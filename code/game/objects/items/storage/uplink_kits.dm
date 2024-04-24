@@ -855,6 +855,36 @@
 	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
 	new /obj/item/lighter(src)
 
+/obj/item/storage/box/syndie_kit/flamethrower_bundle/PopulateContents()
+	new /obj/item/flamethrower/full(src)
+	for(var/i in 1 to 3)
+		new /obj/item/tank/internals/plasma(src)
+	for(var/i in 1 to 3)
+		new /obj/item/grenade/chem_grenade/incendiary(src)
+
+/obj/item/storage/box/syndie_kit/stripperclips/PopulateContents()
+	for(var/i in 1 to 5)
+		new /obj/item/ammo_box/strilka310(src)
+
+/obj/item/storage/harpoon_quiver
+	name = "quiver"
+	desc = "A quiver for holding harpoons."
+	icon = 'icons/obj/storage/storage.dmi'
+	slot_flags = ITEM_SLOT_POCKETS
+	icon_state = "quiver"
+	inhand_icon_state = "quiver"
+
+/obj/item/storage/harpoon_quiver/Initialize(mapload)
+	. = ..()
+	atom_storage.max_total_storage = 27
+	atom_storage.set_holdable(list(
+		/obj/item/ammo_casing/harpoon,
+	))
+
+/obj/item/storage/harpoon_quiver/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/harpoon(src)
+
 #undef KIT_RECON
 #undef KIT_BLOODY_SPAI
 #undef KIT_STEALTHY
