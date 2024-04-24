@@ -20,3 +20,7 @@
 /obj/item/ammo_box/magazine/internal/rus357/Initialize(mapload)
 	stored_ammo += new ammo_type(src)
 	. = ..()
+
+/obj/item/ammo_box/magazine/internal/cylinder/derringer
+	name = "derringer revolver cylinder"
+	max_ammo = 2
