@@ -161,6 +161,7 @@
 	desc = "I'm here to punch people in the face with blades."
 	icon_state = "bladed"
 	inhand_icon_state = "latex_gloves" // not super obvious this way.
+	greyscale_colors = null
 
 /obj/item/clothing/gloves/knifeboxing
 	var/datum/martial_art/knifeboxing/style
