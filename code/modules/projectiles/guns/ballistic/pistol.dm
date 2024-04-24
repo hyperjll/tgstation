@@ -167,3 +167,33 @@
 /obj/item/gun/ballistic/automatic/pistol/viper/implant
 	name = "viper implant"
 	desc = "A modified version of the viper pistol placed inside of the forearm, allows for easy concealment."
+
+/obj/item/gun/ballistic/automatic/pistol/cobra
+	name = "\improper Cobra"
+	desc = "A classic .45 handgun with a small magazine capacity. It makes very little noise at all when firing."
+	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "Cobra"
+	inhand_icon_state = "cobra"
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	w_class = WEIGHT_CLASS_SMALL
+	accepted_magazine_type = /obj/item/ammo_box/magazine/m45
+	mag_display = TRUE
+	can_suppress = FALSE
+	bolt_type = BOLT_TYPE_LOCKING
+	fire_sound = 'sound/weapons/gun/pistol/shot_suppressed.ogg'
+	rack_sound = 'sound/weapons/gun/pistol/rack.ogg'
+	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
+	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
+	fire_sound_volume = 5
+
+/obj/item/gun/ballistic/automatic/pistol/cobra/no_mag
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/cobra/caseless
+	spawn_magazine_type = /obj/item/ammo_box/magazine/m45/cs
+
+/obj/item/gun/ballistic/automatic/pistol/cobra/implant
+	name = "cobra implant"
+	desc = "A modified version of the cobra pistol placed inside of the forearm, allows for easy concealment."
+

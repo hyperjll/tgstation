@@ -32,3 +32,7 @@
 	ammo_type = /obj/item/ammo_casing/a357
 	caliber = CALIBER_357
 	max_ammo = 12
+
+/obj/item/ammo_box/magazine/internal/cylinder/derringer
+	name = "derringer revolver cylinder"
+	max_ammo = 2

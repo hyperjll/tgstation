@@ -322,3 +322,17 @@
 		user.emote("scream")
 		user.drop_all_held_items()
 		user.Paralyze(80)
+
+/obj/item/gun/ballistic/revolver/derringer
+	name = "derringer pistol"
+	desc = "A old-style double-chamber pistol. Load individually with .357 rounds."
+	icon_state = "derringer" // Shoutout to SynnGraffkin at https://github.com/Whitesands13/Whitesands/pull/655 for the original icon! - hyperjll
+	w_class = WEIGHT_CLASS_TINY
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/derringer // 2 rounds max
+	fire_sound_volume = 40 // Quieter?
+	fire_delay = 0 // Like rust's db but more 2d
+
+/obj/item/gun/ballistic/revolver/derringer/attackby(obj/item/A, mob/user, params)
+	if(istype(A, /obj/item/ammo_box)) // prevent speedloader usage
+		return TRUE
+	. = ..()

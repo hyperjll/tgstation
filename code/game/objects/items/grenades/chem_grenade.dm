@@ -26,6 +26,8 @@
 	var/casedesc = "This basic model accepts both beakers and bottles. It heats contents by 10 K upon ignition."
 	/// Whether or not the grenade is currently acting as a landmine. Currently broken and not my current project.
 	var/obj/item/assembly/prox_sensor/landminemode = null
+	/// Whether or not a grenade can be disassembled. Prevents people from reclaiming reagents within grenades.
+	var/can_dismantle = TRUE
 
 /obj/item/grenade/chem_grenade/Initialize(mapload)
 	. = ..()
@@ -144,10 +146,14 @@
 
 /obj/item/grenade/chem_grenade/wirecutter_act(mob/living/user, obj/item/tool)
 	if(stage == GRENADE_READY && !active)
-		tool.play_tool_sound(src)
-		stage_change(GRENADE_WIRED)
-		to_chat(user, span_notice("You unlock the [initial(name)] assembly."))
-		return TRUE
+		if(can_dismantle)
+			tool.play_tool_sound(src)
+			stage_change(GRENADE_WIRED)
+			to_chat(user, span_notice("You unlock the [initial(name)] assembly."))
+			return TRUE
+		else
+			to_chat(user, span_notice("There's no way to open [src]'s assembly."))
+			return FALSE
 
 /obj/item/grenade/chem_grenade/wrench_act(mob/living/user, obj/item/tool)
 	if(stage != GRENADE_WIRED)
@@ -684,3 +690,24 @@
 
 	beakers += beaker_one
 	beakers += beaker_two
+
+/obj/item/grenade/chem_grenade/randomdisease
+	name = "disease grenade"
+	desc = "Used for personnel suppression via biological warfare."
+	stage = GRENADE_READY
+	can_dismantle = FALSE
+
+/obj/item/grenade/chem_grenade/randomdisease/Initialize(mapload)
+	. = ..()
+	var/obj/item/reagent_containers/cup/beaker/large/B1 = new(src)
+	var/obj/item/reagent_containers/cup/beaker/large/B2 = new(src)
+
+	B1.reagents.add_reagent(/datum/reagent/phosphorus, 60)
+	B1.reagents.add_reagent(/datum/reagent/consumable/sugar, 30)
+	B1.reagents.add_reagent(/datum/reagent/diseasedblood, 10)
+	B2.reagents.add_reagent(/datum/reagent/potassium, 60)
+	B2.reagents.add_reagent(/datum/reagent/consumable/sugar, 30)
+	B2.reagents.add_reagent(/datum/reagent/diseasedblood, 10)
+
+	beakers += B1
+	beakers += B2
