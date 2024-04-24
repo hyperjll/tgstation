@@ -1,10 +1,7 @@
-#define ICON_STATE_CHECKED 1 /// this dmi is checked. We don't check this one anymore.
-#define ICON_STATE_NULL 2 /// this dmi has null-named icon_state, allowing it to show a sprite on vv editor.
-
 ADMIN_VERB_AND_CONTEXT_MENU(debug_variables, R_NONE, "View Variables", "View the variables of a datum.", ADMIN_CATEGORY_DEBUG, datum/thing in world)
 	user.debug_variables(thing)
-// This is kept as a seperate proc because admins are able to show VV to non-admins
 
+// This is kept as a seperate proc because admins are able to show VV to non-admins
 /client/proc/debug_variables(datum/thing in world)
 	set category = "Debug"
 	set name = "View Variables"
@@ -21,9 +18,8 @@ ADMIN_VERB_AND_CONTEXT_MENU(debug_variables, R_NONE, "View Variables", "View the
 	var/datum/asset/asset_cache_datum = get_asset_datum(/datum/asset/simple/vv)
 	asset_cache_datum.send(usr)
 
-	var/isappearance = isappearance(thing)
 	var/islist = islist(thing) || (!isdatum(thing) && hascall(thing, "Cut")) // Some special lists dont count as lists, but can be detected by if they have list procs
-	if(!islist && !isdatum(thing) && !isappearance)
+	if(!islist && !isdatum(thing))
 		return
 
 	var/title = ""
@@ -31,7 +27,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(debug_variables, R_NONE, "View Variables", "View the
 	var/icon/sprite
 	var/hash
 
-	var/type = islist? /list : (isappearance ? "/appearance" : thing.type)
+	var/type = islist? /list : thing.type
 	var/no_icon = FALSE
 
 	if(isatom(thing))
@@ -39,26 +35,9 @@ ADMIN_VERB_AND_CONTEXT_MENU(debug_variables, R_NONE, "View Variables", "View the
 		if(!sprite)
 			no_icon = TRUE
 
-	else if(isimage(thing) || isappearance)
-		// icon_state=null shows first image even if dmi has no icon_state for null name.
-		// This list remembers which dmi has null icon_state, to determine if icon_state=null should display a sprite
-		// (NOTE: icon_state="" is correct, but saying null is obvious)
-		var/static/list/dmi_nullstate_checklist = list()
+	else if(isimage(thing))
 		var/image/image_object = thing
-		var/icon_filename_text = "[image_object.icon]" // "icon(null)" type can exist. textifying filters it.
-		if(icon_filename_text)
-			if(image_object.icon_state)
-				sprite = icon(image_object.icon, image_object.icon_state)
-				
-			else // it means: icon_state=""
-				if(!dmi_nullstate_checklist[icon_filename_text])
-					dmi_nullstate_checklist[icon_filename_text] = ICON_STATE_CHECKED
-					if("" in icon_states(image_object.icon))
-						// this dmi has nullstate. We'll allow "icon_state=null" to show image.
-						dmi_nullstate_checklist[icon_filename_text] = ICON_STATE_NULL
-
-				if(dmi_nullstate_checklist[icon_filename_text] == ICON_STATE_NULL)
-					sprite = icon(image_object.icon, image_object.icon_state)
+		sprite = icon(image_object.icon, image_object.icon_state)
 
 	var/sprite_text
 	if(sprite)
@@ -69,7 +48,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(debug_variables, R_NONE, "View Variables", "View the
 	title = "[thing] ([REF(thing)]) = [type]"
 	var/formatted_type = replacetext("[type]", "/", "<wbr>/")
 
-	var/list/header = islist ? list("<b>/list</b>") : (isappearance ? vv_get_header_appearance(thing) : thing.vv_get_header())
+	var/list/header = islist ? list("<b>/list</b>") : thing.vv_get_header()
 
 	var/ref_line = "@[copytext(refid, 2, -1)]" // get rid of the brackets, add a @ prefix for copy pasting in asay
 
@@ -103,16 +82,11 @@ ADMIN_VERB_AND_CONTEXT_MENU(debug_variables, R_NONE, "View Variables", "View the
 			var/name = dropdownoptions[i]
 			var/link = dropdownoptions[name]
 			dropdownoptions[i] = "<option value[link? "='[link]'":""]>[name]</option>"
-	else if(isappearance)
-		dropdownoptions = vv_get_dropdown_appearance(thing)
 	else
 		dropdownoptions = thing.vv_get_dropdown()
 
 	var/list/names = list()
-	if(isappearance)
-		var/static/list/virtual_appearance_vars = build_virtual_appearance_vars()
-		names = virtual_appearance_vars.Copy()
-	else if(!islist)
+	if(!islist)
 		for(var/varname in thing.vars)
 			names += varname
 
@@ -127,10 +101,6 @@ ADMIN_VERB_AND_CONTEXT_MENU(debug_variables, R_NONE, "View Variables", "View the
 			if(IS_NORMAL_LIST(list_value) && IS_VALID_ASSOC_KEY(key))
 				value = list_value[key]
 			variable_html += debug_variable(i, value, 0, list_value)
-	else if(isappearance)
-		names = sort_list(names)
-		for(var/varname in names)
-			variable_html += debug_variable_appearance(varname, thing)
 	else
 		names = sort_list(names)
 		for(var/varname in names)
@@ -315,6 +285,3 @@ datumrefresh=[refid];[HrefToken()]'>Refresh</a>
 
 /client/proc/vv_update_display(datum/thing, span, content)
 	src << output("[span]:[content]", "variables[REF(thing)].browser:replace_span")
-
-#undef ICON_STATE_CHECKED
-#undef ICON_STATE_NULL
