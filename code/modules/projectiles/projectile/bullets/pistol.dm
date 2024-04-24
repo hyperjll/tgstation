@@ -61,3 +61,29 @@
 	impact_light_intensity = 5
 	impact_light_range = 1
 	impact_light_color_override = LIGHT_COLOR_DIM_YELLOW
+
+/obj/projectile/bullet/c10mm/cs
+	name = "10mm caseless bullet"
+	damage = 27
+	speed = 0.5
+
+/obj/projectile/bullet/c10mm/sp
+	name = "10mm soporific bullet"
+	damage = 5
+	eyeblur = 20
+
+/obj/projectile/bullet/c10mm/sp/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	if((blocked != 100) && isliving(target))
+		var/mob/living/L = target
+		L.adjustStaminaLoss(20)
+		if(L.getStaminaLoss() >= 100)
+			L.Sleeping(400)
+	return ..()
+
+/obj/projectile/bullet/c10mm/emp
+	name = "10mm EMP bullet"
+	damage = 25
+
+/obj/projectile/bullet/c10mm/emp/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	..()
+	empulse(target, heavy_range = 1, light_range = 2) //Heavy EMP on target, light EMP in tiles around
