@@ -20,6 +20,11 @@
 	damage = 15
 	fire_stacks = 2
 
+/obj/projectile/bullet/c45/cs
+	name = ".45 caseless bullet"
+	damage = 27
+	speed = 0.5
+
 // 4.6x30mm (Autorifles)
 
 /obj/projectile/bullet/c46x30mm

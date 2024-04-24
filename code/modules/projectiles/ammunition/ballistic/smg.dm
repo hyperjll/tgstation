@@ -27,6 +27,12 @@
 /obj/item/ammo_casing/c45/spent
 	projectile_type = null
 
+/obj/item/ammo_casing/caseless/c45/cs
+	name = ".45 caseless bullet"
+	desc = "Huh? But i thought..."
+	caliber = ".45"
+	projectile_type = /obj/projectile/bullet/c45/cs
+
 /obj/item/ammo_casing/c45/ap
 	name = ".45 armor-piercing bullet casing"
 	desc = "A .45 bullet casing."
