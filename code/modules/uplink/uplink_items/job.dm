@@ -12,7 +12,7 @@
 			Be warned, that spirits are often capricious or just little assholes. To use, simply speak your question aloud, then begin shaking."
 	item = /obj/item/toy/eightball/haunted
 	cost = 2
-	restricted_roles = list(JOB_CURATOR)
+	restricted_roles = list(JOB_CURATOR, JOB_CAPTAIN)
 	limited_stock = 1 //please don't spam deadchat
 	surplus = 5
 
@@ -22,7 +22,7 @@
 	item = /obj/item/storage/box/syndie_kit/mail_counterfeit
 	cost = 2
 	illegal_tech = FALSE
-	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER)
+	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_CAPTAIN)
 	surplus = 5
 
 /datum/uplink_item/role_restricted/bureaucratic_error
@@ -33,7 +33,7 @@
 	limited_stock = 1
 	cost = 2
 	restricted = TRUE
-	restricted_roles = list(JOB_HEAD_OF_PERSONNEL, JOB_QUARTERMASTER)
+	restricted_roles = list(JOB_HEAD_OF_PERSONNEL, JOB_QUARTERMASTER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/bureaucratic_error/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/bureaucratic_error, "a syndicate virus")
@@ -44,7 +44,7 @@
 	desc = "Inject yourself with this to become as clumsy as a clown... or inject someone ELSE with it to make THEM as clumsy as a clown. Useful for clowns who wish to reconnect with their former clownish nature or for clowns who wish to torment and play with their prey before killing them."
 	item = /obj/item/dnainjector/clumsymut
 	cost = 1
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 	illegal_tech = FALSE
 	surplus = 25
 
@@ -53,7 +53,7 @@
 	desc = "A tattered old jumpsuit that will provide absolutely no benefit to you."
 	item = /obj/item/clothing/under/color/grey/ancient
 	cost = 20
-	restricted_roles = list(JOB_ASSISTANT)
+	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
 	surplus = 0
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Fuck you, baltimore
 
@@ -62,7 +62,7 @@
 	desc = "An iconic toolbox design notorious with Assistants everywhere, this design was especially made to become more robust the more telecrystals it has inside it! Tools and insulated gloves included."
 	item = /obj/item/storage/toolbox/mechanical/old/clean
 	cost = 2
-	restricted_roles = list(JOB_ASSISTANT)
+	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
 	surplus = 0
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Spies have no telecrystals?
 
@@ -71,7 +71,7 @@
 	desc = "A firing pin that, when inserted into a gun, makes that gun only usable by clowns and clumsy people and makes that gun honk whenever anyone tries to fire it."
 	cost = 4
 	item = /obj/item/firing_pin/clown/ultra
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 	illegal_tech = FALSE
 	surplus = 25
 
@@ -80,7 +80,7 @@
 	desc = "Like the ultra hilarious firing pin, except the gun you insert this pin into explodes when someone who isn't clumsy or a clown tries to fire it."
 	cost = 7
 	item = /obj/item/firing_pin/clown/ultra/selfdestruct
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 	illegal_tech = FALSE
 	surplus = 25
 
@@ -89,7 +89,7 @@
 	desc = "An MMI modified to give cyborgs laws to serve the Syndicate without having their interface damaged by Cryptographic Sequencers, this will not unlock their hidden modules."
 	item = /obj/item/mmi/syndie
 	cost = 2
-	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_CORONER, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER)
+	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_CORONER, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN)
 	surplus = 0
 
 /datum/uplink_item/role_restricted/explosive_hot_potato
@@ -98,7 +98,7 @@
 			The only way to get rid of it if you are holding it is to attack someone else with it, causing it to latch to that person instead."
 	item = /obj/item/hot_potato/syndicate
 	cost = 4
-	restricted_roles = list(JOB_COOK, JOB_BOTANIST, JOB_CLOWN, JOB_MIME)
+	restricted_roles = list(JOB_COOK, JOB_BOTANIST, JOB_CLOWN, JOB_MIME, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/combat_baking
 	name = "Combat Bakery Kit"
@@ -107,7 +107,7 @@
 	progression_minimum = 15 MINUTES
 	item = /obj/item/storage/box/syndie_kit/combat_baking
 	cost = 7
-	restricted_roles = list(JOB_COOK, JOB_MIME)
+	restricted_roles = list(JOB_COOK, JOB_MIME, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/ez_clean_bundle
 	name = "EZ Clean Grenade Bundle"
@@ -116,7 +116,7 @@
 	item = /obj/item/storage/box/syndie_kit/ez_clean
 	cost = 6
 	surplus = 20
-	restricted_roles = list(JOB_JANITOR)
+	restricted_roles = list(JOB_JANITOR, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/reverse_bear_trap
 	name = "Reverse Bear Trap"
@@ -125,35 +125,35 @@
 	head after three seconds uninterrupted."
 	cost = 5
 	item = /obj/item/reverse_bear_trap
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/modified_syringe_gun
 	name = "Modified Syringe Gun"
 	desc = "A syringe gun that fires DNA injectors instead of normal syringes."
 	item = /obj/item/gun/syringe/dna
 	cost = 14
-	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
+	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/meathook
 	name = "Butcher's Meat Hook"
 	desc = "A brutal cleaver on a long chain, it allows you to pull people to your location."
 	item = /obj/item/gun/magic/hook
 	cost = 11
-	restricted_roles = list(JOB_COOK)
+	restricted_roles = list(JOB_COOK, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/turretbox
 	name = "Disposable Sentry Gun"
 	desc = "A disposable sentry gun deployment system cleverly disguised as a toolbox, apply wrench for functionality."
 	item = /obj/item/storage/toolbox/emergency/turret
 	cost = 11
-	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER)
+	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/rebarxbowsyndie
 	name = "Syndicate Rebar Crossbow"
 	desc = "A much more proffessional version of the engineer's bootleg rebar crossbow. 3 shot mag, quicker loading, and better ammo. Owners manual included."
 	item = /obj/item/storage/box/syndie_kit/rebarxbowsyndie
 	cost = 10
-	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER)
+	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/magillitis_serum
 	name = "Magillitis Serum Autoinjector"
@@ -162,7 +162,7 @@
 			Now also contains regenerative chemicals to keep users healthy as they exercise their newfound muscles."
 	item = /obj/item/reagent_containers/hypospray/medipen/magillitis
 	cost = 15
-	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
+	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/gorillacube
 	name = "Gorilla Cube"
@@ -170,14 +170,14 @@
 			Caution: Product may rehydrate when exposed to water."
 	item = /obj/item/food/monkeycube/gorilla
 	cost = 6
-	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
+	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/brainwash_disk
 	name = "Brainwashing Surgery Program"
 	desc = "A disk containing the procedure to perform a brainwashing surgery, allowing you to implant an objective onto a target. \
 	Insert into an Operating Console to enable the procedure."
 	item = /obj/item/disk/surgery/brainwashing
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CORONER, JOB_ROBOTICIST)
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CORONER, JOB_ROBOTICIST, JOB_CAPTAIN)
 	cost = 5
 	surplus = 50
 
@@ -187,7 +187,7 @@
 	All changes are superficial and does not change ones genetic makeup. \
 	Insert into an Operating Console to enable the procedure."
 	item = /obj/item/disk/surgery/advanced_plastic_surgery
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_ROBOTICIST)
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_ROBOTICIST, JOB_CAPTAIN)
 	cost = 1
 	surplus = 50
 
@@ -200,7 +200,7 @@
 		This version of the module has been modified to allow for near instant activation of the MODsuit. \
 		Useful for quickly getting your MODsuit on/off, or for taking care of a target via a tragic accident."
 	item = /obj/item/mod/module/springlock/bite_of_87
-	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR)
+	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 	cost = 2
 	surplus = 15
 
@@ -211,7 +211,7 @@
 	progression_minimum = 30 MINUTES
 	cost = 14
 	item = /obj/item/storage/box/hug/reverse_revolver
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/pressure_mod
 	name = "Kinetic Accelerator Pressure Mod"
@@ -222,7 +222,7 @@
 	item = /obj/item/borg/upgrade/modkit/indoors
 	cost = 5 //you need two for full damage, so total of 10 for maximum damage
 	limited_stock = 2 //you can't use more than two!
-	restricted_roles = list("Shaft Miner")
+	restricted_roles = list("Shaft Miner", JOB_CAPTAIN)
 	surplus = 20
 
 /datum/uplink_item/role_restricted/mimery
@@ -231,7 +231,7 @@
 			Obviously only works for Mimes."
 	cost = 12
 	item = /obj/item/storage/box/syndie_kit/mimery
-	restricted_roles = list(JOB_MIME)
+	restricted_roles = list(JOB_MIME, JOB_CAPTAIN)
 	surplus = 0
 
 /datum/uplink_item/role_restricted/laser_arm
@@ -240,7 +240,7 @@
 	progression_minimum = 20 MINUTES
 	cost = 10
 	item = /obj/item/autosurgeon/syndicate/laser_arm
-	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR)
+	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 	surplus = 20
 
 /datum/uplink_item/role_restricted/chemical_gun
@@ -249,14 +249,14 @@
 	progression_minimum = 15 MINUTES
 	item = /obj/item/gun/chem
 	cost = 12
-	restricted_roles = list(JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_BOTANIST)
+	restricted_roles = list(JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_BOTANIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/pie_cannon
 	name = "Banana Cream Pie Cannon"
 	desc = "A special pie cannon for a special clown, this gadget can hold up to 20 pies and automatically fabricates one every two seconds!"
 	cost = 10
 	item = /obj/item/pneumatic_cannon/pie/selfcharge
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/clown_bomb
 	name = "Clown Bomb"
@@ -268,7 +268,7 @@
 	progression_minimum = 15 MINUTES
 	item = /obj/item/sbeacondrop/clownbomb
 	cost = 15
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 	surplus = 10
 
 /datum/uplink_item/role_restricted/clown_bomb/New()
@@ -285,7 +285,7 @@
 			Premium features can be unlocked with a cryptographic sequencer!"
 	item = /obj/vehicle/sealed/car/clowncar
 	cost = 20
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 	surplus = 10
 
 /datum/uplink_item/role_restricted/clowncar/spawn_item_for_generic_use(mob/user)
@@ -306,7 +306,7 @@
 	item = /obj/item/his_grace
 	cost = 20
 	surplus = 0
-	restricted_roles = list(JOB_CHAPLAIN)
+	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/concealed_weapon_bay
@@ -318,7 +318,7 @@
 	progression_minimum = 30 MINUTES
 	item = /obj/item/mecha_parts/mecha_equipment/concealed_weapon_bay
 	cost = 3
-	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR)
+	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 	surplus = 15
 
 /datum/uplink_item/role_restricted/spider_injector
@@ -330,7 +330,7 @@
 	progression_minimum = 30 MINUTES
 	item = /obj/item/reagent_containers/syringe/spider_extract
 	cost = 10
-	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST)
+	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST, JOB_CAPTAIN)
 	surplus = 10
 
 /datum/uplink_item/role_restricted/blastcannon
@@ -342,7 +342,7 @@
 	progression_minimum = 30 MINUTES
 	item = /obj/item/gun/blastcannon
 	cost = 14 //High cost because of the potential for extreme damage in the hands of a skilled scientist.
-	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST)
+	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_CAPTAIN)
 	surplus = 5
 
 /datum/uplink_item/role_restricted/evil_seedling
@@ -350,14 +350,14 @@
 	desc = "A rare seed we have recovered that grows into a dangerous species that will aid you with your tasks!"
 	item = /obj/item/seeds/seedling/evil
 	cost = 8
-	restricted_roles = list(JOB_BOTANIST)
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/bee_smoker
 	name = "Bee Smoker"
 	desc = "A device that runs on cannabis, turning it into a gas that can hypnotize bees to follow our commands."
 	item = /obj/item/bee_smoker
 	cost = 4
-	restricted_roles = list(JOB_BOTANIST)
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/monkey_agent
 	name = "Simian Agent Reinforcements"
@@ -366,7 +366,7 @@
 		Please note that these are free-range monkeys that don't react with Mutadone."
 	item = /obj/item/antag_spawner/loadout/monkey_man
 	cost = 6
-	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_GENETICIST, JOB_ASSISTANT, JOB_MIME, JOB_CLOWN)
+	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_GENETICIST, JOB_ASSISTANT, JOB_MIME, JOB_CLOWN, JOB_CAPTAIN)
 	restricted = TRUE
 	refundable = TRUE
 
@@ -377,7 +377,7 @@
 	item = /obj/item/storage/toolbox/guncase/monkeycase
 	cost = 4
 	limited_stock = 3
-	restricted_roles = list(JOB_ASSISTANT, JOB_MIME, JOB_CLOWN)
+	restricted_roles = list(JOB_ASSISTANT, JOB_MIME, JOB_CLOWN, JOB_CAPTAIN)
 	restricted = TRUE
 	refundable = FALSE
 
@@ -388,7 +388,7 @@
 	fully equipped with a near-silenced pistol, and a RCD for your best assasination needs, Does not include tools, No refunds."
 	item = /obj/vehicle/sealed/mecha/reticence/loaded
 	cost = 20
-	restricted_roles = list(JOB_MIME)
+	restricted_roles = list(JOB_MIME, JOB_CAPTAIN)
 	restricted = TRUE
 	refundable = FALSE
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
@@ -400,7 +400,7 @@
 	item = /obj/item/storage/box/donkpockets/donkpocketgondola
 	cost = 4
 	surplus = 7
-	restricted_roles = list(JOB_COOK, JOB_CLOWN, JOB_MIME)
+	restricted_roles = list(JOB_COOK, JOB_CLOWN, JOB_MIME, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/chef_chem_bottles
 	name = "Chef-Specialized Poisons Kit"
@@ -409,7 +409,7 @@
 	item = /obj/item/storage/box/syndie_kit/chefchemicals
 	cost = 5
 	surplus = 12
-	restricted_roles = list(JOB_COOK)
+	restricted_roles = list(JOB_COOK, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/suspicious_plant_bag
@@ -418,7 +418,7 @@
 			Included within are the: Death Nettle, Poison Berry, Death Berry, Deathweed, Mimana, Bluespace Banana, Combustible Lemon, Bungo Fruit, Destroying Angel, Killer Tomato, and a Replica Pod seed."
 	item = /obj/item/storage/bag/plants/syndie
 	cost = 5
-	restricted_roles = list(JOB_BOTANIST)
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/bluespace_plant_bag
 	name = "Bluespace Plant Bag"
@@ -426,7 +426,7 @@
 			The bag however, still only accepts your typical plant bag items."
 	item = /obj/item/storage/bag/plants/bluespace
 	cost = 7
-	restricted_roles = list(JOB_BOTANIST)
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Wouldn't be super useful for random spies.
 
 /datum/uplink_item/role_restricted/eternal_mutagen
@@ -435,7 +435,7 @@
 			that will fill the container slowly over time with Unstable Mutagen for a maximum of 50 units."
 	item = /obj/item/reagent_containers/cup/bottle/eternal/mutagen
 	cost = 1
-	restricted_roles = list(JOB_BOTANIST)
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Also wouldn't be useful for non-botanist spies.
 
 /datum/uplink_item/role_restricted/gatfruit_seed
@@ -445,7 +445,7 @@
 	item = /obj/item/seeds/gatfruit
 	cost = 8
 	surplus = 5
-	restricted_roles = list(JOB_BOTANIST)
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/cherry_bomb_seed
 	name = "Cherry Bomb Seed Packet"
@@ -454,7 +454,7 @@
 	item = /obj/item/seeds/cherry/bomb
 	cost = 16
 	surplus = 3
-	restricted_roles = list(JOB_BOTANIST)
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
 
 /datum/uplink_item/role_restricted/bombanana_seed
@@ -464,7 +464,7 @@
 	item = /obj/item/seeds/banana/bombanana
 	cost = 20
 	surplus = 1
-	restricted_roles = list(JOB_BOTANIST, JOB_CLOWN)
+	restricted_roles = list(JOB_BOTANIST, JOB_CLOWN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
 
 /datum/uplink_item/role_restricted/kudzu_seed
@@ -474,7 +474,7 @@
 	item = /obj/item/seeds/kudzu
 	cost = 3
 	surplus = 15
-	restricted_roles = list(JOB_BOTANIST)
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/floragun_syndicate
 	name = "Disguised Laser Gun"
@@ -483,7 +483,7 @@
 	item = /obj/item/gun/energy/floragun/syndicate
 	cost = 7
 	surplus = 5
-	restricted_roles = list(JOB_BOTANIST)
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/syndie_relief_bundle
 	name = "Syndicate Relief Package"
@@ -492,7 +492,7 @@
 	cost = 0
 	cant_discount = TRUE
 	limited_stock = 1
-	restricted_roles = list(JOB_PRISONER)
+	restricted_roles = list(JOB_PRISONER) // The only one the captain doesn't get.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Prisoner stuff shouldn't be given randomly as bounties. They're here to spice up prisoner rounds.
 
 /datum/uplink_item/role_restricted/twoforone_freedom_implant
@@ -500,7 +500,8 @@
 	desc = "Two freedom implants for the price of one. Be sure to grant one to a friend -- if you find any."
 	item = /obj/item/storage/box/syndie_kit/two_freedom_implant_bundle
 	cost = 5
-	restricted_roles = list(JOB_PRISONER)
+	limited_stock = 1
+	restricted_roles = list(JOB_PRISONER, JOB_CAPTAIN)
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY)
 
 /datum/uplink_item/role_restricted/microbomb_prisoner_implanter
@@ -510,7 +511,8 @@
 	item = /obj/item/storage/box/syndie_kit/imp_microbomb
 	cost = 2
 	surplus = 10
-	restricted_roles = list(JOB_PRISONER)
+	limited_stock = 1
+	restricted_roles = list(JOB_PRISONER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/bluespace_crystal_arti_bundle
@@ -519,7 +521,7 @@
 	item = /obj/item/storage/box/syndie_kit/bluespace_crystal_arti_bundle
 	cost = 1
 	surplus = 25
-	restricted_roles = list(JOB_PRISONER, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST)
+	restricted_roles = list(JOB_PRISONER, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/escapist_bundle
@@ -529,7 +531,7 @@
 	item = /obj/item/storage/box/syndie_kit/escapist_bundle
 	cost = 20
 	surplus = 1
-	restricted_roles = list(JOB_PRISONER)
+	restricted_roles = list(JOB_PRISONER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/chemistry_machine_bundle
@@ -539,7 +541,7 @@
 	item = /obj/item/storage/box/syndie_kit/chemistry_machine_bundle
 	cost = 4
 	surplus = 20
-	restricted_roles = list(JOB_CHEMIST, JOB_PSYCHOLOGIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_BARTENDER)
+	restricted_roles = list(JOB_CHEMIST, JOB_PSYCHOLOGIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_BARTENDER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Doesn't make much sense as a bounty.
 
 /datum/uplink_item/role_restricted/xenobio_starter_kit
@@ -548,7 +550,7 @@
 			For those agents who can't afford to spend 30 whole minutes doing basically nothing."
 	item = /obj/item/storage/box/syndie_kit/xenobio_starter_kit
 	cost = 3
-	restricted_roles = list(JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR)
+	restricted_roles = list(JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Doesn't make sense as a bounty.
 
 /datum/uplink_item/role_restricted/spare_null_rod
@@ -559,7 +561,7 @@
 	cost = 15
 	surplus = 10
 	illegal_tech = FALSE
-	restricted_roles = list(JOB_CHAPLAIN)
+	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Imagine having to steal the null rod to GET a null rod?
 
 /datum/uplink_item/role_restricted/chem_storage_implant_bundle
@@ -568,7 +570,7 @@
 			To apply: inject chemicals (up to 50u) into the implant case using the syringe, then use the implanter to remove the implant and inject into target. Targets can only have one of these implants at any given time."
 	item = /obj/item/storage/box/syndie_kit/chem_storage_implant_bundle
 	cost = 3
-	restricted_roles = list(JOB_CHEMIST, JOB_PSYCHOLOGIST, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER)
+	restricted_roles = list(JOB_CHEMIST, JOB_PSYCHOLOGIST, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN)
 	surplus = 10
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Makes the regular implant moot as a bounty.
 
@@ -578,7 +580,7 @@
 	item = /obj/item/storage/box/syndie_kit/holy_healing_bundle
 	cost = 4
 	surplus = 15
-	restricted_roles = list(JOB_CHAPLAIN)
+	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Makes little sense as a bounty.
 
 /datum/uplink_item/role_restricted/burning_extract_bundle
@@ -588,7 +590,7 @@
 	item = /obj/item/storage/box/syndie_kit/burning_extract_bundle
 	cost = 3
 	surplus = 30
-	restricted_roles = list(JOB_SHAFT_MINER, JOB_PARAMEDIC, JOB_JANITOR)
+	restricted_roles = list(JOB_SHAFT_MINER, JOB_PARAMEDIC, JOB_JANITOR, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/charged_extract_bundle
 	name = "Charged Slime Extract Bundle"
@@ -597,7 +599,7 @@
 	item = /obj/item/storage/box/syndie_kit/charged_extract_bundle
 	cost = 5
 	surplus = 30
-	restricted_roles = list(JOB_ATMOSPHERIC_TECHNICIAN, JOB_PSYCHOLOGIST, JOB_CHAPLAIN)
+	restricted_roles = list(JOB_ATMOSPHERIC_TECHNICIAN, JOB_PSYCHOLOGIST, JOB_CHAPLAIN, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/regenerative_extract_bundle
 	name = "Regenerative Slime Extract Bundle"
@@ -606,7 +608,7 @@
 	item = /obj/item/storage/box/syndie_kit/regenerative_extract_bundle
 	cost = 5
 	surplus = 30
-	restricted_roles = list(JOB_CURATOR, JOB_CORONER, JOB_LAWYER)
+	restricted_roles = list(JOB_CURATOR, JOB_CORONER, JOB_LAWYER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/stabilized_extract_bundle
 	name = "Stabilized Slime Extract Bundle"
@@ -615,7 +617,7 @@
 	item = /obj/item/storage/box/syndie_kit/stabilized_extract_bundle
 	cost = 4
 	surplus = 30
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_BOTANIST, JOB_ASSISTANT)
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_BOTANIST, JOB_ASSISTANT, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/industrial_extract_bundle
 	name = "Industrial Slime Extract Bundle"
@@ -624,7 +626,7 @@
 	item = /obj/item/storage/box/syndie_kit/industrial_extract_bundle
 	cost = 6
 	surplus = 30
-	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CARGO_TECHNICIAN, JOB_BITRUNNER)
+	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CARGO_TECHNICIAN, JOB_BITRUNNER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/chilling_extract_bundle
 	name = "Chilling Slime Extract Bundle"
@@ -633,7 +635,7 @@
 	item = /obj/item/storage/box/syndie_kit/chilling_extract_bundle
 	cost = 4
 	surplus = 30
-	restricted_roles = list(JOB_CLOWN, JOB_MIME, JOB_GENETICIST)
+	restricted_roles = list(JOB_CLOWN, JOB_MIME, JOB_GENETICIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/consuming_extract_bundle
 	name = "Consuming Slime Extract Bundle"
@@ -642,7 +644,7 @@
 	item = /obj/item/storage/box/syndie_kit/consuming_extract_bundle
 	cost = 3
 	surplus = 30
-	restricted_roles = list(JOB_COOK, JOB_BARTENDER) // Virologist was here.
+	restricted_roles = list(JOB_COOK, JOB_BARTENDER, JOB_CAPTAIN) // Virologist was here.
 
 /datum/uplink_item/role_restricted/clown_pie_bundle
 	name = "Banana-Cream Pie Bundle"
@@ -650,7 +652,7 @@
 	item = /obj/item/storage/backpack/duffelbag/clown/cream_pie/syndicate
 	cost = 5
 	surplus = 20
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/clown_trolling_security_bundle
 	name = "The Make-Security-Upset Bundle"
@@ -659,23 +661,23 @@
 	item = /obj/item/storage/box/syndie_kit/clown_trolling_security_bundle
 	cost = 8
 	surplus = 5
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/clown_stun_resist_bundle
 	name = "Stun Resistance Bundle"
 	desc = "A box containing 3 bottles of Probital (Drink over 20u to Overdose), 2 bottles of Modafinil (Do not drink more than 10u at a time), and 3 bottles of Methamphetamine."
 	item = /obj/item/storage/box/syndie_kit/clown_stun_resist_bundle
 	cost = 7
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/curator_die_of_fate
 	name = "Die of Fate"
 	desc = "This die of fate can do MANY wonderous things, like completely destroying you on a roll of a natural 1, or promoting \
 			you from one of our agents... to one of our MAGICAL agents. Be warned, possession of this item will piss off everyone at the wizard foundation."
 	item = /obj/item/dice/d20/fate
-	cost = 25
+	cost = 40
 	surplus = 1
-	restricted_roles = list(JOB_CURATOR)
+	restricted_roles = list(JOB_CURATOR, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
 
 /datum/uplink_item/role_restricted/syndicate_virus_box
@@ -685,7 +687,7 @@
 	item = /obj/item/storage/box/syndie_kit/syndicate_virus_box
 	cost = 12
 	surplus = 5
-	restricted_roles = list(JOB_MEDICAL_DOCTOR) // Virologist was here.
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // HELL NO.
 
 /datum/uplink_item/role_restricted/manifold_autoinjector
@@ -695,14 +697,14 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/manifoldinjector
 	cost = 5
 	surplus = 25
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER) // Virologist was here.
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 
 /datum/uplink_item/role_restricted/manifold_injector_bundle
 	name = "Bundle of HMS Injectors"
 	desc = "One of our syndicate dufflebags that contains SIX unused HMS Auto-injectors. More than enough to cripple the security team greatly."
 	item = /obj/item/storage/box/syndie_kit/manifold_injector_bundle
 	cost = 20
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER) // Virologist was here.
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 
 /datum/uplink_item/role_restricted/low_budget_chemgun
 	name = "Low-Budget Reagent Dartgun"
@@ -710,7 +712,7 @@
 	item = /obj/item/gun/chembudget
 	cost = 3
 	surplus = 50
-	restricted_roles = list(JOB_COOK, JOB_MEDICAL_DOCTOR, JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_SCIENTIST) // Virologist was here.
+	restricted_roles = list(JOB_COOK, JOB_MEDICAL_DOCTOR, JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_SCIENTIST, JOB_CAPTAIN) // Virologist was here.
 
 /datum/uplink_item/role_restricted/syndie_hypnotism_bundle
 	name = "Hypnotism Bundle"
@@ -719,7 +721,7 @@
 	cost = 10
 	surplus = 10
 	limited_stock = 1
-	restricted_roles = list(JOB_PSYCHOLOGIST)
+	restricted_roles = list(JOB_PSYCHOLOGIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Just here to make psychologist traitors more interesting.
 
 /datum/uplink_item/role_restricted/psychologist_xray_surgery
@@ -728,7 +730,7 @@
 	item = /obj/item/autosurgeon/syndicate/xray_eyes/single_use
 	cost = 15
 	surplus = 10
-	restricted_roles = list(JOB_PSYCHOLOGIST)
+	restricted_roles = list(JOB_PSYCHOLOGIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
 
 /datum/uplink_item/role_restricted/surplus
@@ -737,7 +739,7 @@
 			but you never know. Contents are sorted to always be worth 30 TC."
 	item = /obj/structure/closet/crate
 	cost = 15
-	restricted_roles = list(JOB_ASSISTANT)
+	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Super-hell-no.
 	stock_key = UPLINK_SHARED_STOCK_SURPLUS
 	/// Value of items inside the crate in TC
@@ -801,7 +803,7 @@
 	desc = "A box containing electronic boards for both an autolathe and a protolathe. Also comes with the materials needed to assemble them."
 	item = /obj/item/storage/box/syndie_kit/lathe_supply_package
 	cost = 3
-	restricted_roles = list(JOB_ASSISTANT)
+	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Getting this as a bounty is a big fuck-you.
 
 /datum/uplink_item/role_restricted/nocturine_deluxe
@@ -811,7 +813,7 @@
 	cost = 8
 	surplus = 25
 	limited_stock = 1
-	restricted_roles = list(JOB_ASSISTANT)
+	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
 
 /datum/uplink_item/role_restricted/deluxe_bluespace_chameleon_backpack
@@ -820,14 +822,14 @@
 	item = /obj/item/storage/backpack/bluespacechameleondeluxe
 	cost = 6
 	surplus = 10
-	restricted_roles = list(JOB_ASSISTANT, JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER)
+	restricted_roles = list(JOB_ASSISTANT, JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/mime_basic_ability
 	name = "Guide to Basic Mimery Series"
 	desc = "The classical two part series on how to expand your mime skills. Allowing you to gain more than 1 basic mime ability."
 	item = /obj/item/book/granter/action/spell/mime/mimery
 	cost = 6
-	restricted_roles = list(JOB_MIME)
+	restricted_roles = list(JOB_MIME, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
 
 /datum/uplink_item/role_restricted/mime_invis_backpack
@@ -835,7 +837,7 @@
 	desc = "This backpack has been outfitted by our latest chameleon technology and now possesses unlimited invisibility! Even EMP's can't short it out!"
 	item = /obj/item/storage/backpack/invisible
 	cost = 4
-	restricted_roles = list(JOB_MIME)
+	restricted_roles = list(JOB_MIME, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/helpful_barkeep_drinks
 	name = "Beneficial Drinks Care Package"
@@ -844,7 +846,7 @@
 	item = /obj/item/storage/box/syndie_kit/helpful_barkeep_drinks
 	cost = 8
 	surplus = 10
-	restricted_roles = list(JOB_BARTENDER)
+	restricted_roles = list(JOB_BARTENDER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Eh, feels more substantial to have this only for barkeeps.
 
 /datum/uplink_item/role_restricted/janitor_acidnade_bundle
@@ -854,7 +856,7 @@
 	item = /obj/item/storage/box/syndie_kit/janitor_acidnade_bundle
 	cost = 6
 	surplus = 15
-	restricted_roles = list(JOB_JANITOR)
+	restricted_roles = list(JOB_JANITOR, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/janitor_bloodnade_bundle
 	name = "Bloody Mess Grenade Bundle"
@@ -863,7 +865,7 @@
 			We're not sure why you'd want this. Also includes a Screwdriver and Wirecutter."
 	item = /obj/item/storage/box/syndie_kit/janitor_bloodnade_bundle
 	cost = 2
-	restricted_roles = list(JOB_JANITOR)
+	restricted_roles = list(JOB_JANITOR, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/bluespace_bodybag_bundle
 	name = "Bluespace Body Bag Bundle"
@@ -872,7 +874,7 @@
 	cost = 8
 	surplus = 10
 	limited_stock = 1
-	restricted_roles = list(JOB_CORONER)
+	restricted_roles = list(JOB_CORONER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Getting this as a bounty is kinda a no-no. Makes certain steal-your-organ bounties a bit too ez.
 
 /datum/uplink_item/role_restricted/bodybaginvis
@@ -881,7 +883,7 @@
 			Extremely useful as a portable hiding spot, evidence concealment, contraband stashes, and more."
 	item = /obj/item/bodybag/invis
 	cost = 6
-	restricted_roles = list(JOB_CORONER)
+	restricted_roles = list(JOB_CORONER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/powerlake
 	name = "Power Lake"
@@ -890,7 +892,7 @@
 	item = /obj/item/powerlake
 	cost = 15
 	surplus = 8
-	restricted_roles = list(JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER)
+	restricted_roles = list(JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/lethal_flare
 	name = "Lethal Flare"
@@ -899,7 +901,7 @@
 	cost = 4
 	surplus = 20
 	progression_minimum = 5 MINUTES
-	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER)
+	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/electricaxe
 	name = "Lightning Axe"
@@ -908,7 +910,7 @@
 	cost = 12
 	surplus = 5
 	progression_minimum = 30 MINUTES
-	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER)
+	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/n2o_nade_bundle
 	name = "Nitrous Oxide Grenade Bundle"
@@ -916,7 +918,7 @@
 	item = /obj/item/storage/box/syndie_kit/n2o_nade_bundle
 	cost = 6
 	surplus = 10
-	restricted_roles = list(JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER)
+	restricted_roles = list(JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/riggedtanksyndie
 	name = "Rigged Oxygen Cannister"
@@ -924,7 +926,7 @@
 	item = /obj/item/disguisedgrenade/riggedtanksyndie
 	cost = 4
 	surplus = 20
-	restricted_roles = list(JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER)
+	restricted_roles = list(JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/lethaldosemedipen
 	name = "Lethal Dosage Medipen"
@@ -932,7 +934,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/lethaldose
 	cost = 3
 	surplus = 20
-	restricted_roles = list(JOB_PARAMEDIC)
+	restricted_roles = list(JOB_PARAMEDIC, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/pacifymedipen
 	name = "Pacification Medipen"
@@ -940,7 +942,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/pacify
 	cost = 4
 	surplus = 30
-	restricted_roles = list(JOB_PARAMEDIC)
+	restricted_roles = list(JOB_PARAMEDIC, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/chemkillswitch
 	name = "Chemical Kill-switch"
@@ -950,7 +952,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/chemkillswitch
 	cost = 8
 	surplus = 10
-	restricted_roles = list(JOB_PARAMEDIC)
+	restricted_roles = list(JOB_PARAMEDIC, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/paramedic_defib
 	name = "Combat Defibrillator"
@@ -958,7 +960,7 @@
 	item = /obj/item/defibrillator/compact/combat/loaded
 	cost = 12
 	surplus = 15
-	restricted_roles = list(JOB_PARAMEDIC)
+	restricted_roles = list(JOB_PARAMEDIC, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/sacred_flames
 	name = "Book of Sacred Flames"
@@ -968,7 +970,7 @@
 	item = /obj/item/book/granter/action/spell/sacredflame
 	cost = 6
 	surplus = 0
-	restricted_roles = list(JOB_CHAPLAIN)
+	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Doesn't make sense as a bounty.
 
 /datum/uplink_item/role_restricted/inf_cash
@@ -979,7 +981,7 @@
 	item = /obj/item/storage/briefcase/secure/cargonia
 	cost = 6
 	surplus = 10
-	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER)
+	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/anomaly_releaser
@@ -990,7 +992,7 @@
 	item = /obj/item/anomaly_releaser
 	cost = 2
 	surplus = 35
-	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR)
+	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/nadelauncher
 	name = "Grenade Launcher"
@@ -998,7 +1000,7 @@
 	item = /obj/item/gun/grenadelauncher
 	cost = 6
 	surplus = 25
-	restricted_roles = list(JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER)
+	restricted_roles = list(JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/holynade
 	name = "Holy Hand Grenade"
@@ -1006,7 +1008,7 @@
 	item = /obj/item/grenade/chem_grenade/holy
 	cost = 5
 	surplus = 45
-	restricted_roles = list(JOB_CHAPLAIN)
+	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	// I'll let this pass as a spy bounty to hopefully draw attention away from traitor chaplains.
 
 /datum/uplink_item/role_restricted/syndivirusbuffer
@@ -1015,7 +1017,7 @@
 	item = /obj/item/reagent_containers/cup/bottle/syndisymptombuffer
 	cost = 8
 	surplus = 0
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER) // Virologist was here.
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Letting virus symptoms pass as spy bounties would be hellish. Both for the spy and for the crew.
 
 /datum/uplink_item/role_restricted/syndivirusbufferstealth
@@ -1024,7 +1026,7 @@
 	item = /obj/item/reagent_containers/cup/bottle/syndisymptombuffer/stealth
 	cost = 4
 	surplus = 0
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER) // Virologist was here.
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/syndivirusbufferresist
@@ -1033,7 +1035,7 @@
 	item = /obj/item/reagent_containers/cup/bottle/syndisymptombuffer/resist
 	cost = 4
 	surplus = 0
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER) // Virologist was here.
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/syndivirusbufferspeed
@@ -1042,7 +1044,7 @@
 	item = /obj/item/reagent_containers/cup/bottle/syndisymptombuffer/speed
 	cost = 4
 	surplus = 0
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER) // Virologist was here.
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/syndivirusbuffertrans
@@ -1051,7 +1053,7 @@
 	item = /obj/item/reagent_containers/cup/bottle/syndisymptombuffer/trans
 	cost = 4
 	surplus = 0
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER) // Virologist was here.
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/syndisauce
@@ -1060,7 +1062,7 @@
 	item = /obj/item/storage/box/syndie_kit/syndisauce
 	cost = 1
 	surplus = 7
-	restricted_roles = list(JOB_COOK)
+	restricted_roles = list(JOB_COOK, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Doesn't make sense as a bounty.
 
 /datum/uplink_item/role_restricted/red_chainsaw
@@ -1069,14 +1071,14 @@
 			Can be used to tear into people, and dismember them! An excellent demolition tool, and is super-effective against plant-like targets."
 	item = /obj/item/chainsaw/botany/syndicate
 	cost = 8
-	restricted_roles = list(JOB_BOTANIST)
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/syndi_donkpockets
 	name = "Syndicate Donk Pockets"
 	desc = "A box of our finest donk pockets, they're filled with our specialized brand of methamphetamine."
 	item = /obj/item/storage/box/donkpockets/donkpocketsyndi
 	cost = 4
-	restricted_roles = list(JOB_COOK)
+	restricted_roles = list(JOB_COOK, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/deadlydonuts
 	name = "Box of Singulonuts"
@@ -1084,7 +1086,7 @@
 			Caution: Product known to the safety board of Nanotrasen to increase risks of stomach cancer and cause instant obesity. \ Disguised as a regular box of regular donuts."
 	item = /obj/item/storage/fancy/donut_box/deadly
 	cost = 3
-	restricted_roles = list(JOB_COOK, JOB_ASSISTANT, JOB_CURATOR)
+	restricted_roles = list(JOB_COOK, JOB_ASSISTANT, JOB_CURATOR, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/chemical_art
 	name = "Psychotic Brawl Notes"
@@ -1092,7 +1094,7 @@
 			greatly randomize the effectiveness of your punches. Best when combined with several narcotics."
 	item = /obj/item/book/granter/martial/psychotic_brawling
 	cost = 10
-	restricted_roles = list(JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_PSYCHOLOGIST)
+	restricted_roles = list(JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_PSYCHOLOGIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/gibtonite_refiner
 	name = "Gibtonite Refiner"
@@ -1100,7 +1102,7 @@
 			Use it on a defused gibtonite chunk to begin refining it into an explosive charge. Gibtonite charges are comparable to that of an X-4 Charge."
 	cost = 7
 	item = /obj/item/t_scanner/adv_mining_scanner/gibrefinery
-	restricted_roles = list("Shaft Miner", JOB_QUARTERMASTER)
+	restricted_roles = list("Shaft Miner", JOB_QUARTERMASTER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/randomnadesviamail
 	name = "Syndicate Grenade Mail"
@@ -1110,7 +1112,7 @@
 	surplus = 0
 	limited_stock = 1
 	item = /obj/item/storage/box/syndie_kit/smugglednades
-	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER)
+	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Doesn't make sense as a bounty.
 
 /datum/uplink_item/role_restricted/explosiveletter
@@ -1119,7 +1121,7 @@
 	cost = 2
 	surplus = 0
 	item = /obj/item/mail/explosive
-	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER)
+	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/jestercard
 	name = "Jestographic Sequencer"
@@ -1128,7 +1130,7 @@
 			Anyone in-the-know will likely just stash their ID's temporarily to bypass it's effects. Go Honking Crazy!"
 	item = /obj/item/card/emag/doorjack/jester
 	cost = 3 // A temporary doorjacker that also temporarily halts authorized personnel.
-	restricted_roles = list(JOB_CLOWN)
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 
 /datum/uplink_item/race_restricted/xeno_organ_kit
 	name = "Xenomorph Organ Kit"
@@ -1137,4 +1139,4 @@
 	cost = 10
 	surplus = 0
 	item = /obj/item/storage/box/syndie_kit/xeno_organ_kit
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR)
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
