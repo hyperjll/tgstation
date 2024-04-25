@@ -139,23 +139,23 @@
 /obj/item/organ/internal/cyberimp/brain/anti_stun/proc/clear_stuns()
 	if(isnull(owner) || (organ_flags & ORGAN_FAILING) || !COOLDOWN_FINISHED(src, implant_cooldown))
 		return
-	
+
 	owner.SetStun(0)
 	owner.SetKnockdown(0)
 	owner.SetImmobilized(0)
 	owner.SetParalyzed(0)
 	owner.setStaminaLoss(0)
 	addtimer(CALLBACK(owner, TYPE_PROC_REF(/mob/living, setStaminaLoss), 0), stun_resistance_time)
-	
+
 	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
 	sparks.set_up(5, 1, src)
 	sparks.start()
 
 	owner.add_traits(list(TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_BATON_RESISTANCE, TRAIT_STUNIMMUNE), REF(src))
-	addtimer(TRAIT_CALLBACK_REMOVE(owner, TRAIT_IGNOREDAMAGESLOWDOWN, REF(src)), stun_resistance_time)	
+	addtimer(TRAIT_CALLBACK_REMOVE(owner, TRAIT_IGNOREDAMAGESLOWDOWN, REF(src)), stun_resistance_time)
 	addtimer(TRAIT_CALLBACK_REMOVE(owner, TRAIT_BATON_RESISTANCE, REF(src)), stun_resistance_time)
 	addtimer(TRAIT_CALLBACK_REMOVE(owner, TRAIT_STUNIMMUNE, REF(src)), stun_resistance_time)
-	
+
 	COOLDOWN_START(src, implant_cooldown, 60 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(implant_ready)),60 SECONDS)
 
@@ -171,7 +171,7 @@
 	addtimer(CALLBACK(src, PROC_REF(reboot)), 90 / severity)
 
 /obj/item/organ/internal/cyberimp/brain/anti_stun/proc/reboot()
-	organ_flags &= ~ORGAN_FAILING 
+	organ_flags &= ~ORGAN_FAILING
 	implant_ready()
 
 //[[[[MOUTH]]]]
@@ -204,3 +204,14 @@
 	new /obj/item/autosurgeon/syndicate/xray_eyes(src)
 	new /obj/item/autosurgeon/syndicate/anti_stun(src)
 	new /obj/item/autosurgeon/syndicate/reviver(src)
+
+
+
+/obj/item/organ/internal/cyberimp/brain/anti_drop/syndicate
+	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+
+/obj/item/organ/internal/cyberimp/brain/anti_stun/syndicate
+	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+
+/obj/item/organ/internal/cyberimp/mouth/breathing_tube/syndicate
+	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN

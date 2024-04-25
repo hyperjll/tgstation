@@ -197,3 +197,14 @@
 	name = "cobra implant"
 	desc = "A modified version of the cobra pistol placed inside of the forearm, allows for easy concealment."
 
+/obj/item/gun/ballistic/automatic/pistol/implant
+	name = "Makarov implant"
+	desc = "A modified version of the Makarov pistol placed inside of the forearm, allows for easy concealment."
+
+/obj/item/gun/ballistic/automatic/pistol/m1911/implant
+	name = "m1911 implant"
+	desc = "A modified version of the m1911 pistol placed inside of the forearm, allows for easy concealment."
+
+/obj/item/gun/ballistic/automatic/pistol/deagle/implant
+	name = "desert eagle implant"
+	desc = "A modified version of the desert eagle placed inside of the forearm, allows for easy concealment."
