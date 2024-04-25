@@ -538,6 +538,7 @@
 	slot = ORGAN_SLOT_RIGHT_ARM_AUG
 
 	actions_types = list()
+	items_to_create = list(/obj/item/gun/magic/hook/buster)
 
 	///The amount of damage the implant adds to our unarmed attacks.
 	punch_damage = 20

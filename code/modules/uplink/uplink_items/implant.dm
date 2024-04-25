@@ -329,6 +329,7 @@
 	item = /obj/item/autosurgeon/syndicate/makarov_implant
 	cost = 9
 	surplus = 20
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/implants/m1911_implant
 	name = "M1911 Arm implant"
@@ -336,6 +337,7 @@
 	item = /obj/item/autosurgeon/syndicate/m1911_implant
 	cost = 8
 	surplus = 20
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/implants/deagle_implant
 	name = "Desert Eagle Arm implant"
@@ -343,6 +345,7 @@
 	item = /obj/item/autosurgeon/syndicate/deagle_implant
 	cost = 12
 	surplus = 20
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/implants/viper_implant
 	name = "Viper Arm implant"
@@ -350,6 +353,7 @@
 	item = /obj/item/autosurgeon/syndicate/viper_implant
 	cost = 10
 	surplus = 20
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/implants/cobra_implant
 	name = "Cobra Arm implant"
@@ -358,6 +362,7 @@
 	progression_minimum = 5 MINUTES
 	cost = 9
 	surplus = 20
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/implants/spinaloverclock
 	name = "Neural Overclocker Implant"
