@@ -1,6 +1,6 @@
 /datum/uplink_category/events
 	name = "Events & Chaos"
-	weight = 4
+	weight = 3
 
 /datum/uplink_item/events
 	category = /datum/uplink_category/events

@@ -37,6 +37,7 @@
 	weight = 5
 	show_in_report = TRUE
 	report_message = "Your station has been selected for a special grant. Some extra funds has been made available to your cargo department."
+	trait_to_give = STATION_TRAIT_GALACTIC_GRANT
 
 /datum/station_trait/galactic_grant/on_round_start()
 	var/datum/bank_account/cargo_bank = SSeconomy.get_dep_account(ACCOUNT_CAR)
@@ -68,6 +69,7 @@
 	show_in_report = TRUE
 	report_message = "Prices are low in this system, BUY BUY BUY!"
 	blacklist = list(/datum/station_trait/distant_supply_lines)
+	trait_to_give = STATION_TRAIT_STRONG_SUPPLY_LINES
 
 /datum/station_trait/strong_supply_lines/on_round_start()
 	SSeconomy.pack_price_modifier *= 0.8
@@ -103,6 +105,7 @@
 	show_in_report = TRUE
 	abstract_type = /datum/station_trait/deathrattle_department
 	blacklist = list(/datum/station_trait/deathrattle_all)
+	trait_to_give = STATION_TRAIT_DEATHRATTLED_DEPARTMENT
 
 	var/department_to_apply_to
 	var/department_name = "department"
@@ -175,6 +178,7 @@
 	show_in_report = TRUE
 	weight = 1
 	report_message = "All members of the station have received an implant to notify each other if one of them dies. This should help improve job-safety!"
+	trait_to_give = STATION_TRAIT_DEATHRATTLED_ALL
 	var/datum/deathrattle_group/deathrattle_group
 
 /datum/station_trait/deathrattle_all/New()

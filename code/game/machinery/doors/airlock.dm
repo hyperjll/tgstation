@@ -1449,6 +1449,23 @@
 	loseMainPower()
 	loseBackupPower()
 
+// For the jestographic sequencer, temporarily reverses access functionality.
+/obj/machinery/door/airlock/proc/jester_act(mob/user, obj/item/card/emag/emag_card)
+	if(!operating && density && hasPower() && !(obj_flags & EMAGGED))
+		if(istype(emag_card, /obj/item/card/emag/doorjack/jester))
+			var/obj/item/card/emag/doorjack/jester/jester_card = emag_card
+			jester_card.use_charge(user)
+		jestergraphed = TRUE
+		addtimer(CALLBACK(src, PROC_REF(finish_jester_act)), 30 SECONDS)
+		return TRUE
+	return FALSE
+
+/// What fixes the door's operation after getting jestergraph'd
+/obj/machinery/door/airlock/proc/finish_jester_act()
+	if(QDELETED(src))
+		return FALSE
+	jestergraphed = FALSE
+
 /// When a airlock is opened with a explosive charge is installed
 /obj/machinery/door/airlock/proc/blow_charge()
 	panel_open = TRUE

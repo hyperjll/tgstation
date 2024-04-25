@@ -1556,6 +1556,67 @@
 /obj/item/storage/box/syndie_kit/emp_shield/PopulateContents()
 	new /obj/item/implanter/empshield(src)
 
+/obj/item/storage/box/syndie_kit/riggedglowsticks/PopulateContents()
+	var/list/types = subtypesof(/obj/item/flashlight/syndirig/glowstick/)
+	for(var/i in 1 to 6)
+		var/type = pick(types)
+		new type(src)
+
+/obj/item/storage/box/syndie_kit/riggedplushies/PopulateContents()
+	var/list/item_list = list(
+		/obj/item/deployablemine/explosive/mothplushie,
+		/obj/item/deployablemine/explosive/lizardplushie,
+		/obj/item/deployablemine/explosive/carpplushie,
+		/obj/item/deployablemine/explosive/bubbleplush,
+		/obj/item/deployablemine/explosive/plushvar,
+		/obj/item/deployablemine/explosive/narplush,
+		/obj/item/deployablemine/explosive/nukeplushie,
+		/obj/item/deployablemine/explosive/slimeplushie
+	)
+
+	for(var/i in 1 to 6)
+		var/item = pick(item_list)
+		new item(src)
+
+/obj/item/storage/box/syndie_kit/piratekit
+	name = "Pirate Kit"
+
+/obj/item/storage/box/syndie_kit/piratekit/PopulateContents()
+	new /obj/item/gun/ballistic/handcannon/syndicate(src)
+	for(var/i in 1 to 4)
+		new /obj/item/ammo_casing/caseless/cannonball(src)
+	new /obj/item/book/granter/crafting_recipe/syndipiratemanual(src)
+
+/obj/item/storage/box/syndie_kit/riggedglitterbombs
+	name = "Box of Explosive Glitterbombs"
+
+/obj/item/storage/box/syndie_kit/riggedglitterbombs/PopulateContents()
+	var/list/item_list = list(
+		/obj/item/grenade/chem_grenade/pyro/explosive/pinkglitter,
+		/obj/item/grenade/chem_grenade/pyro/explosive/blueglitter,
+		/obj/item/grenade/chem_grenade/pyro/explosive/whiteglitter
+	)
+
+	for(var/i in 1 to 5)
+		var/item = pick(item_list)
+		new item(src)
+
+/obj/item/storage/box/syndie_kit/boxed_dehydrated_carp/PopulateContents()
+	for(var/i in 1 to 8)
+		new /obj/item/toy/plush/carpplushie/dehy_carp(src)
+
+/obj/item/storage/box/syndie_kit/stealthmicrobomb/PopulateContents()
+	new /obj/item/implanter/stealthimplanter/explosive(src)
+
+/obj/item/storage/box/syndie_kit/goloudbundle
+	name = "NT-Annihilation 'Go Loud' Kit"
+
+/obj/item/storage/box/syndie_kit/goloudbundle/PopulateContents()
+	new /obj/item/stack/telecrystal/five(src)
+	new /obj/item/stack/telecrystal/five(src)
+	new /obj/item/stack/telecrystal/five(src)
+	new /obj/item/pen/edagger(src)
+	new /obj/item/reagent_containers/hypospray/medipen/atropine(src)
 
 
 
