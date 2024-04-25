@@ -629,7 +629,7 @@
 	ammo_type = /obj/item/ammo_casing/a357/wallstake
 
 
-/**
+
 /obj/item/ammo_box/nadepouch
 	name = "grenade pouch"
 	icon = 'icons/obj/storage/armaments.dmi'
@@ -750,5 +750,3 @@
 	icon_state = "ammopouch-mirage"
 	ammo_type = /obj/item/grenade/mirage
 	max_ammo = 5
-**/
-

@@ -19,3 +19,8 @@
 		addtimer(CALLBACK(lanced_turf, TYPE_PROC_REF(/datum/, _RemoveElement), list(/datum/element/forced_gravity, forced_value)), duration)
 
 	qdel(src)
+
+/obj/item/grenade/antigravity/syndicate
+	range = 20
+	forced_value = 0
+	duration = 600

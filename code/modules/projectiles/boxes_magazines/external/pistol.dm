@@ -87,32 +87,36 @@
 
 /obj/item/ammo_box/magazine/m45/cs
 	name = "handgun magazine (.45 Caseless)"
-	icon_state = "45-8"
+	icon_state = "cs45-8"
+	base_icon_state = "cs45"
 	ammo_type = /obj/item/ammo_casing/caseless/c45/cs
-	caliber = ".45"
+	caliber = CALIBER_45
 	max_ammo = 8
 	multiple_sprites = AMMO_BOX_PER_BULLET
 	multiple_sprite_use_base = TRUE
 
 /obj/item/ammo_box/magazine/m45/sp
 	name = "handgun magazine (.45 Soporific)"
-	icon_state = "45-8"
+	icon_state = "sleep45-8"
+	base_icon_state = "sleep45"
 	ammo_type = /obj/item/ammo_casing/c45/sp
-	caliber = ".45"
+	caliber = CALIBER_45
 	max_ammo = 8
 
 /obj/item/ammo_box/magazine/m45/emp
 	name = "handgun magazine (.45 EMP)"
-	icon_state = "45-8"
+	icon_state = "emp45-8"
+	base_icon_state = "emp45"
 	ammo_type = /obj/item/ammo_casing/c45/emp
-	caliber = ".45"
+	caliber = CALIBER_45
 	max_ammo = 8
 
 /obj/item/ammo_box/magazine/m45/venom
 	name = "handgun magazine (.45 Venom)"
-	icon_state = "45-8"
+	icon_state = "venom45-8"
+	base_icon_state = "venom45"
 	ammo_type = /obj/item/ammo_casing/c45/venom
-	caliber = ".45"
+	caliber = CALIBER_45
 	max_ammo = 8
 
 /obj/item/ammo_box/magazine/m9mm
