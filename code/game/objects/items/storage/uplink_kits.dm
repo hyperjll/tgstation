@@ -1618,7 +1618,14 @@
 	new /obj/item/pen/edagger(src)
 	new /obj/item/reagent_containers/hypospray/medipen/atropine(src)
 
+/obj/item/storage/box/syndie_kit/smugglednades/PopulateContents()
+	for(var/i in 1 to 5)
+		new /obj/item/mail/traitor/mail_strike(src)
 
+/obj/item/storage/box/syndie_kit/xeno_organ_kit/PopulateContents()
+	new /obj/item/organ/internal/alien/plasmavessel(src)
+	new /obj/item/organ/internal/alien/resinspinner(src)
+	new /obj/item/organ/internal/alien/acid(src)
 
 
 

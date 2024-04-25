@@ -471,3 +471,13 @@
 	new_coin.fire()
 
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+/obj/item/gun/energy/floragun/syndicate
+	name = "floral somatoray"
+	desc = "A tool that discharges controlled radiation which induces mutation in plant cells."
+	icon_state = "flora"
+	inhand_icon_state = "gun"
+	ammo_type = list(/obj/item/ammo_casing/energy/flora/yield, /obj/item/ammo_casing/energy/flora/mut, /obj/item/ammo_casing/energy/flora/revolution, /obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/lasergun/old)
+	modifystate = 1
+	ammo_x_offset = 1
+	selfcharge = 1

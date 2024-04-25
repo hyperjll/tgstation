@@ -522,3 +522,8 @@
 	name = "robusta beans"
 	desc = "A bag containing fresh, dry coffee robusta beans. Ethically sourced and packaged by Waffle Corp."
 	beantype = /obj/item/food/grown/coffee/robusta
+
+
+/obj/item/storage/box/donkpockets/donkpocketsyndi
+	name = "box of donk-pockets"
+	donktype = /obj/item/food/donkpocket/syndi
