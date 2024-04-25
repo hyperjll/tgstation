@@ -1138,6 +1138,16 @@
 	new /obj/item/swapper(src)
 	new /obj/item/swapper(src)
 
+/obj/item/storage/box/syndie_kit/syndifulton/PopulateContents()
+	new /obj/item/book/granter/crafting_recipe/syndifultons(src)
+	for(var/i in 1 to 2)
+		new /obj/item/extraction_pack/non_contractor(src)
+	for(var/i in 1 to 2)
+		new /obj/item/fulton_core/syndicate(src)
+
+
+
+
 #undef KIT_RECON
 #undef KIT_BLOODY_SPAI
 #undef KIT_STEALTHY

@@ -508,3 +508,14 @@
 	new /obj/item/food/grown/banana/bunch/monkeybomb(src)
 	// Somewhere to store it all.
 	new /obj/item/storage/backpack/messenger(src)
+
+/obj/item/storage/toolbox/syndicate/deluxe/PopulateContents() // dont make this carry over the previous stuff
+	new /obj/item/screwdriver/power(src)
+	new /obj/item/weldingtool/experimental(src)
+	new /obj/item/crowbar/red(src)
+	new /obj/item/wirecutters(src, "red")
+	new /obj/item/multitool(src)
+	new /obj/item/clothing/gloves/combat(src)
+	for(var/obj/item/I in contents)
+		I.toolspeed = 0.3
+		I.name = "syndicate [I.name]"
