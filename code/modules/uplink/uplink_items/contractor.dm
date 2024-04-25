@@ -1,6 +1,6 @@
 /datum/uplink_category/contractor
 	name = "Contractor"
-	weight = 10
+	weight = 14
 
 /datum/uplink_item/bundles_tc/contract_kit
 	name = "Contract Kit"

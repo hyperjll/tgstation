@@ -1781,6 +1781,139 @@
 		H.physiology.oxy_mod /= 0.75
 
 
+
+/datum/reagent/medicine/bicaridine
+	name = "Bicaridine"
+	description = "Restores bruising. Overdose causes it instead."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	overdose_threshold = 30
+
+/datum/reagent/medicine/bicaridine/on_mob_life(mob/living/carbon/M)
+	M.adjustBruteLoss(-2*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/medicine/bicaridine/overdose_process(mob/living/M)
+	M.adjustBruteLoss(4*REM, FALSE, FALSE)
+	..()
+	. = 1
+
+/datum/reagent/medicine/dexalin
+	name = "Dexalin"
+	description = "Restores oxygen loss. Overdose causes it instead."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	overdose_threshold = 30
+
+/datum/reagent/medicine/dexalin/on_mob_life(mob/living/carbon/M)
+	M.adjustOxyLoss(-2*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/medicine/dexalin/overdose_process(mob/living/M)
+	M.adjustOxyLoss(4*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/medicine/kelotane
+	name = "Kelotane"
+	description = "Restores fire damage. Overdose causes it instead."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	overdose_threshold = 30
+
+/datum/reagent/medicine/kelotane/on_mob_life(mob/living/carbon/M)
+	M.adjustFireLoss(-2*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/medicine/kelotane/overdose_process(mob/living/M)
+	M.adjustFireLoss(4*REM, FALSE, FALSE)
+	..()
+	. = 1
+
+/datum/reagent/medicine/antitoxin
+	name = "Anti-Toxin"
+	description = "Heals toxin damage and removes toxins in the bloodstream. Overdose causes toxin damage."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	overdose_threshold = 30
+	taste_description = "a roll of gauze"
+
+/datum/reagent/medicine/antitoxin/on_mob_life(mob/living/carbon/M)
+	M.adjustToxLoss(-2*REM, 0)
+	for(var/datum/reagent/toxin/R in M.reagents.reagent_list)
+		M.reagents.remove_reagent(R.type,1)
+	..()
+	. = 1
+
+/datum/reagent/medicine/antitoxin/overdose_process(mob/living/M)
+	M.adjustToxLoss(4*REM, 0) // End result is 2 toxin loss taken, because it heals 2 and then removes 4.
+	..()
+	. = 1
+
+/datum/reagent/medicine/tricordrazine
+	name = "Tricordrazine"
+	description = "Has a high chance to heal all types of damage. Overdose instead causes it."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	overdose_threshold = 30
+	taste_description = "grossness"
+
+/datum/reagent/medicine/tricordrazine/on_mob_life(mob/living/carbon/M)
+	if(prob(80))
+		M.adjustBruteLoss(-1*REM, 0)
+		M.adjustFireLoss(-1*REM, 0)
+		M.adjustOxyLoss(-1*REM, 0)
+		M.adjustToxLoss(-1*REM, 0)
+		. = 1
+	..()
+
+/datum/reagent/medicine/tricordrazine/overdose_process(mob/living/M)
+	M.adjustToxLoss(2*REM, 0)
+	M.adjustOxyLoss(2*REM, 0)
+	M.adjustBruteLoss(2*REM, FALSE, FALSE)
+	M.adjustFireLoss(2*REM, FALSE, FALSE)
+	..()
+	. = 1
+
+/datum/reagent/medicine/barozine
+	name = "Barozine"
+	description = "A potent drug that prevents pressure damage. Causes extreme pain and jittering. Very poisonous when overdosed."
+	reagent_state = LIQUID
+	color = "#EA4F34"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	overdose_threshold = 30
+
+/datum/reagent/medicine/barozine/expose_mob(mob/living/carbon/M)
+	..()
+	if(M.stat == DEAD)
+		return
+	M.adjust_jitter(60 SECONDS)
+
+/datum/reagent/medicine/barozine/on_mob_life(mob/living/carbon/M)
+	if(prob(30))
+		M.adjustFireLoss(1*REM, 0)
+	if(prob(5))
+		M.emote("scream")
+
+	..()
+	. = 1
+
+/datum/reagent/medicine/barozine/on_mob_metabolize(mob/living/M)
+	ADD_TRAIT(M, TRAIT_RESISTHIGHPRESSURE, type)
+	ADD_TRAIT(M, TRAIT_RESISTLOWPRESSURE, type)
+
+/datum/reagent/medicine/barozine/on_mob_end_metabolize(mob/living/M)
+	REMOVE_TRAIT(M, TRAIT_RESISTHIGHPRESSURE, type)
+	REMOVE_TRAIT(M, TRAIT_RESISTLOWPRESSURE, type)
+
+/datum/reagent/medicine/barozine/overdose_process(mob/living/M)
+	M.adjustToxLoss(6*REM, 0)
+	..()
+	. = 1
+
 /datum/reagent/medicine/changelingextract //is this used anywhere?
 	name = "Changeling Regenerative Extract"
 	description = "A highly complex regenerative chemical. Results in limb and organ growth."
@@ -1793,7 +1926,6 @@
 	. = ..()
 	affected_mob.regenerate_limbs()
 	affected_mob.regenerate_organs()
-
 
 /datum/reagent/medicine/experimentalstimulants
 	name = "Experimental Stimulants"
