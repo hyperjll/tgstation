@@ -1104,6 +1104,40 @@
 	for(var/i in 1 to 5)
 		new /obj/item/deployablemine/sleepy(src)
 
+/obj/item/storage/box/syndie_kit/thievesgloves/PopulateContents()
+	new /obj/item/clothing/gloves/chameleon/thiefgloves(src)
+	new /obj/item/screwdriver(src)
+	new /obj/item/multitool(src)
+	new /obj/item/crowbar(src)
+
+/obj/item/storage/box/syndie_kit/trackingimplants/PopulateContents()
+	new /obj/item/implanter/stealthimplanter/tracking(src)
+	for(var/i in 1 to 5)
+		new /obj/item/implantcase/tracking/syndicate(src)
+
+/obj/item/storage/box/syndie_kit/syndiekeys/PopulateContents()
+	for(var/i in 1 to 2)
+		new /obj/item/encryptionkey/syndicate(src)
+
+/obj/item/storage/box/syndie_kit/launchpadcamerabundle/PopulateContents()
+	new /obj/item/stack/sheet/iron/ten(src)
+	new /obj/item/stack/sheet/iron/five(src)
+	for(var/i in 1 to 4)
+		new /obj/item/stack/sheet/glass(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/circuitboard/computer/launchpad_console(src)
+	new /obj/item/circuitboard/machine/launchpad(src)
+	new /obj/item/circuitboard/computer/advanced_camera(src)
+	new /obj/item/stock_parts/servo/femto(src)
+	new /obj/item/stack/ore/bluespace_crystal(src)
+	new /obj/item/wrench(src)
+	new /obj/item/screwdriver(src)
+	new /obj/item/multitool(src)
+
+/obj/item/storage/box/syndie_kit/spininverters/PopulateContents()
+	new /obj/item/swapper(src)
+	new /obj/item/swapper(src)
+
 #undef KIT_RECON
 #undef KIT_BLOODY_SPAI
 #undef KIT_STEALTHY

@@ -558,3 +558,44 @@
 	name = "bottle of laugh syrup"
 	desc = "A pump bottle containing laugh syrup. The product of juicing Laughin' Peas. Fizzy, and seems to change flavour based on what it's used with!"
 	list_reagents = list(/datum/reagent/consumable/laughsyrup = 50)
+
+
+/obj/item/reagent_containers/cup/bottle/omnizine
+	name = "omnizine bottle"
+	desc = "A small bottle of omnizine. Drink in moderation."
+	list_reagents = list(/datum/reagent/medicine/omnizine = 30)
+
+/obj/item/reagent_containers/cup/bottle/probital
+	name = "probital bottle"
+	list_reagents = list(/datum/reagent/medicine/c2/probital = 30)
+
+/obj/item/reagent_containers/cup/bottle/modafinil
+	name = "modafinil bottle"
+	list_reagents = list(/datum/reagent/medicine/modafinil = 30)
+
+/obj/item/reagent_containers/cup/bottle/methamphetamine
+	name = "methamphetamine bottle"
+	list_reagents = list(/datum/reagent/drug/methamphetamine = 30)
+
+/obj/item/reagent_containers/cup/bottle/libital
+	name = "libital bottle"
+	desc = "A small bottle of libital."
+	list_reagents = list(/datum/reagent/medicine/c2/libital = 30)
+
+/obj/item/reagent_containers/cup/bottle/aiuri
+	name = "aiuri bottle"
+	desc = "A small bottle of aiuri."
+	list_reagents = list(/datum/reagent/medicine/c2/aiuri = 30)
+
+/obj/item/reagent_containers/cup/bottle/stimulants
+	name = "stimulants bottle"
+	desc = "A small bottle of stimulants."
+	list_reagents = list(/datum/reagent/medicine/stimulants = 30)
+
+/obj/item/reagent_containers/cup/bottle/nocturine
+	name = "nocturine bottle"
+	list_reagents = list(/datum/reagent/toxin/nocturine = 30)
+
+/obj/item/reagent_containers/cup/bottle/nocturine/full
+	name = "nocturine bottle"
+	list_reagents = list(/datum/reagent/toxin/nocturine = 50)

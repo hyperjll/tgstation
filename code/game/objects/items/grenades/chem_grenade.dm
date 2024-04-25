@@ -830,6 +830,7 @@
 	name = "hellfoam grenade"
 	desc = "BURN!-brand foaming clf3. In a special applicator for rapid purging of wide areas."
 	stage = GRENADE_READY
+	can_dismantle = FALSE
 
 /obj/item/grenade/chem_grenade/syndiclf3/Initialize(mapload)
 	. = ..()
@@ -840,6 +841,9 @@
 	B1.reagents.add_reagent(/datum/reagent/clf3, 50)
 	B2.reagents.add_reagent(/datum/reagent/water, 50)
 	B2.reagents.add_reagent(/datum/reagent/clf3, 50)
+
+	beakers += B1
+	beakers += B2
 
 
 /obj/item/grenade/chem_grenade/highacidfoam
