@@ -88,4 +88,5 @@
 	icon_state = "enotchapple"
 	filling_color = "#FFD700"
 	distill_reagent = null
+	bite_consumption_mod = 10
 	wine_power = 100
