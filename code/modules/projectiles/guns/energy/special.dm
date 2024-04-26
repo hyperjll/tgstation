@@ -481,3 +481,16 @@
 	modifystate = 1
 	ammo_x_offset = 1
 	selfcharge = 1
+
+/obj/item/gun/energy/xenospitter //xenomorph acid gun?
+	name = "xenomorphic pistol"
+	icon = 'icons/obj/weapons/guns/energy.dmi'
+	icon_state = "xenopistol"
+	inhand_icon_state = "gun"
+	shaded_charge = 1
+	desc = "A reagent pistol modeled to look after the alien species it was originally inspired by. \
+			Fires globs of a highly acidic reagent as well as a small amount of neurotoxin."
+	ammo_type = list(/obj/item/ammo_casing/energy/xenoglob)
+	selfcharge = 1
+	charge_delay = 20
+	pin = /obj/item/firing_pin/dna

@@ -481,7 +481,7 @@
 	desc = "A laser pistol with both stun and lethal capabilities, it's been disguised as a floral somatoray for easy concealment. \
 			Also functions as a regular floral somatoray."
 	item = /obj/item/gun/energy/floragun/syndicate
-	cost = 7
+	cost = 8
 	surplus = 5
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 
