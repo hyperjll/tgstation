@@ -240,7 +240,7 @@
 	item = /obj/item/book/granter/martial/plasma_fist
 	restricted_species = list(SPECIES_PLASMAMAN)
 
-/datum/uplink_item/race_restricted/wirecrawl
+/datum/uplink_item/species_restricted/wirecrawl
 	name = "Modified Yellow Slime Extract"
 	desc = "An experimental yellow slime extract that when absorbed by an Ethereal, causes their form to become unstable. \
 			Unstable ethereals can transform into pure electricity, allowing them to travel along power wires."

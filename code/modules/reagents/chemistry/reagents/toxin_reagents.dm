@@ -1494,20 +1494,22 @@
 	var/delayed_organ_damage = 0
 
 /datum/reagent/toxin/nanitedestroyers/on_mob_delete(mob/living/M)
-	var/delayed_toxin_damage = current_cycle*5*REM
+	var/delayed_toxin_damage = current_cycle*2*REM
 	M.log_message("has taken [delayed_toxin_damage] toxin damage from nanite destroyers", LOG_ATTACK)
 	M.adjustToxLoss(delayed_toxin_damage)
 	..()
 
 /datum/reagent/toxin/nanitedestroyers/on_mob_delete(mob/living/M)
-	var/delayed_brute_damage = current_cycle*3*REM
+	var/delayed_brute_damage = current_cycle*1*REM
 	M.log_message("has taken [delayed_brute_damage] brute damage from nanite destroyers", LOG_ATTACK)
 	M.adjustBruteLoss(delayed_brute_damage)
 	..()
 
 /datum/reagent/toxin/nanitedestroyers/on_mob_delete(mob/living/M)
-	var/delayed_organ_damage = current_cycle*5*REM
+	var/delayed_organ_damage = current_cycle*0.5*REM
 	M.log_message("has taken [delayed_organ_damage] organ damage from nanite destroyers", LOG_ATTACK)
+	if(delayed_organ_damage >= 96)
+		delayed_organ_damage = 95
 	M.adjustOrganLoss(ORGAN_SLOT_HEART, delayed_organ_damage)
 	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, delayed_organ_damage)
 	M.adjustOrganLoss(ORGAN_SLOT_LIVER, delayed_organ_damage)
