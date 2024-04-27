@@ -2,7 +2,7 @@
 	name = "biological demolecularisor"
 	desc = "A gun that discharges high amounts of controlled radiation to slowly break a target into component elements."
 	icon_state = "decloner"
-	ammo_type = list(/obj/item/ammo_casing/energy/radiation/weak)
+	ammo_type = list(/obj/item/ammo_casing/energy/radiation/balanced)
 	pin = /obj/item/firing_pin
 	ammo_x_offset = 1
 	selfcharge = 1
@@ -42,3 +42,15 @@
 	selfcharge = 1
 	charge_delay = 20
 	pin = /obj/item/firing_pin/dna
+
+/obj/item/gun/energy/disabler/syndicate
+	name = "disabler"
+	desc = "A self-defense weapon that exhausts organic targets, weakening them until they collapse."
+	icon_state = "disabler"
+	inhand_icon_state = null
+	ammo_type = list(/obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/lasergun)
+	selfcharge = 1
+	ammo_x_offset = 2
+
+/obj/item/gun/energy/gravity_gun/withcore
+	firing_core = TRUE

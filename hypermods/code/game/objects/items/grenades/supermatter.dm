@@ -19,7 +19,7 @@
 	if(!supermatter_turf)
 		return
 
-	playsound(supermatter_turf, 'sound/effects/supermatter_start.ogg', 50, TRUE)
+	playsound(supermatter_turf, 'hypermods/sound/effects/supermatter_start.ogg', 50, TRUE)
 
 	sleep(5 SECONDS)
 	supermatter_kaboom()
@@ -31,7 +31,7 @@
 		return
 	for(var/mob/living/M in view(supermatter_power, supermatter_turf))
 		bang(get_turf(M), M)
-	playsound(supermatter_turf, 'sound/effects/supermatter_loop.ogg', 50, TRUE)
+	playsound(supermatter_turf, 'hypermods/sound/effects/supermatter_loop.ogg', 50, TRUE)
 	for(var/atom/movable/X in orange(supermatter_power, supermatter_turf))
 		if(iseffect(X))
 			continue
@@ -69,7 +69,7 @@
 		return
 
 	STOP_PROCESSING(SSobj, src)
-	playsound(supermatter_turf, 'sound/effects/supermatter_end.ogg', 50, TRUE)
+	playsound(supermatter_turf, 'hypermods/sound/effects/supermatter_end.ogg', 50, TRUE)
 	explosion(src, 0, 0, 6, flame_range = 0)
 	qdel(src)
 

@@ -23,7 +23,7 @@
 	max_integrity = 200
 	resistance_flags = ACID_PROOF | FIRE_PROOF
 	w_class = WEIGHT_CLASS_HUGE
-	hitsound = 'sound/effects/hammerhitbasic.ogg'
+	hitsound = 'hypermods/sound/effects/hammerhitbasic.ogg'
 	slot_flags = ITEM_SLOT_BACK
 	actions_types = list(/datum/action/item_action/charge_hammer)
 	light_system = OVERLAY_LIGHT
@@ -139,7 +139,7 @@
 		var/turf/target_turf = get_turf(target) //Does the nice effects first so whatever happens to what's about to get clapped doesn't affect it
 		var/obj/effect/temp_visual/kinetic_blast/K = new /obj/effect/temp_visual/kinetic_blast(target_turf)
 		K.color = color
-		playsound(loc, 'sound/effects/powerhammerhit.ogg', 80, FALSE) //Mainly this sound
+		playsound(loc, 'hypermods/sound/effects/powerhammerhit.ogg', 80, FALSE) //Mainly this sound
 		playsound(loc, 'sound/effects/explosion3.ogg', 20, TRUE) //Bit of a reverb
 		supercharge() //At start so it doesn't give an unintentional message if you hit yourself
 

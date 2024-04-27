@@ -48,6 +48,7 @@
 	show_in_report = FALSE
 	cost = STATION_TRAIT_COST_LOW
 	report_message = "Ian has gone exploring somewhere in the station."
+	trait_to_give = STATION_TRAIT_IAN_ADVENTURE
 
 /datum/station_trait/ian_adventure/on_round_start()
 	for(var/mob/living/basic/pet/dog/corgi/dog in GLOB.mob_list)
@@ -287,6 +288,7 @@
 	cost = STATION_TRAIT_COST_MINIMAL
 	show_in_report = TRUE
 	var/list/scarves
+	trait_to_give = STATION_TRAIT_SCARVES
 
 /datum/station_trait/scarves/New()
 	. = ..()

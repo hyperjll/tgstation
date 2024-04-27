@@ -632,7 +632,7 @@
 
 /obj/item/ammo_box/nadepouch
 	name = "grenade pouch"
-	icon = 'icons/obj/storage/armaments.dmi'
+	icon = 'hypermods/icons/obj/storage/armaments.dmi'
 	icon_state = "ammopouch"
 	ammo_type = null
 	max_ammo = 5

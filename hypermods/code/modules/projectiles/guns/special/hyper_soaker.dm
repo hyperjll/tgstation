@@ -1,7 +1,7 @@
 /obj/item/gun/water
 	name = "donksoft hyper-soaker"
 	desc = "Harmless fun, unless you're allergic to water."
-	icon = 'icons/obj/weapons/guns/water.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/water.dmi'
 	icon_state = "water"
 	inhand_icon_state = "water"
 	w_class = WEIGHT_CLASS_NORMAL

@@ -4,6 +4,21 @@
 
 // .45 (M1911 + C20r)
 
+/obj/item/ammo_casing/c45/ap
+	name = ".45 armor-piercing bullet casing"
+	desc = "A .45 bullet casing."
+	projectile_type = /obj/projectile/bullet/c45/ap
+
+/obj/item/ammo_casing/c45/hp
+	name = ".45 hollow point bullet casing"
+	desc = "A .45 bullet casing."
+	projectile_type = /obj/projectile/bullet/c45/hp
+
+/obj/item/ammo_casing/c45/inc
+	name = ".45 incendiary bullet casing"
+	desc = "A .45 bullet casing."
+	projectile_type = /obj/projectile/bullet/incendiary/c45
+
 /obj/item/ammo_casing/caseless/c45/cs
 	name = ".45 caseless bullet"
 	desc = "Huh? But i thought..."

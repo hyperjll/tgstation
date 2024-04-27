@@ -20,7 +20,7 @@
 	if(!whitehole_turf)
 		return
 
-	playsound(whitehole_turf, 'sound/effects/whitehole_start.ogg', 50, TRUE)
+	playsound(whitehole_turf, 'hypermods/sound/effects/whitehole_start.ogg', 50, TRUE)
 
 	sleep(5 SECONDS)
 	whitehole_kaboom()
@@ -32,7 +32,7 @@
 		return
 	for(var/mob/living/M in view(whitehole_power, whitehole_turf))
 		bang(get_turf(M), M)
-	playsound(whitehole_turf, 'sound/effects/whitehole_loop.ogg', 50, TRUE)
+	playsound(whitehole_turf, 'hypermods/sound/effects/whitehole_loop.ogg', 50, TRUE)
 	var/list/thrown_items = list()
 	for(var/atom/movable/A in range(whitehole_turf, whitehole_power))
 		if(A.anchored || thrown_items[A])

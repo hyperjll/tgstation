@@ -1,4 +1,4 @@
-/obj/item/clothing/mask/gascig/fakemoustache/syndicate
+/obj/item/clothing/mask/gas/fakemoustache/syndicate
 	name = "fake moustache"
 	desc = "Warning: moustache is fake."
 	icon_state = "fake-moustache"

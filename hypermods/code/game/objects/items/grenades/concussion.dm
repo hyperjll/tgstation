@@ -20,7 +20,7 @@
 	if(!concussion_turf)
 		return
 
-	playsound(concussion_turf, 'sound/weapons/conc_grenade.ogg', 50, TRUE)
+	playsound(concussion_turf, 'hypermods/sound/weapons/conc_grenade.ogg', 50, TRUE)
 
 	return
 

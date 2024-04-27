@@ -709,3 +709,10 @@
 		flags = ANIMATION_RELATIVE,
 	)
 	return ..()
+
+/obj/effect/temp_visual/decoy/tensecond
+	desc = "It's a decoy!"
+	duration = 100
+
+/obj/effect/temp_visual/decoy/fading/onesecond
+	duration = 10

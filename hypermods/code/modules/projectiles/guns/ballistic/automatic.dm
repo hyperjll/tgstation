@@ -15,4 +15,4 @@
 	actions_types = list()
 	mag_display = TRUE
 	mag_display_ammo = FALSE
-	fire_sound = 'sound/weapons/rifleshot.ogg'
+	fire_sound = 'hypermods/sound/weapons/rifleshot.ogg'

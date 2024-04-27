@@ -21,6 +21,30 @@
 
 
 
+/obj/item/ammo_box/magazine/m45/ap
+	name = "handgun magazine (.45 AP)"
+	icon_state = "ap45-8"
+	base_icon_state = "ap45"
+	ammo_type = /obj/item/ammo_casing/c45/ap
+	caliber = CALIBER_45
+	max_ammo = 8
+
+/obj/item/ammo_box/magazine/m45/hp
+	name = "handgun magazine (.45 HP)"
+	icon_state = "hp45-8"
+	base_icon_state = "hp45"
+	ammo_type = /obj/item/ammo_casing/c45/hp
+	caliber = CALIBER_45
+	max_ammo = 8
+
+/obj/item/ammo_box/magazine/m45/inc
+	name = "handgun magazine (.45 incendiary)"
+	icon_state = "inc45-8"
+	base_icon_state = "inc45"
+	ammo_type = /obj/item/ammo_casing/c45/inc
+	caliber = CALIBER_45
+	max_ammo = 8
+
 /obj/item/ammo_box/magazine/m45/cs
 	name = "handgun magazine (.45 Caseless)"
 	icon_state = "cs45-8"

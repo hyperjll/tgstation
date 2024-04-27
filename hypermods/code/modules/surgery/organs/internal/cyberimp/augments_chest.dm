@@ -180,7 +180,7 @@
 /obj/item/organ/internal/cyberimp/chest/spinalspeed/proc/toggle(silent = FALSE)
 	if(!on)
 		if(COOLDOWN_FINISHED(src, startsoundcooldown))
-			playsound(owner, 'sound/effects/spinal_implant_on.ogg', 60)
+			playsound(owner, 'hypermods/sound/effects/spinal_implant_on.ogg', 60)
 			COOLDOWN_START(src, startsoundcooldown, 1 SECONDS)
 		if(syndicate_implant)//the toy doesn't do anything aside from the trail and the sound
 			if(ishuman(owner))
@@ -190,7 +190,7 @@
 		RegisterSignal(owner, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(move_react))
 	else
 		if(COOLDOWN_FINISHED(src, endsoundcooldown))
-			playsound(owner, 'sound/effects/spinal_implant_off.ogg', 70)
+			playsound(owner, 'hypermods/sound/effects/spinal_implant_off.ogg', 70)
 			COOLDOWN_START(src, endsoundcooldown, 1 SECONDS)
 		if(syndicate_implant)
 			if(ishuman(owner))

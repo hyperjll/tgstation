@@ -19,7 +19,7 @@
 	..()
 	if(!armed)
 		armed = TRUE
-		playsound(src, 'sound/effects/c4beep.ogg', 20, 1)
+		playsound(src, 'hypermods/sound/effects/c4beep.ogg', 20, 1)
 
 /obj/item/device/chameleon/bomb/pickup()
 	..()

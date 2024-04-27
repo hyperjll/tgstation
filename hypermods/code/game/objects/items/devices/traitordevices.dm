@@ -297,7 +297,7 @@
 	for(var/obj/machinery/light/L in urange(10, user, 1))
 		L.break_light_tube()
 
-	playsound(sonic_turf, 'sound/effects/light_breaker.ogg', 35, TRUE)
+	playsound(sonic_turf, 'hypermods/sound/effects/light_breaker.ogg', 35, TRUE)
 	if(!IS_TRAITOR(user) || !IS_NUKE_OP(user))
 		to_chat(user, span_notice("You trigger [src]."))
 		return
