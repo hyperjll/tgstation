@@ -15,7 +15,7 @@
 /obj/item/organ/internal/cyberimp/arm/gun/gasharpoon
 	name = "gasharpoon"
 	desc = "A metal gauntlet with a harpoon attatched, powered by gasoline and traditionally used by space-whalers."
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
 	icon_state = "gasharpoon"
 	inhand_icon_state = "gasharpoon"
 	items_to_create = list(/obj/item/gun/gasharpoon)
@@ -35,7 +35,7 @@
 /obj/item/gun/gasharpoon
 	name = "harpoon gun"
 	desc = "A heavily modified harpoon gun, it fires brutal rounds of 'Fuck-You' branded harpoons which are automatically synthesized."
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
 	icon_state = "gasharpoon"
 	inhand_icon_state = "gasharpoon"
 	w_class = WEIGHT_CLASS_NORMAL

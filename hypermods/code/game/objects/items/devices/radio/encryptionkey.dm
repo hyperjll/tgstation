@@ -1,5 +1,6 @@
 /obj/item/encryptionkey/universal
 	name = "universal encryption key"
+	icon = 'hypermods/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "uni_cypherkey"
 	channels = list(RADIO_CHANNEL_SYNDICATE = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_MEDICAL = 1, RADIO_CHANNEL_SERVICE = 1, RADIO_CHANNEL_SUPPLY = 1, RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_CENTCOM = 1)
 	syndie = TRUE

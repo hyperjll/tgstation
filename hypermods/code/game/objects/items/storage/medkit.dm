@@ -1,7 +1,7 @@
 /obj/item/storage/medkit/medical_variety_pack
 	name = "\improper Medical Variety Pack"
 	desc = "It's a bluespace medical kit, it's capable of holding far more medical supplies than normal."
-	icon = 'icons/obj/storage/medkit.dmi'
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "medkit_bluespace"
 
 /obj/item/storage/medkit/medical_variety_pack/PopulateContents()
@@ -20,7 +20,7 @@
 /obj/item/storage/medkit/deluxe_medical_variety_pack
 	name = "\improper Deluxe Medical Variety Pack"
 	desc = "It's a bluespace medical kit, it's capable of holding far more medical supplies than normal."
-	icon = 'icons/obj/storage/medkit.dmi'
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "medkit_bluespace2"
 
 /obj/item/storage/medkit/deluxe_medical_variety_pack/PopulateContents()
@@ -52,7 +52,7 @@
 /obj/item/storage/medkit/medipenkit
 	name = "\improper Medipen Kit"
 	desc = "It's a medical kit designed to contain medipens of various kinds."
-	icon = 'icons/obj/storage/medkit.dmi'
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "medipenkit"
 
 /obj/item/storage/medkit/medipenkit/PopulateContents()
@@ -77,7 +77,7 @@
 
 /obj/item/storage/medkit/syndiecigsvarietypack
 	name = "\improper Syndicate Variety Cigarettes"
-	icon = 'icons/obj/storage/medkit.dmi'
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "cigarettepacker"
 
 /obj/item/storage/medkit/syndiecigsvarietypack/PopulateContents()
@@ -88,7 +88,7 @@
 
 /obj/item/storage/medkit/syndiecigsvarietypackdeluxe
 	name = "\improper Syndicate Variety Cigarettes Deluxe Edition"
-	icon = 'icons/obj/storage/medkit.dmi'
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "cigarettepacker2"
 
 /obj/item/storage/medkit/syndiecigsvarietypackdeluxe/Initialize(mapload)
@@ -124,7 +124,7 @@
 
 /obj/item/storage/medkit/hypospray
 	name = "hypospray kit"
-	icon = 'icons/obj/storage/medkit.dmi'
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "hypospraykit"
 
 /obj/item/storage/medkit/hypospray/PopulateContents()

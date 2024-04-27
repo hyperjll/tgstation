@@ -52,6 +52,7 @@
 /obj/item/pen/cybersun
 	desc = "It's a pen made from valuable materials, 'Cybersun' is engraved on it's body."
 	name = "cybersun pen"
+	icon = 'hypermods/icons/obj/service/bureaucracy.dmi'
 	icon_state = "pen-cybersun"
 	inhand_icon_state = "pen"
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_EARS

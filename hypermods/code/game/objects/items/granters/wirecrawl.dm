@@ -1,7 +1,7 @@
 /obj/item/book/granter/action/wirecrawl
 	name = "modified yellow slime extract"
 	desc = "An experimental yellow slime extract that when absorbed by an Ethereal, grants control over electrical powers."
-	icon = 'icons/obj/science/slimecrossing.dmi'
+	icon = 'hypermods/icons/obj/science/slimecrossing.dmi'
 	icon_state = "myellow"
 	granted_action = /datum/action/cooldown/spell/jaunt/wirecrawl
 	action_name = "Wirecrawling"

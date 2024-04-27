@@ -1,5 +1,6 @@
 /obj/item/ammo_box/magazine/m10mm/cs
 	name = "pistol magazine (10mm Caseless)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "9x19p"
 	base_icon_state = "9x19p"
 	desc = "A 10mm pistol magazine. Loaded with rounds which are engineered without casings, but suffer damage and speed as a result."
@@ -7,6 +8,7 @@
 
 /obj/item/ammo_box/magazine/m10mm/sp
 	name = "pistol magazine (10mm Soporific)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "9x19pS"
 	base_icon_state = "9x19pS"
 	desc= "A 10mm pistol magazine. Loaded with rounds which administer a small dose of tranquilizer on hit."
@@ -14,6 +16,7 @@
 
 /obj/item/ammo_box/magazine/m10mm/emp
 	name = "pistol magazine (10mm EMP)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "9x19pE"
 	base_icon_state = "9x19pE"
 	desc = "A 10mm pistol magazine. Loaded with rounds which release a small EMP pulse upon hitting a target."
@@ -23,6 +26,7 @@
 
 /obj/item/ammo_box/magazine/m45/ap
 	name = "handgun magazine (.45 AP)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "ap45-8"
 	base_icon_state = "ap45"
 	ammo_type = /obj/item/ammo_casing/c45/ap
@@ -31,6 +35,7 @@
 
 /obj/item/ammo_box/magazine/m45/hp
 	name = "handgun magazine (.45 HP)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "hp45-8"
 	base_icon_state = "hp45"
 	ammo_type = /obj/item/ammo_casing/c45/hp
@@ -39,6 +44,7 @@
 
 /obj/item/ammo_box/magazine/m45/inc
 	name = "handgun magazine (.45 incendiary)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "inc45-8"
 	base_icon_state = "inc45"
 	ammo_type = /obj/item/ammo_casing/c45/inc
@@ -47,6 +53,7 @@
 
 /obj/item/ammo_box/magazine/m45/cs
 	name = "handgun magazine (.45 Caseless)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "cs45-8"
 	base_icon_state = "cs45"
 	ammo_type = /obj/item/ammo_casing/caseless/c45/cs
@@ -57,6 +64,7 @@
 
 /obj/item/ammo_box/magazine/m45/sp
 	name = "handgun magazine (.45 Soporific)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "sleep45-8"
 	base_icon_state = "sleep45"
 	ammo_type = /obj/item/ammo_casing/c45/sp
@@ -65,6 +73,7 @@
 
 /obj/item/ammo_box/magazine/m45/emp
 	name = "handgun magazine (.45 EMP)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "emp45-8"
 	base_icon_state = "emp45"
 	ammo_type = /obj/item/ammo_casing/c45/emp
@@ -73,6 +82,7 @@
 
 /obj/item/ammo_box/magazine/m45/venom
 	name = "handgun magazine (.45 Venom)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "venom45-8"
 	base_icon_state = "venom45"
 	ammo_type = /obj/item/ammo_casing/c45/venom

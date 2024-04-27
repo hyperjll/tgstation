@@ -8,11 +8,11 @@
 /obj/item/reagent_containers/hypospray/gorlex
 	name = "gorlex hypospray"
 	desc = "The Vahlen Pharmaceuticals hypospray is a sterile, air-needle autoinjector for rapid administration of drugs to fellow operatives."
-	icon = 'icons/obj/medical/syringe.dmi'
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	inhand_icon_state = "gorlex"
 	worn_icon_state = "gorlex"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/equipment/medical_righthand.dmi'
 	icon_state = "gorlex"
 	volume = 80
 	ignore_flags = 1 // So they can heal their comrades.
@@ -33,6 +33,7 @@
 /obj/item/reagent_containers/hypospray/medipen/resurrector
 	name = "resurrector nanite serum"
 	desc = "A single-use superdose of nanites capable of restoring a corpse to perfect working very quickly. Does nothing on a living person."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "resurrector"
 	list_reagents = list(/datum/reagent/medicine/resurrector_nanites = 1)
 
@@ -68,6 +69,7 @@
 /obj/item/reagent_containers/hypospray/medipen/arithrazine
 	name = "arithrazine medipen"
 	desc = "An autoinjector containing arithrazine, used to quickly purge radiaton at the cost of inflicting brute damage."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenari"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenari"
@@ -78,6 +80,7 @@
 /obj/item/reagent_containers/hypospray/medipen/bicaridine
 	name = "bicaridine medipen"
 	desc = "An autoinjector containing bicaridine, used to quickly heal all forms of brute damage."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenbic"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenbic"
@@ -88,6 +91,7 @@
 /obj/item/reagent_containers/hypospray/medipen/dermaline
 	name = "dermaline medipen"
 	desc = "An autoinjector containing dermaline, used to quickly heal all forms of burn damage."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpender"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpender"
@@ -98,6 +102,7 @@
 /obj/item/reagent_containers/hypospray/medipen/hyronalin
 	name = "hyronalin medipen"
 	desc = "An autoinjector containing hyronalin, used to cure radiation."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenhyv"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenhyv"
@@ -109,6 +114,7 @@
 /obj/item/reagent_containers/hypospray/medipen/morphine
 	name = "morphine medipen"
 	desc = "An autoinjector containing morphine, used to quickly stabilize someone in critical condition. Acts as a decent painkiller."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenmor"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenmor"
@@ -119,6 +125,7 @@
 /obj/item/reagent_containers/hypospray/medipen/pen_acid
 	name = "pentetic acid medipen"
 	desc = "An autoinjector containing pentetic acid, used to quickly heal toxic damage and purge chemicals from the body quickly."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenpea"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenpea"
@@ -129,6 +136,7 @@
 /obj/item/reagent_containers/hypospray/medipen/combatmedicine
 	name = "combat medical medipen"
 	desc = "An autoinjector containing omnizine and tranexamic acid, used to heal all types of damage in the thick of battle."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpen"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpen"
@@ -139,6 +147,7 @@
 /obj/item/reagent_containers/hypospray/medipen/donkcostim
 	name = "donk co. stimpack"
 	desc = "Contains six doses of various donk co. sponsored chemicals, symptoms include: faster brain and motor ability, healing, respiration, temperature stabilization, stun resistance, and temporary blood restoration."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancysyndistimpen"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancysyndistimpen"
@@ -149,6 +158,7 @@
 /obj/item/reagent_containers/hypospray/medipen/juggernaut
 	name = "juggernaut stimpack"
 	desc = "Contains three doses of juggernaut, a specialized combat chemical which nullifies pain and reduces incoming damage."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenmacrostim"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenmacrostim"
@@ -159,6 +169,7 @@
 /obj/item/reagent_containers/hypospray/medipen/cardiaccs
 	name = "cardiac combi-stimpack"
 	desc = "Contains ten doses of epinephrine and saline-glucose solution, giving 2.5 units of each every time it's used."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenmacrostim"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenmacrostim"
@@ -169,6 +180,7 @@
 /obj/item/reagent_containers/hypospray/medipen/bloodlosscs
 	name = "bloodloss combi-stimpack"
 	desc = "Contains ten doses of filgrastim and proconvertin, giving 2.5 units of each every time it's used."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenmacrostim"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenmacrostim"
@@ -179,6 +191,7 @@
 /obj/item/reagent_containers/hypospray/medipen/lifesupportcs
 	name = "lifesupport combi-stimpack"
 	desc = "Contains ten doses of salbutamol and mannitol, giving 2.5 units of each every time it's used."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenmacrostim"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenmacrostim"
@@ -229,6 +242,7 @@
 /obj/item/reagent_containers/hypospray/medipen/experistimulants
 	name = "experimental stimulant injector"
 	desc = "Contains a moderate amount of an experimental stimulant."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "expstimpen"
 	inhand_icon_state = "medipen"
 	base_icon_state = "expstimpen"

@@ -1,6 +1,7 @@
 /obj/item/clothing/suit/armor/webvest
 	name = "web vest"
 	desc = "A bulletproof vest that has been fitted with additional webbing and armor plates for additional protection. It's strangely light-weight and easy to take off and on."
+	icon = 'hypermods/icons/obj/clothing/suits/armor.dmi'
 	icon_state = "webvest"
 	inhand_icon_state = "webvest"
 	blood_overlay_type = "armor"

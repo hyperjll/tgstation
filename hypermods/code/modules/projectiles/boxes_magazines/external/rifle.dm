@@ -3,6 +3,7 @@
 /obj/item/ammo_box/magazine/ak712x82
 	name = "rifle magazine (7.12x82mm)"
 	desc = "A 30-round 7.12x82mm magazine designed with the AKM specifically in mind."
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "ak762x82"
 	ammo_type = /obj/item/ammo_casing/mm712x82
 	caliber = "7.12x82"

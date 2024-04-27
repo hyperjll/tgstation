@@ -1,6 +1,7 @@
 /obj/item/clothing/shoes/bhop/airshoes // better jump shoes?
 	name = "air shoes"
 	desc = "Footwear that uses propulsion technology to keep you above the ground and let you move faster."
+	icon = 'hypermods/icons/obj/clothing/shoes.dmi'
 	icon_state = "airshoes"
 	obj_flags = UNIQUE_RENAME
 	resistance_flags = FIRE_PROOF // Insert super sonic running along lava clip here

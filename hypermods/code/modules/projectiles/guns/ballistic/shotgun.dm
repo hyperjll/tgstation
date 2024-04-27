@@ -31,11 +31,11 @@
 	fire_delay = 2
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "Kammerer"
 	inhand_icon_state = "kammerer"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/kammerer
 	w_class = WEIGHT_CLASS_HUGE
 
@@ -45,7 +45,7 @@
 	name = "\improper Kammerer"
 	desc = "A semi-automatic shotgun with a four-shell capacity. Often favored over compact shotguns for their slightly better performance."
 	fire_delay = 2
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "Kammerer"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/kammerer/syndicate
 	w_class = WEIGHT_CLASS_HUGE

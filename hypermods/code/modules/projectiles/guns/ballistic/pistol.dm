@@ -1,11 +1,11 @@
 /obj/item/gun/ballistic/automatic/pistol/viper
 	name = "\improper Viper"
 	desc = "A classic 10mm handgun with a small magazine capacity. It's capable of automatic fire."
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "Viper"
 	inhand_icon_state = "viper"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m10mm
 	mag_display = TRUE
@@ -31,11 +31,11 @@
 /obj/item/gun/ballistic/automatic/pistol/cobra
 	name = "\improper Cobra"
 	desc = "A classic .45 handgun with a small magazine capacity. It makes very little noise at all when firing."
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "Cobra"
 	inhand_icon_state = "cobra"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m45
 	mag_display = TRUE

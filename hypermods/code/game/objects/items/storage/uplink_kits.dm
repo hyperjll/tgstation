@@ -12,7 +12,7 @@
 /obj/item/storage/harpoon_quiver
 	name = "quiver"
 	desc = "A quiver for holding harpoons."
-	icon = 'icons/obj/storage/storage.dmi'
+	icon = 'hypermods/icons/obj/storage/storage.dmi'
 	slot_flags = ITEM_SLOT_POCKETS
 	icon_state = "quiver"
 	inhand_icon_state = "quiver"

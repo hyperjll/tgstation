@@ -7,7 +7,7 @@
 	name = "Wire Crawl"
 	desc = "Allows you to condense into pure electricity and travel along power wires."
 
-	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = 'hypermods/icons/mob/actions/actions_minor_antag.dmi'
 	button_icon_state = "wirecrawl"
 
 	spell_requirements = NONE
@@ -154,7 +154,7 @@
 /obj/item/wirecrawl
 	name = "wire crawl"
 	desc = "You are unable to hold anything while in this form."
-	icon = 'icons/effects/blood.dmi' // Also within the same blood.dmi to pay respects to it's sister, bloodcrawl.
+	icon = 'hypermods/icons/effects/blood.dmi' // Also within the same blood.dmi to pay respects to it's sister, bloodcrawl.
 	item_flags = ABSTRACT | DROPDEL
 
 /obj/item/wirecrawl/Initialize(mapload)

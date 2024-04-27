@@ -1,7 +1,7 @@
 /obj/item/melee/beelibsword
 	name = "The Stinger"
 	desc = "Taken from a giant bee and folded over one thousand times in pure honey. Can sting through anything."
-	icon = 'icons/obj/weapons/sword.dmi'
+	icon = 'hypermods/icons/obj/weapons/sword.dmi'
 	icon_state = "stinger"
 	inhand_icon_state = "stinger"
 	worn_icon_state = "stinger"

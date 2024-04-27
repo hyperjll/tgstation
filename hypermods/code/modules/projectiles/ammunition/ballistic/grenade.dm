@@ -1,7 +1,7 @@
 /obj/item/ammo_casing/caseless/chinalake
 	name = "Blast Grenade"
 	desc = "A cased high explosive grenade specially designed to be fired out of a china-lake grenade launcher."
-	icon = 'icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	base_icon_state = "Blast_grenade"
 	icon_state = "Blast_grenade"
 	caliber = CALIBER_40MM

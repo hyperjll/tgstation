@@ -1,6 +1,7 @@
 /obj/item/gun/energy/decloner/syndicate
 	name = "biological demolecularisor"
 	desc = "A gun that discharges high amounts of controlled radiation to slowly break a target into component elements."
+	icon = 'hypermods/icons/obj/weapons/guns/energy.dmi'
 	icon_state = "decloner"
 	ammo_type = list(/obj/item/ammo_casing/energy/radiation/balanced)
 	pin = /obj/item/firing_pin
@@ -11,6 +12,7 @@
 /obj/item/gun/energy/mindflayer/syndicate
 	name = "mind flayer"
 	desc = "A vicious weapon with the ability to lock up the motor neurons of the respiratory system and take advantage of the increasing suffocation of the brain to destroy it."
+	icon = 'hypermods/icons/obj/weapons/guns/energy.dmi'
 	icon_state = "mindflayer"
 	inhand_icon_state = "mindflayer"
 	w_class = WEIGHT_CLASS_SMALL
@@ -32,7 +34,7 @@
 
 /obj/item/gun/energy/xenospitter //xenomorph acid gun?
 	name = "xenomorphic pistol"
-	icon = 'icons/obj/weapons/guns/energy.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/energy.dmi'
 	icon_state = "xenopistol"
 	inhand_icon_state = "gun"
 	shaded_charge = 1

@@ -278,7 +278,7 @@
 /obj/item/grenade/chem_grenade/engiairfoam
 	name = "breatheable air grenade"
 	desc = "A foam grenade containing highly condensed breatheable air, pull the pin and launch into a room that has been vacuumed for easy air distribution."
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
 	icon_state = "oxy"
 	stage = GRENADE_READY
 	can_dismantle = FALSE
@@ -302,7 +302,7 @@
 /obj/item/grenade/chem_grenade/saxitoxin
 	name = "saxitoxin grenade"
 	desc = "A smoke grenade containing highly toxin saxitoxin, those who breathe the smoke will suffer burn, toxin, and brain damage."
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
 	icon_state = "saxitoxin"
 	stage = GRENADE_READY
 	can_dismantle = FALSE

@@ -1,7 +1,7 @@
 /obj/item/gun/energy/syndicatelaserrifle
 	name = "\improper laser rifle"
 	desc = "A powerful laser rifle repurposed and maintained by foreign corporations. Originally based off old laser gun models created by Nanotrasen."
-	icon = 'icons/obj/weapons/guns/energy.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/energy.dmi'
 	icon_state = "oldrifle"
 	inhand_icon_state = "arg"
 	fire_delay = 2

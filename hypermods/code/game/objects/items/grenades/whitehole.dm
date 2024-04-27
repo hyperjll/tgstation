@@ -1,7 +1,7 @@
 /obj/item/grenade/whitehole
 	name = "whitehole grenade"
 	desc = "Violently sends everything around from it at extreme speeds before exploding violently. It is set to detonate in 3 seconds."
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
 	icon_state = "whitehole"
 	inhand_icon_state = "flashbang"
 	det_time = 3 SECONDS

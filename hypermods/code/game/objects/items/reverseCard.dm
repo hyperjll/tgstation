@@ -1,6 +1,6 @@
 /obj/item/syndicateReverseCard
 	name = "Red Reverse"
-	icon = 'icons/obj/toys/toy.dmi'
+	icon = 'hypermods/icons/obj/toys/toy.dmi'
 	icon_state = "sc_Red Reverse_uno"
 	desc = "A card."
 	w_class = WEIGHT_CLASS_TINY

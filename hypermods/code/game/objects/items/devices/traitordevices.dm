@@ -1,8 +1,8 @@
 /obj/item/mindbatterer
 	name = "mind batterer"
 	desc = "A strange device with twin antennas."
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
-	icon_state = "batterer"
+	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
+	icon_state = "mindbatterer"
 	throwforce = 5
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 3
@@ -165,7 +165,7 @@
 /obj/item/holodisguiser
 	name = "holographic disguiser"
 	desc = "A device used to change the user's name and appearance randomly."
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
 	icon_state = "enshield0"
 	item_flags = NOBLUDGEON
 	slot_flags = ITEM_SLOT_BELT
@@ -352,7 +352,7 @@
 /obj/item/batterer/cargoshuttle
 	name = "cargo shuttle navigation corruptor"
 	desc = "A strange device with twin antennas and a static-like touch."
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
+	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
 	icon_state = "cargoshuttlebatterer"
 	throwforce = 5
 	w_class = WEIGHT_CLASS_TINY

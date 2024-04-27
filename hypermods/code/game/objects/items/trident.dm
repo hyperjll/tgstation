@@ -1,9 +1,9 @@
 /obj/item/trident
-	icon = 'icons/obj/weapons/spear.dmi'
+	icon = 'hypermods/icons/obj/weapons/spear.dmi'
 	icon_state = "trident0"
 	base_icon_state = "trident"
-	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "trident"
 	desc = "An ancient relic often associated with the sea."
 	force = 7

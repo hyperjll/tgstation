@@ -2,11 +2,11 @@
  * Vxtvul Hammer
  */
 /obj/item/melee/vxtvulhammer
-	icon = 'icons/obj/weapons/hammer.dmi'
+	icon = 'hypermods/icons/obj/weapons/hammer.dmi'
 	icon_state = "vxtvul_hammer0-0"
 	base_icon_state = "vxtvul_hammer"
-	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/hammers_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/hammers_righthand.dmi'
 	name = "Vxtvul Hammer"
 	desc = "A relic sledgehammer with charge packs wired to two blast pads on its head. \
 			While wielded in two hands, the user can charge a massive blow that will shatter construction and hurl bodies."

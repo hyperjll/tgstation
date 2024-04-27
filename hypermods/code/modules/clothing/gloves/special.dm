@@ -1,6 +1,7 @@
 /obj/item/clothing/gloves/knifeboxing
 	name = "bladed gloves"
 	desc = "I'm here to punch people in the face with blades."
+	icon = 'hypermods/icons/obj/clothing/gloves.dmi'
 	icon_state = "bladed"
 	inhand_icon_state = "latex_gloves" // not super obvious this way.
 

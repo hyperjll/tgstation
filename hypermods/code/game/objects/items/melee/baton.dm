@@ -1,11 +1,11 @@
 /obj/item/melee/baton/donkbat
 	name = "toy baseball bat"
 	desc = "A colorful foam baseball bat. The label on the handle reads Donksoft. Feels...heavy."
-	icon = 'icons/obj/weapons/bat.dmi'
+	icon = 'hypermods/icons/obj/weapons/bat.dmi'
 	icon_state = "baseball_bat_donk"
 	inhand_icon_state = "baseball_bat_donk"
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/melee_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 10
 	stamina_damage = 40

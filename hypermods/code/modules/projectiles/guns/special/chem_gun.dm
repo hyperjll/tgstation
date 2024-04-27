@@ -57,6 +57,7 @@
 /obj/item/gun/toxicreagentgun
 	name = "toxic reagent gun"
 	desc = "A weapon favored by crazed doctors all around for it's ability to quickly administer debilitating drugs in even the most unwilling of patients."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "chemguntox"
 	inhand_icon_state = "syringegun"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -124,6 +125,7 @@
 /obj/item/gun/explosivereagentgun
 	name = "explosive reagent gun"
 	desc = "A weapon favored by pyrotechnicians all around for it's ability to quickly turn any living beings into walking bombs."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "chemgunexplosive"
 	inhand_icon_state = "syringegun"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -185,6 +187,7 @@
 /obj/item/gun/medicalreagentgun
 	name = "medical reagent gun"
 	desc = "A weapon favored by nuclear operative medics for it's ability to quickly get their teammates back into the fight."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "chemgunmed"
 	inhand_icon_state = "syringegun"
 	w_class = WEIGHT_CLASS_NORMAL

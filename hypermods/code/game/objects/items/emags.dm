@@ -5,6 +5,7 @@
 /obj/item/card/emag/botemagger
 	desc = "It's a card with a magnetic strip attached to some circuitry. It looks... off, somehow."
 	name = "bot behavior sequencer"
+	icon = 'hypermods/icons/obj/card.dmi'
 	icon_state = "botmag"
 	inhand_icon_state = "card-id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
@@ -32,6 +33,7 @@
 /obj/item/card/emag/doorjack/jester
 	name = "jestographic sequencer"
 	desc = "It's a colorful card with electronics attached to it. The phrase 'Tastes like electromagnetic bananium.' is written on the back."
+	icon = 'hypermods/icons/obj/card.dmi'
 	icon_state = "jester"
 	charge_time = 600 // 1 minute
 

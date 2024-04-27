@@ -1,10 +1,10 @@
 /obj/item/mantis/blade
 	name = "mantis blade"
 	desc = "A blade designed to be hidden just beneath the skin. The brain is directly linked to this bad boy, allowing it to spring into action."
-	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "mantis"
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/swords_righthand.dmi'
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	force = 20
 	armour_penetration = 30

@@ -28,6 +28,7 @@
 	seed = /obj/item/seeds/apple/gold/notch/enchanted
 	name = "enchanted notch apple"
 	desc = "It's wonderful to look at."
+	icon = 'hypermods/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "enotchapple"
 	filling_color = "#FFD700"
 	distill_reagent = null

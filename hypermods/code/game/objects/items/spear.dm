@@ -3,11 +3,11 @@
  */
 
 /obj/item/spear/energy
-	icon = 'icons/obj/weapons/transforming_energy.dmi'
+	icon = 'hypermods/icons/obj/weapons/transforming_energy.dmi'
 	icon_state = "espearred0"
 	base_icon_state = "espearred"
-	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "energy spear"
 	desc = "A robust and deadly weapon of ancient design fitted with hardlight technology."
 	force = 8

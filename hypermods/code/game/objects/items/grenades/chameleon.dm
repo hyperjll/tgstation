@@ -1,7 +1,7 @@
 /obj/item/device/chameleon/bomb
 	name = "chameleon bomb"
 	desc = "Hit the bomb on any object to disguise it as that object. Use the bomb in hand to arm/disarm it. The bomb will explode when anyone tries to pick up the armed bomb."
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
 	icon_state = "cham_bomb"
 	var/dev_range = 0
 	var/lar_range = 0

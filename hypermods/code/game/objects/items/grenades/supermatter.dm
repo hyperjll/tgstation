@@ -1,7 +1,7 @@
 /obj/item/grenade/supermatter
 	name = "supermatter grenade"
 	desc = "Pulls in everything nearby and then produces a minor explosion. It is set to detonate in 3 seconds."
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
 	icon_state = "supermatter"
 	inhand_icon_state = "flashbang"
 	det_time = 3 SECONDS

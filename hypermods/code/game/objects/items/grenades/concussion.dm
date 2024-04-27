@@ -1,7 +1,7 @@
 /obj/item/grenade/concussive
 	name = "concussion grenade"
 	desc = "Violently sends everything around from it at extreme speeds and stunning everyone caught in the blast for an extended period. It is set to detonate in 3 seconds."
-	icon = 'icons/obj/weapons/grenade.dmi'
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
 	icon_state = "concussive"
 	inhand_icon_state = "flashbang"
 	det_time = 3 SECONDS

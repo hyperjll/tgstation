@@ -1,11 +1,11 @@
 /obj/item/chainsaw/botany
 	name = "botany chainsaw"
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans. Excellent in cutting down plants and vines."
-	icon = 'icons/obj/weapons/chainsaw.dmi'
+	icon = 'hypermods/icons/obj/weapons/chainsaw.dmi'
 	icon_state = "c_saw_off"
 	inhand_icon_state = "c_saw_off"
-	lefthand_file = 'icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/chainsaw_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/chainsaw_righthand.dmi'
 	tool_behaviour = TOOL_SAW
 	force = 3
 	demolition_mod = 1
@@ -32,11 +32,11 @@
 /obj/item/chainsaw/botany/syndicate
 	name = "syndicate chainsaw"
 	desc = "A powerful versatile power tool. Useful for limbing trees and delimbing humans. Excellent in cutting down plants and vines."
-	icon = 'icons/obj/weapons/chainsaw.dmi'
+	icon = 'hypermods/icons/obj/weapons/chainsaw.dmi'
 	icon_state = "c_saw_s_off"
 	inhand_icon_state = "c_saw_s_off"
-	lefthand_file = 'icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/chainsaw_righthand.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/chainsaw_righthand.dmi'
 	force = 13
 	demolition_mod = 1.5
 	force_on = 35

@@ -30,9 +30,11 @@
 /obj/item/fireaxe/energy
 	name = "energy fire axe"
 	desc = "A massive, two handed, energy-based hardlight axe capable of cutting through solid metal. 'Glory to atmosia' is carved on the side of the handle."
-	icon = 'icons/obj/weapons/fireaxe.dmi'
+	icon = 'hypermods/icons/obj/weapons/fireaxe.dmi'
 	icon_state = "energy-fireaxe0"
 	base_icon_state = "energy-fireaxe"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/axes_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/axes_righthand.dmi'
 	demolition_mod = 4 // DESTROY
 	armour_penetration = 50 // Probably doesn't care much for armor given how it can destroy solid metal structures
 	block_chance = 50 // Big handle and large flat energy blade, good for blocking things
