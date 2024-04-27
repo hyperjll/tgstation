@@ -91,7 +91,7 @@
 
 /datum/uplink_item/dangerous/revolver
 	name = "Syndicate Revolver"
-	desc = "Waffle Co.'s modernized Syndicate revolver. Fires 7 brutal rounds of .357 Magnum."
+	desc = "Waffle Co.'s modernized Syndicate revolver. Utilizes bluespace technology to have 12 chambers specifically designed to fire brutal rounds of .357 Magnum."
 	item = /obj/item/gun/ballistic/revolver/syndicate
 	cost = 13
 	surplus = 50

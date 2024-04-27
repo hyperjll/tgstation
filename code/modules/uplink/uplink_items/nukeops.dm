@@ -399,7 +399,8 @@
 	name = "Buzzkill Grenade Box"
 	desc = "A box with three grenades that release a swarm of angry bees upon activation. These bees indiscriminately attack friend or foe \
 		with random toxins. Courtesy of the BLF and Tiger Cooperative."
-	item = /obj/item/storage/box/syndie_kit/bee_grenades
+	item = /obj/item/ammo_box/nadepouch/wasp
+	cost = 8 // Discounted as killer bees cant tell friend from foe, makes em a liability.
 
 /datum/uplink_item/explosives/grenades/virus_grenade
 	name = "Fungal Tuberculosis Grenade Box"
@@ -410,10 +411,10 @@
 	restricted = TRUE
 
 /datum/uplink_item/explosives/grenades/viscerators
-	name = "Viscerator Delivery Grenade Box"
-	desc = "A box containing unique grenades that deploys a swarm of viscerators upon activation, which will chase down and shred \
-		any non-operatives in the area."
-	item = /obj/item/storage/box/syndie_kit/manhack_grenades
+	name = "Viscerator Delivery Grenade Pouch"
+	desc = "A pouch containing unique grenades that deploys a swarm of viscerators upon activation, which will chase down and shred \
+			any non-operatives in the area."
+	item = /obj/item/ammo_box/nadepouch/visc
 
 // ~~ Grenadier's Belt Kit ~~
 
@@ -751,12 +752,6 @@
 	item = /obj/item/storage/box/syndie_kit/imp_deniability
 	cost = 6
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_SPY
-
-/datum/uplink_item/implants/nuclear/reviver
-	name = "Reviver Implant"
-	desc = "This implant will attempt to revive and heal you if you lose consciousness. Comes with an autosurgeon."
-	item = /obj/item/autosurgeon/syndicate/reviver
-	cost = 8
 
 /datum/uplink_item/implants/nuclear/thermals
 	name = "Thermal Eyes"

@@ -22,16 +22,6 @@
 	cost = 4
 	surplus = 66
 
-/datum/uplink_item/device_tools/encryptionkey
-	name = "Syndicate Encryption Key"
-	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \
-			as well as talk on an encrypted Syndicate channel with other agents that have the same key. In addition, this key also protects \
-			your headset from radio jammers."
-	item = /obj/item/encryptionkey/syndicate
-	cost = 2
-	surplus = 75
-	restricted = TRUE
-
 /datum/uplink_item/device_tools/syndietome
 	name = "Syndicate Tome"
 	desc = "Using rare artifacts acquired at great cost, the Syndicate has reverse engineered \
@@ -200,14 +190,6 @@
 			in electronic devices, subverts intended functions, and easily breaks security mechanisms. Cannot be used to open airlocks."
 	item = /obj/item/card/emag
 	cost = 4
-
-/datum/uplink_item/device_tools/stimpack
-	name = "Stimpack"
-	desc = "Stimpacks, the tool of many great heroes, make you nearly immune to stuns and knockdowns for about \
-			5 minutes after injection."
-	item = /obj/item/reagent_containers/hypospray/medipen/stimulants
-	cost = 5
-	surplus = 90
 
 /datum/uplink_item/device_tools/super_pointy_tape
 	name = "Super Pointy Tape"
