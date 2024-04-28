@@ -175,3 +175,12 @@
 	var/limbs = user.held_items.len
 	user.change_number_of_hands(limbs+1)
 	to_chat(user, "You feel more dexterous")
+
+/datum/uplink_item/device_tools/syndieomnitool
+	name = "Syndicate Holotool"
+	desc = "Thanks to our agents for procuring NT's Experimental Holotool, we've been able to replicate the design for ourselves. \
+			This holotool can be switched between all forms of basic tools, and starts with a scarlet color which can be changed."
+	item = /obj/item/holotool/syndicate
+	cost = 4
+	surplus = 40
+	illegal_tech = FALSE // NT is already walking around with this, pretty sure it ain't illegal.

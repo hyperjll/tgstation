@@ -1,8 +1,11 @@
 /obj/item/clothing/shoes/magboots/syndie/advanced
 	name = "advanced blood-red magboots"
 	desc = "Reverse-engineered magnetic boots that have a heavy rotating magnetic pull. Property of Gorlex Marauders and Cybersun Industries."
+	icon = 'hypermods/icons/obj/clothing/shoes.dmi'
 	icon_state = "syndiemag0"
 	base_icon_state = "syndiemag"
+	worn_icon = 'hypermods/icons/mob/clothing/feet.dmi'
+	worn_icon_state = "syndiemag0"
 	slowdown_active = SHOES_SLOWDOWN // ZERO active slowdown
 	var/gravmode = 0
 	var/gravmodetext = "disabled" // This feels like cheating.

@@ -23,3 +23,8 @@
 	var/mob/living/carbon/H = target
 	if(ishuman(target) && proximity_flag)
 		H.reagents.add_reagent(/datum/reagent/mutationtoxin/felinid, 2)
+
+
+/obj/item/switchblade/backstab/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/backstabs, 2, 2 SECONDS) // 40 damage, 2s CD

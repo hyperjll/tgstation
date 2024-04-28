@@ -49,7 +49,7 @@
 	name = "Mind Batterer"
 	desc = "A device with twin attennas. When activated it acts like a mental flashbang to everyone nearby except the user. \
 			Has a 75% chance to work, and can only be used three times before being burnt out."
-	item = /obj/item/batterer
+	item = /obj/item/mindbatterer
 	cost = 4
 	surplus = 30
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS) // Would easily fuck over your fellow operatives or make taking down high priority targets too easy.

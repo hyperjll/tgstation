@@ -3,6 +3,8 @@
 	desc = "A sturdy helmet outfitted with extensive webbing and armor plating. It's strangely light-weight and easy to take off and on."
 	icon = 'hypermods/icons/obj/clothing/head/helmet.dmi'
 	icon_state = "webhelmet"
+	worn_icon = 'hypermods/icons/mob/clothing/head/helmet.dmi'
+	worn_icon_state = "webhelmet"
 	inhand_icon_state = "helmet"
 	armor_type = /datum/armor/webhelmet
 	dog_fashion = null

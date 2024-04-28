@@ -3,6 +3,8 @@
 	desc = "I'm here to punch people in the face with blades."
 	icon = 'hypermods/icons/obj/clothing/gloves.dmi'
 	icon_state = "bladed"
+	worn_icon = 'hypermods/icons/mob/clothing/hands.dmi'
+	worn_icon_state = "knife_boxing"
 	inhand_icon_state = "latex_gloves" // not super obvious this way.
 
 /obj/item/clothing/gloves/knifeboxing

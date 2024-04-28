@@ -42,3 +42,38 @@
 	force_on = 35
 	icon_name = "c_saw_s"
 	item_name = "c_saw_s"
+
+
+/obj/item/chainsaw/energy
+	name = "energy chainsaw"
+	desc = "A powerful versatile power tool. Uses hardlight technology to tear away at your target."
+	icon = 'hypermods/icons/obj/weapons/chainsaw.dmi'
+	icon_state = "echainsaw_off"
+	inhand_icon_state = "echainsaw_off"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/chainsaw_righthand.dmi'
+	force = 15
+	demolition_mod = 2
+	force_on = 45
+
+/obj/item/chainsaw/energy/attack_self(mob/user)
+	on = !on
+	to_chat(user, "As you pull the starting cord dangling from [src], [on ? "it begins to whirr." : "the chain stops moving."]")
+	force = on ? force_on : initial(force)
+	throwforce = on ? force_on : initial(force)
+	icon_state = "echainsaw_[on ? "on" : "off"]"
+	inhand_icon_state = "echainsaw_[on ? "on" : "off"]"
+	var/datum/component/butchering/butchering = src.GetComponent(/datum/component/butchering)
+	butchering.butchering_enabled = on
+
+	if(on)
+		hitsound = 'sound/weapons/chainsawhit.ogg'
+		chainsaw_loop.start()
+	else
+		hitsound = SFX_SWING_HIT
+		chainsaw_loop.stop()
+
+	toolspeed = on ? 0.5 : initial(toolspeed) //Turning it on halves the speed
+	if(src == user.get_active_held_item()) //update inhands
+		user.update_held_items()
+	update_item_action_buttons()

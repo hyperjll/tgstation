@@ -7,6 +7,13 @@
 	category = /datum/uplink_category/dangerous
 
 
+/datum/uplink_item/dangerous/backstab
+	name = "Backstabbing Switchblade"
+	desc = "This switchblade has a unique shape that makes it especially lethal when lodged in someone's backside. \
+			Still does a moderate amount of damage when applied from the front."
+	item = /obj/item/switchblade/backstab
+	cost = 4
+
 /datum/uplink_item/dangerous/beesword
 	name = "The Stinger"
 	desc = "A sword provided to high-ranking staff of the Bee Liberation Front and often seen as it's 'pride and joy'. \
@@ -66,6 +73,18 @@
 	progression_minimum = 30 MINUTES
 	surplus = 20
 	cost = 10
+	illegal_tech = TRUE
+
+/datum/uplink_item/dangerous/echainsaw
+	name = "Energy Chainsaw"
+	desc = "A 'Champions-of-Evil' branded chainsaw utilizing hardlight technology for it's countless razor-like blades. \
+			Excellent for demolishing structures and ripping (and tearing) your foes apart! \
+			Deals significantly high damage, though it's difficult to conceal and lumber around. \
+			Excellent when used with one of our Anti-Drop implants."
+	item = /obj/item/chainsaw/energy
+	progression_minimum = 30 MINUTES
+	surplus = 0
+	cost = 15
 	illegal_tech = TRUE
 
 /datum/uplink_item/dangerous/m1911pistol

@@ -4,6 +4,8 @@
 	icon = 'hypermods/icons/obj/clothing/suits/armor.dmi'
 	icon_state = "webvest"
 	inhand_icon_state = "webvest"
+	worn_icon = 'hypermods/icons/mob/clothing/suits/armor.dmi'
+	worn_icon_state = "webvest"
 	blood_overlay_type = "armor"
 	armor_type = /datum/armor/armor_webvest
 	strip_delay = 120

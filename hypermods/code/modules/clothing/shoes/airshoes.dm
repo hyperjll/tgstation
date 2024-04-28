@@ -3,6 +3,8 @@
 	desc = "Footwear that uses propulsion technology to keep you above the ground and let you move faster."
 	icon = 'hypermods/icons/obj/clothing/shoes.dmi'
 	icon_state = "airshoes"
+	worn_icon = 'hypermods/icons/mob/clothing/feet.dmi'
+	worn_icon_state = "aieshoes"
 	obj_flags = UNIQUE_RENAME
 	resistance_flags = FIRE_PROOF // Insert super sonic running along lava clip here
 	actions_types = list(/datum/action/item_action/airshoes) // This is defined in augments_legs.dm cuz i made the implant version first. - hyperjll
