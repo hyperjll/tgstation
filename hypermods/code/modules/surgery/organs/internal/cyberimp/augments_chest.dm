@@ -150,6 +150,7 @@
 	name = "neural overclocker implant"
 	desc = "Stimulates your central nervous system in order to enable you to perform muscle movements faster. Careful not to overuse it."
 	slot = ORGAN_SLOT_SPINAL_AUG
+	icon = 'hypermods/icons/obj/medical/organs.dmi'
 	icon_state = "imp_spinal"
 	implant_overlay = null
 	implant_color = null
