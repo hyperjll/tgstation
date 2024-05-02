@@ -49,3 +49,31 @@
 	icon_state = "Kammerer"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/kammerer/syndicate
 	w_class = WEIGHT_CLASS_HUGE
+
+/obj/item/gun/ballistic/shotgun/automatic/combat/nopin
+	pin = null
+
+/obj/item/gun/ballistic/shotgun/automatic/combat/kammerer/nopin
+	pin = null
+
+/obj/item/gun/ballistic/shotgun/enforcer
+	name = "\improper Enforcer"
+	desc = "A semi-auto shotgun for combat in narrow corridors, originally conceived to compete against the syndicate's famous 'Bulldog'. Must be loaded with shells one-by-one for a maximum of 7 shells."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "Enforcer"
+	inhand_icon_state = "enforcer"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	w_class = WEIGHT_CLASS_HUGE
+	weapon_weight = WEAPON_MEDIUM
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/enforcer
+	can_suppress = FALSE
+	burst_size = 1
+	fire_delay = 2
+	pin = /obj/item/firing_pin
+	actions_types = list()
+	semi_auto = TRUE
+	custom_price = 7500
+
+/obj/item/gun/ballistic/shotgun/enforcer/nopin
+	pin = null

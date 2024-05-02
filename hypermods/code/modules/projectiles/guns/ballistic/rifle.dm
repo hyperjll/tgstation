@@ -1,0 +1,24 @@
+/obj/item/gun/ballistic/rifle/sniper_rifle/hristov
+	name = "\improper Hristov"
+	desc = "A long ranged weapon that does significant damage. Often found in the hands of Nanotrasen's snipers. Has an internal magazine."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "Hristov"
+	inhand_icon_state = "hristov"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	fire_sound = "sound/weapons/sniper_shot.ogg"
+	fire_sound_volume = 90
+	vary_fire_sound = FALSE
+	load_sound = "sound/weapons/sniper_mag_insert.ogg"
+	rack_sound = "sound/weapons/sniper_rack.ogg"
+	recoil = 2
+	rack_delay = 1 SECONDS
+	weapon_weight = WEAPON_HEAVY
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/hristov
+	spread = 0
+	w_class = WEIGHT_CLASS_HUGE
+	slot_flags = ITEM_SLOT_BACK
+	actions_types = list()
+	bolt_type = BOLT_TYPE_LOCKING
+	bolt_locked = FALSE
+	custom_price = 10000

@@ -24,3 +24,36 @@
 // .50AE (Desert Eagle)
 
 
+
+// .38 (MK58 Pistol)
+
+/obj/item/ammo_casing/c38
+	name = ".38 special bullet casing"
+	desc = "A .38 special bullet casing."
+	caliber = CALIBER_38
+	projectile_type = /obj/projectile/bullet/c38
+
+/obj/item/ammo_casing/c38/rubber
+	name = ".38 rubber bullet casing"
+	desc = "A .38 rubber bullet casing."
+	projectile_type = /obj/projectile/bullet/c38/rubber
+
+/obj/item/ammo_casing/c38/ap
+	name = ".38 armor-piercing bullet casing"
+	desc = "A .38 armor-piercing bullet casing."
+	projectile_type = /obj/projectile/bullet/c38/ap
+
+/obj/item/ammo_casing/c38/frost
+	name = ".38 frost bullet casing"
+	desc = "A .38 frost bullet casing."
+	projectile_type = /obj/projectile/bullet/c38/frost
+
+/obj/item/ammo_casing/c38/talon
+	name = ".38 talon bullet casing"
+	desc = "A .38 talon bullet casing."
+	projectile_type = /obj/projectile/bullet/c38/talon
+
+/obj/item/ammo_casing/c38/bluespace
+	name = ".38 bluespace bullet casing"
+	desc = "A .38 bluespace bullet casing."
+	projectile_type = /obj/projectile/bullet/c38/bluespace

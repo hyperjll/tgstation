@@ -1,81 +1,3 @@
-// .223 (M-90gl Carbine)
-
-/obj/projectile/bullet/a223
-	name = ".223 bullet"
-	damage = 35
-	armour_penetration = 30
-	wound_bonus = -40
-
-/obj/projectile/bullet/a223/weak //centcom
-	damage = 20
-
-/obj/projectile/bullet/a223/phasic
-	name = ".223 phasic bullet"
-	icon_state = "gaussphase"
-	damage = 30
-	armour_penetration = 100
-	projectile_phasing =  PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF | PASSMACHINE | PASSSTRUCTURE | PASSDOORS
-
-// .310 Strilka (Sakhno Rifle)
-
-/obj/projectile/bullet/strilka310
-	name = ".310 Strilka bullet"
-	damage = 60
-	armour_penetration = 10
-	wound_bonus = -45
-	wound_falloff_tile = 0
-
-/obj/projectile/bullet/strilka310/surplus
-	name = ".310 Strilka surplus bullet"
-	weak_against_armour = TRUE //this is specifically more important for fighting carbons than fighting noncarbons. Against a simple mob, this is still a full force bullet
-	armour_penetration = 0
-
-/obj/projectile/bullet/strilka310/enchanted
-	name = "enchanted .310 bullet"
-	damage = 20
-	stamina = 80
-
-// Harpoons (Harpoon Gun)
-
-/obj/projectile/bullet/harpoon
-	name = "harpoon"
-	icon_state = "gauss"
-	damage = 60
-	armour_penetration = 50
-	wound_bonus = -20
-	bare_wound_bonus = 80
-	embedding = list(embed_chance=100, fall_chance=3, jostle_chance=4, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=6, rip_time=10)
-	wound_falloff_tile = -5
-	shrapnel_type = null
-
-// Rebar (Rebar Crossbow)
-/obj/projectile/bullet/rebar
-	name = "rebar"
-	icon_state = "rebar"
-	damage = 30
-	speed = 0.4
-	dismemberment = 1 //because a 1 in 100 chance to just blow someones arm off is enough to be cool but also not enough to be reliable
-	armour_penetration = 10
-	wound_bonus = -20
-	bare_wound_bonus = 20
-	embedding = list(embed_chance=60, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=2, rip_time=10)
-	embed_falloff_tile = -5
-	wound_falloff_tile = -2
-	shrapnel_type = /obj/item/stack/rods
-
-/obj/projectile/bullet/rebarsyndie
-	name = "rebar"
-	icon_state = "rebar"
-	damage = 35
-	speed = 0.4
-	dismemberment = 2 //It's a budget sniper rifle.
-	armour_penetration = 20 //A bit better versus armor. Gets past anti laser armor or a vest, but doesnt wound proc on sec armor.
-	wound_bonus = 10
-	bare_wound_bonus = 10
-	embedding = list(embed_chance=80, fall_chance=1, jostle_chance=3, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=2, rip_time=14)
-	embed_falloff_tile = -3
-	shrapnel_type = /obj/item/stack/rods
-
 // AKM Boollets
 
 /obj/projectile/bullet/mm712x82
@@ -104,3 +26,70 @@
 	name = "7.12x82mm incendiary bullet"
 	damage = 27
 	fire_stacks = 2
+
+// 5.56mm (Drozd SMG + Lecter)
+
+/obj/projectile/bullet/a556
+	name = "5.56mm bullet"
+	damage = 24
+	wound_bonus = -40
+
+/obj/projectile/bullet/a556/ap
+	name = "5.56mm armor-piercing bullet"
+	damage = 20
+	armour_penetration = 50
+
+/obj/projectile/bullet/incendiary/a556
+	name = "5.56mm incendiary bullet"
+	damage = 18
+	fire_stacks = 2
+
+/obj/projectile/bullet/a556/rubber
+	name = "5.56mm rubber bullet"
+	damage = 6
+	stamina = 40
+	sharpness = NONE
+
+// 7.62 (Hristov)
+
+/obj/projectile/bullet/a762
+	name = "7.62mm bullet"
+	speed = 0.3
+	damage = 60
+	wound_bonus = -35
+	wound_falloff_tile = 0
+	demolition_mod = 1.2
+
+/obj/projectile/bullet/a762/raze
+	name = "7.62mm Raze bullet"
+	damage = 40
+	var/radiation_chance = 60
+
+/obj/projectile/bullet/a762/raze/on_hit(atom/target, blocked, pierce_hit)
+	. = ..()
+	if (ishuman(target) && prob(radiation_chance))
+		radiation_pulse(target, max_range = 0, threshold = RAD_FULL_INSULATION)
+	return BULLET_ACT_HIT
+
+/obj/projectile/bullet/a762/pen
+	name = "7.62mm anti-material bullet"
+	damage = 52
+	armour_penetration = 40
+	projectile_piercing = PASSSTRUCTURE
+	demolition_mod = 1.5 // anti-armor
+
+/obj/projectile/bullet/a762/vulcan
+	name = "7.62mm Vulcan bullet"
+	damage = 47
+
+/obj/projectile/bullet/a762/vulcan/on_hit(atom/target, blocked = FALSE, pierce_hit) //God-forsaken mutant of explosion and incendiary code that makes it so it does an explosion basically without the throwing around
+	..()
+	var/turf/central_point = get_turf(target)
+	playsound(loc, 'sound/effects/explosion1.ogg', 20, TRUE)
+	new /obj/effect/hotspot(central_point)
+	central_point.hotspot_expose(700, 50, 1)
+	for(var/turf/warm_spot in RANGE_TURFS(2, central_point)) //Checks all tiles within two spaces of the center
+		if(prob(50) && !isspaceturf(warm_spot) && !warm_spot.density)
+			new /obj/effect/hotspot(warm_spot)
+			warm_spot.hotspot_expose(700, 50, 1)
+	return BULLET_ACT_HIT

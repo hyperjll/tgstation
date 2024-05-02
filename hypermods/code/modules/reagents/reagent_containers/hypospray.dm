@@ -1,3 +1,8 @@
+/obj/item/reagent_containers/hypospray/buyable
+	icon_state = "combat_hypo"
+	inhand_icon_state = "combat_hypo"
+	worn_icon_state = "hypo"
+
 /obj/item/reagent_containers/hypospray/hacked
 	icon_state = "combat_hypo"
 	inhand_icon_state = "combat_hypo"

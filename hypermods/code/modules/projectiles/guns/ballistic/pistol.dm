@@ -68,3 +68,32 @@
 /obj/item/gun/ballistic/automatic/pistol/deagle/implant
 	name = "desert eagle implant"
 	desc = "A modified version of the desert eagle placed inside of the forearm, allows for easy concealment."
+
+
+/obj/item/gun/ballistic/automatic/pistol/mk58
+	name = "\improper Mk58"
+	desc = "A classic .38 handgun with a small magazine capacity."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "Mk58"
+	inhand_icon_state = "mk58"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	w_class = WEIGHT_CLASS_SMALL
+	accepted_magazine_type = /obj/item/ammo_box/magazine/v38
+	mag_display = TRUE
+	can_suppress = FALSE
+	fire_sound = "sound/weapons/pistolshotsmall.ogg"
+	custom_price = 2500
+
+/obj/item/gun/ballistic/automatic/pistol/mk58/nopin
+	pin = null
+
+/obj/item/gun/ballistic/automatic/pistol/mk58/no_mag
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/mk58/rubber
+	spawn_magazine_type = /obj/item/ammo_box/magazine/m45/cs
+
+/obj/item/gun/ballistic/automatic/pistol/mk58/no_mag/nopin
+	spawnwithmagazine = FALSE
+	pin = null

@@ -16,3 +16,45 @@
 	mag_display = TRUE
 	mag_display_ammo = FALSE
 	fire_sound = 'hypermods/sound/weapons/rifleshot.ogg'
+
+// Lecter Automatic Rifle
+
+/obj/item/gun/ballistic/automatic/lecter
+	name = "\improper Lecter"
+	desc = "A high end military grade assault rifle. Uses 5.56mm rifle ammo."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "Lecter"
+	inhand_icon_state = "lecter"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
+	fire_delay = 2
+	burst_size = 2
+	spread = 2
+	w_class = WEIGHT_CLASS_HUGE
+	weapon_weight = WEAPON_MEDIUM
+	mag_display = TRUE
+	mag_display_ammo = TRUE
+	empty_indicator = TRUE
+	custom_price = 7500
+
+// Drozd SMG
+
+/obj/item/gun/ballistic/automatic/drozd
+	name = "\improper Drozd"
+	desc = "An excellent fully automatic Heavy SMG. Uses 5.56mm rifle ammo."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "Drozd"
+	inhand_icon_state = "drozd"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
+	fire_delay = 2
+	burst_size = 3
+	spread = 1
+	w_class = WEIGHT_CLASS_HUGE
+	weapon_weight = WEAPON_MEDIUM
+	mag_display = TRUE
+	mag_display_ammo = TRUE
+	empty_indicator = TRUE
+	custom_price = 8000

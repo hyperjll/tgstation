@@ -592,3 +592,75 @@
 		H.physiology.burn_mod /= 0.8
 		H.physiology.tox_mod /= 0.8
 		H.physiology.oxy_mod /= 0.8
+
+/datum/reagent/medicine/clownenhancer
+	name = "Clown Juice"
+	description = "Grants clownly people superpowers."
+	reagent_state = LIQUID
+	color = "#ff0066"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	var/wasenhanced = FALSE
+
+/datum/reagent/medicine/clownenhancer/on_mob_metabolize(mob/living/M)
+	if(ishuman(M) && (M.mind?.assigned_role == "Clown" || M.mind?.has_antag_datum(/datum/antagonist/nukeop/clownop)))
+		var/mob/living/carbon/human/H = M
+		H.physiology.brute_mod *= 0.2
+		H.physiology.burn_mod *= 0.2
+		H.physiology.tox_mod *= 0.2
+		H.physiology.oxy_mod *= 0.2
+		wasenhanced = TRUE
+
+/datum/reagent/medicine/clownenhancer/on_mob_end_metabolize(mob/living/M)
+	if(ishuman(M) && wasenhanced == TRUE) // Just to prevent admin fuck-ups
+		var/mob/living/carbon/human/H = M
+		H.physiology.brute_mod /= 0.2
+		H.physiology.burn_mod /= 0.2
+		H.physiology.tox_mod /= 0.2
+		H.physiology.oxy_mod /= 0.2
+		wasenhanced = FALSE
+
+
+/datum/reagent/medicine/antiwater
+	name = "Anti-Water"
+	description = "Grants the user temporary aquaphobia?"
+	reagent_state = LIQUID
+	color = "#ff0066"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	var/wasenhanced = FALSE
+
+/datum/reagent/medicine/antiwater/on_mob_life(mob/living/carbon/M)
+	M.adjustFireLoss(-0.1*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/medicine/antiwater/on_mob_metabolize(mob/living/M)
+	ADD_TRAIT(M, TRAIT_NO_SLIP_WATER, type)
+	if(ishuman(M) && !ispodperson(M)) // Trying not to pick on pods even more.
+		var/mob/living/carbon/human/H = M
+		H.physiology.burn_mod *= 1.1
+		wasenhanced = TRUE
+
+/datum/reagent/medicine/antiwater/on_mob_end_metabolize(mob/living/M)
+	REMOVE_TRAIT(M, TRAIT_NO_SLIP_WATER, type)
+	if(ishuman(M) && wasenhanced == TRUE)
+		var/mob/living/carbon/human/H = M
+		H.physiology.burn_mod /= 1.1
+		wasenhanced = FALSE
+
+/datum/reagent/medicine/lavaland_extract
+	name = "Lavaland Extract"
+	description = "An extract of lavaland atmospheric and mineral elements. Heals the user in small doses, but is extremely toxic otherwise."
+	color = "#C8A5DC" // rgb: 200, 165, 220
+	overdose_threshold = 3 //To prevent people stacking massive amounts of a very strong healing reagent
+
+/datum/reagent/medicine/lavaland_extract/on_mob_life(mob/living/carbon/M)
+	M.heal_bodypart_damage(5,5)
+	..()
+	return TRUE
+
+/datum/reagent/medicine/lavaland_extract/overdose_process(mob/living/M)
+	M.adjustBruteLoss(3*REM, 0, FALSE)
+	M.adjustFireLoss(3*REM, 0, FALSE)
+	M.adjustToxLoss(3*REM, 0)
+	..()
+	return TRUE
