@@ -6,11 +6,9 @@
 	inhand_icon_state = "hristov"
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
-	fire_sound = "sound/weapons/sniper_shot.ogg"
 	fire_sound_volume = 90
 	vary_fire_sound = FALSE
-	load_sound = "sound/weapons/sniper_mag_insert.ogg"
-	rack_sound = "sound/weapons/sniper_rack.ogg"
+	internal_magazine = TRUE
 	recoil = 2
 	rack_delay = 1 SECONDS
 	weapon_weight = WEAPON_HEAVY

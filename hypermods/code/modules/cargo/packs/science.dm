@@ -4,7 +4,7 @@
 
 /datum/supply_pack/science/advancedparts
 	name = "Advanced Parts Crate"
-	desc = "Contains one full set of Tier-2 Machine Parts and a fully-charged super power cell. Requires Science access to open."
+	desc = "Contains one full set of Tier-2 Machine Parts and a fully-charged super power cell."
 	cost = 2000
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
@@ -19,7 +19,7 @@
 
 /datum/supply_pack/science/superparts
 	name = "Super Parts Crate"
-	desc = "Contains one full set of Tier-3 Machine Parts and a fully-charged hyper power cell. Requires Science access to open."
+	desc = "Contains one full set of Tier-3 Machine Parts and a fully-charged hyper power cell."
 	cost = 5000
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
@@ -34,7 +34,7 @@
 
 /datum/supply_pack/science/bluespaceparts
 	name = "Bluespace Parts Crate"
-	desc = "Contains one full set of Tier-4 Machine Parts and a fully-charged bluespace power cell. Requires Science access to open."
+	desc = "Contains one full set of Tier-4 Machine Parts and a fully-charged bluespace power cell."
 	cost = 10000
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
@@ -49,7 +49,7 @@
 
 /datum/supply_pack/science/tcommparts
 	name = "Telecommunication Parts Crate"
-	desc = "Contains one full set of Telecommunication Machine Parts. Requires Science access to open."
+	desc = "Contains one full set of Telecommunication Machine Parts."
 	cost = 1000
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
@@ -65,7 +65,7 @@
 
 /datum/supply_pack/science/toximate
 	name = "Toximate 3000"
-	desc = "Contains one Toximate 3000, for all of your ordinance needs. Requires Science access to open."
+	desc = "Contains one Toximate 3000, for all of your ordinance needs."
 	cost = 3000
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
@@ -75,7 +75,7 @@
 
 /datum/supply_pack/science/cyborgassembly
 	name = "Cyborg Assembly Crate"
-	desc = "Contains all of the required parts to construct a cyborg, but doesn't contain any tools. Requires Science access to open."
+	desc = "Contains all of the required parts to construct a cyborg, but doesn't contain any tools."
 	cost = 2500
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
@@ -96,7 +96,7 @@
 /**
 /datum/supply_pack/science/nanitelab
 	name = "Nanite Lab Setup Crate"
-	desc = "Contains a multitude of circuitry required for nanite labs as well as essential supplies for programming and monitoring nanites. Requires Science access to open."
+	desc = "Contains a multitude of circuitry required for nanite labs as well as essential supplies for programming and monitoring nanites."
 	cost = 2000
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
@@ -113,8 +113,8 @@
 	crate_type = /obj/structure/closet/crate/secure/science
 **/
 /datum/supply_pack/science/pyrocore
-	name = "Pyroclastic Anomaly Core Crate"
-	desc = "Contains a single Pyroclastic anomaly core. Requires a research director or higher level access to open."
+	name = "Refined Pyroclastic Anomaly Core Crate"
+	desc = "Contains a single Pyroclastic anomaly core."
 	cost = 10000
 	access = ACCESS_RD
 	access_view = ACCESS_RD
@@ -123,8 +123,8 @@
 	crate_type = /obj/structure/closet/crate/secure/science
 
 /datum/supply_pack/science/gravcore
-	name = "Gravitational Anomaly Core Crate"
-	desc = "Contains a single Gravitational anomaly core. Requires a research director or higher level access to open."
+	name = "Refined Gravitational Anomaly Core Crate"
+	desc = "Contains a single Gravitational anomaly core."
 	cost = 10000
 	access = ACCESS_RD
 	access_view = ACCESS_RD
@@ -133,8 +133,8 @@
 	crate_type = /obj/structure/closet/crate/secure/science
 
 /datum/supply_pack/science/fluxcore
-	name = "Flux Anomaly Core Crate"
-	desc = "Contains a single Flux anomaly core. Requires a research director or higher level access to open."
+	name = "Refined Flux Anomaly Core Crate"
+	desc = "Contains a single Flux anomaly core."
 	cost = 10000
 	access = ACCESS_RD
 	access_view = ACCESS_RD
@@ -143,8 +143,8 @@
 	crate_type = /obj/structure/closet/crate/secure/science
 
 /datum/supply_pack/science/blspcore
-	name = "Bluespace Anomaly Core Crate"
-	desc = "Contains a single Bluespace anomaly core. Requires a research director or higher level access to open."
+	name = "Refined Bluespace Anomaly Core Crate"
+	desc = "Contains a single Bluespace anomaly core."
 	cost = 10000
 	access = ACCESS_RD
 	access_view = ACCESS_RD
@@ -153,8 +153,8 @@
 	crate_type = /obj/structure/closet/crate/secure/science
 
 /datum/supply_pack/science/vortcore
-	name = "Vortex Anomaly Core Crate"
-	desc = "Contains a single Vortex anomaly core. Requires a research director or higher level access to open."
+	name = "Refined Vortex Anomaly Core Crate"
+	desc = "Contains a single Vortex anomaly core."
 	cost = 10000
 	access = ACCESS_RD
 	access_view = ACCESS_RD
@@ -163,8 +163,8 @@
 	crate_type = /obj/structure/closet/crate/secure/science
 
 /datum/supply_pack/science/hallcore
-	name = "Hallucination Anomaly Core Crate"
-	desc = "Contains a single Hallucination anomaly core. Requires a research director or higher level access to open."
+	name = "Refined Hallucination Anomaly Core Crate"
+	desc = "Contains a single Hallucination anomaly core."
 	cost = 10000
 	access = ACCESS_RD
 	access_view = ACCESS_RD
@@ -173,8 +173,8 @@
 	crate_type = /obj/structure/closet/crate/secure/science
 /**
 /datum/supply_pack/science/radscore
-	name = "Radiation Anomaly Core Crate"
-	desc = "Contains a single Radiation anomaly core. Requires a research director or higher level access to open."
+	name = "Refined Radiation Anomaly Core Crate"
+	desc = "Contains a single Radiation anomaly core."
 	cost = 10000
 	access = ACCESS_RD
 	access_view = ACCESS_RD

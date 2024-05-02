@@ -10,7 +10,7 @@
 
 /datum/supply_pack/security/armory/mk58
 	name = "Mk58 Pistols Crate"
-	desc = "Contains three Mk58 Pistols and a spare magazine for each. Requires Armory access to open."
+	desc = "Contains three Mk58 Pistols and a spare magazine for each."
 	cost = 3000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/mk58,
@@ -23,7 +23,7 @@
 
 /datum/supply_pack/security/armory/mk58single
 	name = "Mk58 Pistol Crate Single-Pack"
-	desc = "Contains one Mk58 Pistol and a spare magazine for it. Requires Armory access to open."
+	desc = "Contains one Mk58 Pistol and a spare magazine for it."
 	cost = 1750
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/mk58,
 					/obj/item/ammo_box/magazine/v38)
@@ -31,7 +31,7 @@
 
 /datum/supply_pack/security/armory/kammerer
 	name = "Kammerer Crate"
-	desc = "Contains three Kammerers and three boxes of lethal shells. Requires Armory access to open."
+	desc = "Contains three Kammerers and three boxes of lethal shells."
 	cost = 4000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/shotgun/automatic/combat/kammerer,
@@ -44,7 +44,7 @@
 
 /datum/supply_pack/security/armory/kammerersingle
 	name = "Kammerer Crate Single-Pack"
-	desc = "Contains one Kammerer and one boxes of lethal shells. Requires Armory access to open."
+	desc = "Contains one Kammerer and one boxes of lethal shells."
 	cost = 2500
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/shotgun/automatic/combat/kammerer,
@@ -53,7 +53,7 @@
 
 /datum/supply_pack/security/armory/enforcer
 	name = "Enforcer Crate"
-	desc = "Contains three Enforcers and three boxes of lethal shells. Requires Armory access to open."
+	desc = "Contains three Enforcers and three boxes of lethal shells."
 	cost = 6000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/shotgun/enforcer,
@@ -66,7 +66,7 @@
 
 /datum/supply_pack/security/armory/enforcersingle
 	name = "Enforcer Crate Single-Pack"
-	desc = "Contains one Enforcer and one boxes of lethal shells. Requires Armory access to open."
+	desc = "Contains one Enforcer and one boxes of lethal shells."
 	cost = 3500
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/shotgun/enforcer,
@@ -76,7 +76,7 @@
 
 /datum/supply_pack/security/armory/hristov
 	name = "Hristov Crate"
-	desc = "Contains two Hristov Sniper Rifles and two bandoliers containing twelve additional rounds. Requires Armory access to open."
+	desc = "Contains two Hristov Sniper Rifles and two bandoliers containing twelve additional rounds."
 	cost = 7500
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/rifle/sniper_rifle/hristov,
@@ -87,7 +87,7 @@
 
 /datum/supply_pack/security/armory/hristovsingle
 	name = "Hristov Crate Single-Pack"
-	desc = "Contains one Hristov Sniper Rifle and a bandolier containing twelve additional rounds. Requires Armory access to open."
+	desc = "Contains one Hristov Sniper Rifle and a bandolier containing twelve additional rounds."
 	cost = 4000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/rifle/sniper_rifle/hristov,
@@ -96,7 +96,7 @@
 
 /datum/supply_pack/security/armory/lecter
 	name = "Lecter Crate"
-	desc = "Contains two Lecters and four additional magazines. Requires Armory access to open."
+	desc = "Contains two Lecters and four additional magazines."
 	cost = 8000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/lecter,
@@ -109,7 +109,7 @@
 
 /datum/supply_pack/security/armory/lectersingle
 	name = "Lecter Crate Single-Pack"
-	desc = "Contains one Lecter and two additional magazines. Requires Armory access to open."
+	desc = "Contains one Lecter and two additional magazines."
 	cost = 4500
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/lecter,
@@ -119,7 +119,7 @@
 
 /datum/supply_pack/security/armory/drozd
 	name = "Drozd Crate"
-	desc = "Contains two Drozd and four additional magazines. Requires Armory access to open."
+	desc = "Contains two Drozd and four additional magazines."
 	cost = 10000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/drozd,
@@ -132,7 +132,7 @@
 
 /datum/supply_pack/security/armory/drozdsingle
 	name = "Drozd Crate Single-Pack"
-	desc = "Contains one Drozd and two additional magazines. Requires Armory access to open."
+	desc = "Contains one Drozd and two additional magazines."
 	cost = 6000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/drozd,
@@ -142,7 +142,7 @@
 
 /datum/supply_pack/security/armory/sabersmg
 	name = "Saber SMG Crate"
-	desc = "Contains three NT-Saber SMG's and 6 9mm magazines. Requires Armory access to open."
+	desc = "Contains three NT-Saber SMG's and 6 9mm magazines."
 	cost = 6000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/proto/unrestricted,
@@ -158,7 +158,7 @@
 
 /datum/supply_pack/security/armory/sabersmgsingle
 	name = "Saber SMG Crate Single-Pack"
-	desc = "Contains one NT-Saber SMG's and 2 9mm magazines. Requires Armory access to open."
+	desc = "Contains one NT-Saber SMG's and 2 9mm magazines."
 	cost = 3500
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/proto/unrestricted,
@@ -167,7 +167,7 @@
 
 /datum/supply_pack/security/armory/ntargrifle
 	name = "NT-ARG Rifle Crate"
-	desc = "Contains three NT-ARG 'Boarder' Rifles, and 6 5.56mm magazines. Requires Armory access to open."
+	desc = "Contains three NT-ARG 'Boarder' Rifles, and 6 5.56mm magazines."
 	cost = 8000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/ar,
@@ -183,7 +183,7 @@
 
 /datum/supply_pack/security/armory/ntargriflesingle
 	name = "NT-ARG Rifle Crate Single-Pack"
-	desc = "Contains one NT-ARG 'Boarder' Rifles, and 2 5.56mm magazines. Requires Armory access to open."
+	desc = "Contains one NT-ARG 'Boarder' Rifles, and 2 5.56mm magazines."
 	cost = 4500
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/ar,
@@ -193,7 +193,7 @@
 /**
 /datum/supply_pack/security/armory/
 	name = " Crate"
-	desc = "Contains three  and . Requires Armory access to open."
+	desc = "Contains three  and ."
 	cost = 3000
 	access = ACCESS_ARMORY
 	contains = list(,
@@ -204,7 +204,7 @@
 
 /datum/supply_pack/security/armory/single
 	name = " Crate Single-Pack"
-	desc = "Contains one  and . Requires Armory access to open."
+	desc = "Contains one  and ."
 	cost = 1500
 	access = ACCESS_ARMORY
 	contains = list(,
@@ -223,7 +223,7 @@
 
 /datum/supply_pack/weaponry/exoticammo
 	name = "Exotic Ammo Crate"
-	desc = "Contains variety magazines for the following: 3 v38 magazines, 2 smg 9mm magazines, 4 variety 5.56 rifle magazines, and an uzi 9mm magazine. Requires Armory access to open."
+	desc = "Contains variety magazines for the following: 3 v38 magazines, 2 smg 9mm magazines, 4 variety 5.56 rifle magazines, and an uzi 9mm magazine."
 	cost = 7000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/ammo_box/magazine/v38/frost,
@@ -329,7 +329,7 @@
 
 /datum/supply_pack/weaponry/gyrojet
 	name = "Gyrojet Pistols Crate"
-	desc = "Contains two Gyrojet Pistols and 2 specialized .75 magazines. Requires Armory access to open."
+	desc = "Contains two Gyrojet Pistols and 2 specialized .75 magazines."
 	cost = 20000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/gyropistol,
@@ -340,7 +340,7 @@
 
 /datum/supply_pack/weaponry/m1911
 	name = "M1911 Pistols Crate"
-	desc = "Contains two M1911 Pistols and 4 .45 ACP magazines. Requires Armory access to open."
+	desc = "Contains two M1911 Pistols and 4 .45 ACP magazines."
 	cost = 3500
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/m1911,
@@ -353,7 +353,7 @@
 
 /datum/supply_pack/weaponry/pumpshotgun
 	name = "Pump Shotgun Crate"
-	desc = "Contains two Pump Shotguns, and two boxes filled with lethal shots. Requires Armory access to open."
+	desc = "Contains two Pump Shotguns, and two boxes filled with lethal shots."
 	cost = 5000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/shotgun,
@@ -364,7 +364,7 @@
 
 /datum/supply_pack/weaponry/deserteagle
 	name = "Desert Eagle Crate"
-	desc = "Contains one Desert Eagle, and two magazines for it. Requires Armory access to open."
+	desc = "Contains one Desert Eagle, and two magazines for it."
 	cost = 6000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/deagle,
@@ -374,7 +374,7 @@
 
 /datum/supply_pack/weaponry/surpluscarbine
 	name = "Surplus Carbine Crate"
-	desc = "Contains one Surplus Carbine and three spare magazines. Requires Armory access to open."
+	desc = "Contains one Surplus Carbine and three spare magazines."
 	cost = 3000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/surplus,
@@ -385,7 +385,7 @@
 
 /datum/supply_pack/weaponry/type3uzi
 	name = "Type U3 Uzi Crate"
-	desc = "Contains two Type U3 Uzi's and 4 spare magazines -- popular among gangsters. Requires Armory access to open."
+	desc = "Contains two Type U3 Uzi's and 4 spare magazines -- popular among gangsters."
 	cost = 8000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/mini_uzi,
@@ -398,7 +398,7 @@
 
 /datum/supply_pack/weaponry/liberationvending
 	name = "Liberation Station"
-	desc = "Contains one liberation station vending machine, thank the Americans later. Requires Armory access to open."
+	desc = "Contains one liberation station vending machine, thank the Americans later."
 	cost = 50000
 	access = ACCESS_ARMORY
 	contains = list(/obj/machinery/vending/liberationstation/expensive)

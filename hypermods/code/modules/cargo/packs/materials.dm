@@ -66,7 +66,7 @@
 /datum/supply_pack/materials/titaniumglasssupply
 	name = "50 Titanium Glass Sheets Crate"
 	desc = "50 sheets of titanium glass. For restocking the ore silo, or for building some of the strongest... oh who are we kidding? You're not gonna use any of this are you?"
-	cost = 45000
+	cost = 6000
 	contains = list(/obj/item/stack/sheet/titaniumglass/fifty)
 	crate_name = "titanium glass crate"
 	crate_type = /obj/structure/closet/crate
@@ -74,7 +74,7 @@
 /datum/supply_pack/materials/plastitaniumglasssupply
 	name = "50 Plastitanium Glass Sheets Crate"
 	desc = "50 sheets of plastitanium. For restocking the ore silo, or for building the strongest windows."
-	cost = 55000
+	cost = 16000
 	contains = list(/obj/item/stack/sheet/plastitaniumglass/fifty)
 	crate_name = "plastitanium glass crate"
 	crate_type = /obj/structure/closet/crate
@@ -82,7 +82,7 @@
 /datum/supply_pack/materials/titaniumsupply
 	name = "50 Titanium Crate"
 	desc = "50 sheets of titanium. For restocking the ore silo, or for stronger walls than plasteel can provide."
-	cost = 25000
+	cost = 5000
 	contains = list(/obj/item/stack/sheet/mineral/titanium/fifty)
 	crate_name = "titanium crate"
 	crate_type = /obj/structure/closet/crate
@@ -90,7 +90,7 @@
 /datum/supply_pack/materials/plastitaniumsupply
 	name = "50 Plastitanium Crate"
 	desc = "50 sheets of plastitanium. For restocking the ore silo, or for building the strongest walls."
-	cost = 65000
+	cost = 15000
 	contains = list(/obj/item/stack/sheet/mineral/plastitanium/fifty)
 	crate_name = "plastitanium crate"
 	crate_type = /obj/structure/closet/crate
@@ -106,7 +106,7 @@
 /datum/supply_pack/materials/diamondsupply
 	name = "50 Diamonds Crate"
 	desc = "50 diamonds. For restocking the ore silo, in case of emergencies of course."
-	cost = 75000
+	cost = 20000
 	contains = list(/obj/item/stack/sheet/mineral/diamond/fifty)
 	crate_name = "diamond crate"
 	crate_type = /obj/structure/closet/crate
@@ -114,7 +114,7 @@
 /datum/supply_pack/materials/uraniumsupply
 	name = "50 Uranium Bars Crate"
 	desc = "50 bars of uranium. For restocking the ore silo, in case of emergencies of course."
-	cost = 60000
+	cost = 4000
 	contains = list(/obj/item/stack/sheet/mineral/uranium/fifty)
 	crate_name = "uranium bars crate"
 	crate_type = /obj/structure/closet/crate
@@ -122,7 +122,7 @@
 /datum/supply_pack/materials/plasmasupply
 	name = "50 Plasma Crate"
 	desc = "50 chunks of plasma. For restocking the ore silo, in case of emergencies of course."
-	cost = 40000
+	cost = 8000
 	contains = list(/obj/item/stack/sheet/mineral/plasma/fifty)
 	crate_name = "plasma crate"
 	crate_type = /obj/structure/closet/crate
@@ -130,7 +130,7 @@
 /datum/supply_pack/materials/goldsupply
 	name = "50 Gold Bars Crate"
 	desc = "50 bars of solid gold. For restocking the ore silo, in case of emergencies of course."
-	cost = 50000
+	cost = 8000
 	contains = list(/obj/item/stack/sheet/mineral/gold/fifty)
 	crate_name = "gold bars crate"
 	crate_type = /obj/structure/closet/crate
@@ -138,7 +138,7 @@
 /datum/supply_pack/materials/silversupply
 	name = "50 Silver Bars Crate"
 	desc = "50 bars of solid silver. For restocking the ore silo, in case of emergencies of course."
-	cost = 20000
+	cost = 2000
 	contains = list(/obj/item/stack/sheet/mineral/silver/fifty)
 	crate_name = "silver bars crate"
 	crate_type = /obj/structure/closet/crate
@@ -146,7 +146,7 @@
 /datum/supply_pack/materials/bananiumsupply
 	name = "50 Bananium Sheets Crate"
 	desc = "50 chunks of the clownly bananium. For restocking the ore silo, yes. Definitely for the ore silo and nothing else!"
-	cost = 200000
+	cost = 20000
 	contains = list(/obj/item/stack/sheet/mineral/bananium/fifty)
 	crate_name = "bananium crate"
 	crate_type = /obj/structure/closet/crate
