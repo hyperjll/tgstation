@@ -6279,6 +6279,8 @@
 #include "hypermods\code\game\objects\structures\crates_lockers\closets\bodybag.dm"
 #include "hypermods\code\modules\actionspeed\modifiers\misc.dm"
 #include "hypermods\code\modules\assembly\flash.dm"
+#include "hypermods\code\modules\bitrunning\virtual_domain\breeze_bay_2.dm"
+#include "hypermods\code\modules\bitrunning\virtual_domain\vaporwave_combat.dm"
 #include "hypermods\code\modules\cargo\packs\engineering.dm"
 #include "hypermods\code\modules\cargo\packs\goodies.dm"
 #include "hypermods\code\modules\cargo\packs\materials.dm"

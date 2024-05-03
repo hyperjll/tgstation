@@ -254,3 +254,6 @@
 	volume = 25
 	amount_per_transfer_from_this = 25
 	list_reagents = list(/datum/reagent/medicine/experimentalstimulants = 25)
+
+/obj/item/reagent_containers/hypospray/medipen/invisibility
+	desc = "An autoinjector containing a stabilized Saturn-X compound. Causes the user to become invisible for a limited time, clothes will NOT become invisible."

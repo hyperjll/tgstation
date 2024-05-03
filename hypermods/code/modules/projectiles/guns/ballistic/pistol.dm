@@ -93,7 +93,7 @@
 	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/mk58/rubber
-	spawn_magazine_type = /obj/item/ammo_box/magazine/m45/cs
+	spawn_magazine_type = /obj/item/ammo_box/magazine/v38/rubber
 
 /obj/item/gun/ballistic/automatic/pistol/mk58/no_mag/nopin
 	spawnwithmagazine = FALSE

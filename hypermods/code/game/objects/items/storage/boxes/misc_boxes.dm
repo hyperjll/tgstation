@@ -8,17 +8,4 @@
 	name = "Random Junk Package"
 
 /obj/item/storage/box/randomjunk/PopulateContents()
-	new /obj/effect/spawner/random/maintenance/two(src)
-	new /obj/effect/spawner/random/maintenance/two(src)
-	new /obj/effect/spawner/random/maintenance/three(src)
-	new /obj/effect/spawner/random/maintenance/three(src)
-	new /obj/effect/spawner/random/maintenance/four(src)
-	new /obj/effect/spawner/random/maintenance/four(src)
-	new /obj/effect/spawner/random/maintenance/five(src)
-	new /obj/effect/spawner/random/maintenance/five(src)
-	new /obj/effect/spawner/random/maintenance/six(src)
-	new /obj/effect/spawner/random/maintenance/six(src)
-	new /obj/effect/spawner/random/maintenance/seven(src)
-	new /obj/effect/spawner/random/maintenance/seven(src)
-	new /obj/effect/spawner/random/maintenance/eight(src)
 	new /obj/effect/spawner/random/maintenance/eight(src)

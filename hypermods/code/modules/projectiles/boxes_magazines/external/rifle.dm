@@ -34,7 +34,7 @@
 	icon_state = "ak762x82I"
 	ammo_type = /obj/item/ammo_casing/mm712x82/inc
 
-//Drozd and Lecter
+// Drozd and Lecter
 
 /obj/item/ammo_box/magazine/r556
 	name = "rifle magazine (5.56mm)"
