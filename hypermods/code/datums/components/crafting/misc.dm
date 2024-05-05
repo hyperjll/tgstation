@@ -6,7 +6,7 @@
 				/obj/item/stock_parts/servo = 5,
 				/obj/item/stock_parts/scanning_module = 5)
 	category = CAT_MISC
-	always_available = FALSE
+	crafting_flags = CRAFT_MUST_BE_LEARNED
 
 /datum/crafting_recipe/syndifultonbeacon
 	name = "Syndicate Extraction Beacon"
@@ -16,5 +16,5 @@
 				/obj/item/stock_parts/servo = 5,
 				/obj/item/stock_parts/micro_laser = 3)
 	category = CAT_MISC
-	always_available = FALSE
 	tool_behaviors = list(TOOL_WELDER, TOOL_WIRECUTTER, TOOL_SCREWDRIVER)
+	crafting_flags = CRAFT_MUST_BE_LEARNED

@@ -4,8 +4,8 @@
 	time = 5 SECONDS
 	reqs = list(/obj/item/stack/sheet/iron = 10)
 	category = CAT_WEAPON_AMMO
-	always_available = FALSE
 	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER)
+	crafting_flags = CRAFT_MUST_BE_LEARNED
 
 /datum/crafting_recipe/cannonball/emp
 	name = "EMP Cannonball"
@@ -16,8 +16,8 @@
 				/datum/reagent/iron = 20,
 				/datum/reagent/uranium = 20)
 	category = CAT_WEAPON_AMMO
-	always_available = FALSE
 	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+	crafting_flags = CRAFT_MUST_BE_LEARNED
 
 /datum/crafting_recipe/cannonball/explosive
 	name = "Explosive Cannonball"
@@ -26,5 +26,5 @@
 	reqs = list(/obj/item/stack/sheet/iron = 10,
 				/datum/reagent/gunpowder = 50)
 	category = CAT_WEAPON_AMMO
-	always_available = FALSE
 	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER)
+	crafting_flags = CRAFT_MUST_BE_LEARNED

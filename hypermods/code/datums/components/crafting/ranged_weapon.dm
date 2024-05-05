@@ -6,5 +6,5 @@
 				/obj/item/stack/sheet/mineral/titanium = 10,
 				/obj/item/stack/sheet/mineral/wood = 5)
 	category = CAT_WEAPON_RANGED
-	always_available = FALSE
 	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WRENCH)
+	crafting_flags = CRAFT_MUST_BE_LEARNED
