@@ -142,6 +142,11 @@
 
 
 
+/obj/item/reagent_containers/cup/bottle/random_symptom
+	name = "Isolated symptom culture bottle"
+	desc = "A small bottle. Contains an unknown isolated symptom."
+	spawned_disease = /datum/disease/advance/isolatedsymptom
+
 /obj/item/reagent_containers/cup/bottle/syndisymptombuffer
 	name = "S. Gene culture bottle"
 	desc = "A small bottle. Contains a sample of an incredibly refined and powerful virus gene."
@@ -149,16 +154,53 @@
 
 /obj/item/reagent_containers/cup/bottle/syndisymptombuffer/stealth
 	name = "STE. Gene culture bottle"
-	spawned_disease = /datum/disease/advance/syndicate/stealth
+	spawned_disease = /datum/disease/advance/syndicatestealth
 
 /obj/item/reagent_containers/cup/bottle/syndisymptombuffer/resist
 	name = "SRE. Gene culture bottle"
-	spawned_disease = /datum/disease/advance/syndicate/resist
+	spawned_disease = /datum/disease/advance/syndicateresist
 
 /obj/item/reagent_containers/cup/bottle/syndisymptombuffer/speed
 	name = "SPD. Gene culture bottle"
-	spawned_disease = /datum/disease/advance/syndicate/speed
+	spawned_disease = /datum/disease/advance/syndicatespeed
 
 /obj/item/reagent_containers/cup/bottle/syndisymptombuffer/trans
 	name = "STR. Gene culture bottle"
-	spawned_disease = /datum/disease/advance/syndicate/trans
+	spawned_disease = /datum/disease/advance/syndicatetrans
+
+
+/obj/item/reagent_containers/cup/bottle/uranium
+	name = "liquid uranium bottle"
+	list_reagents = list(/datum/reagent/uranium = 30)
+
+/obj/item/reagent_containers/cup/bottle/mutagenvirusfood
+	name = "mutagenic agar bottle"
+	list_reagents = list(/datum/reagent/toxin/mutagen/mutagenvirusfood = 30)
+
+/obj/item/reagent_containers/cup/bottle/mutagenvirusfoodsugar
+	name = "sucrose agar bottle"
+	list_reagents = list(/datum/reagent/toxin/mutagen/mutagenvirusfood/sugar = 30)
+
+/obj/item/reagent_containers/cup/bottle/plasmavirusfoodweak
+	name = "weakened virus plasma bottle"
+	list_reagents = list(/datum/reagent/toxin/plasma/plasmavirusfood/weak = 30)
+
+/obj/item/reagent_containers/cup/bottle/plasmavirusfood
+	name = "virus plasma bottle"
+	list_reagents = list(/datum/reagent/toxin/plasma/plasmavirusfood = 30)
+
+/obj/item/reagent_containers/cup/bottle/synaptizinevirusfood
+	name = "virus rations bottle"
+	list_reagents = list(/datum/reagent/medicine/synaptizine/synaptizinevirusfood = 30)
+
+/obj/item/reagent_containers/cup/bottle/uraniumvirusfood
+	name = "decaying uranium gel bottle"
+	list_reagents = list(/datum/reagent/uranium/uraniumvirusfood = 30)
+
+/obj/item/reagent_containers/cup/bottle/uraniumvirusfoodunstable
+	name = "unstable uranium gel bottle"
+	list_reagents = list(/datum/reagent/uranium/uraniumvirusfood/unstable = 30)
+
+/obj/item/reagent_containers/cup/bottle/uraniumvirusfoodstable
+	name = "stable uranium gel bottle"
+	list_reagents = list(/datum/reagent/uranium/uraniumvirusfood/stable = 30)

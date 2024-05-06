@@ -1,6 +1,8 @@
 /obj/item/ammo_casing/caseless/cannonball
 	name = "compact cannonball"
 	desc = "A compact cannonball that fits within your hand. It's incredibly difficult to hold this without straining."
+	icon = 'icons/obj/stack_objects.dmi'
+	icon_state = "cannonballs"
 	caliber = CALIBER_CANNONBALL
 	projectile_type = /obj/projectile/bullet/cannonball
 
@@ -21,5 +23,3 @@
 	desc = "A compact meteor that fits within your hand. It's incredibly difficult to hold this without straining."
 	caliber = CALIBER_CANNONBALL
 	projectile_type = /obj/projectile/bullet/cannonball/meteorslug
-
-

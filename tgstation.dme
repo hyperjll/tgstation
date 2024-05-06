@@ -6196,6 +6196,8 @@
 #include "hypermods\code\datums\components\crafting\ranged_weapon.dm"
 #include "hypermods\code\datums\components\crafting\weapon_ammo.dm"
 #include "hypermods\code\datums\diseases\advance\presets.dm"
+#include "hypermods\code\datums\diseases\advance\symptoms\explosive.dm"
+#include "hypermods\code\datums\diseases\advance\symptoms\heal.dm"
 #include "hypermods\code\datums\diseases\advance\symptoms\syndicate.dm"
 #include "hypermods\code\datums\martial\knifeboxing.dm"
 #include "hypermods\code\datums\martial\riggedboxing.dm"

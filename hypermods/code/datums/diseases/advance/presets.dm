@@ -1,3 +1,29 @@
+//Randomly generated symptom, for virus crates and events
+/datum/disease/advance/isolatedsymptom
+	copy_type = /datum/disease/advance
+
+/datum/disease/advance/isolatedsymptom/New(max_symptoms, max_level = 12)
+	if(!max_symptoms)
+		max_symptoms = rand(1, 1)
+	var/list/datum/symptom/possible_symptoms = list()
+	for(var/symptom in subtypesof(/datum/symptom))
+		var/datum/symptom/S = symptom
+		if(!initial(S.naturally_occuring))
+			continue
+		if(initial(S.level) > max_level)
+			continue
+		if(initial(S.level) <= 0) //unobtainable symptoms
+			continue
+		possible_symptoms += S
+	for(var/i in 1 to max_symptoms)
+		var/datum/symptom/chosen_symptom = pick_n_take(possible_symptoms)
+		if(chosen_symptom)
+			var/datum/symptom/S = new chosen_symptom
+			symptoms += S
+	Refresh()
+
+	name = "Isolated Symptom #[rand(1,100)]"
+
 // Syndicate stuff
 
 /datum/disease/advance/syndicate
@@ -8,34 +34,34 @@
 	symptoms = list(new/datum/symptom/syndicatebuff)
 	..()
 
-/datum/disease/advance/syndicate/stealth
+/datum/disease/advance/syndicatestealth
 	copy_type = /datum/disease/advance
 
-/datum/disease/advance/syndicate/stealth/New()
+/datum/disease/advance/syndicatestealth/New()
 	name = "Syndicate Stealthy Virus Gene"
 	symptoms = list(new/datum/symptom/syndicatebuffstealth)
 	..()
 
-/datum/disease/advance/syndicate/resist
+/datum/disease/advance/syndicateresist
 	copy_type = /datum/disease/advance
 
-/datum/disease/advance/syndicate/resist/New()
+/datum/disease/advance/syndicateresist/New()
 	name = "Syndicate Resistant Virus Gene"
 	symptoms = list(new/datum/symptom/syndicatebuffresist)
 	..()
 
-/datum/disease/advance/syndicate/speed
+/datum/disease/advance/syndicatespeed
 	copy_type = /datum/disease/advance
 
-/datum/disease/advance/syndicate/speed/New()
+/datum/disease/advance/syndicatespeed/New()
 	name = "Syndicate Fast-Acting Virus Gene"
 	symptoms = list(new/datum/symptom/syndicatebuffspeed)
 	..()
 
-/datum/disease/advance/syndicate/trans
+/datum/disease/advance/syndicatetrans
 	copy_type = /datum/disease/advance
 
-/datum/disease/advance/syndicate/trans/New()
+/datum/disease/advance/syndicatetrans/New()
 	name = "Syndicate Transmissable Virus Gene"
 	symptoms = list(new/datum/symptom/syndicatebufftrans)
 	..()

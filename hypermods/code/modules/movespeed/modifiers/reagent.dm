@@ -3,3 +3,6 @@
 
 /datum/movespeed_modifier/reagent/syndimeth
 	multiplicative_slowdown = -1.6
+
+/datum/movespeed_modifier/reagent/diseasensstim
+	multiplicative_slowdown = -0.05

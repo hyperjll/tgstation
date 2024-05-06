@@ -24,3 +24,31 @@
 		exposed_turf.atmos_spawn_air("oxygen=[reac_volume/2];TEMP=[temp]")
 		exposed_turf.atmos_spawn_air("nitrogen=[reac_volume/5];TEMP=[temp]")
 	return
+
+/datum/reagent/antihardcrit
+	name = "Conscience Stabilizers"
+	description = "A reagent specifically used to stabilize critical patients to allow them to move despite the severity of their injuries. Impossible to synthesize outside of virology."
+	color = "#78008C"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+
+/datum/reagent/antihardcrit/on_mob_metabolize(mob/living/L)
+	..()
+	ADD_TRAIT(L,TRAIT_NOHARDCRIT,type)
+
+/datum/reagent/antihardcrit/on_mob_end_metabolize(mob/living/L)
+	REMOVE_TRAIT(L,TRAIT_NOHARDCRIT,type)
+	..()
+
+/datum/reagent/diseasensstim
+	name = "Neurological Stimulants"
+	description = "A minor neurological sitmulant capable of boosting the host's movement speed. Impossible to synthesize outside of virology."
+	color = "#78008C"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+
+/datum/reagent/diseasensstim/on_mob_metabolize(mob/living/L)
+	..()
+	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/diseasensstim)
+
+/datum/reagent/diseasensstim/on_mob_end_metabolize(mob/living/L)
+	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/diseasensstim)
+	..()

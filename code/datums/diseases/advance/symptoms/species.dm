@@ -13,7 +13,7 @@
 	resistance = -2
 	stage_speed = 1
 	transmittable = 0
-	level = 5
+	level = 6
 	severity = 0
 
 /datum/symptom/undead_adaptation/OnAdd(datum/disease/advance/A)
@@ -39,7 +39,7 @@
 	resistance = 4
 	stage_speed = -2
 	transmittable = 3
-	level = 5
+	level = 6
 	severity = 0
 
 /datum/symptom/inorganic_adaptation/OnAdd(datum/disease/advance/A)

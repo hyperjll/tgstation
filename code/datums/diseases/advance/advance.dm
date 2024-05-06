@@ -41,6 +41,7 @@
 			/datum/reagent/iodine,
 			/datum/reagent/iron,
 			/datum/reagent/silver,
+			/datum/reagent/consumable/nutriment/vitamin,
 		),
 		list( // level 2
 			/datum/reagent/consumable/ethanol,
@@ -49,6 +50,8 @@
 			/datum/reagent/lithium,
 			/datum/reagent/potassium,
 			/datum/reagent/silicon,
+			/datum/reagent/determination,
+			/datum/reagent/drug/space_drugs,
 		),
 		list( // level 3
 			/datum/reagent/consumable/milk,
@@ -56,6 +59,10 @@
 			/datum/reagent/consumable/salt,
 			/datum/reagent/consumable/sugar,
 			/datum/reagent/consumable/tomatojuice,
+			/datum/reagent/hydrogen_peroxide,
+			/datum/reagent/cryostylane,
+			/datum/reagent/pyrosium,
+			/datum/reagent/inverse/cryostylane,
 		),
 		list( //level 4
 			/datum/reagent/fuel/oil,
@@ -64,45 +71,83 @@
 			/datum/reagent/medicine/haloperidol,
 			/datum/reagent/medicine/mine_salve,
 			/datum/reagent/medicine/salglu_solution,
+			/datum/reagent/kronkus_extract,
 		),
 		list( //level 5
 			/datum/reagent/drug/space_drugs,
 			/datum/reagent/medicine/mannitol,
 			/datum/reagent/medicine/synaptizine,
 			/datum/reagent/cryptobiolin,
+			/datum/reagent/love,
+			/datum/reagent/medicine/coagulant,
+			/datum/reagent/toxin/amatoxin,
 		),
 		list( // level 6
 			/datum/reagent/medicine/antihol,
 			/datum/reagent/medicine/inacusiate,
 			/datum/reagent/medicine/oculine,
 			/datum/reagent/phenol,
+			/datum/reagent/medicine/ammoniated_mercury,
+			/datum/reagent/medicine/neurine,
+			/datum/reagent/toxin/heparin,
 		),
 		list( // level 7
 			/datum/reagent/medicine/higadrite,
 			/datum/reagent/medicine/leporazine,
 			/datum/reagent/toxin/mindbreaker,
 			/datum/reagent/acetaldehyde,
+			/datum/reagent/acetone_oxide,
 		),
 		list( // level 8
 			/datum/reagent/drug/happiness,
 			/datum/reagent/medicine/ephedrine,
 			/datum/reagent/pax,
+			/datum/reagent/teslium,
+			/datum/reagent/medicine/earthsblood,
+			/datum/reagent/medicine/silibinin,
+			/datum/reagent/bluespace,
 		),
 		list( // level 9
 			/datum/reagent/medicine/sal_acid,
+			/datum/reagent/medicine/oxandrolone,
 			/datum/reagent/toxin/chloralhydrate,
 			/datum/reagent/toxin/lipolicide,
+			/datum/reagent/medicine/cryoxadone,
+			/datum/reagent/medicine/atropine,
 		),
 		list( // level 10
 			/datum/reagent/drug/aranesp,
 			/datum/reagent/medicine/diphenhydramine,
 			/datum/reagent/pentaerythritol,
+			/datum/reagent/drug/methamphetamine,
+			/datum/reagent/medicine/pyroxadone,
+			/datum/reagent/medicine/omnizine/protozine,
+			/datum/reagent/medicine/salbutamol,
+			/datum/reagent/medicine/pen_acid,
 		),
 		list( //level 11
 			/datum/reagent/medicine/c2/tirimol,
 			/datum/reagent/medicine/modafinil,
+			/datum/reagent/medicine/omnizine,
+			/datum/reagent/drug/krokodil,
+		),
+		list( //level 12
+			/datum/reagent/pentaerythritol,
+			/datum/reagent/nitroglycerin,
+			/datum/reagent/medicine/sansufentanyl,
+			/datum/reagent/medicine/rezadone,
+			/datum/reagent/wittel,
+			/datum/reagent/plasma_oxide,
+		),
+		list( //level 13
+			/datum/reagent/drug/bath_salts,
+			/datum/reagent/eigenstate,
+			/datum/reagent/wittel,
+			/datum/reagent/plasma_oxide,
 		),
 	)
+
+
 
 /*
 
