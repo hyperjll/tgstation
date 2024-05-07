@@ -1,7 +1,7 @@
 /obj/item/ammo_casing/caseless/cannonball
 	name = "compact cannonball"
 	desc = "A compact cannonball that fits within your hand. It's incredibly difficult to hold this without straining."
-	icon = 'icons/obj/stack_objects.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "cannonballs"
 	caliber = CALIBER_CANNONBALL
 	projectile_type = /obj/projectile/bullet/cannonball

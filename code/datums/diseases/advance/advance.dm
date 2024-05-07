@@ -80,7 +80,7 @@
 			/datum/reagent/cryptobiolin,
 			/datum/reagent/love,
 			/datum/reagent/medicine/coagulant,
-			/datum/reagent/toxin/amatoxin,
+			/datum/reagent/toxin,
 		),
 		list( // level 6
 			/datum/reagent/medicine/antihol,

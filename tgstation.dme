@@ -6313,6 +6313,7 @@
 #include "hypermods\code\modules\power\cable.dm"
 #include "hypermods\code\modules\power\port_gen.dm"
 #include "hypermods\code\modules\power\lighting\light_items.dm"
+#include "hypermods\code\modules\projectiles\ammunition\_ammunition.dm"
 #include "hypermods\code\modules\projectiles\ammunition\ballistic\grenade.dm"
 #include "hypermods\code\modules\projectiles\ammunition\ballistic\pistol.dm"
 #include "hypermods\code\modules\projectiles\ammunition\ballistic\revolver.dm"
