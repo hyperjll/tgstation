@@ -70,6 +70,8 @@
 #define CALIBER_HOOK "hook"
 /// The caliber used by the changeling tentacle mutation.
 #define CALIBER_TENTACLE "tentacle"
+/// The caliber used by pipeguns and pipe pistols
+#define CALIBER_JUNK "junk"
 /// The caliber used by the cannonballs.
 #define CALIBER_CANNONBALL "cannonball"
 
