@@ -11,6 +11,10 @@
 		/obj/item/reagent_containers/cup/glass/mug/coco = 3,
 	)
 	contraband = list(
+		/obj/item/reagent_containers/cup/glass/coffee/syndicate = 4,
+		/obj/item/reagent_containers/cup/glass/coffee/nukie = 1,
+	)
+	premium = list(
 		/obj/item/reagent_containers/cup/glass/ice = 12,
 	)
 	refill_canister = /obj/item/vending_refill/coffee

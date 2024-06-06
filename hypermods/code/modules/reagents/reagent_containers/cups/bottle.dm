@@ -85,6 +85,14 @@
 	custom_premium_price = 100
 	list_reagents = list(/datum/reagent/medicine/tricordrazine = 6, /datum/reagent/medicine/epinephrine = 12, /datum/reagent/medicine/lavaland_extract = 6, /datum/reagent/medicine/omnizine = 6)
 
+/obj/item/reagent_containers/cup/bottle/oculine
+	name = "oculine bottle"
+	list_reagents = list(/datum/reagent/medicine/oculine = 30)
+
+/obj/item/reagent_containers/cup/bottle/inacusiate
+	name = "inacusiate bottle"
+	list_reagents = list(/datum/reagent/medicine/inacusiate = 30)
+
 
 
 /// Red-space flasks of eternal whatever -- expensive traitor shit.

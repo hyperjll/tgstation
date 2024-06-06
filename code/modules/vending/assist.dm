@@ -15,19 +15,40 @@
 		/obj/item/stock_parts/micro_laser = 3,
 		/obj/item/stock_parts/scanning_module = 3,
 		/obj/item/wirecutters = 1,
+		/obj/item/screwdriver = 1,
+		/obj/item/weldingtool/mini = 1,
+		/obj/item/stock_parts/cell/empty = 4,
+		/obj/item/stack/sheet/iron/five = 10,
+		/obj/item/stack/sheet/glass = 10,
+		/obj/item/stack/cable_coil = 3,
+		/obj/item/extinguisher/mini = 3,
+		/obj/item/hand_labeler = 2,
+		/obj/item/rcd_ammo = 3,
+		/obj/item/reagent_containers/cup/beaker/large = 2,
+		/obj/item/reagent_containers/cup/bucket = 1,
+		/obj/item/radio/off = 5,
+		/obj/item/flashlight = 5,
 	)
 	contraband = list(
-		/obj/item/assembly/health = 2,
-		/obj/item/assembly/timer = 2,
-		/obj/item/assembly/voice = 2,
+		/obj/item/assembly/health = 10,
+		/obj/item/assembly/timer = 10,
+		/obj/item/assembly/voice = 10,
 		/obj/item/stock_parts/cell/high = 1,
 		/obj/item/market_uplink/blackmarket = 1,
+		/obj/item/stock_parts/cell/high = 1,
+		/obj/item/market_uplink/blackmarket = 1,
+		/obj/item/ammo_casing/shotgun/beanbag = 10,
+		/obj/item/clothing/gloves/color/fyellow = 4,
 	)
 	premium = list(
 		/obj/item/assembly/igniter/condenser = 2,
 		/obj/item/circuitboard/machine/vendor = 3,
 		/obj/item/universal_scanner = 3,
 		/obj/item/vending_refill/custom = 3,
+		/obj/item/assembly/infra = 1,
+		/obj/item/analyzer = 1,
+		/obj/item/electronics/airlock = 5,
+		/obj/item/multitool = 1,
 	)
 
 	refill_canister = /obj/item/vending_refill/assist

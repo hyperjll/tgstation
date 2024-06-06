@@ -16,11 +16,29 @@
 		/obj/item/healthanalyzer/simple = 2,
 		/obj/item/stack/medical/bone_gel = 2,
 		/obj/item/storage/box/bandages = 1,
+		/obj/item/stack/medical/gauze = 3,
+		/obj/item/reagent_containers/pill/iron = 5,
+		/obj/item/reagent_containers/pill/antiviral = 5,
+		/obj/item/reagent_containers/cup/bottle/salglu_solution = 2,
+		/obj/item/reagent_containers/cup/bottle/oculine = 1,
+		/obj/item/reagent_containers/cup/bottle/inacusiate = 1,
 	)
 	contraband = list(
 		/obj/item/reagent_containers/pill/tox = 2,
 		/obj/item/reagent_containers/pill/morphine = 2,
 		/obj/item/storage/box/gum/happiness = 1,
+		/obj/item/reagent_containers/hypospray/medipen/ekit = 1,
+		/obj/item/reagent_containers/hypospray/medipen/formaldehyde = 1,
+		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 1,
+	)
+	premium = list(
+		/obj/item/reagent_containers/medigel/synthflesh = 1,
+		/obj/item/reagent_containers/pill/bicaridine = 5,
+		/obj/item/reagent_containers/pill/kelotane = 5,
+		/obj/item/reagent_containers/pill/antitoxin = 5,
+		/obj/item/reagent_containers/pill/dexalin = 5,
+		/obj/item/reagent_containers/pill/inaprovaline = 5,
+		/obj/item/reagent_containers/pill/coagulant = 5,
 	)
 	refill_canister = /obj/item/vending_refill/wallmed
 	default_price = PAYCHECK_COMMAND //Double the medical price due to being meant for public consumption, not player specfic

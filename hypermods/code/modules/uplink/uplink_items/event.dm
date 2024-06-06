@@ -289,20 +289,3 @@
 /datum/uplink_item/role_restricted/spacepirates/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/pirates, "an encrypted signal")
 	return
-
-/datum/uplink_item/role_restricted/sentient_disease
-	name = "Send a Sentient Virus to the Station"
-	desc = "When purchased, we'll authorize ONE of our classified micro-organisms to be sent onto the station via bluespace technology. Do be mindful, that the virus is very unpredictable."
-	item = /obj/effect/gibspawner/generic
-	surplus = 0
-	progression_minimum = 30 MINUTES
-	limited_stock = 1
-	cost = 20
-	cant_discount = TRUE
-	restricted = TRUE
-	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER)
-
-/datum/uplink_item/role_restricted/sentient_disease/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
-	force_event(/datum/round_event_control/sentient_disease, "bluespaced onto the station by the syndicate")
-	return source //For log icon
-

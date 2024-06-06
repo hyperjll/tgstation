@@ -21,6 +21,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "changelingsting"
 	list_reagents = list(/datum/reagent/consumable/changelingsting = 50)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/devilskiss
 	name = "Devil's Kiss"
@@ -30,6 +31,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "devilskiss"
 	list_reagents = list(/datum/reagent/consumable/ethanol/devilskiss = 50)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/turbo
 	name = "Turbo"
@@ -39,6 +41,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "turbo"
 	list_reagents = list(/datum/reagent/consumable/turbo = 50)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/hearty_punch
 	name = "Hearty Punch"
@@ -48,6 +51,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "hearty_punch"
 	list_reagents = list(/datum/reagent/consumable/hearty_punch = 50)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/robust_nukie
 	name = "Robust Nukie Cola"
@@ -57,6 +61,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "nukie_cola"
 	list_reagents = list(/datum/reagent/medicine/stimulants = 25, /datum/reagent/medicine/omnizine = 5, /datum/reagent/consumable/space_cola = 20)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/fireball
 	name = "Fireball"
@@ -66,6 +71,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "fireball"
 	list_reagents = list(/datum/reagent/phlogiston = 15, /datum/reagent/medicine/kelotane = 10, /datum/reagent/medicine/dermaline = 10, /datum/reagent/medicine/leporazine = 10, /datum/reagent/consumable/space_cola = 5)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/fireworks
 	name = "Firework Factory"
@@ -75,6 +81,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "fireworks"
 	list_reagents = list(/datum/reagent/gunpowder = 20, /datum/reagent/phlogiston = 10, /datum/reagent/napalm = 10, /datum/reagent/consumable/space_cola = 10)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/mutate_fizz
 	name = "Mutation Fizz"
@@ -85,11 +92,13 @@
 	icon_state = "mutate_fizz"
 	list_reagents = list(/datum/reagent/consumable/space_cola = 40)
 	var/extra_reagent = null
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/mutate_fizz/Initialize(mapload)
 	. = ..()
 	extra_reagent = pick(/datum/reagent/mutationtoxin, /datum/reagent/mutationtoxin/classic, /datum/reagent/mutationtoxin/felinid, /datum/reagent/mutationtoxin/lizard, /datum/reagent/mutationtoxin/fly, /datum/reagent/mutationtoxin/moth, /datum/reagent/mutationtoxin/pod, /datum/reagent/mutationtoxin/jelly, /datum/reagent/mutationtoxin/android, /datum/reagent/mutationtoxin/abductor, /datum/reagent/mutationtoxin/skeleton, /datum/reagent/mutationtoxin/plasma)
 	reagents.add_reagent(extra_reagent, 10)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/aged_soda
 	name = "Aged Soda"
@@ -99,6 +108,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "aged_soda"
 	list_reagents = list(/datum/reagent/consumable/old_timer = 10, /datum/reagent/medicine/bicaridine = 7.5, /datum/reagent/medicine/dermaline = 7.5, /datum/reagent/medicine/antitoxin = 7.5, /datum/reagent/medicine/dexalinplus = 7.5, /datum/reagent/consumable/space_cola = 10)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/antidote
 	name = "Antidote"
@@ -108,6 +118,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "antidote"
 	list_reagents = list(/datum/reagent/medicine/dylovene = 15, /datum/reagent/medicine/antitoxin = 15, /datum/reagent/medicine/potass_iodide = 10, /datum/reagent/consumable/space_cola = 10)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/space_walker
 	name = "Space Walker"
@@ -117,6 +128,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "space_walker"
 	list_reagents = list(/datum/reagent/medicine/barozine = 20, /datum/reagent/medicine/leporazine = 20, /datum/reagent/consumable/space_cola = 10)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/anti_water
 	name = "Anti-Water"
@@ -126,6 +138,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "anti_water"
 	list_reagents = list(/datum/reagent/medicine/antiwater = 10, /datum/reagent/consumable/space_cola = 40)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/nano_pop
 	name = "Nanolytic Pop"
@@ -135,6 +148,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "nano_pop"
 	list_reagents = list(/datum/reagent/medicine/healingnanites = 5, /datum/reagent/medicine/dermalnanites = 10, /datum/reagent/consumable/space_cola = 35)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/ice_e
 	name = "ICE-E Sodapop"
@@ -144,6 +158,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "ice_e"
 	list_reagents = list(/datum/reagent/inverse/cryostylane = 30, /datum/reagent/medicine/cryoxadone = 10, /datum/reagent/consumable/space_cola = 10)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/simple_times
 	name = "Simple Times"
@@ -153,6 +168,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "simple_times"
 	list_reagents = list(/datum/reagent/consumable/old_timer = 5, /datum/reagent/medicine/tricordrazine = 20, /datum/reagent/consumable/space_cola = 25)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/chocolate_sips
 	name = "Chocolate Sips"
@@ -162,6 +178,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "chocolate_sips"
 	list_reagents = list(/datum/reagent/consumable/choccyshake = 30, /datum/reagent/consumable/space_cola = 20)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/honey_med
 	name = "Honeyed Medicine"
@@ -171,6 +188,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "honey_med"
 	list_reagents = list(/datum/reagent/consumable/honey = 20, /datum/reagent/medicine/tricordrazine = 10, /datum/reagent/consumable/space_cola = 20)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/unstable_vortex
 	name = "Unstable Vortex"
@@ -180,6 +198,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "unstable_vortex"
 	list_reagents = list(/datum/reagent/bluespace = 20, /datum/reagent/consumable/space_cola = 30)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/clown_juice
 	name = "Clown Juice"
@@ -189,6 +208,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "clown_juice"
 	list_reagents = list(/datum/reagent/medicine/clownenhancer = 6, /datum/reagent/consumable/banana = 14, /datum/reagent/consumable/space_cola = 30)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/gold_soda
 	name = "Golden Soda"
@@ -198,6 +218,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "gold_soda"
 	list_reagents = list(/datum/reagent/medicine/enchantedgold = 10, /datum/reagent/gold = 20, /datum/reagent/consumable/space_cola = 20)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/sleepy_time
 	name = "Sleepy Time"
@@ -207,6 +228,7 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "sleepy_time"
 	list_reagents = list(/datum/reagent/toxin/sodium_thiopental = 20, /datum/reagent/consumable/between_the_sheets = 20, /datum/reagent/consumable/space_cola = 10)
+	volume = 50
 
 /obj/item/reagent_containers/cup/soda_cans/nocturnal
 	name = "Nocturnal Drunkard"
@@ -216,9 +238,10 @@
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "nocturnal"
 	list_reagents = list(/datum/reagent/toxin/nocturine = 5, /datum/reagent/medicine/c2/probital = 30, /datum/reagent/medicine/modafinil = 10, /datum/reagent/consumable/space_cola = 5)
+	volume = 50
 
 
-/obj/item/reagent_containers/cup/coffee/syndicate
+/obj/item/reagent_containers/cup/glass/coffee/syndicate
 	name = "syndicate latte"
 	desc = "A syndicate-branded hot beverage, satisfaction guaranteed."
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
@@ -230,7 +253,7 @@
 	custom_price = 150
 	custom_premium_price = 150
 
-/obj/item/reagent_containers/cup/coffee/nukie
+/obj/item/reagent_containers/cup/glass/coffee/nukie
 	name = "robust nukie latte"
 	desc = "A syndicate-branded hot beverage, a large illustration of a three-headed snake exists on one side of the cup, and on the other is a crude depiction of a 'Gorlex Marauder'."
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'

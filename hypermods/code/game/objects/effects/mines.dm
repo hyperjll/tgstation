@@ -93,7 +93,7 @@
 /obj/effect/mine/explosive/fakeian
 	name = "Ian"
 	desc = "It's the HoP's beloved corgi."
-	icon = 'icons/mob/pets.dmi'
+	icon = 'icons/mob/simple/pets.dmi'
 	icon_state = "old_corgi"
 	alpha = 255
 	range_devastation = 2

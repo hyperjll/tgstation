@@ -18,11 +18,33 @@
 		/obj/item/reagent_containers/cup/glass/waterbottle = 10,
 		/obj/item/reagent_containers/cup/glass/bottle/mushi_kombucha = 3,
 		/obj/item/reagent_containers/cup/soda_cans/volt_energy = 3,
+		/obj/item/reagent_containers/cup/soda_cans/hearty_punch = 2,
+		/obj/item/reagent_containers/cup/soda_cans/fireball = 2,
+		/obj/item/reagent_containers/cup/soda_cans/mutate_fizz = 3,
+		/obj/item/reagent_containers/cup/soda_cans/antidote = 3,
+		/obj/item/reagent_containers/cup/soda_cans/anti_water = 3,
+		/obj/item/reagent_containers/cup/soda_cans/simple_times = 3,
+		/obj/item/reagent_containers/cup/soda_cans/chocolate_sips = 3,
+		/obj/item/reagent_containers/cup/soda_cans/honey_med = 3,
+		/obj/item/reagent_containers/cup/soda_cans/gold_soda = 3,
+		/obj/item/reagent_containers/cup/soda_cans/sleepy_time = 3,
 	)
 	contraband = list(
 		/obj/item/reagent_containers/cup/soda_cans/thirteenloko = 6,
 		/obj/item/reagent_containers/cup/soda_cans/shamblers = 6,
 		/obj/item/reagent_containers/cup/soda_cans/wellcheers = 6,
+		/obj/item/reagent_containers/cup/soda_cans/thirteenloko = 6,
+		/obj/item/reagent_containers/cup/soda_cans/shamblers = 6,
+		/obj/item/reagent_containers/cup/soda_cans/wellcheers = 6,
+		/obj/item/reagent_containers/cup/soda_cans/robust_nukie = 1,
+		/obj/item/reagent_containers/cup/soda_cans/fireworks = 1,
+		/obj/item/reagent_containers/cup/soda_cans/aged_soda = 2,
+		/obj/item/reagent_containers/cup/soda_cans/space_walker = 2,
+		/obj/item/reagent_containers/cup/soda_cans/nano_pop = 1,
+		/obj/item/reagent_containers/cup/soda_cans/ice_e = 2,
+		/obj/item/reagent_containers/cup/soda_cans/unstable_vortex = 2,
+		/obj/item/reagent_containers/cup/soda_cans/clown_juice = 1,
+		/obj/item/reagent_containers/cup/soda_cans/nocturnal = 1,
 	)
 	premium = list(
 		/obj/item/reagent_containers/cup/glass/drinkingglass/filled/nuka_cola = 1,
@@ -30,6 +52,10 @@
 		/obj/item/reagent_containers/cup/soda_cans/monkey_energy = 1,
 		/obj/item/reagent_containers/cup/soda_cans/grey_bull = 1,
 		/obj/item/reagent_containers/cup/glass/bottle/rootbeer = 1,
+		/obj/item/reagent_containers/cup/soda_cans/mystery = 5,
+		/obj/item/reagent_containers/cup/soda_cans/changelingsting = 2,
+		/obj/item/reagent_containers/cup/soda_cans/devilskiss = 2,
+		/obj/item/reagent_containers/cup/soda_cans/turbo = 2,
 	)
 	refill_canister = /obj/item/vending_refill/cola
 	default_price = PAYCHECK_CREW * 0.7

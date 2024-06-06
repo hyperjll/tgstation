@@ -21,10 +21,26 @@
 		/obj/item/cane/white = 2,
 		/obj/item/clothing/glasses/eyepatch/medical = 2,
 		/obj/item/storage/box/bandages = 2,
+		/obj/item/reagent_containers/syringe/antiviral = 6,
+		/obj/item/reagent_containers/cup/bottle/multiver = 4,
+		/obj/item/reagent_containers/cup/bottle/epinephrine = 3,
+		/obj/item/reagent_containers/cup/bottle/morphine = 4,
+		/obj/item/reagent_containers/cup/bottle/potass_iodide = 1,
+		/obj/item/reagent_containers/cup/bottle/salglu_solution = 3,
+		/obj/item/reagent_containers/cup/bottle/oculine = 5,
+		/obj/item/reagent_containers/cup/bottle/inacusiate = 5,
+		/obj/item/storage/pill_bottle/mannitol = 5,
+		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 5,
+		/obj/item/storage/pill_bottle/inaprovaline = 3,
 	)
 	contraband = list(
 		/obj/item/storage/box/gum/happiness = 3,
 		/obj/item/storage/box/hug/medical = 1,
+		/obj/item/stack/medical/suture/medicated = 3,
+		/obj/item/stack/medical/mesh/advanced = 3,
+		/obj/item/storage/pill_bottle/tricordrazine = 3,
+		/obj/item/reagent_containers/hypospray/medipen/formaldehyde = 5,
+		/obj/item/reagent_containers/cup/bottle/toxin = 3,
 	)
 	premium = list(
 		/obj/item/reagent_containers/hypospray/medipen = 3,
@@ -34,6 +50,15 @@
 		/obj/item/storage/medkit/advanced = 2,
 		/obj/item/shears = 1,
 		/obj/item/storage/organbox = 1,
+		/obj/item/reagent_containers/medigel/synthflesh = 4,
+		/obj/item/storage/pill_bottle/bicaridine = 3,
+		/obj/item/storage/pill_bottle/kelotane = 3,
+		/obj/item/storage/pill_bottle/antitoxin = 3,
+		/obj/item/storage/pill_bottle/dexalin = 3,
+		/obj/item/storage/pill_bottle/coagulant = 2,
+		/obj/item/storage/pill_bottle/psicodine = 2,
+		/obj/item/reagent_containers/hypospray/medipen/ekit = 3,
+		/obj/item/reagent_containers/cup/beaker/cryoxadone = 4,
 	)
 	refill_canister = /obj/item/vending_refill/medical
 	default_price = PAYCHECK_CREW
