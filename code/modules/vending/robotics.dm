@@ -23,18 +23,17 @@
 		/obj/item/clothing/mask/breath/medical = 5,
 		/obj/item/screwdriver = 5,
 		/obj/item/crowbar = 5,
-		/obj/item/stack/sheet/metal = 50,
+		/obj/item/stack/sheet/iron = 50,
 		/obj/item/stack/sheet/glass = 50,
 	)
 	premium = list(
 		/obj/item/grenade/chem_grenade/smart_metal_foam = 5,
-		/obj/item/clothing/head/hardhat/red = 5,
 		/obj/item/extinguisher = 5,
 		/obj/item/stack/sheet/plasteel/twenty = 5,
 	)
 	contraband = list(
 		/obj/item/grenade/clusterbuster/metalfoam = 1,
-		/obj/item/borg/upgrade/restart = 1,
+		/obj/item/borg_restart_board = 1,
 	)
 	refill_canister = /obj/item/vending_refill/robotics
 	default_price = PAYCHECK_COMMAND

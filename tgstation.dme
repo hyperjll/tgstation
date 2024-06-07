@@ -6402,6 +6402,7 @@
 #include "hypermods\code\modules\reagents\chemistry\reagents\toxin_reagents.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\condiment.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\hypospray.dm"
+#include "hypermods\code\modules\reagents\reagent_containers\pill.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\spray.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\syringes.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\cups\_cup.dm"
