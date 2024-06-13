@@ -19,7 +19,7 @@
 
 /datum/uplink_item/device_tools/airshoes
 	name = "Air Shoes"
-	desc = "Popular in underground racing rings, these shoes come with built-in jets, allowing the users to reach high speeds in short bursts. \
+	desc = "Popular in underground racing rings, these shoes come with built-in jets, allowing the user to reach high speeds in short bursts. \
 			Users should keep in mind that despite being superior to Jump Shoes, these will not protect you from high-speed impacts."
 	item = /obj/item/clothing/shoes/bhop/airshoes
 	cost = 4

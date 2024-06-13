@@ -13,7 +13,7 @@
 	/// Max time this can be set
 	var/max_duration = 300 SECONDS
 	/// Currently set time
-	var/duration = 30 SECONDS
+	var/duration = 300 SECONDS
 	/// Last world time
 	var/last_use = 0
 	/// world.time + (world.time - last_use)
@@ -40,7 +40,7 @@
 	. += span_notice("Can be used again to interrupt the effect early. The recharge time is the same as the time spent in desync.")
 
 /obj/item/desynchronizer/click_alt(mob/living/user)
-	var/new_duration = tgui_input_number(user, "Set the duration", "Desynchronizer", duration / 10, max_duration, 5)
+	var/new_duration = tgui_input_number(user, "Set the duration", "Desynchronizer", duration, max_duration, 5)
 	if(!new_duration || QDELETED(user) || QDELETED(src) || !usr.can_perform_action(src, NEED_DEXTERITY))
 		return CLICK_ACTION_BLOCKING
 	duration = new_duration

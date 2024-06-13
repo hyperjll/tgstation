@@ -117,7 +117,7 @@
 
 /datum/uplink_item/stealthy_tools/holodisguiser
 	name = "Holographic Disguiser"
-	desc = "A peculiar device modeled after extensive research into stabilized green extracts. \
+	desc = "A peculiar device modeled after extensive research into stabilized green slime extracts. \
 			While held, or within your backpack the device will automatically activate, projecting a false appearance AND voice. \
 			Excellent for mulligan tactics, pair with a Agent Identification Card and Chameleon Kit for an excellent combo."
 	item = /obj/item/holodisguiser

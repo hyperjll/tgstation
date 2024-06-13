@@ -143,13 +143,13 @@
 	item = /obj/item/storage/box/syndie_kit/fourtyfivemmmagboxsp
 
 /datum/uplink_item/ammo/handgun45/emp
-	name = ".45mm EMP Handgun Magazines"
+	name = ".45mm EMP Handgun Magazine"
 	desc = "A single 8-round EMP .45mm magazines, compatible with the M1911 pistol and the Cobra. \
 			Shots emit a tiny electro-magnetic pulse where they hit."
 	item = /obj/item/ammo_box/magazine/m45/emp
 
 /datum/uplink_item/ammo/handgun45/venom
-	name = ".45mm Venom Handgun Magazines"
+	name = ".45mm Venom Handgun Magazine"
 	desc = "A single 8-round Venom .45mm magazines, compatible with the M1911 pistol and the Cobra. \
 			These bullets inject the victim with 4 units of Venom in addition to doing regular damage."
 	item = /obj/item/ammo_box/magazine/m45/venom
