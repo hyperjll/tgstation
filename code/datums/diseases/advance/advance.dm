@@ -51,7 +51,6 @@
 			/datum/reagent/potassium,
 			/datum/reagent/silicon,
 			/datum/reagent/determination,
-			/datum/reagent/drug/space_drugs,
 		),
 		list( // level 3
 			/datum/reagent/consumable/milk,
@@ -62,7 +61,6 @@
 			/datum/reagent/hydrogen_peroxide,
 			/datum/reagent/cryostylane,
 			/datum/reagent/pyrosium,
-			/datum/reagent/inverse/cryostylane,
 		),
 		list( //level 4
 			/datum/reagent/fuel/oil,

@@ -26,7 +26,7 @@
 /obj/item/ammo_casing/shotgun/laserbuckshot
 	name = "laser buckshot"
 	desc = "An advanced shotgun shell that uses micro lasers to replicate the effects of a laser weapon in a ballistic package."
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "lshell"
 	projectile_type = /obj/projectile/beam/laser/buckshot
 	pellets = 5
@@ -103,7 +103,7 @@
 /obj/item/ammo_casing/shotgun/clownshot
 	name = "buckshot shell..?"
 	desc = "This feels a little light for a buckshot shell."
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "gshell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_clownshot
 	pellets = 20

@@ -494,7 +494,7 @@
 /datum/uplink_item/role_restricted/bodybaginvis
 	name = "Invisible Body Bag"
 	desc = "A single, invisible body bag. It's chameleon technology is so advanced, it cannot be revealed -- even with EMP's. Try not to forget where you placed it. \
-			Extremely useful as a portable hiding spot, evidence concealment, contraband stashes, and more."
+			Extremely useful as a portable hiding spot, evidence concealment, contraband stashes and more."
 	item = /obj/item/bodybag/invis
 	cost = 6
 	restricted_roles = list(JOB_CORONER, JOB_CAPTAIN)
@@ -618,7 +618,7 @@
 
 /datum/uplink_item/role_restricted/holynade
 	name = "Holy Hand Grenade"
-	desc = "The priest's patented special surprise, produces a small explosion comparable to that of a potassium & water explosion. Makes a distinct sound when detonated."
+	desc = "The priest's patented special surprise, produces a decent explosion stronger than that of a potassium & water explosion. Makes a distinct sound when detonated."
 	item = /obj/item/grenade/chem_grenade/holy
 	cost = 5
 	surplus = 45

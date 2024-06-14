@@ -156,24 +156,21 @@
 
 /datum/uplink_item/implants/medicalhud
 	name = "Syndicate MedHUD Implant"
-	desc = "A cybersun industries branded MedicalHUD implant, comes with a one-use autosurgeon for quick installation. Only one HUD implant can be installed per agent. \
-			Comes with an autosurgeon."
+	desc = "A cybersun industries branded MedicalHUD implant, comes with a one-use autosurgeon for quick installation. Only one HUD implant can be installed per agent."
 	item = /obj/item/autosurgeon/syndicate/contraband_medhud
 	cost = 1
 	surplus = 0
 
 /datum/uplink_item/implants/diagnostichud
 	name = "Syndicate DiagnosticHUD Implant"
-	desc = "A cybersun industries branded DiagnosticHUD implant, comes with a one-use autosurgeon for quick installation. Only one HUD implant can be installed per agent. \
-			Comes with an autosurgeon."
+	desc = "A cybersun industries branded DiagnosticHUD implant, comes with a one-use autosurgeon for quick installation. Only one HUD implant can be installed per agent."
 	item = /obj/item/autosurgeon/syndicate/contraband_diaghud
 	cost = 1
 	surplus = 0
 
 /datum/uplink_item/implants/securityhud
 	name = "Syndicate SecHUD Implant"
-	desc = "A cybersun industries branded SecurityHUD implant, comes with a one-use autosurgeon for quick installation. Only one HUD implant can be installed per agent. \
-			Comes with an autosurgeon."
+	desc = "A cybersun industries branded SecurityHUD implant, comes with a one-use autosurgeon for quick installation. Only one HUD implant can be installed per agent."
 	item = /obj/item/autosurgeon/syndicate/contraband_sechud
 	cost = 2
 	surplus = 10
@@ -316,7 +313,7 @@
 
 /datum/uplink_item/implants/spinaloverclock
 	name = "Neural Overclocker Implant"
-	desc = "Stimulates your central nervous system in order to enable you to perform muscle movements faster, resulting in (75%) faster movement and (35%) actions. \
+	desc = "A spinal cord integrable implant that stimulates your central nervous system in order to enable you to perform muscle movements faster, resulting in (75%) faster movement and (35%) actions. \
 			Overuse will inevitably result in irreversable bodily harm, ensure long periods of rest between uses. Comes with an autosurgeon."
 	item = /obj/item/autosurgeon/syndicate/spinalspeed
 	cost = 14
