@@ -6263,6 +6263,7 @@
 #include "hypermods\code\datums\mutations\super.dm"
 #include "hypermods\code\datums\mutations\vitality.dm"
 #include "hypermods\code\datums\status_effects\buffs.dm"
+#include "hypermods\code\game\machinery\flatpacker.dm"
 #include "hypermods\code\game\objects\effects\mines.dm"
 #include "hypermods\code\game\objects\items\beelibsword.dm"
 #include "hypermods\code\game\objects\items\bodybag.dm"

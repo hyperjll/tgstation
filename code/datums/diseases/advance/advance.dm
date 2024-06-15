@@ -77,7 +77,6 @@
 			/datum/reagent/medicine/synaptizine,
 			/datum/reagent/cryptobiolin,
 			/datum/reagent/love,
-			/datum/reagent/medicine/coagulant,
 			/datum/reagent/toxin,
 		),
 		list( // level 6
@@ -128,6 +127,7 @@
 			/datum/reagent/medicine/modafinil,
 			/datum/reagent/medicine/omnizine,
 			/datum/reagent/drug/krokodil,
+			/datum/reagent/medicine/coagulant,
 		),
 		list( //level 12
 			/datum/reagent/pentaerythritol,

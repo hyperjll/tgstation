@@ -171,6 +171,37 @@
 	contains = list(/obj/item/assembly/signaler/anomaly/hallucination)
 	crate_name = "hallucination anomaly core crate"
 	crate_type = /obj/structure/closet/crate/secure/science
+
+/datum/supply_pack/science/biocore
+	name = "Refined Bioscrambler Anomaly Core Crate"
+	desc = "Contains a single Bioscrambler anomaly core."
+	cost = 10000
+	access = ACCESS_RD
+	access_view = ACCESS_RD
+	contains = list(/obj/item/assembly/signaler/anomaly/bioscrambler)
+	crate_name = "bioscrambler anomaly core crate"
+	crate_type = /obj/structure/closet/crate/secure/science
+
+/datum/supply_pack/science/dimencore
+	name = "Refined Dimensional Anomaly Core Crate"
+	desc = "Contains a single Dimensional anomaly core."
+	cost = 10000
+	access = ACCESS_RD
+	access_view = ACCESS_RD
+	contains = list(/obj/item/assembly/signaler/anomaly/dimensional)
+	crate_name = "dimensional anomaly core crate"
+	crate_type = /obj/structure/closet/crate/secure/science
+
+/datum/supply_pack/science/ectocore
+	name = "Refined Ectoplasm Anomaly Core Crate"
+	desc = "Contains a single Ectoplasm anomaly core."
+	cost = 10000
+	access = ACCESS_RD
+	access_view = ACCESS_RD
+	contains = list(/obj/item/assembly/signaler/anomaly/ectoplasm)
+	crate_name = "ectoplasm anomaly core crate"
+	crate_type = /obj/structure/closet/crate/secure/science
+
 /**
 /datum/supply_pack/science/radscore
 	name = "Refined Radiation Anomaly Core Crate"
