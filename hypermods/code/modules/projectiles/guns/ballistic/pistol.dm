@@ -83,7 +83,6 @@
 	mag_display = TRUE
 	can_suppress = FALSE
 	bolt_type = BOLT_TYPE_LOCKING
-	fire_sound = "sound/weapons/pistolshotsmall.ogg"
 	custom_price = 2500
 
 /obj/item/gun/ballistic/automatic/pistol/mk58/nopin

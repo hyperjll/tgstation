@@ -529,6 +529,7 @@
 /obj/item/clothing/glasses/thermal/syndi
 	name = "chameleon thermals"
 	desc = "A pair of thermal optic goggles with an onboard chameleon generator."
+	clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED)
 	actions_types = list(/datum/action/item_action/chameleon/change/glasses/no_preset)
 
 /obj/item/clothing/glasses/thermal/monocle

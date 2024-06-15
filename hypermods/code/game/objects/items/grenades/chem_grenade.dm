@@ -280,13 +280,12 @@
 	desc = "A foam grenade containing highly condensed breatheable air, pull the pin and launch into a room that has been vacuumed for easy air distribution."
 	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
 	icon_state = "oxy"
+	base_icon_state = "oxy"
 	stage = GRENADE_READY
 	can_dismantle = FALSE
 
 /obj/item/grenade/chem_grenade/engiairfoam/Initialize(mapload)
 	. = ..()
-	icon_state = "oxy" // just to fix the icon being missing.
-
 	var/obj/item/reagent_containers/cup/beaker/large/B1 = new(src)
 	var/obj/item/reagent_containers/cup/beaker/large/B2 = new(src)
 
@@ -304,13 +303,12 @@
 	desc = "A smoke grenade containing highly toxin saxitoxin, those who breathe the smoke will suffer burn, toxin, and brain damage."
 	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
 	icon_state = "saxitoxin"
+	base_icon_state = "saxitoxin"
 	stage = GRENADE_READY
 	can_dismantle = FALSE
 
 /obj/item/grenade/chem_grenade/saxitoxin/Initialize(mapload)
 	. = ..()
-	icon_state = "saxitoxin" // just to fix the icon being missing.
-
 	var/obj/item/reagent_containers/cup/beaker/large/B1 = new(src)
 	var/obj/item/reagent_containers/cup/beaker/large/B2 = new(src)
 

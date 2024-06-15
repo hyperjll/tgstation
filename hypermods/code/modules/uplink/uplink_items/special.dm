@@ -208,8 +208,9 @@
 	desc = "A box containing a syndicate handcannon, 4 cannonballs, and a recipe book to craft them both. \
 			The syndicate handcannon can hold FOUR cannonballs in it's chamber!"
 	item = /obj/item/storage/box/syndie_kit/piratekit
-	cost = 8
+	cost = 14
 	surplus = 0
+	progression_minimum = 20 MINUTES
 
 /datum/uplink_item/special/spacepiratekit/New()
 	..()
