@@ -23,19 +23,19 @@
 	for (var/list/subtypelist in type_whitelist)
 		if (target.type in subtypelist)
 			return TRUE
-	to_chat(user, span_warning("[src] is unable to interface with this. It only seems to activate when in close proximity to simple bots."))
+	to_chat(user, span_warning("[src] is unable to interface with this. It seems to display a notification? Simplebot Only."))
 	return FALSE
 
 /*
- * The Jestographic Sequencer
+ * The Jestographic Sequencer <- tf? -NexusLeader
  */
 
 /obj/item/card/emag/doorjack/jester
 	name = "jestographic sequencer"
-	desc = "It's a colorful card with electronics attached to it. The phrase 'Tastes like electromagnetic bananium.' is written on the back."
+	desc = "It's a colorful card with electronics attached to it. The phrase 'Tastes like electromagnetic bananium.' is written on the back. It is stamped by HonkCo."
 	icon = 'hypermods/icons/obj/card.dmi'
 	icon_state = "jester"
-	charge_time = 600 // 1 minute
+	charge_time = 900 // 1 minute and 30 seconds
 
 /obj/item/card/emag/doorjack/jester/Initialize(mapload)
 	. = ..()
