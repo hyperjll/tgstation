@@ -35,7 +35,7 @@
 		/obj/item/storage/pill_bottle/tricordrazine = 2,
 		/obj/item/pinpointer/crew = 2,
 		/mob/living/simple_animal/bot/secbot = 3,
-		/obj/item/antag_spawner/nanotrasensecborg = 2,
+		/obj/item/antag_spawner/securityborg = 2,
 	)
 	refill_canister = /obj/item/vending_refill/security
 	default_price = PAYCHECK_CREW
