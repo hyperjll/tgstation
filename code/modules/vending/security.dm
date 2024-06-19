@@ -31,11 +31,12 @@
 		/obj/item/grenade/stingbang = 5,
 		/obj/item/watertank/pepperspray = 2,
 		/obj/item/storage/belt/holster/energy = 4,
+		/obj/item/ammo_box/magazine/v38/rubber = 2,
 		/obj/item/storage/medkit/regular = 2,
 		/obj/item/storage/pill_bottle/tricordrazine = 2,
 		/obj/item/pinpointer/crew = 2,
 		/mob/living/simple_animal/bot/secbot = 3,
-		/obj/item/antag_spawner/securityborg = 2,
+		/obj/item/antag_spawner/nanotrasen/securityborg = 2,
 	)
 	refill_canister = /obj/item/vending_refill/security
 	default_price = PAYCHECK_CREW
