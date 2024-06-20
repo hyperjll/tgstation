@@ -250,7 +250,7 @@
 /datum/action/cooldown/airshoes
 	name = "Dash"
 	desc = "Dash forward."
-	button_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = 'hypermods/icons/mob/actions/actions_items.dmi'
 	button_icon_state = "thrust"
 	check_flags = AB_CHECK_HANDS_BLOCKED | AB_CHECK_IMMOBILE | AB_CHECK_CONSCIOUS
 	cooldown_time = 4 SECONDS
