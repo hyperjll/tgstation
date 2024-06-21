@@ -186,3 +186,8 @@
 /obj/item/reagent_containers/cup/beaker/large/turbo
 	name = "turbo"
 	list_reagents = list(/datum/reagent/consumable/ethanol/turbo = 100)
+
+
+/obj/item/reagent_containers/cup/beaker/large/enchantedgold
+	name = "enchanted gold large beaker"
+	list_reagents = list(/datum/reagent/medicine/enchantedgold = 100)

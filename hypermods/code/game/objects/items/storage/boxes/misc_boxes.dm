@@ -66,3 +66,34 @@
 	for(var/i in 1 to 1)
 		var/type = pick(types)
 		new type(src)
+
+/obj/item/storage/box/randomcyberneticimplants
+	name = "cybernetic implant box"
+	desc = "It's a cardboard box with a tag labeled 'Cyberimp inc'."
+
+/obj/item/storage/box/randomcyberneticimplants/PopulateContents()
+	var/list/item_list = list(
+		/obj/item/organ/internal/cyberimp/arm/toolset,
+		/obj/item/organ/internal/cyberimp/eyes/hud/diagnostic,
+		/obj/item/organ/internal/cyberimp/chest/nutriment/plus,
+		/obj/item/organ/internal/cyberimp/chest/reviver,
+		/obj/item/organ/internal/cyberimp/arm/surgery,
+		/obj/item/organ/internal/eyes/robotic/shield,
+		/obj/item/organ/internal/eyes/robotic/xray,
+		/obj/item/organ/internal/eyes/robotic/glow,
+		/obj/item/organ/internal/cyberimp/leg/jumpboots,
+		/obj/item/organ/internal/cyberimp/chest/thrusters,
+		/obj/item/organ/internal/cyberimp/eyes/hud/diagnostic,
+		/obj/item/organ/internal/cyberimp/eyes/hud/security,
+		/obj/item/organ/internal/cyberimp/eyes/hud/medical,
+		/obj/item/organ/internal/cyberimp/brain/anti_stun,
+		/obj/item/organ/internal/cyberimp/brain/anti_drop,
+		/obj/item/organ/internal/cyberimp/mouth/breathing_tube,
+		/obj/item/organ/internal/cyberimp/leg/magboot,
+		/obj/item/organ/internal/cyberimp/chest/nutriment,
+		/obj/item/organ/internal/cyberimp/leg/galosh
+	)
+
+	for(var/i in 1 to 2)
+		var/item = pick(item_list)
+		new item(src)
