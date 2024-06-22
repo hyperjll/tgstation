@@ -6459,7 +6459,6 @@
 #include "hypermods\code\modules\surgery\organs\internal\cyberimp\augments_eyes.dm"
 #include "hypermods\code\modules\surgery\organs\internal\cyberimp\augments_internal.dm"
 #include "hypermods\code\modules\surgery\organs\internal\cyberimp\augments_legs.dm"
-#include "hypermods\code\modules\uplink\uplink_devices.dm"
 #include "hypermods\code\modules\uplink\uplink_items\ammunition.dm"
 #include "hypermods\code\modules\uplink\uplink_items\armor.dm"
 #include "hypermods\code\modules\uplink\uplink_items\badass.dm"
