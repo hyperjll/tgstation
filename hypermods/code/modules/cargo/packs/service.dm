@@ -336,3 +336,10 @@
 	cost = 3000
 	contains = list(/obj/machinery/vending/wardrobe/viro_wardrobe)
 	crate_name = "virologist wardrobe crate"
+
+/datum/supply_pack/vendingmachines/magivend
+	name = "MagiVend Machine"
+	desc = "A rare vending machines of unknown origin. Probably has magicks within."
+	contraband = TRUE
+	cost = PAYCHECK_COMMAND * 25
+	contains = list(/obj/machinery/vending/magivend)

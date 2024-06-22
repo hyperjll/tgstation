@@ -50,17 +50,11 @@
 	contains = list(/obj/item/stock_parts/cell/bluespace/selfcharge/empty,/obj/item/stock_parts/cell/bluespace/selfcharge/empty,/obj/item/stock_parts/cell/bluespace/selfcharge/empty)
 **/
 
-/datum/supply_pack/goody/ntuplink
-	name = "Nanotrasen Uplink"
-	desc = "One of our VERY exclusive uplinks given to high-ranking personnel. We'll sell it to you if you can... persuade us. Comes precharged with 20 WC. Requires Armory Access to open."
-	cost = PAYCHECK_COMMAND * 300
-	access_view = ACCESS_ARMORY
-	contains = list(/obj/item/ntuplink)
-
 
 /datum/supply_pack/goody/airshoes
 	name = "Air Shoes"
 	desc = "One pair of highly sought after AIR SHOES. They're equipped with high-end tech capable of propelling the user forward at great speeds or allowing them to hover."
+	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 200
 	contains = list(/obj/item/clothing/shoes/bhop/airshoes)
 
@@ -77,13 +71,6 @@
 	desc = "Contains a syringe gun, for long-range reagent distribution."
 	cost = PAYCHECK_COMMAND * 10
 	contains = list(/obj/item/gun/syringe)
-
-
-/datum/supply_pack/goody/magivend
-	name = "MagiVend Machine"
-	desc = "A rare vending machines of unknown origin. Probably has magicks within."
-	cost = PAYCHECK_COMMAND * 25
-	contains = list(/obj/machinery/vending/magivend)
 
 
 /datum/supply_pack/goody/nukiecola
@@ -134,7 +121,7 @@
 
 /datum/supply_pack/goody/explosivegrenades
 	name = "Explosive Grenades"
-	desc = "Three pyrotechnical chemical grenades filled with gunpowder. We're not going to ask why you'd need these. Requires Armory Access to open."
+	desc = "Three pyrotechnical chemical grenades filled with gunpowder. We're not going to ask why you'd need these."
 	cost = PAYCHECK_COMMAND * 50
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/grenade/chem_grenade/pyro/explosive,/obj/item/grenade/chem_grenade/pyro/explosive,/obj/item/grenade/chem_grenade/pyro/explosive)
@@ -199,119 +186,126 @@
 
 /datum/supply_pack/goody/incendiaryshells
 	name = "Incendiary Shells"
-	desc = "15 Incendiary Shells, especially effective against alien lifeforms. Requires Armory Access to open."
+	desc = "15 Incendiary Shells, especially effective against alien lifeforms."
 	cost = PAYCHECK_COMMAND * 20
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/incendiaryshells)
 
 /datum/supply_pack/goody/dartshells
 	name = "Dart Shells"
-	desc = "15 Dart Shells for biochemical warfare. Requires Armory Access to open."
+	desc = "15 Dart Shells for biochemical warfare."
 	cost = PAYCHECK_COMMAND * 10
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/dartshells)
 
 /datum/supply_pack/goody/tasershells
 	name = "Taser Slugs"
-	desc = "15 Taser Slugs for quickly subdueing targets. Requires Armory Access to open."
+	desc = "15 Taser Slugs for quickly subdueing targets."
 	cost = PAYCHECK_COMMAND * 25
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/tasershells)
 
 /datum/supply_pack/goody/meteorshells
 	name = "Meteor Shells"
-	desc = "15 Meteor Shells for high-power destruction of any and all targets. Requires Armory Access to open."
+	desc = "15 Meteor Shells for high-power destruction of any and all targets."
+	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 65
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/meteorshells)
 
 /datum/supply_pack/goody/pulseshells
 	name = "Pulse Shells"
-	desc = "15 Pulse Shells for those precious few who enjoy the suffering of others. Requires Armory Access to open."
+	desc = "15 Pulse Shells for those precious few who enjoy the suffering of others."
+	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 80
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/pulseshells)
 
 /datum/supply_pack/goody/frag12shells
 	name = "Frag-12 Shells"
-	desc = "15 Frag-12 Shells for quick and easy demolition of armored foes. Requires Armory Access to open."
+	desc = "15 Frag-12 Shells for quick and easy demolition of armored foes."
+	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 60
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/frag12shells)
 
 /datum/supply_pack/goody/flechetteshells
 	name = "Flechette Shells"
-	desc = "15 Flechette Shells for maiming your targets in the event you can't kill em'. Requires Armory Access to open."
+	desc = "15 Flechette Shells for maiming your targets in the event you can't kill em'."
 	cost = PAYCHECK_COMMAND * 20
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/flechetteshells)
 
 /datum/supply_pack/goody/rubbershotshells
 	name = "Rubbershot Shells"
-	desc = "15 Rubbershot Shells for when beanbags just ain't enough. Requires Armory Access to open."
+	desc = "15 Rubbershot Shells for when beanbags just ain't enough."
 	cost = PAYCHECK_COMMAND * 15
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/rubbershotshells)
 
 /datum/supply_pack/goody/ionshells
 	name = "ION Shells"
-	desc = "15 ION Shells for shutting down silicon life in an effective manner. Requires Armory Access to open."
+	desc = "15 ION Shells for shutting down silicon life in an effective manner."
+	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 25
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/ionshells)
 
 /datum/supply_pack/goody/lasershells
 	name = "Laser Buckshot Shells"
-	desc = "15 Laser Buckshot Shells for those who intend to fire past windows to reach their targets. Requires Armory Access to open."
+	desc = "15 Laser Buckshot Shells for those who intend to fire past windows to reach their targets."
 	cost = PAYCHECK_COMMAND * 12.5
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/lasershells)
 
 /datum/supply_pack/goody/uraniumshells
 	name = "Uranium Shells"
-	desc = "15 Uranium Shells for penetrating armor -- and the person. Requires Armory Access to open."
+	desc = "15 Uranium Shells for penetrating armor -- and the person."
+	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 37.5
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/uraniumshells)
 
 /datum/supply_pack/goody/cryoshotshells
 	name = "Cryoshot Shells"
-	desc = "15 Cryoshot Shells for commiting warcrimes. Requires Armory Access to open."
+	desc = "15 Cryoshot Shells for commiting warcrimes."
 	cost = PAYCHECK_COMMAND * 25
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/cryoshotshells)
 
 /datum/supply_pack/goody/breachershells
 	name = "Breaching Shells"
-	desc = "15 Breaching Shells for busting down walls and airlocks alike. Requires Armory Access to open."
+	desc = "15 Breaching Shells for busting down walls and airlocks alike."
 	cost = PAYCHECK_COMMAND * 15
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/breachershells)
 
 /datum/supply_pack/goody/thundershotshells
 	name = "Thundershot Shells"
-	desc = "15 Thundershot Shells for mass-harm of incredibly dangerous targets. Requires Armory Access to open."
+	desc = "15 Thundershot Shells for mass-harm of incredibly dangerous targets."
+	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 40
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/thundershotshells)
 
 /datum/supply_pack/goody/hardlightshells
 	name = "Hardlight Shells"
-	desc = "15 Hardlight Shells for subdueing targets in a non-lethal manner. Requires Armory Access to open."
+	desc = "15 Hardlight Shells for subdueing targets in a non-lethal manner."
 	cost = PAYCHECK_COMMAND * 15
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/hardlightshells)
 
 /datum/supply_pack/goody/ripshells
 	name = "RIP Shells"
-	desc = "15 RIP Shells for quick elimination of the enemy. Requires Armory Access to open."
+	desc = "15 RIP Shells for quick elimination of the enemy."
+	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 20
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/ripshells)
 
 /datum/supply_pack/goody/anarchyshells
 	name = "Anarchy Shells"
-	desc = "15 Anarchy Shells for when aiming isn't the highest priority. Requires Armory Access to open."
+	desc = "15 Anarchy Shells for when aiming isn't the highest priority."
 	cost = PAYCHECK_COMMAND * 10
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/anarchyshells)
