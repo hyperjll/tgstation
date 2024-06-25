@@ -13,7 +13,7 @@
 					/obj/item/stock_parts/scanning_module/adv,
 					/obj/item/stock_parts/micro_laser/high,
 					/obj/item/stock_parts/matter_bin/adv,
-					/obj/item/stock_parts/cell/super)
+					/obj/item/stock_parts/power_store/cell/super)
 	crate_name = "advanced parts crate"
 	crate_type = /obj/structure/closet/crate/secure/science
 
@@ -28,7 +28,7 @@
 					/obj/item/stock_parts/scanning_module/phasic,
 					/obj/item/stock_parts/micro_laser/ultra,
 					/obj/item/stock_parts/matter_bin/super,
-					/obj/item/stock_parts/cell/hyper)
+					/obj/item/stock_parts/power_store/cell/hyper)
 	crate_name = "super parts crate"
 	crate_type = /obj/structure/closet/crate/secure/science
 
@@ -43,7 +43,7 @@
 					/obj/item/stock_parts/scanning_module/triphasic,
 					/obj/item/stock_parts/micro_laser/quadultra,
 					/obj/item/stock_parts/matter_bin/bluespace,
-					/obj/item/stock_parts/cell/bluespace)
+					/obj/item/stock_parts/power_store/cell/bluespace)
 	crate_name = "bluespace parts crate"
 	crate_type = /obj/structure/closet/crate/secure/science
 
@@ -89,7 +89,7 @@
 					/obj/item/mmi/posibrain,
 					/obj/item/assembly/flash/handheld,
 					/obj/item/assembly/flash/handheld,
-					/obj/item/stock_parts/cell/high,
+					/obj/item/stock_parts/power_store/cell/high,
 					/obj/item/stack/cable_coil)
 	crate_name = "cyborg assembly crate"
 	crate_type = /obj/structure/closet/crate/secure/science

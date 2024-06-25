@@ -41,16 +41,16 @@
 		icon_state = "battererburnt"
 
 
-/obj/item/stock_parts/cell/bluespace/syndirig
+/obj/item/stock_parts/power_store/cell/bluespace/syndirig
 	rigged = TRUE
 
-/obj/item/stock_parts/cell/bluespace/syndirig/explode()
+/obj/item/stock_parts/power_store/cell/bluespace/syndirig/explode()
 	if (charge==0)
 		return
 	//explosion(T, 0, 1, 2, 2)
 	addtimer(CALLBACK(src, PROC_REF(syndiplode)), 60 SECONDS)
 
-/obj/item/stock_parts/cell/bluespace/syndirig/proc/syndiplode()
+/obj/item/stock_parts/power_store/cell/bluespace/syndirig/proc/syndiplode()
 	explosion(src, -1, 4, 10, 0)
 	qdel(src)
 

@@ -215,7 +215,7 @@
 
 /obj/item/storage/box/syndie_kit/syndirigcells/PopulateContents()
 	for(var/i in 1 to 6)
-		new /obj/item/stock_parts/cell/bluespace/syndirig(src)
+		new /obj/item/stock_parts/power_store/cell/bluespace/syndirig(src)
 
 /obj/item/storage/box/lights/mixed/syndirigged
 	name = "box of replacement lights"
@@ -612,7 +612,7 @@
 		new /obj/item/stock_parts/servo/femto(src)
 	for(var/i in 1 to 3)
 		new /obj/item/stock_parts/matter_bin/bluespace(src)
-	new /obj/item/stock_parts/cell/high(src)
+	new /obj/item/stock_parts/power_store/cell/high(src)
 	for(var/i in 1 to 3)
 		new /obj/item/stack/sheet/glass(src)
 	new /obj/item/reagent_containers/cup/beaker(src)
