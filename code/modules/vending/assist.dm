@@ -34,6 +34,7 @@
 		/obj/item/assembly/timer = 10,
 		/obj/item/assembly/voice = 10,
 		/obj/item/stock_parts/cell/high = 1,
+		/obj/item/stock_parts/power_store/battery/high = 1,
 		/obj/item/market_uplink/blackmarket = 1,
 		/obj/item/ammo_casing/shotgun/beanbag = 10,
 		/obj/item/clothing/gloves/color/fyellow = 4,
