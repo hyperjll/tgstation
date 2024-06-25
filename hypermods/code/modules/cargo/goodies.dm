@@ -1,31 +1,31 @@
 /datum/supply_pack/goody/bicaridinebottles
 	name = "Bicaridine Pill Bottles"
 	desc = "Three pill bottles filled with bicaridine pills. Useful in treating brute damage quickly."
-	cost = PAYCHECK_CREW * 10
+	cost = PAYCHECK_CREW * 30
 	contains = list(/obj/item/storage/pill_bottle/bicaridine,/obj/item/storage/pill_bottle/bicaridine,/obj/item/storage/pill_bottle/bicaridine)
 
 /datum/supply_pack/goody/kelotanebottles
 	name = "Kelotane Pill Bottles"
 	desc = "Three pill bottles filled with kelotane pills. Useful in treating burn damage quickly."
-	cost = PAYCHECK_CREW * 10
+	cost = PAYCHECK_CREW * 30
 	contains = list(/obj/item/storage/pill_bottle/kelotane,/obj/item/storage/pill_bottle/kelotane,/obj/item/storage/pill_bottle/kelotane)
 
 /datum/supply_pack/goody/antitoxinbottles
 	name = "Anti-Toxin Pill Bottles"
 	desc = "Three pill bottles filled with anti-toxin pills. Useful in treating toxin damage quickly."
-	cost = PAYCHECK_CREW * 10
+	cost = PAYCHECK_CREW * 30
 	contains = list(/obj/item/storage/pill_bottle/antitoxin,/obj/item/storage/pill_bottle/antitoxin,/obj/item/storage/pill_bottle/antitoxin)
 
 /datum/supply_pack/goody/dexalinbottles
 	name = "Dexalin Pill Bottles"
 	desc = "Three pill bottles filled with dexalin pills. Useful in treating oxygen damage quickly."
-	cost = PAYCHECK_CREW * 10
+	cost = PAYCHECK_CREW * 30
 	contains = list(/obj/item/storage/pill_bottle/dexalin,/obj/item/storage/pill_bottle/dexalin,/obj/item/storage/pill_bottle/dexalin)
 
 /datum/supply_pack/goody/tricordrazinebottles
 	name = "Tricordrazine Pill Bottles"
 	desc = "Three pill bottles filled with tricordrazine pills. Useful in treating most damage quickly."
-	cost = PAYCHECK_CREW * 20
+	cost = PAYCHECK_CREW * 50
 	contains = list(/obj/item/storage/pill_bottle/tricordrazine,/obj/item/storage/pill_bottle/tricordrazine,/obj/item/storage/pill_bottle/tricordrazine)
 
 

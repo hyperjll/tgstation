@@ -6321,6 +6321,8 @@
 #include "hypermods\code\game\objects\items\food\donkpocket.dm"
 #include "hypermods\code\game\objects\items\food\donuts.dm"
 #include "hypermods\code\game\objects\items\food\monkeycube.dm"
+#include "hypermods\code\game\objects\items\food\pizza.dm"
+#include "hypermods\code\game\objects\items\food\snacks.dm"
 #include "hypermods\code\game\objects\items\granters\wirecrawl.dm"
 #include "hypermods\code\game\objects\items\granters\crafting\cannon.dm"
 #include "hypermods\code\game\objects\items\granters\crafting\fulton.dm"
