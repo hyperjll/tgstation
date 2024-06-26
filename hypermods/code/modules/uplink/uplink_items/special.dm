@@ -13,7 +13,7 @@
 /datum/uplink_item/special/straypod
 	name = "Stray Supply Pod"
 	desc = "We've got plenty of supply pods in our warehouses, if you've got Telecrystals to spare \
-			We'll send one flying toward the station, which will crash-land in a random location. \
+			we'll send one flying toward the station, which will crash-land in a random location. \
 			May contain rather useful stuff."
 	item = /obj/effect/gibspawner/generic
 	cost = 4

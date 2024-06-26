@@ -99,3 +99,47 @@
 	desc = "You can totally see in the dark now! Fitted specifically for the near-sighted."
 	clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED)
 	custom_premium_price = 500
+
+
+/obj/item/clothing/glasses/universal
+	name = "universal hud goggles"
+	desc = "An all-in-one for purposes unknown."
+	icon_state = "nvgmeson"
+	inhand_icon_state = "nvgmeson"
+	glass_colour_type = FALSE
+	vision_flags = SEE_TURFS
+	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_MADNESS_IMMUNE)
+	var/list/hudlist = list(DATA_HUD_MEDICAL_ADVANCED, DATA_HUD_DIAGNOSTIC_ADVANCED, DATA_HUD_SECURITY_ADVANCED)
+	actions_types = list(/datum/action/item_action/chameleon/change/glasses/no_preset)
+
+/obj/item/clothing/glasses/universal/equipped(mob/user, slot)
+	. = ..()
+	if(!(slot & ITEM_SLOT_EYES))
+		return
+	if(ishuman(user))
+		for(var/hud in hudlist)
+			var/datum/atom_hud/our_hud = GLOB.huds[hud]
+			our_hud.show_to(user)
+		user.add_traits(list(TRAIT_MEDICAL_HUD, TRAIT_SECURITY_HUD), GLASSES_TRAIT)
+
+/obj/item/clothing/glasses/universal/dropped(mob/user)
+	. = ..()
+	user.remove_traits(list(TRAIT_MEDICAL_HUD, TRAIT_SECURITY_HUD), GLASSES_TRAIT)
+	if(ishuman(user))
+		for(var/hud in hudlist)
+			var/datum/atom_hud/our_hud = GLOB.huds[hud]
+			our_hud.hide_from(user)
+
+/obj/item/clothing/glasses/universal/antiflash
+	name = "universal hud goggles"
+	desc = "An all-in-one for purposes unknown."
+	icon_state = "nvgmeson"
+	inhand_icon_state = "nvgmeson"
+	flags_cover = GLASSESCOVERSEYES
+	flash_protect = FLASH_PROTECTION_WELDER
+	lighting_cutoff = LIGHTING_CUTOFF_HIGH
+	glass_colour_type = FALSE
+	vision_flags = SEE_TURFS
+	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_MADNESS_IMMUNE)
+	hudlist = list(DATA_HUD_MEDICAL_ADVANCED, DATA_HUD_DIAGNOSTIC_ADVANCED, DATA_HUD_SECURITY_ADVANCED)
+	actions_types = list(/datum/action/item_action/chameleon/change/glasses/no_preset)

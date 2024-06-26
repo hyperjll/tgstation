@@ -184,3 +184,13 @@
 	cost = 4
 	surplus = 40
 	illegal_tech = FALSE // NT is already walking around with this, pretty sure it ain't illegal.
+
+/datum/uplink_item/device_tools/syndieomnigoggles
+	name = "Syndicate Omni-Goggles"
+	desc = "A pair of goggles augmented with chameleon technology and every single HUD-tech known to us. \
+			Allows you to see Medical Statuses, IDs, Reagent Info, Diagnostic Info, and the general layout of the area around you. \
+			Does NOT protect from flashes, but corrects near-sighted-ness."
+	item = /obj/item/clothing/glasses/universal
+	cost = 4
+	surplus = 20
+	illegal_tech = TRUE
