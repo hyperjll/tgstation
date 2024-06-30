@@ -11,7 +11,7 @@
 	conflicts = list(/datum/mutation/human/hulk)
 	mutadone_proof = TRUE
 	var/superhumanhealing = FALSE
-	var/static/list/mutation_traits = list(
+	mutation_traits = list(
 		TRAIT_NO_SLIP_WATER,
 		TRAIT_IGNOREDAMAGESLOWDOWN,
 		TRAIT_PUSHIMMUNE,
