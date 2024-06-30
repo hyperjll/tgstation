@@ -18,7 +18,7 @@
 	///Does the mask have an FOV?
 	var/has_fov = TRUE
 	///Cigarette in the mask
-	var/obj/item/clothing/mask/cigarette/cig
+	var/obj/item/cigarette/cig
 	voice_filter = "lowpass=f=750,volume=2"
 
 /datum/armor/mask_gas
@@ -75,7 +75,7 @@
 /obj/item/clothing/mask/gascig/attackby(obj/item/tool, mob/user)
 	var/valid_wearer = ismob(loc)
 	var/mob/wearer = loc
-	if(istype(tool, /obj/item/clothing/mask/cigarette))
+	if(istype(tool, /obj/item/cigarette))
 		if(flags_cover & MASKCOVERSMOUTH)
 			balloon_alert(user, "mask's mouth is covered!")
 			return ..()

@@ -36,7 +36,7 @@
 /obj/item/clothing/mask/gas/fakemoustache/syndicate/attackby(obj/item/tool, mob/user)
 	var/valid_wearer = ismob(loc)
 	var/mob/wearer = loc
-	if(istype(tool, /obj/item/clothing/mask/cigarette))
+	if(istype(tool, /obj/item/cigarette))
 		if(flags_cover & MASKCOVERSMOUTH)
 			balloon_alert(user, "The stache' is in the way!")
 			return ..()
