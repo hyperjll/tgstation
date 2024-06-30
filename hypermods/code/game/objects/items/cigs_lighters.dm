@@ -5,7 +5,7 @@
 	smoketime = 1 MINUTES
 	list_reagents = list(/datum/reagent/drug/nicotine = 5)
 
-/obj/item/clothing/mask/cigarette/syndicate/explosive/put_out(mob/user, done_early = FALSE)
+/obj/item/cigarette/syndicate/explosive/put_out(mob/user, done_early = FALSE)
 	explosion(src.loc,1,1,2,flame_range = 3)
 	qdel(src)
 	src.visible_message("<span class='alert'>The [src] explodes!</span>")
