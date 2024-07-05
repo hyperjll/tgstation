@@ -15,38 +15,6 @@
 	illegal_tech = FALSE
 	purchasable_from = ~UPLINK_NUKE_OPS
 
-/datum/uplink_item/ammo/pistol
-	name = "9mm Handgun Magazine"
-	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol."
-	item = /obj/item/ammo_box/magazine/m9mm
-	cost = 1
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-	illegal_tech = FALSE
-
-/datum/uplink_item/ammo/pistolap
-	name = "9mm Armour Piercing Magazine"
-	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
-			These rounds are less effective at injuring the target but penetrate protective gear."
-	item = /obj/item/ammo_box/magazine/m9mm/ap
-	cost = 2
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-
-/datum/uplink_item/ammo/pistolhp
-	name = "9mm Hollow Point Magazine"
-	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
-			These rounds are more damaging but ineffective against armour."
-	item = /obj/item/ammo_box/magazine/m9mm/hp
-	cost = 3
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-
-/datum/uplink_item/ammo/pistolfire
-	name = "9mm Incendiary Magazine"
-	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
-			Loaded with incendiary rounds which inflict little damage, but ignite the target."
-	item = /obj/item/ammo_box/magazine/m9mm/fire
-	cost = 2
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-
 /datum/uplink_item/ammo/revolver
 	name = ".357 Speed Loader"
 	desc = "A speed loader that contains seven additional .357 Magnum rounds; usable with the Syndicate revolver. \
