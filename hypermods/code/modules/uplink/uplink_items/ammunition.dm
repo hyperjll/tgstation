@@ -174,12 +174,14 @@
 	desc = "A speed loader that contains seven .357 Ironfeather; usable with the .357 Revolver, Python, and Syndicate revolver. \
 			Ironfeather shells contain six pellets which are less damaging than buckshot but mildly better over range."
 	item = /obj/item/storage/box/syndie_kit/revolvershotgunammo
+	cost = 3
 
 /datum/uplink_item/ammo/revolver/nutcracker
 	name = ".357 Nutcracker Speed Loader"
 	desc = "A speed loader that contains seven .357 Nutcracker rounds; usable with the .357 Revolver, Python, and Syndicate revolver. \
 			These rounds lose moderate stopping power in exchange for being able to rapidly destroy doors and windows."
 	item = /obj/item/ammo_box/a357/nutcracker
+	cost = 3
 
 /datum/uplink_item/ammo/revolver/metalshock
 	name = ".357 Metalshock Speed Loader"
@@ -198,6 +200,7 @@
 	desc = "A speed loader that contains seven .357 Wallstake rounds; usable with the .357 Revolver, Python, and Syndicate revolver. \
 			These blunt rounds are slightly less damaging but can knock people against walls."
 	item = /obj/item/ammo_box/a357/wallstake
+	cost = 3
 
 /datum/uplink_item/ammo/deagle
 	name = ".50 AE Handgun Magazine"
