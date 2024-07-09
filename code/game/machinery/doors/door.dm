@@ -255,12 +255,12 @@
 			return
 		if(requiresID() && check_access(I))
 			if(jestergraphed) // These checks are to ensure people cant just throw their id's at the door to bypass the bump check.
-				do_animate("deny")
+				run_animation(DOOR_DENY_ANIMATION)
 			else
 				open()
 		else
 			if(!jestergraphed)
-			run_animation(DOOR_DENY_ANIMATION)
+				run_animation(DOOR_DENY_ANIMATION)
 			else
 				open()
 		return
@@ -291,11 +291,11 @@
 		open()
 	else if(requiresID() && allowed(user))
 		if(jestergraphed) // Flip the access requirements.
-			do_animate("deny")
+			run_animation(DOOR_DENY_ANIMATION)
 		else
 			open()
 	else
-		do_animate("deny")
+		run_animation(DOOR_DENY_ANIMATION)
 
 /obj/machinery/door/attack_hand(mob/user, list/modifiers)
 	. = ..()
