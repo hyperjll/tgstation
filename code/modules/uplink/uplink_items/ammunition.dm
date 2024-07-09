@@ -13,7 +13,7 @@
 	cost = 2
 	surplus = 0
 	illegal_tech = FALSE
-	purchasable_from = ~UPLINK_NUKE_OPS
+	purchasable_from = ~UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo/revolver
 	name = ".357 Speed Loader"
@@ -21,5 +21,5 @@
 			For when you really need a lot of things dead."
 	item = /obj/item/ammo_box/a357
 	cost = 4
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY) //nukies get their own version
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) //nukies get their own version
 	illegal_tech = FALSE
