@@ -64,9 +64,12 @@
 	custom_materials = list(/datum/material/titanium = SMALL_MATERIAL_AMOUNT*0.1)
 	pressure_resistance = 2
 	grind_results = list(/datum/reagent/iron = 2, /datum/reagent/iodine = 1)
-	embedding = list(embed_chance = 100)
+	embed_type = /datum/embed_data/cybersunpen
 	sharpness = SHARP_POINTY
 	custom_price = 200
+
+/datum/embed_data/cybersunpen
+	embed_chance = 100
 
 /obj/item/pen/cybersun/disguised
 	desc = "It's a normal black ink pen."
@@ -83,7 +86,7 @@
 	custom_materials = list(/datum/material/titanium = SMALL_MATERIAL_AMOUNT*0.1)
 	pressure_resistance = 2
 	grind_results = list(/datum/reagent/iron = 2, /datum/reagent/iodine = 1)
-	embedding = list(embed_chance = 100)
+	embed_type = /datum/embed_data/cybersunpen
 	sharpness = SHARP_POINTY
 
 /**

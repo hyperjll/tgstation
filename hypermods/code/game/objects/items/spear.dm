@@ -19,7 +19,7 @@
 	throwforce = 80
 	throw_speed = 4
 	throw_range = 10
-	embedding = list("embed_chance" = 100, "impact_pain_mult" = 2, "remove_pain_mult" = 4, "embedded_impact_pain_multiplier" = 3, "jostle_chance" = 2.5)
+	embed_type = /datum/embed_data/espear
 	armour_penetration = 60
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "pokes", "jabs", "tears", "lacerates", "gores")
@@ -29,6 +29,12 @@
 	wound_bonus = 10
 	bare_wound_bonus = 25
 	block_chance = 20
+
+/datum/embed_data/espear
+	embed_chance = 100
+	impact_pain_mult = 2
+	remove_pain_mult = 4
+	jostle_chance = 2.5
 
 /datum/armor/item_energyspear
 	fire = 100

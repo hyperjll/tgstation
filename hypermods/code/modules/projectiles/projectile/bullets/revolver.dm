@@ -61,7 +61,7 @@
 	ricochet_decay_damage = 0.8
 	shrapnel_type = null
 	sharpness = NONE
-	embedding = null
+	embed_type = null
 
 // weak against armor, lower base damage, but excellent at embedding and causing slice wounds at close range
 /obj/projectile/bullet/a357/dumdum
@@ -72,9 +72,19 @@
 	sharpness = SHARP_EDGED
 	wound_bonus = 20
 	bare_wound_bonus = 20
-	embedding = list(embed_chance=75, fall_chance=3, jostle_chance=4, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=6, rip_time=1 SECONDS)
+	embed_type = /datum/embed_data/a357dumdum
 	wound_falloff_tile = -5
 	embed_falloff_tile = -15
+
+/datum/embed_data/a357dumdum
+	embed_chance = 75
+	fall_chance = 3
+	jostle_chance = 4
+	ignore_throwspeed_threshold = TRUE
+	pain_stam_pct = 0.4
+	pain_mult = 5
+	jostle_pain_mult = 6
+	rip_time = 1 SECONDS
 
 /obj/projectile/bullet/a357/trac
 	name = ".357 TRAC bullet"

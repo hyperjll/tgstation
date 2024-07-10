@@ -157,13 +157,13 @@
 				var/mob/living/occupant = O
 				if(elevator_mode && elevator_status == LIFT_PLATFORM_UNLOCKED)
 					if(jestergraphed)
-						do_animate("deny")
+						run_animation(DOOR_DENY_ANIMATION)
 						return
 					open()
 					return
 				if(allowed(occupant))
 					if(jestergraphed)
-						do_animate("deny")
+						run_animation(DOOR_DENY_ANIMATION)
 						return
 					open_and_close()
 					return

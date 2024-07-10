@@ -60,6 +60,11 @@
 	name = "holo-knife"
 	sound = 'sound/weapons/blade1.ogg'
 
+/datum/embed_data/holoknife
+	embed_chance = 40
+	fall_chance = 0
+	pain_mult = 5
+
 /datum/holotool_mode/knife/can_be_used(obj/item/holotool/H)
 	return (H.obj_flags & EMAGGED)
 
@@ -68,7 +73,7 @@
 	H.force = 17
 	H.attack_verb_simple = list("sliced", "torn", "cut")
 	H.armour_penetration = 45
-	H.embedding = list("embed_chance" = 40, "embedded_fall_chance" = 0, "embedded_pain_multiplier" = 5)
+	H.embed_type = /datum/embed_data/holoknife
 	H.hitsound = 'sound/weapons/blade1.ogg'
 
 /datum/holotool_mode/knife/on_unset(obj/item/holotool/H)
@@ -76,5 +81,5 @@
 	H.force = initial(H.force)
 	H.attack_verb_simple = initial(H.attack_verb_simple)
 	H.armour_penetration = initial(H.armour_penetration)
-	H.embedding = initial(H.embedding)
+	H.embed_type = initial(H.embed_type)
 	H.hitsound = initial(H.hitsound)
