@@ -11,7 +11,6 @@
 	cost = 0
 	surplus = 0
 	limited_stock = 1
-	illegal_tech = FALSE
 	cant_discount = TRUE
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY)
 	var/loud_kit = /obj/item/storage/box/syndie_kit/goloudbundle

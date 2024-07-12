@@ -78,7 +78,7 @@
 	item = /obj/item/desynchronizer
 	cost = 4
 	surplus = 20
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/stealthy_tools/bluespace_briefcase
 	name = "Bluespace Briefcase"

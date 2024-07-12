@@ -51,7 +51,6 @@
 	item = /obj/item/storage/box/syndie_kit/molotovs
 	cost = 1
 	surplus = 30
-	illegal_tech = FALSE
 
 /datum/uplink_item/explosives/grenadierbelt
 	name = "Grenadier Belt"
@@ -59,7 +58,6 @@
 	item = /obj/item/storage/belt/grenade/full
 	surplus = 1
 	cost = 20
-	illegal_tech = FALSE
 	progression_minimum = 30 MINUTES
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
@@ -235,7 +233,6 @@
 	item = /obj/item/ammo_box/nadepouch/eyebreak
 	cost = 4
 	surplus = 40
-	illegal_tech = FALSE
 	progression_minimum = 10 MINUTES
 
 /datum/uplink_item/explosives/supermatternades

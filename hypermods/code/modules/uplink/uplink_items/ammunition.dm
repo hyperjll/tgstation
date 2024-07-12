@@ -12,7 +12,7 @@
 	item = /obj/item/ammo_box/foambox/riot
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = ~UPLINK_NUKE_OPS
 **/
 /datum/uplink_item/ammo/pistol
@@ -21,7 +21,7 @@
 	item = /obj/item/storage/box/syndie_kit/pistol9mmammo
 	cost = 1
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-	illegal_tech = FALSE
+
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/pistol/random
@@ -106,7 +106,7 @@
 	item = /obj/item/storage/box/syndie_kit/fourtyfivemmmagbox
 	cost = 1
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-	illegal_tech = FALSE
+
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/handgun45/random
@@ -164,7 +164,7 @@
 	item = /obj/item/ammo_box/a357
 	cost = 4
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY) //nukies get their own version
-	illegal_tech = FALSE
+
 **/
 /datum/uplink_item/ammo/revolver/random
 	name = "Random .357 Speed Loader Box"
@@ -211,7 +211,7 @@
 	item = /obj/item/ammo_box/magazine/m50
 	cost = 4
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-	illegal_tech = FALSE
+
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/boltactionammo
@@ -220,7 +220,7 @@
 	item = /obj/item/storage/box/syndie_kit/stripperclips
 	cost = 2
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-	illegal_tech = FALSE
+
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/tommygun
@@ -229,7 +229,7 @@
 	item = /obj/item/ammo_box/magazine/tommygunm45
 	cost = 6 // 15 + 6 for 100 rounds of .45. If you dumped out 6 .45 mags, you'd get 48 bullets.
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akm
@@ -238,7 +238,7 @@
 	item = /obj/item/ammo_box/magazine/ak712x82
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akmap
@@ -247,7 +247,7 @@
 	item = /obj/item/ammo_box/magazine/ak712x82/ap
 	cost = 4
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akmhp
@@ -256,7 +256,7 @@
 	item = /obj/item/ammo_box/magazine/ak712x82/hp
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akmincendiary
@@ -265,7 +265,7 @@
 	item = /obj/item/ammo_box/magazine/ak712x82/incendiary
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/magspears
@@ -274,7 +274,7 @@
 	item = /obj/item/storage/harpoon_quiver
 	cost = 4
 	surplus = 0
-	illegal_tech = FALSE // Just a pouch filled with giant hunks of metal.
+	 // Just a pouch filled with giant hunks of metal.
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo9mmbox
@@ -283,7 +283,7 @@
 	item = /obj/item/ammo_box/c9mm
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -293,7 +293,7 @@
 	item = /obj/item/ammo_box/c9mm/sixty
 	cost = 4
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -303,7 +303,7 @@
 	item = /obj/item/ammo_box/c10mm
 	cost = 1
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -313,7 +313,7 @@
 	item = /obj/item/ammo_box/c10mm/cs
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -323,7 +323,7 @@
 	item = /obj/item/ammo_box/c10mm/sp
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -333,7 +333,7 @@
 	item = /obj/item/ammo_box/c10mm/ap
 	cost = 3
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -343,7 +343,7 @@
 	item = /obj/item/ammo_box/c10mm/hp
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -353,7 +353,7 @@
 	item = /obj/item/ammo_box/c10mm/inc
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -363,7 +363,7 @@
 	item = /obj/item/ammo_box/c10mm/emp
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -373,7 +373,7 @@
 	item = /obj/item/ammo_box/c10mm/fifty
 	cost = 3
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -383,7 +383,7 @@
 	item = /obj/item/ammo_box/a357/no_direct
 	cost = 8
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -394,7 +394,7 @@
 	item = /obj/item/ammo_box/a357/no_direct/ironfeather
 	cost = 8
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -404,7 +404,7 @@
 	item = /obj/item/ammo_box/a357/no_direct/nutcracker
 	cost = 8
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -414,7 +414,7 @@
 	item = /obj/item/ammo_box/a357/no_direct/metalshock
 	cost = 8
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -424,7 +424,7 @@
 	item = /obj/item/ammo_box/a357/no_direct/heartpiercer
 	cost = 8
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -434,7 +434,7 @@
 	item = /obj/item/ammo_box/a357/no_direct/wallstake
 	cost = 8
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -444,7 +444,7 @@
 	item = /obj/item/ammo_box/c45/thirty
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -454,7 +454,7 @@
 	item = /obj/item/ammo_box/c45/thirty/cs
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -464,7 +464,7 @@
 	item = /obj/item/ammo_box/c45/thirty/sp
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -474,7 +474,7 @@
 	item = /obj/item/ammo_box/c45/thirty/ap
 	cost = 3
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -484,7 +484,7 @@
 	item = /obj/item/ammo_box/c45/thirty/hp
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -494,7 +494,7 @@
 	item = /obj/item/ammo_box/c45/thirty/inc
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -504,7 +504,7 @@
 	item = /obj/item/ammo_box/c45/thirty/emp
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -514,7 +514,7 @@
 	item = /obj/item/ammo_box/c45/thirty/venom
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -524,7 +524,7 @@
 	item = /obj/item/ammo_box/c45/fifty
 	cost = 3
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -534,7 +534,7 @@
 	item = /obj/item/ammo_box/c50
 	cost = 6
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -544,7 +544,7 @@
 	item = /obj/item/ammo_box/c50/fifty
 	cost = 8
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -554,7 +554,7 @@
 	item = /obj/item/ammo_box/n712x82
 	cost = 5
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -564,7 +564,7 @@
 	item = /obj/item/ammo_box/n712x82/hundred
 	cost = 9
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = UPLINK_NUKE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -574,7 +574,7 @@
 	item = /obj/item/storage/box/mysteryshells/syndi
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/ammo/lethalshells
 	name = "Lethal Shells Box"
@@ -582,7 +582,7 @@
 	item = /obj/item/storage/box/lethalshot/syndi
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/ammo/dartshells
 	name = "Dart Shells Box"
@@ -590,7 +590,7 @@
 	item = /obj/item/storage/box/dartshells/syndi
 	cost = 1
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/ammo/incendiaryshells
 	name = "Incendiary Shells Box"
@@ -598,7 +598,7 @@
 	item = /obj/item/storage/box/incendiaryshells/syndi
 	cost = 1
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/ammo/dragonshells
 	name = "Dragon's Breath Shells Box"
@@ -606,7 +606,7 @@
 	item = /obj/item/storage/box/dragonshells/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 
 /datum/uplink_item/ammo/syndieshotshells
@@ -615,7 +615,7 @@
 	item = /obj/item/storage/box/syndieshotshells/syndi
 	cost = 3
 	purchasable_from = UPLINK_NUKE_OPS
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/ammo/syndieslugshells
 	name = "Syndicate Slugs Box"
@@ -623,14 +623,14 @@
 	item = /obj/item/storage/box/syndieslugshells/syndi
 	cost = 3
 	purchasable_from = UPLINK_NUKE_OPS
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/ammo/tasershells
 	name = "Taser Slugs Box"
 	desc = "A box containing 14 taser slugs for a shotgun, effective in incapacitating single targets quickly."
 	item = /obj/item/storage/box/tasershells/syndi
 	cost = 3
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 	progression_minimum = 20 MINUTES
 
@@ -639,7 +639,7 @@
 	desc = "A box containing 14 meteor slugs for a shotgun, they deal less damage than normal slugs but the shots always paralyze the target through sheer blunt force."
 	item = /obj/item/storage/box/meteorshells/syndi
 	cost = 3
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 	progression_minimum = 40 MINUTES
 
@@ -649,7 +649,7 @@
 	item = /obj/item/storage/box/pulseshells/syndi
 	cost = 6
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 	progression_minimum = 50 MINUTES
 
@@ -659,7 +659,7 @@
 	item = /obj/item/storage/box/frag12shells/syndi
 	cost = 5
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 	progression_minimum = 30 MINUTES
 
@@ -669,7 +669,7 @@
 	item = /obj/item/storage/box/flechetteshells/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 
 /datum/uplink_item/ammo/rubbershotshells
@@ -677,7 +677,7 @@
 	desc = "A box containing 14 rubbershot shells for a shotgun, they're useful in subdueing multiple targets in a less-lethal manner."
 	item = /obj/item/storage/box/rubbershotshells/syndi
 	cost = 2
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 	progression_minimum = 5 MINUTES
 
@@ -687,7 +687,7 @@
 	item = /obj/item/storage/box/ionshells/syndi
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 	progression_minimum = 5 MINUTES
 
@@ -697,7 +697,7 @@
 	item = /obj/item/storage/box/lasershells/syndi
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 
 /datum/uplink_item/ammo/uraniumshells
@@ -706,7 +706,7 @@
 	item = /obj/item/storage/box/uraniumshells/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 	progression_minimum = 20 MINUTES
 
@@ -716,7 +716,7 @@
 	item = /obj/item/storage/box/cryoshotshells/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 
 /datum/uplink_item/ammo/bioterrorshells
@@ -725,7 +725,7 @@
 	item = /obj/item/storage/box/bioterrorshells/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 /** Only fits into breaching shotguns, may want to make a new version of the ammo.
 /datum/uplink_item/ammo/breachershells
@@ -734,7 +734,7 @@
 	item = /obj/item/storage/box/breachershells/syndi
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 **/
 /datum/uplink_item/ammo/thundershotshells
 	name = "Thundershot Shells Box"
@@ -742,7 +742,7 @@
 	item = /obj/item/storage/box/thundershotshells/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 
 /datum/uplink_item/ammo/hardlightshells
@@ -750,7 +750,7 @@
 	desc = "A box containing 14 hardlight shells for a shotgun, they only tire your foes, draining their stamina. Otherwise they're basically energy buckshot."
 	item = /obj/item/storage/box/hardlightshells/syndi
 	cost = 1
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 
 /datum/uplink_item/ammo/ripshells
@@ -759,7 +759,7 @@
 	item = /obj/item/storage/box/ripshells/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 
 /datum/uplink_item/ammo/anarchyshells
@@ -767,7 +767,7 @@
 	desc = "A box containing 14 anarchy shells for a shotgun, fires 3 pellets that bounce off walls, they deal little damage outright though."
 	item = /obj/item/storage/box/anarchyshells/syndi
 	cost = 1
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 
 /datum/uplink_item/ammo/clownshellsclownop
@@ -777,7 +777,7 @@
 	cost = 0
 	limited_stock = 5
 	purchasable_from = UPLINK_CLOWN_OPS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 
 /datum/uplink_item/ammo/clownshells
@@ -787,7 +787,7 @@
 	cost = 0
 	limited_stock = 1
 	purchasable_from = UPLINK_TRAITORS
-	illegal_tech = FALSE
+
 	cant_discount = TRUE
 
 /datum/uplink_item/ammo/bioterrorammo
@@ -796,7 +796,7 @@
 	item = /obj/item/storage/box/syndie_kit/bioterrorammo
 	cost = 10
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/ammo/bioterrorammodeluxe
@@ -805,5 +805,5 @@
 	item = /obj/item/storage/box/syndie_kit/bioterrorammodeluxe
 	cost = 20
 	surplus = 0
-	illegal_tech = FALSE
+
 	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)

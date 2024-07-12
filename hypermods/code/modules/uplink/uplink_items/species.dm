@@ -252,7 +252,7 @@
 	progression_minimum = 10 MINUTES
 	surplus = 0
 	cost = 7
-	illegal_tech = FALSE
+
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
 /datum/uplink_item/dangerous/lasereyes
@@ -264,7 +264,7 @@
 	progression_minimum = 30 MINUTES
 	surplus = 0
 	cost = 20
-	illegal_tech = FALSE // Just a mutator, not necessarily high tech.
+	 // Just a mutator, not necessarily high tech.
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
 /datum/uplink_item/medical/regenerative
@@ -273,7 +273,7 @@
 	item = /obj/item/dnainjector/regenerative
 	cost = 3
 	surplus = 0
-	illegal_tech = FALSE
+
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
 /datum/uplink_item/armor/vitality
@@ -282,7 +282,7 @@
 	item = /obj/item/dnainjector/vitality
 	cost = 11
 	surplus = 15
-	illegal_tech = FALSE
+
 	progression_minimum = 15 MINUTES
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
@@ -292,7 +292,7 @@
 	item = /obj/item/dnainjector/metallineskin
 	cost = 5
 	surplus = 20
-	illegal_tech = FALSE
+
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
 /datum/uplink_item/armor/reflectiveskin
@@ -301,7 +301,7 @@
 	item = /obj/item/dnainjector/reflectiveskin
 	cost = 5
 	surplus = 20
-	illegal_tech = FALSE
+
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
 /datum/uplink_item/armor/superradproof
@@ -310,5 +310,5 @@
 	item = /obj/item/dnainjector/superradproof
 	cost = 4
 	surplus = 20
-	illegal_tech = FALSE
+
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)

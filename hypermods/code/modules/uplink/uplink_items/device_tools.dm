@@ -32,7 +32,7 @@
 			Comes with a hand drill and experimental welding tool instead of the usual tools we provide."
 	item = /obj/item/storage/toolbox/syndicate/deluxe
 	cost = 2
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/device_tools/tactical_gloves
 	name = "Tactical Fingerless Gloves"
@@ -79,7 +79,7 @@
 	desc = "A blue jetpack smuggled from NT's suppliers. It's been pre-filled with oxygen."
 	item = /obj/item/tank/jetpack/oxygen
 	cost = 2
-	illegal_tech = FALSE
+
 	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/device_tools/advlaunchcamerasetup
@@ -89,7 +89,7 @@
 	item = /obj/item/storage/box/syndie_kit/launchpadcamerabundle
 	cost = 8
 	surplus = 15
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/device_tools/portalgun
 	name = "Bluespace Wormhole Projector"
@@ -99,7 +99,7 @@
 	item = /obj/item/gun/energy/wormhole_projector/core_inserted
 	cost = 5
 	surplus = 18
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/device_tools/spininverters
 	name = "Quantum Spin Inverters"
@@ -107,7 +107,7 @@
 	item = /obj/item/storage/box/syndie_kit/spininverters
 	cost = 2
 	surplus = 20
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/device_tools/belt_bluecham
 	name = "Bluespace Chameleon Belt"
@@ -159,7 +159,7 @@
 	item = /obj/item/encryptionkey/universal
 	cost = 3
 	surplus = 0
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/device_tools/extraarm
 	name = "Additional Arm"
@@ -169,7 +169,7 @@
 	surplus = 0
 	limited_stock = 2 // It's probably best to not break the UI any further.
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_SPY)
-	illegal_tech = FALSE // It's just another arm.
+	 // It's just another arm.
 
 /datum/uplink_item/device_tools/extraarm/spawn_item(spawn_item, mob/user)
 	var/limbs = user.held_items.len
@@ -183,7 +183,6 @@
 	item = /obj/item/holotool/syndicate
 	cost = 4
 	surplus = 40
-	illegal_tech = FALSE // NT is already walking around with this, pretty sure it ain't illegal.
 
 /datum/uplink_item/device_tools/syndieomnigoggles
 	name = "Syndicate Omni-Goggles"
@@ -193,4 +192,4 @@
 	item = /obj/item/clothing/glasses/universal
 	cost = 4
 	surplus = 20
-	illegal_tech = TRUE
+

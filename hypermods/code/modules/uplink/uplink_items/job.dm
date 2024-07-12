@@ -175,7 +175,6 @@
 	item = /obj/item/nullrod
 	cost = 15
 	surplus = 10
-	illegal_tech = FALSE
 	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Imagine having to steal the null rod to GET a null rod?
 

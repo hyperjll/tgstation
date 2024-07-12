@@ -23,7 +23,7 @@
 	progression_minimum = 15 MINUTES
 	surplus = 30
 	cost = 7
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/dangerous/trident
 	name = "Electrified Trident"
@@ -34,7 +34,7 @@
 	progression_minimum = 25 MINUTES
 	surplus = 20
 	cost = 9
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/dangerous/bostaff
 	name = "Bo Staff"
@@ -50,7 +50,7 @@
 	progression_minimum = 25 MINUTES
 	surplus = 25
 	cost = 10
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/dangerous/vxtvulhammer
 	name = "Vxtvul Hammer"
@@ -61,7 +61,7 @@
 	progression_minimum = 30 MINUTES
 	surplus = 25
 	cost = 12
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/dangerous/espear
 	name = "Energy Spear"
@@ -73,7 +73,7 @@
 	progression_minimum = 30 MINUTES
 	surplus = 20
 	cost = 10
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/dangerous/echainsaw
 	name = "Energy Chainsaw"
@@ -85,7 +85,7 @@
 	progression_minimum = 30 MINUTES
 	surplus = 0
 	cost = 15
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/dangerous/m1911pistol
 	name = "M1911"
@@ -138,7 +138,7 @@
 	progression_minimum = 30 MINUTES
 	cost = 10
 	surplus = 25
-	illegal_tech = TRUE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/energy_fire_axe
@@ -158,7 +158,7 @@
 	item = /obj/item/gun/ballistic/shotgun/automatic/combat/kammerer/syndicate
 	cost = 9
 	surplus = 35
-	illegal_tech = TRUE
+
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/dangerous/boltactionrifle
@@ -213,7 +213,7 @@
 	item = /obj/item/gun/energy/disabler/syndicate
 	cost = 7
 	surplus = 25
-	illegal_tech = TRUE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/infernopistol
@@ -224,7 +224,7 @@
 	item = /obj/item/gun/energy/laser/thermal/inferno/syndicate
 	cost = 7
 	surplus = 30
-	illegal_tech = TRUE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/cyrogenicpistol
@@ -235,7 +235,7 @@
 	item = /obj/item/gun/energy/laser/thermal/cryo/syndicate
 	cost = 7
 	surplus = 30
-	illegal_tech = TRUE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/chemsprayer
@@ -246,7 +246,7 @@
 	item = /obj/item/reagent_containers/spray/chemsprayer/syndicate
 	surplus = 20
 	cost = 16
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/dangerous/syndielaserrifle
 	name = "Syndicate Energy Rifle"
@@ -255,7 +255,7 @@
 	item = /obj/item/gun/energy/syndicatelaserrifle
 	surplus = 10
 	cost = 14
-	illegal_tech = TRUE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/demolecularisor
@@ -264,7 +264,7 @@
 	item = /obj/item/gun/energy/decloner/syndicate
 	surplus = 8
 	cost = 10
-	illegal_tech = TRUE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/mindflayer
@@ -274,7 +274,7 @@
 	item = /obj/item/gun/energy/mindflayer/syndicate
 	surplus = 5
 	cost = 19
-	illegal_tech = TRUE
+
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/gravitygun
@@ -284,7 +284,6 @@
 	item = /obj/item/gun/energy/gravity_gun/withcore
 	surplus = 10
 	cost = 2
-	illegal_tech = FALSE
 
 /datum/uplink_item/dangerous/harpoongun
 	name = "Ballistic Harpoon Gun"
@@ -294,4 +293,3 @@
 	item = /obj/item/gun/ballistic/rifle/boltaction/harpoon
 	surplus = 15
 	cost = 14
-	illegal_tech = TRUE

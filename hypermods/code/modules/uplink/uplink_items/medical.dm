@@ -29,7 +29,7 @@
 	item = /obj/item/storage/medkit/medical_variety_pack
 	cost = 2
 	surplus = 35
-	illegal_tech = FALSE
+
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/medical/deluxe_medical_variety_pack
@@ -38,7 +38,7 @@
 	item = /obj/item/storage/medkit/deluxe_medical_variety_pack
 	cost = 5
 	surplus = 30
-	illegal_tech = FALSE
+
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/medical/medipenkit
@@ -47,7 +47,7 @@
 	item = /obj/item/storage/medkit/medipenkit
 	cost = 2
 	surplus = 35
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/medical/combatmedipen
 	name = "Combat Medipens"
@@ -55,7 +55,7 @@
 	item = /obj/item/storage/medkit/emergency/combatmedipens
 	cost = 3
 	surplus = 40
-	illegal_tech = FALSE
+
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/medical/combistimpack
@@ -98,7 +98,7 @@
 	item = /obj/item/reagent_containers/syringe/bluespace/miracle
 	cost = 1
 	surplus = 50
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/medical/restore_nanite_kit
 	name = "Restoration Nanite kit"
@@ -108,7 +108,7 @@
 	cost = 12
 	surplus = 10
 	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/medical/stimpack
 	name = "Stimpack"
@@ -155,7 +155,7 @@
 	surplus = 30
 	limited_stock = 1
 	cant_discount = TRUE
-	illegal_tech = FALSE
+
 	progression_minimum = 20 MINUTES
 
 /datum/uplink_item/medical/syndiecigs
@@ -163,7 +163,7 @@
 	desc = "Strong flavor, dense smoke, infused with omnizine."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 2
-	illegal_tech = FALSE
+
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/syndiecigsvarietypack
@@ -174,7 +174,7 @@
 	cost = 3
 	surplus = 50
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/medical/syndiecigsvarietypackdeluxe
 	name = "Syndicate Variety Cigarettes Deluxe Edition"
@@ -184,7 +184,7 @@
 	cost = 6
 	surplus = 30
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/medical/eternalomnizine
 	name = "Eternal Flask of Omnizine"
@@ -201,7 +201,7 @@
 	item = /obj/item/storage/medkit/mutatekit
 	cost = 4
 	surplus = 35
-	illegal_tech = FALSE
+
 
 /datum/uplink_item/medical/enchantedgoldenapple
 	name = "Enchanted Golden Apple"
@@ -209,7 +209,6 @@
 	item = /obj/item/food/grown/apple/gold/notch/enchanted
 	cost = 10
 	surplus = 5
-	illegal_tech = FALSE // NT and it's destructive analyzers likely can't figure this shit out. It's a magical apple.
 
 /datum/uplink_item/medical/resurrector
 	name = "Resurrector Nanite Serum"
@@ -250,7 +249,7 @@
 	cost = 4
 	surplus = 40
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY) // The gorlex hypo is the better version fo this, spies should be forced to earn it. Why? Cuz' it's funny (and cool seeing as how tots cant get it)
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/medical/gorlexhypo
 	name = "Gorlex Hypospray"
@@ -260,4 +259,4 @@
 	cost = 8
 	surplus = 0
 	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-	illegal_tech = TRUE
+

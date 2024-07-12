@@ -12,7 +12,6 @@
 	item = /obj/item/clothing/suit/armor/webvest
 	cost = 5
 	surplus = 30
-	illegal_tech = FALSE
 
 /datum/uplink_item/armor/webhelmet
 	name = "Web Helmet"
@@ -20,7 +19,6 @@
 	item = /obj/item/clothing/head/helmet/webhelmet
 	cost = 5
 	surplus = 35
-	illegal_tech = FALSE
 
 /datum/uplink_item/armor/armoredchameleon
 	name = "Armored Jumpsuit"
@@ -28,7 +26,7 @@
 	item = /obj/item/clothing/under/chameleon/armored
 	cost = 4
 	surplus = 40
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/armor/energyshield
 	name = "Energy Shield"
@@ -37,7 +35,7 @@
 	item = /obj/item/shield/energy
 	cost = 8
 	surplus = 20
-	illegal_tech = TRUE
+
 	progression_minimum = 20 MINUTES
 
 /datum/uplink_item/armor/armoredtie
@@ -46,7 +44,7 @@
 	item = /obj/item/clothing/neck/chameleon/armored
 	cost = 2
 	surplus = 25
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/armor/armoredgloves
 	name = "Armored Gloves"
@@ -55,7 +53,7 @@
 	item = /obj/item/clothing/gloves/chameleon/armored
 	cost = 2
 	surplus = 25
-	illegal_tech = TRUE
+
 
 /datum/uplink_item/armor/reactiveteleportsyndicate
 	name = "Augmented Teleportation Vest"
@@ -64,7 +62,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/teleport
 	cost = 12
 	surplus = 10
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactiveincendiarysyndicate
@@ -74,7 +72,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/fire
 	cost = 12
 	surplus = 5
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactivestealthsyndicate
@@ -84,7 +82,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/stealth
 	cost = 12
 	surplus = 10
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactiveteslasyndicate
@@ -94,7 +92,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/tesla
 	cost = 12
 	surplus = 10
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactiverepulsesyndicate
@@ -104,7 +102,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/repulse
 	cost = 12
 	surplus = 10
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactivetablesyndicate
@@ -114,7 +112,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/table
 	cost = 12
 	surplus = 10
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactivehallucinatingsyndicate
@@ -124,7 +122,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/hallucinating
 	cost = 12
 	surplus = 10
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactiveradiationsyndicate
@@ -134,7 +132,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/radiation
 	cost = 12
 	surplus = 10
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactivebioscramblingsyndicate
@@ -144,7 +142,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/bioscrambling
 	cost = 12
 	surplus = 10
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactivebarricadesyndicate
@@ -154,7 +152,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/barricade
 	cost = 12
 	surplus = 10
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactiveectoplasmsyndicate
@@ -164,7 +162,7 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/ectoplasm
 	cost = 12
 	surplus = 10
-	illegal_tech = TRUE
+
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/dermal_harden
@@ -175,5 +173,5 @@
 	item = /obj/item/storage/fancy/cigarettes/dermal_harden
 	cost = 5
 	surplus = 15
-	illegal_tech = TRUE
+
 
