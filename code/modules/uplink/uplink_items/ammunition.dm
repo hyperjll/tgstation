@@ -12,7 +12,7 @@
 	item = /obj/item/ammo_box/foambox/riot
 	cost = 2
 	surplus = 0
-	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	purchasable_from = ~UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo/revolver
@@ -22,4 +22,4 @@
 	item = /obj/item/ammo_box/a357
 	cost = 4
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) //nukies get their own version
-	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
