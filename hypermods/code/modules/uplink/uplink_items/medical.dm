@@ -89,6 +89,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/restorationnaniteinjector
 	cost = 3
 	surplus = 60
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/miraclesyringe
 	name = "Miracle Syringe"
@@ -117,6 +118,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/stimulants
 	cost = 3
 	surplus = 90
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/experistimpack
 	name = "Experimental Stimpack"
@@ -162,6 +164,7 @@
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 2
 	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/syndiecigsvarietypack
 	name = "Syndicate Variety Cigarettes"

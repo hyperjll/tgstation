@@ -89,6 +89,7 @@
 	cost = 3
 	surplus = 15
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/floragun_syndicate
 	name = "Disguised Laser Gun"

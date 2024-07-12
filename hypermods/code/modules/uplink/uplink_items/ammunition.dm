@@ -22,6 +22,7 @@
 	cost = 1
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/pistol/random
 	name = "Random 9mm Handgun Magazines"
@@ -54,6 +55,7 @@
 	item = /obj/item/storage/box/syndie_kit/pistol10mmammo
 	cost = 1
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/pistol10mm/random
 	name = "Random 10mm Handgun Magazines"
@@ -105,6 +107,7 @@
 	cost = 1
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/handgun45/random
 	name = "Random .45mm Handgun Magazines"
@@ -209,6 +212,7 @@
 	cost = 4
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/boltactionammo
 	name = "Stripper Clips"
@@ -217,6 +221,7 @@
 	cost = 2
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/tommygun
 	name = "Tommy Gun Drum Magazine"
@@ -225,6 +230,7 @@
 	cost = 6 // 15 + 6 for 100 rounds of .45. If you dumped out 6 .45 mags, you'd get 48 bullets.
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akm
 	name = "Rifle Magazine (7.12x82mm)"
@@ -233,6 +239,7 @@
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akmap
 	name = "Armor-Piercing Rifle Magazine (7.12x82mm)"
@@ -241,6 +248,7 @@
 	cost = 4
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akmhp
 	name = "Hollow-Point Rifle Magazine (7.12x82mm)"
@@ -249,6 +257,7 @@
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akmincendiary
 	name = "Incendiary Rifle Magazine (7.12x82mm)"
@@ -257,6 +266,7 @@
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	illegal_tech = FALSE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/magspears
 	name = "Harpoon Quiver"
@@ -265,6 +275,7 @@
 	cost = 4
 	surplus = 0
 	illegal_tech = FALSE // Just a pouch filled with giant hunks of metal.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo9mmbox
 	name = "Box of 9mm Rounds"
@@ -274,6 +285,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo9mmboxmega
 	name = "Box of 9mm Rounds"
@@ -283,6 +295,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo10mmbox
 	name = "Box of 10mm Rounds"
@@ -292,6 +305,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo10mmboxcaseless
 	name = "Box of 10mm Caseless Rounds"
@@ -301,6 +315,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo10mmboxtranq
 	name = "Box of 10mm Soporific Rounds"
@@ -310,6 +325,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo10mmboxap
 	name = "Box of 10mm AP Rounds"
@@ -319,6 +335,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo10mmboxhp
 	name = "Box of 10mm HP Rounds"
@@ -328,6 +345,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo10mmboxincendiary
 	name = "Box of 10mm Incendiary Rounds"
@@ -337,6 +355,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo10mmboxemp
 	name = "Box of 10mm EMP Rounds"
@@ -346,6 +365,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo10mmboxmega
 	name = "Mega Box of 10mm Rounds"
@@ -355,6 +375,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo357box
 	name = "Box of .357 Rounds"
@@ -364,6 +385,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo357boxironfeather
 	name = "Box of Ironfeather .357 Rounds"
@@ -374,6 +396,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo357boxnutcracker
 	name = "Box of Nutcracker .357 Rounds"
@@ -383,6 +406,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo357boxmetalshock
 	name = "Box of Metalshock .357 Rounds"
@@ -392,6 +416,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo357boxheartpiercer
 	name = "Box of Heartpiercer .357 Rounds"
@@ -401,6 +426,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo357boxwallstake
 	name = "Box of Wallstake .357 Rounds"
@@ -410,6 +436,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo45box
 	name = "Box of .45 Rounds"
@@ -419,6 +446,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo45boxcs
 	name = "Box of .45 Caseless Rounds"
@@ -428,6 +456,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo45boxsp
 	name = "Box of .45 Soporific Rounds"
@@ -437,6 +466,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo45boxap
 	name = "Box of .45 Armor Piercing Rounds"
@@ -446,6 +476,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo45boxhp
 	name = "Box of .45 Hollow Point Rounds"
@@ -455,6 +486,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo45boxinc
 	name = "Box of .45 Incendiary Rounds"
@@ -464,6 +496,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo45boxemp
 	name = "Box of .45 EMP Rounds"
@@ -473,6 +506,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo45boxvenom
 	name = "Box of .45 Venom Rounds"
@@ -482,6 +516,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo45boxmega
 	name = "Mega Box of .45 Rounds"
@@ -491,6 +526,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo50box
 	name = "Box of .50 AE Rounds"
@@ -500,6 +536,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo50boxmega
 	name = "Mega Box of .50 AE Rounds"
@@ -509,6 +546,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo712box
 	name = "Box of 7.12x82mm Rounds"
@@ -518,6 +556,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ammo712boxmega
 	name = "Mega Box of 7.12x82mm Rounds"
@@ -527,6 +566,7 @@
 	surplus = 0
 	illegal_tech = FALSE
 	purchasable_from = UPLINK_NUKE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/mysteryshells
 	name = "Mystery Shells Box"
