@@ -13,7 +13,6 @@
 	var/superhumanhealing = FALSE
 	mutation_traits = list(
 		TRAIT_NO_SLIP_WATER,
-		TRAIT_IGNOREDAMAGESLOWDOWN,
 		TRAIT_PUSHIMMUNE,
 		TRAIT_STUNIMMUNE,
 		TRAIT_NODISMEMBER,
@@ -30,10 +29,10 @@
 	acquirer.physiology.tox_mod *= 0.90
 	acquirer.physiology.oxy_mod *= 0.90
 	acquirer.add_traits(mutation_traits, TRAIT_NO_SLIP_WATER)
-	acquirer.add_traits(mutation_traits, TRAIT_IGNOREDAMAGESLOWDOWN)
 	acquirer.add_traits(mutation_traits, TRAIT_PUSHIMMUNE)
 	acquirer.add_traits(mutation_traits, TRAIT_STUNIMMUNE)
 	acquirer.add_traits(mutation_traits, TRAIT_NODISMEMBER)
+	owner.add_movespeed_mod_immunities("superhuman", /datum/movespeed_modifier/damage_slowdown)
 
 /datum/mutation/human/superhuman/on_losing(mob/living/carbon/human/owner)
 	if(..())
@@ -46,10 +45,10 @@
 	owner.physiology.tox_mod *= 1.10
 	owner.physiology.oxy_mod *= 1.10
 	owner.remove_traits(mutation_traits, TRAIT_NO_SLIP_WATER)
-	owner.remove_traits(mutation_traits, TRAIT_IGNOREDAMAGESLOWDOWN)
 	owner.remove_traits(mutation_traits, TRAIT_PUSHIMMUNE)
 	owner.remove_traits(mutation_traits, TRAIT_STUNIMMUNE)
 	owner.remove_traits(mutation_traits, TRAIT_NODISMEMBER)
+	owner.remove_movespeed_mod_immunities("superhuman", /datum/movespeed_modifier/damage_slowdown)
 
 /datum/mutation/human/superhuman/on_life(seconds_per_tick, times_fired, mob/living/carbon/human/H)
 	if(superhumanhealing)
