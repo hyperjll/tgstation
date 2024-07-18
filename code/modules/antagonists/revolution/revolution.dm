@@ -174,6 +174,7 @@
 	name = "\improper Head Revolutionary"
 	antag_hud_name = "rev_head"
 	job_rank = ROLE_REV_HEAD
+	stinger_sound = 'hypermods/sound/ambience/antag/headrev_start.ogg'
 
 	preview_outfit = /datum/outfit/revolutionary
 	hardcore_random_bonus = TRUE

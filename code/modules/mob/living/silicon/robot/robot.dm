@@ -421,6 +421,7 @@
 	else
 		clear_alert(ALERT_HACKED)
 	set_modularInterface_theme()
+	playsound_local(get_turf(model), 'hypermods/sound/ambience/antag/emagged_borg.ogg', 70, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 
 /// Special handling for getting hit with a light eater
 /mob/living/silicon/robot/proc/on_light_eater(mob/living/silicon/robot/source, datum/light_eater)

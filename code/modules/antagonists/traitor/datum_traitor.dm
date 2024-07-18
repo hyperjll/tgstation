@@ -62,6 +62,7 @@
 
 /datum/antagonist/traitor/infiltrator/sleeper_agent
 	name = "\improper Syndicate Sleeper Agent"
+	stinger_sound = 'hypermods/sound/ambience/antag/brothersorsleeper.ogg'
 
 /datum/antagonist/traitor/New(give_objectives = TRUE)
 	. = ..()
