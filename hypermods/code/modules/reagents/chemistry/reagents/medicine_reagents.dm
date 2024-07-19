@@ -355,7 +355,7 @@
 // New version of inaprovaline, which is buffed to be more useful.
 
 /datum/reagent/medicine/coagulant/inaprovaline
-	name = "Inaprovaline"
+	name = "Inaprovaline Plus"
 	description = "Stabilizes the breathing of patients, and heals asphyxiation damage quickly. It also increases blood clotting efficiency. Good for those in critical condition."
 	reagent_state = LIQUID
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
@@ -441,7 +441,7 @@
 	passive_bleed_modifier = 0.3 // .4 better than sangurite (0.7)
 
 /datum/reagent/medicine/coagulant/proconvertin/overdose_process(mob/living/carbon/M)
-	M.adjustOxyLoss(-5*REM, 0)
+	M.adjustOxyLoss(5*REM, 0)
 	..()
 	. = 1
 
@@ -664,3 +664,31 @@
 	M.adjustToxLoss(3*REM, 0)
 	..()
 	return TRUE
+
+/datum/reagent/medicine/ultravasculine
+	name = "Ultravasculine"
+	description = "Rapidly flushes toxins and especially histamines from the body, but places some stress on the veins. Overdose increases the stress."
+	reagent_state = LIQUID
+	metabolization_rate = 1.25 * REAGENTS_METABOLISM
+	color = "#710000"
+	overdose_threshold = 30
+
+/datum/reagent/medicine/ultravasculine/on_mob_life(mob/living/carbon/M)
+	M.adjustToxLoss(-6*REM, 0)
+	M.adjustBruteLoss(1*REM, 0)
+
+	if(M.reagents.has_reagent(/datum/reagent/toxin/histamine))
+		M.reagents.add_reagent(/datum/reagent/medicine/ultravasculine, 0.5)
+	..()
+	. = 1
+
+	if(M.reagents.has_reagent(/datum/reagent/toxin/histamine))
+		M.reagents.remove_reagent(/datum/reagent/toxin/histamine, 1)
+	..()
+	. = 1
+
+/datum/reagent/medicine/ultravasculine/overdose_process(mob/living/carbon/M)
+	M.adjustToxLoss(4*REM, 0)
+	M.adjustBruteLoss(5*REM, 0)
+	..()
+	. = 1

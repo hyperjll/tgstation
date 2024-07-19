@@ -168,3 +168,21 @@
 	REMOVE_TRAIT(M, TRAIT_PARALYSIS_R_LEG, type)
 	REMOVE_TRAIT(M, TRAIT_PARALYSIS_L_LEG, type)
 	. = ..()
+
+/datum/reagent/toxin/heartbreaker
+	name = "Heartbreaker Toxin"
+	description = "A hallucinogenic compound derived from mindbreaker toxin. it blocks neurological signals to the respiratory system, causing asphyxiation and heart failure."
+	color = "#FF006F" // rgb: 139, 166, 233
+	toxpwr = 0
+	taste_description = "sourness"
+	metabolization_rate = 1 * REAGENTS_METABOLISM
+	var/slurtimer = (3 * REM)
+
+/datum/reagent/toxin/heartbreaker/on_mob_life(mob/living/carbon/M)
+	M.adjust_slurring(slurtimer SECONDS)
+
+	M.adjustOxyLoss(3.5 * REM, FALSE)
+	M.adjustOrganLoss(ORGAN_SLOT_HEART, 1)
+
+	M.adjustStaminaLoss(5, 0)
+	return ..()

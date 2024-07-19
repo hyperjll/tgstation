@@ -52,3 +52,9 @@
 /datum/reagent/diseasensstim/on_mob_end_metabolize(mob/living/L)
 	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/diseasensstim)
 	..()
+
+/datum/reagent/lemoline
+	name = "Lemoline"
+	description = "Synthesized in off-station laboratories, used in several high-quality medicines."
+	color ="#FFF44F"
+	taste_description = "lemony"
