@@ -1,16 +1,16 @@
-/datum/symptom/explosive
+/datum/symptom/explosive // ~I'm the bomb and i'm about to blow up!~
 	name = "Explosive Glands"
 	desc = "The virus produces explosive reagents and stores them within various areas of the body."
 	stealth = -2
 	resistance = -1
 	stage_speed = 0
 	transmittable = -3
-	level = 11
+	level = 12
 	severity = 8
 	threshold_descs = list(
 		"Stealth 8" = "Symptom remains completely hidden until it's fully active.",
 		"Resistance 12" = "Doubles the amount of explosive reagents capable of being stored within the body.",
-		"Transmission 6" = "The virus steadily increases the host's bodily temperature, making it easier to set off the explosives."
+		"Transmission 6" = "The virus steadily increases the host's bodily temperature, making it easier to set off the explosives.",
 	)
 	var/chemmult = 1
 	var/tempmodifier = FALSE
