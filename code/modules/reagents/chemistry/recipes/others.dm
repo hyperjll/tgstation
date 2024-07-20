@@ -273,19 +273,24 @@
 	level_max = 8
 
 /datum/chemical_reaction/mix_virus/mix_virus_9
-	required_reagents = list(/datum/reagent/uranium/uraniumvirusfood/unstable = 1)
+	required_reagents = list(/datum/reagent/uranium = 1)
 	level_min = 9
 	level_max = 9
 
 /datum/chemical_reaction/mix_virus/mix_virus_10
-	required_reagents = list(/datum/reagent/uranium/uraniumvirusfood = 1)
+	required_reagents = list(/datum/reagent/uranium/uraniumvirusfood/unstable = 1)
 	level_min = 10
 	level_max = 10
 
 /datum/chemical_reaction/mix_virus/mix_virus_11
-	required_reagents = list(/datum/reagent/uranium/uraniumvirusfood/stable = 1)
+	required_reagents = list(/datum/reagent/uranium/uraniumvirusfood = 1)
 	level_min = 11
 	level_max = 11
+
+/datum/chemical_reaction/mix_virus/mix_virus_12
+	required_reagents = list(/datum/reagent/uranium/uraniumvirusfood/stable = 1)
+	level_min = 12
+	level_max = 12
 
 /datum/chemical_reaction/mix_virus/rem_virus
 	required_reagents = list(/datum/reagent/medicine/synaptizine = 1)

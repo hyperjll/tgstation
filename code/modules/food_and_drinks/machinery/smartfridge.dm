@@ -752,6 +752,7 @@
 	initial_contents = list(
 		/obj/item/reagent_containers/pill/epinephrine = 12,
 		/obj/item/reagent_containers/pill/multiver = 5,
+		/obj/item/reagent_containers/pill/antiviral = 3,
 		/obj/item/reagent_containers/cup/bottle/epinephrine = 1,
 		/obj/item/reagent_containers/cup/bottle/multiver = 1)
 
@@ -776,6 +777,7 @@
 		/obj/item/reagent_containers/cup/bottle/plasmavirusfoodweak = 1,
 		/obj/item/reagent_containers/cup/bottle/plasma = 1,
 		/obj/item/reagent_containers/cup/bottle/plasmavirusfood = 1,
+		/obj/item/reagent_containers/cup/bottle/uranium = 1,
 		/obj/item/reagent_containers/cup/bottle/uraniumvirusfoodunstable = 1,
 		/obj/item/reagent_containers/cup/bottle/uraniumvirusfood = 1,
 		/obj/item/reagent_containers/cup/bottle/uraniumvirusfoodstable = 1,

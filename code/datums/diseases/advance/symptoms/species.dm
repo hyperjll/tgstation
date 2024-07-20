@@ -9,10 +9,10 @@
 /datum/symptom/undead_adaptation
 	name = "Necrotic Metabolism"
 	desc = "The virus is able to thrive and act even within dead hosts."
-	stealth = 2
-	resistance = -2
-	stage_speed = 1
-	transmittable = 0
+	stealth = 1
+	resistance = 2
+	stage_speed = 2
+	transmittable = 1
 	level = 6
 	severity = 0
 
