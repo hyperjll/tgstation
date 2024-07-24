@@ -12,7 +12,7 @@
 	/// The name of the special role given to the recruit
 	var/special_role_name = "Nanotrasen Employee"
 	/// Style used by the droppod
-	var/pod_style = STYLE_STANDARD
+	var/pod_style = /datum/pod_style
 	/// Where do we land our pod?
 	var/turf/spawn_location
 	/// Are we currently polling?
@@ -59,7 +59,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Security Cyborg"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 
 /obj/item/antag_spawner/nanotrasen/securityborg/spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
 	var/mob/living/silicon/robot/model/security/secborg = new()
@@ -80,7 +80,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Clown Cyborg"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 
 /obj/item/antag_spawner/nanotrasen/clownborg/spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
 	var/mob/living/silicon/robot/model/clown/borg = new()
@@ -101,7 +101,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Engineering Cyborg"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 
 /obj/item/antag_spawner/nanotrasen/engiborg/spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
 	var/mob/living/silicon/robot/model/engineering/borg = new()
@@ -122,7 +122,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Medical Cyborg"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 
 /obj/item/antag_spawner/nanotrasen/medicalborg/spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
 	var/mob/living/silicon/robot/model/medical/borg = new()
@@ -143,7 +143,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Janitor Cyborg"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 
 /obj/item/antag_spawner/nanotrasen/janitorborg/spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
 	var/mob/living/silicon/robot/model/janitor/borg = new()
@@ -164,7 +164,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Mining Cyborg"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 
 /obj/item/antag_spawner/nanotrasen/minerborg/spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
 	var/mob/living/silicon/robot/model/miner/borg = new()
@@ -185,7 +185,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Peacekeeper Cyborg"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 
 /obj/item/antag_spawner/nanotrasen/peaceborg/spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
 	var/mob/living/silicon/robot/model/peacekeeper/borg = new()
@@ -206,7 +206,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Service Cyborg"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 
 /obj/item/antag_spawner/nanotrasen/serviceborg/spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
 	var/mob/living/silicon/robot/model/service/borg = new()
@@ -228,7 +228,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Assistant"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/assistant/consistent/outfit = /datum/outfit/job/assistant/consistent
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -261,7 +261,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Scientist"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/scientist/outfit = /datum/outfit/job/
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -294,7 +294,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Bartender"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/bartender/outfit = /datum/outfit/job/bartender
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -327,7 +327,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Botanist"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/botanist/outfit = /datum/outfit/job/botanist
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -360,7 +360,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Cargo Technician"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/cargo_tech/outfit = /datum/outfit/job/cargo_tech
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -393,7 +393,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Chemist"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/chemist/outfit = /datum/outfit/job/chemist
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -426,7 +426,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Clown"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/clown/outfit = /datum/outfit/job/clown
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -459,7 +459,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Cook"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/cook/outfit = /datum/outfit/job/cook
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -492,7 +492,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Coroner"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/coroner/outfit = /datum/outfit/job/coroner
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -525,7 +525,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Curator"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/curator/outfit = /datum/outfit/job/curator
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -558,7 +558,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Detective"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/detective/outfit = /datum/outfit/job/detective
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -591,7 +591,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Geneticist"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/geneticist/outfit = /datum/outfit/job/geneticist
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -624,7 +624,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Janitor"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/janitor/outfit = /datum/outfit/job/janitor
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -657,7 +657,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Lawyer"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/lawyer/outfit = /datum/outfit/job/lawyer
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -690,7 +690,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Medical Doctor"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/doctor/outfit = /datum/outfit/job/doctor
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -723,7 +723,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Mime"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/mime/outfit = /datum/outfit/job/mime
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -756,7 +756,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Paramedic"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/paramedic/outfit = /datum/outfit/job/paramedic
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -789,7 +789,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Psychologist"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/psychologist/outfit = /datum/outfit/job/psychologist
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -822,7 +822,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Roboticist"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/roboticist/outfit = /datum/outfit/job/roboticist
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -855,7 +855,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Security Officer"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/security/outfit = /datum/outfit/job/security
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -888,7 +888,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Shaft Miner"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/miner/outfit = /datum/outfit/job/miner
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -921,7 +921,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Station Engineer"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/engineer/outfit = /datum/outfit/job/engineer
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -954,7 +954,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Warden"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/warden/outfit = /datum/outfit/job/warden
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -987,7 +987,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = "Chaplain"
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job/chaplain/outfit = /datum/outfit/job/chaplain
 	/// Chance for reinforcement to be selected as an antagonist.
@@ -1020,7 +1020,7 @@
 	/// The name of the special role given to the recruit
 	special_role_name = ""
 	/// Style used by the droppod
-	pod_style = STYLE_STANDARD
+	pod_style = /datum/pod_style
 	/// The applied outfit
 	var/datum/outfit/job//outfit = /datum/outfit/job/
 	/// Chance for reinforcement to be selected as an antagonist.

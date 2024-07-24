@@ -98,3 +98,9 @@
 	name = "bluespace syringe"
 	desc = "An advanced syringe that can hold 60 units of chemicals."
 	list_reagents = list(/datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/dermaline = 5, /datum/reagent/medicine/antitoxin = 5, /datum/reagent/medicine/dexalinplus = 5, /datum/reagent/medicine/coagulant = 5, /datum/reagent/medicine/omnizine = 5, /datum/reagent/iron = 5, /datum/reagent/medicine/potass_iodide = 5, /datum/reagent/medicine/antihol = 5, /datum/reagent/medicine/healingnanites = 5)
+
+/obj/item/reagent_containers/syringe/sedative
+	name = "syringe (Sedatives)"
+	desc = "Contains 15 units of light-weight sedatives."
+	list_reagents = list(/datum/reagent/medicine/haloperidol = 15)
+	icon_state = "syringe"

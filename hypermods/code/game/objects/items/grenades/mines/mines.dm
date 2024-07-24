@@ -7,7 +7,7 @@
 	var/mine_type = /obj/effect/mine
 	var/arming_time = 3 SECONDS
 
-/obj/item/deployablemine/afterattack(atom/plantspot, mob/user, proximity)
+/obj/item/deployablemine/interact_with_atom(atom/plantspot, mob/user, proximity)
 	if(!proximity)
 		return
 	if(!istype(plantspot,/turf/open/floor))
@@ -136,3 +136,13 @@
 	icon = 'icons/mob/simple/pets.dmi'
 	icon_state = "corgi"
 	mine_type = /obj/effect/mine/explosive/fakeian
+
+
+/obj/item/deployablemine/radio
+	name = "radio mine"
+	desc = "It's a mime which transmits some kind of message over an encrypted radio channel when stepped on."
+	mine_type = /obj/effect/mine/radio
+
+/obj/item/deployablemine/radio/security
+	name = "security radio mine"
+	mine_type = /obj/effect/mine/radio/security

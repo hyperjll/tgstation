@@ -4,4 +4,4 @@
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = CALIBER_N762
 	max_ammo = 6
-	multiload = 1
+//	multiload = 1

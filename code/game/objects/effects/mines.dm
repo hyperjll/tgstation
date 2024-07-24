@@ -17,6 +17,8 @@
 	/// Stepping on the mine will set this to the first mob who stepped over it
 	/// The mine will not detonate via movement unless the first mob steps off of it
 	var/datum/weakref/foot_on_mine
+	/// The chance the mine deletes itself after activation.
+	var/mineusechance = 100
 
 /obj/effect/mine/Initialize(mapload)
 	. = ..()
@@ -141,7 +143,10 @@
 	mineEffect(triggerer)
 	triggered = TRUE
 	SEND_SIGNAL(src, COMSIG_MINE_TRIGGERED, triggerer)
-	qdel(src)
+	if(prob(mineusechance))
+		qdel(src)
+	else
+		triggered = FALSE
 
 /obj/effect/mine/explosive
 	name = "explosive mine"

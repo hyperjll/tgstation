@@ -27,7 +27,7 @@
 
 	podspawn(list(
 		"target" = get_turf(user),
-		"style" = STYLE_SYNDICATE,
+		"style" = /datum/pod_style/syndicate,
 		"spawn" = loudkit,
 	))
 	return source //For log icon

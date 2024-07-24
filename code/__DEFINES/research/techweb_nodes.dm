@@ -118,3 +118,8 @@
 #define TECHWEB_NODE_TELECOMS "telecoms"
 #define TECHWEB_NODE_UNREGULATED_BLUESPACE "unregulated_bluespace"
 #define TECHWEB_NODE_XENOBIOLOGY "xenobiology"
+
+#define TECHWEB_NODE_SEC_EQUIP_ADV "sec_equip_adv"
+#define TECHWEB_NODE_BALLISTICS "ballistics"
+#define TECHWEB_NODE_BALLISTICS_ADV "ballistics_adv"
+#define TECHWEB_NODE_BALLISTICS_SUPER "ballistics_super"

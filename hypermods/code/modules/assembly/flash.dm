@@ -10,5 +10,15 @@
 	worn_icon_state = "flashlight"
 	pickup_sound = null
 	drop_sound = null
-	burnout_resistance = 100
+	burnout_resistance = 1
 	cooldown = 5 SECONDS
+
+/obj/item/assembly/flash/handheld/upgraded
+	name = "security flash"
+	desc = "A powerful and versatile flashbulb device, with applications ranging from disorienting attackers to acting as visual receptors in robot production. This one has extended range and a more powerful bulb."
+	icon = 'hypermods/icons/obj/devices/flash.dmi'
+	icon_state = "secflash"
+	flashing_overlay = "secflash-f"
+	burnout_resistance = 0.3
+	aoerange = 5
+	aoeconfusiondur = 8 SECONDS

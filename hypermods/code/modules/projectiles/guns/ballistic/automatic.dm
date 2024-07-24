@@ -38,6 +38,15 @@
 	empty_indicator = TRUE
 	custom_price = 7500
 
+/obj/item/gun/ballistic/automatic/lecter/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS)
+
+/obj/item/gun/ballistic/automatic/lecter/freshprint
+	spawnwithmagazine = FALSE
+	pin = null
+
+
 // Drozd SMG
 
 /obj/item/gun/ballistic/automatic/drozd
@@ -58,3 +67,11 @@
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
 	custom_price = 8000
+
+/obj/item/gun/ballistic/automatic/drozd/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+
+/obj/item/gun/ballistic/automatic/drozd/freshprint
+	spawnwithmagazine = FALSE
+	pin = null

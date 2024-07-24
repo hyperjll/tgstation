@@ -100,3 +100,39 @@
 	range_heavy = 4
 	range_light = 8
 	range_flash = 16
+
+
+/obj/effect/mine/radio
+	name = "radio mine"
+	desc = "It's a mime which transmits some kind of message over an encrypted radio channel when stepped on."
+	alpha = 55
+	var/obj/item/radio/radio
+	var/encryptionkey = /obj/item/encryptionkey/headset_cent
+	var/channel = RADIO_CHANNEL_CENTCOM
+	mineusechance = 0
+
+/obj/effect/mine/radio/Initialize(mapload)
+	. = ..()
+	radio = new(src)
+	radio.keyslot = new encryptionkey // Should broadcast exclusively on the centcom channel.
+	radio.listening = FALSE
+	radio.recalculateChannels()
+
+/obj/effect/mine/radio/Destroy()
+	QDEL_NULL(radio)
+	return ..()
+
+/obj/effect/mine/radio/mineEffect(mob/victim)
+	var/name = victim.mind ? victim.mind.name : victim.real_name
+	var/area = get_area_name(get_turf(victim))
+
+	// What is to be said.
+	var/message = "[name] has triggered a radio mine at [area]."
+
+	radio.talk_into(src, message, channel)
+	return
+
+/obj/effect/mine/radio/security
+	name = "security radio mine"
+	encryptionkey = /obj/item/encryptionkey/headset_sec // Security channel only?
+	channel = RADIO_CHANNEL_SECURITY

@@ -26,6 +26,8 @@
 	var/last_used = 0 //last world.time it was used.
 	var/cooldown = 0
 	var/last_trigger = 0 //Last time it was successfully triggered.
+	var/aoerange = 3
+	var/aoeconfusiondur = 5 SECONDS
 
 /obj/item/assembly/flash/suicide_act(mob/living/user)
 	if(burnt_out)
@@ -84,7 +86,7 @@
 	return TRUE
 
 //BYPASS CHECKS ALSO PREVENTS BURNOUT!
-/obj/item/assembly/flash/proc/AOE_flash(bypass_checks = FALSE, range = 3, confusion_duration = 5 SECONDS, mob/user)
+/obj/item/assembly/flash/proc/AOE_flash(bypass_checks = FALSE, range = aoerange, confusion_duration = aoeconfusiondur, mob/user)
 	if(!bypass_checks && !try_use_flash())
 		return FALSE
 	var/list/mob/targets = get_flash_targets(get_turf(src), range, FALSE)

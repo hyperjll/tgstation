@@ -68,23 +68,20 @@
 	name = "7.62mm bullet casing"
 	desc = "A 7.62mm bullet casing."
 	icon_state = "762-casing"
-	caliber = CALIBER_762X54R
+	caliber = CALIBER_N762
 	projectile_type = /obj/projectile/bullet/a762
 
 /obj/item/ammo_casing/a762/raze
 	name = "7.62mm Raze bullet casing"
 	desc = "A 7.62mm Raze bullet casing."
-	icon_state = "762R-casing"
 	projectile_type = /obj/projectile/bullet/a762/raze
 
 /obj/item/ammo_casing/a762/pen
 	name = "7.62mm anti-material bullet casing"
 	desc = "A 7.62mm anti-material bullet casing."
-	icon_state = "762P-casing"
 	projectile_type = /obj/projectile/bullet/a762/pen
 
 /obj/item/ammo_casing/a762/vulcan
 	name = "7.62mm Vulcan bullet casing"
 	desc = "A 7.62mm Vulcan bullet casing."
-	icon_state = "762I-casing"
 	projectile_type = /obj/projectile/bullet/a762/vulcan

@@ -70,6 +70,8 @@
 	can_suppress = FALSE
 	burst_size = 1
 	fire_delay = 2
+	inhand_x_dimension = 32
+	inhand_y_dimension = 32
 	pin = /obj/item/firing_pin
 	actions_types = list()
 	semi_auto = TRUE

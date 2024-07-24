@@ -19,4 +19,11 @@
 	actions_types = list()
 	bolt_type = BOLT_TYPE_LOCKING
 	bolt_locked = FALSE
+	can_suppress = FALSE
+	mag_display = FALSE
+	tac_reloads = FALSE
 	custom_price = 10000
+
+/obj/item/gun/ballistic/rifle/sniper_rifle/hristov/freshprint
+	spawnwithmagazine = FALSE
+	pin = null
