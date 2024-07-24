@@ -40,20 +40,23 @@
 /obj/item/organ/internal/cyberimp/arm/surgery/emagged/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/arm/muscle/syndicate
+/obj/item/organ/internal/cyberimp/arm/strongarm/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/arm/muscle/syndicate/l
+/obj/item/organ/internal/cyberimp/arm/strongarm/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/internal/cyberimp/arm/muscle/buster
+/obj/item/organ/internal/cyberimp/arm/strongarm/buster
 	name = "\proper Buster Arm implant"
 	desc = "When implanted, this cybernetic implant will enhance the muscles and bones of the arm to deliver incredibly powerful punches."
 	icon_state = "muscle_implant"
 
 	zone = BODY_ZONE_R_ARM
-	slot = ORGAN_SLOT_RIGHT_ARM_AUG
+	slot = ORGAN_SLOT_RIGHT_ARM_MUSCLE
+
+	right_arm_organ_slot = ORGAN_SLOT_RIGHT_ARM_MUSCLE
+	left_arm_organ_slot = ORGAN_SLOT_LEFT_ARM_MUSCLE
 
 	actions_types = list()
 	items_to_create = list(/obj/item/gun/magic/hook/buster)
@@ -71,16 +74,16 @@
 	///How long will the implant malfunction if it is EMP'd
 	emp_base_duration = 30 SECONDS
 
-/obj/item/organ/internal/cyberimp/arm/muscle/buster/on_mob_insert(mob/living/carbon/arm_owner)
+/obj/item/organ/internal/cyberimp/arm/strongarm/buster/on_mob_insert(mob/living/carbon/arm_owner)
 	. = ..()
 	if(ishuman(arm_owner)) //Sorry, only humans
 		RegisterSignal(arm_owner, COMSIG_LIVING_EARLY_UNARMED_ATTACK, PROC_REF(on_attack_hand))
 
-/obj/item/organ/internal/cyberimp/arm/muscle/on_mob_remove(mob/living/carbon/arm_owner)
+/obj/item/organ/internal/cyberimp/arm/strongarm/on_mob_remove(mob/living/carbon/arm_owner)
 	. = ..()
 	UnregisterSignal(arm_owner, COMSIG_LIVING_EARLY_UNARMED_ATTACK)
 
-/obj/item/organ/internal/cyberimp/arm/muscle/buster/emp_act(severity)
+/obj/item/organ/internal/cyberimp/arm/strongarm/buster/emp_act(severity)
 	. = ..()
 	if((organ_flags & ORGAN_FAILING) || . & EMP_PROTECT_SELF)
 		return
@@ -88,11 +91,11 @@
 	organ_flags |= ORGAN_FAILING
 	addtimer(CALLBACK(src, PROC_REF(reboot)), 90 / severity)
 
-/obj/item/organ/internal/cyberimp/arm/muscle/buster/reboot()
+/obj/item/organ/internal/cyberimp/arm/strongarm/buster/reboot()
 	organ_flags &= ~ORGAN_FAILING
 	owner.balloon_alert(owner, "your arm stops spasming!")
 
-/obj/item/organ/internal/cyberimp/arm/muscle/buster/on_attack_hand(mob/living/carbon/human/source, atom/target, proximity, modifiers, override = TRUE)
+/obj/item/organ/internal/cyberimp/arm/strongarm/buster/on_attack_hand(mob/living/carbon/human/source, atom/target, proximity, modifiers, override = TRUE)
 	SIGNAL_HANDLER
 
 	if(source.get_active_hand() != hand || !proximity)
@@ -159,13 +162,13 @@
 
 	return COMPONENT_CANCEL_ATTACK_CHAIN
 
-/obj/item/organ/internal/cyberimp/arm/muscle/buster/l
+/obj/item/organ/internal/cyberimp/arm/strongarm/buster/l
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/internal/cyberimp/arm/muscle/buster/syndicate
+/obj/item/organ/internal/cyberimp/arm/strongarm/buster/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/arm/muscle/buster/syndicate/l
+/obj/item/organ/internal/cyberimp/arm/strongarm/buster/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_ARM
 

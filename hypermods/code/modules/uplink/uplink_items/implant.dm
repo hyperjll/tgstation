@@ -112,7 +112,7 @@
 	desc = "A multisurgeon containing two strong-arm empowered musculature implants. \
 			These implants grant the arms of it's user increased punching power, increasing it's damage toward body and stamina. \
 			Also knocks people around easily."
-	item = /obj/item/multisurgeon/syndicate/muscle/single_use
+	item = /obj/item/multisurgeon/syndicate/strongarm/single_use
 	progression_minimum = 10 MINUTES
 	cost = 6
 	surplus = 30
@@ -123,7 +123,7 @@
 			These implants grant the arms of it's user increased punching power, increasing it's damage toward body and stamina greatly. \
 			Also knocks people around easily and can cause them to crash harmfully into walls and people. \
 			Activate the implant with nothing in hand to reveal a grappling hook capable of grabbing people and pulling them close, comes with two hooks."
-	item = /obj/item/multisurgeon/syndicate/muscle/buster/single_use
+	item = /obj/item/multisurgeon/syndicate/strongarm/buster/single_use
 	progression_minimum = 30 MINUTES
 	cost = 25
 	surplus = 10
