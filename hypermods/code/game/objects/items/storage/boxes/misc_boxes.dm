@@ -97,3 +97,14 @@
 	for(var/i in 1 to 2)
 		var/item = pick(item_list)
 		new item(src)
+
+
+/obj/item/storage/box/spongecapsules
+	name = "sponge capsule box"
+	icon = 'hypermods/icons/obj/storage/storage.dmi'
+	icon_state = "spongecapsules"
+	desc = "The instructions of the back read 'WARNING, DO NOT EXPOSE TO WATER UNLESS YOU HAVE A DEATH WISH'."
+
+/obj/item/storage/box/spongecapsules/PopulateContents()
+	for(var/i in 1 to 6)
+		new /obj/item/food/monkeycube/biosponge(src)
