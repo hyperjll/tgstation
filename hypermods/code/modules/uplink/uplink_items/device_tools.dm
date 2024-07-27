@@ -125,7 +125,7 @@
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY)
 
 /datum/uplink_item/device_tools/spongecapsules
-	name = "Syndicate Sponge Capsules
+	name = "Syndicate Sponge Capsules"
 	desc = "After extensive research into monkey cubes and gold slime extracts, the xenobiologists at the Tiger Coop managed to combine them \
 			into one all-in-one package. Simply place a capsule where you need your monster party and spray with water. Each capsule will \
 			bring forth 2 random beasts to maul random bystanders. Comes with SIX sponge capsules. Monsters may or may not attack you."
