@@ -97,7 +97,7 @@
 /// New shit below
 
 /obj/item/seeds/tower/glass
-	name = "pack of glass-cap mycelium"
+	name = "glass-cap mycelium pack"
 	desc = "This mycelium grows into glass logs."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "mycelium-glasscap"
@@ -110,7 +110,7 @@
 	rarity = 20
 //Mutates from Steel
 /obj/item/seeds/tower/plasteel
-	name = "pack of plasteel-cap mycelium"
+	name = "plasteel-cap mycelium pack"
 	desc = "This mycelium grows into plasteel logs."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "mycelium-plasteelcap"
@@ -123,7 +123,7 @@
 	rarity = 40
 //Mutates from Steel
 /obj/item/seeds/tower/silver
-	name = "pack of silver-cap mycelium"
+	name = "silver-cap mycelium pack"
 	desc = "This mycelium grows into silver logs."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "mycelium-silvercap"
@@ -136,7 +136,7 @@
 	rarity = 40
 ///Mutates from glass
 /obj/item/seeds/tower/diamond
-	name = "pack of diamond-cap mycelium"
+	name = "diamond-cap mycelium pack"
 	desc = "This mycelium grows into diamond logs."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "mycelium-diamondcap"
@@ -149,7 +149,7 @@
 	rarity = 40
 
 /obj/item/seeds/tower/uranium
-	name = "pack of uranium-cap mycelium"
+	name = "uranium-cap mycelium pack"
 	desc = "This mycelium grows into uranium logs."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "mycelium-uraniumcap"
@@ -162,7 +162,7 @@
 	rarity = 40
 //Mutates from Plasteel
 /obj/item/seeds/tower/titanium
-	name = "pack of titanium-cap mycelium"
+	name = "titanium-cap mycelium pack"
 	desc = "This mycelium grows into titanium logs."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "mycelium-titaniumcap"
@@ -175,7 +175,7 @@
 	rarity = 80
 //Mutates from Silver
 /obj/item/seeds/tower/gold
-	name = "pack of gold-cap mycelium"
+	name = "gold-cap mycelium pack"
 	desc = "This mycelium grows into gold logs."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "mycelium-goldcap"
@@ -188,7 +188,7 @@
 	rarity = 80
 //Mutates from Diamond
 /obj/item/seeds/tower/bluespace
-	name = "pack of bluespace-cap mycelium"
+	name = "bluespace-cap mycelium pack"
 	desc = "This mycelium grows into bluespace crystal logs."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "mycelium-bluespacecap"

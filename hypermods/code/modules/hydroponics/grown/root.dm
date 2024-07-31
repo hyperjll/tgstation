@@ -1,5 +1,5 @@
 /obj/item/seeds/carrot/gold
-	name = "pack of golden carrot seeds"
+	name = "golden carrot seed pack"
 	desc = "These seeds grow into special golden carrots. Known for their healing properties."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "seed-goldcarrot"

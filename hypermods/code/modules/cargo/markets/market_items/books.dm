@@ -22,3 +22,15 @@
 	price_max = CARGO_CRATE_VALUE * 2.5
 	stock_max = 3
 	availability_prob = 100
+
+/datum/market_item/books/healing
+	name = "Applied Medicare"
+	desc = "A book containing various medicine recipes and how to apply them effectively."
+	item = /obj/item/magicbook/healing
+
+	price_min = CARGO_CRATE_VALUE
+	price_max = CARGO_CRATE_VALUE * 2.5
+	stock_max = 3
+	availability_prob = 100
+
+

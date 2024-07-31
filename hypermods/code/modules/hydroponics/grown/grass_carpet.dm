@@ -1,5 +1,5 @@
 /obj/item/seeds/grass/golden
-	name = "pack of goldengrass seeds"
+	name = "goldengrass seed pack"
 	desc = "These seeds grow into a strangely non-metallic yellow grass."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
 	icon_state = "seed-goldgrass"

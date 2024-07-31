@@ -70,3 +70,30 @@
 		food_item.visible_message(span_danger("Before you can even read what's within it, [food_item] suddenly pops out from the book, and into your hand!"))
 
 	..()
+
+/obj/item/magicbook/healing
+	name = "Applied Medicare"
+	desc = "A book containing various medicine recipes and how to apply them effectively. \
+			Has the potential to provide healing to yourself and all nearby humanoids."
+	icon_state ="healing"
+	use_sound = 'hypermods/sound/items/bookopenlong.ogg'
+	usetime = 3 SECONDS
+	uses = 3
+
+/obj/item/magicbook/healing/do_effect(mob/user)
+	playsound(user, 'sound/magic/staff_healing.ogg', 50, TRUE)
+	for(var/mob/living/carbon/C in viewers(user, null))
+		var/need_mob_update = FALSE
+		need_mob_update += C.adjustBruteLoss(-5, updating_health = FALSE)
+		need_mob_update += C.adjustFireLoss(-5, updating_health = FALSE)
+		need_mob_update += C.adjustToxLoss(-5, updating_health = FALSE)
+		need_mob_update += C.adjustOxyLoss(-5, updating_health = FALSE)
+		if(need_mob_update)
+			C.updatehealth()
+		C.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 2)
+		C.reagents.add_reagent(/datum/reagent/medicine/c2/aiuri, 2)
+		C.reagents.add_reagent(/datum/reagent/medicine/c2/syriniver, 2)
+		C.reagents.add_reagent(/datum/reagent/medicine/c2/seiver, 2)
+
+	..()
+

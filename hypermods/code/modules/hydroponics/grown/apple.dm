@@ -1,5 +1,5 @@
 /obj/item/seeds/apple/gold/notch
-	name = "pack of notch apple seeds"
+	name = "notch apple seed pack"
 	desc = "These seeds grow into notch apple trees. Something very wonderful was occured within them, granting them healing properties."
 	icon_state = "seed-goldapple"
 	species = "notchapple"
@@ -27,7 +27,7 @@
 	wine_power = 80
 
 /obj/item/seeds/apple/gold/notch/enchanted
-	name = "pack of enchanted notch apple seeds"
+	name = "enchanted notch apple seed pack"
 	desc = "These seeds grow into enchanted notch apple trees. The seeds look incredibly fragile."
 	icon_state = "seed-goldapple"
 	species = "enotchapple"
