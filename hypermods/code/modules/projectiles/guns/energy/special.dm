@@ -1,7 +1,6 @@
 /obj/item/gun/energy/decloner/syndicate
 	name = "biological demolecularisor"
 	desc = "A gun that discharges high amounts of controlled radiation to slowly break a target into component elements."
-	icon = 'hypermods/icons/obj/weapons/guns/energy.dmi'
 	icon_state = "decloner"
 	ammo_type = list(/obj/item/ammo_casing/energy/radiation/balanced)
 	pin = /obj/item/firing_pin

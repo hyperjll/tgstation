@@ -45,6 +45,8 @@
 	backpack_contents = list(
 		/obj/item/barcodescanner = 1,
 		/obj/item/choice_beacon/hero = 1,
+		/obj/item/book/granter/action/spellpage/curator = 1,
+		/obj/item/market_uplink/curator = 1,
 	)
 	belt = /obj/item/modular_computer/pda/curator
 	ears = /obj/item/radio/headset/headset_srv

@@ -754,3 +754,24 @@
 	surplus = 0
 	item = /obj/item/storage/box/syndie_kit/xeno_organ_kit
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/curatorspellpage
+	name = "Recovered Spellpage"
+	desc = "A 'spell page' we've recovered from our various bouts against and with the Wizard Federation. \
+			We hope your particular expertise can make sense of this chicken-scratch."
+	item = /obj/item/book/granter/action/spellpage/curator
+	cost = 8
+	surplus = 0
+	restricted_roles = list(JOB_CURATOR, JOB_CAPTAIN)
+	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+
+/datum/uplink_item/role_restricted/curatorspellpagegreater
+	name = "Recovered Spellbook"
+	desc = "A spellbook we've recovered from our various bouts against and with the Wizard Federation. \
+			Our arcane allies have emphasized that this book contains 'great power', but we can hardly make heads-or-tails about it. \
+			According to them, you can learn one of: Sanguine Strike, Bind Soul, or Mind Swap from this book."
+	item = /obj/item/book/granter/action/spellpage/curator/greater
+	cost = 20
+	surplus = 0
+	restricted_roles = list(JOB_CURATOR, JOB_CAPTAIN)
+	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
