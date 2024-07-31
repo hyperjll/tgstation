@@ -50,7 +50,8 @@
 /obj/item/organ/internal/cyberimp/arm/strongarm/buster
 	name = "\proper Buster Arm implant"
 	desc = "When implanted, this cybernetic implant will enhance the muscles and bones of the arm to deliver incredibly powerful punches."
-	icon_state = "muscle_implant"
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "busterarm_implant"
 
 	zone = BODY_ZONE_R_ARM
 	slot = ORGAN_SLOT_RIGHT_ARM_MUSCLE
@@ -175,6 +176,8 @@
 /obj/item/organ/internal/cyberimp/arm/signaler
 	name = "arm-concealed signaler"
 	desc = "An illegal cybernetic implant that can produce and conceal a signaling device."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "implant-toolkit"
 	items_to_create = list(/obj/item/assembly/signaler)
 
 /obj/item/organ/internal/cyberimp/arm/signaler/syndicate
@@ -184,6 +187,8 @@
 /obj/item/organ/internal/cyberimp/arm/syndie_mantis
 	name = "G.O.R.L.E.X. mantis blade implant"
 	desc = "Modernized mantis blades designed and coined by Tiger operatives. Energy actuators makes the blade a much deadlier weapon."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "syndie_mantis"
 	items_to_create = list(/obj/item/mantis/blade/syndicate)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
@@ -194,12 +199,16 @@
 /obj/item/organ/internal/cyberimp/arm/syndie_hammer
 	name = "Vxtvul Hammer implant"
 	desc = "A folded Vxtvul Hammer designed to be incorporated into preterni chassis. Surgery can permit it to fit in other organic bodies."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "implant-weaponkit"
 	items_to_create = list(/obj/item/melee/vxtvulhammer)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 /obj/item/organ/internal/cyberimp/arm/nt_mantis
 	name = "H.E.P.H.A.E.S.T.U.S. mantis blade implants"
 	desc = "Retractable arm-blade implants to get you out of a pinch. Wielding two will let you double-attack."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "mantis"
 	items_to_create = list(/obj/item/mantis/blade/NT)
 
 /obj/item/organ/internal/cyberimp/arm/nt_mantis/l
@@ -209,29 +218,39 @@
 /obj/item/organ/internal/cyberimp/arm/makarov_implant
 	name = "Makarov implant"
 	desc = "A modified version of the Makarov pistol placed inside of the forearm to allow for easy concealment."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "implant-gunkit"
 	items_to_create = list(/obj/item/gun/ballistic/automatic/pistol/implant)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 /obj/item/organ/internal/cyberimp/arm/m1911_implant
 	name = "M1911 implant"
 	desc = "A modified version of the M1911 pistol placed inside of the forearm to allow for easy concealment."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "implant-gunkit"
 	items_to_create = list(/obj/item/gun/ballistic/automatic/pistol/m1911/implant)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 /obj/item/organ/internal/cyberimp/arm/deagle_implant
 	name = "Desert Eagle implant"
 	desc = "A modified version of the Desert Eagle placed inside of the forearm to allow for easy concealment."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "implant-gunkit"
 	items_to_create = list(/obj/item/gun/ballistic/automatic/pistol/deagle/implant)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 /obj/item/organ/internal/cyberimp/arm/viper_implant
 	name = "Viper implant"
 	desc = "A modified version of the Viper pistol placed inside of the forearm to allow for easy concealment."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "implant-gunkit"
 	items_to_create = list(/obj/item/gun/ballistic/automatic/pistol/viper/implant)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 /obj/item/organ/internal/cyberimp/arm/cobra_implant
 	name = "Cobra implant"
 	desc = "A modified version of the Cobra pistol placed inside of the forearm to allow for easy concealment."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "implant-gunkit"
 	items_to_create = list(/obj/item/gun/ballistic/automatic/pistol/cobra/implant)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN

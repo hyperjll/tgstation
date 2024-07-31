@@ -33,7 +33,10 @@
 /obj/item/organ/internal/cyberimp/chest/regenerativebetter
 	name = "regenerative implant"
 	desc = "A surgical implant that when inserted into the body will slowly repair the host. Allowing for very slow recovery of all forms of damage."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "chest_implant"
+	implant_overlay = "chest_implant_overlay"
+	implant_color = "#AD0000"
 	slot = ORGAN_SLOT_HEART_AID
 	var/healing = FALSE
 
@@ -72,7 +75,10 @@
 /obj/item/organ/internal/cyberimp/chest/regenerative
 	name = "regenerative implant"
 	desc = "A surgical implant that when inserted into the body will slowly repair the host. Allowing for very slow recovery of all forms of damage."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "chest_implant"
+	implant_overlay = "chest_implant_overlay"
+	implant_color = "#AD0000"
 	slot = ORGAN_SLOT_HEART_AID
 	var/healing = FALSE
 
@@ -111,7 +117,10 @@
 /obj/item/organ/internal/cyberimp/chest/jellypersonregen
 	name = "gelatine sythesis implant"
 	desc = "A surgical implant that when inserted into the body will slowly repair the host. Specifically tailored to jellypeople."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "chest_implant"
+	implant_overlay = "chest_implant_overlay"
+	implant_color = "#AD5000"
 	slot = ORGAN_SLOT_HEART_AID
 
 /obj/item/organ/internal/cyberimp/chest/jellypersonregen/on_life(seconds_per_tick, times_fired)
