@@ -377,6 +377,9 @@
 		/obj/item/deployablemine/radio,
 		/obj/item/gun/syringe/security,
 	))
+	atom_storage.open_sound = 'sound/items/holster.ogg'
+	atom_storage.open_sound_vary = TRUE
+	atom_storage.rustle_sound = FALSE
 
 /obj/item/storage/belt/security/full/PopulateContents()
 	new /obj/item/reagent_containers/spray/pepper(src)
