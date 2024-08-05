@@ -137,8 +137,9 @@
 
 /obj/item/gun/ballistic/revolver/syndicate
 	name = "\improper Syndicate Revolver"
-	desc = "A modernized 7 round revolver manufactured by Waffle Co. Uses .357 ammo."
+	desc = "A modernized 12 round revolver manufactured by Waffle Co. Uses .357 ammo."
 	icon_state = "revolversyndie"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/bluespace
 
 /obj/item/gun/ballistic/revolver/syndicate/nuclear
 	pin = /obj/item/firing_pin/implant/pindicate
