@@ -27,7 +27,7 @@
 	progression_minimum = 20 MINUTES
 	cost = 1
 	surplus = 0
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY)
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
 /datum/uplink_item/implants/adrenalin
 	name = "Adrenaline Implant"
@@ -45,7 +45,7 @@
 	item = /obj/item/autosurgeon/syndicate/regenerativebetter/hidden/single_use
 	cost = 8
 	surplus = 20
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/implants/chemstorage
 	name = "Chemical Storage Implant"
@@ -72,7 +72,7 @@
 	item = /obj/item/autosurgeon/syndicate/reviver/hidden/single_use
 	cost = 6
 	surplus = 20
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/implants/syndiantistun
 	name = "Syndicate CNS Rebooter Implant"
@@ -82,7 +82,7 @@
 	progression_minimum = 10 MINUTES
 	cost = 6
 	surplus = 40
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/implants/syndisignaller
 	name = "Signaler Implant"
@@ -183,7 +183,7 @@
 	item = /obj/item/storage/box/syndie_kit/waspimplant
 	cost = 2
 	surplus = 50
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/implants/waspsmacro
 	name = "Macro Wasp Revenge Implant"
@@ -194,7 +194,7 @@
 	progression_minimum = 30 MINUTES
 	cost = 8
 	surplus = 10
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/implants/tesla
 	name = "Flyzapper Implant"
@@ -276,7 +276,7 @@
 	item = /obj/item/autosurgeon/syndicate/makarov_implant
 	cost = 9
 	surplus = 20
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/implants/m1911_implant
 	name = "M1911 Arm implant"
@@ -284,7 +284,7 @@
 	item = /obj/item/autosurgeon/syndicate/m1911_implant
 	cost = 8
 	surplus = 20
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/implants/deagle_implant
 	name = "Desert Eagle Arm implant"
@@ -292,7 +292,7 @@
 	item = /obj/item/autosurgeon/syndicate/deagle_implant
 	cost = 12
 	surplus = 20
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/implants/viper_implant
 	name = "Viper Arm implant"
@@ -300,7 +300,7 @@
 	item = /obj/item/autosurgeon/syndicate/viper_implant
 	cost = 10
 	surplus = 20
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/implants/cobra_implant
 	name = "Cobra Arm implant"
@@ -309,7 +309,7 @@
 	progression_minimum = 5 MINUTES
 	cost = 9
 	surplus = 20
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/implants/spinaloverclock
 	name = "Neural Overclocker Implant"

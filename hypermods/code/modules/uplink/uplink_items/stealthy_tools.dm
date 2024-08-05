@@ -11,14 +11,14 @@
 	desc = "A tactical belt that renders the wearer invisible while active. Has a short charge that is refilled in darkness; only charges when in use."
 	item = /obj/item/shadowcloak
 	cost = 15
-	purchasable_from = ~UPLINK_NUKE_OPS
+	purchasable_from = ~UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/stealthy_tools/nuclearshadowcloak
 	name = "Cloaker Belt"
 	desc = "A tactical belt that renders the wearer invisible while active. Has a short charge that is refilled in darkness; only charges when in use."
 	item = /obj/item/shadowcloak
 	cost = 20
-	purchasable_from = UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/stealthy_tools/syndireverse
 	name = "Bluespace Projectile Weapon Disrupter"
@@ -79,7 +79,6 @@
 	cost = 4
 	surplus = 20
 
-
 /datum/uplink_item/stealthy_tools/bluespace_briefcase
 	name = "Bluespace Briefcase"
 	desc = "One of our secure briefcases, it's been fitted with bluespace technology allowing it to hold even the bulkiest of items \
@@ -96,7 +95,7 @@
 	item = /obj/item/pinpointer/crew/syndicate
 	cost = 3
 	surplus = 0
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/stealthy_tools/tracking_implants
 	name = "Box of Tracking Implants"
@@ -105,7 +104,7 @@
 	item = /obj/item/storage/box/syndie_kit/trackingimplants
 	cost = 1
 	surplus = 0
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/stealthy_tools/thievesgloves
 	name = "Thieves Gloves"

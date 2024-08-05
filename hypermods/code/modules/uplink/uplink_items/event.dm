@@ -15,7 +15,7 @@
 	limited_stock = 1
 	cost = 5
 	cant_discount = TRUE
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/summoncarpmigration/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/carp_migration, "a strange signal")
@@ -29,7 +29,7 @@
 	limited_stock = 1
 	cost = 10
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/carpmigration/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/carp_migration, "a nuclear operative support agent")
@@ -44,7 +44,7 @@
 	limited_stock = 1
 	cost = 4
 	restricted = TRUE
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/telecomm_blackout/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/communications_blackout, "a syndicate virus")
@@ -59,7 +59,7 @@
 	limited_stock = 1
 	cost = 6
 	restricted = TRUE
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/blackout/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/grid_check, "a syndicate virus")
@@ -73,7 +73,7 @@
 	limited_stock = 5
 	cost = 1
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/camera_failure/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/camera_failure, "a nuclear operative support agent")
@@ -87,7 +87,7 @@
 	limited_stock = 1
 	cost = 7
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/communications_blackout/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/communications_blackout, "a nuclear operative support agent")
@@ -101,7 +101,7 @@
 	limited_stock = 1
 	cost = 6
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/brand_intelligence/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/brand_intelligence, "a nuclear operative support agent")
@@ -115,7 +115,7 @@
 	limited_stock = 1
 	cost = 8
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/gravity_generator_blackout/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/gravity_generator_blackout, "a nuclear operative support agent")
@@ -129,7 +129,7 @@
 	limited_stock = 1
 	cost = 20
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/portal_storm_syndicate/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/portal_storm_syndicate, "a nuclear operative support agent")
@@ -161,7 +161,7 @@
 	limited_stock = 1
 	cost = 10
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/stray_cargo/syndicate/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/stray_cargo/syndicate, "a nuclear operative support agent")
@@ -175,7 +175,7 @@
 	limited_stock = 1
 	cost = 8
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/scrubber_overflow/catastrophic/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/scrubber_overflow/catastrophic, "a nuclear operative support agent")
@@ -189,7 +189,7 @@
 	limited_stock = 1
 	cost = 18
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/radiation_storm/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/radiation_storm, "a nuclear operative support agent")
@@ -204,7 +204,7 @@
 	limited_stock = 1
 	cost = 35
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/space_dragon/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/space_dragon, "a nuclear operative support agent")
@@ -219,7 +219,7 @@
 	limited_stock = 1
 	cost = 25
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/space_ninja/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/space_ninja, "a nuclear operative support agent")
@@ -233,7 +233,7 @@
 	limited_stock = 1
 	cost = 9
 	cant_discount = TRUE
-	purchasable_from = (UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/events/meteor_wave/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/meteor_wave, "a nuclear operative support agent")

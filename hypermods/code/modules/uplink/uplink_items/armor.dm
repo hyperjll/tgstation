@@ -35,7 +35,6 @@
 	item = /obj/item/shield/energy
 	cost = 8
 	surplus = 20
-
 	progression_minimum = 20 MINUTES
 
 /datum/uplink_item/armor/armoredtie
@@ -62,7 +61,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/teleport
 	cost = 12
 	surplus = 10
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactiveincendiarysyndicate
@@ -72,7 +70,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/fire
 	cost = 12
 	surplus = 5
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactivestealthsyndicate
@@ -82,7 +79,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/stealth
 	cost = 12
 	surplus = 10
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactiveteslasyndicate
@@ -92,7 +88,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/tesla
 	cost = 12
 	surplus = 10
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactiverepulsesyndicate
@@ -102,7 +97,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/repulse
 	cost = 12
 	surplus = 10
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactivetablesyndicate
@@ -112,7 +106,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/table
 	cost = 12
 	surplus = 10
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactivehallucinatingsyndicate
@@ -122,7 +115,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/hallucinating
 	cost = 12
 	surplus = 10
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactiveradiationsyndicate
@@ -132,7 +124,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/radiation
 	cost = 12
 	surplus = 10
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactivebioscramblingsyndicate
@@ -142,7 +133,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/bioscrambling
 	cost = 12
 	surplus = 10
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactivebarricadesyndicate
@@ -152,7 +142,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/barricade
 	cost = 12
 	surplus = 10
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/reactiveectoplasmsyndicate
@@ -162,7 +151,6 @@
 	item = /obj/item/clothing/suit/armor/reactive/syndicate/ectoplasm
 	cost = 12
 	surplus = 10
-
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/armor/dermal_harden

@@ -52,7 +52,7 @@
 	item = /obj/item/mindbatterer
 	cost = 4
 	surplus = 30
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS) // Would easily fuck over your fellow operatives or make taking down high priority targets too easy.
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // Would easily fuck over your fellow operatives or make taking down high priority targets too easy.
 
 /datum/uplink_item/stealthy_weapons/bladegloves
 	name = "Bladed Gloves"
@@ -95,7 +95,7 @@
 	item = /obj/item/doorCharge
 	cost = 2
 	surplus = 10
-	purchasable_from = ~UPLINK_NUKE_OPS
+	purchasable_from = ~UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/stealthy_weapons/knifevenom
 	name = "Reagent Knife (Venom)"

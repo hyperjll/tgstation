@@ -24,7 +24,6 @@
 	surplus = 30
 	cost = 7
 
-
 /datum/uplink_item/dangerous/trident
 	name = "Electrified Trident"
 	desc = "A trident rumored to have been recovered from the city of atlantis. \
@@ -34,7 +33,6 @@
 	progression_minimum = 25 MINUTES
 	surplus = 20
 	cost = 9
-
 
 /datum/uplink_item/dangerous/bostaff
 	name = "Bo Staff"
@@ -51,7 +49,6 @@
 	surplus = 25
 	cost = 10
 
-
 /datum/uplink_item/dangerous/vxtvulhammer
 	name = "Vxtvul Hammer"
 	desc = "A relic sledgehammer with charge packs wired to two blast pads on its head. \
@@ -61,7 +58,6 @@
 	progression_minimum = 30 MINUTES
 	surplus = 25
 	cost = 12
-
 
 /datum/uplink_item/dangerous/espear
 	name = "Energy Spear"
@@ -74,7 +70,6 @@
 	surplus = 20
 	cost = 10
 
-
 /datum/uplink_item/dangerous/echainsaw
 	name = "Energy Chainsaw"
 	desc = "A 'Champions-of-Evil' branded chainsaw utilizing hardlight technology for it's countless razor-like blades. \
@@ -86,14 +81,13 @@
 	surplus = 0
 	cost = 15
 
-
 /datum/uplink_item/dangerous/m1911pistol
 	name = "M1911"
 	desc = "A single M1911 Pistol that fires .45 bullets. Loaded with 9 lethal shots."
 	item = /obj/item/gun/ballistic/automatic/pistol/m1911
 	cost = 6
 	surplus = 45
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/viper
 	name = "Viper"
@@ -102,7 +96,7 @@
 	item = /obj/item/gun/ballistic/automatic/pistol/viper
 	cost = 8
 	surplus = 50
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/normalrevolver
 	name = ".357 Revolver"
@@ -111,7 +105,7 @@
 	item = /obj/item/gun/ballistic/revolver
 	cost = 9
 	surplus = 70
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/python
 	name = "Python"
@@ -119,7 +113,7 @@
 	item = /obj/item/gun/ballistic/revolver/python
 	cost = 11
 	surplus = 50
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/deagle
 	name = "Desert Eagle"
@@ -128,7 +122,7 @@
 	item = /obj/item/gun/ballistic/automatic/pistol/deagle
 	cost = 10
 	surplus = 45
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/fireyaxe
 	name = "Fire-y Axe"
@@ -138,7 +132,6 @@
 	progression_minimum = 30 MINUTES
 	cost = 10
 	surplus = 25
-
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/energy_fire_axe
@@ -158,8 +151,7 @@
 	item = /obj/item/gun/ballistic/shotgun/automatic/combat/kammerer/syndicate
 	cost = 9
 	surplus = 35
-
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/boltactionrifle
 	name = "Bolt-Action Rifle"
@@ -167,7 +159,7 @@
 	item = /obj/item/gun/ballistic/rifle
 	cost = 3
 	surplus = 60
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/watergun
 	name = "Extended Capacity Hyper-Soaker"
@@ -185,7 +177,7 @@
 	progression_minimum = 25 MINUTES
 	cost = 15
 	surplus = 25
-	purchasable_from = ~UPLINK_CLOWN_OPS
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/dangerous/akm
 	name = "AKM Assault Rifle"
@@ -213,7 +205,6 @@
 	item = /obj/item/gun/energy/disabler/syndicate
 	cost = 7
 	surplus = 25
-
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/infernopistol
@@ -224,7 +215,6 @@
 	item = /obj/item/gun/energy/laser/thermal/inferno/syndicate
 	cost = 7
 	surplus = 30
-
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/cyrogenicpistol
@@ -235,7 +225,6 @@
 	item = /obj/item/gun/energy/laser/thermal/cryo/syndicate
 	cost = 7
 	surplus = 30
-
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/chemsprayer
@@ -247,7 +236,6 @@
 	surplus = 20
 	cost = 16
 
-
 /datum/uplink_item/dangerous/syndielaserrifle
 	name = "Syndicate Energy Rifle"
 	desc = "A laser rifle originally manufactured by Nanotrasen, we've augmented the rifle to recharge automatically. \
@@ -255,7 +243,6 @@
 	item = /obj/item/gun/energy/syndicatelaserrifle
 	surplus = 10
 	cost = 14
-
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/demolecularisor
@@ -264,7 +251,6 @@
 	item = /obj/item/gun/energy/decloner/syndicate
 	surplus = 8
 	cost = 10
-
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/mindflayer
@@ -274,7 +260,6 @@
 	item = /obj/item/gun/energy/mindflayer/syndicate
 	surplus = 5
 	cost = 19
-
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/gravitygun

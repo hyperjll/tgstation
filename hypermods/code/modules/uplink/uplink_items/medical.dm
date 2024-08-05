@@ -29,8 +29,7 @@
 	item = /obj/item/storage/medkit/medical_variety_pack
 	cost = 2
 	surplus = 35
-
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/deluxe_medical_variety_pack
 	name = "Deluxe Medical Variety Pack"
@@ -38,8 +37,7 @@
 	item = /obj/item/storage/medkit/deluxe_medical_variety_pack
 	cost = 5
 	surplus = 30
-
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/medipenkit
 	name = "Medipen Kit"
@@ -48,15 +46,13 @@
 	cost = 2
 	surplus = 35
 
-
 /datum/uplink_item/medical/combatmedipen
 	name = "Combat Medipens"
 	desc = "Three medipens loaded with 25 units of Omnizine and 5 units of Tranexamic Acid. Useful in a pinch."
 	item = /obj/item/storage/medkit/emergency/combatmedipens
 	cost = 3
 	surplus = 40
-
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/combistimpack
 	name = "Chemical Combi-Stimpack Bag"
@@ -68,7 +64,7 @@
 	item = /obj/item/storage/bag/chemistry/syndimedipens
 	cost = 3
 	surplus = 0
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/combistimpackdeluxe
 	name = "Deluxe Combi-Stimpack Bag"
@@ -80,7 +76,7 @@
 	item = /obj/item/storage/bag/chemistry/syndimedipens/deluxe
 	cost = 6
 	surplus = 15
-	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/restorationnaniteinjector
 	name = "Restoration Nanite Injector"
@@ -99,7 +95,6 @@
 	cost = 1
 	surplus = 50
 
-
 /datum/uplink_item/medical/restore_nanite_kit
 	name = "Restoration Nanite kit"
 	desc = "A box containing 5 restoration nanite auto-injectors, when injected, they quickly heal the patients wounds \
@@ -107,8 +102,7 @@
 	item = /obj/item/storage/box/syndie_kit/restore_nanite_kit
 	cost = 12
 	surplus = 10
-	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/stimpack
 	name = "Stimpack"
@@ -145,7 +139,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/juggernaut
 	cost = 8
 	surplus = 65
-	purchasable_from = UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/medical/stimulant_kit
 	name = "Stimpack kit"
@@ -155,7 +149,6 @@
 	surplus = 30
 	limited_stock = 1
 	cant_discount = TRUE
-
 	progression_minimum = 20 MINUTES
 
 /datum/uplink_item/medical/syndiecigs
@@ -163,7 +156,6 @@
 	desc = "Strong flavor, dense smoke, infused with omnizine."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 2
-
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/syndiecigsvarietypack
@@ -173,8 +165,7 @@
 	item = /obj/item/storage/medkit/syndiecigsvarietypack
 	cost = 3
 	surplus = 50
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/syndiecigsvarietypackdeluxe
 	name = "Syndicate Variety Cigarettes Deluxe Edition"
@@ -183,8 +174,7 @@
 	item = /obj/item/storage/medkit/syndiecigsvarietypackdeluxe
 	cost = 6
 	surplus = 30
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/eternalomnizine
 	name = "Eternal Flask of Omnizine"
@@ -202,7 +192,6 @@
 	cost = 4
 	surplus = 35
 
-
 /datum/uplink_item/medical/enchantedgoldenapple
 	name = "Enchanted Golden Apple"
 	desc = "An extremely potent magical apple, rumored to have originated from another universe. It grants the one who eats it incredible regeneration, increased health, extreme resistance to fire, and resistance against all damage for 4 minutes."
@@ -217,7 +206,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/resurrector
 	cost = 2
 	surplus = 0
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/syndihealvirus
 	name = "Syndicate Augmented Healing Virus"
@@ -228,7 +217,7 @@
 	cost = 8
 	surplus = 5
 	limited_stock = 1
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/syndihealvirusnukie
 	name = "Syndicate Augmented Healing Virus"
@@ -238,7 +227,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/syndicatevirus
 	cost = 15
 	surplus = 0
-	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/hackedhypo
 	name = "Hacked Hypospray"
@@ -248,8 +237,7 @@
 	item = /obj/item/reagent_containers/hypospray/hacked
 	cost = 4
 	surplus = 40
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY) // The gorlex hypo is the better version fo this, spies should be forced to earn it. Why? Cuz' it's funny (and cool seeing as how tots cant get it)
-
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) // The gorlex hypo is the better version for this, spies should be forced to earn it. Why? Cuz' it's funny (and cool seeing as how tots cant get it)
 
 /datum/uplink_item/medical/gorlexhypo
 	name = "Gorlex Hypospray"
@@ -258,5 +246,4 @@
 	item = /obj/item/reagent_containers/hypospray/gorlex
 	cost = 8
 	surplus = 0
-	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-
+	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)

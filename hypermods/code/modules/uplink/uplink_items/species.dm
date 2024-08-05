@@ -4,7 +4,7 @@
 
 /datum/uplink_item/species_restricted
 	category = /datum/uplink_category/species
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY)
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
 /datum/uplink_item/species_restricted/superhuman
 	name = "Super-Human Mutator"
@@ -252,7 +252,6 @@
 	progression_minimum = 10 MINUTES
 	surplus = 0
 	cost = 7
-
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
 /datum/uplink_item/dangerous/lasereyes
@@ -273,7 +272,6 @@
 	item = /obj/item/dnainjector/regenerative
 	cost = 3
 	surplus = 0
-
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
 /datum/uplink_item/armor/vitality
@@ -282,7 +280,6 @@
 	item = /obj/item/dnainjector/vitality
 	cost = 11
 	surplus = 15
-
 	progression_minimum = 15 MINUTES
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
@@ -292,7 +289,6 @@
 	item = /obj/item/dnainjector/metallineskin
 	cost = 5
 	surplus = 20
-
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
 /datum/uplink_item/armor/reflectiveskin
@@ -301,7 +297,6 @@
 	item = /obj/item/dnainjector/reflectiveskin
 	cost = 5
 	surplus = 20
-
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
 /datum/uplink_item/armor/superradproof
@@ -310,5 +305,4 @@
 	item = /obj/item/dnainjector/superradproof
 	cost = 4
 	surplus = 20
-
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)

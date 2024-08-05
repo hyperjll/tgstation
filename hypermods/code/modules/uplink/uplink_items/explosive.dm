@@ -42,7 +42,7 @@
 	cost = 1
 	surplus = 60
 	progression_minimum = 10 MINUTES
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/explosives/molotovs
 	name = "Box of Molotovs"
@@ -59,7 +59,7 @@
 	surplus = 1
 	cost = 20
 	progression_minimum = 30 MINUTES
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/explosives/bioterrorfoam
 	name = "Bioterror Foam Grenade"
@@ -78,7 +78,7 @@
 	item = /obj/item/grenade/chem_grenade/saxitoxin
 	cost = 5
 	surplus = 40
-	purchasable_from = UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/explosives/shrapnelgrenademega
 	name = "FRAGmentation Grenade"
@@ -181,7 +181,7 @@
 	item = /obj/item/ammo_box/nadepouch/concussion
 	cost = 5
 	surplus = 40
-	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/explosives/incengrenades
 	name = "Incendiary Grenades"
@@ -314,7 +314,7 @@
 	item = /obj/item/disguisedgrenade/riggedstunbaton
 	cost = 6
 	surplus = 50
-	purchasable_from = ~UPLINK_NUKE_OPS
+	purchasable_from = ~UPLINK_SERIOUS_OPS
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/explosives/tricktelecrystal
@@ -326,7 +326,7 @@
 	item = /obj/item/stack/telecrystal/trick
 	cost = 5
 	surplus = 0
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	progression_minimum = 30 MINUTES
 
 /datum/uplink_item/explosives/riggedcells
@@ -355,7 +355,7 @@
 	item = /obj/item/grenade/clusterbuster/clf3
 	cost = 20
 	surplus = 3
-	purchasable_from = UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/explosives/clusterminibombs
 	name = "Syndicate Minibomb Cluster"
@@ -363,7 +363,7 @@
 	item = /obj/item/grenade/clusterbuster/syndieminibomb
 	cost = 15
 	surplus = 3
-	purchasable_from = UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/explosives/clusterspesscarp
 	name = "Space Carp Army"
@@ -371,7 +371,7 @@
 	item = /obj/item/grenade/clusterbuster/spawner_spesscarp
 	cost = 15
 	surplus = 3
-	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/explosives/clusteremp
 	name = "EMP Clusterbomb"
@@ -379,7 +379,7 @@
 	item = /obj/item/grenade/clusterbuster/emp
 	cost = 10
 	surplus = 3
-	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/explosives/clustermanhacks
 	name = "Vicserator Clusterbomb"
@@ -387,7 +387,7 @@
 	item = /obj/item/grenade/clusterbuster/spawner_manhacks
 	cost = 20
 	surplus = 3
-	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/explosives/clusteracid
 	name = "Acidic Clusterbomb"
@@ -395,7 +395,7 @@
 	item = /obj/item/grenade/clusterbuster/facid
 	cost = 8
 	surplus = 3
-	purchasable_from = UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/explosives/clusterfire
 	name = "Inferno Clusterbomb"
@@ -403,7 +403,7 @@
 	item = /obj/item/grenade/clusterbuster/inferno
 	cost = 10
 	surplus = 3
-	purchasable_from = UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/explosives/clustersmoke
 	name = "Smoke Clusterbomb"

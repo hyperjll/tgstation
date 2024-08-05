@@ -3,7 +3,7 @@
 /datum/uplink_item/weapon_kits/extreme_cost
 	cost = 35
 	surplus = 10
-	purchasable_from = UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/weapon_kits/extreme_cost/chinalake
 	name = "China Lake Case (???)"
@@ -71,14 +71,14 @@
 	desc = "Based on a Nanotrasen model, this powerful tool can repair or destroy structures very quickly. Holds 1000 matter. Can be recharged much like a regular RCD."
 	item = /obj/item/construction/rcd/syndicate
 	cost = 15
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY
 
 /datum/uplink_item/device_tools/syndie_arcd
 	name = "Syndicate Advanced Rapid-Construction-Device"
 	desc = "Based on a prototype Nanotrasen model, this powerful tool can repair or destroy structures very quickly from a distance! Holds 1000 matter. Can be recharged much like a regular RCD."
 	item = /obj/item/construction/rcd/syndicate/ranged
 	cost = 30
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/device_tools/syndie_forcefields
 	name = "Syndicate Forcefield Generator"
@@ -86,7 +86,7 @@
 			Can project up to 6 forcefields at any time and will only be sustained should the projector be nearby. Perfect for holding off the hordes."
 	item = /obj/item/forcefield_projector/syndicate
 	cost = 12
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 // Ammo
 
@@ -95,7 +95,7 @@
 	desc = "A highly compressed package of solid matter for recharging a Rapid-Construction-Device. Holds 1000 matter in total."
 	item = /obj/item/rcd_ammo/syndicate
 	cost = 5
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 // Medical
 
@@ -105,7 +105,7 @@
 			operatives in the fight, even while under fire. Don't cross the streams!"
 	item = /obj/item/gun/medbeam
 	cost = 12
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/medicalreagentgun
 	name = "Medical Reagent Gun"
@@ -114,7 +114,7 @@
 			The gun shoots 40u each shot, and will inevitably run out of chemicals. You may refill it with whatever you desire. Synthesises syringes automatically."
 	item = /obj/item/gun/medicalreagentgun
 	cost = 15
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/medical/hypospray_kit
 	name = "Syndicate Combat Hypospray Kit"
@@ -122,7 +122,7 @@
 			Pair with one of our Gorlex Hypospray's for optimal application."
 	item = /obj/item/storage/medkit/hypospray
 	cost = 5
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 // Implants
 
@@ -155,7 +155,7 @@
 	surplus = 0
 	cost = 25
 	cant_discount = TRUE
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 // Badass (meme items)
 

@@ -16,7 +16,6 @@
 	surplus = 75
 	restricted = TRUE
 
-
 /datum/uplink_item/device_tools/airshoes
 	name = "Air Shoes"
 	desc = "Popular in underground racing rings, these shoes come with built-in jets, allowing the user to reach high speeds in short bursts. \
@@ -32,7 +31,6 @@
 			Comes with a hand drill and experimental welding tool instead of the usual tools we provide."
 	item = /obj/item/storage/toolbox/syndicate/deluxe
 	cost = 2
-
 
 /datum/uplink_item/device_tools/tactical_gloves
 	name = "Tactical Fingerless Gloves"
@@ -79,7 +77,6 @@
 	desc = "A blue jetpack smuggled from NT's suppliers. It's been pre-filled with oxygen."
 	item = /obj/item/tank/jetpack/oxygen
 	cost = 2
-
 	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/device_tools/advlaunchcamerasetup
@@ -90,7 +87,6 @@
 	cost = 8
 	surplus = 15
 
-
 /datum/uplink_item/device_tools/portalgun
 	name = "Bluespace Wormhole Projector"
 	desc = "A projector that emits high density quantum-coupled bluespace beams capable of ripping holes within the fabric of space-time. \
@@ -100,14 +96,12 @@
 	cost = 5
 	surplus = 18
 
-
 /datum/uplink_item/device_tools/spininverters
 	name = "Quantum Spin Inverters"
 	desc = "An experimental device that is able to swap the locations of two entities by switching their particles' spin values. Must be linked to another device to function."
 	item = /obj/item/storage/box/syndie_kit/spininverters
 	cost = 2
 	surplus = 20
-
 
 /datum/uplink_item/device_tools/belt_bluecham
 	name = "Bluespace Chameleon Belt"
@@ -122,7 +116,7 @@
 	item = /obj/item/storage/box/monkeycubes/syndicate/syndis
 	cost = 5
 	surplus = 10
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY)
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
 /datum/uplink_item/device_tools/spongecapsules
 	name = "Syndicate Sponge Capsules"
@@ -133,7 +127,6 @@
 	cost = 7
 	surplus = 10
 	purchasable_from = (UPLINK_TRAITORS | UPLINK_SPY | UPLINK_CLOWN_OPS)
-
 
 /datum/uplink_item/device_tools/dangerous_bone_gel
 	name = "Reverse Bone Gel"
@@ -171,7 +164,6 @@
 	cost = 3
 	surplus = 0
 
-
 /datum/uplink_item/device_tools/extraarm
 	name = "Additional Arm"
 	desc = "An additional arm, automatically added to your body upon purchase, allows you to use more items at once"
@@ -179,7 +171,7 @@
 	cost = 5
 	surplus = 0
 	limited_stock = 2 // It's probably best to not break the UI any further.
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_SPY)
+	purchasable_from = ~(UPLINK_SERIOUS_OPS | UPLINK_SPY)
 	 // It's just another arm.
 
 /datum/uplink_item/device_tools/extraarm/spawn_item(spawn_item, mob/user)
@@ -203,4 +195,3 @@
 	item = /obj/item/clothing/glasses/universal
 	cost = 4
 	surplus = 20
-
