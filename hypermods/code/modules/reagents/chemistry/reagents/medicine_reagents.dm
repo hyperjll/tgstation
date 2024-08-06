@@ -721,3 +721,16 @@
 	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/diseasensstim)
 	..()
 
+
+/datum/reagent/medicine/antimagic
+	name = "Holy Blessing"
+	description = "Grants the user temporary rhabdophobia?"
+	reagent_state = LIQUID
+	color = "#ff0066"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+
+/datum/reagent/medicine/antimagic/on_mob_metabolize(mob/living/M)
+	ADD_TRAIT(M, TRAIT_HOLY, type)
+
+/datum/reagent/medicine/antimagic/on_mob_end_metabolize(mob/living/M)
+	REMOVE_TRAIT(M, TRAIT_HOLY, type)
