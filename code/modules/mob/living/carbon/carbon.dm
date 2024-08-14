@@ -120,6 +120,7 @@
 	throw_mode = THROW_MODE_DISABLED
 	if(hud_used)
 		hud_used.throw_icon.icon_state = "act_throw_off"
+	set_turf_click_type(TURF_CLICK_FLAT)
 	SEND_SIGNAL(src, COMSIG_LIVING_THROW_MODE_TOGGLE, throw_mode)
 
 
@@ -127,6 +128,7 @@
 	throw_mode = mode
 	if(hud_used)
 		hud_used.throw_icon.icon_state = "act_throw_on"
+	set_turf_click_type(TURF_CLICK_CUBE_KEEP_PARAMS)
 	SEND_SIGNAL(src, COMSIG_LIVING_THROW_MODE_TOGGLE, throw_mode)
 
 /mob/proc/throw_item(atom/target)
@@ -1209,7 +1211,7 @@
 	return bodyparts.len > 2 && ..()
 
 /mob/living/carbon/proc/hypnosis_vulnerable()
-	if(HAS_TRAIT(src, TRAIT_MINDSHIELD))
+	if(HAS_MIND_TRAIT(src, TRAIT_UNCONVERTABLE))
 		return FALSE
 	if(has_status_effect(/datum/status_effect/hallucination) || has_status_effect(/datum/status_effect/drugginess))
 		return TRUE
