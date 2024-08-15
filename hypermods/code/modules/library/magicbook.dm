@@ -12,6 +12,9 @@
 	resistance_flags = FLAMMABLE
 	drop_sound = 'sound/items/handling/book_drop.ogg'
 	pickup_sound = 'sound/items/handling/book_pickup.ogg'
+	var/backfirechance = 50
+	var/minbadeffects = 1
+	var/maxbadeffects = 20
 	var/use_sound = 'hypermods/sound/items/bookopen.ogg'
 	var/uses = 3
 	var/usetime = 1.5 SECONDS
@@ -21,12 +24,20 @@
 	if(uses)
 		. += span_notice("Has [uses] uses left.")
 
-/obj/item/magicbook/attack_self(mob/user)
-	to_chat(user, span_notice("You flip open the [src] and begin scouring it's contents..."))
+/obj/item/magicbook/attack_self(mob/living/M)
+	to_chat(M, span_notice("You flip open the [src] and begin scouring it's contents..."))
 	playsound(src, use_sound, 50, TRUE)
-	if(do_after(user, usetime, user) && !QDELETED(src))
-		playsound(src, 'hypermods/sound/effects/magebook_used.ogg', 50, TRUE)
-		do_effect(user)
+	if(do_after(M, usetime, M) && !QDELETED(src))
+		if(M.mind?.assigned_role != "Curator")
+			if(prob(backfirechance))
+				playsound(src, 'sound/effects/magic.ogg', 50, TRUE)
+				do_backfire(M)
+			else
+				playsound(src, 'hypermods/sound/effects/magebook_used.ogg', 50, TRUE)
+				do_effect(M)
+		else
+			playsound(src, 'hypermods/sound/effects/magebook_used.ogg', 50, TRUE)
+			do_effect(M)
 
 /obj/item/magicbook/proc/do_effect(mob/user)
 	uses -= 1
@@ -35,12 +46,192 @@
 		to_chat(user, span_notice("The [src] vanishes within your hands, it's power expended..."))
 		return
 
+// Backfire shit here
+
+/obj/item/magicbook/proc/do_backfire(mob/user)
+	uses -= 1
+	get_random_backfire(user)
+	if(!uses)
+		qdel(src)
+		to_chat(user, span_notice("The [src] vanishes within your hands, it's power expended..."))
+		return
+
+// All the possible backfire effects
+
+/obj/item/magicbook/proc/get_random_backfire(mob/living/carbon/human/user,roll)
+	var/turf/selected_turf = get_turf(src)
+	var/backfireselect = rand(minbadeffects, maxbadeffects)
+	switch(backfireselect)
+		if(1)
+			//Instant Death - The ultimate reason as to why you shouldn't use books as a non-curator
+			selected_turf.visible_message(span_userdanger("[user] suddenly dies!"))
+			user.investigate_log("has been killed by a magical book backfire effect.", INVESTIGATE_DEATHS)
+			user.death()
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Instant Death) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Instant Death.", LOG_ATTACK)
+		if(2)
+			//Permanent 2.5% Defense Debuff
+			selected_turf.visible_message(span_userdanger("[user] looks less robust!"))
+
+			user.physiology.brute_mod /= 0.975
+			user.physiology.burn_mod /= 0.975
+			user.physiology.tox_mod /= 0.975
+			user.physiology.oxy_mod /= 0.975
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Defense Loss) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Defense Loss.", LOG_ATTACK)
+		if(3)
+			//Swarm of carps
+			selected_turf.visible_message(span_userdanger("A swarm of carps surrounds [user]!"))
+			for(var/direction in GLOB.alldirs)
+				var/turf/stepped_turf = get_step(get_turf(user), direction)
+				do_sparks(3, FALSE, stepped_turf)
+				new /mob/living/basic/carp(stepped_turf)
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Carp Swarm) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Carp Swarm.", LOG_ATTACK)
+		if(4)
+			//Eye hurty
+			user.visible_message(span_userdanger("The [src] emits a bright light which blinds [user]!"))
+			user.flash_act(1, 1)
+			user.adjustOrganLoss(ORGAN_SLOT_EYES, 10, 95)
+			user.adjust_eye_blur(20)
+			user.Knockdown(rand(5, 20))
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Flashed) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Flashed.", LOG_ATTACK)
+		if(5)
+			//Monkeying
+			selected_turf.visible_message(span_userdanger("[user] transforms into a monkey!"))
+			user.monkeyize()
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Monkeyize) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Monkeyize.", LOG_ATTACK)
+		if(6)
+			//Poisoned
+			selected_turf.visible_message(span_userdanger("[user] turns green for a brief moment..."))
+			var/datum/reagent/toxin = pick(typesof(/datum/reagent/toxin))
+			user.reagents.add_reagent(toxin, pick(5,10))
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Poisoning) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Poisoning.", LOG_ATTACK)
+		if(7)
+			//Thrown
+			selected_turf.visible_message(span_userdanger("Unseen forces throw [user]!"))
+			user.Stun(10)
+			user.adjustBruteLoss(10)
+			var/throw_dir = pick(GLOB.cardinals)
+			var/atom/throw_target = get_edge_target_turf(user, throw_dir)
+			user.throw_at(throw_target, 200, 4)
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Thrown) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Thrown.", LOG_ATTACK)
+		if(8)
+			//Fuel tank Explosion
+			selected_turf.visible_message(span_userdanger("An explosion bursts into existence around [user]!"))
+			explosion(get_turf(user), devastation_range = -1, light_impact_range = 2, flame_range = 2, explosion_cause = src)
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Fuel tank Explosion) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Fuel tank Explosion.", LOG_ATTACK)
+		if(9)
+			//Diseased
+			var/datum/disease/advance/random = new /datum/disease/advance/random()
+			selected_turf.visible_message(span_userdanger("[user] goes pale for a moment!"))
+			user.ForceContractDisease(random, FALSE, TRUE)
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Diseased) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Diseased.", LOG_ATTACK)
+		if(10)
+			//Nothing
+			selected_turf.visible_message(span_userdanger("The [src] lets out a puff of smoke, but nothing happens."))
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Nothing) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Nothing.", LOG_ATTACK)
+		if(11)
+			//Bloodloss
+			selected_turf.visible_message(span_userdanger("[user]'s entire body crumbles inward like a crushed juice box for a split second!"))
+			user.blood_volume -= 50 // About 10% of total blood volume.
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Bloodloss) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Bloodloss.", LOG_ATTACK)
+		if(12)
+			//Getting chunked
+			selected_turf.visible_message(span_userdanger("[user] suddenly lurches forward in agony!"))
+			user.adjustBruteLoss(50)
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Instant Damage) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Instant Damage.", LOG_ATTACK)
+		if(13)
+			//Drowsiness
+			selected_turf.visible_message(span_userdanger("[user] looks exhausted."))
+			user.adjust_drowsiness(40 SECONDS)
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Drowsiness) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Drowsiness.", LOG_ATTACK)
+		if(14)
+			//Oh no! Fire!
+			selected_turf.visible_message(span_userdanger("[user] suddenly bursts into flames!"))
+			user.adjust_fire_stacks(2)
+			user.ignite_mob()
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Fire) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Fire.", LOG_ATTACK)
+		if(15)
+			//Crash Bandicoot: Warped (like 50 tiles away)
+			selected_turf.visible_message(span_userdanger("[src] emits blue flames which quickly envelop [user] as they disappear!"))
+			do_teleport(user, get_turf(src), 50, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Teleported) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Teleported.", LOG_ATTACK)
+		if(16)
+			//Spew forth miasma. Smelly.
+			selected_turf.visible_message(span_userdanger("The [src] lets out a puff of purple smoke. It smells awful!"))
+			selected_turf.atmos_spawn_air("[GAS_MIASMA]=200")
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Miasma) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Miasma.", LOG_ATTACK)
+		if(17)
+			//Random dismemberment
+			selected_turf.visible_message(span_userdanger("[user]'s bodyparts writhe as something splits away!."))
+			var/def_zone = user.get_random_valid_zone(BODY_ZONE_R_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_ARM, BODY_ZONE_L_LEG)
+			var/obj/item/bodypart/target_part = user.get_bodypart(def_zone)
+			target_part.dismember(BRUTE)
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Random dismemberment) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Random dismemberment.", LOG_ATTACK)
+		if(18)
+			//Biological swap
+			selected_turf.visible_message(span_userdanger("The [src] pulses with green energy, and [user] suddenly looks... different?"))
+			user.bioscramble()
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Biological swap) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Biological swap.", LOG_ATTACK)
+		if(19)
+			//Random bad mutation activation
+			selected_turf.visible_message(span_userdanger("[user] suddenly mutates after using the [src]!"))
+			user.easy_random_mutate((NEGATIVE + MINOR_NEGATIVE), TRUE, TRUE, TRUE, resilient = NONE)
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Bad mutation activation) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Bad mutation activation.", LOG_ATTACK)
+		if(20)
+			//Increases the dynamic midround threat budget by 1.
+			selected_turf.visible_message(span_userdanger("Sinister magic flows outward from [src], a sense of dread fills your soul!"))
+			SSdynamic.mid_round_budget += 1
+
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Increased Midround Threat) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Increased Midround Threat.", LOG_ATTACK)
+
+// Random book spawner
+
 /obj/item/magicbook/random
 
 /obj/item/magicbook/random/Initialize(mapload)
 	var/random_book = pick(subtypesof(/obj/item/magicbook) - /obj/item/magicbook/random)
 	new random_book(loc)
 	qdel(src)
+
+// Actual magic books below
 
 /obj/item/magicbook/slimes
 	name = "Slime Encyclopedia"
@@ -105,8 +296,7 @@
 			C.updatehealth()
 		C.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 2)
 		C.reagents.add_reagent(/datum/reagent/medicine/c2/aiuri, 2)
-		C.reagents.add_reagent(/datum/reagent/medicine/c2/syriniver, 2)
-		C.reagents.add_reagent(/datum/reagent/medicine/c2/seiver, 2)
+		C.reagents.add_reagent(/datum/reagent/medicine/c2/seiver, 4)
 
 	..()
 
