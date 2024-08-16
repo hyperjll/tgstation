@@ -1,7 +1,7 @@
 /obj/item/assembly/flash/lantern
 	name = "suspicious lantern"
 	desc = "A suspicious looking lantern."
-	icon = 'icons/obj/lighting.dmi'
+	icon = 'icons/obj/devices/lighting.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
 	icon_state = "syndilantern"
