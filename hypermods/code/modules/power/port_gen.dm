@@ -4,8 +4,8 @@
 	icon_state = "portgen1_0"
 	base_icon_state = "portgen1"
 	max_sheets = 50
-	time_per_sheet = 20
-	power_gen = 10000
+	time_per_sheet = 60
+	power_gen = 30 KILO JOULES
 	sheet_path = /obj/item/stack/sheet/mineral/uranium
 
 /obj/machinery/power/port_gen/pacman/superpacman/pre_loaded
@@ -17,8 +17,8 @@
 	icon_state = "portgen2_0"
 	base_icon_state = "portgen2"
 	max_sheets = 50
-	time_per_sheet = 20
-	power_gen = 15000
+	time_per_sheet = 60
+	power_gen = 60 KILO JOULES
 	sheet_path = /obj/item/stack/sheet/mineral/diamond
 
 /obj/machinery/power/port_gen/pacman/superpacman/pre_loaded
