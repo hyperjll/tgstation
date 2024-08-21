@@ -64,7 +64,6 @@
 			energy projectiles it blocks, but requires two hands to wield. It also struggles to protect you from tackles."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/dualsaber
-
 	cost = 13
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS //nukies get their own version
 

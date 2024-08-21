@@ -5,6 +5,7 @@
 
 /datum/uplink_item/dangerous
 	category = /datum/uplink_category/dangerous
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/dangerous/backstab

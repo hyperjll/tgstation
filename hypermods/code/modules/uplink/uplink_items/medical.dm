@@ -14,6 +14,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/limborganregen
 	cost = 4
 	surplus = 10
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/surgerybag
 	name = "Syndicate Surgery Duffel Bag"
@@ -122,6 +123,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/experistimulants
 	cost = 5
 	surplus = 50
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/donkcostimpack
 	name = "Donk Co. Stimpack"
@@ -131,6 +133,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/donkcostim
 	cost = 5
 	surplus = 40
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/juggernaut
 	name = "Juggernaut Stimpack"
@@ -140,6 +143,7 @@
 	cost = 8
 	surplus = 65
 	purchasable_from = UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/stimulant_kit
 	name = "Stimpack kit"
@@ -183,6 +187,7 @@
 	item = /obj/item/reagent_containers/cup/bottle/eternal/omnizine
 	cost = 6
 	surplus = 25
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/mutationkit
 	name = "Mutation Toxin Kit"
@@ -207,6 +212,7 @@
 	cost = 2
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/syndihealvirus
 	name = "Syndicate Augmented Healing Virus"
@@ -218,6 +224,7 @@
 	surplus = 5
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/syndihealvirusnukie
 	name = "Syndicate Augmented Healing Virus"
@@ -228,6 +235,7 @@
 	cost = 15
 	surplus = 0
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/hackedhypo
 	name = "Hacked Hypospray"
@@ -238,6 +246,7 @@
 	cost = 4
 	surplus = 40
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) // The gorlex hypo is the better version for this, spies should be forced to earn it. Why? Cuz' it's funny (and cool seeing as how tots cant get it)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/gorlexhypo
 	name = "Gorlex Hypospray"
@@ -247,3 +256,4 @@
 	cost = 8
 	surplus = 0
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

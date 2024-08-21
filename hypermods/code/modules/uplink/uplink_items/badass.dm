@@ -6,6 +6,7 @@
 	item = /obj/item/stack/sheet/mineral/mythril/five
 	cost = 2
 	surplus = 0
+	purchasable_from = UPLINK_TRAITORS
 
 /datum/uplink_item/badass/ltsrbt
 	name = "Black Market LTSRBT"
@@ -15,6 +16,7 @@
 	item = /obj/item/flatpack/ltsrbt
 	cost = 2
 	surplus = 0
+	purchasable_from = UPLINK_TRAITORS
 
 /datum/uplink_item/badass/blackmarket
 	name = "Black Market Uplink"
@@ -24,3 +26,4 @@
 	item = /obj/item/market_uplink/blackmarket
 	cost = 1
 	surplus = 0
+	purchasable_from = UPLINK_TRAITORS

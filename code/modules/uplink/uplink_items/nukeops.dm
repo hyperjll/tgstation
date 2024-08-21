@@ -107,33 +107,6 @@
 			with suppressors. Comes with three spare magazines."
 	item = /obj/item/storage/toolbox/guncase/clandestine
 
-/datum/uplink_item/ammo_nuclear/basic/m10mm
-	name = "10mm Handgun Magazine (Ansem)"
-	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol."
-	item = /obj/item/ammo_box/magazine/m10mm
-	purchasable_from = parent_type::purchasable_from | UPLINK_SPY
-
-/datum/uplink_item/ammo_nuclear/ap/m10mm
-	name = "10mm Armour Piercing Magazine (Ansem)"
-	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol. \
-		These rounds are less effective at injuring the target but penetrate protective gear."
-	item = /obj/item/ammo_box/magazine/m10mm/ap
-	purchasable_from = parent_type::purchasable_from | UPLINK_SPY
-
-/datum/uplink_item/ammo_nuclear/hp/m10mm
-	name = "10mm Hollow Point Magazine (Ansem)"
-	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol. \
-		These rounds are more damaging but ineffective against armour."
-	item = /obj/item/ammo_box/magazine/m10mm/hp
-	purchasable_from = parent_type::purchasable_from | UPLINK_SPY
-
-/datum/uplink_item/ammo_nuclear/incendiary/m10mm
-	name = "10mm Incendiary Magazine (Ansem)"
-	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol. \
-		Loaded with incendiary rounds which inflict less damage, but ignite the target."
-	item = /obj/item/ammo_box/magazine/m10mm/fire
-	purchasable_from = parent_type::purchasable_from | UPLINK_SPY
-
 //Medium-cost: 14 TC each. Meant for more expensive purchases with a goal in mind.
 
 /datum/uplink_item/weapon_kits/medium_cost
@@ -689,7 +662,7 @@
 	cost = 4
 	purchasable_from = UPLINK_SERIOUS_OPS | UPLINK_SPY
 
-/datum/uplink_item/device_tools/medkit
+/datum/uplink_item/medical/medkit
 	name = "Syndicate Combat Medic Kit"
 	desc = "This first aid kit is a suspicious black and red. Included is a number of atropine medipens \
 		for rapid stabilization and detonation prevention, sutures and regenerative mesh for wound treatment, and patches \
@@ -698,7 +671,7 @@
 	cost = 4
 	purchasable_from = UPLINK_SERIOUS_OPS
 
-/datum/uplink_item/device_tools/medkit/premium
+/datum/uplink_item/medical/medkit/premium
 	name = "Syndicate Combat Medical Suite"
 	desc = "This first aid kit is a suspicious black and red. Included is an unloaded combat chemical injector \
 		for suit-penetrative chem delivery, a medical science night vision HUD for quick identification of injured personnel and chemical supplies, \

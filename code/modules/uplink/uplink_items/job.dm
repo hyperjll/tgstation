@@ -305,7 +305,7 @@
 	cost = 20
 	surplus = 0
 	restricted_roles = list(JOB_CHAPLAIN)
-	purchasable_from = ~UPLINK_SPY
+	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/concealed_weapon_bay
 	name = "Concealed Weapon Bay"

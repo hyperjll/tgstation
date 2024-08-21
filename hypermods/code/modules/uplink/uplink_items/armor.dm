@@ -5,6 +5,7 @@
 /datum/uplink_item/armor
 	category = /datum/uplink_category/armor
 	surplus = 0
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/webvest
 	name = "Web Vest"
@@ -26,7 +27,7 @@
 	item = /obj/item/clothing/under/chameleon/armored
 	cost = 4
 	surplus = 40
-
+	uplink_item_flags = null
 
 /datum/uplink_item/armor/energyshield
 	name = "Energy Shield"
@@ -43,7 +44,7 @@
 	item = /obj/item/clothing/neck/chameleon/armored
 	cost = 2
 	surplus = 25
-
+	uplink_item_flags = null
 
 /datum/uplink_item/armor/armoredgloves
 	name = "Armored Gloves"
@@ -52,7 +53,7 @@
 	item = /obj/item/clothing/gloves/chameleon/armored
 	cost = 2
 	surplus = 25
-
+	uplink_item_flags = null
 
 /datum/uplink_item/armor/reactiveteleportsyndicate
 	name = "Augmented Teleportation Vest"
@@ -161,5 +162,3 @@
 	item = /obj/item/storage/fancy/cigarettes/dermal_harden
 	cost = 5
 	surplus = 15
-
-

@@ -77,7 +77,7 @@
 	desc = "A blue jetpack smuggled from NT's suppliers. It's been pre-filled with oxygen."
 	item = /obj/item/tank/jetpack/oxygen
 	cost = 2
-	purchasable_from = ~UPLINK_SPY
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
 /datum/uplink_item/device_tools/advlaunchcamerasetup
 	name = "Launchpad & Camera Setup Bundle"

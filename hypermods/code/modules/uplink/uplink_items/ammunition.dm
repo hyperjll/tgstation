@@ -21,7 +21,6 @@
 	item = /obj/item/storage/box/syndie_kit/pistol9mmammo
 	cost = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/pistol/random
@@ -54,7 +53,7 @@
 	desc = "Two additional 8-round 10mm magazines; compatible with the Viper."
 	item = /obj/item/storage/box/syndie_kit/pistol10mmammo
 	cost = 1
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/pistol10mm/random
@@ -106,7 +105,6 @@
 	item = /obj/item/storage/box/syndie_kit/fourtyfivemmmagbox
 	cost = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/handgun45/random
@@ -171,6 +169,7 @@
 	desc = "A box with two random .357 speed loaders. Who knows what fun toys you might get?"
 	item = /obj/item/storage/box/syndie_kit/revolverammo/random
 	cost = 6
+	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 
 /datum/uplink_item/ammo/revolver/ironfeather
 	name = ".357 Ironfeather Speed Loader Box"
@@ -178,6 +177,7 @@
 			Ironfeather shells contain six pellets which are less damaging than buckshot but mildly better over range."
 	item = /obj/item/storage/box/syndie_kit/revolvershotgunammo
 	cost = 3
+	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 
 /datum/uplink_item/ammo/revolver/nutcracker
 	name = ".357 Nutcracker Speed Loader"
@@ -185,18 +185,21 @@
 			These rounds lose moderate stopping power in exchange for being able to rapidly destroy doors and windows."
 	item = /obj/item/ammo_box/a357/nutcracker
 	cost = 3
+	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 
 /datum/uplink_item/ammo/revolver/metalshock
 	name = ".357 Metalshock Speed Loader"
 	desc = "A speed loader that contains seven .357 Metalshock rounds; usable with the .357 Revolver, Python, and Syndicate revolver. \
 			These rounds convert some lethality into an electric payload, which can bounce between targets."
 	item = /obj/item/ammo_box/a357/metalshock
+	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 
 /datum/uplink_item/ammo/revolver/heartpiercer
 	name = ".357 Heartpiercer Speed Loader"
 	desc = "A speed loader that contains seven .357 Heartpiercer rounds; usable with the .357 Revolver, Python, and Syndicate revolver. \
 			These rounds are less damaging, but penetrate through armor and obstacles alike."
 	item = /obj/item/ammo_box/a357/heartpiercer
+	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 
 /datum/uplink_item/ammo/revolver/wallstake
 	name = ".357 Wallstake Speed Loader"
@@ -204,13 +207,14 @@
 			These blunt rounds are slightly less damaging but can knock people against walls."
 	item = /obj/item/ammo_box/a357/wallstake
 	cost = 3
+	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 
 /datum/uplink_item/ammo/deagle
 	name = ".50 AE Handgun Magazine"
 	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle."
 	item = /obj/item/ammo_box/magazine/m50
 	cost = 4
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/boltactionammo
@@ -538,6 +542,7 @@
 	item = /obj/item/storage/box/mysteryshells/syndi
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/lethalshells
 	name = "Lethal Shells Box"
@@ -545,6 +550,7 @@
 	item = /obj/item/storage/box/lethalshot/syndi
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/dartshells
 	name = "Dart Shells Box"
@@ -552,6 +558,7 @@
 	item = /obj/item/storage/box/dartshells/syndi
 	cost = 1
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/incendiaryshells
 	name = "Incendiary Shells Box"
@@ -559,6 +566,7 @@
 	item = /obj/item/storage/box/incendiaryshells/syndi
 	cost = 1
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/dragonshells
 	name = "Dragon's Breath Shells Box"
@@ -567,6 +575,7 @@
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/syndieshotshells
 	name = "Syndicate Buckshot Shells Box"
@@ -574,6 +583,7 @@
 	item = /obj/item/storage/box/syndieshotshells/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/syndieslugshells
 	name = "Syndicate Slugs Box"
@@ -581,6 +591,7 @@
 	item = /obj/item/storage/box/syndieslugshells/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/tasershells
 	name = "Taser Slugs Box"
@@ -589,6 +600,7 @@
 	cost = 3
 	cant_discount = TRUE
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/meteorshells
 	name = "Meteor Slugs Box"
@@ -598,6 +610,7 @@
 	cant_discount = TRUE
 	progression_minimum = 40 MINUTES
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/pulseshells
 	name = "Pulse Shells Box"
@@ -607,6 +620,7 @@
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
 	progression_minimum = 50 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/frag12shells
 	name = "Frag 12 Shells Box"
@@ -616,6 +630,7 @@
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/flechetteshells
 	name = "Flechette Shells Box"
@@ -624,6 +639,7 @@
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/rubbershotshells
 	name = "Rubbershot Shells Box"
@@ -632,6 +648,7 @@
 	cost = 2
 	cant_discount = TRUE
 	progression_minimum = 5 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ionshells
 	name = "ION Shells Box"
@@ -641,6 +658,7 @@
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
 	progression_minimum = 5 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/lasershells
 	name = "Laser Buckshot Shells Box"
@@ -649,6 +667,7 @@
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/uraniumshells
 	name = "Uranium Shells Box"
@@ -658,6 +677,7 @@
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/cryoshotshells
 	name = "Cryoshot Shells Box"
@@ -666,6 +686,7 @@
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/bioterrorshells
 	name = "Bioterror Shells Box"
@@ -674,6 +695,8 @@
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
 /** Only fits into breaching shotguns, may want to make a new version of the ammo.
 /datum/uplink_item/ammo/breachershells
 	name = "Breacher Shells Box"
@@ -681,7 +704,9 @@
 	item = /obj/item/storage/box/breachershells/syndi
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 **/
+
 /datum/uplink_item/ammo/thundershotshells
 	name = "Thundershot Shells Box"
 	desc = "A box containing 14 thundershot shells for a shotgun, fires 3 pellets but does little damage. Pellets will shock everyone nearby -- including you."
@@ -689,6 +714,7 @@
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/hardlightshells
 	name = "Hardlight Shells Box"
@@ -696,6 +722,7 @@
 	item = /obj/item/storage/box/hardlightshells/syndi
 	cost = 1
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/ripshells
 	name = "RIP Shells Box"
@@ -704,6 +731,7 @@
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/anarchyshells
 	name = "Anarchy Shells Box"
@@ -711,6 +739,7 @@
 	item = /obj/item/storage/box/anarchyshells/syndi
 	cost = 1
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/clownshellsclownop
 	name = "Fake Shotgun Shells Box"
@@ -720,6 +749,7 @@
 	limited_stock = 5
 	purchasable_from = UPLINK_CLOWN_OPS
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/clownshells
 	name = "Fake Shotgun Shells Box"
@@ -729,6 +759,7 @@
 	limited_stock = 1
 	purchasable_from = UPLINK_TRAITORS
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/bioterrorammo
 	name = "Bioterror Chemical Package"
@@ -737,6 +768,7 @@
 	cost = 10
 	surplus = 0
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/bioterrorammodeluxe
 	name = "Deluxe Bioterror Chemical Package"
@@ -745,3 +777,4 @@
 	cost = 20
 	surplus = 0
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

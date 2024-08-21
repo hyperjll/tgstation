@@ -25,7 +25,6 @@
 	cost = 4
 	restricted = TRUE
 
-
 /datum/uplink_item/implants/stealthimplant
 	name = "Stealth Implant"
 	desc = "This one-of-a-kind implant will make you almost invisible if you play your cards right. \
