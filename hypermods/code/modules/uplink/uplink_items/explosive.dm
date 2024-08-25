@@ -96,7 +96,7 @@
 	item = /obj/item/grenade/spawnergrenade/bananapeel
 	cost = 1
 	surplus = 0
-	purchasable_from = (UPLINK_TRAITORS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~(UPLINK_SPY | UPLINK_SERIOUS_OPS)
 
 /datum/uplink_item/explosives/rotfragnade
 	name = "ROTFrag Grenade"

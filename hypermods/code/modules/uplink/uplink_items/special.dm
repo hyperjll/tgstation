@@ -21,7 +21,7 @@
 /datum/uplink_item/special/straypod/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_STRONG_SUPPLY_LINES))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
 /datum/uplink_item/events/straypod/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
@@ -43,7 +43,7 @@
 /datum/uplink_item/special/extratc/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_BOUNTIFUL_BOUNTIES))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
 /datum/uplink_item/special/bluespacestoragetie
@@ -58,7 +58,7 @@
 /datum/uplink_item/special/bluespacestoragetie/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_SCARVES))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
 /datum/uplink_item/special/riggedglitterbombs
@@ -71,7 +71,7 @@
 /datum/uplink_item/special/riggedglitterbombs/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_FILLED_MAINT))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
 // Neutral Station Traits
@@ -87,7 +87,7 @@
 /datum/uplink_item/special/fakeian/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_IAN_ADVENTURE))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
 /datum/uplink_item/special/stealthmicrobomb
@@ -101,7 +101,7 @@
 /datum/uplink_item/special/stealthmicrobomb/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_DEATHRATTLED_DEPARTMENT) || HAS_TRAIT(SSstation, STATION_TRAIT_DEATHRATTLED_ALL))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
 
@@ -117,7 +117,7 @@
 /datum/uplink_item/special/boxed_dehydrated_carp/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_CARP_INFESTATION))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
 /datum/uplink_item/special/synditaser
@@ -130,7 +130,7 @@
 /datum/uplink_item/special/synditaser/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_CYBERNETIC_REVOLUTION))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
 /datum/uplink_item/special/cargoshuttlebatterer
 	name = "Cargo Shuttle Navigation Corruptor"
@@ -143,7 +143,7 @@
 /datum/uplink_item/special/cargoshuttlebatterer/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_SLOW_SHUTTLE))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
 /datum/uplink_item/special/botemagger
@@ -156,7 +156,7 @@
 /datum/uplink_item/special/botemagger/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_BOTS_GLITCHED))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
 /datum/uplink_item/special/ailawpurger
@@ -171,7 +171,7 @@
 /datum/uplink_item/special/ailawpurger/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_ION_STORMS))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
 /datum/uplink_item/special/syndicaterewinder
@@ -186,7 +186,7 @@
 /datum/uplink_item/special/syndicaterewinder/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_REVOLUTIONARY_TRASHING)) // Cuz i can't think of anything better to use.
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
 /datum/uplink_item/special/magicdehydratedcarp
@@ -200,7 +200,7 @@
 /datum/uplink_item/special/magicdehydratedcarp/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_RAD_STORMS)) // Radiation magic powers? Guess that's not far-fetched as far as cartoons go.
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
 /datum/uplink_item/special/spacepiratekit
@@ -215,7 +215,7 @@
 /datum/uplink_item/special/spacepiratekit/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_DISTANT_SUPPLYLINES))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
 /datum/uplink_item/special/chameleonmutator
@@ -229,7 +229,7 @@
 /datum/uplink_item/special/chameleonmutator/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_BLACKOUT))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
 /datum/uplink_item/special/syndicategrant
@@ -243,5 +243,5 @@
 /datum/uplink_item/special/syndicategrant/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_GALACTIC_GRANT))
-		purchasable_from |= UPLINK_TRAITORS
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1

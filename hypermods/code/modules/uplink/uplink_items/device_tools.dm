@@ -126,7 +126,7 @@
 	item = /obj/item/storage/box/spongecapsules
 	cost = 7
 	surplus = 10
-	purchasable_from = (UPLINK_TRAITORS | UPLINK_SPY | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/device_tools/dangerous_bone_gel
 	name = "Reverse Bone Gel"

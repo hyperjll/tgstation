@@ -757,7 +757,7 @@
 	item = /obj/item/storage/box/clownshells/syndi
 	cost = 0
 	limited_stock = 1
-	purchasable_from = UPLINK_TRAITORS
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 

@@ -203,4 +203,4 @@
 	cost = 4
 	surplus = 10
 	limited_stock = 1
-	purchasable_from = (UPLINK_TRAITORS | UPLINK_SPY | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_SERIOUS_OPS
