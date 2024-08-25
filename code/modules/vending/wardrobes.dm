@@ -372,7 +372,7 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/storage/backpack/satchel/explorer = 1,
 		/obj/item/storage/backpack/messenger/explorer = 1,
 		/obj/item/storage/bag/books = 1,
-		/obj/item/radio/headset/headset_srv = 2,
+		/obj/item/radio/headset/headset_srvent = 2,
 	)
 	premium = list(/obj/item/storage/box/randomjunk = 5)
 	contraband = list(
