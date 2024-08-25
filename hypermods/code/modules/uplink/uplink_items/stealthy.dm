@@ -218,7 +218,7 @@
 
 /datum/uplink_item/stealthy_weapons/cyborgmartyr
 	name = "Martyr Cyborg Module"
-	desc = "A high-yielding explosive which can be installed into any cyborgs you come across. \
+	desc = "Reveals a high-yielding explosive which was installed into the cyborg upon it's creation. \
 			This effectively allows a cyborg to self-destruct and possibly take out other people with it. \
 			Will also hack their software to reveal hidden modules."
 	item = /obj/item/borg/upgrade/syndicate/martyr
