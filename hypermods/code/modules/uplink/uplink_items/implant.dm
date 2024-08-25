@@ -95,7 +95,7 @@
 	name = "Toolset Implants"
 	desc = "A multisurgeon containing both an arm-concealed toolset implant and a surgical toolset. Comes with an autosurgeon."
 	item = /obj/item/multisurgeon/toolsets
-	cost = 2
+	cost = 6
 	surplus = 30
 
 /datum/uplink_item/implants/esword

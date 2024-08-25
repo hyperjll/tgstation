@@ -1,3 +1,23 @@
+/obj/item/antag_spawner/nuke_ops/syndicat
+	name = "syndicate syndicat beacon"
+	desc = "A single-use beacon designed to quickly launch reinforcement cyborgs into the field."
+	antag_datum = /datum/antagonist/nukeop/reinforcement
+	special_role_name = "Syndicat"
+
+/obj/item/antag_spawner/nuke_ops/syndicat/spawn_antag(client/C, turf/T, kind, datum/mind/user)
+	var/mob/living/basic/syndicat/scat
+	var/datum/antagonist/nukeop/creator_op = user.has_antag_datum(/datum/antagonist/nukeop,TRUE)
+	if(!creator_op)
+		return
+	var/obj/structure/closet/supplypod/pod = setup_pod()
+
+	scat.key = C.key
+
+	scat.mind.add_antag_datum(antag_datum, creator_op ? creator_op.get_team() : null)
+	scat.mind.special_role = special_role_name
+	scat.forceMove(pod)
+	new /obj/effect/pod_landingzone(get_turf(src), pod)
+
 /// Not actually an antag spawner.
 /obj/item/antag_spawner/nanotrasen
 	name = "nanotrasen reinforcement beacon"

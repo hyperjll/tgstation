@@ -769,3 +769,41 @@
 	new /obj/item/organ/internal/alien/plasmavessel(src)
 	new /obj/item/organ/internal/alien/resinspinner(src)
 	new /obj/item/organ/internal/alien/acid(src)
+
+/obj/item/storage/box/syndie_kit/construction_bundle/PopulateContents()
+	new /obj/item/stack/sheet/iron/fifty(src)
+	new /obj/item/stack/sheet/iron/fifty(src)
+	new /obj/item/stack/sheet/glass/fifty(src)
+	new /obj/item/stack/sheet/glass/fifty(src)
+	new /obj/item/stack/sheet/plasteel/fifty(src)
+	new /obj/item/stack/sheet/plasteel/fifty(src)
+
+/obj/item/storage/box/syndie_kit/syndie_inducer_bundle/PopulateContents()
+	new /obj/item/inducer/syndicate(src)
+	for(var/i in 1 to 3)
+		new /obj/item/stock_parts/power_store/cell/hyper(src)
+	new /obj/item/screwdriver(src)
+
+/obj/item/storage/backpack/duffelbag/syndie/operativeclothes/PopulateContents()
+	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/under/syndicate/skirt(src)
+
+/obj/item/storage/box/syndie_kit/synditoykit
+	name = "syndicate snack box"
+	desc = "A single cardboard box designed to hold various snacks. Loved by syndicate agents everywhere."
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "nukietoy"
+
+/obj/item/storage/box/syndie_kit/synditoykit/PopulateContents()
+	new /obj/item/reagent_containers/cup/soda_cans/robust_nukie(src)
+	new /obj/item/food/syndicake(src)
+
+	var/list/foodtypes = subtypesof(/obj/item/food/)
+	for(var/i in 1 to 4)
+		var/foodtype = pick(foodtypes)
+		new foodtype(src)
+
+	var/list/drinktypes = (subtypesof(/obj/item/reagent_containers/cup/glass/bottle/) | subtypesof(/obj/item/reagent_containers/cup/soda_cans/))
+	for(var/i in 1 to 1)
+		var/drinktype = pick(drinktypes)
+		new drinktype(src)

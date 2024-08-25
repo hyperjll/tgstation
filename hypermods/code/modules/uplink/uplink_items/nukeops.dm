@@ -1,3 +1,12 @@
+// Support
+
+/datum/uplink_item/reinforcements/syndicat
+	name = "SyndiCat Teleporter"
+	desc = "Call in a handy cat equipped with an explosive implant. Explodes when seriously injured. \
+			Can bite painfully and comes equipped with a syndicate cat hardsuit for space walks."
+	item = /obj/item/antag_spawner/nuke_ops
+	cost = 6
+
 // ~~ China-Lake Bundle ~~ (The one and ONLY.) Also has a 35 TC price tag for how destructive it is.
 
 /datum/uplink_item/weapon_kits/extreme_cost

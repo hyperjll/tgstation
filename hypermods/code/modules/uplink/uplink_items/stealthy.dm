@@ -204,3 +204,25 @@
 	surplus = 10
 	limited_stock = 1
 	purchasable_from = ~UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/stealthy_weapons/cyborgweapons
+	name = "Weapon Cyborg Module"
+	desc = "An illegal module capable of granting a cyborg a Viper pistol with the necessary hardware \
+			needed to print more ammunition on the fly. Also grants the cyborg of choice an energy dagger \
+			and hacks their software to reveal hidden modules. Exceptionally effective for mass murder."
+	item = /obj/item/borg/upgrade/syndicate/weapons
+	cost = 8
+	surplus = 0
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~UPLINK_CLOWN_OPS
+
+/datum/uplink_item/stealthy_weapons/cyborgmartyr
+	name = "Martyr Cyborg Module"
+	desc = "A high-yielding explosive which can be installed into any cyborgs you come across. \
+			This effectively allows a cyborg to self-destruct and possibly take out other people with it. \
+			Will also hack their software to reveal hidden modules."
+	item = /obj/item/borg/upgrade/syndicate/martyr
+	cost = 4
+	surplus = 10
+	progression_minimum = 20 MINUTES
+	purchasable_from = ~UPLINK_CLOWN_OPS

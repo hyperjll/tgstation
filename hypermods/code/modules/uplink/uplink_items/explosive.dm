@@ -24,6 +24,16 @@
 	surplus = 0
 	limited_stock = 1
 
+/datum/uplink_item/explosives/grenadepenguin
+	name = "Grenade Penguin"
+	desc = "A grenade that takes the form of an aggressive penguin that explodes upon death. \
+			The Penguin ignores nuclear operatives, but cannot recognize undercover agents. \
+			The grenade has a small, but lethal blast range. Best used with an escape route in mind."
+	item = /obj/item/sbeacondrop/grenadepenguin
+	progression_minimum = 20 MINUTES
+	cost = 4
+	surplus = 15
+
 /datum/uplink_item/explosives/trickcigs
 	name = "Trick Cigarettes"
 	desc = "A normal cigarette packet containing 6 explosive cigarettes. They explode violently after they've been lit and put out. \

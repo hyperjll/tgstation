@@ -28,6 +28,29 @@
 	name = "viper implant"
 	desc = "A modified version of the viper pistol placed inside of the forearm, allows for easy concealment."
 
+/obj/item/gun/energy/viper // FOR CYBORGS.
+	name = "\improper Viper"
+	desc = "A classic 10mm handgun retrofitted with an energy-based ammo synthesizer. It's capable of automatic fire."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "Viper_full"
+	inhand_icon_state = "viper"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	w_class = WEIGHT_CLASS_SMALL
+	can_suppress = FALSE
+	fire_delay = 0
+	fire_sound = 'sound/weapons/gun/pistol/shot_alt.ogg'
+	cell_type = /obj/item/stock_parts/power_store/cell/secborg
+	ammo_type = list(/obj/item/ammo_casing/energy/c10mm)
+	can_charge = FALSE
+	use_cyborg_cell = TRUE
+
+/obj/item/gun/energy/viper/Initialize(mapload)
+	AddElement(/datum/element/update_icon_blocker)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+	AddElement(/datum/element/empprotection, EMP_PROTECT_ALL)
+
 /obj/item/gun/ballistic/automatic/pistol/cobra
 	name = "\improper Cobra"
 	desc = "A classic .45 handgun with a small magazine capacity. It makes very little noise at all when firing."

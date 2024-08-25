@@ -17,6 +17,13 @@
 	desc = "A 10mm EMP bullet casing."
 	projectile_type = /obj/projectile/bullet/c10mm/emp
 
+/obj/item/ammo_casing/energy/c10mm // 10mm bullet for cyborg viper
+	projectile_type = /obj/projectile/bullet/c10mm
+	select_name = "lethal"
+	fire_sound = 'sound/weapons/gun/pistol/shot_alt.ogg'
+	e_cost = LASER_SHOTS(30, STANDARD_CELL_CHARGE * 0.6)
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect
+
 // 9mm (Makarov, Stechkin APS, PP-95)
 
 

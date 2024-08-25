@@ -68,6 +68,15 @@ export const SOFTWARE_DESC = {
     codes.`,
   'Security HUD': `Allows you to view security records using an overlay HUD.`,
   'Universal Translator': `Translation module for non-common languages.`,
+  'Host Repair': `When enabled, you'll slowly repair the damaged cells of the holder.`,
+  'Martyrdom': `Activate your self-destruct protocol and violently explode after a delay.`,
+  'Scram Pulse': `Allows you to pulse your internal spacial destabilizer to teleport your holder
+   somewhere nearby.`,
+  'Antiviral': `Use your chemical synthesizer to infuse 1 unit of spacecillin into your holder.`,
+  'Stimulate': `Use your chemical synthesizer to infuse 3 units of stimulants into your holder.`,
+  'Thermal Sensors': `Engage your thermal sensors to recognize lifeforms and terrain through obstacles.`,
+  'Empulse': `Utilize your internal electromagnetic coils to emit a short-range EMP blast. 
+  May cause self-harm.`,
 } as const;
 
 export enum PAI_TAB {
