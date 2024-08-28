@@ -8,3 +8,11 @@
 	select_name = "neuro-acid"
 	e_cost = 120
 	fire_sound = 'hypermods/sound/weapons/plasma.ogg'
+
+// Currently used exclusively in /obj/item/gun/energy/printer/flamethrower
+/obj/item/ammo_casing/energy/flamethrower
+	projectile_type = /obj/projectile/bullet/incendiary/flamethrower
+	select_name = "fire"
+	fire_sound = 'hypermods/sound/weapons/flamethrower.ogg'
+	firing_effect_type = null
+	e_cost = 100

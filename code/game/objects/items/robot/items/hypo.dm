@@ -87,7 +87,21 @@
 		/datum/reagent/blood,\
 		/datum/reagent/toxin/carpotoxin,\
 		/datum/reagent/toxin/fakebeer,\
+		/datum/reagent/toxin/zombiepowder,\
+		/datum/reagent/toxin/polonium,\
+		/datum/reagent/consumable/hearty_punch,\
+		/datum/reagent/consumable/changelingsting,\
+		/datum/reagent/consumable/turbo,\
+		/datum/reagent/consumable/old_timer,\
+		/datum/reagent/consumable/between_the_sheets,\
 		/datum/reagent/consumable/ethanol/fernet,\
+		/datum/reagent/consumable/ethanol/bloody_mary,\
+		/datum/reagent/consumable/ethanol/brave_bull,\
+		/datum/reagent/consumable/ethanol/beepsky_smash,\
+		/datum/reagent/consumable/ethanol/demonsblood,\
+		/datum/reagent/consumable/ethanol/crevice_spike,\
+		/datum/reagent/consumable/ethanol/fernet_cola,\
+		/datum/reagent/consumable/ethanol/wine_voltaic,\
 )
 
 #define REAGENT_CONTAINER_INTERNAL "internal_beaker"

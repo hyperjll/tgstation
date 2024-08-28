@@ -296,6 +296,7 @@ GLOBAL_LIST_INIT(plasteel_recipes, list ( \
 	tableVariant = /obj/structure/table/reinforced
 	material_flags = NONE
 	matter_amount = 12
+	source = /datum/robot_energy_storage/material/plasteel
 
 /datum/armor/sheet_plasteel
 	fire = 100

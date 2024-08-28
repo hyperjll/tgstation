@@ -31,6 +31,17 @@
 	ammo_x_offset = 1
 	selfcharge = 1
 
+/obj/item/gun/energy/floragun/cyborg
+	name = "cyborg floral somatoray"
+	desc = "A tool that discharges controlled radiation which induces mutation in plant cells."
+	icon_state = "flora"
+	inhand_icon_state = "gun"
+	ammo_type = list(/obj/item/ammo_casing/energy/flora/yield, /obj/item/ammo_casing/energy/flora/mut)
+	modifystate = 1
+	ammo_x_offset = 1
+	selfcharge = 1
+	charge_delay = 5
+
 /obj/item/gun/energy/xenospitter //xenomorph acid gun?
 	name = "xenomorphic pistol"
 	icon = 'hypermods/icons/obj/weapons/guns/energy.dmi'
@@ -55,3 +66,21 @@
 
 /obj/item/gun/energy/gravity_gun/withcore
 	firing_core = TRUE
+
+/obj/item/gun/energy/printer/flamethrower // from yog
+	name = "cyborg flame projector"
+	desc = "Originally intended for cyborgs to assist in atmospherics projects, was soon scrapped due to safety concerns."
+	icon = 'icons/obj/weapons/flamethrower.dmi'
+	icon_state = "flamethrower1"
+	ammo_type = list(/obj/item/ammo_casing/energy/flamethrower)
+	can_charge = FALSE
+	use_cyborg_cell = TRUE
+
+/obj/item/gun/energy/plasmacutter/adv/malf
+	name = "cyborg malfunctioning plasma cutter"
+	desc = "A mining tool capable o=#9v@3-M!a%R=KILLING AND MURDERING ORGANICS."
+	force = 15
+	selfcharge = 1
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/adv/cyborg/malf)
+	can_charge = FALSE
+	use_cyborg_cell = TRUE

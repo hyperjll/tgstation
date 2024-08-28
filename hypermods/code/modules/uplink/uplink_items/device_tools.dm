@@ -195,3 +195,14 @@
 	item = /obj/item/clothing/glasses/universal
 	cost = 4
 	surplus = 20
+
+/datum/uplink_item/device_tools/cyborgrescue
+	name = "Rescue Cyborg Module"
+	desc = "An illegal module which grants a cyborg of choice fulton equipment. \
+			Very useful for quick escapes for both you and your silicon companion. \
+			Will also hack their software to reveal hidden modules. Does NOT enslave cyborgs."
+	item = /obj/item/borg/upgrade/illegalrescue
+	cost = 10
+	surplus = 10
+	progression_minimum = 15 MINUTES
+	purchasable_from = ~UPLINK_CLOWN_OPS

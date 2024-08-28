@@ -209,8 +209,8 @@
 	name = "Weapon Cyborg Module"
 	desc = "An illegal module capable of granting a cyborg a Viper pistol with the necessary hardware \
 			needed to print more ammunition on the fly. Also grants the cyborg of choice an energy dagger \
-			and hacks their software to reveal hidden modules. Exceptionally effective for mass murder."
-	item = /obj/item/borg/upgrade/syndicate/weapons
+			and hacks their software to reveal hidden modules. Exceptionally effective for mass murder. Does NOT enslave cyborgs."
+	item = /obj/item/borg/upgrade/illegalweapons
 	cost = 8
 	surplus = 0
 	progression_minimum = 30 MINUTES
@@ -220,8 +220,8 @@
 	name = "Martyr Cyborg Module"
 	desc = "Reveals a high-yielding explosive which was installed into the cyborg upon it's creation. \
 			This effectively allows a cyborg to self-destruct and possibly take out other people with it. \
-			Will also hack their software to reveal hidden modules."
-	item = /obj/item/borg/upgrade/syndicate/martyr
+			Will also hack their software to reveal hidden modules. Does NOT enslave cyborgs."
+	item = /obj/item/borg/upgrade/martyr
 	cost = 4
 	surplus = 10
 	progression_minimum = 20 MINUTES

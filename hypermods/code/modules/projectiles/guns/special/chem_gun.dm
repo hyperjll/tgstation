@@ -54,6 +54,14 @@
 	last_synth = world.time
 
 
+/obj/item/gun/chembudget/cyborg
+	name = "reagent gun"
+	desc = "A Nanotrasen syringe gun, modified to automatically synthesise chemical darts, and instead hold reagents. Holds up to 15 units of reagents."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "chemgunmed"
+	inhand_icon_state = "chemgun"
+
+
 /obj/item/gun/toxicreagentgun
 	name = "toxic reagent gun"
 	desc = "A weapon favored by crazed doctors all around for it's ability to quickly administer debilitating drugs in even the most unwilling of patients."
