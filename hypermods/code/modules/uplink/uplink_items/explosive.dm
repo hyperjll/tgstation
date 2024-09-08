@@ -48,7 +48,7 @@
 	name = "Explosive Pen"
 	desc = "A normal black pen, it's been filled with explosives. Has a 5 second timer, and is completely silent when being armed. \
 			The explosion is TINY but extremely powerful."
-	item = /obj/item/pen/explosive
+	item = /obj/item/storage/box/itempack/bombpen
 	cost = 1
 	surplus = 60
 	progression_minimum = 10 MINUTES
@@ -230,7 +230,7 @@
 
 /datum/uplink_item/explosives/acidfoamnades
 	name = "Highly-Acidic Grenades"
-	desc = "A pouch containing approximately 5 Highly-Acidic Foam Grenades. Especially effective against security officers who are now donning security hardsuits."
+	desc = "A pouch containing approximately 5 Highly-Acidic Foam Grenades. Especially effective against security officers who are now donning security modsuits."
 	item = /obj/item/ammo_box/nadepouch/highacidfoam
 	cost = 5
 	surplus = 30

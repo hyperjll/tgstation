@@ -775,3 +775,22 @@
 	surplus = 0
 	restricted_roles = list(JOB_CURATOR, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+
+/datum/uplink_item/role_restricted/cerberus
+	name = "Necronomicon"
+	desc = "A book that is capable of summoning a demonic familiar, Cerberus. The demonic familiar isn't capable of much aside from biting your foes, of which, it bites HARD. \
+			Cerberus is supposed to follow your commands and protect you in your time of need."
+	item = /obj/item/antag_spawner/nanotrasen/cerberus
+	cost = 4
+	surplus = 10
+	refundable = TRUE
+	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/wetfloormine
+	name = "Wet Floor Mine"
+	desc = "A wet floor sign which detonates violently after someone foolishly steps over it. \
+			Has a large but relatively weak explosive size."
+	item = /obj/item/deployablemine/explosive/wetfloor
+	cost = 5
+	surplus = 0
+	restricted_roles = list(JOB_JANITOR, JOB_CAPTAIN)

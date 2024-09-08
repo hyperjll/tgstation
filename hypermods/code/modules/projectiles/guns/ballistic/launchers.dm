@@ -6,7 +6,7 @@
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	icon_state = "China-Lake"
 	inhand_icon_state = "chinalake"
-	fire_sound = "hypermods/sound/weapons/gun/launcher/china_lake.ogg"
+	fire_sound = "hypermods/sound/weapons/china_lake.ogg"
 	fire_sound_volume = 90
 	w_class = WEIGHT_CLASS_BULKY
 	pin = /obj/item/firing_pin/implant/pindicate

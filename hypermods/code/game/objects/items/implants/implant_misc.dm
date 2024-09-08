@@ -40,13 +40,26 @@
 	if(ishuman(target))
 		target.AddElement(/datum/element/empprotection, EMP_PROTECT_SELF|EMP_PROTECT_CONTENTS)
 
+/obj/item/implant/empshield/get_data()
+	var/dat = {"<b>Implant Specifications:</b><BR>
+				<b>Name:</b> Cybersun Industries EMP-Shield Implant<BR>
+				<b>Life:</b> Unknown<BR>
+				<b>Important Notes:</b> <font color='red'>Illegal</font><BR>
+				<HR>
+				<b>Implant Details:</b> Subjects injected with implant are rendered immune to E.M.P's.<BR>
+				<b>Function:</b> Shields the user from EMP's.<BR>
+				<b>Integrity:</b> Implant can be used multiple times, but continuous EMP blasts can neutralize this implant temporarily."}
+	return dat
+
 /obj/item/implanter/empshield
 	name = "implanter (EMP shield)"
 	imp_type = /obj/item/implant/empshield
 
+
 /obj/item/implanter/weapons_auth
 	name = "implanter (weapon authentication)"
 	imp_type = /obj/item/implant/weapons_auth
+
 
 /obj/item/implanter/adrenalin
 	name = "implanter (adrenalin)"
@@ -84,5 +97,54 @@
 	imp_in.reagents.add_reagent(/datum/reagent/medicine/synaptizine, 10)
 	imp_in.reagents.add_reagent(/datum/reagent/medicine/omnizine, 10)
 	imp_in.reagents.add_reagent(/datum/reagent/medicine/stimulants, 10)
+	if(!uses)
+		qdel(src)
+
+
+/obj/item/implanter/scram
+	name = "implanter (scram)"
+	imp_type = /obj/item/implant/scram
+
+/obj/item/implant/scram
+	name = "scram implant"
+	desc = "Teleports the user."
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "shield1"
+	uses = 2
+
+/obj/item/implant/scram/get_data()
+	var/dat = {"<b>Implant Specifications:</b><BR>
+				<b>Name:</b> Hyper Foundation Scram Implant<BR>
+				<b>Life:</b> Unknown.<BR>
+				<b>Important Notes:</b> <font color='red'>Illegal</font><BR>
+				<HR>
+				<b>Implant Details:</b> Subjects injected with implant can harness bluespace energies to teleport.<BR>
+				<b>Function:</b> Teleports the implantee somewhere nearby, though it can locate a safe location to teleport to in case of emergencies.<BR>
+				<b>Integrity:</b> Implant can only be used two times before it's circuitry is too damaged to continue operations."}
+	return dat
+
+/obj/item/implant/scram/activate()
+	. = ..()
+	uses--
+	var/healthlossed = 0
+	healthlossed = (imp_in.getBruteLoss() + imp_in.getFireLoss() + imp_in.getToxLoss())
+
+	if((imp_in.getMaxHealth() / 4) < healthlossed) // Do you have a quarter of your health left or under?
+		do_sparks(5,FALSE,imp_in)
+		var/F = find_safe_turf(zlevel = imp_in.z, extended_safety_checks = TRUE)
+		var/range = 0
+		if(!F)
+			do_sparks(5,FALSE,imp_in)
+			do_teleport(imp_in, get_turf(imp_in), 24, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE) // Double the range if no safe turf
+			to_chat(span_warning("You feel reality warp erratically as you're displaced!"))
+		if(F)
+			do_sparks(5,FALSE,imp_in)
+			to_chat(span_warning("You feel reality warp around you as you're teleported somewhere safe!"))
+			do_teleport(imp_in, F, range, channel = TELEPORT_CHANNEL_BLUESPACE)
+	else
+		do_sparks(5,FALSE,imp_in)
+		to_chat(imp_in, span_notice("You feel reality warp around you as you're teleported!"))
+		do_teleport(imp_in, get_turf(imp_in), 12, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+
 	if(!uses)
 		qdel(src)

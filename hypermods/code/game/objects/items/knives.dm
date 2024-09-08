@@ -54,3 +54,21 @@
 	chemicalinuse = /datum/reagent/toxin/heparin
 	chemicalamount = 5
 	chemicalexamine = "Heparin"
+
+
+/obj/item/knife/throwing
+	name = "throwing knife"
+	icon = 'hypermods/icons/obj/weapons/stabby.dmi'
+	icon_state = "throwingknife"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/swords_righthand.dmi'
+	inhand_icon_state = "throwingknife"
+	embed_type = /datum/embed_data/throwingknife
+	force = 15
+	throwforce = 35
+	throw_speed = 2
+	throw_range = 12
+
+/datum/embed_data/throwingknife
+	embed_chance = 100
+	fall_chance = 0.01

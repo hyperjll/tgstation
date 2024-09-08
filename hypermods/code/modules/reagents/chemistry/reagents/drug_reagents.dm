@@ -5,6 +5,7 @@
 	color = "#FAFAFA"
 	addiction_types = list(/datum/addiction/stimulants = 4)
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolized_traits = list(TRAIT_STIMULATED)
 
 /datum/reagent/drug/syndimethamphetamine/on_mob_metabolize(mob/living/L)
 	..()

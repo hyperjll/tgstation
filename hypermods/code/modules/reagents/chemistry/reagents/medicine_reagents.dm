@@ -192,6 +192,8 @@
 	color = "#78008C"
 	metabolization_rate = 0.05
 	overdose_threshold = 30
+	addiction_types = list(/datum/addiction/stimulants = 6) //1.2 per 2 seconds
+	metabolized_traits = list(TRAIT_BATON_RESISTANCE, TRAIT_ANALGESIA, TRAIT_STIMULATED)
 
 /datum/reagent/medicine/experimentalstimulants/on_mob_metabolize(mob/living/L)
 	..()
@@ -387,6 +389,7 @@
 	color = "#ff1a1a"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 60
+	addiction_types = list(/datum/addiction/stimulants = 2) //0.4 per 2 seconds
 
 /datum/reagent/medicine/juggernaut/on_mob_metabolize(mob/living/L)
 	..()
@@ -734,3 +737,45 @@
 
 /datum/reagent/medicine/antimagic/on_mob_end_metabolize(mob/living/M)
 	REMOVE_TRAIT(M, TRAIT_HOLY, type)
+
+
+/datum/reagent/medicine/hyperzine
+	name = "Hyperzine"
+	description = "A reverse-engineered panacea of unknown origin, quickly restores all damage, boosts speed, and renders the host nearly immune to stuns. Metabolizes quickly.."
+	reagent_state = LIQUID
+	color = "#DCDCDC"
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM
+	var/healing = 7
+	self_consuming = TRUE
+	addiction_types = list(/datum/addiction/stimulants = 8) //1.6 per 2 seconds
+	metabolized_traits = list(TRAIT_BATON_RESISTANCE, TRAIT_ANALGESIA, TRAIT_STIMULATED)
+
+/datum/reagent/medicine/hyperzine/on_mob_metabolize(mob/living/L)
+	..()
+	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/expstimulants)
+
+/datum/reagent/medicine/hyperzine/on_mob_end_metabolize(mob/living/L)
+	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/expstimulants)
+	..()
+
+/datum/reagent/medicine/hyperzine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	affected_mob.adjustToxLoss(-healing, FALSE)
+	affected_mob.adjustOxyLoss(-healing, FALSE)
+	affected_mob.adjustBruteLoss(-healing, FALSE)
+	affected_mob.adjustFireLoss(-healing, FALSE)
+
+	affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, -healing)
+	affected_mob.adjustOrganLoss(ORGAN_SLOT_HEART, -healing)
+	affected_mob.adjustOrganLoss(ORGAN_SLOT_LUNGS, -healing)
+	affected_mob.adjustOrganLoss(ORGAN_SLOT_LIVER, -healing)
+	affected_mob.adjustOrganLoss(ORGAN_SLOT_STOMACH, -healing)
+	affected_mob.adjustOrganLoss(ORGAN_SLOT_EYES, -healing)
+	affected_mob.adjustOrganLoss(ORGAN_SLOT_EARS, -healing)
+
+	affected_mob.adjust_nutrition(-2) // Big oof
+
+	affected_mob.AdjustAllImmobility(-60  * REM * seconds_per_tick)
+	affected_mob.adjustStaminaLoss(-12 * REM * seconds_per_tick, updating_stamina = FALSE, required_biotype = affected_biotype)
+
+	..()
+	. = TRUE

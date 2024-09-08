@@ -4,19 +4,56 @@
 	antag_datum = /datum/antagonist/nukeop/reinforcement
 	special_role_name = "Syndicat"
 
-/obj/item/antag_spawner/nuke_ops/syndicat/spawn_antag(client/C, turf/T, kind, datum/mind/user)
-	var/mob/living/basic/syndicat/scat
+/obj/item/antag_spawner/nuke_ops/syndicat/spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
+	var/mob/living/basic/syndicat/scat = new()
 	var/datum/antagonist/nukeop/creator_op = user.has_antag_datum(/datum/antagonist/nukeop,TRUE)
 	if(!creator_op)
 		return
 	var/obj/structure/closet/supplypod/pod = setup_pod()
 
-	scat.key = C.key
+	scat.ckey = our_client.ckey
 
 	scat.mind.add_antag_datum(antag_datum, creator_op ? creator_op.get_team() : null)
 	scat.mind.special_role = special_role_name
 	scat.forceMove(pod)
 	new /obj/effect/pod_landingzone(get_turf(src), pod)
+
+/obj/item/antag_spawner/nuke_ops/syndicat/setup_pod()
+	var/obj/structure/closet/supplypod/pod = new(null, pod_style)
+	pod.explosionSize = list(0,0,0,0)
+	pod.bluespace = TRUE
+	return pod
+
+/obj/item/antag_spawner/nanotrasen/cerberus // Technically a syndicate thing, but whatever.
+	name = "necronomicon"
+	desc = "A single-use beacon designed to quickly launch reinforcement cyborgs into the field."
+	icon = 'hypermods/icons/obj/service/library.dmi'
+	icon_state = "necronomicon"
+	inhand_icon_state = "necronomicon"
+	lefthand_file = 'icons/mob/inhands/items/books_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items/books_righthand.dmi'
+	var/antag_datum = /datum/antagonist/cerberus
+	special_role_name = "Cerberus"
+	//fail_text = "Unable to connect to the 'Other Side'. Please wait and try again later or use the necronomicon on your uplink to get your points refunded."
+	delaydelete = TRUE
+
+/obj/item/antag_spawner/nanotrasen/cerberus/spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
+	var/mob/living/basic/cerberus/doggo = new()
+
+	doggo.ckey = our_client.key
+
+	doggo.mind.add_antag_datum(antag_datum)
+	doggo.mind.special_role = special_role_name
+
+	if(length(GLOB.newplayer_start)) // needed as hud code doesn't render huds if the atom is in nullspace, so just move the dog somewhere safe
+		doggo.forceMove(pick(GLOB.newplayer_start))
+	else
+		doggo.forceMove(locate(1,1,1))
+
+	var/turf/our_turf = get_turf(src)
+	doggo.forceMove(our_turf)
+
+	qdel(src) // Cuz we delayed the deletion to ensure the src exists to get it's own location.
 
 /// Not actually an antag spawner.
 /obj/item/antag_spawner/nanotrasen
@@ -37,6 +74,8 @@
 	var/turf/spawn_location
 	/// Are we currently polling?
 	var/polling = FALSE
+	/// Dont delete right away?
+	var/delaydelete = FALSE
 
 /obj/item/antag_spawner/nanotrasen/proc/check_usability(mob/user)
 	if(used)
@@ -44,7 +83,6 @@
 		return FALSE
 	return TRUE
 
-/// Creates the drop pod the nukie will be dropped by
 /obj/item/antag_spawner/nanotrasen/proc/setup_pod()
 	var/obj/structure/closet/supplypod/pod = new(null, pod_style)
 	pod.explosionSize = list(0,0,0,0)
@@ -67,7 +105,8 @@
 		used = TRUE
 		spawn_antag(chosen_one.client, get_turf(src), user.mind)
 		do_sparks(4, TRUE, src)
-		qdel(src)
+		if(!delaydelete)
+			qdel(src)
 	else
 		polling = FALSE
 		to_chat(user, span_warning("Unable to contact central command. Please wait and try again."))

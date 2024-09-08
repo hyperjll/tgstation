@@ -8,6 +8,13 @@
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 
+/datum/uplink_item/dangerous/throwingknives
+	name = "Throwing Knives"
+	desc = "Exceptionally lethal throwing knives, they perfectly embed into your foes without much \
+			difficulty. Don't rely upon these or your victims will prepare to catch and use these knives."
+	item = /obj/item/storage/box/syndie_kit/throwingknives
+	cost = 5
+
 /datum/uplink_item/dangerous/backstab
 	name = "Backstabbing Switchblade"
 	desc = "This switchblade has a unique shape that makes it especially lethal when lodged in someone's backside. \

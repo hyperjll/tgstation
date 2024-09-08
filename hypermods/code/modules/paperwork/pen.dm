@@ -1,4 +1,4 @@
-/obj/item/pen/fountain/hypo
+/obj/item/pen/hypo
 	desc = "It's a normal black ink pen."
 	name = "pen"
 	icon_state = "pen"
@@ -12,12 +12,13 @@
 	pressure_resistance = 2
 	grind_results = list(/datum/reagent/iron = 2, /datum/reagent/iodine = 1)
 	sharpness = SHARP_POINTY
+	numbneedle = TRUE
 
-/obj/item/pen/fountain/hypo/Initialize(mapload)
+/obj/item/pen/hypo/Initialize(mapload)
 	. = ..()
 	create_reagents(15, OPENCONTAINER)
 
-/obj/item/pen/fountain/hypo/attack(mob/living/M, mob/user, params)
+/obj/item/pen/hypo/attack(mob/living/M, mob/user, params)
 	. = ..()
 	if(!.)
 		return
@@ -27,17 +28,17 @@
 		return
 	reagents.trans_to(M, reagents.total_volume, transferred_by = user, methods = INJECT)
 
-/obj/item/pen/fountain/hypo/on_inserted_into_dart(datum/source, obj/item/ammo_casing/dart, mob/user)
+/obj/item/pen/hypo/on_inserted_into_dart(datum/source, obj/item/ammo_casing/dart, mob/user)
 	. = ..()
 	var/obj/projectile/proj = dart.loaded_projectile
 	RegisterSignal(proj, COMSIG_PROJECTILE_SELF_ON_HIT, PROC_REF(on_dart_hit))
 
-/obj/item/pen/fountain/hypo/on_removed_from_dart(datum/source, obj/item/ammo_casing/dart, obj/projectile/proj, mob/user)
+/obj/item/pen/hypo/on_removed_from_dart(datum/source, obj/item/ammo_casing/dart, obj/projectile/proj, mob/user)
 	. = ..()
 	if(istype(proj))
 		UnregisterSignal(proj, COMSIG_PROJECTILE_SELF_ON_HIT)
 
-/obj/item/pen/fountain/hypo/proc/on_dart_hit(datum/source, atom/movable/firer, atom/target, angle, hit_limb, blocked)
+/obj/item/pen/hypo/proc/on_dart_hit(datum/source, atom/movable/firer, atom/target, angle, hit_limb, blocked)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/carbon_target = target
 	if(!istype(carbon_target) || blocked == 100)

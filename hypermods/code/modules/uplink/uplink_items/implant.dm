@@ -19,6 +19,14 @@
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_CYBERNETIC_REVOLUTION))
 		cost /= 2
 
+/datum/uplink_item/implants/cavitymanipulator
+	name = "Cavity Manipulator"
+	desc = "An autosurgeon specifically designed to implant items into one's torso cavity area. Can be used infinitely. \
+			Cannot take items back out from one's cavity region, use with caution."
+	item = /obj/item/cavitymanipulator
+	cost = 4
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
 /datum/uplink_item/implants/weapons_auth
 	name = "Syndicate Firearm Authentication Implant"
 	desc = "A singular implant, it's required for using most advanced syndicate weaponry such as the C-20r or the Bulldog. \
@@ -340,3 +348,12 @@
 	surplus = 5
 	progression_minimum = 35 MINUTES
 	item = /obj/item/autosurgeon/syndicate/syndie_hammer
+
+/datum/uplink_item/implants/scram
+	name = "Scram Implant"
+	desc = "A two-use implant rigged with precision-based bluespace technology which will warp the user \
+			somewhere nearby, but if the user is gravely injured it'll warp you somewhere safe. \
+			Does not come with life insurance."
+	item = /obj/item/storage/box/syndie_kit/scramimplant
+	cost = 6
+	surplus = 20

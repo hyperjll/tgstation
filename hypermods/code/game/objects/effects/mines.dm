@@ -101,6 +101,17 @@
 	range_light = 8
 	range_flash = 16
 
+/obj/effect/mine/explosive/wetfloor
+	name = "wet floor sign"
+	desc = "Caution! Wet Floor!"
+	icon = 'icons/obj/clothing/suits/utility.dmi'
+	icon_state = "caution"
+	alpha = 255
+	range_devastation = 0
+	range_heavy = 1
+	range_light = 8
+	range_flash = 12
+
 
 /obj/effect/mine/radio
 	name = "radio mine"

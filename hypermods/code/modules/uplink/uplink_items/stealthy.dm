@@ -45,6 +45,15 @@
 	cost = 1
 	surplus = 40
 
+/datum/uplink_item/stealthy_weapons/hypo_pen
+	name = "Hypo Pen"
+	desc = "One of our state-of-the-art hypo pens, capable of injecting up to 15 units of reagents at a time. \
+			The injectee often won't realize they've been injected thanks to the hypopen's numbing needle. \
+			Doesn't come with any reagents."
+	item = /obj/item/storage/box/itempack/hypopen
+	cost = 7
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+
 /datum/uplink_item/stealthy_weapons/mindbatterer
 	name = "Mind Batterer"
 	desc = "A device with twin attennas. When activated it acts like a mental flashbang to everyone nearby except the user. \
@@ -53,6 +62,15 @@
 	cost = 4
 	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // Would easily fuck over your fellow operatives or make taking down high priority targets too easy.
+
+/datum/uplink_item/stealthy_weapons/mindswitch
+	name = "Mindswitch"
+	desc = "A three-use switch which exploits Nanotrasen's mindshield implants, causing the brain \
+			to shut itself off for an extended period of time and causing significant brain damage."
+	item = /obj/item/mindbatterer/mindshield
+	cost = 8
+	surplus = 30
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // Would easily make taking down high priority targets too easy.
 
 /datum/uplink_item/stealthy_weapons/bladegloves
 	name = "Bladed Gloves"

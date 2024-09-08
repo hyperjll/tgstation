@@ -547,14 +547,14 @@
 	ammo_type = /obj/item/ammo_casing/c45
 	max_ammo = 50
 
-/obj/item/ammo_box/c50
+/obj/item/ammo_box/m50
 	name = "ammo box (.50 AE)"
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "50aebox"
 	ammo_type = /obj/item/ammo_casing/a50ae
 	max_ammo = 20
 
-/obj/item/ammo_box/c50/fifty
+/obj/item/ammo_box/m50/fifty
 	name = "ammo box (.50 AE)"
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "mega50aebox"

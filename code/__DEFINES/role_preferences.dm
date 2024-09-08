@@ -77,6 +77,7 @@
 #define ROLE_SLAUGHTER_DEMON "Slaughter Demon"
 #define ROLE_WIZARD_APPRENTICE "apprentice"
 #define ROLE_SYNDICATE_MONKEY "Syndicate Monkey Agent"
+#define ROLE_CERBERUS "Cerberus"
 #define ROLE_CONTRACTOR_SUPPORT "Contractor Support Unit"
 #define ROLE_OPERATIVE_OVERWATCH "Operative Overwatch Agent"
 #define ROLE_SYNDICATE_SABOBORG "Syndicate Sabotage Cyborg"

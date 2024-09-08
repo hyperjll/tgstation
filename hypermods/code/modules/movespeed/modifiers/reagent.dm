@@ -6,3 +6,6 @@
 
 /datum/movespeed_modifier/reagent/diseasensstim
 	multiplicative_slowdown = -0.05
+
+/datum/movespeed_modifier/reagent/hyperzine
+	multiplicative_slowdown = -1

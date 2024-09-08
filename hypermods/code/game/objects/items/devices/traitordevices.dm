@@ -20,7 +20,7 @@
 	if(!user) return
 
 	if(times_used >= max_uses)
-		to_chat(user, span_danger("The mind batterer has been burnt out!"))
+		to_chat(user, span_danger("The [src] has been burnt out!"))
 		return
 
 	log_combat(user, null, "knocked down people in the area", src)
@@ -39,6 +39,49 @@
 	times_used += 1
 	if(times_used >= max_uses)
 		icon_state = "battererburnt"
+
+
+/obj/item/mindbatterer/mindshield
+	name = "mindswitch"
+	desc = "A strange device with quadrapole antennas."
+	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
+	icon_state = "mindswitch"
+	throwforce = 5
+	w_class = WEIGHT_CLASS_TINY
+	throw_speed = 3
+	throw_range = 7
+	obj_flags = CONDUCTS_ELECTRICITY
+	inhand_icon_state = "electronic"
+	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+
+	times_used = 0 //Number of times it's been used.
+	max_uses = 3
+
+
+/obj/item/mindbatterer/mindshield/attack_self(mob/living/carbon/user, flag = 0, emp = 0)
+	if(!user) return
+
+	if(times_used >= max_uses)
+		to_chat(user, span_danger("The mind batterer has been burnt out!"))
+		return
+
+	log_combat(user, null, "sabotaged the mindshields of everyone nearby", src)
+
+	for(var/mob/living/carbon/human/M in urange(10, user, 1))
+		if(HAS_TRAIT(M, TRAIT_MINDSHIELD))
+
+			M.Paralyze(rand(200,400))
+			to_chat(M, span_userdanger("You hear a tremendously sound shock within your head as your limbs fall limp."))
+
+		else
+			to_chat(M, span_userdanger("You feel something akin to electricity hit your eyes, but nothing else happens."))
+
+	playsound(src.loc, 'sound/misc/interference.ogg', 50, TRUE)
+	to_chat(user, span_notice("You trigger [src]."))
+	times_used += 1
+	if(times_used >= max_uses)
+		icon_state = "mindswitch_out"
 
 
 /obj/item/stock_parts/power_store/cell/bluespace/syndirig

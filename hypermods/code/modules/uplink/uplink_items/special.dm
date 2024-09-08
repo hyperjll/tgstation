@@ -24,7 +24,7 @@
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
-/datum/uplink_item/events/straypod/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
+/datum/uplink_item/special/straypod/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	var/chance = rand(1, 10)
 	if(chance == 1)
 		force_event(/datum/round_event_control/stray_cargo/syndicate, "a strange singal")

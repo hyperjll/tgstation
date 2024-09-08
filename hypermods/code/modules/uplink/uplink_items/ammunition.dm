@@ -503,7 +503,7 @@
 /datum/uplink_item/ammo/ammo50box
 	name = "Box of .50 AE Rounds"
 	desc = "An ammo box filled with .50 AE rounds, used for restocking .50 AE magazines. Contains 20 .50 AE bullets."
-	item = /obj/item/ammo_box/c50
+	item = /obj/item/ammo_box/m50
 	cost = 6
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
@@ -512,7 +512,7 @@
 /datum/uplink_item/ammo/ammo50boxmega
 	name = "Mega Box of .50 AE Rounds"
 	desc = "An ammo box filled with .50 AE rounds, used for restocking .50 AE magazines. Contains 50 .50 AE bullets."
-	item = /obj/item/ammo_box/c50/fifty
+	item = /obj/item/ammo_box/m50/fifty
 	cost = 8
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

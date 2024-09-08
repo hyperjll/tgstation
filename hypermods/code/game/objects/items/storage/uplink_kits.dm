@@ -642,6 +642,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimulants,
 		/obj/item/reagent_containers/hypospray/medipen/experistimulants,
 		/obj/item/reagent_containers/hypospray/medipen/donkcostim,
+		/obj/item/reagent_containers/hypospray/medipen/hyperzine,
 		/obj/item/reagent_containers/hypospray/medipen/juggernaut
 	)
 
@@ -807,3 +808,10 @@
 	for(var/i in 1 to 1)
 		var/drinktype = pick(drinktypes)
 		new drinktype(src)
+
+/obj/item/storage/box/syndie_kit/scramimplant/PopulateContents()
+	new /obj/item/implanter/scram(src)
+
+/obj/item/storage/box/syndie_kit/throwingknives/PopulateContents()
+	for(var/i in 1 to 5)
+		new /obj/item/knife/throwing(src)

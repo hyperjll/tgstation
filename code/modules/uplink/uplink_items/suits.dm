@@ -25,7 +25,7 @@
 			fits inside bags, and has a weapon slot. Nanotrasen crew members are trained to report red space suit \
 			sightings, however."
 	item = /obj/item/storage/box/syndie_kit/space
-	cost = 4
+	cost = 2
 
 /datum/uplink_item/suits/modsuit
 	name = "Syndicate MODsuit"
@@ -38,13 +38,13 @@
 	name = "MODsuit Thermal Visor Module"
 	desc = "A visor for a MODsuit. Lets you see living beings through walls."
 	item = /obj/item/mod/module/visor/thermal
-	cost = 3
+	cost = 2
 
 /datum/uplink_item/suits/night
 	name = "MODsuit Night Visor Module"
 	desc = "A visor for a MODsuit. Lets you see clearer in the dark."
 	item = /obj/item/mod/module/visor/night
-	cost = 2
+	cost = 1
 
 /datum/uplink_item/suits/chameleon
 	name = "MODsuit Chameleon Module"
@@ -56,13 +56,13 @@
 	name = "MODsuit Plate Compression Module"
 	desc = "A MODsuit module that lets the suit compress into a smaller size. Not compatible with storage modules or the Infiltrator MODsuit."
 	item = /obj/item/mod/module/plate_compression
-	cost = 2
+	cost = 1
 
 /datum/uplink_item/suits/noslip
 	name = "MODsuit Anti-Slip Module"
 	desc = "A MODsuit module preventing the user from slipping on water."
 	item = /obj/item/mod/module/noslip
-	cost = 2
+	cost = 1
 
 /datum/uplink_item/suits/shock_absorber
 	name = "MODsuit Shock-Absorber Module"
@@ -77,6 +77,6 @@
 	item = /obj/item/mod/control/pre_equipped/traitor_elite
 	// This one costs more than the nuke op counterpart
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	progression_minimum = 90 MINUTES
+	progression_minimum = 30 MINUTES
 	cost = 16
 	cant_discount = TRUE

@@ -37,6 +37,18 @@
 /obj/item/clothing/neck/chameleon/armored
 	armor_type = /datum/armor/neck_chameleon/armored
 
+/obj/item/clothing/gloves/chameleon/conductive
+	desc = "These gloves provide protection against electric shock. The thickness of the rubber makes your fingers seem bigger."
+	name = "insulated gloves"
+	icon_state = "yellow"
+	siemens_coefficient = 4 // The catch, if you will.
+	inhand_icon_state = "ygloves"
+	armor_type = /datum/armor/color_yellow
+	resistance_flags = NONE
+	custom_price = PAYCHECK_CREW * 10
+	custom_premium_price = PAYCHECK_COMMAND * 6
+	clothing_traits = list(TRAIT_CHUNKYFINGERS)
+
 /datum/armor/neck_chameleon/armored
 	melee = 15
 	bullet = 15

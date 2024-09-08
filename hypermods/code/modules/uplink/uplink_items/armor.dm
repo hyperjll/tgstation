@@ -162,3 +162,12 @@
 	item = /obj/item/storage/fancy/cigarettes/dermal_harden
 	cost = 5
 	surplus = 15
+
+/datum/uplink_item/armor/raid
+	name = "Syndicate Raid MODsuit"
+	desc = "A syndicate MODsuit specifically designed to not inhibit the wearer's mobility at the cost of it's space faring capabilities. \
+			Capable of sustaining heavy damage with minimal slowdown. Please contact 1900 Donk Co. for any complaints."
+	item = /obj/item/mod/control/pre_equipped/raid
+	progression_minimum = 20 MINUTES
+	cost = 12
+	surplus = 20

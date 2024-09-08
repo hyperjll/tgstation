@@ -137,6 +137,13 @@
 	icon_state = "corgi"
 	mine_type = /obj/effect/mine/explosive/fakeian
 
+/obj/item/deployablemine/explosive/wetfloor
+	name = "wet floor sign"
+	desc = "Caution! Wet Floor!"
+	icon = 'icons/obj/clothing/suits/utility.dmi'
+	icon_state = "caution"
+	mine_type = /obj/effect/mine/explosive/wetfloor
+
 
 /obj/item/deployablemine/radio
 	name = "radio mine"

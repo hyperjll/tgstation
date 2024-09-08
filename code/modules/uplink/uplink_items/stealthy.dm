@@ -26,7 +26,7 @@
 /datum/uplink_item/stealthy_weapons/edagger
 	name = "Energy Dagger"
 	desc = "A dagger made of energy that looks and functions as a pen when off."
-	item = /obj/item/pen/edagger
+	item = /obj/item/storage/box/itempack/edagger
 	cost = 2
 
 /datum/uplink_item/stealthy_weapons/slipstick
@@ -62,7 +62,7 @@
 			strong anesthetic and a chemical that prevents the target from speaking. \
 			The pen holds one dose of the mixture, and can be refilled with any chemicals. Note that before the target \
 			falls asleep, they will be able to move and act."
-	item = /obj/item/pen/sleepy
+	item = /obj/item/storage/box/itempack/sleeppen
 	cost = 4
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 

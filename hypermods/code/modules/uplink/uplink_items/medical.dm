@@ -135,6 +135,17 @@
 	surplus = 40
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
+/datum/uplink_item/medical/hyperzinepack
+	name = "Hyperzine Injector"
+	desc = "A stimulant injector, containing 30u of hyperzine: enough chems to keep you running fast \
+			and resistant to stuns for 30 seconds. Unlike other stimulants, this chemical mix \
+			greatly increses the metabolism of the user, resulting in weight loss and rapid regeneration."
+	item = /obj/item/reagent_containers/hypospray/medipen/hyperzine
+	cost = 4
+	surplus = 40
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
 /datum/uplink_item/medical/juggernaut
 	name = "Juggernaut Stimpack"
 	desc = "The famous syndicate juggernaut stimpack, modeled after the even-more-famous regular stimpack, will nullify \
