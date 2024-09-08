@@ -13,6 +13,6 @@
 	stunning = TRUE
 	crafting_complexity = FOOD_COMPLEXITY_3
 
-/obj/item/food/pie/cream/bluespace/splat(atom/movable/hit_atom)
+/obj/item/food/pie/cream/bluespace/stun_and_blur(atom/movable/hit_atom)
 	do_teleport(hit_atom, get_turf(src), 5, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 	..()
