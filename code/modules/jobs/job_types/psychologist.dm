@@ -33,7 +33,6 @@
 	rpg_title = "Snake Oil Salesman"
 	job_flags = STATION_JOB_FLAGS
 
-
 /datum/outfit/job/psychologist
 	name = "Psychologist"
 	jobtype = /datum/job/psychologist
@@ -59,4 +58,4 @@
 	messenger = /obj/item/storage/backpack/messenger/med
 
 	pda_slot = ITEM_SLOT_BELT
-	skillchips = list(/obj/item/skillchip/job/psychology)
+	skillchips = list(/obj/item/skillchip/job/psychology, /obj/item/skillchip/reversehypno)

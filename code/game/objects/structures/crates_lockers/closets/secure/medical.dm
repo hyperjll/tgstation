@@ -69,6 +69,7 @@
 	new /obj/item/clothing/mask/muzzle(src)
 	new /obj/item/clothing/glasses/blindfold(src)
 	new /obj/item/circuitboard/machine/chem_dispenser/psych(src)
+	new /obj/item/assembly/flash(src)
 
 /obj/structure/closet/secure_closet/chief_medical
 	name = "chief medical officer's locker"
