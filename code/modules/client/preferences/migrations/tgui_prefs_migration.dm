@@ -33,12 +33,14 @@
 // Before tgui preferences menu, "traitor" would handle both roundstart, midround, and latejoin.
 // These were split apart.
 /datum/preferences/proc/migrate_antagonists()
-	migrate_antagonist(ROLE_HERETIC, list(ROLE_HERETIC_SMUGGLER))
+	migrate_antagonist(ROLE_HERETIC, list(ROLE_HERETIC_MIDROUND, ROLE_HERETIC_SMUGGLER))
 	migrate_antagonist(ROLE_MALF, list(ROLE_MALF_MIDROUND))
 	migrate_antagonist(ROLE_OPERATIVE, list(ROLE_OPERATIVE_MIDROUND, ROLE_LONE_OPERATIVE))
 	migrate_antagonist(ROLE_REV_HEAD, list(ROLE_PROVOCATEUR))
 	migrate_antagonist(ROLE_TRAITOR, list(ROLE_SYNDICATE_INFILTRATOR, ROLE_SLEEPER_AGENT))
 	migrate_antagonist(ROLE_WIZARD, list(ROLE_WIZARD_MIDROUND))
+	migrate_antagonist(ROLE_SPY, list(ROLE_SPY_INFILTRATOR))
+	migrate_antagonist(ROLE_BROTHER, list(ROLE_BROTHER_INITIATE))
 
 
 // If you have an antagonist enabled, it will add the alternative preferences for said antag in be_special.

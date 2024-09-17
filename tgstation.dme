@@ -6390,6 +6390,8 @@
 #include "code\modules\zombie\items.dm"
 #include "code\modules\zombie\organs.dm"
 #include "code\ze_genesis_call\genesis_call.dm"
+#include "hypermods\code\controllers\subsystem\dynamic\dynamic_rulesets_latejoin.dm"
+#include "hypermods\code\controllers\subsystem\dynamic\dynamic_rulesets_midround.dm"
 #include "hypermods\code\datums\holotoolmodes.dm"
 #include "hypermods\code\datums\actions\items\airshoe_dash.dm"
 #include "hypermods\code\datums\components\backstabs.dm"

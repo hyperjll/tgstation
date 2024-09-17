@@ -38,12 +38,15 @@
 #define ROLE_SPIDER "Spider"
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
 #define ROLE_VOIDWALKER "Voidwalker"
+#define ROLE_HERETIC_MIDROUND "Heretic Awakening"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
 #define ROLE_PROVOCATEUR "Provocateur"
 #define ROLE_STOWAWAY_CHANGELING "Stowaway Changeling"
 #define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"
+#define ROLE_SPY_INFILTRATOR "Spy Infiltrator"
+#define ROLE_BROTHER_INITIATE "Brother Initiate"
 
 // Other roles
 #define ROLE_ANOMALY_GHOST "Ectoplasmic Anomaly Ghost"
@@ -156,12 +159,15 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SPIDER = 0,
 	ROLE_WIZARD_MIDROUND = 14,
 	ROLE_VOIDWALKER = 0,
+	ROLE_HERETIC_MIDROUND = 0,
 
 	// Latejoin
 	ROLE_HERETIC_SMUGGLER = 0,
 	ROLE_PROVOCATEUR = 14,
 	ROLE_SYNDICATE_INFILTRATOR = 0,
 	ROLE_STOWAWAY_CHANGELING = 0,
+	ROLE_SPY_INFILTRATOR = 0,
+	ROLE_BROTHER_INITIATE = 0,
 
 	// I'm not too sure why these are here, but they're not moving.
 	ROLE_GLITCH = 0,
