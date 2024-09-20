@@ -815,3 +815,51 @@
 /obj/item/storage/box/syndie_kit/throwingknives/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/knife/throwing(src)
+
+/obj/item/storage/box/syndie_kit/modsuitmodbundle
+	name = "MODsuit module box"
+
+/obj/item/storage/box/syndie_kit/modsuitmodbundle/PopulateContents()
+	var/list/item_list = list(
+		/obj/item/mod/module/visor/thermal,
+		/obj/item/mod/module/visor/night,
+		/obj/item/mod/module/chameleon,
+		/obj/item/mod/module/plate_compression,
+		/obj/item/mod/module/noslip,
+		/obj/item/mod/module/shock_absorber,
+		/obj/item/mod/module/stealth/wraith,
+		/obj/item/mod/module/flamethrower,
+		///obj/item/mod/module/springlock/disguised, // Probably best to leave this one out.
+		/obj/item/mod/module/synditeleporter,
+		/obj/item/mod/module/antigrav,
+		/obj/item/mod/module/power_kick/syndicate,
+		/obj/item/mod/module/demoralizer,
+		/obj/item/mod/module/welding/camera_vision,
+		/obj/item/mod/module/rad_protection,
+		/obj/item/mod/module/storage/bluespace,
+		/obj/item/mod/module/mouthhole, // I'm keeping this one cuz it's nice to have.
+		/obj/item/mod/module/emp_shield/pulse,
+		/obj/item/mod/module/dispenser/mirage,
+		/obj/item/mod/module/dispenser/frag,
+		/obj/item/mod/module/joint_torsion/syndicate,
+		/obj/item/mod/module/recycler/donk,
+		/obj/item/mod/module/recycler/ammobox/c9mm,
+		/obj/item/mod/module/recycler/ammobox/c45,
+		/obj/item/mod/module/recycler/ammobox/a357,
+		/obj/item/mod/module/recycler/ammobox/c10mm,
+		/obj/item/mod/module/recycler/ammobox/m50,
+		/obj/item/mod/module/stealth/syndicate,
+		/obj/item/mod/module/electricpalm,
+		/obj/item/mod/module/energy_net/syndicate,
+		/obj/item/mod/module/adrenaline_boost/syndicate,
+		/obj/item/mod/module/pepper_shoulders, // Not illegal, but i'm keeping it anyways.
+		/obj/item/mod/module/projectile_dampener/syndicate,
+		/obj/item/mod/module/active_sonar/syndicate,
+		/obj/item/mod/module/shooting_assistant,
+		/obj/item/mod/module/shove_blocker, // Not illegal, but i'm keeping it anyways.
+		/obj/item/mod/module/death_sphere
+	)
+
+	for(var/i in 1 to 5)
+		var/item = pick(item_list)
+		new item(src)

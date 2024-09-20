@@ -39,36 +39,42 @@
 	desc = "A visor for a MODsuit. Lets you see living beings through walls."
 	item = /obj/item/mod/module/visor/thermal
 	cost = 2
+	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/suits/night
 	name = "MODsuit Night Visor Module"
 	desc = "A visor for a MODsuit. Lets you see clearer in the dark."
 	item = /obj/item/mod/module/visor/night
 	cost = 1
+	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/suits/chameleon
 	name = "MODsuit Chameleon Module"
 	desc = "A MODsuit module that lets the suit disguise itself as other objects."
 	item = /obj/item/mod/module/chameleon
 	cost = 2
+	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/suits/plate_compression
 	name = "MODsuit Plate Compression Module"
 	desc = "A MODsuit module that lets the suit compress into a smaller size. Not compatible with storage modules or the Infiltrator MODsuit."
 	item = /obj/item/mod/module/plate_compression
 	cost = 1
+	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/suits/noslip
 	name = "MODsuit Anti-Slip Module"
 	desc = "A MODsuit module preventing the user from slipping on water."
 	item = /obj/item/mod/module/noslip
 	cost = 1
+	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/suits/shock_absorber
 	name = "MODsuit Shock-Absorber Module"
 	desc = "A MODsuit module preventing the user from getting knocked down by batons."
 	item = /obj/item/mod/module/shock_absorber
 	cost = 2
+	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/suits/modsuit/elite_traitor
 	name = "Elite Syndicate MODsuit"
@@ -86,3 +92,4 @@
 	desc = "A MODsuit module that grants to the user Optical camouflage and the ability to overload light sources to recharge suit power."
 	item = /obj/item/mod/module/stealth/wraith
 	cost = 3
+	purchasable_from = ~UPLINK_SPY
