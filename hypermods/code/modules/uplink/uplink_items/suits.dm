@@ -201,10 +201,10 @@
 
 /datum/uplink_item/suits/electricpalm
 	name = "MODsuit Electric Palm Module"
-	desc = "A MODsuit module developed after a single researcher at Cybersun Industries heard of the Spider Clan's hacker module, \
+	desc = "A now discontinued MODsuit module orginally developed by the Spider Clan to give their operatives an edge in unarmed combat. \
 			After installation, this module channels electricity straight from the MODsuit's cell straight into the palm of the user's hands, \
 			allowing for quick electrically-induced stuns to unsuspecting enemies."
-	item = /obj/item/mod/module/electricpalm
+	item = /obj/item/mod/module/hacker/electricpalm
 	cost = 3
 	purchasable_from = ~UPLINK_SPY
 

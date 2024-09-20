@@ -849,7 +849,7 @@
 		/obj/item/mod/module/recycler/ammobox/c10mm,
 		/obj/item/mod/module/recycler/ammobox/m50,
 		/obj/item/mod/module/stealth/syndicate,
-		/obj/item/mod/module/electricpalm,
+		/obj/item/mod/module/hacker/electricpalm,
 		/obj/item/mod/module/energy_net/syndicate,
 		/obj/item/mod/module/adrenaline_boost/syndicate,
 		/obj/item/mod/module/pepper_shoulders, // Not illegal, but i'm keeping it anyways.

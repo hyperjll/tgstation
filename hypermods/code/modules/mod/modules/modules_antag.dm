@@ -164,7 +164,7 @@
 	stealth_alpha = 40
 
 ///Basically a shittier hacker module, doesn't hack doors but can shock people
-/obj/item/mod/module/electricpalm
+/obj/item/mod/module/hacker/electricpalm
 	name = "MOD lightning palm module"
 	desc = "Specifically designed by the MI13, and manufactured at the behest of both Cybersun Industries and Waffle Co. \
 		This modules allows the wearer to channel electrical shocks directly from the MODsuit's battery into the gloves, \
@@ -174,31 +174,22 @@
 	incompatible_modules = list(/obj/item/mod/module/hacker)
 	required_slots = list(ITEM_SLOT_GLOVES)
 
-/obj/item/mod/module/electricpalm/on_suit_activation()
-	RegisterSignal(mod.wearer, COMSIG_LIVING_UNARMED_ATTACK, PROC_REF(shock))
+/obj/item/mod/module/hacker/electricpalm/on_suit_activation()
+	RegisterSignal(mod.wearer, COMSIG_LIVING_UNARMED_ATTACK, PROC_REF(hack))
 
-/obj/item/mod/module/electricpalm/on_suit_deactivation(deleting = FALSE)
+/obj/item/mod/module/hacker/electricpalm/on_suit_deactivation(deleting = FALSE)
 	UnregisterSignal(mod.wearer, COMSIG_LIVING_UNARMED_ATTACK)
 
-/obj/item/mod/module/electricpalm/proc/shock(mob/living/carbon/human/source, obj/item/mod/module/electricpalm/hacking_module, atom/target, proximity, modifiers)
+/obj/item/mod/module/hacker/electricpalm/hack(mob/living/carbon/human/source, atom/target, proximity, modifiers)
 	SIGNAL_HANDLER
 
 	if(!LAZYACCESS(modifiers, RIGHT_CLICK) || !proximity)
 		return NONE
 	target.add_fingerprint(mod.wearer)
 
-	//20 uses for a standard cell. 200 for high capacity cells.
-	if(hacking_module.mod.subtract_charge(DEFAULT_CHARGE_DRAIN*10))
-		//Got that electric touch
-		var/datum/effect_system/spark_spread/spark_system = new /datum/effect_system/spark_spread()
-		spark_system.set_up(5, 0, loc)
-		spark_system.start()
-		visible_message(span_danger("[source] electrocutes [src] with [source.p_their()] touch!"), span_userdanger("[source] electrocutes you with [source.p_their()] touch!"))
-		if(istype(target, /mob/living/carbon/human))
-			var/mob/living/carbon/human/motherfucker = target
-			motherfucker.Knockdown(3 SECONDS)
-			motherfucker.set_jitter_if_lower(3 SECONDS)
-	return NONE
+	//Got that electric touch
+	if(istype(target, /mob/living/carbon/human))
+		return target.ninjadrain_act(mod.wearer, src)
 
 /obj/item/mod/module/energy_net/syndicate
 	name = "syndicate MOD energy net module"
@@ -238,8 +229,8 @@
 
 /obj/projectile/energy_net/syndicate
 	name = "energy net"
-	icon_state = "net_projectile"
 	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "net_projectile"
 	damage = 5 // A little damage for your troubles.
 	range = 9
 
