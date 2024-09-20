@@ -26,9 +26,9 @@
 	var/nuke_icon_state = "nuclearbomb_base"
 
 	/// The amount of discounts that the team get
-	var/discount_team_amount = 5
+	var/discount_team_amount = 10 // doubled to make up for additional categories and new items.
 	/// The amount of limited discounts that the team get
-	var/discount_limited_amount = 10
+	var/discount_limited_amount = 20 // doubled to make up for additional categories and new items.
 
 /datum/antagonist/nukeop/greet()
 	play_stinger()

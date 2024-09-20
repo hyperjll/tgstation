@@ -47,8 +47,8 @@
 	/// The uplink handler that this traitor belongs to.
 	var/datum/uplink_handler/uplink_handler
 
-	var/uplink_sales_min = 4
-	var/uplink_sales_max = 6
+	var/uplink_sales_min = 6 // boosted by 2 to make up for the extra categories
+	var/uplink_sales_max = 8 // boosted by 2 to make up for the extra categories
 
 	///the final objective the traitor has to accomplish, be it escaping, hijacking, or just martyrdom.
 	var/datum/objective/ending_objective
