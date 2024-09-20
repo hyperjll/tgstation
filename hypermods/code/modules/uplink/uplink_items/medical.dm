@@ -139,7 +139,7 @@
 	name = "Hyperzine Injector"
 	desc = "A stimulant injector, containing 30u of hyperzine: enough chems to keep you running fast \
 			and resistant to stuns for 30 seconds. Unlike other stimulants, this chemical mix \
-			greatly increses the metabolism of the user, resulting in weight loss and rapid regeneration."
+			greatly increases the metabolism of the user, resulting in weight loss and rapid regeneration."
 	item = /obj/item/reagent_containers/hypospray/medipen/hyperzine
 	cost = 4
 	surplus = 40
