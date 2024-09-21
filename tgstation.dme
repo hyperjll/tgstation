@@ -6566,6 +6566,7 @@
 #include "hypermods\code\modules\pai\pai.dm"
 #include "hypermods\code\modules\pai\software.dm"
 #include "hypermods\code\modules\paperwork\pen.dm"
+#include "hypermods\code\modules\power\battery.dm"
 #include "hypermods\code\modules\power\cable.dm"
 #include "hypermods\code\modules\power\port_gen.dm"
 #include "hypermods\code\modules\power\lighting\light_items.dm"
