@@ -40,3 +40,18 @@
 	name = ".45 venom bullet casing"
 	desc = "A .45 venom bullet casing."
 	projectile_type = /obj/projectile/bullet/c45/venom
+
+/obj/item/ammo_casing/c45/pacify
+	name = ".45 pacification bullet casing"
+	desc = "A .45 pacification bullet casing."
+	projectile_type = /obj/projectile/bullet/c45/pacify
+
+/obj/item/ammo_casing/c45/delay
+	name = ".45 delayed bullet casing"
+	desc = "A .45 delayed bullet casing."
+	projectile_type = /obj/projectile/bullet/c45/delay
+
+/obj/item/ammo_casing/c45/tranq
+	name = ".45 tranquilizer bullet casing"
+	desc = "A .45 tranquilizer bullet casing."
+	projectile_type = /obj/projectile/bullet/c45/tranq

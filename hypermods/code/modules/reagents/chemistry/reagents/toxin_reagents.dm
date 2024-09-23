@@ -186,3 +186,24 @@
 
 	M.adjustStaminaLoss(5, 0)
 	return ..()
+
+/datum/reagent/toxin/muscleparalyzers
+	name = "Muscle Relaxant"
+	description = "A nonlethal toxin that causes stamina loss in it's victim following my long lasting paralysis."
+	silent_toxin = TRUE
+	self_consuming = TRUE
+	reagent_state = LIQUID
+	color = "#fef65b"
+	toxpwr = 0
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	data = 35
+
+/datum/reagent/toxin/muscleparalyzers/on_mob_life(mob/living/carbon/affected_mob)
+	switch(current_cycle)
+		if(1 to 10)
+			affected_mob.adjustStaminaLoss(REM * data, 0)
+		if(10 to INFINITY)
+			affected_mob.adjustStaminaLoss(REM * data, 0)
+			affected_mob.Paralyze(5 SECONDS * REM)
+			. = TRUE
+	..()

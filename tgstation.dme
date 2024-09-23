@@ -6586,6 +6586,7 @@
 #include "hypermods\code\modules\projectiles\boxes_magazines\ammo_boxes.dm"
 #include "hypermods\code\modules\projectiles\boxes_magazines\external\pistol.dm"
 #include "hypermods\code\modules\projectiles\boxes_magazines\external\rifle.dm"
+#include "hypermods\code\modules\projectiles\boxes_magazines\external\smg.dm"
 #include "hypermods\code\modules\projectiles\boxes_magazines\internal\cannonball.dm"
 #include "hypermods\code\modules\projectiles\boxes_magazines\internal\grenade.dm"
 #include "hypermods\code\modules\projectiles\boxes_magazines\internal\revolver.dm"

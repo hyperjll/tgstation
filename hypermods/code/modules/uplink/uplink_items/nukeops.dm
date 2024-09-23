@@ -99,6 +99,34 @@
 
 // Ammo
 
+/datum/uplink_item/ammo_nuclear/special/smgvenom
+	name = ".45 Venom SMG Magazine (C-20r)"
+	desc = "An additional 24-round .45 magazine suitable for use with the C-20r submachine gun. \
+			These bullets inject the victim with 4 units of Venom in addition to doing regular damage."
+	item = /obj/item/ammo_box/magazine/smgm45/venom
+
+/datum/uplink_item/ammo_nuclear/special/smgpacify
+	name = ".45 Pacification SMG Magazine (C-20r)"
+	desc = "An additional 24-round .45 magazine suitable for use with the C-20r submachine gun. \
+			These bullets infuse Pax within the victim, inhibiting violence within them for atleast 10 seconds per bullet. \
+			Allows for the one-sided fights."
+	item = /obj/item/ammo_box/magazine/smgm45/pacify
+	cost = 6
+
+/datum/uplink_item/ammo_nuclear/special/smgdelay
+	name = ".45 Delayed SMG Magazine (C-20r)"
+	desc = "An additional 24-round .45 magazine suitable for use with the C-20r submachine gun. \
+			These bullets infused a delayed toxin within the host. A single bullet is worth 60 toxin damage."
+	item = /obj/item/ammo_box/magazine/smgm45/delay
+	cost = 6
+
+/datum/uplink_item/ammo_nuclear/special/smgtranq
+	name = ".45 Tranquilizer SMG Magazine (C-20r)"
+	desc = "An additional 24-round .45 magazine suitable for use with the C-20r submachine gun. \
+			These bullets inject a heavy-duty tranquilizer which weakens targets. Multiple shots can leave targets momentarily paralyzed."
+	item = /obj/item/ammo_box/magazine/smgm45/tranq
+	cost = 6
+
 /datum/uplink_item/ammo/syndie_rcd_ammo
 	name = "Syndicate Rapid-Construction-Device Ammo"
 	desc = "A highly compressed package of solid matter for recharging a Rapid-Construction-Device. Holds 1000 matter in total."

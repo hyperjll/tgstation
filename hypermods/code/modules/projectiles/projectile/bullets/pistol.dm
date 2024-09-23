@@ -32,6 +32,87 @@
 	damage = 15
 	fire_stacks = 2
 
+/obj/projectile/bullet/c9mm/cs
+	name = "9mm caseless bullet"
+	damage = 17
+	speed = 0.5
+
+/obj/projectile/bullet/c9mm/emp
+	name = "9mm EMP bullet"
+	damage = 15
+
+/obj/projectile/bullet/c9mm/emp/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	..()
+	empulse(target, heavy_range = 1, light_range = 2) //Heavy EMP on target, light EMP in tiles around
+
+/obj/projectile/bullet/c9mm/cryo
+	name = "9mm cryogenic bullet"
+	damage = 20
+
+/obj/projectile/bullet/c9mm/cryo/on_hit(atom/target, blocked, pierce_hit)
+	if(iscarbon(target))
+		var/mob/living/carbon/victim = target
+		victim.reagents.add_reagent(/datum/reagent/inverse/cryostylane, 10)
+	return ..()
+
+/obj/projectile/bullet/c9mm/richochet
+	name = "9mm richochet bullet"
+	damage = 20
+	wound_bonus = -30
+	wound_falloff_tile = -2.5
+	bare_wound_bonus = 15
+	ricochets_max = 2
+	reflect_range_decrease = 1
+	ricochet_chance = 100
+	ricochet_auto_aim_range = 3
+	ricochet_auto_aim_angle = 50
+	ricochet_incidence_leeway = 0
+
+/obj/projectile/bullet/c9mm/bomb
+	name = "9mm explosive bullet"
+	damage = 5
+
+/obj/projectile/bullet/c9mm/bomb/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	..()
+	explosion(target, 0, 0, 1, flame_range = 0)
+
+/obj/projectile/bullet/c9mm/sonic
+	name = "9mm sonic bullet"
+	damage = 10
+	var/base_damage = 8
+	var/sonic_range = 3
+
+/obj/projectile/bullet/c9mm/sonic/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	..()
+	var/sonic_turf = get_turf(src)
+	if(!sonic_turf)
+		return
+
+	playsound(sonic_turf, 'sound/effects/screech.ogg', 8, TRUE)
+
+	for(var/mob/living/M in get_hearers_in_view(sonic_range, sonic_turf))
+		bang(get_turf(M), M)
+
+/obj/projectile/bullet/c9mm/sonic/proc/bang(turf/T , mob/living/M)
+	if(M.stat == DEAD)	//They're dead!
+		return
+	M.Paralyze(1 SECONDS)
+	M.Knockdown(3 SECONDS)
+	M.adjust_confusion(5 SECONDS)
+	M.adjust_jitter(5 SECONDS)
+	M.soundbang_act(1, 20, 10, 15)
+	M.adjustOrganLoss(ORGAN_SLOT_EARS, -base_damage)
+
+/obj/projectile/bullet/c9mm/mutate
+	name = "9mm mutation bullet"
+	damage = 15
+
+/obj/projectile/bullet/c9mm/mutate/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	if(iscarbon(target))
+		var/mob/living/carbon/victim = target
+		victim.easy_random_mutate(NEGATIVE | MINOR_NEGATIVE)
+	return ..()
+
 // 10mm
 
 /obj/projectile/bullet/c10mm
@@ -98,6 +179,32 @@
 	..()
 	empulse(target, heavy_range = 1, light_range = 2) //Heavy EMP on target, light EMP in tiles around
 
+/obj/projectile/bullet/c10mm/bleedout
+	name = "10mm bleedout bullet"
+	damage = 25
+
+/obj/projectile/bullet/c10mm/bleedout/on_hit(atom/target, blocked, pierce_hit)
+	if(iscarbon(target))
+		var/mob/living/carbon/victim = target
+		victim.reagents.add_reagent(/datum/reagent/toxin/heparin, 5)
+	return ..()
+
+/obj/projectile/bullet/c10mm/rad
+	name = "10mm radiation bullet"
+	damage = 30
+
+/obj/projectile/bullet/c10mm/rad/on_hit(atom/target, blocked, pierce_hit)
+	if(iscarbon(target))
+		var/mob/living/carbon/victim = target
+		if (!HAS_TRAIT(victim, TRAIT_IRRADIATED) && SSradiation.can_irradiate_basic(victim))
+			victim.AddComponent(/datum/component/irradiated)
+	return ..()
+
+/obj/projectile/bullet/pellet/c10mm
+	name = "10mm fragmentation pellet"
+	damage = 10 // potentially 50 damage if you point blank someone.
+
+// .38
 
 /obj/projectile/bullet/c38
 	name = ".38 special bullet"

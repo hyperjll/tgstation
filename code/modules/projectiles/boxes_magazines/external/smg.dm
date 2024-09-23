@@ -86,14 +86,23 @@
 
 /obj/item/ammo_box/magazine/smgm45/ap
 	name = "SMG magazine (Armour Piercing .45)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon_state = "c20r45A"
+	base_icon_state = "c20r45A"
 	ammo_type = /obj/item/ammo_casing/c45/ap
 
 /obj/item/ammo_box/magazine/smgm45/hp
 	name = "SMG magazine (Hollow Point .45)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon_state = "c20r45H"
+	base_icon_state = "c20r45H"
 	ammo_type = /obj/item/ammo_casing/c45/hp
 
 /obj/item/ammo_box/magazine/smgm45/incen
 	name = "SMG magazine (Incendiary .45)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon_state = "c20r45I"
+	base_icon_state = "c20r45I"
 	ammo_type = /obj/item/ammo_casing/c45/inc
 
 /obj/item/ammo_box/magazine/tommygunm45

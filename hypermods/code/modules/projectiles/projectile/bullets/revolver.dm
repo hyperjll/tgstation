@@ -1,3 +1,5 @@
+// .357 (Syndie Revolver)
+
 /obj/projectile/bullet/pellet/a357_ironfeather
 	name = ".357 Ironfeather pellet"
 	damage = 8 //Total of 48 damage assuming PBS
@@ -127,3 +129,75 @@
 	if(isliving(target))
 		var/mob/living/M = target
 		M.adjust_bodytemperature(((100-blocked)/100)*(temperature - M.bodytemperature))
+
+// .50AE (Desert Eagle)
+
+/obj/projectile/bullet/a50ae/ap
+	name = ".50AE AP bullet"
+	damage = 50
+	armour_penetration = 40
+	embed_type = null
+	shrapnel_type = null
+
+/obj/projectile/bullet/a50ae/hp
+	name = ".50AE HP bullet"
+	damage = 80
+	weak_against_armour = TRUE
+
+/obj/projectile/bullet/incendiary/a50ae
+	name = ".50AE incendiary bullet"
+	damage = 30
+	fire_stacks = 2
+
+/obj/projectile/bullet/a50ae/cs
+	name = ".50AE caseless bullet"
+	damage = 40
+	speed = 0.5
+
+/obj/projectile/bullet/a50ae/emp
+	name = ".50AE EMP bullet"
+	damage = 30
+
+/obj/projectile/bullet/a50ae/emp/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	..()
+	empulse(target, heavy_range = 1, light_range = 2) //Heavy EMP on target, light EMP in tiles around
+
+/obj/projectile/bullet/a50ae/hi
+	name = ".50AE hi-power bullet"
+	damage = 120
+	wound_bonus = -50
+
+/obj/projectile/bullet/a50ae/demo
+	name = ".50AE demolish bullet"
+	damage = 40
+	demolition_mod = 20
+
+/obj/projectile/bullet/a50ae/rod
+	name = ".50AE immovable bullet"
+	damage = 240
+	wound_bonus = -100
+	speed = 100 // 100x slower
+
+/obj/projectile/bullet/a50ae/bomb
+	name = ".50AE ordinance bullet"
+	damage = 30
+
+/obj/projectile/bullet/a50ae/bomb/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	..()
+	explosion(target, 0, 1, 3, flame_range = 2)
+
+/obj/projectile/bullet/a50ae/rep
+	name = ".50AE repulsive bullet"
+	damage = 40
+	var/repulse_force = MOVE_FORCE_EXTREMELY_STRONG
+
+/obj/projectile/bullet/a50ae/rep/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	..()
+	var/turf/T = get_turf(src)
+	var/list/thrown_items = list()
+	for(var/atom/movable/A in range(T, 7))
+		if(A == src || A.anchored || thrown_items[A])
+			continue
+		var/throwtarget = get_edge_target_turf(T, get_dir(T, get_step_away(A, T)))
+		A.safe_throw_at(throwtarget, 10, 1, force = repulse_force)
+		thrown_items[A] = A

@@ -48,9 +48,53 @@
 			Loaded with incendiary rounds which inflict little damage, but ignite the target."
 	item = /obj/item/ammo_box/magazine/m9mm/fire
 
+/datum/uplink_item/ammo/pistol/caseless
+	name = "9mm Caseless Magazine"
+	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
+			These rounds leave behind no casings, ensuring little evidence is left behind."
+	item = /obj/item/ammo_box/magazine/m9mm/caseless
+
+/datum/uplink_item/ammo/pistol/emp
+	name = "9mm EMP Magazine"
+	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
+			These rounds release a small EMP pulse upon hitting a target."
+	item = /obj/item/ammo_box/magazine/m9mm/emp
+
+/datum/uplink_item/ammo/pistol/cryo
+	name = "9mm Cryogenic Magazine"
+	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
+			These rounds deploy a cyrogenic chemical that freezes the target solid briefly."
+	item = /obj/item/ammo_box/magazine/m9mm/cryo
+
+/datum/uplink_item/ammo/pistol/richochet
+	name = "9mm Richochet Magazine"
+	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
+			These rounds are capable of bouncing around multiple times. Useful if you've got stormtrooper aim."
+	item = /obj/item/ammo_box/magazine/m9mm/richochet
+
+/datum/uplink_item/ammo/pistol/bomb
+	name = "9mm Explosive Magazine"
+	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
+			These rounds deliver small explosions where they land."
+	item = /obj/item/ammo_box/magazine/m9mm/bomb
+	cost = 2
+
+/datum/uplink_item/ammo/pistol/sonic
+	name = "9mm Sonic Magazine"
+	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
+			These rounds are capable of delivering tiny auditory shockwaves powerful enough to bypass ear protection."
+	item = /obj/item/ammo_box/magazine/m9mm/sonic
+	cost = 2
+
+/datum/uplink_item/ammo/pistol/mutate
+	name = "9mm Mutation Magazine"
+	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
+			These rounds activate negative mutations in its victims, to add insult to injury."
+	item = /obj/item/ammo_box/magazine/m9mm/mutate
+
 /datum/uplink_item/ammo/pistol10mm
 	name = "Pair of 10mm Handgun Magazines"
-	desc = "Two additional 8-round 10mm magazines; compatible with the Viper."
+	desc = "Two additional 8-round 10mm magazines; compatible with the Viper and Ansem Pistol."
 	item = /obj/item/storage/box/syndie_kit/pistol10mmammo
 	cost = 1
 	purchasable_from = ~UPLINK_CLOWN_OPS
@@ -58,53 +102,71 @@
 
 /datum/uplink_item/ammo/pistol10mm/random
 	name = "Random 10mm Handgun Magazines"
-	desc = "A box that contains three random 8-round 10mm magazines at a discount; compatible with the Viper."
+	desc = "A box that contains three random 8-round 10mm magazines at a discount; compatible with the Viper and Ansem Pistol."
 	item = /obj/item/storage/box/syndie_kit/pistolammo10mm/random
 	cost = 2
 
 /datum/uplink_item/ammo/pistol10mm/ap
 	name = "10mm Armor-Piercing Magazine"
-	desc = "An additional 8-round 10mm magazine; compatible with the Viper. \
+	desc = "An additional 8-round 10mm magazine; compatible with the Viper and Ansem Pistol. \
 			These rounds are less effective at injuring the target but penetrate protective gear."
 	item = /obj/item/ammo_box/magazine/m10mm/ap
 
 /datum/uplink_item/ammo/pistol10mm/hp
 	name = "10mm Hollow-Point Magazine"
-	desc = "An additional 8-round 10mm magazine; compatible with the Viper. \
+	desc = "An additional 8-round 10mm magazine; compatible with the Viper and Ansem Pistol. \
 			These rounds are more damaging but ineffective against armour."
 	item = /obj/item/ammo_box/magazine/m10mm/hp
 	cost = 2
 
 /datum/uplink_item/ammo/pistol10mm/fire
 	name = "10mm Incendiary Magazine"
-	desc = "An additional 8-round 10mm magazine; compatible with the Viper. \
+	desc = "An additional 8-round 10mm magazine; compatible with the Viper and Ansem Pistol. \
 			Loaded with incendiary rounds which inflict reduced damage, but ignite the target."
 	item = /obj/item/ammo_box/magazine/m10mm/fire
 
 /datum/uplink_item/ammo/pistol10mm/cs
 	name = "10mm Caseless Magazine"
-	desc = "An additional 8-round 10mm magazine; compatible with the Viper. \
+	desc = "An additional 8-round 10mm magazine; compatible with the Viper and Ansem Pistol. \
 			These rounds will leave no casings behind when fired."
 	item = /obj/item/ammo_box/magazine/m10mm/cs
 
 /datum/uplink_item/ammo/pistol10mm/sleepy
 	name = "Pair of 10mm Soporific Magazines"
-	desc = "Two additional 8-round 10mm magazines; compatible with the Viper. \
+	desc = "Two additional 8-round 10mm magazines; compatible with the Viper and Ansem Pistol. \
 			These rounds will deliver small doses of tranqulizers on hit, knocking the target out after a few successive hits."
 	item = /obj/item/storage/box/syndie_kit/pistolsleepyammo
 
 /datum/uplink_item/ammo/pistol10mm/emp
 	name = "10mm EMP Magazine"
-	desc = "An additional 8-round 10mm magazine; compatible with the Viper. \
+	desc = "An additional 8-round 10mm magazine; compatible with the Viper and Ansem Pistol. \
 			Loaded with bullets which release micro-electromagnetic pulses on hit, disrupting electronics on the target hit."
 	item = /obj/item/ammo_box/magazine/m10mm/emp
+
+/datum/uplink_item/ammo/pistol10mm/bleedout
+	name = "10mm Bleedout Magazine"
+	desc = "An additional 8-round 10mm magazine; compatible with the Viper and Ansem Pistol. \
+			Loaded with bullets which deliver a heparin payload which results in severe bloodloss in their victims.."
+	item = /obj/item/ammo_box/magazine/m10mm/bleedout
+
+/datum/uplink_item/ammo/pistol10mm/rad
+	name = "10mm Radiation Magazine"
+	desc = "An additional 8-round 10mm magazine; compatible with the Viper and Ansem Pistol. \
+			Loaded with bullets which irradiate their victims instantly."
+	item = /obj/item/ammo_box/magazine/m10mm/rad
+
+/datum/uplink_item/ammo/pistol10mm/fragment
+	name = "10mm Fragmentation Magazine"
+	desc = "An additional 8-round 10mm magazine; compatible with the Viper and Ansem Pistol. \
+			Loaded with bullets which spread 5 pellets in a tight spread. Potentially devastating if fired point-blank into target."
+	item = /obj/item/ammo_box/magazine/m10mm/fragment
 
 /datum/uplink_item/ammo/handgun45
 	name = "Pair of .45mm Handgun Magazines"
 	desc = "Two additional 8-round .45mm magazines, compatible with the M1911 pistol and the Cobra."
 	item = /obj/item/storage/box/syndie_kit/fourtyfivemmmagbox
 	cost = 1
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/handgun45/random
@@ -115,20 +177,20 @@
 
 /datum/uplink_item/ammo/handgun45/ap
 	name = ".45mm Armor Piercing Magazine"
-	desc = "A single 8-round Armor Piercing .45mm magazines, compatible with the M1911 pistol and the Cobra. \
+	desc = "A single 8-round Armor Piercing .45mm magazine, compatible with the M1911 pistol and the Cobra. \
 			Exceptional when used against armored targets."
 	item = /obj/item/ammo_box/magazine/m45/ap
 
 /datum/uplink_item/ammo/handgun45/hp
 	name = ".45mm Hollow Point Magazine"
-	desc = "A single 8-round Hollow Point .45mm magazines, compatible with the M1911 pistol and the Cobra. \
+	desc = "A single 8-round Hollow Point .45mm magazine, compatible with the M1911 pistol and the Cobra. \
 			Ineffective against armored targets, but very good again non-armored targets."
 	item = /obj/item/ammo_box/magazine/m45/hp
 	cost = 2
 
 /datum/uplink_item/ammo/handgun45/inc
 	name = ".45mm Incendiary Magazine"
-	desc = "A single 8-round Incendiary .45mm magazines, compatible with the M1911 pistol and the Cobra. \
+	desc = "A single 8-round Incendiary .45mm magazine, compatible with the M1911 pistol and the Cobra. \
 			These bullets will lit your targets ablaze, though they don't leave behind a trail of fire."
 	item = /obj/item/ammo_box/magazine/m45/inc
 
@@ -145,15 +207,38 @@
 
 /datum/uplink_item/ammo/handgun45/emp
 	name = ".45mm EMP Handgun Magazine"
-	desc = "A single 8-round EMP .45mm magazines, compatible with the M1911 pistol and the Cobra. \
+	desc = "A single 8-round EMP .45mm magazine, compatible with the M1911 pistol and the Cobra. \
 			Shots emit a tiny electro-magnetic pulse where they hit."
 	item = /obj/item/ammo_box/magazine/m45/emp
 
 /datum/uplink_item/ammo/handgun45/venom
 	name = ".45mm Venom Handgun Magazine"
-	desc = "A single 8-round Venom .45mm magazines, compatible with the M1911 pistol and the Cobra. \
+	desc = "A single 8-round Venom .45mm magazine, compatible with the M1911 pistol and the Cobra. \
 			These bullets inject the victim with 4 units of Venom in addition to doing regular damage."
 	item = /obj/item/ammo_box/magazine/m45/venom
+
+/datum/uplink_item/ammo/handgun45/pacify
+	name = ".45mm Pacification Handgun Magazine"
+	desc = "A single 8-round Pacification .45mm magazine, compatible with the M1911 pistol and the Cobra. \
+			These bullets infuse Pax within the victim, inhibiting violence within them for atleast 10 seconds per bullet. \
+			Allows for the one-sided fights."
+	item = /obj/item/ammo_box/magazine/m45/pacify
+	cost = 2
+
+/datum/uplink_item/ammo/handgun45/delay
+	name = ".45mm Delayed Handgun Magazine"
+	desc = "A single 8-round Delayed .45mm magazine, compatible with the M1911 pistol and the Cobra. \
+			These bullets infused a delayed toxin within the host. A single bullet is worth 60 toxin damage."
+	item = /obj/item/ammo_box/magazine/m45/delay
+	cost = 2
+
+/datum/uplink_item/ammo/handgun45/tranq
+	name = ".45mm Tranquilizer Handgun Magazine"
+	desc = "A single 8-round Tranquilizer .45mm magazine, compatible with the M1911 pistol and the Cobra. \
+			These bullets inject a heavy-duty tranquilizer which weakens targets. Multiple shots can leave targets momentarily paralyzed."
+	item = /obj/item/ammo_box/magazine/m45/tranq
+	cost = 2
+
 /**
 /datum/uplink_item/ammo/revolver
 	name = ".357 Speed Loader"
@@ -162,8 +247,8 @@
 	item = /obj/item/ammo_box/a357
 	cost = 4
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) //nukies get their own version
-
 **/
+
 /datum/uplink_item/ammo/revolver/random
 	name = "Random .357 Speed Loader Box"
 	desc = "A box with two random .357 speed loaders. Who knows what fun toys you might get?"
@@ -216,6 +301,74 @@
 	cost = 4
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/ammo/deagle/ap
+	name = ".50 AE-AP Handgun Magazine"
+	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
+			These rounds are less effective at injuring the target but penetrate protective gear."
+	item = /obj/item/ammo_box/magazine/m50/ap
+	cost = 5
+
+/datum/uplink_item/ammo/deagle/hp
+	name = ".50 AE-HP Handgun Magazine"
+	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
+			Ineffective against armored targets, but very good again non-armored targets."
+	item = /obj/item/ammo_box/magazine/m50/hp
+	cost = 5
+
+/datum/uplink_item/ammo/deagle/inc
+	name = ".50 AE-Incendiary Handgun Magazine"
+	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
+			Bursts into flammable liquids upon hitting a valid target, then sparks ignite said liquids."
+	item = /obj/item/ammo_box/magazine/m50/inc
+
+/datum/uplink_item/ammo/deagle/cs
+	name = ".50 AE-Caseless Handgun Magazine"
+	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
+			Leaves behind no casings, for maximum stealth, at the cost of damage."
+	item = /obj/item/ammo_box/magazine/m50/cs
+	cost = 4
+
+/datum/uplink_item/ammo/deagle/emp
+	name = ".50 AE-EMP Handgun Magazine"
+	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
+			Shots emit a tiny electro-magnetic pulse where they hit."
+	item = /obj/item/ammo_box/magazine/m50/emp
+
+/datum/uplink_item/ammo/deagle/hi
+	name = ".50 AE-HiPower Handgun Magazine"
+	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
+			Bullets equipped with augmented explosives, they deal 1.5x more damage than normal. \
+			Excessive use of this ammunition will result in the degredation of your firearm."
+	item = /obj/item/ammo_box/magazine/m50/hi
+	cost = 6
+
+/datum/uplink_item/ammo/deagle/demo
+	name = ".50 AE-Demolish Handgun Magazine"
+	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
+			Extremely effective at demolishing structures such as machines, airlocks, and windows."
+	item = /obj/item/ammo_box/magazine/m50/demo
+
+/datum/uplink_item/ammo/deagle/rod
+	name = ".50 AE-Immovable Handgun Magazine"
+	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
+			Has extremely slow projectile speed, but deals roughly 4x the normal damage."
+	item = /obj/item/ammo_box/magazine/m50/rod
+	cost = 5
+
+/datum/uplink_item/ammo/deagle/bomb
+	name = ".50 AE-Ordinance Handgun Magazine"
+	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
+			These rounds have highly pressurized gases within the bullet thanks to experimental technology. \
+			Bullets explode violently upon impact."
+	item = /obj/item/ammo_box/magazine/m50/bomb
+	cost = 6
+
+/datum/uplink_item/ammo/deagle/rep
+	name = ".50 AE-Repulsive Handgun Magazine"
+	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
+			Bullets emit a burst of gravitational energy, resulting in a repulse effect on the target."
+	item = /obj/item/ammo_box/magazine/m50/rep
 
 /datum/uplink_item/ammo/boltactionammo
 	name = "Stripper Clips"

@@ -56,6 +56,36 @@
 		victim.reagents.add_reagent(/datum/reagent/toxin/venom, 4)
 	return ..()
 
+/obj/projectile/bullet/c45/pacify
+	name = ".45 pacification bullet"
+	damage = 18
+
+/obj/projectile/bullet/c45/pacify/on_hit(atom/target, blocked, pierce_hit)
+	if(iscarbon(target))
+		var/mob/living/carbon/victim = target
+		victim.reagents.add_reagent(/datum/reagent/pax, 1)
+	return ..()
+
+/obj/projectile/bullet/c45/delay
+	name = ".45 delayed bullet"
+	damage = 15
+
+/obj/projectile/bullet/c45/delay/on_hit(atom/target, blocked, pierce_hit)
+	if(iscarbon(target))
+		var/mob/living/carbon/victim = target
+		victim.reagents.add_reagent(/datum/reagent/toxin/amanitin, 5)
+	return ..()
+
+/obj/projectile/bullet/c45/tranq
+	name = ".45 tranquilizer bullet"
+	damage = 4
+
+/obj/projectile/bullet/c45/tranq/on_hit(atom/target, blocked, pierce_hit)
+	if(iscarbon(target))
+		var/mob/living/carbon/victim = target
+		victim.reagents.add_reagent(/datum/reagent/toxin/muscleparalyzers, 3)
+	return ..()
+
 // 4.6x30mm (Autorifles)
 
 /obj/projectile/bullet/c46x30mm
