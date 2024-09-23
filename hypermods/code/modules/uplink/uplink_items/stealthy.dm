@@ -52,7 +52,7 @@
 			Doesn't come with any reagents."
 	item = /obj/item/storage/box/itempack/hypopen
 	cost = 7
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/stealthy_weapons/mindbatterer
 	name = "Mind Batterer"

@@ -117,7 +117,7 @@
 	cost = 5
 	limited_stock = 1
 	restricted_roles = list(JOB_PRISONER, JOB_CAPTAIN)
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS | UPLINK_SPY)
+	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/role_restricted/microbomb_prisoner_implanter
 	name = "Microbomb Implanter"
@@ -746,7 +746,7 @@
 	cost = 3 // A temporary doorjacker that also temporarily halts authorized personnel.
 	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
 
-/datum/uplink_item/race_restricted/xeno_organ_kit
+/datum/uplink_item/role_restricted/xeno_organ_kit
 	name = "Xenomorph Organ Kit"
 	desc = "A kit containing some organs that we've recovered from clearing out xenomorph hives. Contains a plasma vessel, a resin spinner, and an acid gland. \
 			You'll either have to purchase an autosurgeon or have these surgically implanted by someone you can trust."

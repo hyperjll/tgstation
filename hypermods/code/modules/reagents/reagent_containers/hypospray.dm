@@ -22,6 +22,7 @@
 	volume = 80
 	ignore_flags = 1 // So they can heal their comrades.
 	possible_transfer_amounts = list(1,3,5,10,20,30)
+	list_reagents = list(/datum/reagent/medicine/omnizine = 30, /datum/reagent/medicine/stimulants = 30, /datum/reagent/medicine/coagulant/tranexamicacid  = 10, /datum/reagent/medicine/hyronalin = 10)
 
 
 

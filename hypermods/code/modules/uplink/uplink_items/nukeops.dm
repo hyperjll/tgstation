@@ -158,7 +158,7 @@
 	desc = "An medical kit containing a wide variety of bottles containing \"perfectly legal chemicals\" to treat combatants. \
 			Pair with one of our Gorlex Hypospray's for optimal application."
 	item = /obj/item/storage/medkit/hypospray
-	cost = 5
+	cost = 4
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 // Implants

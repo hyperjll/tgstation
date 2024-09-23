@@ -7,23 +7,6 @@
 	surplus = 0
 
 
-/datum/uplink_item/medical/changelingextract
-	name = "Changeling Extract"
-	desc = "A medipen containing a highly complex regenerative chemical donated to us by the Tiger Cooperative Fanatics. \
-			Upon it's application, the user will near-instanteously regrow all of their limbs and organs."
-	item = /obj/item/reagent_containers/hypospray/medipen/limborganregen
-	cost = 4
-	surplus = 10
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/medical/surgerybag
-	name = "Syndicate Surgery Duffel Bag"
-	desc = "The Syndicate surgery duffel bag is a toolkit containing all surgery tools, surgical drapes, \
-			a Syndicate brand MMI, a straitjacket, and a muzzle."
-	item = /obj/item/storage/backpack/duffelbag/syndie/surgery
-	cost = 3
-	surplus = 66
-
 /datum/uplink_item/medical/medical_variety_pack
 	name = "Medical Variety Pack"
 	desc = "A bluespace-compressed medkit containing one first aid kit and potentially some variety first aid kits such as brute and toxin."
@@ -39,6 +22,23 @@
 	cost = 5
 	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/medical/surgerybag
+	name = "Syndicate Surgery Duffel Bag"
+	desc = "The Syndicate surgery duffel bag is a toolkit containing all surgery tools, surgical drapes, \
+			a Syndicate brand MMI, a straitjacket, and a muzzle."
+	item = /obj/item/storage/backpack/duffelbag/syndie/surgery
+	cost = 3
+	surplus = 66
+
+/datum/uplink_item/medical/changelingextract
+	name = "Changeling Extract"
+	desc = "A medipen containing a highly complex regenerative chemical donated to us by the Tiger Cooperative Fanatics. \
+			Upon it's application, the user will near-instanteously regrow all of their limbs and organs."
+	item = /obj/item/reagent_containers/hypospray/medipen/limborganregen
+	cost = 4
+	surplus = 10
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/medipenkit
 	name = "Medipen Kit"
@@ -88,14 +88,6 @@
 	surplus = 60
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/medical/miraclesyringe
-	name = "Miracle Syringe"
-	desc = "Contains 5 units of nearly every effective medicine we could muster, included within are \
-			bicaridine, dermaline, anti-toxin, omnizine, healing nanites, antihol, sanguirite, iron, and potassium iodide."
-	item = /obj/item/reagent_containers/syringe/bluespace/miracle
-	cost = 1
-	surplus = 50
-
 /datum/uplink_item/medical/restore_nanite_kit
 	name = "Restoration Nanite kit"
 	desc = "A box containing 5 restoration nanite auto-injectors, when injected, they quickly heal the patients wounds \
@@ -104,6 +96,14 @@
 	cost = 12
 	surplus = 10
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/medical/miraclesyringe
+	name = "Miracle Syringe"
+	desc = "Contains 5 units of nearly every effective medicine we could muster, included within are \
+			bicaridine, dermaline, anti-toxin, omnizine, healing nanites, antihol, sanguirite, iron, and potassium iodide."
+	item = /obj/item/reagent_containers/syringe/bluespace/miracle
+	cost = 1
+	surplus = 50
 
 /datum/uplink_item/medical/stimpack
 	name = "Stimpack"
@@ -229,7 +229,7 @@
 	name = "Syndicate Augmented Healing Virus"
 	desc = "A autoinjector filled with 5 units of blood. However, within that 5 units of blood contains our most powerful healing virus ever concieved. \
 			Symptoms include: Nocturnal Regeneration, Tissue Hydration, Starlight Condensation, Plasma Fixation, Radioactive Resonance and Self-Respiration. \
-			Not guaranteed to work if used directly on silicon-based humanoids such as androids but may persist through mutation."
+			Not guaranteed to work if used directly on silicon-based humanoids but may persist through mutation."
 	item = /obj/item/reagent_containers/hypospray/medipen/syndicatevirus
 	cost = 8
 	surplus = 5
@@ -241,7 +241,7 @@
 	name = "Syndicate Augmented Healing Virus"
 	desc = "A autoinjector filled with 5 units of blood. However, within that 5 units of blood contains our most powerful healing virus ever concieved. \
 			Symptoms include: Nocturnal Regeneration, Tissue Hydration, Starlight Condensation, Plasma Fixation, Radioactive Resonance and Self-Respiration. \
-			Not guaranteed to work if used directly on silicon-based humanoids such as androids but may persist through mutation."
+			Not guaranteed to work if used directly on silicon-based humanoids but may persist through mutation."
 	item = /obj/item/reagent_containers/hypospray/medipen/syndicatevirus
 	cost = 15
 	surplus = 0
@@ -261,10 +261,20 @@
 
 /datum/uplink_item/medical/gorlexhypo
 	name = "Gorlex Hypospray"
-	desc = "A Vahlen Pharmaceuticals brand hypospray, it's features include an expanded reagent container, the ability to dispense reagents quickly, \
+	desc = "A Gorlex Marauders brand hypospray as manufactured by Vahlen Pharmaceuticals, it's features include an expanded reagent container, the ability to dispense reagents quickly, \
 			and comes filled with various healing chemicals. Has a diamond-tipped needle to penetrate armor."
 	item = /obj/item/reagent_containers/hypospray/gorlex
 	cost = 8
 	surplus = 0
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/medical/evilmeds
+	name = "Box of Premium Medicine"
+	desc = "A Interdyne Pharmaceutics sponsored medicine package, containing 180 units of the following: \
+			Omnizine, Salicylic Acid, Oxandrolone, Pentetic Acid, Atropine, Salbutamol, and Rezadone. \
+			You won't be running out of medicine any time soon. Pairs well with a Hypospray."
+	item = /obj/item/storage/box/evilmeds
+	cost = 12
+	surplus = 0
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS)
