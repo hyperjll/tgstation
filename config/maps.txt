@@ -57,6 +57,10 @@ map dorfworld
 	minplayers 0
 endmap
 
+map kilostation
+	votable
+endmap
+
 # Debug-only maps.
 
 map gateway_test
