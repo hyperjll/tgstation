@@ -4,7 +4,7 @@
 	desc = "Heals a small amount of brute and burn damage to the caster. It has an extended cooldown, likely due to your inexperience."
 
 	button_icon_state = "chuuni"
-	sound = 'sound/magic/staff_healing.ogg'
+	sound = 'sound/effects/magic/staff_healing.ogg'
 	school = SCHOOL_RESTORATION
 	cooldown_time = 60 SECONDS
 	cooldown_reduction_per_rank = 1.25 SECONDS

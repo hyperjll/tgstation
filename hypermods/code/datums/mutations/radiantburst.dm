@@ -38,7 +38,7 @@
 	spell_requirements = NONE
 	school = SCHOOL_EVOCATION
 	cooldown_time = 30 SECONDS
-	sound = 'sound/magic/blind.ogg'
+	sound = 'sound/effects/magic/blind.ogg'
 	var/safe = FALSE
 
 /datum/action/cooldown/spell/aoe/radiantburst/cast(atom/cast_on)
