@@ -120,7 +120,7 @@
 	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_MOB_STUN
 	//var/turf/teslaturf = get_turf(imp_in)
 	tesla_zap(imp_in, zap_range, zap_power, zap_flags)
-	playsound(imp_in, 'sound/machines/defib_zap.ogg', 50, TRUE)
+	playsound(imp_in, 'sound/machines/defib/defib_zap.ogg', 50, TRUE)
 
 /obj/item/implant/tesla/macro
 	zap_range = 20

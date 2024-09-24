@@ -57,7 +57,7 @@
 /obj/projectile/bullet/pellet/shotgun_thundershot
 	name = "thundershot pellet"
 	damage = 3
-	hitsound = 'sound/magic/lightningbolt.ogg'
+	hitsound = 'sound/effects/magic/lightningbolt.ogg'
 	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_LOW_POWER_GEN
 
 /obj/projectile/bullet/pellet/shotgun_thundershot/on_hit(atom/target, blocked = 0, pierce_hit)

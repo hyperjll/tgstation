@@ -90,7 +90,7 @@
 			owner.visible_message(span_danger("The augmented teleport system is still recharging! It fails to teleport [H]!"))
 			return
 		owner.visible_message(span_danger("The reactive teleport system flings [H] clear of [attack_text], shutting itself off in the process!"))
-		do_teleport(H, get_turf(H), tele_range, asoundin = 'sound/magic/blink.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
+		do_teleport(H, get_turf(H), tele_range, asoundin = 'sound/effects/magic/blink.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 		reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
 		return 1
 	return 0
@@ -112,7 +112,7 @@
 			owner.visible_message(span_danger("The augmented incendiary armor on [owner] activates, but fails to send out flames as it is still recharging its flame jets!"))
 			return
 		owner.visible_message(span_danger("[src] blocks [attack_text], sending out jets of flame!"))
-		playsound(get_turf(owner),'sound/magic/fireball.ogg', 100, 1)
+		playsound(get_turf(owner),'sound/effects/magic/fireball.ogg', 100, 1)
 		for(var/mob/living/carbon/C in range(6, owner))
 			if(C != owner)
 				C.adjust_fire_stacks(8)
@@ -204,7 +204,7 @@
 		if(world.time < reactivearmor_cooldown)
 			owner.visible_message(span_danger("The repulse generator is still recharging!"))
 			return 0
-		playsound(get_turf(owner),'sound/magic/repulse.ogg', 100, 1)
+		playsound(get_turf(owner),'sound/effects/magic/repulse.ogg', 100, 1)
 		owner.visible_message(span_danger("[src] blocks [attack_text], converting the attack into a wave of force!"))
 		var/turf/T = get_turf(owner)
 		var/list/thrown_items = list()
@@ -378,7 +378,7 @@
 	armor_type = /datum/armor/armor_reactive/stronger // better armor
 
 /obj/item/clothing/suit/armor/reactive/syndicate/barricade/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	playsound(get_turf(owner),'sound/magic/repulse.ogg', 100, TRUE)
+	playsound(get_turf(owner),'sound/effects/magic/repulse.ogg', 100, TRUE)
 	owner.visible_message(span_danger("The reactive armor interposes matter from another world between [src] and [attack_text]!"))
 	for (var/atom/movable/target in repulse_targets(owner))
 		repulse(target, owner)
@@ -440,7 +440,7 @@
 	reactivearmor_cooldown_duration = 20 SECONDS // halved cooldown
 
 /obj/item/clothing/suit/armor/reactive/syndicate/ectoplasm/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	playsound(get_turf(owner),'sound/hallucinations/veryfar_noise.ogg', 100, TRUE)
+	playsound(get_turf(owner),'sound/effects/hallucinations/veryfar_noise.ogg', 100, TRUE)
 	owner.visible_message(span_danger("The [src] lets loose a burst of otherworldly energy!"))
 
 	haunt_outburst(epicenter = get_turf(owner), range = 8, haunt_chance = 85, duration = 40 SECONDS)

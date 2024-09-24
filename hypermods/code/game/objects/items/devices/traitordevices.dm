@@ -410,7 +410,7 @@
 
 	SSshuttle.supply.callTime += (1 MINUTES)
 
-	priority_announce("Attention, due to data corruption caused by unknown circumstances: The navigation protocols on the cargo shuttle has degraded in quality, the cargo shuttle will take another minute to depart and return. We apologize for the inconveinence.", "Cental Command - Cargo Shuttle Update", 'sound/misc/notice1.ogg')
+	priority_announce("Attention, due to data corruption caused by unknown circumstances: The navigation protocols on the cargo shuttle has degraded in quality, the cargo shuttle will take another minute to depart and return. We apologize for the inconveinence.", "Cental Command - Cargo Shuttle Update", 'sound/announcer/notice/notice1.ogg')
 
 	playsound(src.loc, 'sound/misc/interference.ogg', 50, TRUE)
 	to_chat(user, span_danger("The cargo shuttle navigation corruptor self-destructs!"))

@@ -285,7 +285,7 @@
 	usetime = 3 SECONDS
 
 /obj/item/magicbook/healing/do_effect(mob/user)
-	playsound(user, 'sound/magic/staff_healing.ogg', 50, TRUE)
+	playsound(user, 'sound/effects/magic/staff_healing.ogg', 50, TRUE)
 	for(var/mob/living/carbon/C in range(10, get_turf(user)))
 		var/need_mob_update = FALSE
 		need_mob_update += C.adjustBruteLoss(-5, updating_health = FALSE)
@@ -510,13 +510,13 @@
 					user.visible_message(span_danger("[user] turns \the [old_name] into [transform_string]!"))
 					message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] at [ADMIN_VERBOSEJMP(T)]")
 					user.log_message("used a [src] at [AREACOORD(T)].", LOG_ATTACK)
-					playsound(T,'sound/magic/fireball.ogg', 200, TRUE)
+					playsound(T,'sound/effects/magic/fireball.ogg', 200, TRUE)
 			else // no delay on turning turfs back from lava.
 				sleep(turntobasalttime)
 				var/old_name = T.name
 				if(T.TerraformTurf(reset_turf_type, flags = CHANGETURF_INHERIT_AIR))
 					user.visible_message(span_danger("[user] turns \the [old_name] into [reset_string]!"))
-					playsound(T,'sound/magic/fireball.ogg', 200, TRUE)
+					playsound(T,'sound/effects/magic/fireball.ogg', 200, TRUE)
 		usedrecently = FALSE
 	else
 		to_chat(span_notice("[src]'s powers cannot be invoked right now!"))

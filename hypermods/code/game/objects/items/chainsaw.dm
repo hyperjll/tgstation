@@ -67,7 +67,7 @@
 	butchering.butchering_enabled = on
 
 	if(on)
-		hitsound = 'sound/weapons/chainsawhit.ogg'
+		hitsound = 'sound/items/weapons/chainsawhit.ogg'
 		chainsaw_loop.start()
 	else
 		hitsound = SFX_SWING_HIT

@@ -12,10 +12,10 @@
 	can_suppress = FALSE
 	bolt_type = BOLT_TYPE_LOCKING
 	fire_delay = 0
-	fire_sound = 'sound/weapons/gun/pistol/shot_alt.ogg'
-	rack_sound = 'sound/weapons/gun/pistol/rack.ogg'
-	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
-	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
+	fire_sound = 'sound/items/weapons/gun/pistol/shot_alt.ogg'
+	rack_sound = 'sound/items/weapons/gun/pistol/rack.ogg'
+	lock_back_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
+	bolt_drop_sound = 'sound/items/weapons/gun/pistol/slide_drop.ogg'
 
 /obj/item/gun/ballistic/automatic/pistol/viper/Initialize(mapload)
 	. = ..()
@@ -39,7 +39,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	can_suppress = FALSE
 	fire_delay = 0
-	fire_sound = 'sound/weapons/gun/pistol/shot_alt.ogg'
+	fire_sound = 'sound/items/weapons/gun/pistol/shot_alt.ogg'
 	cell_type = /obj/item/stock_parts/power_store/cell/secborg
 	ammo_type = list(/obj/item/ammo_casing/energy/c10mm)
 	can_charge = FALSE
@@ -64,10 +64,10 @@
 	mag_display = TRUE
 	can_suppress = FALSE
 	bolt_type = BOLT_TYPE_LOCKING
-	fire_sound = 'sound/weapons/gun/pistol/shot_suppressed.ogg'
-	rack_sound = 'sound/weapons/gun/pistol/rack.ogg'
-	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
-	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
+	fire_sound = 'sound/items/weapons/gun/pistol/shot_suppressed.ogg'
+	rack_sound = 'sound/items/weapons/gun/pistol/rack.ogg'
+	lock_back_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
+	bolt_drop_sound = 'sound/items/weapons/gun/pistol/slide_drop.ogg'
 	fire_sound_volume = 5
 
 /obj/item/gun/ballistic/automatic/pistol/cobra/no_mag

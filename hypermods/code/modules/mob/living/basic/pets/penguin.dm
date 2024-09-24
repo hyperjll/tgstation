@@ -22,7 +22,7 @@
 
 	attack_verb_continuous = "pecks"
 	attack_verb_simple = "peck"
-	attack_sound = 'sound/weapons/punch1.ogg'
+	attack_sound = 'sound/items/weapons/punch1.ogg'
 
 /mob/living/basic/grenadepenguin/death()
 	explosion(src, 0, 2, 4, flame_range = 3)

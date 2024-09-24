@@ -1,7 +1,7 @@
 /obj/item/ammo_casing/energy/radiation/balanced
 	projectile_type = /obj/projectile/energy/radiation/balanced
 	select_name = "declone"
-	fire_sound = 'sound/weapons/pulse3.ogg'
+	fire_sound = 'sound/items/weapons/pulse3.ogg'
 
 /obj/item/ammo_casing/energy/xenoglob
 	projectile_type = /obj/projectile/energy/xenoglob

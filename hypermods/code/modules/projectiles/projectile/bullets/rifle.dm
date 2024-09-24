@@ -85,7 +85,7 @@
 /obj/projectile/bullet/a762/vulcan/on_hit(atom/target, blocked = FALSE, pierce_hit) //God-forsaken mutant of explosion and incendiary code that makes it so it does an explosion basically without the throwing around
 	..()
 	var/turf/central_point = get_turf(target)
-	playsound(loc, 'sound/effects/explosion1.ogg', 20, TRUE)
+	playsound(loc, 'sound/effects/explosion/explosion1.ogg', 20, TRUE)
 	new /obj/effect/hotspot(central_point)
 	central_point.hotspot_expose(700, 50, 1)
 	for(var/turf/warm_spot in RANGE_TURFS(2, central_point)) //Checks all tiles within two spaces of the center

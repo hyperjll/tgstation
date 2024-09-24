@@ -76,7 +76,7 @@
 		visible_message(span_danger("[src] shatters."))
 		status = LIGHT_BROKEN
 		force = 5
-		playsound(src.loc, 'sound/effects/glasshit.ogg', 75, 1)
+		playsound(src.loc, 'sound/effects/glass/glasshit.ogg', 75, 1)
 		if(syndicaterig)
 			atmos_spawn_air("plasma=5") //5u of plasma are required to rig a light bulb/tube
 			addtimer(CALLBACK(src, PROC_REF(syndiplode)), 60 SECONDS)
@@ -91,7 +91,7 @@
 		visible_message(span_danger("[src] shatters."))
 		status = LIGHT_BROKEN
 		force = 5
-		playsound(src.loc, 'sound/effects/glasshit.ogg', 75, 1)
+		playsound(src.loc, 'sound/effects/glass/glasshit.ogg', 75, 1)
 		if(syndicaterig)
 			atmos_spawn_air("plasma=5") //5u of plasma are required to rig a light bulb/tube
 			addtimer(CALLBACK(src, PROC_REF(syndiplode)), 60 SECONDS)

@@ -28,10 +28,10 @@
 	stamina_damage = 45
 	cooldown = 30 SECONDS
 	affect_cyborg = FALSE
-	on_stun_sound = 'sound/effects/contractorbatonhit.ogg'
+	on_stun_sound = 'sound/items/weapons/contractor_baton/contractorbatonhit.ogg'
 
 	on_inhand_icon_state = "contractor_baton_on"
-	on_sound = 'sound/weapons/contractorbatonextend.ogg'
+	on_sound = 'sound/items/weapons/contractorbatonextend.ogg'
 	active_force = 16
 
 /obj/item/melee/baton/telescopic/sleep_baton/additional_effects_non_cyborg(mob/living/target, mob/living/user)

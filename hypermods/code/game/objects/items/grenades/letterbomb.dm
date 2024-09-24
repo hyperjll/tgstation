@@ -52,7 +52,7 @@
 			user.put_in_hands(stuff)
 		else
 			stuff.forceMove(drop_location())
-	playsound(loc, 'sound/items/poster_ripped.ogg', vol = 50, vary = TRUE)
+	playsound(loc, 'sound/items/poster/poster_ripped.ogg', vol = 50, vary = TRUE)
 	explosion(loc,0,1,2, flame_range = 3)
 	qdel(src)
 	return TRUE

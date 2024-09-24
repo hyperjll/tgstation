@@ -16,7 +16,7 @@
 	armour_penetration = 85
 	attack_verb_continuous = list("slashes", "stings", "pricks", "pokes")
 	attack_verb_simple = list("slashed", "stung", "prickled", "poked")
-	hitsound = 'sound/weapons/rapierhit.ogg'
+	hitsound = 'sound/items/weapons/rapierhit.ogg'
 
 /obj/item/melee/beelibsword/afterattack(atom/target, mob/user, proximity = TRUE)
 	. = ..()

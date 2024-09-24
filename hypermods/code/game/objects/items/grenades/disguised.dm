@@ -72,7 +72,7 @@
 			C.throw_mode_on()
 		if(msg)
 			to_chat(user, span_warning("You prime [src]! [capitalize(DisplayTimeText(det_time))]!"))
-	playsound(src, 'sound/weapons/armbomb.ogg', volume, 1)
+	playsound(src, 'sound/items/weapons/armbomb.ogg', volume, 1)
 	active = TRUE
 	addtimer(CALLBACK(src, PROC_REF(prime)), isnull(delayoverride)? det_time : delayoverride)
 

@@ -117,7 +117,7 @@
 			return //Has to double-check return because attacking or one-handing won't actually proc !do_mob, so the channel will seem to continue despite the message that pops out, but this actually ensures that it won't charge despite attacking or one-handing
 		to_chat(user, span_notice("You complete charging the weapon."))
 		user.visible_message(span_warning("[user] looks up as [user.p_their()] hammer begins to crackle and hum!"))
-		playsound(loc, 'sound/magic/lightningshock.ogg', 60, TRUE) //Mainly electric crack
+		playsound(loc, 'sound/effects/magic/lightningshock.ogg', 60, TRUE) //Mainly electric crack
 		playsound(loc, 'sound/effects/magic.ogg', 40, TRUE) //Reverb undertone
 		supercharge()
 		charging = FALSE
@@ -140,7 +140,7 @@
 		var/obj/effect/temp_visual/kinetic_blast/K = new /obj/effect/temp_visual/kinetic_blast(target_turf)
 		K.color = color
 		playsound(loc, 'hypermods/sound/effects/powerhammerhit.ogg', 80, FALSE) //Mainly this sound
-		playsound(loc, 'sound/effects/explosion3.ogg', 20, TRUE) //Bit of a reverb
+		playsound(loc, 'sound/effects/explosion/explosion3.ogg', 20, TRUE) //Bit of a reverb
 		supercharge() //At start so it doesn't give an unintentional message if you hit yourself
 
 		if(ismachinery(target) && !toy)

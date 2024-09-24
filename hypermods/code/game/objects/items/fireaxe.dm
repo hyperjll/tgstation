@@ -57,8 +57,8 @@
 	AddComponent(/datum/component/two_handed, \
 		force_wielded = force_wielded, \
 		icon_wielded = "[base_icon_state]1", \
-		wieldsound = 'sound/weapons/saberon.ogg', \
-		unwieldsound = 'sound/weapons/saberoff.ogg', \
+		wieldsound = 'sound/items/weapons/saberon.ogg', \
+		unwieldsound = 'sound/items/weapons/saberoff.ogg', \
 		wield_callback = CALLBACK(src, PROC_REF(on_wield)), \
 		unwield_callback = CALLBACK(src, PROC_REF(on_unwield)), \
 	)
@@ -66,7 +66,7 @@
 /obj/item/fireaxe/energy/proc/on_wield(obj/item/source, mob/living/carbon/user)
 	w_class = w_class_on
 	sharpness = SHARP_EDGED
-	hitsound = 'sound/weapons/blade1.ogg'
+	hitsound = 'sound/items/weapons/blade1.ogg'
 	START_PROCESSING(SSobj, src)
 	set_light_on(TRUE)
 

@@ -109,7 +109,7 @@
 /obj/item/mod/module/recycler/ammobox/dispense(atom/target)
 	if(!container.use_amount_mat(required_amount, /datum/material/iron))
 		balloon_alert(mod.wearer, "not enough material")
-		playsound(src, 'sound/machines/buzz-sigh.ogg', 50, TRUE)
+		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 50, TRUE)
 		return
 	var/obj/item/ammo_box/product = new ammobox_type(target)
 	attempt_insert_storage(product)
@@ -215,7 +215,7 @@
 	var/obj/projectile/net = new /obj/projectile/energy_net/syndicate(mod.wearer.loc, src)
 	net.preparePixelProjectile(target, mod.wearer)
 	net.firer = mod.wearer
-	playsound(src, 'sound/weapons/punchmiss.ogg', 25, TRUE)
+	playsound(src, 'sound/items/weapons/punchmiss.ogg', 25, TRUE)
 	INVOKE_ASYNC(net, TYPE_PROC_REF(/obj/projectile, fire))
 	drain_power(use_energy_cost)
 
@@ -410,7 +410,7 @@
 /obj/item/mod/module/death_sphere/used()
 	if(lavaland_equipment_pressure_check(get_turf(src)))
 		balloon_alert(mod.wearer, "not enough pressure!")
-		playsound(src, 'sound/weapons/gun/general/dry_fire.ogg', 25, TRUE)
+		playsound(src, 'sound/items/weapons/gun/general/dry_fire.ogg', 25, TRUE)
 		return FALSE
 	return ..()
 
@@ -421,7 +421,7 @@
 	var/obj/projectile/bomb = new /obj/projectile/bullet/mining_bomb/syndicate(mod.wearer.loc)
 	bomb.preparePixelProjectile(target, mod.wearer)
 	bomb.firer = mod.wearer
-	playsound(src, 'sound/weapons/gun/general/grenade_launch.ogg', 75, TRUE)
+	playsound(src, 'sound/items/weapons/gun/general/grenade_launch.ogg', 75, TRUE)
 	INVOKE_ASYNC(bomb, TYPE_PROC_REF(/obj/projectile, fire))
 	drain_power(use_energy_cost)
 
@@ -469,7 +469,7 @@
 
 /obj/structure/mining_bomb/syndicate/boom(atom/movable/firer)
 	visible_message(span_danger("[src] explodes!"))
-	playsound(src, 'sound/magic/magic_missile.ogg', 200, vary = TRUE)
+	playsound(src, 'sound/effects/magic/magic_missile.ogg', 200, vary = TRUE)
 	for(var/turf/closed/mineral/rock in circle_range_turfs(src, 2))
 		rock.gets_drilled()
 	for(var/mob/living/mob in range(3, src)) // range from 1 to 3

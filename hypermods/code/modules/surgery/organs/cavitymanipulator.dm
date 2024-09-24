@@ -89,7 +89,7 @@
 	// Note that this shit runtimes (Cannot execute null.do drop animation())
 	stored_item = null
 	name = initial(name) //get rid of the organ in the name
-	playsound(target.loc, 'sound/weapons/circsawhit.ogg', 50, vary = TRUE)
+	playsound(target.loc, 'sound/items/weapons/circsawhit.ogg', 50, vary = TRUE)
 	update_appearance()
 
 	if(uses)

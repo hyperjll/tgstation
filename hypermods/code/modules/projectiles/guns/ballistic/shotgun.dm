@@ -4,10 +4,10 @@
 	icon = 'icons/obj/weapons/staff.dmi'
 	icon_state = "cane"
 	inhand_icon_state = "stick"
-	fire_sound = 'sound/weapons/gun/shotgun/shot.ogg'
+	fire_sound = 'sound/items/weapons/gun/shotgun/shot.ogg'
 	fire_sound_volume = 90
-	rack_sound = 'sound/weapons/gun/shotgun/rack.ogg'
-	load_sound = 'sound/weapons/gun/shotgun/insert_shell.ogg'
+	rack_sound = 'sound/items/weapons/gun/shotgun/rack.ogg'
+	load_sound = 'sound/items/weapons/gun/shotgun/insert_shell.ogg'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	w_class = WEIGHT_CLASS_NORMAL

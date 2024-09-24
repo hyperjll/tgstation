@@ -15,7 +15,7 @@
 	var/static/obj/item/card/id/access_card = new /obj/item/card/id/advanced/gold/captains_spare()
 	COOLDOWN_DECLARE(last_dash)
 	COOLDOWN_DECLARE(last_attack)
-	var/list/hit_sounds = list('sound/weapons/genhit1.ogg', 'sound/weapons/genhit2.ogg', 'sound/weapons/genhit3.ogg', 'sound/weapons/punch1.ogg', 'sound/weapons/punch2.ogg', 'sound/weapons/punch3.ogg', 'sound/weapons/punch4.ogg')
+	var/list/hit_sounds = list('sound/items/weapons/genhit1.ogg', 'sound/items/weapons/genhit2.ogg', 'sound/items/weapons/genhit3.ogg', 'sound/items/weapons/punch1.ogg', 'sound/items/weapons/punch2.ogg', 'sound/items/weapons/punch3.ogg', 'sound/items/weapons/punch4.ogg')
 	var/list/moving = list()
 
 /obj/item/mdrive/afterattack(atom/target, mob/living/carbon/user)
@@ -83,7 +83,7 @@
 		. += span_notice("A digital display on it reads [COOLDOWN_TIMELEFT(src, last_dash)/10].")
 
 /obj/item/mdrive/proc/reload()
-	playsound(src.loc, 'sound/weapons/kinetic_reload.ogg', 60, 1)
+	playsound(src.loc, 'sound/items/weapons/kinetic_reload.ogg', 60, 1)
 	return
 
 /obj/item/mdrive/proc/nyoom(atom/movable/target, list/path, var/lagdist)

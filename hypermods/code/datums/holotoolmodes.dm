@@ -9,7 +9,7 @@
 	return TRUE
 
 /datum/holotool_mode/proc/on_set(obj/item/holotool/H)
-	H.usesound = sound ? sound : 'sound/items/pshoom.ogg'
+	H.usesound = sound ? sound : 'sound/items/pshoom/pshoom.ogg'
 	H.toolspeed = speed ? speed : 1
 	H.tool_behaviour = behavior ? behavior : null
 
@@ -51,14 +51,14 @@
 
 /datum/holotool_mode/welder
 	name = "holo-welder"
-	sound = list('sound/items/welder.ogg', 'sound/items/welder2.ogg')//so it actually gives the expected feedback from welding
+	sound = list('sound/items/tools/welder.ogg', 'sound/items/tools/welder2.ogg')//so it actually gives the expected feedback from welding
 	behavior = TOOL_WELDER
 
 ////////////////////////////////////////////////
 
 /datum/holotool_mode/knife
 	name = "holo-knife"
-	sound = 'sound/weapons/blade1.ogg'
+	sound = 'sound/items/weapons/blade1.ogg'
 
 /datum/embed_data/holoknife
 	embed_chance = 40
@@ -74,7 +74,7 @@
 	H.attack_verb_simple = list("sliced", "torn", "cut")
 	H.armour_penetration = 45
 	H.embed_type = /datum/embed_data/holoknife
-	H.hitsound = 'sound/weapons/blade1.ogg'
+	H.hitsound = 'sound/items/weapons/blade1.ogg'
 
 /datum/holotool_mode/knife/on_unset(obj/item/holotool/H)
 	..()

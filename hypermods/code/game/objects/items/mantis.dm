@@ -5,7 +5,7 @@
 	icon_state = "mantis"
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/swords_righthand.dmi'
-	hitsound = 'sound/weapons/bladeslice.ogg'
+	hitsound = 'sound/items/weapons/bladeslice.ogg'
 	force = 20
 	armour_penetration = 30
 	wound_bonus = 20

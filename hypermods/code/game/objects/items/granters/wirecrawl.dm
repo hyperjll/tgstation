@@ -18,7 +18,7 @@
 		"Spiral...",
 		"Electro-magnetic...",
 		"Turbo...")
-	book_sounds = list('sound/effects/sparks1.ogg','sound/effects/sparks2.ogg','sound/effects/sparks3.ogg')
+	book_sounds = list('sound/effects/sparks/sparks1.ogg','sound/effects/sparks/sparks2.ogg','sound/effects/sparks/sparks3.ogg')
 	var/admin = FALSE
 
 /obj/item/book/granter/action/wirecrawl/on_reading_start(mob/user)

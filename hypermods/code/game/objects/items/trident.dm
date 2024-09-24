@@ -10,7 +10,7 @@
 	throwforce = 20
 	w_class = WEIGHT_CLASS_BULKY
 	attack_verb_simple = list("attacked", "impaled", "pierced")
-	hitsound = 'sound/weapons/bladeslice.ogg'
+	hitsound = 'sound/items/weapons/bladeslice.ogg'
 	sharpness = SHARP_POINTY
 	max_integrity = 200
 	resistance_flags = FIRE_PROOF

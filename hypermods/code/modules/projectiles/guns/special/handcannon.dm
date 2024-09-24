@@ -4,7 +4,7 @@
 	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "handcannon"
 	inhand_icon_state = "handycannon"
-	fire_sound = 'sound/weapons/gun/general/cannon.ogg'
+	fire_sound = 'sound/items/weapons/gun/general/cannon.ogg'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cannonball
 	w_class = WEIGHT_CLASS_HUGE
 	internal_magazine = TRUE

@@ -13,7 +13,7 @@
 		playsound(interacting_with, 'sound/machines/mining/refinery.ogg', 30, FALSE)
 		if(!do_after(user, 10 SECONDS, interacting_with))
 			balloon_alert(user, "interrupted!")
-			playsound(interacting_with, 'sound/machines/buzz-two.ogg', 30, FALSE)
+			playsound(interacting_with, 'sound/machines/buzz/buzz-two.ogg', 30, FALSE)
 			return
 		var/obj/item/gibtonite/gibore = interacting_with
 		var/turf/target_turf = get_turf(gibore)
@@ -34,7 +34,7 @@
 		playsound(interacting_with, 'sound/machines/mining/refinery.ogg', 30, FALSE)
 		if(!do_after(user, 10 SECONDS, interacting_with))
 			balloon_alert(user, "interrupted!")
-			playsound(interacting_with, 'sound/machines/buzz-two.ogg', 30, FALSE)
+			playsound(interacting_with, 'sound/machines/buzz/buzz-two.ogg', 30, FALSE)
 			return
 		var/obj/item/gibtonite/gibore = interacting_with
 		var/turf/target_turf = get_turf(gibore)

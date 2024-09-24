@@ -23,7 +23,7 @@
 
 	if(user.has_dna()) // Make sure that disguises won't prevent people from circumventing this.
 		base_buyer_name = user.real_name
-		priority_announce("We've just detected an encrypted signal originating from [base_buyer_name], that has resulted in a pod being sent to the station containing what we believe to be a large influx of illegal redspace technology. We believe this to be a massive security issue and we highly advise all security personnel to be on high alert. [base_buyer_name] should be arrested and detained ALIVE as their capture could be valuable to us, though high-ranking officers may provide new directives as normal.", "Cental Command - HIGH PRIORITY ALERT", 'sound/misc/notice1.ogg')
+		priority_announce("We've just detected an encrypted signal originating from [base_buyer_name], that has resulted in a pod being sent to the station containing what we believe to be a large influx of illegal redspace technology. We believe this to be a massive security issue and we highly advise all security personnel to be on high alert. [base_buyer_name] should be arrested and detained ALIVE as their capture could be valuable to us, though high-ranking officers may provide new directives as normal.", "Cental Command - HIGH PRIORITY ALERT", 'sound/announcer/notice/notice1.ogg')
 
 	podspawn(list(
 		"target" = get_turf(user),

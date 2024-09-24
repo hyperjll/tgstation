@@ -50,7 +50,7 @@
 				bastard.update_appearance(UPDATE_ICON)
 		toimplant.Insert(user)//insert stored organ into the user
 	user.visible_message(span_notice("[user] presses a button on [src], and you hear a short mechanical noise."), span_notice("You feel a sharp sting as [src] plunges into your body."))
-	playsound(get_turf(user), 'sound/weapons/circsawhit.ogg', 50, 1)
+	playsound(get_turf(user), 'sound/items/weapons/circsawhit.ogg', 50, 1)
 	storedorgan = null
 	name = initial(name)
 	if(uses != INFINITE)

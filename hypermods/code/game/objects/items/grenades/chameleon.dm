@@ -46,7 +46,7 @@
 	if(iseffect(target))
 		if(!(istype(target, /obj/effect/decal))) //be a footprint
 			return
-	playsound(get_turf(src), 'sound/weapons/flash.ogg', 100, TRUE, -6)
+	playsound(get_turf(src), 'sound/items/weapons/flash.ogg', 100, TRUE, -6)
 	to_chat(user, span_notice("Copied [target]'s appearance."))
 	name = target.name
 	desc = target.desc

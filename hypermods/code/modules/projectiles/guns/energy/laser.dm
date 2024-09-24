@@ -9,7 +9,7 @@
 	burst_size = 0
 	actions_types = list()
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
-	fire_sound = 'sound/weapons/laser.ogg'
+	fire_sound = 'sound/items/weapons/laser.ogg'
 	selfcharge = 1
 	charge_delay = 4
 
