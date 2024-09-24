@@ -137,6 +137,10 @@
 /obj/structure/plaque/static_plaque/golden/commission/birdshot
 	desc = "Spinward Sector Station SS-13\n'Birdshot' Class Outpost\nCommissioned 29/04/2563\n'Shooting for the Stars'"
 
+// Dorf World: added Sep 24, 2024 (#Poopy)
+/obj/structure/plaque/static_plaque/golden/commission/dorfworld
+	desc = "Spinward Sector Station SS-13\n'Dorf World' Class Outpost\nCommissioned 24/09/2563\n'Building from the Ground Up'"
+
 //Removed stations
 
 // Asteroidstation: added Oct 17, 2015 (169ab09f7b52254ee505e54cdea681fab287647b), removed Jun 19, 2016 (#18661)- 8 months, 2 days

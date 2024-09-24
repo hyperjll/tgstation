@@ -52,6 +52,11 @@ map wawastation
 	minplayers 40
 endmap
 
+map dorfworld
+	votable
+	minplayers 0
+endmap
+
 # Debug-only maps.
 
 map gateway_test

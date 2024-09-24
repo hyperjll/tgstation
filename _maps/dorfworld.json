@@ -1,0 +1,17 @@
+{
+	"version": 1,
+	"map_name": "Dorf Station",
+	"map_path": "map_files/DorfWorld",
+	"map_file": "dorfworld.dmm",
+	"shuttles": {
+		"cargo": "cargo_birdshot",
+		"ferry": "ferry_kilo",
+		"whiteship": "whiteship_birdshot",
+		"emergency": "emergency_birdshot"
+	},
+	"job_changes": {
+		"Cook": {
+			"additional_cqc_areas": ["/area/station/service/bar", "/area/station/commons/lounge"]
+		}
+	}
+}
