@@ -549,6 +549,10 @@
 		/obj/item/throwing_star,
 	))
 
+/obj/item/storage/box/syndie_kit/cutouts
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "decoy"
+
 /obj/item/storage/box/syndie_kit/cutouts/PopulateContents()
 	for(var/i in 1 to 3)
 		new/obj/item/cardboard_cutout/adaptive(src)

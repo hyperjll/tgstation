@@ -53,3 +53,8 @@
 /datum/chemical_reaction/tricordrazine
 	results = list(/datum/reagent/medicine/tricordrazine = 3)
 	required_reagents = list(/datum/reagent/medicine/bicaridine = 1, /datum/reagent/medicine/dermaline = 1, /datum/reagent/medicine/antitoxin = 1)
+
+/datum/chemical_reaction/stimulants
+	results = list(/datum/reagent/medicine/stimulants = 3)
+	required_reagents = list(/datum/reagent/vestine = 1, /datum/reagent/medicine/ephedrine = 1, /datum/reagent/oxygen = 2)
+	required_temp = 370

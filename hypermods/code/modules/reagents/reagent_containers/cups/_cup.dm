@@ -191,3 +191,8 @@
 /obj/item/reagent_containers/cup/beaker/large/enchantedgold
 	name = "enchanted gold large beaker"
 	list_reagents = list(/datum/reagent/medicine/enchantedgold = 100)
+
+
+/obj/item/reagent_containers/cup/tube/vestine
+	name = "vestine tube"
+	list_reagents = list(/datum/reagent/vestine = 30)

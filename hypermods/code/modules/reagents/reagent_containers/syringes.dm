@@ -104,3 +104,6 @@
 	desc = "Contains 15 units of light-weight sedatives."
 	list_reagents = list(/datum/reagent/medicine/haloperidol = 15)
 	icon_state = "syringe"
+
+/obj/item/reagent_containers/syringe/contraband/stimulants
+	list_reagents = list(/datum/reagent/medicine/stimulants = 15)

@@ -55,6 +55,12 @@
 
 /datum/reagent/lemoline
 	name = "Lemoline"
-	description = "Synthesized in off-station laboratories, used in several high-quality medicines."
+	description = "Commonly synthesized in off-station laboratories, used in several high-quality medicines."
 	color ="#FFF44F"
 	taste_description = "lemony"
+
+/datum/reagent/vestine
+	name = "Vestine"
+	description = "Produced by Vahlen Pharmaceuticals as a miracle component for producing difficult-to-make or otherwise luxorious reagents."
+	color ="#253654"
+	taste_description = "vaugely evil"

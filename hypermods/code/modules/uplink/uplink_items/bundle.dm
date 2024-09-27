@@ -31,3 +31,42 @@
 		"spawn" = loudkit,
 	))
 	return source //For log icon
+
+/datum/uplink_item/bundles_tc/drugpeddler
+	name = "Drug Peddling Kit"
+	desc = "A box containing 12 hardcore street drugs, for commercial purposes only... \
+			but we'll make an exception for you. Sell them, distribute them, or use these hardcore drugs yourself! \
+			Contents of these kits can vary between purchases. Use with caution."
+	cost = 4
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/box/syndie_kit/drugpeddler
+
+/datum/uplink_item/bundles_tc/chemicalsynth
+	name = "Chemical Synthesis Kit"
+	desc = "A special kit for aspiring chemists out there. Contains 2 beakers, a dropper, \
+			a pair of night-vision science goggles, an empty tube, a syringe of stimulants, and most importantly: \
+			two tubes of Vestine! A miracle compound capable of synthesizing many powerful reagents quickly and conveniently."
+	cost = 4
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/box/syndie_kit/chemicalsynth
+
+/datum/uplink_item/bundles_tc/observe
+	name = "Observation Kit"
+	desc = "A special kit for those information freaks out there. Contains a MEDSEC HUD disguised as a pair of sunglasses, \
+			three biosignaller implanters, and four informational PDA programs that have had their access requirements removed."
+	cost = 5
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/box/syndie_kit/observe
+
+/datum/uplink_item/bundles_tc/disruptor
+	name = "Electrical Disruptor Kit"
+	desc = "The ultimate reversal of energy-based technology! Disables energy weapons, computers, silicon lifeforms, and suit sensors alike! \
+			Contains a EMP implanter, a Tesla Revenge implanter, a EMP-shield implanter, two EMP grenades and \
+			a state-of-the-art SC/FISHER disruptor to take out lights, cameras, and other electronics from a distance!"
+	cost = 5
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/box/syndie_kit/disruptor

@@ -812,6 +812,10 @@
 /obj/item/storage/box/syndie_kit/scramimplant/PopulateContents()
 	new /obj/item/implanter/scram(src)
 
+/obj/item/storage/box/syndie_kit/throwingknives
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "knives"
+
 /obj/item/storage/box/syndie_kit/throwingknives/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/knife/throwing(src)
@@ -863,3 +867,88 @@
 	for(var/i in 1 to 5)
 		var/item = pick(item_list)
 		new item(src)
+
+/obj/item/storage/box/syndie_kit/drugpeddler
+	name = "drug peddler kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "druggie"
+
+/obj/item/storage/box/syndie_kit/drugpeddler/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/drugpeddler/PopulateContents()
+	var/list/item_list = list(
+		/obj/item/food/drug/moon_rock,
+		/obj/item/food/drug/saturnx,
+		/obj/item/reagent_containers/cup/blastoff_ampoule,
+		/obj/item/reagent_containers/hypospray/medipen/morphine,
+		/obj/item/reagent_containers/hypospray/medipen/pumpup,
+		/obj/item/reagent_containers/pill/stimulant,
+		/obj/item/reagent_containers/pill/zoom,
+		/obj/item/reagent_containers/pill/happy,
+		/obj/item/reagent_containers/pill/lsd,
+		/obj/item/reagent_containers/pill/aranesp,
+		/obj/item/reagent_containers/syringe/contraband/krokodil,
+		/obj/item/reagent_containers/syringe/contraband/methamphetamine,
+		/obj/item/reagent_containers/syringe/contraband/bath_salts,
+		/obj/item/reagent_containers/syringe/contraband/fentanyl
+	)
+
+	for(var/i in 1 to 12)
+		var/item = pick(item_list)
+		new item(src)
+
+/obj/item/storage/box/syndie_kit/chemicalsynth
+	name = "chemical synthesis kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "chemicals"
+
+/obj/item/storage/box/syndie_kit/chemicalsynth/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/chemicalsynth/PopulateContents()
+	new /obj/item/reagent_containers/cup/beaker(src)
+	new /obj/item/reagent_containers/cup/beaker(src)
+	new /obj/item/reagent_containers/dropper(src)
+	new /obj/item/clothing/glasses/science/night(src)
+	new /obj/item/reagent_containers/cup/tube/vestine(src)
+	new /obj/item/reagent_containers/cup/tube/vestine(src)
+	new /obj/item/reagent_containers/cup/tube(src)
+	new /obj/item/reagent_containers/syringe/contraband/stimulants(src)
+
+
+/obj/item/storage/box/syndie_kit/observe
+	name = "observation kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "observe"
+
+/obj/item/storage/box/syndie_kit/observe/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/observe/PopulateContents()
+	new /obj/item/clothing/glasses/hud/medsechud/disguised(src)
+	new /obj/item/implanter/biosig(src)
+	new /obj/item/implanter/biosig(src)
+	new /obj/item/implanter/biosig(src)
+	new /obj/item/computer_disk/syndicate/observe(src)
+
+/obj/item/storage/box/syndie_kit/disruptor
+	name = "electrical disruptor kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "disruptor"
+
+/obj/item/storage/box/syndie_kit/disruptor/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/disruptor/PopulateContents()
+	new /obj/item/gun/energy/recharge/fisher(src)
+	new /obj/item/grenade/empgrenade(src)
+	new /obj/item/grenade/empgrenade(src)
+	new /obj/item/implanter/emp(src)
+	new /obj/item/implanter/tesla(src)
+	new /obj/item/implanter/empshield(src)
+

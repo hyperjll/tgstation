@@ -143,3 +143,11 @@
 	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_MADNESS_IMMUNE)
 	hudlist = list(DATA_HUD_MEDICAL_ADVANCED, DATA_HUD_DIAGNOSTIC, DATA_HUD_SECURITY_ADVANCED)
 	actions_types = list(/datum/action/item_action/chameleon/change/glasses/no_preset)
+
+/obj/item/clothing/glasses/hud/medsechud/disguised
+	name = "sunglasses"
+	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Enhanced shielding blocks flashes."
+	icon_state = "sun"
+	inhand_icon_state = "sunglasses"
+	flags_cover = GLASSESCOVERSEYES
+	clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED, TRAIT_MEDICAL_HUD, TRAIT_SECURITY_HUD)
