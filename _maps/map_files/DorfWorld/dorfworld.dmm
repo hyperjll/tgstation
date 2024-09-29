@@ -14,18 +14,24 @@
 	pixel_y = -3
 	},
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "ap" = (
 /obj/item/radio/intercom/prison/directional/west,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "ar" = (
 /obj/machinery/light/directional/north,
 /obj/structure/secure_safe/hos{
 	pixel_x = 36;
 	pixel_y = 28
 	},
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "au" = (
 /obj/machinery/power/apc/auto_name/directional/east,
@@ -66,7 +72,9 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "aE" = (
 /obj/structure/table/optable/abductor,
 /turf/open/floor/plating/abductor,
@@ -84,7 +92,9 @@
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/plating/airless,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "aO" = (
 /obj/machinery/door/airlock/command{
 	name = "Chief Engineer's Office";
@@ -108,7 +118,9 @@
 /obj/effect/spawner/random/armory/riot_armor,
 /obj/effect/spawner/random/armory/bulletproof_armor,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "aY" = (
 /obj/machinery/abductor/pad,
 /turf/open/floor/plating/abductor,
@@ -249,7 +261,9 @@
 /area/station/maintenance/port/aft)
 "cd" = (
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "cf" = (
 /obj/machinery/door/airlock/command{
 	name = "Quartermaster's Office"
@@ -310,7 +324,9 @@
 "cC" = (
 /obj/structure/table,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "cD" = (
 /obj/structure/railing{
 	dir = 8
@@ -367,7 +383,9 @@
 "cP" = (
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "cQ" = (
 /obj/effect/landmark/start/chemist,
 /turf/open/misc/grass/jungle,
@@ -394,7 +412,9 @@
 	})
 "cT" = (
 /turf/open/floor/wood,
-/area/station/engineering/main)
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "cU" = (
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den)
@@ -430,7 +450,9 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "dv" = (
 /obj/machinery/biogenerator,
 /turf/open/floor/wood,
@@ -439,7 +461,9 @@
 	})
 "dy" = (
 /turf/open/floor/wood,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "dz" = (
 /obj/machinery/door/window/brigdoor/security/cell/left/directional/south{
 	id = "Cell 2";
@@ -448,7 +472,9 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "dA" = (
 /obj/structure/secure_safe/caps_spare{
 	pixel_x = -27
@@ -462,7 +488,9 @@
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "dU" = (
 /turf/open/floor/wood,
 /area/station/cargo/storage{
@@ -531,7 +559,9 @@
 	})
 "ej" = (
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "em" = (
 /obj/item/stack/sheet/bronze,
 /turf/open/misc/dirt/station,
@@ -571,7 +601,9 @@
 "ev" = (
 /obj/machinery/hydroponics/soil,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "ey" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
@@ -589,7 +621,9 @@
 /obj/item/radio/intercom/directional/west,
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "eC" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/awaymission/beach{
@@ -639,7 +673,9 @@
 	spawn_random_offset = 1
 	},
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "eN" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks/beer,
@@ -655,7 +691,9 @@
 /obj/machinery/power/energy_accumulator/tesla_coil/anchored,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "eV" = (
 /turf/closed/wall/mineral/wood,
 /area/station/cargo/storage{
@@ -703,12 +741,16 @@
 "fp" = (
 /obj/effect/landmark/start/head_of_security,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "fq" = (
 /obj/effect/landmark/start/lawyer,
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "fs" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
@@ -745,7 +787,9 @@
 "fU" = (
 /obj/effect/landmark/start/warden,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "fV" = (
 /obj/item/seeds/apple/gold,
 /turf/open/floor/mineral/diamond,
@@ -856,7 +900,9 @@
 "gC" = (
 /obj/structure/weightmachine/weightlifter,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "gD" = (
 /obj/structure/table,
 /obj/item/assembly/flash/handheld{
@@ -868,7 +914,9 @@
 	pixel_y = -3
 	},
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "gF" = (
 /turf/open/misc/beach/sand,
 /area/awaymission/beach{
@@ -906,7 +954,9 @@
 /obj/machinery/door/airlock/security/glass,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "gW" = (
 /obj/structure/railing,
 /turf/open/floor/wood,
@@ -922,7 +972,9 @@
 "hj" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "ht" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
@@ -930,7 +982,9 @@
 /obj/item/stack/sheet/mineral/plasma/thirty,
 /obj/item/stack/sheet/mineral/plasma/thirty,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "hw" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/wood,
@@ -951,7 +1005,9 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/engine_equipment,
 /obj/machinery/door/airlock/engineering,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "hM" = (
 /obj/effect/landmark/start/depsec/supply,
 /turf/open/floor/wood,
@@ -962,14 +1018,18 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/riot_shield,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "hP" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plating/airless,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "hU" = (
 /obj/machinery/camera/motion/directional/west,
 /turf/open/misc/grass/jungle,
@@ -1049,7 +1109,9 @@
 "iv" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "iy" = (
 /obj/structure/chair/stool/directional/west,
 /turf/open/floor/wood,
@@ -1062,7 +1124,9 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "iK" = (
 /turf/closed/wall/mineral/wood,
 /area/station/cargo/warehouse{
@@ -1073,7 +1137,9 @@
 /obj/machinery/door/airlock/security/glass,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "iM" = (
 /mob/living/carbon/human/species/monkey,
 /turf/open/misc/grass/jungle,
@@ -1220,7 +1286,9 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering,
 /obj/machinery/door/airlock/engineering,
 /turf/open/floor/wood,
-/area/station/engineering/main)
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "ki" = (
 /obj/structure/rack,
 /obj/item/slime_extract/grey,
@@ -1246,7 +1314,9 @@
 "km" = (
 /obj/structure/cable,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "ko" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
@@ -1302,8 +1372,8 @@
 "kJ" = (
 /obj/docking_port/stationary{
 	dir = 8;
-	dwidth = 3;
-	height = 15;
+	dwidth = 4;
+	height = 18;
 	name = "arrivals";
 	roundstart_template = /datum/map_template/shuttle/arrival/dorf;
 	shuttle_id = "arrival_stationary";
@@ -1323,7 +1393,9 @@
 /obj/structure/water_source/puddle,
 /obj/item/reagent_containers/cup/watering_can,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "kR" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -1391,7 +1463,9 @@
 /obj/machinery/power/energy_accumulator/grounding_rod/anchored,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "lv" = (
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/misc/grass/jungle,
@@ -1409,7 +1483,9 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "lB" = (
 /obj/structure/closet/crate/silvercrate,
 /turf/open/floor/wood,
@@ -1433,7 +1509,9 @@
 "lG" = (
 /obj/machinery/power/emitter,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "lI" = (
 /obj/structure/girder/bronze,
 /turf/open/misc/dirt/station,
@@ -1463,12 +1541,16 @@
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "lU" = (
 /obj/item/stack/license_plates/empty/fifty,
 /obj/item/stack/license_plates/empty/fifty,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/work)
+/area/station/security/prison/work{
+	has_gravity = 1
+	})
 "lV" = (
 /obj/machinery/door/airlock/command{
 	name = "Research Director's Office";
@@ -1492,7 +1574,9 @@
 	},
 /obj/item/storage/lockbox/loyalty,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "ma" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
@@ -1511,7 +1595,9 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "mf" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Bridge Access"
@@ -1541,17 +1627,23 @@
 "mp" = (
 /obj/structure/cable,
 /turf/open/floor/iron/solarpanel/airless,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "mq" = (
 /obj/effect/landmark/start/prisoner,
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "mr" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "mt" = (
 /turf/closed/wall/mineral/wood,
 /area/station/tcommsat/server{
@@ -1560,7 +1652,9 @@
 "mH" = (
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "mN" = (
 /turf/open/floor/carpet/royalblack,
 /area/station/command/heads_quarters/qm{
@@ -1579,7 +1673,9 @@
 	pixel_y = -3
 	},
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "mP" = (
 /obj/machinery/camera/motion/directional/south,
 /turf/open/misc/grass/jungle,
@@ -1606,7 +1702,9 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "mY" = (
 /obj/effect/landmark/start/botanist,
 /turf/open/misc/grass/jungle,
@@ -1666,7 +1764,9 @@
 	})
 "np" = (
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "ns" = (
 /obj/docking_port/stationary{
 	dir = 2;
@@ -1688,7 +1788,9 @@
 	})
 "nu" = (
 /obj/structure/cable,
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "nx" = (
 /obj/machinery/computer/order_console/bitrunning,
@@ -1713,12 +1815,16 @@
 /obj/machinery/camera/autoname/directional/east,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "nB" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/wood,
-/area/station/engineering/storage_shared)
+/area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
 "nD" = (
 /obj/structure/table/wood,
 /obj/machinery/microwave,
@@ -1766,7 +1872,9 @@
 /obj/machinery/power/tracker,
 /obj/structure/cable,
 /turf/open/floor/plating/airless,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "nN" = (
 /obj/machinery/camera/motion/directional/north,
 /turf/open/misc/asteroid/basalt/wasteland,
@@ -1818,12 +1926,16 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/wood,
-/area/station/engineering/main)
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "oi" = (
 /obj/structure/table,
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "oo" = (
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/qm{
@@ -1845,7 +1957,9 @@
 /obj/effect/spawner/random/armory/riot_helmet,
 /obj/effect/spawner/random/armory/bulletproof_helmet,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "oz" = (
 /obj/structure/rack,
 /obj/item/storage/belt/utility,
@@ -1861,7 +1975,9 @@
 /obj/machinery/power/energy_accumulator/tesla_coil/anchored,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "oI" = (
 /obj/structure/mineral_door/silver,
 /turf/open/floor/vault/sandstone,
@@ -1877,16 +1993,22 @@
 "oJ" = (
 /obj/structure/closet/secure_closet/detective,
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "oP" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /turf/open/floor/wood,
-/area/station/engineering/lobby)
+/area/station/engineering/lobby{
+	has_gravity = 1
+	})
 "oW" = (
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom/prison/directional/south,
 /turf/open/floor/wood,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "oZ" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
@@ -1914,19 +2036,27 @@
 "pi" = (
 /obj/machinery/rnd/production/techfab/department/security,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "pl" = (
-/turf/closed/wall/mineral/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "po" = (
 /obj/structure/closet/radiation,
 /turf/open/floor/wood,
-/area/station/engineering/lobby)
+/area/station/engineering/lobby{
+	has_gravity = 1
+	})
 "pA" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/e_gun,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "pB" = (
 /obj/structure/fluff/clockwork/blind_eye,
 /turf/open/misc/dirt/station,
@@ -1941,11 +2071,15 @@
 	})
 "pC" = (
 /turf/closed/wall/mineral/wood,
-/area/station/engineering/lobby)
+/area/station/engineering/lobby{
+	has_gravity = 1
+	})
 "pL" = (
 /obj/item/pipe_dispenser,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "pM" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/maintenance,
@@ -1961,19 +2095,25 @@
 	})
 "pQ" = (
 /obj/structure/cable,
-/turf/open/floor/carpet/royalblack,
-/area/station/command/heads_quarters/hos)
+/turf/open/floor/wood,
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "pY" = (
 /obj/machinery/biogenerator,
 /turf/open/floor/wood,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "qc" = (
 /turf/closed/wall/mineral/wood,
 /area/station/maintenance/aft/greater)
 "qe" = (
 /obj/effect/spawner/random/contraband/prison,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "qh" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/open/floor/mineral/plastitanium/red,
@@ -2013,19 +2153,27 @@
 "qo" = (
 /obj/structure/flora/tree/jungle/style_random,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "qp" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
-/area/station/engineering/lobby)
+/area/station/engineering/lobby{
+	has_gravity = 1
+	})
 "qx" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/disablers,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "qy" = (
 /obj/vehicle/sealed/mecha/ripley/paddy/preset,
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "qz" = (
 /obj/effect/landmark/start/chief_engineer,
@@ -2042,11 +2190,15 @@
 /obj/effect/mapping_helpers/airalarm/tlv_no_checks,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "qE" = (
 /obj/effect/landmark/start/lawyer,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "qK" = (
 /obj/structure/fluff/clockwork/clockgolem_remains,
 /turf/open/misc/dirt/station,
@@ -2070,7 +2222,9 @@
 /obj/machinery/power/energy_accumulator/grounding_rod/anchored,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "qU" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Telecomms - Server Room - Aft-Starboard";
@@ -2237,7 +2391,9 @@
 	})
 "sD" = (
 /turf/open/floor/plating,
-/area/station/engineering/supermatter)
+/area/station/engineering/supermatter{
+	has_gravity = 1
+	})
 "sK" = (
 /obj/structure/railing{
 	dir = 8
@@ -2288,7 +2444,9 @@
 "sZ" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "ta" = (
 /obj/structure/rack,
 /obj/item/stack/sheet/mineral/wood/fifty,
@@ -2372,7 +2530,9 @@
 "tz" = (
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "tF" = (
 /obj/machinery/requests_console/directional/south{
 	department = "Telecomms Admin";
@@ -2422,7 +2582,9 @@
 "uo" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/engineering/lobby)
+/area/station/engineering/lobby{
+	has_gravity = 1
+	})
 "ur" = (
 /obj/machinery/suit_storage_unit/mining,
 /turf/open/floor/wood,
@@ -2444,11 +2606,15 @@
 "uu" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "uv" = (
 /obj/effect/landmark/secequipment,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "uB" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
@@ -2489,7 +2655,9 @@
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "uN" = (
 /obj/structure/fluff/clockwork/alloy_shards,
 /turf/open/misc/dirt/station,
@@ -2554,7 +2722,9 @@
 	})
 "vo" = (
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "vu" = (
 /obj/structure/table,
 /obj/item/inspector{
@@ -2566,14 +2736,20 @@
 	pixel_y = 12
 	},
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "vw" = (
 /obj/structure/closet/secure_closet/hos,
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "vx" = (
 /turf/closed/wall/mineral/wood,
-/area/station/engineering/main)
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "vz" = (
 /obj/structure/table/bronze,
 /obj/item/disk/design_disk/knight_gear,
@@ -2625,7 +2801,9 @@
 "vO" = (
 /obj/item/radio/intercom/prison/directional/north,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "vW" = (
 /obj/structure/table,
 /obj/item/storage/box/chemimp{
@@ -2634,7 +2812,9 @@
 	},
 /obj/item/storage/box/trackimp,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "vZ" = (
 /obj/machinery/telecomms/bus/preset_one,
 /turf/open/floor/circuit/green/telecomms/mainframe,
@@ -2677,13 +2857,17 @@
 /obj/machinery/light/directional/north,
 /obj/machinery/vending/security,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "wo" = (
 /obj/structure/rack,
 /obj/item/gun/energy/temperature/security,
 /obj/item/gun/energy/ionrifle,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "wp" = (
 /obj/effect/spawner/random/structure/crate,
 /turf/open/floor/wood,
@@ -2754,7 +2938,9 @@
 	pixel_y = -32
 	},
 /turf/closed/wall/mineral/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "wP" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/bandages{
@@ -2779,11 +2965,15 @@
 /obj/effect/spawner/random/contraband/prison,
 /obj/machinery/light/directional/north,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "wY" = (
 /obj/structure/bed,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "xb" = (
 /obj/machinery/computer/rdconsole{
 	dir = 8
@@ -2863,7 +3053,9 @@
 /obj/structure/cable,
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/wood,
-/area/station/engineering/main)
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "xM" = (
 /obj/structure/table/reinforced/rglass,
 /obj/item/reagent_containers/cup/glass/bottle/whiskey{
@@ -2878,7 +3070,9 @@
 /obj/structure/bed/dogbed/mcgriff,
 /mob/living/basic/pet/dog/pug/mcgriff,
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "xQ" = (
 /obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/wood,
@@ -2914,7 +3108,9 @@
 /obj/machinery/computer/prisoner/management{
 	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "yd" = (
 /obj/structure/cable,
@@ -2940,7 +3136,9 @@
 	})
 "yF" = (
 /turf/open/floor/wood,
-/area/station/engineering/storage_shared)
+/area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
 "yP" = (
 /obj/structure/flora/tree/jungle/style_random,
 /turf/open/misc/grass/jungle,
@@ -2974,14 +3172,20 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "zg" = (
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "zh" = (
 /obj/effect/landmark/start/prisoner,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "zj" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
@@ -3019,7 +3223,9 @@
 "zE" = (
 /obj/structure/lattice/catwalk,
 /turf/open/misc/beach/sand,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "zH" = (
 /turf/open/floor/vault/sandstone,
 /area/awaymission/beach{
@@ -3033,14 +3239,18 @@
 	})
 "zK" = (
 /turf/closed/wall/r_wall,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "zL" = (
 /obj/structure/chair{
 	dir = 1
 	},
 /obj/effect/landmark/start/security_officer,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "zR" = (
 /obj/effect/landmark/start/paramedic,
 /turf/open/misc/grass/jungle,
@@ -3089,7 +3299,9 @@
 "Ai" = (
 /obj/machinery/rnd/production/protolathe/department/engineering,
 /turf/open/floor/wood,
-/area/station/engineering/storage_shared)
+/area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
 "Ap" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/water/jungle,
@@ -3107,7 +3319,9 @@
 /obj/item/storage/lockbox/loyalty,
 /obj/item/storage/lockbox/loyalty,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "Ax" = (
 /obj/machinery/telecomms/bus/preset_two,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -3184,7 +3398,9 @@
 "Bk" = (
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/wood,
-/area/station/engineering/lobby)
+/area/station/engineering/lobby{
+	has_gravity = 1
+	})
 "Bo" = (
 /obj/item/bedsheet/syndie,
 /obj/structure/bed,
@@ -3212,7 +3428,9 @@
 	})
 "Bv" = (
 /turf/open/floor/wood,
-/area/station/engineering/lobby)
+/area/station/engineering/lobby{
+	has_gravity = 1
+	})
 "BD" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -3259,7 +3477,9 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "BT" = (
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -3270,7 +3490,9 @@
 /obj/machinery/computer/security/hos{
 	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "Cb" = (
 /obj/effect/landmark/start/depsec/science,
@@ -3296,7 +3518,9 @@
 	pixel_y = -3
 	},
 /obj/structure/table/wood,
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "Cj" = (
 /obj/effect/decal/remains/human,
@@ -3313,7 +3537,9 @@
 "Ck" = (
 /obj/machinery/flasher/directional/north,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Cn" = (
 /obj/machinery/byteforge,
 /turf/open/floor/wood,
@@ -3350,14 +3576,20 @@
 /obj/structure/closet/secure_closet/security/sec,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "CO" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
-/area/station/engineering/main)
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "CQ" = (
 /turf/closed/wall/r_wall,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "CV" = (
 /obj/machinery/computer/camera_advanced,
 /turf/open/floor/mineral/plastitanium/red,
@@ -3374,17 +3606,23 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Dd" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/laser_gun,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "Dh" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "Di" = (
 /obj/structure/railing,
 /turf/open/misc/grass/jungle,
@@ -3418,12 +3656,16 @@
 "Dy" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "Dz" = (
 /obj/effect/landmark/event_spawn,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "DH" = (
 /obj/machinery/power/solar_control{
 	dir = 8;
@@ -3431,10 +3673,14 @@
 	name = "Starboard Quarter Solar Control"
 	},
 /turf/open/floor/wood,
-/area/station/maintenance/solars/starboard/aft)
+/area/station/maintenance/solars/starboard/aft{
+	has_gravity = 1
+	})
 "DM" = (
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/work)
+/area/station/security/prison/work{
+	has_gravity = 1
+	})
 "DP" = (
 /obj/structure/cable,
 /obj/machinery/autolathe,
@@ -3467,7 +3713,9 @@
 "DW" = (
 /obj/machinery/gulag_teleporter,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Ec" = (
 /obj/machinery/telecomms/bus/preset_four,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -3476,7 +3724,9 @@
 	})
 "Ed" = (
 /turf/closed/wall/mineral/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "Ee" = (
 /obj/structure/spawner/lavaland/goliath,
 /turf/open/misc/basalt/safe,
@@ -3501,7 +3751,9 @@
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "Ev" = (
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblue,
@@ -3556,7 +3808,9 @@
 	})
 "ET" = (
 /turf/closed/wall/mineral/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "EU" = (
 /obj/machinery/light/directional/north,
 /obj/structure/rack,
@@ -3581,10 +3835,14 @@
 	pixel_y = 2
 	},
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "EW" = (
 /obj/machinery/suit_storage_unit/hos,
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "Fc" = (
 /obj/machinery/camera/autoname/motion/directional/north,
@@ -3633,12 +3891,16 @@
 	})
 "Fn" = (
 /turf/open/misc/grass/jungle,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "Fz" = (
 /obj/machinery/pdapainter/security,
 /obj/structure/cable,
 /obj/structure/cable,
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "FB" = (
 /obj/effect/spawner/random/maintenance,
@@ -3650,12 +3912,16 @@
 "FC" = (
 /obj/structure/closet/secure_closet/security/sec,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "FE" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "FK" = (
 /obj/effect/spawner/random/structure/crate,
 /obj/effect/spawner/random/maintenance,
@@ -3689,7 +3955,9 @@
 /area/station/ai_monitored/command/nuke_storage)
 "Gb" = (
 /turf/closed/wall/mineral/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Ge" = (
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
@@ -3703,7 +3971,9 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Gg" = (
 /obj/machinery/camera/motion/directional/north,
 /turf/open/water/jungle,
@@ -3749,8 +4019,11 @@
 	})
 "Gk" = (
 /obj/structure/cable,
+/obj/machinery/power/terminal,
 /turf/open/floor/wood,
-/area/station/engineering/main)
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "Go" = (
 /obj/effect/spawner/random/structure/crate,
 /obj/effect/spawner/random/maintenance,
@@ -3852,7 +4125,9 @@
 "GT" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "GU" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
@@ -3869,7 +4144,9 @@
 "Hb" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/wood,
-/area/station/engineering/lobby)
+/area/station/engineering/lobby{
+	has_gravity = 1
+	})
 "Hc" = (
 /obj/machinery/telecomms/server/presets/medical,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -3926,7 +4203,9 @@
 "Hs" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/wood,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "HB" = (
 /obj/machinery/door/airlock/wood/glass,
 /obj/structure/cable,
@@ -3939,7 +4218,9 @@
 /obj/structure/window/reinforced/plasma/spawner/directional/east,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "HF" = (
 /obj/item/wheelchair/gold,
 /turf/open/floor/mineral/diamond,
@@ -4003,7 +4284,9 @@
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Ic" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/wood,
@@ -4032,7 +4315,9 @@
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "Ii" = (
 /obj/structure/table/wood/fancy/orange,
 /obj/item/stamp/head/qm{
@@ -4057,11 +4342,15 @@
 /obj/machinery/vending/cola/red,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "Iv" = (
 /obj/effect/landmark/start/prisoner,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "Iz" = (
 /obj/structure/bonfire/prelit,
 /turf/open/floor/vault/sandstone,
@@ -4093,10 +4382,14 @@
 /obj/effect/spawner/random/armory/dragnet,
 /obj/effect/spawner/random/armory/dragnet,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "IG" = (
 /turf/closed/wall/mineral/wood,
-/area/station/engineering/storage_shared)
+/area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
 "IK" = (
 /obj/item/reagent_containers/cup/bucket/wooden,
 /turf/open/floor/wood,
@@ -4118,7 +4411,9 @@
 "IM" = (
 /obj/structure/lattice/catwalk,
 /turf/open/misc/grass/jungle,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "IO" = (
 /obj/structure/rack,
 /obj/item/stack/sheet/iron/fifty,
@@ -4200,14 +4495,18 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/wood,
-/area/station/engineering/lobby)
+/area/station/engineering/lobby{
+	has_gravity = 1
+	})
 "Jv" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/barrier_grenades,
 /obj/effect/spawner/random/armory/barrier_grenades,
 /obj/effect/spawner/random/armory/barrier_grenades,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "Jw" = (
 /obj/effect/landmark/start/research_director,
 /obj/item/circuitboard/computer/rdconsole,
@@ -4223,7 +4522,9 @@
 	},
 /obj/structure/cable,
 /obj/structure/cable,
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "Jy" = (
 /obj/structure/showcase/cyborg/old{
@@ -4248,7 +4549,9 @@
 "JH" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
-/area/station/engineering/storage_shared)
+/area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
 "JS" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood,
@@ -4259,7 +4562,9 @@
 /obj/structure/cable,
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating/airless,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "Kl" = (
 /obj/machinery/suit_storage_unit/hos,
 /obj/machinery/light/directional/west,
@@ -4297,7 +4602,9 @@
 /obj/item/stack/sheet/mineral/plasma/thirty,
 /obj/item/stack/sheet/mineral/plasma/thirty,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "Kv" = (
 /obj/machinery/computer/crew{
 	dir = 8
@@ -4383,7 +4690,9 @@
 "Lz" = (
 /obj/machinery/air_sensor/engine_chamber,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter)
+/area/station/engineering/supermatter{
+	has_gravity = 1
+	})
 "LA" = (
 /obj/machinery/microwave,
 /obj/structure/table/reinforced/titaniumglass,
@@ -4400,7 +4709,9 @@
 "LC" = (
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "Mc" = (
 /obj/effect/landmark/carpspawn,
 /turf/open/water/jungle,
@@ -4450,11 +4761,15 @@
 	},
 /obj/item/gun/grenadelauncher,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "Mz" = (
 /obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "MA" = (
 /obj/effect/decal/remains/human,
 /turf/open/misc/dirt/station,
@@ -4482,13 +4797,17 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/wood,
-/area/station/engineering/storage_shared)
+/area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
 "MI" = (
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/engineering,
 /obj/machinery/door/airlock/engineering,
 /turf/open/floor/wood,
-/area/station/engineering/lobby)
+/area/station/engineering/lobby{
+	has_gravity = 1
+	})
 "ML" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -4560,11 +4879,15 @@
 /obj/item/clothing/suit/hooded/ablative,
 /obj/item/clothing/suit/hooded/ablative,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "Nz" = (
 /obj/machinery/plate_press,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/work)
+/area/station/security/prison/work{
+	has_gravity = 1
+	})
 "NB" = (
 /obj/effect/landmark/start/coroner,
 /turf/open/misc/grass/jungle,
@@ -4588,12 +4911,16 @@
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
 /turf/open/floor/plating/airless,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "NI" = (
 /obj/machinery/computer/records/security{
 	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "NM" = (
 /obj/structure/cable,
@@ -4618,7 +4945,9 @@
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
 /turf/open/floor/plating/airless,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "NU" = (
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
@@ -4632,7 +4961,9 @@
 	})
 "NW" = (
 /obj/effect/landmark/start/head_of_security,
-/turf/open/floor/carpet/royalblack,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "NY" = (
 /turf/closed/wall/mineral/wood,
@@ -4673,7 +5004,9 @@
 	name = "Cell 2 locker"
 	},
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Oo" = (
 /turf/open/misc/dirt/station,
 /area/awaymission/beach{
@@ -4749,11 +5082,15 @@
 /obj/structure/bed,
 /obj/item/bedsheet/red,
 /turf/open/floor/wood,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "OP" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "OQ" = (
 /obj/structure/table/wood,
 /obj/item/storage/toolbox/emergency,
@@ -4762,9 +5099,6 @@
 /area/station/cargo/miningoffice{
 	has_gravity = 1
 	})
-"OW" = (
-/turf/open/floor/wood,
-/area/station/command/heads_quarters/hos)
 "OY" = (
 /obj/structure/flatpack_cart,
 /turf/open/floor/wood,
@@ -4805,7 +5139,9 @@
 "Po" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "Pu" = (
 /obj/structure/bed,
 /obj/item/bedsheet/syndie,
@@ -4822,7 +5158,9 @@
 "Pz" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/wood,
-/area/station/engineering/storage_shared)
+/area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
 "PA" = (
 /turf/open/floor/mineral/titanium,
 /area/awaymission/beach{
@@ -4842,10 +5180,14 @@
 /obj/effect/spawner/random/maintenance/three,
 /obj/effect/spawner/random/contraband/armory,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "PJ" = (
 /turf/closed/wall/r_wall,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "PK" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
@@ -4888,20 +5230,26 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
-/turf/open/floor/wood,
+/turf/closed/wall/mineral/wood{
+	has_gravity = 1
+	},
 /area/station/command/heads_quarters/hos)
 "PQ" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/shotgun,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "PU" = (
 /obj/machinery/camera/autoname/directional/east,
 /obj/machinery/computer/prisoner/gulag_teleporter_computer{
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Qd" = (
 /obj/effect/landmark/start/cook,
 /turf/open/misc/asteroid/basalt/wasteland,
@@ -4917,11 +5265,15 @@
 "Qi" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "Qn" = (
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "Qv" = (
 /obj/machinery/camera/motion/directional/west,
 /turf/open/misc/beach/sand,
@@ -5006,7 +5358,9 @@
 	pixel_y = -32
 	},
 /turf/closed/wall/mineral/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Ru" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/mining,
@@ -5078,7 +5432,9 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /obj/machinery/door/airlock/security/glass,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "RP" = (
 /obj/structure/table/abductor,
 /obj/structure/table/abductor,
@@ -5110,7 +5466,9 @@
 /obj/effect/spawner/structure/window/bronze,
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "RV" = (
 /obj/machinery/door/window/brigdoor/security/cell/left/directional/south{
 	id = "Cell 1";
@@ -5119,7 +5477,9 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Sb" = (
 /obj/effect/spawner/random/structure/crate,
 /obj/effect/spawner/random/maintenance,
@@ -5169,7 +5529,9 @@
 	pixel_x = 8
 	},
 /turf/open/floor/wood,
-/area/station/engineering/storage_shared)
+/area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
 "Sx" = (
 /obj/machinery/vending/hydronutrients,
 /turf/open/floor/wood,
@@ -5180,7 +5542,9 @@
 /obj/structure/cable,
 /obj/effect/landmark/start/depsec/engineering,
 /turf/open/floor/wood,
-/area/station/engineering/main)
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "SB" = (
 /turf/closed/wall,
 /area/awaymission/beach{
@@ -5209,7 +5573,9 @@
 /obj/machinery/light/directional/north,
 /obj/structure/closet/secure_closet/warden,
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "SO" = (
 /obj/effect/landmark/start/bartender,
 /turf/open/misc/grass/jungle,
@@ -5225,7 +5591,9 @@
 "SS" = (
 /obj/effect/landmark/start/security_officer,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "SV" = (
 /obj/structure/chair/bronze,
 /turf/open/floor/bronze,
@@ -5304,7 +5672,9 @@
 "Tj" = (
 /obj/effect/spawner/random/contraband/prison,
 /turf/open/floor/wood,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "Tu" = (
 /turf/closed/wall/mineral/abductor,
 /area/awaymission/beach{
@@ -5355,11 +5725,15 @@
 /obj/structure/lattice/catwalk,
 /obj/effect/landmark/event_spawn,
 /turf/open/misc/grass/jungle,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "TJ" = (
 /obj/effect/landmark/start/detective,
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "TL" = (
 /obj/structure/rack,
 /obj/item/storage/box/donkpockets,
@@ -5379,7 +5753,9 @@
 "TU" = (
 /obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/wood,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "TV" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
@@ -5401,7 +5777,9 @@
 	pixel_y = -3
 	},
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "TZ" = (
 /obj/structure/table/wood,
 /obj/item/storage/medkit/regular{
@@ -5416,7 +5794,9 @@
 /obj/machinery/camera/autoname/directional/west,
 /obj/structure/closet/secure_closet/security/sec,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "Ue" = (
 /obj/structure/table/wood,
 /obj/item/hand_labeler_refill{
@@ -5436,7 +5816,9 @@
 	})
 "Ui" = (
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Un" = (
 /obj/structure/closet/secure_closet/miner,
 /turf/open/floor/wood,
@@ -5446,7 +5828,9 @@
 "Uq" = (
 /obj/machinery/power/smes/engineering,
 /turf/open/floor/wood,
-/area/station/engineering/main)
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "Ur" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/fishing_hooks,
@@ -5464,7 +5848,9 @@
 /obj/structure/bed,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Uv" = (
 /turf/closed/wall/mineral/wood,
 /area/station/command/bridge{
@@ -5549,7 +5935,9 @@
 	pixel_y = -3
 	},
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "Vm" = (
 /obj/machinery/telecomms/processor/preset_one,
 /obj/machinery/camera/directional/north{
@@ -5569,7 +5957,9 @@
 	})
 "Vu" = (
 /turf/open/floor/carpet/royalblack,
-/area/station/security/office)
+/area/station/security/office{
+	has_gravity = 1
+	})
 "VF" = (
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/command/nuke_storage)
@@ -5577,7 +5967,9 @@
 /obj/machinery/camera/autoname/motion/directional/west,
 /obj/effect/landmark/blobstart,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "VJ" = (
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
@@ -5603,7 +5995,9 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/security/armory)
+/area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
 "VU" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/fishing_hooks,
@@ -5640,7 +6034,9 @@
 "Wb" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "We" = (
 /obj/machinery/light/small/directional/south,
 /obj/machinery/computer/rdservercontrol{
@@ -5665,9 +6061,6 @@
 	power_equip = 0;
 	power_light = 0
 	})
-"Wt" = (
-/turf/open/floor/carpet/royalblack,
-/area/station/command/heads_quarters/hos)
 "Wx" = (
 /obj/item/coin/gold,
 /obj/item/stack/sheet/mineral/gold,
@@ -5713,7 +6106,9 @@
 "WT" = (
 /obj/machinery/vending/sustenance,
 /turf/open/floor/wood,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "WW" = (
 /obj/machinery/vending/engivend,
 /turf/open/floor/wood,
@@ -5742,7 +6137,9 @@
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Xj" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Telecomms - Server Room - Aft-Port";
@@ -5769,7 +6166,9 @@
 	})
 "Xn" = (
 /turf/closed/wall/r_wall,
-/area/station/security/brig)
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "Xx" = (
 /obj/structure/bed,
 /obj/item/bedsheet/cosmos,
@@ -5813,7 +6212,9 @@
 "XY" = (
 /obj/effect/landmark/start/depsec/engineering,
 /turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "XZ" = (
 /obj/effect/spawner/random/structure/crate,
 /obj/machinery/light/directional/north,
@@ -5823,7 +6224,9 @@
 /obj/structure/weightmachine/weightlifter,
 /obj/machinery/light/directional/north,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison)
+/area/station/security/prison{
+	has_gravity = 1
+	})
 "Yl" = (
 /obj/machinery/pdapainter/supply,
 /turf/open/floor/wood,
@@ -5868,12 +6271,16 @@
 	})
 "YR" = (
 /turf/closed/wall/mineral/wood,
-/area/station/solars/starboard/aft)
+/area/station/solars/starboard/aft{
+	has_gravity = 1
+	})
 "YW" = (
 /obj/machinery/seed_extractor,
 /obj/item/radio/intercom/prison/directional/east,
 /turf/open/misc/grass/jungle,
-/area/station/security/prison/garden)
+/area/station/security/prison/garden{
+	has_gravity = 1
+	})
 "YZ" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -5888,7 +6295,9 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/lockers)
+/area/station/security/lockers{
+	has_gravity = 1
+	})
 "Zg" = (
 /obj/structure/closet/crate/engineering/electrical,
 /obj/item/solar_assembly,
@@ -5925,11 +6334,15 @@
 /obj/item/solar_assembly,
 /obj/item/stack/sheet/glass/fifty,
 /turf/open/floor/wood,
-/area/station/engineering/main)
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "Zm" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/engineering/storage_shared)
+/area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
 "Zr" = (
 /obj/machinery/light_switch/directional/north,
 /obj/structure/showcase/cyborg/old{
@@ -52754,8 +53167,8 @@ qp
 Hb
 Bk
 cT
-Gk
-Gk
+pQ
+pQ
 hD
 Dy
 Dy
@@ -53012,7 +53425,7 @@ po
 Bk
 cT
 cT
-Gk
+pQ
 zK
 np
 zK
@@ -53269,7 +53682,7 @@ Jr
 Bv
 cT
 cT
-Gk
+pQ
 zK
 np
 zK
@@ -53524,7 +53937,7 @@ Gj
 MI
 uo
 uo
-Gk
+pQ
 Sy
 og
 zK
@@ -53783,7 +54196,7 @@ Pz
 Zm
 cT
 cT
-Gk
+pQ
 zK
 np
 zK
@@ -54040,7 +54453,7 @@ yF
 Zm
 cT
 cT
-Gk
+pQ
 zK
 np
 zK
@@ -54280,7 +54693,7 @@ NI
 BX
 yb
 nu
-OW
+pl
 ET
 vW
 Ub
@@ -54296,8 +54709,8 @@ JH
 So
 nB
 cT
-Gk
-Gk
+pQ
+pQ
 hD
 Dy
 Dy
@@ -54535,8 +54948,8 @@ PJ
 pl
 ar
 NW
-Wt
-pQ
+pl
+nu
 qy
 ET
 wl

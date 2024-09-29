@@ -9,14 +9,14 @@
 "i" = (/obj/structure/table,/obj/item/circuitboard/machine/techfab/department/cargo,/obj/item/circuitboard/machine/techfab/department/engineering,/obj/item/circuitboard/machine/techfab/department/medical,/obj/item/circuitboard/machine/techfab/department/science,/obj/item/circuitboard/machine/techfab/department/security,/obj/item/circuitboard/machine/techfab/department/service,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "j" = (/obj/structure/table,/obj/item/stack/sheet/iron/fifty,/obj/item/stack/sheet/iron/fifty,/obj/item/stack/sheet/iron/fifty,/obj/item/stack/sheet/iron/fifty,/obj/item/stack/sheet/iron/fifty,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "k" = (/obj/structure/table,/obj/item/stack/sheet/mineral/wood/fifty,/obj/item/stack/sheet/mineral/wood/fifty,/obj/item/stack/sheet/mineral/wood/fifty,/obj/item/stack/sheet/mineral/wood/fifty,/obj/item/stack/sheet/mineral/wood/fifty,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
-"l" = (/obj/docking_port/mobile/arrivals,/obj/machinery/power/shuttle_engine/propulsion/burst/right{dir = 4},/turf/open/floor/plating/airless,/area/shuttle/arrival)
+"l" = (/obj/item/storage/medkit/regular,/obj/item/storage/medkit/regular,/obj/item/storage/medkit/regular,/obj/structure/table,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "m" = (/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "n" = (/turf/closed/wall/mineral/titanium,/area/shuttle/arrival)
 "o" = (/obj/structure/table,/obj/item/stack/sheet/mineral/plasma/fifty,/obj/item/stack/sheet/mineral/plasma/fifty,/obj/item/stack/sheet/mineral/plasma/fifty,/obj/item/stack/sheet/mineral/plasma/fifty,/obj/item/stack/sheet/mineral/plasma/fifty,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
-"p" = (/obj/structure/table,/obj/item/storage/medkit/surgery,/obj/item/storage/medkit/surgery,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
+"p" = (/obj/structure/table,/obj/item/storage/belt/utility,/obj/item/storage/belt/utility,/obj/item/storage/toolbox/mechanical{pixel_x = -2; pixel_y = -1},/obj/item/storage/toolbox/mechanical{pixel_x = -2; pixel_y = -1},/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "q" = (/obj/structure/closet/wardrobe/grey,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "r" = (/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
-"s" = (/obj/structure/window/reinforced/spawner/directional/west,/obj/machinery/power/shuttle_engine/heater{dir = 4},/turf/open/floor/plating/airless,/area/shuttle/arrival)
+"s" = (/obj/structure/window/reinforced/spawner/directional/west,/obj/machinery/power/shuttle_engine/heater{dir = 4},/obj/machinery/power/shuttle_engine/propulsion/burst/right{dir = 4},/turf/open/floor/plating/airless,/area/shuttle/arrival)
 "t" = (/obj/machinery/vending/drugs,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "u" = (/obj/machinery/vending/cigarette,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "v" = (/obj/machinery/vending/autodrobe,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
@@ -25,39 +25,37 @@
 "y" = (/obj/structure/table,/obj/item/stack/sheet/glass/fifty,/obj/item/stack/sheet/glass/fifty,/obj/item/stack/sheet/glass/fifty,/obj/item/stack/sheet/glass/fifty,/obj/item/stack/sheet/glass/fifty,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "z" = (/obj/effect/spawner/random/entertainment/arcade,/obj/item/radio/intercom/directional/north,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "A" = (/obj/machinery/vending/wallhypo,/turf/closed/wall/mineral/titanium,/area/shuttle/arrival)
-"B" = (/obj/structure/chair/comfy/shuttle{dir = 8},/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
+"B" = (/obj/structure/chair/comfy/shuttle{dir = 4},/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "C" = (/obj/machinery/vending/clothing,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "D" = (/obj/structure/table,/obj/item/stack/sheet/mineral/silver/fifty,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "E" = (/obj/effect/spawner/structure/window/reinforced/shuttle,/obj/structure/fans/tiny/invisible,/turf/open/floor/plating,/area/shuttle/arrival)
-"F" = (/obj/structure/table,/obj/item/storage/toolbox/mechanical{pixel_x = -2; pixel_y = -1},/obj/item/storage/toolbox/mechanical{pixel_x = -2; pixel_y = -1},/obj/item/storage/toolbox/mechanical{pixel_x = -2; pixel_y = -1},/obj/item/storage/toolbox/mechanical{pixel_x = -2; pixel_y = -1},/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
+"F" = (/obj/structure/chair/comfy/shuttle,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "G" = (/obj/machinery/vending/wallgene,/turf/closed/wall/mineral/titanium,/area/shuttle/arrival)
 "H" = (/obj/machinery/vending/medical,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
-"I" = (/obj/structure/table,/obj/item/storage/medkit/brute,/obj/item/storage/medkit/fire,/obj/item/storage/medkit/o2,/obj/item/storage/medkit/toxin,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
+"I" = (/obj/item/storage/medkit/brute,/obj/item/storage/medkit/fire,/obj/item/storage/medkit/o2,/obj/item/storage/medkit/toxin,/obj/structure/table,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "J" = (/obj/machinery/door/airlock/titanium{name = "Arrivals Shuttle Airlock"},/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "K" = (/obj/machinery/vending/tool,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "L" = (/obj/machinery/vending/wallmed,/turf/closed/wall/mineral/titanium,/area/shuttle/arrival)
 "M" = (/obj/machinery/vending/cola/random,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
-"N" = (/obj/structure/table,/obj/item/vending_refill/assist,/obj/item/vending_refill/autodrobe,/obj/item/vending_refill/cigarette,/obj/item/vending_refill/clothing,/obj/item/vending_refill/coffee,/obj/item/vending_refill/cola,/obj/item/vending_refill/donksoft,/obj/item/vending_refill/drugs,/obj/item/vending_refill/games,/obj/item/vending_refill/medical,/obj/item/vending_refill/modularpc,/obj/item/vending_refill/snack,/obj/item/vending_refill/sustenance,/obj/item/vending_refill/wallhypo,/obj/item/vending_refill/wallmed,/obj/item/vending_refill/youtool,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
-"O" = (/turf/template_noop,/area/template_noop)
+"N" = (/obj/structure/table,/obj/item/vending_refill/assist,/obj/item/vending_refill/autodrobe,/obj/item/vending_refill/cigarette,/obj/item/vending_refill/clothing,/obj/item/vending_refill/coffee,/obj/item/vending_refill/cola,/obj/item/vending_refill/donksoft,/obj/item/vending_refill/drugs,/obj/item/vending_refill/games,/obj/item/vending_refill/medical,/obj/item/vending_refill/modularpc,/obj/item/vending_refill/snack,/obj/item/vending_refill/sustenance,/obj/item/vending_refill/wallhypo,/obj/item/vending_refill/wallmed,/obj/item/vending_refill/youtool,/obj/machinery/requests_console/directional/north{department = "Arrival shuttle"; name = "Arrival Shuttle Requests Console"},/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
+"O" = (/obj/structure/chair/comfy/shuttle{dir = 8},/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "P" = (/obj/machinery/door/airlock/titanium{name = "Arrivals Shuttle Airlock"},/obj/machinery/door/airlock/titanium{name = "Arrivals Shuttle Airlock"},/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
-"Q" = (/obj/machinery/power/shuttle_engine/propulsion/burst/right{dir = 4},/turf/open/floor/plating/airless,/area/shuttle/arrival)
+"Q" = (/obj/structure/window/reinforced/spawner/directional/west,/obj/machinery/power/shuttle_engine/heater{dir = 4},/obj/machinery/power/shuttle_engine/propulsion/burst/right{dir = 4},/turf/closed/wall/mineral/titanium,/area/shuttle/arrival)
 "R" = (/obj/machinery/vending/snack/random,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "T" = (/obj/machinery/vending/donksofttoyvendor,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
-"U" = (/obj/structure/table,/obj/item/storage/medkit/regular,/obj/item/storage/medkit/regular,/obj/item/storage/medkit/regular,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
+"U" = (/obj/item/storage/medkit/surgery,/obj/item/storage/medkit/surgery,/obj/structure/table,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "V" = (/obj/machinery/vending/coffee,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "W" = (/obj/structure/table,/obj/item/stack/sheet/mineral/gold/fifty,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
-"X" = (/obj/structure/table,/obj/item/storage/belt/utility,/obj/item/storage/belt/utility,/obj/item/storage/belt/utility,/obj/item/storage/belt/utility,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
+"X" = (/obj/structure/window/reinforced/spawner/directional/west,/obj/machinery/power/shuttle_engine/heater{dir = 4},/obj/docking_port/mobile/arrivals{name = "dorf arrivals shuttle"},/obj/machinery/power/shuttle_engine/propulsion/burst/right{dir = 4},/turf/open/floor/plating/airless,/area/shuttle/arrival)
 "Y" = (/obj/structure/closet/wardrobe/green,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "Z" = (/obj/machinery/vending/assist,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 
 (1,1,1) = {"
-nnEEnOOOOOOOOOOnEEnn
-nUIpAnEEnJJnEEnLFXsQ
-nhrhriwxzmmzMRNrBjsQ
-nhrhrmrmrmmrmrmrBysQ
-GhrhrYHtemmdKbqrBksl
-nhrhrmrmrmmrmrmrBcsQ
-nhrhraZTgmmgfVarBosQ
-nvCuLnEEnJPnEEnADWsQ
-nnEEnOOOOOOOOOOnEEnn
+nnEEAnEEnJJnEEnLEQ
+nplIUiwxzmmzMRNjys
+GhBhBmrmrmmrmrmOkX
+nhBhBYHteFFdKbqOcs
+nhBhBmrmrmmrmrmOos
+nvCuraZTgmmgfVaDWs
+nnEELnEEnJPnEEnAEn
 "}
