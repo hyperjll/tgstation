@@ -3,11 +3,14 @@
 	"map_name": "Dorf Station",
 	"map_path": "map_files/DorfWorld",
 	"map_file": "dorfworld.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
 	"shuttles": {
 		"cargo": "cargo_birdshot",
 		"ferry": "ferry_kilo",
 		"whiteship": "whiteship_birdshot",
-		"emergency": "emergency_birdshot"
+		"emergency": "emergency_kilo"
 	},
 	"job_changes": {
 		"Cook": {
