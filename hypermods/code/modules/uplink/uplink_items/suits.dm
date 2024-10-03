@@ -37,7 +37,7 @@
 /datum/uplink_item/suits/inquisitory
 	name = "Syndicate Dark Paladin MODsuit"
 	desc = "A blessed high-speed suit (stolen?) by the Gorlex Maradeurs, purposed for less than honest intents. \
-			Comes with all the usual features of an Elite Syndicate NODsuit with some additional modules. \
+			Comes with all the usual features of an Elite Syndicate MODsuit with some additional modules. \
 			Modules include: A flashdark module, a shove blocker, a no-slip module, and a state-of-the-art magic nullification module."
 	item = /obj/item/mod/control/pre_equipped/responsory/inquisitory/syndie/super
 	progression_minimum = 20 MINUTES
