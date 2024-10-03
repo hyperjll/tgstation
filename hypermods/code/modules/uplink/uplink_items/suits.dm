@@ -6,7 +6,7 @@
 	name = "Space Carp Hardsuit"
 	desc = "An ordinary carp suit now with space-faring capabilities, operatives are still advised \
 			to avoid the 'Space Dragon' specimen at all costs as this suit may not fool them."
-	item = /obj/item/clothing/suit/hooded/carp_costume/hardsuit
+	item = /obj/item/clothing/suit/hooded/carp_costume/spaceproof/syndi
 	cost = 4
 	surplus = 15
 
@@ -31,6 +31,16 @@
 			you should still watch out for reagent dartguns as poison can still kill you just as easily."
 	item = /obj/item/mod/control/pre_equipped/juggernaut
 	progression_minimum = 40 MINUTES
+	cost = 18
+	surplus = 5
+
+/datum/uplink_item/suits/inquisitory
+	name = "Syndicate Dark Paladin MODsuit"
+	desc = "A blessed high-speed suit (stolen?) by the Gorlex Maradeurs, purposed for less than honest intents. \
+			Comes with all the usual features of an Elite Syndicate NODsuit with some additional modules. \
+			Modules include: A flashdark module, a shove blocker, a no-slip module, and a state-of-the-art magic nullification module."
+	item = /obj/item/mod/control/pre_equipped/responsory/inquisitory/syndie/super
+	progression_minimum = 20 MINUTES
 	cost = 18
 	surplus = 5
 

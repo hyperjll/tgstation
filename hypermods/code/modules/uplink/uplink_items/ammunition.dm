@@ -427,6 +427,20 @@
 	 // Just a pouch filled with giant hunks of metal.
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
+/datum/uplink_item/ammo/sniper
+	name = ".50 BMG Magazine"
+	desc = "A standard 6-round magazine for use with .50 sniper rifles."
+	cost = 2
+	item = /obj/item/ammo_box/magazine/sniper_rounds
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/ammo/snipersurplus
+	name = ".50 BMG Magazine Box"
+	desc = "A box containing three .50 BMG magazines. Three for the price of two!"
+	cost = 4 //2 TC per magazine
+	item = /obj/item/storage/box/syndie_kit/sniperammo_bundle
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
 /datum/uplink_item/ammo/ammo9mmbox
 	name = "Box of 9mm Rounds"
 	desc = "An ammo box filled with 9mm rounds, used for restocking 9mm magazines. Contains 30 10mm bullets."

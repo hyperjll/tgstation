@@ -88,3 +88,12 @@
 	surplus = 0
 	cant_discount = TRUE
 	purchasable_from = ~UPLINK_SPY
+
+/datum/uplink_item/badass/binoculars
+	name = "Binoculars"
+	desc = "A pair of binoculars. We're not super sure why you'd want a pair of these, but we've gotta dump our surplus somewhere, right?"
+	item = /obj/item/binoculars
+	cost = 1
+	surplus = 0
+	cant_discount = TRUE
+	purchasable_from = ~UPLINK_SPY

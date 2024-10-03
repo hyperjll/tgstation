@@ -52,3 +52,13 @@
 		var/obj/item/I = new /obj/item/stack/spacecash/c1000(floor)
 		if(!atom_storage.attempt_insert(I, user, override = TRUE, force = STORAGE_SOFT_LOCKED))
 			qdel(I)
+
+
+/obj/item/storage/briefcase/sniper_traitor/PopulateContents()
+	..() // in case you need any paperwork done after your rampage
+	new /obj/item/gun/ballistic/rifle/sniper_rifle(src)
+	new /obj/item/clothing/neck/tie/red/hitman(src)
+	new /obj/item/clothing/under/syndicate/sniper(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)
+	new /obj/item/ammo_box/magazine/sniper_rounds(src)

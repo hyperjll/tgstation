@@ -70,3 +70,12 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/disruptor
+
+/datum/uplink_item/bundles_tc/sniper
+	name = "Sniper Bundle"
+	desc = "A briefcase containing a sniper rifle, three additional magazines, and a very nice suit. \
+			Sponsored by the Gorlex Maradeurs, for all the solars snipers out there!"
+	cost = 14
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/briefcase/sniper_traitor

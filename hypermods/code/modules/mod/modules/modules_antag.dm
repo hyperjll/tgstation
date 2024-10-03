@@ -498,3 +498,6 @@
 	wounding_power = 45
 	/// How long we knockdown for on the kick.
 	knockdown_time = 5 SECONDS
+
+/obj/item/mod/module/flashlight/darkness/super
+	light_power = 2

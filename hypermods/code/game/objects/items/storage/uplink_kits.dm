@@ -868,6 +868,21 @@
 		var/item = pick(item_list)
 		new item(src)
 
+/obj/item/storage/box/syndie_kit/sniperammo_bundle
+	name = ".50 BMG magazine box"
+	desc = "A box full of .50 BMG magazines."
+
+/obj/item/storage/box/syndie_kit/sniperammo_bundle/PopulateContents()
+	for(var/i in 1 to 3)
+		new /obj/item/ammo_box/magazine/sniper_rounds(src)
+
+/obj/item/storage/box/syndie_kit/collarbombs
+
+/obj/item/storage/box/syndie_kit/collarbombs/PopulateContents()
+	for(var/i in 1 to 5)
+		new /obj/item/clothing/neck/collar_bomb(src)
+	new /obj/item/storage/box/syndie_kit/signaler(src)
+
 /obj/item/storage/box/syndie_kit/drugpeddler
 	name = "drug peddler kit"
 	icon = 'hypermods/icons/obj/storage/box.dmi'
@@ -951,4 +966,3 @@
 	new /obj/item/implanter/emp(src)
 	new /obj/item/implanter/tesla(src)
 	new /obj/item/implanter/empshield(src)
-

@@ -174,6 +174,19 @@
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
+/datum/uplink_item/special/ailawfucker
+	name = "Ion Law Uploader"
+	desc = "A toy AI with law uploading functionality. Simply play with the toy until is says something particularly interesting and upload it directly to the AI. Chaos Reigns."
+	item = /obj/item/ai_module/toy_ai
+	cost = 6
+	surplus = 0
+
+/datum/uplink_item/special/ailawfucker/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_ION_STORMS))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = -1
+
 /datum/uplink_item/special/syndicaterewinder
 	name = "Syndicate Rewind Camera"
 	desc = "A single polaroid camera, augmented with the best syndicate technology and our finest sepia extracts. \

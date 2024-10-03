@@ -8,6 +8,14 @@
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 
+/datum/uplink_item/dangerous/collarbombs
+	name = "Collar Bombs"
+	desc = "A box containing 5 collar bombs, which must be directly attached to the victims' neck. \
+			After recieving an appropriate signal, the collar bomb explodes resulting in decapitation \
+			after a short delay. Comes with 6 remote signallers for ease of use."
+	item = /obj/item/storage/box/syndie_kit/collarbombs
+	cost = 4
+
 /datum/uplink_item/dangerous/throwingknives
 	name = "Throwing Knives"
 	desc = "Exceptionally lethal throwing knives, they perfectly embed into your foes without much \
@@ -106,6 +114,18 @@
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
+/datum/uplink_item/dangerous/fisher // Normally only available in a special kit, fuck that, this thing's cool as shit.
+	name = "Ansem/SC pistol"
+	desc = "A modified variant of the Ansem, spiritual successor to the \
+			Makarov, featuring an integral suppressor and push-button \
+			trigger on the grip for an underbarrel-mounted disruptor, \
+			similar in operation to the standalone SC/FISHER. \
+			Chambered in 10mm."
+	item = /obj/item/gun/ballistic/automatic/pistol/clandestine/fisher
+	cost = 11
+	surplus = 20
+	//purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // Eh, i'll allow it.
+
 /datum/uplink_item/dangerous/normalrevolver
 	name = ".357 Revolver"
 	desc = "A modernized, .357 revolver. Grown straight from our gatfruit farms. Fires 7 brutal rounds of .357 magnum. \
@@ -130,6 +150,15 @@
 	item = /obj/item/gun/ballistic/automatic/pistol/deagle
 	cost = 10
 	surplus = 45
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/dangerous/sniper_rifle
+	name = "Anti-Materiel Sniper Rifle"
+	desc = "A boltaction anti-materiel rifle, utilizing .50 BMG cartridges. While technically outdated in modern arms markets, it still works exceptionally well as \
+			an anti-personnel rifle. It is also able to be suppressed....somehow."
+	item = /obj/item/gun/ballistic/rifle/sniper_rifle
+	cost = 12
+	surplus = 25
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/fireyaxe
