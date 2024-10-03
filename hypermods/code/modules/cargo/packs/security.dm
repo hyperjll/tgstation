@@ -168,7 +168,7 @@
 /datum/supply_pack/security/armory/ntargrifle
 	name = "NT-ARG Rifle Crate"
 	desc = "Contains three NT-ARG 'Boarder' Rifles, and 6 5.56mm magazines."
-	cost = 8000
+	cost = 15000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/ar,
 					/obj/item/gun/ballistic/automatic/ar,
@@ -184,7 +184,7 @@
 /datum/supply_pack/security/armory/ntargriflesingle
 	name = "NT-ARG Rifle Crate Single-Pack"
 	desc = "Contains one NT-ARG 'Boarder' Rifles, and 2 5.56mm magazines."
-	cost = 4500
+	cost = 8000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/ar,
 					/obj/item/ammo_box/magazine/r556)

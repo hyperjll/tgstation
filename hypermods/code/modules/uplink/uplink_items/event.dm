@@ -31,7 +31,7 @@
 	cant_discount = TRUE
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
-/datum/uplink_item/events/carpmigration/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
+/datum/uplink_item/events/nukiecarpmigration/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/carp_migration, "a nuclear operative support agent")
 	return source //For log icon
 
