@@ -1,4 +1,9 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/turf/open/water/jungle,
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
+	})
 "ah" = (
 /obj/structure/table,
 /obj/item/storage/box/flashbangs{
@@ -17,6 +22,13 @@
 /area/station/security/lockers{
 	has_gravity = 1
 	})
+"ai" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/turf/open/floor/wood,
+/area/station/security/office{
+	has_gravity = 1
+	})
 "ap" = (
 /obj/item/radio/intercom/prison/directional/west,
 /turf/open/misc/grass/jungle,
@@ -29,29 +41,22 @@
 	pixel_x = 36;
 	pixel_y = 28
 	},
-/turf/closed/wall/mineral/wood{
-	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
-"au" = (
-/obj/machinery/power/apc/auto_name/directional/east,
-/obj/structure/cable,
-/obj/machinery/camera/motion/directional/north,
 /turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
+	has_gravity = 1
+	})
+"au" = (
+/obj/structure/chair/comfy/black,
+/obj/effect/landmark/start/quartermaster,
+/turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1
 	})
 "aw" = (
 /obj/machinery/camera/motion/directional/north,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "az" = (
 /obj/item/coin/gold,
@@ -88,21 +93,19 @@
 	power_light = 0
 	})
 "aH" = (
-/obj/structure/lattice/catwalk,
 /obj/structure/cable,
-/obj/structure/cable,
-/turf/open/floor/plating/airless,
-/area/station/solars/starboard/aft{
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/ce{
 	has_gravity = 1
 	})
 "aO" = (
 /obj/machinery/door/airlock/command{
-	name = "Chief Engineer's Office";
-	req_access_txt = "56"
+	name = "Chief Engineer's Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/ce,
+/obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/ce{
 	has_gravity = 1
 	})
 "aP" = (
@@ -119,6 +122,18 @@
 /obj/effect/spawner/random/armory/bulletproof_armor,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
+"aV" = (
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/misc/grass/jungle,
+/area/space/nearstation{
+	has_gravity = 1
+	})
+"aW" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood,
+/area/station/security/brig{
 	has_gravity = 1
 	})
 "aY" = (
@@ -138,6 +153,12 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft)
+"bf" = (
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/captain{
+	has_gravity = 1
+	})
 "bg" = (
 /turf/closed/wall/mineral/wood,
 /area/station/cargo/bitrunning/den)
@@ -157,38 +178,27 @@
 "bj" = (
 /obj/effect/landmark/start/depsec/medical,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "bk" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
+	})
+"bp" = (
+/obj/structure/cable,
+/obj/structure/cable,
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/cmo{
+	has_gravity = 1
 	})
 "bt" = (
 /obj/effect/landmark/start/medical_doctor,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "bv" = (
 /obj/structure/cable,
@@ -209,7 +219,7 @@
 /mob/living/basic/pet/cat/runtime,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/cmo{
 	has_gravity = 1
 	})
 "bL" = (
@@ -280,7 +290,6 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/mapping_helpers/airlock/access/all/engineering/tcoms,
 /obj/effect/mapping_helpers/airlock/access/any/command/ai_upload,
 /turf/open/floor/iron/dark,
 /area/station/tcommsat/server{
@@ -305,14 +314,8 @@
 "cw" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "cy" = (
 /obj/effect/spawner/random/structure/closet_empty/crate,
@@ -332,14 +335,13 @@
 	dir = 8
 	},
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/mine/abandoned)
+"cE" = (
+/obj/structure/cable,
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood,
+/area/station/security/brig{
+	has_gravity = 1
 	})
 "cF" = (
 /obj/structure/railing{
@@ -347,15 +349,7 @@
 	},
 /obj/machinery/camera/motion/directional/north,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
-	})
+/area/mine/abandoned)
 "cI" = (
 /obj/structure/bonfire/prelit,
 /turf/open/misc/dirt/station,
@@ -371,14 +365,8 @@
 "cO" = (
 /obj/effect/landmark/start/botanist,
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "cP" = (
 /obj/effect/spawner/structure/window/reinforced/plasma,
@@ -389,14 +377,14 @@
 "cQ" = (
 /obj/effect/landmark/start/chemist,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
+	})
+"cR" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
 	})
 "cS" = (
 /mob/living/simple_animal/hostile/megafauna/dragon,
@@ -420,14 +408,8 @@
 /area/station/cargo/bitrunning/den)
 "cX" = (
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "do" = (
 /obj/machinery/computer/records/security{
@@ -480,7 +462,7 @@
 	pixel_x = -27
 	},
 /turf/closed/wall/mineral/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/captain{
 	has_gravity = 1
 	})
 "dE" = (
@@ -489,6 +471,25 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/lockers{
+	has_gravity = 1
+	})
+"dJ" = (
+/mob/living/basic/carp/pet/lia,
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
+	has_gravity = 1
+	})
+"dL" = (
+/turf/open/misc/dirt/station,
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
+	})
+"dR" = (
+/obj/structure/chair/comfy/black,
+/obj/effect/landmark/start/head_of_security,
+/turf/open/floor/carpet/royalblue,
+/area/station/command/bridge{
 	has_gravity = 1
 	})
 "dU" = (
@@ -523,6 +524,12 @@
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft)
+"dY" = (
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/misc/beach/sand,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "dZ" = (
 /obj/machinery/door/airlock/wood/glass,
 /obj/structure/cable,
@@ -536,15 +543,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining_station,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
-	})
+/area/mine/abandoned)
 "eg" = (
 /mob/living/basic/skeleton/templar,
 /turf/open/floor/vault/sandstone,
@@ -593,6 +592,12 @@
 	power_equip = 0;
 	power_light = 0
 	})
+"er" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/wood,
+/area/station/security/office{
+	has_gravity = 1
+	})
 "eu" = (
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
@@ -614,14 +619,15 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/ce{
 	has_gravity = 1
 	})
 "eB" = (
 /obj/item/radio/intercom/directional/west,
 /obj/machinery/camera/autoname/directional/west,
+/obj/machinery/light/directional/west,
 /turf/open/floor/wood,
-/area/station/security/brig{
+/area/station/security/office{
 	has_gravity = 1
 	})
 "eC" = (
@@ -638,19 +644,14 @@
 "eI" = (
 /obj/effect/landmark/start/roboticist,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "eJ" = (
 /obj/structure/chair/comfy/black{
 	dir = 1
 	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1
@@ -675,6 +676,14 @@
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
 	has_gravity = 1
+	})
+"eL" = (
+/obj/structure/cable,
+/obj/item/solar_assembly,
+/turf/open/floor/iron/solarpanel/airless,
+/area/station/solars/starboard/aft{
+	has_gravity = 1;
+	outdoors = 1
 	})
 "eN" = (
 /obj/structure/table/wood,
@@ -701,12 +710,12 @@
 	})
 "eW" = (
 /obj/machinery/door/airlock/command{
-	name = "Chief Medical Officer's Office";
-	req_access_txt = "40"
+	name = "Chief Medical Officer's Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/cmo,
+/obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/cmo{
 	has_gravity = 1
 	})
 "fd" = (
@@ -731,7 +740,9 @@
 /obj/machinery/computer/bank_machine,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "fn" = (
 /obj/structure/closet/crate/trashcart/filled,
 /turf/open/floor/wood,
@@ -764,14 +775,14 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining_station,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
+/area/mine/abandoned)
+"fL" = (
+/obj/structure/lattice/catwalk,
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/misc/beach/sand,
+/area/station/solars/starboard/aft{
 	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+	outdoors = 1
 	})
 "fM" = (
 /obj/structure/table/wood,
@@ -825,54 +836,32 @@
 /obj/item/folder/documents,
 /obj/item/poster/traitor,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "ga" = (
 /obj/effect/decal/cleanable/blood/gibs/core,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "gb" = (
 /obj/machinery/camera/motion/directional/south,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
 	})
 "ge" = (
 /obj/effect/landmark/start/janitor,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "gk" = (
 /obj/effect/spawner/random/structure/crate,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
 	})
 "gp" = (
 /obj/machinery/light/directional/west,
@@ -886,6 +875,10 @@
 /area/station/cargo/miningoffice{
 	has_gravity = 1
 	})
+"gw" = (
+/obj/effect/spawner/random/structure/crate,
+/turf/open/misc/dirt/station,
+/area/mine/abandoned)
 "gz" = (
 /turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/beach{
@@ -919,14 +912,8 @@
 	})
 "gF" = (
 /turf/open/misc/beach/sand,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "gN" = (
 /obj/structure/fluff/clockwork/alloy_shards/medium_gearbit,
@@ -960,14 +947,8 @@
 "gW" = (
 /obj/structure/railing,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "hj" = (
 /obj/effect/landmark/event_spawn,
@@ -993,7 +974,9 @@
 /obj/structure/closet/crate/goldcrate,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "hA" = (
 /obj/machinery/camera/motion/directional/south,
 /turf/open/floor/wood,
@@ -1022,30 +1005,22 @@
 	has_gravity = 1
 	})
 "hP" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	outdoors = 1
 	})
 "hU" = (
 /obj/machinery/camera/motion/directional/west,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "hX" = (
 /obj/structure/closet/secure_closet/hop,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/hop{
 	has_gravity = 1
 	})
 "ie" = (
@@ -1076,16 +1051,9 @@
 	dir = 1;
 	req_access = null
 	},
+/obj/machinery/light/directional/south,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
-	})
+/area/mine/abandoned)
 "io" = (
 /obj/structure/chair/comfy/black{
 	dir = 4
@@ -1093,6 +1061,11 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
+	has_gravity = 1
+	})
+"iq" = (
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/captain{
 	has_gravity = 1
 	})
 "ir" = (
@@ -1114,6 +1087,7 @@
 	})
 "iy" = (
 /obj/structure/chair/stool/directional/west,
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft)
 "iB" = (
@@ -1143,28 +1117,23 @@
 "iM" = (
 /mob/living/carbon/human/species/monkey,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
+	})
+"iS" = (
+/obj/machinery/power/emitter,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
 	})
 "iV" = (
 /obj/effect/landmark/start/botanist,
 /obj/machinery/camera/autoname/directional/east,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "iY" = (
 /obj/machinery/door/airlock/external/glass{
@@ -1183,14 +1152,8 @@
 "jj" = (
 /obj/structure/chair/plastic,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "jm" = (
 /obj/machinery/vending/clothing,
@@ -1217,17 +1180,19 @@
 /obj/item/gun/ballistic/revolver/russian,
 /obj/item/storage/briefcase/secure/riches,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
+"ju" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "jw" = (
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "jF" = (
 /turf/open/floor/wood,
@@ -1242,14 +1207,8 @@
 "jV" = (
 /obj/effect/landmark/start/assistant,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "jW" = (
 /obj/structure/showcase/cyborg/old{
@@ -1272,14 +1231,8 @@
 /obj/item/storage/box/fishing_hooks,
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "kh" = (
 /obj/structure/cable,
@@ -1326,14 +1279,8 @@
 "kq" = (
 /obj/machinery/camera/motion/directional/west,
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "kt" = (
 /obj/structure/rack,
@@ -1349,8 +1296,9 @@
 	})
 "kw" = (
 /obj/machinery/suit_storage_unit/captain,
+/obj/machinery/light/directional/north,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/captain{
 	has_gravity = 1
 	})
 "kB" = (
@@ -1368,7 +1316,9 @@
 "kC" = (
 /obj/structure/sign/warning/secure_area,
 /turf/closed/wall/r_wall,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "kJ" = (
 /obj/docking_port/stationary{
 	dir = 8;
@@ -1380,14 +1330,8 @@
 	width = 7
 	},
 /turf/open/floor/plating,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "kM" = (
 /obj/structure/water_source/puddle,
@@ -1395,6 +1339,12 @@
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
 	has_gravity = 1
+	})
+"kN" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/water/jungle,
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
 	})
 "kR" = (
 /obj/machinery/power/apc/auto_name/directional/east,
@@ -1424,14 +1374,8 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "kX" = (
 /obj/structure/table/reinforced/rglass,
@@ -1449,14 +1393,17 @@
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
+	})
+"ln" = (
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/obj/effect/landmark/start/head_of_personnel,
+/turf/open/floor/carpet/royalblue,
+/area/station/command/bridge{
+	has_gravity = 1
 	})
 "lo" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/east,
@@ -1466,17 +1413,33 @@
 /area/station/engineering/supermatter/room{
 	has_gravity = 1
 	})
+"lr" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
+"ls" = (
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/misc/dirt/station,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "lv" = (
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
+	})
+"lx" = (
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/obj/effect/landmark/start/chief_medical_officer,
+/turf/open/floor/carpet/royalblue,
+/area/station/command/bridge{
+	has_gravity = 1
 	})
 "lA" = (
 /obj/effect/spawner/random/contraband/prison,
@@ -1488,8 +1451,17 @@
 	})
 "lB" = (
 /obj/structure/closet/crate/silvercrate,
+/obj/machinery/light/directional/east,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
+"lC" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/floor/wood,
+/area/station/cargo/warehouse{
+	has_gravity = 1
+	})
 "lE" = (
 /obj/structure/fluff/clockwork/alloy_shards/small,
 /turf/open/misc/dirt/station,
@@ -1527,14 +1499,8 @@
 "lL" = (
 /obj/machinery/camera/motion/directional/east,
 /turf/open/water/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "lO" = (
 /obj/effect/spawner/structure/window/bronze,
@@ -1553,13 +1519,12 @@
 	})
 "lV" = (
 /obj/machinery/door/airlock/command{
-	name = "Research Director's Office";
-	req_access_txt = "30"
+	name = "Research Director's Office"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/science/rd,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/rd{
 	has_gravity = 1
 	})
 "lX" = (
@@ -1628,7 +1593,8 @@
 /obj/structure/cable,
 /turf/open/floor/iron/solarpanel/airless,
 /area/station/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	outdoors = 1
 	})
 "mq" = (
 /obj/effect/landmark/start/prisoner,
@@ -1639,9 +1605,8 @@
 	has_gravity = 1
 	})
 "mr" = (
-/obj/machinery/power/apc/auto_name/directional/east,
-/turf/open/floor/wood,
-/area/station/security/brig{
+/turf/closed/indestructible/necropolis,
+/area/space/nearstation{
 	has_gravity = 1
 	})
 "mt" = (
@@ -1653,6 +1618,12 @@
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/wood,
 /area/station/security/office{
+	has_gravity = 1
+	})
+"mI" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/misc/grass/jungle,
+/area/space/nearstation{
 	has_gravity = 1
 	})
 "mN" = (
@@ -1679,14 +1650,8 @@
 "mP" = (
 /obj/machinery/camera/motion/directional/south,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "mT" = (
 /obj/machinery/telecomms/processor/preset_four,
@@ -1702,20 +1667,14 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig{
+/area/station/security/office{
 	has_gravity = 1
 	})
 "mY" = (
 /obj/effect/landmark/start/botanist,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "mZ" = (
 /obj/structure/table/wood,
@@ -1777,21 +1736,15 @@
 	width = 29
 	},
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "nu" = (
 /obj/structure/cable,
-/turf/closed/wall/mineral/wood{
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "nx" = (
 /obj/machinery/computer/order_console/bitrunning,
 /turf/open/floor/wood,
@@ -1842,56 +1795,51 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/any/supply/vault,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "nJ" = (
 /turf/open/water/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "nK" = (
 /obj/effect/landmark/start/librarian,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "nM" = (
-/obj/structure/lattice/catwalk,
 /obj/machinery/power/tracker,
 /obj/structure/cable,
+/obj/effect/light_emitter/fake_outdoors,
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	outdoors = 1
 	})
 "nN" = (
 /obj/machinery/camera/motion/directional/north,
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "nQ" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/bitrunner,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
+	has_gravity = 1
+	})
+"nY" = (
+/obj/structure/cable,
+/obj/item/disk/nuclear,
+/obj/item/pinpointer/nuke,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/table/reinforced/rglass,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/captain/private{
 	has_gravity = 1
 	})
 "nZ" = (
@@ -1952,6 +1900,14 @@
 /area/station/tcommsat/server{
 	has_gravity = 1
 	})
+"ov" = (
+/obj/structure/bed,
+/obj/item/bedsheet/captain,
+/mob/living/basic/pet/fox/renault,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/captain/private{
+	has_gravity = 1
+	})
 "ox" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/riot_helmet,
@@ -1998,6 +1954,7 @@
 	})
 "oP" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
+/obj/machinery/light/directional/west,
 /turf/open/floor/wood,
 /area/station/engineering/lobby{
 	has_gravity = 1
@@ -2012,14 +1969,8 @@
 "oZ" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "pe" = (
 /obj/structure/statue/gold/ce,
@@ -2040,10 +1991,10 @@
 	has_gravity = 1
 	})
 "pl" = (
-/turf/closed/wall/mineral/wood{
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "po" = (
 /obj/structure/closet/radiation,
 /turf/open/floor/wood,
@@ -2084,19 +2035,14 @@
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
 	})
 "pQ" = (
 /obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/wood,
-/area/station/engineering/main{
+/area/station/command/bridge{
 	has_gravity = 1
 	})
 "pY" = (
@@ -2171,14 +2117,16 @@
 	})
 "qy" = (
 /obj/vehicle/sealed/mecha/ripley/paddy/preset,
-/turf/closed/wall/mineral/wood{
+/obj/structure/cable,
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "qz" = (
 /obj/effect/landmark/start/chief_engineer,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/ce{
 	has_gravity = 1
 	})
 "qB" = (
@@ -2248,7 +2196,7 @@
 /mob/living/basic/parrot/poly,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/ce{
 	has_gravity = 1
 	})
 "rn" = (
@@ -2338,17 +2286,12 @@
 "sb" = (
 /obj/effect/turf_decal/caution,
 /turf/open/floor/plating,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "sg" = (
 /obj/structure/chair/comfy/black,
+/obj/effect/landmark/start/captain,
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1
@@ -2364,11 +2307,18 @@
 	power_equip = 0;
 	power_light = 0
 	})
+"sq" = (
+/turf/open/misc/dirt/station,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "sv" = (
 /turf/open/floor/circuit/green{
 	luminosity = 2
 	},
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "sz" = (
 /obj/structure/table/wood/fancy/orange,
 /obj/item/stamp/denied{
@@ -2394,21 +2344,20 @@
 /area/station/engineering/supermatter{
 	has_gravity = 1
 	})
+"sG" = (
+/obj/structure/cable,
+/obj/effect/landmark/start/hangover,
+/turf/open/floor/wood,
+/area/station/cargo/storage{
+	has_gravity = 1
+	})
 "sK" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /obj/machinery/camera/motion/directional/south,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
-	})
+/area/mine/abandoned)
 "sL" = (
 /obj/item/reagent_containers/cup/bucket/wooden,
 /turf/open/floor/wood,
@@ -2485,28 +2434,16 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "tg" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/fishing_lines,
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "tp" = (
 /obj/structure/table/reinforced/plasmarglass,
@@ -2533,6 +2470,15 @@
 /area/station/engineering/supermatter/room{
 	has_gravity = 1
 	})
+"tB" = (
+/obj/structure/cable,
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/captain{
+	has_gravity = 1
+	})
+"tC" = (
+/turf/open/misc/dirt/station,
+/area/mine/abandoned)
 "tF" = (
 /obj/machinery/requests_console/directional/south{
 	department = "Telecomms Admin";
@@ -2546,8 +2492,9 @@
 "tP" = (
 /obj/effect/spawner/structure/window/bronze,
 /obj/structure/cable,
+/obj/structure/grille,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/rd{
 	has_gravity = 1
 	})
 "tS" = (
@@ -2570,14 +2517,8 @@
 "ui" = (
 /mob/living/basic/bear,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "uo" = (
 /obj/structure/cable,
@@ -2611,6 +2552,7 @@
 	})
 "uv" = (
 /obj/effect/landmark/secequipment,
+/obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/security/lockers{
 	has_gravity = 1
@@ -2624,14 +2566,8 @@
 "uC" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "uE" = (
 /obj/machinery/camera/motion/directional/east,
@@ -2641,14 +2577,8 @@
 /obj/effect/landmark/start/chaplain,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "uL" = (
 /obj/effect/landmark/event_spawn,
@@ -2673,14 +2603,8 @@
 "uO" = (
 /obj/machinery/camera/motion/directional/north,
 /turf/open/misc/beach/sand,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "uP" = (
 /mob/living/basic/trooper/syndicate/ranged,
@@ -2717,7 +2641,7 @@
 /obj/effect/landmark/start/chief_medical_officer,
 /obj/machinery/camera/motion/directional/east,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/cmo{
 	has_gravity = 1
 	})
 "vo" = (
@@ -2741,10 +2665,10 @@
 	})
 "vw" = (
 /obj/structure/closet/secure_closet/hos,
-/turf/closed/wall/mineral/wood{
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "vx" = (
 /turf/closed/wall/mineral/wood,
 /area/station/engineering/main{
@@ -2766,14 +2690,8 @@
 "vD" = (
 /obj/machinery/camera/autoname/motion/directional/north,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "vE" = (
 /obj/machinery/ntnet_relay,
@@ -2788,7 +2706,9 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/effect/mapping_helpers/airlock/access/any/supply/vault,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "vM" = (
 /obj/structure/rack,
 /obj/item/storage/box/donkpockets/donkpocketspicy,
@@ -2826,14 +2746,8 @@
 	dir = 1
 	},
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "wg" = (
 /obj/structure/rack,
@@ -2875,26 +2789,14 @@
 "wr" = (
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "ws" = (
 /obj/item/storage/cans/sixbeer,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "wu" = (
 /obj/structure/cable,
@@ -2912,23 +2814,17 @@
 "wI" = (
 /obj/effect/turf_decal/caution/stand_clear,
 /turf/open/floor/plating,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "wK" = (
 /obj/machinery/door/airlock/command{
-	name = "Head of Personnel";
-	req_access_txt = "57"
+	name = "Head of Personnel"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/command/hop,
+/obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/hop{
 	has_gravity = 1
 	})
 "wN" = (
@@ -2985,14 +2881,8 @@
 "xe" = (
 /obj/structure/barricade/wooden,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "xi" = (
 /obj/item/crowbar/hammer,
@@ -3011,15 +2901,7 @@
 	dir = 8
 	},
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
-	})
+/area/mine/abandoned)
 "xy" = (
 /obj/structure/rack,
 /obj/item/shovel,
@@ -3040,14 +2922,8 @@
 "xI" = (
 /obj/machinery/camera/motion/directional/south,
 /turf/open/water/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "xJ" = (
 /obj/structure/cable,
@@ -3083,14 +2959,8 @@
 /obj/structure/flora/tree/palm/style_random,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "xV" = (
 /obj/structure/cable,
@@ -3108,10 +2978,10 @@
 /obj/machinery/computer/prisoner/management{
 	dir = 4
 	},
-/turf/closed/wall/mineral/wood{
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "yd" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -3142,14 +3012,8 @@
 "yP" = (
 /obj/structure/flora/tree/jungle/style_random,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "yY" = (
 /obj/structure/window/reinforced/spawner/directional/east,
@@ -3165,12 +3029,20 @@
 /area/station/cargo/warehouse{
 	has_gravity = 1
 	})
+"zd" = (
+/turf/open/misc/asteroid/basalt/wasteland,
+/area/space/nearstation{
+	has_gravity = 1;
+	base_lighting_alpha = 255;
+	static_lighting = 0;
+	base_lighting_color = COLOR_STARLIGHT
+	})
 "zf" = (
-/obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/computer/security{
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/security/office{
 	has_gravity = 1
@@ -3193,11 +3065,24 @@
 	has_gravity = 1
 	})
 "zm" = (
-/obj/structure/closet/secure_closet/hos,
 /obj/machinery/light/directional/north,
-/obj/structure/cable,
+/obj/structure/table/reinforced/rglass,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/captain/private{
+	has_gravity = 1
+	})
+"zo" = (
+/obj/structure/cable,
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/hop{
+	has_gravity = 1
+	})
+"zq" = (
+/obj/effect/spawner/structure/window/bronze,
+/obj/structure/cable,
+/obj/structure/grille,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/captain/private{
 	has_gravity = 1
 	})
 "zw" = (
@@ -3208,23 +3093,26 @@
 /area/station/cargo/storage{
 	has_gravity = 1
 	})
+"zy" = (
+/obj/effect/spawner/structure/window/bronze,
+/obj/structure/cable,
+/obj/structure/grille,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/captain{
+	has_gravity = 1
+	})
 "zA" = (
 /obj/effect/landmark/start/scientist,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "zE" = (
 /obj/structure/lattice/catwalk,
 /turf/open/misc/beach/sand,
 /area/station/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	outdoors = 1
 	})
 "zH" = (
 /turf/open/floor/vault/sandstone,
@@ -3254,14 +3142,8 @@
 "zR" = (
 /obj/effect/landmark/start/paramedic,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "zT" = (
 /obj/docking_port/stationary{
@@ -3273,20 +3155,16 @@
 	width = 12
 	},
 /turf/open/floor/plating,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "zZ" = (
 /obj/effect/landmark/start/captain,
 /obj/machinery/camera/motion/directional/east,
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/captain{
 	has_gravity = 1
 	})
 "Ab" = (
@@ -3304,15 +3182,9 @@
 	})
 "Ap" = (
 /obj/effect/spawner/random/maintenance,
-/turf/open/water/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/turf/open/misc/dirt/station,
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
 	})
 "Aw" = (
 /obj/structure/table,
@@ -3357,17 +3229,17 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/mine/abandoned)
+"AN" = (
+/obj/machinery/light/directional/south,
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hop{
+	has_gravity = 1
 	})
 "AU" = (
 /obj/machinery/light/directional/south,
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1
@@ -3431,10 +3303,33 @@
 /area/station/engineering/lobby{
 	has_gravity = 1
 	})
+"Bx" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/wood,
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "BD" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
+"BE" = (
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/obj/effect/landmark/start/chief_engineer,
+/turf/open/floor/carpet/royalblue,
+/area/station/command/bridge{
+	has_gravity = 1
+	})
+"BF" = (
+/obj/structure/cable,
+/turf/open/misc/dirt/station,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "BH" = (
 /obj/item/fish/goldfish,
 /turf/open/floor/mineral/diamond,
@@ -3458,14 +3353,8 @@
 /obj/structure/table/wood,
 /obj/item/storage/cans/sixbeer,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "BS" = (
 /obj/structure/table,
@@ -3485,26 +3374,34 @@
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater)
+"BU" = (
+/obj/effect/spawner/structure/window/bronze,
+/obj/structure/cable,
+/obj/structure/grille,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/ce{
+	has_gravity = 1
+	})
 "BX" = (
 /obj/machinery/camera/autoname/directional/west,
 /obj/machinery/computer/security/hos{
 	dir = 4
 	},
-/turf/closed/wall/mineral/wood{
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
+"BY" = (
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/water/jungle,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "Cb" = (
 /obj/effect/landmark/start/depsec/science,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Cc" = (
 /obj/effect/landmark/blobstart,
@@ -3518,10 +3415,12 @@
 	pixel_y = -3
 	},
 /obj/structure/table/wood,
-/turf/closed/wall/mineral/wood{
+/obj/structure/cable,
+/obj/item/pinpointer/nuke,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "Cj" = (
 /obj/effect/decal/remains/human,
 /turf/open/misc/basalt/safe,
@@ -3536,6 +3435,7 @@
 	})
 "Ck" = (
 /obj/machinery/flasher/directional/north,
+/obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/security/brig{
 	has_gravity = 1
@@ -3544,6 +3444,12 @@
 /obj/machinery/byteforge,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den)
+"Cr" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/misc/dirt/station,
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
+	})
 "CA" = (
 /obj/machinery/telecomms/server/presets/science,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -3553,23 +3459,22 @@
 "CC" = (
 /obj/machinery/camera/motion/directional/north,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
+"CF" = (
+/obj/effect/spawner/random/structure/crate,
+/obj/machinery/light/directional/north,
+/turf/open/misc/dirt/station,
+/area/mine/abandoned)
 "CG" = (
 /obj/machinery/door/airlock/command{
-	name = "Captain's Quarters";
-	req_access_txt = "20"
+	name = "Captain's Quarters"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/command/captain,
+/obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/captain{
 	has_gravity = 1
 	})
 "CN" = (
@@ -3605,6 +3510,7 @@
 "Da" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
+/obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/security/brig{
 	has_gravity = 1
@@ -3626,14 +3532,8 @@
 "Di" = (
 /obj/structure/railing,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Dj" = (
 /obj/structure/cable,
@@ -3645,6 +3545,12 @@
 	},
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/ai_monitored/turret_protected/ai{
+	has_gravity = 1
+	})
+"Du" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room{
 	has_gravity = 1
 	})
 "Dx" = (
@@ -3663,7 +3569,7 @@
 /obj/effect/landmark/event_spawn,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig{
+/area/station/security/office{
 	has_gravity = 1
 	})
 "DH" = (
@@ -3672,6 +3578,7 @@
 	id = "starboardsolar";
 	name = "Starboard Quarter Solar Control"
 	},
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/maintenance/solars/starboard/aft{
 	has_gravity = 1
@@ -3694,6 +3601,13 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
+	has_gravity = 1
+	})
+"DS" = (
+/obj/structure/cable,
+/obj/machinery/light/directional/east,
+/turf/open/floor/wood,
+/area/station/security/brig{
 	has_gravity = 1
 	})
 "DU" = (
@@ -3745,13 +3659,27 @@
 /area/station/command/bridge{
 	has_gravity = 1
 	})
+"Ek" = (
+/obj/structure/cable,
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/captain/private{
+	has_gravity = 1
+	})
 "Es" = (
 /obj/machinery/camera/autoname/directional/east,
 /obj/machinery/computer/crew{
 	dir = 8
 	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/security/office{
+	has_gravity = 1
+	})
+"Et" = (
+/obj/structure/cable,
+/obj/effect/landmark/observer_start,
+/turf/open/floor/catwalk_floor,
+/area/space/nearstation{
 	has_gravity = 1
 	})
 "Ev" = (
@@ -3780,14 +3708,14 @@
 "Ez" = (
 /obj/structure/flora/tree/palm/style_random,
 /turf/open/misc/beach/sand,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
+	})
+"EL" = (
+/obj/structure/closet/crate/silvercrate,
+/turf/open/floor/wood,
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
 	})
 "EM" = (
 /obj/effect/spawner/random/maintenance,
@@ -3797,14 +3725,8 @@
 "ES" = (
 /obj/effect/spawner/random/structure/crate,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "ET" = (
 /turf/closed/wall/mineral/wood,
@@ -3840,44 +3762,26 @@
 	})
 "EW" = (
 /obj/machinery/suit_storage_unit/hos,
-/turf/closed/wall/mineral/wood{
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "Fc" = (
 /obj/machinery/camera/autoname/motion/directional/north,
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Fe" = (
 /obj/structure/cable,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
 	})
 "Ff" = (
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Fg" = (
 /obj/structure/table/wood,
@@ -3885,9 +3789,17 @@
 	name = "Cargo Desk";
 	req_access = list("shipping")
 	},
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
 	has_gravity = 1
+	})
+"Fi" = (
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/floor/plating/airless,
+/area/station/solars/starboard/aft{
+	has_gravity = 1;
+	outdoors = 1
 	})
 "Fn" = (
 /turf/open/misc/grass/jungle,
@@ -3898,10 +3810,10 @@
 /obj/machinery/pdapainter/security,
 /obj/structure/cable,
 /obj/structure/cable,
-/turf/closed/wall/mineral/wood{
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "FB" = (
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
@@ -3922,20 +3834,22 @@
 /area/station/security/prison{
 	has_gravity = 1
 	})
+"FH" = (
+/obj/effect/spawner/structure/window/bronze,
+/obj/structure/cable,
+/obj/structure/grille,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/cmo{
+	has_gravity = 1
+	})
 "FK" = (
 /obj/effect/spawner/random/structure/crate,
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "FO" = (
 /obj/structure/fluff/clockwork/alloy_shards/large,
@@ -3952,7 +3866,9 @@
 "FU" = (
 /obj/machinery/nuclearbomb/selfdestruct,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "Gb" = (
 /turf/closed/wall/mineral/wood,
 /area/station/security/brig{
@@ -3971,20 +3887,14 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig{
+/area/station/security/office{
 	has_gravity = 1
 	})
 "Gg" = (
 /obj/machinery/camera/motion/directional/north,
 /turf/open/water/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Gh" = (
 /obj/machinery/light/small/directional/east,
@@ -3996,30 +3906,17 @@
 "Gi" = (
 /obj/machinery/camera/motion/directional/west,
 /turf/open/water/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Gj" = (
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Gk" = (
 /obj/structure/cable,
-/obj/machinery/power/terminal,
 /turf/open/floor/wood,
 /area/station/engineering/main{
 	has_gravity = 1
@@ -4028,14 +3925,8 @@
 /obj/effect/spawner/random/structure/crate,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
 	})
 "Gv" = (
 /obj/item/storage/fancy/cigarettes/cigpack_robustgold,
@@ -4053,6 +3944,14 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
+	has_gravity = 1
+	})
+"Gx" = (
+/obj/structure/cable,
+/obj/machinery/power/terminal,
+/obj/machinery/light/directional/west,
+/turf/open/floor/wood,
+/area/station/engineering/main{
 	has_gravity = 1
 	})
 "GB" = (
@@ -4087,14 +3986,8 @@
 "GO" = (
 /obj/machinery/camera/motion/directional/north,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
 	})
 "GP" = (
 /obj/machinery/computer/camera_advanced/abductor,
@@ -4132,7 +4025,7 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/rd{
 	has_gravity = 1
 	})
 "GY" = (
@@ -4173,14 +4066,8 @@
 /obj/item/fishing_rod,
 /obj/machinery/camera/motion/directional/south,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Hg" = (
 /obj/structure/table/reinforced/titaniumglass,
@@ -4204,6 +4091,12 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/wood,
 /area/station/security/prison{
+	has_gravity = 1
+	})
+"Hy" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/misc/beach/sand,
+/area/space/nearstation{
 	has_gravity = 1
 	})
 "HB" = (
@@ -4257,25 +4150,13 @@
 /obj/structure/table/wood,
 /obj/item/bait_can/worm,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "HV" = (
 /turf/closed/wall/mineral/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Ia" = (
 /obj/machinery/computer/security/labor{
@@ -4298,14 +4179,8 @@
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "If" = (
 /obj/effect/spawner/random/maintenance,
@@ -4393,14 +4268,8 @@
 "IK" = (
 /obj/item/reagent_containers/cup/bucket/wooden,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "IL" = (
 /obj/machinery/vending/medical,
@@ -4412,7 +4281,8 @@
 /obj/structure/lattice/catwalk,
 /turf/open/misc/grass/jungle,
 /area/station/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	outdoors = 1
 	})
 "IO" = (
 /obj/structure/rack,
@@ -4440,21 +4310,14 @@
 "Ja" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Jb" = (
-/obj/structure/bed,
-/obj/item/bedsheet/captain,
-/mob/living/basic/pet/fox/renault,
+/obj/structure/closet/secure_closet/captains,
+/obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/captain{
 	has_gravity = 1
 	})
 "Jc" = (
@@ -4488,6 +4351,11 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater)
+"Jm" = (
+/obj/effect/spawner/random/structure/closet_maintenance,
+/obj/effect/landmark/start/hangover/closet,
+/turf/open/floor/wood,
+/area/station/maintenance/aft/greater)
 "Jp" = (
 /turf/open/floor/carpet/green,
 /area/station/maintenance/port/aft)
@@ -4512,7 +4380,7 @@
 /obj/item/circuitboard/computer/rdconsole,
 /obj/machinery/camera/motion/directional/east,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/rd{
 	has_gravity = 1
 	})
 "Jx" = (
@@ -4522,10 +4390,10 @@
 	},
 /obj/structure/cable,
 /obj/structure/cable,
-/turf/closed/wall/mineral/wood{
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "Jy" = (
 /obj/structure/showcase/cyborg/old{
 	pixel_y = 20
@@ -4557,14 +4425,16 @@
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft)
 "JV" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	outdoors = 1
 	})
+"Ki" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/floor/wood,
+/area/station/maintenance/port/aft)
 "Kl" = (
 /obj/machinery/suit_storage_unit/hos,
 /obj/machinery/light/directional/west,
@@ -4575,14 +4445,8 @@
 "Km" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Ko" = (
 /obj/machinery/rnd/server,
@@ -4621,14 +4485,8 @@
 "KB" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "KC" = (
 /obj/machinery/telecomms/broadcaster/preset_left,
@@ -4640,8 +4498,11 @@
 "KH" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/machinery/modular_computer/preset/id{
+	dir = 4
+	},
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/hop{
 	has_gravity = 1
 	})
 "Ld" = (
@@ -4661,7 +4522,9 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "Lm" = (
 /obj/effect/landmark/start/cyborg,
 /turf/open/floor/wood,
@@ -4670,14 +4533,8 @@
 	})
 "Lt" = (
 /turf/open/floor/plating,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Lu" = (
 /obj/machinery/camera/motion/directional/south{
@@ -4686,7 +4543,9 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "Lz" = (
 /obj/machinery/air_sensor/engine_chamber,
 /turf/open/floor/plating,
@@ -4712,43 +4571,31 @@
 /area/station/security/office{
 	has_gravity = 1
 	})
+"LM" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/misc/asteroid/basalt/wasteland,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "Mc" = (
 /obj/effect/landmark/carpspawn,
 /turf/open/water/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Mf" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Mq" = (
 /obj/item/food/grown/banana/bunch,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Mv" = (
 /obj/structure/rack,
@@ -4773,14 +4620,8 @@
 "MA" = (
 /obj/effect/decal/remains/human,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "MC" = (
 /turf/closed/indestructible/rock,
@@ -4796,6 +4637,7 @@
 "MF" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
+/obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
 	has_gravity = 1
@@ -4812,20 +4654,14 @@
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/captain{
 	has_gravity = 1
 	})
 "MO" = (
 /obj/effect/landmark/start/geneticist,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Na" = (
 /turf/open/floor/bronze,
@@ -4840,8 +4676,9 @@
 	})
 "Nb" = (
 /obj/machinery/camera/motion/directional/east,
+/obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/ce{
 	has_gravity = 1
 	})
 "Nc" = (
@@ -4868,6 +4705,10 @@
 	power_equip = 0;
 	power_light = 0
 	})
+"Nh" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/misc/dirt/station,
+/area/mine/abandoned)
 "Nq" = (
 /obj/machinery/telecomms/bus/preset_three,
 /turf/open/floor/circuit/green/telecomms/mainframe,
@@ -4891,14 +4732,8 @@
 "NB" = (
 /obj/effect/landmark/start/coroner,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "ND" = (
 /obj/machinery/suit_storage_unit/rd,
@@ -4906,22 +4741,34 @@
 /area/station/command/bridge{
 	has_gravity = 1
 	})
-"NG" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
+"NE" = (
 /obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/cmo{
+	has_gravity = 1
+	})
+"NF" = (
+/obj/effect/spawner/structure/window/bronze,
+/obj/structure/cable,
+/obj/structure/grille,
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/hop{
+	has_gravity = 1
+	})
+"NG" = (
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	outdoors = 1
 	})
 "NI" = (
 /obj/machinery/computer/records/security{
 	dir = 4
 	},
-/turf/closed/wall/mineral/wood{
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "NM" = (
 /obj/structure/cable,
 /obj/machinery/camera/motion/directional/north,
@@ -4932,21 +4779,15 @@
 "NR" = (
 /obj/effect/landmark/start/cook,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "NT" = (
-/obj/structure/lattice/catwalk,
 /obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	outdoors = 1
 	})
 "NU" = (
 /turf/open/floor/wood,
@@ -4961,10 +4802,10 @@
 	})
 "NW" = (
 /obj/effect/landmark/start/head_of_security,
-/turf/closed/wall/mineral/wood{
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "NY" = (
 /turf/closed/wall/mineral/wood,
 /area/station/ai_monitored/turret_protected/ai{
@@ -4980,6 +4821,18 @@
 	power_environ = 0;
 	power_equip = 0;
 	power_light = 0
+	})
+"Ob" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood,
+/area/station/security/office{
+	has_gravity = 1
+	})
+"Oe" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/floor/wood,
+/area/station/cargo/storage{
+	has_gravity = 1
 	})
 "Og" = (
 /obj/machinery/power/smes/full,
@@ -5021,14 +4874,8 @@
 "Or" = (
 /obj/machinery/camera/motion/directional/east,
 /turf/open/misc/beach/sand,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Ot" = (
 /obj/machinery/flatpacker,
@@ -5063,7 +4910,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet/nanotrasen,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/hop{
 	has_gravity = 1
 	})
 "OG" = (
@@ -5099,6 +4946,11 @@
 /area/station/cargo/miningoffice{
 	has_gravity = 1
 	})
+"OW" = (
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
+	has_gravity = 1
+	})
 "OY" = (
 /obj/structure/flatpack_cart,
 /turf/open/floor/wood,
@@ -5116,6 +4968,13 @@
 	power_environ = 0;
 	power_equip = 0;
 	power_light = 0
+	})
+"Pi" = (
+/obj/structure/chair/comfy/black,
+/obj/effect/landmark/start/research_director,
+/turf/open/floor/carpet/royalblue,
+/area/station/command/bridge{
+	has_gravity = 1
 	})
 "Pj" = (
 /obj/structure/rack,
@@ -5143,16 +5002,15 @@
 	has_gravity = 1
 	})
 "Pu" = (
-/obj/structure/bed,
-/obj/item/bedsheet/syndie,
-/mob/living/basic/carp/pet/lia,
+/obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/captain/private{
 	has_gravity = 1
 	})
 "Py" = (
+/obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/hop{
 	has_gravity = 1
 	})
 "Pz" = (
@@ -5181,6 +5039,19 @@
 /obj/effect/spawner/random/contraband/armory,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
+	has_gravity = 1
+	})
+"PD" = (
+/obj/structure/closet/crate/goldcrate,
+/obj/structure/cable,
+/obj/machinery/light/directional/west,
+/turf/open/floor/wood,
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
+"PE" = (
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/rd{
 	has_gravity = 1
 	})
 "PJ" = (
@@ -5230,10 +5101,10 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
-/turf/closed/wall/mineral/wood{
+/turf/open/floor/wood,
+/area/station/command/heads_quarters/hos{
 	has_gravity = 1
-	},
-/area/station/command/heads_quarters/hos)
+	})
 "PQ" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/shotgun,
@@ -5253,19 +5124,18 @@
 "Qd" = (
 /obj/effect/landmark/start/cook,
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Qi" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/lockers{
+	has_gravity = 1
+	})
+"Qk" = (
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/ce{
 	has_gravity = 1
 	})
 "Qn" = (
@@ -5277,20 +5147,14 @@
 "Qv" = (
 /obj/machinery/camera/motion/directional/west,
 /turf/open/misc/beach/sand,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "QD" = (
 /obj/effect/landmark/start/head_of_personnel,
 /obj/machinery/camera/motion/directional/east,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/hop{
 	has_gravity = 1
 	})
 "QI" = (
@@ -5304,14 +5168,8 @@
 /obj/structure/table/wood,
 /obj/item/storage/toolbox/fishing,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "QU" = (
 /obj/machinery/telecomms/processor/preset_two,
@@ -5350,7 +5208,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/vault,
 /turf/open/space/basic,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "Rs" = (
 /obj/machinery/status_display/door_timer{
 	id = "Cell 2";
@@ -5365,14 +5225,8 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/mining,
 /turf/open/floor/catwalk_floor,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Rv" = (
 /turf/open/floor/plating/abductor,
@@ -5453,14 +5307,8 @@
 "RS" = (
 /obj/machinery/camera/motion/directional/east,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "RT" = (
 /obj/effect/spawner/structure/window/bronze,
@@ -5485,39 +5333,21 @@
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/lavaland/surface/outdoors/explored{
+	name = "Mountain Mine Passage"
 	})
 "Sd" = (
 /obj/structure/table/wood,
 /obj/item/fishing_rod,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Sh" = (
 /obj/effect/landmark/start/clown,
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "So" = (
 /obj/machinery/rnd/production/circuit_imprinter,
@@ -5547,15 +5377,7 @@
 	})
 "SB" = (
 /turf/closed/wall,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
-	})
+/area/mine/abandoned)
 "SD" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
@@ -5566,7 +5388,7 @@
 /obj/structure/closet/secure_closet/research_director,
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/rd{
 	has_gravity = 1
 	})
 "SN" = (
@@ -5579,19 +5401,19 @@
 "SO" = (
 /obj/effect/landmark/start/bartender,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "SS" = (
 /obj/effect/landmark/start/security_officer,
 /turf/open/floor/wood,
 /area/station/security/lockers{
+	has_gravity = 1
+	})
+"ST" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/floor/catwalk_floor,
+/area/space/nearstation{
 	has_gravity = 1
 	})
 "SV" = (
@@ -5610,22 +5432,14 @@
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "SZ" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Telecomms Server Room"
 	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/mapping_helpers/airlock/access/all/engineering/tcoms,
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/tcoms,
 /turf/open/floor/wood,
@@ -5633,24 +5447,15 @@
 	has_gravity = 1
 	})
 "Tc" = (
-/obj/structure/closet/secure_closet/captains,
-/obj/machinery/light/directional/north,
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/station/command/bridge{
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/captain/private{
 	has_gravity = 1
 	})
 "Te" = (
 /obj/machinery/camera/motion/directional/east,
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Tf" = (
 /obj/item/reagent_containers/cup/glass/flask/gold,
@@ -5689,14 +5494,13 @@
 "Ty" = (
 /obj/effect/landmark/start/mime,
 /turf/open/misc/asteroid/basalt/wasteland,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
+	})
+"Tz" = (
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/cmo{
+	has_gravity = 1
 	})
 "TD" = (
 /obj/structure/table/abductor,
@@ -5712,21 +5516,23 @@
 	power_light = 0
 	})
 "TE" = (
-/obj/structure/table/wood,
-/obj/item/disk/nuclear,
-/obj/item/pinpointer/nuke,
-/obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/machinery/door/airlock/command{
+	name = "Captain's Quarters"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/command/captain,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/captain/private{
 	has_gravity = 1
 	})
 "TI" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/landmark/event_spawn,
+/obj/effect/light_emitter/fake_outdoors,
 /turf/open/misc/grass/jungle,
 /area/station/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	outdoors = 1
 	})
 "TJ" = (
 /obj/effect/landmark/start/detective,
@@ -5835,14 +5641,8 @@
 /obj/structure/table/wood,
 /obj/item/storage/box/fishing_hooks,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Uu" = (
 /obj/structure/bed,
@@ -5862,6 +5662,12 @@
 /area/station/tcommsat/server{
 	has_gravity = 1
 	})
+"Uy" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/misc/dirt/station,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "UH" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
@@ -5874,6 +5680,8 @@
 	})
 "UL" = (
 /obj/machinery/light/directional/west,
+/obj/structure/cable,
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1
@@ -5882,14 +5690,8 @@
 /obj/structure/table/wood,
 /obj/item/storage/box/fishing_lines,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "US" = (
 /obj/effect/landmark/generic_maintenance_landmark,
@@ -5913,14 +5715,8 @@
 /obj/effect/mob_spawn/corpse/human/assistant,
 /obj/effect/decal/cleanable/blood,
 /turf/open/misc/dirt/station,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Vg" = (
 /obj/machinery/telecomms/server/presets/service,
@@ -5962,7 +5758,9 @@
 	})
 "VF" = (
 /turf/closed/wall/r_wall,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "VG" = (
 /obj/machinery/camera/autoname/motion/directional/west,
 /obj/effect/landmark/blobstart,
@@ -5979,6 +5777,12 @@
 /obj/machinery/telecomms/receiver/preset_right,
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
+	has_gravity = 1
+	})
+"VO" = (
+/obj/structure/cable,
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/rd{
 	has_gravity = 1
 	})
 "VP" = (
@@ -6003,14 +5807,8 @@
 /obj/item/storage/box/fishing_hooks,
 /obj/machinery/camera/motion/directional/north,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "VZ" = (
 /obj/machinery/telecomms/message_server/preset,
@@ -6052,14 +5850,15 @@
 /area/station/cargo/bitrunning/den)
 "Wo" = (
 /turf/open/floor/catwalk_floor,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
+	})
+"Wt" = (
+/obj/machinery/camera/motion/directional/south,
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/command/bridge{
+	has_gravity = 1
 	})
 "Wx" = (
 /obj/item/coin/gold,
@@ -6083,14 +5882,8 @@
 "WI" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "WK" = (
 /turf/closed/mineral/random/jungle,
@@ -6127,17 +5920,15 @@
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater)
 "Xf" = (
-/obj/effect/landmark/start/head_of_security,
-/obj/machinery/camera/motion/directional/east,
-/turf/open/floor/wood,
-/area/station/command/bridge{
+/turf/closed/wall/mineral/wood,
+/area/station/command/heads_quarters/hop{
 	has_gravity = 1
 	})
 "Xg" = (
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/security/brig{
+/area/station/security/office{
 	has_gravity = 1
 	})
 "Xj" = (
@@ -6151,22 +5942,18 @@
 	})
 "Xk" = (
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "Xl" = (
 /obj/effect/landmark/start/psychologist,
 /turf/open/misc/grass/jungle,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "Xn" = (
 /turf/closed/wall/r_wall,
-/area/station/security/brig{
+/area/station/security/office{
 	has_gravity = 1
 	})
 "Xx" = (
@@ -6174,7 +5961,7 @@
 /obj/item/bedsheet/cosmos,
 /mob/living/basic/pet/dog/bullterrier,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/rd{
 	has_gravity = 1
 	})
 "XA" = (
@@ -6183,12 +5970,18 @@
 	network = list("vault")
 	},
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "XB" = (
 /obj/effect/spawner/random/maintenance,
 /obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft)
+"XE" = (
+/obj/structure/cable,
+/turf/open/misc/dirt/station,
+/area/mine/abandoned)
 "XH" = (
 /obj/machinery/telecomms/server/presets/common,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -6246,7 +6039,7 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/station/command/heads_quarters/cmo{
 	has_gravity = 1
 	})
 "Yv" = (
@@ -6262,6 +6055,19 @@
 /area/station/command/bridge{
 	has_gravity = 1
 	})
+"YB" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/wood,
+/area/station/security/brig{
+	has_gravity = 1
+	})
+"YF" = (
+/obj/structure/cable,
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood,
+/area/station/engineering/main{
+	has_gravity = 1
+	})
 "YQ" = (
 /obj/effect/landmark/start/pun_pun,
 /obj/effect/landmark/blobstart,
@@ -6272,7 +6078,8 @@
 "YR" = (
 /turf/closed/wall/mineral/wood,
 /area/station/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	outdoors = 1
 	})
 "YW" = (
 /obj/machinery/seed_extractor,
@@ -6329,12 +6136,11 @@
 /obj/item/solar_assembly,
 /obj/item/solar_assembly,
 /obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
 /obj/item/stack/sheet/glass/fifty,
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/engineering/main{
+/area/station/maintenance/solars/starboard/aft{
 	has_gravity = 1
 	})
 "Zm" = (
@@ -6392,14 +6198,8 @@
 "ZE" = (
 /obj/machinery/camera/motion/directional/west,
 /turf/open/floor/wood,
-/area/awaymission/beach{
-	name = "Dorfworld";
-	has_gravity = 1;
-	always_unpowered = 1;
-	light_power = 0;
-	power_environ = 0;
-	power_equip = 0;
-	power_light = 0
+/area/space/nearstation{
+	has_gravity = 1
 	})
 "ZP" = (
 /obj/machinery/computer/cargo/request{
@@ -6413,15 +6213,13 @@
 /obj/machinery/ore_silo,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage)
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "ZV" = (
-/obj/machinery/door/airlock/command{
-	name = "Head of Security's Office";
-	req_access_txt = "58"
-	},
-/obj/effect/mapping_helpers/airlock/access/all/security/hos,
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
-/area/station/command/bridge{
+/area/space/nearstation{
 	has_gravity = 1
 	})
 
@@ -6618,69 +6416,69 @@ ir
 ir
 ir
 ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
 "}
 (2,1,1) = {"
 ir
@@ -6937,7 +6735,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (3,1,1) = {"
 ir
@@ -7194,7 +6992,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (4,1,1) = {"
 ir
@@ -7451,7 +7249,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (5,1,1) = {"
 ir
@@ -7708,7 +7506,7 @@ Mc
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (6,1,1) = {"
 ir
@@ -7965,7 +7763,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (7,1,1) = {"
 ir
@@ -8222,7 +8020,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (8,1,1) = {"
 ir
@@ -8479,7 +8277,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (9,1,1) = {"
 ir
@@ -8736,7 +8534,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (10,1,1) = {"
 ir
@@ -8993,7 +8791,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (11,1,1) = {"
 ir
@@ -9250,7 +9048,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (12,1,1) = {"
 ir
@@ -9507,7 +9305,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (13,1,1) = {"
 ir
@@ -9764,7 +9562,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (14,1,1) = {"
 ir
@@ -10021,7 +9819,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (15,1,1) = {"
 ir
@@ -10220,6 +10018,7 @@ WK
 WK
 WK
 nJ
+BY
 nJ
 nJ
 nJ
@@ -10277,8 +10076,7 @@ nJ
 nJ
 nJ
 nJ
-nJ
-ir
+mr
 "}
 (16,1,1) = {"
 ir
@@ -10446,10 +10244,10 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
 WK
 WK
 WK
@@ -10475,6 +10273,7 @@ WK
 WK
 WK
 WK
+ac
 nJ
 nJ
 nJ
@@ -10534,8 +10333,7 @@ nJ
 nJ
 nJ
 nJ
-nJ
-ir
+mr
 "}
 (17,1,1) = {"
 ir
@@ -10701,14 +10499,14 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
 Sb
-Oo
-Oo
+dL
+dL
 WK
 WK
 WK
@@ -10732,8 +10530,8 @@ WK
 WK
 WK
 WK
-nJ
-nJ
+ac
+ac
 WK
 nJ
 nJ
@@ -10792,7 +10590,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (18,1,1) = {"
 ir
@@ -10959,14 +10757,14 @@ WK
 WK
 WK
 Go
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+Cr
+dL
+dL
+dL
+dL
 WK
 WK
 WK
@@ -10989,8 +10787,8 @@ WK
 WK
 WK
 WK
-nJ
-nJ
+ac
+ac
 WK
 WK
 nJ
@@ -11049,7 +10847,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (19,1,1) = {"
 ir
@@ -11214,16 +11012,16 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-nJ
-nJ
-nJ
-nJ
-Oo
-Oo
-Oo
+dL
+dL
+dL
+ac
+ac
+ac
+ac
+dL
+dL
+dL
 WK
 WK
 WK
@@ -11233,21 +11031,21 @@ WK
 WK
 WK
 WK
-nJ
-nJ
+ac
+dL
 Ap
-nJ
-nJ
-nJ
-nJ
-nJ
+dL
+dL
+dL
+ac
+ac
 WK
 WK
 WK
 WK
-nJ
-nJ
-nJ
+ac
+ac
+ac
 WK
 WK
 WK
@@ -11306,7 +11104,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (20,1,1) = {"
 ir
@@ -11470,23 +11268,42 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
-nJ
-nJ
-nJ
-nJ
-nJ
-Oo
-Oo
+dL
+dL
+dL
+dL
+ac
+ac
+ac
+ac
+ac
+dL
+dL
 WK
 WK
 WK
 WK
-nJ
-nJ
+dL
+ac
+WK
+WK
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 WK
 WK
 nJ
@@ -11506,8 +11323,6 @@ nJ
 nJ
 nJ
 nJ
-WK
-WK
 nJ
 nJ
 nJ
@@ -11546,24 +11361,7 @@ nJ
 nJ
 nJ
 nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-ir
+mr
 "}
 (21,1,1) = {"
 ir
@@ -11727,17 +11525,42 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-nJ
-Ap
-nJ
-nJ
-nJ
-nJ
-Oo
-Oo
+dL
+dL
+dL
+ac
+ac
+ac
+ac
+ac
+ac
+dL
+dL
+WK
+WK
+dL
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+WK
+WK
 WK
 WK
 nJ
@@ -11761,10 +11584,6 @@ nJ
 nJ
 nJ
 nJ
-WK
-WK
-WK
-WK
 nJ
 nJ
 nJ
@@ -11799,28 +11618,7 @@ nJ
 nJ
 nJ
 nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-ir
+mr
 "}
 (22,1,1) = {"
 ir
@@ -11985,42 +11783,42 @@ WK
 WK
 WK
 gk
-Oo
-Oo
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
+dL
+dL
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 WK
 WK
 WK
-nJ
-nJ
-WK
-WK
-WK
-WK
+dL
+ac
 WK
 WK
 WK
 WK
+WK
+WK
+WK
+WK
 nJ
 nJ
 nJ
@@ -12077,7 +11875,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (23,1,1) = {"
 ir
@@ -12242,26 +12040,26 @@ WK
 WK
 WK
 pM
-Oo
-Oo
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
+dL
+dL
+ac
+ac
+ac
+kN
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 Ap
-nJ
-nJ
-nJ
+dL
+dL
+ac
 WK
 WK
 WK
@@ -12334,7 +12132,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (24,1,1) = {"
 ir
@@ -12499,16 +12297,16 @@ WK
 WK
 WK
 pM
-Oo
-Oo
-nJ
-nJ
-nJ
-nJ
-nJ
-nJ
-Oo
-Oo
+dL
+Cr
+ac
+ac
+ac
+ac
+ac
+ac
+dL
+dL
 WK
 WK
 WK
@@ -12591,7 +12389,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (25,1,1) = {"
 ir
@@ -12756,16 +12554,16 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-nJ
-nJ
-nJ
-Ap
-nJ
-Oo
-Oo
+dL
+dL
+dL
+ac
+ac
+ac
+ac
+ac
+dL
+dL
 WK
 WK
 WK
@@ -12848,7 +12646,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (26,1,1) = {"
 ir
@@ -13013,16 +12811,16 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-nJ
-nJ
-nJ
-nJ
-nJ
-Oo
-Oo
+dL
+dL
+dL
+ac
+ac
+ac
+ac
+kN
+dL
+dL
 WK
 WK
 WK
@@ -13105,7 +12903,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (27,1,1) = {"
 ir
@@ -13272,14 +13070,14 @@ WK
 WK
 WK
 Sb
-Oo
-Oo
-nJ
-nJ
-nJ
-Oo
-Oo
-Oo
+dL
+dL
+ac
+ac
+ac
+dL
+dL
+dL
 WK
 WK
 WK
@@ -13362,7 +13160,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (28,1,1) = {"
 ir
@@ -13528,14 +13326,14 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
 Sb
 WK
 WK
@@ -13619,7 +13417,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (29,1,1) = {"
 ir
@@ -13786,13 +13584,13 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
+dL
+dL
 WK
 WK
 WK
@@ -13876,7 +13674,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (30,1,1) = {"
 ir
@@ -14044,10 +13842,10 @@ WK
 WK
 WK
 WK
-Oo
+dL
 Sb
-Oo
-Oo
+dL
+dL
 WK
 WK
 WK
@@ -14133,7 +13931,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (31,1,1) = {"
 ir
@@ -14390,7 +14188,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (32,1,1) = {"
 ir
@@ -14647,7 +14445,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (33,1,1) = {"
 ir
@@ -14904,7 +14702,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (34,1,1) = {"
 ir
@@ -15161,7 +14959,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (35,1,1) = {"
 ir
@@ -15406,7 +15204,7 @@ nJ
 nJ
 nJ
 qc
-hw
+Jm
 tS
 tS
 tS
@@ -15418,7 +15216,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (36,1,1) = {"
 ir
@@ -15675,7 +15473,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (37,1,1) = {"
 ir
@@ -15917,7 +15715,7 @@ jw
 jw
 jw
 jw
-jw
+ZV
 jw
 jw
 jw
@@ -15932,7 +15730,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (38,1,1) = {"
 ir
@@ -16189,7 +15987,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (39,1,1) = {"
 ir
@@ -16446,7 +16244,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (40,1,1) = {"
 ir
@@ -16668,7 +16466,7 @@ gF
 gF
 mm
 Oj
-GG
+Ki
 GG
 la
 gF
@@ -16703,7 +16501,7 @@ qc
 qc
 qc
 qc
-ir
+mr
 "}
 (41,1,1) = {"
 ir
@@ -16937,7 +16735,7 @@ gF
 gF
 gF
 gF
-gF
+Hy
 gF
 gF
 gF
@@ -16957,10 +16755,10 @@ nJ
 jw
 jw
 qc
-hw
+Jm
 uc
 qc
-ir
+mr
 "}
 (42,1,1) = {"
 ir
@@ -17217,7 +17015,7 @@ qc
 Pk
 tS
 qc
-ir
+mr
 "}
 (43,1,1) = {"
 ir
@@ -17474,7 +17272,7 @@ ey
 tS
 Xd
 qc
-ir
+mr
 "}
 (44,1,1) = {"
 ir
@@ -17708,7 +17506,7 @@ gF
 gF
 gF
 gF
-gF
+dY
 gF
 gF
 gF
@@ -17731,7 +17529,7 @@ qc
 If
 If
 qc
-ir
+mr
 "}
 (45,1,1) = {"
 ir
@@ -17988,7 +17786,7 @@ qc
 dp
 uc
 qc
-ir
+mr
 "}
 (46,1,1) = {"
 ir
@@ -18245,7 +18043,7 @@ qc
 qc
 qc
 qc
-ir
+mr
 "}
 (47,1,1) = {"
 ir
@@ -18502,7 +18300,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (48,1,1) = {"
 ir
@@ -18759,7 +18557,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (49,1,1) = {"
 ir
@@ -19016,7 +18814,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (50,1,1) = {"
 ir
@@ -19273,7 +19071,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (51,1,1) = {"
 ir
@@ -19512,7 +19310,7 @@ JS
 iy
 gF
 gF
-gF
+dY
 nJ
 nJ
 nJ
@@ -19530,7 +19328,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (52,1,1) = {"
 ir
@@ -19769,7 +19567,7 @@ JS
 iy
 gF
 gF
-gF
+dY
 nJ
 nJ
 nJ
@@ -19787,7 +19585,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (53,1,1) = {"
 ir
@@ -20044,7 +19842,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (54,1,1) = {"
 ir
@@ -20301,7 +20099,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (55,1,1) = {"
 ir
@@ -20558,7 +20356,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (56,1,1) = {"
 ir
@@ -20815,7 +20613,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (57,1,1) = {"
 ir
@@ -21072,7 +20870,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (58,1,1) = {"
 ir
@@ -21329,7 +21127,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (59,1,1) = {"
 ir
@@ -21563,7 +21361,7 @@ cX
 gF
 gF
 gF
-gF
+dY
 gF
 gF
 gF
@@ -21586,7 +21384,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (60,1,1) = {"
 ir
@@ -21843,7 +21641,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (61,1,1) = {"
 ir
@@ -22094,13 +21892,13 @@ nJ
 nJ
 nJ
 nJ
+ZV
 jw
-jw
 nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (62,1,1) = {"
 ir
@@ -22337,7 +22135,7 @@ gF
 gF
 gF
 gF
-gF
+Hy
 gF
 gF
 nJ
@@ -22357,7 +22155,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (63,1,1) = {"
 ir
@@ -22614,7 +22412,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (64,1,1) = {"
 ir
@@ -22871,7 +22669,7 @@ jw
 jw
 jw
 jw
-ir
+mr
 "}
 (65,1,1) = {"
 ir
@@ -23128,7 +22926,7 @@ jw
 jw
 jw
 jw
-ir
+mr
 "}
 (66,1,1) = {"
 ir
@@ -23385,7 +23183,7 @@ qc
 qc
 ey
 qc
-ir
+mr
 "}
 (67,1,1) = {"
 ir
@@ -23642,7 +23440,7 @@ uc
 Xd
 tS
 qc
-ir
+mr
 "}
 (68,1,1) = {"
 ir
@@ -23878,7 +23676,7 @@ cX
 gF
 gF
 gF
-gF
+Hy
 gF
 gF
 gF
@@ -23899,7 +23697,7 @@ BT
 If
 If
 qc
-ir
+mr
 "}
 (69,1,1) = {"
 ir
@@ -24156,7 +23954,7 @@ qc
 qc
 qc
 qc
-ir
+mr
 "}
 (70,1,1) = {"
 ir
@@ -24413,7 +24211,7 @@ qc
 qc
 qc
 qc
-ir
+mr
 "}
 (71,1,1) = {"
 ir
@@ -24670,7 +24468,7 @@ Xd
 If
 uc
 qc
-ir
+mr
 "}
 (72,1,1) = {"
 ir
@@ -24927,7 +24725,7 @@ uc
 tS
 If
 qc
-ir
+mr
 "}
 (73,1,1) = {"
 ir
@@ -25184,7 +24982,7 @@ qc
 qc
 qc
 qc
-ir
+mr
 "}
 (74,1,1) = {"
 ir
@@ -25441,7 +25239,7 @@ jw
 jw
 jw
 jw
-ir
+mr
 "}
 (75,1,1) = {"
 ir
@@ -25698,7 +25496,7 @@ jw
 jw
 jw
 jw
-ir
+mr
 "}
 (76,1,1) = {"
 ir
@@ -25955,7 +25753,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (77,1,1) = {"
 ir
@@ -26212,7 +26010,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (78,1,1) = {"
 ir
@@ -26447,10 +26245,10 @@ gF
 gF
 gF
 gF
+Hy
 gF
 gF
 gF
-gF
 nJ
 nJ
 nJ
@@ -26469,7 +26267,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (79,1,1) = {"
 ir
@@ -26726,7 +26524,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (80,1,1) = {"
 ir
@@ -26983,7 +26781,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (81,1,1) = {"
 ir
@@ -27240,7 +27038,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (82,1,1) = {"
 ir
@@ -27497,7 +27295,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (83,1,1) = {"
 ir
@@ -27754,7 +27552,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (84,1,1) = {"
 ir
@@ -28011,7 +27809,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (85,1,1) = {"
 ir
@@ -28268,7 +28066,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (86,1,1) = {"
 ir
@@ -28525,7 +28323,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (87,1,1) = {"
 ir
@@ -28782,7 +28580,7 @@ Mc
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (88,1,1) = {"
 ir
@@ -28982,7 +28780,7 @@ WK
 WK
 WK
 Ff
-Wo
+ST
 Ld
 re
 dU
@@ -29039,7 +28837,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (89,1,1) = {"
 ir
@@ -29196,13 +28994,13 @@ WK
 WK
 WK
 SB
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+tC
+tC
+tC
+tC
+tC
+tC
+tC
 SB
 WK
 WK
@@ -29296,7 +29094,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (90,1,1) = {"
 ir
@@ -29453,13 +29251,13 @@ WK
 WK
 WK
 SB
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+tC
+tC
+tC
+tC
+tC
+tC
+tC
 SB
 WK
 WK
@@ -29504,7 +29302,7 @@ nQ
 Gw
 Gw
 nQ
-Gw
+sG
 dU
 oo
 kb
@@ -29553,7 +29351,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (91,1,1) = {"
 ir
@@ -29710,13 +29508,13 @@ WK
 WK
 WK
 SB
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+tC
+tC
+tC
+tC
+tC
+tC
+tC
 SB
 WK
 WK
@@ -29745,8 +29543,8 @@ WK
 WK
 WK
 WK
-Oo
-Oo
+dL
+dL
 WK
 WK
 WK
@@ -29756,7 +29554,7 @@ Ff
 Gj
 eV
 DP
-dU
+Oe
 xQ
 dU
 hM
@@ -29810,7 +29608,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (92,1,1) = {"
 ir
@@ -29967,13 +29765,13 @@ WK
 WK
 WK
 SB
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+tC
+tC
+tC
+tC
+tC
+tC
+tC
 SB
 WK
 WK
@@ -29983,29 +29781,29 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
 WK
 WK
 WK
@@ -30067,7 +29865,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (93,1,1) = {"
 ir
@@ -30224,46 +30022,46 @@ WK
 WK
 WK
 SB
-Oo
-Oo
-Oo
+tC
+tC
+tC
 xp
-Oo
-Oo
-Oo
+tC
+tC
+tC
 SB
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
 WK
 WK
 Ff
@@ -30324,7 +30122,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (94,1,1) = {"
 ir
@@ -30479,22 +30277,22 @@ WK
 WK
 WK
 WK
-Oo
+dL
 SB
 cF
 cD
 cD
-Oo
+tC
 cD
 cD
 sK
 SB
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
+dL
 Fe
 Fe
 Fe
@@ -30517,12 +30315,12 @@ Fe
 Fe
 Fe
 Fe
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+Cr
+dL
+dL
+dL
+dL
+dL
 Ff
 Gj
 Ff
@@ -30581,7 +30379,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (95,1,1) = {"
 ir
@@ -30736,15 +30534,15 @@ WK
 WK
 WK
 WK
-Oo
+dL
 ef
-Oo
-Oo
-Oo
-Fe
-Fe
-Fe
-Fe
+tC
+tC
+tC
+XE
+XE
+XE
+XE
 fw
 Fe
 Fe
@@ -30753,33 +30551,33 @@ Fe
 Fe
 Fe
 Fe
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+Cr
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
 Fe
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
+dL
 Ff
 Gj
 Ff
@@ -30815,12 +30613,12 @@ gF
 gF
 gF
 gF
+Hy
 gF
 gF
 gF
 gF
 gF
-gF
 nJ
 nJ
 nJ
@@ -30838,7 +30636,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (96,1,1) = {"
 ir
@@ -30990,53 +30788,53 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
 ef
-Oo
-Oo
-Oo
-Fe
-Oo
-Oo
-Oo
+tC
+Nh
+tC
+XE
+Nh
+tC
+tC
 ef
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dL
 Fe
 Fe
 Fe
 Fe
-Oo
-Oo
-Oo
+dL
+dL
+dL
 Ff
 Gj
 Ff
@@ -31095,7 +30893,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (97,1,1) = {"
 ir
@@ -31246,26 +31044,26 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
 gb
 SB
-gk
-Oo
-Oo
-Fe
-Oo
-Oo
+CF
+tC
+tC
+XE
+tC
+tC
 im
 SB
 GO
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
 WK
 WK
 WK
@@ -31274,27 +31072,27 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
+dL
 WK
 WK
 WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
 Fe
 Fe
 Fe
-Oo
-Oo
+dL
+ls
 Gj
 Ff
 cX
@@ -31352,7 +31150,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (98,1,1) = {"
 ir
@@ -31502,20 +31300,20 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
+dL
+dL
+dL
 WK
 WK
 WK
 SB
-gk
-Oo
-Oo
+gw
+tC
+tC
 AM
-gk
-gk
-Oo
+gw
+gw
+tC
 SB
 WK
 WK
@@ -31544,14 +31342,14 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
-Oo
+dL
+dL
+dL
+dL
+dL
 Fe
 Fe
-Fe
+BF
 Gj
 Ff
 Ff
@@ -31587,11 +31385,11 @@ gF
 gF
 gF
 gF
+Hy
 gF
 gF
 gF
 gF
-gF
 nJ
 nJ
 nJ
@@ -31609,7 +31407,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (99,1,1) = {"
 ir
@@ -31805,10 +31603,10 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Fe
+dL
+dL
+dL
+BF
 Gj
 Ru
 Gj
@@ -31866,7 +31664,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (100,1,1) = {"
 ir
@@ -32063,9 +31861,9 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
+dL
+dL
+sq
 Gj
 Ff
 Te
@@ -32123,7 +31921,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (101,1,1) = {"
 ir
@@ -32380,7 +32178,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (102,1,1) = {"
 ir
@@ -32637,7 +32435,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (103,1,1) = {"
 ir
@@ -32894,7 +32692,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (104,1,1) = {"
 ir
@@ -33107,7 +32905,7 @@ cX
 cX
 iK
 yZ
-NU
+lC
 Pj
 IO
 NU
@@ -33151,7 +32949,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (105,1,1) = {"
 ir
@@ -33408,7 +33206,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (106,1,1) = {"
 ir
@@ -33665,7 +33463,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (107,1,1) = {"
 ir
@@ -33881,7 +33679,7 @@ qP
 NU
 YQ
 NU
-NU
+lC
 Kq
 iK
 Ff
@@ -33922,7 +33720,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (108,1,1) = {"
 ir
@@ -34179,7 +33977,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (109,1,1) = {"
 ir
@@ -34395,7 +34193,7 @@ Ic
 NU
 gR
 ta
-NU
+lC
 dv
 iK
 Ff
@@ -34436,7 +34234,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (110,1,1) = {"
 ir
@@ -34693,7 +34491,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (111,1,1) = {"
 ir
@@ -34906,7 +34704,7 @@ cX
 cX
 iK
 Ic
-NU
+lC
 kt
 Uf
 sL
@@ -34950,7 +34748,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (112,1,1) = {"
 ir
@@ -35207,7 +35005,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (113,1,1) = {"
 ir
@@ -35464,7 +35262,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (114,1,1) = {"
 ir
@@ -35672,7 +35470,7 @@ cX
 cX
 cX
 cX
-cX
+mI
 cX
 cX
 hU
@@ -35721,7 +35519,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (115,1,1) = {"
 ir
@@ -35978,7 +35776,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (116,1,1) = {"
 ir
@@ -36235,7 +36033,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (117,1,1) = {"
 ir
@@ -36492,7 +36290,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (118,1,1) = {"
 ir
@@ -36749,7 +36547,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (119,1,1) = {"
 ir
@@ -36962,7 +36760,7 @@ cX
 cX
 cX
 cX
-cX
+mI
 cX
 cX
 cX
@@ -37006,7 +36804,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (120,1,1) = {"
 ir
@@ -37263,7 +37061,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (121,1,1) = {"
 ir
@@ -37520,7 +37318,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (122,1,1) = {"
 ir
@@ -37777,7 +37575,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (123,1,1) = {"
 ir
@@ -38034,7 +37832,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (124,1,1) = {"
 ir
@@ -38291,7 +38089,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (125,1,1) = {"
 ir
@@ -38548,7 +38346,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (126,1,1) = {"
 ir
@@ -38746,7 +38544,7 @@ WK
 cX
 cX
 cX
-cX
+mI
 cX
 cX
 cX
@@ -38805,7 +38603,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (127,1,1) = {"
 ir
@@ -39062,7 +38860,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (128,1,1) = {"
 ir
@@ -39319,7 +39117,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (129,1,1) = {"
 ir
@@ -39576,7 +39374,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (130,1,1) = {"
 ir
@@ -39833,7 +39631,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (131,1,1) = {"
 ir
@@ -40090,7 +39888,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (132,1,1) = {"
 ir
@@ -40347,7 +40145,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (133,1,1) = {"
 ir
@@ -40604,7 +40402,7 @@ Mc
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (134,1,1) = {"
 ir
@@ -40861,7 +40659,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (135,1,1) = {"
 ir
@@ -41118,7 +40916,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (136,1,1) = {"
 ir
@@ -41375,7 +41173,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (137,1,1) = {"
 ir
@@ -41632,7 +41430,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (138,1,1) = {"
 ir
@@ -41841,7 +41639,7 @@ cX
 cX
 cX
 cX
-cX
+mI
 cX
 cX
 cX
@@ -41889,7 +41687,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (139,1,1) = {"
 ir
@@ -42146,7 +41944,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (140,1,1) = {"
 ir
@@ -42403,7 +42201,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (141,1,1) = {"
 ir
@@ -42660,7 +42458,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (142,1,1) = {"
 ir
@@ -42917,7 +42715,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (143,1,1) = {"
 ir
@@ -43174,7 +42972,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (144,1,1) = {"
 ir
@@ -43431,7 +43229,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (145,1,1) = {"
 ir
@@ -43688,7 +43486,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (146,1,1) = {"
 ir
@@ -43945,7 +43743,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (147,1,1) = {"
 ir
@@ -44202,7 +44000,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (148,1,1) = {"
 ir
@@ -44459,7 +44257,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (149,1,1) = {"
 ir
@@ -44716,7 +44514,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (150,1,1) = {"
 ir
@@ -44973,7 +44771,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (151,1,1) = {"
 ir
@@ -45195,11 +44993,11 @@ cX
 Ff
 Gj
 Ff
-Ge
+VO
 SI
 GU
 lV
-bW
+pQ
 mt
 mt
 mt
@@ -45208,7 +45006,7 @@ mt
 mt
 qz
 ez
-Ge
+aH
 uO
 gF
 gF
@@ -45230,7 +45028,7 @@ VF
 VF
 VF
 nJ
-ir
+mr
 "}
 (152,1,1) = {"
 ir
@@ -45455,7 +45253,7 @@ Ff
 tP
 Xx
 Jw
-Uv
+PE
 bW
 Kl
 ND
@@ -45465,7 +45263,7 @@ UL
 aO
 Nb
 rg
-tP
+BU
 gF
 gF
 gF
@@ -45482,12 +45280,12 @@ xI
 VF
 ff
 BD
-hy
+PD
 hy
 ZT
 VF
 nJ
-ir
+mr
 "}
 (153,1,1) = {"
 ir
@@ -45709,27 +45507,27 @@ cX
 Ff
 Gj
 Ff
-Ge
-Uv
-Uv
-Uv
+VO
+PE
+PE
+PE
 bW
 jP
 jP
 jP
 jP
-od
-Uv
-Uv
-Uv
-Ge
+Wt
+Qk
+Qk
+Qk
+aH
 jw
 jw
 jw
 jw
 jw
 jw
-jw
+ZV
 jw
 jw
 jw
@@ -45744,7 +45542,7 @@ sv
 Lu
 VF
 nJ
-ir
+mr
 "}
 (154,1,1) = {"
 ir
@@ -45964,22 +45762,22 @@ cX
 cX
 cX
 Ff
-Gj
+Et
 Ff
-Ge
+Ek
 zm
-KH
-ZV
+nY
+Tc
 bW
 jP
 jP
 jP
 jP
-Py
+bW
 eW
-Py
+NE
 Yn
-ML
+bp
 bk
 Gj
 Gj
@@ -46001,7 +45799,7 @@ sv
 Lj
 VF
 Gg
-ir
+mr
 "}
 (155,1,1) = {"
 ir
@@ -46223,20 +46021,20 @@ cX
 Ff
 Gj
 Ff
-tP
+zq
 Pu
-Xf
-Uv
+Pu
+Tc
 bW
-sg
+Pi
 xM
 Ov
-eJ
-Py
-Uv
+BE
+bW
+Tz
 vm
 bD
-tP
+FH
 jw
 Gj
 jw
@@ -46248,7 +46046,7 @@ jw
 jw
 jw
 jw
-jw
+ZV
 jw
 Rl
 Xk
@@ -46257,8 +46055,8 @@ sv
 sv
 XA
 VF
-nJ
-ir
+BY
+mr
 "}
 (156,1,1) = {"
 ir
@@ -46480,20 +46278,20 @@ cX
 Ff
 Gj
 Ff
-Ge
-Uv
-Uv
-Uv
+Ek
+ov
+Pu
+Tc
 NM
-sg
+au
 kX
 kX
-eJ
-Py
-Uv
-Uv
-Uv
-Ge
+lx
+bW
+Xf
+Xf
+Xf
+zo
 jw
 xT
 jw
@@ -46511,11 +46309,11 @@ VF
 jt
 Xk
 lB
-lB
+EL
 fZ
 VF
 nJ
-ir
+mr
 "}
 (157,1,1) = {"
 ir
@@ -46737,20 +46535,20 @@ cX
 Ff
 Gj
 Ff
-Ge
+Ek
 Tc
 TE
-Uv
+Tc
 bW
-sg
+dR
 kX
 kX
-eJ
-Py
-Uv
+ln
+bW
+Xf
 hX
 KH
-ML
+zo
 jw
 Gj
 jw
@@ -46772,7 +46570,7 @@ VF
 VF
 VF
 nJ
-ir
+mr
 "}
 (158,1,1) = {"
 ir
@@ -46994,20 +46792,20 @@ cX
 Ff
 Gj
 Ff
-Ge
+tB
 kw
-Py
+bf
 CG
 bW
 sg
 kX
 kX
 eJ
-Py
+bW
 wK
 Py
-AU
-Ge
+AN
+NF
 CC
 Gj
 jw
@@ -47029,7 +46827,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (159,1,1) = {"
 ir
@@ -47251,20 +47049,20 @@ cX
 Ff
 Gj
 Ff
-tP
+zy
 Jb
 zZ
-Uv
+iq
 bW
 jP
 jP
 jP
 jP
-Py
-Uv
+bW
+Xf
 QD
 Oz
-tP
+Xf
 jw
 Gj
 jw
@@ -47286,7 +47084,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (160,1,1) = {"
 ir
@@ -47509,8 +47307,8 @@ Ff
 Gj
 Ff
 ML
-Ge
-Ge
+tB
+tB
 dA
 xV
 jP
@@ -47518,10 +47316,10 @@ jP
 fO
 jP
 AU
-Uv
-Ge
-Ge
-Ge
+Xf
+zo
+zo
+zo
 jw
 Gj
 jw
@@ -47543,7 +47341,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (161,1,1) = {"
 ir
@@ -47800,7 +47598,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (162,1,1) = {"
 ir
@@ -48057,7 +47855,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (163,1,1) = {"
 ir
@@ -48282,7 +48080,7 @@ Gj
 Ff
 Ff
 Uv
-au
+NM
 Jf
 do
 RD
@@ -48314,7 +48112,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (164,1,1) = {"
 ir
@@ -48571,7 +48369,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (165,1,1) = {"
 ir
@@ -48828,7 +48626,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (166,1,1) = {"
 ir
@@ -49085,7 +48883,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (167,1,1) = {"
 ir
@@ -49321,12 +49119,12 @@ gF
 gF
 gF
 gF
+Hy
 gF
 gF
 gF
 gF
 gF
-gF
 nJ
 nJ
 nJ
@@ -49342,7 +49140,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (168,1,1) = {"
 ir
@@ -49599,7 +49397,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (169,1,1) = {"
 ir
@@ -49818,7 +49616,7 @@ cX
 cX
 jV
 cX
-Ff
+zd
 Ff
 Gj
 Ff
@@ -49856,7 +49654,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (170,1,1) = {"
 ir
@@ -50113,7 +49911,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (171,1,1) = {"
 ir
@@ -50320,12 +50118,12 @@ cX
 Gb
 Ck
 Ui
-sZ
+cE
 Gb
 Gb
 Ck
 sZ
-Ui
+aW
 Gb
 cX
 cX
@@ -50370,7 +50168,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (172,1,1) = {"
 ir
@@ -50627,7 +50425,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (173,1,1) = {"
 ir
@@ -50860,6 +50658,7 @@ gF
 gF
 gF
 gF
+Hy
 gF
 gF
 gF
@@ -50868,7 +50667,6 @@ gF
 gF
 gF
 gF
-gF
 nJ
 nJ
 nJ
@@ -50884,7 +50682,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (174,1,1) = {"
 ir
@@ -51089,14 +50887,14 @@ cX
 iM
 cX
 Gb
-Ui
-Ui
-sZ
-Ui
-Ui
+YB
 Ui
 sZ
 Ui
+Ui
+Ui
+sZ
+aW
 Gb
 Ff
 Ff
@@ -51121,11 +50919,11 @@ gF
 gF
 gF
 gF
+Hy
 gF
 gF
 gF
 gF
-gF
 nJ
 nJ
 nJ
@@ -51141,7 +50939,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (175,1,1) = {"
 ir
@@ -51349,7 +51147,7 @@ Gb
 DW
 PU
 Ia
-sZ
+DS
 Da
 sZ
 sZ
@@ -51398,7 +51196,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (176,1,1) = {"
 ir
@@ -51655,7 +51453,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (177,1,1) = {"
 ir
@@ -51912,7 +51710,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (178,1,1) = {"
 ir
@@ -52130,7 +51928,7 @@ Vu
 fq
 qE
 Vu
-vo
+Ob
 Ed
 Ff
 Gj
@@ -52169,7 +51967,7 @@ Mc
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (179,1,1) = {"
 ir
@@ -52426,7 +52224,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (180,1,1) = {"
 ir
@@ -52683,7 +52481,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (181,1,1) = {"
 ir
@@ -52910,7 +52708,7 @@ qp
 oP
 Bk
 cT
-Gk
+Gx
 Uq
 zK
 np
@@ -52921,7 +52719,7 @@ np
 np
 np
 np
-np
+ju
 np
 zK
 nJ
@@ -52940,7 +52738,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (182,1,1) = {"
 ir
@@ -53167,8 +52965,8 @@ qp
 Hb
 Bk
 cT
-pQ
-pQ
+Gk
+Gk
 hD
 Dy
 Dy
@@ -53197,7 +52995,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (183,1,1) = {"
 ir
@@ -53425,15 +53223,15 @@ po
 Bk
 cT
 cT
-pQ
+Gk
 zK
-np
+cR
 zK
 eT
 lo
 eT
 zK
-Po
+lr
 np
 Mz
 Dy
@@ -53454,7 +53252,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (184,1,1) = {"
 ir
@@ -53660,12 +53458,12 @@ Tj
 mq
 OP
 Gf
-sZ
-sZ
-sZ
+uu
+uu
+uu
 eB
-sZ
-sZ
+uu
+uu
 mX
 uu
 LC
@@ -53682,7 +53480,7 @@ Jr
 Bv
 cT
 cT
-pQ
+YF
 zK
 np
 zK
@@ -53711,7 +53509,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (185,1,1) = {"
 ir
@@ -53917,13 +53715,13 @@ dy
 OP
 dy
 Xn
-Ui
-Ui
-sZ
+vo
+vo
+uu
 Dz
-sZ
-sZ
-Gb
+uu
+uu
+Ed
 vo
 uL
 uu
@@ -53937,7 +53735,7 @@ Gj
 MI
 uo
 uo
-pQ
+Gk
 Sy
 og
 zK
@@ -53968,7 +53766,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (186,1,1) = {"
 ir
@@ -54174,11 +53972,11 @@ dy
 OP
 OP
 Gf
-sZ
-sZ
-sZ
-mr
-sZ
+uu
+uu
+ai
+er
+uu
 Xg
 mX
 uu
@@ -54196,7 +53994,7 @@ Pz
 Zm
 cT
 cT
-pQ
+YF
 zK
 np
 zK
@@ -54225,7 +54023,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (187,1,1) = {"
 ir
@@ -54453,15 +54251,15 @@ yF
 Zm
 cT
 cT
-pQ
+Gk
 zK
-np
+cR
 zK
 oH
 qQ
 oH
 zK
-lG
+iS
 np
 Mz
 Dy
@@ -54482,7 +54280,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (188,1,1) = {"
 ir
@@ -54693,7 +54491,7 @@ NI
 BX
 yb
 nu
-pl
+dJ
 ET
 vW
 Ub
@@ -54709,8 +54507,8 @@ JH
 So
 nB
 cT
-pQ
-pQ
+Gk
+Gk
 hD
 Dy
 Dy
@@ -54739,7 +54537,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (189,1,1) = {"
 ir
@@ -54948,7 +54746,7 @@ PJ
 pl
 ar
 NW
-pl
+OW
 nu
 qy
 ET
@@ -54965,7 +54763,7 @@ cX
 IG
 Ai
 MF
-cT
+Bx
 xJ
 Zg
 zK
@@ -54977,7 +54775,7 @@ np
 np
 np
 np
-np
+Du
 np
 zK
 nJ
@@ -54996,7 +54794,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (190,1,1) = {"
 ir
@@ -55253,7 +55051,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (191,1,1) = {"
 ir
@@ -55510,7 +55308,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (192,1,1) = {"
 ir
@@ -55737,7 +55535,7 @@ mp
 mp
 mp
 mp
-aH
+NG
 mp
 mp
 mp
@@ -55746,9 +55544,9 @@ gF
 gF
 gF
 gF
+Hy
 gF
 gF
-gF
 nJ
 nJ
 nJ
@@ -55767,7 +55565,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (193,1,1) = {"
 ir
@@ -56024,7 +55822,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (194,1,1) = {"
 ir
@@ -56247,21 +56045,21 @@ cX
 cX
 cX
 cX
+eL
 mp
 mp
 mp
-mp
-aH
+Fi
 mp
 mp
 mp
 mp
 gF
 gF
+Hy
 gF
 gF
 gF
-gF
 nJ
 nJ
 nJ
@@ -56281,7 +56079,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (195,1,1) = {"
 ir
@@ -56512,7 +56310,7 @@ JV
 zE
 zE
 zE
-zE
+fL
 gF
 gF
 gF
@@ -56538,7 +56336,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (196,1,1) = {"
 ir
@@ -56765,11 +56563,11 @@ mp
 mp
 mp
 mp
-aH
+NG
 mp
 mp
 mp
-mp
+eL
 gF
 gF
 gF
@@ -56795,7 +56593,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (197,1,1) = {"
 ir
@@ -57052,7 +56850,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (198,1,1) = {"
 ir
@@ -57275,11 +57073,11 @@ cX
 cX
 cX
 cX
+eL
 mp
 mp
 mp
-mp
-NT
+NG
 mp
 mp
 mp
@@ -57309,7 +57107,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (199,1,1) = {"
 ir
@@ -57566,7 +57364,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (200,1,1) = {"
 ir
@@ -57823,7 +57621,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (201,1,1) = {"
 ir
@@ -58080,7 +57878,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (202,1,1) = {"
 ir
@@ -58337,7 +58135,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (203,1,1) = {"
 ir
@@ -58594,7 +58392,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (204,1,1) = {"
 ir
@@ -58851,7 +58649,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (205,1,1) = {"
 ir
@@ -59108,7 +58906,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (206,1,1) = {"
 ir
@@ -59365,7 +59163,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (207,1,1) = {"
 ir
@@ -59622,7 +59420,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (208,1,1) = {"
 ir
@@ -59879,7 +59677,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (209,1,1) = {"
 ir
@@ -60136,7 +59934,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (210,1,1) = {"
 ir
@@ -60393,7 +60191,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (211,1,1) = {"
 ir
@@ -60650,7 +60448,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (212,1,1) = {"
 ir
@@ -60907,7 +60705,7 @@ nJ
 Mc
 nJ
 nJ
-ir
+mr
 "}
 (213,1,1) = {"
 ir
@@ -61164,7 +60962,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (214,1,1) = {"
 ir
@@ -61391,8 +61189,8 @@ cX
 cX
 gF
 gF
+Hy
 gF
-gF
 nJ
 nJ
 nJ
@@ -61421,7 +61219,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (215,1,1) = {"
 ir
@@ -61678,7 +61476,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (216,1,1) = {"
 ir
@@ -61904,8 +61702,8 @@ cX
 cX
 cX
 gF
+Hy
 gF
-gF
 nJ
 nJ
 nJ
@@ -61935,7 +61733,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (217,1,1) = {"
 ir
@@ -62192,7 +61990,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (218,1,1) = {"
 ir
@@ -62449,7 +62247,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (219,1,1) = {"
 ir
@@ -62706,7 +62504,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (220,1,1) = {"
 ir
@@ -62963,7 +62761,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (221,1,1) = {"
 ir
@@ -63220,7 +63018,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (222,1,1) = {"
 ir
@@ -63477,7 +63275,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (223,1,1) = {"
 ir
@@ -63734,7 +63532,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (224,1,1) = {"
 ir
@@ -63991,7 +63789,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (225,1,1) = {"
 ir
@@ -64248,7 +64046,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (226,1,1) = {"
 ir
@@ -64440,9 +64238,9 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
+sq
+sq
+sq
 WK
 WK
 WK
@@ -64505,7 +64303,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (227,1,1) = {"
 ir
@@ -64695,11 +64493,11 @@ WK
 WK
 WK
 WK
-Oo
-Oo
+sq
+sq
 Ja
-Oo
-Oo
+sq
+sq
 Ja
 WK
 WK
@@ -64762,7 +64560,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (228,1,1) = {"
 ir
@@ -64952,12 +64750,12 @@ WK
 WK
 WK
 FK
-Oo
-Oo
+sq
+sq
 ui
 Vc
-Oo
-Oo
+sq
+sq
 WK
 WK
 WK
@@ -65019,7 +64817,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (229,1,1) = {"
 ir
@@ -65208,14 +65006,14 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+sq
+sq
+sq
+sq
+sq
+sq
 MA
-Oo
+sq
 WK
 WK
 WK
@@ -65276,7 +65074,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (230,1,1) = {"
 ir
@@ -65466,12 +65264,12 @@ WK
 WK
 WK
 ui
-Oo
+sq
 MA
-Oo
-Oo
+sq
+sq
 ui
-Oo
+sq
 ga
 WK
 WK
@@ -65533,7 +65331,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (231,1,1) = {"
 ir
@@ -65722,14 +65520,14 @@ WK
 WK
 WK
 WK
-Oo
-Oo
+sq
+sq
 MA
 Ja
-Oo
+sq
 KB
-Oo
-Oo
+sq
+sq
 WK
 WK
 WK
@@ -65774,8 +65572,8 @@ gF
 nJ
 nJ
 nJ
+ZV
 jw
-jw
 gF
 gF
 gF
@@ -65790,7 +65588,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (232,1,1) = {"
 ir
@@ -65980,13 +65778,13 @@ WK
 WK
 WK
 WK
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
+sq
+sq
+sq
+sq
+sq
+sq
+sq
 WK
 WK
 WK
@@ -66047,7 +65845,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (233,1,1) = {"
 ir
@@ -66304,7 +66102,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (234,1,1) = {"
 ir
@@ -66499,10 +66297,10 @@ WK
 WK
 WK
 WK
-Oo
+sq
 Ja
-Oo
-Oo
+sq
+sq
 WK
 WK
 WK
@@ -66546,7 +66344,7 @@ cX
 cX
 cX
 Ff
-Ff
+LM
 cX
 cX
 cX
@@ -66561,7 +66359,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (235,1,1) = {"
 ir
@@ -66757,12 +66555,12 @@ WK
 WK
 WK
 WK
-Oo
+sq
 MA
-Oo
-Oo
+sq
+sq
 xe
-Oo
+Uy
 cX
 cX
 cX
@@ -66795,7 +66593,7 @@ nJ
 nJ
 gF
 gF
-cX
+mI
 cX
 cX
 cX
@@ -66818,7 +66616,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (236,1,1) = {"
 ir
@@ -67014,10 +66812,10 @@ WK
 WK
 WK
 WK
-Oo
-Oo
+sq
+sq
 Vc
-Oo
+sq
 xe
 Ja
 cX
@@ -67075,7 +66873,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (237,1,1) = {"
 ir
@@ -67277,7 +67075,7 @@ WK
 WK
 WK
 cX
-cX
+aV
 cX
 cX
 cX
@@ -67299,7 +67097,7 @@ cX
 cX
 cX
 gF
-gF
+Hy
 gF
 nJ
 nJ
@@ -67323,7 +67121,7 @@ cX
 cX
 cX
 cX
-cX
+mI
 gF
 gF
 nJ
@@ -67332,7 +67130,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (238,1,1) = {"
 ir
@@ -67589,7 +67387,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (239,1,1) = {"
 ir
@@ -67846,7 +67644,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (240,1,1) = {"
 ir
@@ -68088,7 +67886,7 @@ HV
 ke
 jw
 jw
-jw
+ZV
 jw
 QL
 HV
@@ -68103,7 +67901,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (241,1,1) = {"
 ir
@@ -68360,7 +68158,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (242,1,1) = {"
 ir
@@ -68600,7 +68398,7 @@ cX
 mP
 HV
 tg
-jw
+ZV
 jw
 jw
 jw
@@ -68617,7 +68415,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (243,1,1) = {"
 ir
@@ -68836,8 +68634,8 @@ Yv
 gF
 gF
 gF
-gF
-gF
+Hy
+Hy
 gF
 gF
 gF
@@ -68874,7 +68672,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (244,1,1) = {"
 ir
@@ -69079,6 +68877,7 @@ WK
 gF
 gF
 gF
+Hy
 gF
 gF
 gF
@@ -69092,9 +68891,8 @@ gF
 gF
 gF
 gF
-gF
-gF
-gF
+Hy
+Hy
 gF
 gF
 nJ
@@ -69121,7 +68919,7 @@ HV
 HV
 HV
 cX
-cX
+mI
 gF
 gF
 nJ
@@ -69131,7 +68929,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (245,1,1) = {"
 ir
@@ -69365,7 +69163,7 @@ nJ
 nJ
 gF
 cX
-cX
+mI
 cX
 cX
 cX
@@ -69388,7 +69186,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (246,1,1) = {"
 ir
@@ -69645,7 +69443,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (247,1,1) = {"
 ir
@@ -69902,7 +69700,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (248,1,1) = {"
 ir
@@ -70140,7 +69938,7 @@ gF
 gF
 gF
 gF
-gF
+Hy
 cX
 cX
 cX
@@ -70159,7 +69957,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (249,1,1) = {"
 ir
@@ -70416,7 +70214,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (250,1,1) = {"
 ir
@@ -70660,7 +70458,7 @@ gF
 gF
 cX
 cX
-cX
+mI
 cX
 cX
 gF
@@ -70673,7 +70471,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (251,1,1) = {"
 ir
@@ -70930,7 +70728,7 @@ nJ
 Mc
 nJ
 nJ
-ir
+mr
 "}
 (252,1,1) = {"
 ir
@@ -71187,7 +70985,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (253,1,1) = {"
 ir
@@ -71444,7 +71242,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (254,1,1) = {"
 ir
@@ -71701,7 +71499,7 @@ nJ
 nJ
 nJ
 nJ
-ir
+mr
 "}
 (255,1,1) = {"
 ir
@@ -71902,61 +71700,61 @@ ir
 ir
 ir
 ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
-ir
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
+mr
 "}
