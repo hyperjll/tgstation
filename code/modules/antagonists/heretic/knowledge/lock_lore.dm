@@ -113,6 +113,7 @@
 	next_knowledge = list(
 		/datum/heretic_knowledge/mark/lock_mark,
 		/datum/heretic_knowledge/spell/mind_gate,
+		/datum/heretic_knowledge/armorexpensive,
 	)
 	cost = 1
 	route = PATH_LOCK

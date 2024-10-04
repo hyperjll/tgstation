@@ -6532,6 +6532,7 @@
 #include "hypermods\code\modules\actionspeed\modifiers\virus.dm"
 #include "hypermods\code\modules\antagonists\_common\antag_spawner.dm"
 #include "hypermods\code\modules\antagonists\cerberus\cerberus.dm"
+#include "hypermods\code\modules\antagonists\heretic\knowledge\side_all.dm"
 #include "hypermods\code\modules\antagonists\ninja\energy_net_nets.dm"
 #include "hypermods\code\modules\assembly\flash.dm"
 #include "hypermods\code\modules\bitrunning\orders\bepis.dm"

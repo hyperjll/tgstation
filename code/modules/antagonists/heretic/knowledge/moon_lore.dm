@@ -83,6 +83,7 @@
 		/datum/heretic_knowledge/mark/moon_mark,
 		/datum/heretic_knowledge/medallion,
 		/datum/heretic_knowledge/spell/mind_gate,
+		/datum/heretic_knowledge/armorexpensive,
 	)
 	spell_to_add = /datum/action/cooldown/spell/pointed/moon_smile
 	cost = 1

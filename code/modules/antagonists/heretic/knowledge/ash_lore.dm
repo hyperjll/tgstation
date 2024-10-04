@@ -81,6 +81,7 @@
 		/datum/heretic_knowledge/mark/ash_mark,
 		/datum/heretic_knowledge/summon/fire_shark,
 		/datum/heretic_knowledge/medallion,
+		/datum/heretic_knowledge/armorexpensive,
 	)
 	spell_to_add = /datum/action/cooldown/spell/jaunt/ethereal_jaunt/ash
 	cost = 1

@@ -9,6 +9,9 @@
 		/datum/heretic_knowledge/rust_regen,
 		/datum/heretic_knowledge/blade_dance,
 	)
+	banned_knowledge = list(
+		/datum/heretic_knowledge/armorexpensive,
+	)
 	required_atoms = list(
 		/obj/structure/table = 1,
 		/obj/item/clothing/mask/gas = 1,
