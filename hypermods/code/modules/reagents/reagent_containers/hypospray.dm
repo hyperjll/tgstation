@@ -41,6 +41,7 @@
 	desc = "A single-use superdose of nanites capable of restoring a corpse to perfect working very quickly. Does nothing on a living person."
 	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "resurrector"
+	base_icon_state = "resurrector"
 	list_reagents = list(/datum/reagent/medicine/resurrector_nanites = 1)
 
 /obj/item/reagent_containers/hypospray/medipen/resurrector/attack(mob/living/M, mob/user)
