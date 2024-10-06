@@ -40,10 +40,10 @@
 
 	superhumanhealing = FALSE
 	owner.maxHealth -= 50
-	owner.physiology.brute_mod *= 1.10
-	owner.physiology.burn_mod *= 1.10
-	owner.physiology.tox_mod *= 1.10
-	owner.physiology.oxy_mod *= 1.10
+	owner.physiology.brute_mod /= 0.90
+	owner.physiology.burn_mod /= 0.90
+	owner.physiology.tox_mod /= 0.90
+	owner.physiology.oxy_mod /= 0.90
 	owner.remove_traits(mutation_traits, TRAIT_NO_SLIP_WATER)
 	owner.remove_traits(mutation_traits, TRAIT_PUSHIMMUNE)
 	owner.remove_traits(mutation_traits, TRAIT_STUNIMMUNE)

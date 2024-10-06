@@ -17,7 +17,7 @@
 /datum/mutation/human/metallineskin/on_losing(mob/living/carbon/human/owner)
 	if(..())
 		return
-	owner.physiology.brute_mod *= 1.25
+	owner.physiology.brute_mod /= 0.75
 
 
 /datum/mutation/human/reflectiveskin
@@ -39,4 +39,4 @@
 /datum/mutation/human/reflectiveskin/on_losing(mob/living/carbon/human/owner)
 	if(..())
 		return
-	owner.physiology.burn_mod *= 1.25
+	owner.physiology.burn_mod /= 0.75
