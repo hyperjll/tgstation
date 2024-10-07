@@ -8,6 +8,7 @@
 	instability = 10
 	energy_coeff = 1
 	mutadone_proof = FALSE
+	locked = TRUE
 	var/regenerative = FALSE
 
 /datum/mutation/human/regenerative/on_acquiring(mob/living/carbon/human/acquirer)

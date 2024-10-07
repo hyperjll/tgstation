@@ -6,6 +6,7 @@
 	instability = 40
 	difficulty = 16
 	mutadone_proof = TRUE
+	locked = TRUE
 
 /datum/mutation/human/superradproof/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
