@@ -1,4 +1,4 @@
-// Sidepaths for knowledge between Cosmos and Ash.
+// Sidepaths for knowledge between Cosmos and Time.
 
 /datum/heretic_knowledge/summon/fire_shark
 	name = "Scorching Shark"
@@ -8,7 +8,7 @@
 	gain_text = "The cradle of the nebula was cold, but not dead. Light and heat flits even through the deepest darkness, and is hunted by its own predators."
 	next_knowledge = list(
 		/datum/heretic_knowledge/spell/cosmic_runes,
-		/datum/heretic_knowledge/spell/ash_passage,
+		/datum/heretic_knowledge/mark/time_mark,
 	)
 	required_atoms = list(
 		/obj/effect/decal/cleanable/ash = 1,
@@ -29,7 +29,7 @@
 	gain_text = "You feel like your body can move through space as if you where dust."
 	next_knowledge = list(
 		/datum/heretic_knowledge/spell/star_blast,
-		/datum/heretic_knowledge/mad_mask,
+		/datum/heretic_knowledge/spell/deja_vu,
 	)
 	spell_to_add = /datum/action/cooldown/spell/jaunt/space_crawl
 	cost = 1
@@ -46,7 +46,7 @@
 	gain_text = "The Mansus is a place of all sorts of sins. But greed held a special role."
 	next_knowledge = list(
 		/datum/heretic_knowledge/spell/cosmic_expansion,
-		/datum/heretic_knowledge/spell/flame_birth,
+		/datum/heretic_knowledge/spell/accelerate,
 	)
 	required_atoms = list(
 		/obj/item/stack/sheet/mineral/diamond = 1,

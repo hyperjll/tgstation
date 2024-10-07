@@ -88,6 +88,7 @@
 #define PATH_COSMIC "Cosmic Path"
 #define PATH_LOCK "Lock Path"
 #define PATH_MOON "Moon Path"
+#define PATH_TIME "Time Path"
 
 /// Defines are used in /proc/has_living_heart() to report if the heretic has no heart period, no living heart, or has a living heart.
 #define HERETIC_NO_HEART_ORGAN -1

@@ -149,6 +149,12 @@
 	database_id = MEDAL_MOON_ASCENSION
 	icon_state = "moonascend"
 
+/datum/award/achievement/misc/time_ascension
+	name = "The World is Yours"
+	desc = "You've become a Lord of Time. Let all fear the ticking clock!"
+	database_id = MEDAL_TIME_ASCENSION
+	icon_state = "timeascend"
+
 /datum/award/achievement/misc/grand_ritual_finale
 	name = "Archmage"
 	desc = "Made a big impression on the station with your phenomenal cosmic power."

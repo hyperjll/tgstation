@@ -183,6 +183,12 @@ Striking a noncultist, however, will tear their flesh."}
 			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/moon_smile),
 			SWORD_PREFIX = "shimmering",
 		),
+		// Time
+		PATH_TIME = list(
+			WIELDER_SPELLS = list(/datum/action/cooldown/spell/pointed/projectile/moon_parade),
+			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/moon_smile),
+			SWORD_PREFIX = "ticking",
+		),
 		// Starter
 		PATH_START = list(
 			WIELDER_SPELLS = null,
