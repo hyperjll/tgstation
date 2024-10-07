@@ -408,15 +408,6 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
-"dd" = (
-/obj/machinery/door/airlock/medical/glass{
-	name = "Primary Treatment Centre"
-	},
-/obj/effect/mapping_helpers/airlock/access/all/medical/general,
-/turf/open/floor/wood,
-/area/station/medical/medbay/central{
-	has_gravity = 1
-	})
 "do" = (
 /obj/machinery/computer/records/security{
 	dir = 8
@@ -621,14 +612,6 @@
 /area/station/security/prison/garden{
 	has_gravity = 1
 	})
-"ew" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/floor/wood,
-/area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
-	})
 "ey" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
@@ -702,6 +685,12 @@
 /obj/machinery/chem_dispenser/drinks/beer,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft)
+"eP" = (
+/obj/effect/spawner/structure/window/bronze,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "eS" = (
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
@@ -879,6 +868,13 @@
 /area/station/cargo/miningoffice{
 	has_gravity = 1
 	})
+"gv" = (
+/obj/structure/table/optable,
+/obj/item/surgery_tray/full,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "gw" = (
 /obj/effect/spawner/random/structure/crate,
 /turf/open/misc/dirt/station,
@@ -938,12 +934,6 @@
 /obj/item/storage/box/donkpockets/donkpockethonk,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
-	})
-"gS" = (
-/obj/effect/spawner/structure/window/bronze,
-/turf/open/floor/wood,
-/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "gU" = (
@@ -1040,6 +1030,11 @@
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1
 	})
+"ib" = (
+/turf/closed/wall/mineral/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "ie" = (
 /turf/open/lava/smooth,
 /area/awaymission/beach{
@@ -1104,7 +1099,7 @@
 	})
 "iw" = (
 /turf/open/floor/wood,
-/area/station/medical/treatment_center{
+/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "iy" = (
@@ -1121,6 +1116,27 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
+	has_gravity = 1
+	})
+"iI" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/machinery/light/directional/west,
+/obj/structure/table/reinforced,
+/obj/item/storage/medkit/brute{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/medkit/brute{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/medkit/toxin{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "iK" = (
@@ -1220,9 +1236,10 @@
 /area/station/command/bridge{
 	has_gravity = 1
 	})
-"jT" = (
-/turf/closed/wall/mineral/wood,
-/area/station/medical/medbay/central{
+"jR" = (
+/obj/machinery/camera/motion/directional/south,
+/turf/open/misc/asteroid/basalt/wasteland,
+/area/space/nearstation{
 	has_gravity = 1
 	})
 "jV" = (
@@ -1253,13 +1270,6 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/space/nearstation{
-	has_gravity = 1
-	})
-"kf" = (
-/obj/machinery/light/directional/west,
-/obj/machinery/stasis,
-/turf/open/floor/wood,
-/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "kh" = (
@@ -1361,6 +1371,12 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
+"kL" = (
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "kM" = (
 /obj/structure/water_source/puddle,
 /obj/item/reagent_containers/cup/watering_can,
@@ -1398,8 +1414,8 @@
 	has_gravity = 1
 	})
 "kW" = (
-/turf/closed/wall/mineral/wood,
-/area/station/medical/treatment_center{
+/turf/closed/wall,
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "kX" = (
@@ -1419,6 +1435,12 @@
 	},
 /turf/open/floor/wood,
 /area/space/nearstation{
+	has_gravity = 1
+	})
+"li" = (
+/obj/structure/chair,
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "ln" = (
@@ -1997,13 +2019,6 @@
 /area/station/cargo/warehouse{
 	has_gravity = 1
 	})
-"oE" = (
-/obj/structure/cable,
-/obj/machinery/camera/motion/directional/north,
-/turf/open/floor/catwalk_floor,
-/area/space/nearstation{
-	has_gravity = 1
-	})
 "oH" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
 /obj/machinery/power/energy_accumulator/tesla_coil/anchored,
@@ -2079,6 +2094,16 @@
 /area/station/engineering/lobby{
 	has_gravity = 1
 	})
+"pq" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/medical/glass{
+	name = "Primary Treatment Centre"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
+	has_gravity = 1
+	})
 "py" = (
 /obj/machinery/door/airlock/research{
 	name = "Robotics Lab"
@@ -2119,6 +2144,14 @@
 /area/station/security/brig{
 	has_gravity = 1
 	})
+"pK" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
+	has_gravity = 1
+	})
 "pL" = (
 /obj/item/pipe_dispenser,
 /turf/open/floor/plating,
@@ -2131,12 +2164,6 @@
 /turf/open/misc/dirt/station,
 /area/lavaland/surface/outdoors/explored{
 	name = "Mountain Mine Passage"
-	})
-"pO" = (
-/obj/machinery/computer/operating,
-/turf/open/floor/wood,
-/area/station/medical/treatment_center{
-	has_gravity = 1
 	})
 "pQ" = (
 /obj/structure/cable,
@@ -2213,6 +2240,13 @@
 /area/station/engineering/lobby{
 	has_gravity = 1
 	})
+"qv" = (
+/obj/machinery/light/directional/east,
+/obj/machinery/rnd/production/techfab/department/medical,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
+	has_gravity = 1
+	})
 "qx" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/disablers,
@@ -2244,12 +2278,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
-	})
-"qC" = (
-/obj/effect/turf_decal/caution/stand_clear,
-/turf/open/floor/wood,
-/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "qE" = (
@@ -2284,12 +2312,6 @@
 /area/station/engineering/supermatter/room{
 	has_gravity = 1
 	})
-"qT" = (
-/obj/effect/spawner/structure/window/bronze,
-/turf/open/floor/wood,
-/area/station/medical/medbay/central{
-	has_gravity = 1
-	})
 "qU" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Telecomms - Server Room - Aft-Starboard";
@@ -2299,6 +2321,14 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
+	has_gravity = 1
+	})
+"rc" = (
+/obj/structure/chair,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "re" = (
@@ -2314,6 +2344,15 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/ce{
+	has_gravity = 1
+	})
+"rj" = (
+/obj/effect/turf_decal/caution/stand_clear,
+/obj/structure/chair{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "rn" = (
@@ -2364,25 +2403,10 @@
 /area/station/cargo/warehouse{
 	has_gravity = 1
 	})
-"rO" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/west,
-/obj/machinery/light/directional/west,
-/obj/structure/table/reinforced,
-/obj/item/storage/medkit/brute{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/storage/medkit/brute{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/storage/medkit/toxin{
-	pixel_x = -3;
-	pixel_y = -3
-	},
+"rH" = (
+/obj/machinery/computer/operating,
 /turf/open/floor/wood,
-/area/station/medical/medbay/central{
+/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "rU" = (
@@ -2495,6 +2519,15 @@
 /area/station/cargo/storage{
 	has_gravity = 1
 	})
+"sH" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
+	has_gravity = 1
+	})
 "sK" = (
 /obj/structure/railing{
 	dir = 8
@@ -2577,9 +2610,10 @@
 	has_gravity = 1
 	})
 "td" = (
-/obj/structure/cable,
+/obj/structure/window/fulltile,
+/obj/effect/light_emitter/fake_outdoors,
 /turf/open/floor/wood,
-/area/station/medical/medbay/central{
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "tg" = (
@@ -2907,6 +2941,11 @@
 /area/station/security/lockers{
 	has_gravity = 1
 	})
+"vY" = (
+/turf/closed/wall/mineral/wood,
+/area/station/medical/medbay/central{
+	has_gravity = 1
+	})
 "vZ" = (
 /obj/machinery/telecomms/bus/preset_one,
 /turf/open/floor/circuit/green/telecomms/mainframe,
@@ -2955,6 +2994,15 @@
 /area/station/security/lockers{
 	has_gravity = 1
 	})
+"wn" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/table/optable,
+/obj/item/surgery_tray/full,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "wo" = (
 /obj/structure/rack,
 /obj/item/gun/energy/temperature/security,
@@ -2992,12 +3040,6 @@
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
 	outdoors = 1
-	})
-"wE" = (
-/obj/machinery/camera/motion/directional/south,
-/turf/open/misc/asteroid/basalt/wasteland,
-/area/space/nearstation{
-	has_gravity = 1
 	})
 "wH" = (
 /obj/effect/spawner/random/structure/closet_empty/crate,
@@ -3114,6 +3156,13 @@
 /area/station/cargo/warehouse{
 	has_gravity = 1
 	})
+"xz" = (
+/obj/structure/chair,
+/obj/machinery/status_display/evac/directional/north,
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
+	has_gravity = 1
+	})
 "xI" = (
 /obj/machinery/camera/motion/directional/south,
 /turf/open/water/jungle,
@@ -3148,6 +3197,15 @@
 /obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
+	has_gravity = 1
+	})
+"xS" = (
+/obj/machinery/door/airlock/medical/glass{
+	name = "Primary Treatment Centre"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "xT" = (
@@ -3193,6 +3251,13 @@
 /area/station/cargo/miningoffice{
 	has_gravity = 1
 	})
+"ym" = (
+/obj/machinery/camera/directional/east,
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
+	has_gravity = 1
+	})
 "yn" = (
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=8.1-Aft-to-Escape";
@@ -3213,6 +3278,15 @@
 "yF" = (
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
+"yI" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/medkit/fire,
+/obj/item/storage/medkit/fire,
+/obj/item/storage/medkit/o2,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "yP" = (
@@ -3391,6 +3465,12 @@
 /turf/open/misc/dirt/station,
 /area/lavaland/surface/outdoors/explored{
 	name = "Mountain Mine Passage"
+	})
+"Av" = (
+/obj/effect/spawner/structure/window/bronze,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
+	has_gravity = 1
 	})
 "Aw" = (
 /obj/structure/table,
@@ -3729,6 +3809,17 @@
 /area/station/ai_monitored/security/armory{
 	has_gravity = 1
 	})
+"De" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/computer/slot_machine{
+	pixel_y = 2
+	},
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
+	has_gravity = 1
+	})
 "Dh" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -3792,6 +3883,13 @@
 /area/station/security/office{
 	has_gravity = 1
 	})
+"DD" = (
+/obj/machinery/light/directional/east,
+/obj/machinery/stasis,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "DH" = (
 /obj/machinery/power/solar_control{
 	dir = 8;
@@ -3801,6 +3899,14 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/maintenance/solars/starboard/aft{
+	has_gravity = 1
+	})
+"DK" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "DM" = (
@@ -3819,12 +3925,6 @@
 /obj/effect/turf_decal/delivery,
 /obj/structure/cable,
 /obj/structure/cable,
-/turf/open/floor/wood,
-/area/station/cargo/storage{
-	has_gravity = 1
-	})
-"DS" = (
-/obj/machinery/rnd/production/techfab/department/cargo,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
 	has_gravity = 1
@@ -3930,6 +4030,12 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
+"EF" = (
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
+	has_gravity = 1
+	})
 "EM" = (
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
@@ -3938,12 +4044,6 @@
 "EN" = (
 /turf/closed/wall/mineral/wood,
 /area/station/science/lab{
-	has_gravity = 1
-	})
-"EO" = (
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "ES" = (
@@ -3994,6 +4094,15 @@
 /obj/machinery/suit_storage_unit/hos,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
+	has_gravity = 1
+	})
+"EX" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/spawner/random/entertainment/arcade,
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "Fc" = (
@@ -4090,13 +4199,6 @@
 /obj/machinery/nuclearbomb/selfdestruct,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
-	})
-"FV" = (
-/obj/machinery/light/directional/east,
-/obj/machinery/stasis,
-/turf/open/floor/wood,
-/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "Gb" = (
@@ -4464,13 +4566,6 @@
 /area/station/security/prison{
 	has_gravity = 1
 	})
-"Is" = (
-/obj/structure/table/optable,
-/obj/item/surgery_tray/full,
-/turf/open/floor/wood,
-/area/station/medical/treatment_center{
-	has_gravity = 1
-	})
 "Iv" = (
 /obj/effect/landmark/start/prisoner,
 /turf/open/misc/grass/jungle,
@@ -4715,14 +4810,6 @@
 	has_gravity = 1;
 	outdoors = 1
 	})
-"Kb" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/open/floor/wood,
-/area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
-	})
 "Ki" = (
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
@@ -4744,6 +4831,12 @@
 /obj/machinery/rnd/server,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/ai_monitored/turret_protected/ai{
+	has_gravity = 1
+	})
+"Kp" = (
+/obj/structure/closet/crate/freezer/blood,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "Kq" = (
@@ -4945,6 +5038,13 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
+"MB" = (
+/obj/structure/cable,
+/obj/machinery/camera/motion/directional/north,
+/turf/open/floor/catwalk_floor,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "MC" = (
 /turf/closed/indestructible/rock,
 /area/awaymission/beach{
@@ -4983,6 +5083,14 @@
 /obj/effect/landmark/start/geneticist,
 /turf/open/misc/grass/jungle,
 /area/space/nearstation{
+	has_gravity = 1
+	})
+"MU" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "Na" = (
@@ -5194,6 +5302,13 @@
 	power_equip = 0;
 	power_light = 0
 	})
+"Oq" = (
+/obj/structure/window/fulltile,
+/obj/effect/light_emitter/fake_outdoors,
+/turf/closed/wall,
+/area/station/hallway/secondary/exit/departure_lounge{
+	has_gravity = 1
+	})
 "Or" = (
 /obj/machinery/camera/motion/directional/east,
 /turf/open/misc/beach/sand,
@@ -5255,13 +5370,10 @@
 /area/station/security/prison{
 	has_gravity = 1
 	})
-"OO" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/medkit/fire,
-/obj/item/storage/medkit/fire,
-/obj/item/storage/medkit/o2,
+"ON" = (
+/obj/machinery/rnd/production/techfab/department/cargo,
 /turf/open/floor/wood,
-/area/station/medical/medbay/central{
+/area/station/cargo/storage{
 	has_gravity = 1
 	})
 "OP" = (
@@ -5681,16 +5793,6 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
-"Se" = (
-/obj/structure/cable,
-/obj/machinery/door/airlock/medical/glass{
-	name = "Primary Treatment Centre"
-	},
-/obj/effect/mapping_helpers/airlock/access/all/medical/general,
-/turf/open/floor/wood,
-/area/station/medical/medbay/central{
-	has_gravity = 1
-	})
 "Sh" = (
 /obj/effect/landmark/start/clown,
 /turf/open/misc/asteroid/basalt/wasteland,
@@ -5745,11 +5847,6 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/rd{
-	has_gravity = 1
-	})
-"SL" = (
-/turf/open/floor/wood,
-/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "SN" = (
@@ -5996,12 +6093,6 @@
 /area/station/security/brig{
 	has_gravity = 1
 	})
-"Um" = (
-/obj/structure/closet/crate/freezer/blood,
-/turf/open/floor/wood,
-/area/station/medical/medbay/central{
-	has_gravity = 1
-	})
 "Un" = (
 /obj/structure/closet/secure_closet/miner,
 /turf/open/floor/wood,
@@ -6045,6 +6136,12 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
+"UA" = (
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
+	has_gravity = 1
+	})
 "UH" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
@@ -6068,6 +6165,11 @@
 /obj/item/storage/box/fishing_lines,
 /turf/open/floor/wood,
 /area/space/nearstation{
+	has_gravity = 1
+	})
+"UR" = (
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "US" = (
@@ -6110,6 +6212,13 @@
 /obj/machinery/telecomms/server/presets/service,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
+	has_gravity = 1
+	})
+"Vj" = (
+/obj/structure/cable,
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "Vk" = (
@@ -6239,26 +6348,10 @@
 /area/station/ai_monitored/turret_protected/ai{
 	has_gravity = 1
 	})
-"Wg" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/table/optable,
-/obj/item/surgery_tray/full,
-/turf/open/floor/wood,
-/area/station/medical/treatment_center{
-	has_gravity = 1
-	})
 "Wi" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den)
-"Wj" = (
-/obj/machinery/light/directional/east,
-/obj/machinery/rnd/production/techfab/department/medical,
-/turf/open/floor/wood,
-/area/station/medical/medbay/central{
-	has_gravity = 1
-	})
 "Wo" = (
 /turf/open/floor/catwalk_floor,
 /area/space/nearstation{
@@ -6345,6 +6438,13 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/office{
+	has_gravity = 1
+	})
+"Xh" = (
+/obj/machinery/light/directional/west,
+/obj/machinery/stasis,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "Xj" = (
@@ -6464,6 +6564,13 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/cmo{
+	has_gravity = 1
+	})
+"Yr" = (
+/obj/machinery/camera/directional/west,
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "Yv" = (
@@ -28944,7 +29051,7 @@ WK
 WK
 WK
 Ff
-wE
+jR
 eV
 nD
 dU
@@ -29981,7 +30088,7 @@ dU
 hM
 xQ
 Gw
-DS
+ON
 oo
 Rz
 wT
@@ -31001,7 +31108,7 @@ dL
 dL
 Ff
 Gj
-wE
+jR
 eV
 sP
 bA
@@ -36171,9 +36278,9 @@ Lt
 Lt
 Lt
 Lt
-Kb
+pK
 Ie
-Ie
+ym
 Ie
 Ie
 Ie
@@ -36428,10 +36535,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-Ie
-Ie
-Ie
+pK
+sH
+kW
+li
 Ie
 Ie
 Ff
@@ -36685,10 +36792,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-Ie
-Ie
-Ie
+EX
+MU
+td
+li
 Ie
 Ie
 Ff
@@ -36942,10 +37049,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-Ie
-Ie
-Ie
+pK
+MU
+kW
+li
 Ie
 Ie
 Ff
@@ -37199,10 +37306,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-qC
-Ie
-Ie
+EX
+rj
+td
+li
 Ie
 Ie
 Ff
@@ -37456,10 +37563,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-Ie
-Ie
-Ie
+pK
+MU
+kW
+li
 Ie
 Ie
 Ff
@@ -37713,10 +37820,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-Ie
-Ie
-Ie
+EX
+MU
+td
+li
 Ie
 Ie
 Ff
@@ -37970,10 +38077,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-qC
-Ie
-Ie
+pK
+rj
+kW
+xz
 Ie
 Ie
 Ff
@@ -38229,7 +38336,7 @@ Lt
 oZ
 Ie
 Ie
-Ie
+Yr
 Ie
 Ie
 Ie
@@ -39000,7 +39107,7 @@ Lt
 oZ
 Ie
 Ie
-Ie
+ym
 Ie
 Ie
 Ie
@@ -39230,7 +39337,7 @@ by
 EN
 EN
 HV
-oE
+MB
 Ff
 Ff
 cX
@@ -39255,10 +39362,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-qC
-Ie
-Ie
+pK
+rj
+kW
+xz
 Ie
 Ie
 Ff
@@ -39512,10 +39619,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-Ie
-Ie
-Ie
+De
+MU
+Oq
+li
 Ie
 Ie
 Ff
@@ -39769,10 +39876,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-Ie
-Ie
-Ie
+De
+MU
+td
+li
 Ie
 Ie
 Ff
@@ -40026,10 +40133,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-qC
-Ie
-Ie
+De
+rj
+td
+li
 Ie
 Ie
 Ff
@@ -40283,10 +40390,10 @@ Lt
 Lt
 Lt
 Lt
-Kb
-Ie
-Ie
-Ie
+De
+MU
+td
+li
 Ie
 Ie
 Ff
@@ -40540,10 +40647,10 @@ Lt
 Lt
 wI
 oZ
-Kb
-Ie
-Ie
-Ie
+pK
+sH
+kW
+rc
 Ie
 Ie
 Ff
@@ -40790,17 +40897,17 @@ Gj
 Wo
 Wo
 Ie
-ew
-ew
-ew
-ew
-ew
-ew
-ew
+DK
+DK
+DK
+DK
+DK
+DK
+DK
 Ie
 Ie
-Ie
-Ie
+Yr
+UA
 Ie
 Ie
 Ff
@@ -41044,20 +41151,20 @@ cX
 Ff
 Ff
 Gj
-Wo
-Wo
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
+Gj
+Gj
+UA
+UA
+UA
+Vj
+UA
+UA
+UA
+Vj
+UA
+UA
+UA
+UA
 Ie
 Ie
 Ff
@@ -43855,12 +43962,12 @@ cX
 cX
 cX
 cX
-kW
-kW
-gS
-qT
-jT
-jT
+ib
+ib
+eP
+Av
+vY
+vY
 cX
 cX
 cX
@@ -44112,12 +44219,12 @@ cX
 cX
 cX
 cX
-kW
-kf
-iw
-td
-rO
-qT
+ib
+Xh
+UR
+EF
+iI
+Av
 cX
 cX
 cX
@@ -44369,12 +44476,12 @@ cX
 cX
 cX
 iM
-kW
-pO
-iw
-td
-OO
-jT
+ib
+rH
+UR
+EF
+yI
+vY
 Ff
 Ff
 Ff
@@ -44626,12 +44733,12 @@ cX
 cX
 cX
 cX
-kW
-Wg
-EO
-td
-td
-Se
+ib
+wn
+kL
+EF
+EF
+pq
 yn
 Gj
 Gj
@@ -44883,12 +44990,12 @@ cX
 cX
 yP
 mP
-kW
-Is
+ib
+gv
+UR
 iw
-SL
-SL
-dd
+iw
+xS
 Zq
 Gj
 Gj
@@ -45140,12 +45247,12 @@ cX
 cX
 cX
 cX
-kW
-pO
+ib
+rH
+UR
 iw
-SL
-Um
-jT
+Kp
+vY
 nN
 Ff
 Ff
@@ -45397,12 +45504,12 @@ cX
 cX
 cX
 cX
-kW
-FV
+ib
+DD
+UR
 iw
-SL
-Wj
-qT
+qv
+Av
 cX
 cX
 cX
@@ -45654,12 +45761,12 @@ cX
 cX
 cX
 cX
-kW
-kW
-gS
-qT
-jT
-jT
+ib
+ib
+eP
+Av
+vY
+vY
 cX
 cX
 cX
@@ -53895,7 +54002,7 @@ vo
 Ed
 Ff
 Gj
-wE
+jR
 pC
 Jr
 Bv
