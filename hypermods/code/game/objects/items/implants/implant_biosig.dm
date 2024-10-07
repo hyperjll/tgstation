@@ -57,6 +57,7 @@
     <b>Function:</b>Contains a miniature radio connected to a bioscanner encased in a blue, EMP-resistant shell. Broadcasts the death and last known position of the user over an encrypted radio channel.<BR>"}
 
 /obj/item/implanter/biosig
+	name = "implanter (biosignaller)"
 	imp_type = /obj/item/implant/biosig
 
 /obj/item/implantcase/biosig
