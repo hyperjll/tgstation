@@ -92,6 +92,12 @@
 	power_equip = 0;
 	power_light = 0
 	})
+"aF" = (
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/science/lab{
+	has_gravity = 1
+	})
 "aH" = (
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
@@ -128,12 +134,6 @@
 /obj/effect/light_emitter/fake_outdoors,
 /turf/open/misc/grass/jungle,
 /area/space/nearstation{
-	has_gravity = 1
-	})
-"aW" = (
-/obj/machinery/light/directional/south,
-/turf/open/floor/wood,
-/area/station/security/brig{
 	has_gravity = 1
 	})
 "aY" = (
@@ -205,6 +205,15 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
+	has_gravity = 1
+	})
+"by" = (
+/obj/machinery/door/airlock/research{
+	name = "Robotics Lab"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/science/robotics,
+/turf/open/floor/wood,
+/area/station/science/lab{
 	has_gravity = 1
 	})
 "bA" = (
@@ -313,7 +322,8 @@
 	})
 "cw" = (
 /obj/effect/spawner/random/maintenance,
-/turf/open/misc/grass/jungle,
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor,
 /area/space/nearstation{
 	has_gravity = 1
 	})
@@ -336,13 +346,6 @@
 	},
 /turf/open/misc/dirt/station,
 /area/mine/abandoned)
-"cE" = (
-/obj/structure/cable,
-/obj/machinery/light/directional/south,
-/turf/open/floor/wood,
-/area/station/security/brig{
-	has_gravity = 1
-	})
 "cF" = (
 /obj/structure/railing{
 	dir = 8
@@ -380,12 +383,6 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
-"cR" = (
-/obj/machinery/light/directional/south,
-/turf/open/floor/plating,
-/area/station/engineering/supermatter/room{
-	has_gravity = 1
-	})
 "cS" = (
 /mob/living/simple_animal/hostile/megafauna/dragon,
 /turf/open/misc/basalt/safe,
@@ -409,6 +406,15 @@
 "cX" = (
 /turf/open/misc/grass/jungle,
 /area/space/nearstation{
+	has_gravity = 1
+	})
+"dd" = (
+/obj/machinery/door/airlock/medical/glass{
+	name = "Primary Treatment Centre"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "do" = (
@@ -484,6 +490,18 @@
 /turf/open/misc/dirt/station,
 /area/lavaland/surface/outdoors/explored{
 	name = "Mountain Mine Passage"
+	})
+"dM" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/wood,
+/area/station/science/lab{
+	has_gravity = 1
+	})
+"dP" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
 	})
 "dR" = (
 /obj/structure/chair/comfy/black,
@@ -592,12 +610,6 @@
 	power_equip = 0;
 	power_light = 0
 	})
-"er" = (
-/obj/machinery/light/directional/east,
-/turf/open/floor/wood,
-/area/station/security/office{
-	has_gravity = 1
-	})
 "eu" = (
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
@@ -607,6 +619,14 @@
 /obj/machinery/hydroponics/soil,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
+	has_gravity = 1
+	})
+"ew" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "ey" = (
@@ -676,14 +696,6 @@
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
 	has_gravity = 1
-	})
-"eL" = (
-/obj/structure/cable,
-/obj/item/solar_assembly,
-/turf/open/floor/iron/solarpanel/airless,
-/area/station/solars/starboard/aft{
-	has_gravity = 1;
-	outdoors = 1
 	})
 "eN" = (
 /obj/structure/table/wood,
@@ -776,14 +788,6 @@
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining_station,
 /turf/open/misc/dirt/station,
 /area/mine/abandoned)
-"fL" = (
-/obj/structure/lattice/catwalk,
-/obj/effect/light_emitter/fake_outdoors,
-/turf/open/misc/beach/sand,
-/area/station/solars/starboard/aft{
-	has_gravity = 1;
-	outdoors = 1
-	})
 "fM" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks,
@@ -936,6 +940,12 @@
 /area/station/cargo/warehouse{
 	has_gravity = 1
 	})
+"gS" = (
+/obj/effect/spawner/structure/window/bronze,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "gU" = (
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /obj/machinery/door/airlock/security/glass,
@@ -981,6 +991,13 @@
 /obj/machinery/camera/motion/directional/south,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
+	has_gravity = 1
+	})
+"hC" = (
+/obj/structure/closet/crate/silvercrate,
+/obj/machinery/light/directional/east,
+/turf/open/floor/wood,
+/area/station/ai_monitored/command/nuke_storage{
 	has_gravity = 1
 	})
 "hD" = (
@@ -1085,6 +1102,11 @@
 /area/station/security/office{
 	has_gravity = 1
 	})
+"iw" = (
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "iy" = (
 /obj/structure/chair/stool/directional/west,
 /obj/effect/landmark/start/hangover,
@@ -1118,13 +1140,6 @@
 /mob/living/carbon/human/species/monkey,
 /turf/open/misc/grass/jungle,
 /area/space/nearstation{
-	has_gravity = 1
-	})
-"iS" = (
-/obj/machinery/power/emitter,
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating,
-/area/station/engineering/supermatter/room{
 	has_gravity = 1
 	})
 "iV" = (
@@ -1183,12 +1198,6 @@
 /area/station/ai_monitored/command/nuke_storage{
 	has_gravity = 1
 	})
-"ju" = (
-/obj/machinery/light/directional/west,
-/turf/open/floor/plating,
-/area/station/engineering/supermatter/room{
-	has_gravity = 1
-	})
 "jw" = (
 /turf/open/floor/wood,
 /area/space/nearstation{
@@ -1199,9 +1208,21 @@
 /area/station/ai_monitored/turret_protected/ai{
 	has_gravity = 1
 	})
+"jI" = (
+/obj/machinery/power/emitter,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "jP" = (
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
+	has_gravity = 1
+	})
+"jT" = (
+/turf/closed/wall/mineral/wood,
+/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "jV" = (
@@ -1232,6 +1253,13 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/space/nearstation{
+	has_gravity = 1
+	})
+"kf" = (
+/obj/machinery/light/directional/west,
+/obj/machinery/stasis,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "kh" = (
@@ -1370,11 +1398,8 @@
 	has_gravity = 1
 	})
 "kW" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/open/floor/wood,
-/area/space/nearstation{
+/turf/closed/wall/mineral/wood,
+/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "kX" = (
@@ -1413,13 +1438,6 @@
 /area/station/engineering/supermatter/room{
 	has_gravity = 1
 	})
-"lr" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating,
-/area/station/engineering/supermatter/room{
-	has_gravity = 1
-	})
 "ls" = (
 /obj/effect/light_emitter/fake_outdoors,
 /turf/open/misc/dirt/station,
@@ -1451,7 +1469,6 @@
 	})
 "lB" = (
 /obj/structure/closet/crate/silvercrate,
-/obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
 	has_gravity = 1
@@ -1502,12 +1519,27 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
+"lN" = (
+/obj/item/stack/cable_coil/thirty,
+/turf/open/floor/plating/airless,
+/area/station/solars/starboard/aft{
+	has_gravity = 1;
+	outdoors = 1
+	})
 "lO" = (
 /obj/effect/spawner/structure/window/bronze,
 /obj/structure/cable,
 /obj/structure/cable,
+/obj/structure/grille,
 /turf/closed/wall/mineral/wood,
 /area/station/security/brig{
+	has_gravity = 1
+	})
+"lQ" = (
+/obj/structure/cable,
+/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/turf/open/floor/wood,
+/area/station/science/lab{
 	has_gravity = 1
 	})
 "lU" = (
@@ -1572,6 +1604,12 @@
 /obj/effect/mapping_helpers/airlock/access/all/command,
 /turf/open/floor/wood,
 /area/station/command/bridge{
+	has_gravity = 1
+	})
+"mg" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/wood,
+/area/station/engineering/main{
 	has_gravity = 1
 	})
 "ml" = (
@@ -1653,6 +1691,12 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
+"mR" = (
+/obj/effect/spawner/structure/window/bronze,
+/turf/open/floor/wood,
+/area/station/science/robotics/lab{
+	has_gravity = 1
+	})
 "mT" = (
 /obj/machinery/telecomms/processor/preset_four,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -1695,6 +1739,23 @@
 /obj/item/healthanalyzer/simple/miner,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
+	has_gravity = 1
+	})
+"nb" = (
+/obj/structure/cable,
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood,
+/area/station/security/brig{
+	has_gravity = 1
+	})
+"nc" = (
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/access/all/science/general,
+/obj/machinery/door/airlock/research{
+	name = "Research and Development Lab"
+	},
+/turf/open/floor/wood,
+/area/station/science/lab{
 	has_gravity = 1
 	})
 "ne" = (
@@ -1825,6 +1886,16 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
+"nP" = (
+/obj/structure/cable,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=8.1-Aft-to-Escape";
+	location = "8-Central-to-Aft"
+	},
+/turf/open/floor/catwalk_floor,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "nQ" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/bitrunner,
@@ -1926,6 +1997,13 @@
 /area/station/cargo/warehouse{
 	has_gravity = 1
 	})
+"oE" = (
+/obj/structure/cable,
+/obj/machinery/camera/motion/directional/north,
+/turf/open/floor/catwalk_floor,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "oH" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
 /obj/machinery/power/energy_accumulator/tesla_coil/anchored,
@@ -2001,6 +2079,15 @@
 /area/station/engineering/lobby{
 	has_gravity = 1
 	})
+"py" = (
+/obj/machinery/door/airlock/research{
+	name = "Robotics Lab"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/science/robotics,
+/turf/open/floor/wood,
+/area/station/science/robotics/lab{
+	has_gravity = 1
+	})
 "pA" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/e_gun,
@@ -2025,6 +2112,13 @@
 /area/station/engineering/lobby{
 	has_gravity = 1
 	})
+"pF" = (
+/obj/structure/cable,
+/obj/machinery/light/directional/east,
+/turf/open/floor/wood,
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "pL" = (
 /obj/item/pipe_dispenser,
 /turf/open/floor/plating,
@@ -2038,6 +2132,12 @@
 /area/lavaland/surface/outdoors/explored{
 	name = "Mountain Mine Passage"
 	})
+"pO" = (
+/obj/machinery/computer/operating,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "pQ" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
@@ -2049,6 +2149,11 @@
 /obj/machinery/biogenerator,
 /turf/open/floor/wood,
 /area/station/security/prison/garden{
+	has_gravity = 1
+	})
+"qb" = (
+/turf/open/floor/wood,
+/area/station/science/robotics/lab{
 	has_gravity = 1
 	})
 "qc" = (
@@ -2141,6 +2246,12 @@
 /area/station/engineering/supermatter/room{
 	has_gravity = 1
 	})
+"qC" = (
+/obj/effect/turf_decal/caution/stand_clear,
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
+	has_gravity = 1
+	})
 "qE" = (
 /obj/effect/landmark/start/lawyer,
 /turf/open/floor/carpet/royalblack,
@@ -2171,6 +2282,12 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
+"qT" = (
+/obj/effect/spawner/structure/window/bronze,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "qU" = (
@@ -2245,6 +2362,27 @@
 	},
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
+	has_gravity = 1
+	})
+"rO" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/machinery/light/directional/west,
+/obj/structure/table/reinforced,
+/obj/item/storage/medkit/brute{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/medkit/brute{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/medkit/toxin{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "rU" = (
@@ -2344,6 +2482,12 @@
 /area/station/engineering/supermatter{
 	has_gravity = 1
 	})
+"sE" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "sG" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/hangover,
@@ -2390,6 +2534,12 @@
 /obj/machinery/computer/quantum_console,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den)
+"sX" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood,
+/area/station/security/brig{
+	has_gravity = 1
+	})
 "sZ" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -2427,14 +2577,9 @@
 	has_gravity = 1
 	})
 "td" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 1
-	},
+/obj/structure/cable,
 /turf/open/floor/wood,
-/area/space/nearstation{
+/area/station/medical/medbay/central{
 	has_gravity = 1
 	})
 "tg" = (
@@ -2497,6 +2642,12 @@
 /area/station/command/heads_quarters/rd{
 	has_gravity = 1
 	})
+"tQ" = (
+/obj/effect/spawner/structure/window/bronze,
+/turf/open/floor/wood,
+/area/station/science/lab{
+	has_gravity = 1
+	})
 "tS" = (
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater)
@@ -2509,6 +2660,13 @@
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
 	has_gravity = 1
+	})
+"tZ" = (
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/floor/plating/airless,
+/area/station/solars/starboard/aft{
+	has_gravity = 1;
+	outdoors = 1
 	})
 "uc" = (
 /obj/effect/spawner/random/structure/crate,
@@ -2631,6 +2789,20 @@
 	power_equip = 0;
 	power_light = 0
 	})
+"uR" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
+"uW" = (
+/obj/machinery/light/directional/east,
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/science/robotics/lab{
+	has_gravity = 1
+	})
 "vi" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -2741,6 +2913,15 @@
 /area/station/tcommsat/server{
 	has_gravity = 1
 	})
+"wa" = (
+/obj/machinery/light/directional/east,
+/obj/structure/cable,
+/obj/structure/cable,
+/obj/structure/table/reinforced,
+/turf/open/floor/wood,
+/area/station/science/robotics/lab{
+	has_gravity = 1
+	})
 "wb" = (
 /obj/structure/railing{
 	dir = 1
@@ -2804,6 +2985,20 @@
 /obj/effect/mapping_helpers/airlock/access/any/supply/bit_den,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den)
+"wB" = (
+/obj/structure/lattice/catwalk,
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/misc/beach/sand,
+/area/station/solars/starboard/aft{
+	has_gravity = 1;
+	outdoors = 1
+	})
+"wE" = (
+/obj/machinery/camera/motion/directional/south,
+/turf/open/misc/asteroid/basalt/wasteland,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "wH" = (
 /obj/effect/spawner/random/structure/closet_empty/crate,
 /obj/machinery/camera/motion/directional/east,
@@ -2956,10 +3151,10 @@
 	has_gravity = 1
 	})
 "xT" = (
-/obj/structure/flora/tree/palm/style_random,
 /obj/structure/cable,
-/turf/open/floor/catwalk_floor,
-/area/space/nearstation{
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood,
+/area/station/engineering/main{
 	has_gravity = 1
 	})
 "xV" = (
@@ -2996,6 +3191,17 @@
 	},
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
+	has_gravity = 1
+	})
+"yn" = (
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=8.1-Aft-to-Escape";
+	location = "8-Central-to-Aft"
+	},
+/mob/living/basic/bot/medbot/autopatrol,
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor,
+/area/space/nearstation{
 	has_gravity = 1
 	})
 "yt" = (
@@ -3303,12 +3509,6 @@
 /area/station/engineering/lobby{
 	has_gravity = 1
 	})
-"Bx" = (
-/obj/machinery/light/directional/east,
-/turf/open/floor/wood,
-/area/station/engineering/main{
-	has_gravity = 1
-	})
 "BD" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -3328,6 +3528,12 @@
 /obj/structure/cable,
 /turf/open/misc/dirt/station,
 /area/space/nearstation{
+	has_gravity = 1
+	})
+"BG" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood,
+/area/station/security/office{
 	has_gravity = 1
 	})
 "BH" = (
@@ -3354,6 +3560,12 @@
 /obj/item/storage/cans/sixbeer,
 /turf/open/floor/wood,
 /area/space/nearstation{
+	has_gravity = 1
+	})
+"BO" = (
+/obj/machinery/rnd/destructive_analyzer,
+/turf/open/floor/wood,
+/area/station/science/lab{
 	has_gravity = 1
 	})
 "BS" = (
@@ -3462,11 +3674,6 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
-"CF" = (
-/obj/effect/spawner/random/structure/crate,
-/obj/machinery/light/directional/north,
-/turf/open/misc/dirt/station,
-/area/mine/abandoned)
 "CG" = (
 /obj/machinery/door/airlock/command{
 	name = "Captain's Quarters"
@@ -3547,10 +3754,23 @@
 /area/station/ai_monitored/turret_protected/ai{
 	has_gravity = 1
 	})
-"Du" = (
-/obj/machinery/light/directional/east,
-/turf/open/floor/plating,
-/area/station/engineering/supermatter/room{
+"Dp" = (
+/obj/machinery/light/directional/west,
+/obj/structure/table,
+/obj/item/flatpack{
+	board = /obj/item/circuitboard/machine/flatpacker
+	},
+/obj/item/multitool,
+/turf/open/floor/wood,
+/area/station/science/lab{
+	has_gravity = 1
+	})
+"Dw" = (
+/obj/machinery/mecha_part_fabricator{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/station/science/robotics/lab{
 	has_gravity = 1
 	})
 "Dx" = (
@@ -3604,10 +3824,9 @@
 	has_gravity = 1
 	})
 "DS" = (
-/obj/structure/cable,
-/obj/machinery/light/directional/east,
+/obj/machinery/rnd/production/techfab/department/cargo,
 /turf/open/floor/wood,
-/area/station/security/brig{
+/area/station/cargo/storage{
 	has_gravity = 1
 	})
 "DU" = (
@@ -3711,17 +3930,22 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
-"EL" = (
-/obj/structure/closet/crate/silvercrate,
-/turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
-	})
 "EM" = (
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore)
+"EN" = (
+/turf/closed/wall/mineral/wood,
+/area/station/science/lab{
+	has_gravity = 1
+	})
+"EO" = (
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "ES" = (
 /obj/effect/spawner/random/structure/crate,
 /turf/open/misc/grass/jungle,
@@ -3760,6 +3984,12 @@
 /area/station/ai_monitored/security/armory{
 	has_gravity = 1
 	})
+"EV" = (
+/obj/structure/flora/tree/jungle/style_random,
+/turf/open/misc/asteroid/basalt/wasteland,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "EW" = (
 /obj/machinery/suit_storage_unit/hos,
 /turf/open/floor/wood,
@@ -3793,13 +4023,6 @@
 /turf/open/floor/wood,
 /area/station/cargo/storage{
 	has_gravity = 1
-	})
-"Fi" = (
-/obj/effect/light_emitter/fake_outdoors,
-/turf/open/floor/plating/airless,
-/area/station/solars/starboard/aft{
-	has_gravity = 1;
-	outdoors = 1
 	})
 "Fn" = (
 /turf/open/misc/grass/jungle,
@@ -3867,6 +4090,13 @@
 /obj/machinery/nuclearbomb/selfdestruct,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
+"FV" = (
+/obj/machinery/light/directional/east,
+/obj/machinery/stasis,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "Gb" = (
@@ -3954,6 +4184,14 @@
 /area/station/engineering/main{
 	has_gravity = 1
 	})
+"GA" = (
+/obj/structure/cable,
+/obj/item/solar_assembly,
+/turf/open/floor/iron/solarpanel/airless,
+/area/station/solars/starboard/aft{
+	has_gravity = 1;
+	outdoors = 1
+	})
 "GB" = (
 /obj/machinery/chem_dispenser/abductor,
 /turf/open/floor/plating/abductor,
@@ -4026,6 +4264,15 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/rd{
+	has_gravity = 1
+	})
+"GV" = (
+/obj/effect/mapping_helpers/airlock/access/all/science/general,
+/obj/machinery/door/airlock/research{
+	name = "Research and Development Lab"
+	},
+/turf/open/floor/wood,
+/area/station/science/lab{
 	has_gravity = 1
 	})
 "GY" = (
@@ -4175,11 +4422,8 @@
 	has_gravity = 1
 	})
 "Ie" = (
-/obj/structure/railing{
-	dir = 8
-	},
 /turf/open/floor/wood,
-/area/space/nearstation{
+/area/station/hallway/secondary/exit/departure_lounge{
 	has_gravity = 1
 	})
 "If" = (
@@ -4218,6 +4462,13 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
 /area/station/security/prison{
+	has_gravity = 1
+	})
+"Is" = (
+/obj/structure/table/optable,
+/obj/item/surgery_tray/full,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
 	has_gravity = 1
 	})
 "Iv" = (
@@ -4265,6 +4516,17 @@
 /area/station/engineering/storage_shared{
 	has_gravity = 1
 	})
+"IJ" = (
+/obj/structure/cable,
+/obj/structure/cable,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=8.1-Aft-to-Escape";
+	location = "8-Central-to-Aft"
+	},
+/turf/open/floor/catwalk_floor,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "IK" = (
 /obj/item/reagent_containers/cup/bucket/wooden,
 /turf/open/floor/wood,
@@ -4305,6 +4567,12 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
+	has_gravity = 1
+	})
+"IW" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/wood,
+/area/station/security/brig{
 	has_gravity = 1
 	})
 "Ja" = (
@@ -4366,6 +4634,12 @@
 /area/station/engineering/lobby{
 	has_gravity = 1
 	})
+"Jt" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/wood,
+/area/station/security/office{
+	has_gravity = 1
+	})
 "Jv" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/barrier_grenades,
@@ -4424,12 +4698,30 @@
 /obj/structure/table/wood,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft)
+"JU" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/research{
+	name = "Robotics Lab"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/science/robotics,
+/turf/open/floor/wood,
+/area/station/science/robotics/lab{
+	has_gravity = 1
+	})
 "JV" = (
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
 	outdoors = 1
+	})
+"Kb" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/station/hallway/secondary/exit/departure_lounge{
+	has_gravity = 1
 	})
 "Ki" = (
 /obj/effect/landmark/start/hangover,
@@ -4477,6 +4769,14 @@
 /area/station/command/bridge{
 	has_gravity = 1
 	})
+"Kw" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/table/reinforced,
+/turf/open/floor/wood,
+/area/station/science/robotics/lab{
+	has_gravity = 1
+	})
 "KA" = (
 /obj/machinery/vending/boozeomat,
 /obj/machinery/light/directional/north,
@@ -4503,6 +4803,23 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop{
+	has_gravity = 1
+	})
+"KK" = (
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/science/robotics/lab{
+	has_gravity = 1
+	})
+"KY" = (
+/obj/structure/cable,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=8.1-Aft-to-Escape";
+	location = "8-Central-to-Aft"
+	},
+/mob/living/simple_animal/bot/secbot/beepsky,
+/turf/open/floor/catwalk_floor,
+/area/space/nearstation{
 	has_gravity = 1
 	})
 "Ld" = (
@@ -4611,6 +4928,11 @@
 /area/station/ai_monitored/security/armory{
 	has_gravity = 1
 	})
+"Mw" = (
+/obj/effect/spawner/random/structure/crate,
+/obj/machinery/light/directional/north,
+/turf/open/misc/dirt/station,
+/area/mine/abandoned)
 "Mz" = (
 /obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/plating,
@@ -4723,6 +5045,13 @@
 /area/station/ai_monitored/security/armory{
 	has_gravity = 1
 	})
+"Nu" = (
+/obj/structure/cable,
+/obj/structure/table/reinforced,
+/turf/open/floor/wood,
+/area/station/science/robotics/lab{
+	has_gravity = 1
+	})
 "Nz" = (
 /obj/machinery/plate_press,
 /turf/open/misc/grass/jungle,
@@ -4821,12 +5150,6 @@
 	power_environ = 0;
 	power_equip = 0;
 	power_light = 0
-	})
-"Ob" = (
-/obj/machinery/light/directional/south,
-/turf/open/floor/wood,
-/area/station/security/office{
-	has_gravity = 1
 	})
 "Oe" = (
 /obj/effect/landmark/start/hangover,
@@ -4932,6 +5255,15 @@
 /area/station/security/prison{
 	has_gravity = 1
 	})
+"OO" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/medkit/fire,
+/obj/item/storage/medkit/fire,
+/obj/item/storage/medkit/o2,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
+	has_gravity = 1
+	})
 "OP" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -5001,10 +5333,23 @@
 /area/station/engineering/supermatter/room{
 	has_gravity = 1
 	})
+"Ps" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/machinery/computer/rdconsole,
+/turf/open/floor/wood,
+/area/station/science/lab{
+	has_gravity = 1
+	})
 "Pu" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private{
+	has_gravity = 1
+	})
+"Pv" = (
+/turf/closed/wall/mineral/wood,
+/area/station/science/robotics/lab{
 	has_gravity = 1
 	})
 "Py" = (
@@ -5039,14 +5384,6 @@
 /obj/effect/spawner/random/contraband/armory,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
-	})
-"PD" = (
-/obj/structure/closet/crate/goldcrate,
-/obj/structure/cable,
-/obj/machinery/light/directional/west,
-/turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
 	has_gravity = 1
 	})
 "PE" = (
@@ -5313,6 +5650,7 @@
 "RT" = (
 /obj/effect/spawner/structure/window/bronze,
 /obj/structure/cable,
+/obj/structure/grille,
 /turf/closed/wall/mineral/wood,
 /area/station/security/brig{
 	has_gravity = 1
@@ -5343,6 +5681,16 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
+"Se" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/medical/glass{
+	name = "Primary Treatment Centre"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
+	has_gravity = 1
+	})
 "Sh" = (
 /obj/effect/landmark/start/clown,
 /turf/open/misc/asteroid/basalt/wasteland,
@@ -5360,6 +5708,14 @@
 	},
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
+"Sp" = (
+/obj/machinery/rnd/production/protolathe/department/science,
+/obj/item/stack/sheet/iron/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/turf/open/floor/wood,
+/area/station/science/lab{
 	has_gravity = 1
 	})
 "Sx" = (
@@ -5391,6 +5747,11 @@
 /area/station/command/heads_quarters/rd{
 	has_gravity = 1
 	})
+"SL" = (
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
+	has_gravity = 1
+	})
 "SN" = (
 /obj/machinery/light/directional/north,
 /obj/structure/closet/secure_closet/warden,
@@ -5412,6 +5773,10 @@
 	})
 "ST" = (
 /obj/effect/landmark/start/hangover,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=8.1-Aft-to-Escape";
+	location = "8-Central-to-Aft"
+	},
 /turf/open/floor/catwalk_floor,
 /area/space/nearstation{
 	has_gravity = 1
@@ -5549,6 +5914,12 @@
 /area/station/cargo/warehouse{
 	has_gravity = 1
 	})
+"TN" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room{
+	has_gravity = 1
+	})
 "TO" = (
 /obj/machinery/door/airlock/wood/glass,
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
@@ -5625,6 +5996,12 @@
 /area/station/security/brig{
 	has_gravity = 1
 	})
+"Um" = (
+/obj/structure/closet/crate/freezer/blood,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
+	has_gravity = 1
+	})
 "Un" = (
 /obj/structure/closet/secure_closet/miner,
 /turf/open/floor/wood,
@@ -5698,6 +6075,17 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore)
+"UV" = (
+/obj/structure/cable,
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=8.1-Aft-to-Escape";
+	location = "8-Central-to-Aft"
+	},
+/mob/living/simple_animal/bot/secbot/beepsky/officer,
+/turf/open/floor/catwalk_floor,
+/area/space/nearstation{
+	has_gravity = 1
+	})
 "UZ" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -5810,6 +6198,13 @@
 /area/space/nearstation{
 	has_gravity = 1
 	})
+"VY" = (
+/obj/structure/cable,
+/mob/living/simple_animal/bot/secbot/pingsky,
+/turf/open/floor/wood,
+/area/station/ai_monitored/turret_protected/ai{
+	has_gravity = 1
+	})
 "VZ" = (
 /obj/machinery/telecomms/message_server/preset,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -5844,10 +6239,26 @@
 /area/station/ai_monitored/turret_protected/ai{
 	has_gravity = 1
 	})
+"Wg" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/table/optable,
+/obj/item/surgery_tray/full,
+/turf/open/floor/wood,
+/area/station/medical/treatment_center{
+	has_gravity = 1
+	})
 "Wi" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den)
+"Wj" = (
+/obj/machinery/light/directional/east,
+/obj/machinery/rnd/production/techfab/department/medical,
+/turf/open/floor/wood,
+/area/station/medical/medbay/central{
+	has_gravity = 1
+	})
 "Wo" = (
 /turf/open/floor/catwalk_floor,
 /area/space/nearstation{
@@ -5872,6 +6283,11 @@
 	power_environ = 0;
 	power_equip = 0;
 	power_light = 0
+	})
+"WE" = (
+/turf/open/floor/wood,
+/area/station/science/lab{
+	has_gravity = 1
 	})
 "WF" = (
 /obj/structure/cable,
@@ -6020,6 +6436,14 @@
 /area/station/security/prison{
 	has_gravity = 1
 	})
+"Yi" = (
+/obj/structure/closet/crate/goldcrate,
+/obj/structure/cable,
+/obj/machinery/light/directional/west,
+/turf/open/floor/wood,
+/area/station/ai_monitored/command/nuke_storage{
+	has_gravity = 1
+	})
 "Yl" = (
 /obj/machinery/pdapainter/supply,
 /turf/open/floor/wood,
@@ -6053,19 +6477,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/command,
 /turf/open/floor/wood,
 /area/station/command/bridge{
-	has_gravity = 1
-	})
-"YB" = (
-/obj/machinery/light/directional/north,
-/turf/open/floor/wood,
-/area/station/security/brig{
-	has_gravity = 1
-	})
-"YF" = (
-/obj/structure/cable,
-/obj/machinery/light/directional/south,
-/turf/open/floor/wood,
-/area/station/engineering/main{
 	has_gravity = 1
 	})
 "YQ" = (
@@ -6147,6 +6558,16 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
+	has_gravity = 1
+	})
+"Zq" = (
+/obj/machinery/navbeacon{
+	codes_txt = "patrol;next_patrol=8.1-Aft-to-Escape";
+	location = "8-Central-to-Aft"
+	},
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor,
+/area/space/nearstation{
 	has_gravity = 1
 	})
 "Zr" = (
@@ -16218,7 +16639,7 @@ gF
 gF
 gF
 gF
-gF
+Ez
 gF
 gF
 gF
@@ -16974,7 +17395,7 @@ gF
 gF
 gF
 gF
-gF
+Ez
 gF
 gF
 gF
@@ -17477,7 +17898,7 @@ gF
 gF
 gF
 gF
-gF
+Ez
 gF
 gF
 gF
@@ -19539,7 +19960,7 @@ cX
 cX
 cX
 cX
-cX
+yP
 cX
 cX
 cX
@@ -22390,7 +22811,7 @@ cX
 cX
 gF
 gF
-gF
+Ez
 gF
 gF
 gF
@@ -22635,7 +23056,7 @@ cX
 cX
 cX
 cX
-cX
+yP
 cX
 cX
 cX
@@ -25697,21 +26118,21 @@ WK
 WK
 cX
 cX
-Mf
-Mf
-Mf
-Mf
-Mf
-Mf
-Mf
-Mf
-Mf
-Mf
-Mf
-Mf
-Mf
-Mf
-Mf
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
 cX
 cX
 cX
@@ -25953,23 +26374,23 @@ WK
 WK
 WK
 cX
-Di
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-wb
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
 cX
 cX
 cX
@@ -26210,23 +26631,23 @@ WK
 WK
 WK
 cX
-Di
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-wb
+cX
+cX
+cX
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+Mf
+cX
+cX
 cX
 cX
 cX
@@ -26467,8 +26888,9 @@ WK
 WK
 WK
 cX
+cX
+cX
 Di
-Lt
 sb
 Lt
 Lt
@@ -26480,10 +26902,9 @@ Lt
 Lt
 Lt
 Lt
-Lt
 sb
-Lt
 wb
+cX
 cX
 cX
 cX
@@ -26500,7 +26921,7 @@ gF
 gF
 gF
 gF
-gF
+Ez
 gF
 gF
 gF
@@ -26724,6 +27145,8 @@ WK
 WK
 WK
 cX
+cX
+cX
 Di
 Lt
 Lt
@@ -26737,10 +27160,8 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-Lt
 wb
+cX
 cX
 cX
 cX
@@ -26981,6 +27402,8 @@ WK
 WK
 WK
 cX
+cX
+cX
 Di
 Lt
 Lt
@@ -26994,10 +27417,8 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-Lt
 wb
+cX
 cX
 cX
 cX
@@ -27238,8 +27659,9 @@ WK
 WK
 WK
 cX
+cX
+cX
 Di
-Lt
 wI
 Lt
 Lt
@@ -27251,10 +27673,9 @@ Lt
 Lt
 Lt
 Lt
-Lt
 wI
-Lt
 wb
+cX
 cX
 cX
 cX
@@ -27495,6 +27916,8 @@ WK
 WK
 WK
 cX
+cX
+cX
 Di
 Lt
 Lt
@@ -27508,10 +27931,8 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-Lt
 wb
+cX
 cX
 cX
 cX
@@ -27752,9 +28173,9 @@ WK
 WK
 WK
 cX
+cX
+cX
 Di
-Lt
-Lt
 Lt
 Lt
 Lt
@@ -27767,8 +28188,8 @@ Lt
 Lt
 Lt
 Lt
-Lt
 wb
+cX
 cX
 cX
 cX
@@ -28015,7 +28436,7 @@ eV
 eV
 eV
 eV
-eV
+iY
 iY
 eV
 iY
@@ -28270,9 +28691,9 @@ cX
 eV
 Ue
 Zv
-dU
-nx
 Ot
+nx
+dU
 re
 zw
 re
@@ -28523,7 +28944,7 @@ WK
 WK
 WK
 Ff
-Ff
+wE
 eV
 nD
 dU
@@ -29560,7 +29981,7 @@ dU
 hM
 xQ
 Gw
-dU
+DS
 oo
 Rz
 wT
@@ -30580,7 +31001,7 @@ dL
 dL
 Ff
 Gj
-Ff
+wE
 eV
 sP
 bA
@@ -31050,7 +31471,7 @@ dL
 dL
 gb
 SB
-CF
+Mw
 tC
 tC
 XE
@@ -31095,24 +31516,24 @@ dL
 ls
 Gj
 Ff
-cX
-cX
-hU
-cX
-cX
-cX
-cX
-cX
-cX
+Ff
+Ff
+kq
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
 bg
 bg
 bg
 bg
 bg
 cX
-cX
-cX
-cX
+Ff
+Ff
+Ff
 cX
 cX
 cX
@@ -31125,7 +31546,7 @@ cX
 cX
 gF
 gF
-gF
+Ez
 gF
 gF
 gF
@@ -31607,7 +32028,7 @@ dL
 dL
 dL
 BF
-Gj
+KY
 Ru
 Gj
 Gj
@@ -31627,7 +32048,7 @@ Gj
 Gj
 Gj
 Gj
-Gj
+nP
 Ff
 cX
 cX
@@ -31886,7 +32307,7 @@ Ff
 Ff
 Gj
 Ff
-cX
+Ff
 cX
 cX
 cX
@@ -32125,13 +32546,13 @@ HB
 yk
 xZ
 xZ
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
 iK
 iK
 iK
@@ -32143,7 +32564,7 @@ iK
 Ff
 Gj
 Ff
-cX
+Ff
 cX
 cX
 cX
@@ -32400,7 +32821,7 @@ iK
 Ff
 Gj
 Ff
-cX
+Ff
 cX
 jV
 cX
@@ -32645,7 +33066,7 @@ cX
 jV
 cX
 cX
-cX
+mP
 iK
 yZ
 NU
@@ -32657,7 +33078,7 @@ iK
 nN
 Gj
 Ff
-cX
+Ff
 cX
 cX
 cX
@@ -34453,10 +34874,10 @@ Uf
 NU
 bv
 dZ
-Gj
+nP
 Gj
 Ff
-cX
+Ff
 cX
 cX
 cX
@@ -34701,7 +35122,7 @@ yP
 cX
 cX
 cX
-cX
+mP
 iK
 Ic
 lC
@@ -34713,7 +35134,7 @@ iK
 nN
 Gj
 Ff
-cX
+Ff
 cX
 cX
 cX
@@ -34973,8 +35394,8 @@ Ff
 Ff
 cX
 cX
-cX
-cX
+Ff
+Ff
 cX
 cX
 gF
@@ -35240,9 +35661,9 @@ Ff
 Ff
 Ff
 Ff
-gF
-gF
-gF
+Ff
+Ff
+Ff
 gF
 gF
 gF
@@ -35493,13 +35914,13 @@ lg
 lg
 lg
 lg
-lg
-lg
-jw
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -35750,13 +36171,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-wI
-kW
+Kb
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -36007,13 +36428,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-kW
+Kb
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -36264,13 +36685,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-kW
+Kb
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -36521,13 +36942,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-kW
+Kb
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -36778,13 +37199,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-wI
-kW
+Kb
+qC
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -37022,7 +37443,7 @@ cX
 cX
 cX
 cX
-cX
+Ff
 Ff
 Gj
 Ff
@@ -37035,13 +37456,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-kW
+Kb
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -37264,6 +37685,7 @@ cX
 cX
 cX
 cX
+RS
 cX
 cX
 cX
@@ -37278,8 +37700,7 @@ cX
 cX
 cX
 cX
-cX
-cX
+Ff
 Ff
 Gj
 Ff
@@ -37292,13 +37713,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-td
+Kb
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -37518,6 +37939,14 @@ cX
 cX
 cX
 cX
+EN
+EN
+GV
+EN
+EN
+Ff
+Ff
+Ff
 cX
 cX
 cX
@@ -37528,15 +37957,7 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+Ff
 Ff
 Gj
 Ff
@@ -37549,13 +37970,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-wI
-kW
+Kb
+qC
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -37775,25 +38196,25 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-yP
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+EN
+BO
+WE
+Dp
+EN
+Ff
+Ff
+Ff
+Ff
+Ff
+EV
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
 Ff
 Gj
 Lt
@@ -37805,14 +38226,14 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
 oZ
-kW
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -38032,27 +38453,27 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-iM
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-Ff
+tQ
+Sp
+WE
+WE
+GV
+nP
 Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+nP
 Lt
 Lt
 Lt
@@ -38062,14 +38483,14 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
 oZ
-kW
-Ff
-gF
-gF
-gF
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+ns
 gF
 gF
 gF
@@ -38289,27 +38710,27 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-Ff
+tQ
+lQ
+aF
+aF
+nc
+nP
 Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+nP
 Lt
 Lt
 Lt
@@ -38319,14 +38740,14 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
 oZ
-kW
-ns
-gF
-gF
-gF
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ff
 gF
 gF
 gF
@@ -38546,25 +38967,25 @@ cX
 cX
 mI
 cX
+EN
+Ps
+WE
+dM
+EN
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-yP
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+Gj
+Ff
+EV
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
 Ff
 Gj
 Lt
@@ -38576,14 +38997,14 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
 oZ
-kW
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -38802,26 +39223,26 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-yP
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+mP
+EN
+EN
+by
+EN
+EN
+HV
+oE
+Ff
+Ff
 cX
 cX
 cX
 cX
 cX
+cX
+cX
+cX
+cX
+Ff
 Ff
 Gj
 Ff
@@ -38834,13 +39255,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-wI
-kW
+Kb
+qC
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 gF
@@ -39060,6 +39481,14 @@ cX
 cX
 cX
 cX
+Pv
+Kw
+qb
+Dw
+Dw
+Pv
+Gj
+Ff
 cX
 cX
 cX
@@ -39070,15 +39499,7 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+Ff
 Ff
 Gj
 Ff
@@ -39091,13 +39512,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-kW
+Kb
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 nJ
@@ -39317,14 +39738,14 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+mR
+Nu
+qb
+qb
+qb
+py
+Gj
+Ff
 cX
 cX
 cX
@@ -39348,13 +39769,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-kW
+Kb
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 nJ
@@ -39574,14 +39995,14 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+mR
+wa
+KK
+KK
+uW
+JU
+nP
+Ff
 cX
 cX
 cX
@@ -39605,13 +40026,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-wI
-kW
+Kb
+qC
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 nJ
@@ -39831,6 +40252,14 @@ cX
 cX
 cX
 cX
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Ff
+Ff
 cX
 cX
 cX
@@ -39841,15 +40270,7 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+Ff
 Ff
 Gj
 Ff
@@ -39862,13 +40283,13 @@ Lt
 Lt
 Lt
 Lt
-Lt
-Lt
-kW
+Kb
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 nJ
@@ -40090,6 +40511,7 @@ cX
 cX
 cX
 cX
+hU
 cX
 cX
 cX
@@ -40105,27 +40527,26 @@ cX
 cX
 cX
 cX
-cX
-cX
+Ff
 Ff
 Gj
 Ff
 Ff
 gW
 oZ
+wI
+kJ
 Lt
 Lt
-Lt
-Lt
-Lt
-Lt
-Lt
+wI
 oZ
-kW
+Kb
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-gF
-gF
-gF
 gF
 gF
 nJ
@@ -40363,26 +40784,26 @@ cX
 cX
 cX
 cX
-cX
+Ff
 Ff
 Gj
+Wo
+Wo
+Ie
+ew
+ew
+ew
+ew
+ew
+ew
+ew
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-Ff
-gW
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-Lt
-kW
-Ff
-gF
-gF
-gF
 gF
 gF
 nJ
@@ -40620,26 +41041,26 @@ cX
 cX
 cX
 cX
-cX
+Ff
 Ff
 Gj
+Wo
+Wo
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-Ff
-gW
-wI
-Lt
-Lt
-Lt
-kJ
-Lt
-Lt
-Lt
-wI
-kW
-Ff
-gF
-gF
-gF
 gF
 gF
 nJ
@@ -40877,26 +41298,26 @@ cX
 cX
 jV
 cX
-cX
+Ff
 Ff
 Gj
+Wo
+Wo
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
+Ie
 Ff
-Ff
-jw
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-jw
-Ff
-gF
-gF
-gF
 gF
 gF
 nJ
@@ -41134,7 +41555,7 @@ cX
 cX
 cX
 cX
-cX
+Ff
 Ff
 Gj
 Ff
@@ -41151,9 +41572,9 @@ Ff
 Ff
 Ff
 Ff
-gF
-gF
-gF
+Ff
+Ff
+Ff
 gF
 gF
 nJ
@@ -41391,16 +41812,16 @@ cX
 cX
 cX
 cX
-cX
+Ff
 Ff
 Gj
 Ff
 Ff
 cX
 cX
+Ff
+Ff
 cX
-cX
-cX
 gF
 gF
 gF
@@ -41412,7 +41833,7 @@ gF
 gF
 gF
 gF
-gF
+Ez
 nJ
 nJ
 nJ
@@ -42426,8 +42847,8 @@ Ff
 Ff
 cX
 RS
-cX
-cX
+Ff
+Ff
 mt
 mt
 mt
@@ -43178,7 +43599,7 @@ cX
 cX
 cX
 cX
-cX
+RS
 cX
 cX
 cX
@@ -43434,12 +43855,12 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
+kW
+kW
+gS
+qT
+jT
+jT
 cX
 cX
 cX
@@ -43691,12 +44112,12 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
+kW
+kf
+iw
+td
+rO
+qT
 cX
 cX
 cX
@@ -43711,7 +44132,7 @@ Ff
 bR
 Ym
 Dj
-vi
+VY
 vi
 ci
 WF
@@ -43948,20 +44369,20 @@ cX
 cX
 cX
 iM
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+kW
+pO
+iw
+td
+OO
+jT
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
 Ff
 Gj
 Ff
@@ -43981,7 +44402,7 @@ Vg
 mt
 gF
 gF
-gF
+Ez
 gF
 nJ
 nJ
@@ -44205,22 +44626,22 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-Ff
+kW
+Wg
+EO
+td
+td
+Se
+yn
 Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+nP
 Ff
 NY
 Og
@@ -44460,24 +44881,24 @@ WK
 WK
 cX
 cX
-cX
-cX
-cX
 yP
-cX
-cX
-cX
-yP
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cw
-Ff
+mP
+kW
+Is
+iw
+SL
+SL
+dd
+Zq
 Gj
+Gj
+Gj
+Gj
+Gj
+Gj
+cw
+Gj
+nP
 Ff
 NY
 Gh
@@ -44719,20 +45140,20 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
-cX
+kW
+pO
+iw
+SL
+Um
+jT
+nN
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
+Ff
 Ff
 Gj
 Ff
@@ -44976,12 +45397,12 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
+kW
+FV
+iw
+SL
+Wj
+qT
 cX
 cX
 cX
@@ -45233,12 +45654,12 @@ cX
 cX
 cX
 cX
-cX
-cX
-cX
-cX
-cX
-cX
+kW
+kW
+gS
+qT
+jT
+jT
 cX
 cX
 cX
@@ -45280,7 +45701,7 @@ xI
 VF
 ff
 BD
-PD
+Yi
 hy
 ZT
 VF
@@ -45494,7 +45915,7 @@ cX
 cX
 cX
 cX
-cX
+hU
 cX
 cX
 cX
@@ -45779,6 +46200,7 @@ NE
 Yn
 bp
 bk
+nP
 Gj
 Gj
 Gj
@@ -45789,8 +46211,7 @@ Gj
 Gj
 Gj
 Gj
-Gj
-Gj
+nP
 nG
 BD
 sv
@@ -46269,7 +46690,7 @@ cX
 cX
 cX
 cX
-cX
+yP
 cX
 cX
 eI
@@ -46293,7 +46714,7 @@ Xf
 Xf
 zo
 jw
-xT
+Gj
 jw
 gF
 gF
@@ -46308,8 +46729,8 @@ xI
 VF
 jt
 Xk
+hC
 lB
-EL
 fZ
 VF
 nJ
@@ -47067,7 +47488,7 @@ jw
 Gj
 jw
 gF
-gF
+Ez
 nJ
 nJ
 nJ
@@ -47818,10 +48239,10 @@ cX
 cX
 cX
 Ff
+nP
+IJ
 Gj
-SY
-Gj
-Gj
+nP
 Yx
 bW
 dW
@@ -47832,10 +48253,10 @@ dW
 io
 bW
 mf
+nP
 Gj
 Gj
-Gj
-Gj
+nP
 jw
 gF
 gF
@@ -50118,12 +50539,12 @@ cX
 Gb
 Ck
 Ui
-cE
+nb
 Gb
 Gb
 Ck
 sZ
-aW
+sX
 Gb
 cX
 cX
@@ -50887,14 +51308,14 @@ cX
 iM
 cX
 Gb
-YB
+IW
 Ui
 sZ
 Ui
 Ui
 Ui
 sZ
-aW
+sX
 Gb
 Ff
 Ff
@@ -51147,22 +51568,22 @@ Gb
 DW
 PU
 Ia
-DS
+pF
 Da
 sZ
 sZ
 nA
 ds
-Gj
+nP
 SY
 Gj
 nK
 uF
 iV
 Gj
-Gj
+nP
 Ff
-cX
+Ff
 cX
 cX
 cX
@@ -51419,7 +51840,7 @@ Ed
 Ff
 Gj
 Ff
-cX
+Ff
 cX
 cX
 cX
@@ -51676,7 +52097,7 @@ Ed
 Km
 Gj
 Ff
-cX
+Ff
 cX
 cX
 cX
@@ -51928,12 +52349,12 @@ Vu
 fq
 qE
 Vu
-Ob
+BG
 Ed
 Ff
 Gj
 Ff
-cX
+Ff
 cX
 cX
 cX
@@ -52190,23 +52611,23 @@ Ed
 Ff
 Gj
 Ff
+Ff
 cX
 cX
 cX
-cX
-cX
+RS
 gF
 gF
 gF
 gF
 gF
+Or
 gF
 gF
 gF
 gF
 gF
-gF
-gF
+Or
 gF
 nJ
 nJ
@@ -52714,12 +53135,12 @@ zK
 np
 np
 XY
+TN
 np
 np
 np
 np
-np
-ju
+TN
 np
 zK
 nJ
@@ -53225,18 +53646,18 @@ cT
 cT
 Gk
 zK
-cR
+sE
 zK
 eT
 lo
 eT
 zK
-lr
+uR
 np
 Mz
 Dy
 zK
-nJ
+Gg
 nJ
 nJ
 nJ
@@ -53474,13 +53895,13 @@ vo
 Ed
 Ff
 Gj
-Ff
+wE
 pC
 Jr
 Bv
 cT
 cT
-YF
+xT
 zK
 np
 zK
@@ -53730,7 +54151,7 @@ uu
 uu
 iL
 Gj
-Gj
+UV
 Gj
 MI
 uo
@@ -53975,7 +54396,7 @@ Gf
 uu
 uu
 ai
-er
+Jt
 uu
 Xg
 mX
@@ -53994,7 +54415,7 @@ Pz
 Zm
 cT
 cT
-YF
+xT
 zK
 np
 zK
@@ -54243,9 +54664,9 @@ gU
 ET
 ET
 ET
-cX
-cX
-cX
+Ff
+Ff
+Ff
 IG
 yF
 Zm
@@ -54253,18 +54674,18 @@ cT
 cT
 Gk
 zK
-cR
+sE
 zK
 oH
 qQ
 oH
 zK
-iS
+jI
 np
 Mz
 Dy
 zK
-nJ
+Gg
 nJ
 nJ
 nJ
@@ -54759,23 +55180,23 @@ uv
 ET
 vD
 cX
-cX
+mP
 IG
 Ai
 MF
-Bx
+mg
 xJ
 Zg
 zK
 np
 np
 XY
+dP
 np
 np
 np
 np
-np
-Du
+dP
 np
 zK
 nJ
@@ -55276,19 +55697,19 @@ cX
 cX
 cX
 cX
-cX
+hU
 YR
 NT
 YR
 gF
 gF
 gF
+Qv
 gF
 gF
 gF
 gF
-gF
-gF
+Qv
 gF
 gF
 nJ
@@ -56045,11 +56466,11 @@ cX
 cX
 cX
 cX
-eL
+GA
 mp
 mp
 mp
-Fi
+tZ
 mp
 mp
 mp
@@ -56310,7 +56731,7 @@ JV
 zE
 zE
 zE
-fL
+wB
 gF
 gF
 gF
@@ -56567,7 +56988,7 @@ NG
 mp
 mp
 mp
-eL
+GA
 gF
 gF
 gF
@@ -57073,11 +57494,11 @@ cX
 cX
 cX
 cX
-eL
+GA
 mp
 mp
 mp
-NG
+lN
 mp
 mp
 mp
@@ -62216,7 +62637,7 @@ cX
 cX
 cX
 gF
-gF
+Ez
 gF
 nJ
 nJ
@@ -64783,7 +65204,7 @@ cX
 cX
 cX
 cX
-gF
+Ez
 gF
 gF
 nJ
@@ -68121,7 +68542,7 @@ cX
 cX
 gF
 gF
-gF
+Ez
 gF
 gF
 gF
@@ -69136,7 +69557,7 @@ gF
 gF
 gF
 gF
-gF
+Ez
 gF
 gF
 gF
