@@ -12019,6 +12019,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/landmark/start/coroner,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "ebF" = (
@@ -14103,6 +14104,9 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/machinery/computer/operating{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "eMC" = (
@@ -15170,7 +15174,6 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
 	},
-/obj/effect/landmark/start/medical_doctor,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -18106,6 +18109,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
+/obj/machinery/vending/wardrobe/coroner_wardrobe,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "fYf" = (
@@ -19435,10 +19439,10 @@
 /turf/open/floor/iron/dark,
 /area/station/service/janitor)
 "gtK" = (
-/obj/structure/filingcabinet/chestdrawer,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
+/obj/structure/table/optable,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "gtR" = (
@@ -24896,6 +24900,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/access/all/medical/morgue,
+/obj/effect/mapping_helpers/airlock/access/all/medical/coroner,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/port/fore)
 "ieb" = (
@@ -32807,7 +32812,6 @@
 "kLS" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/drone_dispenser,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
 "kLW" = (
@@ -38528,6 +38532,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/access/all/medical/morgue,
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/obj/effect/mapping_helpers/airlock/access/all/medical/coroner,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "mCk" = (
@@ -40737,6 +40742,7 @@
 	name = "Morgue"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/morgue,
+/obj/effect/mapping_helpers/airlock/access/all/medical/coroner,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "nqn" = (
@@ -46660,6 +46666,8 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/structure/table,
+/obj/item/surgery_tray/full/morgue,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "prn" = (
