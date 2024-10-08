@@ -6535,6 +6535,7 @@
 #include "hypermods\code\game\objects\items\storage\boxes\science_boxes.dm"
 #include "hypermods\code\game\objects\structures\flora.dm"
 #include "hypermods\code\game\objects\structures\crates_lockers\closets\bodybag.dm"
+#include "hypermods\code\game\objects\structures\lavaland\ore_vent.dm"
 #include "hypermods\code\modules\actionspeed\modifiers\misc.dm"
 #include "hypermods\code\modules\actionspeed\modifiers\virus.dm"
 #include "hypermods\code\modules\antagonists\_common\antag_spawner.dm"
