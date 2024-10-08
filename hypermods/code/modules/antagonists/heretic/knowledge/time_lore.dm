@@ -99,6 +99,7 @@
 	next_knowledge = list(
 		/datum/heretic_knowledge/mark/time_mark,
 		/datum/heretic_knowledge/armorexpensive,
+		/datum/heretic_knowledge/summon/fire_shark,
 	)
 	spell_to_add = /datum/action/cooldown/spell/pointed/skip_time
 	cost = 1
@@ -162,7 +163,6 @@
 	cost = 1
 	route = PATH_TIME
 	depth = 7
-	//research_tree_icon_frame = 7
 	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "timemendsall"
 
@@ -183,6 +183,8 @@
 			Knowledge remained, but their attention did not."
 	next_knowledge = list(
 		/datum/heretic_knowledge/blade_upgrade/time,
+		/datum/heretic_knowledge/reroll_targets,
+		/datum/heretic_knowledge/spell/space_phase,
 	)
 	spell_to_add = /datum/action/cooldown/spell/deja_vu
 	cost = 1
@@ -196,7 +198,7 @@
 		upon your attacker, this only works on non-simple and non-silicon based targets."
 	gain_text = "I felt my hands grip tightly, my chest burrowed. \
 			I had to do something. But i did not know what."
-	next_knowledge = list(/datum/heretic_knowledge/spell/accelerate)
+	next_knowledge = list(/datum/heretic_knowledge/haste)
 	route = PATH_TIME
 	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "blade_upgrade_time"
@@ -225,23 +227,29 @@
 		source.adjustOxyLoss(-2)
 
 
-/datum/heretic_knowledge/spell/accelerate
-	name = "Accelerate"
-	desc = "You warp time in your favor, causing you to become hastened for the next \
-		10 seconds. All progress bar actions are performed 50% faster, and you move 100% faster. \
-		You recover from all stuns 25% faster and rapidly purge toxins from your bloodstream. \
-		You age rapidly while hastened, however. Requires a focus to use. "
-	gain_text = "Despite everything, i knew what i COULD do. \
-			I would do what i believed was right for them all. \
-			For the end isn't as far away as i had previously believed."
+/datum/heretic_knowledge/haste
+	name = "Eternal Haste"
+	desc = "You are permanently hastened, you perform all progress bar actions 50% faster and move 15% faster. \
+		You'll purge toxins from your body automatically, and will burn through your calories quicker."
+	gain_text = "My eyes lit up as i realized what my purpose was. \
+			Beyond the folds of time, lies an ultimate goal. A purpose."
 	next_knowledge = list(
 		/datum/heretic_knowledge/ultimate/time_final,
+		/datum/heretic_knowledge/eldritch_coin,
 	)
-	spell_to_add = /datum/action/cooldown/spell/accelerate
 	cost = 1
 	route = PATH_TIME
 	depth = 10
-	//research_tree_icon_frame = 5
+	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
+	research_tree_icon_state = "haste"
+
+/datum/heretic_knowledge/haste/on_gain(mob/user, datum/antagonist/heretic/our_heretic)
+	var/mob/living/carbon/human_user = user
+	human_user.apply_status_effect(/datum/status_effect/haste)
+
+/datum/heretic_knowledge/haste/on_lose(mob/user, datum/antagonist/heretic/our_heretic)
+	var/mob/living/carbon/human_user = user
+	human_user.remove_status_effect(/datum/status_effect/haste)
 
 
 /datum/heretic_knowledge/ultimate/time_final
@@ -250,7 +258,7 @@
 		Transmute three corpses that have been aged past 50 years to ascend. \
 		When completed, your 'Time Mends All' regenerates thrice as quickly and grants total stun \
 		immunity. You may stop time in a large radius for 20 seconds once every minute. \
-		All heathens no matter how far away they might be, will being to age rapidly."
+		All heathens nearby will be cursed permanently, those who are cursed will age rapidly."
 	gain_text = "And now i stand a shepherd with no herd, the end approaches while they sleep. \
 			Even if i told them now, it'd be of no use, they'd forget in the next moment. \
 			But with your help? We can remind them together. \
@@ -288,15 +296,6 @@
 
 	RegisterSignal(user, COMSIG_LIVING_LIFE, PROC_REF(on_life))
 
-	for(var/atom/thing_in_range as anything in range(100, user))
-		if(iscarbon(thing_in_range))
-			if(thing_in_range != user)
-				continue
-			var/mob/living/carbon/close_carbon = thing_in_range
-			if(!close_carbon.has_status_effect(/datum/status_effect/rapidaging)) // Just checking in the event of two time heretic ascensions.
-				close_carbon.apply_status_effect(/datum/status_effect/rapidaging)
-
-/datum/heretic_knowledge/ultimate/time_final/on_gain(mob/user, datum/antagonist/heretic/our_heretic)
 	var/mob/living/carbon/human_user = user
 	human_user.remove_status_effect(/datum/status_effect/timemendsall) // Replacing this with a better version.
 	sleep(1 SECONDS) // give it a delay so this shit doesn't bug out/delete each other.
@@ -307,17 +306,13 @@
 	human_user.remove_status_effect(/datum/status_effect/timemendsall)
 	human_user.remove_status_effect(/datum/status_effect/timemendsall/ascension)
 	UnregisterSignal(human_user, COMSIG_LIVING_LIFE)
-	var/datum/action/cooldown/spell/timestop_super/time_spell = new(user.mind)
-	time_spell.Remove(user)
 
-
-/datum/heretic_knowledge/ultimate/time_final/proc/on_life(mob/living/source, seconds_per_tick, times_fired)
+/datum/heretic_knowledge/ultimate/time_final/proc/on_life(mob/living/user, seconds_per_tick, times_fired)
 	SIGNAL_HANDLER
 
-	for(var/atom/thing_in_range as anything in range(10, source))
+	for(var/atom/thing_in_range as anything in range(10, user))
 		if(iscarbon(thing_in_range))
-			if(thing_in_range != source)
-				continue
-			var/mob/living/carbon/close_carbon = thing_in_range
-			if(!close_carbon.has_status_effect(/datum/status_effect/rapidaging))
-				close_carbon.apply_status_effect(/datum/status_effect/rapidaging)
+			if(thing_in_range != user)
+				var/mob/living/carbon/close_carbon = thing_in_range
+				if(!close_carbon.has_status_effect(/datum/status_effect/rapidaging))
+					close_carbon.apply_status_effect(/datum/status_effect/rapidaging)

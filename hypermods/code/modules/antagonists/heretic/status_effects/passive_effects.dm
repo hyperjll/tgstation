@@ -50,3 +50,26 @@
 	id = "ascended time mends all"
 	healing = -12
 	stunresist = -100
+
+
+/datum/status_effect/haste
+	id = "heretic haste"
+	duration = INFINITY
+	alert_type = null
+
+/datum/status_effect/haste/on_apply()
+	. = ..()
+	owner.add_movespeed_modifier(/datum/movespeed_modifier/haste)
+	owner.add_actionspeed_modifier(/datum/actionspeed_modifier/haste)
+
+/datum/status_effect/haste/tick()
+	var/mob/living/carbon/human/carbon_human = owner
+
+	carbon_human.adjust_nutrition(-0.1)
+
+	for(var/datum/reagent/toxin/R in carbon_human.reagents.reagent_list)
+		carbon_human.reagents.remove_reagent(R.type,1)
+
+/datum/status_effect/haste/on_remove()
+	owner.remove_movespeed_modifier(/datum/movespeed_modifier/haste)
+	owner.remove_actionspeed_modifier(/datum/actionspeed_modifier/haste)

@@ -6543,7 +6543,6 @@
 #include "hypermods\code\modules\antagonists\heretic\knowledge\side_all.dm"
 #include "hypermods\code\modules\antagonists\heretic\knowledge\time_lore.dm"
 #include "hypermods\code\modules\antagonists\heretic\knowledge\sacrifice_knowledge\sacrifice_map.dm"
-#include "hypermods\code\modules\antagonists\heretic\magic\accelerate.dm"
 #include "hypermods\code\modules\antagonists\heretic\magic\dejavu.dm"
 #include "hypermods\code\modules\antagonists\heretic\magic\skip_time.dm"
 #include "hypermods\code\modules\antagonists\heretic\magic\stop_time_super.dm"

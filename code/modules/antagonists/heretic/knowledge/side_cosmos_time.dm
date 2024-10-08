@@ -46,7 +46,7 @@
 	gain_text = "The Mansus is a place of all sorts of sins. But greed held a special role."
 	next_knowledge = list(
 		/datum/heretic_knowledge/spell/cosmic_expansion,
-		/datum/heretic_knowledge/spell/accelerate,
+		/datum/heretic_knowledge/haste,
 	)
 	required_atoms = list(
 		/obj/item/stack/sheet/mineral/diamond = 1,

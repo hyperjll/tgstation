@@ -79,7 +79,6 @@
 	gain_text = "He knew how to walk between the planes."
 	next_knowledge = list(
 		/datum/heretic_knowledge/mark/ash_mark,
-		/datum/heretic_knowledge/summon/fire_shark,
 		/datum/heretic_knowledge/medallion,
 		/datum/heretic_knowledge/armorexpensive,
 	)
@@ -139,7 +138,6 @@
 	next_knowledge = list(
 		/datum/heretic_knowledge/blade_upgrade/ash,
 		/datum/heretic_knowledge/reroll_targets,
-		/datum/heretic_knowledge/spell/space_phase,
 		/datum/heretic_knowledge/curse/paralysis,
 	)
 	required_atoms = list(
@@ -182,7 +180,6 @@
 	next_knowledge = list(
 		/datum/heretic_knowledge/ultimate/ash_final,
 		/datum/heretic_knowledge/summon/ashy,
-		/datum/heretic_knowledge/eldritch_coin,
 	)
 	spell_to_add = /datum/action/cooldown/spell/aoe/fiery_rebirth
 	cost = 1
