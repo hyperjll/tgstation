@@ -1167,7 +1167,7 @@
 	default_skin = "syndicate"
 	armor_type = /datum/armor/mod_theme_syndicate
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
-	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
+	complexity_max = DEFAULT_MAX_COMPLEXITY + 5
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
 	slowdown_inactive = 1
@@ -1276,7 +1276,7 @@
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
+	complexity_max = DEFAULT_MAX_COMPLEXITY + 10
 	siemens_coefficient = 0
 	slowdown_inactive = 1
 	slowdown_active = 0.5

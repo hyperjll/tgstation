@@ -17,8 +17,8 @@
 			Features include: Space faring capabilities, a built-in health analyzer, combat defibrillator, injector, object space-only tether, and more! \
 			It even comes with a preloaded surgical processor with most advanced surgical procedures as a bonus! Anything from wound tending to brainwashing is included! \
 			While active, this suit can boost the wearer's motor ability leading to quicker movement. \
-			Doesn't come with a jetpack, emp shielding, or surgical tools."
-	item = /obj/item/mod/control/pre_equipped/interdyne
+			Doesn't come with surgical tools."
+	item = /obj/item/mod/control/pre_equipped/interdyne/traitor
 	progression_minimum = 10 MINUTES
 	cost = 18
 	surplus = 5

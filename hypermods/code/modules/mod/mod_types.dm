@@ -38,6 +38,29 @@
 		/obj/item/mod/module/jetpack,
 	)
 
+/obj/item/mod/control/pre_equipped/interdyne/traitor
+	theme = /datum/mod_theme/interdyne
+	starting_frequency = MODLINK_FREQ_SYNDICATE
+	applied_cell = /obj/item/stock_parts/power_store/cell/super
+	applied_modules = list(
+		/obj/item/mod/module/organizer,
+		/obj/item/mod/module/defibrillator/combat,
+		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/health_analyzer,
+		/obj/item/mod/module/injector,
+		/obj/item/mod/module/surgical_processor/preloaded,
+		/obj/item/mod/module/storage/syndicate,
+		/obj/item/mod/module/hat_stabilizer/syndicate,
+		/obj/item/mod/module/tether,
+		/obj/item/mod/module/quick_cuff,
+		/obj/item/mod/module/dna_lock,
+		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/shock_absorber,
+		/obj/item/mod/module/emp_shield,
+		/obj/item/mod/module/pathfinder,
+		/obj/item/mod/module/magnetic_harness,
+	)
+
 /obj/item/mod/control/pre_equipped/responsory/inquisitory/syndie/super // a better version than this garbage
 	starting_frequency = MODLINK_FREQ_SYNDICATE
 	req_access = null

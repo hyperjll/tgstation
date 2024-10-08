@@ -7,7 +7,7 @@
 	default_skin = "raid"
 	armor_type = /datum/armor/mod_theme_raid
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
-	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
+	complexity_max = DEFAULT_MAX_COMPLEXITY + 15
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
 	slowdown_inactive = 0.25
@@ -112,7 +112,7 @@
 	default_skin = "juggernaut"
 	armor_type = /datum/armor/mod_theme_juggernaut
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
-	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
+	complexity_max = DEFAULT_MAX_COMPLEXITY + 10
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
 	slowdown_inactive = 3
@@ -208,5 +208,15 @@
 		part.icon_state = "[skin]-[part.base_icon_state][mod.get_part_datum(part).sealed ? "-sealed" : ""]"
 		mod.wearer?.update_clothing(part.slot_flags)
 
-/datum/mod_theme/responsory/traitor/super
+/datum/mod_theme/interdyne/traitor
 	complexity_max = DEFAULT_MAX_COMPLEXITY + 15
+
+/datum/mod_theme/responsory/traitor/super
+	complexity_max = DEFAULT_MAX_COMPLEXITY + 10
+	allowed_suit_storage = list(
+		/obj/item/restraints/handcuffs,
+		/obj/item/assembly/flash,
+		/obj/item/melee/baton,
+		/obj/item/melee/energy/sword,
+		/obj/item/shield/energy,
+	)
