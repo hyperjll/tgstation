@@ -3985,6 +3985,13 @@
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/iron/dark,
 /area/station/security/processing)
+"brT" = (
+/obj/machinery/conveyor{
+	id = "mining"
+	},
+/obj/machinery/brm,
+/turf/open/floor/iron,
+/area/station/cargo/miningoffice)
 "bsa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/wooden/crude,
@@ -5275,6 +5282,9 @@
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/misc/asteroid/lowpressure,
 /area/space/nearstation)
+"bRC" = (
+/turf/closed/wall/r_wall,
+/area/station/cargo/miningoffice)
 "bRJ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -10450,6 +10460,14 @@
 "dyj" = (
 /turf/closed/wall/rust,
 /area/station/security/checkpoint/supply)
+"dyl" = (
+/obj/machinery/conveyor{
+	dir = 9;
+	id = "mining"
+	},
+/obj/machinery/bouldertech/refinery/smelter,
+/turf/open/floor/iron,
+/area/station/cargo/miningoffice)
 "dyu" = (
 /obj/structure/flora/bush/jungle/b,
 /turf/open/misc/asteroid,
@@ -18646,6 +18664,16 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
+"ghM" = (
+/obj/structure/marker_beacon/burgundy{
+	name = "landing marker"
+	},
+/obj/machinery/conveyor_switch/oneway{
+	id = "mining";
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/cargo/miningoffice)
 "ghO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -19504,6 +19532,13 @@
 "guJ" = (
 /turf/open/misc/asteroid,
 /area/station/maintenance/port/lesser)
+"guO" = (
+/obj/machinery/door/airlock/mining{
+	name = "Boulder Refinery"
+	},
+/obj/effect/mapping_helpers/airlock/access/any/supply/mining,
+/turf/open/floor/iron,
+/area/station/cargo/storage)
 "guS" = (
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/structure/closet/secure_closet/engineering_welding,
@@ -31190,6 +31225,12 @@
 /obj/effect/mapping_helpers/airlock/access/any/security/maintenance,
 /turf/open/floor/iron/dark,
 /area/station/security/execution/transfer)
+"kgv" = (
+/obj/machinery/conveyor{
+	id = "mining"
+	},
+/turf/open/floor/iron,
+/area/station/cargo/miningoffice)
 "kgB" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -36416,6 +36457,16 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
+"lRU" = (
+/obj/structure/marker_beacon/burgundy{
+	name = "landing marker"
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "mining"
+	},
+/turf/open/floor/iron,
+/area/station/cargo/miningoffice)
 "lRZ" = (
 /obj/machinery/door/airlock/external{
 	name = "Abandoned External Airlock"
@@ -52731,6 +52782,10 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
+"rtd" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/iron,
+/area/station/cargo/miningoffice)
 "rtr" = (
 /obj/structure/table/glass,
 /obj/item/folder/white,
@@ -72790,6 +72845,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
+"xJl" = (
+/obj/machinery/conveyor{
+	dir = 10;
+	id = "mining"
+	},
+/obj/machinery/bouldertech/refinery,
+/turf/open/floor/iron,
+/area/station/cargo/miningoffice)
 "xJn" = (
 /obj/machinery/computer/records/security{
 	dir = 1
@@ -115318,8 +115381,8 @@ wrY
 tVt
 qAR
 lKq
-hOc
-hOc
+guO
+lKq
 lmO
 wer
 tKv
@@ -115574,9 +115637,9 @@ vuu
 rqL
 qRm
 gKI
-acm
-aaa
-acm
+rtd
+chT
+dyl
 tue
 wer
 eHJ
@@ -115831,9 +115894,9 @@ chT
 kaX
 ohR
 oUz
-qJs
-acK
-qJs
+ghM
+chT
+lRU
 lKq
 iSb
 rNO
@@ -116088,10 +116151,10 @@ aLI
 dVB
 kyj
 qAR
-aaa
-aaa
-aaa
-hOc
+brT
+kgv
+xJl
+lKq
 hBg
 srA
 nfd
@@ -116345,9 +116408,9 @@ rcp
 mjW
 pmk
 qAR
-aaa
-aaa
-aaa
+bRC
+bRC
+bRC
 bBV
 iSb
 dMq
