@@ -5,7 +5,7 @@
 
 /datum/status_effect/timeskipped/on_apply()
 	owner.add_movespeed_modifier(/datum/movespeed_modifier/timeskipped)
-	return TRUE
+	return ..()
 
 /datum/status_effect/timeskipped/on_remove()
 	owner.remove_movespeed_modifier(/datum/movespeed_modifier/timeskipped)

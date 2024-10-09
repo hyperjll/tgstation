@@ -4,11 +4,11 @@
  * Goes as follows:
  *
  * Passage of Time
- * Grasp of the Ages
+ * Grasp of Time
  * Skip Time
  * > Sidepaths:
- *   Cage of Ages
- *   ???
+ *   Slow
+ *   Fire Shark
  *
  * Mark of Time
  * Ritual of Knowledge
@@ -18,13 +18,13 @@
  * Deja Vu
  * > Sidepaths:
  *   Eldritch Echoes
- *   ???
+ *   Space Phase
  *
  * Time Siphon
- * Accelerate
+ * Eternal Haste
  * > Sidepaths:
- *   Unwaivering Fortitude
- *   ???
+ *   Cursed Flames
+ *   Eldritch Coin
  *
  * At The End Of All
  */
@@ -46,8 +46,8 @@
 
 
 /datum/heretic_knowledge/time_grasp
-	name = "Grasp of the Ages"
-	desc = "Your Mansus Grasp will steal 1-2 years of life from your target, and slightly heal all damage types for you."
+	name = "Grasp of Time"
+	desc = "Your Mansus Grasp will steal 1-2 years of youth from your target, and slightly heal all damage types for you."
 	gain_text = "At first, they studied me as they do all."
 	next_knowledge = list(
 		/datum/heretic_knowledge/spell/time_skip,
@@ -98,8 +98,9 @@
 			They pointed to a place i couldn't fathom. A place i couldn't reach."
 	next_knowledge = list(
 		/datum/heretic_knowledge/mark/time_mark,
-		/datum/heretic_knowledge/armorexpensive,
 		/datum/heretic_knowledge/summon/fire_shark,
+		/datum/heretic_knowledge/spell/slow,
+		/datum/heretic_knowledge/armorexpensive,
 	)
 	spell_to_add = /datum/action/cooldown/spell/pointed/skip_time
 	cost = 1
@@ -159,6 +160,7 @@
 			Beyond the folds of time, lies an ultimate goal. A purpose."
 	next_knowledge = list(
 		/datum/heretic_knowledge/spell/deja_vu,
+		/datum/heretic_knowledge/curse/age,
 	)
 	cost = 1
 	route = PATH_TIME
@@ -185,6 +187,7 @@
 		/datum/heretic_knowledge/blade_upgrade/time,
 		/datum/heretic_knowledge/reroll_targets,
 		/datum/heretic_knowledge/spell/space_phase,
+		/datum/heretic_knowledge/spell/eldritch_echoes,
 	)
 	spell_to_add = /datum/action/cooldown/spell/deja_vu
 	cost = 1
@@ -236,6 +239,7 @@
 	next_knowledge = list(
 		/datum/heretic_knowledge/ultimate/time_final,
 		/datum/heretic_knowledge/eldritch_coin,
+		/datum/heretic_knowledge/spell/cursed_flames,
 	)
 	cost = 1
 	route = PATH_TIME

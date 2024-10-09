@@ -24,3 +24,6 @@
 	. = ..()
 	to_chat(owner, span_notice("You take a mental note of where you are now..."))
 	owner.AddComponent(/datum/component/dejavu, 1)
+
+	var/mob/living/carbon/human/heretic = owner
+	heretic.age += (rand(3,5)) // The price of skipping time.

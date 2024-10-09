@@ -34,7 +34,7 @@
 
 /datum/status_effect/rapidaging/lesser // Just here to apply to proc above
 	id = "age checker"
-	duration = 1
+	duration = 1 SECONDS
 	alert_type = null
 	probability = 0 // Don't want any accidentally age-ups with this one
 

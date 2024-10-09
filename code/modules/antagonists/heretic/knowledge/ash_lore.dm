@@ -80,6 +80,7 @@
 	next_knowledge = list(
 		/datum/heretic_knowledge/mark/ash_mark,
 		/datum/heretic_knowledge/medallion,
+		/datum/heretic_knowledge/spell/slow,
 		/datum/heretic_knowledge/armorexpensive,
 	)
 	spell_to_add = /datum/action/cooldown/spell/jaunt/ethereal_jaunt/ash
@@ -121,7 +122,11 @@
 		at a nearby enemy, setting them on fire and burning them. If they do not extinguish themselves, \
 		the beam will continue to another target."
 	gain_text = "No fire was hot enough to rekindle them. No fire was bright enough to save them. No fire is eternal."
-	next_knowledge = list(/datum/heretic_knowledge/mad_mask)
+	next_knowledge = list(
+		/datum/heretic_knowledge/mad_mask,
+		/datum/heretic_knowledge/curse/age,
+
+	)
 	spell_to_add = /datum/action/cooldown/spell/charged/beam/fire_blast
 	cost = 1
 	route = PATH_ASH
@@ -139,6 +144,7 @@
 		/datum/heretic_knowledge/blade_upgrade/ash,
 		/datum/heretic_knowledge/reroll_targets,
 		/datum/heretic_knowledge/curse/paralysis,
+		/datum/heretic_knowledge/spell/eldritch_echoes,
 	)
 	required_atoms = list(
 		/obj/item/organ/internal/liver = 1,
@@ -180,6 +186,7 @@
 	next_knowledge = list(
 		/datum/heretic_knowledge/ultimate/ash_final,
 		/datum/heretic_knowledge/summon/ashy,
+		/datum/heretic_knowledge/spell/cursed_flames,
 	)
 	spell_to_add = /datum/action/cooldown/spell/aoe/fiery_rebirth
 	cost = 1
