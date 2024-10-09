@@ -34,12 +34,15 @@
 	var/turf/targeted_turf = get_turf(cast_on)
 
 	playsound(targeted_turf, 'sound/effects/magic/voidblink.ogg', 80, TRUE)
+
 	cast_on.apply_status_effect(/datum/status_effect/hereticslow, "hereticslow")
 
 
 /datum/status_effect/hereticslow
 	id = "hereticslow"
+	status_type = STATUS_EFFECT_REPLACE
 	duration = 5 SECONDS
+	tick_interval = 1 SECONDS
 	alert_type = /atom/movable/screen/alert/status_effect/hereticslow
 	///The overlay that gets applied to whoever has this status active
 	var/obj/effect/abstract/slowedaura/effect_overlay
@@ -51,12 +54,12 @@
 	RegisterSignal(effect_overlay, COMSIG_QDELETING, PROC_REF(clear_overlay))
 	new_owner.vis_contents += effect_overlay
 
-
 /datum/status_effect/hereticslow/on_apply()
-	owner.add_movespeed_modifier(/datum/movespeed_modifier/hereticslow)
+	. = ..()
+	owner.add_movespeed_modifier(/datum/movespeed_modifier/heretic_slow)
 
 /datum/status_effect/hereticslow/on_remove()
-	owner.remove_movespeed_modifier(/datum/movespeed_modifier/hereticslow)
+	owner.remove_movespeed_modifier(/datum/movespeed_modifier/heretic_slow)
 
 
 ///Makes sure to clear the ref in case the voidball ever suddenly disappears

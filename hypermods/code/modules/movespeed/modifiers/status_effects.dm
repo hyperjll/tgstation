@@ -10,5 +10,5 @@
 /datum/movespeed_modifier/haste
 	multiplicative_slowdown = -0.15
 
-/datum/movespeed_modifier/hereticslow
+/datum/movespeed_modifier/heretic_slow
 	multiplicative_slowdown = 0.50
