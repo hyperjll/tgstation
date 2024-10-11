@@ -61,7 +61,7 @@
 	item = /obj/item/storage/box/syndie_kit/sleepytime
 	purchasable_from = ALL
 	progression_minimum = 90 MINUTES
-	cost = 4
+	cost = 1
 	limited_stock = 1
 	cant_discount = TRUE
 
