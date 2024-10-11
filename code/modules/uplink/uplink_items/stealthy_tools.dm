@@ -9,7 +9,7 @@
 
 /datum/uplink_item/stealthy_tools/agent_card
 	name = "Agent Identification Card"
-	desc = "Agent cards prevent artificial intelligences from tracking the wearer, and hold up to 12 ew common accesses, 6 command, and 3 captain. \
+	desc = "Agent cards prevent artificial intelligences from tracking the wearer, and hold up to 12 new common accesses, 6 command, and 3 captain. \
 			from other identification cards. In addition, they can be forged to display a new assignment, name and trim. \
 			This can be done an unlimited amount of times. Some Syndicate areas and devices can only be accessed \
 			with these cards."
