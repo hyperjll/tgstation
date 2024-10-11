@@ -8,8 +8,8 @@
 
 /datum/uplink_item/stealthy_tools/agent_card_ultimate
 	name = "Ultimate Agent Identification Card"
-	desc = "Agent cards prevent artificial intelligences from tracking the wearer. This one can hold an unlimited amount of additional access. \
-			from other identification cards. In addition, they can be forged to display a new assignment, name and trim. \
+	desc = "Agent cards prevent artificial intelligences from tracking the wearer. This one can hold an unlimited amount of additional access, \
+			much of which you'll likely steal from other identification cards. In addition, they can be forged to display a new assignment, name and trim. \
 			This can be done an unlimited amount of times. Some Syndicate areas and devices can only be accessed \
 			with these cards."
 	item = /obj/item/card/id/advanced/chameleon/black
