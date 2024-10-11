@@ -223,6 +223,14 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_SERIOUS_OPS
 
+/datum/uplink_item/stealthy_weapons/manifold_autoinjector
+	name = "Hereditary Manifold Sickness Injector"
+	desc = "An autoinjector for a permanent, incurable disease that'll slowly destroy it's victim. \
+			The disease can only be suppressed via experimental medication."
+	item = /obj/item/reagent_containers/hypospray/medipen/manifoldinjector
+	cost = 5
+	surplus = 25
+
 /datum/uplink_item/stealthy_weapons/cyborgweapons
 	name = "Weapon Cyborg Module"
 	desc = "An illegal module capable of granting a cyborg a Viper pistol with the necessary hardware \

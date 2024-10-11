@@ -304,18 +304,9 @@
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // HELL NO.
 
-/datum/uplink_item/role_restricted/manifold_autoinjector
-	name = "Hereditary Manifold Sickness Injector"
-	desc = "An autoinjector for a permanent, incurable disease that'll slowly destroy it's victim. \
-			The disease can only be suppressed via experimental medication."
-	item = /obj/item/reagent_containers/hypospray/medipen/manifoldinjector
-	cost = 5
-	surplus = 25
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
-
 /datum/uplink_item/role_restricted/manifold_injector_bundle
 	name = "Bundle of HMS Injectors"
-	desc = "One of our syndicate dufflebags that contains SIX unused HMS Auto-injectors. More than enough to cripple the security team greatly."
+	desc = "A box that contains SIX unused HMS Auto-injectors. More than enough to cripple the security team greatly."
 	item = /obj/item/storage/box/syndie_kit/manifold_injector_bundle
 	cost = 20
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
