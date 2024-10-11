@@ -4,7 +4,7 @@
 /obj/item/organ/internal/cyberimp/chest/reviver/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/chest/reviver/better/heal() // syndicate reviver had a lower cooldown.
+/obj/item/organ/internal/cyberimp/chest/reviver/fivemincap/heal() // five minute cap.
 	if(COOLDOWN_FINISHED(src, defib_cooldown))
 		revive_dead()
 
@@ -24,7 +24,36 @@
 	if(need_mob_update)
 		owner.updatehealth()
 
-/obj/item/organ/internal/cyberimp/chest/reviver/better/syndicate
+	if(revive_cost > 3000) // Make sure this doesn't go over 5 minutes. The revive_dead proc adds 10 minutes, so this is super nice to have here.
+		revive_cost = 3000
+
+/obj/item/organ/internal/cyberimp/chest/reviver/fivemincap/syndicate
+	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+
+/obj/item/organ/internal/cyberimp/chest/reviver/tenmincap/heal() // ten minute cap.
+	if(COOLDOWN_FINISHED(src, defib_cooldown))
+		revive_dead()
+
+	var/need_mob_update = FALSE
+	if(owner.getOxyLoss())
+		need_mob_update += owner.adjustOxyLoss(-5, updating_health = FALSE)
+		revive_cost += 1
+	if(owner.getBruteLoss())
+		need_mob_update += owner.adjustBruteLoss(-2, updating_health = FALSE)
+		revive_cost += 10
+	if(owner.getFireLoss())
+		need_mob_update += owner.adjustFireLoss(-2, updating_health = FALSE)
+		revive_cost += 10
+	if(owner.getToxLoss())
+		need_mob_update += owner.adjustToxLoss(-1, updating_health = FALSE)
+		revive_cost += 10
+	if(need_mob_update)
+		owner.updatehealth()
+
+	if(revive_cost > 6000) // Make sure this doesn't go over 10 minutes. The revive_dead proc adds 10 minutes, so this is super nice to have here.
+		revive_cost = 6000
+
+/obj/item/organ/internal/cyberimp/chest/reviver/tenmincap/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 /obj/item/organ/internal/cyberimp/chest/thrusters/syndicate

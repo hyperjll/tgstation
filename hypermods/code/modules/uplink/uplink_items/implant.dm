@@ -77,7 +77,7 @@
 	name = "Reviver Implant"
 	desc = "This implant will attempt to revive and heal you if you lose consciousness, and can even repair your body and \
 			defibrillate your heart should you perish. Comes with an autosurgeon."
-	item = /obj/item/autosurgeon/syndicate/reviver/hidden/single_use
+	item = /obj/item/autosurgeon/syndicate/reviver/tenmincap/hidden/single_use
 	cost = 6
 	surplus = 20
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

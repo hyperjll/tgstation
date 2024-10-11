@@ -134,17 +134,31 @@
 /obj/item/autosurgeon/syndicate/reviver/hidden/single_use
 	uses = 1
 
-/obj/item/autosurgeon/syndicate/reviver/better
-	starting_organ = /obj/item/organ/internal/cyberimp/chest/reviver/better
 
-/obj/item/autosurgeon/syndicate/reviver/better/single_use
+/obj/item/autosurgeon/syndicate/reviver/fivemincap
+	starting_organ = /obj/item/organ/internal/cyberimp/chest/reviver/fivemincap
+
+/obj/item/autosurgeon/syndicate/reviver/fivemincap/single_use
 	uses = 1
 
-/obj/item/autosurgeon/syndicate/reviver/better/hidden // hidden ver
-	starting_organ = /obj/item/organ/internal/cyberimp/chest/reviver/better/syndicate
+/obj/item/autosurgeon/syndicate/reviver/fivemincap/hidden // hidden ver
+	starting_organ = /obj/item/organ/internal/cyberimp/chest/reviver/fivemincap/syndicate
 
-/obj/item/autosurgeon/syndicate/reviver/better/hidden/single_use
+/obj/item/autosurgeon/syndicate/reviver/fivemincap/hidden/single_use
 	uses = 1
+
+/obj/item/autosurgeon/syndicate/reviver/tenmincap
+	starting_organ = /obj/item/organ/internal/cyberimp/chest/reviver/tenmincap
+
+/obj/item/autosurgeon/syndicate/reviver/tenmincap/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/reviver/tenmincap/hidden // hidden ver
+	starting_organ = /obj/item/organ/internal/cyberimp/chest/reviver/tenmincap/syndicate
+
+/obj/item/autosurgeon/syndicate/reviver/tenmincap/hidden/single_use
+	uses = 1
+
 
 /obj/item/autosurgeon/syndicate/emaggedsurgerytoolset
 	starting_organ = /obj/item/organ/internal/cyberimp/arm/surgery/emagged

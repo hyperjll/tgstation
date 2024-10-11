@@ -166,7 +166,7 @@
 /datum/uplink_item/implants/nuclear/reviver
 	name = "Superior Reviver Implant"
 	desc = "This implant will attempt to revive and heal you if you lose consciousness, these superior versions have a drastically lowered cooldown than most. Comes with an autosurgeon."
-	item = /obj/item/autosurgeon/syndicate/reviver/better/hidden/single_use
+	item = /obj/item/autosurgeon/syndicate/reviver/fivemincap/hidden/single_use
 	cost = 8
 
 /datum/uplink_item/implants/nuclear/regenerativeops
