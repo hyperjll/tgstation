@@ -136,10 +136,10 @@
 		if(!F)
 			do_sparks(5,FALSE,imp_in)
 			do_teleport(imp_in, get_turf(imp_in), 24, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE) // Double the range if no safe turf
-			to_chat(span_warning("You feel reality warp erratically as you're displaced!"))
+			to_chat(imp_in, span_warning("You feel reality warp erratically as you're displaced!"))
 		if(F)
 			do_sparks(5,FALSE,imp_in)
-			to_chat(span_warning("You feel reality warp around you as you're teleported somewhere safe!"))
+			to_chat(imp_in, span_warning("You feel reality warp around you as you're teleported somewhere safe!"))
 			do_teleport(imp_in, F, range, channel = TELEPORT_CHANNEL_BLUESPACE)
 	else
 		do_sparks(5,FALSE,imp_in)
