@@ -785,3 +785,105 @@
 	cost = 5
 	surplus = 0
 	restricted_roles = list(JOB_JANITOR, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/engimodsuit
+	name = "Syndicate Engineering MODsuit"
+	desc = "A heavily modified engineering MODsuit often found on Nanotrasen-run stations. \
+			Comes equipped with most of the modules in a syndicate MODsuit, save for EMP shielding. \
+			Also doesn't come equipped with any additional armor plating. \
+			Comes with a Advanced Magnetic Stability module, a Meson Visor, and a Constructor module. \
+			Has a unique Syndicate Rapid-Construction-Device (RCD) pre-installed."
+	item = /obj/item/mod/control/pre_equipped/engineering/traitor
+	cost = 10
+	surplus = 0
+	progression_minimum = 15 MINUTES
+	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/atmosmodsuit
+	name = "Syndicate Atmospheric MODsuit"
+	desc = "A heavily modified atmospheric MODsuit often found on Nanotrasen-run stations. \
+			Comes equipped with most of the modules in a syndicate MODsuit, save for EMP shielding. \
+			Also doesn't come equipped with any additional armor plating. \
+			Comes with a Advanced Magnetic Stability module, a Meson Visor, and a Constructor module. \
+			Comes with a Reagent Mister, loaded with CLF3 for mass incendiary shenanigans."
+	item = /obj/item/mod/control/pre_equipped/atmospheric/traitor
+	cost = 10
+	surplus = 0
+	progression_minimum = 15 MINUTES
+	restricted_roles = list(JOB_ATMOSPHERIC_TECHNICIAN, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/cargomodsuit
+	name = "Syndicate Loader MODsuit"
+	desc = "A heavily modified loader MODsuit often found on Nanotrasen-run stations. \
+			Comes equipped with most of the modules in a syndicate MODsuit, save for EMP shielding. \
+			Also doesn't come equipped with any additional armor plating. \
+			Comes with a Disposals Connector and a unique Flaming Paper Rifle."
+	item = /obj/item/mod/control/pre_equipped/loader/traitor
+	cost = 10
+	surplus = 0
+	progression_minimum = 15 MINUTES
+	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_CAPTAIN) // QM doesn't have a unique MODsuit
+
+/datum/uplink_item/role_restricted/minemodsuit
+	name = "Syndicate Mining MODsuit"
+	desc = "A heavily modified mining MODsuit often found on Nanotrasen-run stations. \
+			Comes equipped with most of the modules in a syndicate MODsuit, save for EMP shielding. \
+			Also doesn't come equipped with any additional armor plating. \
+			Comes with a free syndicate Death Sphere module, and a unique Wormhole Jaunter module."
+	item = /obj/item/mod/control/pre_equipped/mining/traitor
+	cost = 10
+	surplus = 0
+	progression_minimum = 15 MINUTES
+	restricted_roles = list(JOB_SHAFT_MINER, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/medicmodsuit
+	name = "Syndicate Medical MODsuit"
+	desc = "A heavily modified medical MODsuit often found on Nanotrasen-run stations. \
+			Comes equipped with most of the modules in a syndicate MODsuit, save for EMP shielding. \
+			Also doesn't come equipped with any additional armor plating. \
+			Comes with an Advanced Reagent Scanner, a empty Surgical Processor, a Medibeam module, \
+			A Reverse-Medibeam module, and a unique Hypospray module."
+	item = /obj/item/mod/control/pre_equipped/medical/traitor
+	cost = 10
+	surplus = 0
+	progression_minimum = 15 MINUTES
+	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHEMIST, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/paramodsuit
+	name = "Syndicate Emergency Medical MODsuit"
+	desc = "A heavily modified emergency medical MODsuit often found on Nanotrasen-run stations. \
+			Comes equipped with most of the modules in a syndicate MODsuit, save for EMP shielding. \
+			Also doesn't come equipped with any additional armor plating. \
+			Comes with an Advanced Reagent Scanner, a semi-loaded Surgical Processor, a Medibeam module, \
+			A Reverse-Medibeam module, and a unique Dart Gun module."
+	item = /obj/item/mod/control/pre_equipped/emergency_medical/traitor
+	cost = 10
+	surplus = 0
+	progression_minimum = 15 MINUTES
+	restricted_roles = list(JOB_PARAMEDIC, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/clownmodsuit
+	name = "Syndicate CosmoHONK MODsuit"
+	desc = "A heavily modified Cosmohonk MODsuit rarely ever seen, and when its seen? It's in the hands of a clown. \
+			Comes equipped with most of the modules in a syndicate MODsuit, save for EMP shielding. \
+			Also doesn't come equipped with any additional armor plating. \
+			Comes with an Anti-Slip module pre-installed for free. \
+			Comes with TWO unique modules: the Explosive Balloon Blower module, and the Mega Bikehorn module."
+	item = /obj/item/mod/control/pre_equipped/cosmohonk/traitor
+	cost = 10
+	surplus = 0
+	progression_minimum = 15 MINUTES
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/scimodsuit
+	name = "Syndicate PROTOTYPE MODsuit"
+	desc = "A heavily modified Prototype MODsuit we've recovered from an abandoned station and have been studying. \
+			Comes equipped with most of the modules in a syndicate MODsuit, save for EMP shielding. \
+			Also doesn't come equipped with any additional armor plating. May or may not have hidden modules for tracking and recording data. \
+			Features a Kinesis Beam module allowing for manipulation of most structures and objects. Can't manipulate living objects, though. \
+			Also comes with a unique Tesla Coil module for close-shock electrocutions."
+	item = /obj/item/mod/control/pre_equipped/prototype/traitor
+	cost = 10
+	surplus = 0
+	progression_minimum = 15 MINUTES
+	restricted_roles = list(JOB_SCIENTIST, JOB_ROBOTICIST, JOB_CAPTAIN)

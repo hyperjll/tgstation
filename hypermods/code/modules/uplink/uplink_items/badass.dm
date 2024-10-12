@@ -97,3 +97,17 @@
 	surplus = 0
 	cant_discount = TRUE
 	purchasable_from = ~UPLINK_SPY
+
+/datum/uplink_item/badass/costumes/centcom_official_mod
+	name = "CentCom Official MODsuit"
+	desc = "A highly prized and often under-utilized MODsuit directly smuggled out from Nanotrasen's Central Command. \
+			Equipped with some useful modules including a Shock Absorber, Jetpack, DNA Lock, and a genuine Bluespace Storage Module. \
+			Trying to decieve the station into believing you're a member of Nanotrasen's Central Command is NOT recommended. \
+			Most crew including command staff aren't stupid enough to fall for it, and will instead try to apprehend you. \
+			But, in the event you can pull it off... well, let's just say we'll be watching intently upon every purchase. \
+			Includes a syndicate frequency but not a centcom frequency. No firearms included."
+	purchasable_from = ALL
+	cost = 8
+	surplus = 1 // For that RARE opportunity
+	progression_minimum = 110 MINUTES
+	item = /obj/item/mod/control/pre_equipped/corporate/traitor

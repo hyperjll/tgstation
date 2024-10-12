@@ -7,6 +7,16 @@
 	desc = "An ordinary carp suit now with space-faring capabilities, operatives are still advised \
 			to avoid the 'Space Dragon' specimen at all costs as this suit may not fool them."
 	item = /obj/item/clothing/suit/hooded/carp_costume/spaceproof/syndi
+	cost = 3
+	surplus = 15
+
+/datum/uplink_item/suits/scivilian
+	name = "Civilian-Class Syndicate MODsuit"
+	desc = "A civilian-grade blood-red MODsuit imported straight from the Sol system. \
+			Comes with all the normal modules of our regular Syndicate MODsuits, and even have welding protection! \
+			It's lightweight and freeform design allow for more modules to be installed, and doesn't slow the wearer down when active... \
+			but it also doesn't feature any combat-oriented capabilities, and has little armor plating."
+	item = /obj/item/mod/control/pre_equipped/civilian/traitor
 	cost = 4
 	surplus = 15
 

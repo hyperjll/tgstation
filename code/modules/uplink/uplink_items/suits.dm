@@ -29,7 +29,8 @@
 
 /datum/uplink_item/suits/modsuit
 	name = "Syndicate MODsuit"
-	desc = "The feared MODsuit of a Syndicate agent. Features armoring and a set of inbuilt modules."
+	desc = "The feared MODsuit of a Syndicate agent. Features armoring and a set of inbuilt modules including the following: \
+			A Shock Absorber, DNA Lock, Jetpack, Jump Jet, Syndicate Storage Module, and much more! Spacefaring ability included!"
 	item = /obj/item/mod/control/pre_equipped/traitor
 	cost = 8
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS //you can't buy it in nuke, because the elite modsuit costs the same while being better

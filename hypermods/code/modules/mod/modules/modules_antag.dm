@@ -501,3 +501,249 @@
 
 /obj/item/mod/module/flashlight/darkness/super
 	light_power = 2
+
+/obj/item/mod/module/mister/syndicate
+	name = "syndicate MOD mister module"
+	desc = "A module containing a mister, able to spray it over areas. Holds 1000 units of reagents."
+	device = /obj/item/reagent_containers/spray/mister
+	volume = 1000
+
+/obj/item/mod/module/mister/syndicate/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(/datum/reagent/clf3, volume)
+
+/obj/item/mod/module/rcd
+	name = "MOD RCD module"
+	desc = "A module containing a Rapid-Construction-Device (RCD), allowing the user to quickly construct and deconstruct structures."
+	icon = 'icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "constructor"
+	device = /obj/item/construction/rcd
+	module_type = MODULE_ACTIVE
+
+/obj/item/mod/module/rcd/syndicate
+	name = "syndicate MOD RCD module"
+	desc = "A module containing a Syndicate Rapid-Construction-Device (RCD), allowing the user to quickly construct and deconstruct structures with greater ease."
+	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "constructor_syndi"
+	device = /obj/item/construction/rcd/syndicate
+
+/obj/item/mod/module/paper_rifle
+	name = "syndicate MOD paper dispenser module"
+	desc = "A simple module designed by the bureaucrats of Torch Bay. \
+		It dispenses 'warm, clean, and crisp sheets of paper' onto a nearby table. Usually."
+	icon_state = "paper_maker"
+	module_type = MODULE_ACTIVE
+	complexity = 1
+	incompatible_modules = list(/obj/item/mod/module/paper_dispenser, /obj/item/mod/module/paper_rifle)
+	cooldown_time = 5 SECONDS
+	required_slots = list(ITEM_SLOT_GLOVES)
+	device = /obj/item/pneumatic_cannon/paperplane/selfcharge
+/**
+/obj/item/gun/energy/burningpaper
+	name = "paper dispenser"
+	desc = "A small, easily concealable toy cannon. It fires paper, and lits it."
+	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "paper_rifle"
+	ammo_type = list(/obj/item/ammo_casing/energy/burningpaper)
+	fire_sound = 'sound/items/handling/paper_pickup.ogg'
+	gun_flags = NOT_A_REAL_GUN
+	selfcharge = TRUE
+
+/obj/item/ammo_casing/energy/burningpaper
+	projectile_type = /obj/projectile/bullet/burningpaper
+	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon_state = "paperplane"
+	base_icon_state = "paperplane"
+	select_name = "paper"
+	fire_sound = 'sound/items/handling/paper_drop.ogg'
+	delay = 1
+	e_cost = LASER_SHOTS(20, STANDARD_CELL_CHARGE)
+
+/obj/projectile/bullet/burningpaper
+	name = "paper"
+	desc = "Protect your eyes."
+	damage = 3 // It's paper.
+	damage_type = BRUTE
+	icon = 'icons/obj/service/bureaucracy.dmi'
+	icon_state = "paperplane"
+	base_icon_state = "paperplane"
+	range = 10
+	shrapnel_type = null
+	embed_type = null
+
+/obj/projectile/bullet/burningpaper/on_hit(atom/target, blocked = 0, pierce_hit)
+	..()
+	var/obj/item/paper/crisp_paper = new(get_turf(target))
+	crisp_paper.desc = "It's crisp and warm to the touch. Must be fresh."
+
+	crisp_paper.fire_act(1000, 100)
+**/
+/obj/item/mod/module/harmbeam
+	name = "MOD demedical beamgun module"
+	desc = "A wrist mounted variant of the medbeam gun, this particular version does the exact opposite than heal."
+	icon_state = "chronogun"
+	module_type = MODULE_ACTIVE
+	complexity = 2
+	active_power_cost = DEFAULT_CHARGE_DRAIN
+	device = /obj/item/gun/medbeam/harmful/mod
+	incompatible_modules = list(/obj/item/mod/module/harmbeam)
+	removable = TRUE
+	cooldown_time = 0.5
+	required_slots = list(ITEM_SLOT_BACK)
+
+/obj/item/gun/medbeam/harmful/mod
+	name = "MOD medbeam" // Gotta make sure you cant just examine this in hand to figure someone out.
+
+/obj/item/mod/module/syringe_pistol
+	name = "MOD dart pistol module"
+	desc = "A wrist-mounted dart pistol with retractable tethers to quickly hide the pistol within the MODsuit itself."
+	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "syringe_pistol"
+	module_type = MODULE_ACTIVE
+	complexity = 1
+	active_power_cost = DEFAULT_CHARGE_DRAIN
+	device = /obj/item/gun/syringe/syndicate/mod
+	incompatible_modules = list(/obj/item/mod/module/syringe_pistol)
+	removable = TRUE
+	cooldown_time = 0.5
+	required_slots = list(ITEM_SLOT_GLOVES)
+
+/obj/item/gun/syringe/syndicate/mod
+	name = "MOD dart pistol"
+
+/obj/item/mod/module/hypospray
+	name = "MOD hypospray module"
+	desc = "A mounted DeForest Medical brand hypospray capable of quickly administering drugs and medicine. \
+			It cannot penetrate armor, however..."
+	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "hypospray"
+	module_type = MODULE_ACTIVE
+	complexity = 1
+	active_power_cost = DEFAULT_CHARGE_DRAIN
+	device = /obj/item/reagent_containers/hypospray/buyable/mod
+	incompatible_modules = list(/obj/item/mod/module/hypospray)
+	removable = TRUE
+	cooldown_time = 0.5
+	required_slots = list(ITEM_SLOT_GLOVES)
+
+/obj/item/reagent_containers/hypospray/buyable/mod
+	name = "MOD DeForest hypospray"
+
+/obj/item/mod/module/wormhole_jaunter
+	name = "MOD wormhole jaunter module"
+	desc = "A device harnessing outdated wormhole technology, Nanotrasen has since turned its eyes to bluespace for more accurate teleportation. \
+			The wormholes it creates are unpleasant to travel through, to say the least.\nIt's been augmented to be used infintely."
+	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "jaunter"
+	module_type = MODULE_ACTIVE
+	complexity = 3
+	active_power_cost = DEFAULT_CHARGE_DRAIN * 2
+	device = /obj/item/wormhole_jaunter/mod
+	incompatible_modules = list(/obj/item/wormhole_jaunter/mod)
+	removable = TRUE
+	cooldown_time = 0.5
+	required_slots = list(ITEM_SLOT_GLOVES)
+
+/obj/item/wormhole_jaunter/mod
+	name = "MOD wormhole jaunter"
+	desc = "A device harnessing outdated wormhole technology, Nanotrasen has since turned its eyes to bluespace for more accurate teleportation. \
+			The wormholes it creates are unpleasant to travel through, to say the least.\nIt's been augmented to be used infintely."
+	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "jaunter"
+	inhand_icon_state = "electronic"
+	worn_icon_state = "electronic"
+	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	throwforce = 0
+	w_class = WEIGHT_CLASS_SMALL
+	throw_speed = 3
+	throw_range = 5
+	slot_flags = ITEM_SLOT_BELT
+
+/obj/item/wormhole_jaunter/mod/activate(mob/user, adjacent, teleport)
+	if(!turf_check(user))
+		return FALSE
+
+	if(!can_jaunter_teleport())
+		if(user)
+			to_chat(user, span_notice("\The [src] found no beacons in the world to anchor a wormhole to."))
+		else
+			visible_message(span_notice("\The [src] found no beacons in the world to anchor a wormhole to!"))
+		return TRUE // used for chasm code
+
+	var/list/destinations = get_destinations()
+	var/chosen_beacon = pick(destinations)
+
+	var/obj/effect/portal/jaunt_tunnel/tunnel = new (get_turf(src), 100, null, FALSE, get_turf(chosen_beacon))
+	if(teleport)
+		tunnel.teleport(user)
+	else if(adjacent)
+		try_move_adjacent(tunnel)
+
+	//qdel(src)
+	return FALSE // used for chasm code
+
+/obj/item/mod/module/bikehorn/mega
+	name = "MOD mega bike horn module"
+	desc = "A shoulder-mounted piece of heavy sonic artillery, this module uses the finest technology to \
+		precisely deliver an almost lethal squeeze to... a bike horn, producing a significantly memorable sound. \
+		It may be the last thing they ever hear."
+	icon_state = "bikehorn"
+	module_type = MODULE_USABLE
+	complexity = 2
+	use_energy_cost = DEFAULT_CHARGE_DRAIN * 30 // Hefty
+	incompatible_modules = list(/obj/item/mod/module/bikehorn)
+	cooldown_time = 60 SECONDS
+
+/obj/item/mod/module/bikehorn/mega/on_use(mob/source, atom/target, list/modifiers)
+	drain_power(use_energy_cost)
+
+	playsound(src, 'sound/items/airhorn/airhorn.ogg', 100, TRUE)
+	//to_chat(source, "[icon2html(src, source)]<font color='red' size='5'>HONK</font>")
+	for(var/mob/living/carbon/M in ohearers(6, source))
+		if(!M.can_hear())
+			continue
+		var/turf/turf_check = get_turf(M)
+		if(isspaceturf(turf_check) && !turf_check.Adjacent(M)) //in space nobody can hear you honk.
+			continue
+		to_chat(M, "<font color='red' size='7'>HONK</font>")
+		M.SetSleeping(0)
+		M.adjust_stutter(40 SECONDS)
+		var/obj/item/organ/internal/ears/ears = M.get_organ_slot(ORGAN_SLOT_EARS)
+		if(ears)
+			ears.adjustEarDamage(0, 30)
+		M.Paralyze(2 SECONDS)
+		if(prob(30))
+			M.Stun(4 SECONDS)
+			M.Unconscious(4 SECONDS)
+		else
+			M.set_jitter_if_lower(80 SECONDS)
+
+/obj/item/mod/module/balloon/explosive
+	name = "MOD explosive balloon blower module"
+	desc = "A extra-ordinary piece of technology developed by finest clown engineers with the help of Cybersun Industries \
+		to make long balloons and balloon animals for those lucky few who enjoy a bit more fanfare than usual."
+	cooldown_time = 20 SECONDS
+	balloon_path = /obj/item/toy/balloon/explosive
+	blowing_time = 15 SECONDS
+
+/obj/item/mod/module/teslacoil
+	name = "MOD tesla coil module"
+	desc = "A tiny, high power tesla coil that's fitted within the MODsuit's back, "
+	icon = 'icons/obj/machines/engine/tesla_coil.dmi'
+	icon_state = "coil0"
+	module_type = MODULE_USABLE
+	complexity = 4
+	use_energy_cost = DEFAULT_CHARGE_DRAIN * 100 // Costly AF
+	incompatible_modules = list(/obj/item/mod/module/teslacoil)
+	cooldown_time = 45 SECONDS
+	required_slots = list(ITEM_SLOT_BACK)
+	var/zap_range = 7
+	var/zap_power = 30000
+
+/obj/item/mod/module/teslacoil/on_use(mob/source, atom/target, list/modifiers)
+	drain_power(use_energy_cost)
+
+	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_MOB_STUN
+	tesla_zap(mod.wearer, zap_range, zap_power, zap_flags)
+	playsound(src, 'sound/machines/defib/defib_zap.ogg', 50, TRUE)
