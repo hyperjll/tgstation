@@ -60,6 +60,12 @@
 			These rounds release a small EMP pulse upon hitting a target."
 	item = /obj/item/ammo_box/magazine/m9mm/emp
 
+/datum/uplink_item/ammo/pistol/sleepy
+	name = "Pair of 9mm Soporific Magazines"
+	desc = "Two additional 8-round 9mm magazines; compatible with the Makarov pistol. \
+			These rounds will deliver small doses of tranqulizers on hit, knocking the target out after a few successive hits."
+	item = /obj/item/storage/box/syndie_kit/pistol9mmsleepyammo
+
 /datum/uplink_item/ammo/pistol/cryo
 	name = "9mm Cryogenic Magazine"
 	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
@@ -301,6 +307,12 @@
 	cost = 4
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/ammo/deagle/random
+	name = "Random .50 AE Handgun Magazine Box"
+	desc = "A box with two random .50 AE handgun magazines. Who knows what fun toys you might get?"
+	item = /obj/item/storage/box/syndie_kit/deagleammo/random
+	cost = 8
 
 /datum/uplink_item/ammo/deagle/ap
 	name = ".50 AE-AP Handgun Magazine"

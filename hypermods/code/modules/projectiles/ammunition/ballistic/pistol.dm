@@ -54,6 +54,12 @@
 	desc = "A 9mm EMP bullet casing."
 	projectile_type = /obj/projectile/bullet/c9mm/emp
 
+/obj/item/ammo_casing/c9mm/sp
+	name = "9mm soporific bullet casing"
+	desc = "A 9mm soporific bullet casing."
+	projectile_type = /obj/projectile/bullet/c9mm/sp
+	harmful = FALSE
+
 /obj/item/ammo_casing/c9mm/cryo
 	name = "9mm cryogenic bullet casing"
 	desc = "A 9mm cryogenic bullet casing."

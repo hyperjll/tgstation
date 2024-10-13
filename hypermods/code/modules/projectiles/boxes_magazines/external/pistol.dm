@@ -65,6 +65,14 @@
 	desc = "A gun magazine. Loaded with rounds which release a small EMP pulse upon hitting a target."
 	ammo_type = /obj/item/ammo_casing/c9mm/emp
 
+/obj/item/ammo_box/magazine/m9mm/sp
+	name = "pistol magazine (9mm soporific)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon_state = "9x19pS"
+	base_icon_state = "9x19pS"
+	desc= "A gun magazine. Loaded with rounds which administer a small dose of tranquilizer on hit."
+	ammo_type = /obj/item/ammo_casing/c9mm/sp
+
 /obj/item/ammo_box/magazine/m9mm/cryo
 	name = "pistol magazine (9mm cryogenic)"
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'

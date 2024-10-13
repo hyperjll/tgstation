@@ -36,7 +36,15 @@
 		/obj/item/ammo_box/magazine/m9mm,
 		/obj/item/ammo_box/magazine/m9mm/ap,
 		/obj/item/ammo_box/magazine/m9mm/hp,
-		/obj/item/ammo_box/magazine/m9mm/fire
+		/obj/item/ammo_box/magazine/m9mm/fire,
+		/obj/item/ammo_box/magazine/m9mm/caseless,
+		/obj/item/ammo_box/magazine/m9mm/emp,
+		/obj/item/ammo_box/magazine/m9mm/sp,
+		/obj/item/ammo_box/magazine/m9mm/cryo,
+		/obj/item/ammo_box/magazine/m9mm/richochet,
+		/obj/item/ammo_box/magazine/m9mm/bomb,
+		/obj/item/ammo_box/magazine/m9mm/sonic,
+		/obj/item/ammo_box/magazine/m9mm/mutate
 	)
 
 	for(var/i in 1 to 3)
@@ -50,6 +58,13 @@
 	for(var/i in 1 to 2)
 		new /obj/item/ammo_box/magazine/m9mm(src)
 
+/obj/item/storage/box/syndie_kit/pistol9mmsleepyammo
+	name = "9mm soporific magazine box"
+
+/obj/item/storage/box/syndie_kit/pistol9mmsleepyammo/PopulateContents()
+	for(var/i in 1 to 2)
+		new /obj/item/ammo_box/magazine/m9mm/sp(src)
+
 /obj/item/storage/box/syndie_kit/pistolammo10mm/random
 	name = "random 10mm magazine box"
 
@@ -61,7 +76,10 @@
 		/obj/item/ammo_box/magazine/m10mm/ap,
 		/obj/item/ammo_box/magazine/m10mm/hp,
 		/obj/item/ammo_box/magazine/m10mm/fire,
-		/obj/item/ammo_box/magazine/m10mm/emp
+		/obj/item/ammo_box/magazine/m10mm/emp,
+		/obj/item/ammo_box/magazine/m10mm/bleedout,
+		/obj/item/ammo_box/magazine/m10mm/rad,
+		/obj/item/ammo_box/magazine/m10mm/fragment
 	)
 
 	for(var/i in 1 to 3)
@@ -101,7 +119,10 @@
 		/obj/item/ammo_box/magazine/m45/hp,
 		/obj/item/ammo_box/magazine/m45/inc,
 		/obj/item/ammo_box/magazine/m45/emp,
-		/obj/item/ammo_box/magazine/m45/venom
+		/obj/item/ammo_box/magazine/m45/venom,
+		/obj/item/ammo_box/magazine/m45/pacify,
+		/obj/item/ammo_box/magazine/m45/delay,
+		/obj/item/ammo_box/magazine/m45/tranq
 	)
 
 	for(var/i in 1 to 3)
@@ -147,6 +168,28 @@
 /obj/item/storage/box/syndie_kit/stripperclips/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/ammo_box/strilka310(src)
+
+/obj/item/storage/box/syndie_kit/deagleammo/random
+	name = "random .50 AE magazine box"
+
+/obj/item/storage/box/syndie_kit/deagleammo/random/PopulateContents()
+	var/list/item_list = list(
+		/obj/item/ammo_box/magazine/m50,
+		/obj/item/ammo_box/magazine/m50/ap,
+		/obj/item/ammo_box/magazine/m50/hp,
+		/obj/item/ammo_box/magazine/m50/inc,
+		/obj/item/ammo_box/magazine/m50/cs,
+		/obj/item/ammo_box/magazine/m50/emp,
+		/obj/item/ammo_box/magazine/m50/hi,
+		/obj/item/ammo_box/magazine/m50/demo,
+		/obj/item/ammo_box/magazine/m50/rod,
+		/obj/item/ammo_box/magazine/m50/bomb,
+		/obj/item/ammo_box/magazine/m50/rep
+	)
+
+	for(var/i in 1 to 2)
+		var/item = pick(item_list)
+		new item(src)
 
 /obj/item/storage/box/syndie_kit/bioterrorammo/PopulateContents()
 	new /obj/item/reagent_containers/cup/beaker/large/polonium(src)

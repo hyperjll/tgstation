@@ -45,6 +45,19 @@
 	..()
 	empulse(target, heavy_range = 1, light_range = 2) //Heavy EMP on target, light EMP in tiles around
 
+/obj/projectile/bullet/c9mm/sp
+	name = "9mm soporific bullet"
+	damage = 4
+	eyeblur = 20
+
+/obj/projectile/bullet/c9mm/sp/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	if((blocked != 100) && isliving(target))
+		var/mob/living/L = target
+		L.adjustStaminaLoss(20)
+		if(L.getStaminaLoss() >= 100)
+			L.Sleeping(400)
+	return ..()
+
 /obj/projectile/bullet/c9mm/cryo
 	name = "9mm cryogenic bullet"
 	damage = 20
