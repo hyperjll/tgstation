@@ -246,6 +246,7 @@
 	desc = "A syndicate-branded hot beverage, satisfaction guaranteed."
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "syndi_latte"
+	base_icon_state = "syndi_latte"
 	list_reagents = list(/datum/reagent/medicine/omnizine = 25, /datum/reagent/consumable/coffee = 25)
 	resistance_flags = FREEZE_PROOF
 	isGlass = FALSE
@@ -258,6 +259,7 @@
 	desc = "A syndicate-branded hot beverage, a large illustration of a three-headed snake exists on one side of the cup, and on the other is a crude depiction of a 'Gorlex Marauder'."
 	icon = 'hypermods/icons/obj/drinks/soda.dmi'
 	icon_state = "nukie_latte"
+	base_icon_state = "nukie_latte"
 	list_reagents = list(/datum/reagent/medicine/stimulants = 25, /datum/reagent/consumable/coffee = 25)
 	resistance_flags = FREEZE_PROOF
 	isGlass = FALSE
