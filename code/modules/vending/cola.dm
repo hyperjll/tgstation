@@ -19,15 +19,10 @@
 		/obj/item/reagent_containers/cup/glass/bottle/mushi_kombucha = 3,
 		/obj/item/reagent_containers/cup/soda_cans/volt_energy = 3,
 		/obj/item/reagent_containers/cup/soda_cans/hearty_punch = 2,
-		/obj/item/reagent_containers/cup/soda_cans/fireball = 2,
-		/obj/item/reagent_containers/cup/soda_cans/mutate_fizz = 3,
 		/obj/item/reagent_containers/cup/soda_cans/antidote = 3,
-		/obj/item/reagent_containers/cup/soda_cans/anti_water = 3,
 		/obj/item/reagent_containers/cup/soda_cans/simple_times = 3,
 		/obj/item/reagent_containers/cup/soda_cans/chocolate_sips = 3,
 		/obj/item/reagent_containers/cup/soda_cans/honey_med = 3,
-		/obj/item/reagent_containers/cup/soda_cans/gold_soda = 3,
-		/obj/item/reagent_containers/cup/soda_cans/sleepy_time = 3,
 	)
 	contraband = list(
 		/obj/item/reagent_containers/cup/soda_cans/thirteenloko = 6,
@@ -36,15 +31,10 @@
 		/obj/item/reagent_containers/cup/soda_cans/thirteenloko = 6,
 		/obj/item/reagent_containers/cup/soda_cans/shamblers = 6,
 		/obj/item/reagent_containers/cup/soda_cans/wellcheers = 6,
-		/obj/item/reagent_containers/cup/soda_cans/robust_nukie = 1,
-		/obj/item/reagent_containers/cup/soda_cans/fireworks = 1,
-		/obj/item/reagent_containers/cup/soda_cans/aged_soda = 2,
 		/obj/item/reagent_containers/cup/soda_cans/space_walker = 2,
 		/obj/item/reagent_containers/cup/soda_cans/nano_pop = 1,
 		/obj/item/reagent_containers/cup/soda_cans/ice_e = 2,
 		/obj/item/reagent_containers/cup/soda_cans/unstable_vortex = 2,
-		/obj/item/reagent_containers/cup/soda_cans/clown_juice = 1,
-		/obj/item/reagent_containers/cup/soda_cans/nocturnal = 1,
 	)
 	premium = list(
 		/obj/item/reagent_containers/cup/glass/drinkingglass/filled/nuka_cola = 1,
@@ -56,11 +46,18 @@
 		/obj/item/reagent_containers/cup/soda_cans/changelingsting = 2,
 		/obj/item/reagent_containers/cup/soda_cans/devilskiss = 2,
 		/obj/item/reagent_containers/cup/soda_cans/turbo = 2,
+		/obj/item/reagent_containers/cup/soda_cans/anti_water = 3,
+		/obj/item/reagent_containers/cup/soda_cans/mutate_fizz = 3,
+		/obj/item/reagent_containers/cup/soda_cans/gold_soda = 3,
+		/obj/item/reagent_containers/cup/soda_cans/sleepy_time = 3,
 	)
 	refill_canister = /obj/item/vending_refill/cola
 	default_price = PAYCHECK_CREW * 0.7
 	extra_price = PAYCHECK_CREW
 	payment_department = ACCOUNT_SRV
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cola
 
 	var/static/list/spiking_booze = list(
 		// Your "common" spiking booze
@@ -104,10 +101,14 @@
 	icon_state = "Cola_Machine"
 	light_mask = "cola-light-mask"
 	light_color = COLOR_MODERATE_BLUE
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cola/blue
 
 /obj/machinery/vending/cola/black
 	icon_state = "cola_black"
 	light_mask = "cola-light-mask"
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cola/black
 
 /obj/machinery/vending/cola/red
 	icon_state = "red_cola"
@@ -116,6 +117,8 @@
 	product_slogans = "Cola in space!"
 	light_mask = "red_cola-light-mask"
 	light_color = COLOR_DARK_RED
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cola/red
 
 /obj/machinery/vending/cola/space_up
 	icon_state = "space_up"
@@ -124,6 +127,8 @@
 	product_slogans = "Space-up! Like a hull breach in your mouth."
 	light_mask = "space_up-light-mask"
 	light_color = COLOR_DARK_MODERATE_LIME_GREEN
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cola/space_up
 
 /obj/machinery/vending/cola/starkist
 	icon_state = "starkist"
@@ -133,12 +138,16 @@
 	panel_type = "panel7"
 	light_mask = "starkist-light-mask"
 	light_color = COLOR_LIGHT_ORANGE
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cola/starkist
 
 /obj/machinery/vending/cola/sodie
 	icon_state = "soda"
 	panel_type = "panel7"
 	light_mask = "soda-light-mask"
 	light_color = COLOR_WHITE
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cola/sodie
 
 /obj/machinery/vending/cola/pwr_game
 	icon_state = "pwr_game"
@@ -147,6 +156,8 @@
 	product_slogans = "The POWER that gamers crave! PWR GAME!"
 	light_mask = "pwr_game-light-mask"
 	light_color = COLOR_STRONG_VIOLET
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cola/pwr_game
 
 /obj/machinery/vending/cola/shamblers
 	name = "\improper Shambler's Vendor"
@@ -168,6 +179,8 @@
 	product_ads = "Refreshing!;Thirsty for DNA? Satiate your craving!;Over 1 trillion souls drank!;Made with real DNA!;The hivemind demands your thirst!;Drink up!;Absorb your thirst."
 	light_mask = "shamblers-light-mask"
 	light_color = COLOR_MOSTLY_PURE_PINK
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cola/shamblers
 
 /obj/machinery/vending/cola/shamblers/Initialize(mapload)
 	. = ..()

@@ -7,9 +7,12 @@
 	product_ads = "For Tsar and Country.;Have you fulfilled your nutrition quota today?;Very nice!;We are simple people, for this is all we eat.;If there is a person, there is a problem. If there is no person, then there is no problem."
 	products = list(
 		/obj/item/reagent_containers/cup/glass/drinkingglass/filled/soda = 30,
+		/obj/item/reagent_containers/cup/glass/waterbottle = 10,
+		/obj/item/reagent_containers/cup/soda_cans/mystery = 1,
 	)
 	contraband = list(
 		/obj/item/reagent_containers/cup/glass/drinkingglass/filled/cola = 20,
+		/obj/item/reagent_containers/cup/soda_cans/robust_nukie = 1,
 	)
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/sovietsoda
@@ -17,6 +20,9 @@
 	extra_price = PAYCHECK_CREW //One credit for every state of FREEDOM
 	payment_department = NO_FREEBIES
 	light_color = COLOR_PALE_ORANGE
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/sovietsoda
 
 /obj/item/vending_refill/sovietsoda
 	machine_name = "BODA"

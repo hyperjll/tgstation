@@ -228,6 +228,9 @@
 	light_mask = "wardrobe-light-mask"
 	light_color = LIGHT_COLOR_ELECTRIC_GREEN
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/clothing
+
 /obj/item/vending_refill/clothing
 	machine_name = "ClothesMate"
 	icon_state = "refill_clothes"

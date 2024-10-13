@@ -24,6 +24,7 @@
 		/obj/item/crowbar = 5,
 		/obj/item/stack/sheet/iron = 50,
 		/obj/item/stack/sheet/glass = 50,
+		/obj/item/mmi = 1,
 	)
 	premium = list(
 		/obj/item/grenade/chem_grenade/smart_metal_foam = 5,
@@ -37,6 +38,10 @@
 	refill_canister = /obj/item/vending_refill/robotics
 	default_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_SCI
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/robotics
+
 
 /obj/item/vending_refill/robotics
 	machine_name = "Robotech Deluxe"

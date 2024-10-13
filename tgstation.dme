@@ -6737,6 +6737,7 @@
 #include "hypermods\code\modules\vehicles\vehicle_actions.dm"
 #include "hypermods\code\modules\vehicles\wheelchair.dm"
 #include "hypermods\code\modules\vending\cola.dm"
+#include "hypermods\code\modules\vending\emagged.dm"
 #include "hypermods\code\modules\vending\hypo_wall.dm"
 #include "hypermods\code\modules\vending\liberationexpensive.dm"
 #include "hypermods\code\modules\vending\monkey_wall.dm"

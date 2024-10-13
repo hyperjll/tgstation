@@ -31,7 +31,7 @@
 		/obj/item/food/shok_roks/random = 3,
 	)
 	contraband = list(
-		/obj/item/food/syndicake = 6,
+		/obj/item/food/syndicake/super = 2,
 		/obj/item/food/peanuts/ban_appeal = 3,
 		/obj/item/food/candy/bronx = 1,
 	)
@@ -46,17 +46,29 @@
 	extra_price = PAYCHECK_CREW
 	payment_department = ACCOUNT_SRV
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/snack
+
+
 /obj/item/vending_refill/snack
 	machine_name = "Getmore Chocolate Corp"
 
 /obj/machinery/vending/snack/blue
 	icon_state = "snackblue"
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/snack/blue
 
 /obj/machinery/vending/snack/orange
 	icon_state = "snackorange"
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/snack/orange
 
 /obj/machinery/vending/snack/green
 	icon_state = "snackgreen"
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/snack/green
 
 /obj/machinery/vending/snack/teal
 	icon_state = "snackteal"
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/snack/teal

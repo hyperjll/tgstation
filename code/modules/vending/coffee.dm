@@ -11,8 +11,7 @@
 		/obj/item/reagent_containers/cup/glass/mug/coco = 3,
 	)
 	contraband = list(
-		/obj/item/reagent_containers/cup/glass/coffee/syndicate = 4,
-		/obj/item/reagent_containers/cup/glass/coffee/nukie = 1,
+		/obj/item/reagent_containers/cup/glass/coffee/syndicate = 1,
 	)
 	premium = list(
 		/obj/item/reagent_containers/cup/glass/ice = 12,
@@ -23,6 +22,9 @@
 	payment_department = ACCOUNT_SRV
 	light_mask = "coffee-light-mask"
 	light_color = COLOR_DARK_MODERATE_ORANGE
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/coffee
 
 /obj/item/vending_refill/coffee
 	machine_name = "Solar's Best Hot Drinks"

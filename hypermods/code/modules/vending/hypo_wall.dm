@@ -12,20 +12,19 @@
 					/obj/item/reagent_containers/cup/bottle/multiver = 2,
 					/obj/item/reagent_containers/cup/bottle/syriniver = 2,
 					/obj/item/reagent_containers/cup/bottle/convermol = 2,
-					/obj/item/reagent_containers/cup/bottle/epinephrine = 2,
-					/obj/item/reagent_containers/cup/bottle/coagulant = 2)
-	contraband = list(/obj/item/reagent_containers/cup/bottle/omnizine = 1)
+					/obj/item/reagent_containers/cup/bottle/epinephrine = 2)
 	premium = list(/obj/item/reagent_containers/cup/bottle/sal_acid = 2,
 					/obj/item/reagent_containers/cup/bottle/oxandrolone = 2,
 					/obj/item/reagent_containers/cup/bottle/calomel = 2,
-					/obj/item/reagent_containers/cup/bottle/salbutamol = 2,
-					/obj/item/reagent_containers/cup/bottle/lavaland = 1)
+					/obj/item/reagent_containers/cup/bottle/salbutamol = 2)
 	default_price = 50
 	extra_price = 50
-	armor = list(MELEE = 100, BULLET = 100, LASER = 100, ENERGY = 100, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 50)
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/wallhypo
 	payment_department = ACCOUNT_MED
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wallhypo
 
 /obj/item/vending_refill/wallhypo
 	machine_name = "HypoMed"

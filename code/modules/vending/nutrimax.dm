@@ -29,6 +29,9 @@
 	extra_price = PAYCHECK_COMMAND * 0.8
 	payment_department = ACCOUNT_SRV
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/hydronutrients
+
 /obj/item/vending_refill/hydronutrients
 	machine_name = "NutriMax"
 	icon_state = "refill_plant"

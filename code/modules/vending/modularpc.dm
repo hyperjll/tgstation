@@ -20,6 +20,9 @@
 	extra_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_SCI
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/modularpc
+
 /obj/item/vending_refill/modularpc
 	machine_name = "Deluxe Silicate Selections"
 	icon_state = "refill_engi"

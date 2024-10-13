@@ -16,7 +16,7 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/sugar = 15, /datum/reagent/rockcandyruby = 3)
 	tastes = list("candy" = 4, "expensive gemstones" = 2, "magic" = 1)
 	foodtypes = JUNKFOOD | SUGAR
-	custom_price = 500
+	custom_price = 800
 
 /obj/item/food/sapphirerockcandy
 	name = "Sapphire Rock Candy"
@@ -27,7 +27,7 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/sugar = 15, /datum/reagent/rockcandysapphire = 3)
 	tastes = list("candy" = 4, "expensive gemstones" = 2, "magic" = 1)
 	foodtypes = JUNKFOOD | SUGAR
-	custom_price = 500
+	custom_price = 800
 
 /obj/item/food/emeraldrockcandy
 	name = "Emerald Rock Candy"
@@ -38,7 +38,7 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/sugar = 15, /datum/reagent/rockcandyemerald = 3)
 	tastes = list("candy" = 4, "expensive gemstones" = 2, "magic" = 1)
 	foodtypes = JUNKFOOD | SUGAR
-	custom_price = 500
+	custom_price = 800
 
 /obj/item/food/topazrockcandy
 	name = "Topaz Rock Candy"
@@ -49,7 +49,7 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/sugar = 15, /datum/reagent/rockcandytopaz = 3)
 	tastes = list("candy" = 4, "expensive gemstones" = 2, "magic" = 1)
 	foodtypes = JUNKFOOD | SUGAR
-	custom_price = 500
+	custom_price = 800
 
 /obj/item/food/magicrockcandy
 	name = "Magic Rock Candy"
@@ -61,3 +61,4 @@
 	tastes = list("candy" = 4, "expensive gemstones" = 2, "magic" = 1)
 	foodtypes = JUNKFOOD | SUGAR
 	custom_price = 1000
+	custom_premium_price = 5000

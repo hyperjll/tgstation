@@ -19,7 +19,6 @@
 	contraband = list(
 		/obj/item/vape = 5,
 		/obj/item/cigarette/dart = 1,
-		/obj/item/storage/fancy/cigarettes/cigpack_syndicate = 1,
 	)
 	premium = list(
 		/obj/item/storage/fancy/cigarettes/cigpack_robustgold = 3,
@@ -35,6 +34,9 @@
 	extra_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_SRV
 	light_mask = "cigs-light-mask"
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cigarette
 
 /obj/machinery/vending/cigarette/syndicate
 	products = list(

@@ -69,13 +69,15 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/glasses/hud/security/prescription = 2,
 	)
 	contraband = list(
-		/obj/item/organ/internal/cyberimp/brain/anti_stun = 1,
 		/obj/item/clothing/glasses/hud/security/night = 1,
 		/obj/item/clothing/glasses/hud/security/night/prescription = 1,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/sec_wardrobe
 	payment_department = ACCOUNT_SEC
 	light_color = COLOR_MOSTLY_PURE_RED
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/sec_wardrobe
 
 /obj/item/vending_refill/wardrobe/sec_wardrobe
 	machine_name = "SecDrobe"
@@ -126,11 +128,13 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/grenade/chem_grenade/large = 5,
 		/obj/item/organ/internal/cyberimp/chest/nutriment = 1,
 		/obj/item/organ/internal/cyberimp/mouth/breathing_tube = 1,
-		/obj/item/organ/internal/cyberimp/arm/surgery = 1,
 		/obj/item/implantcase/tracking = 2,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/medi_wardrobe
 	payment_department = ACCOUNT_MED
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/medi_wardrobe
 
 /obj/item/vending_refill/wardrobe/medi_wardrobe
 	machine_name = "MediDrobe"
@@ -265,8 +269,6 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/under/costume/mech_suit = 2,
 		/obj/item/clothing/suit/hooded/techpriest = 2,
 		/obj/item/organ/internal/tongue/robot = 2,
-		/obj/item/organ/internal/cyberimp/arm/toolset = 2,
-		/obj/item/organ/internal/eyes/robotic/shield = 2,
 		/obj/item/mmi/posibrain = 1,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/robo_wardrobe
@@ -302,12 +304,15 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/glasses/science/prescription = 1,
 	)
 	contraband = list(
-		/obj/item/gun/energy/gravity_gun = 1,
 		/obj/item/grenade/antigravity = 1,
-		/obj/item/stack/ore/bluespace_crystal/artificial = 30,
+		/obj/item/stack/ore/bluespace_crystal/artificial = 5,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/science_wardrobe
 	payment_department = ACCOUNT_SCI
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/science_wardrobe
+
 /obj/item/vending_refill/wardrobe/science_wardrobe
 	machine_name = "SciDrobe"
 
@@ -335,7 +340,6 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/glasses/science/prescription = 1,
 	)
 	contraband = list(
-		/obj/item/reagent_containers/syringe/mutatepod = 1,
 		/obj/item/stack/sheet/cloth = 20,
 		/obj/item/stack/sheet/cotton/durathread = 10,
 		/obj/item/stack/sheet/leather = 10,
@@ -343,6 +347,9 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	refill_canister = /obj/item/vending_refill/wardrobe/hydro_wardrobe
 	payment_department = ACCOUNT_SRV
 	light_color = LIGHT_COLOR_ELECTRIC_GREEN
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/hydro_wardrobe
 
 /obj/item/vending_refill/wardrobe/hydro_wardrobe
 	machine_name = "HyDrobe"
@@ -381,6 +388,9 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/curator_wardrobe
 	payment_department = ACCOUNT_SRV
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/curator_wardrobe
 
 /obj/item/vending_refill/wardrobe/curator_wardrobe
 	machine_name = "CuraDrobe"
@@ -421,7 +431,6 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/table_clock = 1,
 		/obj/item/implanter = 1,
 		/obj/item/implantcase = 1,
-		/obj/item/bodybag/bluespace = 1,
 		/obj/item/organ/internal/cyberimp/chest/reviver = 1,
 	)
 	premium = list(
@@ -431,6 +440,9 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/coroner_wardrobe
 	payment_department = ACCOUNT_MED
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/coroner_wardrobe
 
 /obj/item/vending_refill/wardrobe/coroner_wardrobe
 	machine_name = "MortiDrobe"
@@ -468,15 +480,16 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/vending_refill/coffee = 1,
 	)
 	contraband = list(
-		/obj/item/ammo_casing/shotgun/buckshot = 10,
-		/obj/item/ammo_casing/shotgun/dart = 5,
-		/obj/item/ammo_casing/shotgun/incendiary = 5,
-		/obj/item/ammo_casing/shotgun/stunslug = 2,
-		/obj/item/gun/ballistic/shotgun/automatic/combat/kammerer = 1,
+		/obj/item/ammo_casing/shotgun/buckshot = 2,
+		/obj/item/ammo_casing/shotgun/dart = 1,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/bar_wardrobe
 	payment_department = ACCOUNT_MED
 	extra_price = PAYCHECK_COMMAND
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/bar_wardrobe
+
 /obj/item/vending_refill/wardrobe/bar_wardrobe
 	machine_name = "BarDrobe"
 
@@ -603,13 +616,15 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/glasses/hud/security/prescription = 2,
 	)
 	contraband = list(
-		/obj/item/pinpointer/crew/omni = 1,
 		/obj/item/pen/cybersun = 1,
 		/obj/item/detective_scanner = 1, // I'ma do a pheonix wright
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/law_wardrobe
 	extra_price = PAYCHECK_COMMAND * 0.8
 	payment_department = ACCOUNT_SRV
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/law_wardrobe
 
 /obj/item/vending_refill/wardrobe/law_wardrobe
 	machine_name = "LawDrobe"
@@ -649,7 +664,6 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/head/chaplain/medievaljewhat = 3,
 		/obj/item/clothing/head/chaplain/clownmitre = 1,
 		/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
-		/obj/item/gun/ballistic/automatic/pistol/mk58 = 1, // A gun with... a full magazine?
 	)
 	premium = list(
 		/obj/item/clothing/head/chaplain/bishopmitre = 1,
@@ -657,6 +671,9 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/chap_wardrobe
 	payment_department = ACCOUNT_SRV
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/chap_wardrobe
 
 /obj/item/vending_refill/wardrobe/chap_wardrobe
 	machine_name = "DeusVend"
@@ -687,11 +704,11 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	)
 	contraband = list(
 		/obj/item/reagent_containers/spray/syndicate = 2,
-		/obj/item/grenade/chem_grenade/large = 10,
-		/obj/item/grenade/chem_grenade/cryo = 5,
-		/obj/item/grenade/chem_grenade/pyro = 5,
-		/obj/item/grenade/chem_grenade/adv_release = 5,
-		/obj/item/flatpack/autolathe = 1
+		/obj/item/grenade/chem_grenade/large = 3,
+		/obj/item/grenade/chem_grenade/cryo = 2,
+		/obj/item/grenade/chem_grenade/pyro = 2,
+		/obj/item/grenade/chem_grenade/adv_release = 2,
+		/obj/item/flatpack/autolathe = 1,
 	)
 	premium = list(
 		/obj/item/ph_meter = 4,
@@ -699,6 +716,9 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	refill_canister = /obj/item/vending_refill/wardrobe/chem_wardrobe
 	extra_price = PAYCHECK_COMMAND * 0.8
 	payment_department = ACCOUNT_MED
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/chem_wardrobe
 
 /obj/item/vending_refill/wardrobe/chem_wardrobe
 	machine_name = "ChemDrobe"
@@ -726,9 +746,11 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/glasses/hud/health = 1,
 		/obj/item/clothing/glasses/hud/health/prescription = 1,
 	)
-	contraband = list(/obj/item/toy/plush/carpplushie/dehy_carp = 4,)
 	refill_canister = /obj/item/vending_refill/wardrobe/gene_wardrobe
 	payment_department = ACCOUNT_SCI
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/gene_wardrobe
 
 /obj/item/vending_refill/wardrobe/gene_wardrobe
 	machine_name = "GeneDrobe"
@@ -761,6 +783,9 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	contraband = list(/obj/item/gun/syringe = 1,)
 	refill_canister = /obj/item/vending_refill/wardrobe/viro_wardrobe
 	payment_department = ACCOUNT_MED
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/viro_wardrobe
 
 /obj/item/vending_refill/wardrobe/viro_wardrobe
 	machine_name = "ViroDrobe"
@@ -806,16 +831,12 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/ammo_casing/c38 = 4,
 		/obj/item/ammo_casing/c38/match = 4,
 	)
-	contraband = list(
-		/obj/item/ammo_casing/a357 = 1,
-		/obj/item/ammo_box/c38/trac = 1,
-		/obj/item/ammo_casing/c38/dumdum = 1,
-		/obj/item/ammo_casing/c38/hotshot = 1,
-		/obj/item/ammo_casing/c38/iceblox = 1,
-	)
 	refill_canister = /obj/item/vending_refill/wardrobe/det_wardrobe
 	extra_price = PAYCHECK_COMMAND * 1.75
 	payment_department = ACCOUNT_SEC
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/det_wardrobe
 
 /obj/item/vending_refill/wardrobe/det_wardrobe
 	machine_name = "DetDrobe"
@@ -845,6 +866,9 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/gloves/combat = 3,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/cent_wardrobe
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/wardrobe/cent_wardrobe
 
 /obj/item/vending_refill/wardrobe/cent_wardrobe
 	machine_name = "CentDrobe"

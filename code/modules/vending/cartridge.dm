@@ -21,6 +21,9 @@
 	payment_department = ACCOUNT_SRV
 	light_mask = "cart-light-mask"
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cart
+
 /obj/item/vending_refill/cart
 	machine_name = "PTech"
 	icon_state = "refill_smoke"

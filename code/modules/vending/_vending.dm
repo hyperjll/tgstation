@@ -220,6 +220,13 @@ GLOBAL_LIST_EMPTY(vending_machines_to_restock)
 	/// used for narcing on underages
 	var/obj/item/radio/sec_radio
 
+	/// Can this vendor be emagged and replaced?
+	var/emagvendorreplace = FALSE
+	/// If the above if TRUE, what machine is this replaced with?
+	var/replacewith = null
+	/// Can you open the maintenance panel? (Prevents hacking and decontruct)
+	var/screwdrivable = TRUE
+
 /datum/armor/machinery_vending
 	melee = 20
 	fire = 50
@@ -710,6 +717,9 @@ GLOBAL_LIST_EMPTY(vending_machines_to_restock)
 /obj/machinery/vending/screwdriver_act(mob/living/user, obj/item/attack_item)
 	if(..())
 		return TRUE
+	if(!screwdrivable)
+		to_chat(user, span_warning("You attempt to open the maintenance panel of [src], but cannot find it!"))
+		return
 	if(anchored)
 		default_deconstruction_screwdriver(user, icon_state, icon_state, attack_item)
 		update_appearance()
@@ -1189,7 +1199,14 @@ GLOBAL_LIST_EMPTY(vending_machines_to_restock)
 	if(obj_flags & EMAGGED)
 		return FALSE
 	obj_flags |= EMAGGED
-	balloon_alert(user, "product lock disabled")
+	if(emagvendorreplace)
+		//var/turf/T = get_turf(user)
+		balloon_alert(user, "hidden product lock disabled")
+		sleep(1 SECONDS) // I assure you, this ONE sleep fixes a runtime.
+		new replacewith(loc)
+		qdel(src)
+	else
+		balloon_alert(user, "product lock disabled")
 	return TRUE
 
 /obj/machinery/vending/interact(mob/user)
@@ -1360,6 +1377,8 @@ GLOBAL_LIST_EMPTY(vending_machines_to_restock)
 	. = TRUE
 	if(!can_vend(usr))
 		return
+	if(QDELETED(src))
+		return
 	var/datum/data/vending_product/product = locate(params["ref"])
 	var/atom/fake_atom = product.product_path
 
@@ -1392,6 +1411,8 @@ GLOBAL_LIST_EMPTY(vending_machines_to_restock)
  */
 /obj/machinery/vending/proc/vend_greyscale(list/params, datum/greyscale_modify_menu/menu)
 	if(usr != menu.user)
+		return
+	if(QDELETED(src))
 		return
 	vend(params, menu.split_colors)
 

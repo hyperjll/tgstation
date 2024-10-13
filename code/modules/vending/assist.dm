@@ -57,6 +57,9 @@
 	payment_department = NO_FREEBIES
 	light_mask = "parts-light-mask"
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/assist
+
 /obj/item/vending_refill/assist
 	machine_name = "Part-Mart"
 	icon_state = "refill_parts"

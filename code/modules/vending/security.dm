@@ -44,6 +44,9 @@
 	extra_price = PAYCHECK_COMMAND * 1.5
 	payment_department = ACCOUNT_SEC
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/security
+
 /obj/machinery/vending/security/pre_throw(obj/item/thrown_item)
 	if(isgrenade(thrown_item))
 		var/obj/item/grenade/thrown_grenade = thrown_item
