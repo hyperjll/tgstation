@@ -8,7 +8,6 @@
 	flags_cover = PEPPERPROOF
 	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
 	//var/obj/item/clothing/mask/cigarette/cig
-	has_fov = FALSE
 	var/voice_change = TRUE
 
 /obj/item/clothing/mask/gas/fakemoustache/syndicate/worn_overlays(mutable_appearance/standing, isinhands)

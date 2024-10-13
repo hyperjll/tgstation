@@ -29,9 +29,8 @@
 	if(!isinhands && cig)
 		. += cig.build_worn_icon(default_layer = FACEMASK_LAYER, default_icon_file = 'icons/mob/clothing/mask.dmi')
 
-/obj/item/clothing/mask/gas/Initialize(mapload)
+/obj/item/clothing/mask/gascig/Initialize(mapload)
 	. = ..()
-	init_fov()
 	if(!max_filters || !starting_filter_type)
 		return
 
