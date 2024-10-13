@@ -22,8 +22,12 @@
 	can_suppress = FALSE
 	mag_display = FALSE
 	tac_reloads = FALSE
+	semi_auto = FALSE
 	custom_price = 10000
 
+/obj/item/gun/ballistic/rifle/sniper_rifle/hristov/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/scope, range_modifier = 4) //enough range to at least make extremely good use of the penetrator rounds
+
 /obj/item/gun/ballistic/rifle/sniper_rifle/hristov/freshprint
-	spawnwithmagazine = FALSE
 	pin = null
