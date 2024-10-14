@@ -33,3 +33,7 @@
 /datum/map_template/shuttle/arrival/dorf
 	suffix = "dorf"
 	name = "arrival shuttle (Dorf World)"
+
+/datum/map_template/shuttle/arrival/helio
+	suffix = "helio"
+	name = "arrival shuttle (Helio)"

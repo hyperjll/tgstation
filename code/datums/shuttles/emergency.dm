@@ -272,6 +272,13 @@
 	credit_cost = CARGO_CRATE_VALUE * 6
 	occupancy_limit = "25"
 
+/datum/map_template/shuttle/emergency/helio
+	suffix = "helio"
+	name = "Helio Stand-in Emergency Shuttle"
+	description = "A fully functional shuttle including a xenomorph maid, a bar, storage facilities and regular amenities."
+	credit_cost = CARGO_CRATE_VALUE * 9
+	occupancy_limit = "55"
+
 /datum/map_template/shuttle/emergency/scrapheap
 	suffix = "scrapheap"
 	name = "Standby Evacuation Vessel \"Scrapheap Challenge\""

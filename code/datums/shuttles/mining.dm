@@ -19,6 +19,10 @@
 	suffix = "kilo"
 	name = "labour shuttle (Kilo)"
 
+/datum/map_template/shuttle/labour/helio
+	suffix = "helio"
+	name = "labour shuttle (Helio)"
+
 // MINING SHUTTLES
 /datum/map_template/shuttle/mining
 	port_id = "mining"

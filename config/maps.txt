@@ -61,6 +61,10 @@ map kilostation
 	votable
 endmap
 
+map heliostation
+	votable
+endmap
+
 # Debug-only maps.
 
 map gateway_test
