@@ -99,7 +99,7 @@
 	starting_frequency = MODLINK_FREQ_SYNDICATE
 	applied_modules = list(
 		/obj/item/mod/module/welding,
-		/datum/design/module/mod_longfall,
+		/obj/item/mod/module/longfall,
 		/obj/item/mod/module/storage/syndicate,
 		/obj/item/mod/module/shock_absorber,
 		/obj/item/mod/module/emp_shield,
