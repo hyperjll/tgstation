@@ -2,7 +2,7 @@
 
 /datum/uplink_category/weapon_kits
 	name = "Weapon Kits (Recommended)"
-	weight = 30
+	weight = 27
 
 /datum/uplink_item/weapon_kits
 	category = /datum/uplink_category/weapon_kits
@@ -12,8 +12,8 @@
 // ~~ Ammunition Categories ~~
 
 /datum/uplink_category/ammo_nuclear
-	name = "Additional and Unique Ammunition"
-	weight = 29
+	name = "Unique Ammunition"
+	weight = 21
 
 /datum/uplink_item/ammo_nuclear
 	category = /datum/uplink_category/ammo_nuclear
@@ -414,8 +414,8 @@
 // Support (Borgs and Reinforcements)
 
 /datum/uplink_category/reinforcements
-	name = "Reinforcements"
-	weight = 28
+	name = "Allies"
+	weight = 13
 
 /datum/uplink_item/reinforcements
 	category = /datum/uplink_category/reinforcements
@@ -520,8 +520,8 @@
 // Mech related gear
 
 /datum/uplink_category/mech
-	name = "Mech Reinforcement"
-	weight = 27
+	name = "Mechs"
+	weight = 12
 
 /datum/uplink_item/mech
 	category = /datum/uplink_category/mech
@@ -760,7 +760,7 @@
 
 /datum/uplink_category/base_keys
 	name = "Base Keys"
-	weight = 27
+	weight = 28
 
 /datum/uplink_item/base_keys
 	category = /datum/uplink_category/base_keys

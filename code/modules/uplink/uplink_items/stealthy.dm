@@ -1,6 +1,6 @@
 /datum/uplink_category/stealthy
 	name = "Stealthy Weapons"
-	weight = 8
+	weight = 24
 
 /datum/uplink_item/stealthy_weapons
 	category = /datum/uplink_category/stealthy
@@ -15,13 +15,6 @@
 	cost = 4
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-
-/datum/uplink_item/stealthy_weapons/dehy_carp
-	name = "Dehydrated Space Carp"
-	desc = "Looks like a plush toy carp, but just add water and it becomes a real-life space carp! Activate in \
-			your hand before use so it knows not to kill you."
-	item = /obj/item/toy/plush/carpplushie/dehy_carp
-	cost = 1
 
 /datum/uplink_item/stealthy_weapons/edagger
 	name = "Energy Dagger"
@@ -65,7 +58,6 @@
 	item = /obj/item/storage/box/itempack/sleeppen
 	cost = 4
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-
 
 /datum/uplink_item/stealthy_weapons/origami_kit
 	name = "Boxed Origami Kit"

@@ -1,29 +1,3 @@
-/datum/uplink_category/explosives
-	name = "Explosives"
-	weight = 10
-
-/datum/uplink_item/explosives
-	category = /datum/uplink_category/explosives
-
-
-/datum/uplink_item/explosives/trap_disks
-	name = "Box of Syndicate Trapped Disks"
-	desc = "Five bombs disguised as data disks that triggers a minute after inserting into any modular computers. \
-			Can come with some useful programs, if you're fast enough to download them and then throw the disk away."
-	item = /obj/item/storage/box/syndie_kit/trappeddisks
-	progression_minimum = 15 MINUTES
-	cost = 7
-	surplus = 10
-
-/datum/uplink_item/explosives/wheelchair
-	name = "Explosive Wheelchair"
-	desc = "A wheelchair with a high yield bomb strapped to it... why would anyone ever want this? \
-			Doesn't come with the bell required to set off the explosive payload."
-	item = /obj/item/wheelchair/explosive
-	cost = 6
-	surplus = 0
-	limited_stock = 1
-
 /datum/uplink_item/explosives/grenadepenguin
 	name = "Grenade Penguin"
 	desc = "A grenade that takes the form of an aggressive penguin that explodes upon death. \
@@ -34,15 +8,14 @@
 	cost = 4
 	surplus = 15
 
-/datum/uplink_item/explosives/trickcigs
-	name = "Trick Cigarettes"
-	desc = "A normal cigarette packet containing 6 explosive cigarettes. They explode violently after they've been lit and put out. \
-			Explosions are powerful enough to cause hull breaches, and cigarettes are lit for only 60 seconds before exploding. \
-			Only contains 5 units of nicotine each."
-	item = /obj/item/storage/fancy/cigarettes/trick_cigs
+/datum/uplink_item/explosives/diseasegrenade
+	name = "Diseased Grenade"
+	desc = "A chemical foam grenade loaded with a payload capable of causing mass-plagues. \
+			Those who touch the foam will develop a random advanced disease. Wear protection before use."
+	item = /obj/item/grenade/chem_grenade/randomdisease
+	progression_minimum = 10 MINUTES
 	cost = 2
-	surplus = 40
-	progression_minimum = 5 MINUTES
+	surplus = 10
 
 /datum/uplink_item/explosives/explosivepen
 	name = "Explosive Pen"
@@ -124,16 +97,6 @@
 	cost = 6
 	surplus = 10
 	progression_minimum = 5 MINUTES
-
-/datum/uplink_item/explosives/bombchameleon
-	name = "Chameleon Bomb"
-	desc = "An explosive device fitted with our chameleon technology, when used on an object, the bomb will disguise itself as that object. \
-			To arm, remove the bomb from your hands, disguised or not, the bomb will arm itself and will detonate upon being picked up. \
-			The explosive isn't super powerful, but can seriously harm those who pick it up and leave them incapacitated temporarily."
-	item = /obj/item/device/chameleon/bomb
-	cost = 2
-	surplus = 50
-	progression_minimum = 10 MINUTES
 
 /datum/uplink_item/explosives/flashbangs
 	name = "Flashbangs"
@@ -276,87 +239,6 @@
 	cost = 10
 	surplus = 6
 	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
-	progression_minimum = 20 MINUTES
-
-/datum/uplink_item/explosives/explosivemines
-	name = "Box of Explosive Mines"
-	desc = "A box containing approximately 5 Explosive landmines which can be planted on any tile. These mines can easily kill and gib those who step on them as well as destroying all of their stuff."
-	item = /obj/item/storage/box/syndie_kit/explosivemines
-	cost = 6
-	surplus = 10
-	purchasable_from = ~UPLINK_CLOWN_OPS
-	progression_minimum = 20 MINUTES
-
-/datum/uplink_item/explosives/stunmines
-	name = "Box of Stun Mines"
-	desc = "A box containing approximately 5 Stun landmines which can be planted on any tile. These mines will stun targets who walk over them."
-	item = /obj/item/storage/box/syndie_kit/stunmine
-	cost = 3
-	surplus = 50
-
-/datum/uplink_item/explosives/heavymines
-	name = "Box of Sledgehammer Stun Mines"
-	desc = "A box containing approximately 5 Sledgehammer Stun landmines which can be planted on any tile. These mines take a while to plant, but leave a target helpless and disarmed for a long period of time."
-	item = /obj/item/storage/box/syndie_kit/heavymine
-	cost = 4
-	surplus = 50
-
-/datum/uplink_item/explosives/plasmafiremines
-	name = "Box of Plasma Mines"
-	desc = "A box containing approximately 5 Plasma landmines which can be planted on any tile. When stepped on, these mines eject highly toxic plasma gas and ignite it, causing a major fire hazard."
-	item = /obj/item/storage/box/syndie_kit/plasmafiremine
-	cost = 5
-	surplus = 40
-	purchasable_from = ~UPLINK_CLOWN_OPS
-	progression_minimum = 20 MINUTES
-
-/datum/uplink_item/explosives/sleepymines
-	name = "Box of Sleepy Gas Mines"
-	desc = "A box containing approximately 5 Nitrous Oxide gas landmines which can be planted on any tile. When triggered, the mine releases a large amount of N20 Gas."
-	item = /obj/item/storage/box/syndie_kit/sleepymine
-	cost = 4
-	surplus = 45
-	progression_minimum = 20 MINUTES
-
-/datum/uplink_item/explosives/riggedstunbaton
-	name = "Rigged Stun Baton"
-	desc = "A syndicate minibomb cleverly disguised as one of Nanotrasen's stun batons often given to their security team. Perfect for tricking the security team into blowing themselves up and maybe other people too."
-	item = /obj/item/disguisedgrenade/riggedstunbaton
-	cost = 6
-	surplus = 50
-	purchasable_from = ~UPLINK_SERIOUS_OPS
-	progression_minimum = 30 MINUTES
-
-/datum/uplink_item/explosives/tricktelecrystal
-	name = "Trick Telecrystal"
-	desc = "A poorly manufactured telecrystal that's become highly unstable, upon being inserted into an uplink OR when used to attack something \
-			this telecrystal will violently explode dealing MASSIVE damage to both target and user. The explosion is always powerful enough to leave \
-			a hull breach and likely gib the target or user if either one doesn't have any explosive protection. \
-			Often used to fool other syndicate agents or scientific personnel into killing themselves."
-	item = /obj/item/stack/telecrystal/trick
-	cost = 5
-	surplus = 0
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	progression_minimum = 30 MINUTES
-
-/datum/uplink_item/explosives/riggedcells
-	name = "Box of Rigged Power Cells"
-	desc = "A box containing six of our specialty-designed rigged power cells! \
-			Each are designed to be as powerful as a bluespace power cell, but explode 60 seconds after their installation. \
-			These cells explode in a more devastating manner than a normal rigged power cell."
-	item = /obj/item/storage/box/syndie_kit/syndirigcells
-	cost = 5
-	surplus = 30
-	progression_minimum = 20 MINUTES
-
-/datum/uplink_item/explosives/riggedlights
-	name = "Box of Rigged Replacement Lights"
-	desc = "A box containing approximately fourteen of our specialty-designed rigged lights! \
-			Each release plasma when shattered, and after a full minute: explode to breach walls nearby. \
-			Having an electrical storm blow out all the lights for you would probably get the shuttle called."
-	item = /obj/item/storage/box/lights/mixed/syndirigged
-	cost = 7
-	surplus = 25
 	progression_minimum = 20 MINUTES
 
 /datum/uplink_item/explosives/clusterclf3

@@ -1,12 +1,3 @@
-/datum/uplink_category/role_restricted
-	name = "Role-Restricted"
-	weight = 1
-
-/datum/uplink_item/role_restricted
-	category = /datum/uplink_category/role_restricted
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-
-
 /datum/uplink_item/role_restricted/gondola_donk_pocket_box
 	name = "Gondola-Flavoured Donk Pockets"
 	desc = "A box with 6 gondola pockets within it. Gondola pockets contain a chemical called Tranquility, which will inflict a disease upon consumption. \

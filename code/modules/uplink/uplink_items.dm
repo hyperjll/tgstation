@@ -202,15 +202,15 @@
 
 /datum/uplink_category/discounts
 	name = "Discounted Gear"
-	weight = -1
+	weight = -3
 
 /datum/uplink_category/discount_team_gear
 	name = "Discounted Team Gear"
-	weight = -1
+	weight = -3
 
 /datum/uplink_category/limited_discount_team_gear
 	name = "Limited Stock Team Gear"
-	weight = -2
+	weight = -4
 
 //Discounts (dynamically filled above)
 /datum/uplink_item/discounts

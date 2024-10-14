@@ -1,11 +1,3 @@
-/datum/uplink_category/species
-	name = "Species Restricted"
-	weight = 2
-
-/datum/uplink_item/species_restricted
-	category = /datum/uplink_category/species
-	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
-
 /datum/uplink_item/species_restricted/superhuman
 	name = "Super-Human Mutator"
 	desc = "This DNA mutator contains a highly experimental mutation that significantly boosts a human's physical and mental attributes to it's peak potential. \
@@ -251,7 +243,7 @@
 	item = /obj/item/dnainjector/acidspit
 	progression_minimum = 10 MINUTES
 	surplus = 0
-	cost = 7
+	cost = 3
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 
 /datum/uplink_item/dangerous/lasereyes

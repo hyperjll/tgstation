@@ -1,10 +1,11 @@
-/datum/uplink_category/stealthy
-	name = "Stealthy Weapons"
-	weight = 12
-
-/datum/uplink_item/stealthy_weapons
-	category = /datum/uplink_category/stealthy
-
+/datum/uplink_item/stealthy_weapons/augmenteddisabler
+	name = "Energy Pistol"
+	desc = "An energy pistol we've designed to look identical to that of a NT-brand disabler. It's capable of firing both lethal and disabling shots. \
+			Recharges automatically."
+	item = /obj/item/gun/energy/disabler/syndicate
+	cost = 7
+	surplus = 25
+	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/stealthy_weapons/combatglovesplus
 	name = "Combat Gloves Plus"
@@ -95,121 +96,12 @@
 	cost = 6
 	surplus = 20
 
-/datum/uplink_item/stealthy_weapons/radlights
-	name = "Radioactive Lights"
-	desc = "A box disguised as a replacement lights package, containing 6 light tubes and 6 light bulbs. \
-			Light tubes and bulbs contained within are hazardous to life and will erratically pulse with radiation. \
-			When properly installed into any light sources, the light tubes/bulbs within will burst with radiation when broken."
-	item = /obj/item/storage/box/lights/mixed/radiation
-	progression_minimum = 20 MINUTES
-	cost = 4
-	surplus = 15
-
-/datum/uplink_item/stealthy_weapons/door_charge
-	name = "Explosive Airlock Charge"
-	desc = "A small, easily concealable device. It can be applied to an open airlock panel, booby-trapping it. \
-			The next person to open that airlock will trigger an explosion, knocking them down and destroying \
-			the airlock maintenance panel."
-	item = /obj/item/doorCharge
-	cost = 2
-	surplus = 10
-	purchasable_from = ~UPLINK_SERIOUS_OPS
-
-/datum/uplink_item/stealthy_weapons/knifevenom
-	name = "Reagent Knife (Venom)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Venom. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. An excellent backup for agents all around."
-	item = /obj/item/knife/combat/survival/chemical/venom
-	cost = 3
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/stealthy_weapons/knifelexorin
-	name = "Reagent Knife (Lexorin)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Lexorin. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Excellent in taking down opponents without self-respiration."
-	item = /obj/item/knife/combat/survival/chemical/lexorin
-	cost = 6
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/stealthy_weapons/knifeamanitin
-	name = "Reagent Knife (Amanitin)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Amanitin. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Excellent for ensuring the target stays down for the count -- even after being rescued."
-	item = /obj/item/knife/combat/survival/chemical/amanitin
-	cost = 4
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/stealthy_weapons/knifestaminatoxin
-	name = "Reagent Knife (Tirizene)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Tirizene. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Excellent for quick take-downs."
-	item = /obj/item/knife/combat/survival/chemical/staminatoxin
-	cost = 2
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/stealthy_weapons/knifecurare
-	name = "Reagent Knife (Curare)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Curare. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Extremely effective against all non-silicon targets."
-	item = /obj/item/knife/combat/survival/chemical/curare
-	cost = 6
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/stealthy_weapons/knifeinitropidril
-	name = "Reagent Knife (Initropidril)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Initropidril. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Often wins your fights for you -- if you're lucky."
-	item = /obj/item/knife/combat/survival/chemical/initropidril
-	cost = 8
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/stealthy_weapons/knifepancuronium
-	name = "Reagent Knife (Pancuronium)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Pancuronium. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. A decent stun and poison combo."
-	item = /obj/item/knife/combat/survival/chemical/pancuronium
-	cost = 6
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/stealthy_weapons/knifeheparin
-	name = "Reagent Knife (Heparin)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Heparin. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Excellent in bleeding victims out."
-	item = /obj/item/knife/combat/survival/chemical/heparin
-	cost = 2
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
 /datum/uplink_item/stealthy_weapons/syndispraycan
 	name = "Syndicate Hellcan"
 	desc = "A normal spraycan that's been filled with CLF3 and Plasma, perfect for close-range incendiary shenanigans. Only has 10 uses."
 	item = /obj/item/toy/crayon/spraycan/syndicate
 	progression_minimum = 15 MINUTES
 	cost = 1
-	surplus = 10
-
-/datum/uplink_item/stealthy_weapons/megadehydratedcarp
-	name = "Dehydrated Megacarp"
-	desc = "Looks like a plush toy carp, but just add water and it becomes a real-life mega space carp! Activate in \
-			your hand before use so it knows not to kill you."
-	item = /obj/item/toy/plush/carpplushie/dehy_carp/mega
-	cost = 2
-	surplus = 10
-
-/datum/uplink_item/stealthy_weapons/diseasegrenade
-	name = "Diseased Grenade"
-	desc = "A chemical foam grenade loaded with a payload capable of causing mass-plagues. \
-			Those who touch the foam will develop a random advanced disease. Wear protection before use."
-	item = /obj/item/grenade/chem_grenade/randomdisease
-	progression_minimum = 10 MINUTES
-	cost = 2
 	surplus = 10
 
 /datum/uplink_item/stealthy_weapons/sleepybaton
@@ -222,33 +114,3 @@
 	surplus = 10
 	limited_stock = 1
 	purchasable_from = ~UPLINK_SERIOUS_OPS
-
-/datum/uplink_item/stealthy_weapons/manifold_autoinjector
-	name = "Hereditary Manifold Sickness Injector"
-	desc = "An autoinjector for a permanent, incurable disease that'll slowly destroy it's victim. \
-			The disease can only be suppressed via experimental medication."
-	item = /obj/item/reagent_containers/hypospray/medipen/manifoldinjector
-	cost = 5
-	surplus = 25
-
-/datum/uplink_item/stealthy_weapons/cyborgweapons
-	name = "Weapon Cyborg Module"
-	desc = "An illegal module capable of granting a cyborg a Viper pistol with the necessary hardware \
-			needed to print more ammunition on the fly. Also grants the cyborg of choice an energy dagger \
-			and hacks their software to reveal hidden modules. Exceptionally effective for mass murder. Does NOT enslave cyborgs."
-	item = /obj/item/borg/upgrade/illegalweapons
-	cost = 8
-	surplus = 0
-	progression_minimum = 30 MINUTES
-	purchasable_from = ~UPLINK_CLOWN_OPS
-
-/datum/uplink_item/stealthy_weapons/cyborgmartyr
-	name = "Martyr Cyborg Module"
-	desc = "Reveals a high-yielding explosive which was installed into the cyborg upon it's creation. \
-			This allows a cyborg to self-destruct with greater power and possibly take out other people for good. \
-			Will also hack their software to reveal hidden modules. Does NOT enslave cyborgs."
-	item = /obj/item/borg/upgrade/martyr
-	cost = 4
-	surplus = 10
-	progression_minimum = 20 MINUTES
-	purchasable_from = ~UPLINK_CLOWN_OPS

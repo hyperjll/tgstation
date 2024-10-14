@@ -1,11 +1,3 @@
-/datum/uplink_category/stealthy_tools
-	name = "Stealth Gadgets"
-	weight = 9
-
-/datum/uplink_item/stealthy_tools
-	category = /datum/uplink_category/stealthy_tools
-
-
 /datum/uplink_item/stealthy_tools/agent_card_ultimate
 	name = "Ultimate Agent Identification Card"
 	desc = "Agent cards prevent artificial intelligences from tracking the wearer. This one can hold an unlimited amount of additional access, \
@@ -142,12 +134,3 @@
 	cost = 4
 	surplus = 30
 	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/stealthy_tools/conductivegloves
-	name = "Conductive Gloves"
-	desc = "A pair of super-conducting gloves which amplifies electrical shock effectiveness by 4x. \
-			Fitted with our chameleon technology to ensure you can fool just about anyone."
-	item = /obj/item/clothing/gloves/chameleon/conductive
-	cost = 2
-	surplus = 0 // Let's not fool the people who buy a surplus crate.
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

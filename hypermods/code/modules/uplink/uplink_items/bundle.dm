@@ -1,8 +1,3 @@
-//All bundles and telecrystals
-/datum/uplink_category/bundle
-	name = "Bundles"
-	weight = 14
-
 /datum/uplink_item/bundles_tc/goloudbundle
 	name = "NT-Annihilation 'Go Loud' Kit"
 	desc = "For any reason, if you find stealth to be an unviable strategy, we'll understand. Be warned that claiming this kit WILL ALERT EVERYONE TO YOUR TRAITOROUS NATURE. \

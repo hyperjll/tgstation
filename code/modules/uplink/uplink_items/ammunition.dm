@@ -1,19 +1,11 @@
 /datum/uplink_category/ammo
 	name = "Ammunition"
-	weight = 7
+	weight = 22
 
 /datum/uplink_item/ammo
 	category = /datum/uplink_category/ammo
 	surplus = 40
 
-/datum/uplink_item/ammo/toydarts
-	name = "Box of Riot Darts"
-	desc = "A box of 40 Donksoft riot darts, for reloading any compatible foam dart magazine. Don't forget to share!"
-	item = /obj/item/ammo_box/foambox/riot
-	cost = 2
-	surplus = 0
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-	purchasable_from = ~UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo/revolver
 	name = ".357 Speed Loader"
