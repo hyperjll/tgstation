@@ -138,10 +138,10 @@
 
 /datum/reagent/rockcandyemerald/on_mob_metabolize(mob/living/L)
 	..()
-	L.add_movespeed_modifier("emeraldrockcandy", update=TRUE, priority=100, multiplicative_slowdown=-0.15)
+	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/emeraldrockcandy)
 
 /datum/reagent/rockcandyemerald/on_mob_end_metabolize(mob/living/L)
-	L.remove_movespeed_modifier("emeraldrockcandy")
+	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/emeraldrockcandy)
 
 /datum/reagent/rockcandytopaz
 	name = "Topaz Rock Candy"
@@ -174,7 +174,7 @@
 
 /datum/reagent/rockcandymagic/on_mob_metabolize(mob/living/L)
 	..()
-	L.add_movespeed_modifier("magicrockcandy", update=TRUE, priority=100, multiplicative_slowdown=-0.05)
+	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/rockcandymagic)
 
 	var/mob/living/carbon/human/H = L
 	if(ishuman(L))
@@ -185,7 +185,7 @@
 		H.physiology.oxy_mod *= 0.925
 
 /datum/reagent/rockcandymagic/on_mob_end_metabolize(mob/living/L)
-	L.remove_movespeed_modifier("magicrockcandy")
+	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/rockcandymagic)
 
 	var/mob/living/carbon/human/H = L
 	if(ishuman(L))
