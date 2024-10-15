@@ -10,7 +10,7 @@
 
 /obj/item/storage/box/lethalshot/syndi
 	name = "box of lethal shotgun shots"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "ntlethalshot_box"
 
 /obj/item/storage/box/lethalshot/syndi/PopulateContents()
@@ -19,7 +19,7 @@
 
 /obj/item/storage/box/dartshells
 	name = "box of shotgun darts"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "dartshot_box"
 
 /obj/item/storage/box/dartshells/Initialize(mapload)
@@ -37,7 +37,7 @@
 
 /obj/item/storage/box/incendiaryshells
 	name = "box of incendiary shotgun shots"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "incendiaryshot_box"
 
 /obj/item/storage/box/incendiaryshells/Initialize(mapload)
@@ -56,7 +56,7 @@
 
 /obj/item/storage/box/dragonshells
 	name = "ammo box (shells (Dragon's Breath))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "dragonshot_box"
 
 /obj/item/storage/box/dragonshells/Initialize(mapload)
@@ -75,7 +75,7 @@
 
 /obj/item/storage/box/syndieshotshells
 	name = "ammo box (shells (Buckshot))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "syndibuckshot_box"
 
 /obj/item/storage/box/syndieshotshells/Initialize(mapload)
@@ -94,7 +94,7 @@
 
 /obj/item/storage/box/syndieslugshells
 	name = "ammo box (shells (Slug))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "syndislugshot_box"
 
 /obj/item/storage/box/syndieslugshells/Initialize(mapload)
@@ -113,7 +113,7 @@
 
 /obj/item/storage/box/tasershells
 	name = "ammo box (shells (Taser))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "tasershot_box"
 
 /obj/item/storage/box/tasershells/Initialize(mapload)
@@ -132,7 +132,7 @@
 
 /obj/item/storage/box/meteorshells
 	name = "ammo box (shells (Meteor Slug))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "meteorshot_box"
 
 /obj/item/storage/box/meteorshells/Initialize(mapload)
@@ -151,7 +151,7 @@
 
 /obj/item/storage/box/pulseshells
 	name = "ammo box (shells (Pulse Slug))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "pulseshot_box"
 
 /obj/item/storage/box/pulseshells/Initialize(mapload)
@@ -170,7 +170,7 @@
 
 /obj/item/storage/box/frag12shells
 	name = "ammo box (shells (Frag 12))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "fragshot_box"
 
 /obj/item/storage/box/frag12shells/Initialize(mapload)
@@ -189,7 +189,7 @@
 
 /obj/item/storage/box/flechetteshells
 	name = "ammo box (shells (Flechette))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "flechetteshot_box"
 
 /obj/item/storage/box/flechetteshells/Initialize(mapload)
@@ -208,7 +208,7 @@
 
 /obj/item/storage/box/rubbershotshells
 	name = "ammo box (shells (Rubber Shot))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "rubbershot_box"
 
 /obj/item/storage/box/rubbershotshells/Initialize(mapload)
@@ -227,7 +227,7 @@
 
 /obj/item/storage/box/ionshells
 	name = "ammo box (shells (Ion))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "ionshot_box"
 
 /obj/item/storage/box/ionshells/Initialize(mapload)
@@ -246,7 +246,7 @@
 
 /obj/item/storage/box/lasershells
 	name = "ammo box (shells (Laser Buckshot))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "lasershot_box"
 
 /obj/item/storage/box/lasershells/Initialize(mapload)
@@ -265,7 +265,7 @@
 
 /obj/item/storage/box/uraniumshells
 	name = "ammo box (shells (Uranium))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "uraniumshot_box"
 
 /obj/item/storage/box/uraniumshells/Initialize(mapload)
@@ -284,7 +284,7 @@
 
 /obj/item/storage/box/cryoshotshells
 	name = "ammo box (shells (Cryoshot))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "cryoshot_box"
 
 /obj/item/storage/box/cryoshotshells/Initialize(mapload)
@@ -303,7 +303,7 @@
 
 /obj/item/storage/box/bioterrorshells
 	name = "ammo box (shells (Bioterror))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "bioterrorshot_box"
 
 /obj/item/storage/box/bioterrorshells/Initialize(mapload)
@@ -322,7 +322,7 @@
 
 /obj/item/storage/box/breachershells
 	name = "ammo box (shells (Breacher))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "breachershot_box"
 
 /obj/item/storage/box/breachershells/Initialize(mapload)
@@ -341,7 +341,7 @@
 
 /obj/item/storage/box/thundershotshells
 	name = "ammo box (shells (Thundershot))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "thundershot_box"
 
 /obj/item/storage/box/thundershotshells/Initialize(mapload)
@@ -360,7 +360,7 @@
 
 /obj/item/storage/box/hardlightshells
 	name = "ammo box (shells (Hardlight))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "hardlightshot_box"
 
 /obj/item/storage/box/hardlightshells/Initialize(mapload)
@@ -379,7 +379,7 @@
 
 /obj/item/storage/box/ripshells
 	name = "ammo box (shells (RIP Slug))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "ripslugshot_box"
 
 /obj/item/storage/box/ripshells/Initialize(mapload)
@@ -398,7 +398,7 @@
 
 /obj/item/storage/box/anarchyshells
 	name = "ammo box (shells (Anarchy))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "anarchyshot_box"
 
 /obj/item/storage/box/anarchyshells/Initialize(mapload)
@@ -417,7 +417,7 @@
 
 /obj/item/storage/box/mysteryshells
 	name = "ammo box (shells (Mystery))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "mysteryshot_box"
 
 /obj/item/storage/box/mysteryshells/Initialize(mapload)
@@ -440,7 +440,7 @@
 
 /obj/item/storage/box/clownshells
 	name = "ammo box (shells (Clownly))"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "clownshot_box"
 
 /obj/item/storage/box/clownshells/Initialize(mapload)
@@ -459,28 +459,28 @@
 
 /obj/item/ammo_box/n712x82
 	name = "ammo box (7.12x82)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "712x82mmbox"
 	ammo_type = /obj/item/ammo_casing/mm712x82
 	max_ammo = 50
 
 /obj/item/ammo_box/n712x82/hundred
 	name = "ammo box (7.12x82)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "mega712x82mmbox"
 	ammo_type = /obj/item/ammo_casing/mm712x82
 	max_ammo = 100
 
 /obj/item/ammo_box/c9mm/sixty
 	name = "ammo box (9mm)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "mega9mmbox"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	max_ammo = 60
 
 /obj/item/ammo_box/c10mm/fifty
 	name = "ammo box (10mm)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "mega10mmbox"
 	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 50
@@ -493,113 +493,113 @@
 
 /obj/item/ammo_box/c45/thirty/cs
 	name = "ammo box (.45 caseless)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "caseless45box"
 	ammo_type = /obj/item/ammo_casing/caseless/c45/cs
 	max_ammo = 30
 
 /obj/item/ammo_box/c45/thirty/sp
 	name = "ammo box (.45 soporific)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "sleep45box"
 	ammo_type = /obj/item/ammo_casing/c45/sp
 	max_ammo = 30
 
 /obj/item/ammo_box/c45/thirty/ap
 	name = "ammo box (.45 armor piercing)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "ap45box"
 	ammo_type = /obj/item/ammo_casing/c45/ap
 	max_ammo = 30
 
 /obj/item/ammo_box/c45/thirty/hp
 	name = "ammo box (.45 hollow point)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "hp45box"
 	ammo_type = /obj/item/ammo_casing/c45/hp
 	max_ammo = 30
 
 /obj/item/ammo_box/c45/thirty/inc
 	name = "ammo box (.45 incendiary)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "inc45box"
 	ammo_type = /obj/item/ammo_casing/c45/inc
 	max_ammo = 30
 
 /obj/item/ammo_box/c45/thirty/emp
 	name = "ammo box (.45 emp)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "emp45box"
 	ammo_type = /obj/item/ammo_casing/c45/emp
 	max_ammo = 30
 
 /obj/item/ammo_box/c45/thirty/venom
 	name = "ammo box (.45 venom)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "venom45box"
 	ammo_type = /obj/item/ammo_casing/c45/venom
 	max_ammo = 30
 
 /obj/item/ammo_box/c45/fifty
 	name = "ammo box (.45)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "mega45box"
 	ammo_type = /obj/item/ammo_casing/c45
 	max_ammo = 50
 
 /obj/item/ammo_box/m50
 	name = "ammo box (.50 AE)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "50aebox"
 	ammo_type = /obj/item/ammo_casing/a50ae
 	max_ammo = 20
 
 /obj/item/ammo_box/m50/fifty
 	name = "ammo box (.50 AE)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "mega50aebox"
 	ammo_type = /obj/item/ammo_casing/a50ae
 	max_ammo = 50
 
 /obj/item/ammo_box/c10mm/cs
 	name = "ammo box (10mm caseless)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "caseless10mmbox"
 	ammo_type = /obj/item/ammo_casing/caseless/c10mm
 
 /obj/item/ammo_box/c10mm/sp
 	name = "ammo box (10mm soporific)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "sleep10mmbox"
 	ammo_type = /obj/item/ammo_casing/c10mm/sp
 
 /obj/item/ammo_box/c10mm/ap
 	name = "ammo box (10mm armor-piercing)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "ap10mmbox"
 	ammo_type = /obj/item/ammo_casing/c10mm/ap
 
 /obj/item/ammo_box/c10mm/hp
 	name = "ammo box (10mm hollow-point)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "hp10mmbox"
 	ammo_type = /obj/item/ammo_casing/c10mm/hp
 
 /obj/item/ammo_box/c10mm/inc
 	name = "ammo box (10mm incendiary)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "inc10mmbox"
 	ammo_type = /obj/item/ammo_casing/c10mm/fire
 
 /obj/item/ammo_box/c10mm/emp
 	name = "ammo box (10mm EMP)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "emp10mmbox"
 	ammo_type = /obj/item/ammo_casing/c10mm/emp
 
 /obj/item/ammo_box/a357/no_direct
 	name = "ammo box (.357 Magnum)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "357box"
 	ammo_type = /obj/item/ammo_casing/a357
 
