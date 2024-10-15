@@ -6466,6 +6466,7 @@
 #include "hypermods\code\game\area\areas\station\solars.dm"
 #include "hypermods\code\game\machinery\flatpacker.dm"
 #include "hypermods\code\game\machinery\syndicatebeacon.dm"
+#include "hypermods\code\game\machinery\syndicatebomb.dm"
 #include "hypermods\code\game\machinery\camera\camera.dm"
 #include "hypermods\code\game\objects\effects\mines.dm"
 #include "hypermods\code\game\objects\items\beelibsword.dm"

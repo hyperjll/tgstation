@@ -54,3 +54,27 @@
 	progression_minimum = 20 MINUTES
 	item = /obj/item/powersink
 	cost = 11
+
+
+/datum/uplink_item/disruption/decoybomb
+	name = "Decoy Syndicate Bomb"
+	desc = "A syndicate bomb loaded with an incredibly small explosive payload. \
+			Particularly good at keeping the security team busy or for distracting a department."
+	item = /obj/item/sbeacondrop/decoybomb
+	cost = 4
+
+/datum/uplink_item/disruption/dimensionalbomb
+	name = "Dimensional Syndicate Bomb"
+	desc = "The Dimensional Syndicate bomb is a fearsome device capable of massive re-decoration. It has an adjustable timer, \
+		with a minimum of %MIN_BOMB_TIMER seconds, and can be bolted to the floor with a wrench to prevent \
+		movement. The bomb is bulky and cannot be moved; upon ordering this item, a smaller beacon will be \
+		transported to you that will teleport the actual bomb to it upon activation. Note that this bomb can \
+		be defused, and some crew may attempt to do so. \
+		The bomb core can be pried out and manually detonated with other explosives. \"
+	item = /obj/item/sbeacondrop/dimensionalbomb
+	progression_minimum = 20 MINUTES
+	cost = 9
+
+/datum/uplink_item/disruption/dimensionalbomb/New()
+	. = ..()
+	desc = replacetext(desc, "%MIN_BOMB_TIMER", SYNDIEBOMB_MIN_TIMER_SECONDS)
