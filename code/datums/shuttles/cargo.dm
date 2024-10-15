@@ -34,3 +34,7 @@
 /datum/map_template/shuttle/cargo/helio
 	suffix = "helio"
 	name = "cargo ferry (Helio)"
+
+/datum/map_template/shuttle/cargo/selene
+	suffix = "selene"
+	name = "cargo ferry (Selene)"

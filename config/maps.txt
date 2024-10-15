@@ -65,6 +65,10 @@ map heliostation
 	votable
 endmap
 
+map selenestation
+	votable
+endmap
+
 map pubbystation
 	votable
 endmap

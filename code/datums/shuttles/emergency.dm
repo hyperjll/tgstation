@@ -507,4 +507,12 @@
 /datum/map_template/shuttle/emergency/zeta/prerequisites_met()
 	return SSshuttle.shuttle_purchase_requirements_met[SHUTTLE_UNLOCK_ALIENTECH]
 
+/datum/map_template/shuttle/emergency/selene
+	suffix = "selene"
+	name = "Selene Emergency Shuttle"
+	description = "A decent shuttle containing all of the basic ammenities needed for a proper evacuation. \
+	It even has two restrooms, just in case!"
+	credit_cost = CARGO_CRATE_VALUE * 15
+	occupancy_limit = "75"
+
 #undef EMAG_LOCKED_SHUTTLE_COST
