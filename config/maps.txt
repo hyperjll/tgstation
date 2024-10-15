@@ -73,6 +73,10 @@ map pubbystation
 	votable
 endmap
 
+map theiastation
+	votable
+endmap
+
 # Debug-only maps.
 
 map gateway_test

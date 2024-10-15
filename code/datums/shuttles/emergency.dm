@@ -515,4 +515,12 @@
 	credit_cost = CARGO_CRATE_VALUE * 15
 	occupancy_limit = "75"
 
+/datum/map_template/shuttle/emergency/theia
+	suffix = "theia"
+	name = "Theia Emergency Shuttle"
+	description = "A shuttle containing all of the basic ammenities needed for a proper evacuation. \
+	It also comes with a cafe and a small nature reserve, for morale reasons."
+	credit_cost = CARGO_CRATE_VALUE * 13
+	occupancy_limit = "45"
+
 #undef EMAG_LOCKED_SHUTTLE_COST
