@@ -45,7 +45,7 @@
 
 /datum/uplink_item/dangerous/python
 	name = "Python"
-	desc = "A single Python Revolver that fires .357 magnum bullets. Loaded with 9 lethal .357 magnum shots."
+	desc = "A single Python Revolver that fires .357 magnum bullets. Loaded with 9 lethal Heartpiercer .357 magnum shots."
 	item = /obj/item/gun/ballistic/revolver/python
 	cost = 11
 	surplus = 50
