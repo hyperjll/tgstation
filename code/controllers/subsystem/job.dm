@@ -796,6 +796,13 @@ SUBSYSTEM_DEF(job)
 		if(sec.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_SECURITY)
 			. += sec
 
+/// Returns a list of minds of all crew members.
+/datum/controller/subsystem/job/proc/get_all_crew()
+	. = list()
+	for(var/datum/mind/crew as anything in get_crewmember_minds())
+		if(crew.assigned_role.departments_bitflags & (DEPARTMENT_BITFLAG_SECURITY || DEPARTMENT_BITFLAG_SCIENCE || DEPARTMENT_BITFLAG_CARGO || DEPARTMENT_BITFLAG_MEDICAL || DEPARTMENT_BITFLAG_SERVICE || DEPARTMENT_BITFLAG_ENGINEERING))
+			. += crew
+
 /datum/controller/subsystem/job/proc/job_debug(message)
 	log_job_debug(message)
 

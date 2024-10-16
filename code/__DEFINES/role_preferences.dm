@@ -39,6 +39,7 @@
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
 #define ROLE_VOIDWALKER "Voidwalker"
 #define ROLE_HERETIC_MIDROUND "Heretic Awakening"
+#define ROLE_INFILTRATOR "Infiltrator"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
@@ -160,6 +161,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_WIZARD_MIDROUND = 14,
 	ROLE_VOIDWALKER = 0,
 	ROLE_HERETIC_MIDROUND = 0,
+	ROLE_INFILTRATOR = 0,
 
 	// Latejoin
 	ROLE_HERETIC_SMUGGLER = 0,
