@@ -95,3 +95,19 @@
 	item = /obj/item/clothing/glasses/universal
 	cost = 4
 	surplus = 20
+
+/datum/uplink_item/device_tools/firingpin_traitor
+	name = "Syndicate Firing Pins"
+	desc = "A box containing some of our signature firing pins. They require a firearm authentication implant if you intend to privatize your firearms. \
+			These firing pins cannot be removed after installation. You could practically render all guns on the station useless with enough of these."
+	item = /obj/item/storage/box/firingpins/traitor_noremove
+	cost = 2
+	surplus = 0
+
+/datum/uplink_item/device_tools/firingpin_traitor_dna
+	name = "Syndicate DNA Firing Pins"
+	desc = "A box containing some of our experimental DNA firing pins. After installation, use the firearm to link your DNA to it. \
+			These firing pins cannot be removed after installation. Perfect if you intend to private other syndicate agents from using your firearms."
+	item = /obj/item/storage/box/firingpins/dna_noremove
+	cost = 3
+	surplus = 0

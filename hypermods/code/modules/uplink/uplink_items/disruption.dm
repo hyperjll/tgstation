@@ -78,3 +78,11 @@
 /datum/uplink_item/disruption/dimensionalbomb/New()
 	. = ..()
 	desc = replacetext(desc, "%MIN_BOMB_TIMER", SYNDIEBOMB_MIN_TIMER_SECONDS)
+
+/datum/uplink_item/disruption/paywallpins
+	name = "Paywall Firing Pins"
+	desc = "A box of non-removable paywall firing pins! They can be used to charge money for any firearm's usage. \
+			To use, use in hand to select a payment method, then link a card with a bank account for any transactions to send money toward. \
+			Some may call this evil, we call it capitalism... it's basically the same thing."
+	item = /obj/item/storage/box/firingpins/paywall/noremove
+	cost = 3
