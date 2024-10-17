@@ -248,3 +248,17 @@
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_GALACTIC_GRANT))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
+
+/datum/uplink_item/special/luckywinner
+	name = "Soda Dispensery"
+	desc = "A briefcase we've augmented with redspace technology. It dispenses a single, random soda can for your enjoyment. \
+			May or may not dispense soda cans distributed by our cola vending smugglers. Only dispenses soda while in the hands of one of our agents."
+	item = /obj/item/storage/briefcase/secure/luckywinner
+	cost = 15
+	surplus = 0
+
+/datum/uplink_item/special/luckywinner/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_LUCKY_WINNER))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = 1

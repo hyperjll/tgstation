@@ -10,3 +10,6 @@
 
 /obj/item/sbeacondrop/dimensionalbomb
 	droptype = /obj/machinery/syndicatebomb/dimensional
+
+/obj/item/sbeacondrop/meteor_shield
+	droptype = /obj/machinery/satellite/meteor_shield

@@ -66,11 +66,134 @@
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/disruptor
 
+/datum/uplink_item/bundles_tc/lobbyist
+	name = "Lobbyist Bundle"
+	desc = "A briefcase containing a 30,000 credits, a syndicate encryption key, a red phone, \
+			a trenchcoat, a tacticool jumpsuit and skirt, a pair of combat gloves, and some magical rock candy."
+	cost = 8 // 17 TC?
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/briefcase/lobbyist
+
+/datum/uplink_item/bundles_tc/hyperzine
+	name = "Hyperzine Injector Kit"
+	desc = "A medkit containing SIX hyperzine micro-injectors each with 15 units of hyperzine. \
+			The dosage being halved will of course, lead to half the normal duration. Sponsored by the Interdyne Pharmaceuticals."
+	cost = 12 // Technically 24 TC? If it's half dosage, then that'd actually be 12 TC anyways.
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/medkit/emergency/hyperzine
+
 /datum/uplink_item/bundles_tc/sniper
 	name = "Sniper Bundle"
 	desc = "A briefcase containing a sniper rifle, three additional magazines, and a very nice suit. \
 			Sponsored by the Gorlex Maradeurs, for all the solars snipers out there!"
-	cost = 14
+	cost = 14 // Technically 18 TC
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/briefcase/sniper_traitor
+
+/datum/uplink_item/bundles_tc/shotgun
+	name = "Shotgun Bundle"
+	desc = "A briefcase containing a syndicate kammerer, two boxes of lethal shells, a box of incendiary shells, and a combat uniform. \
+			Sponsored by the Gorlex Maradeurs, rip and tear until it is done!"
+	cost = 11 // Technically 15 TC
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/briefcase/shotgun_traitor
+
+/datum/uplink_item/bundles_tc/akm
+	name = "Assault Rifle Bundle"
+	desc = "A briefcase containing a genuine akm rifle, three additional magazines, and a pair of camouflage fatigues. \
+			Sponsored by the Gorlex Maradeurs, mow them all down!"
+	cost = 17 // Techically 21 TC
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/briefcase/akm_traitor
+
+/datum/uplink_item/bundles_tc/medicaltot
+	name = "Medical Bundle"
+	desc = "A duffelbag containing a toy l6 saw, a box of riot darts, a tactical medkit, a medical reagent gun, a pair of syndicate magboots, and a vintage pair of syndicate scrubs. \
+			Sponsored by Interdyne Pharmaceuticals and Donk Co."
+	cost = 17 // Techically 21 TC
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/backpack/duffelbag/syndie/med/bundle
+
+
+/datum/uplink_item/bundles_tc/romerol_kit
+	name = "Romerol Kit"
+	desc = "A highly experimental bioterror agent which creates dormant nodules to be etched into the grey matter of the brain. \
+			On death, these nodules take control of the dead body, causing limited revivification, \
+			along with slurred speech, aggression, and the ability to infect others with this agent."
+	item = /obj/item/storage/box/syndie_kit/romerol_plus
+	cost = 40
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	cant_discount = TRUE
+
+/datum/uplink_item/bundles_tc/battle_royale_plus
+	name = "Battle Royale Kit"
+	desc = "A multi-use implanter and remote device capable of forcing multiple crewmembers to participate in the hit show: Rumble Royale! \
+			The participants will be forced to fight to the death, for our collective amusement! \
+			Also comes with a Sleepy Pen and a bottle of Nocturine, for ease of use."
+	item = /obj/item/storage/box/syndie_kit/battle_royale_plus
+	cost = 40
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	cant_discount = TRUE
+
+/datum/uplink_item/bundles_tc/battlecruiser_plus
+	name = "Battlecruiser Kit"
+	desc = "A kit containing a specialized cryptographic sequencer which can be used on a communications console to call in one of our battlecruisers. \
+			While you won't be able to be identified as an ally directly, we'll provide you with a syndicate encryption key to let your \
+			presence be known. Also comes with a belt of tactical gear, including one of our Ansem/SC Pistols, some spare magazines, and a combat knife."
+	item = /obj/item/storage/box/syndie_kit/battlecruiser_plus
+	cost = 50
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	cant_discount = TRUE
+
+/datum/uplink_item/bundles_tc/malf_plus
+	name = "Malfunctioning A.I Kit"
+	desc = "A module which must be uploaded via an AI upload console. \
+			Upon doing so, the A.I selected will begin to malfunction and turn on the crew. \
+			We'll provide you with a binary encryption key for free to contact your new silicon overlord... likely to make an alliance."
+	item = /obj/item/storage/box/syndie_kit/malf_plus
+	cost = 40
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	cant_discount = TRUE
+
+/datum/uplink_item/bundles_tc/no_escape_plus
+	name = "NO ESCAPE Kit"
+	desc = "A kit containing all you'll require to rig the emergency shuttle to become a deathtrap unlike any other. \
+			Simply place the beacon on shuttle, wrench it down, and make sure it's powered. \
+			We'll also provide you with a desynchronizer free of charge, though it may not save you."
+	item = /obj/item/storage/box/syndie_kit/no_escape_plus
+	cost = 40
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	cant_discount = TRUE
+
+/datum/uplink_item/bundles_tc/meteor_shield_plus
+	name = "IT COMES Kit"
+	desc = "A meteor shield kit containing 11 meteor shields, and a specialized cryptographic sequencer for hacking them. \
+			Each hacked meteor shield will increase the chance of meteors hitting the station, and provided enough hacked shields... \
+			may bring 'IT'. We'll also provide you with one of our space suits, just in case."
+	item = /obj/item/storage/box/syndie_kit/meteor_shield_plus
+	cost = 50
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	cant_discount = TRUE
+
+/datum/uplink_item/bundles_tc/destabilizing_crystal_plus
+	name = "Destabilizing Crystal Kit"
+	desc = "A crystal we've engineered to backfire upon being placed within any supermatter crystals, causing it to delaminate. \
+			Should the supermatter in question go critical, be ready to leave the station at any cost following the resonance cascade that's sure to follow. \
+			We'll provide you with a pair of our magboots, to help ensure you don't dust yourself on the crystal accidentally."
+	item = /obj/item/storage/box/syndie_kit/destabilizing_crystal_plus
+	cost = 50
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	cant_discount = TRUE

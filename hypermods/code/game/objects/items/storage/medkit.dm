@@ -139,3 +139,7 @@
 	new /obj/item/reagent_containers/cup/bottle/omnizine(src)
 	new /obj/item/reagent_containers/cup/bottle/atropine(src)
 	new /obj/item/reagent_containers/cup/bottle/stimulants(src)
+
+/obj/item/storage/medkit/emergency/hyperzine/PopulateContents()
+	for(var/i in 1 to 6)
+		new /obj/item/reagent_containers/hypospray/medipen/hyperzinemicro(src)

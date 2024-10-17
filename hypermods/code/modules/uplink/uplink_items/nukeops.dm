@@ -1,3 +1,23 @@
+// Base Keys
+
+/datum/uplink_item/base_keys/gene_key
+	name = "Syndicate Genetics Laboratory Access Card"
+	desc = "For some Operatives, you enjoy tampering and experimentation with the laws of nature a little too much. \
+		For those scientifically inclined, a special Authorization Key can be instantly delivered to your location. \
+		Experiment will your genetics, gain superpowers, tamper with BCI technology, and inflict both upon your foes! \
+		Comes with some useful equipment as well."
+	item = /obj/item/keycard/syndicate_gene
+	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
+
+/datum/uplink_item/base_keys/armory_key
+	name = "Syndicate Armory Access Card"
+	desc = "Can't get enough fire power? Just declared war and need to arm yourself to the teeth? Feel like going in guns blazing? \
+		For those with an unsatiated bloodlust, a special Authorization Key can be instantly delivered to your location. \
+		Utilize the Armory within Firebase Balthazord to your heart's content, and make sure to send us the video footage!"
+	item = /obj/item/keycard/syndicate_armory
+	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
+	cost = 60
+
 // Support
 
 /datum/uplink_item/reinforcements/syndicat
@@ -159,6 +179,15 @@
 			Pair with one of our Gorlex Hypospray's for optimal application."
 	item = /obj/item/storage/medkit/hypospray
 	cost = 4
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/medical/medbeam_uber
+	name = "Augmented Medbeam Gun"
+	desc = "An augmented version of the classic Medbeam Gun that we picked up off the corpse of a german scientist. \
+			It has an invulnerability mode that can be activated for a few seconds after healing for a long while. \
+			This one comes uncharged, so be sure to give it a whirl before getting into combat."
+	item = /obj/item/gun/medbeam/uber
+	cost = 25
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 // Implants

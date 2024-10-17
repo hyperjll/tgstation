@@ -194,3 +194,25 @@
 	item = /obj/item/gun/ballistic/rifle/boltaction/harpoon
 	surplus = 15
 	cost = 14
+
+/datum/uplink_item/dangerous/toxinreagentgun
+	name = "Toxin Reagent Gun"
+	desc = "A wonder of Syndicate engineering, this reagent gun does little damage on impact, but it will inject a compound of many toxic chemicals. \
+			It's filled with a 400u concoction specifically designed to incapacitate and likely kill your targets. \
+			The gun shoots 40u each shot, and will generate it's toxins slowly thanks to redspace technology. Synthesises syringes automatically."
+	item = /obj/item/gun/toxicreagentgun
+	cost = 10
+	surplus = 10
+	purchasable_from = ~UPLINK_SPY // for the best
+
+/datum/uplink_item/dangerous/explosivereagentgun
+	name = "Explosive Reagent Gun"
+	desc = "Operatives beware: This is perhaps the most evil weapon we've ever concieved. \
+			This reagent gun fires piercing syringes filled with a concoction of pyrotechnical chemicals. \
+			Those who recieve the chemicals turn into living fireballs, and then explode violently. \
+			Can only store one dose and one syringe at a time. Refills both chemicals and syringes automatically."
+	item = /obj/item/gun/explosivereagentgun
+	surplus = 0
+	cost = 30
+	cant_discount = TRUE
+	purchasable_from = ~UPLINK_SPY // for the best

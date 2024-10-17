@@ -111,3 +111,12 @@
 	item = /obj/item/storage/box/firingpins/dna_noremove
 	cost = 3
 	surplus = 0
+
+/datum/uplink_item/device_tools/potion
+	name = "Syndicate Sentience Potion"
+	item = /obj/item/slimepotion/slime/sentience/nuclear
+	desc = "A potion recovered at great risk by undercover Syndicate operatives and then subsequently modified with Syndicate technology. \
+		Using it will make any animal sentient, and bound to serve you, as well as implanting an internal radio for communication and an internal ID card for opening doors."
+	cost = 2
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	restricted = TRUE

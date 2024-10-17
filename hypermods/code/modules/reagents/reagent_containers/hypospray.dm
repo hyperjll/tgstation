@@ -184,6 +184,17 @@
 	amount_per_transfer_from_this = 30
 	list_reagents = list(/datum/reagent/medicine/hyperzine = 30)
 
+/obj/item/reagent_containers/hypospray/medipen/hyperzinemicro
+	name = "hyperzine micro-injector"
+	desc = "Contains one dose of hyperzine, an effective fast-acting restorative stimulant. Ensure proper injection procedures are taken."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "hyperzinepen"
+	inhand_icon_state = "medipen"
+	base_icon_state = "hyperzinepen"
+	volume = 15
+	amount_per_transfer_from_this = 15
+	list_reagents = list(/datum/reagent/medicine/hyperzine = 15)
+
 /obj/item/reagent_containers/hypospray/medipen/cardiaccs
 	name = "cardiac combi-stimpack"
 	desc = "Contains ten doses of epinephrine and saline-glucose solution, giving 2.5 units of each every time it's used."

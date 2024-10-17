@@ -335,13 +335,6 @@
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/hypospray/medipen/restorationnaniteinjector(src)
 
-/obj/item/storage/firstaid/emergency/combatmedipens
-	name = "emergency medkit"
-
-/obj/item/storage/firstaid/emergency/combatmedipens/PopulateContents()
-	for(var/i in 1 to 3)
-		new /obj/item/reagent_containers/hypospray/medipen/combatmedicine(src)
-
 /obj/item/storage/bag/chemistry/syndimedipens/PopulateContents()
 	new /obj/item/reagent_containers/hypospray/medipen/combatmedicine(src)
 	for(var/i in 1 to 2)
@@ -1009,3 +1002,60 @@
 	new /obj/item/implanter/emp(src)
 	new /obj/item/implanter/tesla(src)
 	new /obj/item/implanter/empshield(src)
+
+
+/obj/item/storage/box/syndie_kit/romerol_plus/PopulateContents()
+	new /obj/item/reagent_containers/cup/bottle/romerol(src)
+	new /obj/item/reagent_containers/syringe(src)
+	new /obj/item/reagent_containers/dropper(src)
+
+/obj/item/storage/box/syndie_kit/battle_royale_plus
+	name = "rumble royale broadcast kit"
+	desc = "Contains everything you need to host the galaxy's greatest show; Rumble Royale."
+
+/obj/item/storage/box/syndie_kit/battle_royale_plus/PopulateContents()
+	var/obj/item/royale_implanter/implanter = new(src)
+	var/obj/item/royale_remote/remote = new(src)
+	remote.link_implanter(implanter)
+	new /obj/item/storage/box/itempack/sleeppen(src)
+	new /obj/item/reagent_containers/cup/bottle/nocturine(src)
+
+/obj/item/storage/box/syndie_kit/battlecruiser_plus
+	name = "battlecruiser kit"
+
+/obj/item/storage/box/syndie_kit/battlecruiser_plus/PopulateContents()
+	new /obj/item/card/emag/battlecruiser(src)
+	new /obj/item/storage/belt/military/assault/fisher(src)
+	new /obj/item/encryptionkey/syndicate(src)
+
+/obj/item/storage/box/syndie_kit/malf_plus
+	name = "malf ai kit"
+
+/obj/item/storage/box/syndie_kit/malf_plus/PopulateContents()
+	new /obj/item/ai_module/malf(src)
+	new /obj/item/encryptionkey/binary(src)
+
+/obj/item/storage/box/syndie_kit/no_escape_plus
+	name = "no escape kit"
+
+/obj/item/storage/box/syndie_kit/no_escape_plus/PopulateContents()
+	new /obj/item/sbeacondrop/no_escape(src)
+	new /obj/item/inducer/syndicate(src)
+	new /obj/item/wrench(src)
+	new /obj/item/desynchronizer(src)
+
+/obj/item/storage/box/syndie_kit/meteor_shield_plus
+	name = "meteor shield hijacker kit"
+
+/obj/item/storage/box/syndie_kit/meteor_shield_plus/PopulateContents()
+	new /obj/item/card/emag/meteor_shield_recalibrator(src)
+	new /obj/item/storage/box/syndie_kit/space(src)
+	for(var/i in 1 to 11)
+		new /obj/item/sbeacondrop/meteor_shield(src)
+
+/obj/item/storage/box/syndie_kit/destabilizing_crystal_plus
+	name = "crystal destabilizer kit"
+
+/obj/item/storage/box/syndie_kit/destabilizing_crystal_plus/PopulateContents()
+	new /obj/item/destabilizing_crystal(src)
+	new /obj/item/clothing/shoes/magboots/syndie(src)

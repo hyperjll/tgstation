@@ -9,6 +9,7 @@
 	report_message = "Your station has won the grand prize of the annual station charity event. Free snacks will be delivered to the bar every now and then."
 	trait_processes = TRUE
 	COOLDOWN_DECLARE(party_cooldown)
+	trait_to_give = STATION_TRAIT_LUCKY_WINNER
 
 /datum/station_trait/lucky_winner/on_round_start()
 	. = ..()

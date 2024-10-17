@@ -53,3 +53,12 @@
 	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
 	atom_storage.max_total_storage = 32
 	atom_storage.max_specific_storage = WEIGHT_CLASS_HUGE
+
+
+/obj/item/storage/backpack/duffelbag/syndie/med/bundle/PopulateContents()
+	new /obj/item/clothing/shoes/magboots/syndie(src)
+	new /obj/item/clothing/under/syndicate/scrubs(src)
+	new /obj/item/storage/medkit/tactical(src)
+	new /obj/item/gun/ballistic/automatic/l6_saw/toy/unrestricted/riot(src)
+	new /obj/item/ammo_box/foambox/riot(src)
+	new /obj/item/gun/medicalreagentgun(src)
