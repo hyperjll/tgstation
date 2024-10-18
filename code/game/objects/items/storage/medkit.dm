@@ -99,10 +99,11 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/bloodpack = 1,
 		/obj/item/stack/medical/suture = 2,
 		/obj/item/stack/medical/mesh = 2,
 		/obj/item/reagent_containers/hypospray/medipen = 1,
-		/obj/item/healthanalyzer/simple = 1,
+		/obj/item/storage/pill_bottle/multiver/less = 1,
 	)
 	generate_items_inside(items_inside,src)
 
@@ -115,12 +116,13 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/healthanalyzer/simple = 1,
 		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/bloodpack = 1,
 		/obj/item/stack/medical/suture/emergency = 1,
 		/obj/item/stack/medical/ointment = 1,
-		/obj/item/reagent_containers/hypospray/medipen/ekit = 2,
+		/obj/item/reagent_containers/hypospray/medipen/ekit = 1,
 		/obj/item/storage/pill_bottle/iron = 1,
+		/obj/item/healthanalyzer/simple/disease = 1,
 	)
 	generate_items_inside(items_inside,src)
 
@@ -188,10 +190,11 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/aiuri = 3,
+		/obj/item/reagent_containers/pill/patch/aiuri = 2,
+		/obj/item/reagent_containers/pill/patch/silver_sulfadiazine = 2,
 		/obj/item/reagent_containers/spray/hercuri = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 1,
-		/obj/item/reagent_containers/hypospray/medipen = 1)
+		/obj/item/storage/pill_bottle/kelotane = 1)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/toxin
@@ -214,10 +217,11 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/storage/pill_bottle/multiver/less = 1,
-		/obj/item/reagent_containers/syringe/syriniver = 3,
+		/obj/item/reagent_containers/pill/patch/ondansetron = 1,
+		/obj/item/reagent_containers/syringe/syriniver = 2,
 		/obj/item/storage/pill_bottle/potassiodide = 1,
+		/obj/item/storage/pill_bottle/antitoxin = 1,
 		/obj/item/reagent_containers/hypospray/medipen/penacid = 1,
-		/obj/item/healthanalyzer/simple/disease = 1,
 		)
 	generate_items_inside(items_inside,src)
 
@@ -239,9 +243,10 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/syringe/convermol = 3,
+		/obj/item/storage/pill_bottle/inaprovaline = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 2,
+		/obj/item/reagent_containers/syringe/convermol = 2,
 		/obj/item/reagent_containers/hypospray/medipen/salbutamol = 1,
-		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/storage/pill_bottle/iron = 1)
 	generate_items_inside(items_inside,src)
 
@@ -263,11 +268,11 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/libital = 3,
-		/obj/item/stack/medical/gauze = 1,
+		/obj/item/reagent_containers/pill/patch/libital = 2,
+		/obj/item/reagent_containers/pill/patch/styptic_powder = 2,
 		/obj/item/storage/pill_bottle/probital = 1,
 		/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
-		/obj/item/healthanalyzer/simple = 1,
+		/obj/item/storage/pill_bottle/bicaridine = 1,
 		)
 	generate_items_inside(items_inside,src)
 
@@ -286,9 +291,10 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/synthflesh = 3,
+		/obj/item/reagent_containers/pill/patch/synthflesh = 2,
+		/obj/item/reagent_containers/medigel/synthflesh/big = 1,
 		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
-		/obj/item/stack/medical/gauze = 1,
+		/obj/item/storage/pill_bottle/tricordrazine = 1,
 		/obj/item/storage/pill_bottle/penacid = 1)
 	generate_items_inside(items_inside,src)
 

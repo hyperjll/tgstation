@@ -779,3 +779,62 @@
 
 	..()
 	. = TRUE
+
+
+/datum/reagent/medicine/styptic_powder
+	name = "Styptic Powder"
+	description = "If used in touch-based applications, immediately restores bruising as well as restoring more over time. The chemical will heal up to 45 points of damage at 45 units applied. If ingested through other means, deals minor toxin damage."
+	reagent_state = LIQUID
+	color = "#FF9696"
+	ph = 5.1
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/medicine/styptic_powder/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume, show_message = TRUE)
+	. = ..()
+	if(!iscarbon(exposed_mob))
+		return
+	var/mob/living/carbon/carbies = exposed_mob
+	if(carbies.stat == DEAD)
+		show_message = 0
+	if(!(methods & (PATCH|TOUCH|VAPOR)))
+		return
+	var/current_bruteloss = carbies.getBruteLoss() // because this will be changed after calling adjustBruteLoss()
+	var/harmies = clamp(carbies.adjustBruteLoss(-1.25 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_bruteloss)
+
+	var/need_mob_update = harmies
+
+	if(need_mob_update)
+		carbies.updatehealth()
+	if(show_message)
+		to_chat(carbies, span_danger("You feel your bruises healing! It stings like hell!"))
+
+	carbies.add_mood_event("painful_medicine", /datum/mood_event/painful_medicine)
+
+/datum/reagent/medicine/silver_sulfadiazine
+	name = "Silver Sulfadiazine"
+	description = "If used in touch-based applications, immediately restores burn wounds as well as restoring more over time. The chemical will heal up to 45 points of damage at 45 units applied. If ingested through other means, deals minor toxin damage."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	ph = 7.2
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/medicine/silver_sulfadiazine/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume, show_message = TRUE)
+	. = ..()
+	if(!iscarbon(exposed_mob))
+		return
+	var/mob/living/carbon/carbies = exposed_mob
+	if(carbies.stat == DEAD)
+		show_message = 0
+	if(!(methods & (PATCH|TOUCH|VAPOR)))
+		return
+	var/current_fireloss = carbies.getFireLoss() // because this will be changed after calling adjustFireLoss()
+	var/burnies = clamp(carbies.adjustFireLoss(-1.25 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_fireloss)
+
+	var/need_mob_update = burnies
+
+	if(need_mob_update)
+		carbies.updatehealth()
+	if(show_message)
+		to_chat(carbies, span_danger("You feel your burns healing! It stings like hell!"))
+
+	carbies.add_mood_event("painful_medicine", /datum/mood_event/painful_medicine)

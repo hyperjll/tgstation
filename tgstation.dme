@@ -6715,6 +6715,8 @@
 #include "hypermods\code\modules\reagents\chemistry\recipes\toxins.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\condiment.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\hypospray.dm"
+#include "hypermods\code\modules\reagents\reagent_containers\medigel.dm"
+#include "hypermods\code\modules\reagents\reagent_containers\patch.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\pill.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\spray.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\syringes.dm"
