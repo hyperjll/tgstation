@@ -91,6 +91,7 @@
 	gender = FEMALE
 	gold_core_spawnable = NO_SPAWN
 	unique_pet = TRUE
+	butcher_results = list(/obj/item/food/meat/slab = 3, /obj/item/stack/telecrystal/five = 1)
 
 // A more docile subtype that won't attack other animals.
 /mob/living/basic/pet/fox/docile
