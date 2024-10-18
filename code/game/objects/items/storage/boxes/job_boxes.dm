@@ -12,6 +12,8 @@
 	var/internal_type = /obj/item/tank/internals/emergency_oxygen
 	/// What medipen should be present in this box?
 	var/medipen_type = /obj/item/reagent_containers/hypospray/medipen
+	/// What secondary medipen should be present in this box?
+	var/medipen2_type = /obj/item/reagent_containers/hypospray/medipen/spacepen
 	/// What medical pill should be present in this box?
 	var/pill_type = /obj/item/reagent_containers/pill/antiviral
 	/// Are we crafted?
@@ -37,6 +39,9 @@
 
 	if(!isnull(medipen_type))
 		new medipen_type(src)
+
+	if(!isnull(medipen2_type))
+		new medipen2_type(src)
 
 	if(!isnull(pill_type))
 		new pill_type(src)
@@ -94,12 +99,30 @@
 	internal_type = /obj/item/tank/internals/emergency_oxygen/engi
 	medipen_type =  /obj/item/reagent_containers/hypospray/medipen/atropine
 
+/obj/item/storage/box/survival/syndie/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots += 3
+	atom_storage.max_total_storage += 6
+
+	if(crafted || !HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS))
+		return
+	atom_storage.max_slots += 4
+	atom_storage.max_total_storage += 8
+	name = "large [name]"
+	transform = transform.Scale(1.25, 1)
+
 /obj/item/storage/box/survival/syndie/PopulateContents()
 	..()
 	new /obj/item/crowbar/red(src)
 	new /obj/item/screwdriver/red(src)
 	new /obj/item/weldingtool/mini(src)
 	new /obj/item/paper/fluff/operative(src)
+
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS))
+		new /obj/item/storage/medkit/emergency(src)
+		new /obj/item/clothing/glasses/night(src)
+		new /obj/item/food/syndicake(src)
+		new /obj/item/reagent_containers/cup/soda_cans/robust_nukie(src)
 
 /obj/item/storage/box/survival/centcom
 	name = "emergency response survival box"

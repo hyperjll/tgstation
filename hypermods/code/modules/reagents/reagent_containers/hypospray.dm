@@ -64,6 +64,17 @@
 	spawned_disease = /datum/disease/advance/supersyndicate
 
 
+/obj/item/reagent_containers/hypospray/medipen/spacepen
+	name = "space medipen"
+	desc = "Contains a moderate amount of barozine to prevent pressure damage, and leporazine to prevent temperature damage. Use in moderation."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "fancymedpen"
+	inhand_icon_state = "medipen"
+	base_icon_state = "fancymedpen"
+	volume = 30
+	amount_per_transfer_from_this = 30
+	list_reagents = list(/datum/reagent/medicine/barozine = 15, /datum/reagent/medicine/leporazine = 15)
+
 /obj/item/reagent_containers/hypospray/medipen/formaldehyde
 	name = "formaldehyde medipen"
 	desc = "An autoinjector containing formaldehyde, used to preserve corpses in a pinch."
