@@ -341,6 +341,7 @@
 	response_harm_simple = "kick"
 	gold_core_spawnable = NO_SPAWN
 	unique_pet = TRUE
+	butcher_results = list(/obj/item/food/meat/slab/corgi/ian = 3, /obj/item/stack/sheet/animalhide/corgi = 1)
 	///Tracks how many rounds did Ian survive from start to finish
 	var/age = 0
 	///Callback to execute upon roundend to check whether Ian has survived the round or not
