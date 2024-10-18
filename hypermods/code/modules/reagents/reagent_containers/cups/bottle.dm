@@ -93,7 +93,33 @@
 	name = "inacusiate bottle"
 	list_reagents = list(/datum/reagent/medicine/inacusiate = 30)
 
+/obj/item/reagent_containers/cup/bottle/ipecacide
+	name = "ipecacide bottle"
+	list_reagents = list(/datum/reagent/impurity/ipecacide = 30)
 
+/obj/item/reagent_containers/cup/bottle/bicaridine
+	name = "bicaridine bottle"
+	list_reagents = list(/datum/reagent/medicine/bicaridine = 30)
+
+/obj/item/reagent_containers/cup/bottle/dermaline
+	name = "dermaline bottle"
+	list_reagents = list(/datum/reagent/medicine/dermaline = 30)
+
+/obj/item/reagent_containers/cup/bottle/dylovene
+	name = "dylovene bottle"
+	list_reagents = list(/datum/reagent/medicine/dylovene = 30)
+
+/obj/item/reagent_containers/cup/bottle/dexalin
+	name = "dexalin bottle"
+	list_reagents = list(/datum/reagent/medicine/dexalin = 30)
+
+/obj/item/reagent_containers/cup/bottle/hyronalin
+	name = "hyronalin bottle"
+	list_reagents = list(/datum/reagent/medicine/hyronalin = 30)
+
+/obj/item/reagent_containers/cup/bottle/inaprovaline
+	name = "inaprovaline bottle"
+	list_reagents = list(/datum/reagent/medicine/inaprovaline = 30)
 
 /// Red-space flasks of eternal whatever -- expensive traitor shit.
 

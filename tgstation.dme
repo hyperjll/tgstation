@@ -6543,6 +6543,7 @@
 #include "hypermods\code\game\objects\items\robot\robot_upgrades.dm"
 #include "hypermods\code\game\objects\items\robot\storage.dm"
 #include "hypermods\code\game\objects\items\robot\items\hypo.dm"
+#include "hypermods\code\game\objects\items\stacks\medical.dm"
 #include "hypermods\code\game\objects\items\stacks\sheets\glass.dm"
 #include "hypermods\code\game\objects\items\stacks\sheets\mineral.dm"
 #include "hypermods\code\game\objects\items\storage\ammobox.dm"

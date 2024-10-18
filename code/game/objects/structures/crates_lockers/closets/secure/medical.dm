@@ -7,14 +7,18 @@
 /obj/structure/closet/secure_closet/medical1/PopulateContents()
 	..()
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/cup/beaker = 2,
+		/obj/item/storage/box/beakers = 1,
 		/obj/item/reagent_containers/dropper = 2,
 		/obj/item/storage/belt/medical = 1,
 		/obj/item/storage/box/syringes = 1,
+		/obj/item/stack/medical/bruise_pack = 2,
+		/obj/item/stack/medical/gauze = 2,
+		/obj/item/stack/medical/ointment = 2,
+		/obj/item/stack/medical/bloodpack = 2,
 		/obj/item/reagent_containers/cup/bottle/toxin = 1,
-		/obj/item/reagent_containers/cup/bottle/morphine = 2,
-		/obj/item/reagent_containers/cup/bottle/epinephrine= 3,
-		/obj/item/reagent_containers/cup/bottle/multiver = 3,
+		/obj/item/reagent_containers/cup/bottle/morphine = 1,
+		/obj/item/reagent_containers/cup/bottle/epinephrine= 1,
+		/obj/item/reagent_containers/cup/bottle/multiver = 1,
 		/obj/item/storage/box/rxglasses = 1)
 	generate_items_inside(items_inside,src)
 
@@ -96,6 +100,7 @@
 	new /obj/item/circuitboard/machine/techfab/department/medical(src)
 	new /obj/item/storage/photo_album/cmo(src)
 	new /obj/item/storage/lockbox/medal/med(src)
+	new /obj/item/card/id/departmental_budget/med(src)
 
 /obj/structure/closet/secure_closet/chief_medical/populate_contents_immediate()
 	. = ..()
@@ -123,12 +128,18 @@
 /obj/structure/closet/secure_closet/chemical/PopulateContents()
 	..()
 	new /obj/item/storage/box/pillbottles(src)
-	new /obj/item/storage/box/pillbottles(src)
-	new /obj/item/storage/box/medigels(src)
 	new /obj/item/storage/box/medigels(src)
 	new /obj/item/ph_booklet(src)
 	new /obj/item/reagent_containers/dropper(src)
 	new /obj/item/reagent_containers/cup/bottle/acidic_buffer(src) //hopefully they get the hint
+	new /obj/item/reagent_containers/cup/bottle/ipecacide(src)
+	new /obj/item/reagent_containers/cup/bottle/bicaridine(src)
+	new /obj/item/reagent_containers/cup/bottle/dermaline(src)
+	new /obj/item/reagent_containers/cup/bottle/dylovene(src)
+	new /obj/item/reagent_containers/cup/bottle/dexalin(src)
+	new /obj/item/reagent_containers/cup/bottle/hyronalin(src)
+	new /obj/item/reagent_containers/cup/bottle/inaprovaline(src)
+	new /obj/item/reagent_containers/cup/bottle/atropine(src)
 
 /obj/structure/closet/secure_closet/chemical/heisenberg //contains one of each beaker, syringe etc.
 	name = "advanced chemical closet"
