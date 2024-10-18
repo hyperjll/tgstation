@@ -6509,6 +6509,7 @@
 #include "hypermods\code\game\objects\items\devices\radio\encryptionkey.dm"
 #include "hypermods\code\game\objects\items\food\donkpocket.dm"
 #include "hypermods\code\game\objects\items\food\donuts.dm"
+#include "hypermods\code\game\objects\items\food\meatslab.dm"
 #include "hypermods\code\game\objects\items\food\monkeycube.dm"
 #include "hypermods\code\game\objects\items\food\pie.dm"
 #include "hypermods\code\game\objects\items\food\pizza.dm"
