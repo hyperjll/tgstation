@@ -3,7 +3,8 @@
 	desc = "It's a bluespace medical kit, it's capable of holding far more medical supplies than normal."
 	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "medkit_bluespace"
-	PAYCHECK_COMMAND * 5
+	custom_price = PAYCHECK_COMMAND * 5
+	custom_premium_price = PAYCHECK_COMMAND * 8
 
 /obj/item/storage/medkit/medical_variety_pack/PopulateContents()
 	new /obj/item/storage/medkit/regular(src)
@@ -23,7 +24,8 @@
 	desc = "It's a bluespace medical kit, it's capable of holding far more medical supplies than normal."
 	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "medkit_bluespace2"
-	PAYCHECK_COMMAND * 20
+	custom_price = PAYCHECK_COMMAND * 15
+	custom_premium_price = PAYCHECK_COMMAND * 20
 
 /obj/item/storage/medkit/deluxe_medical_variety_pack/PopulateContents()
 	new /obj/item/storage/medkit/regular(src)
@@ -152,7 +154,8 @@
 	desc = "It's an expanded medical kit, it's capable of holding far more medical supplies than normal."
 	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "medkit_bluespace"
-	PAYCHECK_COMMAND * 10
+	custom_price = PAYCHECK_COMMAND * 8
+	custom_premium_price = PAYCHECK_COMMAND * 10
 
 /obj/item/storage/medkit/expanded/Initialize(mapload)
 	. = ..()
@@ -247,7 +250,8 @@
 	name = "expanded advanced first aid kit"
 	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "medkit_exp_advanced"
-	PAYCHECK_COMMAND * 15
+	custom_price = PAYCHECK_COMMAND * 15
+	custom_premium_price = PAYCHECK_COMMAND * 20
 
 /obj/item/storage/medkit/expanded/advanced/PopulateContents()
 	if(empty)
