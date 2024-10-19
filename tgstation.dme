@@ -6471,6 +6471,7 @@
 #include "hypermods\code\game\area\areas\station\science.dm"
 #include "hypermods\code\game\area\areas\station\security.dm"
 #include "hypermods\code\game\area\areas\station\solars.dm"
+#include "hypermods\code\game\gamemodes\objective_items.dm"
 #include "hypermods\code\game\machinery\flatpacker.dm"
 #include "hypermods\code\game\machinery\syndicatebeacon.dm"
 #include "hypermods\code\game\machinery\syndicatebomb.dm"

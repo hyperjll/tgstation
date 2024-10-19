@@ -415,6 +415,16 @@
 		/obj/machinery/vending/boozeomat,
 		/obj/machinery/vending/medical,
 		/obj/machinery/vending/wardrobe,
+		/obj/machinery/pdapainter, // Random, wild card.
+		/obj/machinery/computer/atmos_alert, // hardly missed
+		/obj/machinery/computer/monitor, // power monitor
+		/obj/machinery/computer/station_alert, // hardly missed
+		/obj/machinery/gibber, // ez to break into
+		/obj/machinery/chem_dispenser/drinks, // depends on whether or not the barkeep will tolerate that.
+		/obj/machinery/power/smes, // Bit of a wild card, but still ez.
+		/obj/machinery/computer/telecomms, // usually outside of tcomms, ez for engi's
+		/obj/machinery/computer/message_monitor, // ditto
+		/obj/machinery/computer/mech_bay_power_console, // outside robo.
 	)
 
 /datum/spy_bounty/machine/random/medium
@@ -433,6 +443,10 @@
 		/obj/machinery/computer/security, // Requires breaking into a sec checkpoint, but not too hard, many are never visited
 		/obj/machinery/dna_scannernew,
 		/obj/machinery/mecha_part_fabricator,
+		/obj/machinery/computer/accounting,
+		/obj/machinery/telecomms/server/presets, // Tcomms invasion is harmful and tedious
+		/obj/machinery/computer/apc_control, // CE's place
+		/obj/machinery/power/apc, // the wildest of cards, medium just cuz it can be ANYWHERE.
 	)
 
 /datum/spy_bounty/machine/engineering_emitter
@@ -450,6 +464,7 @@
 		/obj/machinery/computer/communications,
 		/obj/machinery/computer/upload,
 		/obj/machinery/modular_computer/preset/id,
+		/obj/machinery/nuclearbomb/beer, // This one is usually hidden away.
 	)
 
 /datum/spy_bounty/machine/random/hard/can_claim(mob/user) // These would all be too easy with command level access
@@ -625,6 +640,7 @@
 		/obj/item/organ/internal/appendix,
 		/obj/item/organ/internal/liver,
 		/obj/item/organ/internal/eyes,
+		/obj/item/organ/internal/tongue,
 	)
 	return ..()
 
