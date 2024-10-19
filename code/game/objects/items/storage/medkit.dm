@@ -78,6 +78,8 @@
 		/obj/item/holosign_creator/medical,
 		/obj/item/stack/sticky_tape,
 	)
+	custom_price = PAYCHECK_COMMAND * 3
+	custom_premium_price = PAYCHECK_COMMAND * 5
 
 /obj/item/storage/medkit/Initialize(mapload)
 	. = ..()

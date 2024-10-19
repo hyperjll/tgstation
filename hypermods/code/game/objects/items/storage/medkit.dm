@@ -3,6 +3,7 @@
 	desc = "It's a bluespace medical kit, it's capable of holding far more medical supplies than normal."
 	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "medkit_bluespace"
+	PAYCHECK_COMMAND * 5
 
 /obj/item/storage/medkit/medical_variety_pack/PopulateContents()
 	new /obj/item/storage/medkit/regular(src)
@@ -22,6 +23,7 @@
 	desc = "It's a bluespace medical kit, it's capable of holding far more medical supplies than normal."
 	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "medkit_bluespace2"
+	PAYCHECK_COMMAND * 20
 
 /obj/item/storage/medkit/deluxe_medical_variety_pack/PopulateContents()
 	new /obj/item/storage/medkit/regular(src)
@@ -143,3 +145,122 @@
 /obj/item/storage/medkit/emergency/hyperzine/PopulateContents()
 	for(var/i in 1 to 6)
 		new /obj/item/reagent_containers/hypospray/medipen/hyperzinemicro(src)
+
+
+/obj/item/storage/medkit/expanded
+	name = "\improper expanded medkit"
+	desc = "It's an expanded medical kit, it's capable of holding far more medical supplies than normal."
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_bluespace"
+	PAYCHECK_COMMAND * 10
+
+/obj/item/storage/medkit/expanded/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 14
+	atom_storage.max_total_storage = 28
+
+/obj/item/storage/medkit/expanded/brute
+	name = "expanded brute trauma treatment kit"
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_exp_brute"
+
+/obj/item/storage/medkit/expanded/brute/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/reagent_containers/pill/patch/libital = 3,
+		/obj/item/reagent_containers/pill/patch/styptic_powder = 3,
+		/obj/item/storage/pill_bottle/probital = 1,
+		/obj/item/storage/pill_bottle/bicaridine = 1,
+		/obj/item/storage/pill_bottle/bicartranex = 1,
+		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 2,
+		/obj/item/reagent_containers/hypospray/medipen/bicaridine = 1,
+		/obj/item/reagent_containers/hypospray/medipen/salacid = 2,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/expanded/fire
+	name = "expanded burn trauma treatment kit"
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_exp_burn"
+
+/obj/item/storage/medkit/expanded/fire/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/reagent_containers/pill/patch/aiuri = 3,
+		/obj/item/reagent_containers/pill/patch/silver_sulfadiazine = 3,
+		/obj/item/reagent_containers/spray/hercuri = 2,
+		/obj/item/reagent_containers/hypospray/medipen/dermaline = 1,
+		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 2,
+		/obj/item/storage/pill_bottle/kelotane = 1,
+		/obj/item/storage/pill_bottle/dermaline = 1,
+		/obj/item/reagent_containers/medigel/synthflesh/big = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/expanded/toxin
+	name = "expanded toxin trauma treatment kit"
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_exp_toxin"
+
+/obj/item/storage/medkit/expanded/toxin/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/storage/pill_bottle/multiver/less = 1,
+		/obj/item/reagent_containers/pill/patch/ondansetron = 2,
+		/obj/item/reagent_containers/syringe/syriniver = 2,
+		/obj/item/reagent_containers/cup/bottle/syriniver = 1,
+		/obj/item/reagent_containers/cup/bottle/calomel = 1,
+		/obj/item/reagent_containers/cup/bottle/higadrite = 1,
+		/obj/item/storage/pill_bottle/potassiodide = 1,
+		/obj/item/storage/pill_bottle/mutadone = 1,
+		/obj/item/storage/pill_bottle/antitoxin = 1,
+		/obj/item/reagent_containers/hypospray/medipen/penacid = 2,
+		/obj/item/reagent_containers/cup/beaker/large/formaldehyde = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/expanded/o2
+	name = "expanded oxygen deprivation treatment kit"
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_exp_o2"
+
+/obj/item/storage/medkit/expanded/o2/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/reagent_containers/hypospray/medipen = 3,
+		/obj/item/reagent_containers/syringe/convermol = 3,
+		/obj/item/reagent_containers/cup/bottle/convermol = 1,
+		/obj/item/reagent_containers/cup/bottle/inaprovaline = 1,
+		/obj/item/reagent_containers/cup/bottle/salbutamol = 1,
+		/obj/item/reagent_containers/cup/bottle/diphenhydramine = 1,
+		/obj/item/reagent_containers/hypospray/medipen/salbutamol = 2,
+		/obj/item/storage/pill_bottle/tranex = 1,
+		/obj/item/storage/pill_bottle/dexalinplus = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/expanded/advanced
+	name = "expanded advanced first aid kit"
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_exp_advanced"
+	PAYCHECK_COMMAND * 15
+
+/obj/item/storage/medkit/expanded/advanced/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/reagent_containers/medigel/synthflesh/big = 4,
+		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
+		/obj/item/reagent_containers/hypospray/medipen/penthrite = 2,
+		/obj/item/reagent_containers/cup/bottle/oculine = 1,
+		/obj/item/reagent_containers/cup/bottle/inacusiate = 1,
+		/obj/item/reagent_containers/cup/bottle/methamphetamine = 1,
+		/obj/item/storage/pill_bottle/tricordrazine = 1,
+		/obj/item/storage/pill_bottle/tranex = 1,
+		/obj/item/storage/pill_bottle/penacid = 1
+	)
+	generate_items_inside(items_inside,src)

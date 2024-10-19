@@ -64,11 +64,6 @@
 	list_reagents = list(/datum/reagent/medicine/oxandrolone = 30)
 	custom_premium_price = 50
 
-/obj/item/reagent_containers/cup/bottle/calomel
-	name = "calomel bottle"
-	list_reagents = list(/datum/reagent/medicine/calomel = 30)
-	custom_premium_price = 50
-
 /obj/item/reagent_containers/cup/bottle/salbutamol
 	name = "salbutamol bottle"
 	list_reagents = list(/datum/reagent/medicine/salbutamol = 30)
@@ -120,6 +115,10 @@
 /obj/item/reagent_containers/cup/bottle/inaprovaline
 	name = "inaprovaline bottle"
 	list_reagents = list(/datum/reagent/medicine/inaprovaline = 30)
+
+/obj/item/reagent_containers/cup/bottle/higadrite
+	name = "higadrite bottle"
+	list_reagents = list(/datum/reagent/medicine/higadrite = 30)
 
 /// Red-space flasks of eternal whatever -- expensive traitor shit.
 

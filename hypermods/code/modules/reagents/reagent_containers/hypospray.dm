@@ -140,16 +140,13 @@
 	custom_price = 25
 	custom_premium_price = 50
 
-/obj/item/reagent_containers/hypospray/medipen/pen_acid
-	name = "pentetic acid medipen"
-	desc = "An autoinjector containing pentetic acid, used to quickly heal toxic damage and purge chemicals from the body quickly."
-	icon = 'hypermods/icons/obj/medical/syringe.dmi'
-	icon_state = "fancymedpenpea"
-	inhand_icon_state = "medipen"
-	base_icon_state = "fancymedpenpea"
-	list_reagents = list(/datum/reagent/medicine/pen_acid = 10)
-	custom_price = 50
-	custom_premium_price = 100
+/obj/item/reagent_containers/hypospray/medipen/penthrite/better
+	name = "penthrite autoinjector"
+	desc = "Experimental heart medication."
+	icon_state = "atropen"
+	inhand_icon_state = "atropen"
+	base_icon_state = "atropen"
+	list_reagents = list(/datum/reagent/medicine/c2/penthrite = 30)
 
 /obj/item/reagent_containers/hypospray/medipen/combatmedicine
 	name = "combat medical medipen"
