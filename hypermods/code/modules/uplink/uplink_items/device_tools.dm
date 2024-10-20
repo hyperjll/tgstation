@@ -107,7 +107,7 @@
 /datum/uplink_item/device_tools/firingpin_traitor_dna
 	name = "Syndicate DNA Firing Pins"
 	desc = "A box containing some of our experimental DNA firing pins. After installation, use the firearm to link your DNA to it. \
-			These firing pins cannot be removed after installation. Perfect if you intend to private other syndicate agents from using your firearms."
+			These firing pins cannot be removed after installation. Perfect if you intend to prevent other syndicate agents from using your firearms."
 	item = /obj/item/storage/box/firingpins/dna_noremove
 	cost = 3
 	surplus = 0
