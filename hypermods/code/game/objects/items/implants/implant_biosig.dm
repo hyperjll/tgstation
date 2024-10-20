@@ -4,14 +4,18 @@
 	actions_types = null
 	verb_say = "broadcasts"
 	var/obj/item/radio/radio
-	var/encryptionkey = /obj/item/encryptionkey/universal
+	var/radio_key
 	var/channel = RADIO_CHANNEL_COMMON
+	var/subspace_transmission = FALSE
 
 /obj/item/implant/biosig/Initialize(mapload)
 	. = ..()
 	radio = new(src)
-	radio.keyslot = new encryptionkey
 	radio.listening = FALSE
+	radio.subspace_transmission = subspace_transmission
+	radio.canhear_range = 0
+	if(radio_key)
+		radio.keyslot = new radio_key
 	radio.recalculateChannels()
 
 /obj/item/implant/biosig/activate(cause)
@@ -19,16 +23,14 @@
 		return FALSE
 
 	// Location.
-	var/area/turf = get_area(imp_in)
+	var/area = get_area_name(get_turf(imp_in))
 	// Name of implant user.
-	var/mobname = imp_in.name
+	var/mobname = imp_in.mind ? imp_in.mind.name : imp_in.real_name
 	// What is to be said.
 	var/message = "DEATH ALERT: [mobname]'s lifesig//N&#@$¤#§>..." // Default message for unexpected causes.
 	if(cause == "death")
-		message = "DEATH ALERT: [mobname]'s lifesigns ceased in [turf.name]! Please retrieve their corpse and revive them."
+		message = "DEATH ALERT: [mobname]'s lifesigns ceased in [area]!"
 
-
-	name = "[mobname]'s Biosignaller"
 	radio.talk_into(src, message, channel)
 
 /obj/item/implant/biosig/proc/on_mob_death(mob/living/L, gibbed)
@@ -39,13 +41,15 @@
 
 /obj/item/implant/biosig/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	. = ..()
-	if(.)
-		RegisterSignal(target, COMSIG_LIVING_DEATH, PROC_REF(on_mob_death))
+	SIGNAL_HANDLER
+
+	RegisterSignal(target, COMSIG_LIVING_DEATH, PROC_REF(on_mob_death))
 
 /obj/item/implant/biosig/removed(mob/target, silent = FALSE, special = FALSE)
 	. = ..()
-	if(.)
-		UnregisterSignal(target, COMSIG_LIVING_DEATH)
+	SIGNAL_HANDLER
+
+	UnregisterSignal(target, COMSIG_LIVING_DEATH)
 
 /obj/item/implant/biosig/get_data()
 	. = {"<b>Implant Specifications:</b><BR>
@@ -64,3 +68,19 @@
 	name = "Implant Case - 'Biosignaller'"
 	desc = "A glass case containing a biosignaller implant."
 	imp_type = /obj/item/implant/biosig
+
+
+/obj/item/implant/biosig/syndicate
+	desc = "Beware the man who speaks in hands."
+	radio_key = /obj/item/encryptionkey/syndicate
+	subspace_transmission = TRUE
+	channel = RADIO_CHANNEL_SYNDICATE
+
+/obj/item/implanter/biosig/syndicate
+	name = "implanter (biosignaller)"
+	imp_type = /obj/item/implant/biosig/syndicate
+
+/obj/item/implantcase/biosig/syndicate
+	name = "Implant Case - 'Biosignaller'"
+	desc = "A glass case containing a biosignaller implant."
+	imp_type = /obj/item/implant/biosig/syndicate

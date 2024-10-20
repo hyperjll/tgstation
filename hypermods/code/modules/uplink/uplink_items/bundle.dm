@@ -50,7 +50,7 @@
 /datum/uplink_item/bundles_tc/observe
 	name = "Observation Kit"
 	desc = "A special kit for those information freaks out there. Contains a MEDSEC HUD disguised as a pair of sunglasses, \
-			three biosignaller implanters, and four informational PDA programs that have had their access requirements removed."
+			three deathrattle implant cases with a stealth implanter, three syndicate biosignaller implant cases, and four informational PDA programs that have had their access requirements removed."
 	cost = 5
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

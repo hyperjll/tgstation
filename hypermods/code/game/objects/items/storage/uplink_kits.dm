@@ -981,9 +981,22 @@
 
 /obj/item/storage/box/syndie_kit/observe/PopulateContents()
 	new /obj/item/clothing/glasses/hud/medsechud/disguised(src)
-	new /obj/item/implanter/biosig(src)
-	new /obj/item/implanter/biosig(src)
-	new /obj/item/implanter/biosig(src)
+	new /obj/item/implanter/stealthimplanter(src)
+
+	var/datum/deathrattle_group/group = new
+
+	var/implants = list()
+	for(var/j in 1 to 3)
+		var/obj/item/implantcase/deathrattle/case = new (src)
+		implants += case.imp
+
+	for(var/i in implants)
+		group.register(i)
+	desc += " The implants are registered to the \"[group.name]\" group."
+
+	new /obj/item/implantcase/biosig/syndicate(src)
+	new /obj/item/implantcase/biosig/syndicate(src)
+	new /obj/item/implantcase/biosig/syndicate(src)
 	new /obj/item/computer_disk/syndicate/observe(src)
 
 /obj/item/storage/box/syndie_kit/disruptor
