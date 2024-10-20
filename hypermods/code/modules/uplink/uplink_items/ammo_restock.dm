@@ -257,7 +257,7 @@
 	item = /obj/item/ammo_box/m50/fifty
 	cost = 8
 	surplus = 0
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	purchasable_from = UPLINK_SERIOUS_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo_restock/ammo712box
