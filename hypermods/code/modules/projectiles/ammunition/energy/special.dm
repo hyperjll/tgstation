@@ -13,6 +13,6 @@
 /obj/item/ammo_casing/energy/flamethrower
 	projectile_type = /obj/projectile/bullet/incendiary/flamethrower
 	select_name = "fire"
-	fire_sound = 'hypermods/sound/weapons/flamethrower.ogg'
+	fire_sound = 'sound/items/modsuit/flamethrower.ogg'
 	firing_effect_type = null
 	e_cost = 100
