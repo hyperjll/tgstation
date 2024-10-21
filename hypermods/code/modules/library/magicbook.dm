@@ -25,19 +25,22 @@
 		. += span_notice("Has [uses] uses left.")
 
 /obj/item/magicbook/attack_self(mob/living/M)
-	to_chat(M, span_notice("You flip open the [src] and begin scouring it's contents..."))
-	playsound(src, use_sound, 50, TRUE)
-	if(do_after(M, usetime, M) && !QDELETED(src))
-		if(M.mind?.assigned_role != "Curator")
-			if(prob(backfirechance))
-				playsound(src, 'sound/effects/magic.ogg', 50, TRUE)
-				do_backfire(M)
-			else
+	if(!QDELETED(src))
+		to_chat(M, span_notice("You flip open the [src] and begin scouring it's contents..."))
+		playsound(src, use_sound, 50, TRUE)
+	if(ishuman(M))
+		if(do_after(M, usetime, M) && !QDELETED(src))
+			var/mob/living/carbon/human/human_user = M
+			if(is_curator_job(human_user.mind?.assigned_role))
 				playsound(src, 'hypermods/sound/effects/magebook_used.ogg', 50, TRUE)
-				do_effect(M)
-		else
-			playsound(src, 'hypermods/sound/effects/magebook_used.ogg', 50, TRUE)
-			do_effect(M)
+				do_effect(human_user)
+			else
+				if(prob(backfirechance))
+					playsound(src, 'sound/effects/magic.ogg', 50, TRUE)
+					do_backfire(human_user)
+				else
+					playsound(src, 'hypermods/sound/effects/magebook_used.ogg', 50, TRUE)
+					do_effect(human_user)
 
 /obj/item/magicbook/proc/do_effect(mob/user)
 	uses -= 1
