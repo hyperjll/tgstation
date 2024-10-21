@@ -204,7 +204,7 @@
 
 /obj/item/reagent_containers/pill/antiviral
 	name = "spaceacillin pill"
-	desc = "Used to relieve and contain diseases as well as minor relief for toxin and genetic damage."
+	desc = "Used to relieve oneself of the symptoms of diseases temporarily, and has the potential to eliminate diseases within the host."
 	icon_state = "pill20"
 	volume = 5
 	list_reagents = list(/datum/reagent/medicine/spaceacillin = 5)
@@ -212,7 +212,7 @@
 
 /obj/item/storage/pill_bottle/antiviral
 	name = "bottle of spaceacillin pills"
-	desc = "Contains pills meant to relieve and contain diseases as well as minor relief for toxin and genetic damage."
+	desc = "Contains pills meant to relieve oneself of the symptoms of diseases temporarily, and has the potential to eliminate diseases within the host."
 	custom_price = 50
 	custom_premium_price = 100
 
