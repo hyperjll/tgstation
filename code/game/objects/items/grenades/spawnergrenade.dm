@@ -52,7 +52,8 @@
 /obj/item/grenade/spawnergrenade/buzzkill
 	name = "Buzzkill grenade"
 	desc = "The label reads: \"WARNING: DEVICE WILL RELEASE LIVE SPECIMENS UPON ACTIVATION. SEAL SUIT BEFORE USE.\" It is warm to the touch and vibrates faintly."
-	icon_state = "holy_grenade"
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
+	icon_state = "wasp"
 	spawner_type = /mob/living/basic/bee/toxin
 	deliveryamt = 10
 
@@ -75,5 +76,7 @@
 /obj/item/grenade/spawnergrenade/cat
 	name = "Catnade"
 	desc = "You can hear faint meowing and the sounds of claws on metal coming from within."
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
+	icon_state = "catnade"
 	spawner_type = /mob/living/basic/pet/cat/feral
 	deliveryamt = 5
