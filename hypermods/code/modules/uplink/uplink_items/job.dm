@@ -552,7 +552,9 @@
 
 /datum/uplink_item/role_restricted/paramedic_defib
 	name = "Combat Defibrillator"
-	desc = "A malfunctioning defibrillator, it's electrical shocks stun your foes, and can lead to an inevitable death should you use it like a regular defibrillator."
+	desc = "A blood-red portable defibrillator which can revive someone through thick armor. \
+			Comes with an experimental self-charging battery, and can be utilized as a weapon to stun your foes while in combat. \
+			Can be overcharged while in combat mode to invoke cardiac arrest in those you defibrillate."
 	item = /obj/item/defibrillator/compact/combat/loaded
 	cost = 12
 	surplus = 15
