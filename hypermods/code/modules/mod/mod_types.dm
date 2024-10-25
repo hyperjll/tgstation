@@ -138,13 +138,11 @@
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/hat_stabilizer/syndicate,
 		/obj/item/mod/module/quick_cuff,
-		/obj/item/mod/module/armor_booster,
 	)
 	default_pins = list(
 		/obj/item/mod/module/magboot/advanced,
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/tether,
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/rcd/syndicate,
 	)
@@ -170,12 +168,10 @@
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/hat_stabilizer/syndicate,
 		/obj/item/mod/module/quick_cuff,
-		/obj/item/mod/module/armor_booster,
 	)
 	default_pins = list(
 		/obj/item/mod/module/magboot/advanced,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/mister/syndicate,
 	)
@@ -196,13 +192,11 @@
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/hat_stabilizer/syndicate,
 		/obj/item/mod/module/quick_cuff,
-		/obj/item/mod/module/armor_booster,
 	)
 	default_pins = list(
 		/obj/item/mod/module/clamp/loader,
 		/obj/item/mod/module/magnet,
 		/obj/item/mod/module/hydraulic,
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/paper_rifle,
 	)
@@ -227,13 +221,11 @@
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/hat_stabilizer/syndicate,
 		/obj/item/mod/module/quick_cuff,
-		/obj/item/mod/module/armor_booster,
 	)
 	default_pins = list(
 		/obj/item/mod/module/gps,
 		/obj/item/mod/module/drill,
 		/obj/item/mod/module/death_sphere, // Syndi version for free?
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/wormhole_jaunter,
 	)
@@ -258,10 +250,8 @@
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/hat_stabilizer/syndicate,
 		/obj/item/mod/module/quick_cuff,
-		/obj/item/mod/module/armor_booster,
 	)
 	default_pins = list(
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/health_analyzer,
 		/obj/item/mod/module/surgical_processor,
@@ -291,10 +281,8 @@
 		/obj/item/mod/module/quick_cuff,
 		/obj/item/mod/module/shock_absorber,
 		/obj/item/mod/module/magnetic_harness,
-		/obj/item/mod/module/armor_booster,
 	)
 	default_pins = list(
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/health_analyzer,
 		/obj/item/mod/module/injector,
@@ -321,11 +309,9 @@
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/hat_stabilizer/syndicate,
-		/obj/item/mod/module/armor_booster,
 	)
 	default_pins = list(
 		/obj/item/mod/module/jetpack/advanced,
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/bikehorn/mega,
 		/obj/item/mod/module/balloon/explosive,
 	)
@@ -347,13 +333,11 @@
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/hat_stabilizer/syndicate,
-		/obj/item/mod/module/armor_booster,
 	)
 	default_pins = list(
 		/obj/item/mod/module/tether,
 		/obj/item/mod/module/anomaly_locked/kinesis/prototype, // Really cool
 		/obj/item/mod/module/jetpack,
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/teslacoil,
 	)
 
@@ -368,12 +352,10 @@
 		/obj/item/mod/module/magnetic_harness,
 		/obj/item/mod/module/emp_shield/advanced,
 		/obj/item/mod/module/jetpack,
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/shock_absorber,
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/pathfinder,
 	)
 	default_pins = list(
 		/obj/item/mod/module/jetpack,
-		/obj/item/mod/module/armor_booster,
 	)
