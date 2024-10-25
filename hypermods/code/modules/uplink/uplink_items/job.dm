@@ -880,3 +880,14 @@
 	surplus = 0
 	progression_minimum = 15 MINUTES
 	restricted_roles = list(JOB_SCIENTIST, JOB_ROBOTICIST, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/maneater_seed
+	name = "Maneater Seed Packet"
+	desc = "A single seed packet of Man-Eaters. The Man-Eaters are a uniquely powerful species capable of mass destruction on a wide scale. \
+			After being shaken awake, they'll remain in place waiting for non-plant targets to get close for them to attack. \
+			Man-Eaters are roughly twice as powerful as Killer Tomatoes, make sure you max their stats and give them perennial growth for maximum destruction."
+	item = /obj/item/seeds/maneater
+	cost = 10
+	surplus = 5
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
+	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
