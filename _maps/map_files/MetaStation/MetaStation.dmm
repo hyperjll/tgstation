@@ -27471,6 +27471,12 @@
 /obj/item/storage/box/beakers{
 	pixel_y = 7
 	},
+/obj/item/reagent_containers/cup/beaker/large{
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/dropper{
+	pixel_y = -4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/chem_storage)
 "jKa" = (
@@ -63875,13 +63881,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
 "wsW" = (
-/obj/structure/table/reinforced,
-/obj/item/reagent_containers/cup/beaker/large{
-	pixel_y = 5
-	},
-/obj/item/reagent_containers/dropper{
-	pixel_y = -4
-	},
+/obj/machinery/vending/chemical,
 /turf/open/floor/iron/dark/textured_corner{
 	dir = 1
 	},

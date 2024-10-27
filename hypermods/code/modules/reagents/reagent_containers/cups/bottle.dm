@@ -237,3 +237,16 @@
 /obj/item/reagent_containers/cup/bottle/uraniumvirusfoodstable
 	name = "stable uranium gel bottle"
 	list_reagents = list(/datum/reagent/uranium/uraniumvirusfood/stable = 30)
+
+
+/obj/item/reagent_containers/cup/bottle/stable_plasma
+	name = "stable plasma bottle"
+	list_reagents = list(/datum/reagent/stable_plasma = 30)
+
+/obj/item/reagent_containers/cup/bottle/gold
+	name = "gold bottle"
+	list_reagents = list(/datum/reagent/gold = 30)
+
+/obj/item/reagent_containers/cup/bottle/uranium
+	name = "uranium bottle"
+	list_reagents = list(/datum/reagent/uranium = 30)

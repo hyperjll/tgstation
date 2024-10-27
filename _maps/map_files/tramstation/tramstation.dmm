@@ -36279,6 +36279,22 @@
 	pixel_x = 7;
 	pixel_y = -2
 	},
+/obj/item/reagent_containers/cup/bottle/epinephrine{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/cup/bottle/fluorine{
+	pixel_x = 7;
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/cup/bottle/iodine{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/cup/bottle/nitrogen{
+	pixel_x = 7;
+	pixel_y = -2
+	},
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
@@ -47087,24 +47103,8 @@
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/tram/left)
 "pFX" = (
-/obj/structure/rack,
-/obj/item/reagent_containers/cup/bottle/epinephrine{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/fluorine{
-	pixel_x = 7;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/iodine{
-	pixel_x = -5;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/cup/bottle/nitrogen{
-	pixel_x = 7;
-	pixel_y = -2
-	},
 /obj/machinery/light/small/directional/south,
+/obj/machinery/vending/chemical,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},

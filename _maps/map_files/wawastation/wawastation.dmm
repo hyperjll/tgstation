@@ -33986,6 +33986,7 @@
 /obj/machinery/camera/autoname/directional/east{
 	network = list("ss13","medbay")
 	},
+/obj/machinery/vending/chemical,
 /turf/open/floor/iron/textured,
 /area/station/medical/pharmacy)
 "lZc" = (

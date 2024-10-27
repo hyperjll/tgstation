@@ -1,7 +1,7 @@
 /obj/machinery/vending/wallgene
 	name = "\improper NanoGene"
 	desc = "Wall-mounted Medical Equipment dispenser."
-	icon = 'hypermods/icons/obj/vending.dmi'
+	icon = 'hypermods/icons/obj/machines/vending.dmi'
 	icon_state = "wallgene"
 	icon_deny = "wallgene-deny"
 	density = FALSE

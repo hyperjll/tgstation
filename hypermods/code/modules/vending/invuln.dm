@@ -1,0 +1,80 @@
+/obj/machinery/vending/liberationinvuln
+	name = "\improper Liberation Station"
+	desc = "An overwhelming amount of <b>ancient patriotism</b> washes over you just by looking at the machine."
+	icon_state = "liberationstation"
+	product_slogans = "Liberation Station: Your one-stop shop for all things second amendment!;Be a patriot today, pick up a gun!;Quality weapons for cheap prices!;Better dead than red!"
+	product_ads = "Float like an astronaut, sting like a bullet!;Express your second amendment today!;Guns don't kill people, but you can!;Who needs responsibilities when you have guns?"
+	vend_reply = "Remember the name: Liberation Station!"
+	products = list(/obj/item/food/burger/plain = 5, //O say can you see, by the dawn's early light
+					/obj/item/food/burger/baseball = 3, //What so proudly we hailed at the twilight's last gleaming
+					/obj/item/food/fries = 5, //Whose broad stripes and bright stars through the perilous fight
+					/obj/item/reagent_containers/cup/glass/bottle/beer/light = 10, //O'er the ramparts we watched, were so gallantly streaming?
+					/obj/item/food/cheesyfries = 10,
+					/obj/item/food/burger/baconburger = 5,
+					/obj/item/ammo_box/magazine/m10mm = 4,
+					/obj/item/ammo_box/magazine/m45 = 4,
+					/obj/item/ammo_box/magazine/smgm9mm = 5,
+					/obj/item/ammo_box/magazine/m50 = 7,
+					/obj/item/ammo_box/magazine/m45 = 7,
+					/obj/item/ammo_box/magazine/m75 = 5)
+	premium = list(/obj/item/clothing/under/misc/patriotsuit = 3,
+					/obj/item/bedsheet/patriot = 5,
+					/obj/item/gun/ballistic/automatic/pistol/viper = 1,
+					/obj/item/gun/ballistic/automatic/pistol/cobra = 1,
+					/obj/item/gun/ballistic/automatic/pistol/deagle/gold = 1,
+					/obj/item/gun/ballistic/automatic/pistol/deagle/camo = 1,
+					/obj/item/gun/ballistic/automatic/pistol/m1911 = 2,
+					/obj/item/gun/ballistic/automatic/pistol/mk58 = 2,
+					/obj/item/gun/ballistic/automatic/proto/unrestricted = 2,
+					/obj/item/gun/ballistic/shotgun/automatic/combat = 2,
+					/obj/item/gun/ballistic/automatic/gyropistol = 1,
+					/obj/item/gun/ballistic/shotgun = 2,
+					/obj/item/gun/ballistic/automatic/ar = 2,
+					/obj/item/food/burger/superbite = 3)
+	default_price = 200
+	extra_price = 5000
+	payment_department = ACCOUNT_SEC
+	resistance_flags = FIRE_PROOF | ACID_PROOF | INDESTRUCTIBLE
+	screwdrivable = FALSE
+	emagvendorreplace = FALSE
+
+/obj/machinery/vending/syndiammo
+	name = "\improper Ammunition Station"
+	desc = "An vending machine sporting a blood-red color scheme, it's designed to vend ammunition of various types."
+	icon = 'hypermods/icons/obj/machines/vending.dmi'
+	icon_state = "syndivend"
+	icon_deny = "syndivend-deny"
+	product_slogans = "Pop! Pop! Pop!;Never run of out ammo again!;Magazines for all!;Make sure you bring body bags!"
+	product_ads = "Now featuring: Bullets!;What's a little lead with all the blood?;Sponsored by Donk Co.;The Gorlex Maruaders send their regards!"
+	vend_reply = "The folks at the Syndicate thank you!"
+	products = list(/obj/item/ammo_box/magazine/m9mm = 10,
+					/obj/item/ammo_box/magazine/m10mm = 10,
+					/obj/item/ammo_box/magazine/m45 = 10,
+					/obj/item/ammo_box/magazine/m50 = 10,
+					/obj/item/storage/box/syndie_kit/stripperclips = 5,
+					/obj/item/ammo_box/foambox/riot = 2,
+					/obj/item/storage/box/lethalshot = 4)
+	premium = list(/obj/item/storage/box/syndie_kit/pistolammo9mm/random = 3,
+					/obj/item/storage/box/syndie_kit/pistolammo10mm/random = 3,
+					/obj/item/storage/box/syndie_kit/pistolammo45/random = 3,
+					/obj/item/storage/box/syndie_kit/revolverammo/random = 3,
+					/obj/item/storage/box/syndie_kit/deagleammo/random = 3,
+					/obj/item/ammo_box/magazine/tommygunm45 = 2,
+					/obj/item/ammo_box/magazine/ak712x82 = 2,
+					/obj/item/ammo_box/magazine/ak712x82/ap = 1,
+					/obj/item/ammo_box/magazine/ak712x82/hp = 1,
+					/obj/item/ammo_box/magazine/ak712x82/incendiary = 1,
+					/obj/item/storage/harpoon_quiver = 2,
+					/obj/item/storage/box/syndie_kit/sniperammo_bundle = 2,
+					/obj/item/ammo_box/c9mm = 1,
+					/obj/item/ammo_box/c10mm = 1,
+					/obj/item/ammo_box/c45/thirty = 1,
+					/obj/item/ammo_box/a357/no_direct = 1,
+					/obj/item/ammo_box/m50 = 1,
+					/obj/item/storage/box/mysteryshells/syndi = 2)
+	default_price = 300
+	extra_price = 1000
+	payment_department = ACCOUNT_SEC
+	resistance_flags = FIRE_PROOF | ACID_PROOF | INDESTRUCTIBLE
+	screwdrivable = FALSE
+	emagvendorreplace = FALSE

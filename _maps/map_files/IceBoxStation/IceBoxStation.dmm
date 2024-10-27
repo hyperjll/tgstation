@@ -62148,6 +62148,17 @@
 /obj/item/assembly/igniter{
 	pixel_y = -3
 	},
+/obj/item/reagent_containers/cup/bottle/acidic_buffer{
+	pixel_x = 7;
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/cup/bottle/basic_buffer{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/cup/bottle/formaldehyde{
+	pixel_x = 1
+	},
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 4
 	},
@@ -80958,19 +80969,8 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "xxi" = (
-/obj/structure/rack,
-/obj/item/reagent_containers/cup/bottle/acidic_buffer{
-	pixel_x = 7;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/basic_buffer{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/formaldehyde{
-	pixel_x = 1
-	},
 /obj/structure/sign/warning/no_smoking/circle/directional/west,
+/obj/machinery/vending/chemical,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},

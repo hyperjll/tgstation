@@ -1,7 +1,7 @@
 /obj/machinery/vending/wallhypo
 	name = "\improper HypoMed"
 	desc = "Wall-mounted Hypospray Equipment dispenser."
-	icon = 'hypermods/icons/obj/vending.dmi'
+	icon = 'hypermods/icons/obj/machines/vending.dmi'
 	icon_state = "wallhypo"
 	icon_deny = "wallhypo-deny"
 	tiltable = FALSE

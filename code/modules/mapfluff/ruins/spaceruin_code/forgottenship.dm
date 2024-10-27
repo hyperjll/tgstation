@@ -54,6 +54,7 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 		/obj/item/shears = 1,
 	)
 
+	emagvendorreplace = FALSE
 /////////// forgottenship lore
 
 /obj/item/paper/fluff/ruins/forgottenship/password
