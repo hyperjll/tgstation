@@ -692,6 +692,7 @@
 			greatly randomize the effectiveness of your punches. Best when combined with several narcotics."
 	item = /obj/item/book/granter/martial/psychotic_brawling
 	cost = 10
+	progression_minimum = 15 MINUTES
 	restricted_roles = list(JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_PSYCHOLOGIST, JOB_CAPTAIN)
 
 /datum/uplink_item/role_restricted/gibtonite_refiner
