@@ -96,11 +96,12 @@
 	item = /obj/item/card/emag
 	cost = 4
 
-/datum/uplink_item/device_tools/super_pointy_tape
-	name = "Super Pointy Tape"
-	desc = "An all-purpose super pointy tape roll. The tape is built with hundreds of tiny metal needles, the roll comes with in 5 pieces. When added to items the \
-			item that was taped will embed when thrown at people. Taping people's mouthes with it will hurt them if pulled off by someone else."
-	item = /obj/item/stack/sticky_tape/pointy/super
+/datum/uplink_item/device_tools/tapepackage
+	name = "Box of Tape"
+	desc = "A box containing one roll of all-purpose super pointy tape. The tape is built with hundreds of tiny metal needles, the roll comes in 5 pieces. When added to items the \
+			item that was taped will embed when thrown at people. Taping people's mouthes with it will hurt them if pulled off by someone else. \
+			Additionally comes with one roll of regular pointy tape, a roll of super sticky tape, and a roll of regular sticky tape."
+	item = /obj/item/storage/box/syndie_kit/tapepackage
 	cost = 1
 
 /datum/uplink_item/device_tools/singularity_beacon

@@ -108,3 +108,19 @@
 /obj/item/storage/box/spongecapsules/PopulateContents()
 	for(var/i in 1 to 6)
 		new /obj/item/food/monkeycube/biosponge(src)
+
+
+/obj/item/storage/box/syndie_kit/tapepackage
+	name = "box of tape"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "tape"
+
+/obj/item/storage/box/syndie_kit/tapepackage/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/tapepackage/PopulateContents()
+	new /obj/item/stack/sticky_tape/pointy/super(src)
+	new /obj/item/stack/sticky_tape/pointy(src)
+	new /obj/item/stack/sticky_tape/super(src)
+	new /obj/item/stack/sticky_tape(src)

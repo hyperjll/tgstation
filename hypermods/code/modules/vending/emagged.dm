@@ -1581,16 +1581,18 @@
 		/obj/item/clothing/glasses/science = 2,
 		/obj/item/clothing/glasses/science/prescription = 2,
 	)
-	contraband = list(
+	premium = list(
+		/obj/item/ph_meter = 4,
 		/obj/item/reagent_containers/spray/syndicate = 2,
 		/obj/item/grenade/chem_grenade/large = 10,
 		/obj/item/grenade/chem_grenade/cryo = 5,
 		/obj/item/grenade/chem_grenade/pyro = 5,
 		/obj/item/grenade/chem_grenade/adv_release = 5,
-		/obj/item/flatpack/autolathe = 1
-	)
-	premium = list(
-		/obj/item/ph_meter = 4,
+		/obj/item/flatpack/autolathe = 1,
+		/obj/item/stack/sticky_tape/pointy/super = 1,
+		/obj/item/stack/sticky_tape/pointy = 2,
+		/obj/item/stack/sticky_tape/super = 1,
+		/obj/item/stack/sticky_tape = 2,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/chem_wardrobe
 	extra_price = PAYCHECK_COMMAND * 0.8
