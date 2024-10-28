@@ -45,7 +45,7 @@
 	name = "Bicaridine"
 	description = "Restores bruising. Overdose causes it instead."
 	reagent_state = LIQUID
-	color = "#C8A5DC"
+	color = "#f98a00"
 	overdose_threshold = 30
 
 /datum/reagent/medicine/bicaridine/on_mob_life(mob/living/carbon/M)
@@ -62,7 +62,7 @@
 	name = "Dexalin"
 	description = "Restores oxygen loss. Overdose causes it instead."
 	reagent_state = LIQUID
-	color = "#C8A5DC"
+	color = "#24e7d9"
 	overdose_threshold = 30
 
 /datum/reagent/medicine/dexalin/on_mob_life(mob/living/carbon/M)
@@ -79,7 +79,7 @@
 	name = "Kelotane"
 	description = "Restores fire damage. Overdose causes it instead."
 	reagent_state = LIQUID
-	color = "#C8A5DC"
+	color = "#f4a40b"
 	overdose_threshold = 30
 
 /datum/reagent/medicine/kelotane/on_mob_life(mob/living/carbon/M)
@@ -96,7 +96,7 @@
 	name = "Anti-Toxin"
 	description = "Heals toxin damage and removes toxins in the bloodstream. Overdose causes toxin damage."
 	reagent_state = LIQUID
-	color = "#C8A5DC"
+	color = "#24ea28"
 	overdose_threshold = 30
 	taste_description = "a roll of gauze"
 
@@ -361,7 +361,7 @@
 	description = "Stabilizes the breathing of patients, and heals asphyxiation damage quickly. It also increases blood clotting efficiency. Good for those in critical condition."
 	reagent_state = LIQUID
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
-	color = "#C8A5DC"
+	color = "#ff0000"
 	ph = 8.5
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_NO_RANDOM_RECIPE
 	clot_rate = 0.1 // .2 worse than sangurite (0.3)
