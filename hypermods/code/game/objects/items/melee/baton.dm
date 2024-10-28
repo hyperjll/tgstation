@@ -13,6 +13,11 @@
 	on_stun_sound = 'hypermods/sound/weapons/bat_hit.ogg' // Grass grows, birds fly, sun shines, and brudda, i hurt people.
 	on_stun_volume = 75
 
+/obj/item/melee/baton/donkbat/toy
+	force = 0
+	stamina_damage = 4
+	knockdown_time = 0 SECONDS
+
 /obj/item/melee/baton/telescopic/sleep_baton
 	name = "Incapacitation Baton"
 	desc = "A compact, specialised baton once assigned to Syndicate contractors until being scrapped. The micro-injectors along the end will quickly inject knock-out drugs into targets."

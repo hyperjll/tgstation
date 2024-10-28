@@ -210,3 +210,12 @@
 	var/obj/item/melee/vxtvulhammer/vxtvulhammer = target
 	if(istype(vxtvulhammer))
 		vxtvulhammer.charge_hammer(owner)
+
+
+/obj/item/melee/vxtvulhammer/toy
+	force = 0
+	throwforce = 0
+	block_chance = 0
+	force_wielded = 0
+	armour_penetration = 0
+	toy = TRUE
