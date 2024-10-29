@@ -384,7 +384,6 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	premium = list(/obj/item/storage/box/randomjunk = 5)
 	contraband = list(
 		/obj/item/storage/box/archerypackage = 1,
-		/obj/item/pen/cybersun = 1,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/curator_wardrobe
 	payment_department = ACCOUNT_SRV
