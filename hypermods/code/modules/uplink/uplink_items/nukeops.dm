@@ -16,7 +16,7 @@
 		Utilize the Armory within Firebase Balthazord to your heart's content, and make sure to send us the video footage!"
 	item = /obj/item/keycard/syndicate_armory
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
-	cost = 60
+	cost = 100 // Contains sooooo many guns and ammo. More than enough to arm an entire team.
 
 // Support
 
