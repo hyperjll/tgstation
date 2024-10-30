@@ -100,7 +100,12 @@
 	if(istype(interacting_with, /obj/item/card/id) && proximity)
 		var/obj/item/card/id/I = interacting_with
 		I.access |=	ACCESS_SCIENCE
-		to_chat(user, "You upgrade [I] with science access.")
+		to_chat(user, "You upgrade [I] with basic science access.")
+		if(I.assignment == "Assistant")
+			I.assignment = "Science Assistant"
+			if(user.has_dna())
+				var/id_name = user.real_name
+				I.name = "[id_name] ID Card (Science Assistant)"
 		qdel(src)
 
 /obj/item/card/assistant_access_card/cargo
@@ -114,7 +119,12 @@
 	if(istype(interacting_with, /obj/item/card/id) && proximity)
 		var/obj/item/card/id/I = interacting_with
 		I.access |=	ACCESS_CARGO
-		to_chat(user, "You upgrade [I] with cargo access.")
+		to_chat(user, "You upgrade [I] with basic cargo access.")
+		if(I.assignment == "Assistant")
+			I.assignment = "Cargo Assistant"
+			if(user.has_dna())
+				var/id_name = user.real_name
+				I.name = "[id_name] ID Card (Cargo Assistant)"
 		qdel(src)
 
 /obj/item/card/assistant_access_card/engineering
@@ -129,7 +139,12 @@
 		var/obj/item/card/id/I = interacting_with
 		I.access |=	ACCESS_ENGINEERING
 		I.access |=	ACCESS_CONSTRUCTION
-		to_chat(user, "You upgrade [I] with engineering access.")
+		to_chat(user, "You upgrade [I] with basic engineering access.")
+		if(I.assignment == "Assistant")
+			I.assignment = "Engineering Assistant"
+			if(user.has_dna())
+				var/id_name = user.real_name
+				I.name = "[id_name] ID Card (Engineering Assistant)"
 		qdel(src)
 
 /obj/item/card/assistant_access_card/service
@@ -147,6 +162,11 @@
 		I.access |=	ACCESS_BAR
 		I.access |=	ACCESS_HYDROPONICS
 		to_chat(user, "You upgrade [I] with essential service access.")
+		if(I.assignment == "Assistant")
+			I.assignment = "Service Assistant"
+			if(user.has_dna())
+				var/id_name = user.real_name
+				I.name = "[id_name] ID Card (Service Assistant)"
 		qdel(src)
 
 /obj/item/card/assistant_access_card/medical
@@ -160,5 +180,10 @@
 	if(istype(interacting_with, /obj/item/card/id) && proximity)
 		var/obj/item/card/id/I = interacting_with
 		I.access |=	ACCESS_MEDICAL
-		to_chat(user, "You upgrade [I] with medical access.")
+		to_chat(user, "You upgrade [I] with basic medical access.")
+		if(I.assignment == "Assistant")
+			I.assignment = "Medical Assistant"
+			if(user.has_dna())
+				var/id_name = user.real_name
+				I.name = "[id_name] ID Card (Medical Assistant)"
 		qdel(src)
