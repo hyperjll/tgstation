@@ -63,6 +63,15 @@
 	item = /obj/item/storage/box/monkeycubes/syndicate/mice
 	cost = 1
 
+/datum/uplink_item/disruption/syndicubes
+	name = "Box of Syndicate Cubes"
+	desc = "A box containing 5 simple lifeform producing cubes, when water is applied, human-like lifeforms will spring forth and will attack everyone nearby. \
+			Syndicates produced have limited intelligence and may not be able to identify undercover agents. They are armed however."
+	item = /obj/item/storage/box/monkeycubes/syndicate/syndis
+	cost = 5
+	surplus = 10
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
 /datum/uplink_item/disruption/decoybomb
 	name = "Decoy Syndicate Bomb"
 	desc = "A syndicate bomb loaded with an incredibly small explosive payload. \
