@@ -201,7 +201,7 @@
 			It's filled with a 400u concoction specifically designed to incapacitate and likely kill your targets. \
 			The gun shoots 40u each shot, and will generate it's toxins slowly thanks to redspace technology. Synthesises syringes automatically."
 	item = /obj/item/gun/toxicreagentgun
-	cost = 10
+	cost = 20
 	surplus = 10
 	purchasable_from = ~UPLINK_SPY // for the best
 
@@ -213,6 +213,6 @@
 			Can only store one dose and one syringe at a time. Refills both chemicals and syringes automatically."
 	item = /obj/item/gun/explosivereagentgun
 	surplus = 0
-	cost = 30
+	cost = 40
 	cant_discount = TRUE
 	purchasable_from = ~UPLINK_SPY // for the best
