@@ -41,7 +41,7 @@
 /obj/item/ammo_box/a357/bouncy
 	name = "speed loader (.357 Rubber)"
 	desc = "A seven-shot speed loader designed for .357 revolvers. \
-			These rounds trades most of it's lethality for quick weakening of foes. Ricochets quite a lot."
+			These rounds trade most of it's lethality for quick weakening of foes. Ricochets quite a lot."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "357bouncy"
 	ammo_type = /obj/item/ammo_casing/a357/bouncy
@@ -50,7 +50,7 @@
 	name = "speed loader (.357 DumDum)"
 	desc = "A seven-shot speed loader designed for .357 revolvers. \
 			The rounds are incredibly sharp and are quick to embed into foes. \
-			They are also excellent in inflict wounds when used at point-blank range."
+			They are also excellent in inflicting wounds when used at point-blank range."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "357dumdum"
 	ammo_type = /obj/item/ammo_casing/a357/dumdum
