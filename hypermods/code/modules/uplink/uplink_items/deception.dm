@@ -23,6 +23,15 @@
 	surplus = 1
 	uplink_item_flags = NONE
 
+/datum/uplink_item/deception/pizza_bomb
+	name = "Pizza Bomb"
+	desc = "A pizza box with a bomb cunningly attached to the lid. The timer needs to be set by opening the box; afterwards, \
+			opening the box again will trigger the detonation after the timer has elapsed. Comes with free pizza, for you or your target!"
+	progression_minimum = 15 MINUTES
+	item = /obj/item/pizzabox/bomb
+	cost = 6
+	surplus = 8
+
 /datum/uplink_item/deception/frame
 	name = "F.R.A.M.E. disk"
 	desc = "When inserted into a tablet, this cartridge gives you five messenger viruses which \
@@ -68,6 +77,15 @@
 	return source //For log icon
 
 
+/datum/uplink_item/deception/trap_disks
+	name = "Box of Syndicate Trapped Disks"
+	desc = "Five bombs disguised as data disks that triggers a minute after inserting into any modular computers. \
+			Can come with some useful programs, if you're fast enough to download them and then throw the disk away."
+	item = /obj/item/storage/box/syndie_kit/trappeddisks
+	progression_minimum = 15 MINUTES
+	cost = 7
+	surplus = 10
+
 /datum/uplink_item/deception/syndistache
 	name = "Syndicate Moustache"
 	desc = "A moustache to prevent people from recognizing you. Be sure to conceal your real identification card or it won't work. \
@@ -84,6 +102,26 @@
 	item = /obj/item/clothing/mask/chameleon
 	cost = 1
 	surplus = 50
+
+/datum/uplink_item/deception/trickcigs
+	name = "Trick Cigarettes"
+	desc = "A normal cigarette packet containing 6 explosive cigarettes. They explode violently after they've been lit and put out. \
+			Explosions are powerful enough to cause hull breaches, and cigarettes are lit for only 60 seconds before exploding. \
+			Only contains 5 units of nicotine each."
+	item = /obj/item/storage/fancy/cigarettes/trick_cigs
+	cost = 2
+	surplus = 40
+	progression_minimum = 5 MINUTES
+
+/datum/uplink_item/deception/bombchameleon
+	name = "Chameleon Bomb"
+	desc = "An explosive device fitted with our chameleon technology, when used on an object, the bomb will disguise itself as that object. \
+			To arm, remove the bomb from your hands, disguised or not, the bomb will arm itself and will detonate upon being picked up. \
+			The explosive isn't super powerful, but can seriously harm those who pick it up and leave them incapacitated temporarily."
+	item = /obj/item/device/chameleon/bomb
+	cost = 2
+	surplus = 50
+	progression_minimum = 10 MINUTES
 
 /datum/uplink_item/deception/conductivegloves
 	name = "Conductive Gloves"
