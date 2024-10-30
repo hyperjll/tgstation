@@ -351,3 +351,15 @@
 /datum/mod_theme/prototype/traitor
 	complexity_max = DEFAULT_MAX_COMPLEXITY + 10
 	ui_theme = "syndicate"
+
+/datum/mod_theme/ninja/traitor
+	complexity_max = DEFAULT_MAX_COMPLEXITY + 10
+	inbuilt_modules = list(/obj/item/mod/module/welding/camera_vision, /obj/item/mod/module/hacker/electricpalm, /obj/item/mod/module/synditeleporter, /obj/item/mod/module/adrenaline_boost/syndicate, /obj/item/mod/module/energy_net)
+	allowed_suit_storage = list(
+		/obj/item/gun,
+		/obj/item/melee/baton,
+		/obj/item/restraints/handcuffs,
+		/obj/item/assembly/flash,
+		/obj/item/melee/energy/sword,
+		/obj/item/shield/energy,
+	)

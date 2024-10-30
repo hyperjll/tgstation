@@ -1128,6 +1128,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define STATION_TRAIT_QUICK_SHUTTLE "station_trait_quick_shuttle"
 #define STATION_TRAIT_ANNOUNCEMENT_INTERN "station_trait_announcement_intern"
 #define STATION_TRAIT_ANNOUNCEMENT_SYSTEM "station_trait_announcement_system"
+#define STATION_TRAIT_NINJAS "station_trait_ninjas"
 
 ///Deathmatch traits
 #define TRAIT_DEATHMATCH_EXPLOSIVE_IMPLANTS "deathmath_explosive_implants"

@@ -308,3 +308,50 @@
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_LUCKY_WINNER))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
+
+/datum/uplink_item/special/ninjamodsuit
+	name = "Recreational Spider Clan MODsuit"
+	desc = "A MODsuit we've designed at the request of the Spider Clan, substituting much of their technology for our own. \
+			Comes with many of the original MODsuit modules including the EMP Pulse, Energy Net, No-Slip and Ninja Star Dispenser. \
+			MODsuit comes with the following modules: Wraith, Electric Palm, Teleporter, Stimpack Booster, and Night Vision. \
+			Does NOT come with any weaponry."
+	item = /obj/item/mod/control/pre_equipped/ninja/traitor
+	cost = 16
+	surplus = 0
+	progression_minimum = 20 MINUTES
+
+/datum/uplink_item/special/ninjamodsuit/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_NINJAS))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = 1
+
+/datum/uplink_item/special/ninjasword
+	name = "Energy Katana"
+	desc = "A beautiful, green energy katana. It's design incorporates unknown technology allowing the wielder to teleport short distances. \
+			It's about as effective as our energy swords, but cannot be stashed away so easily. \
+			Glory to the Spider Clan! Glory to the Syndicate!"
+	item = /obj/item/energy_katana
+	cost = 16
+	surplus = 0
+	progression_minimum = 20 MINUTES
+
+/datum/uplink_item/special/ninjasword/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_NINJAS))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = 1
+
+/datum/uplink_item/special/pdadiskdeluxe
+	name = "Deluxe Trapped Disk"
+	desc = "A single high-end bomb disguised as a data disk that triggers a minute after inserting into any modular computers. \
+			Can come with some useful programs, if you're fast enough to download them and then throw the disk away."
+	item = /obj/item/computer_disk/black_market/trap/highend
+	cost = 4
+	surplus = 0
+
+/datum/uplink_item/special/pdadiskdeluxe/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_PDA_GLITCHED))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = -1

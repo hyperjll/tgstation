@@ -359,3 +359,30 @@
 	default_pins = list(
 		/obj/item/mod/module/jetpack,
 	)
+
+/obj/item/mod/control/pre_equipped/ninja/traitor
+	theme = /datum/mod_theme/ninja/traitor
+	starting_frequency = null
+	applied_cell = /obj/item/stock_parts/power_store/cell/hyper
+	applied_modules = list(
+		/obj/item/mod/module/storage/syndicate,
+		/obj/item/mod/module/noslip,
+		/obj/item/mod/module/status_readout/ninja,
+		/obj/item/mod/module/stealth/wraith,
+		/obj/item/mod/module/dispenser/ninja,
+		/obj/item/mod/module/dna_lock/noremove,
+		/obj/item/mod/module/emp_shield/pulse,
+		/obj/item/mod/module/hacker/electricpalm,
+		/obj/item/mod/module/quick_cuff,
+		/obj/item/mod/module/synditeleporter,
+		/obj/item/mod/module/visor/night,
+	)
+	default_pins = list(
+		/obj/item/mod/module/stealth/wraith,
+		/obj/item/mod/module/dispenser/ninja,
+		/obj/item/mod/module/synditeleporter,
+		/obj/item/mod/module/emp_shield/pulse,
+		/obj/item/mod/module/adrenaline_boost/syndicate,
+		/obj/item/mod/module/energy_net,
+		/obj/item/mod/module/visor/night,
+	)

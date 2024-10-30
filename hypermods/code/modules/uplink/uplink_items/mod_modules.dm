@@ -56,6 +56,15 @@
 	purchasable_from = ~UPLINK_SPY
 
 
+/datum/uplink_item/mod_modules/dnanoremove
+	name = "MODsuit Non-Removable DNA-Lock"
+	desc = "The gold-standard of privatizing MODsuits, this one has a one-time latching mechanism which prevents it from being removed \
+			after it's installation, preventing people from bypassing the lock whether by removal or via a cryptographic sequencer. \
+			The memory of your DNA can still be removed via EMP's, however."
+	item = /obj/item/mod/module/dna_lock/noremove
+	purchasable_from = ~UPLINK_SPY
+	cost = 2
+
 /datum/uplink_item/mod_modules/flamethrower
 	name = "MODsuit Flamethrower Module"
 	desc = "A MODsuit module which comes equipped with a electrical flamethrower that uses the MODsuit's battery as a fuel source."

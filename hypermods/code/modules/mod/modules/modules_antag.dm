@@ -747,3 +747,6 @@
 	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_MOB_STUN
 	tesla_zap(mod.wearer, zap_range, zap_power, zap_flags)
 	playsound(src, 'sound/machines/defib/defib_zap.ogg', 50, TRUE)
+
+/obj/item/mod/module/dna_lock/noremove
+	removable = FALSE
