@@ -56,6 +56,13 @@
 	cost = 11
 
 
+/datum/uplink_item/disruption/mousecubes
+	name = "Box of Mouse Cubes"
+	desc = "A box with twenty four Waffle Co. brand mouse cubes. Deploy near wiring. \
+			Caution: Product may rehydrate when exposed to water. Useful for taking out wiring in maintenance without suspicion."
+	item = /obj/item/storage/box/monkeycubes/syndicate/mice
+	cost = 1
+
 /datum/uplink_item/disruption/decoybomb
 	name = "Decoy Syndicate Bomb"
 	desc = "A syndicate bomb loaded with an incredibly small explosive payload. \

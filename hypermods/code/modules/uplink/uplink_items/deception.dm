@@ -68,6 +68,23 @@
 	return source //For log icon
 
 
+/datum/uplink_item/deception/syndistache
+	name = "Syndicate Moustache"
+	desc = "A moustache to prevent people from recognizing you. Be sure to conceal your real identification card or it won't work. \
+			The moustache provided is completely fire proof, and has minor protection technology installed to aid you should you be found out. \
+			Also allows you to properly use internals, and even has a slot for smoking cigarettes. Comes with an in-built voice changer."
+	item = /obj/item/clothing/mask/gas/fakemoustache/syndicate
+	cost = 3
+	surplus = 50
+
+/datum/uplink_item/deception/voice_changer
+	name = "Voice Changer"
+	desc = "A mask with voice changing capabilities and chameleon technology, it'll change your voice automatically to match the appearance or ID you have. \
+			Be sure to conceal your real identity or it won't work. Less blatantly obvious than our fake moustaches."
+	item = /obj/item/clothing/mask/chameleon
+	cost = 1
+	surplus = 50
+
 /datum/uplink_item/deception/conductivegloves
 	name = "Conductive Gloves"
 	desc = "A pair of super-conducting gloves which amplifies electrical shock effectiveness by 4x. \
