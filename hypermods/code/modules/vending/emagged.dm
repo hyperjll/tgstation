@@ -1214,7 +1214,7 @@
 		/obj/item/clothing/glasses/hud/security/prescription = 2,
 	)
 	contraband = list(
-		/obj/item/organ/internal/cyberimp/brain/anti_stun = 1,
+		/obj/item/organ/cyberimp/brain/anti_stun = 1,
 		/obj/item/clothing/glasses/hud/security/night = 1,
 		/obj/item/clothing/glasses/hud/security/night/prescription = 1,
 	)
@@ -1266,9 +1266,9 @@
 	)
 	contraband = list(
 		/obj/item/grenade/chem_grenade/large = 5,
-		/obj/item/organ/internal/cyberimp/chest/nutriment = 1,
-		/obj/item/organ/internal/cyberimp/mouth/breathing_tube = 1,
-		/obj/item/organ/internal/cyberimp/arm/surgery = 1,
+		/obj/item/organ/cyberimp/chest/nutriment = 1,
+		/obj/item/organ/cyberimp/mouth/breathing_tube = 1,
+		/obj/item/organ/cyberimp/arm/surgery = 1,
 		/obj/item/implantcase/tracking = 2,
 		/obj/item/reagent_containers/hypospray/medipen/resurrector = 1,
 	)
@@ -1413,7 +1413,7 @@
 		/obj/item/implanter = 1,
 		/obj/item/implantcase = 1,
 		/obj/item/bodybag/bluespace = 1,
-		/obj/item/organ/internal/cyberimp/chest/reviver = 1,
+		/obj/item/organ/cyberimp/chest/reviver = 1,
 	)
 	premium = list(
 		/obj/item/autopsy_scanner = 1,

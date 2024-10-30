@@ -640,6 +640,7 @@
 		/obj/item/organ/appendix,
 		/obj/item/organ/liver,
 		/obj/item/organ/eyes,
+		/obj/item/organ/tongue,
 	)
 	return ..()
 

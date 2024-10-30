@@ -1,4 +1,4 @@
-/obj/item/organ/internal/cyberimp/leg
+/obj/item/organ/cyberimp/leg
 	name = "leg implant"
 	desc = "You shouldn't see this! Adminhelp and report this as an issue on github!"
 	zone = BODY_ZONE_R_LEG
@@ -9,12 +9,12 @@
 	var/implant_type = "leg implant"
 	COOLDOWN_DECLARE(emp_notice)
 
-/obj/item/organ/internal/cyberimp/leg/Initialize(mapload)
+/obj/item/organ/cyberimp/leg/Initialize(mapload)
 	. = ..()
 	update_appearance(UPDATE_ICON)
 	SetSlotFromZone()
 
-/obj/item/organ/internal/cyberimp/leg/emp_act(severity)
+/obj/item/organ/cyberimp/leg/emp_act(severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
@@ -43,14 +43,14 @@
 		to_chat(owner, span_warning("[src] malfunctions and causes your muscles to seize up, preventing your [L] from moving!"))
 		COOLDOWN_START(src, emp_notice, 30 SECONDS)
 
-/obj/item/organ/internal/cyberimp/leg/proc/reenableleg()
+/obj/item/organ/cyberimp/leg/proc/reenableleg()
 	var/obj/item/bodypart/L = owner.get_bodypart(zone)
 	if(!L)	//You got emped and then lost the leg in those 10 seconds? impressive
 		return
 
 	L.set_disabled(FALSE)
 
-/obj/item/organ/internal/cyberimp/leg/proc/SetSlotFromZone()
+/obj/item/organ/cyberimp/leg/proc/SetSlotFromZone()
 	switch(zone)
 		if(BODY_ZONE_L_LEG)
 			slot = ORGAN_SLOT_LEFT_LEG_AUG
@@ -59,19 +59,19 @@
 		else
 			CRASH("Invalid zone for [type]")
 
-/obj/item/organ/internal/cyberimp/leg/update_icon(updates=ALL)
+/obj/item/organ/cyberimp/leg/update_icon(updates=ALL)
 	. = ..()
 	if(zone == BODY_ZONE_R_LEG)
 		transform = null
 	else // Mirroring the icon
 		transform = matrix(-1, 0, 0, 0, 1, 0)
 
-/obj/item/organ/internal/cyberimp/leg/examine(mob/user)
+/obj/item/organ/cyberimp/leg/examine(mob/user)
 	. = ..()
 	. += span_info("[src] is assembled in the [zone == BODY_ZONE_R_LEG ? "right" : "left"] leg configuration. You can use a screwdriver to reassemble it.")
 	. += span_info("You will need two of the same type of implant for them to properly function.")
 
-/obj/item/organ/internal/cyberimp/leg/screwdriver_act(mob/living/user, obj/item/I)
+/obj/item/organ/cyberimp/leg/screwdriver_act(mob/living/user, obj/item/I)
 	. = ..()
 	if(.)
 		return .
@@ -84,99 +84,99 @@
 	to_chat(user, span_notice("You modify [src] to be installed on the [zone == BODY_ZONE_R_LEG ? "right" : "left"] leg."))
 	update_appearance(UPDATE_ICON)
 
-/obj/item/organ/internal/cyberimp/leg/Insert(mob/living/carbon/M, special, drop_if_replaced, special_zone)
+/obj/item/organ/cyberimp/leg/Insert(mob/living/carbon/M, special, drop_if_replaced, special_zone)
 	. = ..()
 	if(HasBoth())
 		AddEffect()
 
-/obj/item/organ/internal/cyberimp/leg/Remove(mob/living/carbon/M, special)
+/obj/item/organ/cyberimp/leg/Remove(mob/living/carbon/M, special)
 	RemoveEffect()
 	. = ..()
 
-/obj/item/organ/internal/cyberimp/leg/proc/HasBoth()
+/obj/item/organ/cyberimp/leg/proc/HasBoth()
 	if(owner.get_organ_slot(ORGAN_SLOT_RIGHT_LEG_AUG) && owner.get_organ_slot(ORGAN_SLOT_LEFT_LEG_AUG))
-		var/obj/item/organ/internal/cyberimp/leg/left = owner.get_organ_slot(ORGAN_SLOT_LEFT_LEG_AUG)
-		var/obj/item/organ/internal/cyberimp/leg/right = owner.get_organ_slot(ORGAN_SLOT_RIGHT_LEG_AUG)
+		var/obj/item/organ/cyberimp/leg/left = owner.get_organ_slot(ORGAN_SLOT_LEFT_LEG_AUG)
+		var/obj/item/organ/cyberimp/leg/right = owner.get_organ_slot(ORGAN_SLOT_RIGHT_LEG_AUG)
 		if(left.implant_type == right.implant_type)
 			return TRUE
 	return FALSE
 
-/obj/item/organ/internal/cyberimp/leg/proc/AddEffect()
+/obj/item/organ/cyberimp/leg/proc/AddEffect()
 	return
 
-/obj/item/organ/internal/cyberimp/leg/proc/RemoveEffect()
+/obj/item/organ/cyberimp/leg/proc/RemoveEffect()
 	return
 
 //------------water noslip implant
-/obj/item/organ/internal/cyberimp/leg/galosh
+/obj/item/organ/cyberimp/leg/galosh
 	name = "antislip implant"
 	desc = "An implant that uses sensors and motors to detect when you are slipping and attempt to prevent it. It probably won't help if the floor is too slippery."
 	implant_type = "noslipwater"
 
-/obj/item/organ/internal/cyberimp/leg/galosh/l
+/obj/item/organ/cyberimp/leg/galosh/l
 	zone = BODY_ZONE_L_LEG
 
-/obj/item/organ/internal/cyberimp/leg/galosh/AddEffect()
+/obj/item/organ/cyberimp/leg/galosh/AddEffect()
 	ADD_TRAIT(owner, TRAIT_NO_SLIP_WATER, "Antislip_implant")
 	ADD_TRAIT(owner, TRAIT_NO_SLIP_ICE, "Antislip_implant")
 
-/obj/item/organ/internal/cyberimp/leg/galosh/RemoveEffect()
+/obj/item/organ/cyberimp/leg/galosh/RemoveEffect()
 	REMOVE_TRAIT(owner, TRAIT_NO_SLIP_WATER, "Antislip_implant")
 	REMOVE_TRAIT(owner, TRAIT_NO_SLIP_ICE, "Antislip_implant")
 
-/obj/item/organ/internal/cyberimp/leg/galosh/syndicate/l
+/obj/item/organ/cyberimp/leg/galosh/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/leg/galosh/syndicate/l
+/obj/item/organ/cyberimp/leg/galosh/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_LEG
 
 //------------true noslip implant
-/obj/item/organ/internal/cyberimp/leg/noslip
+/obj/item/organ/cyberimp/leg/noslip
 	name = "advanced antislip implant"
 	desc = "An implant that uses advanced sensors to detect when you are slipping and utilize motors in order to prevent it."
 	implant_type = "noslipall"
 
-/obj/item/organ/internal/cyberimp/leg/noslip/l
+/obj/item/organ/cyberimp/leg/noslip/l
 	zone = BODY_ZONE_L_LEG
 
-/obj/item/organ/internal/cyberimp/leg/noslip/AddEffect()
+/obj/item/organ/cyberimp/leg/noslip/AddEffect()
 	ADD_TRAIT(owner, TRAIT_NO_SLIP_ALL, "Noslip_implant")
 
-/obj/item/organ/internal/cyberimp/leg/noslip/RemoveEffect()
+/obj/item/organ/cyberimp/leg/noslip/RemoveEffect()
 	REMOVE_TRAIT(owner, TRAIT_NO_SLIP_ALL, "Noslip_implant")
 
-/obj/item/organ/internal/cyberimp/leg/noslip/syndicate
+/obj/item/organ/cyberimp/leg/noslip/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/leg/noslip/syndicate/l
+/obj/item/organ/cyberimp/leg/noslip/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_LEG
 
 //------------dash boots implant
-/obj/item/organ/internal/cyberimp/leg/jumpboots
+/obj/item/organ/cyberimp/leg/jumpboots
 	name = "jumpboots implant"
 	desc = "An implant with a specialized propulsion system for rapid foward movement."
 	implant_type = "jumpboots"
 	var/datum/action/cooldown/boost/implant_ability
 
-/obj/item/organ/internal/cyberimp/leg/jumpboots/l
+/obj/item/organ/cyberimp/leg/jumpboots/l
 	zone = BODY_ZONE_L_LEG
 
-/obj/item/organ/internal/cyberimp/leg/jumpboots/AddEffect()
+/obj/item/organ/cyberimp/leg/jumpboots/AddEffect()
 	ADD_TRAIT(owner, TRAIT_NO_SLIP_ICE, "Jumpboot_implant")
 	implant_ability = new(src)
 	implant_ability.Grant(owner)
 
-/obj/item/organ/internal/cyberimp/leg/jumpboots/RemoveEffect()
+/obj/item/organ/cyberimp/leg/jumpboots/RemoveEffect()
 	REMOVE_TRAIT(owner, TRAIT_NO_SLIP_ICE, "Jumpboot_implant")
 	if(implant_ability)
 		implant_ability.Remove(owner)
 
-/obj/item/organ/internal/cyberimp/leg/jumpboots/syndicate
+/obj/item/organ/cyberimp/leg/jumpboots/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/leg/jumpboots/syndicate/l
+/obj/item/organ/cyberimp/leg/jumpboots/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_LEG
 
@@ -218,31 +218,31 @@
 
 
 //------------Airshoes implant
-/obj/item/organ/internal/cyberimp/leg/airshoes
+/obj/item/organ/cyberimp/leg/airshoes
 	name = "advanced propulsion implant"
 	desc = "An implant that uses propulsion technology to keep you above the ground and let you move faster."
 	implant_type = "airshoes"
 	var/datum/action/cooldown/airshoes/implant_dash
 
-/obj/item/organ/internal/cyberimp/leg/airshoes/l
+/obj/item/organ/cyberimp/leg/airshoes/l
 	zone = BODY_ZONE_L_LEG
 
-/obj/item/organ/internal/cyberimp/leg/airshoes/AddEffect()
+/obj/item/organ/cyberimp/leg/airshoes/AddEffect()
 	ADD_TRAIT(owner, TRAIT_NO_SLIP_ICE, "Airshoes_implant")
 	implant_dash = new
 	implant_dash.Grant(owner)
 	implant_dash.jumpdistance = 7
 	implant_dash.jumpspeed = 5//this makes it function like the airshoes
 
-/obj/item/organ/internal/cyberimp/leg/airshoes/RemoveEffect()
+/obj/item/organ/cyberimp/leg/airshoes/RemoveEffect()
 	REMOVE_TRAIT(owner, TRAIT_NO_SLIP_ICE, "Airshoes_implant")
 	if(implant_dash)
 		implant_dash.Remove(owner)
 
-/obj/item/organ/internal/cyberimp/leg/airshoes/syndicate
+/obj/item/organ/cyberimp/leg/airshoes/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/leg/airshoes/syndicate/l
+/obj/item/organ/cyberimp/leg/airshoes/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_LEG
 
@@ -283,20 +283,20 @@
 	REMOVE_TRAIT(stunned, TRAIT_IMMOBILIZED, REF(src))
 
 //------------magboot implant
-/obj/item/organ/internal/cyberimp/leg/magboot
+/obj/item/organ/cyberimp/leg/magboot
 	name = "magboot implant"
 	desc = "Integrated maglock implant, allows easy movement in a zero-gravity environment."
 	implant_type = "magboot"
 	var/datum/action/innate/magboots/implant_ability
 
-/obj/item/organ/internal/cyberimp/leg/magboot/l
+/obj/item/organ/cyberimp/leg/magboot/l
 	zone = BODY_ZONE_L_LEG
 
-/obj/item/organ/internal/cyberimp/leg/magboot/AddEffect()
+/obj/item/organ/cyberimp/leg/magboot/AddEffect()
 	implant_ability = new
 	implant_ability.Grant(owner)
 
-/obj/item/organ/internal/cyberimp/leg/magboot/RemoveEffect()
+/obj/item/organ/cyberimp/leg/magboot/RemoveEffect()
 	if(implant_ability)
 		implant_ability.Remove(owner)
 	owner.remove_movespeed_modifier("Magbootimplant")
@@ -340,9 +340,9 @@
 	else if(owner.has_movespeed_modifier(/datum/movespeed_modifier/magbootimplant))
 		owner.remove_movespeed_modifier(/datum/movespeed_modifier/magbootimplant)
 
-/obj/item/organ/internal/cyberimp/leg/magboot/syndicate
+/obj/item/organ/cyberimp/leg/magboot/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/leg/magboot/syndicate/l
+/obj/item/organ/cyberimp/leg/magboot/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_LEG

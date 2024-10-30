@@ -1,18 +1,18 @@
 /obj/item/autosurgeon/syndicate/gasharpoon
-	starting_organ = /obj/item/organ/internal/cyberimp/arm/gun/gasharpoon
+	starting_organ = /obj/item/organ/cyberimp/arm/gun/gasharpoon
 
 /obj/item/autosurgeon/syndicate/gasharpoon/single_use
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/gasharpoon/hidden
-	starting_organ = /obj/item/organ/internal/cyberimp/arm/gun/gasharpoon/syndicate
+	starting_organ = /obj/item/organ/cyberimp/arm/gun/gasharpoon/syndicate
 
 /obj/item/autosurgeon/syndicate/gasharpoon/hidden/single_use
 	uses = 1
 
 // The actual gasharpoon to be integrated
 
-/obj/item/organ/internal/cyberimp/arm/gun/gasharpoon
+/obj/item/organ/cyberimp/arm/gun/gasharpoon
 	name = "gasharpoon"
 	desc = "A metal gauntlet with a harpoon attatched, powered by gasoline and traditionally used by space-whalers."
 	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
@@ -20,13 +20,13 @@
 	inhand_icon_state = "gasharpoon"
 	items_to_create = list(/obj/item/gun/gasharpoon)
 
-/obj/item/organ/internal/cyberimp/arm/gun/gasharpoon/l
+/obj/item/organ/cyberimp/arm/gun/gasharpoon/l
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/internal/cyberimp/arm/gun/gasharpoon/syndicate
+/obj/item/organ/cyberimp/arm/gun/gasharpoon/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/arm/gun/gasharpoon/syndicate/l
+/obj/item/organ/cyberimp/arm/gun/gasharpoon/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_ARM
 

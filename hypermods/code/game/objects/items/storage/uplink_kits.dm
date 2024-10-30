@@ -803,9 +803,9 @@
 		new /obj/item/mail/traitor/mail_strike(src)
 
 /obj/item/storage/box/syndie_kit/xeno_organ_kit/PopulateContents()
-	new /obj/item/organ/internal/alien/plasmavessel(src)
-	new /obj/item/organ/internal/alien/resinspinner(src)
-	new /obj/item/organ/internal/alien/acid(src)
+	new /obj/item/organ/alien/plasmavessel(src)
+	new /obj/item/organ/alien/resinspinner(src)
+	new /obj/item/organ/alien/acid(src)
 
 /obj/item/storage/box/syndie_kit/construction_bundle/PopulateContents()
 	new /obj/item/stack/sheet/iron/fifty(src)

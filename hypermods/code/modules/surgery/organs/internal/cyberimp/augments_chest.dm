@@ -1,10 +1,10 @@
-/obj/item/organ/internal/cyberimp/chest/nutriment/plus/syndicate
+/obj/item/organ/cyberimp/chest/nutriment/plus/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/chest/reviver/syndicate
+/obj/item/organ/cyberimp/chest/reviver/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/chest/reviver/fivemincap/heal() // five minute cap.
+/obj/item/organ/cyberimp/chest/reviver/fivemincap/heal() // five minute cap.
 	if(COOLDOWN_FINISHED(src, defib_cooldown))
 		revive_dead()
 
@@ -27,10 +27,10 @@
 	if(revive_cost > 3000) // Make sure this doesn't go over 5 minutes. The revive_dead proc adds 10 minutes, so this is super nice to have here.
 		revive_cost = 3000
 
-/obj/item/organ/internal/cyberimp/chest/reviver/fivemincap/syndicate
+/obj/item/organ/cyberimp/chest/reviver/fivemincap/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/chest/reviver/tenmincap/heal() // ten minute cap.
+/obj/item/organ/cyberimp/chest/reviver/tenmincap/heal() // ten minute cap.
 	if(COOLDOWN_FINISHED(src, defib_cooldown))
 		revive_dead()
 
@@ -53,13 +53,13 @@
 	if(revive_cost > 6000) // Make sure this doesn't go over 10 minutes. The revive_dead proc adds 10 minutes, so this is super nice to have here.
 		revive_cost = 6000
 
-/obj/item/organ/internal/cyberimp/chest/reviver/tenmincap/syndicate
+/obj/item/organ/cyberimp/chest/reviver/tenmincap/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/chest/thrusters/syndicate
+/obj/item/organ/cyberimp/chest/thrusters/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
-/obj/item/organ/internal/cyberimp/chest/regenerativebetter
+/obj/item/organ/cyberimp/chest/regenerativebetter
 	name = "regenerative implant"
 	desc = "A surgical implant that when inserted into the body will slowly repair the host. Allowing for very slow recovery of all forms of damage."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
@@ -69,7 +69,7 @@
 	slot = ORGAN_SLOT_HEART_AID
 	var/healing = FALSE
 
-/obj/item/organ/internal/cyberimp/chest/regenerativebetter/on_life(seconds_per_tick, times_fired)
+/obj/item/organ/cyberimp/chest/regenerativebetter/on_life(seconds_per_tick, times_fired)
 	if(healing)
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 	else
@@ -77,7 +77,7 @@
 		to_chat(owner, span_notice("Your regenerative implant was integrated successfully."))
 	return
 
-/obj/item/organ/internal/cyberimp/chest/regenerativebetter/proc/heal()
+/obj/item/organ/cyberimp/chest/regenerativebetter/proc/heal()
 	if(owner.getOxyLoss())
 		owner.adjustOxyLoss(-2.5)
 	if(owner.getBruteLoss())
@@ -97,11 +97,11 @@
 	owner.adjustOrganLoss(ORGAN_SLOT_TONGUE, -0.5)
 	owner.adjustOrganLoss(ORGAN_SLOT_APPENDIX, -0.5)
 
-/obj/item/organ/internal/cyberimp/chest/regenerativebetter/syndicate
+/obj/item/organ/cyberimp/chest/regenerativebetter/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 
-/obj/item/organ/internal/cyberimp/chest/regenerative
+/obj/item/organ/cyberimp/chest/regenerative
 	name = "regenerative implant"
 	desc = "A surgical implant that when inserted into the body will slowly repair the host. Allowing for very slow recovery of all forms of damage."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
@@ -111,7 +111,7 @@
 	slot = ORGAN_SLOT_HEART_AID
 	var/healing = FALSE
 
-/obj/item/organ/internal/cyberimp/chest/regenerative/on_life(seconds_per_tick, times_fired)
+/obj/item/organ/cyberimp/chest/regenerative/on_life(seconds_per_tick, times_fired)
 	if(healing)
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 	else
@@ -119,7 +119,7 @@
 		to_chat(owner, span_notice("Your regenerative implant was integrated successfully."))
 	return
 
-/obj/item/organ/internal/cyberimp/chest/regenerative/proc/heal()
+/obj/item/organ/cyberimp/chest/regenerative/proc/heal()
 	if(owner.getOxyLoss())
 		owner.adjustOxyLoss(-1)
 	if(owner.getBruteLoss())
@@ -139,11 +139,11 @@
 	owner.adjustOrganLoss(ORGAN_SLOT_TONGUE, -0.25)
 	owner.adjustOrganLoss(ORGAN_SLOT_APPENDIX, -0.25)
 
-/obj/item/organ/internal/cyberimp/chest/regenerative/syndicate
+/obj/item/organ/cyberimp/chest/regenerative/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 
-/obj/item/organ/internal/cyberimp/chest/jellypersonregen
+/obj/item/organ/cyberimp/chest/jellypersonregen
 	name = "gelatine sythesis implant"
 	desc = "A surgical implant that when inserted into the body will slowly repair the host. Specifically tailored to jellypeople."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
@@ -152,12 +152,12 @@
 	implant_color = "#AD5000"
 	slot = ORGAN_SLOT_HEART_AID
 
-/obj/item/organ/internal/cyberimp/chest/jellypersonregen/on_life(seconds_per_tick, times_fired)
+/obj/item/organ/cyberimp/chest/jellypersonregen/on_life(seconds_per_tick, times_fired)
 	if(isjellyperson(owner))
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 	return
 
-/obj/item/organ/internal/cyberimp/chest/jellypersonregen/proc/heal()
+/obj/item/organ/cyberimp/chest/jellypersonregen/proc/heal()
 	if(owner.getOxyLoss())
 		owner.adjustOxyLoss(-3)
 	if(owner.getBruteLoss())
@@ -180,11 +180,11 @@
 	owner.adjustOrganLoss(ORGAN_SLOT_TONGUE, -1)
 	owner.adjustOrganLoss(ORGAN_SLOT_APPENDIX, -1)
 
-/obj/item/organ/internal/cyberimp/chest/jellypersonregen/syndicate
+/obj/item/organ/cyberimp/chest/jellypersonregen/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 
-/obj/item/organ/internal/cyberimp/chest/spinalspeed
+/obj/item/organ/cyberimp/chest/spinalspeed
 	name = "neural overclocker implant"
 	desc = "Stimulates your central nervous system in order to enable you to perform muscle movements faster. Careful not to overuse it."
 	slot = ORGAN_SLOT_SPINAL_AUG
@@ -205,18 +205,18 @@
 	COOLDOWN_DECLARE(startsoundcooldown)
 	COOLDOWN_DECLARE(endsoundcooldown)
 
-/obj/item/organ/internal/cyberimp/chest/spinalspeed/Insert(mob/living/carbon/M, special = 0)
+/obj/item/organ/cyberimp/chest/spinalspeed/Insert(mob/living/carbon/M, special = 0)
 	. = ..()
 
-/obj/item/organ/internal/cyberimp/chest/spinalspeed/Remove(mob/living/carbon/M, special = 0)
+/obj/item/organ/cyberimp/chest/spinalspeed/Remove(mob/living/carbon/M, special = 0)
 	if(on)
 		toggle(silent = TRUE)
 	..()
 
-/obj/item/organ/internal/cyberimp/chest/spinalspeed/ui_action_click()
+/obj/item/organ/cyberimp/chest/spinalspeed/ui_action_click()
 	toggle()
 
-/obj/item/organ/internal/cyberimp/chest/spinalspeed/proc/toggle(silent = FALSE)
+/obj/item/organ/cyberimp/chest/spinalspeed/proc/toggle(silent = FALSE)
 	if(!on)
 		if(COOLDOWN_FINISHED(src, startsoundcooldown))
 			playsound(owner, 'hypermods/sound/effects/spinal_implant_on.ogg', 60)
@@ -242,7 +242,7 @@
 		to_chat(owner, span_notice("You turn your spinal implant [on? "on" : "off"]."))
 	update_appearance(UPDATE_ICON)
 
-/obj/item/organ/internal/cyberimp/chest/spinalspeed/update_icon_state()
+/obj/item/organ/cyberimp/chest/spinalspeed/update_icon_state()
 	. = ..()
 	if(on)
 		icon_state = "imp_spinal-on"
@@ -251,7 +251,7 @@
 	for(var/datum/action/A as anything in actions)
 		A.build_all_button_icons()
 
-/obj/item/organ/internal/cyberimp/chest/spinalspeed/proc/move_react()//afterimage
+/obj/item/organ/cyberimp/chest/spinalspeed/proc/move_react()//afterimage
 	var/turf/currentloc = get_turf(owner)
 	var/obj/effect/temp_visual/decoy/fading/F = new(currentloc, owner)
 	if(!hsv)
@@ -260,7 +260,7 @@
 	//last_step = world.time
 	F.color = hsv2rgb(hsv)	//gotta add the flair
 
-/obj/item/organ/internal/cyberimp/chest/spinalspeed/on_life()
+/obj/item/organ/cyberimp/chest/spinalspeed/on_life()
 	if(!syndicate_implant)//the toy doesn't have a drawback
 		return
 
@@ -294,7 +294,7 @@
 		to_chat(owner, "Your brains feels normal again.")
 		hasexerted = FALSE
 
-/obj/item/organ/internal/cyberimp/chest/spinalspeed/emp_act(severity)
+/obj/item/organ/cyberimp/chest/spinalspeed/emp_act(severity)
 	. = ..()
 	if(!syndicate_implant)//the toy has a different emp act
 		owner.adjust_dizzy(severity SECONDS)
@@ -309,7 +309,7 @@
 	owner.adjustFireLoss(severity)
 	to_chat(owner, span_warning("Your spinal implant malfunctions and you feel it scramble your brain!"))
 
-/obj/item/organ/internal/cyberimp/chest/spinalspeed/toy
+/obj/item/organ/cyberimp/chest/spinalspeed/toy
 	name = "glowy after-image trail implant"
 	desc = "Donk Co's first forray into the world of entertainment implants. Projects a series of after-images as you move, perfect for starting a dance party all on your own."
 	syndicate_implant = FALSE

@@ -35,8 +35,8 @@
 		to_chat(user, span_notice("[src] currently has no implant stored."))
 		return
 	for(var/obj/item/organ/toimplant in storedorgan)
-		if(istype(toimplant, /obj/item/organ/internal/cyberimp/arm)) //these cunts have two limbs to select from, we'll want to check both because players are too lazy to do that themselves
-			var/obj/item/organ/internal/cyberimp/arm/bastard = toimplant
+		if(istype(toimplant, /obj/item/organ/cyberimp/arm)) //these cunts have two limbs to select from, we'll want to check both because players are too lazy to do that themselves
+			var/obj/item/organ/cyberimp/arm/bastard = toimplant
 			if(user.get_organ_slot(bastard.slot)) //FUCK IT WE BALL
 				var/original_zone = toimplant.zone
 				if(bastard.zone == BODY_ZONE_R_ARM) // i do not like them sam i am  i do not like if else and ham
@@ -59,32 +59,32 @@
 		desc = "[initial(desc)] Looks like it's been used up."
 
 /obj/item/multisurgeon/airshoes //for traitors
-	starting_organ = list(/obj/item/organ/internal/cyberimp/leg/airshoes/syndicate, /obj/item/organ/internal/cyberimp/leg/airshoes/syndicate/l)
+	starting_organ = list(/obj/item/organ/cyberimp/leg/airshoes/syndicate, /obj/item/organ/cyberimp/leg/airshoes/syndicate/l)
 
 /obj/item/multisurgeon/noslipall //for traitors
-	starting_organ = list(/obj/item/organ/internal/cyberimp/leg/noslip/syndicate, /obj/item/organ/internal/cyberimp/leg/noslip/syndicate/l)
+	starting_organ = list(/obj/item/organ/cyberimp/leg/noslip/syndicate, /obj/item/organ/cyberimp/leg/noslip/syndicate/l)
 
 /obj/item/multisurgeon/jumpboots //for shaft miner traitors?
-	starting_organ = list(/obj/item/organ/internal/cyberimp/leg/jumpboots/syndicate, /obj/item/organ/internal/cyberimp/leg/jumpboots/syndicate/l)
+	starting_organ = list(/obj/item/organ/cyberimp/leg/jumpboots/syndicate, /obj/item/organ/cyberimp/leg/jumpboots/syndicate/l)
 
 /obj/item/multisurgeon/magboots //for ce and traitors
 	desc = "A single-use multisurgeon that contains magboot implants for each leg."
-	starting_organ = list(/obj/item/organ/internal/cyberimp/leg/magboot/syndicate, /obj/item/organ/internal/cyberimp/leg/magboot/syndicate/l)
+	starting_organ = list(/obj/item/organ/cyberimp/leg/magboot/syndicate, /obj/item/organ/cyberimp/leg/magboot/syndicate/l)
 
 /obj/item/multisurgeon/toolsets //for traitors
-	starting_organ = list(/obj/item/organ/internal/cyberimp/arm/surgery/syndicate, /obj/item/organ/internal/cyberimp/arm/toolset/syndicate/l)
+	starting_organ = list(/obj/item/organ/cyberimp/arm/surgery/syndicate, /obj/item/organ/cyberimp/arm/toolset/syndicate/l)
 
 /obj/item/multisurgeon/lifesupport //for traitors
-	starting_organ = list(/obj/item/organ/internal/cyberimp/mouth/breathing_tube/syndicate, /obj/item/organ/internal/cyberimp/chest/nutriment/plus/syndicate)
+	starting_organ = list(/obj/item/organ/cyberimp/mouth/breathing_tube/syndicate, /obj/item/organ/cyberimp/chest/nutriment/plus/syndicate)
 
 /obj/item/multisurgeon/syndicate/strongarm
-	starting_organ = list(/obj/item/organ/internal/cyberimp/arm/strongarm/syndicate, /obj/item/organ/internal/cyberimp/arm/strongarm/syndicate/l)
+	starting_organ = list(/obj/item/organ/cyberimp/arm/strongarm/syndicate, /obj/item/organ/cyberimp/arm/strongarm/syndicate/l)
 
 /obj/item/multisurgeon/syndicate/strongarm/single_use
 	uses = 1
 
 /obj/item/multisurgeon/syndicate/strongarm/buster
-	starting_organ = list(/obj/item/organ/internal/cyberimp/arm/strongarm/buster/syndicate, /obj/item/organ/internal/cyberimp/arm/strongarm/buster/syndicate/l)
+	starting_organ = list(/obj/item/organ/cyberimp/arm/strongarm/buster/syndicate, /obj/item/organ/cyberimp/arm/strongarm/buster/syndicate/l)
 
 /obj/item/multisurgeon/syndicate/strongarm/buster/single_use
 	uses = 1

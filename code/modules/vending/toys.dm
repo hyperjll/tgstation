@@ -32,7 +32,7 @@
 		/obj/item/storage/box/fakesyndiesuit = 4,
 		/obj/item/gun/ballistic/automatic/c20r/toy/unrestricted = 4,
 		/obj/item/gun/ballistic/automatic/l6_saw/toy/unrestricted = 4,
-		/obj/item/organ/internal/cyberimp/chest/spinalspeed/toy = 2,
+		/obj/item/organ/cyberimp/chest/spinalspeed/toy = 2,
 		/obj/item/melee/vxtvulhammer/toy = 2,
 	)
 	refill_canister = /obj/item/vending_refill/donksoft

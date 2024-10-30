@@ -73,25 +73,25 @@
 
 /obj/item/storage/box/randomcyberneticimplants/PopulateContents()
 	var/list/item_list = list(
-		/obj/item/organ/internal/cyberimp/arm/toolset,
-		/obj/item/organ/internal/cyberimp/eyes/hud/diagnostic,
-		/obj/item/organ/internal/cyberimp/chest/nutriment/plus,
-		/obj/item/organ/internal/cyberimp/chest/reviver,
-		/obj/item/organ/internal/cyberimp/arm/surgery,
-		/obj/item/organ/internal/eyes/robotic/shield,
-		/obj/item/organ/internal/eyes/robotic/xray,
-		/obj/item/organ/internal/eyes/robotic/glow,
-		/obj/item/organ/internal/cyberimp/leg/jumpboots,
-		/obj/item/organ/internal/cyberimp/chest/thrusters,
-		/obj/item/organ/internal/cyberimp/eyes/hud/diagnostic,
-		/obj/item/organ/internal/cyberimp/eyes/hud/security,
-		/obj/item/organ/internal/cyberimp/eyes/hud/medical,
-		/obj/item/organ/internal/cyberimp/brain/anti_stun,
-		/obj/item/organ/internal/cyberimp/brain/anti_drop,
-		/obj/item/organ/internal/cyberimp/mouth/breathing_tube,
-		/obj/item/organ/internal/cyberimp/leg/magboot,
-		/obj/item/organ/internal/cyberimp/chest/nutriment,
-		/obj/item/organ/internal/cyberimp/leg/galosh
+		/obj/item/organ/cyberimp/arm/toolset,
+		/obj/item/organ/cyberimp/eyes/hud/diagnostic,
+		/obj/item/organ/cyberimp/chest/nutriment/plus,
+		/obj/item/organ/cyberimp/chest/reviver,
+		/obj/item/organ/cyberimp/arm/surgery,
+		/obj/item/organ/eyes/robotic/shield,
+		/obj/item/organ/eyes/robotic/xray,
+		/obj/item/organ/eyes/robotic/glow,
+		/obj/item/organ/cyberimp/leg/jumpboots,
+		/obj/item/organ/cyberimp/chest/thrusters,
+		/obj/item/organ/cyberimp/eyes/hud/diagnostic,
+		/obj/item/organ/cyberimp/eyes/hud/security,
+		/obj/item/organ/cyberimp/eyes/hud/medical,
+		/obj/item/organ/cyberimp/brain/anti_stun,
+		/obj/item/organ/cyberimp/brain/anti_drop,
+		/obj/item/organ/cyberimp/mouth/breathing_tube,
+		/obj/item/organ/cyberimp/leg/magboot,
+		/obj/item/organ/cyberimp/chest/nutriment,
+		/obj/item/organ/cyberimp/leg/galosh
 	)
 
 	for(var/i in 1 to 2)

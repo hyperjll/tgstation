@@ -126,8 +126,8 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	)
 	contraband = list(
 		/obj/item/grenade/chem_grenade/large = 5,
-		/obj/item/organ/internal/cyberimp/chest/nutriment = 1,
-		/obj/item/organ/internal/cyberimp/mouth/breathing_tube = 1,
+		/obj/item/organ/cyberimp/chest/nutriment = 1,
+		/obj/item/organ/cyberimp/mouth/breathing_tube = 1,
 		/obj/item/implantcase/tracking = 2,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/medi_wardrobe
@@ -430,7 +430,7 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/table_clock = 1,
 		/obj/item/implanter = 1,
 		/obj/item/implantcase = 1,
-		/obj/item/organ/internal/cyberimp/chest/reviver = 1,
+		/obj/item/organ/cyberimp/chest/reviver = 1,
 	)
 	premium = list(
 		/obj/item/autopsy_scanner = 1,
