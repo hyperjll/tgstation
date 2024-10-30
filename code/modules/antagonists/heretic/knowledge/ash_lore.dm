@@ -147,7 +147,7 @@
 		/datum/heretic_knowledge/spell/eldritch_echoes,
 	)
 	required_atoms = list(
-		/obj/item/organ/internal/liver = 1,
+		/obj/item/organ/liver = 1,
 		/obj/item/melee/baton/security = 1,  // Technically means a cattleprod is valid
 		/obj/item/clothing/mask = 1,
 		/obj/item/flashlight/flare/candle = 4,
