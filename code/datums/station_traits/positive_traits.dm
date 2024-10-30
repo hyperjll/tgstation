@@ -154,6 +154,7 @@
 	show_in_report = TRUE
 	report_message = "Due to proximity to our supply station, the cargo shuttle will have a quicker flight time to your cargo department."
 	blacklist = list(/datum/station_trait/slow_shuttle)
+	trait_to_give = STATION_TRAIT_QUICK_SHUTTLE
 
 /datum/station_trait/quick_shuttle/on_round_start()
 	. = ..()

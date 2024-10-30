@@ -1,0 +1,8 @@
+/obj/item/storage/box/syndie_kit/premium/PopulateContents()
+	new /obj/item/clothing/mask/gas/syndicate(src)
+	new /obj/item/tank/internals/emergency_oxygen/engi(src)
+	new /obj/item/reagent_containers/hypospray/medipen/atropine(src)
+	new /obj/item/storage/medkit/emergency(src)
+	new /obj/item/clothing/glasses/night(src)
+	new /obj/item/food/syndicake(src)
+	new /obj/item/reagent_containers/cup/soda_cans/robust_nukie(src)

@@ -18,7 +18,7 @@
 	var/list/hit_sounds = list('sound/items/weapons/genhit1.ogg', 'sound/items/weapons/genhit2.ogg', 'sound/items/weapons/genhit3.ogg', 'sound/items/weapons/punch1.ogg', 'sound/items/weapons/punch2.ogg', 'sound/items/weapons/punch3.ogg', 'sound/items/weapons/punch4.ogg')
 	var/list/moving = list()
 
-/obj/item/mdrive/afterattack(atom/target, mob/living/carbon/user)
+/obj/item/mdrive/ranged_interact_with_atom(atom/target, mob/living/carbon/user)
 	var/turf/T = get_turf(target)
 	var/next_dash = 0
 	var/list/testpath = list()

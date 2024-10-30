@@ -23,6 +23,21 @@
 		force_event(/datum/round_event_control/stray_cargo, "a strange singal")
 		return source //For log icon
 
+/datum/uplink_item/special/premium_syndibox
+	name = "Premium Syndicate Survival Kit"
+	desc = "One of our survival boxes, often provided to our Nuclear Operatives. In addition to it's usual contents, we've included the following: \
+			An emergency first aid kit, night vision goggles, a freshly-baked syndicake, and one our popular 'Robust' Nukie Cola cans. \
+			Doesn't come with tools."
+	item = /obj/item/storage/box/syndie_kit/premium
+	cost = 1
+	surplus = 0
+
+/datum/uplink_item/special/premium_syndibox/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = 1
+
 /datum/uplink_item/special/extratc
 	name = "Extra Telecrystal"
 	desc = "One additional telecrystal, just for you and any other agents we've sent. Thank our economic advancements and pirates for this one."
@@ -64,6 +79,21 @@
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
+/datum/uplink_item/special/eliteluxurycap
+	name = "Elite Luxury Survival Capsule"
+	desc = "A single capsule containing an entire survival suite for you to enjoy in normally hazardous environments such as space or lavaland. \
+			Comes with a bar, a miniature medical suite, various vending machines, a restroom with a sink, a teleporter hub, and more! \
+			Requires Syndicate access to enter and exit, you'll need an Agent Identification Card for that."
+	item = /obj/item/survivalcapsule/syndicate
+	cost = 8
+	surplus = 0
+
+/datum/uplink_item/special/eliteluxurycap/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_QUICK_SHUTTLE))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = 1
+
 // Neutral Station Traits
 
 /datum/uplink_item/special/fakeian
@@ -77,6 +107,22 @@
 /datum/uplink_item/special/fakeian/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_IAN_ADVENTURE))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = 1
+
+/datum/uplink_item/special/centcom_official
+	name = "CentCom Official Disguise"
+	desc = "In our many attempts to infiltrate Nanotrasen's Central Command, we've managed to confiscate much of their equipment. \
+			If you're feeling lucky, you may be able to pass as one of their officers. \
+			Contains an energy gun, a centcom outfit, an agent id card, and various other things centcom officials carry. \
+			Comes with two plastic C4 just in case, and one of our fake mindshield implants. No encryption key included."
+	cost = 30
+	progression_minimum = 110 MINUTES
+	item = /obj/item/storage/box/syndie_kit/centcom_costume_better
+
+/datum/uplink_item/special/centcom_official/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_ANNOUNCEMENT_INTERN) || HAS_TRAIT(SSstation, STATION_TRAIT_ANNOUNCEMENT_SYSTEM))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -115,7 +161,7 @@
 	desc = "An specialized syndicate arm-mounted taser, for quick subjugation of most personnel. Slowly recharges using bio-electricity."
 	item = /obj/item/autosurgeon/syndicate/taser/hidden/single_use
 	progression_minimum = 30 MINUTES
-	cost = 15
+	cost = 18
 
 /datum/uplink_item/special/synditaser/New()
 	..()
