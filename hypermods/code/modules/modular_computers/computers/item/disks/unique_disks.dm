@@ -3,18 +3,22 @@
 	var/dev_range = -1
 	var/hev_range = 0
 	var/weak_range = 7
+	var/timer = 20 SECONDS
 
-/obj/item/computer_disk/black_market/trap/interact_with_atom(atom/target, mob/user, proximity_flag, click_parameters)
-	if(istype(target, /obj/item/modular_computer) || istype(target, /obj/machinery/modular_computer))
-		addtimer(CALLBACK(src, PROC_REF(trap_explosion)), 60 SECONDS)
-
-/obj/item/computer_disk/black_market/trap/proc/trap_explosion()
+/obj/item/computer_disk/black_market/trap/remove_file(datum/computer_file/file)
+	if(!(file in stored_files))
+		return FALSE
+	stored_files.Remove(file)
+	used_capacity -= file.size
+	qdel(file)
 	explosion(src, devastation_range = dev_range, heavy_impact_range = hev_range, light_impact_range = weak_range, explosion_cause = src)
+	return TRUE
 
 /obj/item/computer_disk/black_market/trap/highend
 	dev_range = -1
 	hev_range = 2
 	weak_range = 9
+	timer = 10 SECONDS
 
 
 /obj/item/computer_disk/syndicate/observe

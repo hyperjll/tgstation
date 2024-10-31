@@ -79,8 +79,8 @@
 
 /datum/uplink_item/deception/trap_disks
 	name = "Box of Syndicate Trapped Disks"
-	desc = "Five bombs disguised as data disks that triggers a minute after inserting into any modular computers. \
-			Can come with some useful programs, if you're fast enough to download them and then throw the disk away."
+	desc = "Five bombs disguised as data disks that explodes should it's contents be tampered with. \
+			We highly advise you don't try and extract the programs yourself."
 	item = /obj/item/storage/box/syndie_kit/trappeddisks
 	progression_minimum = 15 MINUTES
 	cost = 7

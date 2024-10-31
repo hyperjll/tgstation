@@ -344,8 +344,8 @@
 
 /datum/uplink_item/special/pdadiskdeluxe
 	name = "Deluxe Trapped Disk"
-	desc = "A single high-end bomb disguised as a data disk that triggers a minute after inserting into any modular computers. \
-			Can come with some useful programs, if you're fast enough to download them and then throw the disk away."
+	desc = "A single high-end bomb disguised as a data disk that explodes should it's contents be tampered with. \
+			We highly advise you don't try and extract the programs yourself."
 	item = /obj/item/computer_disk/black_market/trap/highend
 	cost = 4
 	surplus = 0
