@@ -10,7 +10,7 @@
 		<b>Important Notes:</b> Agents injected with this device are shown to be shielded from brainwashing on security HUDs.<BR> \
 		<HR> \
 		<b>Implant Details:</b><BR> \
-		<b>Function:</b> Contains a small device which mimmick's nanotrasen's mindshield implant, but does nothing else.<BR> \
+		<b>Function:</b> Contains a small device which mimics nanotrasen's mindshield implant, but does nothing else.<BR> \
 		<b>Special Features:</b> Will trick security HUDs to reveal you to be mindshielded.<BR> \
 		<b>Integrity:</b> Implant will last so long as the device isn't destroyed or removed via surgery or biological attacks."
 

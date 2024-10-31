@@ -249,7 +249,7 @@
 
 /datum/uplink_item/mod_modules/stimpackmod
 	name = "MODsuit Stimpack Booster Module"
-	desc = "A MODsuit module both developed and adopted widely by the Syndicate to mimmic the Spider Clan's adrenaline booster module. \
+	desc = "A MODsuit module both developed and adopted widely by the Syndicate to mimic the Spider Clan's adrenaline booster module. \
 			Contains a dosage of stimulants that are injected into the wearer upon their request, and can be 'restocked' should the module be provided a supply of Ephedrine."
 	item = /obj/item/mod/module/adrenaline_boost/syndicate
 	cost = 3

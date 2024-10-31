@@ -57,7 +57,7 @@
 
 /datum/uplink_item/vendors/donksofttoyvendor
 	name = "Donksoft Toy Vendor"
-	desc = "One of Donk Co.'s popular toy vending machines, contains an assortment of fun toys that mimmick real contraband. \
+	desc = "One of Donk Co.'s popular toy vending machines, contains an assortment of fun toys that mimic real contraband. \
 			Sponsored by Donk Co."
 	cant_discount = TRUE
 	item = /obj/machinery/vending/donksofttoyvendor
@@ -80,7 +80,7 @@
 
 /datum/uplink_item/vendors/toyliberation
 	name = "Donksoft Liberation Station"
-	desc = "One of Donk Co.'s more nefarious toy vending machines, contains an assortment of fun toys that mimmick real contraband. \
+	desc = "One of Donk Co.'s more nefarious toy vending machines, contains an assortment of fun toys that mimic real contraband. \
 			Most guns come loaded with riot darts, and boxes of riot darts are available for purchase. Sponsored by Donk Co."
 	progression_minimum = 10 MINUTES
 	cant_discount = TRUE

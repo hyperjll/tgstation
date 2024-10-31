@@ -135,7 +135,7 @@
 /datum/uplink_item/ammo/pistol10mm/bleedout
 	name = "10mm Bleedout Magazine"
 	desc = "An additional 8-round 10mm magazine; compatible with the Viper and Ansem Pistol. \
-			Loaded with bullets which deliver a heparin payload which results in severe bloodloss in their victims.."
+			Loaded with bullets which deliver a heparin payload which results in severe bloodloss in their victims."
 	item = /obj/item/ammo_box/magazine/m10mm/bleedout
 
 /datum/uplink_item/ammo/pistol10mm/rad
