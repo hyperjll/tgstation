@@ -12,6 +12,7 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 	objectives = list(
 		/datum/traitor_objective/sabotage_machinery/trap = 1,
 		/datum/traitor_objective/sabotage_machinery/destroy = 1,
+		/datum/traitor_objective/sabotage_machinery/trap/rare = 1,
 	)
 
 /datum/traitor_objective/sabotage_machinery
@@ -91,6 +92,14 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 		JOB_QUARTERMASTER = /obj/machinery/rnd/production/techfab/department/cargo,
 		JOB_RESEARCH_DIRECTOR = /obj/machinery/rnd/production/protolathe/department/science,
 		JOB_SHAFT_MINER = /obj/machinery/mineral/ore_redemption,
+		JOB_MEDICAL_DOCTOR = /obj/machinery/computer/pandemic,
+		JOB_CHEMIST = /obj/machinery/chem_dispenser,
+		JOB_BOTANIST = /obj/machinery/seed_extractor,
+		JOB_SECURITY_OFFICER = /obj/machinery/computer/records/security,
+		JOB_ROBOTICIST = /obj/machinery/mecha_part_fabricator,
+		JOB_CYBORG = /obj/machinery/recharge_station,
+		JOB_BITRUNNER = /obj/machinery/netpod,
+		JOB_BARTENDER = /obj/machinery/chem_dispenser/drinks,
 	)
 
 	/// Bonus reward to grant if you booby trap successfully
@@ -236,4 +245,28 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 	return add_sabotage_machine(src, type)
 
 /obj/machinery/mineral/ore_redemption/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/pandemic/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/chem_dispenser/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/seed_extractor/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/records/security/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/mecha_part_fabricator/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/recharge_station/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/netpod/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/chem_dispenser/drinks/add_as_sabotage_target()
 	return add_sabotage_machine(src, type)

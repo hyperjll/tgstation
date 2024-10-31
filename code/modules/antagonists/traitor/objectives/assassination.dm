@@ -4,12 +4,12 @@
 		list(
 			/datum/traitor_objective/target_player/assassinate/calling_card = 1,
 			/datum/traitor_objective/target_player/assassinate/calling_card/heads_of_staff = 1,
-		) = 1,
+		) = 2,
 		list(
 			list(
 				/datum/traitor_objective/target_player/kidnapping/common = 20,
 				/datum/traitor_objective/target_player/kidnapping/common/assistant = 1,
-			) = 4,
+			) = 3,
 			/datum/traitor_objective/target_player/kidnapping/uncommon = 3,
 			/datum/traitor_objective/target_player/kidnapping/rare = 2,
 			/datum/traitor_objective/target_player/kidnapping/captain = 1
