@@ -175,7 +175,7 @@
 
 /datum/uplink_item/vendors/hotdog
 	name = "Hotdoggo-Vend"
-	desc = "A popular vending machine that's since gone out-of-date, it's prizes will likely reflect this. \
+	desc = "A popular vending machine that's since gone out-of-date, it's prices will likely reflect this. \
 			Contains a wide variety of hotdogs, sausages and sauces at your conveinence. \
 			Hotdogs from this vendor are said to have been made with love."
 	cant_discount = TRUE
