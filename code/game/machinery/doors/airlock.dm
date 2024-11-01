@@ -1074,11 +1074,11 @@
 			return
 		if(obj_flags & EMAGGED)
 			return
-		if(charge && !detonated)
+		if(charge && panel_open)
 			to_chat(user, span_warning("There's already a charge hooked up to this door!"))
 			return
-		if(detonated)
-			to_chat(user, span_warning("The maintenance panel is destroyed!"))
+		if(!has_access_panel)
+			to_chat(user, span_warning("The maintenance panel is gone!"))
 			return
 		to_chat(user, span_warning("You apply [C]. Next time someone opens the door, it will explode."))
 		panel_open = FALSE
@@ -1262,7 +1262,7 @@
 	if(!density)
 		return TRUE
 
-	if(charge && !detonated)
+	if(charge && has_access_panel)
 		return blow_charge()
 
 	// Since we aren't physically held shut, do extra checks to see if we should open.
@@ -1511,7 +1511,7 @@
 	visible_message(span_warning("[src]'s panel is blown off in a spray of deadly shrapnel!"))
 	charge.forceMove(drop_location())
 	charge.ex_act(EXPLODE_DEVASTATE)
-	detonated = TRUE
+	//has_access_panel = FALSE // probably don't need this
 	charge = null
 	for(var/mob/living/carbon/human/H in orange(2,src))
 		H.Unconscious(160)
