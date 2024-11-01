@@ -210,7 +210,7 @@
 	name = ".45mm Pacification Handgun Magazine"
 	desc = "A single 8-round Pacification .45mm magazine, compatible with the M1911 pistol and the Cobra. \
 			These bullets infuse Pax within the victim, inhibiting violence within them for atleast 10 seconds per bullet. \
-			Allows for the one-sided fights."
+			Allows for some one-sided fights."
 	item = /obj/item/ammo_box/magazine/m45/pacify
 	cost = 2
 

@@ -415,7 +415,7 @@
 	name = "Uranium Shells Box"
 	desc = "A box containing 14 uranium shells for a shotgun, they all have high damage and armor penetration. Pellets penetrate targets and continue flying."
 	item = /obj/item/storage/box/uraniumshells/syndi
-	cost = 3
+	cost = 4
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
 	progression_minimum = 20 MINUTES
@@ -434,7 +434,7 @@
 	name = "Bioterror Shells Box"
 	desc = "A box containing 14 bioterror dart shells for a shotgun, we've filled them with 6 units of five different toxins for destroying pesky personnel."
 	item = /obj/item/storage/box/bioterrorshells/syndi
-	cost = 3
+	cost = 6
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
@@ -470,7 +470,7 @@
 	name = "RIP Shells Box"
 	desc = "A box containing 14 rip shells for a shotgun, fires two slugs at once, dealing twice the damage. They're super-ineffective against any armor, aim for the legs."
 	item = /obj/item/storage/box/ripshells/syndi
-	cost = 3
+	cost = 4
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	cant_discount = TRUE
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
