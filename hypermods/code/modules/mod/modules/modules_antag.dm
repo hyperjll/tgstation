@@ -174,10 +174,10 @@
 	incompatible_modules = list(/obj/item/mod/module/hacker)
 	required_slots = list(ITEM_SLOT_GLOVES)
 
-/obj/item/mod/module/hacker/electricpalm/on_suit_activation()
+/obj/item/mod/module/hacker/electricpalm/on_part_activation()
 	RegisterSignal(mod.wearer, COMSIG_LIVING_UNARMED_ATTACK, PROC_REF(hack))
 
-/obj/item/mod/module/hacker/electricpalm/on_suit_deactivation(deleting = FALSE)
+/obj/item/mod/module/hacker/electricpalm/on_part_deactivation(deleting = FALSE)
 	UnregisterSignal(mod.wearer, COMSIG_LIVING_UNARMED_ATTACK)
 
 /obj/item/mod/module/hacker/electricpalm/hack(mob/living/carbon/human/source, atom/target, proximity, modifiers)
@@ -204,7 +204,7 @@
 	cooldown_time = 5 SECONDS
 	required_slots = list(ITEM_SLOT_GLOVES)
 
-/obj/item/mod/module/energy_net/syndicate/on_suit_deactivation(deleting)
+/obj/item/mod/module/energy_net/syndicate/on_part_deactivation(deleting)
 	for(var/obj/structure/energy_net/net as anything in energy_nets)
 		net.atom_destruction(ENERGY)
 
