@@ -156,14 +156,14 @@
 
 /// Service cyborgs
 
-/obj/item/borg/upgrade/botanytools
-	name = "service cyborg botany upgrade"
+/obj/item/borg/upgrade/advbotanytools
+	name = "advanced cyborg botany upgrade"
 	desc = "An upgrade for service cyborgs which grants them the ability to tend to plants."
 	icon_state = "module_service"
 	require_model = TRUE
 	model_type = list(/obj/item/robot_model/service)
 	model_flags = BORG_MODEL_SERVICE
-	items_to_add = list(/obj/item/plant_analyzer, /obj/item/shovel/spade, /obj/item/cultivator, /obj/item/hatchet, /obj/item/scythe, /obj/item/gun/energy/floragun/cyborg)
+	items_to_add = list(/obj/item/scythe, /obj/item/gun/energy/floragun/cyborg, /obj/item/geneshears)
 
 /obj/item/borg/upgrade/rapidlightingdevice
 	name = "cyborg rapid lighting device upgrade"

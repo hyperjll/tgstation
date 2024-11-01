@@ -9,7 +9,7 @@
 	)
 	construction_time = 5 SECONDS
 	category = list(
-		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_SERVICE
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_ALL
 	)
 
 /datum/design/borg_upgrade_arcd
@@ -25,11 +25,11 @@
 	)
 	construction_time = 15 SECONDS
 	category = list(
-		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_SERVICE
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_ENGINEERING
 	)
 
 /datum/design/borg_upgrade_advancedmats
-	name = "Cyborg Advanced Materials"
+	name = "Advanced Materials"
 	id = "borg_upgrade_advancedmats"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/advancedmats
@@ -40,11 +40,11 @@
 	)
 	construction_time = 10 SECONDS
 	category = list(
-		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_SERVICE
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_ENGINEERING
 	)
 
 /datum/design/borg_upgrade_medreagentgun
-	name = "Cyborg Reagent Gun"
+	name = "Reagent Gun"
 	id = "borg_upgrade_medreagentgun"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/medreagentgun
@@ -55,11 +55,11 @@
 	)
 	construction_time = 10 SECONDS
 	category = list(
-		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_SERVICE
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_MEDICAL
 	)
 
 /datum/design/borg_upgrade_medimplanter
-	name = "Medical Cyborg Implanter"
+	name = "Implanter"
 	id = "borg_upgrade_medimplanter"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/medimplanter
@@ -69,11 +69,11 @@
 	)
 	construction_time = 4 SECONDS
 	category = list(
-		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_SERVICE
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_MEDICAL
 	)
 
 /datum/design/borg_upgrade_borghypoexotic
-	name = "Medical Cyborg Exotic Hypospray"
+	name = "Exotic Hypospray"
 	id = "borg_upgrade_borghypoexotic"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/borghypoexotic
@@ -84,14 +84,14 @@
 	)
 	construction_time = 15 SECONDS
 	category = list(
-		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_SERVICE
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_MEDICAL
 	)
 
-/datum/design/borg_upgrade_botanytools
-	name = "Service Cyborg Botany Upgrade"
-	id = "borg_upgrade_botanytools"
+/datum/design/borg_adv_upgrade_botanytools
+	name = "Advanced Botany Tools"
+	id = "borg_upgrade_advbotanytools"
 	build_type = MECHFAB
-	build_path = /obj/item/borg/upgrade/botanytools
+	build_path = /obj/item/borg/upgrade/advbotanytools
 	materials = list(
 		/datum/material/iron = SHEET_MATERIAL_AMOUNT*7.5,
 		/datum/material/glass = SHEET_MATERIAL_AMOUNT*1.2,
@@ -103,7 +103,7 @@
 	)
 
 /datum/design/borg_upgrade_rapidlightingdevice
-	name = "Cyborg Rapid Lighting Device Upgrade"
+	name = "Rapid Lighting Device"
 	id = "borg_upgrade_rapidlightingdevice"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/rapidlightingdevice
@@ -129,7 +129,7 @@
 	)
 	construction_time = 20 SECONDS
 	category = list(
-		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_SERVICE
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_JANITOR
 	)
 
 /**
@@ -144,6 +144,6 @@
 	)
 	construction_time = 4 SECONDS
 	category = list(
-		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_SERVICE
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_
 	)
 **/

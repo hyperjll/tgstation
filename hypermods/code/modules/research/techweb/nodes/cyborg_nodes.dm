@@ -37,7 +37,7 @@
 	description = "Finally, some good cyborg upgrades."
 	prereq_ids = list(TECHWEB_NODE_BORG_SERVICES)
 	design_ids = list(
-		"borg_upgrade_botanytools",
+		"borg_upgrade_advbotanytools",
 		"borg_upgrade_rapidlightingdevice",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
