@@ -2,6 +2,11 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
+"b" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating,
+/area/shuttle/arrival)
 "e" = (
 /obj/machinery/power/shuttle_engine/propulsion/burst/left,
 /turf/open/floor/plating,
@@ -231,6 +236,7 @@
 /obj/docking_port/mobile/arrivals{
 	dir = 2
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating,
 /area/shuttle/arrival)
 "M" = (
@@ -271,6 +277,7 @@
 "Z" = (
 /obj/effect/turf_decal/stripes/full,
 /obj/machinery/door/airlock/external,
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/shuttle/arrival)
 
@@ -280,15 +287,15 @@ a
 a
 a
 E
-P
-P
+b
+b
 E
-P
+b
 Z
-P
+b
 E
-P
-P
+b
+b
 E
 a
 a
@@ -316,7 +323,7 @@ E
 a
 a
 a
-P
+b
 W
 x
 x
@@ -351,8 +358,8 @@ w
 e
 "}
 (5,1,1) = {"
-P
-P
+b
+b
 q
 s
 x
@@ -389,8 +396,8 @@ w
 A
 "}
 (7,1,1) = {"
-P
-P
+b
+b
 G
 l
 x
@@ -430,7 +437,7 @@ v
 a
 a
 a
-P
+b
 W
 x
 x
@@ -473,9 +480,9 @@ E
 E
 C
 E
-P
-P
-P
+b
+b
+b
 E
 C
 E

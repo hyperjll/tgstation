@@ -23,10 +23,6 @@
 /obj/structure/sign/nanotrasen,
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/arrival)
-"af" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
-/area/shuttle/arrival)
 "ag" = (
 /turf/template_noop,
 /area/template_noop)
@@ -368,7 +364,7 @@ aN
 ae
 "}
 (6,1,1) = {"
-af
+lA
 ak
 rV
 ay
@@ -377,7 +373,7 @@ aN
 lA
 "}
 (7,1,1) = {"
-af
+lA
 ak
 rV
 az
@@ -386,7 +382,7 @@ aN
 lA
 "}
 (8,1,1) = {"
-af
+lA
 ak
 rV
 ab
@@ -410,7 +406,7 @@ Lk
 aP
 aU
 aW
-af
+lA
 "}
 (11,1,1) = {"
 ab
