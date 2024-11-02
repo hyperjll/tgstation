@@ -13,9 +13,6 @@
 		/obj/item/mod/module/hat_stabilizer/syndicate,
 		/obj/item/mod/module/quick_cuff,
 	)
-	default_pins = list(
-		/obj/item/mod/module/armor_booster,
-	)
 
 /obj/item/mod/control/pre_equipped/juggernaut
 	theme = /datum/mod_theme/juggernaut
