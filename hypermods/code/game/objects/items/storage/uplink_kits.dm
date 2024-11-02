@@ -1100,3 +1100,9 @@
 
 /obj/item/storage/box/syndie_kit/imp_deniability/deluxe/PopulateContents()
 	new /obj/item/implanter/tactical_deniability/deluxe(src)
+
+/obj/item/storage/box/syndie_kit/imp_mindhack
+	name = "mindhack implant box"
+
+/obj/item/storage/box/syndie_kit/imp_mindhack/PopulateContents()
+	new /obj/item/implanter/mindhack(src)

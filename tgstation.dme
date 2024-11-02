@@ -6555,6 +6555,7 @@
 #include "hypermods\code\game\objects\items\grenades\whitehole.dm"
 #include "hypermods\code\game\objects\items\grenades\mines\mines.dm"
 #include "hypermods\code\game\objects\items\implants\implant_biosig.dm"
+#include "hypermods\code\game\objects\items\implants\implant_mindhack.dm"
 #include "hypermods\code\game\objects\items\implants\implant_mindshieldtot.dm"
 #include "hypermods\code\game\objects\items\implants\implant_misc.dm"
 #include "hypermods\code\game\objects\items\implants\implant_revenge.dm"

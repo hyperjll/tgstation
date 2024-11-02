@@ -101,3 +101,15 @@
 	cost = 12
 	cant_discount = TRUE // This thing is fucking POWERFUL, let's not potentially make it cheaper.
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
+/datum/uplink_item/implants/mindhack
+	name = "Mindhack Implant"
+	desc = "A special implant developed by the Roseus Galactic Actors Guild in conjunction with Cybersun Industries, \
+			this implant hijacks the target's mental functions, instilling a directive directly into the victim's psyche. \
+			Those who are implanted will become convinced they are a Syndicate Agent, and that they are to protect and obey the implanter (hopefully you). \
+			Brainwashing instilled by this implant cannot penetrate mindshields, but will persist should the mindshield be installed after the mindhack. \
+			The implant will refresh the brainwashing after a short delay should it be removed by a Psychologist."
+	item = /obj/item/storage/box/syndie_kit/imp_mindhack
+	cost = 4
+	surplus = 20
+	progression_minimum = 10 MINUTES
