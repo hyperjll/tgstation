@@ -31,7 +31,6 @@
 		/obj/item/mod/module/quick_cuff,
 	)
 	default_pins = list(
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/jetpack,
 	)
 
@@ -107,10 +106,8 @@
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/hat_stabilizer/syndicate,
 		/obj/item/mod/module/quick_cuff,
-		/obj/item/mod/module/armor_booster,
 	)
 	default_pins = list(
-		/obj/item/mod/module/armor_booster,
 		/obj/item/mod/module/jetpack,
 	)
 
