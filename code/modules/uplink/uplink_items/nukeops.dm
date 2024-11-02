@@ -587,7 +587,7 @@
 	item = /obj/item/mod/control/pre_equipped/elite
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/suits/energy_shield
+/datum/uplink_item/mod_modules/energy_shield
 	name = "MODsuit Energy Shield Module"
 	desc = "An energy shield module for a MODsuit. The shields can stop a single impact \
 		before needing to recharge. Used wisely, this module will keep you alive for a lot longer."
@@ -595,28 +595,28 @@
 	cost = 8
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/suits/emp_shield
+/datum/uplink_item/mod_modules/emp_shield
 	name = "MODsuit Advanced EMP Shield Module"
 	desc = "An advanced EMP shield module for a MODsuit. It protects your entire body from electromagnetic pulses."
 	item = /obj/item/mod/module/emp_shield/advanced
 	cost = 5
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/suits/injector
+/datum/uplink_item/mod_modules/injector
 	name = "MODsuit Injector Module"
 	desc = "An injector module for a MODsuit. It is an extendable piercing injector with 30u capacity."
 	item = /obj/item/mod/module/injector
 	cost = 1
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/suits/holster
+/datum/uplink_item/mod_modules/holster
 	name = "MODsuit Holster Module"
 	desc = "A holster module for a MODsuit. It can stealthily store any not too heavy gun inside it."
 	item = /obj/item/mod/module/holster
 	cost = 1
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/suits/medgun_mod
+/datum/uplink_item/mod_modules/medgun_mod
 	name = "Medbeam Gun Module"
 	desc = "A wonder of Syndicate engineering, the Medbeam gun module, or Medi-Gun enables a medic to keep his fellow \
 		operatives in the fight, even while under fire. Don't cross the streams!"
