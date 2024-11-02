@@ -94,16 +94,16 @@
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/spy_unique/antistun
-	name = /datum/uplink_item/implants/nuclear/antistun::name
-	desc = /datum/uplink_item/implants/nuclear/antistun::desc
+	name = /datum/uplink_item/surgical/antistun::name
+	desc = /datum/uplink_item/surgical/antistun::desc
 	item = /obj/item/autosurgeon/syndicate/anti_stun/single_use
 
 /datum/uplink_item/spy_unique/reviver
-	name = /datum/uplink_item/implants/nuclear/reviver::name
-	desc = /datum/uplink_item/implants/nuclear/reviver::desc
+	name = /datum/uplink_item/surgical/reviver::name
+	desc = /datum/uplink_item/surgical/reviver::desc
 	item = /obj/item/autosurgeon/syndicate/reviver/single_use
 
 /datum/uplink_item/spy_unique/thermals
-	name = /datum/uplink_item/implants/nuclear/thermals::name
-	desc = /datum/uplink_item/implants/nuclear/thermals::desc
+	name = /datum/uplink_item/surgical/thermals::name
+	desc = /datum/uplink_item/surgical/thermals::desc
 	item = /obj/item/autosurgeon/syndicate/thermal_eyes/single_use

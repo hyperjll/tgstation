@@ -92,3 +92,12 @@
 	item = /obj/item/storage/box/syndie_kit/scramimplant
 	cost = 6
 	surplus = 20
+
+/datum/uplink_item/implants/tenacity
+	name = "Tenacity Implant"
+	desc = "An implant injected into the brain, and later activated either manually or automatically upon entering critical condition. \
+			Prevents the host from collapsing from critical condition, thanks to the folks at Interdyne for their extensive research for this one."
+	item = /obj/item/storage/box/syndie_kit/imp_tenacity
+	cost = 12
+	cant_discount = TRUE // This thing is fucking POWERFUL, let's not potentially make it cheaper.
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)

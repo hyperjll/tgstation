@@ -192,24 +192,46 @@
 
 // Implants
 
-/datum/uplink_item/implants/nuclear/reviver
+/datum/uplink_item/implants/nuclear/deniability/deluxe
+	name = "Deluxe Tactical Deniability Implant"
+	desc = "An implant injected into the brain, and later activated either manually or automatically upon entering critical condition. \
+			Prevents collapsing from critical condition, but explodes after a full minute has passed."
+	item = /obj/item/storage/box/syndie_kit/imp_deniability/deluxe
+	cost = 10
+	purchasable_from = UPLINK_SERIOUS_OPS | UPLINK_SPY
+
+/datum/uplink_item/implants/nuclear/tenacity
+	name = "Tenacity Implant"
+	desc = "An implant injected into the brain, and later activated either manually or automatically upon entering critical condition. \
+			Prevents the host from collapsing from critical condition, thanks to the folks at Interdyne for their extensive research for this one."
+	item = /obj/item/storage/box/syndie_kit/imp_tenacity
+	cost = 16
+	purchasable_from = UPLINK_SERIOUS_OPS | UPLINK_SPY
+
+/datum/uplink_item/surgical/reviverops
 	name = "Superior Reviver Implant"
 	desc = "This implant will attempt to revive and heal you if you lose consciousness, these superior versions have a drastically lowered cooldown than most. Comes with an autosurgeon."
 	item = /obj/item/autosurgeon/syndicate/reviver/fivemincap/hidden/single_use
 	cost = 8
+	surplus = 0
+	purchasable_from = UPLINK_NUKE_OPS
 
-/datum/uplink_item/implants/nuclear/regenerativeops
+/datum/uplink_item/surgical/regenerativeops
 	name = "Regenerative Implants"
 	desc = "Three surgical implants that when inserted into the body will very slowly repair the host. Allowing for VERY slow recovery of all forms of damage."
 	item = /obj/item/storage/box/syndie_kit/regen_implant_box
 	cost = 10
+	surplus = 0
+	purchasable_from = UPLINK_NUKE_OPS
 
-/datum/uplink_item/implants/nuclear/medibeam
+/datum/uplink_item/surgical/medibeam
 	name = "Integrated Medical Beam Gun Implant"
 	desc = "A complete, miniaturized medical healing beam gun straight from our factories, it'll fit perfectly within one of your arms to support your fellow operatives in the midst of battle. \
 			Comes with an autosurgeon."
 	item = /obj/item/autosurgeon/syndicate/medibeam/hidden/single_use
 	cost = 15
+	surplus = 0
+	purchasable_from = UPLINK_NUKE_OPS
 
 // Conspicous weapons
 

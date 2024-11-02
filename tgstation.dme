@@ -6558,6 +6558,7 @@
 #include "hypermods\code\game\objects\items\implants\implant_mindshieldtot.dm"
 #include "hypermods\code\game\objects\items\implants\implant_misc.dm"
 #include "hypermods\code\game\objects\items\implants\implant_revenge.dm"
+#include "hypermods\code\game\objects\items\implants\implant_tenacity.dm"
 #include "hypermods\code\game\objects\items\implants\stealthimplanter.dm"
 #include "hypermods\code\game\objects\items\implants\security\implant_chem.dm"
 #include "hypermods\code\game\objects\items\melee\baton.dm"

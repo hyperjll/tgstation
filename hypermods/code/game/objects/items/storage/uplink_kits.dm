@@ -1088,3 +1088,15 @@
 	new /obj/item/grenade/c4(src)
 	new /obj/item/implanter/mindshieldtot(src)
 	new /obj/item/card/id/advanced/chameleon(src)
+
+/obj/item/storage/box/syndie_kit/imp_tenacity
+	name = "tenacity implant box"
+
+/obj/item/storage/box/syndie_kit/imp_tenacity/PopulateContents()
+	new /obj/item/implanter/tenacity(src)
+
+/obj/item/storage/box/syndie_kit/imp_deniability/deluxe
+	name = "deluxe tactical deniability implant box"
+
+/obj/item/storage/box/syndie_kit/imp_deniability/deluxe/PopulateContents()
+	new /obj/item/implanter/tactical_deniability/deluxe(src)

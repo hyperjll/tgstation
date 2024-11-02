@@ -730,23 +730,29 @@
 	cost = 6
 	purchasable_from = UPLINK_SERIOUS_OPS | UPLINK_SPY
 
-/datum/uplink_item/implants/nuclear/thermals
+/datum/uplink_item/surgical/thermals
 	name = "Thermal Eyes"
 	desc = "These cybernetic eyes will give you thermal vision. Comes with a free autosurgeon."
 	item = /obj/item/autosurgeon/syndicate/thermal_eyes
 	cost = 8
+	surplus = 0
+	purchasable_from = UPLINK_NUKE_OPS
 
-/datum/uplink_item/implants/nuclear/implants/xray
+/datum/uplink_item/surgical/xray
 	name = "X-ray Vision Implant"
 	desc = "These cybernetic eyes will give you X-ray vision. Comes with an autosurgeon."
 	item = /obj/item/autosurgeon/syndicate/xray_eyes
 	cost = 8
+	surplus = 0
+	purchasable_from = UPLINK_NUKE_OPS
 
-/datum/uplink_item/implants/nuclear/antistun
+/datum/uplink_item/surgical/antistun
 	name = "CNS Rebooter Implant"
 	desc = "This implant will help you get back up on your feet faster after being stunned. Comes with an autosurgeon."
 	item = /obj/item/autosurgeon/syndicate/anti_stun
 	cost = 8
+	surplus = 0
+	purchasable_from = UPLINK_NUKE_OPS
 
 // Badass (meme items)
 
