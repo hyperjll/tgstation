@@ -1,4 +1,4 @@
 author: "SyncIt21"
 delete-after: True
 changes:
-  - bugfix: "HPLC can purify inverted chems."
+  - code_imp: "Improved code for RTD"
