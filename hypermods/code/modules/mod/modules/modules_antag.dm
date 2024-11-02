@@ -1,5 +1,6 @@
 //An actually disguised springlock module for sabotage.
 /obj/item/mod/module/springlock/disguised
+	step_change = 1
 
 /obj/item/mod/module/springlock/disguised/Initialize(mapload)
 	. = ..()
@@ -9,12 +10,6 @@
 	icon_state = initial(the_dna_lock_behind_the_slaughter.icon_state)
 	complexity = initial(the_dna_lock_behind_the_slaughter.complexity)
 	use_energy_cost = initial(the_dna_lock_behind_the_slaughter.use_energy_cost)
-
-/obj/item/mod/module/springlock/disguised/on_install()
-	mod.activation_step_time *= 1 // If the suit activates quickly, that's a DEAD give-away. Get it?
-
-/obj/item/mod/module/springlock/disguised/on_uninstall(deleting = FALSE)
-	mod.activation_step_time *= 1
 
 ///Teleporter - Lets the user teleport to a nearby location.
 /obj/item/mod/module/synditeleporter
