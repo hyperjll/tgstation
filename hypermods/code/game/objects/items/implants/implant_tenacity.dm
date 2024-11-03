@@ -12,6 +12,7 @@
 	desc = "An experimental implant designed by Interdyne Pharmaceuticals with the aid of Cybersun Industries. \
 			The implant blocks the brain from properly shutting down as a result of extensive bodily damage, \
 			allowing the host to move freely even while greatly damaged!"
+	actions_types = null
 
 /obj/item/implant/tenacity/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	. = ..()

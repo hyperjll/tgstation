@@ -32,6 +32,7 @@
 #define TECHWEB_NODE_CHEM_SYNTHESIS "chem_synthesis"
 #define TECHWEB_NODE_CIRCUIT_SHELLS "circuit_shells"
 #define TECHWEB_NODE_COMBAT_IMPLANTS "combat_implants"
+#define TECHWEB_NODE_HEALTH_IMPLANTS "health_implants"
 #define TECHWEB_NODE_CONSOLES "consoles"
 #define TECHWEB_NODE_CONSTRUCTION "construction"
 #define TECHWEB_NODE_CRYOSTASIS "cryostasis"

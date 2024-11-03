@@ -1106,3 +1106,9 @@
 
 /obj/item/storage/box/syndie_kit/imp_mindhack/PopulateContents()
 	new /obj/item/implanter/mindhack(src)
+
+/obj/item/storage/box/syndie_kit/imp_robusttec
+	name = "R.O.B.U.S.T implant box"
+
+/obj/item/storage/box/syndie_kit/imp_robusttec/PopulateContents()
+	new /obj/item/implanter/robusttec(src)

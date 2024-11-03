@@ -99,6 +99,7 @@
 			Prevents the host from collapsing from critical condition, thanks to the folks at Interdyne for their extensive research for this one."
 	item = /obj/item/storage/box/syndie_kit/imp_tenacity
 	cost = 12
+	progression_minimum = 30 MINUTES
 	cant_discount = TRUE // This thing is fucking POWERFUL, let's not potentially make it cheaper.
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
@@ -111,5 +112,15 @@
 			The implant will refresh the brainwashing after a short delay should it be removed by a Psychologist."
 	item = /obj/item/storage/box/syndie_kit/imp_mindhack
 	cost = 4
-	surplus = 20
+	surplus = 40
 	progression_minimum = 10 MINUTES
+
+/datum/uplink_item/implants/robusttec
+	name = "R.O.B.U.S.T Implant"
+	desc = "A special implant developed by Vahlen Pharmaceuticals, of which the design has reportedly been stolen by Nanotrasen. \
+			The implant is designed to synthesize medicinal chemicals should the host be gravely injured. \
+			After activation, the implant requires an estimated 100 seconds to recharge."
+	item = /obj/item/storage/box/syndie_kit/imp_robusttec
+	cost = 8
+	surplus = 10
+	progression_minimum = 20 MINUTES
