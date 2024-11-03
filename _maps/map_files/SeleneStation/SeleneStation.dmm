@@ -12792,6 +12792,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/science/explab)
+"eZj" = (
+/obj/structure/sign/directions/engineering,
+/turf/closed/wall,
+/area/station/maintenance/department/medical)
 "eZk" = (
 /obj/machinery/camera/directional/south{
 	c_tag = "Engineering - Mix Tank";
@@ -19627,6 +19631,10 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron,
 /area/station/engineering/atmos/hfr_room)
+"hOa" = (
+/obj/structure/sign/directions/engineering,
+/turf/closed/wall/r_wall,
+/area/station/command/teleporter)
 "hOe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -37529,6 +37537,14 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
+"oFO" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 8
+	},
+/obj/structure/sign/directions/engineering/directional/west,
+/turf/open/floor/iron,
+/area/station/hallway/primary/aft)
 "oGa" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
@@ -38840,6 +38856,10 @@
 "pjd" = (
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/command/storage/eva)
+"pjl" = (
+/obj/structure/sign/directions/engineering,
+/turf/closed/wall,
+/area/station/maintenance/department/engine)
 "pjp" = (
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/wood,
@@ -48803,6 +48823,10 @@
 /obj/effect/mapping_helpers/airlock/access/all/medical/surgery,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery)
+"tkP" = (
+/obj/structure/sign/directions/engineering,
+/turf/closed/wall/r_wall,
+/area/station/hallway/primary/central)
 "tkS" = (
 /obj/effect/spawner/random/vending/snackvend,
 /obj/machinery/light/directional/north,
@@ -57596,6 +57620,10 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/ai_monitored/command/nuke_storage)
+"wLO" = (
+/obj/structure/sign/directions/engineering,
+/turf/closed/wall/r_wall,
+/area/station/security/detectives_office)
 "wLQ" = (
 /turf/open/floor/engine{
 	name = "Holodeck Projector Floor"
@@ -88207,7 +88235,7 @@ wZi
 jcx
 iIx
 auX
-gIR
+wLO
 vdz
 aOI
 vdz
@@ -89982,7 +90010,7 @@ tKT
 cYw
 fKo
 gRm
-wce
+hOa
 wce
 wce
 seC
@@ -93379,7 +93407,7 @@ gXS
 gXS
 nGU
 nGU
-dSh
+pjl
 dSh
 wVE
 dSh
@@ -98720,7 +98748,7 @@ ycg
 ycg
 iff
 ycg
-ycg
+eZj
 ycg
 ycg
 vOK
@@ -99515,7 +99543,7 @@ bPQ
 hGm
 iIx
 auX
-cmy
+tkP
 xiS
 xiS
 xiS
@@ -99796,7 +99824,7 @@ lkZ
 icl
 uhh
 nKh
-uhh
+oFO
 hDv
 xdI
 yku
