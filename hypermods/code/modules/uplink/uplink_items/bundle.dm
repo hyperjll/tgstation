@@ -89,6 +89,7 @@
 	desc = "A briefcase containing a sniper rifle, three additional magazines, and a very nice suit. \
 			Sponsored by the Gorlex Maradeurs, for all the solars snipers out there!"
 	cost = 14 // Technically 18 TC
+	progression_minimum = 15 MINUTES
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/briefcase/sniper_traitor
@@ -98,6 +99,7 @@
 	desc = "A briefcase containing a syndicate kammerer, two boxes of lethal shells, a box of incendiary shells, and a combat uniform. \
 			Sponsored by the Gorlex Maradeurs, rip and tear until it is done!"
 	cost = 11 // Technically 15 TC
+	progression_minimum = 15 MINUTES
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/briefcase/shotgun_traitor
@@ -107,6 +109,7 @@
 	desc = "A briefcase containing a genuine akm rifle, three additional magazines, and a pair of camouflage fatigues. \
 			Sponsored by the Gorlex Maradeurs, mow them all down!"
 	cost = 17 // Techically 21 TC
+	progression_minimum = 20 MINUTES
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/briefcase/akm_traitor
