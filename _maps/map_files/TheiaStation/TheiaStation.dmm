@@ -7672,7 +7672,6 @@
 /area/station/medical/medbay/central)
 "dbL" = (
 /obj/structure/table/wood/fancy/royalblack,
-/obj/item/organ/internal/heart,
 /turf/open/floor/wood,
 /area/station/service/chapel)
 "dbP" = (
@@ -34361,7 +34360,9 @@
 	c_tag = "Command - Bridge Fore";
 	name = "camera"
 	},
-/obj/structure/secure_safe/caps_spare,
+/obj/structure/secure_safe/caps_spare{
+	pixel_y = 24
+	},
 /turf/open/floor/iron/dark/herringbone,
 /area/station/command/bridge)
 "nPi" = (

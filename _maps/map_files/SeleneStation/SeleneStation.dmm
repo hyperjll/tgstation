@@ -2336,6 +2336,7 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/medical/pharmacy,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "aUa" = (
@@ -10300,6 +10301,7 @@
 /area/station/security/lockers)
 "dXS" = (
 /obj/structure/secure_safe/caps_spare,
+/obj/structure/table/wood,
 /turf/open/floor/vault,
 /area/station/command/bridge)
 "dYi" = (
@@ -13074,6 +13076,7 @@
 "fdN" = (
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/tile/brown/fourcorners,
+/obj/structure/closet/secure_closet/medical1,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "fdU" = (
@@ -13739,6 +13742,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 4
 	},
+/obj/structure/secure_safe/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
 "fqD" = (
@@ -15975,7 +15979,7 @@
 	pixel_y = -3
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 5
+	dir = 9
 	},
 /turf/open/floor/iron/white{
 	initial_gas_mix = "n2=100;TEMP=293.15"
@@ -38506,7 +38510,7 @@
 	pixel_y = -3
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 9
+	dir = 4
 	},
 /turf/open/floor/iron/white{
 	initial_gas_mix = "n2=100;TEMP=293.15"
@@ -42573,8 +42577,6 @@
 /turf/open/floor/iron/white/herringbone,
 /area/station/maintenance/starboard/aft)
 "qIN" = (
-/obj/item/organ/internal/ears/cat,
-/obj/item/organ/external/tail/cat,
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/decal/cleanable/blood,
 /obj/item/knife,
@@ -48182,7 +48184,7 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/disposalpipe/trunk{
-	dir = 8
+	dir = 1
 	},
 /obj/machinery/disposal/delivery_chute{
 	dir = 4
