@@ -95,7 +95,7 @@
 
 /datum/uplink_item/implants/tenacity
 	name = "Tenacity Implant"
-	desc = "An implant injected into the brain, and later activated either manually or automatically upon entering critical condition. \
+	desc = "An implant injected into the brain, and later activated automatically upon entering critical condition. \
 			Prevents the host from collapsing from critical condition, thanks to the folks at Interdyne for their extensive research for this one."
 	item = /obj/item/storage/box/syndie_kit/imp_tenacity
 	cost = 12
