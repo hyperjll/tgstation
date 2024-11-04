@@ -1,12 +1,7 @@
 import {
-  AnimatedNumber,
   Box,
   Button,
-  Image,
-  Modal,
   Section,
-  Stack,
-  Tabs,
 } from 'tgui-core/components';
 
 import { useBackend } from '../backend';
