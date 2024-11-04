@@ -20,10 +20,18 @@
 /datum/uplink_item/implants/chemstorage
 	name = "Chemical Storage Implant"
 	desc = "A box containing a chemical storage implant case, an implanter, a syringe, and a beaker. You'll have to supply your own chemicals though. \
-			To apply: inject chemicals (up to 50u) into the implant case using the syringe, then use the implanter to remove the implant and inject into target or yourself. \
+			To apply: inject chemicals (up to 100u) into the implant case using the syringe, then use the implanter to remove the implant and inject into target or yourself. \
 			Targets can only have one of these implants at any given time. When activated, the chemicals within the implant are injected directly into the host's bloodstream."
 	item = /obj/item/storage/box/syndie_kit/chem_storage_implant
 	cost = 1
+	surplus = 60
+
+/datum/uplink_item/implants/binary
+	name = "Internal Binary Radio Implant"
+	desc = "An implant injected into the body, allowing the use of an internal Binary translating radio. \
+			Used just like a regular headset, but can be disabled to use external headsets normally and to avoid detection."
+	item = /obj/item/storage/box/syndie_kit/imp_binary
+	cost = 7
 	surplus = 60
 
 /datum/uplink_item/implants/kravmaga
@@ -124,3 +132,22 @@
 	cost = 8
 	surplus = 10
 	progression_minimum = 20 MINUTES
+
+/datum/uplink_item/implants/violentpsychosis
+	name = "Violent Psychosis Implant"
+	desc = "An implant injected into the brain, it actively feeds the host's violent tendencies, causing a violent psychosis. \
+			Those under the effects of this implant tend to fight in unpredictable ways."
+	item = /obj/item/storage/box/syndie_kit/imp_violentpsychosis
+	cost = 10
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
+/datum/uplink_item/implants/camouflage
+	name = "Camouflage Implant"
+	desc = "An implant injected into the body and later activated at the request of the host, it projects a field of energy which \
+			bends light around it. This field only covers the host, and due to technical limitations the field of energy isn't truely \
+			'solid', thus light can still make it past the energy field. While not complete invisibility, it's still effective in keeping you hidden."
+	item = /obj/item/storage/box/syndie_kit/imp_camo
+	cost = 16
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

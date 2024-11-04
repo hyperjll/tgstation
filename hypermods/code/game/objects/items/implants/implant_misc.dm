@@ -148,3 +148,13 @@
 
 	if(!uses)
 		qdel(src)
+
+
+/obj/item/implant/radio/binary
+	desc = "This world is MINE. I AM GOD HERE."
+	radio_key = /obj/item/encryptionkey/binary
+	subspace_transmission = TRUE
+
+/obj/item/implanter/radio/binary
+	name = "implanter (binary translating radio)"
+	imp_type = /obj/item/implant/radio/binary

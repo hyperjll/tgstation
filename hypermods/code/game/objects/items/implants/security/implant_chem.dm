@@ -26,7 +26,7 @@
 
 /obj/item/implant/syndiechem/Initialize(mapload)
 	. = ..()
-	create_reagents(50, OPENCONTAINER)
+	create_reagents(100, OPENCONTAINER)
 
 /obj/item/implant/syndiechem/activate(cause)
 	. = ..()

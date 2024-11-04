@@ -1112,3 +1112,21 @@
 
 /obj/item/storage/box/syndie_kit/imp_robusttec/PopulateContents()
 	new /obj/item/implanter/robusttec(src)
+
+/obj/item/storage/box/syndie_kit/imp_binary
+	name = "binary radio implant box"
+
+/obj/item/storage/box/syndie_kit/imp_binary/PopulateContents()
+	new /obj/item/implanter/radio/binary(src)
+
+/obj/item/storage/box/syndie_kit/imp_camo
+	name = "camouflage implant box"
+
+/obj/item/storage/box/syndie_kit/imp_camo/PopulateContents()
+	new /obj/item/implanter/camouflage(src)
+
+/obj/item/storage/box/syndie_kit/imp_violentpsychosis
+	name = "violent psychosis implant box"
+
+/obj/item/storage/box/syndie_kit/imp_violentpsychosis/PopulateContents()
+	new /obj/item/implanter/violentpsychosis(src)

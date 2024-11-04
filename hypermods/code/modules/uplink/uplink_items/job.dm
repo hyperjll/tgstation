@@ -172,7 +172,7 @@
 /datum/uplink_item/role_restricted/chem_storage_implant_bundle
 	name = "Chemical Storage Implant Bundle"
 	desc = "A bluespaced box containing roughly 5 chemical storage implant cases, an implanter, a syringe, and a beaker. You'll have to supply your own chemicals though. \
-			To apply: inject chemicals (up to 50u) into the implant case using the syringe, then use the implanter to remove the implant and inject into target. Targets can only have one of these implants at any given time."
+			To apply: inject chemicals (up to 100u) into the implant case using the syringe, then use the implanter to remove the implant and inject into target. Targets can only have one of these implants at any given time."
 	item = /obj/item/storage/box/syndie_kit/chem_storage_implant_bundle
 	cost = 3
 	restricted_roles = list(JOB_CHEMIST, JOB_PSYCHOLOGIST, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN)
