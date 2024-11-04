@@ -210,7 +210,7 @@
 	desc = "Operatives beware: This is perhaps the most evil weapon we've ever concieved. \
 			This reagent gun fires piercing syringes filled with a concoction of pyrotechnical chemicals. \
 			Those who recieve the chemicals turn into living fireballs, and then explode violently. \
-			Can only store one dose and one syringe at a time. Refills both chemicals and syringes automatically."
+			Can only store 50 units and one syringe at a time. Refills both chemicals and syringes automatically."
 	item = /obj/item/gun/explosivereagentgun
 	surplus = 0
 	cost = 40
