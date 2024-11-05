@@ -81,7 +81,7 @@
 		/obj/item/organ/eyes/robotic/shield,
 		/obj/item/organ/eyes/robotic/xray,
 		/obj/item/organ/eyes/robotic/glow,
-		/obj/item/organ/cyberimp/leg/jumpboots,
+		//obj/item/organ/cyberimp/leg/jumpboots,
 		/obj/item/organ/cyberimp/chest/thrusters,
 		/obj/item/organ/cyberimp/eyes/hud/diagnostic,
 		/obj/item/organ/cyberimp/eyes/hud/security,
@@ -89,9 +89,9 @@
 		/obj/item/organ/cyberimp/brain/anti_stun,
 		/obj/item/organ/cyberimp/brain/anti_drop,
 		/obj/item/organ/cyberimp/mouth/breathing_tube,
-		/obj/item/organ/cyberimp/leg/magboot,
-		/obj/item/organ/cyberimp/chest/nutriment,
-		/obj/item/organ/cyberimp/leg/galosh
+		//obj/item/organ/cyberimp/leg/magboot,
+		//obj/item/organ/cyberimp/leg/galosh,
+		/obj/item/organ/cyberimp/chest/nutriment
 	)
 
 	for(var/i in 1 to 2)

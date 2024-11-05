@@ -1,4 +1,5 @@
 /obj/item/reagent_containers/hypospray/buyable
+	name = "civilian hypospray"
 	icon_state = "combat_hypo"
 	inhand_icon_state = "combat_hypo"
 	worn_icon_state = "hypo"
