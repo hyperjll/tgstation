@@ -19,6 +19,10 @@
 	suffix = "kilo"
 	name = "labour shuttle (Kilo)"
 
+/datum/map_template/shuttle/labour/nebula
+	suffix = "nebula"
+	name = "labour shuttle (Nebula)"
+
 /datum/map_template/shuttle/labour/helio
 	suffix = "helio"
 	name = "labour shuttle (Helio)"
@@ -51,6 +55,10 @@
 /datum/map_template/shuttle/mining/northstar
 	suffix = "northstar"
 	name = "mining shuttle (North Star)"
+
+/datum/map_template/shuttle/mining/nebula
+	suffix = "nebula"
+	name = "mining shuttle (Nebula)"
 
 // MINING COMMON SHUTTLES
 /datum/map_template/shuttle/mining_common
