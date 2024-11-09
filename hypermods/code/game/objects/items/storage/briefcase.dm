@@ -122,3 +122,8 @@
 	new /obj/item/ammo_box/magazine/ak712x82(src)
 	new /obj/item/ammo_box/magazine/ak712x82(src)
 	new /obj/item/ammo_box/magazine/ak712x82(src)
+
+/obj/item/storage/briefcase/pblowgun/PopulateContents()
+	..()
+	new /obj/item/gun/syringe/pblowgun(src)
+	new /obj/item/storage/box/syringes/sedative/piercing(src)

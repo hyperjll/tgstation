@@ -105,5 +105,11 @@
 	list_reagents = list(/datum/reagent/medicine/haloperidol = 15)
 	icon_state = "syringe"
 
+/obj/item/reagent_containers/syringe/piercing/sedative
+	name = "piercing syringe"
+	desc = "A diamond-tipped syringe that pierces armor when launched at high velocity. It can hold up to 10 units."
+	list_reagents = list(/datum/reagent/medicine/haloperidol = 15)
+	icon_state = "piercing_0"
+
 /obj/item/reagent_containers/syringe/contraband/stimulants
 	list_reagents = list(/datum/reagent/medicine/stimulants = 15)

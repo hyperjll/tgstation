@@ -114,3 +114,13 @@
 	surplus = 10
 	limited_stock = 1
 	purchasable_from = ~UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/stealthy_weapons/pblowgun
+	name = "Professional Blowgun"
+	desc = "A briefcase containing a professional blowgun, which has two chambers for syringes. \
+			The quality of the blowgun allows for syringes to be blown short distances with less effort required by the user. \
+			Comes with a box of piercing syringes filled with sedatives."
+	item = /obj/item/storage/briefcase/pblowgun
+	cost = 6
+	surplus = 20
+	purchasable_from = ~UPLINK_SERIOUS_OPS
