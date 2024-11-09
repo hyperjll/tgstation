@@ -318,7 +318,8 @@
 /area/space/nearstation)
 "agm" = (
 /obj/structure/table,
-/obj/effect/spawner/random/maintenance,
+/obj/item/storage/box/disks_nanite,
+/obj/item/storage/box/disks_nanite,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "ago" = (
@@ -3322,6 +3323,7 @@
 "bnp" = (
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/light/directional/north,
+/obj/machinery/nanite_programmer,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "bns" = (
@@ -11746,7 +11748,6 @@
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/structure/barricade/wooden/crude,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "eCu" = (
@@ -21250,6 +21251,9 @@
 /area/station/hallway/secondary/service)
 "ivi" = (
 /obj/machinery/light/small/directional/south,
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "ivq" = (
@@ -36419,7 +36423,10 @@
 "oix" = (
 /obj/structure/table,
 /obj/machinery/newscaster/directional/west,
-/obj/effect/spawner/random/maintenance,
+/obj/item/nanite_scanner,
+/obj/item/nanite_scanner,
+/obj/item/nanite_remote,
+/obj/item/nanite_remote,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "oiG" = (
@@ -36466,7 +36473,6 @@
 /obj/item/clothing/glasses/hud/diagnostic,
 /obj/item/clothing/glasses/hud/diagnostic,
 /obj/structure/rack,
-/obj/item/crowbar,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "okf" = (
@@ -41821,6 +41827,7 @@
 	c_tag = "Science - Nanite Lab";
 	network = list("ss13","rd")
 	},
+/obj/machinery/computer/nanite_cloud_controller,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "qrF" = (
@@ -42218,6 +42225,7 @@
 /area/station/service/hydroponics)
 "qAe" = (
 /obj/item/radio/intercom/directional/south,
+/obj/machinery/nanite_chamber,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "qAq" = (
@@ -52608,6 +52616,10 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/construction)
+"uIp" = (
+/obj/machinery/nanite_program_hub,
+/turf/open/floor/iron/dark/herringbone,
+/area/station/science/nanite)
 "uID" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -105237,7 +105249,7 @@ lld
 lld
 qsa
 cWT
-vih
+uIp
 vih
 ufQ
 vih

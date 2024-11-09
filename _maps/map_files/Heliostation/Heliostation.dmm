@@ -19742,7 +19742,8 @@
 "bWX" = (
 /obj/structure/rack,
 /obj/machinery/light/directional/north,
-/obj/effect/spawner/random/maintenance,
+/obj/item/nanite_scanner,
+/obj/item/nanite_scanner,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "bXb" = (
@@ -20518,6 +20519,7 @@
 "ceW" = (
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/machinery/light/small/directional/south,
+/obj/machinery/nanite_chamber,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "cfe" = (
@@ -24457,6 +24459,7 @@
 /area/station/maintenance/department/science/xenobiology)
 "cOw" = (
 /obj/machinery/airalarm/directional/north,
+/obj/machinery/computer/nanite_cloud_controller,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "cOx" = (
@@ -32693,7 +32696,6 @@
 /obj/structure/table,
 /obj/item/clothing/glasses/hud/diagnostic,
 /obj/item/clothing/glasses/hud/diagnostic,
-/obj/item/crowbar,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "fEu" = (
@@ -43233,6 +43235,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/hallway)
+"jGI" = (
+/obj/machinery/nanite_program_hub,
+/turf/open/floor/iron/dark/herringbone,
+/area/station/science/nanite)
 "jHe" = (
 /obj/item/storage/medkit/o2{
 	pixel_x = 3;
@@ -48923,6 +48929,7 @@
 /area/station/medical/morgue)
 "lWb" = (
 /obj/machinery/light/directional/north,
+/obj/machinery/nanite_programmer,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "lWk" = (
@@ -49379,6 +49386,9 @@
 /area/station/ai_monitored/command/storage/eva)
 "mew" = (
 /obj/item/radio/intercom/directional/south,
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "meV" = (
@@ -65824,7 +65834,8 @@
 /area/station/security/checkpoint/science/research)
 "szX" = (
 /obj/structure/rack,
-/obj/effect/spawner/random/maintenance,
+/obj/item/nanite_remote,
+/obj/item/nanite_remote,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "sAc" = (
@@ -71422,7 +71433,8 @@
 	c_tag = "Science - Nanite Lab";
 	network = list("ss13","rd")
 	},
-/obj/effect/spawner/random/maintenance,
+/obj/item/storage/box/disks_nanite,
+/obj/item/storage/box/disks_nanite,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "uHl" = (
@@ -74969,7 +74981,6 @@
 /obj/machinery/door/airlock/research{
 	name = "Nanite Lab"
 	},
-/obj/structure/barricade/wooden/crude,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "wbW" = (
@@ -125387,7 +125398,7 @@ wKH
 uHo
 oMA
 caq
-fbi
+jGI
 dqn
 fbi
 nwM
