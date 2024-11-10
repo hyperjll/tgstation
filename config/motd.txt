@@ -2,4 +2,8 @@
 
 <h1>Welcome to Space Station 13!</h1>
 
-<i>This server is running a /tg/station 13 Git build.</i>
+<i>This server is running a modified /tg/station 13 Git build. Despite the lack of changelog updates, i'm still adding a bunch of new stuff/bugfixing.</i>
+
+<i>You may find the code here: https://github.com/hyperjll/tgstation</i>
+
+<i>Additionally, our personal discord server can be found here: https://discord.gg/4fQrVrqBEB</i>
