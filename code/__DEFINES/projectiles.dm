@@ -74,6 +74,8 @@
 #define CALIBER_JUNK "junk"
 /// The caliber used by the cannonballs.
 #define CALIBER_CANNONBALL "cannonball"
+/// The caliber used solely by the orion silenced pistol.
+#define CALIBER_22MM "22mm"
 
 /// For gunpoints, how many tiles around the target the shooter can roam without losing their shot
 #define GUNPOINT_SHOOTER_STRAY_RANGE 2

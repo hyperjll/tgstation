@@ -72,3 +72,34 @@
 /datum/embed_data/throwingknife
 	embed_chance = 100
 	fall_chance = 0.01
+
+
+/obj/item/melee/syndidagger
+	name = "syndicate dagger"
+	desc = "An old-fashioned syndicate dagger. Rumored to have manufactured to kill syndicate agents specifically."
+	icon = 'hypermods/icons/obj/weapons/stabby.dmi'
+	icon_state = "syndidagger"
+	force = 10
+	throwforce = 20
+	sharpness = SHARP_EDGED
+	var/syndicateuser = FALSE
+
+/obj/item/melee/syndidagger/examine(mob/user)
+	. = ..()
+	if(IS_TRAITOR(user)) // since this is a surplus only thing, people likely wont know what this does.
+		. += "This dagger seems specifically made to kill syndicate agents like you. Might prove useful if your allies betray you."
+
+/obj/item/melee/syndidagger/pickup(mob/user)
+	..()
+	if(IS_TRAITOR(user)) // prevent normal peeps from antag checking
+		syndicateuser = TRUE
+
+/obj/item/melee/syndidagger/dropped()
+	..()
+	syndicateuser = FALSE
+
+/obj/item/melee/syndidagger/afterattack(target, mob/user, proximity = TRUE)
+	. = ..()
+	var/mob/living/carbon/human/L = target
+	if(IS_TRAITOR(L) && syndicateuser)
+		L.apply_damage(20, BRUTE)

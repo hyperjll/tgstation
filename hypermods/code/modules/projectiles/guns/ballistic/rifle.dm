@@ -31,3 +31,18 @@
 
 /obj/item/gun/ballistic/rifle/sniper_rifle/hristov/freshprint
 	pin = null
+
+
+/obj/item/gun/ballistic/rifle/hunting_rifle
+	name = "old hunting rifle"
+	desc = "The Kittiwake from Cormorant Precision Arms, a classic high-powered hunting and police rifle, reliable in almost any environment. This one shows years of use."
+	icon = 'hypermods/icons/obj/weapons/guns/48x32.dmi'
+	icon_state = "ohr"
+	inhand_icon_state = "ohr"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+
+/obj/item/gun/ballistic/rifle/hunting_rifle/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/scope, range_modifier = 2)
+

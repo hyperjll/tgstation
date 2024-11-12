@@ -108,3 +108,24 @@
 	name = "clownshot pellet"
 	damage = 0
 	hitsound = 'sound/items/bikehorn.ogg'
+
+// Flare gun
+
+/obj/projectile/bullet/pellet/flare
+	name = "flare"
+	damage = 10
+	light_system = OVERLAY_LIGHT
+	light_range = 8
+	light_power = 1.8
+	light_color = COLOR_MOSTLY_PURE_RED
+	var/fire_range = 2
+
+/obj/projectile/bullet/pellet/flare/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	..()
+	var/flare_turf = get_turf(src)
+	if(!flare_turf)
+		return
+
+	for(var/mob/living/carbon/C in range(fire_range, flare_turf))
+		C.adjust_fire_stacks(2)
+		C.ignite_mob()

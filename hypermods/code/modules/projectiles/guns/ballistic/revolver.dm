@@ -22,3 +22,17 @@
 	if(istype(A, /obj/item/ammo_box)) // prevent speedloader usage
 		return TRUE
 	. = ..()
+
+/obj/item/gun/ballistic/revolver/c38/kestrel
+	name = "\improper Kestrel revolver"
+	desc = "A hefty combat revolver developed by Cormorant Precision Arms. Uses .38 rounds. \
+			Can be modified with a wrench to accept .357 rounds."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "kestral"
+
+	can_modify_ammo = TRUE
+	initial_caliber = CALIBER_38
+	initial_fire_sound = 'sound/items/weapons/gun/revolver/shot.ogg'
+	alternative_caliber = CALIBER_357
+	alternative_fire_sound = 'sound/items/weapons/gun/revolver/shot_alt.ogg'
+	alternative_ammo_misfires = FALSE

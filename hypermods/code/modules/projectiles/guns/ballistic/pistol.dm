@@ -121,3 +121,22 @@
 /obj/item/gun/ballistic/automatic/pistol/mk58/freshprint
 	spawnwithmagazine = FALSE
 	pin = null
+
+
+/obj/item/gun/energy/orion
+	name = "\improper Orion Silenced Pistol"
+	desc = "A rare .22 handgun with a small magazine capacity. It makes very little noise at all when firing. \
+			This rare model slowly fabricates it's ammunition with an in-built miniature autolathe."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "silenced-full"
+	inhand_icon_state = "tranq_pistol"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	w_class = WEIGHT_CLASS_SMALL
+	cell_type = /obj/item/stock_parts/power_store/cell
+	ammo_type = list(/obj/item/ammo_casing/energy/c22mm)
+	fire_sound = 'sound/items/weapons/gun/pistol/shot_suppressed.ogg'
+	fire_sound_volume = 5
+	selfcharge = 1
+	charge_delay = 30
+	can_charge = FALSE

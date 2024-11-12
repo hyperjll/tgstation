@@ -268,3 +268,10 @@
 	name = ".38 bluespace bullet"
 	damage = 18
 	speed = 0.2 //Very, very, very fast
+
+// .22
+
+/obj/projectile/bullet/c22mm
+	name = ".22 bullet"
+	damage = 20
+	speed = 0.5

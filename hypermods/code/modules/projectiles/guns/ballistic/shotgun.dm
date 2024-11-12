@@ -79,3 +79,32 @@
 
 /obj/item/gun/ballistic/shotgun/enforcer/nopin
 	pin = null
+
+/obj/item/gun/ballistic/shotgun/spes
+	name = "SPES-12"
+	desc = "An expensive imported combat shotgun, popular with frontier militias and private military operators. Holds 8 shells."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "spas"
+	inhand_icon_state = "spas"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	w_class = WEIGHT_CLASS_HUGE
+	weapon_weight = WEAPON_MEDIUM
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/spes
+	can_suppress = FALSE
+	burst_size = 1
+	fire_delay = 2
+	inhand_x_dimension = 32
+	inhand_y_dimension = 32
+	pin = /obj/item/firing_pin
+	actions_types = list()
+	semi_auto = TRUE
+	custom_price = 8000
+
+/obj/item/gun/ballistic/shotgun/spes/New()
+	if(prob(10))
+		name = pick("SPEZZ-12", "SPESS-12", "SPETZ-12", "SPOCK-12", "SCHPATZL-12", "SABRINA-12", "SAURUS-12", "SABER-12", "SOSIG-12", "DINOHUNTER-12", "COMBAT-12", "SHOTASS-12", "SPES-12", "SHOOTY-12", "BLAM-12", "SPICY-12", "ANTKILLER-12", "SLAPS-12", "SPAGOOTER-12", "MARTIANSLAYER-12")
+	..()
+
+/obj/item/gun/ballistic/shotgun/enforcer/nopin
+	pin = null

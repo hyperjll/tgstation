@@ -19,7 +19,7 @@
 
 /obj/item/ammo_casing/energy/c10mm // 10mm bullet for cyborg viper
 	projectile_type = /obj/projectile/bullet/c10mm
-	select_name = "lethal"
+	select_name = "10mm"
 	fire_sound = 'sound/items/weapons/gun/pistol/shot_alt.ogg'
 	e_cost = LASER_SHOTS(30, STANDARD_CELL_CHARGE * 0.6)
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect
@@ -171,3 +171,12 @@
 	name = ".38 bluespace bullet casing"
 	desc = "A .38 bluespace bullet casing."
 	projectile_type = /obj/projectile/bullet/c38/bluespace
+
+// .22
+
+/obj/item/ammo_casing/energy/c22mm
+	projectile_type = /obj/projectile/bullet/c22mm
+	select_name = ".22"
+	fire_sound = 'sound/items/weapons/gun/pistol/shot_suppressed.ogg'
+	e_cost = LASER_SHOTS(500, STANDARD_CELL_CHARGE * 100)
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect

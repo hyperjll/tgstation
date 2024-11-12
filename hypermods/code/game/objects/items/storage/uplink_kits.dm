@@ -436,6 +436,10 @@
 	for(var/i in 1 to 20)
 		new /obj/item/food/pie/cream(src)
 
+/obj/item/storage/box/syndie_kit/holy_healing_bundle
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "holywaterkit"
+
 /obj/item/storage/box/syndie_kit/holy_healing_bundle/PopulateContents()
 	for(var/i in 1 to 3)
 		new /obj/item/reagent_containers/cup/bottle/omnizine(src)

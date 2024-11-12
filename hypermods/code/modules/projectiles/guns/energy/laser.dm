@@ -27,3 +27,18 @@
 	ammo_x_offset = 1
 	shaded_charge = 1
 	fire_sound = 'hypermods/sound/weapons/laserrifle.ogg'
+
+/obj/item/gun/energy/plasma_gun
+	name = "plasma rifle"
+	desc = "This advanced bullpup energy rifle contains an internal cell charging mechanism."
+	icon_state = "bullpup"
+	icon = 'hypermods/icons/obj/weapons/guns/energy.dmi'
+	inhand_icon_state = "bullpup"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	force = 5
+	shaded_charge = 1
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/plasma_gun)
+	selfcharge = 1
+	charge_delay = 6
+	fire_sound = 'hypermods/sound/weapons/plasma_gun.ogg'

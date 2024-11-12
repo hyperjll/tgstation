@@ -108,3 +108,12 @@
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_clownshot
 	pellets = 20
 	variance = 35
+
+// Flare gun
+
+/obj/item/ammo_casing/shotgun/flare
+	name = "flare shell"
+	desc = "A flare casing for a flare gun, it could probably be fired from a shotgun too."
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon_state = "flare"
+	projectile_type = /obj/projectile/bullet/pellet/flare

@@ -61,3 +61,44 @@
 	new weapon_to_spawn (src)
 	for(var/i in 1 to 2)
 		new extra_to_spawn (src)
+
+/obj/item/storage/toolbox/guncase/flaregun
+	name = "flare gun case"
+	desc = "A weapon's case. It has a rather distinguished look to it."
+	icon = 'hypermods/icons/obj/storage/guncases.dmi'
+	icon_state = "hard_case"
+	weapon_to_spawn = /obj/item/gun/ballistic/flaregun
+	extra_to_spawn = /obj/item/storage/box/flareshot/syndi
+
+/obj/item/storage/toolbox/guncase/flaregun/PopulateContents()
+	new weapon_to_spawn (src)
+	new extra_to_spawn (src)
+
+/obj/item/storage/toolbox/guncase/kestral
+	name = "kestral revolver case"
+	desc = "A weapon's case. It has a rather distinguished look to it."
+	icon = 'hypermods/icons/obj/storage/guncases.dmi'
+	icon_state = "hard_case"
+	weapon_to_spawn = /obj/item/gun/ballistic/revolver/c38/kestrel
+	extra_to_spawn = /obj/item/ammo_box/c38
+	var/second_extra_to_spawn = /obj/item/ammo_box/a357
+
+/obj/item/storage/toolbox/guncase/kestral/PopulateContents()
+	new weapon_to_spawn (src)
+	for(var/i in 1 to 2)
+		new extra_to_spawn (src)
+	for(var/i in 1 to 2)
+		new second_extra_to_spawn (src)
+	new /obj/item/wrench(src)
+
+/obj/item/storage/toolbox/guncase/spes
+	name = "spes shotgun case"
+	desc = "A weapon's case. It has a rather distinguished look to it."
+	icon = 'hypermods/icons/obj/storage/guncases.dmi'
+	icon_state = "hard_case"
+	weapon_to_spawn = /obj/item/gun/ballistic/shotgun/spes
+	extra_to_spawn = /obj/item/storage/box/lethalshot
+
+/obj/item/storage/toolbox/guncase/flaregun/PopulateContents()
+	new weapon_to_spawn (src)
+	new extra_to_spawn (src)

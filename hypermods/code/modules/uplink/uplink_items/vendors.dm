@@ -5,6 +5,7 @@
 /datum/uplink_item/vendors
 	category = /datum/uplink_category/vendors
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH
+	surplus = 0
 
 
 /datum/uplink_item/vendors/liberation

@@ -628,6 +628,19 @@
 	icon_state = "ws357box"
 	ammo_type = /obj/item/ammo_casing/a357/wallstake
 
+/obj/item/storage/box/flareshot
+	name = "box of flare shells"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "flareshell_box"
+
+/obj/item/storage/box/flareshot/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/shotgun/flare(src)
+
+/obj/item/storage/box/flareshot/syndi/PopulateContents()
+	for(var/i in 1 to 14)
+		new /obj/item/ammo_casing/shotgun/flare(src)
+
 
 
 /obj/item/ammo_box/nadepouch
@@ -749,4 +762,16 @@
 	name = "grenade pouch (mirage)"
 	icon_state = "ammopouch-mirage"
 	ammo_type = /obj/item/grenade/mirage
+	max_ammo = 5
+
+/obj/item/ammo_box/nadepouch/bananapeel
+	name = "grenade pouch (banana peels)"
+	icon_state = "ammopouch-banana"
+	ammo_type = /obj/item/grenade/spawnergrenade/bananapeel
+	max_ammo = 5
+
+/obj/item/ammo_box/nadepouch/beartraps
+	name = "grenade pouch (bear traps)"
+	icon_state = "ammopouch-quad"
+	ammo_type = /obj/item/restraints/legcuffs/beartrap
 	max_ammo = 5
