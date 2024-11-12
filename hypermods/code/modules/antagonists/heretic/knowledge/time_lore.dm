@@ -28,19 +28,36 @@
  *
  * At The End Of All
  */
+
+/datum/heretic_knowledge_tree_column/main/time
+	neighbour_type_left = /datum/heretic_knowledge_tree_column/cosmic_to_time
+	neighbour_type_right = /datum/heretic_knowledge_tree_column/time_to_ash
+
+	route = PATH_TIME
+	ui_bgr = "node_time"
+
+	start = /datum/heretic_knowledge/limited_amount/starting/base_time
+	grasp = /datum/heretic_knowledge/time_grasp
+	tier1 = /datum/heretic_knowledge/spell/time_skip
+	mark = /datum/heretic_knowledge/mark/time_mark
+	ritual_of_knowledge = /datum/heretic_knowledge/knowledge_ritual/time
+	unique_ability = /datum/heretic_knowledge/time_mends_all
+	tier2 = /datum/heretic_knowledge/spell/deja_vu
+	blade = /datum/heretic_knowledge/blade_upgrade/time
+	tier3 =	 /datum/heretic_knowledge/haste
+	ascension = /datum/heretic_knowledge/ultimate/time_final
+
 /datum/heretic_knowledge/limited_amount/starting/base_time
 	name = "Passage of Time"
 	desc = "Opens up the Path of Time to you. \
 		Allows you to transmute a knife and a timer into a Time Blade. \
 		You can only create two at a time."
 	gain_text = "The Time Lords stand idly. Watching all from their ivory towers, until i decided to investigate why."
-	next_knowledge = list(/datum/heretic_knowledge/time_grasp)
 	required_atoms = list(
 		/obj/item/knife = 1,
 		/obj/item/assembly/timer = 1,
 	)
 	result_atoms = list(/obj/item/melee/sickly_blade/time)
-	route = PATH_TIME
 	research_tree_icon_path = 'hypermods/icons/obj/weapons/khopesh.dmi'
 	research_tree_icon_state = "time_blade"
 
@@ -49,12 +66,7 @@
 	name = "Grasp of Time"
 	desc = "Your Mansus Grasp will steal 1-2 years of youth from your target, and slightly heal all damage types for you."
 	gain_text = "At first, they studied me as they do all."
-	next_knowledge = list(
-		/datum/heretic_knowledge/spell/time_skip,
-	)
 	cost = 1
-	route = PATH_TIME
-	depth = 3
 	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "grasp_time"
 
@@ -96,16 +108,8 @@
 		Eventually, all obstacles are either moved, destroyed or opened, after all."
 	gain_text = "They took an interest in me, noting the path i chose. \
 			They pointed to a place i couldn't fathom. A place i couldn't reach."
-	next_knowledge = list(
-		/datum/heretic_knowledge/mark/time_mark,
-		/datum/heretic_knowledge/summon/fire_shark,
-		/datum/heretic_knowledge/spell/slow,
-		/datum/heretic_knowledge/armorexpensive,
-	)
 	spell_to_add = /datum/action/cooldown/spell/pointed/skip_time
 	cost = 1
-	route = PATH_TIME
-	depth = 4
 
 
 /datum/heretic_knowledge/mark/time_mark
@@ -115,10 +119,6 @@
 		from the target and gain a speed boost for a short time."
 	gain_text = "Beyond the folds of space and time, something stirred yet. \
 			Their eyes fixated upon it for a moment, but my eyes ceased to linger upon it."
-	next_knowledge = list(
-		/datum/heretic_knowledge/knowledge_ritual/time,
-		)
-	route = PATH_TIME
 	mark_type = /datum/status_effect/eldritch/time
 
 /datum/heretic_knowledge/mark/time_mark/trigger_mark(mob/living/source, mob/living/target)
@@ -146,8 +146,6 @@
 
 
 /datum/heretic_knowledge/knowledge_ritual/time
-	next_knowledge = list(/datum/heretic_knowledge/time_mends_all)
-	route = PATH_TIME
 
 
 /datum/heretic_knowledge/time_mends_all
@@ -158,13 +156,7 @@
 		These effects only apply while you're under 50 years of age."
 	gain_text = "My eyes lit up as i realized what my purpose was. \
 			Beyond the folds of time, lies an ultimate goal. A purpose."
-	next_knowledge = list(
-		/datum/heretic_knowledge/spell/deja_vu,
-		/datum/heretic_knowledge/curse/age,
-	)
 	cost = 1
-	route = PATH_TIME
-	depth = 7
 	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "timemendsall"
 
@@ -183,16 +175,8 @@
 		When this occurs, you reverse all damage (and healing) taken at great cost to your youth."
 	gain_text = "And before i knew it, i was back where i was before. Requires a focus to use. \
 			Knowledge remained, but their attention did not."
-	next_knowledge = list(
-		/datum/heretic_knowledge/blade_upgrade/time,
-		/datum/heretic_knowledge/reroll_targets,
-		/datum/heretic_knowledge/spell/space_phase,
-		/datum/heretic_knowledge/spell/eldritch_echoes,
-	)
 	spell_to_add = /datum/action/cooldown/spell/deja_vu
 	cost = 1
-	route = PATH_TIME
-	depth = 8
 
 
 /datum/heretic_knowledge/blade_upgrade/time
@@ -201,8 +185,6 @@
 		upon your attacker, this only works on non-simple and non-silicon based targets."
 	gain_text = "I felt my hands grip tightly, my chest burrowed. \
 			I had to do something. But i did not know what."
-	next_knowledge = list(/datum/heretic_knowledge/haste)
-	route = PATH_TIME
 	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "blade_upgrade_time"
 
@@ -236,14 +218,7 @@
 		You'll purge toxins from your body automatically, and will burn through your calories quicker."
 	gain_text = "My eyes lit up as i realized what my purpose was. \
 			Beyond the folds of time, lies an ultimate goal. A purpose."
-	next_knowledge = list(
-		/datum/heretic_knowledge/ultimate/time_final,
-		/datum/heretic_knowledge/eldritch_coin,
-		/datum/heretic_knowledge/spell/cursed_flames,
-	)
 	cost = 1
-	route = PATH_TIME
-	depth = 10
 	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "haste"
 
@@ -267,7 +242,6 @@
 			Even if i told them now, it'd be of no use, they'd forget in the next moment. \
 			But with your help? We can remind them together. \
 			So, rise! Lord of Time! YOUR ASCENSION AWAITS."
-	route = PATH_TIME
 	ascension_achievement = /datum/award/achievement/misc/time_ascension
 	/// A static list of all traits we apply on ascension.
 	var/static/list/traits_to_apply = list(

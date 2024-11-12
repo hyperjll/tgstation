@@ -6626,7 +6626,6 @@
 #include "hypermods\code\modules\antagonists\_common\antag_spawner.dm"
 #include "hypermods\code\modules\antagonists\cerberus\cerberus.dm"
 #include "hypermods\code\modules\antagonists\heretic\items\heretic_blades.dm"
-#include "hypermods\code\modules\antagonists\heretic\knowledge\side_all.dm"
 #include "hypermods\code\modules\antagonists\heretic\knowledge\side_cosmos_time.dm"
 #include "hypermods\code\modules\antagonists\heretic\knowledge\side_time_ash.dm"
 #include "hypermods\code\modules\antagonists\heretic\knowledge\time_lore.dm"

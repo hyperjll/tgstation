@@ -1500,7 +1500,7 @@
 		/obj/item/clothing/shoes/laceup = 2,
 		/obj/item/radio/headset/headset_srv = 2,
 		/obj/item/storage/box/evidence = 2,
-		/obj/item/fish_feed = 1,
+		/obj/item/reagent_containers/cup/fish_feed = 1,
 	)
 	premium = list(
 		/obj/item/clothing/glasses/hud/security = 2,

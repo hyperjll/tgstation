@@ -53,7 +53,7 @@
 	playsound(get_turf(user), 'sound/items/weapons/circsawhit.ogg', 50, 1)
 	storedorgan = null
 	name = initial(name)
-	if(uses != INFINITE)
+	if(uses != INFINITY)
 		uses--
 	if(!uses)
 		desc = "[initial(desc)] Looks like it's been used up."

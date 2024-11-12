@@ -7,7 +7,7 @@
 	inhand_icon_state = "nothing"
 	w_class = WEIGHT_CLASS_SMALL
 	/// How many times you can use the autosurgeon before it becomes useless
-	var/uses = INFINITE
+	var/uses = INFINITY
 	/// What organ will the autosurgeon sub-type will start with. ie, CMO autosurgeon start with a medi-hud.
 	var/starting_item
 	/// The organ currently loaded in the autosurgeon, ready to be implanted.

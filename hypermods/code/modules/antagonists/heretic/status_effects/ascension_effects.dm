@@ -1,6 +1,6 @@
 /datum/status_effect/rapidaging
 	id = "rapid aging"
-	duration = INFINITY
+	duration = STATUS_EFFECT_PERMANENT
 	alert_type = null
 	var/probability = 5
 

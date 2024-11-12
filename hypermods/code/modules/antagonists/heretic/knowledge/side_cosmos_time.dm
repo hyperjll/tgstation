@@ -1,6 +1,6 @@
-/datum/heretic_knowledge_tree_column/cosmic_to_ash
+/datum/heretic_knowledge_tree_column/cosmic_to_time
 	neighbour_type_left = /datum/heretic_knowledge_tree_column/main/cosmic
-	neighbour_type_right = /datum/heretic_knowledge_tree_column/main/ash
+	neighbour_type_right = /datum/heretic_knowledge_tree_column/main/time
 
 	route = PATH_SIDE
 
@@ -9,7 +9,7 @@
 	tier3 = /datum/heretic_knowledge/eldritch_coin
 
 
-// Sidepaths for knowledge between Cosmos and Ash.
+// Sidepaths for knowledge between Cosmos and Time.
 
 /datum/heretic_knowledge/summon/fire_shark
 	name = "Scorching Shark"

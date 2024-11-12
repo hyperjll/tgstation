@@ -1,6 +1,6 @@
 /datum/status_effect/timemendsall
 	id = "time mends all"
-	duration = INFINITY
+	duration = STATUS_EFFECT_PERMANENT
 	alert_type = null
 	var/healing = -4
 	var/stunresist = -40
@@ -54,7 +54,7 @@
 
 /datum/status_effect/haste
 	id = "heretic haste"
-	duration = INFINITY
+	duration = STATUS_EFFECT_PERMANENT
 	alert_type = null
 
 /datum/status_effect/haste/on_apply()

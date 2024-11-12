@@ -10,5 +10,5 @@
 
 /datum/map_template/shelter/syndicate/New()
 	. = ..()
-	whitelisted_turfs = typecacheof(/turf/closed/mineral)
+	blacklisted_turfs -= typesof(/turf/closed/mineral)
 	banned_objects = typecacheof(/obj/structure/stone_tile)
