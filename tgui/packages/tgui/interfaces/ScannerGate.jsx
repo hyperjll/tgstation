@@ -67,6 +67,10 @@ const SCANNER_GATE_ROUTES = {
     title: 'Scanner Mode: Nutrition',
     component: () => ScannerGateNutrition,
   },
+  Contraband: {
+    title: 'Scanner Mode: Contraband',
+    component: () => ScannerGateContraband,
+  },
 };
 
 const ScannerGateControl = (props) => {
@@ -94,6 +98,7 @@ const ScannerGateControl = (props) => {
 
 const ScannerGateOff = (props) => {
   const { act, data } = useBackend();
+  const { contraband_enabled } = data;
   return (
     <>
       <Box mb={2}>Select a scanning mode below.</Box>
@@ -121,6 +126,11 @@ const ScannerGateOff = (props) => {
         <Button
           content="Nutrition"
           onClick={() => act('set_mode', { new_mode: 'Nutrition' })}
+        />
+        <Button
+          content="Contraband"
+          disabled={contraband_enabled ? false : true}
+          onClick={() => act('set_mode', { new_mode: 'Contraband' })}
         />
       </Box>
     </>
@@ -257,6 +267,21 @@ const ScannerGateNutrition = (props) => {
             }
           />
         ))}
+      </Box>
+      <ScannerGateMode />
+    </>
+  );
+};
+
+const ScannerGateContraband = (props) => {
+  const { data } = useBackend();
+  const { reverse } = data;
+  return (
+    <>
+      <Box mb={2}>
+        Trigger if the person scanned {reverse ? 'does not have' : 'has'} any
+        anything considered contraband. Requires an N-spect scanner installed to
+        enable.
       </Box>
       <ScannerGateMode />
     </>
