@@ -1,4 +1,4 @@
-/** // Preventing this category from being made prevents people from buying via uplink, but not from surplus crates.
+/** // Preventing this category from being made prevents people from buying via uplink, but not from surplus crates. (Except via search)
 /datum/uplink_category/surplusonly
 	name = "Surplus Only"
 	weight = -99
@@ -6,7 +6,7 @@
 /datum/uplink_item/surplusonly
 	//category = /datum/uplink_category/surplusonly
 	surplus = 10
-	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	purchasable_from = NONE
 	cant_discount = TRUE
 
 
