@@ -54,7 +54,7 @@
 	if(locked)
 		. += "[base_icon_state]_locked"
 
-/obj/item/nanite_remote/afterattack(atom/target, mob/user, proximity_flag, click_parameters, comms_message)
+/obj/item/nanite_remote/interact_with_atom(atom/target, mob/user, proximity_flag, click_parameters, comms_message)
 	switch(mode)
 		if(REMOTE_MODE_OFF)
 			return
