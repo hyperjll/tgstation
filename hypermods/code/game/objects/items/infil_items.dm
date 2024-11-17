@@ -76,6 +76,8 @@
 	var/objectives_complete = FALSE
 	///List of objectives we have already checked
 	var/list/checked_objectives = list()
+	///has the player completed all objectives and got hijack?
+	var/hijacker_rdy = FALSE
 	///Pool of rewards
 	var/reward_items = list(
 		/obj/item/card/emag,
@@ -147,6 +149,7 @@
 	var/list/data = list()
 	data["check"] = check_reward_status(user)
 	data["completed"] = objectives_complete
+	data["final"] = hijacker_rdy
 	return data
 
 /obj/item/infiltrator_radio/ui_act(action, params)

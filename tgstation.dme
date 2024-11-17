@@ -6677,6 +6677,7 @@
 #include "hypermods\code\modules\clothing\suits\costume.dm"
 #include "hypermods\code\modules\clothing\suits\reactive_armour.dm"
 #include "hypermods\code\modules\events\ghost_role\infiltrator.dm"
+#include "hypermods\code\modules\events\infil\missiles.dm"
 #include "hypermods\code\modules\events\space_vines\vine_controller.dm"
 #include "hypermods\code\modules\events\space_vines\vine_event.dm"
 #include "hypermods\code\modules\events\space_vines\vine_mutations.dm"
