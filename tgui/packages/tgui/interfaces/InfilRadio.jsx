@@ -1,8 +1,9 @@
 import { useBackend } from '../backend';
 import { 
+  Box,
   Button,
   Section,
-} from '../components';
+} from 'tgui-core/components';
 import { Window } from '../layouts';
 
 export const InfilRadio = (props) => {
