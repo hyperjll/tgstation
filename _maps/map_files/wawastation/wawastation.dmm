@@ -11178,7 +11178,7 @@
 /area/station/service/janitor)
 "dWb" = (
 /obj/structure/window/reinforced/spawner/directional/west,
-/mob/living/simple_animal/bot/floorbot,
+/mob/living/basic/bot/repairbot,
 /obj/effect/turf_decal/stripes{
 	dir = 6
 	},
@@ -63397,6 +63397,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/testlab)
+"wqG" = (
+/obj/structure/lattice/catwalk,
+/turf/open/openspace/telecomms,
+/area/station/science/xenobiology)
 "wqK" = (
 /obj/structure/table,
 /obj/item/circular_saw,
@@ -186171,9 +186175,9 @@ qXj
 lKY
 qUi
 wmO
-ybO
-ybO
-ybO
+wqG
+wqG
+wqG
 wmO
 rmi
 lKY
@@ -186428,9 +186432,9 @@ qXj
 avA
 nVm
 wmO
-ybO
-ybO
-ybO
+wqG
+wqG
+wqG
 wmO
 xGG
 uBm
@@ -186685,9 +186689,9 @@ qXj
 lKY
 qGD
 wmO
-ybO
-ybO
-ybO
+wqG
+wqG
+wqG
 wmO
 bLI
 lKY
