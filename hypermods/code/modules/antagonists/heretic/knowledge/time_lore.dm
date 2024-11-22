@@ -108,7 +108,7 @@
 		Eventually, all obstacles are either moved, destroyed or opened, after all."
 	gain_text = "They took an interest in me, noting the path i chose. \
 			They pointed to a place i couldn't fathom. A place i couldn't reach."
-	spell_to_add = /datum/action/cooldown/spell/pointed/skip_time
+	action_to_add = /datum/action/cooldown/spell/pointed/skip_time
 	cost = 1
 
 
@@ -175,7 +175,7 @@
 		When this occurs, you reverse all damage (and healing) taken at great cost to your youth."
 	gain_text = "And before i knew it, i was back where i was before. Requires a focus to use. \
 			Knowledge remained, but their attention did not."
-	spell_to_add = /datum/action/cooldown/spell/deja_vu
+	action_to_add = /datum/action/cooldown/spell/deja_vu
 	cost = 1
 
 

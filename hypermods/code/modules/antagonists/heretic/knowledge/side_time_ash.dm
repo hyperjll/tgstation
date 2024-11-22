@@ -14,7 +14,7 @@
 	desc = "Grants you Slow, a short-range spell that lets you manipulate time upon another, \
 		causing them to move drastically slower for the next 5 seconds. Requires a focus to use."
 	gain_text = "The Nightwatcher walked these paths, leaving burned clues etched by second nature."
-	spell_to_add = /datum/action/cooldown/spell/pointed/slow
+	action_to_add = /datum/action/cooldown/spell/pointed/slow
 	cost = 1
 
 /datum/heretic_knowledge/curse/age
@@ -53,7 +53,7 @@
 		Using this a second time on a target does nothing but reset the timer."
 	gain_text = "Beyond the veil i witnessed something strange, countless eyes stared back at me. \
 		But most peculiar was the tune they sung as they watched."
-	spell_to_add = /datum/action/cooldown/spell/pointed/eldritch_echoes
+	action_to_add = /datum/action/cooldown/spell/pointed/eldritch_echoes
 	cost = 1
 
 /datum/heretic_knowledge/spell/cursed_flames
@@ -62,5 +62,5 @@
 		and drenches them with flammable liquids."
 	gain_text = "The Nightwatcher himself once sought out the Time Lords. \
 		Seeking answers as to how to preserve the fire within and out."
-	spell_to_add = /datum/action/cooldown/spell/pointed/cursed_flames
+	action_to_add = /datum/action/cooldown/spell/pointed/cursed_flames
 	cost = 1

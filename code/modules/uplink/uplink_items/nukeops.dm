@@ -53,7 +53,7 @@
 		least SOME of these items. More experienced operatives can do without."
 	item = /obj/item/storage/box/syndie_kit/core_gear
 	//The cost for the core kit is always equivalent to the combined costs of the included items
-	cost = (/datum/uplink_item/device_tools/doorjack::cost + /datum/uplink_item/implants/freedom::cost + /datum/uplink_item/explosives/c4::cost + /datum/uplink_item/device_tools/stimpack::cost +	/datum/uplink_item/suits/energy_shield::cost)
+	cost = (/datum/uplink_item/device_tools/doorjack::cost + /datum/uplink_item/implants/freedom::cost + /datum/uplink_item/explosive_tools/c4::cost + /datum/uplink_item/consumable/stimpack::cost +	/datum/uplink_item/mod_modules/energy_shield::cost)
 	limited_stock = 1
 	cant_discount = TRUE
 	purchasable_from = UPLINK_SERIOUS_OPS

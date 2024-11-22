@@ -153,11 +153,11 @@
 	cost = PAYCHECK_COMMAND * 2
 	contains = list(/mob/living/basic/bot/firebot)
 
-/datum/supply_pack/goody/floorbot
-	name = "Floor Replacment Bot"
-	desc = "A crate containing one Floor Replacment Bot."
+/datum/supply_pack/goody/repairbot
+	name = "Repair Bot"
+	desc = "A crate containing one Repair Bot."
 	cost = PAYCHECK_COMMAND * 3
-	contains = list(/mob/living/simple_animal/bot/floorbot)
+	contains = list(/mob/living/basic/bot/repairbot)
 
 /datum/supply_pack/goody/honkbot
 	name = "Clown Bot"
