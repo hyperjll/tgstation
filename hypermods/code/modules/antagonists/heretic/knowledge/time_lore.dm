@@ -243,6 +243,8 @@
 			But with your help? We can remind them together. \
 			So, rise! Lord of Time! YOUR ASCENSION AWAITS."
 	ascension_achievement = /datum/award/achievement/misc/time_ascension
+	announcement_text = "%SPOOKY% Witness the end of days, for the Lord of Time, %NAME% has ascended! Let all be reminded of what's to come! %SPOOKY%"
+	announcement_sound = 'hypermods/sound/music/antag/heretic/ascend_time.ogg'
 	/// A static list of all traits we apply on ascension.
 	var/static/list/traits_to_apply = list(
 		TRAIT_TIME_STOP_IMMUNE,
@@ -259,12 +261,6 @@
 
 /datum/heretic_knowledge/ultimate/time_final/on_finished_recipe(mob/living/user, list/selected_atoms, turf/loc)
 	. = ..()
-	priority_announce(
-		text = "[generate_heretic_text()] Witness the end of days, for the Lord of Time, [user.real_name] has ascended! Let all be reminded of what's to come! [generate_heretic_text()]",
-		title = "[generate_heretic_text()]",
-		sound = 'hypermods/sound/music/antag/heretic/ascend_time.ogg',
-		color_override = "grey",
-	)
 
 	var/datum/action/cooldown/spell/timestop_super/time_spell = new(user.mind)
 	time_spell.Grant(user)
