@@ -208,7 +208,7 @@
 	if(!.)
 		return
 	var/obj/projectile/net = new /obj/projectile/energy_net/syndicate(mod.wearer.loc, src)
-	net.preparePixelProjectile(target, mod.wearer)
+	net.aim_projectile(target, mod.wearer)
 	net.firer = mod.wearer
 	playsound(src, 'sound/items/weapons/punchmiss.ogg', 25, TRUE)
 	INVOKE_ASYNC(net, TYPE_PROC_REF(/obj/projectile, fire))
@@ -414,7 +414,7 @@
 	if(!.)
 		return
 	var/obj/projectile/bomb = new /obj/projectile/bullet/mining_bomb/syndicate(mod.wearer.loc)
-	bomb.preparePixelProjectile(target, mod.wearer)
+	bomb.aim_projectile(target, mod.wearer)
 	bomb.firer = mod.wearer
 	playsound(src, 'sound/items/weapons/gun/general/grenade_launch.ogg', 75, TRUE)
 	INVOKE_ASYNC(bomb, TYPE_PROC_REF(/obj/projectile, fire))
