@@ -13,3 +13,7 @@
 #define SEC_LEVEL_RED 2
 /// Security level is delta. (station destruction immiment)
 #define SEC_LEVEL_DELTA 3
+
+//Defines for "Alert Level Deltaww"
+#define SEC_LEVEL_DELTAWW 4
+#define ALERT_COEFF_DELTAWW 255 //This alert level should only be temporary; might as well mess with everyone.

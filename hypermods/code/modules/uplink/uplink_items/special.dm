@@ -355,3 +355,17 @@
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_PDA_GLITCHED))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
+
+/datum/uplink_item/special/siliconmag
+	name = "Cyborg Sequencer"
+	desc = "A unique cryptographic sequencer designed to only subvert and interact with cyborgs! \
+			This is technically a mark-down from the original design."
+	item = /obj/item/card/emag/silicon_hack
+	cost = 2
+	surplus = 0
+
+/datum/uplink_item/special/siliconmag/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_UNIQUE_AI))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = -1

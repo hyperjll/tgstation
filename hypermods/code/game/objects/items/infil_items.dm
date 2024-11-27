@@ -161,3 +161,218 @@
 			if(check_reward_status(usr))
 				give_reward(usr)
 	return
+
+
+/obj/item/missile_disk
+	name = "missile disk"
+	desc = "Used to store the coordinates of the station."
+	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
+	icon_state = "missiledisk"
+	w_class = WEIGHT_CLASS_TINY
+	item_flags = NOBLUDGEON
+	///Does the disk have the station coordinates?
+	var/stored = FALSE
+
+/obj/item/missile_disk/interact_with_atom(atom/movable/victim, mob/living/carbon/human/user, proximity)
+	. = ..()
+	if(!proximity)
+		return
+	if(!istype(victim, /obj/machinery/computer/communications))
+		return
+	if(stored)
+		to_chat(user, span_warning("Disk already contains station coordinates."))
+		return
+	to_chat(user, span_warning("Downloading station coordinates..."))
+	if(!do_after(user, 8 SECONDS))
+		return
+	playsound(src, 'sound/machines/beep/beep.ogg', 50, FALSE)
+	to_chat(user, span_warning("Station coordinates successfully downloaded!"))
+	stored = TRUE
+
+/obj/item/missilephone
+	name = "large handphone"
+	desc = "Hello? Is this the police?"
+	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
+	icon_state = "missilephone"
+	w_class = WEIGHT_CLASS_SMALL
+	item_flags = NOBLUDGEON
+	///has a disk been inserted into the phone?
+	var/disk = FALSE
+	///has the phone served its purpose?
+	var/used = FALSE
+
+/obj/item/missilephone/attackby(obj/item/missile_disk/terrorism, mob/user)
+	if(!terrorism.stored)
+		return
+	playsound(src, 'sound/machines/terminal/terminal_insert_disc.ogg', 50, FALSE)
+	to_chat(user, span_warning("Station coordinates uploaded to phone!"))
+	disk = TRUE
+	qdel(terrorism)
+	add_overlay("missilephone_overlay")
+
+/obj/item/missilephone/attack_self(mob/living/user)
+	if(!ISADVANCEDTOOLUSER(user))
+		to_chat(user, span_warning("This device is too advanced for you!"))
+		return
+	if(used)
+		to_chat(user, span_warning("This [src] has already been used."))
+		return FALSE
+	if(!disk)
+		to_chat(user, span_warning("This [src] doesn't have it's coordinates set!"))
+		return FALSE
+
+	if(tgui_alert(user, "Are you sure you want to launch the missiles?", "Missile Phone", list("Yes", "No")) == "Yes")
+		if(used || QDELETED(src)) //Prevents fuckers from cheesing alert
+			return FALSE
+
+		to_chat(user, span_notice("You have activated Protocol CRAB-17."))
+		message_admins("[ADMIN_LOOKUPFLW(user)] has activated Protocol CRAB-17.")
+		user.log_message("activated Protocol CRAB-17.", LOG_GAME)
+
+		used = TRUE
+
+		var/datum/round_event_control/missilegalore/missiles = new
+		missiles.run_event()
+
+
+/obj/item/grenade/c4/wormhole
+	name = "Wormhole Projector"
+	desc = "A device that opens up a portal gateway to our allies."
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/bombs_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/bombs_righthand.dmi'
+	icon_state = "wormhole-explosive0"
+	inhand_icon_state = "wormhole-explosive"
+	boom_sizes = list(0, 0, 0)
+	///The place that wiLL be used to summon the wormhole
+	var/area/bombing_zone
+	///the terrorist in question
+	var/datum/weakref/bomber
+
+/obj/item/grenade/c4/wormhole/proc/set_bombing_zone()
+	for(var/sanity in 1 to 100)
+		var/area/selected_area = pick(get_sorted_areas())
+		if(!is_station_level(selected_area.z) || !(selected_area.area_flags & VALID_TERRITORY))
+			continue
+		bombing_zone = selected_area
+		break
+
+/obj/item/grenade/c4/wormhole/interact_with_atom(atom/movable/bombed, mob/user, flag)
+	if(!isfloorturf(bombed))
+		to_chat(user, span_notice("This wormhole projector must be planted on a floor!"))
+		return
+	if((get_area(target) != bombing_zone) && (get_area(src) != bombing_zone))
+		if (!active)
+			to_chat(user, span_notice("This isn't the location you're supposed to use this!"))
+			return
+	bomber = WEAKREF(user)
+	return ..()
+
+/obj/item/grenade/c4/wormhole/detonate(mob/living/lanced_by)
+	if(!bomber)
+		return
+	var/mob/terrorist = bomber.resolve()
+	var/turf/location
+	location = get_turf(target)
+	. = ..()
+	var/obj/structure/cyborg_rift/rift = new /obj/structure/cyborg_rift(location)
+	rift.owner = terrorist.real_name
+	playsound(rift, 'sound/vehicles/rocketlaunch.ogg', 100, TRUE)
+	notify_ghosts(
+		"Someone has opened a Cyborg rift!",
+		source = rift,
+		header = "Cyborg Rift opened",
+		notify_flags = NOTIFY_CATEGORY_NOFLASH,
+	)
+	priority_announce("An extra-dimensional rift has been detected within your sector, it's recommended such rifts be located and destroyed.", "Extra-Dimensional Affairs Report")
+	/**
+	var/datum/antagonist/traitor/fulp_infiltrator/infil = terrorist.mind.has_antag_datum(/datum/antagonist/traitor/fulp_infiltrator)
+	if(!infil)
+		return
+	var/datum/objective/summon_wormhole/objective = locate() in infil.objectives
+	objective.completed = TRUE
+	**/
+
+/obj/item/grenade/c4/wormhole/Destroy()
+	bombing_zone = null
+	bomber = null
+	return ..()
+
+/obj/structure/cyborg_rift
+	name = "cyborg rift"
+	desc = "A portal opened up to long-forgotten cyborgs."
+	armor_type = /datum/armor/cyborg_rift
+	max_integrity = 300
+	icon = 'hypermods/icons/effects/effects.dmi'
+	icon_state = "cyborg_rift"
+	anchored = TRUE
+	density = FALSE
+	plane = MASSIVE_OBJ_PLANE
+	///How many borgs have we spawned?
+	var/borg_counter = 0
+	///Max amount of borgs to produce.
+	var/borg_max = INFINITY
+	///name of the owner
+	var/owner
+
+/datum/armor/cyborg_rift
+	melee = 99 // a little lee-way
+	energy = 99 // a little lee-way
+	bomb = 100
+	fire = 100
+	acid = 100
+
+/obj/structure/cyborg_rift/attack_ghost(mob/user)
+	. = ..()
+	if(.)
+		return
+	summon_cyborg(user)
+	if(borg_counter >= borg_max)
+		qdel(src)
+
+/obj/structure/cyborg_rift/proc/summon_cyborg(mob/user)
+	var/cyborg_check = tgui_alert(user, "Become a rogue security cyborg?", "Cyborg Rift", list("Yes", "No"))
+	if(cyborg_check != "Yes" || !src || QDELETED(src) || QDELETED(user))
+		return FALSE
+
+	if(borg_counter >= borg_max)
+		return FALSE
+
+	borg_counter += 1
+	var/mob/living/silicon/robot/model/rogue/borg = new /mob/living/silicon/robot/model/rogue(loc)
+	borg.SetEmagged(1)
+	borg.set_connected_ai(null)
+	borg.laws = new /datum/ai_laws/syndicate_override
+	if(owner)
+		borg.set_zeroth_law("Aid [owner] with their tasks in exacting revenge against Nanotrasen.")
+	borg.laws.associate(src)
+	borg.key = user.key
+
+/mob/living/silicon/robot/model/rogue
+	set_model = /obj/item/robot_model/security/rogue
+	icon = 'hypermods/icons/mob/silicon/robots.dmi'
+	icon_state = "infilsec"
+	scrambledcodes = TRUE
+
+/obj/projectile/beam/laser/rogue
+	damage = 10
+
+/obj/item/ammo_casing/energy/lasergun/rogue
+	projectile_type = /obj/projectile/beam/laser/rogue
+
+/obj/item/gun/energy/laser/cyborg/rogue
+	ammo_type = list(/obj/item/ammo_casing/energy/lasergun/rogue)
+
+/obj/item/robot_model/security/rogue
+	name = "Rogue Security"
+	emag_modules = list(/obj/item/gun/energy/laser/cyborg/rogue)
+	cyborg_base_icon = "infilsec"
+
+/mob/living/silicon/robot/model/rogue/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if(istype(emag_card, /obj/item/card/emag/silicon_hack)) //cheeky MF thought YOU WAS CLEVER?
+		to_chat(user, span_warning("This sequencer seems to be incompatible with this model of cyborgs!"))
+		return
+	return ..()
+
+/mob/living/silicon/robot/model/rogue/ResetModel()
+	self_destruct(src)

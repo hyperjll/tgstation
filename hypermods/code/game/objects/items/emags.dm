@@ -15,6 +15,10 @@
 	prox_check = TRUE
 	var/type_whitelist //List of types
 
+/obj/item/card/emag/botemagger/examine(mob/user)
+    . = ..()
+    . += span_notice("It can only be used on basic bots.")
+
 /obj/item/card/emag/botemagger/Initialize(mapload)
 	. = ..()
 	type_whitelist = list(typesof(/mob/living/basic/bot), typesof(/mob/living/simple_animal/bot)) //list of all acceptable typepaths that this device can affect
@@ -24,6 +28,38 @@
 		if (target.type in subtypelist)
 			return TRUE
 	to_chat(user, span_warning("[src] is unable to interface with this. It only seems to activate when in close proximity to simple bots."))
+	return FALSE
+
+/*
+ * The Cyborg-Only Subverter
+ */
+
+/obj/item/card/emag/silicon_hack
+	desc = "It's a card with a magnetic strip attached to some circuitry. It looks... off, somehow."
+	name = "silicon cryptographic sequencer"
+	icon = 'hypermods/icons/obj/card.dmi'
+	icon_state = "cyborg_hack"
+	inhand_icon_state = "card-id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+	item_flags = NO_MAT_REDEMPTION | NOBLUDGEON
+	/// Does usage require you to be in range?
+	prox_check = TRUE
+	var/type_whitelist //List of types
+
+/obj/item/card/emag/silicon_hack/examine(mob/user)
+    . = ..()
+    . += span_notice("It can only be used on cyborgs.")
+
+/obj/item/card/emag/silicon_hack/Initialize(mapload)
+	. = ..()
+	type_whitelist = list(typesof(/mob/living/silicon/robot/model)) //list of all acceptable typepaths that this device can affect
+
+/obj/item/card/emag/silicon_hack/can_emag(atom/target, mob/user)
+	for (var/list/subtypelist in type_whitelist)
+		if (target.type in subtypelist)
+			return TRUE
+	to_chat(user, span_warning("[src] is unable to interface with this. It only seems to activate when in close proximity to cyborgs."))
 	return FALSE
 
 /*

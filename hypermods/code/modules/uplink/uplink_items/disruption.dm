@@ -102,3 +102,16 @@
 			Some may call this evil, we call it capitalism... it's basically the same thing."
 	item = /obj/item/storage/box/firingpins/paywall/noremove
 	cost = 3
+
+/datum/uplink_item/disruption/missilephone
+	name = "Missile Phone"
+	desc = "A box containing two items: A coordinates disk and a missile phone. Use the disk upon a communications console \
+			to download the station's coordinates, then insert the disk into the phone. \
+			When you're ready to launch the missiles, simply activate the phone with the disk inserted! \
+			Beware: Missiles are numerous and will impact random areas, including areas you may want to use later, \
+			such as the Medbay, Supermatter Engine, etc."
+	item = /obj/item/storage/box/syndie_kit/missilephone
+	restricted = TRUE
+	cost = 9 // Highly destructive, but not everyone can easily access a communications console.
+	limited_stock = 1
+	progression_minimum = 30 MINUTES

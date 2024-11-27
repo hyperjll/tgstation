@@ -200,3 +200,14 @@
 	progression_minimum = 30 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
+
+/datum/uplink_item/bundles_tc/silicon_rift_plus
+	name = "Silicon Rift Kit"
+	desc = "A box containing a single, highly experimental rift charge leading to a nearby universe where rogue security cyborgs have since \
+			conquered the stars for the Syndicate. After detonation, the rift will draw these cyborgs in to invade the station and install \
+			a new directive within them: Serve you. Comes with a binary encryption key to help you keep in touch with them."
+	item = /obj/item/storage/box/syndie_kit/silicon_rift_plus
+	cost = 50
+	progression_minimum = 30 MINUTES
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	cant_discount = TRUE

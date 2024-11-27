@@ -11,8 +11,8 @@
 /obj/item/powerlake
 	name = "power lake"
 	desc = "A power lake which draws energy from alternate universes and sends it straight to the power grid. This technology is highly unstable and prone to over-heating which can result in a catastrophic explosion. This is inevitable should the power lake not be disposed of after being used for an extended period of time."
-	icon = 'icons/obj/devices/syndie_gadget.dmi'
-	icon_state = "powersink0"
+	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
+	icon_state = "powerlake0"
 	inhand_icon_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
@@ -31,7 +31,7 @@
 	var/obj/structure/cable/attached
 
 /obj/item/powerlake/update_icon_state()
-	icon_state = "powersink[mode == OPERATING]"
+	icon_state = "powerlake[mode == OPERATING]"
 	return ..()
 
 /obj/item/powerlake/examine(mob/user)

@@ -8,6 +8,7 @@
 		/datum/traitor_objective/ultimate/romerol = 1,
 		/datum/traitor_objective/ultimate/supermatter_cascade = 1,
 		/datum/traitor_objective/ultimate/no_escape = 1,
+		/datum/traitor_objective/ultimate/cyborg_rift = 1,
 	)
 	weight = 100
 

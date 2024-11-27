@@ -1093,6 +1093,13 @@
 	new /obj/item/implanter/mindshieldtot(src)
 	new /obj/item/card/id/advanced/chameleon(src)
 
+/obj/item/storage/box/syndie_kit/silicon_rift_plus
+	name = "silicon rift kit"
+
+/obj/item/storage/box/syndie_kit/silicon_rift_plus/PopulateContents()
+	new /obj/item/grenade/c4/wormhole(src)
+	new /obj/item/encryptionkey/binary(src)
+
 /obj/item/storage/box/syndie_kit/imp_tenacity
 	name = "tenacity implant box"
 
@@ -1134,3 +1141,10 @@
 
 /obj/item/storage/box/syndie_kit/imp_violentpsychosis/PopulateContents()
 	new /obj/item/implanter/violentpsychosis(src)
+
+/obj/item/storage/box/syndie_kit/missilephone
+	name = "missile phone box"
+
+/obj/item/storage/box/syndie_kit/missilephone/PopulateContents()
+	new /obj/item/missile_disk(src)
+	new /obj/item/missilephone(src)
