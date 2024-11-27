@@ -361,7 +361,7 @@
 	var/datum/uplink_item/uplink_item = pick(possible_items)
 	if(prob(100 - uplink_item.surplus))
 		return null
-	if(tc_budget < uplink_item.real_cost(handler))
+	if(tc_budget < uplink_item.cost)
 		return null
 	return uplink_item
 
@@ -372,7 +372,7 @@
 		var/datum/uplink_item/uplink_item = pick_possible_item(possible_items, tc_budget, handler)
 		if(!uplink_item)
 			continue
-		tc_budget -= uplink_item.real_cost(handler)
+		tc_budget -= uplink_item.cost
 		new uplink_item.item(surplus_crate)
 
 /// overwrites item spawning proc for surplus items to spawn an appropriate crate via a podspawn
