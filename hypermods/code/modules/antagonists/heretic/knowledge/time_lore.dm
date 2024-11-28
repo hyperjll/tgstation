@@ -216,8 +216,7 @@
 	name = "Eternal Haste"
 	desc = "You are permanently hastened, you perform all progress bar actions 50% faster and move 15% faster. \
 		You'll purge toxins from your body automatically, and will burn through your calories quicker."
-	gain_text = "My eyes lit up as i realized what my purpose was. \
-			Beyond the folds of time, lies an ultimate goal. A purpose."
+	gain_text = "My heart beats faster, i feel time slip away as i walk these planes."
 	cost = 1
 	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
 	research_tree_icon_state = "haste"
