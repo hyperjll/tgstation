@@ -1106,3 +1106,84 @@
 	respawned.forceMove(pod)
 	new /obj/effect/pod_landingzone(spawn_location ? spawn_location : get_turf(src), pod)
 **/
+
+/obj/item/antag_spawner/loadout/syndipal
+	name = "syndicate support beacon"
+	desc = "A beacon sold to syndicate agents in the field, a single-use radio for calling immediate backup."
+	icon = 'icons/obj/devices/voice.dmi'
+	icon_state = "nukietalkie"
+	outfit = /datum/outfit/traitor_partner
+	use_subtypes = FALSE
+	antag_datum = /datum/antagonist/traitor/traitor_support
+	poll_ignore_category = ROLE_TRAITOR
+	role_to_play = ROLE_SYNDICATE_SUPPORT
+
+/obj/item/antag_spawner/loadout/syndipal/do_special_things(mob/living/carbon/human/syndi_support, mob/user)
+	to_chat(syndi_support, "\n[span_alertwarning("[user.real_name] is your superior. Follow any, and all orders given by them. You're here to support their mission only.")]")
+	to_chat(syndi_support, "[span_alertwarning("Should they perish, or be otherwise unavailable, you're to assist other active agents in this mission area to the best of your ability.")]")
+
+/// Support unit gets it's own very basic antag datum for admin logging.
+/datum/antagonist/traitor/traitor_support
+	name = "Syndicate Support Unit"
+	job_rank = ROLE_SYNDICATE_SUPPORT
+	employer = "Syndicate Support Unit"
+	show_in_roundend = FALSE
+	give_objectives = TRUE
+	give_uplink = FALSE
+
+/datum/antagonist/traitor/traitor_support/forge_traitor_objectives()
+	var/datum/objective/generic_objective = new
+	generic_objective.name = "Aid Syndicate Agents"
+	generic_objective.explanation_text = "Follow orders provided by syndicate agents and assist them accordingly, especially the one who brought you here."
+	generic_objective.completed = TRUE
+	objectives += generic_objective
+
+/datum/antagonist/traitor/traitor_support/forge_ending_objective()
+	return
+
+/datum/outfit/traitor_partner
+	name = "Syndicate Support Unit"
+
+	uniform = /obj/item/clothing/under/chameleon
+	suit = /obj/item/clothing/suit/chameleon
+	back = /obj/item/storage/backpack
+	belt = /obj/item/modular_computer/pda/chameleon
+	mask = /obj/item/cigarette/syndicate
+	shoes = /obj/item/clothing/shoes/chameleon/noslip
+	ears = /obj/item/radio/headset/chameleon
+	id = /obj/item/card/id/advanced/chameleon
+	r_hand = /obj/item/storage/toolbox/syndicate
+	id_trim = /datum/id_trim/chameleon/operative
+
+	backpack_contents = list(
+		/obj/item/storage/box/survival,
+		/obj/item/knife/combat/survival, // No uplink, just a basic weapon.
+		/obj/item/clothing/mask/chameleon,
+		/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
+		/obj/item/lighter,
+	)
+
+/datum/outfit/traitor_partner/post_equip(mob/living/carbon/human/H, visuals_only)
+	. = ..()
+	var/obj/item/cigarette/syndicate/cig = H.get_item_by_slot(ITEM_SLOT_MASK)
+	cig.light()
+
+
+/obj/item/antag_spawner/loadout/syndiborg
+	name = "syndicate cyborg support beacon"
+	desc = "A beacon sold to syndicate agents in the field, a single-use radio for calling immediate silicon-based backup."
+	icon = 'icons/obj/devices/voice.dmi'
+	icon_state = "nukietalkie"
+	outfit = /datum/outfit/traitor_partner
+	spawn_type = /mob/living/silicon/robot/model
+	use_subtypes = FALSE
+	antag_datum = /datum/antagonist/traitor/traitor_support
+	poll_ignore_category = ROLE_TRAITOR
+	role_to_play = ROLE_SYNDICATE_SUPPORT
+
+/obj/item/antag_spawner/loadout/syndiborg/do_special_things(mob/living/silicon/robot/model/H, mob/user)
+	. = ..()
+	H.SetEmagged(1)
+	H.set_connected_ai(null)
+	H.laws = new /datum/ai_laws/syndicate_override
+	H.laws.associate(src)

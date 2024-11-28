@@ -88,6 +88,7 @@
 #define ROLE_SYNDICATE_SABOBORG "Syndicate Sabotage Cyborg"
 #define ROLE_SYNDICATE_MEDBORG "Syndicate Medical Cyborg"
 #define ROLE_SYNDICATE_ASSAULTBORG "Syndicate Assault Cyborg"
+#define ROLE_SYNDICATE_SUPPORT "Syndicate Support Unit"
 
 #define ROLE_RECOVERED_CREW "Recovered Crew"
 

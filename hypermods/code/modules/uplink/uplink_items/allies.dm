@@ -1,9 +1,33 @@
+/datum/uplink_item/reinforcements/syndipal
+	name = "Syndicate Support Beacon"
+	desc = "A single-use beacon which allows us to send over a support agent to your location to assist you. \
+			The support agent comes equipped with some chameleon clothing, a syndicate toolbox, an agent id, \
+			a voice mask, some syndicate smokes, and a survival knife for self-defense."
+	item = /obj/item/antag_spawner/loadout/syndipal
+	cost = 4
+	limited_stock = 1
+	refundable = TRUE
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // This is necessary cuz it defaults to nukeop only.
+
+/datum/uplink_item/reinforcements/totborg
+	name = "Cyborg Support Beacon"
+	desc = "A single-use beacon which allows us to send over a hacked cyborg to your location to assist you. \
+			The support cyborg will have had it's hidden modules unlocked before-hand. \
+			Just in case, it's had our own custom set of laws installed to ensure it's compliance."
+	item = /obj/item/antag_spawner/loadout/syndiborg
+	cost = 6
+	limited_stock = 1
+	refundable = TRUE
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+
 /datum/uplink_item/reinforcements/dehy_carp
 	name = "Dehydrated Space Carp"
 	desc = "Looks like a plush toy carp, but just add water and it becomes a real-life space carp! Activate in \
 			your hand before use so it knows not to kill you."
 	item = /obj/item/toy/plush/carpplushie/dehy_carp
 	cost = 1
+	purchasable_from = ALL
 
 /datum/uplink_item/reinforcements/guardian
 	name = "Holoparasites"
@@ -22,12 +46,14 @@
 	desc = "A modified flash able to hypnotize targets. If the target is not in a mentally vulnerable state, it will only confuse and pacify them temporarily."
 	item = /obj/item/assembly/flash/hypnotic
 	cost = 7
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/reinforcements/hypnotic_grenade
 	name = "Hypnotic Grenade"
 	desc = "A modified flashbang grenade able to hypnotize targets. The sound portion of the flashbang causes hallucinations, and will allow the flash to induce a hypnotic trance to viewers."
 	item = /obj/item/grenade/hypnotic
 	cost = 12
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 
 /datum/uplink_item/reinforcements/megadehydratedcarp
@@ -37,6 +63,7 @@
 	item = /obj/item/toy/plush/carpplushie/dehy_carp/mega
 	cost = 2
 	surplus = 10
+	purchasable_from = ALL
 
 /datum/uplink_item/reinforcements/potion
 	name = "Syndicate Sentience Potion"
