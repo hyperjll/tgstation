@@ -172,8 +172,8 @@
 /datum/heretic_knowledge/spell/deja_vu
 	name = "Deja Vu"
 	desc = "You mark a place in time and space and return to it after 10 seconds. \
-		When this occurs, you reverse all damage (and healing) taken at great cost to your youth."
-	gain_text = "And before i knew it, i was back where i was before. Requires a focus to use. \
+		When this occurs, you reverse all damage (and healing) taken at great cost to your youth. Requires a focus to use."
+	gain_text = "And before i knew it, i was back where i was before. \
 			Knowledge remained, but their attention did not."
 	action_to_add = /datum/action/cooldown/spell/deja_vu
 	cost = 1
