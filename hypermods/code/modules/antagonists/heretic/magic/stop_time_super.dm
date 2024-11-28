@@ -9,7 +9,7 @@
 	school = SCHOOL_FORBIDDEN
 	cooldown_time = 1 MINUTES
 
-	invocation = "L'T TH'S' N'GG'S KN'W"
+	invocation = "C''S' Y''R FL'W"
 	invocation_type = INVOCATION_WHISPER
 	spell_requirements = SPELL_REQUIRES_HUMAN
 
