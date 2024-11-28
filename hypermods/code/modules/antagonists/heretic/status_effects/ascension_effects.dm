@@ -22,11 +22,11 @@
 
 	if(carbon_human.age > 100)
 		carbon_human.become_nearsighted(type)
-		if(prob(carbon_human.age / 1))
+		if(carbon_human.gender == MALE)
+			carbon_human.set_facial_hairstyle("Beard (Very Long)", update = TRUE)
+		if(prob(carbon_human.age * 0.01))
 			var/datum/disease/heart_disease = new /datum/disease/heart_failure()
 			carbon_human.ForceContractDisease(heart_disease, FALSE, TRUE)
-			if(carbon_human.gender == MALE)
-				carbon_human.set_facial_hairstyle("Beard (Very Long)", update = TRUE)
 
 	if(carbon_human.age > 969)
 		carbon_human.visible_message(span_notice("[carbon_human] becomes older than any man should be.. and crumbles into dust!"))
@@ -36,7 +36,7 @@
 	id = "age checker"
 	duration = 1 SECONDS
 	alert_type = null
-	probability = 0 // Don't want any accidentally age-ups with this one
+	probability = 0 // Don't want any accidental age-ups with this one
 
 /datum/status_effect/rapidaging/lesser/tick(seconds_between_ticks)
 	agecheck()
