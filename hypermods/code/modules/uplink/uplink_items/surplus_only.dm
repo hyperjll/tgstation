@@ -1,4 +1,4 @@
-/** // Preventing this category from being made prevents people from buying via uplink, but not from surplus crates. (Except via search)
+/** Just here for posture.
 /datum/uplink_category/surplusonly
 	name = "Surplus Only"
 	weight = -99
@@ -6,7 +6,7 @@
 /datum/uplink_item/surplusonly
 	//category = /datum/uplink_category/surplusonly
 	surplus = 10
-	purchasable_from = NONE
+	purchasable_from = NONE // Surplus crates only.
 	cant_discount = TRUE
 
 
@@ -37,7 +37,7 @@
 	desc = "A case containing a single flare gun, and some spare ammunition."
 	item = /obj/item/storage/toolbox/guncase/flaregun
 	cost = 5
-	surplus = 70
+	surplus = 60
 
 /datum/uplink_item/surplusonly/syndidagger
 	name = "Syndicate Dagger"
