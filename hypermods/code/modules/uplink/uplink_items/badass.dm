@@ -82,7 +82,7 @@
 /datum/uplink_item/badass/syndibackpack
 	name = "Syndicate Backpack"
 	desc = "A syndicate branded backpack capable of storing nearly as many goods as a duffelbag would. \
-			The backpack itself is made a fire-proof and acid-proof materials. Hides contraband."
+			The backpack itself is made of fire-proof and acid-proof materials. Hides contraband."
 	item = /obj/item/storage/backpack/syndicate
 	cost = 2
 	surplus = 0
