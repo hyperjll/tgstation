@@ -16,6 +16,7 @@
 
 	update_appearance()
 	SSpai.pai_card_list += src
+	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
 	//ADD_TRAIT(src, TRAIT_CASTABLE_LOC, INNATE_TRAIT)
 	//RegisterSignal(src, COMSIG_HIT_BY_SABOTEUR, PROC_REF(on_saboteur))
 

@@ -75,8 +75,7 @@ export const SOFTWARE_DESC = {
   'Antiviral': `Use your chemical synthesizer to infuse 1 unit of spacecillin into your holder.`,
   'Stimulate': `Use your chemical synthesizer to infuse 3 units of stimulants into your holder.`,
   'Thermal Sensors': `Engage your thermal sensors to recognize lifeforms and terrain through obstacles.`,
-  'Empulse': `Utilize your internal electromagnetic coils to emit a short-range EMP blast. 
-  May cause self-harm.`,
+  'Empulse': `Utilize your internal electromagnetic coils to emit a short-range EMP blast.`,
 } as const;
 
 export enum PAI_TAB {

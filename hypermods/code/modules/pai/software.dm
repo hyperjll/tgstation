@@ -228,5 +228,5 @@
 		balloon_alert(usr, "On Cooldown!")
 		return
 
-	empulse(src, 0, 4)
+	empulse(src, 0, 6)
 	empblast_cooldown = (world.time + 80 SECONDS)
