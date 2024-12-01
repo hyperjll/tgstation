@@ -9,6 +9,14 @@
 	item = /obj/item/keycard/syndicate_gene
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
 
+/datum/uplink_item/base_keys/nanite_key
+	name = "Syndicate Nanite Laboratory Access Card"
+	desc = "Some of our folks at Cybersun Industries recently shipped over some over their Nanite Technology to your base. \
+		With this Authorization Key, you may have early access to the equipment to cause nanite havoc upon the crew, or support your team \
+		using specialized robotic technology. Comes with many programs pre-downloaded! Get creative!"
+	item = /obj/item/keycard/syndicate_nanite
+	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
+
 /datum/uplink_item/base_keys/armory_key
 	name = "Syndicate Armory Access Card"
 	desc = "Can't get enough fire power? Just declared war and need to arm yourself to the teeth? Feel like going in guns blazing? \

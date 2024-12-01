@@ -9,3 +9,9 @@
 	icon_state = "syndie-elite"
 	static_lighting = TRUE
 	ambience_index = AMBIENCE_MAINT
+
+/area/centcom/syndicate_mothership/expansion_nanites
+	name = "Syndicate Nanite Lab"
+	icon_state = "syndie-elite"
+	static_lighting = TRUE
+	ambience_index = AMBIENCE_MAINT

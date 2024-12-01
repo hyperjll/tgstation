@@ -7,6 +7,10 @@
 "ae" = (
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"ag" = (
+/obj/machinery/nanite_programmer,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "ah" = (
 /obj/effect/turf_decal/stripes/end{
 	dir = 4
@@ -47,7 +51,21 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"aA" = (
+/obj/effect/turf_decal/siding/wideplating/dark,
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 1
+	},
+/obj/machinery/door/puzzle/keycard/syndicate_nanite,
+/obj/structure/fans/tiny,
+/turf/open/floor/iron/smooth_half{
+	dir = 4
+	},
+/area/centcom/syndicate_mothership/expansion_nanites)
 "aG" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/expansion_genepowers)
 "aJ" = (
@@ -72,14 +90,8 @@
 /turf/open/floor/iron/freezer,
 /area/centcom/syndicate_mothership/control)
 "bf" = (
-/obj/effect/turf_decal/siding/purple{
-	dir = 1
-	},
-/obj/effect/turf_decal/siding/thinplating_new/light{
-	dir = 8
-	},
 /turf/open/floor/mineral/plastitanium,
-/area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+/area/centcom/syndicate_mothership/expansion_nanites)
 "bo" = (
 /obj/structure/sink/directional/west,
 /obj/structure/mirror/directional/east,
@@ -351,6 +363,12 @@
 /obj/machinery/light/cold/directional/west,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/centcom/syndicate_mothership/control)
+"dR" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "dV" = (
 /obj/effect/turf_decal/siding/red{
 	dir = 4
@@ -578,6 +596,12 @@
 /obj/machinery/computer/security/telescreen/entertainment/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership)
+"gb" = (
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "gf" = (
 /obj/item/toy/plush/lizard_plushie/green{
 	name = "Spots-The-Operative"
@@ -1086,7 +1110,6 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 9
 	},
-/obj/structure/sign/poster/contraband/gorlex_recruitment/directional/north,
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/control)
@@ -1119,6 +1142,27 @@
 	},
 /turf/open/lava/plasma/ice_moon,
 /area/centcom/syndicate_mothership/control)
+"lb" = (
+/obj/structure/table,
+/obj/item/storage/box/disks_nanite{
+	pixel_y = 16;
+	pixel_x = -12
+	},
+/obj/item/storage/box/disks_nanite/syndicate{
+	pixel_x = -12
+	},
+/obj/item/storage/box/disks_nanite/random{
+	pixel_y = 16;
+	pixel_x = 12
+	},
+/obj/item/storage/box/disks_nanite/random{
+	pixel_x = 12
+	},
+/obj/item/storage/box/disks_nanite/random{
+	pixel_y = 5
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "lc" = (
 /obj/effect/turf_decal/siding/red/corner{
 	dir = 4
@@ -1289,11 +1333,17 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
 "mX" = (
-/obj/structure/sign/poster/contraband/power/directional/north,
+/obj/effect/turf_decal/siding/purple{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new/light{
+	dir = 8
+	},
 /obj/machinery/camera/autoname/directional/north{
 	network = list("nukie")
 	},
-/turf/open/floor/mineral/titanium/tiled/yellow,
+/obj/structure/sign/poster/contraband/power/directional/north,
+/turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
 "na" = (
 /obj/effect/turf_decal/siding/purple,
@@ -1881,6 +1931,14 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"sT" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/structure/sign/poster/contraband/gorlex_recruitment/directional/north,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/control)
 "sU" = (
 /turf/open/space/basic,
 /area/space)
@@ -1932,6 +1990,35 @@
 	},
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"tp" = (
+/obj/structure/table,
+/obj/item/clothing/glasses/hud/diagnostic/night{
+	pixel_y = 4;
+	pixel_x = -4
+	},
+/obj/item/clothing/glasses/hud/diagnostic/night{
+	pixel_y = -4;
+	pixel_x = -4
+	},
+/obj/item/clothing/glasses/hud/diagnostic/sunglasses{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/clothing/glasses/hud/diagnostic/sunglasses{
+	pixel_y = -4;
+	pixel_x = 4
+	},
+/obj/item/nanite_scanner,
+/obj/item/nanite_remote,
+/obj/item/nanite_remote,
+/obj/item/nanite_scanner,
+/obj/item/disk/nanite_program{
+	pixel_y = 9;
+	pixel_x = 6
+	},
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "tu" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/siding/red/corner{
@@ -2065,6 +2152,11 @@
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"vq" = (
+/obj/machinery/nanite_chamber,
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "vv" = (
 /obj/structure/table/reinforced,
 /obj/item/paper/fluff/stations/centcom/disk_memo{
@@ -2222,16 +2314,10 @@
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
 "xf" = (
-/obj/effect/turf_decal/siding/wideplating/dark,
-/obj/effect/turf_decal/siding/wideplating/dark{
-	dir = 1
-	},
-/obj/machinery/door/puzzle/keycard/syndicate_chem,
-/obj/structure/fans/tiny,
-/turf/open/floor/iron/smooth_half{
-	dir = 4
-	},
-/area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+/obj/machinery/computer/nanite_cloud_controller,
+/obj/machinery/light/cold/directional/north,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "xg" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner,
 /turf/open/floor/mineral/plastitanium/red,
@@ -2348,8 +2434,15 @@
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/control)
 "zi" = (
-/obj/structure/chair/office,
-/turf/open/floor/mineral/titanium/tiled/yellow,
+/obj/machinery/door/puzzle/keycard/syndicate_chem,
+/obj/structure/fans/tiny,
+/obj/effect/turf_decal/siding/wideplating/dark,
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 1
+	},
+/turf/open/floor/iron/smooth_half{
+	dir = 4
+	},
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
 "zo" = (
 /obj/item/stack/sheet/mineral/sandbags,
@@ -3233,6 +3326,12 @@
 /obj/machinery/light/floor,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/control)
+"Hw" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "HD" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
@@ -3472,6 +3571,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/purple,
+/obj/machinery/light/cold/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
 "JX" = (
@@ -4045,6 +4145,9 @@
 /obj/structure/flora/grass/both/style_random,
 /turf/open/misc/asteroid/snow/airless,
 /area/centcom/syndicate_mothership)
+"Qa" = (
+/turf/closed/indestructible/syndicate,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "Qe" = (
 /obj/machinery/button/door/directional/south{
 	desc = "Looks like the elevator is under maintenance..";
@@ -4264,6 +4367,19 @@
 /obj/structure/closet/cardboard,
 /obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6/directional/east,
 /turf/open/floor/catwalk_floor/iron_dark,
+/area/centcom/syndicate_mothership/control)
+"RR" = (
+/obj/machinery/door/airlock/titanium{
+	name = "Nanite Lab Corridor"
+	},
+/obj/effect/turf_decal/siding/wideplating/dark,
+/obj/effect/turf_decal/siding/wideplating/dark{
+	dir = 1
+	},
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/turf/open/floor/iron/smooth_half{
+	dir = 4
+	},
 /area/centcom/syndicate_mothership/control)
 "RT" = (
 /obj/effect/baseturf_helper/asteroid/snow,
@@ -4575,6 +4691,9 @@
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple,
 /turf/open/space/basic,
 /area/space/nearstation)
+"Uv" = (
+/turf/closed/indestructible/opsglass,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "Uw" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
@@ -5008,6 +5127,12 @@
 /obj/structure/flora/grass/both/style_random,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
+"Zb" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/expansion_genepowers)
 "Zc" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 4
@@ -5040,6 +5165,10 @@
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/control)
+"Zq" = (
+/obj/machinery/nanite_program_hub,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "Zt" = (
 /obj/effect/light_emitter{
 	set_cap = 1;
@@ -5483,20 +5612,20 @@ sU
 Ox
 nQ
 mX
-Ge
-Ge
-Ge
-Ge
-Ge
-Ge
-Ge
-Ge
-Ge
-Ge
-Ge
+Ab
+Ab
+Ab
+Ab
+Ab
+Ab
+Ab
+Ab
+Ab
+Ab
+ps
 nQ
 Be
-aG
+Zb
 Fb
 xu
 cO
@@ -5584,18 +5713,18 @@ sU
 sU
 Ox
 nQ
-bf
-Ab
-Ab
-Ab
-Ab
-Ab
-Ab
-Ab
-Ab
-Ab
-Ab
-ps
+Bk
+LO
+LO
+LO
+KD
+LO
+LO
+BE
+Tz
+bU
+mA
+lB
 nQ
 Lw
 aG
@@ -5686,18 +5815,18 @@ sU
 sU
 Ox
 nQ
-Bk
+jP
 LO
 LO
 LO
+LO
+LO
+LO
+FG
 KD
-LO
-LO
-BE
-Tz
-bU
-mA
-lB
+qX
+qX
+JU
 nQ
 CO
 yr
@@ -5788,18 +5917,18 @@ sU
 sU
 Ox
 nQ
-jP
+Bk
 LO
 LO
 LO
 LO
 LO
-LO
-FG
 KD
-qX
-qX
-JU
+Pz
+pW
+iO
+Mt
+EV
 nQ
 cX
 Ta
@@ -5890,19 +6019,19 @@ Ye
 Ye
 Ye
 nQ
-Bk
-LO
-LO
-LO
-LO
-LO
-KD
-Pz
-pW
-iO
-Mt
-EV
-nQ
+Yg
+yf
+gJ
+yf
+yf
+yf
+yf
+yf
+yf
+yf
+yf
+na
+zi
 kQ
 Ow
 CQ
@@ -5992,19 +6121,19 @@ KU
 KU
 Ye
 nQ
-Yg
-yf
-gJ
-yf
-yf
-yf
-yf
-yf
-yf
-yf
-yf
-na
-PD
+Ge
+Ge
+zx
+Ge
+Ge
+RI
+vV
+AW
+EL
+Jf
+eu
+hN
+nQ
 OM
 Hm
 DM
@@ -6094,20 +6223,20 @@ wW
 KU
 KU
 nQ
-Ge
-Ge
-zx
-Ge
-Ge
-RI
-vV
-Ge
-zi
-Ge
-Ge
-Ge
-xf
-ZI
+nQ
+nQ
+nQ
+nQ
+nQ
+nQ
+nQ
+nQ
+nQ
+nQ
+nQ
+nQ
+PD
+sT
 nF
 zZ
 ZO
@@ -6195,20 +6324,20 @@ wv
 HW
 HW
 KU
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-AW
-EL
-Jf
-eu
-hN
-PD
+KU
+KU
+KU
+Qa
+xf
+bf
+bf
+aA
+Ov
+Ov
+Ov
+Ov
+Ov
+RR
 ZI
 JX
 yP
@@ -6300,17 +6429,17 @@ nz
 Vt
 KU
 KU
-KU
-KU
-KU
-KU
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+Uv
+ag
+Hw
+vq
+DZ
+VK
+VK
+VK
+VK
+VK
+DZ
 ZI
 Va
 JL
@@ -6402,10 +6531,10 @@ TX
 HW
 HW
 ub
-bT
-uT
-ub
-vX
+Uv
+Zq
+dR
+gb
 DZ
 oW
 Ax
@@ -6504,10 +6633,10 @@ nk
 vX
 HW
 uT
-PN
-uT
-PN
-qO
+Uv
+lb
+bf
+tp
 DZ
 iA
 GS
@@ -6606,10 +6735,10 @@ HW
 TX
 PN
 uT
-Bm
-Bm
-uT
-PN
+Qa
+Qa
+Qa
+Qa
 DZ
 bE
 gL

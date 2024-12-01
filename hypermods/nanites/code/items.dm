@@ -6,6 +6,33 @@
 	for(var/i in 1 to 7)
 		new /obj/item/disk/nanite_program(src)
 
+/obj/item/storage/box/disks_nanite/random
+	name = "nanite program disks box"
+	illustration = "disk_kit"
+
+/obj/item/storage/box/disks_nanite/random/PopulateContents()
+	var/list/types = subtypesof(/obj/item/disk/nanite_program/)
+	for(var/i in 1 to 7)
+		var/type = pick(types)
+		new type(src)
+
+/obj/item/storage/box/disks_nanite/syndicate
+	name = "cybersun nanite program disks box"
+	illustration = "disk_kit"
+
+/obj/item/storage/box/disks_nanite/syndicate/PopulateContents()
+	new /obj/item/disk/nanite_program/viral(src)
+	new /obj/item/disk/nanite_program/spreading(src)
+	new /obj/item/disk/nanite_program/nanite_sting(src)
+	new /obj/item/disk/nanite_program/explosive(src)
+	new /obj/item/disk/nanite_program/meltdown(src)
+	new /obj/item/disk/nanite_program/heart_stop(src)
+	new /obj/item/disk/nanite_program/pacifying(src)
+	new /obj/item/disk/nanite_program/stun(src)
+	new /obj/item/disk/nanite_program/mind_control(src)
+	new /obj/item/disk/nanite_program/dermal_button(src)
+	new /obj/item/disk/nanite_program/stealth(src)
+
 //Names are intentionally all the same - track your nanites, or use a hand labeler
 //This also means that you can give flesh melting nanites to your victims if you feel like it
 
@@ -33,9 +60,6 @@
 
 /obj/item/disk/nanite_program/meltdown
 	program = /datum/nanite_program/meltdown
-
-/obj/item/disk/nanite_program/relay
-	program = /datum/nanite_program/relay
 
 /obj/item/disk/nanite_program/emp
 	program = /datum/nanite_program/emp
@@ -66,9 +90,6 @@
 
 /obj/item/disk/nanite_program/blood_restoring
 	program = /datum/nanite_program/blood_restoring
-
-/obj/item/disk/nanite_program/repairing
-	program = /datum/nanite_program/repairing
 
 /obj/item/disk/nanite_program/nervous
 	program = /datum/nanite_program/nervous
@@ -147,3 +168,85 @@
 
 /obj/item/disk/nanite_program/mind_control
 	program = /datum/nanite_program/comm/mind_control
+
+
+/obj/item/disk/nanite_program/kickstart
+	program = /datum/nanite_program/protocol/kickstart
+
+/obj/item/disk/nanite_program/factory
+	program = /datum/nanite_program/protocol/factory
+
+/obj/item/disk/nanite_program/tinker
+	program = /datum/nanite_program/protocol/tinker
+
+/obj/item/disk/nanite_program/offline
+	program = /datum/nanite_program/protocol/offline
+
+/obj/item/disk/nanite_program/hive
+	program = /datum/nanite_program/protocol/hive
+
+/obj/item/disk/nanite_program/zip
+	program = /datum/nanite_program/protocol/zip
+
+/obj/item/disk/nanite_program/free_range
+	program = /datum/nanite_program/protocol/free_range
+
+/obj/item/disk/nanite_program/unsafe_storage
+	program = /datum/nanite_program/protocol/unsafe_storage
+
+/obj/item/disk/nanite_program/health
+	program = /datum/nanite_program/sensor/health
+
+/obj/item/disk/nanite_program/damage
+	program = /datum/nanite_program/sensor/damage
+
+/obj/item/disk/nanite_program/crit
+	program = /datum/nanite_program/sensor/crit
+
+/obj/item/disk/nanite_program/death
+	program = /datum/nanite_program/sensor/death
+
+/obj/item/disk/nanite_program/voice
+	program = /datum/nanite_program/sensor/voice
+
+/obj/item/disk/nanite_program/species
+	program = /datum/nanite_program/sensor/species
+
+/obj/item/disk/nanite_program/defib
+	program = /datum/nanite_program/defib
+
+/obj/item/disk/nanite_program/good_mood
+	program = /datum/nanite_program/good_mood
+
+/obj/item/disk/nanite_program/bad_mood
+	program = /datum/nanite_program/bad_mood
+
+/obj/item/disk/nanite_program/self_scan
+	program = /datum/nanite_program/self_scan
+
+/obj/item/disk/nanite_program/dermal_button
+	program = /datum/nanite_program/dermal_button
+
+/obj/item/disk/nanite_program/stealth
+	program = /datum/nanite_program/stealth
+
+/obj/item/disk/nanite_program/nanite_sting
+	program = /datum/nanite_program/nanite_sting
+
+/obj/item/disk/nanite_program/mitosis
+	program = /datum/nanite_program/mitosis
+
+/obj/item/disk/nanite_program/flesh_eating
+	program = /datum/nanite_program/flesh_eating
+
+/obj/item/disk/nanite_program/poison
+	program = /datum/nanite_program/poison
+
+/obj/item/disk/nanite_program/memory_leak
+	program = /datum/nanite_program/memory_leak
+
+/obj/item/disk/nanite_program/adrenaline
+	program = /datum/nanite_program/adrenaline
+
+/obj/item/disk/nanite_program/mindshield // Risky handing this one to nukies
+	program = /datum/nanite_program/mindshield
