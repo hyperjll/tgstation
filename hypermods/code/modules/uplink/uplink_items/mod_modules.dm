@@ -48,9 +48,10 @@
 	cost = 2
 	purchasable_from = ~UPLINK_SPY
 
-/datum/uplink_item/mod_modules/modsuit/Wraith
-	name = "MODsuit wraith cloaking module"
-	desc = "A MODsuit module that grants to the user Optical camouflage and the ability to overload light sources to recharge suit power."
+/datum/uplink_item/mod_modules/modsuit/wraith
+	name = "MODsuit Wraith Cloaking Module"
+	desc = "A MODsuit module that grants to the user Optical camouflage and the ability to overload light sources to recharge suit power. \
+			Incompatible with any MODsuits with a Armor Booster Module installed."
 	item = /obj/item/mod/module/stealth/wraith
 	cost = 3
 	purchasable_from = ~UPLINK_SPY
