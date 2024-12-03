@@ -250,3 +250,172 @@
 
 /obj/item/disk/nanite_program/mindshield // Risky handing this one to nukies
 	program = /datum/nanite_program/mindshield
+
+
+/obj/item/disk/nanite_program/research
+	program = /datum/nanite_program/research
+
+/obj/item/disk/nanite_program/accelerated_synthesis
+	program = /datum/nanite_program/accelerated_synthesis
+
+/obj/item/disk/nanite_program/construct_tool
+	program = /datum/nanite_program/construct_tool
+
+/obj/item/disk/nanite_program/convert_nanites
+	program = /datum/nanite_program/convert_nanites
+
+/obj/item/disk/nanite_program/construct_tool_adv
+	program = /datum/nanite_program/construct_tool_adv
+
+/obj/item/disk/nanite_program/construct_tool_super
+	program = /datum/nanite_program/construct_tool_super
+
+/obj/item/disk/nanite_program/bluespace_blood
+	program = /datum/nanite_program/bluespace_blood
+
+/obj/item/disk/nanite_program/botsummon
+	program = /datum/nanite_program/botsummon
+
+/obj/item/disk/nanite_program/researchplus
+	program = /datum/nanite_program/researchplus
+
+/obj/item/disk/nanite_program/deadchat
+	program = /datum/nanite_program/deadchat
+
+/obj/item/disk/nanite_program/bodily_augment
+	program = /datum/nanite_program/bodily_augment
+
+/obj/item/disk/nanite_program/sticky_fingers
+	program = /datum/nanite_program/sticky_fingers
+
+/obj/item/disk/nanite_program/metabolic_suppression
+	program = /datum/nanite_program/metabolic_suppression
+
+/obj/item/disk/nanite_program/extinguisher
+	program = /datum/nanite_program/extinguisher
+
+/obj/item/disk/nanite_program/painnull
+	program = /datum/nanite_program/painnull
+
+/obj/item/disk/nanite_program/antidismember
+	program = /datum/nanite_program/antidismember
+
+/obj/item/disk/nanite_program/antibomb
+	program = /datum/nanite_program/antibomb
+
+/obj/item/disk/nanite_program/slipresist
+	program = /datum/nanite_program/slipresist
+
+/obj/item/disk/nanite_program/magicshield
+	program = /datum/nanite_program/magicshield
+
+/obj/item/disk/nanite_program/hardiness
+	program = /datum/nanite_program/hardiness
+
+/obj/item/disk/nanite_program/antikpa
+	program = /datum/nanite_program/antikpa
+
+/obj/item/disk/nanite_program/antirad
+	program = /datum/nanite_program/antirad
+
+/obj/item/disk/nanite_program/antigrab
+	program = /datum/nanite_program/antigrab
+
+/obj/item/disk/nanite_program/weatherendure
+	program = /datum/nanite_program/weatherendure
+
+/obj/item/disk/nanite_program/obsidian
+	program = /datum/nanite_program/obsidian
+
+/obj/item/disk/nanite_program/plantlike
+	program = /datum/nanite_program/plantlike
+
+/obj/item/disk/nanite_program/limbtach
+	program = /datum/nanite_program/limbtach
+
+/obj/item/disk/nanite_program/pyramid
+	program = /datum/nanite_program/protocol/pyramid
+
+/obj/item/disk/nanite_program/eclipse
+	program = /datum/nanite_program/protocol/eclipse
+
+/obj/item/disk/nanite_program/collective
+	program = /datum/nanite_program/protocol/collective
+
+/obj/item/disk/nanite_program/backup
+	program = /datum/nanite_program/protocol/backup
+
+/obj/item/disk/nanite_program/blood_storage
+	program = /datum/nanite_program/protocol/blood_storage
+
+/obj/item/disk/nanite_program/emergency
+	program = /datum/nanite_program/protocol/emergency
+
+/obj/item/disk/nanite_program/stasis
+	program = /datum/nanite_program/protocol/stasis
+
+/obj/item/disk/nanite_program/freedom
+	program = /datum/nanite_program/freedom
+
+/obj/item/disk/nanite_program/construct_ammo
+	program = /datum/nanite_program/construct_ammo
+
+/obj/item/disk/nanite_program/construct_c4
+	program = /datum/nanite_program/construct_c4
+/** Best keep this outta nukie hands
+/obj/item/disk/nanite_program/telecrystal
+	program = /datum/nanite_program/telecrystal
+**/
+/obj/item/disk/nanite_program/kravmaga
+	program = /datum/nanite_program/kravmaga
+
+/obj/item/disk/nanite_program/suicidal
+	program = /datum/nanite_program/suicidal
+
+/obj/item/disk/nanite_program/organrepair
+	program = /datum/nanite_program/organrepair
+
+/obj/item/disk/nanite_program/corpsepreserve
+	program = /datum/nanite_program/corpsepreserve
+
+/obj/item/disk/nanite_program/critstable
+	program = /datum/nanite_program/critstable
+
+/obj/item/disk/nanite_program/naniteresus
+	program = /datum/nanite_program/naniteresus
+
+/obj/item/disk/nanite_program/synthflesh
+	program = /datum/nanite_program/synthflesh
+
+/obj/item/disk/nanite_program/mendingbrute
+	program = /datum/nanite_program/mendingbrute
+
+/obj/item/disk/nanite_program/mendingburn
+	program = /datum/nanite_program/mendingburn
+
+/obj/item/disk/nanite_program/mendingtoxin
+	program = /datum/nanite_program/mendingtoxin
+
+/obj/item/disk/nanite_program/selfresp
+	program = /datum/nanite_program/selfresp
+
+/obj/item/disk/nanite_program/repairingplus
+	program = /datum/nanite_program/repairingplus
+
+/obj/item/disk/nanite_program/woundfixer
+	program = /datum/nanite_program/woundfixer
+
+/obj/item/disk/nanite_program/alcoholic
+	program = /datum/nanite_program/alcoholic
+
+/obj/item/disk/nanite_program/weakness
+	program = /datum/nanite_program/weakness
+
+/obj/item/disk/nanite_program/neuraltrauma
+	program = /datum/nanite_program/neuraltrauma
+
+/obj/item/disk/nanite_program/braintrauma
+	program = /datum/nanite_program/braintrauma
+
+/obj/item/disk/nanite_program/lungdestruction
+	program = /datum/nanite_program/lungdestruction

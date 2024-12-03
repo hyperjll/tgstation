@@ -98,3 +98,86 @@
 	id = "mitosis_nanites"
 	category = list(NANITE_CATEGORY_UTILITIES)
 	program_type = /datum/nanite_program/mitosis
+
+
+/datum/design/nanites/research
+	name = "Distributed Computing"
+	desc = "The nanites aid the research servers by performing a portion of its calculations, providing additional general research point generation and nanite point generation."
+	id = "research_nanites"
+	category = list(NANITE_CATEGORY_UTILITIES)
+	program_type = /datum/nanite_program/research
+
+/datum/design/nanites/accelerated_synthesis
+	name = "Accelerated Synthesis"
+	desc = "The nanites adopt a simpler method of self-replication to speed up their replication rate, while this may cause corruptions, it won't prevent cloud linking."
+	id = "accelerated_synthesis_nanites"
+	category = list(NANITE_CATEGORY_UTILITIES)
+	program_type = /datum/nanite_program/accelerated_synthesis
+
+/datum/design/nanites/construct_tool
+	name = "Construct Nanite Tool"
+	desc = "The nanites gather into the palm of the host's hand and form a specific tool such as a crowbar or wrench."
+	id = "construct_tool_nanites"
+	category = list(NANITE_CATEGORY_UTILITIES)
+	program_type = /datum/nanite_program/construct_tool
+
+/datum/design/nanites/convert_nanites
+	name = "Convert Nanites"
+	desc = "The nanites gather into the palm of the host's hand and form a specific material such as metal sheets or glass sheets. \
+			The items do NOT disappear afterward."
+	id = "convert_nanites"
+	category = list(NANITE_CATEGORY_UTILITIES)
+	program_type = /datum/nanite_program/convert_nanites
+
+/datum/design/nanites/construct_tool_adv
+	name = "Construct Advanced Nanite Tool"
+	desc = "The nanites gather into the palm of the host's hand and form a specific tool such as a multitool or holofan projector."
+	id = "construct_tool_adv_nanites"
+	category = list(NANITE_CATEGORY_UTILITIES)
+	program_type = /datum/nanite_program/construct_tool_adv
+
+/datum/design/nanites/construct_tool_super
+	name = "Construct Super Nanite Tool"
+	desc = "The nanites gather into the palm of the host's hand and form a specific tool such as a holotool."
+	id = "construct_tool_super_nanites"
+	category = list(NANITE_CATEGORY_UTILITIES)
+	program_type = /datum/nanite_program/construct_tool_super
+
+/datum/design/nanites/bluespace_blood
+	name = "Bluespace Harvestation"
+	desc = "The nanites will harvest foreign bluespace energies and store them away. Once the proper signal is recieved, \
+			the nanites invest the bluespace energies into the host's bloodstream. Causing temporary spontaneous short-range teleportation."
+	id = "bluespace_blood_nanites"
+	category = list(NANITE_CATEGORY_UTILITIES)
+	program_type = /datum/nanite_program/bluespace_blood
+
+/datum/design/nanites/botsummon
+	name = "Simple Bot Construction"
+	desc = "The nanites expend a large amount of themselves to develop a single simple bot capable of assisting \
+			the station and it's personnel."
+	id = "botsummon_nanites"
+	category = list(NANITE_CATEGORY_UTILITIES)
+	program_type = /datum/nanite_program/botsummon
+
+/datum/design/nanites/researchplus
+	name = "Nanite Research Servers"
+	desc = "The nanites adopt research server programming and may expend themselves to \
+			generate both general and nanite research points in substantial amounts."
+	id = "researchplus_nanites"
+	category = list(NANITE_CATEGORY_UTILITIES)
+	program_type = /datum/nanite_program/researchplus
+
+/datum/design/nanites/deadchat
+	name = "Otherworldly Programming"
+	desc = "The nanites keep the host's brain in a constant state of near-death, \
+			causing strange yet vivid auditory hallucinations."
+	id = "deadchat_nanites"
+	category = list(NANITE_CATEGORY_UTILITIES)
+	program_type = /datum/nanite_program/deadchat
+
+/datum/design/nanites/monitoring
+	name = "Monitoring"
+	desc = "The nanites monitor the host's vitals and location, sending them to the suit sensor network."
+	id = "monitoring_nanites"
+	program_type = /datum/nanite_program/monitoring
+	category = list(NANITE_CATEGORY_UTILITIES)

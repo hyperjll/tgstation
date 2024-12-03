@@ -81,3 +81,18 @@
 	id = "bad_mood_nanites"
 	category = list(NANITES_CATEGORY_SUPPRESSION)
 	program_type = /datum/nanite_program/bad_mood
+
+
+/datum/design/nanites/alcoholic
+	name = "Alcohol Synthesis"
+	desc = "The nanites expend themselves to create alcoholic substances, and invest them into the host's bloodstream, causing temporary drunkeness."
+	id = "alcoholic_nanites"
+	program_type = /datum/nanite_program/alcoholic
+	category = list(NANITES_CATEGORY_SUPPRESSION)
+
+/datum/design/nanites/weakness
+	name = "Weakening Procedure"
+	desc = "The nanites inhibit muscular tension and modify the host's bones to be more brittle. This results in an increase of wounds and broken bones when the host is subjected to damage."
+	id = "weakness_nanites"
+	program_type = /datum/nanite_program/weakness
+	category = list(NANITES_CATEGORY_SUPPRESSION)

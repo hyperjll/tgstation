@@ -186,3 +186,52 @@
 /datum/nanite_program/comm/mind_control/disable_passive_effect()
 	. = ..()
 	end_brainwashing()
+
+
+/datum/nanite_program/neuraltrauma
+	name = "Neural Traumatic Nanites"
+	desc = "The nanites inflict havoc with the host's brain by firing electrical signals spontaneously, resulting in neural trauma."
+	use_rate = 0.8
+	rogue_types = list(/datum/nanite_program/nerve_decay)
+
+/datum/nanite_program/neuraltrauma/enable_passive_effect()
+	. = ..()
+	if(iscarbon(host_mob))
+		var/mob/living/carbon/C = host_mob
+		//var/obj/item/organ/brain/B = locate(/obj/item/organ/brain) in C.internal_organs
+		C.gain_trauma_type(BRAIN_TRAUMA_MILD, TRAUMA_RESILIENCE_SURGERY)
+
+/datum/nanite_program/neuraltrauma/disable_passive_effect()
+	. = ..()
+	if(iscarbon(host_mob))
+		var/mob/living/carbon/C = host_mob
+		C.cure_trauma_type(BRAIN_TRAUMA_MILD, TRAUMA_RESILIENCE_SURGERY)
+
+
+/datum/nanite_program/braintrauma
+	name = "Brain Traumatic Nanites"
+	desc = "The nanites begin disassembling parts of the brain in a non-lethal manner, causing wide-spread chaos and trauma all across the brain. This results in severe brain trauma for the host."
+	use_rate = 2
+	rogue_types = list(/datum/nanite_program/brain_misfire)
+
+/datum/nanite_program/braintrauma/enable_passive_effect()
+	. = ..()
+	if(iscarbon(host_mob))
+		var/mob/living/carbon/C = host_mob
+		C.gain_trauma_type(BRAIN_TRAUMA_SEVERE, TRAUMA_RESILIENCE_LOBOTOMY)
+
+/datum/nanite_program/braintrauma/disable_passive_effect()
+	. = ..()
+	if(iscarbon(host_mob))
+		var/mob/living/carbon/C = host_mob
+		C.cure_trauma_type(BRAIN_TRAUMA_SEVERE, TRAUMA_RESILIENCE_LOBOTOMY)
+
+
+/datum/nanite_program/lungdestruction
+	name = "Respiratory Distress"
+	desc = "The nanites slowly cripple and destroy the host's lungs."
+	use_rate = 2
+	rogue_types = list(/datum/nanite_program/glitch)
+
+/datum/nanite_program/lungdestruction/active_effect()
+	host_mob.adjustOrganLoss(ORGAN_SLOT_LUNGS, -0.5)

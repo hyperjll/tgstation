@@ -4293,6 +4293,9 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership)
+"Rc" = (
+/turf/closed/indestructible/opsglass,
+/area/centcom/syndicate_mothership/expansion_genepowers)
 "Rd" = (
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron,
@@ -5930,7 +5933,7 @@ iO
 Mt
 EV
 nQ
-cX
+Rc
 Ta
 cX
 xu
@@ -6133,7 +6136,7 @@ EL
 Jf
 eu
 hN
-nQ
+PD
 OM
 Hm
 DM
@@ -6235,7 +6238,7 @@ nQ
 nQ
 nQ
 nQ
-PD
+nQ
 sT
 nF
 zZ

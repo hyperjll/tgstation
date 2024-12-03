@@ -39,6 +39,12 @@
 #define NES_SCAN_TYPE "Scan Type"
 #define NES_BUTTON_NAME "Button Name"
 #define NES_ICON "Icon"
+#define NES_TOOL_CHOICE "Tool to Make"
+#define NES_MAT_CHOICE "Material to Make"
+#define NES_ADV_TOOL_CHOICE "Adv. Tool to Make"
+#define NES_SUPER_TOOL_CHOICE "Super Tool to Make"
+#define NES_BOT_CHOICE "Bot to Make"
+#define NES_AMMO_CHOICE "Ammo to Make"
 
 #define NANITE_CATEGORY_UTILITIES "Utility Nanites"
 #define NANITE_CATEGORY_MEDICAL "Medical Nanites"

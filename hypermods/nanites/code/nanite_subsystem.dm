@@ -7,6 +7,11 @@ PROCESSING_SUBSYSTEM_DEF(nanites)
 	var/list/datum/nanite_cloud_backup/cloud_backups = list()
 	///List of all nanite relays in the game.
 	var/list/datum/nanite_program/relay/nanite_relays = list()
+	///List of all people being monitored, and info being sent to crew monitor
+	var/list/mob/living/nanite_monitored_mobs = list()
+
+	var/neural_network_count = 0
+	var/hive_protocol_count = 0
 
 /datum/controller/subsystem/processing/nanites/proc/check_hardware(datum/nanite_cloud_backup/backup)
 	if(QDELETED(backup.cloud_host) || (backup.cloud_host.machine_stat & (NOPOWER|BROKEN)))

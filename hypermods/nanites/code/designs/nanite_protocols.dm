@@ -54,3 +54,54 @@
 	id = "unsafe_storage_nanites"
 	category = list(NANITES_CATEGORY_PROTOCOLS)
 	program_type = /datum/nanite_program/protocol/unsafe_storage
+
+
+/datum/design/nanites/pyramid
+	name = "Pyramid Protocol"
+	desc = "Replication Protocol: the nanites implement an alternate cooperative replication protocol that is active as long as the nanite saturation level is above 50%, \
+			resulting in an additional volume production of 1.5 per second."
+	id = "pyramid_nanites"
+	program_type = /datum/nanite_program/protocol/pyramid
+	category = list(NANITES_CATEGORY_PROTOCOLS)
+
+/datum/design/nanites/eclipse
+	name = "Eclipse Protocol"
+	desc = "Replication Protocol: while the host is dead, the nanites exploit the reduced interference to replicate roughly 6x quicker than normal."
+	id = "eclipse_nanites"
+	program_type = /datum/nanite_program/protocol/eclipse
+	category = list(NANITES_CATEGORY_PROTOCOLS)
+
+/datum/design/nanites/collective
+	name = "Collective Protocol"
+	desc = "Replication Protocol: the nanites adopt more strategic protocols for mass-replication, decreasing replication speed by 0.5, but increasing replication speed by a small amount for each host using this protocol."
+	id = "collective_nanites"
+	program_type = /datum/nanite_program/protocol/collective
+	category = list(NANITES_CATEGORY_PROTOCOLS)
+
+/datum/design/nanites/backup
+	name = "Backup Protocol"
+	desc = "Replication Protocol: the nanites siphon a small amount of themselves and stash them within the host for emergencies, slowing the replication speed by 0.5, but when the host falls to the default safety threshold of 50, they'll instantly recover a large amount of nanites."
+	id = "backup_nanites"
+	program_type = /datum/nanite_program/protocol/backup
+	category = list(NANITES_CATEGORY_PROTOCOLS)
+
+/datum/design/nanites/blood_storage
+	name = "BLOOD Protocol"
+	desc = "Replication Protocol: the nanites make themselves at home within the host's flesh and blood, but this comes at the cost of the host's blood and sometimes flesh."
+	id = "blood_storage_nanites"
+	program_type = /datum/nanite_program/protocol/blood_storage
+	category = list(NANITES_CATEGORY_PROTOCOLS)
+
+/datum/design/nanites/emergency
+	name = "Emergency Protocol"
+	desc = "Replication Protocol: the nanites can capable of detecting if the host is severely injured (atleast 75 damage), and will ramp up production in response."
+	id = "emergency_nanites"
+	program_type = /datum/nanite_program/protocol/emergency
+	category = list(NANITES_CATEGORY_PROTOCOLS)
+
+/datum/design/nanites/stasis
+	name = "Stasis Protocol"
+	desc = "Replication Protocol: the nanites take advantage of innately inert environments such as stasis or dead hosts, and can now replicate quickly without trouble in such environments. Also slightly boosts replication speeds in perfect health hosts."
+	id = "stasis_nanites"
+	program_type = /datum/nanite_program/protocol/stasis
+	category = list(NANITES_CATEGORY_PROTOCOLS)

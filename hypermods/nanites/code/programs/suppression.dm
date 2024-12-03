@@ -208,3 +208,46 @@
 /datum/nanite_program/bad_mood/disable_passive_effect()
 	. = ..()
 	host_mob.clear_mood_event("nanite_sadness")
+
+
+/datum/nanite_program/alcoholic
+	name = "Alcohol Synthesis"
+	desc = "The nanites expend themselves to create alcoholic substances, and invest them into the host's bloodstream, causing temporary drunkeness."
+	can_trigger = TRUE
+	trigger_cost = 20
+	trigger_cooldown = 200
+	rogue_types = list(/datum/nanite_program/suffocating)
+
+/datum/nanite_program/alcoholic/on_trigger()
+	. = ..()
+	host_mob.reagents.add_reagent(/datum/reagent/consumable/ethanol, 10)
+
+/**
+/datum/nanite_program/antistunweapons
+	name = "Electrophobia"
+	desc = "The nanites alter the brain within the host, causing them to fear stun-based weaponry. This results in the inability to use stun-based weapons."
+	use_rate = 2
+	rogue_types = list(/datum/nanite_program/glitch)
+
+/datum/nanite_program/antistunweapons/enable_passive_effect()
+	. = ..()
+	host_mob.add_traits(list(TRAIT_NO_STUN_WEAPONS), TRAIT_NANITES)
+
+/datum/nanite_program/antistunweapons/disable_passive_effect()
+	. = ..()
+	host_mob.remove_traits(list(TRAIT_NO_STUN_WEAPONS), TRAIT_NANITES)
+**/
+
+/datum/nanite_program/weakness
+	name = "Weakening Procedure"
+	desc = "The nanites inhibit muscular tension and modify the host's bones to be more brittle. This results in an increase of wounds and broken bones when the host is subjected to damage."
+	use_rate = 1
+	rogue_types = list(/datum/nanite_program/hardiness)
+
+/datum/nanite_program/weakness/enable_passive_effect()
+	. = ..()
+	host_mob.add_traits(list(TRAIT_EASILY_WOUNDED), TRAIT_NANITES)
+
+/datum/nanite_program/weakness/disable_passive_effect()
+	. = ..()
+	host_mob.remove_traits(list(TRAIT_EASILY_WOUNDED), TRAIT_NANITES)

@@ -228,3 +228,327 @@
 	carbon_host.set_timed_status_effect(10 SECONDS, /datum/status_effect/jitter, only_if_higher = TRUE)
 	SEND_SIGNAL(carbon_host, COMSIG_LIVING_MINOR_SHOCK)
 	log_game("[carbon_host] has been successfully defibrillated by nanites.")
+
+
+/datum/nanite_program/organrepair
+	name = "Organ Repair"
+	desc = "The nanites begin repairing the host's organs should they be damaged."
+	use_rate = 0.8
+	rogue_types = list(/datum/nanite_program/necrotic)
+
+/datum/nanite_program/organrepair/check_conditions()
+	if(iscarbon(host_mob))
+		return FALSE
+	return ..()
+
+/datum/nanite_program/organrepair/active_effect()
+	if(prob(2))
+		to_chat(host_mob, "<span class='warning'>You feel your innards twitch.")
+
+	var/mob/living/carbon/C = host_mob
+	C.adjustOrganLoss(ORGAN_SLOT_BRAIN, -1)
+	C.adjustOrganLoss(ORGAN_SLOT_HEART, -0.5)
+	C.adjustOrganLoss(ORGAN_SLOT_LUNGS, -0.5)
+	C.adjustOrganLoss(ORGAN_SLOT_LIVER, -0.5)
+	C.adjustOrganLoss(ORGAN_SLOT_STOMACH, -0.5)
+	C.adjustOrganLoss(ORGAN_SLOT_EYES, -0.5)
+	C.adjustOrganLoss(ORGAN_SLOT_EARS, -0.5)
+	..()
+	. = TRUE
+
+
+/datum/nanite_program/corpsepreserve
+	name = "Corpse Preservation"
+	desc = "The nanites will synthesize a small amount of formaldehyde upon the host's death."
+	use_rate = 0
+	rogue_types = list(/datum/nanite_program/necrotic)
+	var/spent = FALSE
+
+/datum/nanite_program/corpsepreserve/active_effect()
+	var/datum/reagent/S = host_mob.reagents.has_reagent(/datum/reagent/toxin/formaldehyde)
+	if(S?.volume > 4)
+		return
+	if(host_mob.stat == DEAD)
+		if(!spent)
+			spent = TRUE
+			nanites.adjust_nanites(null, -10)
+			host_mob.reagents.add_reagent(/datum/reagent/toxin/formaldehyde, 5)
+			return
+		return
+	else
+		spent = FALSE
+		return
+
+
+/datum/nanite_program/critstable
+	name = "Critical Stabilization"
+	desc = "The nanites will synthesize epinephrine when the host enters a critical state."
+	use_rate = 0
+	rogue_types = list(/datum/nanite_program/suffocating)
+	var/spent = FALSE
+
+/datum/nanite_program/critstable/active_effect()
+	var/datum/reagent/S = host_mob.reagents.has_reagent(/datum/reagent/medicine/epinephrine)
+	if(S?.volume > 14)
+		return
+
+	if(HAS_TRAIT(host_mob, TRAIT_CRITICAL_CONDITION))
+		if(!spent)
+			spent = TRUE
+			nanites.adjust_nanites(null, -15)
+			host_mob.reagents.add_reagent(/datum/reagent/medicine/epinephrine, 15)
+			return
+		return
+	else
+		spent = FALSE
+		return
+
+
+/datum/nanite_program/naniteresus
+	name = "Nanite Resurrection"
+	desc = "The nanites expend a large portion of themselves to create a strange reagent while the host is dead, which may result in their resurrection."
+	use_rate = 0
+	rogue_types = list(/datum/nanite_program/necrotic)
+	var/hasnotified = FALSE
+	var/hashealed = FALSE
+
+/datum/nanite_program/naniteresus/active_effect()
+	if(host_mob.stat == DEAD)
+		if(ismegafauna(host_mob)) //they are never coming back
+			//host_mob.visible_message(span_warning("[host_mob]'s body does not react to the nanite's attempt at revival..."))  messages just gets spammed.
+			sleep(300 SECONDS) // Fuck you, stop checking for something every tick if it'll never change results. (Def of insanity)
+			return
+		if(iscarbon(host_mob) && (host_mob.getBruteLoss() + host_mob.getFireLoss() >= 100 || HAS_TRAIT(host_mob, TRAIT_HUSK))) //body is too damaged to be revived
+			//host_mob.visible_message(span_warning("[host_mob]'s body convulses a bit, and then falls still once more."))  messages just gets spammed.
+			//host_mob.do_jitter_animation(10)
+			sleep(10 SECONDS)
+			return
+		else
+			//host_mob.visible_message(span_warning("[host_mob]'s body starts convulsing!")) messages just gets spammed.
+			if(!hasnotified)
+				host_mob.notify_revival("You're being ressurected by nanites! Re-enter your corpse at your earliest conveinence.")
+				hasnotified = TRUE
+			host_mob.do_jitter_animation(10)
+			addtimer(CALLBACK(host_mob, TYPE_PROC_REF(/mob/living/carbon, do_jitter_animation), 10), 40) //jitter immediately, then again after 4 and 8 seconds
+			addtimer(CALLBACK(host_mob, TYPE_PROC_REF(/mob/living/carbon, do_jitter_animation), 10), 80)
+			sleep(10 SECONDS) //so the ghost has time to re-enter
+			if(iscarbon(host_mob))
+				var/mob/living/carbon/C = host_mob
+				C.adjustOrganLoss(ORGAN_SLOT_BRAIN, -50)
+				C.adjustOrganLoss(ORGAN_SLOT_HEART, -25)
+				C.adjustOrganLoss(ORGAN_SLOT_LUNGS, -25)
+				C.adjustOrganLoss(ORGAN_SLOT_LIVER, -25)
+				C.adjustOrganLoss(ORGAN_SLOT_STOMACH, -25)
+				C.adjustOrganLoss(ORGAN_SLOT_EYES, -25)
+				C.adjustOrganLoss(ORGAN_SLOT_EARS, -25)
+			if(!hashealed)
+				host_mob.adjustBruteLoss(-10)
+				host_mob.adjustFireLoss(-10)
+				host_mob.adjustOxyLoss(-101, 0)
+				host_mob.adjustToxLoss(-20, 0, TRUE)
+				host_mob.blood_volume += 10
+				host_mob.updatehealth()
+				hashealed = TRUE
+			if(host_mob.revive())
+				host_mob.emote("gasp")
+				nanites.adjust_nanites(null, -35)
+				log_combat(host_mob, host_mob, "revived", src)
+				hasnotified = FALSE
+				hashealed = FALSE
+
+
+/datum/nanite_program/synthflesh
+	name = "Corpse Repair"
+	desc = "The nanites will slowly produce synthetic flesh over time, and use that to both patch the host's injuries and unhusk them."
+	use_rate = 2
+	rogue_types = list(/datum/nanite_program/necrotic)
+
+/datum/nanite_program/synthflesh/check_conditions()
+	if(!host_mob.getBruteLoss() && !host_mob.getFireLoss())
+		return FALSE
+	return ..()
+
+/datum/nanite_program/synthflesh/active_effect(mob/living/M)
+	var/can_heal = FALSE
+	if(iscarbon(host_mob))
+		//var/mob/living/carbon/C = host_mob
+		if(host_mob.stat == DEAD)
+			can_heal = TRUE
+		if(can_heal)
+			if(!ishuman(host_mob))
+				host_mob.adjustBruteLoss(-1.25)
+				host_mob.adjustFireLoss(-1.25)
+			else
+				host_mob.adjustBruteLoss(-2)
+				host_mob.adjustFireLoss(-2)
+				if(HAS_TRAIT_FROM(host_mob, TRAIT_HUSK, BURN) && (host_mob.getFireLoss() < 51) && host_mob.cure_husk(BURN)) //cure husk will return true if it cures the final husking source
+					sleep(3 SECONDS)
+	..()
+
+
+/datum/nanite_program/mendingbrute
+	name = "Brute Mending"
+	desc = "The nanites quickly and efficiently repair blunt force, slashes, and punctures within the host. This program shuts itself off when no damage is available to be healed."
+	use_rate = 2.5
+	rogue_types = list(/datum/nanite_program/necrotic)
+	var/healing = 1.25
+
+/datum/nanite_program/mendingbrute/check_conditions()
+	if(!host_mob.getBruteLoss())
+		return FALSE
+	if(iscarbon(host_mob))
+		var/mob/living/carbon/C = host_mob
+		var/list/parts = C.get_damaged_bodyparts(TRUE,TRUE, status = BODYTYPE_ORGANIC)
+		if(!parts.len)
+			return FALSE
+	return ..()
+
+/datum/nanite_program/mendingbrute/active_effect()
+	if(iscarbon(host_mob))
+		var/mob/living/carbon/C = host_mob
+		var/list/parts = C.get_damaged_bodyparts(TRUE,TRUE, status = BODYTYPE_ORGANIC)
+		if(!parts.len)
+			return
+		for(var/obj/item/bodypart/L in parts)
+			if(L.heal_damage(healing/parts.len, healing/parts.len, null, BODYTYPE_ORGANIC))
+				host_mob.update_damage_overlays()
+		if(C.getStaminaLoss() < 41)
+			C.adjustStaminaLoss(1)
+			if(prob(5))
+				to_chat(C, "<span class='warning'>You suddenly feel your flesh re-adjust.")
+	else
+		host_mob.adjustBruteLoss(-healing, TRUE)
+
+
+/datum/nanite_program/mendingburn
+	name = "Burn Mending"
+	desc = "The nanites quickly and efficiently repair burns, frostbite, and electric scars within the host. This program shuts itself off when no damage is available to be healed."
+	use_rate = 2.5
+	rogue_types = list(/datum/nanite_program/pyro)
+	var/healing = 1.25
+
+/datum/nanite_program/mendingburn/check_conditions()
+	if(!host_mob.getFireLoss())
+		return FALSE
+	if(iscarbon(host_mob))
+		var/mob/living/carbon/C = host_mob
+		var/list/parts = C.get_damaged_bodyparts(TRUE,TRUE, status = BODYTYPE_ORGANIC)
+		if(!parts.len)
+			return FALSE
+	return ..()
+
+/datum/nanite_program/mendingburn/active_effect()
+	if(iscarbon(host_mob))
+		var/mob/living/carbon/C = host_mob
+		var/list/parts = C.get_damaged_bodyparts(TRUE,TRUE, status = BODYTYPE_ORGANIC)
+		if(!parts.len)
+			return
+		for(var/obj/item/bodypart/L in parts)
+			if(L.heal_damage(healing/parts.len, healing/parts.len, null, BODYTYPE_ORGANIC))
+				host_mob.update_damage_overlays()
+		if(C.getStaminaLoss() < 41)
+			C.adjustStaminaLoss(1)
+			if(prob(5))
+				to_chat(C, "<span class='warning'>You feel both charred and burned flesh alike sizzle for a moment.")
+	else
+		host_mob.adjustFireLoss(-healing, TRUE)
+
+
+/datum/nanite_program/mendingtoxin
+	name = "Toxin Cleansing"
+	desc = "The nanites run through the host's bloodstream and re-construct cells killed by toxins. This program shuts itself off when no damage is available to be healed."
+	use_rate = 2.5
+	rogue_types = list(/datum/nanite_program/toxic)
+	var/healing = 1.25
+
+/datum/nanite_program/mendingtoxin/check_conditions()
+	if(!host_mob.getToxLoss())
+		return FALSE
+	return ..()
+
+/datum/nanite_program/mendingtoxin/active_effect()
+	if(iscarbon(host_mob))
+		host_mob.adjustToxLoss(-healing, TRUE)
+		if(prob(5))
+			to_chat(host_mob, "<span class='warning'>For the briefest of moments, you feel your veins bulk up.")
+
+
+/datum/nanite_program/selfresp
+	name = "Self-Respiration"
+	desc = "The nanites synthesize breathable air within the host's lungs and blood, negating the need to breathe."
+	use_rate = 2.5
+	rogue_types = list(/datum/nanite_program/suffocating)
+	var/toggled = FALSE
+
+/datum/nanite_program/selfresp/enable_passive_effect()
+	var/mob/living/carbon/M = host_mob
+	if(iscarbon(host_mob))
+		if(toggled)
+			M.adjustOxyLoss(-7, 0)
+			M.losebreath = max(0, host_mob.losebreath - 4)
+			ADD_TRAIT(M, TRAIT_NOBREATH, TRAIT_NANITES)
+		else
+			toggled = TRUE
+
+/datum/nanite_program/selfresp/disable_passive_effect()
+	var/mob/living/carbon/M = host_mob
+	if(iscarbon(host_mob))
+		if(toggled)
+			toggled = FALSE
+			REMOVE_TRAIT(M, TRAIT_NOBREATH, TRAIT_NANITES)
+
+
+/datum/nanite_program/repairingplus
+	name = "Synthetic Regeneration"
+	desc = "The nanites repair damage within robotic organisms or limbs including both denting and melting. This program shuts itself off when no damage is available to be healed."
+	use_rate = 1.5 //still more efficient than organic healing
+	rogue_types = list(/datum/nanite_program/aggressive_replication)
+	var/healing = 1.5
+
+/datum/nanite_program/repairingplus/check_conditions()
+	if(!host_mob.getBruteLoss() && !host_mob.getFireLoss())
+		return FALSE
+
+	if(iscarbon(host_mob))
+		var/mob/living/carbon/C = host_mob
+		var/list/parts = C.get_damaged_bodyparts(TRUE, TRUE, status = BODYTYPE_ROBOTIC)
+		if(!parts.len)
+			return FALSE
+	else
+		if(!(host_mob.mob_biotypes & MOB_ROBOTIC))
+			return FALSE
+	return ..()
+
+/datum/nanite_program/repairingplus/active_effect(mob/living/M)
+	if(iscarbon(host_mob))
+		var/mob/living/carbon/C = host_mob
+		var/list/parts = C.get_damaged_bodyparts(TRUE, TRUE, status = BODYTYPE_ROBOTIC)
+		if(!parts.len)
+			return
+		var/update = FALSE
+		for(var/obj/item/bodypart/L in parts)
+			if(L.heal_damage(healing/parts.len, healing/parts.len, null, BODYTYPE_ROBOTIC))
+				update = TRUE
+		if(update)
+			host_mob.update_damage_overlays()
+	else
+		host_mob.adjustBruteLoss(-healing, TRUE)
+		host_mob.adjustFireLoss(-healing, TRUE)
+
+
+/datum/nanite_program/woundfixer
+	name = "Wound-Tending"
+	desc = "The nanites slowly and methodically scan the host for major injuries and will slowly fix any wounds detected such as broken bones or hairline fractures -- without ever needing surgery."
+	use_rate = 2
+	rogue_types = list(/datum/nanite_program/flesh_eating)
+	var/woundfixtimer = 0
+	var/max_woundfixtimer = 120
+
+/datum/nanite_program/woundfixer/active_effect()
+	. = ..()
+	woundfixtimer = min(woundfixtimer + 1, max_woundfixtimer)
+	if(woundfixtimer >= max_woundfixtimer)
+		var/mob/living/carbon/C = host_mob
+		for(var/datum/wound/iter_wound as anything in C.all_wounds)
+			iter_wound.remove_wound()
+			woundfixtimer = 0
