@@ -15,7 +15,7 @@
 
 /datum/uplink_item/implants/freedom/New()
 	. = ..()
-	desc += " Implant has enough energy for [FREEDOM_IMPLANT_CHARGES] uses before it becomes inert and harmlessly self-destructs."
+	desc += " Implant has enough energy for [FREEDOM_IMPLANT_CHARGES] uses before it becomes inert. It recharges one use every 3 minutes."
 
 /datum/uplink_item/implants/radio
 	name = "Internal Syndicate Radio Implant"
