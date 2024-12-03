@@ -12,7 +12,7 @@
 	name = "Adrenaline Implant"
 	desc = "A single implanter, containing an adrenaline implant. When activated, it infuses the host's bloodstream with \
 			10 units of Synaptizine, Omnizine, and Stimulants leading to massive healing, increased speed, and near-immunity to stuns for a limited time. \
-			Can be used 3 times."
+			Can be used 3 times, will recharge 1 use every 10 minutes."
 	item = /obj/item/storage/box/syndie_kit/adrenalineimplant
 	cost = 7
 	surplus = 15
@@ -96,7 +96,7 @@
 	name = "Scram Implant"
 	desc = "A two-use implant rigged with precision-based bluespace technology which will warp the user \
 			somewhere nearby, but if the user is gravely injured it'll warp you somewhere safe. \
-			Does not come with life insurance."
+			Does not come with life insurance. Will recharge 1 use every 5 minutes."
 	item = /obj/item/storage/box/syndie_kit/scramimplant
 	cost = 6
 	surplus = 20

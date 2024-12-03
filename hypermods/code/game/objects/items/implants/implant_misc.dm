@@ -70,6 +70,10 @@
 	desc = "Removes all stuns."
 	icon_state = "adrenal"
 	uses = 3
+	var/maxuses = 3
+	var/rechargetime = 10 MINUTES
+	var/deleteonnouses = FALSE
+	var/recharging = FALSE
 
 /obj/item/implant/adrenalin/get_data()
 	var/dat = {"<b>Implant Specifications:</b><BR>
@@ -84,6 +88,11 @@
 
 /obj/item/implant/adrenalin/activate()
 	. = ..()
+	if(!uses)
+		var/mob/living/carbon/carbon_imp_in = imp_in
+		balloon_alert(carbon_imp_in, "no charge!")
+		return
+
 	uses--
 	to_chat(imp_in, span_notice("You feel a sudden surge of energy!"))
 	imp_in.SetStun(0)
@@ -97,8 +106,23 @@
 	imp_in.reagents.add_reagent(/datum/reagent/medicine/synaptizine, 10)
 	imp_in.reagents.add_reagent(/datum/reagent/medicine/omnizine, 10)
 	imp_in.reagents.add_reagent(/datum/reagent/medicine/stimulants, 10)
-	if(!uses)
+	if(!uses && deleteonnouses)
+		var/mob/living/carbon/carbon_imp_in = imp_in
+		addtimer(CALLBACK(carbon_imp_in, TYPE_PROC_REF(/atom, balloon_alert), carbon_imp_in, "implant degraded!"), 1 SECONDS)
 		qdel(src)
+
+	if((maxuses > uses) && !recharging)
+		recharging = TRUE
+		addtimer(CALLBACK(src, PROC_REF(restore_charge)), rechargetime)
+
+/obj/item/implant/adrenalin/proc/restore_charge(mob/living/carbon/implanted_in)
+	if(maxuses > uses)
+		uses++
+		var/mob/living/carbon/carbon_imp_in = imp_in
+		balloon_alert(carbon_imp_in, "adrenal implant: [uses] uses left!")
+		addtimer(CALLBACK(src, PROC_REF(restore_charge)), rechargetime) // keep charging till you can't
+	else
+		recharging = FALSE
 
 
 /obj/item/implanter/scram
@@ -111,6 +135,10 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "shield1"
 	uses = 2
+	var/maxuses = 2
+	var/rechargetime = 5 MINUTES
+	var/deleteonnouses = FALSE
+	var/recharging = FALSE
 
 /obj/item/implant/scram/get_data()
 	var/dat = {"<b>Implant Specifications:</b><BR>
@@ -125,6 +153,11 @@
 
 /obj/item/implant/scram/activate()
 	. = ..()
+	if(!uses)
+		var/mob/living/carbon/carbon_imp_in = imp_in
+		balloon_alert(carbon_imp_in, "no charge!")
+		return
+
 	uses--
 	var/healthlossed = 0
 	healthlossed = (imp_in.getBruteLoss() + imp_in.getFireLoss() + imp_in.getToxLoss())
@@ -146,8 +179,23 @@
 		to_chat(imp_in, span_notice("You feel reality warp around you as you're teleported!"))
 		do_teleport(imp_in, get_turf(imp_in), 12, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 
-	if(!uses)
+	if(!uses && deleteonnouses)
+		var/mob/living/carbon/carbon_imp_in = imp_in
+		addtimer(CALLBACK(carbon_imp_in, TYPE_PROC_REF(/atom, balloon_alert), carbon_imp_in, "implant degraded!"), 1 SECONDS)
 		qdel(src)
+
+	if((maxuses > uses) && !recharging)
+		recharging = TRUE
+		addtimer(CALLBACK(src, PROC_REF(restore_charge)), rechargetime)
+
+/obj/item/implant/scram/proc/restore_charge(mob/living/carbon/implanted_in)
+	if(maxuses > uses)
+		uses++
+		var/mob/living/carbon/carbon_imp_in = imp_in
+		balloon_alert(carbon_imp_in, "scram implant: [uses] uses left!")
+		addtimer(CALLBACK(src, PROC_REF(restore_charge)), rechargetime) // keep charging till you can't
+	else
+		recharging = FALSE
 
 
 /obj/item/implant/radio/binary
