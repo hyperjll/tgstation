@@ -4,7 +4,7 @@
 /obj/item/implant/syndiechem
 	name = "Chemical Storage Implant"
 	desc = "Stores chemicals within for body for later activation."
-	icon = 'icons/hud/implants.dmi'
+	icon = 'hypermods/icons/hud/implants.dmi'
 	icon_state = "chemicalstore"
 	actions_types = list(/datum/action/item_action/activate_injector)
 
