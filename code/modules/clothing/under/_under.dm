@@ -212,9 +212,6 @@
 /// Adds or removes a mob from the global suit sensors list based on sensor status and mode
 /mob/living/carbon/human/proc/update_sensor_list()
 	var/obj/item/clothing/under/uniform = w_uniform
-	var/nanite_sensors = FALSE
-	if(src in SSnanites.nanite_monitored_mobs)
-		nanite_sensors = TRUE
 
 	if(istype(uniform) && uniform.has_sensor > NO_SENSORS && uniform.sensor_mode)
 		GLOB.suit_sensors_list |= src
