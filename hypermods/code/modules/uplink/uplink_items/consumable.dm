@@ -103,6 +103,15 @@
 	surplus = 15
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
+/datum/uplink_item/consumable/mysteryfizz
+	name = "Mystery Fizz Six-Pack"
+	desc = "A six-pack of Fizzfazz's trademark 'mystery' soda! \
+			We've heard these soda's can often contain some seriously powerful reagents. \
+			Are you feeling lucky?"
+	item = /obj/item/storage/cans/sixmystery
+	cost = 2
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
 /datum/uplink_item/consumable/syndiecigs
 	name = "Syndicate Smokes"
 	desc = "Strong flavor, dense smoke, infused with omnizine."
