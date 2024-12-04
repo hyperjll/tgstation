@@ -55,6 +55,17 @@
 	surplus = 25
 	uplink_item_flags = null
 
+/datum/uplink_item/armor/gunbootsdisabler
+	name = "Disabler Shoes"
+	desc = "A highly experimental pair of 'gunboots' developed by (and later discontinued) Cybersun Industries in an attempt to incorporate turrets within footwear. \
+			These shoes will randomly fire disabler beams to weaken or incapacitate nearby entities while you walk with them on. \
+			Development was discontinued after frustration within the R&D team grew too high as the boots were more often-than-not a detriment \
+			to security and assault teams alike. Could still prove useful if you're solo, however."
+	item = /obj/item/clothing/shoes/gunboots/disabler
+	cost = 9
+	surplus = 0
+	progression_minimum = 20 MINUTES
+
 /datum/uplink_item/armor/reactiveteleportsyndicate
 	name = "Augmented Teleportation Vest"
 	desc = "Thanks to our agents who've stolen NT's Reactive Teleport Armor, we've reverse-engineered the technology for ourselves. \
