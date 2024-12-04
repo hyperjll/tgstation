@@ -508,7 +508,7 @@
 		if("Multitool")
 			new /obj/item/multitool/nanite(host_mob.loc)
 		if("Jaws of Life")
-			new /obj/item/jawsoflife/nanite(host_mob.loc)
+			new /obj/item/crowbar/power/nanite(host_mob.loc)
 		if("RPD")
 			new /obj/item/pipe_dispenser/nanite(host_mob.loc)
 		if("Fire Extinguisher")
@@ -532,15 +532,15 @@
 	visible_message(span_danger("The nanite multitool crumbles into nothing..."), span_userdanger("The nanite multitool suddenly vanishes with little fanfare."))
 	qdel(src)
 
-/obj/item/jawsoflife/nanite
+/obj/item/crowbar/power/nanite
 	name = "nanite jaws of life"
-	desc = "A set of jaws of life, compressed through the magic of science. It's fitted with a prying head. Upon closer inspection, the material is moving ever-so-slightly."
+	desc = "A set of jaws of life, compressed through the magic of science. Upon closer inspection, the material is moving ever-so-slightly."
 
-/obj/item/jawsoflife/nanite/Initialize(mapload)
+/obj/item/crowbar/power/nanite/Initialize(mapload)
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(destroy_nanite_item)), 50 SECONDS)
 
-/obj/item/jawsoflife/nanite/proc/destroy_nanite_item()
+/obj/item/crowbar/power/nanite/proc/destroy_nanite_item()
 	visible_message(span_danger("The nanite jaws of life is beginning to destabilize..."), span_userdanger("The nanite jaws of life is destabilizing..."))
 	sleep(10 SECONDS)
 	visible_message(span_danger("The nanite jaws of life crumbles into nothing..."), span_userdanger("The nanite jaws of life suddenly vanishes with little fanfare."))
