@@ -227,10 +227,17 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 			stack_trace("Human without a suit sensors compatible uniform is in suit_sensors_list: [tracked_human] ([tracked_human.type]) ([uniform?.type])")
 			continue
 
-		// Check if their uniform is in a compatible mode.
-		if(((uniform.has_sensor == NO_SENSORS) || !uniform.sensor_mode) && !nanite_sensors)
+		// Check if their uniform is in a compatible mode. OR if they have monitoring nanites, if they have monitoring nanites, then continue.
+		if((uniform.has_sensor == NO_SENSORS || !uniform.sensor_mode) && !nanite_sensors)
 			stack_trace("Human without active suit sensors is in suit_sensors_list: [tracked_human] ([tracked_human.type]) ([uniform.type])")
 			continue
+
+		if(nanite_sensors) // Just making sure the crew monitor picks you up if you have sensors turned off or n/a
+			if(istype(uniform) && (uniform.has_sensor == NO_SENSORS || !uniform.sensor_mode))
+				GLOB.suit_sensors_list |= tracked_human
+		if(!nanite_sensors) // Huh, lost my monitoring nanites and still dont got sensors, better clock out.
+			if(uniform.has_sensor == NO_SENSORS || !uniform.sensor_mode)
+				GLOB.suit_sensors_list -= tracked_human
 
 		var/sensor_mode = uniform.sensor_mode
 
@@ -251,7 +258,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 				entry["ijob"] = jobs[trim_assignment]
 
 		// Broken sensors show garbage data
-		if (uniform.has_sensor == BROKEN_SENSORS)
+		if (uniform.has_sensor == BROKEN_SENSORS && !nanite_sensors)
 			entry["life_status"] = rand(0,1)
 			entry["area"] = pick_list (ION_FILE, "ionarea")
 			entry["oxydam"] = rand(0,175)

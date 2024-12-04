@@ -716,15 +716,13 @@
 
 /datum/nanite_program/monitoring
 	name = "Monitoring"
-	desc = "The nanites monitor the host's vitals and location, sending them to the suit sensor network."
+	desc = "The nanites monitor the host's vitals and location, sending them to the suit sensor network.  Cannot function if the host isn't wearing a suit."
 	rogue_types = list(/datum/nanite_program/toxic)
 
 /datum/nanite_program/monitoring/enable_passive_effect()
 	. = ..()
 	SSnanites.nanite_monitored_mobs |= host_mob
-	GLOB.suit_sensors_list |= host_mob
 
 /datum/nanite_program/monitoring/disable_passive_effect()
 	. = ..()
 	SSnanites.nanite_monitored_mobs -= host_mob
-	GLOB.suit_sensors_list -= src

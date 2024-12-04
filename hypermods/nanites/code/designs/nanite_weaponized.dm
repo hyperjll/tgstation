@@ -91,6 +91,13 @@
 	program_type = /datum/nanite_program/kravmaga
 	category = list(NANITES_CATEGORY_WEAPONIZED)
 
+/datum/design/nanites/neuraltrauma
+	name = "Neural Traumatic Nanites"
+	desc = "The nanites inflict havoc with the host's brain by firing electrical signals spontaneously, resulting in neural trauma."
+	id = "neuraltrauma_nanites"
+	program_type = /datum/nanite_program/neuraltrauma
+	category = list(NANITES_CATEGORY_WEAPONIZED)
+
 /datum/design/nanites/braintrauma
 	name = "Brain Traumatic Nanites"
 	desc = "The nanites begin disassembling parts of the brain in a non-lethal manner, causing wide-spread chaos and trauma all across the brain. This results in severe brain trauma for the host."

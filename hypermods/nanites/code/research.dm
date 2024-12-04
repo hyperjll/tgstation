@@ -320,7 +320,7 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_3_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_BIO, TECHWEB_NODE_NANITE_SMART)
-	design_ids = list("stickyfingers_nanites", "accelsynth_nanites", "bluespace_blood_nanites", "extinguisher_nanites", "antishove_nanites")
+	design_ids = list("stickyfingers_nanites", "accelerated_synthesis_nanites", "bluespace_blood_nanites", "extinguisher_nanites", "antishove_nanites")
 
 /datum/techweb_node/nanite_brainaug
 	id = TECHWEB_NODE_NANITE_BRAINAUG

@@ -177,7 +177,21 @@
 
 /datum/design/nanites/monitoring
 	name = "Monitoring"
-	desc = "The nanites monitor the host's vitals and location, sending them to the suit sensor network."
+	desc = "The nanites monitor the host's vitals and location, sending them to the suit sensor network. Cannot function if the host isn't wearing a suit."
 	id = "monitoring_nanites"
 	program_type = /datum/nanite_program/monitoring
+	category = list(NANITE_CATEGORY_UTILITIES)
+
+/datum/design/nanites/freedom
+	name = "Freedom Procedure"
+	desc = "The nanites search for restraints upon the host and remove them quickly."
+	id = "freedom_nanites"
+	program_type = /datum/nanite_program/freedom
+	category = list(NANITE_CATEGORY_UTILITIES)
+
+/datum/design/nanites/telecrystal
+	name = "Redspace Manifestation"
+	desc = "The nanites use nearly 100% of their typical maximum capacity (500) worth of themselves to create a single telecrystal where the host is."
+	id = "telecrystal_nanites"
+	program_type = /datum/nanite_program/telecrystal
 	category = list(NANITE_CATEGORY_UTILITIES)

@@ -76,6 +76,13 @@
 	program_type = /datum/nanite_program/painnull
 	category = list(NANITES_CATEGORY_AUGMENTATION)
 
+/datum/design/nanites/extinguisher
+	name = "Extinguishing Nanites"
+	desc = "The nanites will detect if the host is on fire and will administer both water and other fire-retardent chemicals around the body to extinguish the host."
+	id = "extinguisher_nanites"
+	program_type = /datum/nanite_program/extinguisher
+	category = list(NANITES_CATEGORY_AUGMENTATION)
+
 /datum/design/nanites/antidismember
 	name = "Dismemberment Resistance"
 	desc = "The nanites reinforce the skeletal-structure within the host, be it human or robot. This results in an immunity to dismemberment in the host."
