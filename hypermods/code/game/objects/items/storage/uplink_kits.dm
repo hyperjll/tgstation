@@ -1142,6 +1142,12 @@
 /obj/item/storage/box/syndie_kit/imp_violentpsychosis/PopulateContents()
 	new /obj/item/implanter/violentpsychosis(src)
 
+/obj/item/storage/box/syndie_kit/imp_dnascramble
+	name = "dna scrambler implant box"
+
+/obj/item/storage/box/syndie_kit/imp_dnascramble/PopulateContents()
+	new /obj/item/implanter/dnascramble(src)
+
 /obj/item/storage/box/syndie_kit/missilephone
 	name = "missile phone box"
 

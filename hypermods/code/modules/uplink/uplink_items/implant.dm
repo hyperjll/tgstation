@@ -34,6 +34,15 @@
 	cost = 7
 	surplus = 60
 
+/datum/uplink_item/implants/dnascramble
+	name = "DNA Scrambler Implant"
+	desc = "An implant injected into the body, allowing the user to scramble their DNA and appearance ONCE. \
+			Comes bundled with integrated electronics designed to alter any identification cards the user may be wearing \
+			to display their new name. Does NOT change your clothing or the ID's job assignment."
+	item = /obj/item/storage/box/syndie_kit/imp_dnascramble
+	cost = 5
+	surplus = 60
+
 /datum/uplink_item/implants/kravmaga
 	name = "Krav Maga Implant"
 	desc = "A single sterile implanter containing a neural datachip containing extensive education of Krav Maga, an effective martial art. \
