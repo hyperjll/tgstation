@@ -91,6 +91,18 @@
 	cost = 5
 	surplus = 5
 
+/datum/uplink_item/consumable/coffeeplus
+	name = "Waffle Co. Coffee"
+	desc = "An inconspicuous cup of coffee with some of Waffle Co.'s finest brewed coffee. \
+			Drinking the contents within will temporarily grant an extra 20% movement speed, \
+			minor regeneration, and near immunity to drowsiness and exhaustion. \
+			The brew even clears your bloodstream of various tranquilizing chemicals and \
+			helps keep you warm! The perfect drink for your morning breakfast!"
+	item = /obj/item/reagent_containers/cup/glass/coffee/plus
+	cost = 4
+	surplus = 15
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
 /datum/uplink_item/consumable/syndiecigs
 	name = "Syndicate Smokes"
 	desc = "Strong flavor, dense smoke, infused with omnizine."

@@ -18,3 +18,6 @@
 
 /datum/movespeed_modifier/reagent/cheapturbo
 	multiplicative_slowdown = -0.3
+
+/datum/movespeed_modifier/reagent/coffeeplus
+	multiplicative_slowdown = -0.2

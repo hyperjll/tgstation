@@ -289,3 +289,6 @@
 	volume = 50
 	custom_price = 200
 	custom_premium_price = 200
+
+/obj/item/reagent_containers/cup/glass/coffee/plus
+	list_reagents = list(/datum/reagent/consumable/coffeeplus = 30)

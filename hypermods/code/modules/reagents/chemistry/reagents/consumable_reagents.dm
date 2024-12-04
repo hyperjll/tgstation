@@ -202,3 +202,49 @@
 	M.adjustToxLoss(-0.25, 0)
 	..()
 	. = 1
+
+/datum/reagent/consumable/coffeeplus
+	name = "Coffee"
+	description = "Coffee is a brewed drink prepared from roasted seeds, commonly called coffee beans, of the coffee plant. There's something special about this brew..."
+	color = "#482000" // rgb: 72, 32, 0
+	nutriment_factor = 0
+	overdose_threshold = 80
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	taste_description = "bitterness"
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	glass_price = DRINK_PRICE_STOCK
+	metabolized_traits = list(TRAIT_STIMULATED)
+
+/datum/reagent/consumable/coffeeplus/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
+
+/datum/reagent/consumable/coffeeplus/on_mob_metabolize(mob/living/L)
+	..()
+	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/coffeeplus)
+
+/datum/reagent/consumable/coffeeplus/on_mob_end_metabolize(mob/living/L)
+	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/coffeeplus)
+	..()
+
+/datum/reagent/consumable/coffeeplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	affected_mob.adjustBruteLoss(-0.1, 0)
+	affected_mob.adjustFireLoss(-0.1, 0)
+	affected_mob.adjustOxyLoss(-0.1, 0)
+	affected_mob.adjustToxLoss(-0.1, 0)
+
+	affected_mob.adjustStaminaLoss(-1 * REM * seconds_per_tick)
+	affected_mob.adjust_dizzy(-14 SECONDS * REM * seconds_per_tick)
+	affected_mob.adjust_drowsiness(-9 SECONDS * REM * seconds_per_tick)
+	affected_mob.AdjustSleeping(-6 SECONDS * REM * seconds_per_tick)
+	//310.15 is the normal bodytemp.
+	affected_mob.adjust_bodytemperature(25 * REM * TEMPERATURE_DAMAGE_COEFFICIENT * seconds_per_tick, 0, affected_mob.get_body_temp_normal())
+	if(holder.has_reagent(/datum/reagent/consumable/frostoil))
+		holder.remove_reagent(/datum/reagent/consumable/frostoil, 5 * REM * seconds_per_tick)
+	if(holder.has_reagent(/datum/reagent/medicine/haloperidol))
+		holder.remove_reagent(/datum/reagent/medicine/haloperidol, 3 * REM * seconds_per_tick)
+	if(holder.has_reagent(/datum/reagent/medicine/morphine))
+		holder.remove_reagent(/datum/reagent/medicine/morphine, 3 * REM * seconds_per_tick)
+	if(holder.has_reagent(/datum/reagent/toxin/nocturine))
+		holder.remove_reagent(/datum/reagent/toxin/nocturine, 2 * REM * seconds_per_tick)
