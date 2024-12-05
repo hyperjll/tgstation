@@ -203,6 +203,7 @@
 	item = /obj/item/gun/toxicreagentgun
 	cost = 20
 	surplus = 10
+	progression_minimum = 15 MINUTES
 	purchasable_from = ~UPLINK_SPY // for the best
 
 /datum/uplink_item/dangerous/explosivereagentgun
@@ -214,5 +215,6 @@
 	item = /obj/item/gun/explosivereagentgun
 	surplus = 0
 	cost = 40
+	progression_minimum = 40 MINUTES
 	cant_discount = TRUE
 	purchasable_from = ~UPLINK_SPY // for the best
