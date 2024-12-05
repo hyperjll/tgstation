@@ -131,7 +131,7 @@
 	desc = "A sterile implanter, loaded with a micro-bomb implant. The implanter provided can be used without being noticed. \
 			Those who are implanted will not be able to detonate nor recognize the microbomb on their own, and can only activate it through death."
 	item = /obj/item/implanter/stealthimplanter/explosive
-	cost = 4
+	cost = 8
 	surplus = 0
 
 /datum/uplink_item/special/stealthmicrobomb/New()
