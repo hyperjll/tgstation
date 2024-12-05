@@ -1,6 +1,6 @@
 /obj/item/device/chameleon/bomb
 	name = "chameleon bomb"
-	desc = "Hit the bomb on any object to disguise it as that object. Use the bomb in hand to arm/disarm it. The bomb will explode when anyone tries to pick up the armed bomb."
+	desc = "Hit the bomb on any object to disguise it as that object. Simply drop the bomb or place it into a storage object to arm it. The bomb will explode when anyone tries to pick up the armed bomb."
 	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
 	icon_state = "cham_bomb"
 	var/dev_range = 0
@@ -9,17 +9,23 @@
 	var/low_range = 6
 	var/burn_range = 4
 	var/armed = FALSE
+	var/arming = FALSE
 
 /obj/item/device/chameleon/bomb/examine(mob/user)
 	. = ..()
 	if((IS_TRAITOR(user) || !IS_NUKE_OP(user)) && armed) //helpful to other syndicates
 		. += "This is a bomb in disguise!"
 
-/obj/item/device/chameleon/bomb/dropped()
+/obj/item/device/chameleon/bomb/dropped(mob/user)
 	..()
-	if(!armed)
-		armed = TRUE
-		playsound(src, 'hypermods/sound/effects/c4beep.ogg', 20, 1)
+	if(!armed && !arming)
+		user.balloon_alert(user, "Arming! Better drop it.")
+		arming = TRUE
+		addtimer(CALLBACK(src, PROC_REF(armup)), 5 SECONDS)
+
+/obj/item/device/chameleon/bomb/proc/armup()
+	armed = TRUE
+	playsound(src, 'hypermods/sound/effects/c4beep.ogg', 20, 1)
 
 /obj/item/device/chameleon/bomb/pickup()
 	..()
@@ -29,13 +35,15 @@
 	else
 		return
 
-/obj/item/device/chameleon/bomb/afterattack(atom/target, mob/user , proximity)
+/obj/item/device/chameleon/bomb/interact_with_atom(atom/target, mob/user , proximity)
 	. = ..()
 	if(!proximity)
 		return
 	if(isturf(target))
 		return
 	if(ismob(target))
+		return
+	if(istype(target, /obj/structure/table)) // causes bugs
 		return
 	if(istype(target, /obj/structure/falsewall))
 		return
