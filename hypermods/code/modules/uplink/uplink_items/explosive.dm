@@ -1,7 +1,7 @@
 /datum/uplink_item/explosives/grenadepenguin
 	name = "Grenade Penguin"
 	desc = "A grenade that takes the form of an aggressive penguin that explodes upon death. \
-			The Penguin ignores nuclear operatives, but cannot recognize undercover agents. \
+			The Penguin ignores nuclear operatives as well as the one who summoned it, but cannot recognize undercover agents. \
 			The grenade has a small, but lethal blast range. Best used with an escape route in mind."
 	item = /obj/item/sbeacondrop/grenadepenguin
 	progression_minimum = 20 MINUTES
