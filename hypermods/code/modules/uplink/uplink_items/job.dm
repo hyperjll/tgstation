@@ -405,16 +405,6 @@
 	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Getting this as a bounty is a big fuck-you.
 
-/datum/uplink_item/role_restricted/nocturine_deluxe
-	name = "Nocturine Deluxe Package"
-	desc = "A box containing a Sleepy Pen, and 3 bottles of Nocturine. Very useful for incapacitating targets or kidnapping them."
-	item = /obj/item/storage/box/syndie_kit/nocturine_deluxe
-	cost = 8
-	surplus = 25
-	limited_stock = 1
-	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
-	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
-
 /datum/uplink_item/role_restricted/deluxe_bluespace_chameleon_backpack
 	name = "Deluxe Bluespace Chameleon Backpack"
 	desc = "A backpack fitted with both chameleon & bluespace technology. We've upgraded it especially for you, so it may contain more items than our normal variety."

@@ -1020,6 +1020,104 @@
 	new /obj/item/implanter/tesla(src)
 	new /obj/item/implanter/empshield(src)
 
+/obj/item/storage/box/syndie_kit/anatomy
+	name = "anatomy kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "anatomy"
+
+/obj/item/storage/box/syndie_kit/anatomy/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/anatomy/PopulateContents()
+	new /obj/item/implanter/storage(src)
+	new /obj/item/implanter/dnascramble(src)
+	new /obj/item/reagent_containers/cup/bottle/ephedrine(src)
+	new /obj/item/reagent_containers/syringe(src)
+	new /obj/item/reagent_containers/cup/glass/shaker(src)
+	new /obj/item/soap/omega(src)
+
+/obj/item/storage/box/syndie_kit/breacher
+	name = "breacher kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "breacher"
+
+/obj/item/storage/box/syndie_kit/breacher/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/breacher/PopulateContents()
+	new /obj/item/grenade/c4(src)
+	new /obj/item/grenade/c4(src)
+	new /obj/item/multitool(src)
+	new /obj/item/assembly/signaler(src)
+	new /obj/item/crowbar/power(src)
+	new /obj/item/weldingtool/hugetank(src)
+	new /obj/item/clothing/glasses/meson/engine(src)
+	new /obj/item/clothing/gloves/color/yellow(src)
+
+/obj/item/storage/box/syndie_kit/chameleondeluxe
+	name = "deluxe chameleon kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "chameleon"
+
+/obj/item/storage/box/syndie_kit/chameleondeluxe/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/chameleondeluxe/PopulateContents()
+	new /obj/item/storage/box/syndie_kit/chameleon(src)
+	new /obj/item/card/id/advanced/chameleon(src)
+	new /obj/item/chameleon(src)
+
+/obj/item/storage/box/syndie_kit/communicator
+	name = "communicator kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "communicator"
+
+/obj/item/storage/box/syndie_kit/communicator/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/communicator/PopulateContents()
+	new /obj/item/encryptionkey/universal(src)
+	new /obj/item/clothing/mask/chameleon(src)
+	new /obj/item/pen/cybersun(src)
+	new /obj/item/stack/spacecash/c10000(src)
+	new /obj/item/stack/spacecash/c10000(src)
+
+/obj/item/storage/box/syndie_kit/sleeper
+	name = "sleeper kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "sleeper"
+
+/obj/item/storage/box/syndie_kit/sleeper/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/sleeper/PopulateContents()
+	new /obj/item/tank/internals/anesthetic(src)
+	new /obj/item/reagent_containers/cup/bottle/nocturine(src)
+	new /obj/item/reagent_containers/cup/bottle/nocturine(src)
+	new /obj/item/storage/box/itempack/hypopen(src)
+
+/obj/item/storage/box/syndie_kit/smuggler
+	name = "smuggler kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "smuggler"
+
+/obj/item/storage/box/syndie_kit/smuggler/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/smuggler/PopulateContents()
+	new /obj/item/storage/backpack/satchel/flat/with_tools(src)
+	new /obj/item/grenade/smokebomb(src)
+	new /obj/item/grenade/smokebomb(src)
+	new /obj/item/grenade/smokebomb(src)
+	new /obj/item/fulton_core/syndicate(src)
+	new /obj/item/extraction_pack/non_contractor(src)
+
 
 /obj/item/storage/box/syndie_kit/romerol_plus/PopulateContents()
 	new /obj/item/reagent_containers/cup/bottle/romerol(src)

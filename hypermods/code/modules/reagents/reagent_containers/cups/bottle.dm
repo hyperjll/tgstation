@@ -120,6 +120,10 @@
 	name = "higadrite bottle"
 	list_reagents = list(/datum/reagent/medicine/higadrite = 30)
 
+/obj/item/reagent_containers/cup/bottle/ephedrine
+	name = "ephedrine bottle"
+	list_reagents = list(/datum/reagent/medicine/ephedrine = 30)
+
 /// Red-space flasks of eternal whatever -- expensive traitor shit.
 
 /obj/item/reagent_containers/cup/bottle/eternal

@@ -66,6 +66,60 @@
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/disruptor
 
+/datum/uplink_item/bundles_tc/anatomy
+	name = "Anatomy Kit"
+	desc = "A special kit for altering or boosting your physical performance. \
+			Contains a Storage Implanter, DNA Scrambler Implanter, Ephedrine bottle (30u), Syringe, Empty Shaker, and Omega Soap."
+	cost = 12
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/box/syndie_kit/anatomy
+
+/datum/uplink_item/bundles_tc/breacher
+	name = "Breacher Kit"
+	desc = "What's that sound? A lil' C4 knockin' at their door. No obstacle can stop you! \
+			Contains two C4, a Multitool, Remote Signaller, Jaws of Life, Advanced Industrial Welding Tool, Engineering Goggles, and Insulated Gloves."
+	cost = 6
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/box/syndie_kit/breacher
+
+/datum/uplink_item/bundles_tc/chameleondeluxe
+	name = "Deluxe Chameleon Kit"
+	desc = "You are everyone and no one; you are a master of disguise. Disguise as anyone and anything! \
+			Contains a full set of Chameleon Clothing, an Agent ID, and a Chameleon Projector."
+	cost = 10
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/box/syndie_kit/chameleondeluxe
+
+/datum/uplink_item/bundles_tc/communicator
+	name = "Communicator Kit"
+	desc = "Money is power, and secrets are money. Use your silver tongue and wealth to subvert the station. \
+			Contains a Universal Encryption Key, a Cybersun Pen, a Voice Changer, and 20k Cash."
+	cost = 5
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/box/syndie_kit/communicator
+
+/datum/uplink_item/bundles_tc/sleeper
+	name = "Sleeper Kit"
+	desc = "Until we close our eyes for good, use your illegal prescriptions to keep others asleep. \
+			Contains a Sleepy Nitrous Oxide tank, two Nocturine bottles (30u each), and a Hypopen."
+	cost = 9
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/box/syndie_kit/sleeper
+
+/datum/uplink_item/bundles_tc/smuggler
+	name = "Smuggler Kit"
+	desc = "All thieves need somewhere to stash their goods in the dark. Don't forget to place your fulton beacon. \
+			Contains a Fulton Beacon, a Fulton Pack, 3 Smoke Grenades, and a Smuggler's Satchel. "
+	cost = 5
+	limited_stock = 1
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	item = /obj/item/storage/box/syndie_kit/smuggler
+
 /datum/uplink_item/bundles_tc/lobbyist
 	name = "Lobbyist Bundle"
 	desc = "A briefcase containing a 30,000 credits, a syndicate encryption key, a red phone, \
