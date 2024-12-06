@@ -501,3 +501,75 @@
 		H.physiology.brute_mod /= 4
 		H.physiology.burn_mod /= 4
 
+
+/obj/item/storage/portable_chem_mixer/chemicompiler
+	name = "chemi-compiler"
+	desc = "An illegal, portable device that dispenses and mixes chemicals using an internal chemical synthesizer."
+	icon = 'hypermods/icons/obj/medical/chemical.dmi'
+	icon_state = "chemicompiler"
+	w_class = WEIGHT_CLASS_SMALL
+	slot_flags = null
+	///The amount of reagent that is to be dispensed currently
+	amount = 5
+	///List in which all currently dispensable reagents go
+	dispensable_reagents = list()
+
+/obj/item/storage/portable_chem_mixer/Initialize(mapload)
+	. = ..()
+	atom_storage.locked = STORAGE_FULLY_LOCKED
+	//register_context()
+	//update_contents()
+
+/obj/item/storage/portable_chem_mixer/chemicompiler/PopulateContents()
+	new /obj/item/reagent_containers/cup/bottle/eternal/stable_plasma(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/silver(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/gold(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/uranium(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/plasma(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/hydrogen(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/lithium(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/carbon(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/nitrogen(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/oxygen(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/fluorine(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/sodium(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/aluminium(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/silicon(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/phosphorus(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/sulfur(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/chlorine(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/potassium(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/iron(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/copper(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/mercury(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/radium(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/water(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/ethanol(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/sugar(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/acid(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/fuel(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/iodine(src)
+	new /obj/item/reagent_containers/cup/bottle/eternal/bromine(src)
+	update_contents()
+
+/obj/item/storage/portable_chem_mixer/chemicompiler/update_icon_state()
+	if(!atom_storage.locked)
+		icon_state = "chemicompiler_open"
+		return //..()
+	if(!QDELETED(beaker))
+		icon_state = "chemicompiler"
+		return //..()
+	icon_state = "chemicompiler"
+	return //..()
+
+/obj/item/storage/portable_chem_mixer/chemicompiler/item_ctrl_click(mob/user)
+	if(atom_storage.locked == STORAGE_FULLY_LOCKED)
+		//atom_storage.locked = STORAGE_NOT_LOCKED
+		replace_beaker(user)
+		SStgui.close_uis(src)
+	else
+		atom_storage.locked = STORAGE_FULLY_LOCKED
+		atom_storage.hide_contents(user)
+
+	update_appearance()
+	return CLICK_ACTION_SUCCESS

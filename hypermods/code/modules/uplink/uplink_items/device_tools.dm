@@ -111,3 +111,12 @@
 	item = /obj/item/storage/box/firingpins/dna_noremove
 	cost = 3
 	surplus = 0
+
+/datum/uplink_item/device_tools/chemicompiler
+	name = "Chemi-Compiler"
+	desc = "A handheld device used for on-the-go chemical dispensing. \
+			It's basically just a handheld chemical dispenser, with some added chemicals to dispense, such as silver, gold, and uranium. \
+			Doesn't come with any beakers, a heater, or any means to seperate the chemicals or manufacture pills/patches/etc."
+	item = /obj/item/storage/portable_chem_mixer/chemicompiler
+	cost = 10
+	surplus = 0
