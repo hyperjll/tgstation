@@ -487,7 +487,7 @@
 /datum/status_effect/cloaking_device/on_apply()
 	to_chat(owner, span_warning("You notice your form flicker out of existance."))
 	if(ishuman(owner))
-		owner.alpha = 20
+		owner.alpha = 10
 		var/mob/living/carbon/human/H = owner
 		H.physiology.brute_mod *= 4
 		H.physiology.burn_mod *= 4

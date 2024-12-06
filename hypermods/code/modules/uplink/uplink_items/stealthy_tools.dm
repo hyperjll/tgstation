@@ -114,7 +114,7 @@
 /datum/uplink_item/stealthy_tools/cloaking_device
 	name = "Cloaking Device"
 	desc = "A handheld device which features state-of-the-art cloaking technology. \
-			It's small enough to be placed within pockets, but cannot function should it be stored beyond any more than 1 layer of stroage. \
+			It's small enough to be placed within pockets, but cannot function should it be stored beyond any more than 1 layer of storage. \
 			(In other words, don't place it in a box within your backpack.) \
 			For some reason, those under it's effects take quadrupole damage, we believe this to be the user's fault as most users under it's effects \
 			drop their guard completely."
