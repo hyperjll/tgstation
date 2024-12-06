@@ -120,3 +120,12 @@
 	item = /obj/item/storage/portable_chem_mixer/chemicompiler
 	cost = 10
 	surplus = 0
+
+/datum/uplink_item/device_tools/syndicate_radio_mine
+	name = "Radio Mines"
+	desc = "Seven radio mines that report directly to the syndicate radio frequency whenever they're stepped upon. \
+			They always relay the victims identity and the location of the mine. The mines come with camoflauge to render \
+			them nearly invisible to the naked eye. The mines are still loud enough to be heard after stepping upon them."
+	item = /obj/item/storage/box/syndie_kit/syndicate_radio_mine
+	cost = 4
+	surplus = 0

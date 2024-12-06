@@ -115,7 +115,7 @@
 
 /obj/effect/mine/radio
 	name = "radio mine"
-	desc = "It's a mime which transmits some kind of message over an encrypted radio channel when stepped on."
+	desc = "It's a mine which transmits some kind of message over an encrypted radio channel when stepped on."
 	alpha = 55
 	var/obj/item/radio/radio
 	var/encryptionkey = /obj/item/encryptionkey/headset_cent
@@ -147,3 +147,9 @@
 	name = "security radio mine"
 	encryptionkey = /obj/item/encryptionkey/headset_sec // Security channel only?
 	channel = RADIO_CHANNEL_SECURITY
+
+/obj/effect/mine/radio/syndicate
+	name = "radio mine"
+	alpha = 10
+	encryptionkey = /obj/item/encryptionkey/syndicate
+	channel = RADIO_CHANNEL_SYNDICATE

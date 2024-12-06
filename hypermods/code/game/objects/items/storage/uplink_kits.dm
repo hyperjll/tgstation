@@ -1252,3 +1252,7 @@
 /obj/item/storage/box/syndie_kit/missilephone/PopulateContents()
 	new /obj/item/missile_disk(src)
 	new /obj/item/missilephone(src)
+
+/obj/item/storage/box/syndie_kit/syndicate_radio_mine/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/deployablemine/radio/syndicate(src)

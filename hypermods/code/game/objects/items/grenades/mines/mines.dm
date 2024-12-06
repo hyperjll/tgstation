@@ -153,3 +153,7 @@
 /obj/item/deployablemine/radio/security
 	name = "security radio mine"
 	mine_type = /obj/effect/mine/radio/security
+
+/obj/item/deployablemine/radio/syndicate
+	name = "syndicate radio mine"
+	mine_type = /obj/effect/mine/radio/syndicate
