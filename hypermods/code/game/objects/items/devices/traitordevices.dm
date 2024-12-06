@@ -415,3 +415,89 @@
 	playsound(src.loc, 'sound/misc/interference.ogg', 50, TRUE)
 	to_chat(user, span_danger("The cargo shuttle navigation corruptor self-destructs!"))
 	qdel(src)
+
+
+/obj/item/cloaking_device
+	name = "cloaking device"
+	desc = "An illegal device that bends light around the user, rendering them invisible to regular vision."
+	icon = 'hypermods/icons/obj/devices/syndie_gadget.dmi'
+	icon_state = "shield0"
+	item_flags = NOBLUDGEON
+	slot_flags = ITEM_SLOT_BELT
+	inhand_icon_state = "electronic"
+	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	throwforce = 5
+	throw_speed = 3
+	throw_range = 5
+	w_class = WEIGHT_CLASS_SMALL
+	var/is_active = FALSE
+	var/datum/status_effect/linked_effect
+	var/mob/living/owner
+
+/obj/item/cloaking_device/Initialize(mapload)
+	. = ..()
+	START_PROCESSING(SSobj,src)
+
+/obj/item/cloaking_device/Destroy()
+	STOP_PROCESSING(SSobj,src)
+	qdel(linked_effect)
+	return ..()
+
+/obj/item/cloaking_device/process() // Stolen from green slime extract.
+	var/humanfound = null
+	if(ishuman(loc))
+		humanfound = loc
+	if(ishuman(loc.loc)) //Check if in backpack.
+		humanfound = (loc.loc)
+	if(!humanfound)
+		icon_state = "shield0"
+		return
+	var/mob/living/carbon/human/H = humanfound
+	var/effectpath = /datum/status_effect/cloaking_device
+	if(!H.has_status_effect(effectpath))
+		var/datum/status_effect/holodisguise/S = H.apply_status_effect(effectpath)
+		owner = H
+		S.linked_extract = src
+		playsound(get_turf(src), 'sound/effects/pop.ogg', 100, TRUE, -6)
+		to_chat(H, span_notice("[src] begins to hum softly."))
+		icon_state = "shield1"
+		new /obj/effect/temp_visual/emp/pulse(get_turf(src))
+		STOP_PROCESSING(SSobj,src)
+
+
+/datum/status_effect/cloaking_device
+	id = "cloaking device"
+	duration = -1
+	alert_type = null
+	var/obj/item/cloaking_device/linked_extract // was previously slimecross/stabilized/linked_extract -- test this later
+
+/datum/status_effect/cloaking_device/tick()
+	if(!linked_extract || !linked_extract.loc) //Sanity checking
+		qdel(src)
+		return
+	if(linked_extract && linked_extract.loc != owner && linked_extract.loc.loc != owner)
+		linked_extract.linked_effect = null
+		if(!QDELETED(linked_extract))
+			linked_extract.owner = null
+			START_PROCESSING(SSobj,linked_extract)
+		qdel(src)
+	return ..()
+
+/datum/status_effect/cloaking_device/on_apply()
+	to_chat(owner, span_warning("You notice your form flicker out of existance."))
+	if(ishuman(owner))
+		owner.alpha = 20
+		var/mob/living/carbon/human/H = owner
+		H.physiology.brute_mod *= 4
+		H.physiology.burn_mod *= 4
+	return ..()
+
+/datum/status_effect/cloaking_device/on_remove()
+	to_chat(owner, span_notice("You notice your body became visible again!"))
+	if(ishuman(owner))
+		owner.alpha = initial(owner.alpha)
+		var/mob/living/carbon/human/H = owner
+		H.physiology.brute_mod /= 4
+		H.physiology.burn_mod /= 4
+
