@@ -134,6 +134,9 @@
 	return ..()
 
 /obj/effect/mine/radio/mineEffect(mob/victim)
+	if(!istype(victim, /mob/living/carbon/human))
+		return
+
 	var/name = victim.mind ? victim.mind.name : victim.real_name
 	var/area = get_area_name(get_turf(victim))
 
