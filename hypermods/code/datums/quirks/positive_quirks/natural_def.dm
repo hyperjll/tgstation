@@ -1,6 +1,6 @@
 /datum/quirk/natural_def
 	name = "Naturally Robust"
-	desc = "Whether by genetic superiority or by intense physical training, you're much more hardy than normal people."
+	desc = "You've been through thick and thin many times before, and have naturally become resistant to brute or burn damage."
 	icon = FA_ICON_SHIELD_ALT
 	value = 8
 	medical_record_text = "Patient has above-average physical health."
