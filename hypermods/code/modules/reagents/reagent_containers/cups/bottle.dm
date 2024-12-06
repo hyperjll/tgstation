@@ -178,119 +178,119 @@
 	generate_reagent = /datum/reagent/medicine/stimulants
 
 /obj/item/reagent_containers/cup/bottle/eternal/stable_plasma
-	list_reagents = list(/datum/reagent/stable_plasma = 1)
+	list_reagents = list(/datum/reagent/stable_plasma = 50)
 	generate_reagent = /datum/reagent/stable_plasma
 
 /obj/item/reagent_containers/cup/bottle/eternal/silver
-	list_reagents = list(/datum/reagent/silver = 1)
+	list_reagents = list(/datum/reagent/silver = 50)
 	generate_reagent = /datum/reagent/silver
 
 /obj/item/reagent_containers/cup/bottle/eternal/gold
-	list_reagents = list(/datum/reagent/gold = 1)
+	list_reagents = list(/datum/reagent/gold = 50)
 	generate_reagent = /datum/reagent/gold
 
 /obj/item/reagent_containers/cup/bottle/eternal/uranium
-	list_reagents = list(/datum/reagent/uranium = 1)
+	list_reagents = list(/datum/reagent/uranium = 50)
 	generate_reagent = /datum/reagent/uranium
 
 /obj/item/reagent_containers/cup/bottle/eternal/plasma
-	list_reagents = list(/datum/reagent/toxin/plasma = 1)
+	list_reagents = list(/datum/reagent/toxin/plasma = 50)
 	generate_reagent = /datum/reagent/toxin/plasma
 
 /obj/item/reagent_containers/cup/bottle/eternal/hydrogen
-	list_reagents = list(/datum/reagent/hydrogen = 1)
+	list_reagents = list(/datum/reagent/hydrogen = 50)
 	generate_reagent = /datum/reagent/hydrogen
 
 /obj/item/reagent_containers/cup/bottle/eternal/lithium
-	list_reagents = list(/datum/reagent/lithium = 1)
+	list_reagents = list(/datum/reagent/lithium = 50)
 	generate_reagent = /datum/reagent/lithium
 
 /obj/item/reagent_containers/cup/bottle/eternal/carbon
-	list_reagents = list(/datum/reagent/carbon = 1)
+	list_reagents = list(/datum/reagent/carbon = 50)
 	generate_reagent = /datum/reagent/carbon
 
 /obj/item/reagent_containers/cup/bottle/eternal/nitrogen
-	list_reagents = list(/datum/reagent/nitrogen = 1)
+	list_reagents = list(/datum/reagent/nitrogen = 50)
 	generate_reagent = /datum/reagent/nitrogen
 
 /obj/item/reagent_containers/cup/bottle/eternal/oxygen
-	list_reagents = list(/datum/reagent/oxygen = 1)
+	list_reagents = list(/datum/reagent/oxygen = 50)
 	generate_reagent = /datum/reagent/oxygen
 
 /obj/item/reagent_containers/cup/bottle/eternal/fluorine
-	list_reagents = list(/datum/reagent/fluorine = 1)
+	list_reagents = list(/datum/reagent/fluorine = 50)
 	generate_reagent = /datum/reagent/fluorine
 
 /obj/item/reagent_containers/cup/bottle/eternal/sodium
-	list_reagents = list(/datum/reagent/sodium = 1)
+	list_reagents = list(/datum/reagent/sodium = 50)
 	generate_reagent = /datum/reagent/sodium
 
 /obj/item/reagent_containers/cup/bottle/eternal/aluminium
-	list_reagents = list(/datum/reagent/aluminium = 1)
+	list_reagents = list(/datum/reagent/aluminium = 50)
 	generate_reagent = /datum/reagent/aluminium
 
 /obj/item/reagent_containers/cup/bottle/eternal/silicon
-	list_reagents = list(/datum/reagent/silicon = 1)
+	list_reagents = list(/datum/reagent/silicon = 50)
 	generate_reagent = /datum/reagent/silicon
 
 /obj/item/reagent_containers/cup/bottle/eternal/phosphorus
-	list_reagents = list(/datum/reagent/phosphorus = 1)
+	list_reagents = list(/datum/reagent/phosphorus = 50)
 	generate_reagent = /datum/reagent/phosphorus
 
 /obj/item/reagent_containers/cup/bottle/eternal/sulfur
-	list_reagents = list(/datum/reagent/sulfur = 1)
+	list_reagents = list(/datum/reagent/sulfur = 50)
 	generate_reagent = /datum/reagent/sulfur
 
 /obj/item/reagent_containers/cup/bottle/eternal/chlorine
-	list_reagents = list(/datum/reagent/chlorine = 1)
+	list_reagents = list(/datum/reagent/chlorine = 50)
 	generate_reagent = /datum/reagent/chlorine
 
 /obj/item/reagent_containers/cup/bottle/eternal/potassium
-	list_reagents = list(/datum/reagent/potassium = 1)
+	list_reagents = list(/datum/reagent/potassium = 50)
 	generate_reagent = /datum/reagent/potassium
 
 /obj/item/reagent_containers/cup/bottle/eternal/iron
-	list_reagents = list(/datum/reagent/iron = 1)
+	list_reagents = list(/datum/reagent/iron = 50)
 	generate_reagent = /datum/reagent/iron
 
 /obj/item/reagent_containers/cup/bottle/eternal/copper
-	list_reagents = list(/datum/reagent/copper = 1)
+	list_reagents = list(/datum/reagent/copper = 50)
 	generate_reagent = /datum/reagent/copper
 
 /obj/item/reagent_containers/cup/bottle/eternal/mercury
-	list_reagents = list(/datum/reagent/mercury = 1)
+	list_reagents = list(/datum/reagent/mercury = 50)
 	generate_reagent = /datum/reagent/mercury
 
 /obj/item/reagent_containers/cup/bottle/eternal/radium
-	list_reagents = list(/datum/reagent/uranium/radium = 1)
+	list_reagents = list(/datum/reagent/uranium/radium = 50)
 	generate_reagent = /datum/reagent/uranium/radium
 
 /obj/item/reagent_containers/cup/bottle/eternal/water
-	list_reagents = list(/datum/reagent/water = 1)
+	list_reagents = list(/datum/reagent/water = 50)
 	generate_reagent = /datum/reagent/water
 
 /obj/item/reagent_containers/cup/bottle/eternal/ethanol
-	list_reagents = list(/datum/reagent/consumable/ethanol = 1)
+	list_reagents = list(/datum/reagent/consumable/ethanol = 50)
 	generate_reagent = /datum/reagent/consumable/ethanol
 
 /obj/item/reagent_containers/cup/bottle/eternal/sugar
-	list_reagents = list(/datum/reagent/consumable/sugar = 1)
+	list_reagents = list(/datum/reagent/consumable/sugar = 50)
 	generate_reagent = /datum/reagent/consumable/sugar
 
 /obj/item/reagent_containers/cup/bottle/eternal/acid
-	list_reagents = list(/datum/reagent/toxin/acid = 1)
+	list_reagents = list(/datum/reagent/toxin/acid = 50)
 	generate_reagent = /datum/reagent/toxin/acid
 
 /obj/item/reagent_containers/cup/bottle/eternal/fuel
-	list_reagents = list(/datum/reagent/fuel = 1)
+	list_reagents = list(/datum/reagent/fuel = 50)
 	generate_reagent = /datum/reagent/fuel
 
 /obj/item/reagent_containers/cup/bottle/eternal/iodine
-	list_reagents = list(/datum/reagent/iodine = 1)
+	list_reagents = list(/datum/reagent/iodine = 50)
 	generate_reagent = /datum/reagent/iodine
 
 /obj/item/reagent_containers/cup/bottle/eternal/bromine
-	list_reagents = list(/datum/reagent/bromine = 1)
+	list_reagents = list(/datum/reagent/bromine = 50)
 	generate_reagent = /datum/reagent/bromine
 
 
