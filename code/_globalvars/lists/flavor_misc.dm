@@ -267,3 +267,4 @@ GLOBAL_LIST_INIT(status_display_state_pictures, list(
 ))
 
 GLOBAL_LIST_INIT(fishing_tips, world.file2list("strings/fishing_tips.txt"))
+GLOBAL_LIST_INIT(global_tips, world.file2list("strings/tips.txt"))
