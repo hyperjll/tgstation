@@ -46,7 +46,8 @@
 /datum/uplink_item/role_restricted/gatfruit_seed
 	name = "Gatfruit Seed Packet"
 	desc = "A single seed packet of the fabled Gatfruit. These seeds take a LONG time to grow, and start off fragile. \
-			Gatfruit can be converted into a fully loaded .357 Revolver. Be warned that leaving behind a trail of revolvers will likely let everyone know what's up!"
+			Gatfruit can be converted into a fully loaded Revolver that shoots reagent peas! \
+			Be warned that leaving behind a trail of revolvers will likely let everyone know what's up!"
 	item = /obj/item/seeds/gatfruit
 	cost = 8
 	surplus = 5
