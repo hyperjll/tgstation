@@ -68,6 +68,8 @@
 #define CALIBER_TENTACLE "tentacle"
 /// The caliber used by pipeguns and pipe pistols
 #define CALIBER_JUNK "junk"
+/// The caliber used by the (gatfruit) peashooter
+#define CALIBER_PEA "pea"
 /// The caliber used by the cannonballs.
 #define CALIBER_CANNONBALL "cannonball"
 /// The caliber used solely by the orion silenced pistol.
