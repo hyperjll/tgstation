@@ -8,6 +8,17 @@
 	cost = 4
 	surplus = 15
 
+/datum/uplink_item/explosives/minisyndies
+	name = "Syndicates in Pipebomb"
+	desc = "A pipebomb containing miniaturized basic-sentience syndicate operatives wielding C-20r's. \
+			These operatives will shoot to kill anyone in the vicinity -- including you! \
+			Miniaturized operatives come with miniaturized micro-bomb implants."
+	item = /obj/item/grenade/spawnergrenade/minisyndies
+	progression_minimum = 30 MINUTES
+	cost = 8
+	limited_stock = 1
+	surplus = 15
+
 /datum/uplink_item/explosives/diseasegrenade
 	name = "Diseased Grenade"
 	desc = "A chemical foam grenade loaded with a payload capable of causing mass-plagues. \

@@ -6729,6 +6729,7 @@
 #include "hypermods\code\modules\mob\living\basic\pets\cat\cat.dm"
 #include "hypermods\code\modules\mob\living\basic\pets\dog\corgi.dm"
 #include "hypermods\code\modules\mob\living\basic\space_fauna\man_eater.dm"
+#include "hypermods\code\modules\mob\living\basic\trooper\syndicate.dm"
 #include "hypermods\code\modules\mob\living\silicon\robot\robot_model.dm"
 #include "hypermods\code\modules\mod\mod_theme.dm"
 #include "hypermods\code\modules\mod\mod_types.dm"
