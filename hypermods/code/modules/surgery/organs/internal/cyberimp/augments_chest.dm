@@ -64,7 +64,7 @@
 	desc = "A surgical implant that when inserted into the body will slowly repair the host. Allowing for very slow recovery of all forms of damage."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "chest_implant"
-	implant_overlay = "chest_implant_overlay"
+	//implant_overlay = "chest_implant_overlay"
 	implant_color = "#AD0000"
 	slot = ORGAN_SLOT_HEART_AID
 	var/healing = FALSE
@@ -106,7 +106,7 @@
 	desc = "A surgical implant that when inserted into the body will slowly repair the host. Allowing for very slow recovery of all forms of damage."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "chest_implant"
-	implant_overlay = "chest_implant_overlay"
+	//implant_overlay = "chest_implant_overlay"
 	implant_color = "#AD0000"
 	slot = ORGAN_SLOT_HEART_AID
 	var/healing = FALSE
@@ -148,7 +148,7 @@
 	desc = "A surgical implant that when inserted into the body will slowly repair the host. Specifically tailored to jellypeople."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "chest_implant"
-	implant_overlay = "chest_implant_overlay"
+	//implant_overlay = "chest_implant_overlay"
 	implant_color = "#AD5000"
 	slot = ORGAN_SLOT_HEART_AID
 
@@ -190,7 +190,7 @@
 	slot = ORGAN_SLOT_SPINAL_AUG
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "imp_spinal"
-	implant_overlay = null
+	//implant_overlay = null
 	implant_color = null
 	actions_types = list(/datum/action/item_action/organ_action/toggle)
 	w_class = WEIGHT_CLASS_NORMAL
