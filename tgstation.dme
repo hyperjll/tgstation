@@ -6698,6 +6698,7 @@
 #include "hypermods\code\modules\clothing\masks\moustache.dm"
 #include "hypermods\code\modules\clothing\neck\_neck.dm"
 #include "hypermods\code\modules\clothing\shoes\airshoes.dm"
+#include "hypermods\code\modules\clothing\shoes\boomshoes.dm"
 #include "hypermods\code\modules\clothing\shoes\magboots.dm"
 #include "hypermods\code\modules\clothing\suits\armor.dm"
 #include "hypermods\code\modules\clothing\suits\costume.dm"
