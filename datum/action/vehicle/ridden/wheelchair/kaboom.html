@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="../../../../../"><link rel="stylesheet" href="dmdoc.css"><title>/datum/action/vehicle/ridden/wheelchair/kaboom - /tg/ Station 13</title></head><body><header><a href="index.html">/tg/ Station 13</a> - <a href="index.html#modules">Modules</a> - <a href="index.html#types">Types</a></header><main><h1>kaboom <aside>/<a href="datum.html">datum</a>/<a href="datum/action.html">action</a>/<a href="datum/action/vehicle/ridden/wheelchair/kaboom.html">vehicle/ridden/wheelchair/kaboom</a></aside> <a href="https://github.com/hyperjll/tgstation/blob/63272dbb0d7a2a7b3b1e637f74fb80b678f75d0b/hypermods/code/modules/vehicles/vehicle_actions.dm#L1"><img src="git.png" width="16" height="16" title="hypermods/code/modules/vehicles/vehicle_actions.dm 1"></a></h1><p>/datum/uplink_item/vendors/
+name = &quot;&quot;
+desc = &quot;&quot;
+progression_minimum = 20 MINUTES
+cant_discount = TRUE
+item = /obj/machinery/vending/
+cost =
+purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+var/pod_item = /obj/machinery/vending/</p>
+<p>/datum/uplink_item/vendors//spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)
+var/poditem = new pod_item()
+if(!istype(poditem))
+CRASH(&quot;uplink produced the wrong item instead of the [pod_item].&quot;)</p>
+<pre><code>podspawn(list(
+	&quot;target&quot; = get_turf(user),
+	&quot;style&quot; = /datum/pod_style/syndicate,
+	&quot;spawn&quot; = poditem,
+))
+return source //For log icon
+</code></pre></main><footer>tgstation.dme <a href="https://github.com/hyperjll/tgstation/tree/63272dbb0d7a2a7b3b1e637f74fb80b678f75d0b">63272db</a> (master) — <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.9.0</a></footer></body></html>
