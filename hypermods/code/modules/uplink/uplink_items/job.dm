@@ -886,3 +886,12 @@
 	surplus = 5
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
+
+/datum/uplink_item/role_restricted/moonshine
+	name = "Jug of Moonshine"
+	desc = "A single 100 unit jug of moonshine. Moonshine is guaranteed to get people horribly drunk very quickly even in small amounts. \
+			Unless they happen to be a Syndicate Agent of course, in which case our specialized brew will deteriorate into Omnizine."
+	item = /obj/item/reagent_containers/cup/glass/bottle/moonshine/traitor
+	cost = 2
+	surplus = 0
+	restricted_roles = list(JOB_BARTENDER, JOB_CAPTAIN)

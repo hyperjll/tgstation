@@ -23,3 +23,7 @@
 
 /obj/item/reagent_containers/cup/glass/bottle/molotov/spore_burning
 	list_reagents = list(/datum/reagent/toxin/spore_burning = 100)
+
+
+/obj/item/reagent_containers/cup/glass/bottle/moonshine/traitor
+	list_reagents = list(/datum/reagent/consumable/ethanol/moonshine/traitor = 100)

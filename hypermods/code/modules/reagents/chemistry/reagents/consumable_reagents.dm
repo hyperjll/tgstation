@@ -248,3 +248,19 @@
 		holder.remove_reagent(/datum/reagent/medicine/morphine, 3 * REM * seconds_per_tick)
 	if(holder.has_reagent(/datum/reagent/toxin/nocturine))
 		holder.remove_reagent(/datum/reagent/toxin/nocturine, 2 * REM * seconds_per_tick)
+
+
+/datum/reagent/consumable/ethanol/moonshine/traitor
+	name = "Moonshine"
+	boozepwr = 95
+
+/datum/reagent/consumable/ethanol/moonshine/traitor/on_mob_life(mob/living/carbon/M, seconds_per_tick, times_fired)
+	. = ..()
+	if(IS_TRAITOR(M))
+		M.reagents.remove_reagent(/datum/reagent/consumable/ethanol/moonshine/traitor, 2)
+		..()
+		. = 1
+
+		M.reagents.add_reagent(/datum/reagent/medicine/omnizine, 2)
+		..()
+		. = 1
