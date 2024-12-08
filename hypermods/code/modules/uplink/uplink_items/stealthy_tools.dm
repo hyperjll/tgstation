@@ -122,3 +122,14 @@
 	cost = 14
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/stealthy_tools/pickpocket
+	name = "Pickpocket Gun"
+	desc = "An energy-based grappling gun designed for ranged, stealthy theft of items from personnel. \
+			Comes with two options: Steal and Plant. You may store an item within the gun and use the plant option \
+			to 'plant' objects directly onto someone! However, this gun can only steal from one's back-equipped storage, \
+			such as backpacks, satchels, and duffelbags."
+	item = /obj/item/gun/energy/pickpocket
+	cost = 8
+	surplus = 10
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

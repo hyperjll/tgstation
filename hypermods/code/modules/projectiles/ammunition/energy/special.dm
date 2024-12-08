@@ -16,3 +16,17 @@
 	fire_sound = 'sound/items/modsuit/flamethrower.ogg'
 	firing_effect_type = null
 	e_cost = 100
+
+/obj/item/ammo_casing/energy/pickpocket
+	projectile_type = /obj/projectile/energy/pickpocket/steal
+	select_name = "steal"
+	fire_sound = null
+	firing_effect_type = null
+	e_cost = 200
+
+/obj/item/ammo_casing/energy/pickpocket/plant
+	projectile_type = /obj/projectile/energy/pickpocket/plant
+	select_name = "plant"
+	fire_sound = null
+	firing_effect_type = null
+	e_cost = 200

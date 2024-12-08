@@ -6799,6 +6799,7 @@
 #include "hypermods\code\modules\projectiles\projectile\energy\radiation.dm"
 #include "hypermods\code\modules\projectiles\projectile\special\mindflayer.dm"
 #include "hypermods\code\modules\projectiles\projectile\special\neurotoxin.dm"
+#include "hypermods\code\modules\projectiles\projectile\special\pickpocket.dm"
 #include "hypermods\code\modules\projectiles\projectile\special\plasma.dm"
 #include "hypermods\code\modules\projectiles\projectile\special\reagent.dm"
 #include "hypermods\code\modules\reagents\chemistry\machinery\chem_dispenser.dm"

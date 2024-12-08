@@ -59,7 +59,6 @@
 	name = "disabler"
 	desc = "A self-defense weapon that exhausts organic targets, weakening them until they collapse."
 	icon_state = "disabler"
-	inhand_icon_state = null
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/lasergun)
 	selfcharge = 1
 	ammo_x_offset = 2
@@ -84,3 +83,62 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/adv/cyborg/malf)
 	can_charge = FALSE
 	use_cyborg_cell = TRUE
+
+
+/obj/item/gun/energy/pickpocket
+	name = "\improper Super! Grapple Friend"
+	desc = "A complicated, camoflaged claw device on a tether capable of complex and stealthy interactions. It's definitely not just a repurposed janky toy that steals shit."
+	icon = 'hypermods/icons/obj/weapons/guns/energy.dmi'
+	icon_state = "pickpocket"
+	w_class = WEIGHT_CLASS_SMALL
+	inhand_icon_state = "pickpocket"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	ammo_type = list(/obj/item/ammo_casing/energy/pickpocket, /obj/item/ammo_casing/energy/pickpocket/plant)
+	suppressed = TRUE
+	suppressed_volume = 20
+	force = 4
+	throw_speed = 3
+	throw_range = 10
+	selfcharge = 1
+	charge_delay = 16
+	var/obj/item/heldItem = null
+
+/obj/item/gun/energy/pickpocket/examine()
+	..()
+	if (src.heldItem)
+		. += "It's currently holding a [src.heldItem]."
+	else
+		. += "It's not holding anything."
+
+/obj/item/gun/energy/pickpocket/attackby(obj/item/I, mob/user)
+	if(HAS_TRAIT(I, TRAIT_NODROP))
+		return
+	if (heldItem)
+		to_chat(user, "You remove the [heldItem.name] from the gun.")
+		user.put_in_hands(heldItem)
+		heldItem = null
+	else
+		heldItem = I
+		user.transferItemToLoc(I, src)
+		I = null
+		to_chat(user, "You insert the [heldItem.name] into the gun's gripper.")
+	return ..()
+
+/obj/item/gun/energy/pickpocket/attack_self(mob/target, mob/user, def_zone, is_special = FALSE, params = null)
+	if (istype(ammo_type, /obj/item/ammo_casing/energy/pickpocket) && heldItem)
+		to_chat(user, "Cannot steal while gun is holding something!")
+		return
+	if (istype(ammo_type, /obj/item/ammo_casing/energy/pickpocket/plant) && !heldItem)
+		to_chat(user, "Cannot plant item if gun is not holding anything!")
+		return
+	return ..(target, user)
+
+/obj/item/gun/energy/pickpocket/fire_gun(atom/target, mob/living/user, flag, params)
+	if (istype(ammo_type, /obj/item/ammo_casing/energy/pickpocket) && heldItem)
+		to_chat(user, "Cannot steal items while gun is holding something!")
+		return
+	if (istype(ammo_type, /obj/item/ammo_casing/energy/pickpocket/plant) && !heldItem)
+		to_chat(user, "Cannot plant item if gun is not holding anything!")
+		return
+	return ..(target, user)
