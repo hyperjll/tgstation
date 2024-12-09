@@ -899,7 +899,7 @@
 /datum/uplink_item/role_restricted/boomboots
 	name = "Boomboots"
 	desc = "A pair of boots of unknown origin, it came into our possession after salvaging the cargo of a ruined escape pod. \
-			When worn, these Boom Boots there's a 10% chance with every step you take, \
+			When worn, these Boom Boots have a 10% chance with every step you take, \
 			that a random machine within 12 tiles of you will randomly just blow up. "
 	item = /obj/item/clothing/shoes/boomboots
 	cost = 16
