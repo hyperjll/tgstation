@@ -905,3 +905,16 @@
 	cost = 16
 	surplus = 0
 	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/cyborg_factory
+	name = "Cyborg Factory Base"
+	desc = "A single survival capsule containing a miniaturized base of operations. \
+			It contains various ammenities such as a miniature medical suite, a pharmacy, \
+			a robotics lab, a teleporter hub, and finally: An Automatic Robotic Factory for quick \
+			conversions of human personnel into silicon servants! Be warned that you'll probably have to \
+			hack each cyborg produced yourself, flashes are provided, but you'll have to bring your own \
+			means of cyborg subversion."
+	item = /obj/item/survivalcapsule/cyborg_factory
+	cost = 25
+	surplus = 0
+	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
