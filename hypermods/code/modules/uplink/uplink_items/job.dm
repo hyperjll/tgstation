@@ -918,3 +918,12 @@
 	cost = 25
 	surplus = 0
 	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/tearstache
+	name = "Teachstache Grenade"
+	desc = "A teargas grenade that launches sticky moustaches onto the face of anyone not wearing a clown or mime mask. The moustaches will \
+		remain attached to the face of all targets for one minute, preventing the use of breath masks and other such devices."
+	item = /obj/item/grenade/chem_grenade/teargas/moustache
+	cost = 3
+	surplus = 0
+	restricted_roles = list(JOB_ASSISTANT, JOB_CLOWN, JOB_CAPTAIN)
