@@ -7,7 +7,7 @@
 	worn_icon_state = "airshoes"
 	obj_flags = UNIQUE_RENAME
 	resistance_flags = FIRE_PROOF // Insert super sonic running along lava clip here
-	actions_types = list(/datum/action/item_action/airshoes) // This is defined in augments_legs.dm cuz i made the implant version first. - hyperjll
+	actions_types = list(/datum/action/item_action/airshoes) // This is defined in airshoe_dash.dm - hyperjll
 	armor_type = /datum/armor/shoes_airshoes
 	jumpdistance = 7 //-1 from to see the actual distance, e.g 4 goes over 3 tiles
 	jumpspeed = 5
