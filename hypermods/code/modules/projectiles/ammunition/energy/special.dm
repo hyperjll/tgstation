@@ -30,3 +30,9 @@
 	fire_sound = null
 	firing_effect_type = null
 	e_cost = 200
+
+/obj/item/ammo_casing/energy/teleport
+	projectile_type = /obj/projectile/energy/teleport
+	select_name = "teleporter"
+	fire_sound = 'sound/items/weapons/pulse3.ogg'
+	e_cost = 500

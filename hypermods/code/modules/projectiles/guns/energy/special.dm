@@ -142,3 +142,73 @@
 		to_chat(user, "Cannot plant item if gun is not holding anything!")
 		return
 	return ..(target, user)
+
+
+/obj/item/gun/energy/teleport
+	name = "teleport gun"
+	desc = "A hacked together combination of a taser and a handheld teleportation unit."
+	icon = 'hypermods/icons/obj/weapons/guns/energy.dmi'
+	icon_state = "teleport"
+	w_class = WEIGHT_CLASS_NORMAL
+	inhand_icon_state = "gun"
+	shaded_charge = 1
+	force = 10
+	throw_speed = 2
+	throw_range = 10
+	ammo_type = list(/obj/item/ammo_casing/energy/teleport)
+	var/obj/item/our_target = null
+	var/targetarea = null // just for the examine
+
+/obj/item/gun/energy/teleport/examine()
+	..()
+	if(src.our_target)
+		. += "It's currently locked onto [src.targetarea]."
+	else
+		. += "It's not locked onto anything, and thus cannot fire."
+
+/obj/item/gun/energy/teleport/attack_self(mob/user)
+	if (!can_teleport_notifies(user))
+		return
+
+	var/list/L = list()
+
+	for(var/obj/item/beacon/W in GLOB.teleportbeacons)
+		if(!W.renamed)
+			var/area/A = get_area(W)
+			W.name = A.name
+		L += W
+
+	var/t1 = tgui_input_list(user, "Please select a destination to lock in on.", "Destination Selection", L)
+
+	var/turf/there = get_turf(t1)
+
+	our_target = there
+	targetarea = get_area(our_target)
+
+	to_chat(user, span_notice("You set [src]'s destination to [t1]."))
+
+	var/obj/item/ammo_casing/energy/teleport/TP = ammo_type[select]
+	var/obj/projectile/energy/teleport/TPproj = TP.loaded_projectile
+
+	TPproj.target = our_target
+
+/obj/item/gun/energy/teleport/handle_chamber() // Refresh the target every shot, cuz it doesn't do so automatically.
+	. = ..()
+	var/obj/item/ammo_casing/energy/teleport/TP = ammo_type[select]
+	var/obj/projectile/energy/teleport/TPproj = TP.loaded_projectile
+	TPproj.target = our_target
+
+/obj/item/gun/energy/teleport/can_shoot() // No targets? :(
+	. = ..()
+	if(!our_target)
+		return FALSE
+	return ..()
+
+/obj/item/gun/energy/teleport/proc/can_teleport_notifies(mob/user)
+	var/turf/current_location = get_turf(user)
+	var/area/current_area = current_location.loc
+	if (!current_location || (current_area.area_flags & NOTELEPORT) || is_away_level(current_location.z) || !isturf(user.loc))
+		to_chat(user, span_notice("[src] is malfunctioning."))
+		return FALSE
+
+	return TRUE

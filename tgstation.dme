@@ -6806,6 +6806,7 @@
 #include "hypermods\code\modules\projectiles\projectile\special\pickpocket.dm"
 #include "hypermods\code\modules\projectiles\projectile\special\plasma.dm"
 #include "hypermods\code\modules\projectiles\projectile\special\reagent.dm"
+#include "hypermods\code\modules\projectiles\projectile\special\teleporter.dm"
 #include "hypermods\code\modules\reagents\chemistry\machinery\chem_dispenser.dm"
 #include "hypermods\code\modules\reagents\chemistry\reagents\consumable_reagents.dm"
 #include "hypermods\code\modules\reagents\chemistry\reagents\drug_reagents.dm"
