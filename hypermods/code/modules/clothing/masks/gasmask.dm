@@ -159,3 +159,65 @@
 		current_filters_durability += gas_filter.filter_status
 	var/durability = (current_filters_durability / max_filters_durability) * 100
 	return durability
+
+
+/obj/item/clothing/mask/gas/clown_hat/cursed
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	equip_delay_other = 5 SECONDS
+	var/mob/living/carbon/human/victim
+	// how long till we can be taken back off?
+	var/unstick_time = 3 MINUTES
+	// interval between effects
+	var/curse_timer = 10 SECONDS
+	// are we actively cursing someone?
+	var/cursing = FALSE
+
+/obj/item/clothing/mask/gas/clown_hat/cursed/equipped(mob/user, slot)
+	. = ..()
+	if(slot_flags & slot)
+		var/mob/living/M = user
+		if(M.mind?.assigned_role == "Clown" || M.mind?.has_antag_datum(/datum/antagonist/nukeop/clownop))
+			cursing = FALSE
+			return
+		else
+			ADD_TRAIT(src, TRAIT_NODROP, STICKY_CLOTHING_TRAIT)
+			addtimer(CALLBACK(src, PROC_REF(unstick)), unstick_time)
+			addtimer(CALLBACK(src, PROC_REF(curse_effect)), curse_timer)
+			cursing = TRUE
+
+/obj/item/clothing/mask/gas/clown_hat/cursed/dropped()
+	. = ..()
+	cursing = FALSE
+
+/obj/item/clothing/mask/gas/clown_hat/cursed/proc/unstick()
+	REMOVE_TRAIT(src, TRAIT_NODROP, STICKY_CLOTHING_TRAIT)
+
+/obj/item/clothing/mask/gas/clown_hat/cursed/proc/curse_effect(mob/user, slot)
+	if(!cursing)
+		return
+
+	var/mob/living/carbon/human/wearer = loc
+	if(istype(wearer) && (wearer.get_slot_by_item(src) & slot_flags))
+		addtimer(CALLBACK(src, PROC_REF(curse_effect)), curse_timer)
+
+		if(wearer.health >= 0)
+			wearer.adjustFireLoss(5)
+
+		var/effectselect = rand(1, 4)
+		switch(effectselect)
+			if(1)
+				//uncontrollable laughin
+				wearer.emote("laugh")
+			if(2)
+				//confused movement
+				wearer.adjust_confusion_up_to(3 SECONDS, 10 SECONDS)
+			if(3)
+				//bouts of Tiredness and Stun
+				wearer.adjustStaminaLoss(30)
+				wearer.Stun(2 SECONDS)
+				wearer.Knockdown(2 SECONDS)
+			if(4)
+				//minor brain damage
+				wearer.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10)
+	else
+		cursing = FALSE

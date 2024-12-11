@@ -927,3 +927,12 @@
 	cost = 3
 	surplus = 0
 	restricted_roles = list(JOB_ASSISTANT, JOB_CLOWN, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/cursedclownmask
+	name = "Cursed Clown Mask"
+	desc = "A clown mask haunted by the souls of those who honked before. Only true clowns should attempt to wear this. It also functions like a gas mask. \
+			Those unworthy of it's power are condemned temporarily to suffer for the next 3 minutes at minimum."
+	item = /obj/item/clothing/mask/gas/clown_hat/cursed
+	cost = 5
+	surplus = 0
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
