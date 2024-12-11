@@ -37,8 +37,9 @@
 	if(!C.has_dna())
 		return
 	switch(A.stage)
-		if(4, 5)
+		if(1, 3)
 			to_chat(C, span_warning("[pick("Your skin feels rubbery.", "You feel a spark of energy curl up within you.")]"))
+		if(4, 5)
 			C.easy_random_mutate((POSITIVE), TRUE, TRUE, TRUE, mutadone_proof)
 
 /datum/symptom/good_genetic_mutation/End(datum/disease/advance/A)
