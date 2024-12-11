@@ -36,7 +36,7 @@
 	if(find_nearby_wires(get_turf(owner)))
 		return TRUE
 	if(feedback)
-		to_chat(owner, span_warning("There must be a nearby source of blood!"))
+		to_chat(owner, span_warning("There must be nearby wires!"))
 	return FALSE
 
 /datum/action/cooldown/spell/jaunt/wirecrawl/cast(mob/living/cast_on)
