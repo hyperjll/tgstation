@@ -17,7 +17,7 @@
 
 /datum/uplink_item/medical/deluxe_medical_variety_pack
 	name = "Deluxe Medical Variety Pack"
-	desc = "A bluespace-compressed medkit containing one of each variety of first aid kits. Contains some bottles of liquid medicines, pill bottles and potentially medipens."
+	desc = "A bluespace-compressed medkit containing one of each variety of first aid kits. Contains a bottle of omnizine, and some iron/mannitol/mutadone pills."
 	item = /obj/item/storage/medkit/deluxe_medical_variety_pack
 	cost = 5
 	surplus = 30
@@ -36,7 +36,7 @@
 	desc = "A medipen containing a highly complex regenerative chemical donated to us by the Tiger Cooperative Fanatics. \
 			Upon it's application, the user will near-instanteously regrow all of their limbs and organs."
 	item = /obj/item/reagent_containers/hypospray/medipen/limborganregen
-	cost = 4
+	cost = 2
 	surplus = 10
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -44,7 +44,7 @@
 	name = "Medipen Kit"
 	desc = "A bluespace-compressed medkit containing multiple medicinal medipens filled with various reagents. Useful in a pinch."
 	item = /obj/item/storage/medkit/medipenkit
-	cost = 2
+	cost = 3
 	surplus = 35
 
 /datum/uplink_item/medical/combatmedipen
@@ -58,10 +58,10 @@
 /datum/uplink_item/medical/combistimpack
 	name = "Chemical Combi-Stimpack Bag"
 	desc = "A bag containing one combat medipen loaded with 25 units of Omnizine and 5 units of Tranexamic Acid. \
-			Two cardiac combi-stimpacks loaded with epinephrine and saline-glucose solution, \
-			Two bloodloss combi-stimpacks loaded with filgrastim and proconvertin, and \
-			Two lifesupport combi-stimpacks loaded with salbutamol and mannitol. \
-			Each combi-stimpack is 25 units of each chemical with 10 doses."
+			One cardiac combi-stimpacks loaded with Penthrite and Saline-Glucose Solution, \
+			One bloodloss combi-stimpacks loaded with Filgrastim and Proconvertin, and \
+			One lifesupport combi-stimpacks loaded with Atropine and Protozine. \
+			Also comes with an auto-mender for both brute and burn damage."
 	item = /obj/item/storage/bag/chemistry/syndimedipens
 	cost = 3
 	surplus = 0
@@ -70,10 +70,10 @@
 /datum/uplink_item/medical/combistimpackdeluxe
 	name = "Deluxe Combi-Stimpack Bag"
 	desc = "A bag containing three medipens loaded with 25 units of Omnizine and 5 units of Tranexamic Acid. \
-			Two cardiac combi-stimpacks loaded with epinephrine and saline-glucose solution, \
-			Two bloodloss combi-stimpacks loaded with filgrastim and proconvertin, and \
-			Two lifesupport combi-stimpacks loaded with salbutamol and mannitol. \
-			Each combi-stimpack is 25 units of each chemical with 10 doses."
+			One cardiac combi-stimpacks loaded with Penthrite and Saline-Glucose Solution, \
+			One bloodloss combi-stimpacks loaded with Filgrastim and Proconvertin, and \
+			One lifesupport combi-stimpacks loaded with Atropine and Protozine. \
+			Also comes with an auto-mender for both brute and burn damage."
 	item = /obj/item/storage/bag/chemistry/syndimedipens/deluxe
 	cost = 6
 	surplus = 15
@@ -100,10 +100,12 @@
 /datum/uplink_item/medical/miraclesyringe
 	name = "Miracle Syringe"
 	desc = "Contains 5 units of nearly every effective medicine we could muster, included within are \
-			bicaridine, dermaline, anti-toxin, omnizine, healing nanites, antihol, sanguirite, iron, and potassium iodide."
+			bicaridine, dermaline, anti-toxin, omnizine, healing nanites, antihol, sanguirite, iron, and potassium iodide. \
+			Only two per agent."
 	item = /obj/item/reagent_containers/syringe/bluespace/miracle
 	cost = 1
 	surplus = 50
+	limited_stock = 2
 
 /datum/uplink_item/medical/eternalomnizine
 	name = "Eternal Flask of Omnizine"

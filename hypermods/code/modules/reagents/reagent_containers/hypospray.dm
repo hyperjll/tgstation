@@ -100,12 +100,23 @@
 
 /obj/item/reagent_containers/hypospray/medipen/bicaridine
 	name = "bicaridine medipen"
-	desc = "An autoinjector containing bicaridine, used to quickly heal all forms of brute damage."
+	desc = "An autoinjector containing bicaridine, used to heal all forms of brute damage."
 	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenbic"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenbic"
 	list_reagents = list(/datum/reagent/medicine/bicaridine = 10)
+	custom_price = 50
+	custom_premium_price = 100
+
+/obj/item/reagent_containers/hypospray/medipen/kelotane
+	name = "kelotane medipen"
+	desc = "An autoinjector containing kelotane, used to heal all forms of burn damage."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "fancymedpenkel"
+	inhand_icon_state = "medipen"
+	base_icon_state = "fancymedpenkel"
+	list_reagents = list(/datum/reagent/medicine/kelotane = 10)
 	custom_price = 50
 	custom_premium_price = 100
 
@@ -146,9 +157,10 @@
 /obj/item/reagent_containers/hypospray/medipen/penthrite/better
 	name = "penthrite autoinjector"
 	desc = "Experimental heart medication."
-	icon_state = "atropen"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "fancymedpenatr"
 	inhand_icon_state = "atropen"
-	base_icon_state = "atropen"
+	base_icon_state = "fancymedpenatr"
 	list_reagents = list(/datum/reagent/medicine/c2/penthrite = 30)
 
 /obj/item/reagent_containers/hypospray/medipen/combatmedicine
@@ -208,14 +220,14 @@
 
 /obj/item/reagent_containers/hypospray/medipen/cardiaccs
 	name = "cardiac combi-stimpack"
-	desc = "Contains ten doses of epinephrine and saline-glucose solution, giving 2.5 units of each every time it's used."
+	desc = "Contains ten doses of penthrite and saline-glucose solution, giving 5 units of each every time it's used. DO NOT TAKE WITH ATROPINE OR EPINEPHRINE."
 	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenmacrostim"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenmacrostim"
-	volume = 50
-	amount_per_transfer_from_this = 5
-	list_reagents = list(/datum/reagent/medicine/epinephrine  = 25, /datum/reagent/medicine/salglu_solution = 25)
+	volume = 100
+	amount_per_transfer_from_this = 10
+	list_reagents = list(/datum/reagent/medicine/c2/penthrite = 50, /datum/reagent/medicine/salglu_solution = 50)
 
 /obj/item/reagent_containers/hypospray/medipen/bloodlosscs
 	name = "bloodloss combi-stimpack"
@@ -230,14 +242,14 @@
 
 /obj/item/reagent_containers/hypospray/medipen/lifesupportcs
 	name = "lifesupport combi-stimpack"
-	desc = "Contains ten doses of salbutamol and mannitol, giving 2.5 units of each every time it's used."
+	desc = "Contains ten doses of atropine and protozine, giving 5 units of atropine and 2.5 units of protozine every time it's used."
 	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenmacrostim"
 	inhand_icon_state = "medipen"
 	base_icon_state = "fancymedpenmacrostim"
-	volume = 50
-	amount_per_transfer_from_this = 5
-	list_reagents = list(/datum/reagent/medicine/salbutamol = 25, /datum/reagent/medicine/mannitol = 25)
+	volume = 75
+	amount_per_transfer_from_this = 7.5
+	list_reagents = list(/datum/reagent/medicine/atropine = 50, /datum/reagent/medicine/omnizine/protozine = 25)
 
 /obj/item/reagent_containers/hypospray/medipen/lethaldose
 	name = "epinephrine medipen"
