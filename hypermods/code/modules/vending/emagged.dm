@@ -720,6 +720,8 @@
 		/obj/item/reagent_containers/pill/tox = 3,
 		/obj/item/reagent_containers/pill/morphine = 4,
 		/obj/item/reagent_containers/pill/multiver = 6,
+		/obj/item/reagent_containers/pill/patch/mender/brute = 1,
+		/obj/item/reagent_containers/pill/patch/mender/burn = 1,
 	)
 	premium = list(
 		/obj/item/reagent_containers/medigel/synthflesh = 5,
