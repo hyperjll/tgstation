@@ -88,7 +88,8 @@
 
 /obj/item/reagent_containers/hypospray/medipen/arithrazine
 	name = "arithrazine medipen"
-	desc = "An autoinjector containing arithrazine, used to quickly purge radiaton at the cost of inflicting brute damage."
+	desc = "An autoinjector containing arithrazine, used to quickly purge radiaton at the cost of inflicting brute damage. \
+			Will also protect you from radiation while it's metabolizing and relieve minor toxin damage."
 	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenari"
 	inhand_icon_state = "medipen"
@@ -121,7 +122,7 @@
 
 /obj/item/reagent_containers/hypospray/medipen/hyronalin
 	name = "hyronalin medipen"
-	desc = "An autoinjector containing hyronalin, used to cure radiation."
+	desc = "An autoinjector containing hyronalin, used to cure radiation and treat minor toxin damage."
 	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenhyv"
 	inhand_icon_state = "medipen"

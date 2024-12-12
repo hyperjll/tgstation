@@ -302,7 +302,7 @@
 
 /datum/reagent/medicine/hyronalin
 	name = "Hyronalin"
-	description = "An all-purpose radiation cure. Overdose causes burns within the host."
+	description = "An all-purpose radiation cure that also heals minor toxin damage. Overdose causes burns within the host."
 	reagent_state = LIQUID
 	color = "#00cc7a"
 	overdose_threshold = 30
@@ -321,10 +321,10 @@
 
 /datum/reagent/medicine/arithrazine
 	name = "Arithrazine"
-	description = "A strong all-purpose radiation cure, side effects include minor bruising of the patient. Has no overdose effects."
+	description = "A strong all-purpose radiation cure/blocker that also heals minor toxin damage, side effects include minor bruising of the patient. Has no overdose effects."
 	reagent_state = LIQUID
 	color = "#b34700"
-	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS)
+	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS, TRAIT_RADIMMUNE)
 
 /datum/reagent/medicine/arithrazine/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-1*REM, 0)

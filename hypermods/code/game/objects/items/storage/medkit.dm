@@ -60,9 +60,6 @@
 	icon_state = "medipenkit"
 
 /obj/item/storage/medkit/medipenkit/PopulateContents()
-	new /obj/item/reagent_containers/hypospray/medipen/arithrazine(src)
-	new /obj/item/reagent_containers/hypospray/medipen/hyronalin(src)
-	new /obj/item/reagent_containers/hypospray/medipen/hyronalin(src)
 	new /obj/item/reagent_containers/hypospray/medipen/bicaridine(src)
 	new /obj/item/reagent_containers/hypospray/medipen/bicaridine(src)
 	new /obj/item/reagent_containers/hypospray/medipen/bicaridine(src)
@@ -71,6 +68,8 @@
 	new /obj/item/reagent_containers/hypospray/medipen/dermaline(src)
 	new /obj/item/reagent_containers/hypospray/medipen/dermaline(src)
 	new /obj/item/reagent_containers/hypospray/medipen/oxandrolone(src)
+	new /obj/item/reagent_containers/hypospray/medipen/arithrazine(src)
+	new /obj/item/reagent_containers/hypospray/medipen/hyronalin(src)
 	new /obj/item/reagent_containers/hypospray/medipen/penacid(src)
 	new /obj/item/reagent_containers/hypospray/medipen/penacid(src)
 	new /obj/item/reagent_containers/hypospray/medipen/salbutamol(src)
