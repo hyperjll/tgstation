@@ -6564,6 +6564,7 @@
 #include "hypermods\code\game\objects\items\holotool.dm"
 #include "hypermods\code\game\objects\items\infil_items.dm"
 #include "hypermods\code\game\objects\items\knives.dm"
+#include "hypermods\code\game\objects\items\lighter.dm"
 #include "hypermods\code\game\objects\items\mantis.dm"
 #include "hypermods\code\game\objects\items\plushes.dm"
 #include "hypermods\code\game\objects\items\pneumaticCannon.dm"

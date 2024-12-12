@@ -947,3 +947,12 @@
 	cost = 7
 	surplus = 10
 	restricted_roles = list(JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/hotbox
+	name = "Hotbox Lighter"
+	desc = "A zippo lighter with a suspicious paint job. Has an extended fuel capacity for extensive use. \
+			This lighter may be used directly on grown foods (apples, pumpkins, etc) to directly convert the food into smoke! \
+			The smoke created will contain the food's reagents. Internals are highly recommended if you intend to get 'creative'."
+	item = /obj/item/lighter/hotbox
+	cost = 2
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
