@@ -956,3 +956,13 @@
 	item = /obj/item/lighter/hotbox
 	cost = 2
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/waspbow
+	name = "Wasp Crossbow"
+	desc = "One of the Bee Liberation Front's augmented energy crossbows, they fire 4 wasp eggs in a wide pattern that deal minor toxin damage on hit. \
+			Wasp eggs after impact turn into hostile bees to assault your foes! They also have a small chance to be given a random toxin strain! \
+			Not sponsored nor endorsed by Dr. Bees."
+	item = /obj/item/gun/energy/recharge/ebow/wasp
+	cost = 12
+	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
+
