@@ -966,3 +966,12 @@
 	cost = 12
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 
+/datum/uplink_item/role_restricted/gibbingtrashcart
+	name = "Trash Compactor"
+	desc = "A seemingly ordinary trash cart, it's been provided with an inbuilt timer and infra-red sensor to detect humanoid lifeforms. \
+			After closing a human or humanoid entity within, the timer begins a countdown from 1 minute before compacting all human/humanoid entities within. \
+			Perfect for the destruction of any unwanted people! Be sure to clean up the mess it leaves behind."
+	item = /obj/structure/closet/crate/trashcart/gibber
+	cost = 9
+	surplus = 0
+	restricted_roles = list(JOB_JANITOR, JOB_CAPTAIN)
