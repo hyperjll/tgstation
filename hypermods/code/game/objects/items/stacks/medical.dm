@@ -28,7 +28,7 @@
 		patient.balloon_alert(user, "can't heal [patient]!")
 		return FALSE
 
-/obj/item/stack/medical/bloodpack/heal(mob/living/patient, mob/user)
+/obj/item/stack/medical/bloodpack/heal_carbon(mob/living/patient, mob/user)
 	patient.blood_volume += 10
 	playsound(src, 'sound/misc/soggy.ogg', 30, TRUE)
 	to_chat(user, span_warning("You've applied the [src] to [patient]."))
