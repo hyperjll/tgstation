@@ -126,7 +126,7 @@
 			this implant hijacks the target's mental functions, instilling a directive directly into the victim's psyche. \
 			Those who are implanted will become convinced they are a Syndicate Agent, and that they are to protect and obey the implanter (hopefully you). \
 			Brainwashing instilled by this implant cannot penetrate mindshields, but will persist should the mindshield be installed after the mindhack. \
-			The implant will refresh the brainwashing after a short delay should it be removed by a Psychologist."
+			Flashing the victim of this implant can restore it's brainwashing, useful against psychologists."
 	item = /obj/item/storage/box/syndie_kit/imp_mindhack
 	cost = 4
 	surplus = 40

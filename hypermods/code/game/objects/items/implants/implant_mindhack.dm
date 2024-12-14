@@ -42,8 +42,8 @@
 		return
 	if(HAS_MIND_TRAIT(imp_in, TRAIT_UNCONVERTABLE))
 		return
-	var/datum/antagonist/brainwashed/mindhacked = imp_in.mind.has_antag_datum(/datum/antagonist/brainwashed)
-	if(!mindhacked)
+	//var/datum/antagonist/brainwashed/mindhacked = imp_in.mind.has_antag_datum(/datum/antagonist/brainwashed)
+	if(imp_in.mind.has_antag_datum(/datum/antagonist/brainwashed)) // Was the brainwash not removed?
 		return
 	addtimer(CALLBACK(src, PROC_REF(restore_brainwash)), 30 SECONDS) // Cuz the psychologist flash calls this shit too, both procs cause some bugs.
 
