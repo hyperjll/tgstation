@@ -304,3 +304,18 @@
 
 /obj/item/reagent_containers/hypospray/medipen/invisibility
 	desc = "An autoinjector containing a stabilized Saturn-X compound. Causes the user to become invisible for a limited time, clothes will NOT become invisible."
+
+/obj/item/reagent_containers/hypospray/medipen/invisibility/stable
+	volume = 45
+	amount_per_transfer_from_this = 45
+	list_reagents = list(/datum/reagent/drug/saturnx/stable = 45)
+
+/obj/item/reagent_containers/hypospray/medipen/pumpupplus
+	name = "maintenance pump-up"
+	desc = "A ghetto looking autoinjector filled with a cheap adrenaline shot... Great for shrugging off the effects of stunbatons."
+	volume = 30
+	amount_per_transfer_from_this = 30
+	list_reagents = list(/datum/reagent/drug/pumpupplus = 25)
+	icon_state = "maintenance"
+	base_icon_state = "maintenance"
+	label_examine = FALSE

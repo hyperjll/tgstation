@@ -45,3 +45,56 @@
 	M.adjustToxLoss(1, 0)
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, pick(0.5, 0.6, 0.7, 0.8, 0.9, 1))
 	. = 1
+
+
+/datum/reagent/drug/pumpupplus
+	name = "Pump-Up Plus"
+	description = "A fast acting, hard hitting drug that pushes the limit on what you can handle. Makes you immune to knockdowns entirely."
+	reagent_state = LIQUID
+	color = "#e38e44"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	overdose_threshold = 35
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	addiction_types = list(/datum/addiction/stimulants = 0.6) //0.26 per 2 seconds
+	metabolized_traits = list(TRAIT_BATON_RESISTANCE, TRAIT_ANALGESIA, TRAIT_STIMULATED)
+
+/datum/reagent/drug/pumpupplus/on_mob_metabolize(mob/living/carbon/affected_mob)
+	. = ..()
+	var/obj/item/organ/liver/liver = affected_mob.get_organ_slot(ORGAN_SLOT_LIVER)
+	if(liver && HAS_TRAIT(liver, TRAIT_MAINTENANCE_METABOLISM))
+		affected_mob.add_mood_event("maintenance_fun", /datum/mood_event/maintenance_high)
+		metabolization_rate *= 0.8
+
+/datum/reagent/drug/pumpupplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
+	affected_mob.AdjustKnockdown(-100, FALSE)
+	affected_mob.adjustStaminaLoss(-2, 0)
+
+	if(SPT_PROB(2.5, seconds_per_tick))
+		to_chat(affected_mob, span_notice("[pick("Go! Go! GO!", "You feel ready...", "You feel invincible...")]"))
+	if(SPT_PROB(7.5, seconds_per_tick))
+		affected_mob.losebreath++
+		affected_mob.adjustToxLoss(0.2, updating_health = FALSE, required_biotype = affected_biotype)
+		return UPDATE_MOB_HEALTH
+
+/datum/reagent/drug/pumpupplus/overdose_start(mob/living/affected_mob)
+	. = ..()
+	to_chat(affected_mob, span_userdanger("You can't stop shaking, your heart beats faster and faster..."))
+
+/datum/reagent/drug/pumpupplus/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
+	var/need_mob_update
+	if(SPT_PROB(2.5, seconds_per_tick))
+		affected_mob.drop_all_held_items()
+	if(SPT_PROB(7.5, seconds_per_tick))
+		affected_mob.emote(pick("twitch","drool"))
+	if(SPT_PROB(10, seconds_per_tick))
+		affected_mob.losebreath++
+		affected_mob.adjustStaminaLoss(4, updating_stamina = FALSE, required_biotype = affected_biotype)
+		need_mob_update = TRUE
+	if(SPT_PROB(7.5, seconds_per_tick))
+		need_mob_update += affected_mob.adjustToxLoss(2, updating_health = FALSE, required_biotype = affected_biotype)
+	if(need_mob_update)
+		return UPDATE_MOB_HEALTH

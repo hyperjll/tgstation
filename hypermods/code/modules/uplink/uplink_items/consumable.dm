@@ -4,6 +4,7 @@
 
 /datum/uplink_item/consumable
 	category = /datum/uplink_category/consumable
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/consumable/manifold_autoinjector
@@ -22,7 +23,6 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/stimulants
 	cost = 3
 	surplus = 90
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/consumable/experistimpack
@@ -33,7 +33,6 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/experistimulants
 	cost = 5
 	surplus = 50
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/donkcostimpack
 	name = "Donk Co. Stimpack"
@@ -43,7 +42,6 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/donkcostim
 	cost = 5
 	surplus = 40
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/hyperzinepack
 	name = "Hyperzine Injector"
@@ -53,7 +51,6 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/hyperzine
 	cost = 4
 	surplus = 40
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/consumable/juggernaut
@@ -64,7 +61,6 @@
 	cost = 8
 	surplus = 65
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/stimulant_kit
 	name = "Stimpack kit"
@@ -90,6 +86,7 @@
 	item = /obj/item/food/magicrockcandy
 	cost = 5
 	surplus = 5
+	uplink_item_flags = null
 
 /datum/uplink_item/consumable/coffeeplus
 	name = "Waffle Co. Coffee"
@@ -101,7 +98,6 @@
 	item = /obj/item/reagent_containers/cup/glass/coffee/plus
 	cost = 4
 	surplus = 15
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/mysteryfizz
 	name = "Mystery Fizz Six-Pack"
@@ -110,14 +106,12 @@
 			Are you feeling lucky?"
 	item = /obj/item/storage/cans/sixmystery
 	cost = 2
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/syndiecigs
 	name = "Syndicate Smokes"
 	desc = "Strong flavor, dense smoke, infused with omnizine."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 2
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/syndiecigsvarietypack
 	name = "Syndicate Variety Cigarettes"
@@ -136,3 +130,19 @@
 	cost = 6
 	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/consumable/saturnx
+	name = "Stable Saturn-X Autoinjector"
+	desc = "An autoinjector containing a stabilized Saturn-X compound. \
+			Causes the user to become invisible for a limited time, clothes will NOT become invisible. \
+			A single dose is estimated to last over 3 minutes."
+	item = /obj/item/reagent_containers/hypospray/medipen/invisibility/stable
+	cost = 2
+
+/datum/uplink_item/consumable/pumpupplus
+	name = "Pump-Up Plus Autoinjector"
+	desc = "An autoinjector containing an improved version of 'Pump-Up' a cheap adrenaline-based street drug. \
+			While under it's effects, you'll be rendered completely immune to Knockdowns and recieved increased stamina regeneration. \
+			A single dose is estimated to last 5 minutes."
+	item = /obj/item/reagent_containers/hypospray/medipen/pumpupplus
+	cost = 2

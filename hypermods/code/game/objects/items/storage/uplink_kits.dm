@@ -942,10 +942,21 @@
 		/obj/item/reagent_containers/pill/happy,
 		/obj/item/reagent_containers/pill/lsd,
 		/obj/item/reagent_containers/pill/aranesp,
+		/obj/item/reagent_containers/pill/gravitum,
+		/obj/item/reagent_containers/syringe/crude/mushroom,
+		/obj/item/food/grown/tobacco,
+		/obj/item/food/grown/mushroom/amanita,
+		/obj/item/food/grown/cannabis,
+		/obj/item/food/grown/cannabis/rainbow,
+		/obj/item/food/grown/cannabis/ultimate,
+		/obj/item/food/grown/ambrosia/gaia,
 		/obj/item/reagent_containers/syringe/contraband/krokodil,
 		/obj/item/reagent_containers/syringe/contraband/methamphetamine,
 		/obj/item/reagent_containers/syringe/contraband/bath_salts,
-		/obj/item/reagent_containers/syringe/contraband/fentanyl
+		/obj/item/reagent_containers/syringe/contraband/fentanyl,
+		/obj/item/reagent_containers/syringe/contraband/space_drugs,
+		/obj/item/reagent_containers/hypospray/medipen/invisibility/stable,
+		/obj/item/reagent_containers/hypospray/medipen/pumpupplus
 	)
 
 	for(var/i in 1 to 12)
