@@ -137,6 +137,27 @@
 	..()
 	. = 1
 
+/datum/reagent/medicine/painkillers
+	name = "Painkillers"
+	description = "Slowly heals brute and burn damage types while you have under 25 TOTAL damage of those types. Overdose causes minor toxin damage."
+	reagent_state = LIQUID
+	color = "#f2feff"
+	overdose_threshold = 30
+	taste_description = "diet morphine"
+
+/datum/reagent/medicine/painkillers/on_mob_life(mob/living/carbon/M)
+	var/totaldamage = (M.getBruteLoss() + M.getFireLoss())
+	if(totaldamage <= 25)
+		M.adjustBruteLoss(-0.5*REM, 0)
+		M.adjustFireLoss(-0.5*REM, 0)
+		. = 1
+	..()
+
+/datum/reagent/medicine/painkillers/overdose_process(mob/living/M)
+	M.adjustToxLoss(0.5*REM, 0)
+	..()
+	. = 1
+
 /datum/reagent/medicine/barozine
 	name = "Barozine"
 	description = "A potent drug that prevents pressure damage. Causes extreme pain and jittering. Very poisonous when overdosed."

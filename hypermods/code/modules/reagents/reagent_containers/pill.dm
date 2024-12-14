@@ -219,3 +219,20 @@
 /obj/item/storage/pill_bottle/antiviral/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/pill/antiviral(src)
+
+/obj/item/reagent_containers/pill/painkillers
+	name = "painkiller"
+	desc = "Used for treating minor brute or burn damage."
+	icon_state = "pill1"
+	volume = 10
+	list_reagents = list(/datum/reagent/medicine/painkillers = 10)
+	rename_with_volume = TRUE
+
+/obj/item/storage/pill_bottle/painkillers
+	name = "bottle of painkillers"
+	desc = "Contains pills used for treating minor brute or burn damage."
+	custom_premium_price = 100
+
+/obj/item/storage/pill_bottle/painkillers/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/pill/painkillers(src)

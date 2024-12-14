@@ -19,6 +19,7 @@
 		/obj/item/storage/box/bandages = 1,
 		/obj/item/stack/medical/gauze = 3,
 		/obj/item/reagent_containers/pill/iron = 5,
+		/obj/item/storage/pill_bottle/painkillers = 3,
 		/obj/item/reagent_containers/cup/bottle/salglu_solution = 2,
 		/obj/item/reagent_containers/cup/bottle/oculine = 1,
 		/obj/item/reagent_containers/cup/bottle/inacusiate = 1,

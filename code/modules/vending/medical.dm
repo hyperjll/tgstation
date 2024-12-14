@@ -22,6 +22,7 @@
 		/obj/item/storage/box/bandages = 2,
 		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 5,
 		/obj/item/storage/pill_bottle/inaprovaline = 3,
+		/obj/item/storage/pill_bottle/painkillers = 5,
 	)
 	contraband = list(
 		/obj/item/storage/box/gum/happiness = 3,
@@ -29,6 +30,7 @@
 		/obj/item/storage/pill_bottle/tricordrazine = 3,
 		/obj/item/reagent_containers/hypospray/medipen/formaldehyde = 5,
 		/obj/item/reagent_containers/cup/bottle/toxin = 3,
+		/obj/item/storage/medkit/expanded/regular = 1,
 		/obj/item/storage/medkit/expanded/brute = 1,
 		/obj/item/storage/medkit/expanded/fire = 1,
 		/obj/item/storage/medkit/expanded/toxin = 1,
@@ -87,6 +89,7 @@
 		/obj/item/cane/crutch = 2,
 		/obj/item/cane/white = 2,
 		/obj/item/clothing/glasses/eyepatch/medical = 2,
+		/obj/item/storage/pill_bottle/painkillers = 1,
 	)
 
 	emagvendorreplace = FALSE

@@ -7,7 +7,10 @@
 	custom_premium_price = PAYCHECK_COMMAND * 8
 
 /obj/item/storage/medkit/medical_variety_pack/PopulateContents()
-	new /obj/item/storage/medkit/regular(src)
+	if(prob(90))
+		new /obj/item/storage/medkit/regular(src)
+	else
+		new /obj/item/storage/medkit/expanded/regular(src)
 	if(prob(50))
 		if(prob(90))
 			new /obj/item/storage/medkit/fire(src)
@@ -43,7 +46,10 @@
 	custom_premium_price = PAYCHECK_COMMAND * 20
 
 /obj/item/storage/medkit/deluxe_medical_variety_pack/PopulateContents()
-	new /obj/item/storage/medkit/regular(src)
+	if(prob(90))
+		new /obj/item/storage/medkit/regular(src)
+	else
+		new /obj/item/storage/medkit/expanded/regular(src)
 	if(prob(90))
 		new /obj/item/storage/medkit/fire(src)
 	else
@@ -181,6 +187,29 @@
 	. = ..()
 	atom_storage.max_slots = 14
 	atom_storage.max_total_storage = 28
+
+/obj/item/storage/medkit/expanded/regular
+	name = "expanded medkit"
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_exp_regular"
+
+/obj/item/storage/medkit/expanded/regular/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/bloodpack = 2,
+		/obj/item/stack/medical/suture/medicated = 2,
+		/obj/item/stack/medical/mesh/advanced = 2,
+		/obj/item/stack/medical/bone_gel = 1,
+		/obj/item/stack/sticky_tape/surgical = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/reagent_containers/hypospray/medipen/ekit = 1,
+		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 1,
+		/obj/item/storage/pill_bottle/multiver/less = 1,
+		/obj/item/storage/pill_bottle/painkillers = 1,
+	)
+	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/expanded/brute
 	name = "expanded brute trauma treatment kit"
