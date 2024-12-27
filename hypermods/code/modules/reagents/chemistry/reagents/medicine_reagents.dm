@@ -1,7 +1,6 @@
 /datum/reagent/medicine/dermalnanites
 	name = "Dermal Nanites"
 	description = "Specialized nanites that cures all damage types slowly over time. Stabilizes temperature and cleanses radiation. Metabolizes very slowly."
-	reagent_state = LIQUID
 	color = "#DCDCDC"
 	metabolization_rate = 0.1
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -44,7 +43,6 @@
 /datum/reagent/medicine/bicaridine
 	name = "Bicaridine"
 	description = "Restores bruising. Overdose causes it instead."
-	reagent_state = LIQUID
 	color = "#f98a00"
 	overdose_threshold = 30
 
@@ -61,7 +59,6 @@
 /datum/reagent/medicine/dexalin
 	name = "Dexalin"
 	description = "Restores oxygen loss. Overdose causes it instead."
-	reagent_state = LIQUID
 	color = "#24e7d9"
 	overdose_threshold = 30
 
@@ -78,7 +75,6 @@
 /datum/reagent/medicine/kelotane
 	name = "Kelotane"
 	description = "Restores fire damage. Overdose causes it instead."
-	reagent_state = LIQUID
 	color = "#f4a40b"
 	overdose_threshold = 30
 
@@ -95,7 +91,6 @@
 /datum/reagent/medicine/antitoxin
 	name = "Anti-Toxin"
 	description = "Heals toxin damage and removes toxins in the bloodstream. Overdose causes toxin damage."
-	reagent_state = LIQUID
 	color = "#24ea28"
 	overdose_threshold = 30
 	taste_description = "a roll of gauze"
@@ -115,7 +110,6 @@
 /datum/reagent/medicine/tricordrazine
 	name = "Tricordrazine"
 	description = "Has a high chance to heal all types of damage. Overdose instead causes it."
-	reagent_state = LIQUID
 	color = "#C8A5DC"
 	overdose_threshold = 30
 	taste_description = "grossness"
@@ -140,7 +134,6 @@
 /datum/reagent/medicine/painkillers
 	name = "Painkillers"
 	description = "Slowly heals brute and burn damage types while you have under 25 TOTAL damage of those types. Overdose causes minor toxin damage."
-	reagent_state = LIQUID
 	color = "#f2feff"
 	overdose_threshold = 30
 	taste_description = "diet morphine"
@@ -161,7 +154,6 @@
 /datum/reagent/medicine/barozine
 	name = "Barozine"
 	description = "A potent drug that prevents pressure damage. Causes extreme pain and jittering. Very poisonous when overdosed."
-	reagent_state = LIQUID
 	color = "#EA4F34"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
@@ -197,7 +189,6 @@
 /datum/reagent/medicine/changelingextract //is this used anywhere?
 	name = "Changeling Regenerative Extract"
 	description = "A highly complex regenerative chemical. Results in limb and organ growth."
-	reagent_state = LIQUID
 	color = "#A4D8D8"
 	self_consuming = TRUE
 	metabolization_rate = 1
@@ -264,7 +255,6 @@
 /datum/reagent/medicine/dexalinplus
 	name = "Dexalin Plus"
 	description = "Restores oxygen loss and restores blood volume quickly. Overdose causes both instead."
-	reagent_state = LIQUID
 	color = "#0742CA"
 	overdose_threshold = 25
 
@@ -287,7 +277,6 @@
 /datum/reagent/medicine/dermaline
 	name = "Dermaline"
 	description = "Restores fire damage greatly. Overdose causes a drop in bodily temperature and oxygen loss. Overdoses in small amounts."
-	reagent_state = LIQUID
 	color = "#084936"
 	overdose_threshold = 20
 
@@ -306,7 +295,6 @@
 /datum/reagent/medicine/dylovene
 	name = "Dylovene"
 	description = "Restores toxin damage slowly. Overdose causes minor tissue damage."
-	reagent_state = LIQUID
 	color = "#6600FF"
 	overdose_threshold = 20
 
@@ -324,7 +312,6 @@
 /datum/reagent/medicine/hyronalin
 	name = "Hyronalin"
 	description = "An all-purpose radiation cure that also heals minor toxin damage. Overdose causes burns within the host."
-	reagent_state = LIQUID
 	color = "#00cc7a"
 	overdose_threshold = 30
 	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS)
@@ -343,7 +330,6 @@
 /datum/reagent/medicine/arithrazine
 	name = "Arithrazine"
 	description = "A strong all-purpose radiation cure/blocker that also heals minor toxin damage, side effects include minor bruising of the patient. Has no overdose effects."
-	reagent_state = LIQUID
 	color = "#b34700"
 	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS, TRAIT_RADIMMUNE)
 
@@ -357,7 +343,6 @@
 /datum/reagent/medicine/coagulant/tranexamicacid
 	name = "Tranexamic Acid"
 	description = "A low-tolerance blood clotter, capable of staunching bloodloss and restoring small amounts of blood. Overdose causes internal bleeding."
-	reagent_state = LIQUID
 	color = "#9f6060"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 15
@@ -380,7 +365,6 @@
 /datum/reagent/medicine/coagulant/inaprovaline
 	name = "Inaprovaline Plus"
 	description = "Stabilizes the breathing of patients, and heals asphyxiation damage quickly. It also increases blood clotting efficiency. Good for those in critical condition."
-	reagent_state = LIQUID
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
 	color = "#ff0000"
 	ph = 8.5
@@ -406,7 +390,6 @@
 /datum/reagent/medicine/juggernaut
 	name = "Juggernaut"
 	description = "A potent painkiller that negates a significant amount of walkspeed loss from being hurt, with the additional special effect of absorbing and healing a portion of brute and burn damages taken between life cycles. Overdose causes confusion, loss of breath, and spontaneous paralysis."
-	reagent_state = LIQUID
 	color = "#ff1a1a"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 60
@@ -445,7 +428,6 @@
 /datum/reagent/medicine/filgrastim
 	name = "Filgrastim"
 	description = "A granulocyte colony stimulating factor analog, which helps the body create more blood."
-	reagent_state = LIQUID
 	color = "#660000"
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 
@@ -457,7 +439,6 @@
 /datum/reagent/medicine/coagulant/proconvertin
 	name = "Proconvertin"
 	description = "A VERY low-tolerance blood clotter, capable of staunching bloodloss quickly. Overdose causes massive oxygen loss."
-	reagent_state = LIQUID
 	color = "#9f6060"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 10
@@ -486,7 +467,6 @@
 /datum/reagent/medicine/healingnanites
 	name = "Restoration Nanites"
 	description = "Specialized nanites that quickly heals all damage types and restores the integrity of essential organs."
-	reagent_state = LIQUID
 	color = "#DCDCDC"
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	var/healing = 10
@@ -530,7 +510,6 @@
 /datum/reagent/medicine/enchantedgold
 	name = "Enchanted Gold"
 	description = "Slowly heals all damage types and slightly boosts maximum health."
-	reagent_state = LIQUID
 	color = "#ffff00"
 	self_consuming = TRUE
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
@@ -565,7 +544,6 @@
 /datum/reagent/medicine/enchantedsupergold
 	name = "Super Enchanted Gold"
 	description = "Quickly heals all damage types and boosts maximum health, also reduces incoming damage and renders you immune to fire."
-	reagent_state = LIQUID
 	color = "#ffff00"
 	self_consuming = TRUE
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
@@ -620,7 +598,6 @@
 /datum/reagent/medicine/clownenhancer
 	name = "Clown Juice"
 	description = "Grants clownly people superpowers."
-	reagent_state = LIQUID
 	color = "#ff0066"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	var/wasenhanced = FALSE
@@ -647,7 +624,6 @@
 /datum/reagent/medicine/antiwater
 	name = "Anti-Water"
 	description = "Grants the user temporary aquaphobia?"
-	reagent_state = LIQUID
 	color = "#ff0066"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	var/wasenhanced = FALSE
@@ -692,7 +668,6 @@
 /datum/reagent/medicine/ultravasculine
 	name = "Ultravasculine"
 	description = "Rapidly flushes toxins and especially histamines from the body, but places some stress on the veins. Overdose increases the stress."
-	reagent_state = LIQUID
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
 	color = "#710000"
 	overdose_threshold = 30
@@ -749,7 +724,6 @@
 /datum/reagent/medicine/antimagic
 	name = "Holy Blessing"
 	description = "Grants the user temporary rhabdophobia?"
-	reagent_state = LIQUID
 	color = "#ff0066"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 
@@ -763,7 +737,6 @@
 /datum/reagent/medicine/hyperzine
 	name = "Hyperzine"
 	description = "A reverse-engineered panacea of unknown origin, quickly restores all damage, boosts speed, and renders the host nearly immune to stuns. Metabolizes quickly.."
-	reagent_state = LIQUID
 	color = "#DCDCDC"
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	var/healing = 7
@@ -805,7 +778,6 @@
 /datum/reagent/medicine/styptic_powder
 	name = "Styptic Powder"
 	description = "If used in touch-based applications, immediately restores bruising as well as restoring more over time. The chemical will heal up to 45 points of damage at 45 units applied. If ingested through other means, deals minor toxin damage."
-	reagent_state = LIQUID
 	color = "#FF9696"
 	ph = 5.1
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -834,7 +806,6 @@
 /datum/reagent/medicine/silver_sulfadiazine
 	name = "Silver Sulfadiazine"
 	description = "If used in touch-based applications, immediately restores burn wounds as well as restoring more over time. The chemical will heal up to 45 points of damage at 45 units applied. If ingested through other means, deals minor toxin damage."
-	reagent_state = LIQUID
 	color = "#C8A5DC"
 	ph = 7.2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED

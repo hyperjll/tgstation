@@ -1,7 +1,6 @@
 /datum/reagent/toxin/norepinephricacid
 	name = "Norepinephric acid"
 	description = "Not to be confused with Norepinephrine, this toxin is known for it's specific use in crippling vision."
-	reagent_state = LIQUID
 	color = "#b7dbe1"
 	toxpwr = 0
 	taste_description = "milk"
@@ -15,7 +14,6 @@
 /datum/reagent/toxin/saxitoxin
 	name = "Saxitoxin"
 	description = "Nasty poison gas that's highly volatile when breathed. It features an unholy BRAIN-TOX-BURN triad on top of distinct jittering and stuns."
-	reagent_state = GAS
 	color = "#ffffc6"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
@@ -34,7 +32,6 @@
 	description = "A nonlethal poison that causes near-instant loss of conscience in small doses for extended periods of time."
 	silent_toxin = TRUE
 	self_consuming = TRUE
-	reagent_state = LIQUID
 	color = "#11f4ff"
 	toxpwr = 0
 	metabolization_rate = 1 * REAGENTS_METABOLISM
@@ -57,7 +54,6 @@
 	description = "A nanite-based virus. Metabolizes very slowly, and when depleted it causes a massive amount of toxin and brute damage depending on how long it has been in the victim's bloodstream."
 	silent_toxin = TRUE
 	self_consuming = TRUE
-	reagent_state = LIQUID
 	color = "#FFFFFF"
 	toxpwr = 0
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
@@ -152,7 +148,6 @@
 	description = "A nonlethal toxin that causes stamina loss in it's victim following my long lasting paralysis."
 	silent_toxin = TRUE
 	self_consuming = TRUE
-	reagent_state = LIQUID
 	color = "#fef65b"
 	toxpwr = 0
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM

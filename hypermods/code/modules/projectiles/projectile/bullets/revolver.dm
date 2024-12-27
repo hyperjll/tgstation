@@ -176,7 +176,7 @@
 	name = ".50AE immovable bullet"
 	damage = 240
 	wound_bonus = -100
-	speed = 100 // 100x slower
+	speed = 0.01 // 100x slower
 
 /obj/projectile/bullet/a50ae/bomb
 	name = ".50AE ordinance bullet"

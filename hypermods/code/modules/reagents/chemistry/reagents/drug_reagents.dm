@@ -1,7 +1,6 @@
 /datum/reagent/drug/syndimethamphetamine
 	name = "Methamphetamine Plus"
 	description = "Neutralizes mannitol. Reduces stun times by about 300%, speeds the user up, and allows the user to quickly recover stamina while dealing a small amount of Brain damage. If overdosed the subject will move randomly, laugh randomly, drop items and suffer from Toxin and Brain damage. If addicted the subject will constantly jitter and drool, before becoming dizzy and losing motor control and eventually suffer heavy toxin damage."
-	reagent_state = LIQUID
 	color = "#FAFAFA"
 	addiction_types = list(/datum/addiction/stimulants = 4)
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
@@ -50,7 +49,6 @@
 /datum/reagent/drug/pumpupplus
 	name = "Pump-Up Plus"
 	description = "A fast acting, hard hitting drug that pushes the limit on what you can handle. Makes you immune to knockdowns entirely."
-	reagent_state = LIQUID
 	color = "#e38e44"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 35

@@ -12,7 +12,6 @@
 /datum/reagent/liquid_air
 	name = "Liquidized Breatheable Air"
 	description = "A condensed liquid form of breatheable air."
-	reagent_state = LIQUID
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
 	color = "#000000"
 	taste_description = "air"

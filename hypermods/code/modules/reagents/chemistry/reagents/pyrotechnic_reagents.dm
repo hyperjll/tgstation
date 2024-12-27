@@ -1,7 +1,6 @@
 /datum/reagent/tazinide //Tazinide. It's teslium if it were on steroids.
 	name = "Tazinide"
 	description = "An highly dangerous metallic mixture. Periodically electrocutes its victim, and makes electrocutions against them more deadly. Can often interfere with one's motor ability."
-	reagent_state = LIQUID
 	color = "#ffe700" //RGB: 32, 50, 77
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	taste_description = "charged evil"

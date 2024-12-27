@@ -16,10 +16,11 @@
 	surplus = 0
 
 /datum/uplink_item/stealthy_weapons/cobra
-	name = "Cobra"
-	desc = "A single Cobra pistol that fires .45 bullets. Loaded with 9 lethal shots. Nearly silent when firing. \
-			Comes loaded with caseless ammo."
-	item = /obj/item/gun/ballistic/automatic/pistol/cobra/caseless
+	name = "Cobra Case"
+	desc = "A weapon case containing a single Cobra Pistol that fires .45 bullets. Loaded with 9 lethal shots. \
+			Nearly silent when firing and comes loaded with caseless ammo. \
+			Also comes with two spare magazines and a box of caseless 45 rounds."
+	item = /obj/item/storage/toolbox/guncase/traitor/cobra
 	progression_minimum = 5 MINUTES
 	cost = 7
 	surplus = 30

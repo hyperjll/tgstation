@@ -6,30 +6,33 @@
 	cost = 5
 
 /datum/uplink_item/dangerous/m1911pistol
-	name = "M1911"
-	desc = "A single M1911 Pistol that fires .45 bullets. Loaded with 9 lethal shots."
-	item = /obj/item/gun/ballistic/automatic/pistol/m1911
+	name = "M1911 Pistol Case"
+	desc = "A weapon case containing a single M1911 Pistol that fires .45 bullets. Loaded with 9 lethal shots. \
+			Also comes with two spare magazines and a box of .45 rounds. A cheap option for ranged offense, or if you don't \
+			intend to go for the stealther Cobra."
+	item = /obj/item/storage/toolbox/guncase/traitor/m1911pistol
 	cost = 6
 	surplus = 45
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/viper
-	name = "Viper"
-	desc = "A single Viper Pistol that fires 10mm bullets. Loaded with 9 lethal shots. \
+	name = "Viper Case"
+	desc = "A weapon case containing a single Viper Pistol that fires 10mm bullets. Loaded with 9 lethal shots. \
+			Also comes with two spare magazines and a box of 10mm rounds. \
 			This pistol fires quickly and is fully-automatic."
-	item = /obj/item/gun/ballistic/automatic/pistol/viper
+	item = /obj/item/storage/toolbox/guncase/traitor/viper
 	cost = 8
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/fisher // Normally only available in a special kit, fuck that, this thing's cool as shit.
-	name = "Ansem/SC pistol"
-	desc = "A modified variant of the Ansem, spiritual successor to the \
+	name = "Ansem/SC Pistol Case"
+	desc = "A weapon case containing a modified variant of the Ansem, spiritual successor to the \
 			Makarov, featuring an integral suppressor and push-button \
 			trigger on the grip for an underbarrel-mounted disruptor, \
-			similar in operation to the standalone SC/FISHER. \
-			Chambered in 10mm."
-	item = /obj/item/gun/ballistic/automatic/pistol/clandestine/fisher
+			similar in operation to the standalone SC/FISHER. Chambered in 10mm. \
+			Also comes with two spare magazines and a box of 10mm rounds."
+	item = /obj/item/storage/toolbox/guncase/traitor/fisher
 	cost = 11
 	surplus = 20
 	//purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // Eh, i'll allow it.

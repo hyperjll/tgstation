@@ -41,7 +41,7 @@
 		/datum/pet_command/idle,
 		/datum/pet_command/free,
 		/datum/pet_command/follow,
-		/datum/pet_command/point_targeting/attack,
+		/datum/pet_command/attack,
 	)
 
 /mob/living/basic/man_eater/Initialize(mapload)
