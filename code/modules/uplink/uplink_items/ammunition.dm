@@ -6,6 +6,13 @@
 	category = /datum/uplink_category/ammo
 	surplus = 40
 
+/datum/uplink_item/ammo/toydarts
+	name = "Donksoft Riot Pistol Ammunition Case"
+	desc = "A case containing three spare magazines for the Donksoft riot pistol, along with a box of loose riot darts."
+	item = /obj/item/storage/toolbox/guncase/traitor/ammunition/donksoft
+	cost = 2
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	purchasable_from = ~UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo/revolver
 	name = ".357 Speed Loader"
