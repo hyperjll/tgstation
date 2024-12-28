@@ -1510,6 +1510,14 @@
 	self_consuming = TRUE
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	metabolized_traits = list(TRAIT_STABLELIVER)
+	var/effect_progress = 0 // to track how long the chem was in your system
+
+/datum/reagent/medicine/higadrite/on_mob_life(mob/living/carbon/metabolizer)
+	. = ..()
+	effect_progress++
+	if(effect_progress >= 10) // .5 per tick is used up, so 5 units x2 = 10. (5u is needed to restore liver by 1hp)
+		metabolizer.adjustOrganLoss(ORGAN_SLOT_LIVER, -1)
+		effect_progress = 0
 
 /datum/reagent/medicine/cordiolis_hepatico
 	name = "Cordiolis Hepatico"

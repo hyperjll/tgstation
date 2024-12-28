@@ -118,6 +118,9 @@
 
 /obj/item/reagent_containers/cup/bottle/higadrite
 	name = "higadrite bottle"
+	desc = "A small bottle of higadrite, used for stabilizing livers. \
+			It prevents a build-up of toxins while your liver is non-functional. \
+			Also used to repair the tissue of the host's liver."
 	list_reagents = list(/datum/reagent/medicine/higadrite = 30)
 
 /obj/item/reagent_containers/cup/bottle/ephedrine
