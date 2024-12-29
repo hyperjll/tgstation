@@ -278,4 +278,4 @@
 			That vendor contains a wide variety of special kits and equipment you likely won't find for purchase normally."
 	item = /obj/item/syndicate_voucher
 	cost = 40 // price varies depending on the kit selected
-	purchasable_from = UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_FIREBASE_OPS
