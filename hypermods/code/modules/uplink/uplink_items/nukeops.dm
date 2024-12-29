@@ -88,6 +88,15 @@
 			Also contained within are 2 stimpacks, and an armored jumpsuit to sweeten the deal."
 	item = /obj/item/storage/toolbox/guncase/elementalguns
 
+// ~~ M-546 Osprey ~~
+
+/datum/uplink_item/weapon_kits/extreme_cost/minigun
+	name = "M-546 Osprey Case (Easy to Moderate)"
+	desc = "A single back-mounted M-546 Osprey minigun setup capable of firing 7mm rounds at a rapid pace. \
+			Though it eventually overheats, you'll never have to worry about running out of ammunition thanks to the \
+			in-built 7mm manufactury within the ammo storage compartment. Comes with a Medical Variety Pack for increased survivability."
+	item = /obj/item/storage/toolbox/guncase/minigun
+
 // Explosives and Grenades
 // ~~ Grenades ~~
 
@@ -261,7 +270,12 @@
 
 
 
-// Hats
-// It is fundamental for the game's health for there to be a hat crate for nuclear operatives.
+// Bundles
 
-
+/datum/uplink_item/bundles_tc/requisition_token
+	name = "Requisition Token"
+	desc = "A special requisition token to use with the specialized equipment vendor on Firebase Balthazord. \
+			That vendor contains a wide variety of special kits and equipment you likely won't find for purchase normally."
+	item = /obj/item/syndicate_voucher
+	cost = 40 // price varies depending on the kit selected
+	purchasable_from = UPLINK_NUKE_OPS

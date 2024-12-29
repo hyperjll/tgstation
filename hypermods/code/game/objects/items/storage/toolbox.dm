@@ -52,6 +52,15 @@
 	for(var/i in 1 to 2)
 		new second_extra_to_spawn (src)
 
+/obj/item/storage/toolbox/guncase/minigun
+	name = "minigun case"
+	weapon_to_spawn = /obj/item/minigunmount
+	extra_to_spawn = /obj/item/storage/medkit/medical_variety_pack
+
+/obj/item/storage/toolbox/guncase/minigun/PopulateContents()
+	new weapon_to_spawn (src)
+	new extra_to_spawn (src)
+
 /obj/item/storage/toolbox/guncase/tommygun
 	name = "tommy gun case"
 	weapon_to_spawn = /obj/item/gun/ballistic/automatic/tommygun
