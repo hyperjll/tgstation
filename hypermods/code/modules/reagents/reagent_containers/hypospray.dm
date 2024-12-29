@@ -306,9 +306,9 @@
 	desc = "An autoinjector containing a stabilized Saturn-X compound. Causes the user to become invisible for a limited time, clothes will NOT become invisible."
 
 /obj/item/reagent_containers/hypospray/medipen/invisibility/stable
-	volume = 45
-	amount_per_transfer_from_this = 45
-	list_reagents = list(/datum/reagent/drug/saturnx/stable = 45)
+	volume = 8
+	amount_per_transfer_from_this = 8
+	list_reagents = list(/datum/reagent/drug/saturnx/stable = 8)
 
 /obj/item/reagent_containers/hypospray/medipen/pumpupplus
 	name = "maintenance pump-up"
