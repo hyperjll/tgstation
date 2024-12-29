@@ -374,8 +374,8 @@
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/explosives/grenades/buzzkill
-	name = "Buzzkill Grenade Box"
-	desc = "A box with three grenades that release a swarm of angry bees upon activation. These bees indiscriminately attack friend or foe \
+	name = "Buzzkill Grenade Pouch"
+	desc = "A pouch with five grenades that release a swarm of angry bees upon activation. These bees indiscriminately attack friend or foe \
 		with random toxins. Courtesy of the BLF and Tiger Cooperative."
 	item = /obj/item/ammo_box/nadepouch/wasp
 	cost = 8 // Discounted as killer bees cant tell friend from foe, makes em a liability.
