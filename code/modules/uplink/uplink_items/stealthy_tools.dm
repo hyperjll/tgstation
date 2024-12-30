@@ -104,3 +104,10 @@
 	item = /obj/item/storage/mail_counterfeit_device
 	cost = 1
 	surplus = 30
+
+/datum/uplink_item/stealthy_tools/forensics_spofer
+	name = "Forensics Spoofing Kit"
+	desc = "A box that contains the forensics spoofer (and instructions) which can scan and replicate fingerprints and fibers \
+			and apply them to a target object. Helpful for framing crew. Recommend buying soap with your purchase."
+	item = /obj/item/storage/box/syndie_kit/forensics_spoofer
+	cost = 5
