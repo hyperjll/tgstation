@@ -1,16 +1,45 @@
 // 40mm (Grenade Launcher
 
-/obj/projectile/bullet/a40mm
+/obj/projectile/bullet/a40mm/shocker
 	name ="40mm grenade"
-	desc = "USE A WEEL GUN"
-	icon_state= "bolter"
-	damage = 60
-	embed_type = null
-	shrapnel_type = null
+	damage = 40
+	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_LOW_POWER_GEN
+	var/zap_range = 12
+	var/power = 3e8
 
-/obj/projectile/bullet/a40mm/on_hit(atom/target, blocked = 0, pierce_hit)
+/obj/projectile/bullet/a40mm/shocker/on_hit(atom/target, blocked = 0, pierce_hit)
 	..()
-	explosion(target, devastation_range = -1, light_impact_range = 2, flame_range = 3, flash_range = 1, adminlog = FALSE, explosion_cause = src)
+	tesla_zap(source = src, zap_range = zap_range, power = power, cutoff = 3e8, zap_flags = zap_flags)
+	return BULLET_ACT_HIT
+
+/obj/projectile/bullet/a40mm/spread
+	name ="40mm grenade"
+	damage = 10
+
+/obj/projectile/bullet/a40mm/sucking
+	name ="40mm grenade"
+	damage = 40
+	var/repulse_force = MOVE_FORCE_EXTREMELY_STRONG
+
+/obj/projectile/bullet/a40mm/sucking/on_hit(atom/target, blocked = 0, pierce_hit)
+	..()
+	var/turf/T = get_turf(src)
+	var/list/thrown_items = list()
+	for(var/atom/movable/A in range(T, 7))
+		if(A == src || A.anchored || thrown_items[A])
+			continue
+		A.safe_throw_at(T, 10, 1, force = repulse_force)
+		thrown_items[A] = A
+	return BULLET_ACT_HIT
+
+/obj/projectile/bullet/a40mm/nuke
+	name ="40mm grenade"
+	damage = 10
+	speed = 0.01 // 100x slower
+
+/obj/projectile/bullet/a40mm/nuke/on_hit(atom/target, blocked = 0, pierce_hit)
+	..()
+	explosion(target, 1, 6, 12, flame_range = 12, flash_range = 12, adminlog = FALSE, explosion_cause = src)
 	return BULLET_ACT_HIT
 
 // China lake stuff

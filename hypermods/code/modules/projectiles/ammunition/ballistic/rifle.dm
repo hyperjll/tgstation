@@ -8,7 +8,45 @@
 
 // 40mm (Grenade Launcher)
 
+/obj/item/ammo_casing/a40mm/shocker
+	name = "40mm SH shell"
+	desc = "A cased high explosive grenade that can only be activated once fired out of a grenade launcher. \
+			In addition to exploding, it emits a highly concentrated tesla blast."
+	caliber = CALIBER_40MM
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon_state = "40mmSH"
+	projectile_type = /obj/projectile/bullet/a40mm/shocker
 
+/obj/item/ammo_casing/a40mm/spread
+	name = "40mm SP shell"
+	desc = "A cased high explosive grenade that can only be activated once fired out of a grenade launcher. \
+			It fires a spread of highly explosive pellets, a rarity now-a-days."
+	caliber = CALIBER_40MM
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon_state = "40mmSP"
+	projectile_type = /obj/projectile/bullet/a40mm/spread
+	pellets = 3
+	variance = 30
+
+/obj/item/ammo_casing/a40mm/sucking
+	name = "40mm SU shell"
+	desc = "A cased high explosive grenade that can only be activated once fired out of a grenade launcher. \
+			In addition to the explosion, it creates a short-lived gravitational vortex to suck-in everything nearby \
+			for easy follow-ups."
+	caliber = CALIBER_40MM
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon_state = "40mmSU"
+	projectile_type = /obj/projectile/bullet/a40mm/sucking
+
+/obj/item/ammo_casing/a40mm/nuke
+	name = "40mm SL shell"
+	desc = "A cased high explosive grenade that can only be activated once fired out of a grenade launcher. \
+			These rounds remain suspended in the air for long periods of time, but have far greater yield than normal. \
+			They're effectively air-mines."
+	caliber = CALIBER_40MM
+	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
+	icon_state = "40mmSL"
+	projectile_type = /obj/projectile/bullet/a40mm/nuke
 
 // AKM bullets
 

@@ -6794,6 +6794,7 @@
 #include "hypermods\code\modules\projectiles\ammunition\special\reagent.dm"
 #include "hypermods\code\modules\projectiles\ammunition\special\syringe.dm"
 #include "hypermods\code\modules\projectiles\boxes_magazines\ammo_boxes.dm"
+#include "hypermods\code\modules\projectiles\boxes_magazines\external\lmg.dm"
 #include "hypermods\code\modules\projectiles\boxes_magazines\external\pistol.dm"
 #include "hypermods\code\modules\projectiles\boxes_magazines\external\rifle.dm"
 #include "hypermods\code\modules\projectiles\boxes_magazines\external\smg.dm"

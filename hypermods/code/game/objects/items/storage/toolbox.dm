@@ -81,7 +81,7 @@
 	name = "cobra gun case"
 	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/cobra/caseless
 	extra_to_spawn = /obj/item/ammo_box/magazine/m45/cs
-	ammo_box_to_spawn = /obj/item/ammo_box/c45/thirty/cs
+	ammo_box_to_spawn = /obj/item/ammo_box/c45/cs
 
 /obj/item/storage/toolbox/guncase/traitor/viper
 	name = "viper gun case"

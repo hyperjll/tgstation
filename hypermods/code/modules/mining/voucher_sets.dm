@@ -181,3 +181,117 @@
 		/obj/item/anomaly_releaser, // 2 TC
 		/obj/item/anomaly_releaser, // 2 TC
 		)
+
+/datum/s_voucher_set/implant_man_kit // 79 TC
+	name = "Implant Man Kit"
+	description = "Probably the strangest kit available to our operatives, you'll be a certified robo-operative. \
+			Contains a wide-variety of implants, including several offensive, defensive, and utility-based implants. \
+			You'll have everything you'll need to really cause problems without any backpack clutter."
+	icon = 'icons/obj/medical/syringe.dmi'
+	icon_state = "implanter0"
+	set_items = list(
+		/obj/item/implanter/freedom, // 5 TC
+		/obj/item/implanter/emp, // 1 TC
+		/obj/item/implanter/explosive, // 2 TC
+		/obj/item/implanter/storage, // 8 TC
+		/obj/item/implanter/dnascramble, // 5 TC
+		/obj/item/implanter/camouflage, // 16 TC
+		/obj/item/implanter/robusttec, // 8 TC
+		/obj/item/implanter/tactical_deniability/deluxe, // 10 TC
+		/obj/item/autosurgeon/syndicate/esword/hidden/single_use, // 10 TC
+		/obj/item/implanter/empshield, // 4 TC
+		/obj/item/implanter/tesla, // 2 TC
+		/obj/item/implanter/wasps, // 2 TC
+		/obj/item/implanter/scram, // 6 TC
+		)
+
+/datum/s_voucher_set/fake_centcom_kit // 43 TC
+	name = "Central Impersonator Kit"
+	description = "Developed as a tactical espionage kit after previous operatives before you came up with this idea. \
+			It contains nearly everything you'll need to disguise yourself as a representative of NT's Central Command. \
+			It also comes with a modified CentCom MODsuit, and a freedom implanter."
+	icon = 'icons/obj/clothing/under/centcom.dmi'
+	icon_state = "officer"
+	set_items = list(
+		/obj/item/storage/box/syndie_kit/centcom_costume_better, // 30 TC
+		/obj/item/mod/control/pre_equipped/corporate/traitor, // 8 TC
+		/obj/item/implanter/freedom, // 5 TC
+		)
+
+/datum/s_voucher_set/standard_gl_kit // 54 TC
+	name = "Standard Grenade Launcher Kit"
+	description = "One of our favorites amongst those who love chemistry. \
+			Contains a single Grenade Launcher, a Grenadier's Belt, and several pouches of various grenades."
+	icon = 'icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "riotgun"
+	set_items = list(
+		/obj/item/gun/grenadelauncher, // 6 TC
+		/obj/item/storage/belt/grenade/full, // 20 TC
+		/obj/item/grenade/spawnergrenade/minisyndies, // 8 TC
+		/obj/item/ammo_box/nadepouch/stingbang, // 4 TC
+		/obj/item/ammo_box/nadepouch/frag, // 7 TC
+		/obj/item/ammo_box/nadepouch/rads, // 4 TC
+		/obj/item/ammo_box/nadepouch/highacidfoam, // 5 TC
+		)
+
+// Syndicate Classes below
+
+/datum/s_voucher_set/class_grenadier_kit // 54 TC~~
+	name = "Grenadier Class Kit"
+	description = "Not to be confused with the 'Standard Grenade Launcher Kit', this kit contains \
+			a much more standardized and reliable loadout. \
+			Contains a Rigil Grenade Launcher, a pouch of stingbangs and fragmentation grenades, \
+			4 boxes of 40mm grenades, and some variety 40mm grenades to spice things up."
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "grenade_launcher"
+	set_items = list(
+		/obj/item/gun/ballistic/rigil_gl, // 6 TC~~
+		/obj/item/ammo_box/nadepouch/stingbang, //4 TC
+		/obj/item/ammo_box/nadepouch/frag, // 7 TC
+		/obj/item/ammo_box/a40mm, // 2TC
+		/obj/item/ammo_box/a40mm, // 2TC
+		/obj/item/ammo_box/a40mm, // 2TC
+		/obj/item/ammo_box/a40mm, // 2TC
+		/obj/item/ammo_box/a40mm/shocker, // 7 TC
+		/obj/item/ammo_box/a40mm/spread, // 6 TC
+		/obj/item/ammo_box/a40mm/sucking, // 6 TC
+		/obj/item/ammo_box/a40mm/nuke, // 10 TC
+		)
+
+/datum/s_voucher_set/heavy_weapons_kit // 57 TC~~
+	name = "Heavy Weapons Class Kit"
+	description = "For operatives that aren't afraid of the frontline. \
+			Contains a Antares LMG with a 100 round magazine of 7mm ammunition. \
+			Also contains SIX additional magazines and an energy shield module."
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "lmg"
+	set_items = list(
+		/obj/item/gun/ballistic/automatic/antares, // 20 TC?
+		/obj/item/ammo_box/magazine/r7mm, // 4 TC~~
+		/obj/item/ammo_box/magazine/r7mm, // 4 TC~~
+		/obj/item/ammo_box/magazine/r7mm/hollow, // 5 TC~~
+		/obj/item/ammo_box/magazine/r7mm/ap, // 6 TC~~
+		/obj/item/ammo_box/magazine/r7mm/incen, // 5 TC~~
+		/obj/item/ammo_box/magazine/r7mm/match, // 5 TC~~
+		/obj/item/mod/module/energy_shield, // 8 TC
+		)
+
+/datum/s_voucher_set/class_medic_kit // 55 TC
+	name = "Field Medic Class Kit"
+	description = "Most operatives simply buy their own medicine, but if you want to double-down.... \
+			Contains a Veritate PDW with five spare magazines, a Premium Medical Suite, a Gorlex Hypospray, \
+			a Hypospray Kit, and a Deluxe Combi-Stimpack bag."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "vector"
+	set_items = list(
+		/obj/item/gun/ballistic/automatic/veritate, // 12 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/storage/medkit/tactical/premium, // 15 TC
+		/obj/item/reagent_containers/hypospray/gorlex, // 8 TC
+		/obj/item/storage/medkit/hypospray, // 4 TC
+		/obj/item/storage/bag/chemistry/syndimedipens/deluxe, // 6 TC
+		)

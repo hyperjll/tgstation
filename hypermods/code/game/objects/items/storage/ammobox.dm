@@ -471,94 +471,77 @@
 	ammo_type = /obj/item/ammo_casing/mm712x82
 	max_ammo = 100
 
-/obj/item/ammo_box/c9mm/sixty
+/obj/item/ammo_box/c9mm/cs
+	name = "ammo box (9mm caseless)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "caseless9mmbox"
+	ammo_type = /obj/item/ammo_casing/caseless/c9mm
+
+/obj/item/ammo_box/c9mm/fire
+	name = "ammo box (9mm incendiary)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "inc9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/fire
+
+/obj/item/ammo_box/c9mm/hp
+	name = "ammo box (9mm hollow-point)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "hp9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/hp
+
+/obj/item/ammo_box/c9mm/ap
+	name = "ammo box (9mm armor piercing)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "ap9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/ap
+
+/obj/item/ammo_box/c9mm/emp
+	name = "ammo box (9mm EMP)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "emp9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/emp
+
+/obj/item/ammo_box/c9mm/sp
+	name = "ammo box (9mm soporific)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "sleep9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/sp
+
+/obj/item/ammo_box/c9mm/cryo
+	name = "ammo box (9mm cryogenic)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "cryo9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/cryo
+
+/obj/item/ammo_box/c9mm/richochet
+	name = "ammo box (9mm richochet)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "richochet9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/richochet
+
+/obj/item/ammo_box/c9mm/bomb
+	name = "ammo box (9mm explosive)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "bomb9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/bomb
+
+/obj/item/ammo_box/c9mm/sonic
+	name = "ammo box (9mm sonic)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "sonic9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/sonic
+
+/obj/item/ammo_box/c9mm/mutate
+	name = "ammo box (9mm mutation)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "mutate9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/mutate
+
+/obj/item/ammo_box/c9mm/fifty
 	name = "ammo box (9mm)"
 	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "mega9mmbox"
 	ammo_type = /obj/item/ammo_casing/c9mm
-	max_ammo = 60
-
-/obj/item/ammo_box/c10mm/fifty
-	name = "ammo box (10mm)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "mega10mmbox"
-	ammo_type = /obj/item/ammo_casing/c10mm
-	max_ammo = 50
-
-/obj/item/ammo_box/c45/thirty
-	name = "ammo box (.45)"
-	icon_state = "45box"
-	ammo_type = /obj/item/ammo_casing/c45
-	max_ammo = 30
-
-/obj/item/ammo_box/c45/thirty/cs
-	name = "ammo box (.45 caseless)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "caseless45box"
-	ammo_type = /obj/item/ammo_casing/caseless/c45/cs
-	max_ammo = 30
-
-/obj/item/ammo_box/c45/thirty/sp
-	name = "ammo box (.45 soporific)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "sleep45box"
-	ammo_type = /obj/item/ammo_casing/c45/sp
-	max_ammo = 30
-
-/obj/item/ammo_box/c45/thirty/ap
-	name = "ammo box (.45 armor piercing)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "ap45box"
-	ammo_type = /obj/item/ammo_casing/c45/ap
-	max_ammo = 30
-
-/obj/item/ammo_box/c45/thirty/hp
-	name = "ammo box (.45 hollow point)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "hp45box"
-	ammo_type = /obj/item/ammo_casing/c45/hp
-	max_ammo = 30
-
-/obj/item/ammo_box/c45/thirty/inc
-	name = "ammo box (.45 incendiary)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "inc45box"
-	ammo_type = /obj/item/ammo_casing/c45/inc
-	max_ammo = 30
-
-/obj/item/ammo_box/c45/thirty/emp
-	name = "ammo box (.45 emp)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "emp45box"
-	ammo_type = /obj/item/ammo_casing/c45/emp
-	max_ammo = 30
-
-/obj/item/ammo_box/c45/thirty/venom
-	name = "ammo box (.45 venom)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "venom45box"
-	ammo_type = /obj/item/ammo_casing/c45/venom
-	max_ammo = 30
-
-/obj/item/ammo_box/c45/fifty
-	name = "ammo box (.45)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "mega45box"
-	ammo_type = /obj/item/ammo_casing/c45
-	max_ammo = 50
-
-/obj/item/ammo_box/m50
-	name = "ammo box (.50 AE)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "50aebox"
-	ammo_type = /obj/item/ammo_casing/a50ae
-	max_ammo = 20
-
-/obj/item/ammo_box/m50/fifty
-	name = "ammo box (.50 AE)"
-	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
-	icon_state = "mega50aebox"
-	ammo_type = /obj/item/ammo_casing/a50ae
 	max_ammo = 50
 
 /obj/item/ammo_box/c10mm/cs
@@ -597,6 +580,159 @@
 	icon_state = "emp10mmbox"
 	ammo_type = /obj/item/ammo_casing/c10mm/emp
 
+/obj/item/ammo_box/c10mm/bleedout
+	name = "ammo box (10mm bleedout)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "bleedout10mmbox"
+	ammo_type = /obj/item/ammo_casing/c10mm/bleedout
+
+/obj/item/ammo_box/c10mm/rad
+	name = "ammo box (10mm radiation)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "rad10mmbox"
+	ammo_type = /obj/item/ammo_casing/c10mm/rad
+
+/obj/item/ammo_box/c10mm/fragment
+	name = "ammo box (10mm fragmentation)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "fragment10mmbox"
+	ammo_type = /obj/item/ammo_casing/c10mm/fragment
+
+/obj/item/ammo_box/c10mm/fifty
+	name = "ammo box (10mm)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "mega10mmbox"
+	ammo_type = /obj/item/ammo_casing/c10mm
+	max_ammo = 50
+
+/obj/item/ammo_box/c45/cs
+	name = "ammo box (.45 caseless)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "caseless45box"
+	ammo_type = /obj/item/ammo_casing/caseless/c45/cs
+
+/obj/item/ammo_box/c45/sp
+	name = "ammo box (.45 soporific)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "sleep45box"
+	ammo_type = /obj/item/ammo_casing/c45/sp
+
+/obj/item/ammo_box/c45/ap
+	name = "ammo box (.45 armor piercing)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "ap45box"
+	ammo_type = /obj/item/ammo_casing/c45/ap
+
+/obj/item/ammo_box/c45/hp
+	name = "ammo box (.45 hollow point)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "hp45box"
+	ammo_type = /obj/item/ammo_casing/c45/hp
+
+/obj/item/ammo_box/c45/inc
+	name = "ammo box (.45 incendiary)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "inc45box"
+	ammo_type = /obj/item/ammo_casing/c45/inc
+
+/obj/item/ammo_box/c45/emp
+	name = "ammo box (.45 emp)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "emp45box"
+	ammo_type = /obj/item/ammo_casing/c45/emp
+
+/obj/item/ammo_box/c45/venom
+	name = "ammo box (.45 venom)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "venom45box"
+	ammo_type = /obj/item/ammo_casing/c45/venom
+
+/obj/item/ammo_box/c45/pacify
+	name = "ammo box (.45 pacification)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "pacify45box"
+	ammo_type = /obj/item/ammo_casing/c45/pacify
+
+/obj/item/ammo_box/c45/delay
+	name = "ammo box (.45 delayed)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "delay45box"
+	ammo_type = /obj/item/ammo_casing/c45/delay
+
+/obj/item/ammo_box/c45/tranq
+	name = "ammo box (.45 tranquilizer)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "tranq45box"
+	ammo_type = /obj/item/ammo_casing/c45/tranq
+
+/obj/item/ammo_box/c45/fifty
+	name = "ammo box (.45)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "mega45box"
+	ammo_type = /obj/item/ammo_casing/c45
+	max_ammo = 50
+
+/obj/item/ammo_box/m50
+	name = "ammo box (.50 AE)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "50aebox"
+	ammo_type = /obj/item/ammo_casing/a50ae
+	max_ammo = 20
+
+/obj/item/ammo_box/m50/ap
+	name = "ammo box (.50 AE armor piercing)"
+	icon_state = "ap50aebox"
+	ammo_type = /obj/item/ammo_casing/a50ae/ap
+
+/obj/item/ammo_box/m50/hp
+	name = "ammo box (.50 AE hollow point)"
+	icon_state = "hp50aebox"
+	ammo_type = /obj/item/ammo_casing/a50ae/hp
+
+/obj/item/ammo_box/m50/inc
+	name = "ammo box (.50 AE incendiary)"
+	icon_state = "inc50aebox"
+	ammo_type = /obj/item/ammo_casing/a50ae/inc
+
+/obj/item/ammo_box/m50/caseless
+	name = "ammo box (.50 AE caseless)"
+	icon_state = "caseless50aebox"
+	ammo_type = /obj/item/ammo_casing/caseless/a50ae
+
+/obj/item/ammo_box/m50/emp
+	name = "ammo box (.50 AE EMP)"
+	icon_state = "emp50aebox"
+	ammo_type = /obj/item/ammo_casing/a50ae/emp
+
+/obj/item/ammo_box/m50/hi
+	name = "ammo box (.50 AE hi-power)"
+	icon_state = "hi50aebox"
+	ammo_type = /obj/item/ammo_casing/a50ae/hi
+
+/obj/item/ammo_box/m50/demo
+	name = "ammo box (.50 AE demolishing)"
+	icon_state = "demo50aebox"
+	ammo_type = /obj/item/ammo_casing/a50ae/demo
+
+/obj/item/ammo_box/m50/rod
+	name = "ammo box (.50 AE immovable)"
+	icon_state = "rod50aebox"
+	ammo_type = /obj/item/ammo_casing/a50ae/rod
+
+/obj/item/ammo_box/m50/bomb
+	name = "ammo box (.50 AE ordinance)"
+	icon_state = "bomb50aebox"
+	ammo_type = /obj/item/ammo_casing/a50ae/bomb
+
+/obj/item/ammo_box/m50/rep
+	name = "ammo box (.50 AE repulsive)"
+	icon_state = "rep50aebox"
+	ammo_type = /obj/item/ammo_casing/a50ae/rep
+
+/obj/item/ammo_box/m50/fifty
+	icon_state = "mega50aebox"
+	max_ammo = 50
+
 /obj/item/ammo_box/a357/no_direct
 	name = "ammo box (.357 Magnum)"
 	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
@@ -628,6 +764,10 @@
 	icon_state = "ws357box"
 	ammo_type = /obj/item/ammo_casing/a357/wallstake
 
+/obj/item/ammo_box/a357/no_direct/fifty
+	icon_state = "mega357box"
+	max_ammo = 50
+
 /obj/item/storage/box/flareshot
 	name = "box of flare shells"
 	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
@@ -641,7 +781,39 @@
 	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun/flare(src)
 
+/obj/item/ammo_box/a40mm/shocker
+	name = "ammo box (40mm SH grenades)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "40mmSH"
+	ammo_type = /obj/item/ammo_casing/a40mm/shocker
+	max_ammo = 4
+	multiple_sprites = AMMO_BOX_PER_BULLET
 
+/obj/item/ammo_box/a40mm/spread
+	name = "ammo box (40mm SP grenades)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "40mmSP"
+	ammo_type = /obj/item/ammo_casing/a40mm/spread
+	max_ammo = 4
+	multiple_sprites = AMMO_BOX_PER_BULLET
+
+/obj/item/ammo_box/a40mm/sucking
+	name = "ammo box (40mm SU grenades)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "40mmSU"
+	ammo_type = /obj/item/ammo_casing/a40mm/sucking
+	max_ammo = 4
+	multiple_sprites = AMMO_BOX_PER_BULLET
+
+/obj/item/ammo_box/a40mm/nuke
+	name = "ammo box (40mm SL grenades)"
+	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
+	icon_state = "40mmSL"
+	ammo_type = /obj/item/ammo_casing/a40mm/nuke
+	max_ammo = 4
+	multiple_sprites = AMMO_BOX_PER_BULLET
+
+// Nade pouches
 
 /obj/item/ammo_box/nadepouch
 	name = "grenade pouch"

@@ -164,6 +164,36 @@
 	item = /obj/item/ammo_box/magazine/smgm45/tranq
 	cost = 6
 
+/datum/uplink_item/ammo_nuclear/special/shocker40mm
+	name = "40mm SH Grenade Box (M-90gl)"
+	desc = "A box of 40mm SH grenades for use with the M-90gl's under-barrel grenade launcher. \
+			These explode AND electrocute everyone nearby."
+	item = /obj/item/ammo_box/a40mm/shocker
+	cost = 7
+
+/datum/uplink_item/ammo_nuclear/special/spread40mm
+	name = "40mm SP Grenade Box (M-90gl)"
+	desc = "A box of 40mm SP grenades for use with the M-90gl's under-barrel grenade launcher. \
+			Each grenade fires a wide spread of equally explosive grenades."
+	item = /obj/item/ammo_box/a40mm/spread
+	cost = 6
+
+/datum/uplink_item/ammo_nuclear/special/sucking40mm
+	name = "40mm SU Grenade Box (M-90gl)"
+	desc = "A box of 40mm SU grenades for use with the M-90gl's under-barrel grenade launcher. \
+			Each grenade creates a short-lived gravitational vortex after exploding. \
+			Stay clear while firing."
+	item = /obj/item/ammo_box/a40mm/sucking
+	cost = 6
+
+/datum/uplink_item/ammo_nuclear/special/nuke40mm
+	name = "40mm SL Grenade Box (M-90gl)"
+	desc = "A box of 40mm SL grenades for use with the M-90gl's under-barrel grenade launcher. \
+			These grenades travel extremely slowly, but are EXTREMELY explosive. \
+			They're effectively air-mines."
+	item = /obj/item/ammo_box/a40mm/nuke
+	cost = 10
+
 /datum/uplink_item/ammo/syndie_rcd_ammo
 	name = "Syndicate Rapid-Construction-Device Ammo"
 	desc = "A highly compressed package of solid matter for recharging a Rapid-Construction-Device. Holds 1000 matter in total."
@@ -278,4 +308,5 @@
 			That vendor contains a wide variety of special kits and equipment you likely won't find for purchase normally."
 	item = /obj/item/syndicate_voucher
 	cost = 40 // price varies depending on the kit selected
+	limited_stock = 1 // don't want people getting a shitload of kits for cheap.
 	purchasable_from = UPLINK_FIREBASE_OPS

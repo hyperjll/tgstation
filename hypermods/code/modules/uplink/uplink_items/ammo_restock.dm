@@ -7,32 +7,98 @@
 	surplus = 40
 
 
-/datum/uplink_item/ammo_restock/toydarts
-	name = "Box of Riot Darts"
-	desc = "A box of 40 Donksoft riot darts, for reloading any compatible foam dart magazine. Don't forget to share!"
-	item = /obj/item/ammo_box/foambox/riot
-	cost = 2
-	surplus = 0
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-	purchasable_from = ~UPLINK_SERIOUS_OPS
-
 /datum/uplink_item/ammo_restock/ammo9mmbox
 	name = "Box of 9mm Rounds"
-	desc = "An ammo box filled with 9mm rounds, used for restocking 9mm magazines. Contains 30 10mm bullets."
+	desc = "An ammo box filled with 9mm rounds, used for restocking 9mm magazines. Contains 20 9mm bullets."
 	item = /obj/item/ammo_box/c9mm
-	cost = 2
+	cost = 1
 	surplus = 0
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo9mmboxmega
-	name = "Mega Box of 9mm Rounds"
-	desc = "An ammo box filled with 9mm rounds, used for restocking 9mm magazines. Contains 60 10mm bullets."
-	item = /obj/item/ammo_box/c9mm/sixty
-	cost = 4
-	surplus = 0
+/datum/uplink_item/ammo_restock/ammo9mmbox/hp
+	name = "Box of 9mm HP Rounds"
+	desc = "An ammo box filled with 9mm HP rounds, used for restocking 9mm magazines. Contains 20 9mm HP bullets."
+	item = /obj/item/ammo_box/c9mm/hp
+	cost = 2
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/ap
+	name = "Box of 9mm AP Rounds"
+	desc = "An ammo box filled with 9mm AP rounds, used for restocking 9mm magazines. Contains 20 9mm AP bullets."
+	item = /obj/item/ammo_box/c9mm/ap
+	cost = 3
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/fire
+	name = "Box of 9mm Incendiary Rounds"
+	desc = "An ammo box filled with 9mm Incendiary rounds, used for restocking 9mm magazines. Contains 20 9mm Incendiary bullets."
+	item = /obj/item/ammo_box/c9mm/fire
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/cs
+	name = "Box of 9mm Caseless Rounds"
+	desc = "An ammo box filled with 9mm Caseless rounds, used for restocking 9mm magazines. Contains 20 9mm Caseless bullets."
+	item = /obj/item/ammo_box/c9mm/cs
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/emp
+	name = "Box of 9mm EMP Rounds"
+	desc = "An ammo box filled with 9mm EMP rounds, used for restocking 9mm magazines. Contains 20 9mm EMP bullets."
+	item = /obj/item/ammo_box/c9mm/emp
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/sp
+	name = "Box of 9mm Soporific Rounds"
+	desc = "An ammo box filled with 9mm Soporific rounds, used for restocking 9mm magazines. Contains 20 9mm Soporific bullets."
+	item = /obj/item/ammo_box/c9mm/sp
+	cost = 1
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/cryo
+	name = "Box of 9mm Cryogenic Rounds"
+	desc = "An ammo box filled with 9mm Cryogenic rounds, used for restocking 9mm magazines. Contains 20 9mm Cryogenic bullets."
+	item = /obj/item/ammo_box/c9mm/cryo
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/richochet
+	name = "Box of 9mm Richochet Rounds"
+	desc = "An ammo box filled with 9mm Richochet rounds, used for restocking 9mm magazines. Contains 20 9mm Richochet bullets."
+	item = /obj/item/ammo_box/c9mm/richochet
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/bomb
+	name = "Box of 9mm Explosive Rounds"
+	desc = "An ammo box filled with 9mm Explosive rounds, used for restocking 9mm magazines. Contains 20 9mm Explosive bullets."
+	item = /obj/item/ammo_box/c9mm/bomb
+	cost = 3
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/sonic
+	name = "Box of 9mm Sonic Rounds"
+	desc = "An ammo box filled with 9mm Sonic rounds, used for restocking 9mm magazines. Contains 20 9mm Sonic bullets."
+	item = /obj/item/ammo_box/c9mm/sonic
+	cost = 3
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/mutate
+	name = "Box of 9mm Mutation Rounds"
+	desc = "An ammo box filled with 9mm Mutation rounds, used for restocking 9mm magazines. Contains 20 9mm Mutation bullets."
+	item = /obj/item/ammo_box/c9mm/mutate
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo9mmbox/mega
+	name = "Mega Box of 9mm Rounds"
+	desc = "An ammo box filled with 9mm rounds, used for restocking 9mm magazines. Contains 50 9mm bullets."
+	item = /obj/item/ammo_box/c9mm/fifty
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo_restock/ammo10mmbox
 	name = "Box of 10mm Rounds"
@@ -43,68 +109,161 @@
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo10mmboxcaseless
-	name = "Box of 10mm Caseless Rounds"
-	desc = "An ammo box filled with 10mm Caseless rounds, used for restocking 10mm magazines. Contains 20 10mm Caseless bullets."
-	item = /obj/item/ammo_box/c10mm/cs
-	cost = 2
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/ammo_restock/ammo10mmboxtranq
-	name = "Box of 10mm Soporific Rounds"
-	desc = "An ammo box filled with 10mm Soporific rounds, used for restocking 10mm magazines. Contains 20 10mm Soporific bullets."
-	item = /obj/item/ammo_box/c10mm/sp
-	cost = 2
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/ammo_restock/ammo10mmboxap
+/datum/uplink_item/ammo_restock/ammo10mmbox/ap
 	name = "Box of 10mm AP Rounds"
 	desc = "An ammo box filled with 10mm AP rounds, used for restocking 10mm magazines. Contains 20 10mm AP bullets."
 	item = /obj/item/ammo_box/c10mm/ap
 	cost = 3
-	surplus = 0
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo10mmboxhp
+/datum/uplink_item/ammo_restock/ammo10mmbox/hp
 	name = "Box of 10mm HP Rounds"
 	desc = "An ammo box filled with 10mm HP rounds, used for restocking 10mm magazines. Contains 20 10mm HP bullets."
 	item = /obj/item/ammo_box/c10mm/hp
 	cost = 2
-	surplus = 0
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo10mmboxincendiary
+/datum/uplink_item/ammo_restock/ammo10mmbox/incendiary
 	name = "Box of 10mm Incendiary Rounds"
 	desc = "An ammo box filled with 10mm Incendiary rounds, used for restocking 10mm magazines. Contains 20 10mm Incendiary bullets."
 	item = /obj/item/ammo_box/c10mm/inc
 	cost = 2
-	surplus = 0
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo10mmboxemp
+/datum/uplink_item/ammo_restock/ammo10mmbox/caseless
+	name = "Box of 10mm Caseless Rounds"
+	desc = "An ammo box filled with 10mm Caseless rounds, used for restocking 10mm magazines. Contains 20 10mm Caseless bullets."
+	item = /obj/item/ammo_box/c10mm/cs
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo10mmbox/emp
 	name = "Box of 10mm EMP Rounds"
 	desc = "An ammo box filled with 10mm EMP rounds, used for restocking 10mm magazines. Contains 20 10mm EMP bullets."
 	item = /obj/item/ammo_box/c10mm/emp
 	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo10mmbox/sp
+	name = "Box of 10mm Soporific Rounds"
+	desc = "An ammo box filled with 10mm Soporific rounds, used for restocking 10mm magazines. Contains 20 10mm Soporific bullets."
+	item = /obj/item/ammo_box/c10mm/sp
+	cost = 1
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo10mmbox/bleedout
+	name = "Box of 10mm Bleedout Rounds"
+	desc = "An ammo box filled with 10mm Bleedout rounds, used for restocking 10mm magazines. Contains 20 10mm Bleedout bullets."
+	item = /obj/item/ammo_box/c10mm/bleedout
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo10mmbox/rad
+	name = "Box of 10mm Radiation Rounds"
+	desc = "An ammo box filled with 10mm Radiation rounds, used for restocking 10mm magazines. Contains 20 10mm Radiation bullets."
+	item = /obj/item/ammo_box/c10mm/rad
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo10mmbox/fragment
+	name = "Box of 10mm Fragmentation Rounds"
+	desc = "An ammo box filled with 10mm Fragmentation rounds, used for restocking 10mm magazines. Contains 20 10mm Fragmentation bullets."
+	item = /obj/item/ammo_box/c10mm/fragment
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo10mmbox/mega
+	name = "Mega Box of 10mm Rounds"
+	desc = "An ammo box filled with 10mm rounds, used for restocking 10mm magazines. Contains 50 10mm bullets."
+	item = /obj/item/ammo_box/c10mm/fifty
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo45box
+	name = "Box of .45 Rounds"
+	desc = "An ammo box filled with .45 rounds, used for restocking .45 magazines. Contains 20 .45 bullets."
+	item = /obj/item/ammo_box/c45
+	cost = 1
 	surplus = 0
 	purchasable_from = UPLINK_SERIOUS_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo10mmboxmega
-	name = "Mega Box of 10mm Rounds"
-	desc = "An ammo box filled with 10mm rounds, used for restocking 10mm magazines. Contains 50 10mm bullets."
-	item = /obj/item/ammo_box/c10mm/fifty
+/datum/uplink_item/ammo_restock/ammo45box/ap
+	name = "Box of .45 Armor Piercing Rounds"
+	desc = "An ammo box filled with .45 Armor Piercing rounds, used for restocking .45 magazines. Contains 20 .45 Armor Piercing bullets."
+	item = /obj/item/ammo_box/c45/ap
 	cost = 3
-	surplus = 0
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/ammo_restock/ammo45box/hp
+	name = "Box of .45 Hollow Point Rounds"
+	desc = "An ammo box filled with .45 Hollow Point rounds, used for restocking .45 magazines. Contains 20 .45 Hollow Point bullets."
+	item = /obj/item/ammo_box/c45/hp
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo45box/inc
+	name = "Box of .45 Incendiary Rounds"
+	desc = "An ammo box filled with .45 Incendiary rounds, used for restocking .45 magazines. Contains 20 .45 Incendiary bullets."
+	item = /obj/item/ammo_box/c45/inc
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo45box/cs
+	name = "Box of .45 Caseless Rounds"
+	desc = "An ammo box filled with .45 Caseless rounds, used for restocking .45 magazines. Contains 20 .45 Caseless bullets."
+	item = /obj/item/ammo_box/c45/cs
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo45box/emp
+	name = "Box of .45 EMP Rounds"
+	desc = "An ammo box filled with .45 EMP rounds, used for restocking .45 magazines. Contains 20 .45 EMP bullets."
+	item = /obj/item/ammo_box/c45/emp
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo45box/sp
+	name = "Box of .45 Soporific Rounds"
+	desc = "An ammo box filled with .45 Soporific rounds, used for restocking .45 magazines. Contains 20 .45 Soporific bullets."
+	item = /obj/item/ammo_box/c45/sp
+	cost = 1
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo45box/venom
+	name = "Box of .45 Venom Rounds"
+	desc = "An ammo box filled with .45 Venom rounds, used for restocking .45 magazines. Contains 20 .45 Venom bullets."
+	item = /obj/item/ammo_box/c45/venom
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo45box/pacify
+	name = "Box of .45 Pacification Rounds"
+	desc = "An ammo box filled with .45 Pacification rounds, used for restocking .45 magazines. Contains 20 .45 Pacification bullets."
+	item = /obj/item/ammo_box/c45/pacify
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo45box/delay
+	name = "Box of .45 Delayed Rounds"
+	desc = "An ammo box filled with .45 Delayed rounds, used for restocking .45 magazines. Contains 20 .45 Delayed bullets."
+	item = /obj/item/ammo_box/c45/delay
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo45box/tranq
+	name = "Box of .45 Tranquilizer Rounds"
+	desc = "An ammo box filled with .45 Tranquilizer rounds, used for restocking .45 magazines. Contains 20 .45 Tranquilizer bullets."
+	item = /obj/item/ammo_box/c45/tranq
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo45box/mega
+	name = "Mega Box of .45 Rounds"
+	desc = "An ammo box filled with .45 rounds, used for restocking .45 magazines. Contains 50 .45 bullets."
+	item = /obj/item/ammo_box/c45/fifty
+	cost = 2
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo_restock/ammo357box
 	name = "Box of .357 Rounds"
@@ -115,150 +274,129 @@
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo357boxironfeather
+/datum/uplink_item/ammo_restock/ammo357box/ironfeather
 	name = "Box of Ironfeather .357 Rounds"
 	desc = "An ammo box filled with .357 Ironfeather rounds, used for restocking .357 speedloaders. Contains 20 .357 Ironfeather rounds. \
 			These rounds contain six pellets which are less damaging than buckshot but mildly better over range."
 	item = /obj/item/ammo_box/a357/no_direct/ironfeather
-	cost = 8
-	surplus = 0
+	cost = 6
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo357boxnutcracker
+/datum/uplink_item/ammo_restock/ammo357box/nutcracker
 	name = "Box of Nutcracker .357 Rounds"
 	desc = "An ammo box filled with .357 Nutcracker rounds, used for restocking .357 speedloaders. Contains 20 .357 Nutcracker rounds."
 	item = /obj/item/ammo_box/a357/no_direct/nutcracker
-	cost = 8
-	surplus = 0
+	cost = 6
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo357boxmetalshock
+/datum/uplink_item/ammo_restock/ammo357box/metalshock
 	name = "Box of Metalshock .357 Rounds"
 	desc = "An ammo box filled with .357 Metalshock rounds, used for restocking .357 speedloaders. Contains 20 .357 Metalshock rounds."
 	item = /obj/item/ammo_box/a357/no_direct/metalshock
 	cost = 8
-	surplus = 0
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo357boxheartpiercer
+/datum/uplink_item/ammo_restock/ammo357box/heartpiercer
 	name = "Box of Heartpiercer .357 Rounds"
 	desc = "An ammo box filled with .357 Heartpiercer rounds, used for restocking .357 speedloaders. Contains 20 .357 Heartpiercer rounds."
 	item = /obj/item/ammo_box/a357/no_direct/heartpiercer
 	cost = 8
-	surplus = 0
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo357boxwallstake
+/datum/uplink_item/ammo_restock/ammo357box/wallstake
 	name = "Box of Wallstake .357 Rounds"
 	desc = "An ammo box filled with .357 Wallstake rounds, used for restocking .357 speedloaders. Contains 20 .357 Wallstake rounds."
 	item = /obj/item/ammo_box/a357/no_direct/wallstake
-	cost = 8
-	surplus = 0
+	cost = 6
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo45box
-	name = "Box of .45 Rounds"
-	desc = "An ammo box filled with .45 rounds, used for restocking .45 magazines. Contains 30 .45 bullets."
-	item = /obj/item/ammo_box/c45/thirty
-	cost = 2
-	surplus = 0
+/datum/uplink_item/ammo_restock/ammo357box/mega
+	name = "Mega Box of .357 Rounds"
+	desc = "An ammo box filled with .357 rounds, used for restocking .357 speedloaders. Contains 50 .357 rounds."
+	item = /obj/item/ammo_box/a357/no_direct/fifty
+	cost = 12
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/ammo_restock/ammo45boxcs
-	name = "Box of .45 Caseless Rounds"
-	desc = "An ammo box filled with .45 Caseless rounds, used for restocking .45 magazines. Contains 30 .45 Caseless bullets."
-	item = /obj/item/ammo_box/c45/thirty/cs
-	cost = 2
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/ammo_restock/ammo45boxsp
-	name = "Box of .45 Soporific Rounds"
-	desc = "An ammo box filled with .45 Soporific rounds, used for restocking .45 magazines. Contains 30 .45 Soporific bullets."
-	item = /obj/item/ammo_box/c45/thirty/sp
-	cost = 2
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/ammo_restock/ammo45boxap
-	name = "Box of .45 Armor Piercing Rounds"
-	desc = "An ammo box filled with .45 Armor Piercing rounds, used for restocking .45 magazines. Contains 30 .45 Armor Piercing bullets."
-	item = /obj/item/ammo_box/c45/thirty/ap
-	cost = 3
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/ammo_restock/ammo45boxhp
-	name = "Box of .45 Hollow Point Rounds"
-	desc = "An ammo box filled with .45 Hollow Point rounds, used for restocking .45 magazines. Contains 30 .45 Hollow Point bullets."
-	item = /obj/item/ammo_box/c45/thirty/hp
-	cost = 2
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/ammo_restock/ammo45boxinc
-	name = "Box of .45 Incendiary Rounds"
-	desc = "An ammo box filled with .45 Incendiary rounds, used for restocking .45 magazines. Contains 30 .45 Incendiary bullets."
-	item = /obj/item/ammo_box/c45/thirty/inc
-	cost = 2
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/ammo_restock/ammo45boxemp
-	name = "Box of .45 EMP Rounds"
-	desc = "An ammo box filled with .45 EMP rounds, used for restocking .45 magazines. Contains 30 .45 EMP bullets."
-	item = /obj/item/ammo_box/c45/thirty/emp
-	cost = 2
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/ammo_restock/ammo45boxvenom
-	name = "Box of .45 Venom Rounds"
-	desc = "An ammo box filled with .45 Venom rounds, used for restocking .45 magazines. Contains 30 .45 Venom bullets."
-	item = /obj/item/ammo_box/c45/thirty/venom
-	cost = 2
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/ammo_restock/ammo45boxmega
-	name = "Mega Box of .45 Rounds"
-	desc = "An ammo box filled with .45 rounds, used for restocking .45 magazines. Contains 50 .45 bullets."
-	item = /obj/item/ammo_box/c45/fifty
-	cost = 3
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo_restock/ammo50box
 	name = "Box of .50 AE Rounds"
 	desc = "An ammo box filled with .50 AE rounds, used for restocking .50 AE magazines. Contains 20 .50 AE bullets."
 	item = /obj/item/ammo_box/m50
-	cost = 6
+	cost = 8
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo50boxmega
+/datum/uplink_item/ammo_restock/ammo50box/ap
+	name = "Box of .50 AE-AP Rounds"
+	desc = "An ammo box filled with .50 AE-AP rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-AP bullets."
+	item = /obj/item/ammo_box/m50/ap
+	cost = 10
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo50box/hp
+	name = "Box of .50 AE-HP Rounds"
+	desc = "An ammo box filled with .50 AE-HP rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-HP bullets."
+	item = /obj/item/ammo_box/m50/hp
+	cost = 10
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo50box/inc
+	name = "Box of .50 AE-Incendiary Rounds"
+	desc = "An ammo box filled with .50 AE-Incendiary rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-Incendiary bullets."
+	item = /obj/item/ammo_box/m50/inc
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo50box/caseless
+	name = "Box of .50 AE-Caseless Rounds"
+	desc = "An ammo box filled with .50 AE-Caseless rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-Caseless bullets."
+	item = /obj/item/ammo_box/m50/caseless
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo50box/emp
+	name = "Box of .50 AE-EMP Rounds"
+	desc = "An ammo box filled with .50 AE-EMP rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-EMP bullets."
+	item = /obj/item/ammo_box/m50/emp
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo50box/hi
+	name = "Box of .50 AE-HiPower Rounds"
+	desc = "An ammo box filled with .50 AE-HiPower rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-HiPower bullets."
+	item = /obj/item/ammo_box/m50/hi
+	cost = 12
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo50box/demo
+	name = "Box of .50 AE-Demolish Rounds"
+	desc = "An ammo box filled with .50 AE-Demolish rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-Demolish bullets."
+	item = /obj/item/ammo_box/m50/demo
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo50box/rod
+	name = "Box of .50 AE-Immovable Rounds"
+	desc = "An ammo box filled with .50 AE-Immovable rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-Immovable bullets."
+	item = /obj/item/ammo_box/m50/rod
+	cost = 10
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo50box/bomb
+	name = "Box of .50 AE-Ordinance Rounds"
+	desc = "An ammo box filled with .50 AE-Ordinance rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-Ordinance bullets."
+	item = /obj/item/ammo_box/m50/bomb
+	cost = 12
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo50box/rep
+	name = "Box of .50 AE-Repulsive Rounds"
+	desc = "An ammo box filled with .50 AE-Repulsive rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-Repulsive bullets."
+	item = /obj/item/ammo_box/m50/rep
+	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/ammo50box/mega
 	name = "Mega Box of .50 AE Rounds"
 	desc = "An ammo box filled with .50 AE rounds, used for restocking .50 AE magazines. Contains 50 .50 AE bullets."
 	item = /obj/item/ammo_box/m50/fifty
 	cost = 8
-	surplus = 0
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo_restock/ammo712box
 	name = "Box of 7.12x82mm Rounds"
@@ -269,14 +407,11 @@
 	purchasable_from = UPLINK_SERIOUS_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/ammo_restock/ammo712boxmega
+/datum/uplink_item/ammo_restock/ammo712box/mega
 	name = "Mega Box of 7.12x82mm Rounds"
 	desc = "An ammo box filled with 7.12x82mm rounds, used for restocking 7.12x82mm magazines. Contains 100 7.12x82mm bullets."
 	item = /obj/item/ammo_box/n712x82/hundred
 	cost = 9
-	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo_restock/mysteryshells
 	name = "Mystery Shells Box"

@@ -46,15 +46,14 @@
 	spawnwithmagazine = FALSE
 	pin = null
 
-
 // Drozd SMG
 
 /obj/item/gun/ballistic/automatic/drozd
 	name = "\improper Drozd"
 	desc = "An excellent fully automatic Heavy SMG. Uses 5.56mm rifle ammo."
-	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
-	icon_state = "Drozd"
-	inhand_icon_state = "drozd"
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "grenade_launcher"
+	inhand_icon_state = "grenade_launcher"
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
@@ -75,3 +74,52 @@
 /obj/item/gun/ballistic/automatic/drozd/freshprint
 	spawnwithmagazine = FALSE
 	pin = null
+
+// Syndicate Medic Specialist Primary
+
+/obj/item/gun/ballistic/automatic/veritate
+	desc = "A personal defence weapon, developed by the Gorlex Marauders."
+	name = "\improper Veritate PDW"
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "vector"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	inhand_icon_state = "glocksyn"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/smgm9mm
+	burst_size = 1
+	can_suppress = FALSE
+	bolt_type = BOLT_TYPE_OPEN
+	show_bolt_icon = FALSE
+	mag_display = TRUE
+	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
+	rack_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
+
+/obj/item/gun/ballistic/automatic/veritate/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+
+// Syndicate Heavy-Weapons Specialist Primary
+
+/obj/item/gun/ballistic/automatic/antares
+	desc = "A 100 round light machine gun, developed by the Gorlex Marauders."
+	name = "\improper Antares light machine gun"
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "lmg"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	inhand_icon_state = "lmg"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/r7mm
+	w_class = WEIGHT_CLASS_BULKY
+	burst_size = 2
+	can_suppress = FALSE
+	bolt_type = BOLT_TYPE_OPEN
+	show_bolt_icon = FALSE
+	mag_display = TRUE
+	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
+	fire_sound = 'sound/items/weapons/gun/l6/shot.ogg'
+	rack_sound = 'sound/items/weapons/gun/l6/l6_rack.ogg'
+	suppressed_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
+
+/obj/item/gun/ballistic/automatic/antares/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS)

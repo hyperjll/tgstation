@@ -133,18 +133,18 @@
 	item = /obj/item/ammo_box/magazine/m10mm/cs
 	cost = 1
 
-/datum/uplink_item/ammo/pistol10mm/sleepy
-	name = "Pair of 10mm Soporific Magazines"
-	desc = "Two additional 8-round 10mm magazines; compatible with the Viper and Ansem Pistol. \
-			These rounds will deliver small doses of tranqulizers on hit, knocking the target out after a few successive hits."
-	item = /obj/item/storage/box/syndie_kit/pistolsleepyammo
-	cost = 1
-
 /datum/uplink_item/ammo/pistol10mm/emp
 	name = "10mm EMP Magazine"
 	desc = "An additional 8-round 10mm magazine; compatible with the Viper and Ansem Pistol. \
 			Loaded with bullets which release micro-electromagnetic pulses on hit, disrupting electronics on the target hit."
 	item = /obj/item/ammo_box/magazine/m10mm/emp
+	cost = 1
+
+/datum/uplink_item/ammo/pistol10mm/sleepy
+	name = "Pair of 10mm Soporific Magazines"
+	desc = "Two additional 8-round 10mm magazines; compatible with the Viper and Ansem Pistol. \
+			These rounds will deliver small doses of tranqulizers on hit, knocking the target out after a few successive hits."
+	item = /obj/item/storage/box/syndie_kit/pistolsleepyammo
 	cost = 1
 
 /datum/uplink_item/ammo/pistol10mm/bleedout
@@ -210,18 +210,18 @@
 	item = /obj/item/ammo_box/magazine/m45/cs
 	cost = 1
 
-/datum/uplink_item/ammo/handgun45/sp
-	name = "Pair of .45mm Soporific Handgun Magazines"
-	desc = "A box containing two additional 8-round Soporific .45mm magazines, compatible with the M1911 pistol and the Cobra. \
-			Shots aren't very lethal but greatly inhibit movement in the victim, multiple hits can render a target unconscious."
-	item = /obj/item/storage/box/syndie_kit/fourtyfivemmmagboxsp
-	cost = 1
-
 /datum/uplink_item/ammo/handgun45/emp
 	name = ".45mm EMP Handgun Magazine"
 	desc = "A single 8-round EMP .45mm magazine, compatible with the M1911 pistol and the Cobra. \
 			Shots emit a tiny electro-magnetic pulse where they hit."
 	item = /obj/item/ammo_box/magazine/m45/emp
+	cost = 1
+
+/datum/uplink_item/ammo/handgun45/sp
+	name = "Pair of .45mm Soporific Handgun Magazines"
+	desc = "A box containing two additional 8-round Soporific .45mm magazines, compatible with the M1911 pistol and the Cobra. \
+			Shots aren't very lethal but greatly inhibit movement in the victim, multiple hits can render a target unconscious."
+	item = /obj/item/storage/box/syndie_kit/fourtyfivemmmagboxsp
 	cost = 1
 
 /datum/uplink_item/ammo/handgun45/venom
@@ -348,7 +348,6 @@
 	desc = "An additional 7-round .50 AE magazine, compatible with the Desert Eagle. \
 			Leaves behind no casings, for maximum stealth, at the cost of damage."
 	item = /obj/item/ammo_box/magazine/m50/cs
-	cost = 4
 
 /datum/uplink_item/ammo/deagle/emp
 	name = ".50 AE-EMP Handgun Magazine"
