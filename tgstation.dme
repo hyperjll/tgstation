@@ -6554,6 +6554,7 @@
 #include "hypermods\code\datums\station_traits\neutral_traits.dm"
 #include "hypermods\code\datums\status_effects\buffs.dm"
 #include "hypermods\code\game\area\areas\centcom.dm"
+#include "hypermods\code\game\area\areas\misc.dm"
 #include "hypermods\code\game\area\areas\station\hallway.dm"
 #include "hypermods\code\game\area\areas\station\medical.dm"
 #include "hypermods\code\game\area\areas\station\science.dm"
