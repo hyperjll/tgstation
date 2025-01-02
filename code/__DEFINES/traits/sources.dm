@@ -316,3 +316,6 @@
 
 /// Trait aquired from being painted a certain color
 #define ATOM_COLOR_TRAIT "atom_color"
+
+/// Permanent trait from an overdose effect
+#define OVERDOSE_TRAIT "overdose"
