@@ -74,11 +74,11 @@
 	sharpness = SHARP_EDGED
 	wound_bonus = 20
 	bare_wound_bonus = 20
-	embed_type = /datum/embed_data/a357dumdum
+	embed_type = /datum/embedding/a357dumdum
 	wound_falloff_tile = -5
 	embed_falloff_tile = -15
 
-/datum/embed_data/a357dumdum
+/datum/embedding/a357dumdum
 	embed_chance = 75
 	fall_chance = 3
 	jostle_chance = 4

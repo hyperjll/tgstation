@@ -76,11 +76,8 @@
 	target.set_embed(conferred_embed)
 	to_chat(user, span_notice("You finish wrapping [target] with [src]."))
 	target.name = "[prefix] [target.name]"
-		if(isgrenade(target) && grenade_stickish)
-			var/obj/item/grenade/sticky_bomb = target
-			sticky_bomb.sticky = TRUE
 
-	if(isgrenade(target))
+	if(isgrenade(target) && grenade_stickish)
 		var/obj/item/grenade/sticky_bomb = target
 		sticky_bomb.sticky = TRUE
 

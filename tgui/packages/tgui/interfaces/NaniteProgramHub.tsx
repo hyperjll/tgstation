@@ -8,7 +8,7 @@ import {
   NoticeBox,
   Section,
   Tabs,
-} from '../components';
+} from 'tgui-core/components';
 import { Window } from '../layouts';
 
 type Data = {

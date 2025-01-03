@@ -19,7 +19,7 @@
 	throwforce = 80
 	throw_speed = 4
 	throw_range = 10
-	embed_type = /datum/embed_data/espear
+	embed_type = /datum/embedding/espear
 	armour_penetration = 60
 	hitsound = 'sound/items/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "pokes", "jabs", "tears", "lacerates", "gores")
@@ -30,7 +30,7 @@
 	bare_wound_bonus = 25
 	block_chance = 20
 
-/datum/embed_data/espear
+/datum/embedding/espear
 	embed_chance = 100
 	impact_pain_mult = 2
 	remove_pain_mult = 4

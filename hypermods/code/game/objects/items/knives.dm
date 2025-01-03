@@ -63,13 +63,13 @@
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/swords_righthand.dmi'
 	inhand_icon_state = "throwingknife"
-	embed_type = /datum/embed_data/throwingknife
+	embed_type = /datum/embedding/throwingknife
 	force = 15
 	throwforce = 35
 	throw_speed = 2
 	throw_range = 12
 
-/datum/embed_data/throwingknife
+/datum/embedding/throwingknife
 	embed_chance = 100
 	fall_chance = 0.01
 

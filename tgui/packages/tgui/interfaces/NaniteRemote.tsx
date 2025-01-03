@@ -9,7 +9,7 @@ import {
   NumberInput,
   Section,
   Table,
-} from '../components';
+} from 'tgui-core/components';
 import { Window } from '../layouts';
 
 export const NaniteRemote = (props) => {
