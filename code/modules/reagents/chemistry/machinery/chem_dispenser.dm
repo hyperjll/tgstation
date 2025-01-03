@@ -92,7 +92,7 @@
 		/datum/reagent/diethylamine,
 		/datum/reagent/ash,
 		/datum/reagent/gold,
-		/datum/reagent/uranium,
+		/datum/reagent/silver,
 		/datum/reagent/nitrous_oxide,
 		/datum/reagent/phenol,
 		/datum/reagent/acetone,
@@ -126,7 +126,7 @@
 		/datum/reagent/napalm,
 		/datum/reagent/phlogiston,
 		/datum/reagent/toxin/acid/fluacid,
-		/datum/reagent/medicine/haloperidol
+		/datum/reagent/uranium
 	)
 /obj/machinery/chem_dispenser/Initialize(mapload)
 	if(dispensable_reagents != null && !dispensable_reagents.len)

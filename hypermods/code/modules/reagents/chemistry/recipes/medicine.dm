@@ -59,3 +59,11 @@
 	results = list(/datum/reagent/medicine/stimulants = 3)
 	required_reagents = list(/datum/reagent/vestine = 1, /datum/reagent/medicine/ephedrine = 1, /datum/reagent/oxygen = 2)
 	required_temp = 370
+
+/datum/chemical_reaction/styptic_powder
+	results = list(/datum/reagent/medicine/styptic_powder = 4)
+	required_reagents = list(/datum/reagent/aluminium = 1, /datum/reagent/hydrogen = 1, /datum/reagent/oxygen = 1, /datum/reagent/toxin/acid = 1)
+
+/datum/chemical_reaction/silver_sulfadiazine
+	results = list(/datum/reagent/medicine/silver_sulfadiazine = 5)
+	required_reagents = list(/datum/reagent/ammonia = 1, /datum/reagent/silver = 1, /datum/reagent/sulfur = 1, /datum/reagent/oxygen = 1, /datum/reagent/chlorine = 1)
