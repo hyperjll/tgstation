@@ -318,7 +318,7 @@
 	description = "Nanite programs that aren't specific to any category and are often highly experimental by nature."
 	research_costs = list(
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS,
-		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_3_POINTS*NANITE_POINT_CONVERSION_RATE,)
+		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_2_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_BIO, TECHWEB_NODE_NANITE_SMART)
 	design_ids = list("stickyfingers_nanites", "accelerated_synthesis_nanites", "bluespace_blood_nanites", "extinguisher_nanites", "antishove_nanites")
 
