@@ -4,7 +4,7 @@
 "dx" = (/obj/machinery/vending/drugs,/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "ei" = (/obj/machinery/vending/snack/random,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "eS" = (/obj/structure/window/reinforced/spawner/directional/west,/obj/machinery/power/shuttle_engine/heater{dir = 4},/obj/docking_port/mobile/arrivals{name = "dorf arrivals shuttle"},/obj/machinery/power/shuttle_engine/propulsion/burst/right{dir = 4},/turf/open/floor/plating/airless,/area/shuttle/arrival)
-"fx" = (/obj/machinery/light/directional/north,/turf/closed/wall/mineral/titanium,/area/shuttle/arrival)
+"fx" = (/obj/structure/fans/tiny/invisible,/obj/effect/spawner/structure/window/reinforced/shuttle,/turf/open/floor/plating,/area/shuttle/arrival)
 "fB" = (/obj/machinery/door/airlock/titanium{name = "Arrivals Shuttle Airlock"},/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
 "hS" = (/obj/structure/chair/comfy/shuttle{dir = 4},/turf/open/floor/mineral/titanium,/area/shuttle/arrival)
 "iW" = (/obj/machinery/vending/coffee,/turf/open/floor/mineral/titanium/blue,/area/shuttle/arrival)
@@ -54,10 +54,10 @@
 
 (1,1,1) = {"
 ljljVAVALTljVAVAljfBfBljVAVAljjCVAqL
-fxmewuDVroPLwcZRxfHWHWxflWeiIOPuTlwe
-lIhSnKhSnKHWooHWooHWHWooHWooHWQpsseS
-ljAVnKhSnKcORcdxaJWbWbDtcKkroiQpWHwe
-ljhSnKhSnKHWooHWooHWHWooHWooHWQpjmwe
+ljmewuDVroPLwcZRxfHWHWxflWeiIOPuTlwe
+fxhSnKhSnKHWooHWooHWHWooHWooHWQpsseS
+lIAVnKhSnKcORcdxaJWbWbDtcKkroiQpWHwe
+fxhSnKhSnKHWooHWooHWHWooHWooHWQpjmwe
 ljBrEQFvooSQVOBNkuHWHWkuBbiWSQxWsJwe
 ljljVAVAjCljVAVAljfBPYljVAVAljLTVAlj
 "}
