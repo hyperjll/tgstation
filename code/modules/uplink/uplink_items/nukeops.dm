@@ -488,7 +488,7 @@
 	desc = "The support specialist: Aid your fellow operatives with this medical bundle. Contains a syndicate combat medical suite, \
 		a Donksoft LMG, a box of riot darts and a magboot MODsuit module to rescue your friends in no-gravity environments."
 	item = /obj/item/storage/backpack/duffelbag/syndie/med/medicalbundle
-	cost = 25 // normally 31
+	cost = 20 // normally 31
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/bundles_tc/firestarter
@@ -497,7 +497,7 @@
 		Stechkin APS machine pistol, two incendiary magazines, a minibomb and a stimulant syringe. \
 		Order NOW and comrade Boris will throw in an extra tracksuit."
 	item = /obj/item/storage/backpack/duffelbag/syndie/firestarter
-	cost = 30
+	cost = 20 // previously 30
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/bundles_tc/induction_kit
@@ -517,7 +517,7 @@
 	This kit contains armor-lined cowboy equipment, a custom revolver and holster, and a horse with a complimentary apple to tame. \
 	A lighter is also included, though you must supply your own smokes."
 	item = /obj/item/storage/box/syndie_kit/cowboy
-	cost = 18
+	cost = 14 // prev 18
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 // Mech related gear
