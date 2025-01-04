@@ -6637,6 +6637,7 @@
 #include "hypermods\code\game\objects\items\implants\stealthimplanter.dm"
 #include "hypermods\code\game\objects\items\implants\security\implant_chem.dm"
 #include "hypermods\code\game\objects\items\melee\baton.dm"
+#include "hypermods\code\game\objects\items\melee\misc.dm"
 #include "hypermods\code\game\objects\items\rcd\RCD.dm"
 #include "hypermods\code\game\objects\items\rcd\RLD.dm"
 #include "hypermods\code\game\objects\items\rcd\RSF.dm"
