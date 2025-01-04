@@ -1126,6 +1126,7 @@
 "kX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden/layer5,
+/obj/machinery/vending/toyliberationstation,
 /turf/open/floor/catwalk_floor/iron,
 /area/centcom/syndicate_mothership/control)
 "la" = (
@@ -4729,7 +4730,7 @@
 /area/centcom/syndicate_mothership/control)
 "Vk" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/south,
-/obj/machinery/vending/toyliberationstation,
+/obj/machinery/vending/syndiammo,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
 "Vm" = (
@@ -4905,7 +4906,7 @@
 /area/centcom/syndicate_mothership/control)
 "WT" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/south,
-/obj/machinery/vending/liberationstation,
+/obj/machinery/vending/liberationinvuln,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
 "WU" = (
