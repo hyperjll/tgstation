@@ -71,6 +71,15 @@
 	for(var/i in 1 to 2)
 		new extra_to_spawn (src)
 
+/obj/item/storage/toolbox/guncase/hadar
+	name = "hadar power sword case"
+
+/obj/item/storage/toolbox/guncase/hadar/PopulateContents()
+	if(prob(50))
+		new /obj/item/melee/energy/blade/hadar(src)
+	else
+		new /obj/item/melee/energy/blade/hadar/red(src)
+
 /obj/item/storage/toolbox/guncase/traitor/m1911pistol
 	name = "m1911 gun case"
 	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/m1911

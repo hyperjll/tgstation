@@ -85,3 +85,30 @@
 		return .
 	var/mutable_appearance/water_overlay = mutable_appearance(icon, "water-tank[water_state]")
 	. += water_overlay
+
+
+/obj/item/gun/water/nukeop
+	name = "vega flamethrower"
+	desc = "A military-grade flamethrower, supplied with what are likely acidic or incendiary reagents. Designed by the Gorlex Marauders and manufactured by Donk Co."
+	icon = 'hypermods/icons/obj/weapons/guns/water.dmi'
+	icon_state = "syndthrower1"
+	inhand_icon_state = "syndthrower1"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	reagent_volume = 5000
+	transfer_volume = 50
+
+/obj/item/gun/water/nukeop/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(/datum/reagent/clf3, (reagent_volume / 2))
+	reagents.add_reagent(/datum/reagent/toxin/acid/nitracid, (reagent_volume / 2))
+
+/obj/item/gun/water/nukeop/update_overlays()
+	. = ..()
+	var/water_state = ROUND_UP(5 * reagents.total_volume / reagents.maximum_volume)
+	if(!water_state)
+		icon_state = "syndthrower"
+		inhand_icon_state = "syndthrower"
+	else
+		icon_state = "syndthrower1"
+		inhand_icon_state = "syndthrower1"

@@ -46,3 +46,17 @@
 	. = ..()
 	AddComponent(/datum/component/scope, range_modifier = 2)
 
+
+/obj/item/ammo_box/magazine/sniper_rounds/betelgeuse
+	name = "\improper Betelgeuse sniper rifle"
+	desc = "A high end black-and-red sniper rifle developed by the Gorlex Marauders. Uses .50 BMG ammo."
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "sniper"
+	inhand_icon_state = "sniper"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
+
+/obj/item/gun/ballistic/rifle/sniper_rifle/betelgeuse/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/scope, range_modifier = 8) //enough range to at least make extremely good use of the penetrator rounds

@@ -364,3 +364,65 @@
 		/obj/item/lightbreaker, // 4 TC
 		/obj/item/pinpointer/nuke/syndicate, // 2 TC
 		)
+
+/datum/s_voucher_set/flamethrower_kit // 46 TC~~
+	name = "Firebrand Class Kit"
+	description = "The ultimate loadout for systematic suppression of carbon lifeforms in close quarters. \
+			Contains a certified Vega Flamethrower filled with CLF3 and Nitric Acid, an Elite MODsuit with a flamethrower attachment, \
+			a Stechkin APS machine pistol, two incendiary magazines, a minibomb, a stimulant syringe, \
+			two pouches of incendiary grenades, and a single fireaxe."
+	icon = 'hypermods/icons/obj/weapons/guns/water.dmi'
+	icon_state = "syndthrower1"
+	set_items = list(
+		/obj/item/storage/backpack/duffelbag/syndie/firestarter, // 20 TC
+		/obj/item/gun/water/nukeop, // 10 TC~~
+		/obj/item/ammo_box/nadepouch/incendiary, // 4 TC
+		/obj/item/ammo_box/nadepouch/incendiary, // 4 TC
+		/obj/item/fireaxe, // 8 TC~~
+		)
+
+/datum/s_voucher_set/engineer_kit // 49 TC?
+	name = "Engineer Class Kit"
+	description = "Makin' bacon. \
+			Contains disposable sentry gun, a genuine SPES shotgun with three boxes of buckshot, \
+			and a full belt of power tools including a single pair of jaws of life and a syndicate RCD."
+	icon = 'icons/obj/weapons/turrets.dmi'
+	icon_state = "toolbox_lethal"
+	set_items = list(
+		/obj/item/storage/toolbox/emergency/turret/nukie, // 16 TC
+		/obj/item/storage/toolbox/guncase/spes, // 13 TC
+		/obj/item/storage/belt/utility/full/powertools/syndircd, // 20 TC?
+		)
+
+/datum/s_voucher_set/marksman_kit // 47 TC?
+	name = "Marksman Class Kit"
+	description = "Snipe people coming onto the scene before they ever see you. \
+			Contains a Betelgeuse sniper rifle with an 8x scope and plenty of ammunition for sustained snipers. \
+			Also comes with a pair of thermal goggles for target tracking."
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "sniper"
+	set_items = list(
+		/obj/item/ammo_box/magazine/sniper_rounds/betelgeuse, // 14 TC?
+		/obj/item/ammo_box/magazine/sniper_rounds, // 2 TC
+		/obj/item/ammo_box/magazine/sniper_rounds, // 2 TC
+		/obj/item/ammo_box/magazine/sniper_rounds, // 2 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/penetrator, // 4 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/penetrator, // 4 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/penetrator, // 4 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/incendiary, // 4 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/disruptor, // 2 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/marksman, // 5 TC
+		/obj/item/clothing/glasses/thermal/syndi, // 4 TC
+		)
+
+/datum/s_voucher_set/energy_knight_kit // 43 TC?
+	name = "Energy Knight Class Kit"
+	description = "Go medieval with a huge sword with escalating damage. \
+			Contains the fabled Hadar heavy power-sword, a more powerful energy sword that becomes even better when used! \
+			Also contains a Cybersun Juggernaut MODsuit for maximum defense."
+	icon = 'hypermods/icons/obj/weapons/heavy_power_sword.dmi'
+	icon_state = "hadar_sword2_low"
+	set_items = list(
+		/obj/item/storage/toolbox/guncase/hadar, // 25 TC?
+		/obj/item/mod/control/pre_equipped/juggernaut, // 18 TC
+		)

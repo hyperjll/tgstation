@@ -9,6 +9,15 @@
 	atom_storage.max_total_storage = 42
 	atom_storage.silent = TRUE
 
+/obj/item/storage/belt/utility/full/powertools/syndircd/PopulateContents()
+	new /obj/item/screwdriver/power(src)
+	new /obj/item/crowbar/power(src)
+	new /obj/item/weldingtool/experimental(src)
+	new /obj/item/multitool(src)
+	new /obj/item/construction/rcd/syndicate(src)
+	new /obj/item/extinguisher/mini(src)
+	new /obj/item/stack/cable_coil(src)
+
 /obj/item/storage/belt/sabre/syndicate
 	name = "syndicate commanders sheath"
 	desc = "A nifty container for an evil sword. Given to the most trusted syndicate operatives."
