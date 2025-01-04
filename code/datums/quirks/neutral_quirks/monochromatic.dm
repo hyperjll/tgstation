@@ -2,7 +2,7 @@
 	name = "Monochromacy"
 	desc = "You suffer from full colorblindness, and perceive nearly the entire world in blacks and whites."
 	icon = FA_ICON_ADJUST
-	value = 0
+	value = -2
 	medical_record_text = "Patient is afflicted with almost complete color blindness."
 	mail_goodies = list( // Noir detective wannabe
 		/obj/item/clothing/suit/jacket/det_suit/noir,
