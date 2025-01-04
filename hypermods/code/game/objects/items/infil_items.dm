@@ -225,9 +225,9 @@
 		if(used || QDELETED(src)) //Prevents fuckers from cheesing alert
 			return FALSE
 
-		to_chat(user, span_notice("You have activated Protocol CRAB-17."))
-		message_admins("[ADMIN_LOOKUPFLW(user)] has activated Protocol CRAB-17.")
-		user.log_message("activated Protocol CRAB-17.", LOG_GAME)
+		to_chat(user, span_notice("You've sent the station's coordinates to god-knows-where..."))
+		message_admins("[ADMIN_LOOKUPFLW(user)] has activated a Missile Phone.")
+		user.log_message("activated a Missile Phone.", LOG_GAME)
 
 		used = TRUE
 
