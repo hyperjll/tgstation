@@ -2,6 +2,7 @@
 
 /obj/item/ammo_box/magazine/m9mm
 	name = "pistol magazine (9mm)"
+	desc = "A gun magazine."
 	icon_state = "9x19p"
 	base_icon_state = "9x19p"
 	ammo_type = /obj/item/ammo_casing/c9mm
@@ -35,6 +36,7 @@
 
 /obj/item/ammo_box/magazine/m9mm_aps
 	name = "stechkin pistol magazine (9mm)"
+	desc = "A gun magazine."
 	icon_state = "9mmaps-15"
 	base_icon_state = "9mmaps"
 	ammo_type = /obj/item/ammo_casing/c9mm
@@ -81,14 +83,14 @@
 	name = "pistol magazine (10mm HP)"
 	icon_state = "9x19pH"
 	base_icon_state = "9x19pH"
-	desc= "A 10mm pistol magazine. Loaded with hollow-point rounds, extremely effective against unarmored targets, but nearly useless against protective clothing."
+	desc = "A 10mm pistol magazine. Loaded with hollow-point rounds, extremely effective against unarmored targets, but nearly useless against protective clothing."
 	ammo_type = /obj/item/ammo_casing/c10mm/hp
 
 /obj/item/ammo_box/magazine/m10mm/ap
 	name = "pistol magazine (10mm AP)"
 	icon_state = "9x19pA"
 	base_icon_state = "9x19pA"
-	desc= "A 10mm pistol magazine. Loaded with rounds which penetrate armour, but are less effective against normal targets."
+	desc = "A 10mm pistol magazine. Loaded with rounds which penetrate armour, but are less effective against normal targets."
 	ammo_type = /obj/item/ammo_casing/c10mm/ap
 
 // Regal Condor (10mm) //
@@ -107,6 +109,7 @@
 
 /obj/item/ammo_box/magazine/m45
 	name = "handgun magazine (.45)"
+	desc = "A gun magazine."
 	icon_state = "45-8"
 	base_icon_state = "45"
 	ammo_type = /obj/item/ammo_casing/c45
@@ -119,6 +122,7 @@
 
 /obj/item/ammo_box/magazine/m50
 	name = "handgun magazine (.50ae)"
+	desc = "A gun magazine."
 	icon_state = "50ae"
 	ammo_type = /obj/item/ammo_casing/a50ae
 	caliber = CALIBER_50AE

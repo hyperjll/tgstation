@@ -117,6 +117,7 @@
 
 /obj/item/ammo_box/magazine/m45/ap
 	name = "handgun magazine (.45 AP)"
+	desc = "A .45 pistol magazine. Loaded with rounds which penetrate armour, but are less effective against normal targets."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "ap45-8"
 	base_icon_state = "ap45"
@@ -126,6 +127,7 @@
 
 /obj/item/ammo_box/magazine/m45/hp
 	name = "handgun magazine (.45 HP)"
+	desc = "A .45 pistol magazine. Loaded with hollow-point rounds, extremely effective against unarmored targets, but nearly useless against protective clothing."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "hp45-8"
 	base_icon_state = "hp45"
@@ -135,6 +137,7 @@
 
 /obj/item/ammo_box/magazine/m45/inc
 	name = "handgun magazine (.45 incendiary)"
+	desc = "A .45 pistol magazine. Loaded with rounds which ignite the target."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "inc45-8"
 	base_icon_state = "inc45"
@@ -144,6 +147,7 @@
 
 /obj/item/ammo_box/magazine/m45/cs
 	name = "handgun magazine (.45 caseless)"
+	desc = "A .45 pistol magazine. Loaded with rounds which leaves behind no casings."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "cs45-8"
 	base_icon_state = "cs45"
@@ -155,6 +159,7 @@
 
 /obj/item/ammo_box/magazine/m45/sp
 	name = "handgun magazine (.45 soporific)"
+	desc = "A .45 pistol magazine. Loaded with rounds which cause fatigue and put people to sleep should they be too exhausted."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "sleep45-8"
 	base_icon_state = "sleep45"
@@ -164,6 +169,7 @@
 
 /obj/item/ammo_box/magazine/m45/emp
 	name = "handgun magazine (.45 EMP)"
+	desc = "A .45 pistol magazine. Loaded with rounds which emits an EMP pulse."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "emp45-8"
 	base_icon_state = "emp45"
@@ -173,6 +179,7 @@
 
 /obj/item/ammo_box/magazine/m45/venom
 	name = "handgun magazine (.45 venom)"
+	desc = "A .45 pistol magazine. Loaded with rounds which contain a venom payload."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "venom45-8"
 	base_icon_state = "venom45"
@@ -182,6 +189,7 @@
 
 /obj/item/ammo_box/magazine/m45/pacify
 	name = "handgun magazine (.45 pacification)"
+	desc = "A .45 pistol magazine. Loaded with rounds which pacify in addition to harm."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "pacify45-8"
 	base_icon_state = "pacify45"
@@ -191,6 +199,7 @@
 
 /obj/item/ammo_box/magazine/m45/delay
 	name = "handgun magazine (.45 delayed)"
+	desc = "A .45 pistol magazine. Loaded with rounds which are loaded with a slow-acting poison."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "delay45-8"
 	base_icon_state = "delay45"
@@ -200,6 +209,7 @@
 
 /obj/item/ammo_box/magazine/m45/tranq
 	name = "handgun magazine (.45 tranquilizer)"
+	desc = "A .45 pistol magazine. Loaded with rounds which contain a paralyzing agent."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "tranq45-8"
 	base_icon_state = "tranq45"
@@ -260,58 +270,68 @@
 
 /obj/item/ammo_box/magazine/m50/ap
 	name = "handgun magazine (.50ae AP)"
+	desc = "A .50 AE pistol magazine. Loaded with rounds which deal less damage, but won't suffer against armor."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "ap50ae"
 	ammo_type = /obj/item/ammo_casing/a50ae/ap
 
 /obj/item/ammo_box/magazine/m50/hp
 	name = "handgun magazine (.50ae HP)"
+	desc = "A .50 AE pistol magazine. Loaded with rounds which are less effective against armor, but deal higher damage."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "hp50ae"
 	ammo_type = /obj/item/ammo_casing/a50ae/hp
 
 /obj/item/ammo_box/magazine/m50/inc
 	name = "handgun magazine (.50ae Incendiary)"
+	desc = "A .50 AE pistol magazine. Loaded with rounds which ignite their target."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "inc50ae"
 	ammo_type = /obj/item/ammo_casing/a50ae/inc
 
 /obj/item/ammo_box/magazine/m50/cs
 	name = "handgun magazine (.50ae Caseless)"
+	desc = "A .50 AE pistol magazine. Loaded with rounds which leave behind no casings."
 	ammo_type = /obj/item/ammo_casing/caseless/a50ae
 
 /obj/item/ammo_box/magazine/m50/emp
 	name = "handgun magazine (.50ae EMP)"
+	desc = "A .50 AE pistol magazine. Loaded with rounds which emit an EMP pulse."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "emp50ae"
 	ammo_type = /obj/item/ammo_casing/a50ae/emp
 
 /obj/item/ammo_box/magazine/m50/hi
 	name = "handgun magazine (.50ae Hi-Power)"
+	desc = "A .50 AE pistol magazine. Loaded with rounds which deal significantly more damage, but degrade the firearm."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "hi50ae"
 	ammo_type = /obj/item/ammo_casing/a50ae/hi
 
 /obj/item/ammo_box/magazine/m50/demo
 	name = "handgun magazine (.50ae Demolish)"
+	desc = "A .50 AE pistol magazine. Loaded with rounds which deal massive damage to structures."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "demo50ae"
 	ammo_type = /obj/item/ammo_casing/a50ae/demo
 
 /obj/item/ammo_box/magazine/m50/rod
 	name = "handgun magazine (.50ae Immovable)"
+	desc = "A .50 AE pistol magazine. Loaded with rounds which travel extremely slowly, but deal devastating amounts of damage."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "rod50ae"
 	ammo_type = /obj/item/ammo_casing/a50ae/rod
 
 /obj/item/ammo_box/magazine/m50/bomb
 	name = "handgun magazine (.50ae Ordinance)"
+	desc = "A .50 AE pistol magazine. Loaded with rounds which explode upon contact."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "bomb50ae"
 	ammo_type = /obj/item/ammo_casing/a50ae/bomb
 
 /obj/item/ammo_box/magazine/m50/rep
 	name = "handgun magazine (.50ae Repulsive)"
+	desc = "A .50 AE pistol magazine. Loaded with rounds which cause a short-lived reverse gravitational singularity."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "rep50ae"
 	ammo_type = /obj/item/ammo_casing/a50ae/rep
