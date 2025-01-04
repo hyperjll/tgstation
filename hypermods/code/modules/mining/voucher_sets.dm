@@ -276,7 +276,32 @@
 		/obj/item/mod/module/energy_shield, // 8 TC
 		)
 
-/datum/s_voucher_set/class_medic_kit // 55 TC
+/datum/s_voucher_set/assault_trooper_kit // 52 TC
+	name = "Assault Trooper Class Kit"
+	description = "A no-nonsense loadout for a counter-strike \
+			Contains a Sirius Assault rifle with a 30 round magazine of 7.12x82 ammunition. \
+			Also contains three additional magazines, two AP magazines, and one magazine each of HP and Incendiary. \
+			Comes with one FRAGmentation grenade, a pouch of regular frag grenades, a pouch of flashbangs, \
+			and two breaching charges."
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "assault_rifle"
+	set_items = list(
+		/obj/item/gun/ballistic/automatic/sirius, // 13 TC?
+		/obj/item/ammo_box/magazine/ak712x82, // 3 TC
+		/obj/item/ammo_box/magazine/ak712x82, // 3 TC
+		/obj/item/ammo_box/magazine/ak712x82, // 3 TC
+		/obj/item/ammo_box/magazine/ak712x82/ap, // 4 TC
+		/obj/item/ammo_box/magazine/ak712x82/ap, // 4 TC
+		/obj/item/ammo_box/magazine/ak712x82/hp, // 4 TC
+		/obj/item/ammo_box/magazine/ak712x82/incendiary, // 4 TC
+		/obj/item/grenade/frag/mega, // 3 TC
+		/obj/item/ammo_box/nadepouch/frag, // 7 TC
+		/obj/item/ammo_box/nadepouch/flashbang, // 2 TC
+		/obj/item/grenade/c4/breaching, // 1 TC
+		/obj/item/grenade/c4/breaching, // 1 TC
+		)
+
+/datum/s_voucher_set/field_medic_kit // 55 TC
 	name = "Field Medic Class Kit"
 	description = "Most operatives simply buy their own medicine, but if you want to double-down.... \
 			Contains a Veritate PDW with five spare magazines, a Premium Medical Suite, a Gorlex Hypospray, \
@@ -294,4 +319,48 @@
 		/obj/item/reagent_containers/hypospray/gorlex, // 8 TC
 		/obj/item/storage/medkit/hypospray, // 4 TC
 		/obj/item/storage/bag/chemistry/syndimedipens/deluxe, // 6 TC
+		)
+
+/datum/s_voucher_set/infiltrator_kit // 45 TC?
+	name = "Infiltrator Class Kit"
+	description = "If you want to sneak onto the station/ship and subvert the AI, snatch the nuke disk or other useful items, \
+			and/or commit other acts of sabotage, this is a good loadout. \
+			Contains a Cobra loaded with tranquilizers with four spare tranquilizer magazines, an EMAG, \
+			a Doorjack, a Chameleon Projector, a Chameleon Kit, an Advanced Mulligan, a Chameleon Module, and a surplus pinpointer."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "Cobra"
+	set_items = list(
+		/obj/item/gun/ballistic/automatic/pistol/cobra/tranq, // 9 TC (7 + 2)
+		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
+		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
+		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
+		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
+		/obj/item/card/emag, // 4 TC
+		/obj/item/card/emag/doorjack, // 3 TC
+		/obj/item/chameleon, // 7 TC
+		/obj/item/storage/box/syndie_kit/chameleon, // 2 TC (also contains a voice mask)
+		/obj/item/adv_mulligan, // 7 TC? This shit kinda op for a nukeop
+		/obj/item/mod/module/chameleon, // 2 TC
+		/obj/item/pinpointer/nuke/syndicate, // 2 TC
+		)
+
+/datum/s_voucher_set/scout_kit // 42 TC~~
+	name = "Scout Class Kit"
+	description = "This is basically designed for flanking. Go in invisible, strike their rear in close quarters, \
+			disappear again once you're done or you need to tactically withdraw. \
+			Contains a Bellatrix submachine gun using 9mm rounds with five spare magazines, a Doorjack, a Cloaking Device, \
+			a Light Breaker, and a surplus pinpointer."
+	icon = 'hypermods/icons/obj/weapons/guns/48x32.dmi'
+	icon_state = "mp52"
+	set_items = list(
+		/obj/item/gun/ballistic/automatic/bellatrix, // 12 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/card/emag/doorjack, // 3 TC
+		/obj/item/cloaking_device, // 14 TC
+		/obj/item/lightbreaker, // 4 TC
+		/obj/item/pinpointer/nuke/syndicate, // 2 TC
 		)

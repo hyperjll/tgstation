@@ -78,7 +78,7 @@
 // Syndicate Medic Specialist Primary
 
 /obj/item/gun/ballistic/automatic/veritate
-	desc = "A personal defence weapon, developed by the Gorlex Marauders."
+	desc = "A personal defence weapon, developed by the Gorlex Marauders. Uses 9mm rounds."
 	name = "\improper Veritate PDW"
 	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "vector"
@@ -101,7 +101,7 @@
 // Syndicate Heavy-Weapons Specialist Primary
 
 /obj/item/gun/ballistic/automatic/antares
-	desc = "A 100 round light machine gun, developed by the Gorlex Marauders."
+	desc = "A 100 round light machine gun, developed by the Gorlex Marauders. Uses 7mm rounds."
 	name = "\improper Antares light machine gun"
 	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
 	icon_state = "lmg"
@@ -123,3 +123,45 @@
 /obj/item/gun/ballistic/automatic/antares/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS)
+
+// Syndicate Assault-Trooper Specialist Primary
+
+/obj/item/gun/ballistic/automatic/sirius
+	name = "\improper Sirius Assault rifle"
+	desc = "A high end military grade assault rifle developed by the Gorlex Marauders. Uses 7.12x82 rifle ammo."
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "assault_rifle"
+	inhand_icon_state = "assault_rifle"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	accepted_magazine_type = /obj/item/ammo_box/magazine/ak712x82
+	fire_delay = 2
+	spread = 6
+	w_class = WEIGHT_CLASS_HUGE
+	mag_display = TRUE
+	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
+
+/obj/item/gun/ballistic/automatic/sirius/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS)
+
+// Syndicate Scout Specialist Primary
+
+/obj/item/gun/ballistic/automatic/bellatrix
+	desc = "A submachine gun developed by the Gorlex Marauders. Uses 9mm rounds."
+	name = "\improper Bellatrix submachine gun"
+	icon = 'hypermods/icons/obj/weapons/guns/48x32.dmi'
+	icon_state = "mp52"
+	inhand_icon_state = "arg"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/smgm9mm
+	burst_size = 3
+	can_suppress = FALSE
+	bolt_type = BOLT_TYPE_OPEN
+	show_bolt_icon = FALSE
+	mag_display = TRUE
+	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
+	rack_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
+
+/obj/item/gun/ballistic/automatic/bellatrix/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.6 SECONDS)

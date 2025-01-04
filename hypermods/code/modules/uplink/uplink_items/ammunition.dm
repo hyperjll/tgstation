@@ -428,7 +428,7 @@
 	name = "Hollow-Point Rifle Magazine (7.12x82mm)"
 	desc = "An additional 30-round Hollow-Point 7.12x82mm magazine, compatible with the AKM Assault Rifle."
 	item = /obj/item/ammo_box/magazine/ak712x82/hp
-	cost = 3
+	cost = 4
 	purchasable_from = UPLINK_SERIOUS_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -436,7 +436,7 @@
 	name = "Incendiary Rifle Magazine (7.12x82mm)"
 	desc = "An additional 30-round Incendiary 7.12x82mm magazine, compatible with the AKM Assault Rifle."
 	item = /obj/item/ammo_box/magazine/ak712x82/incendiary
-	cost = 3
+	cost = 4
 	purchasable_from = UPLINK_SERIOUS_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 

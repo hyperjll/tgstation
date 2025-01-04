@@ -76,6 +76,9 @@
 /obj/item/gun/ballistic/automatic/pistol/cobra/caseless
 	spawn_magazine_type = /obj/item/ammo_box/magazine/m45/cs
 
+/obj/item/gun/ballistic/automatic/pistol/cobra/tranq
+	spawn_magazine_type = /obj/item/ammo_box/magazine/m45/tranq
+
 /obj/item/gun/ballistic/automatic/pistol/cobra/implant
 	name = "cobra implant"
 	desc = "A modified version of the cobra pistol placed inside of the forearm, allows for easy concealment."
