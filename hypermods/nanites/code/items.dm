@@ -49,6 +49,11 @@
 	if(program)
 		program = new program
 
+/obj/item/disk/nanite_program/examine(mob/user)
+	. = ..()
+	if(program) // because why aren't these labeled?
+		. += "The digital footprint reads: [program.name]."
+
 /obj/item/disk/nanite_program/aggressive_replication
 	program = /datum/nanite_program/aggressive_replication
 
