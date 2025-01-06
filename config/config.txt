@@ -19,16 +19,16 @@ $include map_vote.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-SERVERNAME Hyper's Experimental TGstation Server
+# SERVERNAME tgstation
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
-SERVERSQLNAME tgstation
+# SERVERSQLNAME tgstation
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
 STATIONNAME Space Station 13
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
-HUB
+#HUB
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
 LOBBY_COUNTDOWN 120
@@ -131,10 +131,10 @@ VOTE_PERIOD 600
 ## 0 = Cannot respawn (default)
 ## 1 = Can respawn
 ## 2 = Can respawn if choosing a different character
-ALLOW_RESPAWN 1
+ALLOW_RESPAWN 0
 
 ## Respawn delay (deciseconds), which doesn't allow to return to lobby
-RESPAWN_DELAY 18000
+RESPAWN_DELAY 0
 
 ## set a hosted by name for unix platforms
 HOSTEDBY Yournamehere
@@ -144,16 +144,26 @@ GUEST_BAN
 
 ## IPINTEL:
 ## This allows you to detect likely proxies by checking ips against getipintel.net
-## Rating to warn at: (0.9 is good, 1 is 100% likely to be a spammer/proxy, 0.8 is 80%, etc) anything equal to or higher then this number triggers an admin warning
-#IPINTEL_RATING_BAD 0.9
+## Rating to warn at: (0.8 is good, 1 is 100% likely to be a spammer/proxy, 0.8 is 80%, etc) anything equal to or higher then this number triggers an admin warning
+#IPINTEL_RATING_BAD 0.8
 ## Contact email, (required to use the service, leaving blank or default disables IPINTEL)
 #IPINTEL_EMAIL ch@nge.me
-## How long to save good matches (ipintel rate limits to 15 per minute and 500 per day. so this shouldn't be too low, getipintel.net suggests 6 hours, time is in hours) (Your ip will get banned if you go over 500 a day too many times)
-#IPINTEL_SAVE_GOOD 12
-## How long to save bad matches (these numbers can change as ips change hands, best not to save these for too long in case somebody gets a new ip used by a spammer/proxy before.)
-#IPINTEL_SAVE_BAD 3
-## Domain name to query (leave commented out for the default, only needed if you pay getipintel.net for more querys)
-#IPINTEL_DOMAIN check.getipintel.net
+## Query base, if you pay for more queries this is what you want to change.
+#IPINTEL_BASE check.getipintel.net
+## Maximum number of queries in a minute
+#IPINTEL_MAX_QUERY_MINUTE 15
+## Maximum number of queries in a day
+#IPINTEL_MAX_QUERY_DAY 500
+## Whether clients which cannot be checked due to a rate limit will be denied
+#IPINTEL_REJECT_RATE_LIMITED
+## Whether clients which are flagged as a VPN will be denied
+IPINTEL_REJECT_BAD
+## Whether clients which cannot be checked due to an error of some form will be denied
+#IPINTEL_REJECT_UNKNOWN
+## How long to store results in the cache before they must be retrieved again. IN DAYS.
+#IPINTEL_CACHE_LENGTH 7
+## How many minutes of living playtime to be automatically exempt from IPIntel. 0 for never.
+#IPINTEL_EXEMPT_PLAYTIME_LIVING 0
 
 ## Uncomment to allow web client connections
 #ALLOW_WEBCLIENT
@@ -205,7 +215,7 @@ GUEST_BAN
 ## from https://github.com/yt-dlp/yt-dlp/releases
 ## or your package manager
 ## The default value assumes yt-dlp is in your system PATH
-INVOKE_YOUTUBEDL C:/youtube-dl/yt-dlp.exe
+# INVOKE_YOUTUBEDL yt-dlp
 
 ## Comment this out to disable users ability to use the request internet sounds to be played.
 REQUEST_INTERNET_SOUND
