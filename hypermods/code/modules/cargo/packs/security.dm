@@ -378,9 +378,9 @@
 	cost = 3000
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/surplus,
-					/obj/item/ammo_box/magazine/m10mm/rifle,
-					/obj/item/ammo_box/magazine/m10mm/rifle,
-					/obj/item/ammo_box/magazine/m10mm/rifle)
+					/obj/item/ammo_box/magazine/sr10mm,
+					/obj/item/ammo_box/magazine/sr10mm,
+					/obj/item/ammo_box/magazine/sr10mm)
 	crate_name = "surplus carbine crate"
 
 /datum/supply_pack/weaponry/type3uzi
