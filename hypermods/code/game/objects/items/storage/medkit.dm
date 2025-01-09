@@ -308,7 +308,7 @@
 	var/static/items_inside = list(
 		/obj/item/reagent_containers/medigel/synthflesh/big = 4,
 		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
-		/obj/item/reagent_containers/hypospray/medipen/penthrite = 2,
+		/obj/item/reagent_containers/hypospray/medipen/penthrite/better = 2,
 		/obj/item/reagent_containers/cup/bottle/oculine = 1,
 		/obj/item/reagent_containers/cup/bottle/inacusiate = 1,
 		/obj/item/reagent_containers/cup/bottle/methamphetamine = 1,

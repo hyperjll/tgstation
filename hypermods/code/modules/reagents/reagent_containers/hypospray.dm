@@ -156,7 +156,8 @@
 
 /obj/item/reagent_containers/hypospray/medipen/penthrite/better
 	name = "penthrite autoinjector"
-	desc = "Experimental heart medication."
+	desc = "Experimental heart medication, helps prevent helplessness in critical condition while providing healing. \
+			Do NOT take with Atropine or Epinephrine."
 	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "fancymedpenatr"
 	inhand_icon_state = "atropen"
