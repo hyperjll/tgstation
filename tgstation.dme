@@ -6550,6 +6550,7 @@
 #include "hypermods\code\datums\quirks\positive_quirks\mindshield.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\mut_activate.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\natural_def.dm"
+#include "hypermods\code\datums\quirks\positive_quirks\popular.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\robustimp.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\vitality.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\wealthy.dm"
