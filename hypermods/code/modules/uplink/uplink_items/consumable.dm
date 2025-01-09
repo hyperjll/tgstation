@@ -137,7 +137,7 @@
 			Causes the user to become invisible for a limited time, clothes will NOT become invisible. \
 			A single dose is estimated to last over 3 minutes."
 	item = /obj/item/reagent_containers/hypospray/medipen/invisibility/stable
-	cost = 2
+	cost = 1 // Really situational, cuz you gotta drop naked to make use of this.
 
 /datum/uplink_item/consumable/pumpupplus
 	name = "Pump-Up Plus Autoinjector"
