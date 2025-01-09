@@ -146,3 +146,21 @@
 			A single dose is estimated to last 5 minutes."
 	item = /obj/item/reagent_containers/hypospray/medipen/pumpupplus
 	cost = 2
+
+/datum/uplink_item/consumable/syndicryo
+	name = "Cryogelidia Pills"
+	desc = "A single bottle of pills containing Cryogelidia, a chemical which freezes you in a protective block of ice. \
+			The block of ice will turn off and on as the chemical continues metabolizing. \
+			Best used to stall for time or as a defense mechanism, as this renders escape from pursuers hopeless. \
+			Each pill also contains some healing chemicals to help buy time."
+	item = /obj/item/storage/pill_bottle/syndicryo
+	cost = 3
+
+/datum/uplink_item/consumable/eigenstasium
+	name = "Eigenstasium Bottle"
+	desc = "A single bottle of Eigenstasium, a unique chemical capable of locking your position within space and teleporting you back \
+			to where you first drank it. Be mindful that you leave behind an image of yourself when you first drink it, \
+			letting everyone know where you'll inevitably teleport back too. You may drink more to increase the time you have \
+			before teleporting back."
+	item = /obj/item/reagent_containers/cup/glass/bottle/eigenstasium
+	cost = 4

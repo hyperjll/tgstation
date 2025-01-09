@@ -27,3 +27,6 @@
 
 /obj/item/reagent_containers/cup/glass/bottle/moonshine/traitor
 	list_reagents = list(/datum/reagent/consumable/ethanol/moonshine/traitor = 100)
+
+/obj/item/reagent_containers/cup/glass/bottle/eigenstasium
+	list_reagents = list(/datum/reagent/eigenstate = 100)

@@ -236,3 +236,20 @@
 /obj/item/storage/pill_bottle/painkillers/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/pill/painkillers(src)
+
+/obj/item/reagent_containers/pill/syndicryo
+	name = "cryogelidia pill"
+	desc = "Used to temporarily freeze someone in a protective block of ice, often used as a desperate means of self-defense."
+	icon_state = "pill16"
+	volume = 100
+	list_reagents = list(/datum/reagent/inverse/cryostylane = 65, /datum/reagent/medicine/sal_acid = 2.5, /datum/reagent/medicine/oxandrolone = 2.5, /datum/reagent/medicine/antitoxin = 12.5, /datum/reagent/medicine/c2/seiver = 15, /datum/reagent/medicine/inaprovaline = 2.5)
+	rename_with_volume = FALSE
+
+/obj/item/storage/pill_bottle/syndicryo
+	name = "bottle of cryogelidia pills"
+	desc = "Contains pills used to temporarily freeze someone in a protective block of ice, often used as a desperate means of self-defense."
+	custom_premium_price = 300
+
+/obj/item/storage/pill_bottle/syndicryo/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/pill/syndicryo(src)
