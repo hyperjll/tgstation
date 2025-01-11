@@ -169,3 +169,12 @@
 	item = /obj/item/storage/box/syndie_kit/imp_pseudodeath
 	cost = 7
 	surplus = 20
+
+/datum/uplink_item/implants/imp_lifeformradar
+	name = "Lifeform Detection Implants"
+	desc = "A miniaturized lifeform detection device stashed within an implant that feeds information \
+			directly into the host's brain. This allows the host to both use a crew monitor and \
+			locate their fellow crew members via their suit sensors without any handheld clutter."
+	item = /obj/item/storage/box/syndie_kit/imp_lifeformradar
+	cost = 4
+	surplus = 30

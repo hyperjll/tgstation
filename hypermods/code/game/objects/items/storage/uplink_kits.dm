@@ -1261,6 +1261,13 @@
 /obj/item/storage/box/syndie_kit/imp_pseudodeath/PopulateContents()
 	new /obj/item/implanter/pseudodeath(src)
 
+/obj/item/storage/box/syndie_kit/imp_lifeformradar
+	name = "lifeform radar implant box"
+
+/obj/item/storage/box/syndie_kit/imp_lifeformradar/PopulateContents()
+	new /obj/item/implanter/radar(src)
+	new /obj/item/implanter/crewmonitor(src)
+
 /obj/item/storage/box/syndie_kit/missilephone
 	name = "missile phone box"
 
