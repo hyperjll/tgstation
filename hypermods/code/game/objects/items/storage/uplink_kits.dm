@@ -1255,6 +1255,12 @@
 /obj/item/storage/box/syndie_kit/imp_dnascramble/PopulateContents()
 	new /obj/item/implanter/dnascramble(src)
 
+/obj/item/storage/box/syndie_kit/imp_pseudodeath
+	name = "pseudodeath implant box"
+
+/obj/item/storage/box/syndie_kit/imp_pseudodeath/PopulateContents()
+	new /obj/item/implanter/pseudodeath(src)
+
 /obj/item/storage/box/syndie_kit/missilephone
 	name = "missile phone box"
 

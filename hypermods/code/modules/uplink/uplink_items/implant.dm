@@ -160,3 +160,12 @@
 	cost = 16
 	progression_minimum = 30 MINUTES
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/implants/pseudodeath
+	name = "Pseudo-Death Implant"
+	desc = "A rarely used implant designed to fake your death upon sustaining too much damage while in critical condition. \
+			After faking your death, you'll revive after a minute with most of the damage you've sustained mitigated. \
+			You're body will become highly resistant to damage while 'dead'. Cannot revive you should you sustain enough damage to ACTUALLY die."
+	item = /obj/item/storage/box/syndie_kit/imp_pseudodeath
+	cost = 7
+	surplus = 20
