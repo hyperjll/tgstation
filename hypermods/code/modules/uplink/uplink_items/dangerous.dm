@@ -39,7 +39,7 @@
 
 /datum/uplink_item/dangerous/normalrevolver
 	name = ".357 Revolver"
-	desc = "A modernized, .357 revolver. Fires 7 brutal rounds of .357 magnum. \
+	desc = "A modernized .357 revolver. Fires 7 brutal rounds of .357 magnum. \
 			Less obvious than our upgraded revolvers, for plausible deniability."
 	item = /obj/item/gun/ballistic/revolver
 	cost = 9
@@ -48,7 +48,8 @@
 
 /datum/uplink_item/dangerous/python
 	name = "Python"
-	desc = "A single Python Revolver that fires .357 magnum bullets. Loaded with 9 lethal Heartpiercer .357 magnum shots."
+	desc = "A single Python revolver. Fires 9 brutal rounds of .357 magnum. \
+			Starts loaded with 9 lethal Heartpiercer .357 magnum shots which penetrate everything."
 	item = /obj/item/gun/ballistic/revolver/python
 	cost = 11
 	surplus = 50
