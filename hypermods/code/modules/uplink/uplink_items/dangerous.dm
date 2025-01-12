@@ -9,7 +9,7 @@
 	name = "M1911 Pistol Case"
 	desc = "A weapon case containing a single M1911 Pistol that fires .45 bullets. Loaded with 9 lethal shots. \
 			Also comes with two spare magazines and a box of .45 rounds. A cheap option for ranged offense, or if you don't \
-			intend to go for the stealther Cobra."
+			intend to go for the stealthier Cobra."
 	item = /obj/item/storage/toolbox/guncase/traitor/m1911pistol
 	cost = 6
 	surplus = 45
