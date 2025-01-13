@@ -7,7 +7,7 @@
 	button_icon_state = "time"
 
 	school = SCHOOL_FORBIDDEN
-	cooldown_time = 1 MINUTES
+	cooldown_time = 2 MINUTES
 
 	invocation = "C''S' Y''R FL'W"
 	invocation_type = INVOCATION_WHISPER
@@ -16,7 +16,7 @@
 	/// The radius / range of the time stop.
 	var/timestop_range = 10 // Fuck you.
 	/// The duration of the time stop.
-	var/timestop_duration = 20 SECONDS // Also fuck you.
+	var/timestop_duration = 10 SECONDS // Also fuck you.
 
 	/// if TRUE, the owner is immune to all time stop, from anyone
 	var/owner_is_immune_to_all_timestop = TRUE
