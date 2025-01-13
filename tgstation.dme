@@ -6722,6 +6722,7 @@
 #include "hypermods\code\modules\cargo\packs\science.dm"
 #include "hypermods\code\modules\cargo\packs\security.dm"
 #include "hypermods\code\modules\cargo\packs\service.dm"
+#include "hypermods\code\modules\clothing\belts\anomaly_belt.dm"
 #include "hypermods\code\modules\clothing\chameleon\generic_chameleon_clothing.dm"
 #include "hypermods\code\modules\clothing\glasses\hud.dm"
 #include "hypermods\code\modules\clothing\gloves\color.dm"

@@ -33,3 +33,21 @@
 		RND_CATEGORY_EQUIPMENT
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/anomaly_belt_shell
+	name = "Anomaly Belt Shell"
+	desc = "An experimental belt with built-in anomaly core integration. Who knows what it could do with an anomaly core?"
+	id = "anomaly_belt_shell"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT*5,
+		/datum/material/uranium = SHEET_MATERIAL_AMOUNT*4,
+		/datum/material/diamond = SHEET_MATERIAL_AMOUNT * 2.5,
+		/datum/material/silver = SHEET_MATERIAL_AMOUNT*2.5,
+		/datum/material/gold = SHEET_MATERIAL_AMOUNT * 2.5,
+	)
+	build_path = /obj/item/anomaly_belt_shell
+	category = list(
+		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
