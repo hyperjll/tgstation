@@ -182,7 +182,7 @@
 /datum/heretic_knowledge/blade_upgrade/time
 	name = "Time Siphon"
 	desc = "Your time blade now removes 2 damage of each type from you and bestows it \
-		upon your attacker, this only works on non-simple and non-silicon based targets."
+		upon your victim, this only works on non-simple and non-silicon based targets."
 	gain_text = "I felt my hands grip tightly, my chest burrowed. \
 			I had to do something. But i did not know what."
 	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
@@ -235,7 +235,7 @@
 	desc = "The ascension ritual of the Path of Time. \
 		Transmute three corpses that have been aged past 50 years to ascend. \
 		When completed, your 'Time Mends All' regenerates thrice as quickly and grants total stun \
-		immunity. You may stop time in a large radius for 20 seconds once every minute. \
+		immunity. You may stop time in a large radius for 10 seconds once every 2 minutes. \
 		All heathens nearby will be cursed permanently, those who are cursed will age rapidly."
 	gain_text = "And now i stand a shepherd with no herd, the end approaches while they sleep. \
 			Even if i told them now, it'd be of no use, they'd forget in the next moment. \
