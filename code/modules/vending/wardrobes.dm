@@ -827,6 +827,7 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	)
 	premium = list(
 		/obj/item/clothing/head/flatcap = 1,
+		/obj/item/clothing/glasses/sunglasses/noir = 1,
 		/obj/item/ammo_box/c38/match/bouncy = 1,
 		/obj/item/ammo_casing/c38 = 4,
 		/obj/item/ammo_casing/c38/match = 4,
