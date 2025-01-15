@@ -975,3 +975,12 @@
 	cost = 9
 	surplus = 0
 	restricted_roles = list(JOB_JANITOR, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/grenadecasing
+	name = "Chemical Grenade Casings"
+	desc = "A box utilizing bluespace technology, it contains a wide variety of chemical grenade casings for the aspiring chemist. \
+			Cables, tools and chemicals are NOT included."
+	item = /obj/item/storage/box/nadecasings
+	cost = 3
+	surplus = 0
+	restricted_roles = list(JOB_CHEMIST, JOB_SCIENTIST, JOB_CAPTAIN)
