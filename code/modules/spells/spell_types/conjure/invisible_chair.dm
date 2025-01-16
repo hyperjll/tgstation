@@ -34,3 +34,4 @@
 	var/obj/chair = summoned_object
 	chair.setDir(cast_on.dir)
 	chair.buckle_mob(cast_on)
+	chair.AddComponent(/datum/component/slippery, 60, GALOSHES_DONT_HELP)
