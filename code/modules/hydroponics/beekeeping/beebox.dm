@@ -158,11 +158,11 @@
 		return
 
 	// Adding flowers increases the resources
-	if(istype(I, /obj/item/food/grown/poppy))
-		var/obj/item/food/grown/poppy/P = I
-		visible_message(span_notice("[user] composts the [P] into the [src]."))
+	if(istype(item, /obj/item/food/grown/poppy))
+		var/obj/item/food/grown/poppy/Poppy = item
+		visible_message(span_notice("[user] composts the [Poppy] into the [src]."))
 		bee_resources += 20
-		qdel(P)
+		qdel(Poppy)
 		return
 
 	if(istype(item, /obj/item/queen_bee))
