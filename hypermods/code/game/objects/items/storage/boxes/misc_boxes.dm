@@ -124,3 +124,30 @@
 	new /obj/item/stack/sticky_tape/pointy(src)
 	new /obj/item/stack/sticky_tape/super(src)
 	new /obj/item/stack/sticky_tape(src)
+
+
+/obj/item/storage/box/clowngadgets
+	name = "clown gadgets box"
+	desc = "It's a cardboard box with a rather colorful design. \
+			It's stuffed with all the clownly gadgets you managed to bring aboard with you."
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "clown"
+
+/obj/item/storage/box/clowngadgets/PopulateContents()
+	var/list/item_list = list(
+		/obj/item/holosign_creator/atmos/fake,
+		/obj/item/food/pie/cream,
+		/obj/item/reagent_containers/spray/waterflower/lube,
+		/obj/item/spess_knife,
+		/obj/item/storage/box/balloons,
+		/obj/item/reagent_containers/spray/waterflower,
+		/obj/item/bikehorn,
+		/obj/item/food/grown/banana
+	)
+
+	for(var/i in 1 to 3)
+		var/item = pick(item_list)
+		new item(src)
+
+	if(prob(10))
+		new /obj/item/mod/control/pre_equipped/cosmohonk(src)
