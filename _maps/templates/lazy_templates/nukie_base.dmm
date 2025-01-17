@@ -3033,6 +3033,8 @@
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
 "Fb" = (
 /obj/machinery/module_duplicator,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/iron/fifty,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_genepowers)
 "Fm" = (
@@ -4850,6 +4852,8 @@
 /area/centcom/syndicate_mothership/control)
 "Ww" = (
 /obj/machinery/component_printer,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/iron/fifty,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_genepowers)
 "Wz" = (
@@ -4993,6 +4997,17 @@
 /obj/item/controller,
 /obj/item/compact_remote,
 /obj/item/compact_remote,
+/obj/item/screwdriver,
+/obj/item/screwdriver,
+/obj/item/stock_parts/power_store/cell/hyper,
+/obj/item/stock_parts/power_store/cell/hyper,
+/obj/item/stock_parts/power_store/cell/hyper,
+/obj/item/stock_parts/power_store/cell/hyper,
+/obj/item/circuit_component/equipment_action,
+/obj/item/circuit_component/equipment_action,
+/obj/item/circuit_component/equipment_action,
+/obj/item/circuit_component/equipment_action,
+/obj/item/circuit_component/equipment_action,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_genepowers)
 "XL" = (
