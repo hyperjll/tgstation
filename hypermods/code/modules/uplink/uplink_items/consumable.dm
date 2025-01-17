@@ -109,16 +109,16 @@
 
 /datum/uplink_item/consumable/syndiecigs
 	name = "Syndicate Smokes"
-	desc = "Strong flavor, dense smoke, infused with omnizine."
+	desc = "Strong flavor, dense smoke, infused with omnizine. Perfect for on-the-go healing."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
-	cost = 2
+	cost = 1
 
 /datum/uplink_item/consumable/syndiecigsvarietypack
 	name = "Syndicate Variety Cigarettes"
 	desc = "Four different cigarette packs that resemble your regular nanotrasen approved brands. \
 			Each packet of cigarettes contains one of the following: Salicylic Acid, Oxandrolone, Salbutamol, and Pentetic Acid."
 	item = /obj/item/storage/medkit/syndiecigsvarietypack
-	cost = 3
+	cost = 2
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
