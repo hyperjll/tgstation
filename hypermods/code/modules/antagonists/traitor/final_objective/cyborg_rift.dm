@@ -5,9 +5,9 @@
 
 	//this is a prototype so this progression is for all basic level kill objectives
 
-	///area type the objective owner must be in to receive the romerol
+	///area type the objective owner must be in to receive the bomb
 	var/area/rift_spawnarea_type
-	///checker on whether we have sent the romerol yet.
+	///checker on whether we have sent the bomb yet.
 	var/sent_item = FALSE
 
 /datum/traitor_objective/ultimate/cyborg_rift/generate_objective(datum/mind/generating_for, list/possible_duplicates)
