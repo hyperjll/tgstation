@@ -174,7 +174,6 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SYNDICATE_INFILTRATOR = 0,
 	ROLE_STOWAWAY_CHANGELING = 0,
 	ROLE_SPY_INFILTRATOR = 0,
-	ROLE_BROTHER_INITIATE = 0,
 
 	// I'm not too sure why these are here, but they're not moving.
 	ROLE_GLITCH = 0,
