@@ -40,7 +40,6 @@
 	migrate_antagonist(ROLE_TRAITOR, list(ROLE_SYNDICATE_INFILTRATOR, ROLE_SLEEPER_AGENT))
 	migrate_antagonist(ROLE_WIZARD, list(ROLE_WIZARD_MIDROUND))
 	migrate_antagonist(ROLE_SPY, list(ROLE_SPY_INFILTRATOR))
-	migrate_antagonist(ROLE_BROTHER, list(ROLE_BROTHER_INITIATE))
 
 
 // If you have an antagonist enabled, it will add the alternative preferences for said antag in be_special.

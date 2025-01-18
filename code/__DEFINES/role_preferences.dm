@@ -48,7 +48,6 @@
 #define ROLE_STOWAWAY_CHANGELING "Stowaway Changeling"
 #define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"
 #define ROLE_SPY_INFILTRATOR "Spy Infiltrator"
-#define ROLE_BROTHER_INITIATE "Brother Initiate"
 
 // Other roles
 #define ROLE_ANOMALY_GHOST "Ectoplasmic Anomaly Ghost"
