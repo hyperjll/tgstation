@@ -17,6 +17,7 @@
 #define ROLE_TRAITOR "Traitor"
 #define ROLE_WIZARD "Wizard"
 #define ROLE_SPY "Spy"
+#define ROLE_INITIAL_INFECTED "Initial Infected"
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -143,6 +144,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_TRAITOR = 0,
 	ROLE_WIZARD = 14,
 	ROLE_SPY = 0,
+	ROLE_INITIAL_INFECTED = 14,
 
 	// Midround
 	ROLE_ABDUCTOR = 0,
