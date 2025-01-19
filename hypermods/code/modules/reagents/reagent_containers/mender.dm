@@ -53,6 +53,7 @@
 /obj/item/reagent_containers/pill/patch/mender/on_consumption(mob/consumer, mob/giver)
 	if(reagents.total_volume)
 		reagents.trans_to(consumer, use_volume, transferred_by = giver, methods = apply_type)
+	playsound(src, pick(sfx), 50, 1)
 	//qdel(src)
 
 /obj/item/reagent_containers/pill/patch/mender/interact_with_atom(atom/target, mob/living/user, list/modifiers)
@@ -100,3 +101,15 @@
 /obj/item/reagent_containers/pill/patch/mender/burn
 	name = "auto-mender (burn)"
 	list_reagents = list(/datum/reagent/medicine/silver_sulfadiazine = 200)
+
+/obj/item/reagent_containers/pill/patch/mender/toxin
+	name = "auto-mender (toxin)"
+	list_reagents = list(/datum/reagent/medicine/dylovene = 150, /datum/reagent/medicine/antitoxin = 25, /datum/reagent/medicine/painkillers = 25)
+
+/obj/item/reagent_containers/pill/patch/mender/oxy
+	name = "auto-mender (oxygen)"
+	list_reagents = list(/datum/reagent/medicine/dexalin = 150, /datum/reagent/medicine/coagulant/inaprovaline = 25, /datum/reagent/medicine/painkillers = 25)
+
+/obj/item/reagent_containers/pill/patch/mender/all
+	name = "auto-mender (advanced)"
+	list_reagents = list(/datum/reagent/medicine/tricordrazine = 100, /datum/reagent/medicine/omnizine = 25, /datum/reagent/medicine/coagulant = 25, /datum/reagent/medicine/painkillers = 50)

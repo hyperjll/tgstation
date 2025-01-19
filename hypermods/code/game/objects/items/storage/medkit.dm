@@ -1,8 +1,162 @@
+/obj/item/storage/medkit/emergency/alt
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medbriefcase"
+	inhand_icon_state = "medkit-emergency"
+
+/obj/item/storage/medkit/emergency/alt/examine(mob/user)
+	. = ..()
+	. += "[src]'s 'manufactured date' is illegible."
+
+/obj/item/storage/medkit/emergency/alt/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/stack/medical/bruise_pack = 1,
+		/obj/item/stack/medical/suture/emergency = 1,
+		/obj/item/stack/medical/mesh = 1,
+		/obj/item/stack/medical/ointment = 1,
+		/obj/item/stack/medical/bloodpack = 1,
+		/obj/item/reagent_containers/hypospray/medipen/ekit = 1,
+		/obj/item/healthanalyzer/simple = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/regular/alt
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit"
+
+/obj/item/storage/medkit/regular/alt/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/stack/medical/suture = 1,
+		/obj/item/stack/medical/mesh = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 2,
+		/obj/item/reagent_containers/medigel/libital = 1,
+		/obj/item/reagent_containers/medigel/aiuri = 1,
+		/obj/item/storage/pill_bottle/multiver/less = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/fire/alt
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_burn"
+	inhand_icon_state = "medkit-ointment"
+
+/obj/item/storage/medkit/fire/alt/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/reagent_containers/pill/patch/mender/burn = 1,
+		/obj/item/stack/medical/mesh = 1,
+		/obj/item/stack/medical/aloe = 1,
+		/obj/item/reagent_containers/medigel/aiuri = 1,
+		/obj/item/reagent_containers/medigel/silver_sulfadiazine = 1,
+		/obj/item/reagent_containers/hypospray/medipen/kelotane = 1,
+		/obj/item/reagent_containers/hypospray/medipen/dermaline = 1,
+		)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/toxin/alt
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_toxin"
+	inhand_icon_state = "medkit-toxin"
+
+/obj/item/storage/medkit/toxin/alt/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/reagent_containers/pill/patch/mender/toxin = 1,
+		/obj/item/storage/pill_bottle/multiver/less = 1,
+		/obj/item/reagent_containers/hypospray/medipen/dylovene = 2,
+		/obj/item/reagent_containers/hypospray/medipen/hyronalin = 1,
+		/obj/item/reagent_containers/hypospray/medipen/arithrazine = 1,
+		/obj/item/reagent_containers/hypospray/medipen/penacid = 1,
+		)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/o2/alt
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_o2"
+	inhand_icon_state = "medkit-o2"
+
+/obj/item/storage/medkit/o2/alt/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/reagent_containers/pill/patch/mender/oxy = 1,
+		/obj/item/storage/pill_bottle/dexalin = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/reagent_containers/hypospray/medipen/salbutamol = 1,
+		/obj/item/reagent_containers/pill/tranex = 2,
+		/obj/item/storage/pill_bottle/coagulant = 1,
+		)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/brute/alt
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_brute"
+	inhand_icon_state = "medkit-brute"
+
+/obj/item/storage/medkit/brute/alt/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/reagent_containers/pill/patch/mender/brute = 1,
+		/obj/item/stack/medical/bruise_pack = 1,
+		/obj/item/stack/medical/suture = 1,
+		/obj/item/storage/pill_bottle/painkillers = 1,
+		/obj/item/reagent_containers/medigel/libital = 1,
+		/obj/item/reagent_containers/medigel/styptic_powder = 1,
+		/obj/item/reagent_containers/hypospray/medipen/bicaridine = 1,
+		)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/advanced/alt
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "medkit_advanced"
+	inhand_icon_state = "medkit-advanced"
+
+/obj/item/storage/medkit/advanced/alt/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/reagent_containers/pill/patch/mender/all = 1,
+		/obj/item/stack/medical/suture/medicated = 1,
+		/obj/item/stack/medical/mesh/advanced = 1,
+		/obj/item/reagent_containers/medigel/synthflesh/big = 2,
+		/obj/item/reagent_containers/hypospray/medipen/atropine = 1,
+		/obj/item/storage/pill_bottle/penacid = 1,
+		)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/coroner/alt
+	icon = 'hypermods/icons/obj/storage/medkit.dmi'
+	icon_state = "compact_coronerkit"
+	inhand_icon_state = "coronerkit"
+
+/obj/item/storage/medkit/coroner/alt/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/reagent_containers/cup/bottle/formaldehyde = 1,
+		/obj/item/bodybag = 1,
+		/obj/item/surgical_drapes = 1,
+		/obj/item/scalpel/cruel = 1,
+		/obj/item/hemostat/cruel = 1,
+		/obj/item/cautery/cruel = 1,
+		/obj/item/retractor/cruel = 1,
+		/obj/item/circular_saw = 1,
+		/obj/item/organ/cyberimp/chest/reviver = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+
 /obj/item/storage/medkit/medical_variety_pack
 	name = "\improper Medical Variety Pack"
 	desc = "It's a bluespace medical kit, it's capable of holding far more medical supplies than normal."
 	icon = 'hypermods/icons/obj/storage/medkit.dmi'
-	icon_state = "medkit_bluespace"
+	icon_state = "medkit_tactical"
 	custom_price = PAYCHECK_COMMAND * 5
 	custom_premium_price = PAYCHECK_COMMAND * 8
 
@@ -41,7 +195,7 @@
 	name = "\improper Deluxe Medical Variety Pack"
 	desc = "It's a bluespace medical kit, it's capable of holding far more medical supplies than normal."
 	icon = 'hypermods/icons/obj/storage/medkit.dmi'
-	icon_state = "medkit_bluespace2"
+	icon_state = "medkit_bluespace"
 	custom_price = PAYCHECK_COMMAND * 15
 	custom_premium_price = PAYCHECK_COMMAND * 20
 

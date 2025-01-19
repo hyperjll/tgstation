@@ -80,6 +80,8 @@
 	)
 	custom_price = PAYCHECK_COMMAND * 3
 	custom_premium_price = PAYCHECK_COMMAND * 5
+	var/possible_alt = null
+	var/alt_chance = 10
 
 /obj/item/storage/medkit/Initialize(mapload)
 	. = ..()
@@ -87,10 +89,17 @@
 	atom_storage.open_sound = 'sound/items/handling/medkit/medkit_open.ogg'
 	atom_storage.open_sound_vary = TRUE
 	atom_storage.rustle_sound = 'sound/items/handling/medkit/medkit_rustle.ogg'
+	if(possible_alt && prob(alt_chance))
+		replace_with_alt()
+
+/obj/item/storage/medkit/proc/replace_with_alt()
+	new possible_alt(src.loc)
+	qdel(src)
 
 /obj/item/storage/medkit/regular
 	icon_state = "medkit"
 	desc = "A first aid kit with the ability to heal common types of injuries."
+	possible_alt = /obj/item/storage/medkit/regular/alt
 
 /obj/item/storage/medkit/regular/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins giving [user.p_them()]self aids with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -113,6 +122,7 @@
 	inhand_icon_state = "medkit-emergency"
 	name = "emergency medkit"
 	desc = "A very simple first aid kit meant to secure and stabilize serious wounds for later treatment."
+	possible_alt = /obj/item/storage/medkit/emergency/alt
 
 /obj/item/storage/medkit/emergency/PopulateContents()
 	if(empty)
@@ -149,11 +159,12 @@
 		/obj/item/stack/medical/gauze/twelve = 1,
 		/obj/item/stack/medical/suture = 2,
 		/obj/item/stack/medical/mesh = 2,
-		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/surgical_drapes = 1,
 		/obj/item/scalpel = 1,
 		/obj/item/hemostat = 1,
 		/obj/item/cautery = 1,
+		/obj/item/retractor = 1,
+		/obj/item/circular_saw = 1,
 	)
 	generate_items_inside(items_inside,src)
 
@@ -180,6 +191,7 @@
 	icon_state = "medkit_burn"
 	inhand_icon_state = "medkit-ointment"
 	damagetype_healed = BURN
+	possible_alt = /obj/item/storage/medkit/fire/alt
 
 /obj/item/storage/medkit/fire/get_medbot_skin()
 	return "ointment"
@@ -205,6 +217,7 @@
 	icon_state = "medkit_toxin"
 	inhand_icon_state = "medkit-toxin"
 	damagetype_healed = TOX
+	possible_alt = /obj/item/storage/medkit/toxin/alt
 
 /obj/item/storage/medkit/toxin/get_medbot_skin()
 	return "tox"
@@ -233,6 +246,7 @@
 	icon_state = "medkit_o2"
 	inhand_icon_state = "medkit-o2"
 	damagetype_healed = OXY
+	possible_alt = /obj/item/storage/medkit/o2/alt
 
 /obj/item/storage/medkit/o2/get_medbot_skin()
 	return "o2"
@@ -258,6 +272,7 @@
 	icon_state = "medkit_brute"
 	inhand_icon_state = "medkit-brute"
 	damagetype_healed = BRUTE
+	possible_alt = /obj/item/storage/medkit/brute/alt
 
 /obj/item/storage/medkit/brute/get_medbot_skin()
 	return "brute"
@@ -285,6 +300,7 @@
 	inhand_icon_state = "medkit-advanced"
 	custom_premium_price = PAYCHECK_COMMAND * 6
 	damagetype_healed = HEAL_ALL_DAMAGE
+	possible_alt = /obj/item/storage/medkit/advanced/alt
 
 /obj/item/storage/medkit/advanced/get_medbot_skin()
 	return "advanced"
@@ -400,6 +416,7 @@
 	icon = 'icons/obj/storage/medkit.dmi'
 	icon_state = "compact_coronerkit"
 	inhand_icon_state = "coronerkit"
+	possible_alt = /obj/item/storage/medkit/coroner/alt
 
 /obj/item/storage/medkit/coroner/Initialize(mapload)
 	. = ..()
@@ -429,6 +446,11 @@
 		/obj/item/reagent_containers/blood = 1,
 		/obj/item/bodybag = 2,
 		/obj/item/reagent_containers/syringe = 1,
+		/obj/item/surgical_drapes = 1,
+		/obj/item/scalpel/cruel = 1,
+		/obj/item/hemostat/cruel = 1,
+		/obj/item/cautery/cruel = 1,
+		/obj/item/autopsy_scanner = 1,
 	)
 	generate_items_inside(items_inside,src)
 

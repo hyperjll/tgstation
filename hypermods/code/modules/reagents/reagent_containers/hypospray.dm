@@ -154,6 +154,17 @@
 	custom_price = 25
 	custom_premium_price = 50
 
+/obj/item/reagent_containers/hypospray/medipen/dylovene
+	name = "dylovene medipen"
+	desc = "An autoinjector containing dylovene, used to relieve minor toxin damage in the user."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "fancymedpendyl"
+	inhand_icon_state = "medipen"
+	base_icon_state = "fancymedpendyl"
+	list_reagents = list(/datum/reagent/medicine/dylovene = 10)
+	custom_price = 25
+	custom_premium_price = 50
+
 /obj/item/reagent_containers/hypospray/medipen/penthrite/better
 	name = "penthrite autoinjector"
 	desc = "Experimental heart medication, helps prevent helplessness in critical condition while providing healing. \
