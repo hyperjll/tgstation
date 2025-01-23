@@ -416,7 +416,6 @@
 	icon = 'icons/obj/storage/medkit.dmi'
 	icon_state = "compact_coronerkit"
 	inhand_icon_state = "coronerkit"
-	possible_alt = /obj/item/storage/medkit/coroner/alt
 
 /obj/item/storage/medkit/coroner/Initialize(mapload)
 	. = ..()

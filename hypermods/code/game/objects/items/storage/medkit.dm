@@ -130,27 +130,6 @@
 		)
 	generate_items_inside(items_inside,src)
 
-/obj/item/storage/medkit/coroner/alt
-	icon = 'hypermods/icons/obj/storage/medkit.dmi'
-	icon_state = "compact_coronerkit"
-	inhand_icon_state = "coronerkit"
-
-/obj/item/storage/medkit/coroner/alt/PopulateContents()
-	if(empty)
-		return
-	var/static/items_inside = list(
-		/obj/item/reagent_containers/cup/bottle/formaldehyde = 1,
-		/obj/item/bodybag = 1,
-		/obj/item/surgical_drapes = 1,
-		/obj/item/scalpel/cruel = 1,
-		/obj/item/hemostat/cruel = 1,
-		/obj/item/cautery/cruel = 1,
-		/obj/item/retractor/cruel = 1,
-		/obj/item/circular_saw = 1,
-		/obj/item/organ/cyberimp/chest/reviver = 1,
-	)
-	generate_items_inside(items_inside,src)
-
 
 /obj/item/storage/medkit/medical_variety_pack
 	name = "\improper Medical Variety Pack"
