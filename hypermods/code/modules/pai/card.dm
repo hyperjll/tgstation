@@ -22,7 +22,7 @@
 
 /obj/item/pai_card/syndicate/update_overlays()
 	. = ..()
-	. += "spai-[emotion_icon]"
+	. += "spai-[screen_image]"
 	if(pai?.hacking_cable)
 		. += "[initial(icon_state)]-connector"
 
