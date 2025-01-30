@@ -194,7 +194,7 @@
 	possible_alt = /obj/item/storage/medkit/fire/alt
 
 /obj/item/storage/medkit/fire/get_medbot_skin()
-	return "ointment"
+	return "burn"
 
 /obj/item/storage/medkit/fire/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins rubbing \the [src] against [user.p_them()]self! It looks like [user.p_theyre()] trying to start a fire!"))
@@ -249,7 +249,7 @@
 	possible_alt = /obj/item/storage/medkit/o2/alt
 
 /obj/item/storage/medkit/o2/get_medbot_skin()
-	return "o2"
+	return "oxy"
 
 /obj/item/storage/medkit/o2/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins hitting [user.p_their()] neck with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -303,7 +303,7 @@
 	possible_alt = /obj/item/storage/medkit/advanced/alt
 
 /obj/item/storage/medkit/advanced/get_medbot_skin()
-	return "advanced"
+	return "adv"
 
 /obj/item/storage/medkit/advanced/PopulateContents()
 	if(empty)
@@ -721,7 +721,7 @@
 /// A box which takes in coolant and uses it to preserve organs and body parts
 /obj/item/storage/organbox
 	name = "organ transport box"
-	desc = "An advanced box with an cooling mechanism that uses cryostylane or other cold reagents to keep the organs or bodyparts inside preserved."
+	desc = "An advanced box with a cooling mechanism that uses cryostylane or other cold reagents to keep the organs or bodyparts inside preserved."
 	icon = 'icons/obj/storage/case.dmi'
 	icon_state = "organbox"
 	base_icon_state = "organbox"
