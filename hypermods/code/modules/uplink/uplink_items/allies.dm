@@ -41,6 +41,18 @@
 	restricted = TRUE
 	refundable = TRUE
 
+/datum/uplink_item/reinforcements/guardian/nukies // holoparasite ops when?
+	name = "Holoparasites"
+	desc = "Though capable of near sorcerous feats via use of hardlight holograms and nanomachines, they require an \
+			organic host as a home base and source of fuel. Holoparasites come in various types and share damage with their host."
+	//progression_minimum = 30 MINUTES
+	item = /obj/item/guardian_creator/tech
+	cost = 40
+	surplus = 0
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	restricted = TRUE
+	refundable = TRUE
+
 /datum/uplink_item/reinforcements/hypnotic_flash
 	name = "Hypnotic Flash"
 	desc = "A modified flash able to hypnotize targets. If the target is not in a mentally vulnerable state, it will only confuse and pacify them temporarily."
@@ -55,6 +67,15 @@
 	cost = 12
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
+/datum/uplink_item/reinforcements/potion
+	name = "Syndicate Sentience Potion"
+	item = /obj/item/slimepotion/slime/sentience/nuclear
+	desc = "A potion recovered at great risk by undercover Syndicate operatives and then subsequently modified with Syndicate technology. \
+		Using it will make any animal sentient, and bound to serve you, as well as implanting an internal radio for communication and an internal ID card for opening doors."
+	cost = 2
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	restricted = TRUE
+
 
 /datum/uplink_item/reinforcements/megadehydratedcarp
 	name = "Dehydrated Megacarp"
@@ -64,15 +85,6 @@
 	cost = 2
 	surplus = 10
 	purchasable_from = ALL
-
-/datum/uplink_item/reinforcements/potion
-	name = "Syndicate Sentience Potion"
-	item = /obj/item/slimepotion/slime/sentience/nuclear
-	desc = "A potion recovered at great risk by undercover Syndicate operatives and then subsequently modified with Syndicate technology. \
-		Using it will make any animal sentient, and bound to serve you, as well as implanting an internal radio for communication and an internal ID card for opening doors."
-	cost = 2
-	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
-	restricted = TRUE
 
 /datum/uplink_item/reinforcements/spongecapsules
 	name = "Syndicate Sponge Capsules"
@@ -90,7 +102,7 @@
 			Very useful for quick escapes for both you and your silicon companion. \
 			Will also hack their software to reveal hidden modules. Does NOT enslave cyborgs."
 	item = /obj/item/borg/upgrade/illegalrescue
-	cost = 10
+	cost = 6
 	surplus = 10
 	progression_minimum = 15 MINUTES
 	purchasable_from = ~UPLINK_CLOWN_OPS
@@ -101,7 +113,7 @@
 			needed to print more ammunition on the fly. Also grants the cyborg of choice an energy dagger \
 			and hacks their software to reveal hidden modules. Exceptionally effective for mass murder. Does NOT enslave cyborgs."
 	item = /obj/item/borg/upgrade/illegalweapons
-	cost = 8
+	cost = 10
 	surplus = 0
 	progression_minimum = 30 MINUTES
 	purchasable_from = ~UPLINK_CLOWN_OPS
@@ -114,5 +126,15 @@
 	item = /obj/item/borg/upgrade/martyr
 	cost = 4
 	surplus = 10
+	progression_minimum = 20 MINUTES
+	purchasable_from = ~UPLINK_CLOWN_OPS
+
+/datum/uplink_item/reinforcements/betterselfrepair
+	name = "Superior Self-Repair Module"
+	desc = "A typical self-repair module for cyborgs. It's been enhanced with syndicate technology to improve it's repair rate. \
+			This repair module has been estimated to be at least 3x as effective over nanotrasen models."
+	item = /obj/item/borg/upgrade/selfrepair/illegal
+	cost = 2
+	surplus = 0
 	progression_minimum = 20 MINUTES
 	purchasable_from = ~UPLINK_CLOWN_OPS

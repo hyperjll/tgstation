@@ -88,6 +88,10 @@
 		return .
 	borg.SetEmagged(FALSE)
 
+
+/obj/item/borg/upgrade/selfrepair/illegal
+	repair_amount = -3
+
 /// Universal modules
 
 /obj/item/borg/upgrade/unistorage

@@ -22,12 +22,12 @@
 		/obj/item/antag_spawner/loadout/syndiborg, // 6 TC
 		/obj/item/antag_spawner/loadout/syndiborg, // 6 TC
 		/obj/item/antag_spawner/loadout/syndiborg, // 6 TC
-		/obj/item/borg/upgrade/illegalweapons, // 8 TC
-		/obj/item/borg/upgrade/illegalweapons, // 8 TC
+		/obj/item/borg/upgrade/illegalweapons, // 10 TC
+		/obj/item/borg/upgrade/illegalweapons, // 10 TC
 		/obj/item/borg/upgrade/martyr, // 4 TC
 		/obj/item/borg/upgrade/martyr, // 4 TC
 		/obj/item/borg/upgrade/martyr, // 4 TC
-		/obj/item/borg/upgrade/illegalrescue, // 10 TC
+		/obj/item/borg/upgrade/illegalrescue, // 6 TC
 		)
 
 /datum/s_voucher_set/catwalker_kit // 64 TC
