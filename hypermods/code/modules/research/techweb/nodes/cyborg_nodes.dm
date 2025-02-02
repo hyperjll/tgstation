@@ -44,7 +44,7 @@
 
 /datum/techweb_node/borg_janitor
 	id = TECHWEB_NODE_BORG_JANITOR
-	display_name = "Jasnitorial Cyborg Upgrades"
+	display_name = "Janitorial Cyborg Upgrades"
 	description = "Tra-la-la, just cleaning up the crime scene!"
 	prereq_ids = list(TECHWEB_NODE_CYBERNETICS)
 	design_ids = list(
