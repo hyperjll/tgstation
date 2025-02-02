@@ -20,8 +20,8 @@
 		"cybernetic_liver",
 		"cybernetic_heart",
 	)
-	experiments_to_unlock = list(
-		/datum/experiment/scanning/people/android,
+	discount_experiments = list(
+		/datum/experiment/scanning/people/android = TECHWEB_TIER_2_POINTS
 	)
 
 /datum/techweb_node/cybernetics
@@ -232,7 +232,7 @@
 		"cybernetic_heart_tier3",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
-	required_experiments = list(/datum/experiment/scanning/people/augmented_organs)
+	discount_experiments = list(/datum/experiment/scanning/people/augmented_organs = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SCIENCE, RADIO_CHANNEL_MEDICAL)
 
 /datum/techweb_node/cyber/cyber_organs_adv

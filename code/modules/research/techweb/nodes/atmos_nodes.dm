@@ -42,11 +42,11 @@
 		"pneumatic_seal",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
-	experiments_to_unlock = list(
-		/datum/experiment/ordnance/gaseous/plasma,
-		/datum/experiment/ordnance/gaseous/nitrous_oxide,
-		/datum/experiment/ordnance/gaseous/bz,
-		/datum/experiment/ordnance/gaseous/noblium,
+	discount_experiments = list(
+		/datum/experiment/ordnance/gaseous/plasma = TECHWEB_TIER_1_POINTS,
+		/datum/experiment/ordnance/gaseous/nitrous_oxide = TECHWEB_TIER_1_POINTS,
+		/datum/experiment/ordnance/gaseous/bz = TECHWEB_TIER_1_POINTS,
+		/datum/experiment/ordnance/gaseous/noblium = TECHWEB_TIER_1_POINTS,
 	)
 	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
 
