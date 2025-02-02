@@ -23,7 +23,7 @@
 		For those with an unsatiated bloodlust, a special Authorization Key can be instantly delivered to your location. \
 		Utilize the Armory within Firebase Balthazord to your heart's content, and make sure to send us the video footage!"
 	item = /obj/item/keycard/syndicate_armory
-	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_NUKE_OPS
 	cost = 100 // Contains sooooo many guns and ammo. More than enough to arm an entire team.
 
 // Support
