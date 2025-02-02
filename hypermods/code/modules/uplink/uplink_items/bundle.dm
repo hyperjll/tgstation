@@ -185,7 +185,7 @@
 			along with slurred speech, aggression, and the ability to infect others with this agent."
 	item = /obj/item/storage/box/syndie_kit/romerol_plus
 	cost = 40
-	progression_minimum = 30 MINUTES
+	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
 
@@ -196,7 +196,7 @@
 			Also comes with a Sleepy Pen and a bottle of Nocturine, for ease of use."
 	item = /obj/item/storage/box/syndie_kit/battle_royale_plus
 	cost = 40
-	progression_minimum = 30 MINUTES
+	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
 
@@ -207,7 +207,7 @@
 			presence be known. Also comes with a belt of tactical gear, including one of our Ansem/SC Pistols, some spare magazines, and a combat knife."
 	item = /obj/item/storage/box/syndie_kit/battlecruiser_plus
 	cost = 50
-	progression_minimum = 30 MINUTES
+	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
 
@@ -218,7 +218,7 @@
 			We'll provide you with a binary encryption key for free to contact your new silicon overlord... likely to make an alliance."
 	item = /obj/item/storage/box/syndie_kit/malf_plus
 	cost = 40
-	progression_minimum = 30 MINUTES
+	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
 
@@ -229,7 +229,7 @@
 			We'll also provide you with a desynchronizer free of charge, though it may not save you."
 	item = /obj/item/storage/box/syndie_kit/no_escape_plus
 	cost = 40
-	progression_minimum = 30 MINUTES
+	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
 
@@ -240,7 +240,7 @@
 			may bring 'IT'. We'll also provide you with one of our space suits, just in case."
 	item = /obj/item/storage/box/syndie_kit/meteor_shield_plus
 	cost = 50
-	progression_minimum = 30 MINUTES
+	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
 
@@ -251,7 +251,7 @@
 			We'll provide you with a pair of our magboots, to help ensure you don't dust yourself on the crystal accidentally."
 	item = /obj/item/storage/box/syndie_kit/destabilizing_crystal_plus
 	cost = 50
-	progression_minimum = 30 MINUTES
+	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
 
@@ -262,6 +262,6 @@
 			a new directive within them: Serve you. Comes with a binary encryption key to help you keep in touch with them."
 	item = /obj/item/storage/box/syndie_kit/silicon_rift_plus
 	cost = 50
-	progression_minimum = 30 MINUTES
+	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
