@@ -46,7 +46,7 @@
 	name = "R.O.T.B.U.S.T Implant Case"
 	id = "robusttecantirot"
 	build_type = PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/iron =SMALL_MATERIAL_AMOUNT*5, /datum/material/glass =SMALL_MATERIAL_AMOUNT.5, /datum/material/silver =SMALL_MATERIAL_AMOUNT*2, /datum/material/uranium =SMALL_MATERIAL_AMOUNT*2)
+	materials = list(/datum/material/iron =SMALL_MATERIAL_AMOUNT*5, /datum/material/glass =SMALL_MATERIAL_AMOUNT*5, /datum/material/silver =SMALL_MATERIAL_AMOUNT*2, /datum/material/uranium =SMALL_MATERIAL_AMOUNT*2)
 	build_path = /obj/item/implantcase/robusttec/antirot
 	category = list(
 		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_HEALTH
