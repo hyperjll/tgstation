@@ -810,19 +810,19 @@
 	if(!usedrecently)
 		usedrecently = TRUE
 		if(prob(95))
-			ADD_TRAIT(user, TRAIT_THERMAL_VISION, STATUS_EFFECT_TRAIT)
+			ADD_TRAIT(user, TRAIT_THERMAL_VISION, TRAIT_STATUS_EFFECT("vision_book"))
 			user.update_sight()
 			to_chat(span_notice("After flipping through the [src], you notice shapes within the walls!"))
 			sleep(augduration)
-			REMOVE_TRAIT(user, TRAIT_THERMAL_VISION, STATUS_EFFECT_TRAIT)
+			REMOVE_TRAIT(user, TRAIT_THERMAL_VISION, TRAIT_STATUS_EFFECT("vision_book"))
 			user.update_sight()
 			to_chat(span_notice("Your vision has returned to normal."))
 		else
-			ADD_TRAIT(user, TRAIT_XRAY_VISION, STATUS_EFFECT_TRAIT)
+			ADD_TRAIT(user, TRAIT_XRAY_VISION, TRAIT_STATUS_EFFECT("vision_book"))
 			user.update_sight()
 			to_chat(span_notice("After flipping through the [src], you notice the walls give way!"))
 			sleep(augduration)
-			REMOVE_TRAIT(user, TRAIT_XRAY_VISION, STATUS_EFFECT_TRAIT)
+			REMOVE_TRAIT(user, TRAIT_XRAY_VISION, TRAIT_STATUS_EFFECT("vision_book"))
 			user.update_sight()
 			to_chat(span_notice("Your vision has returned to normal."))
 	usedrecently = FALSE
