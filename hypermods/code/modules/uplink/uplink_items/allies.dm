@@ -138,3 +138,21 @@
 	surplus = 0
 	progression_minimum = 20 MINUTES
 	purchasable_from = ~UPLINK_CLOWN_OPS
+
+/datum/uplink_item/reinforcements/imp_induction
+	name = "Operative Induction Implant"
+	desc = "A special implant available to our agents in case one of our nuclear operative teams are coming in hot. \
+			While we provide our operatives with a better version that comes with gear, meeting up during a raid usually isn't \
+			possible in most scenarios. So we'll provide one here to increase the chances of agent recovery and operative success. \
+			CAN ONLY BE PURCHASED SHOULD A NUCLEAR OPERATIVE TEAM DECLARE WAR."
+	item = /obj/item/storage/box/syndie_kit/imp_induction
+	cost = 4 // Cost reduction because we aren't providing extra gear.
+	surplus = 0
+	limited_stock = 1
+	progression_minimum = 20 MINUTES // About the time nukies arrive, if you manage to get secondary objectives done for it early, then fine?
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) // Only available when a nukie team declares war.
+
+/datum/uplink_item/reinforcements/imp_induction/can_be_bought(datum/uplink_handler/uplink_handler)
+	if(!uplink_handler.warops)
+		return FALSE
+	return ..()

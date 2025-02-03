@@ -504,7 +504,7 @@
 	name = "Syndicate Induction Kit"
 	desc = "Met a fellow syndicate agent on the station? Kept some TC in reserve just in case? Or are you communicating with one via the Syndicate channel? \
 		Get this kit and you'll be able to induct them into your operative team via a special implant. \
-		Additionally, it contains an assortment of useful gear for new operatives, including a space suit, an Ansem pistol, two spare magazines, and more! \
+		Additionally, it contains an assortment of useful gear for new operatives, including a syndicate MODsuit, an Ansem pistol, two spare magazines, and more! \
 		*NOT* for usage with Reinforcements, and does not brainwash the target!"
 	item = /obj/item/storage/box/syndie_kit/induction_kit
 	cost = 6
