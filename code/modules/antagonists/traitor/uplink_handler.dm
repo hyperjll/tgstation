@@ -54,6 +54,8 @@
 	var/datum/callback/replace_objectives
 	///Reference to a contractor hub that the infiltrator can run, if they purchase it.
 	var/datum/contractor_hub/contractor_hub
+	///Has a nuclear operative team declared war upon the station?
+	var/warops = FALSE
 
 /datum/uplink_handler/New()
 	. = ..()

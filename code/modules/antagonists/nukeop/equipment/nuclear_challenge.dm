@@ -112,6 +112,14 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 	if (!isnull(announcement_system))
 		announcement_system.broadcast("Additional funding received from Nanotrasen Defense Budget following the emergency protocol.", list(RADIO_CHANNEL_SUPPLY))
 
+	for (var/datum/mind/M in get_antag_minds(/datum/antagonist/traitor)) // let roundstart tots get new uplink stuff should war be declared.
+		if (iscyborg(M.current))
+			continue
+		var/datum/component/uplink/uplink = M.find_syndicate_uplink()
+		if (!uplink)
+			continue
+		uplink.uplink_handler.warops = TRUE
+
 	qdel(src)
 
 /obj/item/nuclear_challenge/proc/distribute_tc()

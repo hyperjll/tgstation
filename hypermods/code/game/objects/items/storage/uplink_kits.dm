@@ -1268,6 +1268,12 @@
 	new /obj/item/implanter/radar(src)
 	new /obj/item/implanter/crewmonitor(src)
 
+/obj/item/storage/box/syndie_kit/imp_induction
+	name = "induction implant box"
+
+/obj/item/storage/box/syndie_kit/imp_induction/PopulateContents()
+	new /obj/item/implanter/induction_implant(src)
+
 /obj/item/storage/box/syndie_kit/missilephone
 	name = "missile phone box"
 
