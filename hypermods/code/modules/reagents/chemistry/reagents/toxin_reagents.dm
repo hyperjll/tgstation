@@ -125,6 +125,7 @@
 	REMOVE_TRAIT(M, TRAIT_PARALYSIS_L_LEG, type)
 	. = ..()
 
+
 /datum/reagent/toxin/heartbreaker
 	name = "Heartbreaker Toxin"
 	description = "A hallucinogenic compound derived from mindbreaker toxin. it blocks neurological signals to the respiratory system, causing asphyxiation and heart failure."
@@ -142,6 +143,7 @@
 
 	M.adjustStaminaLoss(5, 0)
 	return ..()
+
 
 /datum/reagent/toxin/muscleparalyzers
 	name = "Muscle Relaxant"
@@ -162,3 +164,18 @@
 			affected_mob.Paralyze(5 SECONDS * REM)
 			. = TRUE
 	..()
+
+
+/datum/reagent/toxin/ricin
+	name = "Ricin"
+	description = "A silent toxin that infiltrates cells and prevents them from making essential proteins, causing cell death. This often leads to organ failure, among other things."
+	color = "#FFFFFF"
+	toxpwr = 0
+	metabolization_rate = 0.04 * REAGENTS_METABOLISM // Slowly metabolized as the body only really gets rid of it when it loses cells to it.
+
+/datum/reagent/toxin/ricin/on_mob_life(mob/living/carbon/M)
+	M.adjustOrganLoss(ORGAN_SLOT_HEART, 0.1)
+	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, 0.1)
+	M.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.2)
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, 0.3)
+	return ..()

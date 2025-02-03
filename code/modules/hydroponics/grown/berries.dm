@@ -207,7 +207,7 @@
 	icon_dead = "lanternfruit-dead"
 	icon_harvest = "lanternfruit-harvest"
 	genes = list(/datum/plant_gene/trait/glow/yellow)
-	mutatelist = null
+	mutatelist = list(/obj/item/seeds/lanternfruit/oilbulb)
 	reagents_add = list(/datum/reagent/consumable/nutriment = 0.07, /datum/reagent/sulfur = 0.07, /datum/reagent/consumable/sugar = 0.07, /datum/reagent/consumable/liquidelectricity = 0.07)
 	graft_gene = /datum/plant_gene/trait/glow/yellow
 

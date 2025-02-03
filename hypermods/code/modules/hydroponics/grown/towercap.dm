@@ -10,16 +10,16 @@
 /obj/item/grown/log/glass/CheckAccepted(obj/item/I)
 	return FALSE
 
-/obj/item/grown/log/plasteel
-	seed = /obj/item/seeds/tower/plasteel
-	name = "plasteel-cap log"
-	desc = "It's made of plasteel."
+/obj/item/grown/log/titanium
+	seed = /obj/item/seeds/tower/titanium
+	name = "titanium-cap log"
+	desc = "It's made of titanium."
 	icon = 'hypermods/icons/obj/service/hydroponics/harvest.dmi'
-	icon_state = "plasteellogs"
-	plank_type = /obj/item/stack/sheet/plasteel
-	plank_name = "plasteel"
+	icon_state = "titaniumlogs"
+	plank_type = /obj/item/stack/sheet/mineral/titanium
+	plank_name = "titanium"
 
-/obj/item/grown/log/plasteel/CheckAccepted(obj/item/I)
+/obj/item/grown/log/titanium/CheckAccepted(obj/item/I)
 	return FALSE
 
 /obj/item/grown/log/silver
@@ -58,16 +58,16 @@
 /obj/item/grown/log/uranium/CheckAccepted(obj/item/I)
 	return FALSE
 
-/obj/item/grown/log/titanium
-	seed = /obj/item/seeds/tower/titanium
-	name = "titanium-cap log"
-	desc = "It's made of titanium."
+/obj/item/grown/log/plasteel
+	seed = /obj/item/seeds/tower/plasteel
+	name = "plasteel-cap log"
+	desc = "It's made of plasteel."
 	icon = 'hypermods/icons/obj/service/hydroponics/harvest.dmi'
-	icon_state = "titaniumlogs"
-	plank_type = /obj/item/stack/sheet/mineral/titanium
-	plank_name = "titanium"
+	icon_state = "plasteellogs"
+	plank_type = /obj/item/stack/sheet/plasteel
+	plank_name = "plasteel"
 
-/obj/item/grown/log/titanium/CheckAccepted(obj/item/I)
+/obj/item/grown/log/plasteel/CheckAccepted(obj/item/I)
 	return FALSE
 
 /obj/item/grown/log/gold
@@ -109,18 +109,18 @@
 	reagents_add = list(/datum/reagent/silicon = 0.5, /datum/reagent/oxygen = 0.25)
 	rarity = 20
 //Mutates from Steel
-/obj/item/seeds/tower/plasteel
-	name = "plasteel-cap mycelium pack"
-	desc = "This mycelium grows into plasteel logs."
+/obj/item/seeds/tower/titanium
+	name = "titanium-cap mycelium pack"
+	desc = "This mycelium grows into titanium logs."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
-	icon_state = "mycelium-plasteelcap"
-	species = "plasteelcap"
-	plantname = "Plasteel Caps"
+	icon_state = "mycelium-titaniumcap"
+	species = "titaniumcap"
+	plantname = "Titanium Caps"
 	growing_icon = 'hypermods/icons/obj/service/hydroponics/growing_mushrooms.dmi'
-	product = /obj/item/grown/log/plasteel
-	mutatelist = list(/obj/item/seeds/tower/titanium)
-	reagents_add = list(/datum/reagent/stable_plasma = 0.5)
-	rarity = 40
+	product = /obj/item/grown/log/titanium
+	mutatelist = list(/obj/item/seeds/tower/plasteel)
+	reagents_add = list(/datum/reagent/iron = 2)
+	rarity = 80
 //Mutates from Steel
 /obj/item/seeds/tower/silver
 	name = "silver-cap mycelium pack"
@@ -134,7 +134,7 @@
 	mutatelist = list(/obj/item/seeds/tower/gold)
 	reagents_add = list(/datum/reagent/silver = 0.5)
 	rarity = 40
-///Mutates from glass
+///Mutates from Glass
 /obj/item/seeds/tower/diamond
 	name = "diamond-cap mycelium pack"
 	desc = "This mycelium grows into diamond logs."
@@ -147,7 +147,7 @@
 	mutatelist = list(/obj/item/seeds/tower/bluespace)
 	reagents_add = list(/datum/reagent/carbon = 1)
 	rarity = 40
-
+///Mutates from Glass
 /obj/item/seeds/tower/uranium
 	name = "uranium-cap mycelium pack"
 	desc = "This mycelium grows into uranium logs."
@@ -160,19 +160,19 @@
 	mutatelist = null
 	reagents_add = list(/datum/reagent/uranium = 0.5)
 	rarity = 40
-//Mutates from Plasteel
-/obj/item/seeds/tower/titanium
-	name = "titanium-cap mycelium pack"
-	desc = "This mycelium grows into titanium logs."
+//Mutates from Titanium
+/obj/item/seeds/tower/plasteel
+	name = "plasteel-cap mycelium pack"
+	desc = "This mycelium grows into plasteel logs."
 	icon = 'hypermods/icons/obj/service/hydroponics/seeds.dmi'
-	icon_state = "mycelium-titaniumcap"
-	species = "titaniumcap"
-	plantname = "Titanium Caps"
+	icon_state = "mycelium-plasteelcap"
+	species = "plasteelcap"
+	plantname = "Plasteel Caps"
 	growing_icon = 'hypermods/icons/obj/service/hydroponics/growing_mushrooms.dmi'
-	product = /obj/item/grown/log/titanium
+	product = /obj/item/grown/log/plasteel
 	mutatelist = list()
-	reagents_add = list(/datum/reagent/iron = 2)
-	rarity = 80
+	reagents_add = list(/datum/reagent/stable_plasma = 0.5)
+	rarity = 40
 //Mutates from Silver
 /obj/item/seeds/tower/gold
 	name = "gold-cap mycelium pack"

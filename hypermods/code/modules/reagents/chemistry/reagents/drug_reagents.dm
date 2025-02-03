@@ -96,3 +96,41 @@
 		need_mob_update += affected_mob.adjustToxLoss(2, updating_health = FALSE, required_biotype = affected_biotype)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
+
+
+/datum/reagent/drug/nicotwaine
+	name = "Nicotwaine"
+	description = "Moderately reduces stun times and increases bodily vigor. If overdosed it will deal major toxin and oxygen damage."
+	color = "#60A584" // rgb: 96, 165, 132
+	taste_description = "smoke"
+	trippy = FALSE
+	overdose_threshold = 30
+	metabolization_rate = 0.125 * REAGENTS_METABOLISM
+	ph = 8
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	addiction_types = list(/datum/addiction/nicotine = 30) // double of nicotine
+
+	//Nicotine is used as a pesticide IRL.
+/datum/reagent/drug/nicotwaine/on_hydroponics_apply(obj/machinery/hydroponics/mytray, mob/user)
+	mytray.adjust_toxic(round(volume))
+	mytray.adjust_pestlevel(-rand(2, 4))
+
+/datum/reagent/drug/nicotwaine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	if(SPT_PROB(0.3, seconds_per_tick))
+		var/smoke_message = pick("You feel both relaxed and full of vigor!", "A wave of energy washes over you.","You blink and realize you hadn't blinked in a while.","You feel full of vigor.")
+		to_chat(affected_mob, span_notice("[smoke_message]"))
+	affected_mob.add_mood_event("smoked", /datum/mood_event/smoked)
+	affected_mob.remove_status_effect(/datum/status_effect/jitter)
+	affected_mob.AdjustAllImmobility(-60 * REM * seconds_per_tick)
+	affected_mob.adjustStaminaLoss(-1, 0)
+
+	return UPDATE_MOB_HEALTH
+
+/datum/reagent/drug/nicotwaine/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	var/need_mob_update
+	need_mob_update = affected_mob.adjustToxLoss(0.2 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+	need_mob_update += affected_mob.adjustOxyLoss(1.4 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
+	if(need_mob_update)
+		return UPDATE_MOB_HEALTH

@@ -264,3 +264,114 @@
 		M.reagents.add_reagent(/datum/reagent/medicine/omnizine, 2)
 		..()
 		. = 1
+
+
+/datum/reagent/consumable/rainbow_chili
+	name = "Rainbow Chili"
+	description = "An anomalous reagent that quickly diffuses into various other reagents. The ultimate gamble."
+	color = "#ffffff"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	taste_description = "a roll of the dice"
+	var/r_type = ""
+
+/datum/reagent/consumable/rainbow_chili/on_mob_life(mob/living/carbon/M, seconds_per_tick, times_fired)
+	. = ..()
+	var/list/r_types = subtypesof(/datum/reagent/)
+	for(var/i in 1 to 1)
+		r_type = pick(r_types)
+
+	M.reagents.add_reagent(r_type, 1)
+	..()
+	. = 1
+
+	M.reagents.remove_reagent(/datum/reagent/consumable/rainbow_chili, 1)
+	..()
+	. = 1
+
+
+/datum/reagent/consumable/vhfcs // Slower sugar production, but much slower metabolize speed = large amounts of sugar over large amount of time.
+	name = "Very-High-Fructose Corn Syrup"
+	description = "Decays into sugar."
+	color = "#DBCE95"
+	metabolization_rate = 1 * REAGENTS_METABOLISM
+	taste_description = "extra sweet slime"
+
+/datum/reagent/consumable/vhfcs/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	holder.add_reagent(/datum/reagent/consumable/sugar, 2.4 * REM * seconds_per_tick)
+
+
+/datum/reagent/consumable/melonium
+	name = "Melonium"
+	description = "A robust and mysterious substance."
+	color = "#00ff2c"
+	metabolization_rate = 1 * REAGENTS_METABOLISM
+	var/t_type = ""
+	var/m_type = ""
+
+/datum/reagent/consumable/melonium/expose_mob(mob/living/exposed_mob, methods=INGEST, reac_volume, show_message = TRUE)
+	. = ..()
+	if(!iscarbon(exposed_mob))
+		return
+	var/mob/living/carbon/carbies = exposed_mob
+	if(carbies.stat == DEAD)
+		show_message = 0
+	if(!(methods & (INGEST)))
+		return
+
+	switch(rand(1,5))
+		if(1)
+			to_chat(carbies, span_alert("What an explosive burst of flavor!"))
+			var/turf/T = get_turf(carbies.loc)
+			explosion(T, 0, 0, 1, flame_range = 0)
+		if(2)
+			to_chat(carbies, span_alert("So juicy!"))
+			var/list/t_types = subtypesof(/datum/reagent/toxin/)
+			for(var/i in 1 to 1)
+				t_type = pick(t_types)
+
+			carbies.reagents.add_reagent(t_type, 10)
+			..()
+			. = 1
+
+			var/list/m_types = subtypesof(/datum/reagent/medicine/)
+			for(var/i in 1 to 1)
+				m_type = pick(m_types)
+
+			carbies.reagents.add_reagent(m_type, 10)
+			..()
+			. = 1
+		if(3)
+			to_chat(carbies, span_alert("How refreshing!"))
+			var/need_mob_update
+			need_mob_update = carbies.adjustOrganLoss(ORGAN_SLOT_BRAIN, 30 * REM, required_organ_flag = affected_organ_flags)
+			need_mob_update += carbies.adjustBruteLoss(-200 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+			need_mob_update += carbies.adjustFireLoss(-200 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+			need_mob_update += carbies.adjustToxLoss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+			need_mob_update += carbies.adjustOxyLoss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+			if(need_mob_update)
+				return UPDATE_MOB_HEALTH
+		if(4)
+			to_chat(carbies, span_alert("This flavor is out of this world!"))
+			carbies.adjust_confusion(10 SECONDS)
+			carbies.adjust_disgust(10)
+			carbies.adjust_hallucinations(1 MINUTES)
+		if(5)
+			to_chat(carbies, span_alert("What stunning texture!"))
+			carbies.AdjustSleeping(6 SECONDS * REM)
+			carbies.AdjustStun(7 SECONDS * REM)
+			carbies.AdjustKnockdown(8 SECONDS * REM)
+			carbies.adjust_stutter(20 SECONDS)
+
+
+/datum/reagent/consumable/clockwork_orange
+	name = "Clockwork Orange"
+	description = "An almost miracle juice capable of restoring someone's youth."
+	color = "#fa8c0b"
+	taste_description = "uncomfortable"
+
+/datum/reagent/consumable/clockwork_orange/on_mob_life(mob/living/carbon/human/metabolizer, seconds_per_tick, times_fired)
+	. = ..()
+	if(SPT_PROB(20, seconds_per_tick) && istype(metabolizer))
+		if(metabolizer.age > 13)
+			metabolizer.age -= 1
