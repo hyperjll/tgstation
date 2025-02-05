@@ -82,6 +82,8 @@
 		/obj/structure/window,
 	))
 
+	density = FALSE
+
 /datum/emote/carp
 	mob_type_allowed_typecache = /mob/living/basic/carp
 	mob_type_blacklist_typecache = list()
