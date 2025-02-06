@@ -8,5 +8,7 @@
 
 /datum/quirk/mindshielded/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder
+	if(IS_REVOLUTIONARY(human_holder))
+		return
 	var/obj/item/implant/mindshield/mindshield = new /obj/item/implant/mindshield(human_holder)
 	mindshield.implant(human_holder, null, silent = TRUE)
