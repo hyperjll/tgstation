@@ -5,7 +5,7 @@
 
 /obj/item/extraction_pack/non_contractor/cyborg
 	can_use_indoors = TRUE
-	uses_left = -1
+	uses_left = INFINITY
 	beacon_networks = list("station", "syndicate")
 
 /obj/item/fulton_core/syndicate
