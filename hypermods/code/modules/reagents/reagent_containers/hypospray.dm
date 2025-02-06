@@ -331,3 +331,16 @@
 	icon_state = "maintenance"
 	base_icon_state = "maintenance"
 	label_examine = FALSE
+
+/obj/item/reagent_containers/hypospray/medipen/shrink
+	name = "shrink serum medipen"
+	desc = "Contains six doses of a special chemical compound that results in temporary molecular compression within the host."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "stimpakpen"
+	inhand_icon_state = "medipen"
+	base_icon_state = "stimpakpen"
+	custom_price = 300
+	custom_premium_price = 500
+	volume = 30
+	amount_per_transfer_from_this = 5
+	list_reagents = list(/datum/reagent/shrinkcompound = 30)

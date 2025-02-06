@@ -63,3 +63,36 @@
 	description = "Produced by Vahlen Pharmaceuticals as a miracle component for producing difficult-to-make or otherwise luxorious reagents."
 	color ="#253654"
 	taste_description = "vaugely evil"
+
+/datum/reagent/shrinkcompound
+	name = "Shrink Compound"
+	description = "A highly experimental chemical compound that results in temporary molecular compression of the host."
+	color = "#FFFFFF"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	self_consuming = TRUE
+	var/current_size = RESIZE_DEFAULT_SIZE
+	var/newsize = 1
+	var/delay = 1 SECONDS // Timer between size adjustments
+	var/max_shrinks = 75 // The maxmimum size reduction. This deducted by 1 each second (so 100 / ninety = 0.1 size mult)
+
+/datum/reagent/shrinkcompound/on_mob_life(mob/living/carbon/affected_mob)
+	..()
+	while(max_shrinks > 0)
+		affected_mob.update_transform(newsize/current_size)
+		current_size = newsize
+		sleep(delay)
+		max_shrinks--
+		newsize -= 0.01
+
+/datum/reagent/shrinkcompound/on_mob_metabolize(mob/living/affected_mob)
+	affected_mob.maxHealth -= 75
+	affected_mob.density = FALSE
+
+/datum/reagent/shrinkcompound/on_mob_end_metabolize(mob/living/affected_mob)
+	// Putting this here to remove any additional size shenanigans
+	affected_mob.maxHealth += 75 // Restore max health
+	affected_mob.health += 75 // Restore missing health
+	affected_mob.density = TRUE
+	affected_mob.update_transform(RESIZE_DEFAULT_SIZE/current_size)
+	current_size = RESIZE_DEFAULT_SIZE
+	..()

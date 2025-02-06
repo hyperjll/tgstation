@@ -164,3 +164,14 @@
 			before teleporting back."
 	item = /obj/item/reagent_containers/cup/glass/bottle/eigenstasium
 	cost = 4
+
+/datum/uplink_item/consumable/shrink
+	name = "Shrink Serum"
+	desc = "A single six-use medipen using an older design. \
+			Those under the effects of the serum will slowly shrink via molecular compression. \
+			Not only will you be harder to hit, but you'll be small enough to move past most people without bumping into them. \
+			Due to molecular compression and the user's tiny size, you'll be far more vulnerable under the influence of this drug. \
+			The effects may be extended with additional usage with no side effects."
+	item = /obj/item/reagent_containers/hypospray/medipen/shrink
+	cost = 8
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
