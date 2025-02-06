@@ -182,3 +182,13 @@
 	progression_minimum = 20 MINUTES
 	cost = 12
 	surplus = 20
+
+/datum/uplink_item/armor/suicide_vest
+	name = "Suicide Vest"
+	desc = "A bulletproof vest outfitted with explosives. When worn, it cannot be taken off. \
+			It still provides a decent amount of protection and has a large explosion radius. \
+			A favorite among those who'd like to die a glorious death."
+	item = /obj/item/clothing/suit/armor/suicide
+	cost = 13
+	surplus = 0
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

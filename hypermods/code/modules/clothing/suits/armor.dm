@@ -90,3 +90,71 @@
 	fire = 50
 	acid = 90
 	wound = 25
+
+
+/obj/item/clothing/suit/armor/suicide
+	name = "suicide vest"
+	desc = "A bulletproof vest that has been fitted with high-end explosive charges. Some kind of mechanical mechanism locks into one's flesh to prevent removal."
+	icon = 'hypermods/icons/obj/clothing/suits/armor.dmi'
+	icon_state = "suicide"
+	worn_icon = 'hypermods/icons/mob/clothing/suits/armor.dmi'
+	worn_icon_state = "suicide"
+	blood_overlay_type = "armor"
+	actions_types = list(/datum/action/item_action/suicidevest)
+	var/vestprimed = FALSE // Are we already about to explode?
+	var/delay = 1 SECONDS // Delay between beeps
+	var/bomb_beeps_until_boom = 10 // How many beeps till we explode? This * delay = time
+	var/equipped // are we equipped?
+
+/datum/action/item_action/suicidevest
+	name = "Suicide Bomb"
+	desc = "Prime the suicide vest and take those bastards with you."
+	button_icon = 'hypermods/icons/obj/clothing/suits/armor.dmi'
+	button_icon_state = "suicide"
+
+/obj/item/clothing/suit/armor/suicide/equipped(mob/user, slot)
+	. = ..()
+	if(slot_flags & slot)
+		ADD_TRAIT(src, TRAIT_NODROP, STICKY_CLOTHING_TRAIT)
+		equipped = TRUE
+
+/obj/item/clothing/suit/armor/suicide/ui_action_click(mob/user, action)
+	if(!isliving(user))
+		return
+
+	if(vestprimed)
+		to_chat(user, span_warning("It's too late to regret your decisions."))
+		return
+
+	if(!equipped)
+		to_chat(user, span_warning("[src] must be worn to activate."))
+		return
+
+	vestprimed = TRUE
+
+	while(bomb_beeps_until_boom > 0)
+		//for extra spice
+		var/beep_volume = 35
+		playsound(loc, 'sound/items/timer.ogg', beep_volume, vary = FALSE)
+		sleep(delay)
+		bomb_beeps_until_boom--
+		beep_volume += 5
+	explosion(src,3,6,12, flame_range = 9) // pretty massive.
+	qdel(src)
+
+/obj/item/clothing/suit/armor/suicide/wirecutter_act(mob/living/user, obj/item/tool)
+	if(!isliving(user)) // Just checking.
+		return
+
+	balloon_alert(user, "picking a wire to snip...")
+
+	if(!do_after(user, 10 SECONDS))
+		balloon_alert(user, "interrupted!")
+		return
+
+	if(prob(75))
+		explosion(src,1,3,8, flame_range = 5) // not as bad as a manual detonation
+		qdel(src)
+	else
+		to_chat(user, span_notice("You snip a wire, and the vest harmlessly falls apart!"))
+		qdel(src)
