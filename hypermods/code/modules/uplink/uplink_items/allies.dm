@@ -50,6 +50,7 @@
 	cost = 40
 	surplus = 0
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	cant_discount = TRUE
 	restricted = TRUE
 	refundable = TRUE
 
@@ -149,6 +150,7 @@
 	cost = 4 // Cost reduction because we aren't providing extra gear.
 	surplus = 0
 	limited_stock = 1
+	cant_discount = TRUE
 	progression_minimum = 20 MINUTES // About the time nukies arrive, if you manage to get secondary objectives done for it early, then fine?
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) // Only available when a nukie team declares war.
 
