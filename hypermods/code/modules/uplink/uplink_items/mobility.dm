@@ -55,7 +55,7 @@
 			Those who drink the contents of the bottle provided will immediately sprout wings capable of sustained flight. Wings may vary in appearance."
 	cost = 2
 	surplus = 10
-	item = /obj/item/reagent_containers/cup/bottle/potion/flight
+	item = /obj/item/reagent_containers/cup/bottle/potion/flight/syndicate
 
 /datum/uplink_item/mobility/jetpack
 	name = "Smuggled Jetpack"

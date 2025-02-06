@@ -6814,6 +6814,7 @@
 #include "hypermods\code\modules\mining\equipment\grapple_gun.dm"
 #include "hypermods\code\modules\mining\equipment\mineral_scanner.dm"
 #include "hypermods\code\modules\mining\equipment\survival_pod.dm"
+#include "hypermods\code\modules\mining\lavaland\tendril_loot.dm"
 #include "hypermods\code\modules\mob\living\basic\pets\penguin.dm"
 #include "hypermods\code\modules\mob\living\basic\pets\cat\cat.dm"
 #include "hypermods\code\modules\mob\living\basic\pets\dog\corgi.dm"
