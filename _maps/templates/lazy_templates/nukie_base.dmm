@@ -542,6 +542,7 @@
 /obj/structure/frame/computer,
 /obj/effect/decal/cleanable/cobweb,
 /obj/structure/sign/poster/contraband/syndiemoth/directional/north,
+/obj/item/language_manual/codespeak_manual/unlimited,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership)
 "fx" = (
@@ -4257,6 +4258,7 @@
 	pixel_y = -14
 	},
 /obj/effect/turf_decal/tile/bar/opposingcorners,
+/obj/item/language_manual/codespeak_manual/unlimited,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
 "QD" = (
