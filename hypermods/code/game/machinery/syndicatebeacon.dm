@@ -16,15 +16,19 @@
 	penguin.faction = list("[REF(user)]", ROLE_SYNDICATE, FACTION_HOSTILE)
 
 /obj/item/sbeacondrop/superbomb
+	desc = "A label on it reads: <i>Warning: Activating this device will send a high-ordinance explosive to your location</i>."
 	droptype = /obj/machinery/syndicatebomb/super
 
 /obj/item/sbeacondrop/decoybomb
+	desc = "A label on it reads: <i>Warning: Activating this device will send a decoy explosive to your location</i>."
 	droptype = /obj/machinery/syndicatebomb/decoy
 
 /obj/item/sbeacondrop/dimensionalbomb
+	desc = "A label on it reads: <i>Warning: Activating this device will send a mass-redecoration device to your location</i>."
 	droptype = /obj/machinery/syndicatebomb/dimensional
 
 /obj/item/sbeacondrop/meteor_shield
+	desc = "A label on it reads: <i>Activating this device will send a meteor shield to your location.</i>."
 	droptype = /obj/machinery/satellite/meteor_shield
 
 /obj/item/sbeacondrop/semiautoturret
