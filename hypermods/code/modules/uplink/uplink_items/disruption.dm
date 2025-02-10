@@ -115,3 +115,13 @@
 	cost = 9 // Highly destructive, but not everyone can easily access a communications console.
 	limited_stock = 1
 	progression_minimum = 30 MINUTES
+
+/datum/uplink_item/disruption/semiautoturret
+	name = "Disposable Semi-Auto Turret"
+	desc = "A beacon that summons a disposable semi-auto ballistic turret to your location. \
+			The turret, while weak on it's own, can make for a decent distraction to cause chaos. \
+			The turret won't shoot it's deployer, nor anyone clearly affiliated with the Syndicate."
+	item = /obj/item/sbeacondrop/semiautoturret
+	cost = 4
+	surplus = 20
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

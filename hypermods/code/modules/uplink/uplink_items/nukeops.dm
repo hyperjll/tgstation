@@ -35,6 +35,14 @@
 	item = /obj/item/antag_spawner/nuke_ops/syndicat
 	cost = 6
 
+/datum/uplink_item/reinforcements/penetratorturret
+	name = "Disposable Penetrator Turret"
+	desc = "A beacon which is used to send over a single high-end ballistic turret loaded with penetrator rounds. \
+			A favorite among operatives who need decent deterrents for any particular area... or for replacing the turrets aboard your space cruiser."
+	item = /obj/item/sbeacondrop/penetratorturret
+	cost = 30 // Really strong with operatives nearby, damn near shuts down any offensive against the ops.
+	cant_discount = TRUE // Letting people get infinite discounts by chance would absolutely suck ass.
+
 // ~~ China-Lake Bundle ~~ (The one and ONLY.) Also has a 35 TC price tag for how destructive it is.
 
 /datum/uplink_item/weapon_kits/extreme_cost

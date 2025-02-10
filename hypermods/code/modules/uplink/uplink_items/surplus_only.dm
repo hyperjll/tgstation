@@ -128,3 +128,12 @@
 	item = /obj/item/clothing/suit/hooded/syndicommand
 	cost = 8
 	surplus = 20
+
+/datum/uplink_item/surplusonly/laserturret
+	name = "Disposable Laser Turret"
+	desc = "A beacon that summons a disposable heavy-laser turret to your location. \
+			Makes for a decent distraction to cause chaos and can potentially kill several people before going down. \
+			The turret won't shoot it's deployer, nor anyone clearly affiliated with the Syndicate."
+	item = /obj/item/sbeacondrop/heavylaserturret
+	cost = 7
+	surplus = 20
