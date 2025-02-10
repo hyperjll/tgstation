@@ -103,7 +103,7 @@
 	item = /obj/item/toy/crayon/spraycan/syndicate
 	progression_minimum = 15 MINUTES
 	cost = 1
-	surplus = 10
+	surplus = 0 // occasionally bursts into flames due to sparks from the pod.
 
 /datum/uplink_item/stealthy_weapons/sleepybaton
 	name = "Incapacitation Baton"
