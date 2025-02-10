@@ -182,3 +182,12 @@
 	cost = 7
 	surplus = 25
 	progression_minimum = 20 MINUTES
+
+/datum/uplink_item/deception/trickflash
+	name = "Trick Flash"
+	desc = "A handheld flash often used by security officers and roboticists. \
+			The moment it's used, it'll set off the explosives within it."
+	item = /obj/item/assembly/flash/handheld/bomb
+	cost = 2
+	surplus = 0 // Let's not fool the people who buy a surplus crate.
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

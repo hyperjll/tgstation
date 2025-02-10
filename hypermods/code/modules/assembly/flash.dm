@@ -22,3 +22,9 @@
 	burnout_resistance = 0.3
 	aoerange = 5
 	aoeconfusiondur = 8 SECONDS
+
+/obj/item/assembly/flash/handheld/bomb/try_use_flash(mob/user = null)
+	. = ..()
+	if(!burnt_out)
+		explosion(src, -1, 1, 3, 4)
+		burn_out()
