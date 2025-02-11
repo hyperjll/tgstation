@@ -984,3 +984,11 @@
 	cost = 3
 	surplus = 0
 	restricted_roles = list(JOB_CHEMIST, JOB_SCIENTIST, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/crushmagboots
+	name = "Crushing Magboots"
+	desc = "A pair of extra-strength magboots that crush anyone you walk over while they're active."
+	item = /obj/item/clothing/shoes/magboots/crushing
+	cost = 8
+	surplus = 0
+	restricted_roles = list(JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
