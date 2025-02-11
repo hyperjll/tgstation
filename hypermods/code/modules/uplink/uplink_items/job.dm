@@ -992,3 +992,12 @@
 	cost = 8
 	surplus = 0
 	restricted_roles = list(JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/the_honkrender
+	name = "The Honkrender"
+	desc = "An ancient artifact recovered from an ancient cave. Opens the way to the Dark Carnival temporarily. \
+			Useful for... oh what the hell, you know you want too!"
+	item = /obj/item/veilrender/honkrender
+	cost = 8
+	restricted = TRUE
+	restricted_roles = list(JOB_CLOWN, JOB_CHAPLAIN, JOB_CAPTAIN)

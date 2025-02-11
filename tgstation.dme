@@ -6954,6 +6954,7 @@
 #include "hypermods\code\modules\uplink\uplink_items\armor.dm"
 #include "hypermods\code\modules\uplink\uplink_items\badass.dm"
 #include "hypermods\code\modules\uplink\uplink_items\bundle.dm"
+#include "hypermods\code\modules\uplink\uplink_items\clownops.dm"
 #include "hypermods\code\modules\uplink\uplink_items\consumable.dm"
 #include "hypermods\code\modules\uplink\uplink_items\dangerous.dm"
 #include "hypermods\code\modules\uplink\uplink_items\deception.dm"
