@@ -6766,6 +6766,7 @@
 #include "hypermods\code\modules\clothing\glasses\hud.dm"
 #include "hypermods\code\modules\clothing\gloves\color.dm"
 #include "hypermods\code\modules\clothing\gloves\insulated.dm"
+#include "hypermods\code\modules\clothing\gloves\power_gloves.dm"
 #include "hypermods\code\modules\clothing\gloves\special.dm"
 #include "hypermods\code\modules\clothing\head\helmet.dm"
 #include "hypermods\code\modules\clothing\masks\gasmask.dm"

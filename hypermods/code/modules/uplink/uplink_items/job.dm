@@ -1013,3 +1013,14 @@
 	restricted = TRUE
 	refundable = TRUE
 	restricted_roles = list(JOB_COOK, JOB_CHAPLAIN, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/powergloves
+	name = "Power Gloves"
+	desc = "A pair of insulated gloves with onboard electronics capable of harnessing electricity from nearby power wires. \
+			Harnessed electricity can be used to shock nearby people after a short delay. \
+			Requires a decent amount of power to be running through the powernet, and you need to be standing atop of a power wire to use. \
+			T-Analyzers are highly recommended."
+	item = /obj/item/clothing/gloves/color/yellow/power_gloves
+	cost = 8
+	surplus = 10
+	restricted_roles = list(JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
