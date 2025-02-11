@@ -29,7 +29,8 @@
 /datum/uplink_item/stealthy_tools/chameleon
 	name = "Chameleon Kit"
 	desc = "A set of items that contain chameleon technology allowing you to disguise as pretty much anything on the station, and more! \
-			Due to budget cuts, the shoes don't provide protection against slipping and skillchips are sold separately."
+			Due to budget cuts, the shoes don't provide protection against slipping and skillchips are sold separately. \
+			However, we've managed to improve this chameleon set over the years to support plasmamen."
 	item = /obj/item/storage/box/syndie_kit/chameleon
 	cost = 2
 	purchasable_from = ~UPLINK_NUKE_OPS //clown ops are allowed to buy this kit, since it's basically a costume, loneops can purchase it to blend in.

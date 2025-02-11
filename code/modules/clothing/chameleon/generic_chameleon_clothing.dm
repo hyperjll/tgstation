@@ -30,6 +30,7 @@ do { \
 	can_adjust = FALSE
 	armor_type = /datum/armor/clothing_under/chameleon
 	actions_types = list(/datum/action/item_action/chameleon/change/jumpsuit)
+	clothing_flags = PLASMAMAN_PREVENT_IGNITION
 
 /obj/item/clothing/under/chameleon/broken
 
@@ -56,6 +57,7 @@ do { \
 	resistance_flags = NONE
 	armor_type = /datum/armor/suit_chameleon
 	actions_types = list(/datum/action/item_action/chameleon/change/suit)
+	clothing_flags = PLASMAMAN_PREVENT_IGNITION
 
 /obj/item/clothing/suit/chameleon/Initialize(mapload)
 	. = ..()
@@ -111,6 +113,7 @@ do { \
 	armor_type = /datum/armor/gloves_chameleon
 	actions_types = list(/datum/action/item_action/chameleon/change/gloves)
 	clothing_traits = list(TRAIT_FAST_CUFFING)
+	clothing_flags = PLASMAMAN_PREVENT_IGNITION
 
 /obj/item/clothing/gloves/chameleon/broken
 
@@ -135,6 +138,7 @@ do { \
 	resistance_flags = NONE
 	armor_type = /datum/armor/head_chameleon
 	actions_types = list(/datum/action/item_action/chameleon/change/hat)
+	clothing_flags = PLASMAMAN_PREVENT_IGNITION
 
 /obj/item/clothing/head/chameleon/broken
 
@@ -171,7 +175,7 @@ do { \
 	inhand_icon_state = "gas_alt"
 	resistance_flags = NONE
 	armor_type = /datum/armor/mask_chameleon
-	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS | PLASMAMAN_PREVENT_IGNITION
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
 	w_class = WEIGHT_CLASS_SMALL
@@ -228,6 +232,7 @@ do { \
 	resistance_flags = NONE
 	armor_type = /datum/armor/shoes_chameleon
 	actions_types = list(/datum/action/item_action/chameleon/change/shoes)
+	clothing_flags = PLASMAMAN_PREVENT_IGNITION
 
 /obj/item/clothing/shoes/chameleon/Initialize(mapload)
 	. = ..()
