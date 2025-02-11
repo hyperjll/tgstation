@@ -211,7 +211,7 @@
 	item = /obj/item/mod/module/springlock/bite_of_87
 	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 	cost = 2
-	surplus = 15
+	surplus = 0 // Don't trick our precious surplus crate buyers.
 
 /datum/uplink_item/role_restricted/reverse_revolver
 	name = "Reverse Revolver"
