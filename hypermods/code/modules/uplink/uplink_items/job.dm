@@ -1001,3 +1001,15 @@
 	cost = 8
 	restricted = TRUE
 	restricted_roles = list(JOB_CLOWN, JOB_CHAPLAIN, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/holocarp
+	name = "Holocarp Parasites"
+	desc = "Fishsticks prepared through ritualistic means in honor of the god Carp-sie, capable of binding a holocarp \
+			to act as a servant and guardian to their host. You may have several holocarp's at once."
+	item = /obj/item/guardian_creator/carp
+	cost = 18
+	surplus = 5
+	progression_minimum = 30 MINUTES
+	restricted = TRUE
+	refundable = TRUE
+	restricted_roles = list(JOB_COOK, JOB_CHAPLAIN, JOB_CAPTAIN)
