@@ -191,3 +191,13 @@
 	cost = 2
 	surplus = 0 // Let's not fool the people who buy a surplus crate.
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/deception/super_glue
+	name = "Super Glue"
+	desc = "A cheap bottle of one-use super glue we've altered to be far more 'super' than normal. \
+			Use on any item to make it completely undroppable. \
+			Be careful not to glue an item you're already holding!"
+	item = /obj/item/syndie_glue
+	cost = 2
+	surplus = 30
+	//purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // probably not necessary to restrict from nukies, i don't think anyone's stupid enough to glue their own gear.

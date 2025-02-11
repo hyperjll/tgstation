@@ -6634,6 +6634,7 @@
 #include "hypermods\code\game\objects\items\devices\doorCharge.dm"
 #include "hypermods\code\game\objects\items\devices\flashlight.dm"
 #include "hypermods\code\game\objects\items\devices\forcefieldprojector.dm"
+#include "hypermods\code\game\objects\items\devices\glue.dm"
 #include "hypermods\code\game\objects\items\devices\miragedrive.dm"
 #include "hypermods\code\game\objects\items\devices\powerlake.dm"
 #include "hypermods\code\game\objects\items\devices\traitordevices.dm"
