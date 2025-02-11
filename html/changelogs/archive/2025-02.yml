@@ -155,3 +155,20 @@
   timothymtorres:
   - code_imp: Add error message logs to screenshot CI test failure when screenshots
       do not exist.
+2025-02-10:
+  SmArtKar:
+  - bugfix: Fixed missing HTML encodes in comms console code
+  - bugfix: Examining walls no longer allows you to see items mounted on its other
+      side
+  TiviPlus:
+  - code_imp: updated hslify to correctly detect all hexcodes
+  necromanceranne:
+  - bugfix: The traitor guncase properly checks for condition changes before letting
+      a player activate the time bomb.
+2025-02-11:
+  SmArtKar:
+  - bugfix: Fixed wooden rifle stock being uncraftable
+  - bugfix: Fixed exceptionally dark armrests on chairs
+  - bugfix: Fixed dress and gown rendering below gloves and shoes
+  Time-Green:
+  - rscdel: Reverts sneeze projectiles
