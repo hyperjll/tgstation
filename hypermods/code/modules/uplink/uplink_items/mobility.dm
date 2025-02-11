@@ -96,3 +96,26 @@
 	item = /obj/item/storage/box/syndie_kit/syndifulton
 	cost = 6
 	surplus = 30
+
+/datum/uplink_item/mobility/syndiway
+	name = "Syndicate Segway"
+	desc = "A segway with a syndicate paintjob designed for fast-paced action and mobility. \
+			It's been reinforced with titanium plating to ensure your ride isn't so easily disabled. \
+			Of course, it comes with the keys. The segway cannot be used without gravity, for obvious reasons."
+	item = /obj/item/key/syndicate
+	cost = 10
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	var/the_ride = /obj/vehicle/ridden/syndiway
+
+/datum/uplink_item/mobility/syndiway/spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)
+	..() // Make sure the keys are given.
+	var/obj/vehicle/ridden/syndiway/your_ride = new the_ride()
+	if(!istype(your_ride))
+		CRASH("uplink produced the wrong item instead of the syndicate segway.")
+
+	podspawn(list(
+		"target" = get_turf(user),
+		"style" = /datum/pod_style/syndicate,
+		"spawn" = your_ride,
+	))
+	return source //For log icon
