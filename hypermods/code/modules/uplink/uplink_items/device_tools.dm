@@ -129,3 +129,13 @@
 	item = /obj/item/storage/box/syndie_kit/syndicate_radio_mine
 	cost = 4
 	surplus = 0
+
+/datum/uplink_item/device_tools/compressionkit
+	name = "Compression Kit"
+	desc = "A modified version of a BSRPED that can be used to reduce the size of most items while retaining their original functions! \
+			Does not work on storage items. \
+			Can be recharged using bluespace crystals. \
+			Comes with 5 charges."
+	item = /obj/item/compressionkit
+	cost = 14
+	surplus = 0

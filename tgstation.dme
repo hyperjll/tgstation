@@ -6630,6 +6630,7 @@
 #include "hypermods\code\game\objects\items\vxtvulhammer.dm"
 #include "hypermods\code\game\objects\items\weaponry.dm"
 #include "hypermods\code\game\objects\items\circuitboards\machines\machine_circuitboards.dm"
+#include "hypermods\code\game\objects\items\devices\compressionkit.dm"
 #include "hypermods\code\game\objects\items\devices\doorCharge.dm"
 #include "hypermods\code\game\objects\items\devices\flashlight.dm"
 #include "hypermods\code\game\objects\items\devices\forcefieldprojector.dm"
