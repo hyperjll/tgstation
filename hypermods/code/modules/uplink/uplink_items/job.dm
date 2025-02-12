@@ -1024,3 +1024,12 @@
 	cost = 8
 	surplus = 10
 	restricted_roles = list(JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/tunnel_khans
+	name = "Tunnel Khans Scroll"
+	desc = "An odd scroll written with gray crayon. It's really hard to read. We hope that your assistant mind can comprehend it better than us. \
+			Teachs the Tunnel Arts to the reader, granting increased unarmed damage and boosting their overall physical physique. \
+			You'll also gain some special unarmed combo moves to increase your unarmed effectiveness."
+	cost = 13
+	item = /obj/item/book/granter/martial/the_tunnel_arts
+	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
