@@ -578,8 +578,7 @@
 		along with slurred speech, aggression, and the ability to infect others with this agent."
 	item = /obj/item/storage/box/syndie_kit/romerol
 	cost = 25
-	progression_minimum = 30 MINUTES
-	purchasable_from = UPLINK_ALL_SYNDIE_OPS | UPLINK_TRAITORS // Don't give this to spies
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 	cant_discount = TRUE
 
 // Modsuits
