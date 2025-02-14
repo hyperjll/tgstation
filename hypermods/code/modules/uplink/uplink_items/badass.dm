@@ -69,6 +69,17 @@
 	surplus = 0
 	cant_discount = TRUE
 
+/datum/uplink_item/badass/whetstone
+	name = "Syndicate Whetstone"
+	desc = "A blood-red whetstone used for sharpening objects for satisfactory murder. \
+			Can be used to make ANY item you find both sharp and a decent weapon. \
+			Can be used up to six times, but it can only improve items so much. \
+			Don't expect it to work on energy weapons like the energy sword."
+	item = /obj/item/sharpener/syndicate
+	cost = 4
+	surplus = 0
+	cant_discount = TRUE
+
 /datum/uplink_item/badass/operativeclothes
 	name = "Operative Clothes"
 	desc = "A cool black and tan jumpsuit/jumpskirt used by syndicate operatives. Provides no statistical \

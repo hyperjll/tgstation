@@ -6625,6 +6625,7 @@
 #include "hypermods\code\game\objects\items\plushes.dm"
 #include "hypermods\code\game\objects\items\pneumaticCannon.dm"
 #include "hypermods\code\game\objects\items\reverseCard.dm"
+#include "hypermods\code\game\objects\items\sharpener.dm"
 #include "hypermods\code\game\objects\items\spear.dm"
 #include "hypermods\code\game\objects\items\toys.dm"
 #include "hypermods\code\game\objects\items\trident.dm"
