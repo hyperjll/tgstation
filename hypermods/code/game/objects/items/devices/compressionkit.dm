@@ -32,10 +32,13 @@
 		var/obj/item/Object_to_compress = interacting_with
 		if(Object_to_compress.w_class == 1)
 			playsound(get_turf(src), 'sound/machines/buzz/buzz-two.ogg', 50, 1)
-			to_chat(user, "<span class='notice'>[interacting_with] cannot be compressed smaller!.</span>")
+			to_chat(user, "<span class='notice'>[interacting_with] cannot be compressed smaller!</span>")
 			return
 		if(istype(Object_to_compress, /obj/item/storage)) // Not super foolproof, but it'll cover most storage items.
-			to_chat(user, "<span class='notice'>You can't make this item any smaller without compromising its storage functions!.</span>")
+			to_chat(user, "<span class='notice'>You can't make this item any smaller without compromising its storage functions!</span>")
+			return
+		if(istype(Object_to_compress, /obj/item/flatpack)) // To avoid placing entire machines within your backpack.
+			to_chat(user, "<span class='notice'>You can't make this item any smaller without destroying it's functionality!</span>")
 			return
 		if(Object_to_compress.w_class > 1)
 			playsound(get_turf(src), 'sound/items/weapons/flash.ogg', 50, 1)
