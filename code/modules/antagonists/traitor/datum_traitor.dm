@@ -356,8 +356,10 @@
 
 	result += objectives_text
 
-	if(uplink_handler && uplink_handler.contractor_hub)
-		result += contractor_round_end()
+	if(uplink_handler)
+		if (uplink_handler.contractor_hub)
+			result += contractor_round_end()
+		result += "<br>The traitor had a total of [DISPLAY_PROGRESSION(uplink_handler.progression_points)] Reputation and [uplink_handler.telecrystals] Unused Telecrystals."
 
 	var/special_role_text = LOWER_TEXT(name)
 
