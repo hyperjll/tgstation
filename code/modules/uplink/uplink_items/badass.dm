@@ -52,8 +52,6 @@
 	name = "Clown Costume"
 	desc = "Nothing is more terrifying than clowns with fully automatic weaponry."
 	item = /obj/item/storage/backpack/duffelbag/clown/syndie
-	purchasable_from = ALL
-	progression_minimum = 70 MINUTES
 
 /datum/uplink_item/badass/costumes/tactical_naptime
 	name = "Sleepy Time Pajama Bundle"
@@ -69,16 +67,12 @@
 	name = "Broken Chameleon Kit"
 	desc = "A set of items that contain chameleon technology allowing you to disguise as pretty much anything on the station, and more! \
 			Please note that this kit did NOT pass quality control."
-	purchasable_from = ALL
-	progression_minimum = 90 MINUTES
 	item = /obj/item/storage/box/syndie_kit/chameleon/broken
 
 /datum/uplink_item/badass/costumes/centcom_official
 	name = "CentCom Official Costume"
 	desc = "Ask the crew to \"inspect\" their nuclear disk and weapons system, and then when they decline, pull out a fully automatic rifle and gun down the Captain. \
 			Radio headset does not include encryption key. No gun included."
-	purchasable_from = ALL
-	progression_minimum = 110 MINUTES
 	item = /obj/item/storage/box/syndie_kit/centcom_costume
 
 /datum/uplink_item/badass/stickers
