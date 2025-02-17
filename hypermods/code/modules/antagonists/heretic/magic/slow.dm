@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/pointed/slow
 	name = "Slow"
-	desc = "Warps time around a target, drastically slowing them down for the next 5 seconds."
+	desc = "A touch-range spell which warps time around a target, drastically slowing them down for the next 5 seconds."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
 	button_icon = 'hypermods/icons/mob/actions/actions_ecult.dmi'
