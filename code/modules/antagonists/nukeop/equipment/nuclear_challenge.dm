@@ -108,9 +108,9 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 
 	var/datum/bank_account/cargo_bank = SSeconomy.get_dep_account(ACCOUNT_CAR)
 	cargo_bank.adjust_money(rand(2500, 4000))
-	var/obj/machinery/announcement_system/announcement_system = pick(GLOB.announcement_systems)
+	var/obj/machinery/announcement_system/announcement_system = get_announcement_system()
 	if (!isnull(announcement_system))
-		announcement_system.broadcast("Additional funding received from Nanotrasen Defense Budget following the emergency protocol.", list(RADIO_CHANNEL_SUPPLY))
+		announcement_system.broadcast("Additional funding received from Nanotrasen Defense Budget following the emergency protocol.", list(RADIO_CHANNEL_SUPPLY), TRUE)
 
 	for (var/datum/mind/M in get_antag_minds(/datum/antagonist/traitor)) // let roundstart tots get new uplink stuff should war be declared.
 		if (iscyborg(M.current))

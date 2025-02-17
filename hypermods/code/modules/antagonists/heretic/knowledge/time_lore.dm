@@ -14,7 +14,8 @@
  * Ritual of Knowledge
  * Time Mends All
  * > Sidepaths:
- *   Curse of Age
+ *   Curse of Age (Now in a the Codex Morbus)
+ *   Cursed Flames
  * Deja Vu
  * > Sidepaths:
  *   Eldritch Echoes

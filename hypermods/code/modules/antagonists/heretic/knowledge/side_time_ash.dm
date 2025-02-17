@@ -5,7 +5,7 @@
 	route = PATH_SIDE
 
 	tier1 = /datum/heretic_knowledge/spell/slow
-	tier2 = /datum/heretic_knowledge/curse/age
+	tier2 = /datum/heretic_knowledge/spell/cursed_flames
 	tier3 = /datum/heretic_knowledge/spell/eldritch_echoes
 
 // Sidepaths for knowledge between Ash and Time.
@@ -21,14 +21,10 @@
 	name = "Curse of Age"
 	desc = "Allows you to transmute a timer and a diamond to cast a curse of age on a crew member. \
 		After casting, the crew member's age will be increased by 40 years over the duration of the curse. \
-		If supplied with an item with the target's fingerprints, the duration of the curse is doubled."
+		If supplied with an item with the target's fingerprints or is covered in the victim's blood the duration of the curse is doubled."
 	gain_text = "All who've ever stood against the Lords of Time met a similar end."
-	required_atoms = list(
-		/obj/item/assembly/timer = 1,
-		/obj/item/stack/sheet/mineral/diamond = 1,
-	)
 	duration = 40 SECONDS
-	duration_modifier = 2
+	//duration_modifier = 2
 	curse_color = "#d8d8d8"
 	cost = 1
 	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
