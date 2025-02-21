@@ -70,6 +70,7 @@
 		"large_grenade",
 		"adv_grenade",
 		"pyro_grenade",
+		"dummypayload",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	discount_experiments = list(/datum/experiment/ordnance/explosive/lowyieldbomb = TECHWEB_TIER_3_POINTS)

@@ -6558,6 +6558,7 @@
 #include "hypermods\code\datums\actions\items\airshoe_dash.dm"
 #include "hypermods\code\datums\components\backstabs.dm"
 #include "hypermods\code\datums\components\randomcrits.dm"
+#include "hypermods\code\datums\components\crafting\chemistry.dm"
 #include "hypermods\code\datums\components\crafting\guncrafting.dm"
 #include "hypermods\code\datums\components\crafting\misc.dm"
 #include "hypermods\code\datums\components\crafting\ranged_weapon.dm"
