@@ -11374,6 +11374,7 @@
 	req_access = list("medical")
 	},
 /obj/structure/rack,
+/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
 "bfb" = (
@@ -32930,6 +32931,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/command/eva,
 /obj/effect/landmark/navigate_destination,
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/ai_monitored/command/storage/eva)
 "fKe" = (
@@ -33146,7 +33148,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/retaliate/goose/vomit,
 /turf/open/floor/carpet,
 /area/station/service/abandoned_gambling_den)
 "fOD" = (
@@ -36501,6 +36502,11 @@
 "hfo" = (
 /obj/effect/landmark/event_spawn,
 /obj/structure/cable,
+/obj/machinery/greenscreen_camera{
+	dir = 1;
+	pixel_x = 4;
+	pixel_y = 16
+	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "hfu" = (
@@ -38196,6 +38202,7 @@
 	dir = 9
 	},
 /obj/machinery/firealarm/directional/west,
+/mob/living/basic/bot/repairbot,
 /turf/open/floor/iron/dark/side{
 	dir = 9
 	},
@@ -43256,6 +43263,7 @@
 	req_access = list("medical")
 	},
 /obj/structure/rack,
+/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
 "jHw" = (
@@ -44686,6 +44694,7 @@
 	req_access = list("medical")
 	},
 /obj/structure/rack,
+/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
 "kjm" = (
@@ -58725,10 +58734,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/port)
 "pHF" = (
-/obj/structure/table/wood,
-/obj/item/hand_tele,
-/obj/item/melee/chainofcommand,
-/obj/machinery/airalarm/directional/north,
+/obj/structure/sign/poster/greenscreen/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "pHT" = (
@@ -69958,6 +69964,7 @@
 	},
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/rack,
+/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
 "uav" = (
@@ -72194,7 +72201,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
-/mob/living/simple_animal/bot/floorbot,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
@@ -76005,6 +76011,9 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/structure/cable,
+/obj/structure/table/wood,
+/obj/item/hand_tele,
+/obj/item/melee/chainofcommand,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "wxQ" = (
@@ -77476,6 +77485,7 @@
 	c_tag = "Command - Captain's Office";
 	network = list("ss13","command")
 	},
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "xfj" = (

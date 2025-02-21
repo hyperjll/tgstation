@@ -1564,6 +1564,7 @@
 /obj/effect/landmark/navigate_destination/eva,
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/any/command/eva,
+/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/engine,
 /area/station/ai_monitored/command/storage/eva)
 "aDW" = (
@@ -3016,7 +3017,6 @@
 /obj/item/clothing/under/dress/sundress,
 /obj/item/clothing/under/dress/sundress,
 /obj/item/clothing/shoes/sandal,
-/obj/item/fish_feed,
 /obj/item/fish_analyzer,
 /obj/structure/closet/crate,
 /turf/open/floor/plating,
@@ -5248,6 +5248,7 @@
 /obj/effect/turf_decal/tile/blue/half{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/white/textured_edge{
 	dir = 4
 	},
@@ -14221,6 +14222,7 @@
 	name = "First Aid Supplies";
 	req_access = list("medical")
 	},
+/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/white/textured_edge{
 	dir = 4
 	},
@@ -15965,6 +15967,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/duct,
+/obj/machinery/greenscreen_camera{
+	pixel_x = 4;
+	pixel_y = 16
+	},
 /turf/open/floor/wood/tile,
 /area/station/command/heads_quarters/captain/private)
 "gnm" = (
@@ -21704,6 +21710,7 @@
 	dir = 1
 	},
 /obj/machinery/duct,
+/obj/structure/sign/poster/greenscreen/directional/south,
 /turf/open/floor/wood/tile,
 /area/station/command/heads_quarters/captain/private)
 "iFp" = (
@@ -35022,6 +35029,7 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "ocj" = (
+/mob/living/basic/bot/repairbot,
 /turf/open/floor/iron,
 /area/station/engineering/storage_shared)
 "ocm" = (
