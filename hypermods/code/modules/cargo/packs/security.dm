@@ -372,16 +372,16 @@
 					/obj/item/ammo_box/magazine/m50)
 	crate_name = "desert eagle crate"
 
-/datum/supply_pack/weaponry/surpluscarbine
-	name = "Surplus Carbine Crate"
-	desc = "Contains one Surplus Carbine and three spare magazines."
+/datum/supply_pack/weaponry/sakhnosks
+	name = "Sakhno SKS Crate"
+	desc = "Contains one Sakhno SKS semi-automatic rifle and three surplus boxes of ammunition."
 	cost = 3000
 	access = ACCESS_ARMORY
-	contains = list(/obj/item/gun/ballistic/automatic/surplus,
-					/obj/item/ammo_box/magazine/sr10mm,
-					/obj/item/ammo_box/magazine/sr10mm,
-					/obj/item/ammo_box/magazine/sr10mm)
-	crate_name = "surplus carbine crate"
+	contains = list(/obj/item/gun/ballistic/automatic/sks,
+					/obj/item/storage/toolbox/ammobox/strilka310/surplus,
+					/obj/item/storage/toolbox/ammobox/strilka310/surplus,
+					/obj/item/storage/toolbox/ammobox/strilka310/surplus)
+	crate_name = "sakhno sks crate"
 
 /datum/supply_pack/weaponry/type3uzi
 	name = "Type U3 Uzi Crate"
