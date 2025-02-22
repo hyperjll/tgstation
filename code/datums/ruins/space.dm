@@ -143,6 +143,7 @@
 	suffix = "thelizardsgas.dmm"
 	name = "Space-Ruin The Lizard's Gas"
 	description = "A refueling station stocked with enough plasma for any space-worthy vessel. Well, maybe if it weren't 50 years ago."
+	always_place = TRUE
 
 /datum/map_template/ruin/space/intact_empty_ship
 	id = "intact-empty-ship"
@@ -213,7 +214,8 @@
 	suffix = "russian_derelict.dmm"
 	name = "Space-Ruin Kosmicheskaya Stantsiya 13"
 	description = "The true fate of Kosmicheskaya Stantsiya 13 is an open question to this day. Most corporations deny its existence, for fear of questioning on what became of its crew."
-
+	always_place = TRUE
+	
 /datum/map_template/ruin/space/abandonedteleporter
 	id = "abandonedteleporter"
 	suffix = "abandonedteleporter.dmm"
@@ -241,6 +243,7 @@
 	name = "Space-Ruin Syndicate Listening Station"
 	description = "Listening stations form the backbone of the syndicate's information-gathering operations. \
 	Assignment to these stations is dreaded by most agents, as it entails long and lonely shifts listening to nearby stations chatter incessantly about the most meaningless things."
+	always_place = TRUE
 
 /datum/map_template/ruin/space/old_ai_sat
 	id = "oldAIsat"
@@ -276,6 +279,7 @@
 	name = "Space-Ruin Ancient Space Station"
 	description = "The crew of a space station awaken one hundred years after a crisis. Awaking to a derelict space station on the verge of collapse, and a hostile force of invading \
 	hivebots. Can the surviving crew overcome the odds and survive and rebuild, or will the cold embrace of the stars become their new home?"
+	always_place = TRUE
 
 /datum/map_template/ruin/space/gondoland
 	id = "gondolaasteroid"
@@ -326,6 +330,7 @@
 	suffix = "forgottenship.dmm"
 	name = "Space-Ruin Syndicate Forgotten Ship"
 	description = "Seemingly abandoned ship went of course right into NT controlled space. It seems that malfunction caused most systems to turn off, except for sleepers."
+	always_place = TRUE
 
 /datum/map_template/ruin/space/old_syndie_infiltrator
 	id = "old_infiltrator"
@@ -501,6 +506,7 @@
 	suffix = "garbagetruck3.dmm"
 	name = "Space-Ruin Decommissioned Garbage Truck NX3"
 	description = "An NX-760 interstellar transport barge. At the end of their life cycle, they are often filled with trash and launched into unexplored space to become someone else's problem. This one is full of industrial garbage, and a Russian drug den."
+	always_place = TRUE
 
 /datum/map_template/ruin/space/garbagetruck4
 	id = "garbagetruck4"
