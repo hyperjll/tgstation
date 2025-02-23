@@ -45,6 +45,3 @@
 
 /// Minimal cost for an item to be eligible for a discount
 #define TRAITOR_DISCOUNT_MIN_PRICE 4
-
-/// The standard minimum player count for "don't spawn this item on low population rounds"
-#define TRAITOR_POPULATION_LOWPOP 20
