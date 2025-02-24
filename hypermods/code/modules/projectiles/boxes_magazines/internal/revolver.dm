@@ -1,12 +1,12 @@
 /obj/item/ammo_box/magazine/internal/cylinder/python
 	name = "python cylinder"
-	ammo_type = /obj/item/ammo_casing/a357/heartpiercer
+	ammo_type = /obj/item/ammo_casing/c357/heartpiercer
 	caliber = CALIBER_357
 	max_ammo = 9
 
 /obj/item/ammo_box/magazine/internal/cylinder/bluespace
-	name = "revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/a357
+	name = "bluespace cylinder"
+	ammo_type = /obj/item/ammo_casing/c357
 	caliber = CALIBER_357
 	max_ammo = 12
 

@@ -1816,7 +1816,7 @@
 		/obj/item/ammo_casing/c38/match = 4,
 	)
 	contraband = list(
-		/obj/item/ammo_casing/a357 = 1,
+		/obj/item/ammo_casing/c357 = 1,
 		/obj/item/ammo_box/c38/trac = 1,
 		/obj/item/ammo_casing/c38/dumdum = 1,
 		/obj/item/ammo_casing/c38/hotshot = 1,

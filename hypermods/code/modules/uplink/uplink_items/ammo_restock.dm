@@ -268,7 +268,7 @@
 /datum/uplink_item/ammo_restock/ammo357box
 	name = "Box of .357 Rounds"
 	desc = "An ammo box filled with .357 rounds, used for restocking .357 speedloaders. Contains 20 .357 rounds."
-	item = /obj/item/ammo_box/a357/no_direct
+	item = /obj/item/ammo_box/c357/no_direct
 	cost = 8
 	surplus = 0
 	purchasable_from = ~UPLINK_CLOWN_OPS
@@ -278,42 +278,42 @@
 	name = "Box of Ironfeather .357 Rounds"
 	desc = "An ammo box filled with .357 Ironfeather rounds, used for restocking .357 speedloaders. Contains 20 .357 Ironfeather rounds. \
 			These rounds contain six pellets which are less damaging than buckshot but mildly better over range."
-	item = /obj/item/ammo_box/a357/no_direct/ironfeather
+	item = /obj/item/ammo_box/c357/no_direct/ironfeather
 	cost = 6
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo_restock/ammo357box/nutcracker
 	name = "Box of Nutcracker .357 Rounds"
 	desc = "An ammo box filled with .357 Nutcracker rounds, used for restocking .357 speedloaders. Contains 20 .357 Nutcracker rounds."
-	item = /obj/item/ammo_box/a357/no_direct/nutcracker
+	item = /obj/item/ammo_box/c357/no_direct/nutcracker
 	cost = 6
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo_restock/ammo357box/metalshock
 	name = "Box of Metalshock .357 Rounds"
 	desc = "An ammo box filled with .357 Metalshock rounds, used for restocking .357 speedloaders. Contains 20 .357 Metalshock rounds."
-	item = /obj/item/ammo_box/a357/no_direct/metalshock
+	item = /obj/item/ammo_box/c357/no_direct/metalshock
 	cost = 8
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo_restock/ammo357box/heartpiercer
 	name = "Box of Heartpiercer .357 Rounds"
 	desc = "An ammo box filled with .357 Heartpiercer rounds, used for restocking .357 speedloaders. Contains 20 .357 Heartpiercer rounds."
-	item = /obj/item/ammo_box/a357/no_direct/heartpiercer
+	item = /obj/item/ammo_box/c357/no_direct/heartpiercer
 	cost = 8
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo_restock/ammo357box/wallstake
 	name = "Box of Wallstake .357 Rounds"
 	desc = "An ammo box filled with .357 Wallstake rounds, used for restocking .357 speedloaders. Contains 20 .357 Wallstake rounds."
-	item = /obj/item/ammo_box/a357/no_direct/wallstake
+	item = /obj/item/ammo_box/c357/no_direct/wallstake
 	cost = 6
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo_restock/ammo357box/mega
 	name = "Mega Box of .357 Rounds"
 	desc = "An ammo box filled with .357 rounds, used for restocking .357 speedloaders. Contains 50 .357 rounds."
-	item = /obj/item/ammo_box/a357/no_direct/fifty
+	item = /obj/item/ammo_box/c357/no_direct/fifty
 	cost = 12
 	purchasable_from = UPLINK_SERIOUS_OPS
 

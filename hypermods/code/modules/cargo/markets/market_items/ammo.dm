@@ -2,10 +2,10 @@
 	category = "Ammunition"
 	abstract_path = /datum/market_item/ammo
 
-/datum/market_item/ammo/a357
+/datum/market_item/ammo/c357
 	name = ".357 Casing"
 	desc = "A single live round of .357."
-	item = /obj/item/ammo_casing/a357
+	item = /obj/item/ammo_casing/c357
 
 	price_min = CARGO_CRATE_VALUE *0.8
 	price_max = CARGO_CRATE_VALUE *1.5

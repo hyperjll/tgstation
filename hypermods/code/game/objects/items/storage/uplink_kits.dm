@@ -887,7 +887,7 @@
 		/obj/item/mod/module/recycler/donk,
 		/obj/item/mod/module/recycler/ammobox/c9mm,
 		/obj/item/mod/module/recycler/ammobox/c45,
-		/obj/item/mod/module/recycler/ammobox/a357,
+		/obj/item/mod/module/recycler/ammobox/c357,
 		/obj/item/mod/module/recycler/ammobox/c10mm,
 		/obj/item/mod/module/recycler/ammobox/m50,
 		/obj/item/mod/module/stealth/syndicate,

@@ -123,10 +123,10 @@
 	ammobox_type = /obj/item/ammo_box/c45
 	required_amount = (SHEET_MATERIAL_AMOUNT*15)
 
-/obj/item/mod/module/recycler/ammobox/a357
+/obj/item/mod/module/recycler/ammobox/c357
 	name = "MOD .357 munitions recycler module"
 	icon_state = "recycler357"
-	ammobox_type = /obj/item/ammo_box/a357/no_direct
+	ammobox_type = /obj/item/ammo_box/c357/no_direct
 	required_amount = (SHEET_MATERIAL_AMOUNT*20)
 
 /obj/item/mod/module/recycler/ammobox/c10mm

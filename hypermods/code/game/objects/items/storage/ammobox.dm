@@ -733,38 +733,39 @@
 	icon_state = "mega50aebox"
 	max_ammo = 50
 
-/obj/item/ammo_box/a357/no_direct
+/obj/item/ammo_box/c357/no_direct
 	name = "ammo box (.357 Magnum)"
 	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "357box"
-	ammo_type = /obj/item/ammo_casing/a357
+	ammo_type = /obj/item/ammo_casing/c357
+	max_ammo = 20
 
-/obj/item/ammo_box/a357/no_direct/ironfeather
+/obj/item/ammo_box/c357/no_direct/ironfeather
 	name = "ammo box (.357 Ironfeather)"
 	icon_state = "if357box"
-	ammo_type = /obj/item/ammo_casing/a357/ironfeather
+	ammo_type = /obj/item/ammo_casing/c357/ironfeather
 
-/obj/item/ammo_box/a357/no_direct/nutcracker
+/obj/item/ammo_box/c357/no_direct/nutcracker
 	name = "ammo box (.357 Nutcracker)"
 	icon_state = "nc357box"
-	ammo_type = /obj/item/ammo_casing/a357/nutcracker
+	ammo_type = /obj/item/ammo_casing/c357/nutcracker
 
-/obj/item/ammo_box/a357/no_direct/metalshock
+/obj/item/ammo_box/c357/no_direct/metalshock
 	name = "ammo box (.357 Metalshock)"
 	icon_state = "ms357box"
-	ammo_type = /obj/item/ammo_casing/a357/metalshock
+	ammo_type = /obj/item/ammo_casing/c357/metalshock
 
-/obj/item/ammo_box/a357/no_direct/heartpiercer
+/obj/item/ammo_box/c357/no_direct/heartpiercer
 	name = "ammo box (.357 Heartpiercer)"
 	icon_state = "hp357box"
-	ammo_type = /obj/item/ammo_casing/a357/heartpiercer
+	ammo_type = /obj/item/ammo_casing/c357/heartpiercer
 
-/obj/item/ammo_box/a357/no_direct/wallstake
+/obj/item/ammo_box/c357/no_direct/wallstake
 	name = "ammo box (.357 Wallstake)"
 	icon_state = "ws357box"
-	ammo_type = /obj/item/ammo_casing/a357/wallstake
+	ammo_type = /obj/item/ammo_casing/c357/wallstake
 
-/obj/item/ammo_box/a357/no_direct/fifty
+/obj/item/ammo_box/c357/no_direct/fifty
 	icon_state = "mega357box"
 	max_ammo = 50
 

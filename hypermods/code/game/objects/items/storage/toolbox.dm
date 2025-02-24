@@ -119,10 +119,10 @@
 	weapon_to_spawn = /obj/item/ammo_box/magazine/m50
 	ammo_box_to_spawn = /obj/item/ammo_box/m50
 
-/obj/item/storage/toolbox/guncase/traitor/ammunition/a357
+/obj/item/storage/toolbox/guncase/traitor/ammunition/c357
 	name = ".357 speedloader case"
 	weapon_to_spawn = /obj/item/ammo_box/a357
-	ammo_box_to_spawn = /obj/item/ammo_box/a357/no_direct
+	ammo_box_to_spawn = /obj/item/ammo_box/c357/no_direct
 
 /obj/item/storage/toolbox/guncase/flaregun
 	name = "flare gun case"

@@ -69,7 +69,7 @@
 					/obj/item/ammo_box/c9mm = 1,
 					/obj/item/ammo_box/c10mm = 1,
 					/obj/item/ammo_box/c45 = 1,
-					/obj/item/ammo_box/a357/no_direct = 1,
+					/obj/item/ammo_box/c357/no_direct = 1,
 					/obj/item/ammo_box/m50 = 1,
 					/obj/item/storage/box/mysteryshells/syndi = 2)
 	default_price = 300

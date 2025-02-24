@@ -200,11 +200,11 @@
 	cost = 5
 	purchasable_from = ~UPLINK_SPY
 
-/datum/uplink_item/mod_modules/recyclera357
+/datum/uplink_item/mod_modules/recyclerc357
 	name = "MODsuit .357 Recycler Module"
 	desc = "A MODsuit module which collects leftover ammo casings (and garbage) before using it's \
 			internal synthesizer to turn the collected materials into a box of .357 ammunitions."
-	item = /obj/item/mod/module/recycler/ammobox/a357
+	item = /obj/item/mod/module/recycler/ammobox/c357
 	cost = 7
 	purchasable_from = ~UPLINK_SPY
 

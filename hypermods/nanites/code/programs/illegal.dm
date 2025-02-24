@@ -61,7 +61,7 @@
 		if(".45 Bullets")
 			new /obj/item/ammo_box/c45(host_mob.loc)
 		if(".357 Bullets")
-			new /obj/item/ammo_box/a357/no_direct(host_mob.loc)
+			new /obj/item/ammo_box/c357/no_direct(host_mob.loc)
 		if("Shotgun Shells")
 			new /obj/item/storage/box/lethalshot(host_mob.loc)
 
