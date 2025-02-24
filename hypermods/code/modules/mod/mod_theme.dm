@@ -10,8 +10,7 @@
 	complexity_max = DEFAULT_MAX_COMPLEXITY + 15
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
-	slowdown_inactive = 0.25
-	slowdown_active = 0.1
+	slowdown_deployed = 0.1
 	ui_theme = "syndicate"
 	resistance_flags = FIRE_PROOF
 	//inbuilt_modules = list(/obj/item/mod/module/armor_booster)
@@ -115,8 +114,7 @@
 	complexity_max = DEFAULT_MAX_COMPLEXITY + 10
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
-	slowdown_inactive = 3
-	slowdown_active = 1.5
+	slowdown_deployed = 1.5
 	ui_theme = "syndicate"
 	resistance_flags = FIRE_PROOF
 	allowed_suit_storage = list(
@@ -229,8 +227,7 @@
 		a sneeze and a bioweapon. However, their combat applications are incredibly minimal to avoid lawsuits. \
 		Their freeform and lightweight design allow for more specialization than normal civilian class suits, and allow near unimpeded movement while active."
 	siemens_coefficient = 0
-	slowdown_inactive = 0.8
-	slowdown_active = 0
+	slowdown_deployed = 0
 	ui_theme = "syndicate"
 	complexity_max = DEFAULT_MAX_COMPLEXITY + 10
 	default_skin = "scivilian"
