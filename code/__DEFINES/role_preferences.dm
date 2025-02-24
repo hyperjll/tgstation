@@ -18,6 +18,7 @@
 #define ROLE_WIZARD "Wizard"
 #define ROLE_SPY "Spy"
 #define ROLE_INITIAL_INFECTED "Initial Infected"
+#define ROLE_WEREWOLF "Werewolf"
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -41,6 +42,7 @@
 #define ROLE_VOIDWALKER "Voidwalker"
 #define ROLE_HERETIC_MIDROUND "Heretic Awakening"
 #define ROLE_INFILTRATOR "Infiltrator"
+#define ROLE_LYCANTHROPY_VICTIM "Lycanthropy Victim"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
@@ -48,6 +50,7 @@
 #define ROLE_STOWAWAY_CHANGELING "Stowaway Changeling"
 #define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"
 #define ROLE_SPY_INFILTRATOR "Spy Infiltrator"
+#define ROLE_WEREWOLF_INVADER "Werewolf Invader"
 
 // Other roles
 #define ROLE_ANOMALY_GHOST "Ectoplasmic Anomaly Ghost"
@@ -144,6 +147,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_WIZARD = 14,
 	ROLE_SPY = 0,
 	ROLE_INITIAL_INFECTED = 14,
+	ROLE_WEREWOLF = 7,
 
 	// Midround
 	ROLE_ABDUCTOR = 0,
@@ -167,6 +171,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_VOIDWALKER = 0,
 	ROLE_HERETIC_MIDROUND = 0,
 	ROLE_INFILTRATOR = 0,
+	ROLE_LYCANTHROPY_VICTIM = 7,
 
 	// Latejoin
 	ROLE_HERETIC_SMUGGLER = 0,
@@ -174,6 +179,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SYNDICATE_INFILTRATOR = 0,
 	ROLE_STOWAWAY_CHANGELING = 0,
 	ROLE_SPY_INFILTRATOR = 0,
+	ROLE_WEREWOLF_INVADER = 7,
 
 	// I'm not too sure why these are here, but they're not moving.
 	ROLE_GLITCH = 0,
