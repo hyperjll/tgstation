@@ -63,7 +63,7 @@
 		JOB_CYBORG,
 	)
 	required_candidates = 1
-	weight = 8
+	weight = 3
 	cost = 10
 	scaling_cost = 10
 	minimum_players = 20
