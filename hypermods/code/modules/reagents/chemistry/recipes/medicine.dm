@@ -8,7 +8,7 @@
 
 /datum/chemical_reaction/inaprovaline
 	results = list(/datum/reagent/medicine/inaprovaline = 3)
-	required_reagents = list(/datum/reagent/oxygen = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/carbon = 1)
+	required_reagents = list(/datum/reagent/oxygen = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/iron = 1)
 	required_temp = 280
 
 /datum/chemical_reaction/inaprovalineplus
