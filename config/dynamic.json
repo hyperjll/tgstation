@@ -4,7 +4,7 @@
 		"Traitors": {
 			"cost": 8,
 			"scaling_cost": 9,
-			"weight": 1,
+			"weight": 5,
 			"required_candidates": 1,
 			"minimum_required_age": 0,
 			"requirements": [
@@ -34,51 +34,76 @@
 			]
 		},
 
+		"Malfunctioning AI": {
+			"cost": 15,
+			"weight": 3
+		},
+
 		"Blood Brothers": {
 			"cost": 10,
-			"weight": 1
+			"weight": 5
 		},
 
 		"Changelings": {
 			"cost": 10,
-			"weight": 1
+			"weight": 3
 		},
 
 		"Heretics": {
 			"cost": 10,
-			"weight": 1
+			"weight": 3
 		},
 
 		"Wizard": {
 			"cost": 20,
-			"weight": 1
+			"weight": 2
 		},
 
 		"Blood Cult": {
 			"cost": 20,
-			"weight": 1
+			"weight": 3
 		},
 
 		"Nuclear Emergency": {
 			"cost": 20,
-			"weight": 1
+			"weight": 3
 		},
 
 		"Revolution": {
 			"cost": 15,
+			"weight": 3
+		},
+
+		"Clown Operatives": {
+			"cost": 18,
+			"weight": 3
+		},
+
+		"Spies": {
+			"cost": 8,
+			"weight": 5
+		},
+
+		"Initial Infected": {
+			"cost": 20,
 			"weight": 1
+		},
+
+		"Werewolf": {
+			"cost": 10,
+			"weight": 3
 		}
 	},
 
 	"Midround": {
 		"Syndicate Sleeper Agent": {
 			"cost": 3,
-			"weight": 1
+			"weight": 35
 		},
 
 		"Malfunctioning AI": {
 			"cost": 15,
-			"weight": 1
+			"weight": 2
 		},
 
 		"Wizard": {
@@ -88,89 +113,99 @@
 
 		"Nuclear Assault": {
 			"cost": 20,
-			"weight": 1
+			"weight": 5
 		},
 
 		"Blob": {
 			"cost": 10,
-			"weight": 1
+			"weight": 3
 		},
 
 		"Blob Infection": {
 			"cost": 10,
-			"weight": 1
+			"weight": 3
 		},
 
 		"Alien Infestation": {
 			"cost": 12,
-			"weight": 1
+			"weight": 5
 		},
 
 		"Nightmare": {
 			"cost": 8,
-			"weight": 1
+			"weight": 3
 		},
 
 		"Space Dragon": {
 			"cost": 8,
-			"weight": 1
+			"weight": 4
 		},
 
 		"Abductors": {
 			"cost": 6,
-			"weight": 1
+			"weight": 4
 		},
 
 		"Space Ninja": {
 			"cost": 10,
-			"weight": 1
+			"weight": 4
 		},
 
 		"Spiders": {
 			"cost": 4,
-			"weight": 1
+			"weight": 3
 		},
 
 		"Revenant": {
 			"cost": 6,
-			"weight": 1
+			"weight": 4
 		},
 
 		"Space Pirates": {
 			"cost": 10,
-			"weight": 1
+			"weight": 3
+		},
+
+		"Dangerous Space Pirates": {
+			"cost": 12,
+			"weight": 3
 		},
 
 		"Obsessed": {
 			"cost": 2,
-			"weight": 1
+			"weight": 4
 		},
 
 		"Space Changeling": {
 			"cost": 6,
-			"weight": 1
+			"weight": 7
 		},
 
 		"Paradox Clone": {
 			"cost": 2,
-			"weight": 1
+			"weight": 4
 		},
 		
 		"Voidwalker": {
 			"cost": 5,
-			"weight": 1
+			"weight": 2
 		},
-		
-		"Dangerous Space Pirates": {
-			"cost": 12,
-			"weight": 1
+
+		"Heretic Awakening": {
+			"cost": 5,
+			"weight": 7
+		},
+
+		"Lycanthropy Victim": {
+			"cost": 10,
+			"weight": 0
 		}
 	},
 
 	"Latejoin": {
 		"Syndicate Infiltrator": {
-			"cost": 5,
-			"weight": 1
+			"cost": 3,
+			"weight": 11
 		},
 
 		"Provocateur": {
@@ -179,12 +214,22 @@
 		},
 
 		"Heretic Smuggler": {
-			"cost": 8,
-			"weight": 1
+			"cost": 6,
+			"weight": 8
 		},
 
 		"Stowaway Changeling": {
-			"cost": 8,
+			"cost": 10,
+			"weight": 2
+		},
+
+		"Spy Infiltrator": {
+			"cost": 3,
+			"weight": 6
+		},
+
+		"Werewolf Invader": {
+			"cost": 10,
 			"weight": 1
 		}
 	},
