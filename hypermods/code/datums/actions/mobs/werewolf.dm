@@ -176,7 +176,7 @@
 	antimagic_flags = NONE
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 	invocation_type = INVOCATION_NONE
-	var/jumpdistance = 11 //-1 from to see the actual distance, e.g 4 goes over 3 tiles
+	var/jumpdistance = 8 //-1 from to see the actual distance, e.g 4 goes over 3 tiles
 	var/jumpspeed = 5
 
 /datum/action/cooldown/spell/werewolf_pounce/can_cast_spell(feedback = TRUE)

@@ -13,6 +13,8 @@
 	antag_hud_name = "werewolf"
 	show_to_ghosts = FALSE
 	preview_outfit = /datum/outfit/job/assistant
+	/// Will this kind of werewolf get assassination/maroon objectives?
+	var/give_kill_objective = TRUE
 	/// Can this werewolf antag type transform back and forth?
 	var/can_transform = TRUE
 	/// Transformation ability
@@ -60,25 +62,26 @@
 	objective.owner = owner
 	objectives += objective
 
-	if(prob(60))
-		var/datum/objective/maroon/maroon_objective = new()
-		maroon_objective.owner = owner
-		maroon_objective.find_target()
-		objectives += maroon_objective
-	else
-		var/datum/objective/assassinate/kill_objective = new()
-		kill_objective.owner = owner
-		kill_objective.find_target()
-		objectives += kill_objective
+	if(give_kill_objective)
+		if(prob(60))
+			var/datum/objective/maroon/maroon_objective = new()
+			maroon_objective.owner = owner
+			maroon_objective.find_target()
+			objectives += maroon_objective
+		else
+			var/datum/objective/assassinate/kill_objective = new()
+			kill_objective.owner = owner
+			kill_objective.find_target()
+			objectives += kill_objective
 
-	if(prob(90))
-		var/datum/objective/escape/ending_objective = new()
-		ending_objective.owner = owner
-		objectives += ending_objective
-	else
-		var/datum/objective/hijack/ending_objective = new()
-		ending_objective.owner = owner
-		objectives += ending_objective
+		if(prob(90))
+			var/datum/objective/escape/ending_objective = new()
+			ending_objective.owner = owner
+			objectives += ending_objective
+		else
+			var/datum/objective/hijack/ending_objective = new()
+			ending_objective.owner = owner
+			objectives += ending_objective
 
 /datum/antagonist/werewolf/get_preview_icon()
 	var/mob/living/carbon/human/dummy/consistent/werewolfman = new
@@ -117,6 +120,7 @@
 	job_rank = ROLE_LYCANTHROPY_VICTIM
 	special_role = ROLE_LYCANTHROPY_VICTIM
 	can_transform = FALSE
+	give_kill_objective = FALSE
 
 /datum/antagonist/werewolf/invader
 	name = "\improper Werewolf Invader"
