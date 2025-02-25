@@ -60,6 +60,26 @@
 	objective.owner = owner
 	objectives += objective
 
+	if(prob(60))
+		var/datum/objective/maroon/maroon_objective = new()
+		maroon_objective.owner = owner
+		maroon_objective.find_target()
+		objectives += maroon_objective
+	else
+		var/datum/objective/assassinate/kill_objective = new()
+		kill_objective.owner = owner
+		kill_objective.find_target()
+		objectives += kill_objective
+
+	if(prob(90))
+		var/datum/objective/escape/ending_objective = new()
+		ending_objective.owner = owner
+		objectives += ending_objective
+	else
+		var/datum/objective/hijack/ending_objective = new()
+		ending_objective.owner = owner
+		objectives += ending_objective
+
 /datum/antagonist/werewolf/get_preview_icon()
 	var/mob/living/carbon/human/dummy/consistent/werewolfman = new
 
