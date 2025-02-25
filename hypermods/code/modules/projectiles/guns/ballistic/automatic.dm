@@ -52,8 +52,8 @@
 	name = "\improper Drozd"
 	desc = "An excellent fully automatic Heavy SMG. Uses 5.56mm rifle ammo."
 	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
-	icon_state = "grenade_launcher"
-	inhand_icon_state = "grenade_launcher"
+	icon_state = "Drozd"
+	inhand_icon_state = "drozd"
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
