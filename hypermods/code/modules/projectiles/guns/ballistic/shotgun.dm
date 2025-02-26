@@ -69,7 +69,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/enforcer
 	can_suppress = FALSE
 	burst_size = 1
-	fire_delay = 2
+	burst_delay = 2
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	pin = /obj/item/firing_pin
@@ -93,7 +93,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/spes
 	can_suppress = FALSE
 	burst_size = 1
-	fire_delay = 2
+	burst_delay = 2
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	pin = /obj/item/firing_pin

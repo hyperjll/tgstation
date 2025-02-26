@@ -10,12 +10,16 @@
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/ak712x82
 	spread = 15
-	fire_delay = 2
+	burst_delay = 2
 	can_suppress = FALSE
 	actions_types = list()
 	mag_display = TRUE
 	mag_display_ammo = FALSE
 	fire_sound = 'hypermods/sound/weapons/rifleshot.ogg'
+
+/obj/item/gun/ballistic/automatic/akm/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS)
 
 // Lecter Automatic Rifle
 
@@ -28,7 +32,7 @@
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
-	fire_delay = 2
+	burst_delay = 2
 	burst_size = 2
 	spread = 2
 	w_class = WEIGHT_CLASS_HUGE
@@ -51,13 +55,13 @@
 /obj/item/gun/ballistic/automatic/drozd
 	name = "\improper Drozd"
 	desc = "An excellent fully automatic Heavy SMG. Uses 5.56mm rifle ammo."
-	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "Drozd"
 	inhand_icon_state = "drozd"
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
-	fire_delay = 2
+	burst_delay = 2
 	burst_size = 3
 	spread = 1
 	w_class = WEIGHT_CLASS_HUGE
