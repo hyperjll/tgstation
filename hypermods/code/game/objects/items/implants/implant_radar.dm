@@ -67,7 +67,7 @@
 	desc = "An implant designed to hack into suit sensor networks for easy access to the host."
 	//actions_types = null
 	icon = 'icons/obj/devices/scanner.dmi'
-	icon_state = "scanner"
+	icon_state = "crew_monitor"
 
 /obj/item/implant/crewmonitor/activate()
 	GLOB.crewmonitor.show(imp_in,src)
