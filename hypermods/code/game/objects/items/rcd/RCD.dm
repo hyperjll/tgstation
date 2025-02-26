@@ -28,4 +28,4 @@
 	icon_state = "arcd"
 	inhand_icon_state = "oldrcd"
 	energyfactor = 0.182 * STANDARD_CELL_CHARGE
-	upgrade = RCD_ALL_UPGRADES & ~RCD_UPGRADE_SILO_LINK
+	construction_upgrades = RCD_ALL_UPGRADES & ~RCD_UPGRADE_SILO_LINK
