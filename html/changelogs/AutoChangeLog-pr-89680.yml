@@ -1,4 +1,4 @@
 author: "SmArtKar"
 delete-after: True
 changes:
-  - image: "Resprited tinkerer gloves"
+  - bugfix: "You can now lean on falsewalls"
