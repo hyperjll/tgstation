@@ -397,28 +397,22 @@
 	if(!host_mob.getBruteLoss())
 		return FALSE
 	if(iscarbon(host_mob))
-		var/mob/living/carbon/C = host_mob
-		var/list/parts = C.get_damaged_bodyparts(TRUE,TRUE, status = BODYTYPE_ORGANIC)
+		var/mob/living/carbon/host_carbon = host_mob
+		var/list/parts = host_carbon.get_damaged_bodyparts(brute = TRUE, required_bodytype = BODYTYPE_ORGANIC)
 		if(!parts.len)
 			return FALSE
 	return ..()
 
 /datum/nanite_program/mendingbrute/active_effect()
-	if(iscarbon(host_mob))
-		var/mob/living/carbon/C = host_mob
-		var/list/parts = C.get_damaged_bodyparts(TRUE,TRUE, status = BODYTYPE_ORGANIC)
-		if(!parts.len)
-			return
-		for(var/obj/item/bodypart/L in parts)
-			if(L.heal_damage(healing/parts.len, healing/parts.len, null, BODYTYPE_ORGANIC))
-				host_mob.update_damage_overlays()
-		if(C.getStaminaLoss() < 41)
-			C.adjustStaminaLoss(1)
-			if(prob(5))
-				to_chat(C, "<span class='warning'>You suddenly feel your flesh re-adjust.")
-	else
-		host_mob.adjustBruteLoss(-healing, TRUE)
-
+	if(!iscarbon(host_mob))
+		host_mob.adjustBruteLoss(-0.5, TRUE)
+		return
+	var/mob/living/carbon/carbon_mob = host_mob
+	carbon_mob.heal_overall_damage(brute = healing, brute = healing, required_bodytype = BODYTYPE_ORGANIC)
+	if(carbon_mob.getStaminaLoss() < 71)
+		carbon_mob.adjustStaminaLoss(1)
+		if(prob(5))
+			to_chat(carbon_mob, "<span class='warning'>You suddenly feel your flesh re-adjust.")
 
 /datum/nanite_program/mendingburn
 	name = "Burn Mending"
@@ -431,28 +425,22 @@
 	if(!host_mob.getFireLoss())
 		return FALSE
 	if(iscarbon(host_mob))
-		var/mob/living/carbon/C = host_mob
-		var/list/parts = C.get_damaged_bodyparts(TRUE,TRUE, status = BODYTYPE_ORGANIC)
+		var/mob/living/carbon/host_carbon = host_mob
+		var/list/parts = host_carbon.get_damaged_bodyparts(burn = TRUE, required_bodytype = BODYTYPE_ORGANIC)
 		if(!parts.len)
 			return FALSE
 	return ..()
 
 /datum/nanite_program/mendingburn/active_effect()
-	if(iscarbon(host_mob))
-		var/mob/living/carbon/C = host_mob
-		var/list/parts = C.get_damaged_bodyparts(TRUE,TRUE, status = BODYTYPE_ORGANIC)
-		if(!parts.len)
-			return
-		for(var/obj/item/bodypart/L in parts)
-			if(L.heal_damage(healing/parts.len, healing/parts.len, null, BODYTYPE_ORGANIC))
-				host_mob.update_damage_overlays()
-		if(C.getStaminaLoss() < 41)
-			C.adjustStaminaLoss(1)
-			if(prob(5))
-				to_chat(C, "<span class='warning'>You feel both charred and burned flesh alike sizzle for a moment.")
-	else
-		host_mob.adjustFireLoss(-healing, TRUE)
-
+	if(!iscarbon(host_mob))
+		host_mob.adjustFireLoss(-0.5, TRUE)
+		return
+	var/mob/living/carbon/carbon_mob = host_mob
+	carbon_mob.heal_overall_damage(burn = healing, burn = healing, required_bodytype = BODYTYPE_ORGANIC)
+	if(carbon_mob.getStaminaLoss() < 71)
+		carbon_mob.adjustStaminaLoss(1)
+		if(prob(5))
+			to_chat(carbon_mob, "<span class='warning'>You suddenly feel your flesh re-adjust.")
 
 /datum/nanite_program/mendingtoxin
 	name = "Toxin Cleansing"
