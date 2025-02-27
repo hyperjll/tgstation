@@ -491,37 +491,30 @@
 	desc = "The nanites repair damage within robotic organisms or limbs including both denting and melting. This program shuts itself off when no damage is available to be healed."
 	use_rate = 1.5 //still more efficient than organic healing
 	rogue_types = list(/datum/nanite_program/aggressive_replication)
-	var/healing = 1.5
+	var/healing = 2
 
 /datum/nanite_program/repairingplus/check_conditions()
 	if(!host_mob.getBruteLoss() && !host_mob.getFireLoss())
 		return FALSE
 
-	if(iscarbon(host_mob))
-		var/mob/living/carbon/C = host_mob
-		var/list/parts = C.get_damaged_bodyparts(TRUE, TRUE, status = BODYTYPE_ROBOTIC)
-		if(!parts.len)
-			return FALSE
-	else
+	if(!iscarbon(host_mob))
 		if(!(host_mob.mob_biotypes & MOB_ROBOTIC))
 			return FALSE
+		return ..()
+
+	var/mob/living/carbon/carbon_host = host_mob
+	var/list/parts = carbon_host.get_damaged_bodyparts(brute = TRUE, burn = TRUE, required_bodytype = BODYTYPE_ROBOTIC)
+	if(!parts.len)
+		return FALSE
 	return ..()
 
 /datum/nanite_program/repairingplus/active_effect(mob/living/M)
-	if(iscarbon(host_mob))
-		var/mob/living/carbon/C = host_mob
-		var/list/parts = C.get_damaged_bodyparts(TRUE, TRUE, status = BODYTYPE_ROBOTIC)
-		if(!parts.len)
-			return
-		var/update = FALSE
-		for(var/obj/item/bodypart/L in parts)
-			if(L.heal_damage(healing/parts.len, healing/parts.len, null, BODYTYPE_ROBOTIC))
-				update = TRUE
-		if(update)
-			host_mob.update_damage_overlays()
-	else
+	if(!iscarbon(host_mob))
 		host_mob.adjustBruteLoss(-healing, TRUE)
 		host_mob.adjustFireLoss(-healing, TRUE)
+		return
+	host_mob.heal_overall_damage(brute = healing, brute = healing, required_bodytype = BODYTYPE_ROBOTIC)
+	host_mob.heal_overall_damage(burn = healing, burn = healing, required_bodytype = BODYTYPE_ROBOTIC)
 
 
 /datum/nanite_program/woundfixer
