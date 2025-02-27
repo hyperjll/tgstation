@@ -306,7 +306,8 @@
 
 /datum/nanite_program/naniteresus
 	name = "Nanite Resurrection"
-	desc = "The nanites expend a large portion of themselves to create a strange reagent while the host is dead, which may result in their resurrection."
+	desc = "The nanites expend a large portion of themselves to create a strange reagent while the host is dead, which may result in their resurrection. \
+			Cannot repair corpses, and requires them to be unhusked."
 	use_rate = 0
 	rogue_types = list(/datum/nanite_program/necrotic)
 	var/hasnotified = FALSE
@@ -315,40 +316,38 @@
 /datum/nanite_program/naniteresus/active_effect()
 	if(host_mob.stat == DEAD)
 		if(ismegafauna(host_mob)) //they are never coming back
-			//host_mob.visible_message(span_warning("[host_mob]'s body does not react to the nanite's attempt at revival..."))  messages just gets spammed.
-			sleep(300 SECONDS) // Fuck you, stop checking for something every tick if it'll never change results. (Def of insanity)
+			activated = FALSE // Fuck you, stop checking for something every tick if it'll never change results. (Def of insanity)
 			return
-		if(iscarbon(host_mob) && (host_mob.getBruteLoss() + host_mob.getFireLoss() >= 100 || HAS_TRAIT(host_mob, TRAIT_HUSK))) //body is too damaged to be revived
-			//host_mob.visible_message(span_warning("[host_mob]'s body convulses a bit, and then falls still once more."))  messages just gets spammed.
-			//host_mob.do_jitter_animation(10)
-			sleep(10 SECONDS)
-			return
+		if(iscarbon(host_mob) && (host_mob.getBruteLoss() + host_mob.getFireLoss() + host_mob.getToxLoss() >= 100 || HAS_TRAIT(host_mob, TRAIT_HUSK))) //body is too damaged to be revived
+			return // We don't repair corpses, just revive them. (and make them not die afterward)
 		else
-			//host_mob.visible_message(span_warning("[host_mob]'s body starts convulsing!")) messages just gets spammed.
 			if(!hasnotified)
-				host_mob.notify_revival("You're being ressurected by nanites! Re-enter your corpse at your earliest conveinence.")
+				host_mob.notify_revival("You're being resurrected by nanites! Re-enter your corpse at your earliest conveinence.")
 				hasnotified = TRUE
 			host_mob.do_jitter_animation(10)
 			addtimer(CALLBACK(host_mob, TYPE_PROC_REF(/mob/living/carbon, do_jitter_animation), 10), 40) //jitter immediately, then again after 4 and 8 seconds
 			addtimer(CALLBACK(host_mob, TYPE_PROC_REF(/mob/living/carbon, do_jitter_animation), 10), 80)
 			sleep(10 SECONDS) //so the ghost has time to re-enter
 			if(iscarbon(host_mob))
-				var/mob/living/carbon/C = host_mob
-				C.adjustOrganLoss(ORGAN_SLOT_BRAIN, -50)
-				C.adjustOrganLoss(ORGAN_SLOT_HEART, -25)
-				C.adjustOrganLoss(ORGAN_SLOT_LUNGS, -25)
-				C.adjustOrganLoss(ORGAN_SLOT_LIVER, -25)
-				C.adjustOrganLoss(ORGAN_SLOT_STOMACH, -25)
-				C.adjustOrganLoss(ORGAN_SLOT_EYES, -25)
-				C.adjustOrganLoss(ORGAN_SLOT_EARS, -25)
-			if(!hashealed)
+				var/mob/living/carbon/Carbon_mob = host_mob
+				Carbon_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, -50)
+				Carbon_mob.adjustOrganLoss(ORGAN_SLOT_HEART, -25)
+				Carbon_mob.adjustOrganLoss(ORGAN_SLOT_LUNGS, -25)
+				Carbon_mob.adjustOrganLoss(ORGAN_SLOT_LIVER, -25)
+				Carbon_mob.adjustOrganLoss(ORGAN_SLOT_STOMACH, -25)
+				Carbon_mob.adjustOrganLoss(ORGAN_SLOT_EYES, -25)
+				Carbon_mob.adjustOrganLoss(ORGAN_SLOT_EARS, -25)
+				if(!hashealed)
+					Carbon_mob.adjustBruteLoss(-10)
+					Carbon_mob.adjustFireLoss(-10)
+					Carbon_mob.adjustOxyLoss(-101, 0)
+					Carbon_mob.adjustToxLoss(-20, 0, TRUE)
+					Carbon_mob.blood_volume += 10
+					Carbon_mob.updatehealth()
+					hashealed = TRUE
+			else // just for basic mobs, might as well.
 				host_mob.adjustBruteLoss(-10)
 				host_mob.adjustFireLoss(-10)
-				host_mob.adjustOxyLoss(-101, 0)
-				host_mob.adjustToxLoss(-20, 0, TRUE)
-				host_mob.blood_volume += 10
-				host_mob.updatehealth()
-				hashealed = TRUE
 			if(host_mob.revive())
 				host_mob.emote("gasp")
 				nanites.adjust_nanites(null, -35)
@@ -359,7 +358,7 @@
 
 /datum/nanite_program/synthflesh
 	name = "Corpse Repair"
-	desc = "The nanites will slowly produce synthetic flesh over time, and use that to both patch the host's injuries and unhusk them."
+	desc = "The nanites will slowly produce synthetic flesh over time, and use that to both patch the host's injuries and unhusk them. It only works on dead people."
 	use_rate = 2
 	rogue_types = list(/datum/nanite_program/necrotic)
 
@@ -381,6 +380,7 @@
 			else
 				host_mob.adjustBruteLoss(-2)
 				host_mob.adjustFireLoss(-2)
+				host_mob.adjustToxLoss(-0.1, 0, TRUE) // Think of it as a slight bonus.
 				if(HAS_TRAIT_FROM(host_mob, TRAIT_HUSK, BURN) && (host_mob.getFireLoss() < 51) && host_mob.cure_husk(BURN)) //cure husk will return true if it cures the final husking source
 					sleep(3 SECONDS)
 	..()
