@@ -4,6 +4,7 @@
 	icon = 'icons/obj/clothing/gloves.dmi'
 	icon_state = "black"
 	inhand_icon_state = "blackgloves"
+	clothing_traits = list(TRAIT_THIEF)
 	strip_delay = 80
 	siemens_coefficient = 0
 	slot_flags = ITEM_SLOT_HANDS

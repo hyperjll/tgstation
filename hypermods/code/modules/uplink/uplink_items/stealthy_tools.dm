@@ -85,10 +85,11 @@
 
 /datum/uplink_item/stealthy_tools/thievesgloves
 	name = "Thieves Gloves"
-	desc = "A pair of insulated combat gloves which are fitted with our chameleon technology. \
+	desc = "A pair of insulated combat gloves which are fitted both with our chameleon & nano-machine technology. \
+			These gloves are capable of concealing any attempts to pickpocket/strip someone from both the victim and on-lookers, but require a lengthy amount of time to do so. \
 			It also has several bluespace pockets within it for additional storage. Comes with a screwdriver, multitool, and a crowbar."
 	item = /obj/item/storage/box/syndie_kit/thievesgloves
-	cost = 1
+	cost = 5
 	surplus = 20
 
 /datum/uplink_item/stealthy_tools/holodisguiser
