@@ -669,3 +669,29 @@
   - bugfix: fixes slaughter demon roundend report
   - bugfix: Fixes (most) emergency access on maintenance airlocks on WawaStation
   - bugfix: wizard statues are gray
+2025-02-27:
+  DaCoolBoss:
+  - balance: Trash items now contain small amounts of material.
+  Hatterhat:
+  - code_imp: Guns now have burst delay and fire delay variables instead of fire delay
+      affecting both. If a weapon's burst feels off, please submit an issue report.
+  Majkl-J:
+  - bugfix: The charging defib mount no longer runtimes when there's no defib
+  SmArtKar:
+  - bugfix: Fixed flesh reshaper not being placeable on table
+  - bugfix: Sphere transform module no longer makes you spin permanently
+  - bugfix: You can now lean on falsewalls
+  - bugfix: You can no longer activate anomalock heart's voltaic overdrive/tenacity
+      trauma by pulling off some surgery shenanigans
+  - bugfix: You no longer lose tenacity trauma gained via lobotomy after losing voltaic
+      override
+2025-02-28:
+  Profakos:
+  - bugfix: Request consoles once again enter emergency mode when you hit an emergency
+      button
+  SmArtKar:
+  - image: Resprited GPSs
+  - bugfix: You can no longer try to occupy an AI uplink brain already occupied by
+      another AI
+  - bugfix: Armsy (aka Lord Of The Night (aka flesh snek (aka heretic ascention)))
+      no longer affects itself with its own spells
