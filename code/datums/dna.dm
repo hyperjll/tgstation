@@ -250,6 +250,8 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		L[DNA_FISH_TAIL_BLOCK] = construct_block(SSaccessories.tails_list_fish.Find(features["fish_tail"]), length(SSaccessories.tails_list_fish))
 	if(features["fox_tail"])
 		L[DNA_FOX_TAIL_BLOCK] = construct_block(SSaccessories.tails_list_fox.Find(features["fox_tail"]), length(SSaccessories.tails_list_fox))
+	if(features["werewolf_tail"])
+		L[DNA_WEREWOLF_TAIL_BLOCK] = construct_block(SSaccessories.tails_list_werewolf.Find(features["werewolf_tail"]), length(SSaccessories.tails_list_werewolf))
 
 	for(var/blocknum in 1 to DNA_FEATURE_BLOCKS)
 		. += L[blocknum] || random_string(GET_UI_BLOCK_LEN(blocknum), GLOB.hex_characters)
@@ -398,6 +400,8 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 			set_uni_feature_block(blocknumber, construct_block(SSaccessories.tails_list_fish.Find(features["fish_tail"]), length(SSaccessories.tails_list_fish)))
 		if(DNA_FOX_TAIL_BLOCK)
 			set_uni_feature_block(blocknumber, construct_block(SSaccessories.tails_list_fox.Find(features["fox_tail"]), length(SSaccessories.tails_list_fox)))
+		if(DNA_WEREWOLF_TAIL_BLOCK)
+			set_uni_feature_block(blocknumber, construct_block(SSaccessories.tails_list_werewolf.Find(features["werewolf_tail"]), length(SSaccessories.tails_list_werewolf)))
 
 //Please use add_mutation or activate_mutation instead
 /datum/dna/proc/force_give(datum/mutation/human/human_mutation)

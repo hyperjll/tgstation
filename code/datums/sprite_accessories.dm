@@ -1817,6 +1817,14 @@
 /datum/sprite_accessory/tails/fox/default
 	icon_state = "default"
 
+/datum/sprite_accessory/tails/werewolf
+	name = "Werewolf"
+	icon = 'hypermods/icons/mob/human/werewolf_features.dmi'
+	color_src = HAIR_COLOR
+
+/datum/sprite_accessory/tails/werewolf/default
+	icon_state = "default"
+
 /datum/sprite_accessory/tails/monkey
 
 /datum/sprite_accessory/tails/monkey/none
@@ -1951,6 +1959,13 @@
 	icon = 'icons/mob/human/fox_features.dmi'
 	name = "Fox"
 	icon_state = "fox"
+	color_src = HAIR_COLOR
+	locked = TRUE
+
+/datum/sprite_accessory/ears/werewolf
+	icon = 'hypermods/icons/mob/human/werewolf_features.dmi'
+	name = "Werewolf"
+	icon_state = "werewolf"
 	color_src = HAIR_COLOR
 	locked = TRUE
 

@@ -19,7 +19,7 @@
 	mutantbrain = /obj/item/organ/brain/werewolf
 	mutantliver = /obj/item/organ/liver/werewolf
 	mutant_organs = list(
-		/obj/item/organ/tail/cat = "Cat",
+		/obj/item/organ/tail/werewolf = "Werewolf",
 	)
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT

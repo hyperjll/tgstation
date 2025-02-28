@@ -1,10 +1,16 @@
 /obj/item/organ/ears/werewolf
 	name = "wolf ears"
 	icon = 'icons/obj/clothing/head/costume.dmi'
+	worn_icon = 'icons/mob/clothing/head/costume.dmi'
 	icon_state = "kitty"
 	desc = "Allows the user to more easily hear whispers. The user becomes extra vulnerable to loud noises, however"
+	visual = TRUE
 	// Same sensitivity as felinid ears
 	damage_multiplier = 2
+
+	dna_block = DNA_EARS_BLOCK
+	bodypart_overlay = /datum/bodypart_overlay/mutant/cat_ears
+	sprite_accessory_override = /datum/sprite_accessory/ears/werewolf
 
 /*
 /obj/item/organ/ears/werewolf/Insert(mob/living/carbon/receiver, special, drop_if_replaced)
@@ -15,6 +21,8 @@
 /obj/item/organ/eyes/werewolf
 	name = "wolf eyes"
 	desc = "Large and powerful eyes."
+	icon = 'hypermods/icons/obj/antags/mutant_bodyparts.dmi'
+	icon_state = "werewolf_eyes"
 	sight_flags = SEE_MOBS
 	color_cutoffs = list(25, 5, 42)
 
@@ -83,3 +91,23 @@
 		message = new_words.Join(" ")
 		message = capitalize(message)
 		speech_args[SPEECH_MESSAGE] = message
+
+/obj/item/organ/tail/werewolf
+	name = "werewolf tail"
+	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/werewolf
+	dna_block = DNA_WEREWOLF_TAIL_BLOCK
+	wag_flags = WAG_ABLE
+
+/datum/bodypart_overlay/mutant/tail/werewolf
+	feature_key = "werewolf_tail"
+	color_source = ORGAN_COLOR_HAIR
+
+/datum/bodypart_overlay/mutant/tail/werewolf/get_global_feature_list()
+	return SSaccessories.tails_list_werewolf
+
+/datum/bodypart_overlay/mutant/tail/werewolf/on_mob_insert(obj/item/organ/parent, mob/living/carbon/receiver)
+	if(imprint_on_next_insertion && !receiver.dna.features["werewolf_tail"])
+		receiver.dna.features["werewolf_tail"] = pick(SSaccessories.tails_list_werewolf)
+		receiver.dna.update_uf_block(DNA_WEREWOLF_TAIL_BLOCK)
+
+	return ..()
