@@ -247,3 +247,56 @@
 	icon_state = "greyscale"
 	color = COLOR_DARK_MODERATE_LIME_GREEN
 	inhand_icon_state = "werewolf" // no visual "werewolf" icon doesn't exist -- we don't want one..
+
+
+/datum/action/cooldown/spell/werewolf_def_howl
+	name = "Defensive Howl"
+	desc = "Prepare yourself to emit a blood-curdling howl, takes 10 seconds to pull off successfully. \
+			While doing so, you'll gain great resistance to all forms of damage, and if successful, you'll gain a minute-long but slow regeneration effect."
+	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
+	button_icon_state = "howl"
+
+	cooldown_time = 200 SECONDS
+	spell_max_level = 1
+	overlay_icon_state = "bg_default_border"
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+	invocation_type = INVOCATION_NONE
+
+/datum/action/cooldown/spell/werewolf_def_howl/can_cast_spell(feedback = TRUE)
+	. = ..()
+	if(!iswerewolf(owner))
+		return FALSE
+
+/datum/action/cooldown/spell/werewolf_def_howl/cast(mob/living/carbon/cast_on)
+	if(!isliving(cast_on))
+		return
+
+	def_up(cast_on)
+	cast_on.adjust_fire_stacks(-20) // self-extinguish
+	cast_on.balloon_alert(cast_on, "preparing to howl...")
+	cast_on.visible_message(span_warning("[cast_on] lets out a low growl as they stiffen!"), span_warning("You prepare a defensive howl..."), \
+	span_hear("You hear a low growl..."))
+
+	if(!do_after(cast_on, 10 SECONDS))
+		def_down(cast_on)
+		return // Canceled or not, better make sure the def is removed.
+	playsound(cast_on, 'hypermods/sound/mobs/humanoid/werewolf/werewolf_howl.ogg', 70, TRUE)
+	def_down(cast_on)
+	// About 30 brute/burn and 15 tox damage healed over a minute.
+	cast_on.apply_status_effect(/datum/status_effect/regenerative_howl)
+
+/datum/action/cooldown/spell/werewolf_def_howl/proc/def_up(mob/living/carbon/cast_on)
+	var/mob/living/carbon/human/my_werewolf = cast_on
+	my_werewolf.physiology.brute_mod *= 0.3
+	my_werewolf.physiology.burn_mod *= 0.3
+	my_werewolf.physiology.tox_mod *= 0.3
+	my_werewolf.physiology.oxy_mod *= 0.3
+
+/datum/action/cooldown/spell/werewolf_def_howl/proc/def_down(mob/living/carbon/cast_on)
+	var/mob/living/carbon/human/my_werewolf = cast_on
+	my_werewolf.physiology.brute_mod /= 0.3
+	my_werewolf.physiology.burn_mod /= 0.3
+	my_werewolf.physiology.tox_mod /= 0.3
+	my_werewolf.physiology.oxy_mod /= 0.3
