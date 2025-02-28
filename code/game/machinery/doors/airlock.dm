@@ -188,8 +188,9 @@
 	RegisterSignal(src, COMSIG_MACHINERY_BROKEN, PROC_REF(on_break))
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_GREY_TIDE, PROC_REF(grey_tide))
+	RegisterSignal(SSdcs, COMSIG_GLOBAL_GREY_TIDE_TRAITOR, PROC_REF(grey_tide)) // for tot objectives
 
-/obj/machinery/door/airlock/proc/grey_tide(datum/source, list/grey_tide_areas)
+/obj/machinery/door/airlock/proc/grey_tide(datum/source, list/grey_tide_areas, traitor_bug = FALSE)
 	SIGNAL_HANDLER
 
 	if(!is_station_level(z) || critical_machine)
@@ -198,7 +199,10 @@
 	for(var/area_type in grey_tide_areas)
 		if(!istype(get_area(src), area_type))
 			continue
-		INVOKE_ASYNC(src, PROC_REF(prison_open)) //Sleep gets called further down in open(), so we have to invoke async
+		if(traitor_bug)
+			INVOKE_ASYNC(src, PROC_REF(traitor_bug_tide))
+		else
+			INVOKE_ASYNC(src, PROC_REF(prison_open)) //Sleep gets called further down in open(), so we have to invoke async
 
 /obj/machinery/door/airlock/connect_to_shuttle(mapload, obj/docking_port/mobile/port, obj/docking_port/stationary/dock)
 	if(id_tag)

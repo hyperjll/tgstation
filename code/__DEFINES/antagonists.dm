@@ -453,3 +453,14 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 #define INFILTRATOR_FACTION_CORPORATE_CLIMBER "Corporate Climber"
 #define INFILTRATOR_FACTION_ANIMAL_RIGHTS_CONSORTIUM "Animal Rights Consortium"
 #define INFILTRATOR_FACTION_GORLEX_MARAUDERS "Gorlex Marauders"
+
+/// For the tide bug secondary tot objective
+#define TRAITOR_OBJECTIVE_BLACKLISTED_AREAS list(/area/station/engineering/hallway, \
+		/area/station/engineering/lobby, \
+		/area/station/engineering/storage, \
+		/area/station/science/lobby, \
+		/area/station/science/ordnance/bomb, \
+		/area/station/science/ordnance/freezerchamber, \
+		/area/station/science/ordnance/burnchamber, \
+		/area/station/security/prison, \
+	)

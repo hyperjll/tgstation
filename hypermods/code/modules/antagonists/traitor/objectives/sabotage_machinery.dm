@@ -2,6 +2,9 @@
 	name = "Sabotage the %MACHINE%"
 	description = "Destroy the %MACHINE% to cause disarray and disrupt the operations of the %JOB%'s department. If you can get another crew member to destroy the machine using the provided booby trap, you will be rewarded with an additional %PROGRESSION% reputation and %TC% telecrystals."
 
+	abstract_type = /datum/traitor_objective/sabotage_machinery/trap/rare
+	duplicate_type = /datum/traitor_objective/sabotage_machinery
+
 	progression_reward = list(5 MINUTES, 8 MINUTES)
 	telecrystal_reward = 2 // A reward, for tresspassing into hard-to-breach areas
 

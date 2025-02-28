@@ -10,9 +10,11 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 /datum/traitor_objective_category/sabotage_machinery
 	name = "Sabotage Worksite"
 	objectives = list(
-		/datum/traitor_objective/sabotage_machinery/trap = 1,
-		/datum/traitor_objective/sabotage_machinery/destroy = 1,
+		/datum/traitor_objective/sabotage_machinery/trap = 3,
+		/datum/traitor_objective/sabotage_machinery/destroy = 3,
+		/datum/traitor_objective/sabotage_machinery/trap/rare = 1,
 	)
+	weight = OBJECTIVE_WEIGHT_DEFAULT
 
 /datum/traitor_objective/sabotage_machinery
 	name = "Sabotage the %MACHINE%"
@@ -70,6 +72,14 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 	applicable_jobs = list(
 		JOB_STATION_ENGINEER = /obj/machinery/telecomms/hub,
 		JOB_SCIENTIST = /obj/machinery/rnd/server,
+		JOB_ROBOTICIST = /obj/machinery/mecha_part_fabricator,
+		JOB_HEAD_OF_PERSONNEL = /obj/machinery/modular_computer/preset/id,
+		JOB_RESEARCH_DIRECTOR = /obj/machinery/computer/gateway_control,
+		JOB_CAPTAIN = /obj/machinery/teleport/station,
+		JOB_SECURITY_OFFICER = /obj/machinery/gulag_teleporter,
+		JOB_WARDEN = /obj/machinery/computer/security/labor,
+		JOB_QUARTERMASTER = /obj/machinery/computer/security/qm,
+		JOB_CHIEF_ENGINEER = /obj/machinery/computer/telecomms/monitor,
 	)
 
 // Rig machines which are in public locations to explode when interacted with
