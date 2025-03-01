@@ -119,5 +119,13 @@
 		"roundend_report": "was a contractor support agent.",
 		"ui_theme": "syndicate",
 		"uplink": "You do not come with your own uplink, defer to your agent."
+	},
+	"Syndicate Support Unit": {
+		"allies": "You are being sent to help your designated agent, though you may aid other syndicate agents on the field unless your designated agent forbids it.",
+		"goal": "Help your designated agent to the furtest extent you can, their life is above your own.",
+		"introduction": "You are the Syndicate Support Agent.",
+		"roundend_report": "was a syndicate support agent.",
+		"ui_theme": "syndicate",
+		"uplink": "You do not come with your own uplink, defer to your agent."
 	}
 }
