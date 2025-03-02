@@ -14,7 +14,6 @@
 	category = /datum/uplink_category/contractor
 	cost = 20
 	purchasable_from = UPLINK_INFILTRATORS
-	population_minimum = TRAITOR_POPULATION_LOWPOP
 
 /datum/uplink_item/bundles_tc/contract_kit/purchase(mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	. = ..()
