@@ -101,7 +101,7 @@
 /obj/item/stack/telecrystal/trick
 	item_flags = null
 
-/obj/item/stack/telecrystal/trick/afterattack(obj/item/I, mob/user, proximity)
+/obj/item/stack/telecrystal/trick/interact_with_atom(obj/item/I, mob/user, proximity)
 	to_chat(user, span_notice("[src] explodes violently!"))
 	explosion(src, 1,2,0,0)
 	qdel(src)

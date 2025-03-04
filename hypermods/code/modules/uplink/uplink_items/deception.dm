@@ -153,15 +153,16 @@
 
 /datum/uplink_item/deception/tricktelecrystal
 	name = "Trick Telecrystal"
-	desc = "A poorly manufactured telecrystal that's become highly unstable, upon being inserted into an uplink OR when used to attack something \
-			this telecrystal will violently explode dealing MASSIVE damage to both target and user. The explosion is always powerful enough to leave \
+	desc = "A poorly manufactured telecrystal that's become highly unstable, upon being inserted into an uplink OR when used to INTERACT with something \
+			this telecrystal will violently explode. The explosion is always powerful enough to leave \
 			a hull breach and likely gib the target or user if either one doesn't have any explosive protection. \
-			Often used to fool other syndicate agents or scientific personnel into killing themselves."
+			Often used to fool other syndicate agents or scientific personnel into killing themselves. \
+			AVOID ATTEMPTS TO PLACE IT DIRECTLY ONTO TABLES."
 	item = /obj/item/stack/telecrystal/trick
 	cost = 5
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	progression_minimum = 30 MINUTES
+	progression_minimum = 10 MINUTES
 
 /datum/uplink_item/deception/riggedcells
 	name = "Box of Rigged Power Cells"
