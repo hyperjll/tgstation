@@ -53,16 +53,25 @@
 
 /obj/item/implanter/empshield
 	name = "implanter (EMP shield)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/empshield
 
 
 /obj/item/implanter/weapons_auth
 	name = "implanter (weapon authentication)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/weapons_auth
 
 
 /obj/item/implanter/adrenalin
 	name = "implanter (adrenalin)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/adrenalin
 
 /obj/item/implant/adrenalin
@@ -127,6 +136,9 @@
 
 /obj/item/implanter/scram
 	name = "implanter (scram)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/scram
 
 /obj/item/implant/scram
@@ -205,4 +217,7 @@
 
 /obj/item/implanter/radio/binary
 	name = "implanter (binary translating radio)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/radio/binary

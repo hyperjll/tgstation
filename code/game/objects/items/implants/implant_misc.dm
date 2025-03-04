@@ -26,6 +26,9 @@
 
 /obj/item/implanter/emp
 	name = "implanter (EMP)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/emp
 
 /obj/item/implant/radio
@@ -85,4 +88,7 @@
 
 /obj/item/implanter/radio/syndicate
 	name = "implanter (internal syndicate radio)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/radio/syndicate

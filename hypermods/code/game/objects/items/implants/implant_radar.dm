@@ -75,6 +75,9 @@
 
 /obj/item/implanter/radar
 	name = "implanter (radar)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/radar
 
 /obj/item/implantcase/radar
@@ -84,10 +87,16 @@
 
 /obj/item/implanter/radar/super
 	name = "implanter (radar array)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/radar/super
 
 /obj/item/implanter/crewmonitor
 	name = "implanter (crew monitor)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/crewmonitor
 
 /obj/item/implantcase/crewmonitor

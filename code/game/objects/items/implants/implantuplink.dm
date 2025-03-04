@@ -45,6 +45,9 @@
 
 /obj/item/implanter/uplink
 	name = "implanter (uplink)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/uplink
 
 /obj/item/implanter/uplink/Initialize(mapload, uplink_handler)

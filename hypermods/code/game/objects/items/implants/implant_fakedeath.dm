@@ -73,6 +73,9 @@
 
 /obj/item/implanter/pseudodeath
 	name = "implanter (pseudo-death)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/pseudodeath
 
 /obj/item/implantcase/pseudodeath

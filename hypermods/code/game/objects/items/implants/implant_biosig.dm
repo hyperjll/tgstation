@@ -78,6 +78,9 @@
 
 /obj/item/implanter/biosig/syndicate
 	name = "implanter (biosignaller)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/biosig/syndicate
 
 /obj/item/implantcase/biosig/syndicate

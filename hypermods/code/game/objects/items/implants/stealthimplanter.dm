@@ -15,6 +15,9 @@
 
 /obj/item/implanter/stealthimplanter/explosive
 	name = "implanter (microbomb)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/explosive/stealth
 
 /obj/item/implant/explosive/stealth
@@ -32,6 +35,9 @@
 
 /obj/item/implanter/stealthimplanter/megaexplosive
 	name = "implanter (macrobomb)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/explosive/macro/stealth
 
 /obj/item/implant/explosive/macro/stealth
@@ -45,6 +51,9 @@
 
 /obj/item/implanter/stealthimplanter/tracking
 	name = "implanter"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/tracking/syndicate
 
 /obj/item/implant/tracking/syndicate

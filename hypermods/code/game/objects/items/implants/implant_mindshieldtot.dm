@@ -40,6 +40,9 @@
 
 /obj/item/implanter/mindshieldtot
 	name = "implanter (syndicate mindshield)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/mindshieldtot
 
 /obj/item/implantcase/mindshieldtot

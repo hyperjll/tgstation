@@ -84,6 +84,9 @@
 
 /obj/item/implanter/robusttec
 	name = "implanter (R.O.B.U.S.T)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/robusttec
 
 /obj/item/implantcase/robusttec

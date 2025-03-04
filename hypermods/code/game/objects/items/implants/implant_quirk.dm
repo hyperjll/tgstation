@@ -46,6 +46,9 @@
 
 /obj/item/implanter/violentpsychosis
 	name = "implanter (violent psychosis)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/violentpsychosis
 
 /obj/item/implantcase/violentpsychosis

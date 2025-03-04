@@ -54,6 +54,9 @@
 
 /obj/item/implanter/wasps
 	name = "implanter (wasp vengeance)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/wasps
 
 /obj/item/implantcase/wasps
@@ -129,6 +132,9 @@
 
 /obj/item/implanter/tesla
 	name = "implanter (flyzapper implant)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/tesla
 
 /obj/item/implantcase/tesla

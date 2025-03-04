@@ -222,6 +222,9 @@
 
 /obj/item/implanter/explosive
 	name = "implanter (microbomb)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/explosive
 
 /obj/item/implantcase/explosive
@@ -231,10 +234,16 @@
 
 /obj/item/implanter/explosive_macro
 	name = "implanter (macrobomb)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/explosive/macro
 
 /obj/item/implanter/tactical_deniability
 	name = "implanter (tactical deniability)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/explosive/deniability
 
 /datum/action/item_action/explosive_implant
