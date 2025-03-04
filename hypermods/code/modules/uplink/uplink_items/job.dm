@@ -1037,8 +1037,17 @@
 /datum/uplink_item/role_restricted/mining_points
 	name = "Mining Points Card"
 	desc = "A single mining point transfer card pre-loaded with one thousand mining points donated to us by previous agents. \
-			We've heard that you can acquire some decent gear using these things and have opted to sell them to you, just in case.."
+			We've heard that you can acquire some decent gear using these things and have opted to sell them to you, just in case."
 	item = /obj/item/card/mining_point_card/thousand
 	cost = 4
 	surplus = 0
 	restricted_roles = list(JOB_SHAFT_MINER, JOB_BITRUNNER, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/tier4bitrunner
+	name = "Tier 4 Bitrunner Gear Disk"
+	desc = "We've been having a blast in virutal reality for a while and have developed this disk to give you plenty of firepower to really have some fun. \
+			You may choose from disposable penetrator turrets, energy chainsaws, SPES shotguns, laser rifles, and even the fabled china lake! Even more fun toys included!."
+	item = /obj/item/bitrunning_disk/item/tier4
+	cost = 7
+	surplus = 0
+	restricted_roles = list(JOB_BITRUNNER, JOB_CAPTAIN)
