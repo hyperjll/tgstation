@@ -1,3 +1,10 @@
+/obj/item/card/mining_point_card/thousand
+	points = 1000
+
+/obj/item/card/mining_point_card/twofifty
+	points = 250
+
+
 /obj/machinery/computer/order_console/syndicate_voucher
 	name = "syndicate requisitions machine"
 	desc = "A high-durability requisitions machine which dispenses specialized equipment loadouts. Requires a requisition voucher to acquire anything from it."

@@ -1033,3 +1033,12 @@
 	cost = 13
 	item = /obj/item/book/granter/martial/the_tunnel_arts
 	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/mining_points
+	name = "Mining Points Card"
+	desc = "A single mining point transfer card pre-loaded with one thousand mining points donated to us by previous agents. \
+			We've heard that you can acquire some decent gear using these things and have opted to sell them to you, just in case.."
+	item = /obj/item/card/mining_point_card/thousand
+	cost = 4
+	surplus = 0
+	restricted_roles = list(JOB_SHAFT_MINER, JOB_BITRUNNER, JOB_CAPTAIN)
