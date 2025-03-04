@@ -1046,7 +1046,7 @@
 /datum/uplink_item/role_restricted/tier4bitrunner
 	name = "Tier 4 Bitrunner Gear Disk"
 	desc = "We've been having a blast in virutal reality for a while and have developed this disk to give you plenty of firepower to really have some fun. \
-			You may choose from disposable penetrator turrets, energy chainsaws, SPES shotguns, laser rifles, and even the fabled china lake! Even more fun toys included!."
+			You may choose from disposable laser turrets, energy chainsaws, SPES shotguns, laser rifles, and even the fabled china lake! Even more fun toys included!."
 	item = /obj/item/bitrunning_disk/item/tier4
 	cost = 7
 	surplus = 0
