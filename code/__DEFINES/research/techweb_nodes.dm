@@ -130,3 +130,6 @@
 #define TECHWEB_NODE_BALLISTICS "ballistics"
 #define TECHWEB_NODE_BALLISTICS_ADV "ballistics_adv"
 #define TECHWEB_NODE_BALLISTICS_SUPER "ballistics_super"
+
+#define TECHWEB_NODE_AI_UPGRADES "ai_upgrades"
+#define TECHWEB_NODE_AI_UPGRADES_ILLEGAL "ai_upgrades_illegal"
