@@ -1274,6 +1274,12 @@
 /obj/item/storage/box/syndie_kit/imp_induction/PopulateContents()
 	new /obj/item/implanter/induction_implant(src)
 
+/obj/item/storage/box/syndie_kit/imp_emp
+	name = "emp implant box"
+
+/obj/item/storage/box/syndie_kit/imp_emp/PopulateContents()
+	new /obj/item/implanter/emp(src)
+
 /obj/item/storage/box/syndie_kit/missilephone
 	name = "missile phone box"
 

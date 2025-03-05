@@ -1,3 +1,16 @@
+/datum/uplink_item/implants/emp
+	name = "EMP Implant"
+	desc = "A single implanter containing an EMP pulse implant. Useful to disrupt communications, \
+			security's energy weapons and silicon lifeforms when you're in a tight spot. \
+			Can be used 3 times, and will recharge 1 use every 5 minutes."
+	item = /obj/item/storage/box/syndie_kit/imp_emp
+	cost = 1
+
+/datum/uplink_item/implants/emp/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_CYBERNETIC_REVOLUTION))
+		cost *= 3
+
 /datum/uplink_item/implants/weapons_auth
 	name = "Syndicate Firearm Authentication Implant"
 	desc = "A singular implant, it's required for using most advanced syndicate weaponry such as the C-20r or the Bulldog. \

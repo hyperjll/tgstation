@@ -7,11 +7,11 @@
 
 
 /datum/uplink_item/disruption/emp
-	name = "EMP Grenades and Implanter Kit"
-	desc = "A box that contains five EMP grenades and an EMP implant with three uses. Useful to disrupt communications, \
+	name = "EMP Grenades"
+	desc = "A box that contains five EMP grenades. Useful to disrupt communications, \
 			security's energy weapons and silicon lifeforms when you're in a tight spot."
-	item = /obj/item/storage/box/syndie_kit/emp
-	cost = 2
+	item = /obj/item/storage/box/emps
+	cost = 1
 
 /datum/uplink_item/disruption/emp/New()
 	..()
