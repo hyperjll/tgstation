@@ -57,3 +57,27 @@
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/ai_battery_upgrade
+	name = "AI Electrical Storage Upgrade"
+	desc = "An upgrade package that lets an AI store larger amounts of backup power."
+	id = "ai_battery_upgrade"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 5, /datum/material/gold =SHEET_MATERIAL_AMOUNT * 2.5)
+	build_path = /obj/item/battery_upgrade
+	category = list(
+		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/ai_spacecoin_miner_upgrade
+	name = "AI Spacecoin Mining Upgrade"
+	desc = "An upgrade package that lets an AI generate revenue for the station's cargo department at the cost of halving backup power generation."
+	id = "ai_spacecoin_miner_upgrade"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 5, /datum/material/gold =SHEET_MATERIAL_AMOUNT * 5)
+	build_path = /obj/item/spacecoin_miner_upgrade
+	category = list(
+		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE

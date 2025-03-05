@@ -4,12 +4,14 @@
 	description = "Unique pre-loaded data disks containing software capable of allowing artifical intelligences to do much more to aid itself and the humans who surround it."
 	prereq_ids = list(TECHWEB_NODE_AI)
 	design_ids = list(
+		"ai_battery_upgrade",
 		"ai_power_upgrade",
 		"ai_reactivate_camera",
 		"ai_heal_brute",
 		"ai_heal_burn",
 		"ai_heal_tox",
-		"ai_heal_oxy"
+		"ai_heal_oxy",
+		"ai_spacecoin_miner_upgrade"
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SCIENCE, RADIO_CHANNEL_COMMAND)

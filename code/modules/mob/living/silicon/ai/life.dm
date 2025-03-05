@@ -22,8 +22,13 @@
 		battery--
 	else
 		// Gain Power
-		if (battery < 200)
+		if (battery < max_battery)
 			battery++
+
+	if (battery >= 100 && miner_active) // over 50% of the non-upgraded maximum power.
+		var/datum/bank_account/cargo_bank = SSeconomy.get_dep_account(ACCOUNT_CAR)
+		cargo_bank.adjust_money(rand(10, 20))
+		battery -= 0.5
 
 	if(!lacks_power())
 		var/area/home = get_area(src)

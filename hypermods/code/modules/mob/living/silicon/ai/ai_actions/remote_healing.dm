@@ -7,7 +7,7 @@
 
 /datum/action/innate/ai/ranged/heal_brute
 	name = "bluespace brutepack capsule"
-	desc = "Use to remotely heal a human's brute damage."
+	desc = "Use to remotely heal a human's brute damage. Uses 50 battery."
 	button_icon = 'icons/obj/storage/medkit.dmi'
 	button_icon_state = "oldbrute"
 	ranged_mousepointer = 'icons/effects/mouse_pointers/supplypod_target.dmi'
@@ -48,7 +48,7 @@
 
 /datum/action/innate/ai/ranged/heal_burn
 	name = "bluespace burnpack capsule"
-	desc = "Use to remotely heal a human's burn damage."
+	desc = "Use to remotely heal a human's burn damage. Uses 50 battery."
 	button_icon = 'icons/obj/storage/medkit.dmi'
 	button_icon_state = "oldointment"
 	ranged_mousepointer = 'icons/effects/mouse_pointers/supplypod_target.dmi'
@@ -89,7 +89,7 @@
 
 /datum/action/innate/ai/ranged/heal_tox
 	name = "bluespace toxpack capsule"
-	desc = "Use to remotely heal a human's toxin damage."
+	desc = "Use to remotely heal a human's toxin damage. Uses 50 battery."
 	button_icon = 'icons/obj/storage/medkit.dmi'
 	button_icon_state = "oldantitoxin"
 	ranged_mousepointer = 'icons/effects/mouse_pointers/supplypod_target.dmi'
@@ -130,7 +130,7 @@
 
 /datum/action/innate/ai/ranged/heal_oxy
 	name = "bluespace oxypack capsule"
-	desc = "Use to remotely heal a human's oxygen damage."
+	desc = "Use to remotely heal a human's oxygen damage. Uses 50 battery."
 	button_icon = 'icons/obj/storage/medkit.dmi'
 	button_icon_state = "oldo2"
 	ranged_mousepointer = 'icons/effects/mouse_pointers/supplypod_target.dmi'
