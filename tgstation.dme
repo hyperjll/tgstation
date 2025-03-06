@@ -6880,6 +6880,7 @@
 #include "hypermods\code\modules\mob\living\carbon\human\human.dm"
 #include "hypermods\code\modules\mob\living\silicon\ai\ai_actions\battery_upgrade.dm"
 #include "hypermods\code\modules\mob\living\silicon\ai\ai_actions\remote_healing.dm"
+#include "hypermods\code\modules\mob\living\silicon\ai\ai_actions\rgb_lights.dm"
 #include "hypermods\code\modules\mob\living\silicon\ai\ai_actions\spacecoin_miner.dm"
 #include "hypermods\code\modules\mob\living\silicon\robot\robot_model.dm"
 #include "hypermods\code\modules\mod\mod_theme.dm"

@@ -88,6 +88,11 @@
 	var/area/station/ai_monitored/area_motion = null
 	var/alarm_delay = 30 // Don't forget, there's another 3 seconds in queueAlarm()
 
+	/// Are RGB lights currently enabled?
+	var/partytime = FALSE
+	/// RGB Lights for AI's with the respective upgrade
+	var/partytime_colors = list(COLOR_RED, COLOR_ORANGE, COLOR_YELLOW, COLOR_LIME, COLOR_BRIGHT_BLUE, COLOR_CYAN, COLOR_PURPLE)
+
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera, 0)
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname, 0)
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/autoname/motion, 0)
@@ -430,8 +435,17 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/xray, 0)
 				return
 	if(on)
 		set_light(AI_CAMERA_LUMINOSITY)
+		if(partytime)
+			Togglepartytime()
 	else
 		set_light(0)
+
+/obj/machinery/camera/proc/Togglepartytime()
+	if(partytime)
+		set_light_color(pick(partytime_colors))
+		addtimer(CALLBACK(src, PROC_REF(Togglepartytime)), 1 SECONDS)
+	else
+		return
 
 /obj/machinery/camera/get_remote_view_fullscreens(mob/user)
 	if(view_range == short_range) //unfocused

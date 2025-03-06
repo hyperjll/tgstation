@@ -81,3 +81,15 @@
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/ai_rgb_camera_light
+	name = "AI RGB Camera Lights Upgrade"
+	desc = "An upgrade package that causes camera lights to be tined with random colors of the rainbow."
+	id = "ai_rgb_camera_light"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 2.5)
+	build_path = /obj/item/rgb_lights
+	category = list(
+		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE

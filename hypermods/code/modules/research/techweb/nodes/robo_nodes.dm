@@ -7,6 +7,7 @@
 		"ai_battery_upgrade",
 		"ai_power_upgrade",
 		"ai_reactivate_camera",
+		"ai_rgb_camera_light",
 		"ai_heal_brute",
 		"ai_heal_burn",
 		"ai_heal_tox",

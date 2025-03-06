@@ -177,3 +177,6 @@
 
 	/// Has this ai unit been given a spacecoin miner?
 	var/miner_active = FALSE
+
+	/// Does this AI have RGB camera lights?
+	var/partytime = FALSE
