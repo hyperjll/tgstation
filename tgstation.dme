@@ -6780,6 +6780,7 @@
 #include "hypermods\code\modules\antagonists\initial_infected\initial_infected.dm"
 #include "hypermods\code\modules\antagonists\ninja\energy_net_nets.dm"
 #include "hypermods\code\modules\antagonists\traitor\final_objective\cyborg_rift.dm"
+#include "hypermods\code\modules\antagonists\traitor\objectives\protect_fellow_tot.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\sabotage_machinery.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\sleeper_protocol.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\tide_bug_department.dm"

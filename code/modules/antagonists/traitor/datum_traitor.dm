@@ -269,6 +269,12 @@
 		kill_objective.find_target()
 		return kill_objective
 
+	if(prob(10))
+		var/datum/objective/protect/traitor_only/protect_tot_objective = new()
+		protect_tot_objective.owner = owner
+		protect_tot_objective.find_traitor_target()
+		return protect_tot_objective
+
 	var/datum/objective/steal/steal_objective = new()
 	steal_objective.owner = owner
 	steal_objective.find_target()
