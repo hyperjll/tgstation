@@ -1016,3 +1016,48 @@
 
 /obj/item/card/id/departmental_budget/sec/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/card/id/departmental_budget/sec)
+
+/datum/objective_item/steal/cargo_board
+	name = "a supply console computer board."
+	targetitem = /obj/item/circuitboard/computer/cargo
+	excludefromjob = list(JOB_QUARTERMASTER, JOB_CARGO_TECHNICIAN, JOB_SHAFT_MINER, JOB_BITRUNNER)
+	item_owner = list(JOB_QUARTERMASTER)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "A computer board for one of nanotrasen's supply consoles. \
+		Normally found within the cargo department, within the quartermaster's quarters, or on the bridge."
+
+/obj/item/circuitboard/computer/cargo/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/circuitboard/computer/cargo)
+
+/datum/objective_item/steal/holotool
+	name = "the research director's experimental holotool."
+	targetitem = /obj/item/holotool
+	excludefromjob = list(JOB_RESEARCH_DIRECTOR)
+	item_owner = list(JOB_RESEARCH_DIRECTOR)
+	exists_on_map = TRUE
+	difficulty = 3
+	steal_hint = "A highly experimental multi-tool using holographic technology. \
+		Likely found within the Research Director's locker, or on their person."
+
+/obj/item/holotool/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/holotool)
+
+/datum/objective_item/steal/spy/codex_gigas
+	name = "the codex gigas"
+	targetitem = /obj/item/book/codex_gigas
+	excludefromjob = list(
+		JOB_CAPTAIN,
+		JOB_DETECTIVE,
+		JOB_HEAD_OF_PERSONNEL,
+		JOB_HEAD_OF_SECURITY,
+		JOB_SECURITY_OFFICER,
+		JOB_WARDEN,
+		JOB_CURATOR,
+	)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "The Codex Gigas, a rare tome kept within nanotrasen Library's, or on the Curator's person."
+
+/datum/objective_item/steal/spy/codex_gigas/check_special_completion(obj/item/thing)
+	return thing.type == /obj/item/book/codex_gigas

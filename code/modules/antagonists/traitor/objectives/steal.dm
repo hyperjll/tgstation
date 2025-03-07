@@ -98,6 +98,11 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 	possible_items = list(
 		/datum/objective_item/steal/traitor/cargo_budget,
+		/datum/objective_item/steal/traitor/eng_budget,
+		/datum/objective_item/steal/traitor/sci_budget,
+		/datum/objective_item/steal/traitor/med_budget,
+		/datum/objective_item/steal/traitor/srv_budget,
+		/datum/objective_item/steal/traitor/civ_budget,
 		/datum/objective_item/steal/traitor/clown_shoes,
 		/datum/objective_item/steal/traitor/lawyers_badge,
 		/datum/objective_item/steal/traitor/chef_moustache,
@@ -121,6 +126,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 	possible_items = list(
 		/datum/objective_item/steal/traitor/det_revolver,
+		/datum/objective_item/steal/traitor/sec_budget,
 	)
 
 /datum/traitor_objective/steal_item/most_risky
