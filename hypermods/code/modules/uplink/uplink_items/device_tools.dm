@@ -118,7 +118,7 @@
 			It's basically just a handheld chemical dispenser, with some added chemicals to dispense, such as silver, gold, and uranium. \
 			Doesn't come with any beakers, a heater, or any means to seperate the chemicals or manufacture pills/patches/etc."
 	item = /obj/item/storage/portable_chem_mixer/chemicompiler
-	cost = 10
+	cost = 8
 	surplus = 0
 
 /datum/uplink_item/device_tools/syndicate_radio_mine

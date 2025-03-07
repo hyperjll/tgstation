@@ -113,7 +113,7 @@
 		/obj/item/construction/rcd/syndicate, // 15 TC
 		)
 
-/datum/s_voucher_set/chemical_shooter_kit // 47 TC?
+/datum/s_voucher_set/chemical_shooter_kit // 45 TC?
 	name = "Water-Park Kit"
 	description = "The favorite amongst our more clownly friends, for some kind of sick joke probably. \
 			Contains a Hyper-Soaker, a toxic Chemical Sprayer, three large beakers of Nitric Acid, a Chemi-Compiler, and a box of bluespace beakers."
@@ -122,7 +122,7 @@
 	set_items = list(
 		/obj/item/gun/water/syndicate, // 3 TC
 		/obj/item/reagent_containers/spray/chemsprayer/syndicate, // 16 TC
-		/obj/item/storage/portable_chem_mixer/chemicompiler, // 10 TC
+		/obj/item/storage/portable_chem_mixer/chemicompiler, // 8 TC
 		/obj/item/reagent_containers/cup/beaker/large/nitracid, // 5 TC?
 		/obj/item/reagent_containers/cup/beaker/large/nitracid, // 5 TC?
 		/obj/item/reagent_containers/cup/beaker/large/nitracid, // 5 TC?

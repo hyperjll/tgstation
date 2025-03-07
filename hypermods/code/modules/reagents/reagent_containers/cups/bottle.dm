@@ -133,6 +133,7 @@
 	name = "Eternal Flask"
 	desc = "A deceptively stylish glass bottle that's been augmented with redspace technology. It doesn't produce anything, for whatever reason."
 	var/generate_reagent = null
+	var/generate_amount = 1
 	var/last_generate = 0
 	var/generate_delay = 50 //deciseconds or 5 seconds
 
@@ -148,7 +149,7 @@
 	if(world.time < last_generate + generate_delay)
 		return
 	last_generate = world.time
-	reagents.add_reagent(generate_reagent, 1)
+	reagents.add_reagent(generate_reagent, generate_amount)
 
 /obj/item/reagent_containers/cup/bottle/eternal/omnizine
 	name = "Eternal Flask of Omnizine"
@@ -181,120 +182,178 @@
 	generate_reagent = /datum/reagent/medicine/stimulants
 
 /obj/item/reagent_containers/cup/bottle/eternal/stable_plasma
-	list_reagents = list(/datum/reagent/stable_plasma = 50)
+	list_reagents = list(/datum/reagent/stable_plasma = 200)
 	generate_reagent = /datum/reagent/stable_plasma
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/silver
-	list_reagents = list(/datum/reagent/silver = 50)
+	list_reagents = list(/datum/reagent/silver = 200)
 	generate_reagent = /datum/reagent/silver
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/gold
-	list_reagents = list(/datum/reagent/gold = 50)
+	list_reagents = list(/datum/reagent/gold = 200)
 	generate_reagent = /datum/reagent/gold
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/uranium
-	list_reagents = list(/datum/reagent/uranium = 50)
+	list_reagents = list(/datum/reagent/uranium = 200)
 	generate_reagent = /datum/reagent/uranium
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/plasma
-	list_reagents = list(/datum/reagent/toxin/plasma = 50)
+	list_reagents = list(/datum/reagent/toxin/plasma = 200)
 	generate_reagent = /datum/reagent/toxin/plasma
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/hydrogen
-	list_reagents = list(/datum/reagent/hydrogen = 50)
+	list_reagents = list(/datum/reagent/hydrogen = 200)
 	generate_reagent = /datum/reagent/hydrogen
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/lithium
-	list_reagents = list(/datum/reagent/lithium = 50)
+	list_reagents = list(/datum/reagent/lithium = 200)
 	generate_reagent = /datum/reagent/lithium
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/carbon
-	list_reagents = list(/datum/reagent/carbon = 50)
+	list_reagents = list(/datum/reagent/carbon = 200)
 	generate_reagent = /datum/reagent/carbon
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/nitrogen
-	list_reagents = list(/datum/reagent/nitrogen = 50)
+	list_reagents = list(/datum/reagent/nitrogen = 200)
 	generate_reagent = /datum/reagent/nitrogen
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/oxygen
-	list_reagents = list(/datum/reagent/oxygen = 50)
+	list_reagents = list(/datum/reagent/oxygen = 200)
 	generate_reagent = /datum/reagent/oxygen
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/fluorine
-	list_reagents = list(/datum/reagent/fluorine = 50)
+	list_reagents = list(/datum/reagent/fluorine = 200)
 	generate_reagent = /datum/reagent/fluorine
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/sodium
-	list_reagents = list(/datum/reagent/sodium = 50)
+	list_reagents = list(/datum/reagent/sodium = 200)
 	generate_reagent = /datum/reagent/sodium
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/aluminium
-	list_reagents = list(/datum/reagent/aluminium = 50)
+	list_reagents = list(/datum/reagent/aluminium = 200)
 	generate_reagent = /datum/reagent/aluminium
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/silicon
-	list_reagents = list(/datum/reagent/silicon = 50)
+	list_reagents = list(/datum/reagent/silicon = 200)
 	generate_reagent = /datum/reagent/silicon
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/phosphorus
-	list_reagents = list(/datum/reagent/phosphorus = 50)
+	list_reagents = list(/datum/reagent/phosphorus = 200)
 	generate_reagent = /datum/reagent/phosphorus
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/sulfur
-	list_reagents = list(/datum/reagent/sulfur = 50)
+	list_reagents = list(/datum/reagent/sulfur = 200)
 	generate_reagent = /datum/reagent/sulfur
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/chlorine
-	list_reagents = list(/datum/reagent/chlorine = 50)
+	list_reagents = list(/datum/reagent/chlorine = 200)
 	generate_reagent = /datum/reagent/chlorine
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/potassium
-	list_reagents = list(/datum/reagent/potassium = 50)
+	list_reagents = list(/datum/reagent/potassium = 200)
 	generate_reagent = /datum/reagent/potassium
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/iron
-	list_reagents = list(/datum/reagent/iron = 50)
+	list_reagents = list(/datum/reagent/iron = 200)
 	generate_reagent = /datum/reagent/iron
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/copper
-	list_reagents = list(/datum/reagent/copper = 50)
+	list_reagents = list(/datum/reagent/copper = 200)
 	generate_reagent = /datum/reagent/copper
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/mercury
-	list_reagents = list(/datum/reagent/mercury = 50)
+	list_reagents = list(/datum/reagent/mercury = 200)
 	generate_reagent = /datum/reagent/mercury
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/radium
-	list_reagents = list(/datum/reagent/uranium/radium = 50)
+	list_reagents = list(/datum/reagent/uranium/radium = 200)
 	generate_reagent = /datum/reagent/uranium/radium
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/water
-	list_reagents = list(/datum/reagent/water = 50)
+	list_reagents = list(/datum/reagent/water = 200)
 	generate_reagent = /datum/reagent/water
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/ethanol
-	list_reagents = list(/datum/reagent/consumable/ethanol = 50)
+	list_reagents = list(/datum/reagent/consumable/ethanol = 200)
 	generate_reagent = /datum/reagent/consumable/ethanol
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/sugar
-	list_reagents = list(/datum/reagent/consumable/sugar = 50)
+	list_reagents = list(/datum/reagent/consumable/sugar = 200)
 	generate_reagent = /datum/reagent/consumable/sugar
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/acid
-	list_reagents = list(/datum/reagent/toxin/acid = 50)
+	list_reagents = list(/datum/reagent/toxin/acid = 200)
 	generate_reagent = /datum/reagent/toxin/acid
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/fuel
-	list_reagents = list(/datum/reagent/fuel = 50)
+	list_reagents = list(/datum/reagent/fuel = 200)
 	generate_reagent = /datum/reagent/fuel
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/iodine
-	list_reagents = list(/datum/reagent/iodine = 50)
+	list_reagents = list(/datum/reagent/iodine = 200)
 	generate_reagent = /datum/reagent/iodine
+	volume = 200
+	generate_amount = 5
 
 /obj/item/reagent_containers/cup/bottle/eternal/bromine
-	list_reagents = list(/datum/reagent/bromine = 50)
+	list_reagents = list(/datum/reagent/bromine = 200)
 	generate_reagent = /datum/reagent/bromine
+	volume = 200
+	generate_amount = 5
 
 
 /obj/item/reagent_containers/cup/bottle/random_symptom
