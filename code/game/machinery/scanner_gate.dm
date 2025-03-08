@@ -63,6 +63,7 @@
 		SCANGATE_WANTED,
 		SCANGATE_SPECIES,
 		SCANGATE_NUTRITION,
+		SCANGATE_CONTRABAND,
 	)
 	/// All disease severity thresholds available to the scanner
 	var/static/list/all_disease_thresholds = list(
