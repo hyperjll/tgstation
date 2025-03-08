@@ -377,7 +377,7 @@
 	desc = "Contains one Sakhno SKS semi-automatic rifle and three surplus boxes of ammunition."
 	cost = 3000
 	access = ACCESS_ARMORY
-	contains = list(/obj/item/gun/ballistic/automatic/sks,
+	contains = list(/obj/item/gun/ballistic/rifle/sks,
 					/obj/item/storage/toolbox/ammobox/strilka310/surplus,
 					/obj/item/storage/toolbox/ammobox/strilka310/surplus,
 					/obj/item/storage/toolbox/ammobox/strilka310/surplus)
