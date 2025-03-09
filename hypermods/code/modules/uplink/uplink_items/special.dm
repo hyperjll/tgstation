@@ -135,6 +135,20 @@
 	))
 	return source //For log icon
 
+/datum/uplink_item/special/bluespace_wave
+	name = "Bluespace Wave Generator"
+	desc = "A powerful disruption device capable of generating short-bursts of bluespace-derived spacetime distortions. \
+			In short, every 3 minutes the generator will randomly teleport everyone in a large radius around it in a completely random direction and distance."
+	item = /obj/item/sbeacondrop/bluespace_wave
+	cost = 8
+	var/implant_to_give = /obj/item/storage/box/syndie_kit/syndiefirearmauth
+
+/datum/uplink_item/special/bluespace_wave/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_RANDOM_ARRIVALS))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = 1
+
 // Neutral Station Traits
 
 /datum/uplink_item/special/fakeian
