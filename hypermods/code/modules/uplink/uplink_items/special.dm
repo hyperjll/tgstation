@@ -94,6 +94,20 @@
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
+/datum/uplink_item/special/milktov
+	name = "Milktov"
+	desc = "A special, high-end contact grenade disguised as a glass bottle filled with milk. \
+			We had some crazed lunatic try to use these on one of our outposts a while back, he's since been employed."
+	item = /obj/item/reagent_containers/cup/glass/bottle/molotov/milktov
+	cost = 5
+	surplus = 5 // The milkman always finds his way in.
+
+/datum/uplink_item/special/milktov/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_POSTAL_WORKER_STRIKE))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = -1
+
 // Neutral Station Traits
 
 /datum/uplink_item/special/fakeian

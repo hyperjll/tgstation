@@ -25,6 +25,7 @@
 	weight = 2
 	show_in_report = TRUE
 	report_message = "Due to an ongoing strike announced by the postal workers union, mail won't be delivered this shift."
+	trait_to_give = STATION_TRAIT_POSTAL_WORKER_STRIKE
 
 /datum/station_trait/mail_blocked/on_round_start()
 	//This is either a holiday or Sunday... well then, let's flip the situation.
