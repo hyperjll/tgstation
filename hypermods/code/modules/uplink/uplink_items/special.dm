@@ -108,6 +108,33 @@
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
+/datum/uplink_item/special/c20rbundle
+	name = "C-20r Submachine Gun Bundle"
+	desc = "A fully-loaded Scarborough Arms bullpup submachine gun. The C-20r fires .45 rounds with a \
+			24-round magazine and is compatible with suppressors. Comes with spare three magazines and a spare authentication implant."
+	item = /obj/item/storage/toolbox/guncase/c20r
+	cost = 14
+	var/implant_to_give = /obj/item/storage/box/syndie_kit/syndiefirearmauth
+
+/datum/uplink_item/special/c20rbundle/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_LATE_ARRIVALS))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = -1
+
+/datum/uplink_item/special/c20rbundle/spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)
+	..() // Make sure the c20r is given.
+	var/obj/item/storage/box/syndie_kit/syndiefirearmauth/your_implant = new implant_to_give()
+	if(!istype(your_implant))
+		CRASH("uplink produced the wrong item instead of the syndicate firearm auth implant.")
+
+	podspawn(list(
+		"target" = get_turf(user),
+		"style" = /datum/pod_style/syndicate,
+		"spawn" = your_implant,
+	))
+	return source //For log icon
+
 // Neutral Station Traits
 
 /datum/uplink_item/special/fakeian
