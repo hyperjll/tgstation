@@ -6839,6 +6839,7 @@
 #include "hypermods\code\modules\events\space_vines\vine_event.dm"
 #include "hypermods\code\modules\events\space_vines\vine_mutations.dm"
 #include "hypermods\code\modules\events\space_vines\vine_structure.dm"
+#include "hypermods\code\modules\hydroponics\fermenting_barrel.dm"
 #include "hypermods\code\modules\hydroponics\unique_plant_genes.dm"
 #include "hypermods\code\modules\hydroponics\grown\alien.dm"
 #include "hypermods\code\modules\hydroponics\grown\apple.dm"

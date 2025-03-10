@@ -149,6 +149,19 @@
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
+/datum/uplink_item/surplusonly/moonshine_barrel
+	name = "Moonshine Barrel"
+	desc = "A wooden barrel containing 500 units of moonshine. If you think the party last night was awesome, be prepared for today's party."
+	item = /obj/structure/fermenting_barrel/moonshine
+	cost = 6
+	surplus = 0
+
+/datum/uplink_item/special/moonshine_barrel/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_HANGOVER))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = 1
+
 // Neutral Station Traits
 
 /datum/uplink_item/special/fakeian
