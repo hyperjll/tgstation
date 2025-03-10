@@ -149,7 +149,7 @@
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
-/datum/uplink_item/surplusonly/moonshine_barrel
+/datum/uplink_item/special/moonshine_barrel
 	name = "Moonshine Barrel"
 	desc = "A wooden barrel containing 500 units of moonshine. If you think the party last night was awesome, be prepared for today's party."
 	item = /obj/structure/fermenting_barrel/moonshine
