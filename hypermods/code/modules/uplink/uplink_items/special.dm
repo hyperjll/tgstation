@@ -162,6 +162,21 @@
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
+/datum/uplink_item/special/vortex_charge
+	name = "Vortex Charge"
+	desc = "A single composition c4 charge, loaded with a vortex anomaly core. \
+			Upon detonation, the vortex anomaly shall be released to chaos havoc upon everything nearby. \
+			The anomaly can still be neutralized by all usual means, and it's core reclaimed."
+	item = /obj/item/grenade/c4/vortex
+	cost = 9
+	surplus = 0
+
+/datum/uplink_item/special/vortex_charge/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_EMPTY_MAINT))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = 1
+
 // Neutral Station Traits
 
 /datum/uplink_item/special/fakeian
