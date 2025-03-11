@@ -127,6 +127,25 @@
 
 /datum/uplink_item/device_tools/syndicate_climbing_hook
 	name = "Syndicate Climbing Hook"
-	desc = "High-tech rope, a refined hook structure, the peak of climbing technology. Only useful for climbing up holes, provided the operation site has any."
+	desc = "High-tech rope, a refined hook structure, the peak of climbing technology. Only useful for climbing up holes, provided the operation site has any. \
+			Those who purchase these hooks are eligible for a 10k credits prize upon purchase!"
 	item = /obj/item/climbing_hook/syndicate
 	cost = 1
+	var/random_item_chance = 1
+	var/bonus_item_to_give = /obj/item/stack/spacecash/c10000
+
+/datum/uplink_item/device_tools/syndicate_climbing_hook/spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)
+	..()
+	if(!prob(random_item_chance))
+		return
+
+	var/obj/item/stack/spacecash/c10000/bonus_item = new bonus_item_to_give()
+	if(!istype(bonus_item))
+		CRASH("uplink produced the wrong item instead of the chosen bonus item: [bonus_item_to_give].")
+
+	podspawn(list(
+		"target" = get_turf(user),
+		"style" = /datum/pod_style/syndicate,
+		"spawn" = bonus_item,
+	))
+	return source //For log icon
