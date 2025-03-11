@@ -6937,6 +6937,7 @@
 #include "hypermods\code\modules\projectiles\guns\ballistic\rifle.dm"
 #include "hypermods\code\modules\projectiles\guns\ballistic\shotgun.dm"
 #include "hypermods\code\modules\projectiles\guns\energy\crank_guns.dm"
+#include "hypermods\code\modules\projectiles\guns\energy\kinetic_accelerator.dm"
 #include "hypermods\code\modules\projectiles\guns\energy\laser.dm"
 #include "hypermods\code\modules\projectiles\guns\energy\recharge.dm"
 #include "hypermods\code\modules\projectiles\guns\energy\special.dm"

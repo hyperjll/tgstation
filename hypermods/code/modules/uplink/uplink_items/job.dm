@@ -1051,3 +1051,15 @@
 	cost = 7
 	surplus = 0
 	restricted_roles = list(JOB_BITRUNNER, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/syndi_pka_gun
+	name = "Experimental Proto-Kinetic Accelerator"
+	desc = "A freeform self-charging PKA energy gun often used for mining, now with a black-and-red paintjob. \
+			We've re-designed this energy gun after recovering it's blueprints from espionage missions on Nanotrasen stations \
+			to allow for extensive modification. It's total 'mod capacity' is estimated to be precisely three-times as much as normal models. \
+			It cannot accept any cosmetic modifications though, branding and what-not."
+	item = /obj/item/gun/energy/recharge/kinetic_accelerator/syndicate
+	cost = 8
+	surplus = 0
+	restricted_roles = list(JOB_SHAFT_MINER, JOB_QUARTERMASTER, JOB_CAPTAIN)
+
