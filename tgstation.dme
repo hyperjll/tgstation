@@ -6805,6 +6805,7 @@
 #include "hypermods\code\modules\cargo\markets\market_items\tools.dm"
 #include "hypermods\code\modules\cargo\markets\market_items\weapons.dm"
 #include "hypermods\code\modules\cargo\packs\engineering.dm"
+#include "hypermods\code\modules\cargo\packs\imports.dm"
 #include "hypermods\code\modules\cargo\packs\materials.dm"
 #include "hypermods\code\modules\cargo\packs\medical.dm"
 #include "hypermods\code\modules\cargo\packs\science.dm"
