@@ -44,7 +44,7 @@
 		/obj/item/pinpointer/crew = 2,
 		/obj/item/shears = 1,
 		/obj/item/storage/organbox = 1,
-		/obj/item/storage/medkit = 2,
+		/obj/item/storage/medkit/regular = 2,
 		/obj/item/storage/medkit/brute = 1,
 		/obj/item/storage/medkit/fire = 1,
 		/obj/item/storage/medkit/toxin = 1,
