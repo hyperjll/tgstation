@@ -16,8 +16,6 @@
 	var/list/obj/item/borg/upgrade/modkit/modkits = list()
 	///The max capacity of modkits the PKA can have installed at once.
 	var/max_mod_capacity = 100
-	///Can the chassis appearance be modified? Mostly just for syndi version to prevent stealth.
-	var/cosmetic_able = TRUE
 
 /obj/item/gun/energy/recharge/kinetic_accelerator/add_bayonet_point()
 	AddComponent(/datum/component/bayonet_attachable, offset_x = 20, offset_y = 12)
@@ -647,12 +645,12 @@
 /obj/item/borg/upgrade/modkit/chassis_mod/install(obj/item/gun/energy/recharge/kinetic_accelerator/KA, mob/user)
 	. = ..()
 	if(.)
-		if(!KA.cosmetic_able)
-			to_chat(user, span_notice("[src]'s design doesn't allow for cosmetic modifications!"))
-			return
 		KA.icon_state = chassis_icon
 		KA.inhand_icon_state = chassis_icon
 		KA.name = chassis_name
+		KA.icon = 'icons/obj/weapons/guns/energy.dmi'
+		KA.lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+		KA.righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
 		if(iscarbon(KA.loc))
 			var/mob/living/carbon/holder = KA.loc
 			holder.update_held_items()
@@ -661,6 +659,9 @@
 	KA.icon_state = initial(KA.icon_state)
 	KA.inhand_icon_state = initial(KA.inhand_icon_state)
 	KA.name = initial(KA.name)
+	KA.icon = initial(KA.icon)
+	KA.lefthand_file = initial(KA.lefthand_file)
+	KA.righthand_file = initial(KA.righthand_file)
 	if(iscarbon(KA.loc))
 		var/mob/living/carbon/holder = KA.loc
 		holder.update_held_items()

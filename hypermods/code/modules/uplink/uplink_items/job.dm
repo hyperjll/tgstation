@@ -1056,8 +1056,7 @@
 	name = "Experimental Proto-Kinetic Accelerator"
 	desc = "A freeform self-charging PKA energy gun often used for mining, now with a black-and-red paintjob. \
 			We've re-designed this energy gun after recovering it's blueprints from espionage missions on Nanotrasen stations \
-			to allow for extensive modification. It's total 'mod capacity' is estimated to be precisely three-times as much as normal models. \
-			It cannot accept any cosmetic modifications though, branding and what-not."
+			to allow for extensive modification. It's total 'mod capacity' is estimated to be precisely three-times as much as normal models."
 	item = /obj/item/gun/energy/recharge/kinetic_accelerator/syndicate
 	cost = 8
 	surplus = 0
