@@ -6993,6 +6993,7 @@
 #include "hypermods\code\modules\reagents\reagent_containers\cups\glassbottle.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\cups\soda.dm"
 #include "hypermods\code\modules\research\designs\electronics_designs.dm"
+#include "hypermods\code\modules\research\designs\machine_designs.dm"
 #include "hypermods\code\modules\research\designs\mechfabricator_designs.dm"
 #include "hypermods\code\modules\research\designs\medical_designs.dm"
 #include "hypermods\code\modules\research\designs\misc_designs.dm"
