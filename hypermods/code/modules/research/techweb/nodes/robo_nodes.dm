@@ -5,7 +5,6 @@
 	prereq_ids = list(TECHWEB_NODE_AI)
 	design_ids = list(
 		"ai_battery_upgrade",
-		"ai_power_upgrade",
 		"ai_reactivate_camera",
 		"ai_rgb_camera_light",
 		"ai_heal_brute",
