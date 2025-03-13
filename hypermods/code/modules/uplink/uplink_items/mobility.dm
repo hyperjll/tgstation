@@ -104,6 +104,7 @@
 			Of course, it comes with the keys. The segway cannot be used without gravity, for obvious reasons."
 	item = /obj/item/key/syndicate
 	cost = 10
+	surplus = 0 // Doesn't function with surplus crates
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	var/the_ride = /obj/vehicle/ridden/syndiway
 
