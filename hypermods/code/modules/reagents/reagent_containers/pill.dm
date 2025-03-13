@@ -1,4 +1,4 @@
-/obj/item/reagent_containers/pill/bicaridine
+/obj/item/reagent_containers/applicator/pill/bicaridine
 	name = "bicaridine pill"
 	desc = "Used to relieve brute damage in patients."
 	icon_state = "pill4"
@@ -13,9 +13,9 @@
 
 /obj/item/storage/pill_bottle/bicaridine/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/bicaridine(src)
+		new /obj/item/reagent_containers/applicator/pill/bicaridine(src)
 
-/obj/item/reagent_containers/pill/bicartranex
+/obj/item/reagent_containers/applicator/pill/bicartranex
 	name = "wounded pill"
 	desc = "Used to relieve brute damage in patients and clot bleeding wounds while restoring blood."
 	icon_state = "pill5"
@@ -30,9 +30,9 @@
 
 /obj/item/storage/pill_bottle/bicartranex/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/bicartranex(src)
+		new /obj/item/reagent_containers/applicator/pill/bicartranex(src)
 
-/obj/item/reagent_containers/pill/kelotane
+/obj/item/reagent_containers/applicator/pill/kelotane
 	name = "kelotane pill"
 	desc = "Used to relieve burn damage in patients."
 	icon_state = "pill7"
@@ -47,9 +47,9 @@
 
 /obj/item/storage/pill_bottle/kelotane/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/kelotane(src)
+		new /obj/item/reagent_containers/applicator/pill/kelotane(src)
 
-/obj/item/reagent_containers/pill/dermaline
+/obj/item/reagent_containers/applicator/pill/dermaline
 	name = "dermaline pill"
 	desc = "Used to relieve burn damage in patients."
 	icon_state = "pill7"
@@ -64,9 +64,9 @@
 
 /obj/item/storage/pill_bottle/dermaline/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/dermaline(src)
+		new /obj/item/reagent_containers/applicator/pill/dermaline(src)
 
-/obj/item/reagent_containers/pill/dylovene
+/obj/item/reagent_containers/applicator/pill/dylovene
 	name = "dylovene pill"
 	desc = "Used to relieve minor toxic damage in patients."
 	icon_state = "pill11"
@@ -81,9 +81,9 @@
 
 /obj/item/storage/pill_bottle/dylovene/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/dylovene(src)
+		new /obj/item/reagent_containers/applicator/pill/dylovene(src)
 
-/obj/item/reagent_containers/pill/antitoxin
+/obj/item/reagent_containers/applicator/pill/antitoxin
 	name = "anti-toxin pill"
 	desc = "Used to relieve toxic damage in patients."
 	icon_state = "pill11"
@@ -98,9 +98,9 @@
 
 /obj/item/storage/pill_bottle/antitoxin/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/antitoxin(src)
+		new /obj/item/reagent_containers/applicator/pill/antitoxin(src)
 
-/obj/item/reagent_containers/pill/dexalin
+/obj/item/reagent_containers/applicator/pill/dexalin
 	name = "dexalin pill"
 	desc = "Used to relieve oxygen damage in patients."
 	icon_state = "pill8"
@@ -115,9 +115,9 @@
 
 /obj/item/storage/pill_bottle/dexalin/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/dexalin(src)
+		new /obj/item/reagent_containers/applicator/pill/dexalin(src)
 
-/obj/item/reagent_containers/pill/dexalinplus
+/obj/item/reagent_containers/applicator/pill/dexalinplus
 	name = "dexalin plus pill"
 	desc = "Used to relieve oxygen damage in patients."
 	icon_state = "pill8"
@@ -132,9 +132,9 @@
 
 /obj/item/storage/pill_bottle/dexalinplus/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/dexalinplus(src)
+		new /obj/item/reagent_containers/applicator/pill/dexalinplus(src)
 
-/obj/item/reagent_containers/pill/tranex
+/obj/item/reagent_containers/applicator/pill/tranex
 	name = "tranexamic acid pill"
 	desc = "Used to quickly clot bleeding wounds, and restore blood."
 	icon_state = "pill8"
@@ -149,9 +149,9 @@
 
 /obj/item/storage/pill_bottle/tranex/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/tranex(src)
+		new /obj/item/reagent_containers/applicator/pill/tranex(src)
 
-/obj/item/reagent_containers/pill/tricordrazine
+/obj/item/reagent_containers/applicator/pill/tricordrazine
 	name = "tricordrazine pill"
 	desc = "Used to heal most forms of damage including brute, burn and toxin."
 	icon_state = "pill2"
@@ -166,9 +166,9 @@
 
 /obj/item/storage/pill_bottle/tricordrazine/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/tricordrazine(src)
+		new /obj/item/reagent_containers/applicator/pill/tricordrazine(src)
 
-/obj/item/reagent_containers/pill/inaprovaline
+/obj/item/reagent_containers/applicator/pill/inaprovaline
 	name = "inaprovaline pill"
 	desc = "Used to stabilize patients in critical state, often used as a substitute of epinephrine."
 	icon_state = "pill12"
@@ -183,9 +183,9 @@
 
 /obj/item/storage/pill_bottle/inaprovaline/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/inaprovaline(src)
+		new /obj/item/reagent_containers/applicator/pill/inaprovaline(src)
 
-/obj/item/reagent_containers/pill/coagulant
+/obj/item/reagent_containers/applicator/pill/coagulant
 	name = "sanguirite pill"
 	desc = "Used to reduce bleeding quickly. Refrain from taking more than 1 pill over an extended period of time."
 	icon_state = "pill5"
@@ -200,9 +200,9 @@
 
 /obj/item/storage/pill_bottle/coagulant/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/coagulant(src)
+		new /obj/item/reagent_containers/applicator/pill/coagulant(src)
 
-/obj/item/reagent_containers/pill/antiviral
+/obj/item/reagent_containers/applicator/pill/antiviral
 	name = "spaceacillin pill"
 	desc = "Used to relieve oneself of the symptoms of diseases temporarily, and has the potential to eliminate diseases within the host."
 	icon_state = "pill20"
@@ -218,9 +218,9 @@
 
 /obj/item/storage/pill_bottle/antiviral/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/antiviral(src)
+		new /obj/item/reagent_containers/applicator/pill/antiviral(src)
 
-/obj/item/reagent_containers/pill/painkillers
+/obj/item/reagent_containers/applicator/pill/painkillers
 	name = "painkiller"
 	desc = "Used for treating minor brute or burn damage."
 	icon_state = "pill1"
@@ -235,9 +235,9 @@
 
 /obj/item/storage/pill_bottle/painkillers/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/painkillers(src)
+		new /obj/item/reagent_containers/applicator/pill/painkillers(src)
 
-/obj/item/reagent_containers/pill/syndicryo
+/obj/item/reagent_containers/applicator/pill/syndicryo
 	name = "cryogelidia pill"
 	desc = "Used to temporarily freeze someone in a protective block of ice, often used as a desperate means of self-defense."
 	icon_state = "pill16"
@@ -252,4 +252,4 @@
 
 /obj/item/storage/pill_bottle/syndicryo/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/syndicryo(src)
+		new /obj/item/reagent_containers/applicator/pill/syndicryo(src)

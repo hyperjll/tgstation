@@ -7,10 +7,10 @@
 	density = FALSE
 	products = list(
 		/obj/item/reagent_containers/syringe = 3,
-		/obj/item/reagent_containers/pill/patch/libital = 5,
-		/obj/item/reagent_containers/pill/patch/aiuri = 5,
-		/obj/item/reagent_containers/pill/multiver = 2,
-		/obj/item/reagent_containers/pill/antiviral = 3,
+		/obj/item/reagent_containers/applicator/patch/libital = 5,
+		/obj/item/reagent_containers/applicator/patch/aiuri = 5,
+		/obj/item/reagent_containers/applicator/pill/multiver = 2,
+		/obj/item/reagent_containers/applicator/pill/antiviral = 3,
 		/obj/item/reagent_containers/medigel/libital = 2,
 		/obj/item/reagent_containers/medigel/aiuri = 2,
 		/obj/item/reagent_containers/medigel/sterilizine = 1,
@@ -18,7 +18,7 @@
 		/obj/item/stack/medical/bone_gel = 2,
 		/obj/item/storage/box/bandages = 1,
 		/obj/item/stack/medical/gauze = 3,
-		/obj/item/reagent_containers/pill/iron = 5,
+		/obj/item/reagent_containers/applicator/pill/iron = 5,
 		/obj/item/storage/pill_bottle/painkillers = 3,
 		/obj/item/reagent_containers/cup/bottle/salglu_solution = 2,
 		/obj/item/reagent_containers/cup/bottle/oculine = 1,

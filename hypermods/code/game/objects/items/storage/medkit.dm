@@ -47,7 +47,7 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/mender/burn = 1,
+		/obj/item/reagent_containers/applicator/patch/mender/burn = 1,
 		/obj/item/stack/medical/mesh = 1,
 		/obj/item/stack/medical/aloe = 1,
 		/obj/item/reagent_containers/medigel/aiuri = 1,
@@ -66,7 +66,7 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/mender/toxin = 1,
+		/obj/item/reagent_containers/applicator/patch/mender/toxin = 1,
 		/obj/item/storage/pill_bottle/multiver/less = 1,
 		/obj/item/reagent_containers/hypospray/medipen/dylovene = 2,
 		/obj/item/reagent_containers/hypospray/medipen/hyronalin = 1,
@@ -84,11 +84,11 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/mender/oxy = 1,
+		/obj/item/reagent_containers/applicator/patch/mender/oxy = 1,
 		/obj/item/storage/pill_bottle/dexalin = 1,
 		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/reagent_containers/hypospray/medipen/salbutamol = 1,
-		/obj/item/reagent_containers/pill/tranex = 2,
+		/obj/item/reagent_containers/applicator/pill/tranex = 2,
 		/obj/item/storage/pill_bottle/coagulant = 1,
 		)
 	generate_items_inside(items_inside,src)
@@ -102,7 +102,7 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/mender/brute = 1,
+		/obj/item/reagent_containers/applicator/patch/mender/brute = 1,
 		/obj/item/stack/medical/bruise_pack = 1,
 		/obj/item/stack/medical/suture = 1,
 		/obj/item/storage/pill_bottle/painkillers = 1,
@@ -121,7 +121,7 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/mender/all = 1,
+		/obj/item/reagent_containers/applicator/patch/mender/all = 1,
 		/obj/item/stack/medical/suture/medicated = 1,
 		/obj/item/stack/medical/mesh/advanced = 1,
 		/obj/item/reagent_containers/medigel/synthflesh/big = 2,
@@ -353,8 +353,8 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/libital = 3,
-		/obj/item/reagent_containers/pill/patch/styptic_powder = 3,
+		/obj/item/reagent_containers/applicator/patch/libital = 3,
+		/obj/item/reagent_containers/applicator/patch/styptic_powder = 3,
 		/obj/item/storage/pill_bottle/probital = 1,
 		/obj/item/storage/pill_bottle/bicaridine = 1,
 		/obj/item/storage/pill_bottle/bicartranex = 1,
@@ -373,8 +373,8 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/aiuri = 3,
-		/obj/item/reagent_containers/pill/patch/silver_sulfadiazine = 3,
+		/obj/item/reagent_containers/applicator/patch/aiuri = 3,
+		/obj/item/reagent_containers/applicator/patch/silver_sulfadiazine = 3,
 		/obj/item/reagent_containers/spray/hercuri = 2,
 		/obj/item/reagent_containers/hypospray/medipen/dermaline = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 2,
@@ -394,7 +394,7 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/storage/pill_bottle/multiver/less = 1,
-		/obj/item/reagent_containers/pill/patch/ondansetron = 2,
+		/obj/item/reagent_containers/applicator/patch/ondansetron = 2,
 		/obj/item/reagent_containers/syringe/syriniver = 2,
 		/obj/item/reagent_containers/cup/bottle/syriniver = 1,
 		/obj/item/reagent_containers/cup/bottle/calomel = 1,

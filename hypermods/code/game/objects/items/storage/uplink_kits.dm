@@ -340,8 +340,8 @@
 	new /obj/item/reagent_containers/hypospray/medipen/cardiaccs(src)
 	new /obj/item/reagent_containers/hypospray/medipen/bloodlosscs(src)
 	new /obj/item/reagent_containers/hypospray/medipen/lifesupportcs(src)
-	new /obj/item/reagent_containers/pill/patch/mender/brute(src)
-	new /obj/item/reagent_containers/pill/patch/mender/burn(src)
+	new /obj/item/reagent_containers/applicator/patch/mender/brute(src)
+	new /obj/item/reagent_containers/applicator/patch/mender/burn(src)
 
 /obj/item/storage/bag/chemistry/syndimedipens/deluxe/PopulateContents()
 	for(var/i in 1 to 3)
@@ -349,8 +349,8 @@
 	new /obj/item/reagent_containers/hypospray/medipen/cardiaccs(src)
 	new /obj/item/reagent_containers/hypospray/medipen/bloodlosscs(src)
 	new /obj/item/reagent_containers/hypospray/medipen/lifesupportcs(src)
-	new /obj/item/reagent_containers/pill/patch/mender/brute(src)
-	new /obj/item/reagent_containers/pill/patch/mender/burn(src)
+	new /obj/item/reagent_containers/applicator/patch/mender/brute(src)
+	new /obj/item/reagent_containers/applicator/patch/mender/burn(src)
 
 /obj/item/storage/box/syndie_kit/chefchemicals/PopulateContents()
 	new /obj/item/reagent_containers/cup/bottle/fentanyl(src)
@@ -937,12 +937,12 @@
 		/obj/item/reagent_containers/cup/blastoff_ampoule,
 		/obj/item/reagent_containers/hypospray/medipen/morphine,
 		/obj/item/reagent_containers/hypospray/medipen/pumpup,
-		/obj/item/reagent_containers/pill/stimulant,
-		/obj/item/reagent_containers/pill/zoom,
-		/obj/item/reagent_containers/pill/happy,
-		/obj/item/reagent_containers/pill/lsd,
-		/obj/item/reagent_containers/pill/aranesp,
-		/obj/item/reagent_containers/pill/gravitum,
+		/obj/item/reagent_containers/applicator/pill/stimulant,
+		/obj/item/reagent_containers/applicator/pill/zoom,
+		/obj/item/reagent_containers/applicator/pill/happy,
+		/obj/item/reagent_containers/applicator/pill/lsd,
+		/obj/item/reagent_containers/applicator/pill/aranesp,
+		/obj/item/reagent_containers/applicator/pill/gravitum,
 		/obj/item/reagent_containers/syringe/crude/mushroom,
 		/obj/item/food/grown/tobacco,
 		/obj/item/food/grown/mushroom/amanita,

@@ -15,7 +15,7 @@
 	/// What secondary medipen should be present in this box?
 	var/medipen2_type = /obj/item/reagent_containers/hypospray/medipen/spacepen
 	/// What medical pill should be present in this box?
-	var/pill_type = /obj/item/reagent_containers/pill/antiviral
+	var/pill_type = /obj/item/reagent_containers/applicator/pill/antiviral
 	/// Are we crafted?
 	var/crafted = FALSE
 	/// Should we contain an escape hook on maps with z-levels?

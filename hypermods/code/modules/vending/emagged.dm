@@ -697,10 +697,10 @@
 	panel_type = "panel11"
 	product_ads = "Go save some lives!;The best stuff for your medbay.;Only the finest tools.;Natural chemicals!;This stuff saves lives.;Don't you want some?;Ping!"
 	products = list(
-		/obj/item/reagent_containers/pill/patch/libital = 5,
-		/obj/item/reagent_containers/pill/patch/aiuri = 5,
+		/obj/item/reagent_containers/applicator/patch/libital = 5,
+		/obj/item/reagent_containers/applicator/patch/aiuri = 5,
 		/obj/item/reagent_containers/syringe/convermol = 2,
-		/obj/item/reagent_containers/pill/insulin = 5,
+		/obj/item/reagent_containers/applicator/pill/insulin = 5,
 		/obj/item/reagent_containers/cup/bottle/multiver = 2,
 		/obj/item/reagent_containers/cup/bottle/syriniver = 2,
 		/obj/item/reagent_containers/cup/bottle/calomel = 2,
@@ -718,11 +718,11 @@
 		/obj/item/reagent_containers/medigel/sterilizine = 1,
 	)
 	contraband = list(
-		/obj/item/reagent_containers/pill/tox = 3,
-		/obj/item/reagent_containers/pill/morphine = 4,
-		/obj/item/reagent_containers/pill/multiver = 6,
-		/obj/item/reagent_containers/pill/patch/mender/brute = 1,
-		/obj/item/reagent_containers/pill/patch/mender/burn = 1,
+		/obj/item/reagent_containers/applicator/pill/tox = 3,
+		/obj/item/reagent_containers/applicator/pill/morphine = 4,
+		/obj/item/reagent_containers/applicator/pill/multiver = 6,
+		/obj/item/reagent_containers/applicator/patch/mender/brute = 1,
+		/obj/item/reagent_containers/applicator/patch/mender/burn = 1,
 	)
 	premium = list(
 		/obj/item/reagent_containers/medigel/synthflesh = 5,
@@ -759,10 +759,10 @@
 	density = FALSE
 	products = list(
 		/obj/item/reagent_containers/syringe = 3,
-		/obj/item/reagent_containers/pill/patch/libital = 5,
-		/obj/item/reagent_containers/pill/patch/aiuri = 5,
-		/obj/item/reagent_containers/pill/multiver = 2,
-		/obj/item/reagent_containers/pill/antiviral = 3,
+		/obj/item/reagent_containers/applicator/patch/libital = 5,
+		/obj/item/reagent_containers/applicator/patch/aiuri = 5,
+		/obj/item/reagent_containers/applicator/pill/multiver = 2,
+		/obj/item/reagent_containers/applicator/pill/antiviral = 3,
 		/obj/item/reagent_containers/medigel/libital = 2,
 		/obj/item/reagent_containers/medigel/aiuri = 2,
 		/obj/item/reagent_containers/medigel/sterilizine = 1,
@@ -770,14 +770,14 @@
 		/obj/item/stack/medical/bone_gel = 2,
 		/obj/item/storage/box/bandages = 1,
 		/obj/item/stack/medical/gauze = 3,
-		/obj/item/reagent_containers/pill/iron = 5,
+		/obj/item/reagent_containers/applicator/pill/iron = 5,
 		/obj/item/reagent_containers/cup/bottle/salglu_solution = 2,
 		/obj/item/reagent_containers/cup/bottle/oculine = 1,
 		/obj/item/reagent_containers/cup/bottle/inacusiate = 1,
 	)
 	contraband = list(
-		/obj/item/reagent_containers/pill/tox = 2,
-		/obj/item/reagent_containers/pill/morphine = 2,
+		/obj/item/reagent_containers/applicator/pill/tox = 2,
+		/obj/item/reagent_containers/applicator/pill/morphine = 2,
 		/obj/item/storage/box/gum/happiness = 1,
 		/obj/item/reagent_containers/hypospray/medipen/ekit = 1,
 		/obj/item/reagent_containers/hypospray/medipen/formaldehyde = 1,
@@ -785,12 +785,12 @@
 	)
 	premium = list(
 		/obj/item/reagent_containers/medigel/synthflesh = 1,
-		/obj/item/reagent_containers/pill/bicaridine = 5,
-		/obj/item/reagent_containers/pill/kelotane = 5,
-		/obj/item/reagent_containers/pill/antitoxin = 5,
-		/obj/item/reagent_containers/pill/dexalin = 5,
-		/obj/item/reagent_containers/pill/inaprovaline = 5,
-		/obj/item/reagent_containers/pill/coagulant = 5,
+		/obj/item/reagent_containers/applicator/pill/bicaridine = 5,
+		/obj/item/reagent_containers/applicator/pill/kelotane = 5,
+		/obj/item/reagent_containers/applicator/pill/antitoxin = 5,
+		/obj/item/reagent_containers/applicator/pill/dexalin = 5,
+		/obj/item/reagent_containers/applicator/pill/inaprovaline = 5,
+		/obj/item/reagent_containers/applicator/pill/coagulant = 5,
 	)
 	refill_canister = /obj/item/vending_refill/wallmed
 	default_price = PAYCHECK_COMMAND //Double the medical price due to being meant for public consumption, not player specfic

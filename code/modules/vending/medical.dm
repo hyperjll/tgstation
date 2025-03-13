@@ -123,11 +123,11 @@
 		/obj/item/reagent_containers/medigel/sterilizine = 1,
 	)
 	contraband = list(
-		/obj/item/reagent_containers/pill/tox = 3,
-		/obj/item/reagent_containers/pill/morphine = 4,
-		/obj/item/reagent_containers/pill/multiver = 6,
-		/obj/item/reagent_containers/pill/patch/mender/brute = 1,
-		/obj/item/reagent_containers/pill/patch/mender/burn = 1,
+		/obj/item/reagent_containers/applicator/pill/tox = 3,
+		/obj/item/reagent_containers/applicator/pill/morphine = 4,
+		/obj/item/reagent_containers/applicator/pill/multiver = 6,
+		/obj/item/reagent_containers/applicator/patch/mender/brute = 1,
+		/obj/item/reagent_containers/applicator/patch/mender/burn = 1,
 	)
 	premium = list(
 		/obj/item/reagent_containers/medigel/synthflesh = 2,

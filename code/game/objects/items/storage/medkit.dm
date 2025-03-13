@@ -204,8 +204,8 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/aiuri = 2,
-		/obj/item/reagent_containers/pill/patch/silver_sulfadiazine = 2,
+		/obj/item/reagent_containers/applicator/patch/aiuri = 2,
+		/obj/item/reagent_containers/applicator/patch/silver_sulfadiazine = 2,
 		/obj/item/reagent_containers/spray/hercuri = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 1,
 		/obj/item/storage/pill_bottle/kelotane = 1)
@@ -232,7 +232,7 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/storage/pill_bottle/multiver/less = 1,
-		/obj/item/reagent_containers/pill/patch/ondansetron = 1,
+		/obj/item/reagent_containers/applicator/patch/ondansetron = 1,
 		/obj/item/reagent_containers/syringe/syriniver = 2,
 		/obj/item/storage/pill_bottle/potassiodide = 1,
 		/obj/item/storage/pill_bottle/antitoxin = 1,
@@ -285,8 +285,8 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/libital = 2,
-		/obj/item/reagent_containers/pill/patch/styptic_powder = 2,
+		/obj/item/reagent_containers/applicator/patch/libital = 2,
+		/obj/item/reagent_containers/applicator/patch/styptic_powder = 2,
 		/obj/item/storage/pill_bottle/probital = 1,
 		/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
 		/obj/item/storage/pill_bottle/bicaridine = 1,
@@ -309,7 +309,7 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/pill/patch/synthflesh = 2,
+		/obj/item/reagent_containers/applicator/patch/synthflesh = 2,
 		/obj/item/reagent_containers/medigel/synthflesh/big = 1,
 		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
 		/obj/item/storage/pill_bottle/tricordrazine = 1,
