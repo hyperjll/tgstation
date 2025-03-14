@@ -53,6 +53,9 @@
 	///the final objective the traitor has to accomplish, be it escaping, hijacking, or just martyrdom.
 	var/datum/objective/ending_objective
 
+	/// Can this version of traitor get reputation-based objectives? Should only go to traitors WITH secondary objectives.
+	var/can_get_rep_objectives = TRUE
+
 /datum/antagonist/traitor/infiltrator
 	// Used to denote traitors who have joined midround and therefore have no access to secondary objectives.
 	// Progression elements are best left to the roundstart antagonists
@@ -60,6 +63,7 @@
 	name = "\improper Infiltrator"
 	give_secondary_objectives = FALSE
 	uplink_flag_given = UPLINK_INFILTRATORS
+	can_get_rep_objectives = FALSE
 
 /datum/antagonist/traitor/infiltrator/sleeper_agent
 	name = "\improper Syndicate Sleeper Agent"
@@ -274,6 +278,16 @@
 		protect_tot_objective.owner = owner
 		protect_tot_objective.find_traitor_target()
 		return protect_tot_objective
+
+	if(prob(25) && can_get_rep_objectives)
+		if(prob(50))
+			var/datum/objective/traitor_progression/prog_objective = new()
+			prog_objective.owner = owner
+			return prog_objective
+		else
+			var/datum/objective/traitor_objectives/tot_secobj_objective = new()
+			tot_secobj_objective.owner = owner
+			return tot_secobj_objective
 
 	var/datum/objective/steal/steal_objective = new()
 	steal_objective.owner = owner
