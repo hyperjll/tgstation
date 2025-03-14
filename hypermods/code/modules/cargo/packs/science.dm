@@ -5,7 +5,7 @@
 /datum/supply_pack/science/advancedparts
 	name = "Advanced Parts Crate"
 	desc = "Contains one full set of Tier-2 Machine Parts and a fully-charged super power cell."
-	cost = 2000
+	cost = CARGO_CRATE_VALUE * 10
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
 	contains = list(/obj/item/stock_parts/capacitor/adv,
@@ -20,7 +20,7 @@
 /datum/supply_pack/science/superparts
 	name = "Super Parts Crate"
 	desc = "Contains one full set of Tier-3 Machine Parts and a fully-charged hyper power cell."
-	cost = 5000
+	cost = CARGO_CRATE_VALUE * 25
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
 	contains = list(/obj/item/stock_parts/capacitor/super,
@@ -35,7 +35,7 @@
 /datum/supply_pack/science/bluespaceparts
 	name = "Bluespace Parts Crate"
 	desc = "Contains one full set of Tier-4 Machine Parts and a fully-charged bluespace power cell."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
 	contains = list(/obj/item/stock_parts/capacitor/quadratic,
@@ -50,7 +50,7 @@
 /datum/supply_pack/science/tcommparts
 	name = "Telecommunication Parts Crate"
 	desc = "Contains one full set of Telecommunication Machine Parts."
-	cost = 1000
+	cost = CARGO_CRATE_VALUE * 5
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
 	contains = list(/obj/item/stock_parts/subspace/transmitter,
@@ -66,7 +66,7 @@
 /datum/supply_pack/science/toximate
 	name = "Toximate 3000"
 	desc = "Contains one Toximate 3000, for all of your ordinance needs."
-	cost = 3000
+	cost = CARGO_CRATE_VALUE * 15
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
 	contains = list(/obj/machinery/vending/plasmaresearch)
@@ -76,7 +76,7 @@
 /datum/supply_pack/science/cyborgassembly
 	name = "Cyborg Assembly Crate"
 	desc = "Contains all of the required parts to construct a cyborg, but doesn't contain any tools."
-	cost = 2500
+	cost = CARGO_CRATE_VALUE * 12.5
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
 	contains = list(/obj/item/bodypart/chest/robot,
@@ -97,7 +97,7 @@
 /datum/supply_pack/science/nanitelab
 	name = "Nanite Lab Setup Crate"
 	desc = "Contains a multitude of circuitry required for nanite labs as well as essential supplies for programming and monitoring nanites."
-	cost = 2000
+	cost = CARGO_CRATE_VALUE * 10
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
 	contains = list(/obj/item/circuitboard/machine/public_nanite_chamber,
@@ -115,7 +115,7 @@
 /datum/supply_pack/science/pyrocore
 	name = "Refined Pyroclastic Anomaly Core Crate"
 	desc = "Contains a single Pyroclastic anomaly core."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RD
 	access_view = ACCESS_RD
 	contains = list(/obj/item/assembly/signaler/anomaly/pyro)
@@ -125,7 +125,7 @@
 /datum/supply_pack/science/gravcore
 	name = "Refined Gravitational Anomaly Core Crate"
 	desc = "Contains a single Gravitational anomaly core."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RD
 	access_view = ACCESS_RD
 	contains = list(/obj/item/assembly/signaler/anomaly/grav)
@@ -135,7 +135,7 @@
 /datum/supply_pack/science/fluxcore
 	name = "Refined Flux Anomaly Core Crate"
 	desc = "Contains a single Flux anomaly core."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RD
 	access_view = ACCESS_RD
 	contains = list(/obj/item/assembly/signaler/anomaly/flux)
@@ -145,7 +145,7 @@
 /datum/supply_pack/science/blspcore
 	name = "Refined Bluespace Anomaly Core Crate"
 	desc = "Contains a single Bluespace anomaly core."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RD
 	access_view = ACCESS_RD
 	contains = list(/obj/item/assembly/signaler/anomaly/bluespace)
@@ -155,7 +155,7 @@
 /datum/supply_pack/science/vortcore
 	name = "Refined Vortex Anomaly Core Crate"
 	desc = "Contains a single Vortex anomaly core."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RD
 	access_view = ACCESS_RD
 	contains = list(/obj/item/assembly/signaler/anomaly/vortex)
@@ -165,7 +165,7 @@
 /datum/supply_pack/science/hallcore
 	name = "Refined Hallucination Anomaly Core Crate"
 	desc = "Contains a single Hallucination anomaly core."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RD
 	access_view = ACCESS_RD
 	contains = list(/obj/item/assembly/signaler/anomaly/hallucination)
@@ -175,7 +175,7 @@
 /datum/supply_pack/science/biocore
 	name = "Refined Bioscrambler Anomaly Core Crate"
 	desc = "Contains a single Bioscrambler anomaly core."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RD
 	access_view = ACCESS_RD
 	contains = list(/obj/item/assembly/signaler/anomaly/bioscrambler)
@@ -185,7 +185,7 @@
 /datum/supply_pack/science/dimencore
 	name = "Refined Dimensional Anomaly Core Crate"
 	desc = "Contains a single Dimensional anomaly core."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RD
 	access_view = ACCESS_RD
 	contains = list(/obj/item/assembly/signaler/anomaly/dimensional)
@@ -195,7 +195,7 @@
 /datum/supply_pack/science/ectocore
 	name = "Refined Ectoplasm Anomaly Core Crate"
 	desc = "Contains a single Ectoplasm anomaly core."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RD
 	access_view = ACCESS_RD
 	contains = list(/obj/item/assembly/signaler/anomaly/ectoplasm)
@@ -206,7 +206,7 @@
 /datum/supply_pack/science/radscore
 	name = "Refined Radiation Anomaly Core Crate"
 	desc = "Contains a single Radiation anomaly core."
-	cost = 10000
+	cost = CARGO_CRATE_VALUE * 50
 	access = ACCESS_RD
 	access_view = ACCESS_RD
 	contains = list(/obj/item/assembly/signaler/anomaly/radiation)
