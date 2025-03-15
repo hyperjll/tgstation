@@ -102,7 +102,7 @@
 	inhand_icon_state = "nvgmeson"
 	glass_colour_type = FALSE
 	vision_flags = SEE_TURFS
-	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_MADNESS_IMMUNE)
+	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_MADNESS_IMMUNE, TRAIT_NEARSIGHTED_CORRECTED)
 	var/list/hudlist = list(DATA_HUD_MEDICAL_ADVANCED, DATA_HUD_DIAGNOSTIC, DATA_HUD_SECURITY_ADVANCED)
 	actions_types = list(/datum/action/item_action/chameleon/change/glasses/no_preset)
 
