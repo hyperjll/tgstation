@@ -111,3 +111,31 @@
 	name = "Implant Case - 'R.O.T.B.U.S.T'"
 	desc = "A glass case containing a R.O.T.B.U.S.T implant."
 	imp_type = /obj/item/implant/robusttec/antirot
+
+
+/obj/item/implant/selfsurgery
+	name = "self-awareness implant"
+	desc = "An implant designed to alter the host's neural structure to allow them to endure surgical procedures while maintaining focus."
+	actions_types = null
+
+/obj/item/implant/selfsurgery/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
+	. = ..()
+	if(.)
+		target.add_traits(list(TRAIT_SELF_SURGERY_ABLE), IMPLANT_TRAIT)
+
+/obj/item/implant/selfsurgery/removed(mob/target, silent = FALSE, special = FALSE)
+	. = ..()
+	if(.)
+		target.remove_traits(list(TRAIT_SELF_SURGERY_ABLE), IMPLANT_TRAIT)
+
+/obj/item/implanter/selfsurgery
+	name = "implanter (self-surgery)"
+	imp_type = /obj/item/implant/selfsurgery
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
+
+/obj/item/implantcase/selfsurgery
+	name = "Implant Case - 'Self-Surgery'"
+	desc = "A glass case containing a self-surgery implant."
+	imp_type = /obj/item/implant/selfsurgery

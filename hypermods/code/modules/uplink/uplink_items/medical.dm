@@ -26,9 +26,10 @@
 /datum/uplink_item/medical/surgerybag
 	name = "Syndicate Surgery Duffel Bag"
 	desc = "The Syndicate surgery duffel bag is a toolkit containing all surgery tools, surgical drapes, \
-			a Syndicate brand MMI, a straitjacket, and a muzzle."
+			a Syndicate brand MMI, a straitjacket, a muzzle, and a special implant designed to allow the implantee \
+			to perform surgery upon themself."
 	item = /obj/item/storage/backpack/duffelbag/syndie/surgery
-	cost = 3
+	cost = 4
 	surplus = 66
 
 /datum/uplink_item/medical/changelingextract

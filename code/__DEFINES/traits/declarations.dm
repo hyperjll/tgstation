@@ -1492,4 +1492,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 ///trait given to mobs that are easy to tame through mounting
 #define TRAIT_MOB_EASY_TO_MOUNT "easy_to_mount"
 
+///Trait given to mobs which allow them to perform all surgeries upon themselves.
+#define TRAIT_SELF_SURGERY_ABLE "self_surgery_able"
+
 // END TRAIT DEFINES
