@@ -14,5 +14,5 @@
 			Works well for surprise attacks, but not for extended unarmed brawls."
 	item = /obj/item/mushpunch
 	cost = 7
-	sirplus = 10
+	surplus = 10
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_SPY
