@@ -1290,3 +1290,59 @@
 /obj/item/storage/box/syndie_kit/syndicate_radio_mine/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/deployablemine/radio/syndicate(src)
+
+/obj/item/storage/box/syndie_kit/impsur_airshoes
+	name = "airshoes surgical implant box"
+
+/obj/item/storage/box/syndie_kit/impsur_airshoes/PopulateContents()
+	new /obj/item/autosurgeon/syndicate/airshoes/single_use(src)
+	new /obj/item/autosurgeon/syndicate/airshoes/l/single_use(src)
+
+/obj/item/storage/box/syndie_kit/impsur_noslip
+	name = "no-slip surgical implant box"
+
+/obj/item/storage/box/syndie_kit/impsur_noslip/PopulateContents()
+	new /obj/item/autosurgeon/syndicate/noslipall/single_use(src)
+	new /obj/item/autosurgeon/syndicate/noslipall/l/single_use(src)
+
+/obj/item/storage/box/syndie_kit/impsur_jumpboots
+	name = "jumpboots surgical implant box"
+
+/obj/item/storage/box/syndie_kit/impsur_jumpboots/PopulateContents()
+	new /obj/item/autosurgeon/syndicate/jumpboots/single_use(src)
+	new /obj/item/autosurgeon/syndicate/jumpboots/l/single_use(src)
+
+/obj/item/storage/box/syndie_kit/impsur_magboots
+	name = "magboots surgical implant box"
+
+/obj/item/storage/box/syndie_kit/impsur_magboots/PopulateContents()
+	new /obj/item/autosurgeon/syndicate/magboots/single_use(src)
+	new /obj/item/autosurgeon/syndicate/magboots/l/single_use(src)
+
+/obj/item/storage/box/syndie_kit/impsur_toolset
+	name = "toolset surgical implant box"
+
+/obj/item/storage/box/syndie_kit/impsur_toolset/PopulateContents()
+	new /obj/item/autosurgeon/syndicate/toolset_engi/single_use(src)
+	new /obj/item/autosurgeon/syndicate/toolset_surgery/l/single_use(src)
+
+/obj/item/storage/box/syndie_kit/impsur_lifesupp
+	name = "life-support surgical implant box"
+
+/obj/item/storage/box/syndie_kit/impsur_lifesupp/PopulateContents()
+	new /obj/item/autosurgeon/syndicate/breathing_tube/single_use(src)
+	new /obj/item/autosurgeon/syndicate/nutrimentplus/single_use(src)
+
+/obj/item/storage/box/syndie_kit/impsur_strongarm
+	name = "stormarm surgical implant box"
+
+/obj/item/storage/box/syndie_kit/impsur_strongarm/PopulateContents()
+	new /obj/item/autosurgeon/syndicate/strongarm/single_use(src)
+	new /obj/item/autosurgeon/syndicate/strongarm/l/single_use(src)
+
+/obj/item/storage/box/syndie_kit/impsur_buster
+	name = "busterarm surgical implant box"
+
+/obj/item/storage/box/syndie_kit/impsur_buster/PopulateContents()
+	new /obj/item/autosurgeon/syndicate/strongarm/buster/single_use(src)
+	new /obj/item/autosurgeon/syndicate/strongarm/buster/l/single_use(src)

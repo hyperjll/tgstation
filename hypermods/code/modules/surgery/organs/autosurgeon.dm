@@ -287,3 +287,120 @@
 /obj/item/autosurgeon/syndicate/cobra_implant
 	uses = 1
 	starting_organ = /obj/item/organ/cyberimp/arm/cobra_implant
+
+
+/// Previous Multi-surgeons below
+
+/obj/item/autosurgeon/syndicate/airshoes //for traitors
+	starting_organ = /obj/item/organ/cyberimp/leg/airshoes/syndicate
+
+/obj/item/autosurgeon/syndicate/airshoes/l //for traitors
+	starting_organ = /obj/item/organ/cyberimp/leg/airshoes/syndicate/l
+
+/obj/item/autosurgeon/syndicate/noslipall //for traitors
+	starting_organ = /obj/item/organ/cyberimp/leg/noslip/syndicate
+
+/obj/item/autosurgeon/syndicate/noslipall/l //for traitors
+	starting_organ = /obj/item/organ/cyberimp/leg/noslip/syndicate/l
+
+/obj/item/autosurgeon/syndicate/jumpboots //for shaft miner traitors?
+	starting_organ = /obj/item/organ/cyberimp/leg/jumpboots/syndicate
+
+/obj/item/autosurgeon/syndicate/jumpboots/l //for shaft miner traitors?
+	starting_organ = /obj/item/organ/cyberimp/leg/jumpboots/syndicate/l
+
+/obj/item/autosurgeon/syndicate/magboots //for ce and traitors
+	desc = "A single-use multisurgeon that contains a magboot implant for your right leg."
+	starting_organ = /obj/item/organ/cyberimp/leg/magboot/syndicate
+
+/obj/item/autosurgeon/syndicate/magboots/l //for ce and traitors
+	desc = "A single-use multisurgeon that contains a magboot implant for your left leg."
+	starting_organ = /obj/item/organ/cyberimp/leg/magboot/syndicate/l
+
+/obj/item/autosurgeon/syndicate/airshoes/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/airshoes/l/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/noslipall/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/noslipall/l/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/jumpboots/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/jumpboots/l/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/magboots/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/magboots/l/single_use
+	uses = 1
+
+
+/obj/item/autosurgeon/syndicate/toolset_engi //for traitors
+	starting_organ = /obj/item/organ/cyberimp/arm/toolset/syndicate
+
+/obj/item/autosurgeon/syndicate/toolset_engi/l //for traitors
+	starting_organ = /obj/item/organ/cyberimp/arm/toolset/syndicate/l
+
+/obj/item/autosurgeon/syndicate/toolset_surgery //for traitors
+	starting_organ = /obj/item/organ/cyberimp/arm/surgery/syndicate
+
+/obj/item/autosurgeon/syndicate/toolset_surgery/l //for traitors
+	starting_organ = /obj/item/organ/cyberimp/arm/surgery/syndicate/l
+
+/obj/item/autosurgeon/syndicate/toolset_engi/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/toolset_engi/l/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/toolset_surgery/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/toolset_surgery/l/single_use
+	uses = 1
+
+
+/obj/item/autosurgeon/syndicate/breathing_tube //for traitors
+	starting_organ = /obj/item/organ/cyberimp/mouth/breathing_tube/syndicate
+
+/obj/item/autosurgeon/syndicate/nutrimentplus //for traitorsplus
+	starting_organ = /obj/item/organ/cyberimp/chest/nutriment/plus/syndicate
+
+/obj/item/autosurgeon/syndicate/breathing_tube/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/nutrimentplus/single_use
+	uses = 1
+
+
+/obj/item/autosurgeon/syndicate/strongarm
+	starting_organ = /obj/item/organ/cyberimp/arm/strongarm/syndicate
+
+/obj/item/autosurgeon/syndicate/strongarm/l
+	starting_organ = /obj/item/organ/cyberimp/arm/strongarm/syndicate/l
+
+/obj/item/autosurgeon/syndicate/strongarm/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/strongarm/l/single_use
+	uses = 1
+
+
+/obj/item/autosurgeon/syndicate/strongarm/buster
+	starting_organ = /obj/item/organ/cyberimp/arm/strongarm/buster/syndicate
+
+/obj/item/autosurgeon/syndicate/strongarm/buster/l
+	starting_organ = /obj/item/organ/cyberimp/arm/strongarm/buster/syndicate/l
+
+/obj/item/autosurgeon/syndicate/strongarm/buster/single_use
+	uses = 1
+
+/obj/item/autosurgeon/syndicate/strongarm/buster/l/single_use
+	uses = 1

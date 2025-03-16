@@ -16,7 +16,6 @@
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 /obj/item/organ/cyberimp/arm/toolset/syndicate/l
-	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/cyberimp/arm/esword/syndicate
@@ -37,14 +36,19 @@
 /obj/item/organ/cyberimp/arm/surgery/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
+/obj/item/organ/cyberimp/arm/surgery/syndicate/l
+	zone = BODY_ZONE_L_ARM
+
 /obj/item/organ/cyberimp/arm/surgery/emagged/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+
+/obj/item/organ/cyberimp/arm/surgery/emagged/syndicate/l
+	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/cyberimp/arm/strongarm/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 /obj/item/organ/cyberimp/arm/strongarm/syndicate/l
-	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/cyberimp/arm/strongarm/buster
@@ -56,8 +60,10 @@
 	zone = BODY_ZONE_R_ARM
 	slot = ORGAN_SLOT_RIGHT_ARM_MUSCLE
 
-	right_arm_organ_slot = ORGAN_SLOT_RIGHT_ARM_MUSCLE
-	left_arm_organ_slot = ORGAN_SLOT_LEFT_ARM_MUSCLE
+	valid_zones = list(
+		BODY_ZONE_R_ARM = ORGAN_SLOT_RIGHT_ARM_MUSCLE,
+		BODY_ZONE_L_ARM = ORGAN_SLOT_LEFT_ARM_MUSCLE,
+	)
 
 	actions_types = list()
 	items_to_create = list(/obj/item/gun/magic/hook/buster)
@@ -170,7 +176,6 @@
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 
 /obj/item/organ/cyberimp/arm/strongarm/buster/syndicate/l
-	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/cyberimp/arm/signaler

@@ -72,8 +72,8 @@
 
 /datum/uplink_item/surgical/toolsets
 	name = "Toolset Implants"
-	desc = "A multisurgeon containing both an arm-concealed toolset implant and a surgical toolset. Comes with an autosurgeon."
-	item = /obj/item/multisurgeon/toolsets
+	desc = "A box of autosurgeons containing both an arm-concealed toolset implant and a surgical toolset."
+	item = /obj/item/storage/box/syndie_kit/impsur_toolset
 	cost = 6
 	surplus = 30
 
@@ -88,21 +88,22 @@
 
 /datum/uplink_item/surgical/strength
 	name = "S.A.E.M Implants"
-	desc = "A multisurgeon containing two strong-arm empowered musculature implants. \
+	desc = "A box of autosurgeons containing two strong-arm empowered musculature implants. \
 			These implants grant the arms of it's user increased punching power, increasing it's damage toward body and stamina. \
-			Also knocks people around easily."
-	item = /obj/item/multisurgeon/syndicate/strongarm/single_use
+			Also knocks people around easily and allows you to pry open doors with your bare hands."
+	item = /obj/item/storage/box/syndie_kit/impsur_strongarm
 	progression_minimum = 10 MINUTES
-	cost = 6
+	cost = 10
 	surplus = 30
 
 /datum/uplink_item/surgical/buster
 	name = "Buster Arm Implants"
-	desc = "A multisurgeon containing two buster-arm empowered musculature implants that double as grappling hooks. \
+	desc = "A box of autosurgeons containing two buster-arm empowered musculature implants that double as grappling hooks. \
 			These implants grant the arms of it's user increased punching power, increasing it's damage toward body and stamina greatly. \
 			Also knocks people around easily and can cause them to crash harmfully into walls and people. \
-			Activate the implant with nothing in hand to reveal a grappling hook capable of grabbing people and pulling them close, comes with two hooks."
-	item = /obj/item/multisurgeon/syndicate/strongarm/buster/single_use
+			Activate the implant with nothing in hand to reveal a grappling hook capable of grabbing people and pulling them close, comes with two hooks. \
+			Still allows you to pry open doors with your bare hands."
+	item = /obj/item/storage/box/syndie_kit/impsur_buster
 	progression_minimum = 30 MINUTES
 	cost = 25
 	surplus = 10
@@ -119,8 +120,8 @@
 
 /datum/uplink_item/surgical/lifesupport
 	name = "Life-Support Implants"
-	desc = "A breathing tube and nutriment pump PLUS implant within one multisurgeon. You'll never have to eat or wear a mask again. Comes with an autosurgeon."
-	item = /obj/item/multisurgeon/lifesupport
+	desc = "A breathing tube and nutriment pump PLUS implant within one box of autosurgeons. You'll never have to eat or wear a mask again."
+	item = /obj/item/storage/box/syndie_kit/impsur_lifesupp
 	cost = 3
 	surplus = 20
 
@@ -156,17 +157,15 @@
 
 /datum/uplink_item/surgical/jumpshoes
 	name = "Jumpshoes Implants"
-	desc = "A pair of cybernetic jumpshoes for each leg, allows you to dash forward a short distance every 6 seconds. \
-			Comes with a one-use multisurgeon."
-	item = /obj/item/multisurgeon/jumpboots
+	desc = "A pair of cybernetic jumpshoes for each leg, allows you to dash forward a short distance every 6 seconds."
+	item = /obj/item/storage/box/syndie_kit/impsur_jumpboots
 	cost = 5
 	surplus = 0
 
 /datum/uplink_item/surgical/airshoes
 	name = "Airshoes Implants"
-	desc = "A pair of cybernetic airshoes for each leg, allows you to dash forward a medium distance every 4 seconds. \
-			Comes with a one-use multisurgeon."
-	item = /obj/item/multisurgeon/airshoes
+	desc = "A pair of cybernetic airshoes for each leg, allows you to dash forward a medium distance every 4 seconds."
+	item = /obj/item/storage/box/syndie_kit/impsur_airshoes
 	progression_minimum = 15 MINUTES
 	cost = 8
 	surplus = 40
@@ -174,9 +173,8 @@
 /datum/uplink_item/surgical/noslipall
 	name = "No-Slip Implants"
 	desc = "A pair of highly advanced cybernetics which directly attach to the host's nervous system. \
-			When the cybernetics detect the host is slipping, they'll quickly manipulate the host's muscles to avoid a fall. \
-			Comes with a one-use multisurgeon."
-	item = /obj/item/multisurgeon/noslipall
+			When the cybernetics detect the host is slipping, they'll quickly manipulate the host's muscles to avoid a fall."
+	item = /obj/item/storage/box/syndie_kit/impsur_noslip
 	progression_minimum = 20 MINUTES
 	cost = 12
 	surplus = 25
@@ -184,9 +182,8 @@
 /datum/uplink_item/surgical/magboots
 	name = "Magboots Implants"
 	desc = "A pair of highly experimental magnetic cybernetics which are to be installed within the user's legs. \
-			When installed, the host will be able to toggle the magnetics within the cybernetics, attaching to the floor as if they were wearing magboots. \
-			Comes with a one-use multisurgeon."
-	item = /obj/item/multisurgeon/magboots
+			When installed, the host will be able to toggle the magnetics within the cybernetics, attaching to the floor as if they were wearing magboots."
+	item = /obj/item/storage/box/syndie_kit/impsur_magboots
 	progression_minimum = 15 MINUTES
 	cost = 8
 	surplus = 10

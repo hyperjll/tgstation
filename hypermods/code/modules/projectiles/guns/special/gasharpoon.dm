@@ -90,6 +90,7 @@
 /obj/item/ammo_casing/gasharpoon
 	name = "harpoon synthesiser"
 	desc = "A high-power spring, linked to an energy-based piercing harpoon synthesiser."
+	icon_state = "magspear"
 	projectile_type = /obj/projectile/bullet/harpoon/gasharpoon
 	firing_effect_type = null
 
@@ -106,4 +107,4 @@
 
 /obj/projectile/bullet/harpoon/gasharpoon
 	damage = 18
-	icon_state = "harpoon"
+	icon_state = "gauss"
