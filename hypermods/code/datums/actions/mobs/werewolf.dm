@@ -300,3 +300,141 @@
 	my_werewolf.physiology.burn_mod /= 0.3
 	my_werewolf.physiology.tox_mod /= 0.3
 	my_werewolf.physiology.oxy_mod /= 0.3
+
+
+/datum/action/cooldown/spell/werewolf_pounce
+	name = "Pounce"
+	desc = "Prepare your hind legs to leap through the air, quickly traversing long distances and slamming into enemies, knocking them down! Slamming into things may result in recoil damage."
+	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
+	button_icon_state = "pounce"
+
+	cooldown_time = 10 SECONDS
+	spell_max_level = 1
+	overlay_icon_state = "bg_default_border"
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+	invocation_type = INVOCATION_NONE
+
+/datum/action/cooldown/spell/werewolf_pounce/can_cast_spell(feedback = TRUE)
+	. = ..()
+	if(!iswerewolf(owner))
+		return FALSE
+
+/datum/action/cooldown/spell/werewolf_pounce/cast(mob/living/carbon/cast_on)
+	if(!isliving(cast_on))
+		return
+
+	var/atom/target = get_edge_target_turf(cast_on, cast_on.dir) //gets the user's direction
+
+	ADD_TRAIT(cast_on, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)  //Throwing itself doesn't protect mobs against lava (because gulag).
+	if (cast_on.throw_at(target, jumpdistance, jumpspeed, spin = FALSE, diagonals_first = TRUE, callback = TRAIT_CALLBACK_REMOVE(cast_on, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)))
+		playsound(src, 'hypermods/sound/mobs/humanoid/werewolf/werewolf_attack2.ogg', 50, TRUE, TRUE)
+		cast_on.visible_message(span_warning("[cast_on] leaps into the air at high speed!"))
+	else
+		to_chat(cast_on, span_warning("Something prevents you from leaping into the air!"))
+
+
+/datum/action/cooldown/spell/pointed/werewolf_throw
+	name = "Throw"
+	desc = "Prepare yourself to throw around a nearby human like a ragdoll, this doesn't require you to grab them. Will be interrupted should be move too quickly after using this ability."
+	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
+	button_icon_state = "throw"
+
+	cooldown_time = 30 SECONDS
+	spell_max_level = 1
+	cast_range = 1 // Important, we don't want command grabs here.
+	overlay_icon_state = "bg_default_border"
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+	invocation_type = INVOCATION_NONE
+
+	active_msg = "You prepare to throw a target..."
+
+/datum/action/cooldown/spell/pointed/werewolf_throw/can_cast_spell(feedback = TRUE)
+	. = ..()
+	if(!iswerewolf(owner))
+		return FALSE
+
+/datum/action/cooldown/spell/pointed/werewolf_throw/is_valid_target(atom/cast_on)
+	. = ..()
+	if(!.)
+		return FALSE
+	if(!ishuman(cast_on))
+		return FALSE
+
+/datum/action/cooldown/spell/pointed/werewolf_throw/cast(mob/living/carbon/human/cast_on)
+	. = ..()
+	if(!cast_on)
+		return
+	cast_on.forceMove(owner.loc)
+	cast_on.setDir(get_dir(cast_on, owner))
+
+	cast_on.Stun(8 SECONDS)
+	cast_on.visible_message(span_danger("[owner] starts spinning around with [cast_on]!"), \
+					span_userdanger("You're spun around by [owner]!"), span_hear("You hear aggressive shuffling!"), null, owner)
+	to_chat(owner, span_danger("You start spinning around with [cast_on]!"))
+	owner.emote("scream")
+
+	for (var/i in 1 to 20)
+		var/delay = 5
+		switch (i)
+			if (18 to INFINITY)
+				delay = 0.25
+			if (15 to 17)
+				delay = 0.5
+			if (10 to 14)
+				delay = 1
+			if (6 to 9)
+				delay = 2
+			if (1 to 5)
+				delay = 3
+
+		if (owner && cast_on)
+
+			if (get_dist(owner, cast_on) > 1)
+				to_chat(owner, span_warning("[cast_on] is too far away!"))
+				return
+
+			if (!isturf(owner.loc) || !isturf(cast_on.loc))
+				to_chat(owner, span_warning("You can't throw [cast_on] from here!"))
+				return
+
+			owner.setDir(turn(owner.dir, 90))
+			var/turf/T = get_step(owner, owner.dir)
+			var/turf/S = cast_on.loc
+			var/direction = get_dir(cast_on, owner)
+			if ((S && isturf(S) && S.Exit(cast_on, direction)) && (T && isturf(T) && T.Enter(owner)))
+				cast_on.forceMove(T)
+				cast_on.setDir(direction)
+		else
+			return
+
+		sleep(delay)
+
+	if (owner && cast_on)
+		// These are necessary because of the sleep call.
+
+		if (get_dist(owner, cast_on) > 1)
+			to_chat(owner, span_warning("[cast_on] is too far away!"))
+			return
+
+		if (!isturf(owner.loc) || !isturf(cast_on.loc))
+			to_chat(owner, span_warning("You can't throw [cast_on] from here!"))
+			return
+
+		cast_on.forceMove(owner.loc) // Maybe this will help with the wallthrowing bug.
+
+		cast_on.visible_message(span_danger("[owner] throws [cast_on]!"), \
+						span_userdanger("You're thrown by [owner]!"), span_hear("You hear aggressive shuffling and a loud thud!"), null, owner)
+		to_chat(owner, span_danger("You throw [cast_on]!"))
+		playsound(owner.loc, SFX_SWING_HIT, 50, TRUE)
+		playsound(owner.loc, 'hypermods/sound/mobs/humanoid/werewolf/werewolf_attack2.ogg', 50, TRUE, TRUE)
+		var/turf/T = get_edge_target_turf(owner, owner.dir)
+		if (T && isturf(T))
+			if (!cast_on.stat)
+				cast_on.emote("scream")
+			cast_on.throw_at(T, 10, 4, owner, TRUE, TRUE, callback = CALLBACK(cast_on, TYPE_PROC_REF(/mob/living, Paralyze), 20))
+	log_combat(owner, cast_on, "has been thrown by a werewolf")
+	return TRUE

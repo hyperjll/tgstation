@@ -27,6 +27,8 @@
 	var/datum/action/cooldown/spell/touch/werewolf_tainted_claw/tainted_ability
 	/// Defensive Howl ability
 	var/datum/action/cooldown/spell/werewolf_def_howl/defhowl_ability
+	/// Throw ability
+	var/datum/action/cooldown/spell/pointed/werewolf_throw/throw_ability
 
 /datum/antagonist/werewolf/on_gain()
 	forge_objectives()
@@ -50,6 +52,9 @@
 	if(!defhowl_ability)
 		defhowl_ability = new
 		defhowl_ability.Grant(owner.current)
+	if(!throw_ability)
+		throw_ability = new
+		throw_ability.Grant(owner.current)
 
 /datum/antagonist/werewolf/remove_innate_effects()
 	QDEL_NULL(transformation)
@@ -57,6 +62,7 @@
 	QDEL_NULL(pounce_ability)
 	QDEL_NULL(tainted_ability)
 	QDEL_NULL(defhowl_ability)
+	QDEL_NULL(throw_ability)
 	return ..()
 
 /datum/antagonist/werewolf/greet()
