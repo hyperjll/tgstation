@@ -6,3 +6,13 @@
 	cost = 20
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_SPY
+
+/datum/uplink_item/dangerous/mushpunch
+	name = "Sapienza Ophioglossoides"
+	desc = "An exceedingly rare mushroom derived from the flesh of a thought-to-be extinct mushroom person species. \
+			Consuming this mushroom grants the user the ability to charge-up punches for incredibly powerful blows. \
+			Works well for surprise attacks, but not for extended unarmed brawls."
+	item = /obj/item/mushpunch
+	cost = 7
+	sirplus = 10
+	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_SPY
