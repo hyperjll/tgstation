@@ -125,3 +125,13 @@
 	cost = 6
 	surplus = 20
 	purchasable_from = ~UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/stealthy_weapons/championbelt
+	name = "Syndicate Championship Belt"
+	desc = "We were able to steal this precious belt from a famous wrestler recently, and have enhanced it with nano-implant technology \
+			which integrate wrestling moves of famous wrestlers of the past directly into your brain. Be warned, these moves are lethal. \
+			Don't expect to be able to use these moves as a pacifist."
+	item = /obj/item/storage/belt/champion/wrestling
+	cost = 16
+	surplus = 0
+	progression_minimum = 30 MINUTES
