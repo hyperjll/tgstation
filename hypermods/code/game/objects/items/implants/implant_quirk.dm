@@ -33,7 +33,6 @@
 	. = ..()
 	if(.)
 		psychotic_brawling = new()
-		psychotic_brawling.allow_temp_override = FALSE
 		if(!psychotic_brawling.teach(target, TRUE))
 			to_chat(target, span_notice("But your martial knowledge keeps you grounded."))
 			qdel(src)
@@ -41,7 +40,7 @@
 /obj/item/implant/violentpsychosis/removed(mob/target, silent = FALSE, special = FALSE)
 	. = ..()
 	if(.)
-		psychotic_brawling.fully_remove(target)
+		psychotic_brawling.unlearn(target)
 		QDEL_NULL(psychotic_brawling)
 
 /obj/item/implanter/violentpsychosis

@@ -115,7 +115,7 @@
 	if(!host_mob.mind)
 		return
 
-	style.remove(host_mob)
+	style.unlearn(host_mob)
 
 
 /datum/nanite_program/suicidal
