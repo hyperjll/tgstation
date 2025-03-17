@@ -74,12 +74,11 @@
 		cost *= 3
 
 /datum/uplink_item/stealthy_tools/mulligan
-	name = "Mulligan"
-	desc = "Screwed up and have security on your tail? This handy syringe will give you a completely new identity \
-			and appearance. Pair with an Agent ID for maximum effectiveness. A chameleon kit is also extremely handy \
-			to have when using a Mulligan."
-	item = /obj/item/reagent_containers/syringe/mulligan
-	cost = 2
+	name = "Mulligan Kit"
+	desc = "Screwed up and have security on your tail? This handy syringe and set of documents will give you a completely new identity \
+			and appearance, intercepting Nanotrasen communications to announce you as a freshly recruited Assistant."
+	item = /obj/item/storage/box/syndie_kit/mulligan
+	cost = 4
 	surplus = 30
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS)
 
