@@ -1,8 +1,10 @@
 /obj/item/organ/cyberimp/chest/nutriment/plus/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/chest/reviver/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/chest/reviver/fivemincap/heal() // five minute cap.
 	if(COOLDOWN_FINISHED(src, defib_cooldown))
@@ -29,6 +31,7 @@
 
 /obj/item/organ/cyberimp/chest/reviver/fivemincap/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/chest/reviver/tenmincap/heal() // ten minute cap.
 	if(COOLDOWN_FINISHED(src, defib_cooldown))
@@ -55,9 +58,11 @@
 
 /obj/item/organ/cyberimp/chest/reviver/tenmincap/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/chest/thrusters/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/chest/regenerativebetter
 	name = "regenerative implant"
@@ -99,6 +104,7 @@
 
 /obj/item/organ/cyberimp/chest/regenerativebetter/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 
 /obj/item/organ/cyberimp/chest/regenerative
@@ -141,6 +147,7 @@
 
 /obj/item/organ/cyberimp/chest/regenerative/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 
 /obj/item/organ/cyberimp/chest/jellypersonregen
@@ -182,6 +189,7 @@
 
 /obj/item/organ/cyberimp/chest/jellypersonregen/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 
 /obj/item/organ/cyberimp/chest/spinalspeed

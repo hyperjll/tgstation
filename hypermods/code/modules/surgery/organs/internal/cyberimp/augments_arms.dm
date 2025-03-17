@@ -1,5 +1,6 @@
 /obj/item/organ/cyberimp/arm/gun/laser/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/gun/laser/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
@@ -7,6 +8,7 @@
 
 /obj/item/organ/cyberimp/arm/gun/taser/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/gun/taser/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
@@ -14,39 +16,48 @@
 
 /obj/item/organ/cyberimp/arm/toolset/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/toolset/syndicate/l
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/cyberimp/arm/esword/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/medibeam/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/flash/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/baton/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/combat/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/surgery/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/surgery/syndicate/l
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/cyberimp/arm/surgery/emagged/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/surgery/emagged/syndicate/l
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/cyberimp/arm/strongarm/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/strongarm/syndicate/l
 	zone = BODY_ZONE_L_ARM
@@ -174,6 +185,7 @@
 
 /obj/item/organ/cyberimp/arm/strongarm/buster/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/strongarm/buster/syndicate/l
 	zone = BODY_ZONE_L_ARM
@@ -187,6 +199,7 @@
 
 /obj/item/organ/cyberimp/arm/signaler/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 
 /obj/item/organ/cyberimp/arm/syndie_mantis
@@ -196,6 +209,7 @@
 	icon_state = "syndie_mantis"
 	items_to_create = list(/obj/item/mantis/blade/syndicate)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/syndie_mantis/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
@@ -208,6 +222,7 @@
 	icon_state = "implant-weaponkit"
 	items_to_create = list(/obj/item/melee/vxtvulhammer)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/nt_mantis
 	name = "H.E.P.H.A.E.S.T.U.S. mantis blade implants"
@@ -227,6 +242,7 @@
 	icon_state = "implant-gunkit"
 	items_to_create = list(/obj/item/gun/ballistic/automatic/pistol/implant)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/m1911_implant
 	name = "M1911 implant"
@@ -235,6 +251,7 @@
 	icon_state = "implant-gunkit"
 	items_to_create = list(/obj/item/gun/ballistic/automatic/pistol/m1911/implant)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/deagle_implant
 	name = "Desert Eagle implant"
@@ -243,6 +260,7 @@
 	icon_state = "implant-gunkit"
 	items_to_create = list(/obj/item/gun/ballistic/automatic/pistol/deagle/implant)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/viper_implant
 	name = "Viper implant"
@@ -251,6 +269,7 @@
 	icon_state = "implant-gunkit"
 	items_to_create = list(/obj/item/gun/ballistic/automatic/pistol/viper/implant)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
 
 /obj/item/organ/cyberimp/arm/cobra_implant
 	name = "Cobra implant"
@@ -259,3 +278,4 @@
 	icon_state = "implant-gunkit"
 	items_to_create = list(/obj/item/gun/ballistic/automatic/pistol/cobra/implant)
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	aug_overlay = null
