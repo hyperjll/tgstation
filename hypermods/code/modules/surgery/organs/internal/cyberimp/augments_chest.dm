@@ -70,7 +70,7 @@
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "chest_implant"
 	//implant_overlay = "chest_implant_overlay"
-	implant_color = "#AD0000"
+	//implant_color = "#AD0000"
 	slot = ORGAN_SLOT_HEART_AID
 	var/healing = FALSE
 
@@ -113,7 +113,7 @@
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "chest_implant"
 	//implant_overlay = "chest_implant_overlay"
-	implant_color = "#AD0000"
+	//implant_color = "#AD0000"
 	slot = ORGAN_SLOT_HEART_AID
 	var/healing = FALSE
 
@@ -156,7 +156,7 @@
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "chest_implant"
 	//implant_overlay = "chest_implant_overlay"
-	implant_color = "#AD5000"
+	//implant_color = "#AD5000"
 	slot = ORGAN_SLOT_HEART_AID
 
 /obj/item/organ/cyberimp/chest/jellypersonregen/on_life(seconds_per_tick, times_fired)
@@ -199,7 +199,7 @@
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "imp_spinal"
 	//implant_overlay = null
-	implant_color = null
+	//implant_color = null
 	actions_types = list(/datum/action/item_action/organ_action/toggle)
 	w_class = WEIGHT_CLASS_NORMAL
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
