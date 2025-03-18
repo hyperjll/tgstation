@@ -6674,6 +6674,7 @@
 #include "hypermods\code\game\objects\items\reverseCard.dm"
 #include "hypermods\code\game\objects\items\sharpener.dm"
 #include "hypermods\code\game\objects\items\spear.dm"
+#include "hypermods\code\game\objects\items\teleportation.dm"
 #include "hypermods\code\game\objects\items\toys.dm"
 #include "hypermods\code\game\objects\items\trident.dm"
 #include "hypermods\code\game\objects\items\vxtvulhammer.dm"

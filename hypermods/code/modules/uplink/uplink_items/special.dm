@@ -177,6 +177,23 @@
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
+/datum/uplink_item/special/surplus_tele
+	name = "Surplus Hand Tele"
+	desc = "An outdated hand teleporter which has since been canned in favor of the now 'Experimental Syndicate Teleporter' \
+			and later incorporated into the 'Scram Implant'. When used in hand, the surplus teleporter will teleport you somewhere nearby. \
+			If you're gravely injured, the teleporter will locate somewhere safe, and warp you there. \
+			Due to it's outdated technology, the device siphons quite a lot of blood on use, and it's neglect may cause it to explode on use. \
+			On the bright side, it has up to 5 charges, and it's method of teleportation won't result in self-termination of the user should they end up in a wall."
+	item = /obj/item/surplus_teleporter
+	cost = 8
+	surplus = 10 // It's a SURPLUS tele. Get it? It can be found it surplus crates!
+
+/datum/uplink_item/special/surplus_tele/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_EMPTY_MAINT))
+		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+		limited_stock = -1
+
 // Neutral Station Traits
 
 /datum/uplink_item/special/fakeian
