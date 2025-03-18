@@ -867,4 +867,8 @@
 			)
 		if(SFX_REGEN_MESH_DROP)
 			soundin = 'sound/items/regenerative_mesh/regen_mesh_drop1.ogg'
+		if(SFX_REGEN_BLOODPACK_BEGIN)
+			soundin = 'sound/misc/moist_impact.ogg'
+		if(SFX_REGEN_BLOODPACK_END)
+			soundin = 'sound/misc/soggy.ogg'
 	return soundin

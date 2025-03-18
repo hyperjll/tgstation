@@ -13,6 +13,11 @@
 	hitsound = 'sound/misc/moist_impact.ogg'
 	grind_results = list(/datum/reagent/iron = 0.1, /datum/reagent/medicine/salglu_solution = 0.25, /datum/reagent/medicine/filgrastim = 0.65)
 	merge_type = /obj/item/stack/medical/bloodpack
+	//pickup_sound = SFX_REGEN_BLOODPACK_PICKUP
+	//drop_sound = SFX_REGEN_BLOODPACK_DROP
+	heal_begin_sound = SFX_REGEN_BLOODPACK_BEGIN
+	//heal_continuous_sound = SFX_REGEN_BLOODPACK_CONTINUOUS
+	heal_end_sound = SFX_REGEN_BLOODPACK_END
 
 /obj/item/stack/medical/bloodpack/begin_heal_loop(mob/living/patient, mob/living/user, auto_change_zone = TRUE)
 	if(DOING_INTERACTION_WITH_TARGET(user, patient))
@@ -41,6 +46,5 @@
 
 /obj/item/stack/medical/bloodpack/heal_carbon(mob/living/patient, mob/user)
 	patient.blood_volume += 10
-	playsound(src, 'sound/misc/soggy.ogg', 30, TRUE)
 	to_chat(user, span_warning("You've applied the [src] to [patient]."))
 	return TRUE
