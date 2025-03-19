@@ -91,6 +91,7 @@
 		"c38_true_strike",
 		"c38_true_strike_mag",
 		"techshotshell",
+		"flechetteshell",
 		"v38_frost",
 		"v38_talon",
 		"v38_bluespace",
