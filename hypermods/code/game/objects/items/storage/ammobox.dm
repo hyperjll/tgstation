@@ -13,6 +13,11 @@
 	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "ntlethalshot_box"
 
+/obj/item/storage/box/lethalshot/syndi/Initialize(mapload)
+	. = ..()
+	atom_storage.max_total_storage = 14
+	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
+
 /obj/item/storage/box/lethalshot/syndi/PopulateContents()
 	for(var/i in 1 to 14)
 		new /obj/item/ammo_casing/shotgun/buckshot(src)
@@ -24,7 +29,7 @@
 
 /obj/item/storage/box/dartshells/Initialize(mapload)
 	. = ..()
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/dartshells/PopulateContents()
@@ -42,8 +47,7 @@
 
 /obj/item/storage/box/incendiaryshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/incendiaryshells/PopulateContents()
@@ -61,8 +65,7 @@
 
 /obj/item/storage/box/dragonshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/dragonshells/PopulateContents()
@@ -80,8 +83,7 @@
 
 /obj/item/storage/box/syndieshotshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/syndieshotshells/PopulateContents()
@@ -99,8 +101,7 @@
 
 /obj/item/storage/box/syndieslugshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/syndieslugshells/PopulateContents()
@@ -118,8 +119,7 @@
 
 /obj/item/storage/box/tasershells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/tasershells/PopulateContents()
@@ -137,8 +137,7 @@
 
 /obj/item/storage/box/meteorshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/meteorshells/PopulateContents()
@@ -156,8 +155,7 @@
 
 /obj/item/storage/box/pulseshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/pulseshells/PopulateContents()
@@ -175,8 +173,7 @@
 
 /obj/item/storage/box/frag12shells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/frag12shells/PopulateContents()
@@ -194,8 +191,7 @@
 
 /obj/item/storage/box/flechetteshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/flechetteshells/PopulateContents()
@@ -213,8 +209,7 @@
 
 /obj/item/storage/box/rubbershotshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/rubbershotshells/PopulateContents()
@@ -232,8 +227,7 @@
 
 /obj/item/storage/box/ionshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/ionshells/PopulateContents()
@@ -251,8 +245,7 @@
 
 /obj/item/storage/box/lasershells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/lasershells/PopulateContents()
@@ -270,8 +263,7 @@
 
 /obj/item/storage/box/uraniumshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/uraniumshells/PopulateContents()
@@ -289,8 +281,7 @@
 
 /obj/item/storage/box/cryoshotshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/cryoshotshells/PopulateContents()
@@ -308,8 +299,7 @@
 
 /obj/item/storage/box/bioterrorshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/bioterrorshells/PopulateContents()
@@ -327,8 +317,7 @@
 
 /obj/item/storage/box/breachershells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/breachershells/PopulateContents()
@@ -346,8 +335,7 @@
 
 /obj/item/storage/box/thundershotshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/thundershotshells/PopulateContents()
@@ -365,8 +353,7 @@
 
 /obj/item/storage/box/hardlightshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/hardlightshells/PopulateContents()
@@ -384,8 +371,7 @@
 
 /obj/item/storage/box/ripshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/ripshells/PopulateContents()
@@ -403,8 +389,7 @@
 
 /obj/item/storage/box/anarchyshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/anarchyshells/PopulateContents()
@@ -422,8 +407,7 @@
 
 /obj/item/storage/box/mysteryshells/Initialize(mapload)
 	. = ..()
-
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/mysteryshells/PopulateContents()
@@ -445,7 +429,7 @@
 
 /obj/item/storage/box/clownshells/Initialize(mapload)
 	. = ..()
-	atom_storage.max_total_storage = 7
+	atom_storage.max_total_storage = 14
 	atom_storage.set_holdable(list(/obj/item/ammo_casing/shotgun))
 
 /obj/item/storage/box/clownshells/PopulateContents()

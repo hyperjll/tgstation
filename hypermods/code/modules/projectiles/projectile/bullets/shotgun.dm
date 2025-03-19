@@ -11,17 +11,6 @@
 	bare_wound_bonus = 2
 	armour_penetration = 0 //So it doesn't suffer against armor (it's for nukies only)
 
-// Close-range wounding shots
-
-/obj/projectile/bullet/pellet/shotgun_flechette
-	name = "flechette pellet"
-	speed = 0.4 //You're special
-	damage = 12
-	wound_bonus = 4
-	bare_wound_bonus = 4
-	armour_penetration = 40
-	wound_falloff_tile = -1
-
 // Lethal energy shots
 
 /obj/projectile/beam/laser/buckshot

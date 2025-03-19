@@ -457,7 +457,7 @@
 /datum/uplink_item/ammo_restock/syndieshotshells
 	name = "Syndicate Buckshot Shells Box"
 	desc = "A box containing 14 syndicate-made shells for a shotgun, these particular shells are more effective than nanotrasen-made shells."
-	item = /obj/item/storage/box/syndieshotshells/syndi
+	item = /obj/item/storage/box/lethalshot/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
@@ -511,7 +511,7 @@
 
 /datum/uplink_item/ammo_restock/flechetteshells
 	name = "Flechette Shells Box"
-	desc = "A box containing 14 flechette shells for a shotgun, they're slightly better than normal buckshot with a tighter spread and armor penetration."
+	desc = "A box containing 14 flechette shells for a shotgun, they're effective as a low-accuracy AP shot with incredible wounding power."
 	item = /obj/item/storage/box/flechetteshells/syndi
 	cost = 3
 	purchasable_from = ~UPLINK_CLOWN_OPS

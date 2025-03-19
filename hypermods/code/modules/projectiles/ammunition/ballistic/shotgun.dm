@@ -14,15 +14,6 @@
 	icon_state = "sgshell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot/syndie
 
-/obj/item/ammo_casing/shotgun/flechette
-	name = "flechette shell"
-	desc = "A 12-gauge flechette shell."
-	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
-	icon_state = "flshell"
-	projectile_type = /obj/projectile/bullet/pellet/shotgun_flechette
-	pellets = 6
-	variance = 10
-
 /obj/item/ammo_casing/shotgun/laserbuckshot
 	name = "laser buckshot"
 	desc = "An advanced shotgun shell that uses micro lasers to replicate the effects of a laser weapon in a ballistic package."
