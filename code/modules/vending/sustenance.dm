@@ -26,6 +26,9 @@
 	extra_price = PAYCHECK_LOWER * 0.6
 	payment_department = NO_FREEBIES
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/sovietsoda
+
 /obj/item/vending_refill/sustenance
 	machine_name = "Sustenance Vendor"
 	icon_state = "refill_snack"
@@ -39,6 +42,9 @@
 	all_products_free = FALSE
 	displayed_currency_icon = "digging"
 	displayed_currency_name = " LP"
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/sustenance/labor_camp
 
 /obj/machinery/vending/sustenance/interact(mob/user)
 	if(isliving(user))

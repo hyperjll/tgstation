@@ -401,6 +401,7 @@
 		/obj/item/book,
 		/obj/item/spellbook,
 		/obj/item/poster,
+		/obj/item/magicbook,
 	))
 
 /*
@@ -529,6 +530,7 @@
 		/obj/item/reagent_containers/medigel,
 		/obj/item/reagent_containers/applicator,
 		/obj/item/reagent_containers/syringe,
+		/obj/item/reagent_containers/hypospray/medipen,
 	))
 
 

@@ -72,6 +72,8 @@
 	var/elevator_status
 	/// What specific lift ID do we link with?
 	var/transport_linked_id
+	/// Has this airlock been hit by a jestographic sequencer?
+	var/jestergraphed = FALSE
 
 /datum/armor/machinery_door
 	melee = 30
@@ -259,9 +261,15 @@
 		if(!density || (I.w_class < WEIGHT_CLASS_NORMAL && !LAZYLEN(I.GetAccess())))
 			return
 		if(requiresID() && check_access(I))
-			open()
+			if(jestergraphed) // These checks are to ensure people cant just throw their id's at the door to bypass the bump check.
+				run_animation(DOOR_DENY_ANIMATION)
+			else
+				open()
 		else
-			run_animation(DOOR_DENY_ANIMATION)
+			if(!jestergraphed)
+				run_animation(DOOR_DENY_ANIMATION)
+			else
+				open()
 		return
 
 /obj/machinery/door/Move()
@@ -289,7 +297,10 @@
 	if(elevator_mode && elevator_status == LIFT_PLATFORM_UNLOCKED)
 		open()
 	else if(requiresID() && allowed(user))
-		open()
+		if(jestergraphed) // Flip the access requirements.
+			run_animation(DOOR_DENY_ANIMATION)
+		else
+			open()
 	else
 		run_animation(DOOR_DENY_ANIMATION)
 

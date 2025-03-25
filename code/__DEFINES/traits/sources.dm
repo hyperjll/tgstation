@@ -124,6 +124,7 @@
 #define MEGAFAUNA_TRAIT "megafauna"
 #define CLOWN_NUKE_TRAIT "clown-nuke"
 #define STICKY_MOUSTACHE_TRAIT "sticky-moustache"
+#define STICKY_CLOTHING_TRAIT "sticky-clothing"
 #define CHRONO_GUN_TRAIT "chrono-gun"
 #define REVERSE_BEAR_TRAP_TRAIT "reverse-bear-trap"
 #define CURSED_MASK_TRAIT "cursed-mask"

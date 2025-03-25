@@ -77,9 +77,10 @@
 		"defibmount",
 		"medicalbed_emergency",
 		"piercesyringe",
+		"sleeper",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
-	required_experiments = list(/datum/experiment/scanning/reagent/haloperidol)
+	discount_experiments = list(/datum/experiment/scanning/reagent/haloperidol = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(RADIO_CHANNEL_MEDICAL)
 
 /datum/techweb_node/cryostasis

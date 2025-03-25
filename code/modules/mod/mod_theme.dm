@@ -1153,7 +1153,7 @@
 	default_skin = "syndicate"
 	armor_type = /datum/armor/mod_theme_syndicate
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
-	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
+	complexity_max = DEFAULT_MAX_COMPLEXITY + 5
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
 	slowdown_deployed = 0.5
@@ -1261,7 +1261,7 @@
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
+	complexity_max = DEFAULT_MAX_COMPLEXITY + 10
 	siemens_coefficient = 0
 	slowdown_deployed = 0.5
 	ui_theme = "syndicate"
@@ -1850,7 +1850,7 @@
 
 /datum/mod_theme/responsory/traitor
 	name = "dark paladin"
-	desc = "A high-speed suit <s>stolen</s> by the Gorlex Maradeurs, purposed for less than honest intents."
+	desc = "A high-speed suit <s>stolen</s> by the Gorlex Marauders, purposed for less than honest intents."
 	extended_desc = "A streamlined suit of <s>Nanotrasen</s> Syndicate design, these sleek black suits are only worn by \
 		elite <s>emergency response personnel</s> traitors to help <s>save</s> ruin the day. While the slim and nimble design of the suit \
 		cuts the ceramics and ablatives in it down, dropping the protection, \

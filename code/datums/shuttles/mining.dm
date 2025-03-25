@@ -23,6 +23,14 @@
 	suffix = "nebula"
 	name = "labour shuttle (Nebula)"
 
+/datum/map_template/shuttle/labour/helio
+	suffix = "helio"
+	name = "labour shuttle (Helio)"
+
+/datum/map_template/shuttle/labour/selene
+	suffix = "selene"
+	name = "labour shuttle (Selene)"
+
 // MINING SHUTTLES
 /datum/map_template/shuttle/mining
 	port_id = "mining"

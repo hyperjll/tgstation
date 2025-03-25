@@ -24,6 +24,7 @@
 		/obj/item/weldingtool = 8,
 		/obj/item/clothing/head/utility/welding = 8,
 		/obj/item/light/tube = 10,
+		/obj/item/light/bulb = 10,
 		/obj/item/clothing/suit/utility/fire = 4,
 		/obj/item/stock_parts/scanning_module = 5,
 		/obj/item/stock_parts/micro_laser = 5,
@@ -35,6 +36,9 @@
 	extra_price = PAYCHECK_COMMAND * 1.5
 	payment_department = ACCOUNT_ENG
 	light_mask = "engi-light-mask"
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/engineering
 
 /obj/item/vending_refill/engineering
 	machine_name = "Robco Tool Maker"

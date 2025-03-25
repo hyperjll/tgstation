@@ -53,6 +53,7 @@
 	show_in_report = FALSE
 	cost = STATION_TRAIT_COST_LOW
 	report_message = "Ian has gone exploring somewhere in the station."
+	trait_to_give = STATION_TRAIT_IAN_ADVENTURE
 
 /datum/station_trait/ian_adventure/on_round_start()
 	for(var/mob/living/basic/pet/dog/corgi/dog in GLOB.mob_list)
@@ -122,6 +123,7 @@
 	show_in_report = TRUE
 	report_message = "Please be nice to him."
 	blacklist = list(/datum/station_trait/announcement_medbot, /datum/station_trait/birthday)
+	trait_to_give = STATION_TRAIT_ANNOUNCEMENT_INTERN
 
 /datum/station_trait/announcement_intern/New()
 	. = ..()
@@ -139,6 +141,7 @@
 	show_in_report = TRUE
 	report_message = "Our announcement system is under scheduled maintanance at the moment. Thankfully, we have a backup."
 	blacklist = list(/datum/station_trait/announcement_intern, /datum/station_trait/birthday)
+	trait_to_give = STATION_TRAIT_ANNOUNCEMENT_SYSTEM
 
 /datum/station_trait/announcement_medbot/New()
 	. = ..()

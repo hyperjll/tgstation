@@ -1,6 +1,6 @@
 /datum/uplink_category/stealthy
 	name = "Stealthy Weapons"
-	weight = 8
+	weight = 24
 
 /datum/uplink_item/stealthy_weapons
 	category = /datum/uplink_category/stealthy
@@ -16,17 +16,10 @@
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
-/datum/uplink_item/stealthy_weapons/dehy_carp
-	name = "Dehydrated Space Carp"
-	desc = "Looks like a plush toy carp, but just add water and it becomes a real-life space carp! Activate in \
-			your hand before use so it knows not to kill you."
-	item = /obj/item/toy/plush/carpplushie/dehy_carp
-	cost = 1
-
 /datum/uplink_item/stealthy_weapons/edagger
 	name = "Energy Dagger"
 	desc = "A dagger made of energy that looks and functions as a pen when off."
-	item = /obj/item/pen/edagger
+	item = /obj/item/storage/box/itempack/edagger
 	cost = 2
 
 /datum/uplink_item/stealthy_weapons/slipstick
@@ -64,10 +57,9 @@
 			strong anesthetic and a chemical that prevents the target from speaking. \
 			The pen holds one dose of the mixture, and can be refilled with any chemicals. Note that before the target \
 			falls asleep, they will be able to move and act."
-	item = /obj/item/pen/sleepy
+	item = /obj/item/storage/box/itempack/sleeppen
 	cost = 4
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
-
 
 /datum/uplink_item/stealthy_weapons/origami_kit
 	name = "Boxed Origami Kit"
@@ -85,7 +77,6 @@
 			and gain the ability to swat bullets from the air, but you will also refuse to use dishonorable ranged weaponry."
 	item = /obj/item/book/granter/martial/carp
 	progression_minimum = 30 MINUTES
-	population_minimum = TRAITOR_POPULATION_LOWPOP
 	cost = 17
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

@@ -364,6 +364,7 @@
 	emag_modules = list(
 		/obj/item/reagent_containers/borghypo/clown/hacked,
 		/obj/item/reagent_containers/spray/waterflower/cyborg/hacked,
+		/obj/item/melee/energy/sword/bananium,
 	)
 	model_select_icon = "service"
 	cyborg_base_icon = "clown"
@@ -404,6 +405,7 @@
 	radio_channels = list(RADIO_CHANNEL_ENGINEERING)
 	emag_modules = list(
 		/obj/item/borg/stun,
+		/obj/item/gun/energy/printer/flamethrower,
 	)
 	cyborg_base_icon = "engineer"
 	model_select_icon = "engineer"
@@ -432,6 +434,9 @@
 	radio_channels = list(RADIO_CHANNEL_SERVICE)
 	emag_modules = list(
 		/obj/item/reagent_containers/spray/cyborg_lube,
+		/obj/item/gun/water/syndicate,
+		/obj/item/borg/apparatus/beaker,
+		/obj/item/reagent_containers/spray/chemsprayer/syndicate,
 	)
 	cyborg_base_icon = "janitor"
 	model_select_icon = "janitor"
@@ -701,6 +706,8 @@
 	radio_channels = list(RADIO_CHANNEL_MEDICAL)
 	emag_modules = list(
 		/obj/item/reagent_containers/borghypo/medical/hacked,
+		/obj/item/reagent_containers/cup/bottle/eternal/diseasedblood,
+		/obj/item/autosurgeon/syndicate,
 	)
 	cyborg_base_icon = "medical"
 	model_select_icon = "medical"
@@ -730,6 +737,9 @@
 	radio_channels = list(RADIO_CHANNEL_SCIENCE, RADIO_CHANNEL_SUPPLY)
 	emag_modules = list(
 		/obj/item/borg/stun,
+		/obj/item/switchblade/backstab,
+		/obj/item/gun/energy/plasmacutter/adv/malf,
+		/obj/item/t_scanner/adv_mining_scanner/gibrefinery/cyborg,
 	)
 	cyborg_base_icon = "miner"
 	model_select_icon = "miner"
@@ -754,6 +764,8 @@
 	)
 	emag_modules = list(
 		/obj/item/reagent_containers/borghypo/peace/hacked,
+		/obj/item/gun/energy/laser/cyborg,
+		/obj/item/melee/energy/blade/hardlight,
 	)
 	cyborg_base_icon = "peace"
 	model_select_icon = "standard"
@@ -774,10 +786,15 @@
 		/obj/item/gun/energy/disabler/cyborg,
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
 		/obj/item/extinguisher/mini,
+		/obj/item/rsf/donutsynth,
 	)
 	radio_channels = list(RADIO_CHANNEL_SECURITY)
 	emag_modules = list(
 		/obj/item/gun/energy/laser/cyborg,
+		/obj/item/melee/energy/blade/hardlight,
+		/obj/item/jammer,
+		/obj/item/reagent_containers/cup/bottle/eternal/stimpack,
+		/obj/item/reagent_containers/syringe/piercing,
 	)
 	cyborg_base_icon = "sec"
 	model_select_icon = "security"
@@ -829,6 +846,8 @@
 	radio_channels = list(RADIO_CHANNEL_SERVICE)
 	emag_modules = list(
 		/obj/item/reagent_containers/borghypo/borgshaker/hacked,
+		/obj/item/reagent_containers/borghypo/medical,
+		/obj/item/toy/crayon/spraycan/syndicate/borg,
 	)
 	cyborg_base_icon = "service_m" // display as butlerborg for radial model selection
 	model_select_icon = "service"
@@ -863,6 +882,9 @@
 		/obj/item/crowbar/cyborg,
 		/obj/item/extinguisher/mini,
 		/obj/item/pinpointer/syndicate_cyborg,
+	)
+	emag_modules = list(
+		/obj/item/weldingtool/largetank/cyborg,
 	)
 	cyborg_base_icon = "synd_sec"
 	model_select_icon = "malf"
@@ -899,6 +921,10 @@
 		/obj/item/gun/medbeam,
 		/obj/item/borg/apparatus/organ_storage,
 	)
+	emag_modules = list(
+		/obj/item/weldingtool/largetank/cyborg,
+		/obj/item/autosurgeon/syndicate,
+	)
 	cyborg_base_icon = "synd_medical"
 	model_select_icon = "malf"
 	model_traits = list(TRAIT_PUSHIMMUNE)
@@ -927,6 +953,9 @@
 		/obj/item/pinpointer/syndicate_cyborg,
 		/obj/item/borg_chameleon,
 		/obj/item/card/emag,
+	)
+	emag_modules = list(
+		/obj/item/desynchronizer,
 	)
 	cyborg_base_icon = "synd_engi"
 	model_select_icon = "malf"

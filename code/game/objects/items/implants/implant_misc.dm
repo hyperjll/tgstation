@@ -16,16 +16,44 @@
 	desc = "Triggers an EMP."
 	icon_state = "emp"
 	uses = 3
+	var/maxuses = 3
+	var/rechargetime = 5 MINUTES
+	var/deleteonnouses = FALSE
+	var/recharging = FALSE
 
 /obj/item/implant/emp/activate()
 	. = ..()
+	if(!uses)
+		var/mob/living/carbon/carbon_imp_in = imp_in
+		balloon_alert(carbon_imp_in, "no charge!")
+		return
+
 	uses--
 	empulse(imp_in, 3, 5)
-	if(!uses)
+
+	if(!uses && deleteonnouses)
+		var/mob/living/carbon/carbon_imp_in = imp_in
+		addtimer(CALLBACK(carbon_imp_in, TYPE_PROC_REF(/atom, balloon_alert), carbon_imp_in, "implant degraded!"), 1 SECONDS)
 		qdel(src)
+
+	if((maxuses > uses) && !recharging)
+		recharging = TRUE
+		addtimer(CALLBACK(src, PROC_REF(restore_charge)), rechargetime)
+
+/obj/item/implant/emp/proc/restore_charge(mob/living/carbon/implanted_in)
+	if(maxuses > uses)
+		uses++
+		var/mob/living/carbon/carbon_imp_in = imp_in
+		balloon_alert(carbon_imp_in, "emp implant: [uses] uses left!")
+		addtimer(CALLBACK(src, PROC_REF(restore_charge)), rechargetime) // keep charging till you can't
+	else
+		recharging = FALSE
 
 /obj/item/implanter/emp
 	name = "implanter (EMP)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/emp
 
 /obj/item/implant/radio
@@ -85,4 +113,7 @@
 
 /obj/item/implanter/radio/syndicate
 	name = "implanter (internal syndicate radio)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/radio/syndicate

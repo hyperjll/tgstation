@@ -143,7 +143,7 @@
 			stored_organ = null
 
 		screwtool.play_tool_sound(src)
-		uses--
+		//	uses--
 		if(uses <= 0)
 			desc = "[initial(desc)] Looks like it's been used up."
 		update_appearance(UPDATE_ICON)

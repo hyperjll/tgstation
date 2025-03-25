@@ -53,6 +53,9 @@
 	if(thrower != src)
 		extra_speed = min(max(0, throwingdatum.speed - initial(throw_speed)), CARBON_MAX_IMPACT_SPEED_BONUS)
 
+	if(HAS_TRAIT(src, TRAIT_IMPACTIMMUNE))
+		return
+
 	if(istype(throwingdatum))
 		hurt = !throwingdatum.gentle
 	if(hurt && hit_atom.density)

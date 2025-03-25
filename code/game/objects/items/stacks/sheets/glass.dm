@@ -106,6 +106,7 @@ GLOBAL_LIST_INIT(pglass_recipes, list ( \
 	table_type = /obj/structure/table/glass/plasmaglass
 	pickup_sound = 'sound/items/handling/materials/glass_pick_up.ogg'
 	drop_sound = 'sound/items/handling/materials/glass_drop.ogg'
+	source = /datum/robot_energy_storage/material/plasmaglass
 
 /obj/item/stack/sheet/plasmaglass/fifty
 	amount = 50

@@ -106,6 +106,20 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 			announcement_system.broadcast("Additional research data received from Nanotrasen R&D Division following the emergency protocol.", list(RADIO_CHANNEL_SCIENCE), TRUE)
 		station_techweb.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS * 3))
 
+	var/datum/bank_account/cargo_bank = SSeconomy.get_dep_account(ACCOUNT_CAR)
+	cargo_bank.adjust_money(rand(2500, 4000))
+	var/obj/machinery/announcement_system/announcement_system = get_announcement_system()
+	if (!isnull(announcement_system))
+		announcement_system.broadcast("Additional funding received from Nanotrasen Defense Budget following the emergency protocol.", list(RADIO_CHANNEL_SUPPLY), TRUE)
+
+	for (var/datum/mind/M in get_antag_minds(/datum/antagonist/traitor)) // let roundstart tots get new uplink stuff should war be declared.
+		if (iscyborg(M.current))
+			continue
+		var/datum/component/uplink/uplink = M.find_syndicate_uplink()
+		if (!uplink)
+			continue
+		uplink.uplink_handler.warops = TRUE
+
 	qdel(src)
 
 /obj/item/nuclear_challenge/proc/distribute_tc()

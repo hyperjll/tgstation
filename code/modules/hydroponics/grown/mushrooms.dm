@@ -53,7 +53,7 @@
 	growthstages = 3
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
 	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
-	mutatelist = list(/obj/item/seeds/angel)
+	mutatelist = list(/obj/item/seeds/angel, /obj/item/seeds/magicmush, /obj/item/seeds/amanita/purple)
 	reagents_add = list(/datum/reagent/drug/mushroomhallucinogen = 0.04, /datum/reagent/toxin/amatoxin = 0.35, /datum/reagent/consumable/nutriment = 0, /datum/reagent/growthserum = 0.1)
 	graft_gene = /datum/plant_gene/trait/plant_type/fungal_metabolism
 

@@ -13,6 +13,7 @@
 	show_in_report = TRUE
 	report_message = "Due to the distance to our normal supply lines, cargo orders are more expensive."
 	blacklist = list(/datum/station_trait/strong_supply_lines)
+	trait_to_give = STATION_TRAIT_DISTANT_SUPPLYLINES
 
 /datum/station_trait/distant_supply_lines/on_round_start()
 	SSeconomy.pack_price_modifier *= 1.2
@@ -24,6 +25,7 @@
 	weight = 2
 	show_in_report = TRUE
 	report_message = "Due to an ongoing strike announced by the postal workers union, mail won't be delivered this shift."
+	trait_to_give = STATION_TRAIT_POSTAL_WORKER_STRIKE
 
 /datum/station_trait/mail_blocked/on_round_start()
 	//This is either a holiday or Sunday... well then, let's flip the situation.
@@ -102,6 +104,7 @@
 	weight = 3
 	show_in_report = TRUE
 	report_message = "Station lights seem to be damaged, be safe when starting your shift today."
+	trait_to_give = STATION_TRAIT_BLACKOUT
 
 /datum/station_trait/blackout/on_round_start()
 	. = ..()
@@ -127,6 +130,7 @@
 	trait_type = STATION_TRAIT_NEGATIVE
 	weight = 5
 	show_in_report = TRUE
+	trait_to_give = STATION_TRAIT_JOB_OVERFLOW
 	var/chosen_job_name
 
 /datum/station_trait/overflow_job_bureaucracy/New()
@@ -149,6 +153,7 @@
 	show_in_report = TRUE
 	report_message = "Due to distance to our supply station, the cargo shuttle will have a slower flight time to your cargo department."
 	blacklist = list(/datum/station_trait/quick_shuttle)
+	trait_to_give = STATION_TRAIT_SLOW_SHUTTLE
 
 /datum/station_trait/slow_shuttle/on_round_start()
 	. = ..()
@@ -316,6 +321,7 @@
 	weight = 3
 	event_control_path = /datum/round_event_control/ion_storm
 	weight_multiplier = 2
+	trait_to_give = STATION_TRAIT_ION_STORMS
 
 /datum/station_trait/random_event_weight_modifier/ion_storms/get_pulsar_message()
 	var/advisory_string = "Advisory Level: <b>ERROR</b></center><BR>"
@@ -330,6 +336,7 @@
 	event_control_path = /datum/round_event_control/radiation_storm
 	weight_multiplier = 1.5
 	max_occurrences_modifier = 2
+	trait_to_give = STATION_TRAIT_RAD_STORMS
 
 /datum/station_trait/random_event_weight_modifier/dust_storms
 	name = "Dust Stormfront"

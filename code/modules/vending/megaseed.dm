@@ -106,6 +106,9 @@
 	extra_price = PAYCHECK_CREW
 	payment_department = ACCOUNT_SRV
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/hydroseeds
+
 /obj/item/vending_refill/hydroseeds
 	machine_name = "MegaSeed Servitor"
 	icon_state = "refill_plant"

@@ -39286,6 +39286,7 @@
 "ncb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood,
+/obj/item/paper/calling_card,
 /obj/structure/alien/resin/membrane,
 /obj/structure/alien/weeds,
 /turf/open/floor/wood,

@@ -13,7 +13,7 @@
 	growing_icon = 'icons/obj/service/hydroponics/growing_vegetables.dmi'
 	icon_grow = "corn-grow" // Uses one growth icons set for all the subtypes
 	icon_dead = "corn-dead" // Same for the dead icon
-	mutatelist = list(/obj/item/seeds/corn/snapcorn, /obj/item/seeds/corn/pepper)
+	mutatelist = list(/obj/item/seeds/corn/snapcorn, /obj/item/seeds/corn/pepper, /obj/item/seeds/corn/clearcorn)
 	reagents_add = list(/datum/reagent/consumable/nutriment/fat/oil/corn = 0.2, /datum/reagent/consumable/nutriment/vitamin = 0.04, /datum/reagent/consumable/nutriment = 0.1)
 
 /obj/item/food/grown/corn
@@ -106,7 +106,7 @@
 	species = "peppercorn"
 	plantname = "Pepper-Corn Stalks"
 	product = /obj/item/food/grown/peppercorn
-	mutatelist = null
+	mutatelist = list(/obj/item/seeds/corn/blackcorn)
 	reagents_add = list(/datum/reagent/consumable/blackpepper = 0.2, /datum/reagent/consumable/nutriment/vitamin = 0.04, /datum/reagent/consumable/nutriment = 0.1)
 
 /obj/item/food/grown/peppercorn

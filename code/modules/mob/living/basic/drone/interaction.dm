@@ -23,6 +23,10 @@
 			else
 				to_chat(drone, span_warning("You need to remain still to cannibalize [src]!"))
 
+/mob/living/basic/drone/emag_act(mob/user, obj/item/card/emag/emag_card)
+	. = ..()
+	update_drone_hack(TRUE)
+
 /mob/living/basic/drone/attack_drone_secondary(mob/living/basic/drone/drone)
 	return SECONDARY_ATTACK_CALL_NORMAL
 
@@ -161,6 +165,11 @@
 		REMOVE_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
 		speed = 1 //gotta go slow
 		message_admins("[ADMIN_LOOKUPFLW(src)] became a hacked drone hellbent on destroying the station!")
+		notify_ghosts(
+			"[src] became a hacked drone hellbent on destroying the station!",
+			source = src,
+			header = "Hacked Drone!",
+		)
 	else
 		if(!hacked || !can_unhack)
 			return

@@ -290,6 +290,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Applied into wounds when they're scanned with the wound analyzer, halves time to treat them manually.
 #define TRAIT_WOUND_SCANNED "wound_scanned"
 
+// Protects from the damage of getting launched into a wall hard
+#define TRAIT_IMPACTIMMUNE	"impact_immunity"
+
 /// Owner will ignore any fire protection when calculating fire damage
 #define TRAIT_IGNORE_FIRE_PROTECTION "ignore_fire_protection"
 
@@ -367,6 +370,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_QUICK_BUILD "quick-build"
 /// We can handle 'dangerous' plants in botany safely
 #define TRAIT_PLANT_SAFE "plant_safe"
+/// Prevents chat/icon notifications when stealing items from other mobs. Also reduces the time to steal objects by 50%
+#define TRAIT_THIEF "thief"
 /// Prevents the overlay from nearsighted
 #define TRAIT_NEARSIGHTED_CORRECTED "fixes_nearsighted"
 #define TRAIT_UNINTELLIGIBLE_SPEECH "unintelligible-speech"
@@ -1151,6 +1156,25 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define STATION_TRAIT_UNIQUE_AI "station_trait_unique_ai"
 #define STATION_TRAIT_UNNATURAL_ATMOSPHERE "station_trait_unnatural_atmosphere"
 #define STATION_TRAIT_SPIKED_DRINKS "station_trait_spiked_drinks"
+#define STATION_TRAIT_DISTANT_SUPPLYLINES "station_trait_distant_supplylines"
+#define STATION_TRAIT_BLACKOUT "station_trait_blackout"
+#define STATION_TRAIT_SLOW_SHUTTLE "station_trait_slow_shuttle"
+#define STATION_TRAIT_ION_STORMS "station_trait_ion_storms"
+#define STATION_TRAIT_RAD_STORMS "station_trait_rad_storms"
+#define STATION_TRAIT_IAN_ADVENTURE "station_trait_ian_adventure"
+#define STATION_TRAIT_SCARVES "station_trait_scarves"
+#define STATION_TRAIT_GALACTIC_GRANT "station_trait_galactic_grant"
+#define STATION_TRAIT_STRONG_SUPPLY_LINES "station_trait_strong_supply_lines"
+#define STATION_TRAIT_DEATHRATTLED_DEPARTMENT "station_trait_deathrattled_department"
+#define STATION_TRAIT_DEATHRATTLED_ALL "station_trait_deathrattled_all"
+#define STATION_TRAIT_BOUNTIFUL_BOUNTIES "station_trait_bountiful_bounties"
+#define STATION_TRAIT_LUCKY_WINNER "station_trait_lucky_winner"
+#define STATION_TRAIT_QUICK_SHUTTLE "station_trait_quick_shuttle"
+#define STATION_TRAIT_ANNOUNCEMENT_INTERN "station_trait_announcement_intern"
+#define STATION_TRAIT_ANNOUNCEMENT_SYSTEM "station_trait_announcement_system"
+#define STATION_TRAIT_NINJAS "station_trait_ninjas"
+#define STATION_TRAIT_POSTAL_WORKER_STRIKE "station_trait_postal_worker_strike"
+#define STATION_TRAIT_JOB_OVERFLOW "station_trait_job_overflow"
 
 ///Deathmatch traits
 #define TRAIT_DEATHMATCH_EXPLOSIVE_IMPLANTS "deathmath_explosive_implants"
@@ -1468,5 +1492,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 ///trait given to mobs that are easy to tame through mounting
 #define TRAIT_MOB_EASY_TO_MOUNT "easy_to_mount"
+
+///Trait given to mobs which allow them to perform all surgeries upon themselves.
+#define TRAIT_SELF_SURGERY_ABLE "self_surgery_able"
 
 // END TRAIT DEFINES

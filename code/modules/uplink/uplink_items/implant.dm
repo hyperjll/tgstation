@@ -1,6 +1,6 @@
 /datum/uplink_category/implants
 	name = "Implants"
-	weight = 2
+	weight = 5
 
 
 /datum/uplink_item/implants
@@ -15,7 +15,7 @@
 
 /datum/uplink_item/implants/freedom/New()
 	. = ..()
-	desc += " Implant has enough energy for [FREEDOM_IMPLANT_CHARGES] uses before it becomes inert and harmlessly self-destructs."
+	desc += " Implant has enough energy for [FREEDOM_IMPLANT_CHARGES] uses before it becomes inert. It recharges one use every 3 minutes."
 
 /datum/uplink_item/implants/radio
 	name = "Internal Syndicate Radio Implant"
@@ -24,7 +24,6 @@
 	item = /obj/item/storage/box/syndie_kit/imp_radio
 	cost = 4
 	restricted = TRUE
-
 
 /datum/uplink_item/implants/stealthimplant
 	name = "Stealth Implant"

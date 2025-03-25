@@ -45,6 +45,8 @@
 	new /obj/item/circuitboard/machine/techfab/department/service(src)
 	new /obj/item/storage/photo_album/hop(src)
 	new /obj/item/storage/lockbox/medal/hop(src)
+	new /obj/item/card/id/departmental_budget/srv(src)
+	new /obj/item/card/id/departmental_budget/civ(src)
 
 /obj/structure/closet/secure_closet/hop/populate_contents_immediate()
 	new /obj/item/gun/energy/e_gun(src)
@@ -70,6 +72,7 @@
 	new /obj/item/storage/belt/security/full(src)
 	new /obj/item/circuitboard/machine/techfab/department/security(src)
 	new /obj/item/storage/photo_album/hos(src)
+	new /obj/item/card/id/departmental_budget/sec(src)
 
 /obj/structure/closet/secure_closet/hos/populate_contents_immediate()
 	. = ..()
@@ -116,12 +119,30 @@
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/clothing/gloves/tackler(src)
+	new /obj/item/wallframe/camera/autosetup(src)
+	new /obj/item/computer_disk/security/secureye(src)
+	if(prob(35))
+		new /obj/item/implantcase/deathrattle(src)
 
 /obj/structure/closet/secure_closet/security/sec
 
 /obj/structure/closet/secure_closet/security/sec/PopulateContents()
 	..()
 	new /obj/item/storage/belt/security/full(src)
+	new /obj/item/restraints/legcuffs/bola(src)
+	new /obj/item/holosign_creator/security(src)
+	new /obj/item/flatpack/scannergate(src)
+	new /obj/item/inspector(src)
+	if(prob(50))
+		new /obj/item/gun/ballistic/automatic/pistol/mk58/rubber(src)
+		new /obj/item/ammo_box/magazine/v38/rubber(src)
+	if(prob(15))
+		new /obj/item/gun/syringe/security(src)
+		new /obj/item/storage/box/syringes/sedative(src)
+	if(prob(35))
+		new /obj/item/grenade/stingbang(src)
+	if(prob(35))
+		new /obj/item/deployablemine/radio/security(src)
 
 /obj/structure/closet/secure_closet/security/cargo
 

@@ -55,6 +55,9 @@ Assistant
 	jobtype = /datum/job/assistant
 	id_trim = /datum/id_trim/job/assistant
 	belt = /obj/item/modular_computer/pda/assistant
+	backpack_contents = list(
+		/obj/item/assistant_job_selector = 1,
+		)
 
 /datum/outfit/job/assistant/pre_equip(mob/living/carbon/human/target)
 	..()

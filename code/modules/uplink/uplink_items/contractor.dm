@@ -1,6 +1,6 @@
 /datum/uplink_category/contractor
 	name = "Contractor"
-	weight = 10
+	weight = 30
 
 /datum/uplink_item/bundles_tc/contract_kit
 	name = "Contract Kit"
@@ -13,8 +13,7 @@
 	item = /obj/item/storage/box/syndicate/contract_kit
 	category = /datum/uplink_category/contractor
 	cost = 20
-	purchasable_from = UPLINK_TRAITORS
-	population_minimum = TRAITOR_POPULATION_LOWPOP
+	purchasable_from = UPLINK_INFILTRATORS
 
 /datum/uplink_item/bundles_tc/contract_kit/purchase(mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	. = ..()

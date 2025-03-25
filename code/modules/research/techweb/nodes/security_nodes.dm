@@ -70,9 +70,10 @@
 		"large_grenade",
 		"adv_grenade",
 		"pyro_grenade",
+		"dummypayload",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
-	required_experiments = list(/datum/experiment/ordnance/explosive/lowyieldbomb)
+	discount_experiments = list(/datum/experiment/ordnance/explosive/lowyieldbomb = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SECURITY, RADIO_CHANNEL_MEDICAL)
 
 /datum/techweb_node/exotic_ammo
@@ -91,6 +92,9 @@
 		"c38_true_strike_mag",
 		"techshotshell",
 		"flechetteshell",
+		"v38_frost",
+		"v38_talon",
+		"v38_bluespace",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	discount_experiments = list(/datum/experiment/ordnance/explosive/highyieldbomb = TECHWEB_TIER_4_POINTS)
@@ -118,6 +122,7 @@
 	design_ids = list(
 		"xray_laser",
 		"nuclear_gun",
+		"laser_rifle",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SECURITY)

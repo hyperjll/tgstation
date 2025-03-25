@@ -120,7 +120,7 @@ GLOBAL_LIST_INIT(turfs_pass_meteor, typecacheof(list(
 #define ismonkey(A) (is_species(A, /datum/species/monkey))
 #define isandroid(A) (is_species(A, /datum/species/android))
 #define isnightmare(A) (is_species(A, /datum/species/shadow/nightmare))
-
+#define iswerewolf(A) (is_species(A, /datum/species/werewolf))
 
 //More carbon mobs
 #define isalien(A) (istype(A, /mob/living/carbon/alien))
@@ -323,6 +323,7 @@ GLOBAL_LIST_INIT(book_types, typecacheof(list(
 #define is_security_officer_job(job_type) (istype(job_type, /datum/job/security_officer))
 #define is_research_director_job(job_type) (istype(job_type, /datum/job/research_director))
 #define is_unassigned_job(job_type) (istype(job_type, /datum/job/unassigned))
+#define is_curator_job(job_type) (istype(job_type, /datum/job/curator))
 
 #define isprojectilespell(thing) (istype(thing, /datum/action/cooldown/spell/pointed/projectile))
 #define is_multi_tile_object(atom) (atom.bound_width > ICON_SIZE_X || atom.bound_height > ICON_SIZE_Y)

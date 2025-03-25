@@ -73,6 +73,7 @@
 		/obj/item/seeds/seedling,
 		/obj/item/seeds/shrub,
 		/obj/item/seeds/random = 2,
+		/obj/item/seeds/contusine,
 	)
 	crate_name = "exotic seeds crate"
 	crate_type = /obj/structure/closet/crate/hydroponics

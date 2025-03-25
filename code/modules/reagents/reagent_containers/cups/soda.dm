@@ -20,6 +20,7 @@
 	throwforce = 12 // set to 0 upon being opened. Have you ever been domed by a soda can? Those things fucking hurt
 	/// If the can hasn't been opened yet, this is the measure of how fizzed up it is from being shaken or thrown around. When opened, this is rolled as a percentage chance to burst
 	var/fizziness = 0
+	var/crushable = TRUE
 
 /obj/item/reagent_containers/cup/soda_cans/Initialize(mapload, vol)
 	. = ..()
@@ -65,6 +66,8 @@
 
 /obj/item/reagent_containers/cup/soda_cans/attack(mob/M, mob/living/user)
 	if(iscarbon(M) && !reagents.total_volume && user.combat_mode && user.zone_selected == BODY_ZONE_HEAD)
+		if(!crushable)
+			return FALSE
 		if(M == user)
 			user.visible_message(span_warning("[user] crushes the can of [src] on [user.p_their()] forehead!"), span_notice("You crush the can of [src] on your forehead."))
 		else

@@ -96,6 +96,7 @@
 #define PATH_COSMIC "Cosmic Path"
 #define PATH_LOCK "Lock Path"
 #define PATH_MOON "Moon Path"
+#define PATH_TIME "Time Path"
 
 //Heretic knowledge tree defines
 #define HKT_NEXT "next"
@@ -339,7 +340,7 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 /// The normal cost of an uplink implant; used for calcuating how many
 /// TC to charge someone if they get a free implant through choice or
 /// because they have nothing else that supports an implant.
-#define UPLINK_IMPLANT_TELECRYSTAL_COST 4
+#define UPLINK_IMPLANT_TELECRYSTAL_COST 1
 
 /// Items with this stock key do not share stock with other items
 #define UPLINK_SHARED_STOCK_UNIQUE "uplink_shared_stock_unique"
@@ -445,3 +446,19 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 
 /// Camera net used by battle royale objective
 #define BATTLE_ROYALE_CAMERA_NET "battle_royale_camera_net"
+
+/// Infiltrator stuff
+#define INFILTRATOR_FACTION_CORPORATE_CLIMBER "Corporate Climber"
+#define INFILTRATOR_FACTION_ANIMAL_RIGHTS_CONSORTIUM "Animal Rights Consortium"
+#define INFILTRATOR_FACTION_GORLEX_MARAUDERS "Gorlex Marauders"
+
+/// For the tide bug secondary tot objective
+#define TRAITOR_OBJECTIVE_BLACKLISTED_AREAS list(/area/station/engineering/hallway, \
+		/area/station/engineering/lobby, \
+		/area/station/engineering/storage, \
+		/area/station/science/lobby, \
+		/area/station/science/ordnance/bomb, \
+		/area/station/science/ordnance/freezerchamber, \
+		/area/station/science/ordnance/burnchamber, \
+		/area/station/security/prison, \
+	)

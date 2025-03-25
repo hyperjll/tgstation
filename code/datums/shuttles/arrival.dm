@@ -33,3 +33,19 @@
 /datum/map_template/shuttle/arrival/nebula
 	suffix = "nebula"
 	name = "arrival shuttle (Nebula)"
+
+/datum/map_template/shuttle/arrival/dorf
+	suffix = "dorf"
+	name = "arrival shuttle (Dorf World)"
+
+/datum/map_template/shuttle/arrival/helio
+	suffix = "helio"
+	name = "arrival shuttle (Helio)"
+
+/datum/map_template/shuttle/arrival/selene
+	suffix = "selene"
+	name = "arrival shuttle (Selene)"
+
+/datum/map_template/shuttle/arrival/fulp
+	suffix = "fulp"
+	name = "arrival shuttle (Fulp)"

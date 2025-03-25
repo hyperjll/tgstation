@@ -51,7 +51,7 @@
 	resistance = -2
 	stage_speed = 0
 	transmittable = 1
-	level = 6
+	level = 9
 	passive_message = span_notice("You miss the feeling of starlight on your skin.")
 	var/nearspace_penalty = 0.3
 	threshold_descs = list(
@@ -185,7 +185,7 @@
 	resistance = -2
 	stage_speed = 2
 	transmittable = -2
-	level = 7
+	level = 10
 	required_organ = ORGAN_SLOT_HEART
 	threshold_descs = list(
 		"Resistance 7" = "Increases chem removal speed.",
@@ -228,7 +228,7 @@
 	resistance = -2
 	stage_speed = 2
 	transmittable = 1
-	level = 7
+	level = 10
 	required_organ = ORGAN_SLOT_STOMACH
 	threshold_descs = list(
 		"Stealth 3" = "Reduces hunger rate.",
@@ -270,7 +270,7 @@
 	resistance = -1
 	stage_speed = -2
 	transmittable = -1
-	level = 6
+	level = 8
 	passive_message = span_notice("You feel tingling on your skin as light passes over it.")
 	threshold_descs = list(
 		"Stage Speed 8" = "Doubles healing speed.",
@@ -327,7 +327,7 @@
 	resistance = 2
 	stage_speed = -3
 	transmittable = -2
-	level = 8
+	level = 11
 	passive_message = span_notice("The pain from your wounds makes you feel oddly sleepy...")
 	var/deathgasp = FALSE
 	var/stabilize = FALSE
@@ -426,7 +426,7 @@
 	resistance = -1
 	stage_speed = 0
 	transmittable = 1
-	level = 6
+	level = 9
 	passive_message = span_notice("Your skin feels oddly dry...")
 	required_organ = ORGAN_SLOT_LIVER
 	threshold_descs = list(
@@ -501,7 +501,7 @@
 	resistance = 3
 	stage_speed = -2
 	transmittable = -2
-	level = 8
+	level = 10
 	passive_message = span_notice("You feel an odd attraction to plasma.")
 	required_organ = ORGAN_SLOT_LIVER
 	threshold_descs = list(
@@ -612,7 +612,7 @@
 	resistance = -2
 	stage_speed = 2
 	transmittable = -3
-	level = 6
+	level = 8
 	symptom_delay_min = 1
 	symptom_delay_max = 1
 	passive_message = span_notice("Your skin glows faintly for a moment.")

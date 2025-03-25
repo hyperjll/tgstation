@@ -17,6 +17,8 @@
 #define ROLE_TRAITOR "Traitor"
 #define ROLE_WIZARD "Wizard"
 #define ROLE_SPY "Spy"
+#define ROLE_INITIAL_INFECTED "Initial Infected"
+#define ROLE_WEREWOLF "Werewolf"
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -38,12 +40,17 @@
 #define ROLE_SPIDER "Spider"
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
 #define ROLE_VOIDWALKER "Voidwalker"
+#define ROLE_HERETIC_MIDROUND "Heretic Awakening"
+#define ROLE_INFILTRATOR "Infiltrator"
+#define ROLE_LYCANTHROPY_VICTIM "Lycanthropy Victim"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
 #define ROLE_PROVOCATEUR "Provocateur"
 #define ROLE_STOWAWAY_CHANGELING "Stowaway Changeling"
 #define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"
+#define ROLE_SPY_INFILTRATOR "Spy Infiltrator"
+#define ROLE_WEREWOLF_INVADER "Werewolf Invader"
 
 // Other roles
 #define ROLE_ANOMALY_GHOST "Ectoplasmic Anomaly Ghost"
@@ -78,11 +85,13 @@
 #define ROLE_SLAUGHTER_DEMON "Slaughter Demon"
 #define ROLE_WIZARD_APPRENTICE "apprentice"
 #define ROLE_SYNDICATE_MONKEY "Syndicate Monkey Agent"
+#define ROLE_CERBERUS "Cerberus"
 #define ROLE_CONTRACTOR_SUPPORT "Contractor Support Unit"
 #define ROLE_OPERATIVE_OVERWATCH "Operative Overwatch Agent"
 #define ROLE_SYNDICATE_SABOBORG "Syndicate Sabotage Cyborg"
 #define ROLE_SYNDICATE_MEDBORG "Syndicate Medical Cyborg"
 #define ROLE_SYNDICATE_ASSAULTBORG "Syndicate Assault Cyborg"
+#define ROLE_SYNDICATE_SUPPORT "Syndicate Support Unit"
 
 #define ROLE_RECOVERED_CREW "Recovered Crew"
 
@@ -137,6 +146,8 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_TRAITOR = 0,
 	ROLE_WIZARD = 14,
 	ROLE_SPY = 0,
+	ROLE_INITIAL_INFECTED = 14,
+	ROLE_WEREWOLF = 7,
 
 	// Midround
 	ROLE_ABDUCTOR = 0,
@@ -158,12 +169,17 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SPIDER = 0,
 	ROLE_WIZARD_MIDROUND = 14,
 	ROLE_VOIDWALKER = 0,
+	ROLE_HERETIC_MIDROUND = 0,
+	ROLE_INFILTRATOR = 0,
+	ROLE_LYCANTHROPY_VICTIM = 7,
 
 	// Latejoin
 	ROLE_HERETIC_SMUGGLER = 0,
 	ROLE_PROVOCATEUR = 14,
 	ROLE_SYNDICATE_INFILTRATOR = 0,
 	ROLE_STOWAWAY_CHANGELING = 0,
+	ROLE_SPY_INFILTRATOR = 0,
+	ROLE_WEREWOLF_INVADER = 7,
 
 	// I'm not too sure why these are here, but they're not moving.
 	ROLE_GLITCH = 0,

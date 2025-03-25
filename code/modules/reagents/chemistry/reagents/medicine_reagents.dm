@@ -251,6 +251,17 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	added_traits = list(TRAIT_VIRUS_RESISTANCE)
 
+/datum/reagent/medicine/spaceacillin/on_mob_life(mob/living/carbon/M, seconds_per_tick, times_fired)
+	M.adjustToxLoss(-0.1, FALSE)
+
+	if((M.mob_biotypes & MOB_ORGANIC) && prob(0.2))
+		for(var/thing in M.diseases) // can clean viruses from organic lifeforms.
+			var/datum/disease/D = thing
+			D.cure()
+
+	..()
+	. = TRUE
+
 //Goon Chems. Ported mainly from Goonstation. Easily mixable (or not so easily) and provide a variety of effects.
 
 /datum/reagent/medicine/oxandrolone
@@ -1499,6 +1510,14 @@
 	self_consuming = TRUE
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	metabolized_traits = list(TRAIT_STABLELIVER)
+	var/effect_progress = 0 // to track how long the chem was in your system
+
+/datum/reagent/medicine/higadrite/on_mob_life(mob/living/carbon/metabolizer)
+	. = ..()
+	effect_progress++
+	if(effect_progress >= 10) // .5 per tick is used up, so 5 units x2 = 10. (5u is needed to restore liver by 1hp)
+		metabolizer.adjustOrganLoss(ORGAN_SLOT_LIVER, -1)
+		effect_progress = 0
 
 /datum/reagent/medicine/cordiolis_hepatico
 	name = "Cordiolis Hepatico"

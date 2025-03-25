@@ -59,7 +59,7 @@
 	plantname = "Rice Stalks"
 	instability = 1
 	product = /obj/item/food/grown/rice
-	mutatelist = null
+	mutatelist = list(/obj/item/seeds/wheat/rice/ricin)
 	growthstages = 3
 
 /obj/item/food/grown/rice

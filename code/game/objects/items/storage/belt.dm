@@ -350,6 +350,10 @@
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/restraints/handcuffs,
 		/obj/item/restraints/legcuffs/bola,
+		/obj/item/gun/ballistic/automatic/pistol/mk58,
+		/obj/item/ammo_box/magazine/v38,
+		/obj/item/deployablemine/radio,
+		/obj/item/gun/syringe/security,
 	))
 	atom_storage.open_sound = 'sound/items/handling/holster_open.ogg'
 	atom_storage.open_sound_vary = TRUE
@@ -359,7 +363,7 @@
 	new /obj/item/reagent_containers/spray/pepper(src)
 	new /obj/item/restraints/handcuffs(src)
 	new /obj/item/grenade/flashbang(src)
-	new /obj/item/assembly/flash/handheld(src)
+	new /obj/item/assembly/flash/handheld/upgraded(src)
 	new /obj/item/melee/baton/security/loaded(src)
 	update_appearance()
 

@@ -16,3 +16,6 @@
 	default_price = PAYCHECK_CREW
 	extra_price = PAYCHECK_CREW
 	payment_department = ACCOUNT_SCI
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/plasmaresearch

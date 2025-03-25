@@ -9,6 +9,7 @@
 	report_message = "Your station has won the grand prize of the annual station charity event. Free snacks will be delivered to the bar every now and then."
 	trait_processes = TRUE
 	COOLDOWN_DECLARE(party_cooldown)
+	trait_to_give = STATION_TRAIT_LUCKY_WINNER
 
 /datum/station_trait/lucky_winner/on_round_start()
 	. = ..()
@@ -47,6 +48,7 @@
 	weight = 5
 	show_in_report = TRUE
 	report_message = "Your station has been selected for a special grant. Some extra funds has been made available to your cargo department."
+	trait_to_give = STATION_TRAIT_GALACTIC_GRANT
 
 /datum/station_trait/galactic_grant/on_round_start()
 	var/datum/bank_account/cargo_bank = SSeconomy.get_dep_account(ACCOUNT_CAR)
@@ -126,6 +128,7 @@
 	show_in_report = TRUE
 	report_message = "Prices are low in this system, BUY BUY BUY!"
 	blacklist = list(/datum/station_trait/distant_supply_lines)
+	trait_to_give = STATION_TRAIT_STRONG_SUPPLY_LINES
 
 /datum/station_trait/strong_supply_lines/on_round_start()
 	SSeconomy.pack_price_modifier *= 0.8
@@ -150,6 +153,7 @@
 	show_in_report = TRUE
 	report_message = "Due to proximity to our supply station, the cargo shuttle will have a quicker flight time to your cargo department."
 	blacklist = list(/datum/station_trait/slow_shuttle)
+	trait_to_give = STATION_TRAIT_QUICK_SHUTTLE
 
 /datum/station_trait/quick_shuttle/on_round_start()
 	. = ..()
@@ -161,6 +165,7 @@
 	show_in_report = TRUE
 	abstract_type = /datum/station_trait/deathrattle_department
 	blacklist = list(/datum/station_trait/deathrattle_all)
+	trait_to_give = STATION_TRAIT_DEATHRATTLED_DEPARTMENT
 
 	var/department_to_apply_to
 	var/department_name = "department"
@@ -234,6 +239,7 @@
 	weight = 1
 	report_message = "All members of the station have received an implant to notify each other if one of them dies. This should help improve job-safety!"
 	var/datum/deathrattle_group/deathrattle_group
+	trait_to_give = STATION_TRAIT_DEATHRATTLED_ALL
 
 /datum/station_trait/deathrattle_all/New()
 	. = ..()

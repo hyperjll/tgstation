@@ -4,6 +4,10 @@
 	icon_state = "freedom"
 	implant_color = "r"
 	uses = FREEDOM_IMPLANT_CHARGES
+	var/maxuses = FREEDOM_IMPLANT_CHARGES
+	var/rechargetime = 3 MINUTES
+	var/deleteonnouses = FALSE
+	var/recharging = FALSE
 
 /obj/item/implant/freedom/implant(mob/living/target, mob/user, silent, force)
 	. = ..()
@@ -17,20 +21,29 @@
 /obj/item/implant/freedom/activate()
 	. = ..()
 	var/mob/living/carbon/carbon_imp_in = imp_in
+	if(!uses)
+		balloon_alert(carbon_imp_in, "no charge!")
+		return
+
 	if(!can_trigger(carbon_imp_in))
 		balloon_alert(carbon_imp_in, "no restraints!")
 		return
-
-	uses--
 
 	carbon_imp_in.uncuff()
 	var/obj/item/clothing/shoes/shoes = carbon_imp_in.shoes
 	if(istype(shoes) && shoes.tied == SHOES_KNOTTED)
 		shoes.adjust_laces(SHOES_TIED, carbon_imp_in)
 
-	if(!uses)
+	uses--
+	balloon_alert(carbon_imp_in, "[uses] left!")
+
+	if(!uses && deleteonnouses)
 		addtimer(CALLBACK(carbon_imp_in, TYPE_PROC_REF(/atom, balloon_alert), carbon_imp_in, "implant degraded!"), 1 SECONDS)
 		qdel(src)
+
+	if((maxuses > uses) && !recharging)
+		recharging = TRUE
+		addtimer(CALLBACK(src, PROC_REF(restore_charge)), rechargetime)
 
 /obj/item/implant/freedom/proc/can_trigger(mob/living/carbon/implanted_in)
 	if(implanted_in.handcuffed || implanted_in.legcuffed)
@@ -41,6 +54,15 @@
 		return TRUE
 
 	return FALSE
+
+/obj/item/implant/freedom/proc/restore_charge(mob/living/carbon/implanted_in)
+	if(maxuses > uses)
+		uses++
+		var/mob/living/carbon/carbon_imp_in = imp_in
+		balloon_alert(carbon_imp_in, "freedom implant: [uses] uses left!")
+		addtimer(CALLBACK(src, PROC_REF(restore_charge)), rechargetime) // keep charging till you can't
+	else
+		recharging = FALSE
 
 /obj/item/implant/freedom/get_data()
 	return "<b>Implant Specifications:</b><BR> \
@@ -55,6 +77,9 @@
 
 /obj/item/implanter/freedom
 	name = "implanter (freedom)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/freedom
 
 /obj/item/implantcase/freedom

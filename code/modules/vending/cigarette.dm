@@ -35,6 +35,9 @@
 	payment_department = ACCOUNT_SRV
 	light_mask = "cigs-light-mask"
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cigarette
+
 /obj/machinery/vending/cigarette/syndicate
 	products = list(
 		/obj/item/storage/fancy/cigarettes/cigpack_syndicate = 7,

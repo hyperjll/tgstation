@@ -12,7 +12,7 @@
 	sound = null
 
 	school = SCHOOL_MIME
-	cooldown_time = 30 SECONDS
+	cooldown_time = 60 SECONDS
 	invocation = "Someone does a weird gesture." // Overriden in before cast
 	invocation_self_message = span_notice("You conjure up an invisible box, large enough to store a few things.")
 	invocation_type = INVOCATION_EMOTE
@@ -24,7 +24,7 @@
 	delete_old = FALSE
 	item_type = /obj/item/storage/box/mime
 	/// How long boxes last before going away
-	var/box_lifespan = 50 SECONDS
+	var/box_lifespan = 180 SECONDS
 
 /datum/action/cooldown/spell/conjure_item/invisible_box/before_cast(atom/cast_on)
 	. = ..()

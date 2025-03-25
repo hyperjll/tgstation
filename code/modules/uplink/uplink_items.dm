@@ -82,8 +82,6 @@
 	var/list/restricted_species = list()
 	/// The minimum amount of progression needed for this item to be added to uplinks.
 	var/progression_minimum = 0
-	/// The minimum number of joined players (so not observers) needed for this item to be added to uplinks.
-	var/population_minimum = 0
 	/// Whether this purchase is visible in the purchase log.
 	var/purchase_log_vis = TRUE // Visible in the purchase log?
 	/// Whether this purchase is restricted or not (VR/Events related)
@@ -205,15 +203,15 @@
 
 /datum/uplink_category/discounts
 	name = "Discounted Gear"
-	weight = -1
+	weight = -3
 
 /datum/uplink_category/discount_team_gear
 	name = "Discounted Team Gear"
-	weight = -1
+	weight = -3
 
 /datum/uplink_category/limited_discount_team_gear
 	name = "Limited Stock Team Gear"
-	weight = -2
+	weight = -4
 
 //Discounts (dynamically filled above)
 /datum/uplink_item/discounts

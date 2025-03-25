@@ -22,8 +22,8 @@
 	/// Assoc list that dictates how much of each bounty difficulty to give out at once.
 	/// Modified by the number of times we have refreshed bounties.
 	VAR_PRIVATE/list/base_bounties_to_give = list(
-		SPY_DIFFICULTY_EASY = 4,
-		SPY_DIFFICULTY_MEDIUM = 2,
+		SPY_DIFFICULTY_EASY = 5,
+		SPY_DIFFICULTY_MEDIUM = 3,
 		SPY_DIFFICULTY_HARD = 2,
 	)
 

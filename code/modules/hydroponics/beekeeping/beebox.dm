@@ -157,6 +157,14 @@
 			to_chat(user, span_warning("There's no room for any more frames in the apiary!"))
 		return
 
+	// Adding flowers increases the resources
+	if(istype(item, /obj/item/food/grown/poppy))
+		var/obj/item/food/grown/poppy/Poppy = item
+		visible_message(span_notice("[user] composts the [Poppy] into the [src]."))
+		bee_resources += 20
+		qdel(Poppy)
+		return
+
 	if(istype(item, /obj/item/queen_bee))
 		if(queen_bee)
 			to_chat(user, span_warning("This hive already has a queen!"))

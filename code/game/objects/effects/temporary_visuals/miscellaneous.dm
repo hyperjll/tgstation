@@ -745,3 +745,10 @@
 	duration = 5 MINUTES
 	pixel_x = -16
 	pixel_y = -8 //32
+
+/obj/effect/temp_visual/decoy/tensecond
+	desc = "It's a decoy!"
+	duration = 100
+
+/obj/effect/temp_visual/decoy/fading/onesecond
+	duration = 10

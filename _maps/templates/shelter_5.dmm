@@ -1,0 +1,36 @@
+"a" = (/turf/closed/wall/mineral/titanium/survival/pod,/area/misc/survivalpod)
+"c" = (/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"d" = (/obj/machinery/chem_dispenser,/obj/machinery/light/directional/north,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"e" = (/obj/machinery/transformer,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"f" = (/obj/machinery/recharge_station,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"g" = (/obj/machinery/teleport/station,/obj/machinery/light/directional/north,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"j" = (/obj/machinery/mech_bay_recharge_port,/obj/machinery/light/directional/west,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"l" = (/obj/machinery/mecha_part_fabricator,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"m" = (/mob/living/basic/bot/medbot,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"n" = (/obj/machinery/chem_heater,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"p" = (/obj/machinery/rnd/production/circuit_imprinter/department/science,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"q" = (/obj/machinery/vending/drugs,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"y" = (/obj/structure/table/reinforced,/obj/item/fulton_core/syndicate{pixel_y = 11; pixel_x = -6},/obj/item/fulton_core/syndicate{pixel_y = 11; pixel_x = 6},/obj/item/extraction_pack/syndicate{pixel_x = -5},/obj/item/extraction_pack/syndicate{pixel_x = 5},/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"z" = (/obj/structure/grille,/obj/structure/fans/tiny,/obj/structure/window/reinforced/survival_pod/spawner/directional/south,/obj/structure/window/reinforced/survival_pod/spawner/directional/north,/obj/structure/window/reinforced/survival_pod/spawner/directional/east,/obj/structure/window/reinforced/survival_pod/spawner/directional/west,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"B" = (/obj/machinery/vending/medical,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"H" = (/obj/structure/fans/tiny,/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,/obj/machinery/door/airlock/survival_pod/glass,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"J" = (/obj/machinery/computer/teleporter,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"K" = (/obj/structure/table/reinforced,/obj/effect/spawner/surgery_tray/full,/obj/machinery/light/directional/east,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"L" = (/obj/machinery/teleport/hub,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"M" = (/obj/structure/table/reinforced,/obj/item/storage/box/beakers/variety{pixel_y = 11; pixel_x = 6},/obj/item/storage/belt/utility/full{pixel_y = 11; pixel_x = -7},/obj/item/assembly/flash/handheld,/obj/item/assembly/flash/handheld,/obj/item/assembly/flash/handheld,/obj/item/assembly/flash/handheld,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"O" = (/obj/machinery/chem_master,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"R" = (/obj/machinery/computer/mech_bay_power_console{dir = 4},/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"S" = (/obj/machinery/light/directional/south,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"W" = (/obj/machinery/stasis,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+
+(1,1,1) = {"
+aaaaaaaaa
+aJgLyndOa
+accccccca
+aRcccccMa
+ajcceccKa
+alccccmWa
+apcccccqa
+alSfcfSBa
+aaazHzaaa
+"}

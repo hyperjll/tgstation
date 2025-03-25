@@ -74,6 +74,14 @@
 	prereq_ids = list(TECHWEB_NODE_AI)
 	design_ids = list(
 		"ai_power_upgrade",
+		"ai_battery_upgrade",
+		"ai_reactivate_camera",
+		"ai_rgb_camera_light",
+		"ai_heal_brute",
+		"ai_heal_burn",
+		"ai_heal_tox",
+		"ai_heal_oxy",
+		"ai_spacecoin_miner_upgrade",
 		"antimov_module",
 		"asimovpp_module",
 		"balance_module",

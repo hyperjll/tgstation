@@ -30,6 +30,9 @@
 	extra_price = PAYCHECK_COMMAND * 0.5
 	payment_department = ACCOUNT_SCI
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/cytopro
+
 /obj/item/vending_refill/cytopro
 	machine_name = "CytoPro"
 	icon_state = "refill_plant"

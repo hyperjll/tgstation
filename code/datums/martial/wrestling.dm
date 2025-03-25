@@ -69,6 +69,7 @@ If you make a derivative work from this code, you must include this notification
 
 /datum/action/slam
 	name = "Slam (Cinch) - Slam a grappled opponent into the floor."
+	button_icon = 'hypermods/icons/mob/actions/actions_wrestling.dmi'
 	button_icon_state = "wrassle_slam"
 	check_flags = AB_CHECK_INCAPACITATED|AB_CHECK_HANDS_BLOCKED|AB_CHECK_CONSCIOUS
 
@@ -82,6 +83,7 @@ If you make a derivative work from this code, you must include this notification
 
 /datum/action/throw_wrassle
 	name = "Throw (Cinch) - Spin a cinched opponent around and throw them."
+	button_icon = 'hypermods/icons/mob/actions/actions_wrestling.dmi'
 	button_icon_state = "wrassle_throw"
 	check_flags = AB_CHECK_INCAPACITATED|AB_CHECK_HANDS_BLOCKED|AB_CHECK_CONSCIOUS
 
@@ -95,6 +97,7 @@ If you make a derivative work from this code, you must include this notification
 
 /datum/action/kick
 	name = "Kick - A powerful kick, sends people flying away from you. Also useful for escaping from bad situations."
+	button_icon = 'hypermods/icons/mob/actions/actions_wrestling.dmi'
 	button_icon_state = "wrassle_kick"
 	check_flags = AB_CHECK_INCAPACITATED|AB_CHECK_CONSCIOUS // This is supposed to be usable while cuffed but it probably isn't
 
@@ -108,6 +111,7 @@ If you make a derivative work from this code, you must include this notification
 
 /datum/action/strike
 	name = "Strike - Hit a neaby opponent with a quick attack."
+	button_icon = 'hypermods/icons/mob/actions/actions_wrestling.dmi'
 	button_icon_state = "wrassle_strike"
 	check_flags = AB_CHECK_INCAPACITATED|AB_CHECK_HANDS_BLOCKED|AB_CHECK_CONSCIOUS
 
@@ -121,6 +125,7 @@ If you make a derivative work from this code, you must include this notification
 
 /datum/action/drop
 	name = "Drop - Smash down onto an opponent."
+	button_icon = 'hypermods/icons/mob/actions/actions_wrestling.dmi'
 	button_icon_state = "wrassle_drop"
 	check_flags = AB_CHECK_INCAPACITATED|AB_CHECK_HANDS_BLOCKED
 

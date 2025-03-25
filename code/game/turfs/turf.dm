@@ -792,6 +792,14 @@ GLOBAL_LIST_EMPTY(station_turfs)
 /turf/proc/can_cross_safely(atom/movable/crossing)
 	return TRUE
 
+/// Currently only used primarily by the mirage drive.
+/turf/proc/reachableTurftestdensity(caller, turf/T, id, simulated_only) //used for the sake of pathfinding while excluding turfs with dense objects
+	if(T && !T.density && !(simulated_only && SSpathfinder.space_type_cache[T.type]) && !LinkBlockedWithAccess(T,caller, id))
+		for(var/obj/D in T)
+			if(!istype(D, /obj/structure/window) && D.density) //had to do it silly like this so rwindows didn't stop it outright
+				return FALSE
+		return TRUE
+
 /**
  * the following are some hacky fishing-related optimizations to shave off
  * time we spend implementing the fishing as possible, even if that means

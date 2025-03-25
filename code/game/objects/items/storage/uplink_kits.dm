@@ -78,7 +78,7 @@
 			new /obj/item/jammer(src) // 5 tc
 
 		if(KIT_GUN)
-			new /obj/item/gun/ballistic/revolver(src) // 13 tc
+			new /obj/item/gun/ballistic/revolver/syndicate(src) // 13 tc
 			new /obj/item/ammo_box/a357(src) // 4tc
 			new /obj/item/ammo_box/a357(src)
 			new /obj/item/storage/belt/holster/chameleon(src) // 1 tc
@@ -566,6 +566,10 @@
 		/obj/item/throwing_star,
 	))
 
+/obj/item/storage/box/syndie_kit/cutouts
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "decoy"
+
 /obj/item/storage/box/syndie_kit/cutouts/PopulateContents()
 	for(var/i in 1 to 3)
 		new/obj/item/cardboard_cutout/adaptive(src)
@@ -752,20 +756,17 @@
 	new /obj/item/radio/headset/syndicate/alt(src) // 5 TC / Free for nukies
 	new /obj/item/modular_computer/pda/nukeops(src) // ?? TC / Free for nukies
 	new /obj/item/card/id/advanced/chameleon(src) // 2 TC / Free for nukies
-	var/obj/item/clothing/suit/space/syndicate/spess_suit = pick(GLOB.syndicate_space_suits_to_helmets)
-	new spess_suit(src) // Above allows me to get the helmet from a variable on the object
-	var/obj/item/clothing/head/helmet/space/syndicate/spess_helmet = GLOB.syndicate_space_suits_to_helmets[spess_suit]
-	new spess_helmet(src) // 4 TC for the space gear
+	new /obj/item/mod/control/pre_equipped/nuclear(src) // 8 TC? / Free for nukies
 	new /obj/item/tank/jetpack/oxygen/harness(src) // They kinda need this to fly to the cruiser.
 	// Tacticool gear
 	new /obj/item/clothing/shoes/combat(src)
 	new /obj/item/clothing/under/syndicate(src)
-	new /obj/item/clothing/gloves/fingerless(src)
+	new /obj/item/clothing/gloves/combat(src)
 	new /obj/item/book/manual/nuclear(src) // Very important
 	// The most important part of the kit, the implant that gives them the syndicate faction.
 	new /obj/item/implanter/induction_implant(src)
-	// All in all, 6+3+3+2+5+2+4 = ~25 TC of 'miscellaneous' items.
-	// This is a lot of value for 10 TC, but you have to keep in mind that you NEED someone to get this stuff station-side.
+	// All in all, 6+3+3+2+5+2+8 = ~29 TC of 'miscellaneous' items.
+	// This is a lot of value for 6 TC, but you have to keep in mind that you NEED someone to get this stuff station-side.
 	// Pretty much all of it is a bad deal for reinforcements or yourself as they already have similar or good-enough alternatives.
 
 /obj/item/implanter/induction_implant

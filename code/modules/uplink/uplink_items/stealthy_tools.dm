@@ -1,6 +1,6 @@
 /datum/uplink_category/stealthy_tools
 	name = "Stealth Gadgets"
-	weight = 4
+	weight = 18
 
 /datum/uplink_item/stealthy_tools
 	category = /datum/uplink_category/stealthy_tools
@@ -9,12 +9,12 @@
 
 /datum/uplink_item/stealthy_tools/agent_card
 	name = "Agent Identification Card"
-	desc = "Agent cards prevent artificial intelligences from tracking the wearer, and hold up to 5 wildcards \
-			from other identification cards. In addition, they can be forged to display a new assignment, name and trim. \
+	desc = "Agent cards prevent artificial intelligences from tracking the wearer, and hold up to 12 new common accesses, 6 command, and 3 captain. \
+			It may be used on identification cards to copy their accesses. In addition, they can be forged to display a new assignment, name and trim. \
 			This can be done an unlimited amount of times. Some Syndicate areas and devices can only be accessed \
 			with these cards."
 	item = /obj/item/card/id/advanced/chameleon
-	cost = 2
+	cost = 3
 
 /datum/uplink_item/stealthy_tools/ai_detector
 	name = "Artificial Intelligence Detector"
@@ -29,7 +29,8 @@
 /datum/uplink_item/stealthy_tools/chameleon
 	name = "Chameleon Kit"
 	desc = "A set of items that contain chameleon technology allowing you to disguise as pretty much anything on the station, and more! \
-			Due to budget cuts, the shoes don't provide protection against slipping and skillchips are sold separately."
+			Due to budget cuts, the shoes don't provide protection against slipping and skillchips are sold separately. \
+			However, we've managed to improve this chameleon set over the years to support plasmamen."
 	item = /obj/item/storage/box/syndie_kit/chameleon
 	cost = 2
 	purchasable_from = ~UPLINK_NUKE_OPS //clown ops are allowed to buy this kit, since it's basically a costume, loneops can purchase it to blend in.
@@ -52,9 +53,11 @@
 /datum/uplink_item/stealthy_tools/codespeak_manual
 	name = "Codespeak Manual"
 	desc = "Syndicate agents can be trained to use a series of codewords to convey complex information, which sounds like random concepts and drinks to anyone listening. \
-			This manual teaches you this Codespeak. You can also hit someone else with the manual in order to teach them. This is the deluxe edition, which has unlimited uses."
-	item = /obj/item/language_manual/codespeak_manual/unlimited
-	cost = 3
+			This manual teaches you this Codespeak. You can also hit someone else with the manual in order to teach them. Can only be used once. \
+			Be warned that Codespeak usually just gives you away as a potential syndicate agent."
+	item = /obj/item/language_manual/codespeak_manual
+	cost = 1
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS)
 
 /datum/uplink_item/stealthy_tools/emplight
 	name = "EMP Flashlight"
@@ -110,33 +113,3 @@
 			and apply them to a target object. Helpful for framing crew. Recommend buying soap with your purchase."
 	item = /obj/item/storage/box/syndie_kit/forensics_spoofer
 	cost = 5
-
-/datum/uplink_item/stealthy_tools/telecomm_blackout
-	name = "Disable Telecomms"
-	desc = "When purchased, a virus will be uploaded to the telecommunication processing servers to temporarily disable themselves."
-	item = ABSTRACT_UPLINK_ITEM
-	surplus = 0
-	progression_minimum = 15 MINUTES
-	limited_stock = 1
-	cost = 4
-	restricted = TRUE
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS) //Can still be purchased by loneops to give them an edge.
-
-/datum/uplink_item/stealthy_tools/telecomm_blackout/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
-	force_event(/datum/round_event_control/communications_blackout, "a syndicate virus")
-	return source //For log icon
-
-/datum/uplink_item/stealthy_tools/blackout
-	name = "Trigger Stationwide Blackout"
-	desc = "When purchased, a virus will be uploaded to the engineering processing servers to force a routine power grid check, forcing all APCs on the station to be temporarily disabled."
-	item = ABSTRACT_UPLINK_ITEM
-	surplus = 0
-	progression_minimum = 15 MINUTES
-	limited_stock = 1
-	cost = 6
-	restricted = TRUE
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS) //Can still be purchased by loneops to give them an edge.
-
-/datum/uplink_item/stealthy_tools/blackout/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
-	force_event(/datum/round_event_control/grid_check, "a syndicate virus")
-	return source //For log icon

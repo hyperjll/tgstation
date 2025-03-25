@@ -56,6 +56,8 @@
 		/obj/item/food/grown/banana = 1,
 		/obj/item/instrument/bikehorn = 1,
 		/obj/item/storage/box/balloons = 1,
+		/obj/item/storage/box/clowngadgets = 1,
+		/obj/item/market_uplink/clown = 1,
 		)
 	belt = /obj/item/modular_computer/pda/clown
 	ears = /obj/item/radio/headset/headset_srv

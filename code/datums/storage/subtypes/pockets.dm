@@ -102,6 +102,7 @@
 		/obj/item/weldingtool/mini,
 		/obj/item/firing_pin,
 		/obj/item/suppressor,
+		/obj/item/gun/ballistic/revolver/derringer,
 		/obj/item/ammo_box/magazine/m9mm,
 		/obj/item/ammo_box/magazine/m10mm,
 		/obj/item/ammo_box/magazine/m45,

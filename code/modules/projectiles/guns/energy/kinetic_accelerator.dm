@@ -655,6 +655,9 @@
 		KA.icon_state = chassis_icon
 		KA.inhand_icon_state = chassis_icon
 		KA.name = chassis_name
+		KA.icon = 'icons/obj/weapons/guns/energy.dmi'
+		KA.lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+		KA.righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
 		if(iscarbon(KA.loc))
 			var/mob/living/carbon/holder = KA.loc
 			holder.update_held_items()
@@ -663,6 +666,9 @@
 	KA.icon_state = initial(KA.icon_state)
 	KA.inhand_icon_state = initial(KA.inhand_icon_state)
 	KA.name = initial(KA.name)
+	KA.icon = initial(KA.icon)
+	KA.lefthand_file = initial(KA.lefthand_file)
+	KA.righthand_file = initial(KA.righthand_file)
 	if(iscarbon(KA.loc))
 		var/mob/living/carbon/holder = KA.loc
 		holder.update_held_items()

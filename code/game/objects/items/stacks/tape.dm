@@ -19,6 +19,7 @@
 	var/obj/tape_gag = /obj/item/clothing/mask/muzzle/tape
 	greyscale_config = /datum/greyscale_config/tape
 	greyscale_colors = "#B2B2B2#BD6A62"
+	var/grenade_stickish = TRUE
 
 /datum/embedding/sticky_tape
 	pain_mult = 0
@@ -76,7 +77,7 @@
 	to_chat(user, span_notice("You finish wrapping [target] with [src]."))
 	target.name = "[prefix] [target.name]"
 
-	if(isgrenade(target))
+	if(isgrenade(target) && grenade_stickish)
 		var/obj/item/grenade/sticky_bomb = target
 		sticky_bomb.sticky = TRUE
 
@@ -108,6 +109,7 @@
 	greyscale_config = /datum/greyscale_config/tape/spikes
 	greyscale_colors = "#E64539#808080#AD2F45"
 	tape_gag = /obj/item/clothing/mask/muzzle/tape/pointy
+	grenade_stickish = FALSE
 
 /datum/embedding/pointy_tape
 	ignore_throwspeed_threshold = TRUE
@@ -124,6 +126,7 @@
 
 /datum/embedding/pointy_tape/super
 	embed_chance = 100
+	fall_chance = 0
 
 /obj/item/stack/sticky_tape/surgical
 	name = "surgical tape"

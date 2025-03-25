@@ -157,8 +157,11 @@
 			playsound(src, 'sound/machines/buzz/buzz-two.ogg', 50, FALSE, SILENCED_SOUND_EXTRARANGE)
 			return
 
-		// Emagging an unlocked one will do nothing, for now
+		// Emagging an unlocked one will connect you to the syndicate hotline.
 		else
+			balloon_alert(user, "installed syndicate frequency!")
+			playsound(src, SFX_SPARKS, 75, TRUE, SILENCED_SOUND_EXTRARANGE)
+			frequency = FREQ_SYNDICATE
 			return
 
 /obj/item/radio/intercom/update_icon_state()

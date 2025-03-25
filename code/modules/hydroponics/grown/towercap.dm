@@ -15,7 +15,7 @@
 	growing_icon = 'icons/obj/service/hydroponics/growing_mushrooms.dmi'
 	icon_dead = "towercap-dead"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	mutatelist = list(/obj/item/seeds/tower/steel)
+	mutatelist = list(/obj/item/seeds/tower/steel, /obj/item/seeds/tower/glass)
 	reagents_add = list(/datum/reagent/cellulose = 0.05)
 	graft_gene = /datum/plant_gene/trait/plant_type/fungal_metabolism
 
@@ -26,7 +26,7 @@
 	species = "steelcap"
 	plantname = "Steel Caps"
 	product = /obj/item/grown/log/steel
-	mutatelist = null
+	mutatelist = list(/obj/item/seeds/tower/plasteel, /obj/item/seeds/tower/silver)
 	reagents_add = list(/datum/reagent/cellulose = 0.05, /datum/reagent/iron = 0.05)
 	rarity = PLANT_MODERATELY_RARE
 
@@ -117,7 +117,7 @@
 	name = "steel-cap log"
 	desc = "It's made of metal."
 	icon_state = "steellogs"
-	plank_type = /obj/item/stack/rods
+	plank_type = /obj/item/stack/sheet/iron
 	plank_name = "rods"
 
 /obj/item/grown/log/steel/CheckAccepted(obj/item/I)

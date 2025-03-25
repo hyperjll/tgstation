@@ -34,8 +34,14 @@
 #define CALIBER_75 ".75"
 /// The caliber used by [one revolver variant][/obj/item/gun/ballistic/revolver/nagant].
 #define CALIBER_N762 "n762"
+/// The caliber used by the Hristov Sniper Rifle.
+#define CALIBER_762X54R "762"
+/// The caliber used by the AKM Assault Rifle.
+#define CALIBER_712X82 "7.12x82"
 /// The caliber used by the the M-90gl Carbine, and NT-ARG 'Boarder'.
 #define CALIBER_A223 "a223"
+/// The caliber used by the Drozd SMG and the Lecter Rifle.
+#define CALIBER_556 "a556"
 /// The caliber used by bolt action rifles.
 #define CALIBER_STRILKA310 ".310 strilka"
 /// The caliber used by shotguns.
@@ -64,6 +70,10 @@
 #define CALIBER_JUNK "junk"
 /// The caliber used by the (gatfruit) peashooter
 #define CALIBER_PEA "pea"
+/// The caliber used by the cannonballs.
+#define CALIBER_CANNONBALL "cannonball"
+/// The caliber used solely by the orion silenced pistol.
+#define CALIBER_22MM "22mm"
 
 /// For gunpoints, how many tiles around the target the shooter can roam without losing their shot
 #define GUNPOINT_SHOOTER_STRAY_RANGE 2

@@ -88,7 +88,7 @@
 			continue
 		if(!is_type_in_list(target, surgery.target_mobtypes))
 			continue
-		if(user == target && !(surgery.surgery_flags & SURGERY_SELF_OPERABLE))
+		if(user == target && !(surgery.surgery_flags & SURGERY_SELF_OPERABLE) && !HAS_TRAIT(target, TRAIT_SELF_SURGERY_ABLE))
 			continue
 
 		if(isnull(affecting))

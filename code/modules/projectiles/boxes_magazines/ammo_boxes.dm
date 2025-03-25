@@ -88,7 +88,7 @@
 	name = "ammo box (9mm)"
 	icon_state = "9mmbox"
 	ammo_type = /obj/item/ammo_casing/c9mm
-	max_ammo = 30
+	max_ammo = 20
 
 /obj/item/ammo_box/c10mm
 	name = "ammo box (10mm)"

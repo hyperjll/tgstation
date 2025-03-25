@@ -33,6 +33,9 @@
 
 /obj/item/implanter/krav_maga
 	name = "implanter (krav maga)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/krav_maga
 
 /obj/item/implantcase/krav_maga

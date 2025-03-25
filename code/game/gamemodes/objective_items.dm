@@ -1,54 +1,6 @@
-GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
-
 /proc/add_item_to_steal(source, type)
 	GLOB.steal_item_handler.objectives_by_path[type] += source
 	return type
-
-/// Holds references to information about all of the items you might need to steal for objectives
-/datum/objective_item_handler
-	var/list/list/objectives_by_path
-	var/generated_items = FALSE
-
-/datum/objective_item_handler/New()
-	. = ..()
-	objectives_by_path = list()
-	for(var/datum/objective_item/item as anything in subtypesof(/datum/objective_item))
-		objectives_by_path[initial(item.targetitem)] = list()
-	RegisterSignal(SSatoms, COMSIG_SUBSYSTEM_POST_INITIALIZE, PROC_REF(save_items))
-	RegisterSignal(SSdcs, COMSIG_GLOB_NEW_ITEM, PROC_REF(new_item_created))
-
-/datum/objective_item_handler/proc/new_item_created(datum/source, obj/item/item)
-	SIGNAL_HANDLER
-	if(HAS_TRAIT(item, TRAIT_ITEM_OBJECTIVE_BLOCKED))
-		return
-	if(!generated_items)
-		item.add_stealing_item_objective()
-		return
-	var/typepath = item.add_stealing_item_objective()
-	if(typepath != null)
-		register_item(item, typepath)
-
-/// Registers all items that are potentially stealable and removes ones that aren't.
-/// We still need to do things this way because on mapload, items may not be on the station until everything has finished loading.
-/datum/objective_item_handler/proc/save_items()
-	SIGNAL_HANDLER
-	for(var/obj/item/typepath as anything in objectives_by_path)
-		var/list/obj_by_path_cache = objectives_by_path[typepath].Copy()
-		for(var/obj/item/object as anything in obj_by_path_cache)
-			register_item(object, typepath)
-	generated_items = TRUE
-
-/datum/objective_item_handler/proc/register_item(atom/object, typepath)
-	var/turf/place = get_turf(object)
-	if(!place || !is_station_level(place.z))
-		objectives_by_path[typepath] -= object
-		return
-	RegisterSignal(object, COMSIG_QDELETING, PROC_REF(remove_item))
-
-/datum/objective_item_handler/proc/remove_item(atom/source)
-	SIGNAL_HANDLER
-	for(var/typepath in objectives_by_path)
-		objectives_by_path[typepath] -= source
 
 //Contains the target item datums for Steal objectives.
 /datum/objective_item
@@ -972,3 +924,140 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 /obj/item/storage/belt/sabre/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/storage/belt/sabre)
+
+/datum/objective_item/steal/ianmeat
+	name = "a slab of prime-cut corgi meat."
+	targetitem = /obj/item/food/meat/slab/corgi/ian
+	excludefromjob = list(JOB_HEAD_OF_PERSONNEL)
+	item_owner = list(JOB_HEAD_OF_PERSONNEL)
+	exists_on_map = FALSE
+	difficulty = 3
+	steal_hint = "A single slab of meat primarily sourced by the HoP's personal corgi, Ian. \
+		Often found within the HoP's office, but very rarely can be found wandering around the station. \
+		Ian provides multiple slabs of meat when butchered."
+
+/obj/item/food/meat/slab/corgi/ian/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/food/meat/slab/corgi/ian)
+
+/datum/objective_item/steal/traitor/eng_budget
+	name = "engineering's departmental budget"
+	targetitem = /obj/item/card/id/departmental_budget/eng
+	excludefromjob = list(JOB_CHIEF_ENGINEER, JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN)
+	item_owner = list(JOB_CHIEF_ENGINEER)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "A card that grants access to Engineering's funds. \
+		Normally found in the locker of the Chief Engineer, but a particularly keen one may have it on their person or in their wallet."
+
+/obj/item/card/id/departmental_budget/eng/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/card/id/departmental_budget/eng)
+
+/datum/objective_item/steal/traitor/sci_budget
+	name = "science's departmental budget"
+	targetitem = /obj/item/card/id/departmental_budget/sci
+	excludefromjob = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST)
+	item_owner = list(JOB_RESEARCH_DIRECTOR)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "A card that grants access to Science's funds. \
+		Normally found in the locker of the Research Director, but a particularly keen one may have it on their person or in their wallet."
+
+/obj/item/card/id/departmental_budget/sci/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/card/id/departmental_budget/sci)
+
+/datum/objective_item/steal/traitor/med_budget
+	name = "medical's departmental budget"
+	targetitem = /obj/item/card/id/departmental_budget/med
+	excludefromjob = list(JOB_CHIEF_MEDICAL_OFFICER, JOB_MEDICAL_DOCTOR, JOB_CHEMIST, JOB_PARAMEDIC, JOB_PSYCHOLOGIST)
+	item_owner = list(JOB_CHIEF_MEDICAL_OFFICER)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "A card that grants access to Medical's funds. \
+		Normally found in the locker of the Chief Medical Officer, but a particularly keen one may have it on their person or in their wallet."
+
+/obj/item/card/id/departmental_budget/med/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/card/id/departmental_budget/med)
+
+/datum/objective_item/steal/traitor/srv_budget
+	name = "service's departmental budget"
+	targetitem = /obj/item/card/id/departmental_budget/srv
+	excludefromjob = list(JOB_HEAD_OF_PERSONNEL, JOB_BOTANIST, JOB_CHEF, JOB_BARTENDER, JOB_CLOWN, JOB_MIME)
+	item_owner = list(JOB_HEAD_OF_PERSONNEL)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "A card that grants access to Service's funds. \
+		Normally found in the locker of the Head of Personnel, but a particularly keen one may have it on their person or in their wallet."
+
+/obj/item/card/id/departmental_budget/srv/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/card/id/departmental_budget/srv)
+
+/datum/objective_item/steal/traitor/civ_budget
+	name = "civilian's departmental budget"
+	targetitem = /obj/item/card/id/departmental_budget/civ
+	excludefromjob = list(JOB_HEAD_OF_PERSONNEL, JOB_ASSISTANT)
+	item_owner = list(JOB_HEAD_OF_PERSONNEL)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "A card that grants access to the Civilian budget. \
+		Normally found in the locker of the Head of Personnel, but a particularly keen one may have it on their person or in their wallet."
+
+/obj/item/card/id/departmental_budget/civ/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/card/id/departmental_budget/civ)
+
+/datum/objective_item/steal/traitor/sec_budget
+	name = "security's departmental budget"
+	targetitem = /obj/item/card/id/departmental_budget/sec
+	excludefromjob = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER)
+	item_owner = list(JOB_HEAD_OF_SECURITY)
+	exists_on_map = TRUE
+	difficulty = 3
+	steal_hint = "A card that grants access to Security's funds. \
+		Normally found in the locker of the Head of Security, but a particularly keen one may have it on their person or in their wallet."
+
+/obj/item/card/id/departmental_budget/sec/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/card/id/departmental_budget/sec)
+
+/datum/objective_item/steal/cargo_board
+	name = "a supply console computer board."
+	targetitem = /obj/item/circuitboard/computer/cargo
+	excludefromjob = list(JOB_QUARTERMASTER, JOB_CARGO_TECHNICIAN, JOB_SHAFT_MINER, JOB_BITRUNNER)
+	item_owner = list(JOB_QUARTERMASTER)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "A computer board for one of nanotrasen's supply consoles. \
+		Normally found within the cargo department, within the quartermaster's quarters, or on the bridge."
+
+/obj/item/circuitboard/computer/cargo/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/circuitboard/computer/cargo)
+
+/datum/objective_item/steal/holotool
+	name = "the research director's experimental holotool."
+	targetitem = /obj/item/holotool
+	excludefromjob = list(JOB_RESEARCH_DIRECTOR)
+	item_owner = list(JOB_RESEARCH_DIRECTOR)
+	exists_on_map = TRUE
+	difficulty = 3
+	steal_hint = "A highly experimental multi-tool using holographic technology. \
+		Likely found within the Research Director's locker, or on their person."
+
+/obj/item/holotool/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/holotool)
+
+/datum/objective_item/steal/spy/codex_gigas
+	name = "the codex gigas"
+	targetitem = /obj/item/book/codex_gigas
+	excludefromjob = list(
+		JOB_CAPTAIN,
+		JOB_DETECTIVE,
+		JOB_HEAD_OF_PERSONNEL,
+		JOB_HEAD_OF_SECURITY,
+		JOB_SECURITY_OFFICER,
+		JOB_WARDEN,
+		JOB_CURATOR,
+	)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "The Codex Gigas, a rare tome kept within nanotrasen Library's, or on the Curator's person."
+
+/datum/objective_item/steal/spy/codex_gigas/check_special_completion(obj/item/thing)
+	return thing.type == /obj/item/book/codex_gigas

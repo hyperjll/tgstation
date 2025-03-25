@@ -37,6 +37,7 @@
 	var/dart_insert_projectile_icon_state = "overlay_pen_proj"
 	/// If this pen can be clicked in order to retract it
 	var/can_click = TRUE
+	var/numbneedle = FALSE
 
 /datum/embedding/pen
 	embed_chance = 50
@@ -248,7 +249,8 @@
 	if(!M.try_inject(user, injection_flags = INJECT_TRY_SHOW_ERROR_MESSAGE))
 		return FALSE
 	to_chat(user, span_warning("You stab [M] with the pen."))
-	to_chat(M, span_danger("You feel a tiny prick!"))
+	if(!numbneedle)
+		to_chat(M, span_danger("You feel a tiny prick!"))
 	log_combat(user, M, "stabbed", src)
 	return TRUE
 

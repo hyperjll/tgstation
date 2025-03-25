@@ -714,8 +714,14 @@
 		lit_cameras -= C //Removed from list before turning off the light so that it doesn't check the AI looking away.
 		C.Togglelight(0)
 	for (var/obj/machinery/camera/C in add)
-		C.Togglelight(1)
-		lit_cameras |= C
+		if(partytime)
+			C.Togglelight(1)
+			C.partytime = TRUE
+			lit_cameras |= C
+		else
+			C.Togglelight(1)
+			C.partytime = FALSE
+			lit_cameras |= C
 
 /mob/living/silicon/ai/proc/control_integrated_radio()
 	set name = "Transceiver Settings"

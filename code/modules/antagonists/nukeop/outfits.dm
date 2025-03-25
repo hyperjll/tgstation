@@ -33,6 +33,7 @@
 	command_radio = TRUE
 
 	id_trim = /datum/id_trim/chameleon/operative/nuke_leader
+	belt = /obj/item/storage/belt/sabre/syndicate
 
 /datum/outfit/syndicate/leader/plasmaman
 	name = "Syndicate Leader - Basic (Plasmaman)"

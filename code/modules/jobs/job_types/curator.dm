@@ -1,7 +1,7 @@
 /datum/job/curator
 	title = JOB_CURATOR
 	description = "Read and write books and hand them to people, stock \
-		bookshelves, report on station news."
+		bookshelves, report on station news, be a wizard on a budget."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
 	faction = FACTION_STATION
 	total_positions = 1
@@ -45,6 +45,8 @@
 	backpack_contents = list(
 		/obj/item/barcodescanner = 1,
 		/obj/item/choice_beacon/hero = 1,
+		/obj/item/book/granter/action/spellpage/curator = 1,
+		/obj/item/market_uplink/curator = 1,
 	)
 	belt = /obj/item/modular_computer/pda/curator
 	ears = /obj/item/radio/headset/headset_srvent

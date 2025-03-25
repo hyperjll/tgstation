@@ -78,6 +78,10 @@
 		/obj/item/holosign_creator/medical,
 		/obj/item/stack/sticky_tape,
 	)
+	custom_price = PAYCHECK_COMMAND * 3
+	custom_premium_price = PAYCHECK_COMMAND * 5
+	var/possible_alt = null
+	var/alt_chance = 10
 
 /obj/item/storage/medkit/Initialize(mapload)
 	. = ..()
@@ -85,10 +89,17 @@
 	atom_storage.open_sound = 'sound/items/handling/medkit/medkit_open.ogg'
 	atom_storage.open_sound_vary = TRUE
 	atom_storage.rustle_sound = 'sound/items/handling/medkit/medkit_rustle.ogg'
+	if(possible_alt && prob(alt_chance))
+		replace_with_alt()
+
+/obj/item/storage/medkit/proc/replace_with_alt()
+	new possible_alt(src.loc)
+	qdel(src)
 
 /obj/item/storage/medkit/regular
 	icon_state = "medkit"
 	desc = "A first aid kit with the ability to heal common types of injuries."
+	possible_alt = /obj/item/storage/medkit/regular/alt
 
 /obj/item/storage/medkit/regular/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins giving [user.p_them()]self aids with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -98,11 +109,11 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/bloodpack = 1,
 		/obj/item/stack/medical/suture = 2,
 		/obj/item/stack/medical/mesh = 2,
 		/obj/item/reagent_containers/hypospray/medipen = 1,
-		/obj/item/healthanalyzer/simple = 1,
+		/obj/item/storage/pill_bottle/multiver/less = 1,
 	)
 	generate_items_inside(items_inside,src)
 
@@ -111,17 +122,19 @@
 	inhand_icon_state = "medkit-emergency"
 	name = "emergency medkit"
 	desc = "A very simple first aid kit meant to secure and stabilize serious wounds for later treatment."
+	possible_alt = /obj/item/storage/medkit/emergency/alt
 
 /obj/item/storage/medkit/emergency/PopulateContents()
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/healthanalyzer/simple = 1,
 		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/bloodpack = 1,
 		/obj/item/stack/medical/suture/emergency = 1,
 		/obj/item/stack/medical/ointment = 1,
-		/obj/item/reagent_containers/hypospray/medipen/ekit = 2,
+		/obj/item/reagent_containers/hypospray/medipen/ekit = 1,
 		/obj/item/storage/pill_bottle/iron = 1,
+		/obj/item/healthanalyzer/simple/disease = 1,
 	)
 	generate_items_inside(items_inside,src)
 
@@ -146,11 +159,12 @@
 		/obj/item/stack/medical/gauze/twelve = 1,
 		/obj/item/stack/medical/suture = 2,
 		/obj/item/stack/medical/mesh = 2,
-		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/surgical_drapes = 1,
 		/obj/item/scalpel = 1,
 		/obj/item/hemostat = 1,
 		/obj/item/cautery = 1,
+		/obj/item/retractor = 1,
+		/obj/item/circular_saw = 1,
 	)
 	generate_items_inside(items_inside,src)
 
@@ -177,6 +191,7 @@
 	icon_state = "medkit_burn"
 	inhand_icon_state = "medkit-ointment"
 	damagetype_healed = BURN
+	possible_alt = /obj/item/storage/medkit/fire/alt
 
 /obj/item/storage/medkit/fire/get_medbot_skin()
 	return "burn"
@@ -189,10 +204,11 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/applicator/patch/aiuri = 3,
+		/obj/item/reagent_containers/applicator/patch/aiuri = 2,
+		/obj/item/reagent_containers/applicator/patch/silver_sulfadiazine = 2,
 		/obj/item/reagent_containers/spray/hercuri = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 1,
-		/obj/item/reagent_containers/hypospray/medipen = 1)
+		/obj/item/storage/pill_bottle/kelotane = 1)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/toxin
@@ -201,6 +217,7 @@
 	icon_state = "medkit_toxin"
 	inhand_icon_state = "medkit-toxin"
 	damagetype_healed = TOX
+	possible_alt = /obj/item/storage/medkit/toxin/alt
 
 /obj/item/storage/medkit/toxin/get_medbot_skin()
 	return "tox"
@@ -215,10 +232,11 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/storage/pill_bottle/multiver/less = 1,
-		/obj/item/reagent_containers/syringe/syriniver = 3,
+		/obj/item/reagent_containers/applicator/patch/ondansetron = 1,
+		/obj/item/reagent_containers/syringe/syriniver = 2,
 		/obj/item/storage/pill_bottle/potassiodide = 1,
+		/obj/item/storage/pill_bottle/antitoxin = 1,
 		/obj/item/reagent_containers/hypospray/medipen/penacid = 1,
-		/obj/item/healthanalyzer/simple/disease = 1,
 		)
 	generate_items_inside(items_inside,src)
 
@@ -228,6 +246,7 @@
 	icon_state = "medkit_o2"
 	inhand_icon_state = "medkit-o2"
 	damagetype_healed = OXY
+	possible_alt = /obj/item/storage/medkit/o2/alt
 
 /obj/item/storage/medkit/o2/get_medbot_skin()
 	return "oxy"
@@ -240,9 +259,10 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/syringe/convermol = 3,
+		/obj/item/storage/pill_bottle/inaprovaline = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 2,
+		/obj/item/reagent_containers/syringe/convermol = 2,
 		/obj/item/reagent_containers/hypospray/medipen/salbutamol = 1,
-		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/storage/pill_bottle/iron = 1)
 	generate_items_inside(items_inside,src)
 
@@ -252,6 +272,7 @@
 	icon_state = "medkit_brute"
 	inhand_icon_state = "medkit-brute"
 	damagetype_healed = BRUTE
+	possible_alt = /obj/item/storage/medkit/brute/alt
 
 /obj/item/storage/medkit/brute/get_medbot_skin()
 	return "brute"
@@ -264,11 +285,11 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/applicator/patch/libital = 3,
-		/obj/item/stack/medical/gauze = 1,
+		/obj/item/reagent_containers/applicator/patch/libital = 2,
+		/obj/item/reagent_containers/applicator/patch/styptic_powder = 2,
 		/obj/item/storage/pill_bottle/probital = 1,
 		/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
-		/obj/item/healthanalyzer/simple = 1,
+		/obj/item/storage/pill_bottle/bicaridine = 1,
 		)
 	generate_items_inside(items_inside,src)
 
@@ -279,6 +300,7 @@
 	inhand_icon_state = "medkit-advanced"
 	custom_premium_price = PAYCHECK_COMMAND * 6
 	damagetype_healed = HEAL_ALL_DAMAGE
+	possible_alt = /obj/item/storage/medkit/advanced/alt
 
 /obj/item/storage/medkit/advanced/get_medbot_skin()
 	return "adv"
@@ -287,9 +309,10 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/applicator/patch/synthflesh = 3,
+		/obj/item/reagent_containers/applicator/patch/synthflesh = 2,
+		/obj/item/reagent_containers/medigel/synthflesh/big = 1,
 		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
-		/obj/item/stack/medical/gauze = 1,
+		/obj/item/storage/pill_bottle/tricordrazine = 1,
 		/obj/item/storage/pill_bottle/penacid = 1)
 	generate_items_inside(items_inside,src)
 
@@ -422,6 +445,11 @@
 		/obj/item/reagent_containers/blood = 1,
 		/obj/item/bodybag = 2,
 		/obj/item/reagent_containers/syringe = 1,
+		/obj/item/surgical_drapes = 1,
+		/obj/item/scalpel/cruel = 1,
+		/obj/item/hemostat/cruel = 1,
+		/obj/item/cautery/cruel = 1,
+		/obj/item/autopsy_scanner = 1,
 	)
 	generate_items_inside(items_inside,src)
 

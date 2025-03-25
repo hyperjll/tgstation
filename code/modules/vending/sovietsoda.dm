@@ -19,6 +19,9 @@
 	light_color = COLOR_PALE_ORANGE
 	initial_language_holder = /datum/language_holder/spinwarder
 
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/sovietsoda
+
 /obj/item/vending_refill/sovietsoda
 	machine_name = "BODA"
 	icon_state = "refill_cola"

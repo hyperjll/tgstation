@@ -2,7 +2,7 @@
 
 /datum/uplink_category/weapon_kits
 	name = "Weapon Kits (Recommended)"
-	weight = 30
+	weight = 27
 
 /datum/uplink_item/weapon_kits
 	category = /datum/uplink_category/weapon_kits
@@ -12,8 +12,8 @@
 // ~~ Ammunition Categories ~~
 
 /datum/uplink_category/ammo_nuclear
-	name = "Additional and Unique Ammunition"
-	weight = 29
+	name = "Unique Ammunition"
+	weight = 21
 
 /datum/uplink_item/ammo_nuclear
 	category = /datum/uplink_category/ammo_nuclear
@@ -53,7 +53,7 @@
 		least SOME of these items. More experienced operatives can do without."
 	item = /obj/item/storage/box/syndie_kit/core_gear
 	//The cost for the core kit is always equivalent to the combined costs of the included items
-	cost = (/datum/uplink_item/device_tools/doorjack::cost + /datum/uplink_item/implants/freedom::cost + /datum/uplink_item/explosives/c4::cost + /datum/uplink_item/device_tools/stimpack::cost +	/datum/uplink_item/suits/energy_shield::cost)
+	cost = (/datum/uplink_item/device_tools/doorjack::cost + /datum/uplink_item/implants/freedom::cost + /datum/uplink_item/explosive_tools/c4::cost + /datum/uplink_item/consumable/stimpack::cost +	/datum/uplink_item/mod_modules/energy_shield::cost)
 	limited_stock = 1
 	cant_discount = TRUE
 	purchasable_from = UPLINK_SERIOUS_OPS
@@ -122,33 +122,6 @@
 	desc = "A small, easily concealable handgun that uses 10mm auto rounds in 8-round magazines and is compatible \
 			with suppressors. Comes with three spare magazines."
 	item = /obj/item/storage/toolbox/guncase/clandestine
-
-/datum/uplink_item/ammo_nuclear/basic/m10mm
-	name = "10mm Handgun Magazine (Ansem)"
-	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol."
-	item = /obj/item/ammo_box/magazine/m10mm
-	purchasable_from = parent_type::purchasable_from | UPLINK_SPY
-
-/datum/uplink_item/ammo_nuclear/ap/m10mm
-	name = "10mm Armour Piercing Magazine (Ansem)"
-	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol. \
-		These rounds are less effective at injuring the target but penetrate protective gear."
-	item = /obj/item/ammo_box/magazine/m10mm/ap
-	purchasable_from = parent_type::purchasable_from | UPLINK_SPY
-
-/datum/uplink_item/ammo_nuclear/hp/m10mm
-	name = "10mm Hollow Point Magazine (Ansem)"
-	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol. \
-		These rounds are more damaging but ineffective against armour."
-	item = /obj/item/ammo_box/magazine/m10mm/hp
-	purchasable_from = parent_type::purchasable_from | UPLINK_SPY
-
-/datum/uplink_item/ammo_nuclear/incendiary/m10mm
-	name = "10mm Incendiary Magazine (Ansem)"
-	desc = "An additional 8-round 10mm magazine, compatible with the Ansem pistol. \
-		Loaded with incendiary rounds which inflict less damage, but ignite the target."
-	item = /obj/item/ammo_box/magazine/m10mm/fire
-	purchasable_from = parent_type::purchasable_from | UPLINK_SPY
 
 //Medium-cost: 14 TC each. Meant for more expensive purchases with a goal in mind.
 
@@ -416,10 +389,11 @@
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/explosives/grenades/buzzkill
-	name = "Buzzkill Grenade Box"
-	desc = "A box with three grenades that release a swarm of angry bees upon activation. These bees indiscriminately attack friend or foe \
+	name = "Buzzkill Grenade Pouch"
+	desc = "A pouch with five grenades that release a swarm of angry bees upon activation. These bees indiscriminately attack friend or foe \
 		with random toxins. Courtesy of the BLF and Tiger Cooperative."
-	item = /obj/item/storage/box/syndie_kit/bee_grenades
+	item = /obj/item/ammo_box/nadepouch/wasp
+	cost = 8 // Discounted as killer bees cant tell friend from foe, makes em a liability.
 
 /datum/uplink_item/explosives/grenades/virus_grenade
 	name = "Fungal Tuberculosis Grenade Box"
@@ -430,10 +404,10 @@
 	restricted = TRUE
 
 /datum/uplink_item/explosives/grenades/viscerators
-	name = "Viscerator Delivery Grenade Box"
-	desc = "A box containing unique grenades that deploys a swarm of viscerators upon activation, which will chase down and shred \
-		any non-operatives in the area."
-	item = /obj/item/storage/box/syndie_kit/manhack_grenades
+	name = "Viscerator Delivery Grenade Pouch"
+	desc = "A pouch containing unique grenades that deploys a swarm of viscerators upon activation, which will chase down and shred \
+			any non-operatives in the area."
+	item = /obj/item/ammo_box/nadepouch/visc
 
 // ~~ Grenadier's Belt Kit ~~
 
@@ -458,8 +432,8 @@
 // Support (Borgs and Reinforcements)
 
 /datum/uplink_category/reinforcements
-	name = "Reinforcements"
-	weight = 28
+	name = "Allies"
+	weight = 13
 
 /datum/uplink_item/reinforcements
 	category = /datum/uplink_category/reinforcements
@@ -526,10 +500,10 @@
 
 /datum/uplink_item/bundles_tc/medical
 	name = "Medical bundle"
-	desc = "The support specialist: Aid your fellow operatives with this medical bundle. Contains a tactical medkit, \
+	desc = "The support specialist: Aid your fellow operatives with this medical bundle. Contains a syndicate combat medical suite, \
 		a Donksoft LMG, a box of riot darts and a magboot MODsuit module to rescue your friends in no-gravity environments."
 	item = /obj/item/storage/backpack/duffelbag/syndie/med/medicalbundle
-	cost = 25 // normally 31
+	cost = 20 // normally 31
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/bundles_tc/firestarter
@@ -538,17 +512,17 @@
 		Stechkin APS machine pistol, two incendiary magazines, a minibomb and a stimulant syringe. \
 		Order NOW and comrade Boris will throw in an extra tracksuit."
 	item = /obj/item/storage/backpack/duffelbag/syndie/firestarter
-	cost = 30
+	cost = 20 // previously 30
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/bundles_tc/induction_kit
 	name = "Syndicate Induction Kit"
 	desc = "Met a fellow syndicate agent on the station? Kept some TC in reserve just in case? Or are you communicating with one via the Syndicate channel? \
 		Get this kit and you'll be able to induct them into your operative team via a special implant. \
-		Additionally, it contains an assortment of useful gear for new operatives, including a space suit, an Ansem pistol, two spare magazines, and more! \
+		Additionally, it contains an assortment of useful gear for new operatives, including a syndicate MODsuit, an Ansem pistol, two spare magazines, and more! \
 		*NOT* for usage with Reinforcements, and does not brainwash the target!"
 	item = /obj/item/storage/box/syndie_kit/induction_kit
-	cost = 10
+	cost = 6
 	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/bundles_tc/cowboy
@@ -558,14 +532,14 @@
 	This kit contains armor-lined cowboy equipment, a custom revolver and holster, and a horse with a complimentary apple to tame. \
 	A lighter is also included, though you must supply your own smokes."
 	item = /obj/item/storage/box/syndie_kit/cowboy
-	cost = 18
+	cost = 14 // prev 18
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 // Mech related gear
 
 /datum/uplink_category/mech
-	name = "Mech Reinforcement"
-	weight = 27
+	name = "Mechs"
+	weight = 12
 
 /datum/uplink_item/mech
 	category = /datum/uplink_category/mech
@@ -619,9 +593,7 @@
 		along with slurred speech, aggression, and the ability to infect others with this agent."
 	item = /obj/item/storage/box/syndie_kit/romerol
 	cost = 25
-	population_minimum = TRAITOR_POPULATION_LOWPOP
-	progression_minimum = 30 MINUTES
-	purchasable_from = UPLINK_ALL_SYNDIE_OPS | UPLINK_TRAITORS // Don't give this to spies
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 	cant_discount = TRUE
 
 // Modsuits
@@ -633,7 +605,7 @@
 	item = /obj/item/mod/control/pre_equipped/elite
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/suits/energy_shield
+/datum/uplink_item/mod_modules/energy_shield
 	name = "MODsuit Energy Shield Module"
 	desc = "An energy shield module for a MODsuit. The shields can stop a single impact \
 		before needing to recharge. Used wisely, this module will keep you alive for a lot longer."
@@ -641,28 +613,28 @@
 	cost = 8
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/suits/emp_shield
+/datum/uplink_item/mod_modules/emp_shield
 	name = "MODsuit Advanced EMP Shield Module"
 	desc = "An advanced EMP shield module for a MODsuit. It protects your entire body from electromagnetic pulses."
 	item = /obj/item/mod/module/emp_shield/advanced
 	cost = 5
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/suits/injector
+/datum/uplink_item/mod_modules/injector
 	name = "MODsuit Injector Module"
 	desc = "An injector module for a MODsuit. It is an extendable piercing injector with 30u capacity."
 	item = /obj/item/mod/module/injector
-	cost = 2
+	cost = 1
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/suits/holster
+/datum/uplink_item/mod_modules/holster
 	name = "MODsuit Holster Module"
 	desc = "A holster module for a MODsuit. It can stealthily store any not too heavy gun inside it."
 	item = /obj/item/mod/module/holster
-	cost = 2
+	cost = 1
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/device_tools/medgun_mod
+/datum/uplink_item/mod_modules/medgun_mod
 	name = "Medbeam Gun Module"
 	desc = "A wonder of Syndicate engineering, the Medbeam gun module, or Medi-Gun enables a medic to keep his fellow \
 		operatives in the fight, even while under fire. Don't cross the streams!"
@@ -708,7 +680,7 @@
 	cost = 4
 	purchasable_from = UPLINK_SERIOUS_OPS | UPLINK_SPY
 
-/datum/uplink_item/device_tools/medkit
+/datum/uplink_item/medical/medkit
 	name = "Syndicate Combat Medic Kit"
 	desc = "This first aid kit is a suspicious black and red. Included is a number of atropine medipens \
 		for rapid stabilization and detonation prevention, sutures and regenerative mesh for wound treatment, and patches \
@@ -717,7 +689,7 @@
 	cost = 4
 	purchasable_from = UPLINK_SERIOUS_OPS
 
-/datum/uplink_item/device_tools/medkit/premium
+/datum/uplink_item/medical/medkit/premium
 	name = "Syndicate Combat Medical Suite"
 	desc = "This first aid kit is a suspicious black and red. Included is an unloaded combat chemical injector \
 		for suit-penetrative chem delivery, a medical science night vision HUD for quick identification of injured personnel and chemical supplies, \
@@ -776,29 +748,29 @@
 	cost = 6
 	purchasable_from = UPLINK_SERIOUS_OPS | UPLINK_SPY
 
-/datum/uplink_item/implants/nuclear/reviver
-	name = "Reviver Implant"
-	desc = "This implant will attempt to revive and heal you if you lose consciousness. Comes with an autosurgeon."
-	item = /obj/item/autosurgeon/syndicate/reviver
-	cost = 8
-
-/datum/uplink_item/implants/nuclear/thermals
+/datum/uplink_item/surgical/thermals
 	name = "Thermal Eyes"
 	desc = "These cybernetic eyes will give you thermal vision. Comes with a free autosurgeon."
 	item = /obj/item/autosurgeon/syndicate/thermal_eyes
 	cost = 8
+	surplus = 0
+	purchasable_from = UPLINK_NUKE_OPS
 
-/datum/uplink_item/implants/nuclear/implants/xray
+/datum/uplink_item/surgical/xray
 	name = "X-ray Vision Implant"
 	desc = "These cybernetic eyes will give you X-ray vision. Comes with an autosurgeon."
 	item = /obj/item/autosurgeon/syndicate/xray_eyes
 	cost = 8
+	surplus = 0
+	purchasable_from = UPLINK_NUKE_OPS
 
-/datum/uplink_item/implants/nuclear/antistun
+/datum/uplink_item/surgical/antistun
 	name = "CNS Rebooter Implant"
 	desc = "This implant will help you get back up on your feet faster after being stunned. Comes with an autosurgeon."
 	item = /obj/item/autosurgeon/syndicate/anti_stun
 	cost = 8
+	surplus = 0
+	purchasable_from = UPLINK_NUKE_OPS
 
 // Badass (meme items)
 
@@ -812,7 +784,7 @@
 
 /datum/uplink_category/base_keys
 	name = "Base Keys"
-	weight = 27
+	weight = 28
 
 /datum/uplink_item/base_keys
 	category = /datum/uplink_category/base_keys

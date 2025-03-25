@@ -26,6 +26,8 @@
 	var/casedesc = "This basic model accepts both beakers and bottles. It heats contents by 10 K upon ignition."
 	/// Whether or not the grenade is currently acting as a landmine.
 	var/obj/item/assembly/prox_sensor/landminemode = null
+	/// Whether or not a grenade can be disassembled. Prevents people from reclaiming reagents within grenades.
+	var/can_dismantle = TRUE
 
 /obj/item/grenade/chem_grenade/Initialize(mapload)
 	. = ..()
@@ -154,8 +156,15 @@
 	return TRUE
 
 /obj/item/grenade/chem_grenade/wirecutter_act(mob/living/user, obj/item/tool)
-	if (stage != GRENADE_READY || active)
-		return NONE
+	if(stage == GRENADE_READY && !active)
+		if(can_dismantle)
+			tool.play_tool_sound(src)
+			stage_change(GRENADE_WIRED)
+			to_chat(user, span_notice("You unlock the [initial(name)] assembly."))
+			return TRUE
+		else
+			to_chat(user, span_notice("There's no way to open [src]'s assembly."))
+			return FALSE
 
 	tool.play_tool_sound(src)
 	stage_change(GRENADE_WIRED)

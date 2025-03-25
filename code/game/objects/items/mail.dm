@@ -44,6 +44,9 @@
 	///mail will have the color of the department the recipient is in.
 	var/static/list/department_colors
 
+	///Can this particular type of mail provide cargo with credits?
+	var/providemoney = TRUE
+
 /obj/item/mail/envelope
 	name = "envelope"
 	icon_state = "mail_large"
@@ -146,6 +149,9 @@
 		else
 			stuff.forceMove(drop_location())
 	playsound(loc, 'sound/items/poster/poster_ripped.ogg', vol = 50, vary = TRUE)
+	if(providemoney)
+		var/datum/bank_account/cargo_bank = SSeconomy.get_dep_account(ACCOUNT_CAR)
+		cargo_bank.adjust_money(rand(50, 200))
 	qdel(src)
 	return TRUE
 
@@ -241,6 +247,7 @@
 /obj/item/mail/junkmail/Initialize(mapload)
 	. = ..()
 	junk_mail()
+	providemoney = FALSE
 
 /// Crate for mail from CentCom.
 /obj/structure/closet/crate/mail

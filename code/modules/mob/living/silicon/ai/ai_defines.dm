@@ -167,3 +167,16 @@
 	VAR_FINAL/obj/item/multitool/aiMulti
 	/// Helper effect that creates sparks when the AI is damaged
 	VAR_FINAL/datum/effect_system/spark_spread/spark_system
+
+	/// Maximum possible backup power (battery) for an AI to build.
+	var/max_battery = 200
+	/// How many max_battery upgrades has this ai unit recieved?
+	var/battery_upgrades = 0
+	/// How many max_battery upgrades can be given per ai unit?
+	var/max_battery_upgrades = 10
+
+	/// Has this ai unit been given a spacecoin miner?
+	var/miner_active = FALSE
+
+	/// Does this AI have RGB camera lights?
+	var/partytime = FALSE

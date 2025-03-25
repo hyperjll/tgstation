@@ -22,6 +22,7 @@
 	contraband = list(
 		/obj/item/clothing/glasses/sunglasses = 2,
 		/obj/item/storage/fancy/donut_box = 2,
+		/obj/item/ammo_box/magazine/v38 = 2,
 	)
 	premium = list(
 		/obj/item/storage/belt/security/webbing = 5,
@@ -29,14 +30,23 @@
 		/obj/item/clothing/head/helmet/blueshirt = 1,
 		/obj/item/clothing/gloves/color/black/security/blu = 1,
 		/obj/item/clothing/suit/armor/vest/blueshirt = 1,
-		/obj/item/grenade/stingbang = 1,
+		/obj/item/grenade/stingbang = 5,
 		/obj/item/watertank/pepperspray = 2,
 		/obj/item/storage/belt/holster/energy = 4,
+		/obj/item/ammo_box/magazine/v38/rubber = 2,
+		/obj/item/storage/medkit/regular = 2,
+		/obj/item/storage/pill_bottle/tricordrazine = 2,
+		/obj/item/pinpointer/crew = 2,
+		/mob/living/simple_animal/bot/secbot = 3,
+		/obj/item/antag_spawner/nanotrasen/securityborg = 2,
 	)
 	refill_canister = /obj/item/vending_refill/security
 	default_price = PAYCHECK_CREW
 	extra_price = PAYCHECK_COMMAND * 1.5
 	payment_department = ACCOUNT_SEC
+
+	emagvendorreplace = TRUE
+	replacewith = /obj/machinery/vending/emagged/security
 
 /obj/machinery/vending/security/pre_throw(obj/item/thrown_item)
 	if(isgrenade(thrown_item))

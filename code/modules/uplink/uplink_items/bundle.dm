@@ -1,7 +1,7 @@
 //All bundles and telecrystals
 /datum/uplink_category/bundle
 	name = "Bundles"
-	weight = 10
+	weight = 29
 
 /datum/uplink_item/bundles_tc
 	category = /datum/uplink_category/bundle
@@ -81,6 +81,11 @@
 /// generates items that can go inside crates, edit this proc to change what items could go inside your specialized crate
 /datum/uplink_item/bundles_tc/surplus/proc/generate_possible_items(mob/user, datum/uplink_handler/handler)
 	var/list/possible_items = list()
+
+	// Ensure the surplus only category of items makes it in.
+	var/list/surplus_only_items = subtypesof(/datum/uplink_item/surplusonly/)
+	possible_items += surplus_only_items
+
 	for(var/datum/uplink_item/item_path as anything in SStraitor.uplink_items_by_type)
 		var/datum/uplink_item/uplink_item = SStraitor.uplink_items_by_type[item_path]
 		if(src == uplink_item || !uplink_item.item)

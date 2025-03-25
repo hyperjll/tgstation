@@ -61,6 +61,9 @@
 #define DNA_MUSHROOM_CAPS_BLOCK 14
 #define DNA_POD_HAIR_BLOCK 15
 #define DNA_FISH_TAIL_BLOCK 16
+#define DNA_FOX_TAIL_BLOCK 17
+#define DNA_WEREWOLF_TAIL_BLOCK 18
+#define DNA_WEREWOLF_EARS_BLOCK 19
 
 // Hey! Listen up if you're here because you're adding a species feature!
 //
@@ -69,7 +72,7 @@
 // (Which means having a DNA block for a feature tied to a mob without DNA is entirely pointless.)
 
 /// Total amount of DNA blocks, must be equal to the highest DNA block number
-#define DNA_FEATURE_BLOCKS 16
+#define DNA_FEATURE_BLOCKS 19
 
 #define DNA_SEQUENCE_LENGTH 4
 #define DNA_MUTATION_BLOCKS 8
@@ -102,6 +105,10 @@
 #define ORGAN_SLOT_TONGUE "tongue"
 #define ORGAN_SLOT_VOICE "vocal_cords"
 #define ORGAN_SLOT_ZOMBIE "zombie_infection"
+
+#define ORGAN_SLOT_RIGHT_LEG_AUG "r_leg_device"
+#define ORGAN_SLOT_LEFT_LEG_AUG "l_leg_device"
+#define ORGAN_SLOT_SPINAL_AUG "spinal_device"
 
 /// Organ slot external
 #define ORGAN_SLOT_EXTERNAL_TAIL "tail"
@@ -146,6 +153,8 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 	ORGAN_SLOT_APPENDIX,
 	ORGAN_SLOT_RIGHT_ARM_AUG,
 	ORGAN_SLOT_LEFT_ARM_AUG,
+	ORGAN_SLOT_RIGHT_LEG_AUG,
+	ORGAN_SLOT_LEFT_LEG_AUG,
 	ORGAN_SLOT_LEFT_ARM_MUSCLE,
 	ORGAN_SLOT_RIGHT_ARM_MUSCLE,
 	ORGAN_SLOT_STOMACH,
@@ -155,6 +164,7 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 	ORGAN_SLOT_EYES,
 	ORGAN_SLOT_LUNGS,
 	ORGAN_SLOT_HEART,
+	ORGAN_SLOT_SPINAL_AUG,
 	ORGAN_SLOT_ZOMBIE,
 	ORGAN_SLOT_THRUSTERS,
 	ORGAN_SLOT_HUD,

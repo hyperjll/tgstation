@@ -50,10 +50,14 @@
 
 		if ("tank")
 			new /obj/item/tank/internals/oxygen(src)
+			new /obj/item/tank/internals/plasmaman(src)
+			new /obj/item/clothing/mask/breath(src)
 			new /obj/item/clothing/mask/breath(src)
 
 		if ("both")
 			new /obj/item/tank/internals/emergency_oxygen(src)
+			new /obj/item/tank/internals/plasmaman/belt(src)
+			new /obj/item/clothing/mask/breath(src)
 			new /obj/item/clothing/mask/breath(src)
 
 		if ("nothing")
