@@ -74,6 +74,11 @@ Include = EVERYTHING
 Exclude = AUTOADMIN
 Edit = EVERYTHING
 
+Name = Admin Plus
+Include = @ POSSESS POLL BUILD SERVER FUN SPAWN VAREDIT DEBUG POLL SERVER SOUND
+Exclude =
+Edit =
+
 Name = Host
 Include = EVERYTHING
 Exclude =
@@ -82,4 +87,14 @@ Edit = EVERYTHING
 Name = Coder
 Include = DEBUG VAREDIT SERVER SPAWN POLL
 Exclude = AUTOADMIN
+Edit =
+
+Name = TG-Main Staff
+Include = ADMIN
+Exclude =
+Edit =
+
+Name = TG-Main Host
+Include = ADMIN
+Exclude =
 Edit =
