@@ -388,7 +388,6 @@
 	icon_state = "satchel-flat"
 	inhand_icon_state = "satchel-flat"
 	w_class = WEIGHT_CLASS_NORMAL //Can fit in backpacks itself.
-	storage_type = /datum/storage/backpack/satchel
 
 /obj/item/storage/backpack/satchel/flat/Initialize(mapload)
 	. = ..()
