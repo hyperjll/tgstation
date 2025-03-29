@@ -9,12 +9,18 @@
 	var/donktype = /obj/item/food/donkpocket
 
 /obj/item/storage/box/donkpockets/PopulateContents()
+<<<<<<< HEAD
 	for(var/i in 1 to 6)
 		new donktype(src)
 
 /obj/item/storage/box/donkpockets/Initialize(mapload)
 	. = ..()
 	atom_storage.set_holdable(/obj/item/food/donkpocket)
+=======
+	. = list()
+	for(var/_ in 1 to 6)
+		. += donktype
+>>>>>>> origin/master
 
 /obj/item/storage/box/donkpockets/donkpocketspicy
 	name = "box of spicy-flavoured donk-pockets"
@@ -408,8 +414,10 @@
 	desc = "A box containing an assortment of fresh Tiziran goods- perfect for making the foods of the Lizard Empire."
 	icon_state = "lizard_package"
 	illustration = null
+	storage_type = /datum/storage/box/tiziran_goods
 
 /obj/item/storage/box/tiziran_goods/PopulateContents()
+<<<<<<< HEAD
 	for(var/i in 1 to 12)
 		var/random_food = pick_weight(list(
 			/obj/item/food/bread/root = 2,
@@ -424,6 +432,26 @@
 			/obj/item/food/spaghetti/nizaya = 5,
 			))
 		new random_food(src)
+=======
+	var/static/list/obj/item/food = list(
+		/obj/item/food/bread/root = 2,
+		/obj/item/food/grown/ash_flora/seraka = 2,
+		/obj/item/food/grown/korta_nut = 10,
+		/obj/item/food/grown/korta_nut/sweet = 2,
+		/obj/item/food/liver_pate = 5,
+		/obj/item/food/lizard_dumplings = 5,
+		/obj/item/food/moonfish_caviar = 5,
+		/obj/item/food/root_flatbread = 5,
+		/obj/item/food/rootroll = 5,
+		/obj/item/food/spaghetti/nizaya = 5,
+	)
+
+	var/list/obj/item/insert = list()
+	for(var/i in 1 to 8)
+		insert += pick_weight(food)
+
+	return insert
+>>>>>>> origin/master
 
 /obj/item/storage/box/tiziran_cans
 	name = "Tiziran Canned Goods Pack"
@@ -432,6 +460,16 @@
 	illustration = null
 
 /obj/item/storage/box/tiziran_cans/PopulateContents()
+<<<<<<< HEAD
+=======
+	var/static/list/obj/item/food = list(
+		/obj/item/food/canned/jellyfish = 5,
+		/obj/item/food/canned/desert_snails = 5,
+		/obj/item/food/canned/larvae = 5,
+	)
+
+	var/list/obj/item/insert = list()
+>>>>>>> origin/master
 	for(var/i in 1 to 8)
 		var/random_food = pick_weight(list(
 			/obj/item/food/canned/jellyfish = 5,
