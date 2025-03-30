@@ -6,6 +6,8 @@
 	desc = "A box with the bare essentials of ensuring the survival of you and others."
 	icon_state = "internals"
 	illustration = "emergencytank"
+	storage_type = /datum/storage/box/survival
+
 	/// What type of mask are we going to use for this box?
 	var/mask_type = /obj/item/clothing/mask/breath
 	/// Which internals tank are we going to use for this box?
@@ -23,6 +25,7 @@
 	/// Do we get to benefit from Nanotrasen's largesse?
 	var/give_premium_goods = TRUE
 
+<<<<<<< HEAD
 /obj/item/storage/box/survival/Initialize(mapload)
 	. = ..()
 	if(crafted || !HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS))
@@ -32,6 +35,8 @@
 	name = "large [name]"
 	icon_state = "[icon_state]_large"
 
+=======
+>>>>>>> origin/master
 /obj/item/storage/box/survival/PopulateContents()
 	if(crafted)
 		return
