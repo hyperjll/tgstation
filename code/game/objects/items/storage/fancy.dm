@@ -38,18 +38,9 @@
 /obj/item/storage/fancy/PopulateContents()
 	if(!spawn_type)
 		return
-<<<<<<< HEAD
 	for(var/i = 1 to spawn_count)
 		var/thing_in_box = pick(spawn_type)
 		new thing_in_box(src)
-=======
-
-	config.compute_max_values()
-
-	. = list()
-	for(var/i in 1 to spawn_count)
-		. += pick(spawn_type)
->>>>>>> origin/master
 
 /obj/item/storage/fancy/update_icon_state()
 	icon_state = "[base_icon_state][has_open_closed_states && open_status ? contents.len : null]"
@@ -90,16 +81,16 @@
 
 /obj/item/storage/fancy/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	. = ..()
-	if(!(flags_1 & INITIALIZED_1))
-		return
-
 	if(open_status == FANCY_CONTAINER_CLOSED)
 		open_status = FANCY_CONTAINER_OPEN
 	update_appearance()
 
 #define DONUT_INBOX_SPRITE_WIDTH 4
 
-/// Donut Box
+/*
+ * Donut Box
+ */
+
 /obj/item/storage/fancy/donut_box
 	name = "donut box"
 	desc = "Mmm. Donuts."
@@ -108,10 +99,10 @@
 	base_icon_state = "donutbox"
 	spawn_type = /obj/item/food/donut/plain
 	spawn_count = 6
+	open_status = TRUE
 	appearance_flags = KEEP_TOGETHER|LONG_GLIDE
 	custom_premium_price = PAYCHECK_COMMAND * 1.75
 	contents_tag = "donut"
-	storage_type = /datum/storage/donut_box
 
 /obj/item/storage/fancy/donut_box/Initialize(mapload)
 	. = ..()
@@ -161,7 +152,6 @@
 	spawn_type = /obj/item/food/egg
 	spawn_count = 12
 	contents_tag = "egg"
-	storage_type = /datum/storage/egg_box
 
 /obj/item/storage/fancy/egg_box/Initialize(mapload)
 	. = ..()
@@ -195,7 +185,6 @@
 	spawn_count = 5
 	open_status = FANCY_CONTAINER_ALWAYS_OPEN
 	contents_tag = "candle"
-	storage_type = /datum/storage/fancy_holder
 
 /obj/item/storage/fancy/candle_box/Initialize(mapload)
 	. = ..()
@@ -229,14 +218,6 @@
 	///Do we not have our own handling for cig overlays?
 	var/display_cigs = TRUE
 
-<<<<<<< HEAD
-=======
-/obj/item/storage/fancy/cigarettes/Initialize(mapload)
-	. = ..()
-
-	register_context()
-
->>>>>>> origin/master
 /obj/item/storage/fancy/cigarettes/attack_self(mob/user)
 	if(contents.len != 0 || !spawn_coupon)
 		return ..()
@@ -436,7 +417,6 @@
 	spawn_count = 10
 	custom_price = PAYCHECK_LOWER
 	has_open_closed_states = FALSE
-	storage_type = /datum/storage/fancy_holder
 
 /obj/item/storage/fancy/rollingpapers/Initialize(mapload)
 	. = ..()
@@ -518,7 +498,6 @@
 		/obj/item/food/bonbon/peanut_butter_cup,
 	)
 	spawn_count = 8
-	storage_type = /datum/storage/heart_box
 
 /obj/item/storage/fancy/heart_box/Initialize(mapload)
 	. = ..()
@@ -534,8 +513,6 @@
 	contents_tag = "nugget"
 	spawn_type = /obj/item/food/nugget
 	spawn_count = 6
-	storage_type = /datum/storage/fancy_holder
-
 
 /obj/item/storage/fancy/nugget_box/Initialize(mapload)
 	. = ..()
@@ -558,7 +535,6 @@
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT)
 	open_status = FANCY_CONTAINER_ALWAYS_OPEN
 	has_open_closed_states = FALSE
-	storage_type = /datum/storage/fancy_holder
 
 /obj/item/storage/fancy/pickles_jar/Initialize(mapload)
 	. = ..()
