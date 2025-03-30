@@ -35,6 +35,8 @@ do { \
 
 /obj/item/clothing/under/chameleon/broken
 
+/obj/item/clothing/under/chameleon/broken
+
 /obj/item/clothing/under/chameleon/broken/Initialize(mapload)
 	. = ..()
 	BREAK_CHAMELEON_ACTION(src)
