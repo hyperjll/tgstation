@@ -257,5 +257,10 @@ FLOOR SAFES
 	var/obj/item/piggy_bank/vault/piggy = new(src)
 	space += piggy.w_class
 
+	var/obj/item/stack/sheet/mineral/diamond/safediamond = new(src)
+	var/obj/item/stack/spacecash/c1000/safecash = new(src)
+	space += safediamond.w_class
+	space += safecash.w_class
+
 #undef SOUND_CHANCE
 #undef BROKEN_THRESHOLD

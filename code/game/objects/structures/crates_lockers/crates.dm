@@ -448,7 +448,7 @@
 /obj/structure/closet/crate/goldcrate/populate_contents_immediate()
 	. = ..()
 
-	for(var/i in 1 to 3)
+	for(var/i in 1 to 5)
 		new /obj/item/stack/sheet/mineral/gold(src, 1, FALSE)
 
 /obj/structure/closet/crate/silvercrate
@@ -461,6 +461,7 @@
 	..()
 	for(var/i in 1 to 5)
 		new /obj/item/coin/silver(src)
+		new /obj/item/stack/sheet/mineral/silver(src)
 
 /obj/structure/closet/crate/decorations
 	icon_state = "engi_crate"
