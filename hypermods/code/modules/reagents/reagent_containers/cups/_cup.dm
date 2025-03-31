@@ -196,3 +196,16 @@
 /obj/item/reagent_containers/cup/tube/vestine
 	name = "vestine tube"
 	list_reagents = list(/datum/reagent/vestine = 30)
+
+
+/obj/item/reagent_containers/cup/galaxy_gas
+	name = "galaxy gas can"
+	desc = "A can of 'galaxy gas', a flavored whipped-cream charger advertised primarily for culinary use. \
+			It was later outlawed in the spinward sector after constant misuse leading to widespread brain damage and drug-induced violence."
+	icon = 'hypermods/icons/obj/toys/forbidden.dmi'
+	icon_state = "ggascan"
+	volume = 30
+	reagent_flags = TRANSPARENT
+	list_reagents = list(/datum/reagent/nitrous_oxide = 10, /datum/reagent/drug/methamphetamine = 10, /datum/reagent/drug/bath_salts = 10)
+	reagent_consumption_method = INHALE
+	consumption_sound = 'sound/effects/spray2.ogg'

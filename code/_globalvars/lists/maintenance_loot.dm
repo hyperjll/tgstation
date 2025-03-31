@@ -346,11 +346,14 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 			/obj/item/storage/medkit/emergency = 1,
 			/obj/item/storage/medkit/regular = 1,
 			/obj/item/storage/box/bandages = 1,
-			) = 1,
+			) = 5,
 		list(//medical chems
 			/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 1,
 			/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
 			/obj/item/reagent_containers/syringe/contraband/methamphetamine = 1,
+			) = 5,
+		list(//RARE medical chems
+			/obj/item/reagent_containers/cup/galaxy_gas = 1,
 			) = 1,
 		) = 1,
 

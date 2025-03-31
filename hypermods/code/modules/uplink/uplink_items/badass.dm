@@ -122,3 +122,13 @@
 	surplus = 1 // For that RARE opportunity
 	progression_minimum = 110 MINUTES
 	item = /obj/item/mod/control/pre_equipped/corporate/traitor
+
+/datum/uplink_item/badass/galaxy_gas
+	name = "Galaxy Gas"
+	desc = "A canister containing a potent concoction of drugs in gaseous form capable of providing a decent stim at the cost of extensive brain damage. \
+			If you in any way use this, we REALLY hope you know what you're doing and aren't just being 'hip with the kids'."
+	item = /obj/item/reagent_containers/cup/galaxy_gas
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	cost = 3
+	surplus = 1 // real low chance
+	limited_stock = 1
