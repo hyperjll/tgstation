@@ -333,14 +333,14 @@
 /datum/uplink_item/role_restricted/surplus
 	name = "Syndicate Surplus Crate (25% off!)"
 	desc = "A dusty crate from the back of the Syndicate warehouse. Rumored to contain a valuable assortment of items, \
-			but you never know. Contents are sorted to always be worth 30 TC."
+			but you never know. Contents are sorted to always be worth 40 TC."
 	item = /obj/structure/closet/crate
 	cost = 15
 	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Super-hell-no.
 	stock_key = UPLINK_SHARED_STOCK_SURPLUS
 	/// Value of items inside the crate in TC
-	var/crate_tc_value = 30
+	var/crate_tc_value = 40
 	/// crate that will be used for the surplus crate
 	var/crate_type = /obj/structure/closet/crate
 
