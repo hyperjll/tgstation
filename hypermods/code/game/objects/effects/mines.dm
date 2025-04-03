@@ -2,6 +2,16 @@
 	name = "sledgehammer stun mine"
 	stun_time = 20 SECONDS
 
+/obj/effect/mine/emp
+	name = "emp mine"
+	alpha = 55
+	var/emp_heavy = 3
+	var/emp_light = 6
+
+/obj/effect/mine/emp/mineEffect(mob/victim)
+	empulse(src, heavy_range = emp_heavy, light_range = emp_light) //Heavy EMP on target, light EMP in tiles around
+	qdel(src)
+
 /obj/effect/mine/explosive/mothplushie
 	name = "moth plushie"
 	desc = "An adorable mothperson plushy. It's a huggable bug!"

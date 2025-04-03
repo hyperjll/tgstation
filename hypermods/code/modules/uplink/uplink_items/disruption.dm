@@ -125,3 +125,15 @@
 	cost = 4
 	surplus = 20
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/disruption/emp_mine
+	name = "EMP Mine"
+	desc = "A single electro-magnetic blast mine designed to disrupt electronics upon both the victim and in a large radius around it. \
+			Harmlessly self-destructs after activation. Comes with camouflage that activates upon being placed."
+	item = /obj/item/deployablemine/emp
+	cost = 2
+
+/datum/uplink_item/disruption/emp_mine/New()
+	..()
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_CYBERNETIC_REVOLUTION))
+		cost *= 3

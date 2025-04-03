@@ -67,6 +67,10 @@
 	desc = "An unarmed mine that releases N2O into the air when triggered. Nighty Night!"
 	mine_type = /obj/effect/mine/gas/n2o
 
+/obj/item/deployablemine/emp
+	name = "emp mine"
+	desc = "An unarmed electro-magnetic burst mine designed to disrupt all electronics in a given radius."
+	mine_type = /obj/effect/mine/emp
 
 
 /obj/item/deployablemine/explosive/mothplushie
