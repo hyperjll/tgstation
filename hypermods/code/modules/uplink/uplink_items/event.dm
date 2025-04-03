@@ -167,6 +167,41 @@
 	force_event(/datum/round_event_control/stray_cargo/syndicate, "a nuclear operative support agent")
 	return source //For log icon
 
+/datum/uplink_item/events/lockdown
+	name = "Lockdown"
+	desc = "When purchased, your uplink will send an encrypted signal to the station's emergency systems, forcing a temporary lockdown of all airlocks on the station. \
+			This closes, bolts, and electrifies all airlocks on the station for a limited time."
+	item = ABSTRACT_UPLINK_ITEM
+	surplus = 0
+	progression_minimum = 30 MINUTES
+	limited_stock = 1
+	cost = 12
+	cant_discount = TRUE
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	var/hack_in_progress  = FALSE
+
+/datum/uplink_item/events/lockdown/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
+	hack_in_progress = TRUE
+	for(var/obj/machinery/door/locked_down as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/door))
+		if(QDELETED(locked_down) || !is_station_level(locked_down.z))
+			continue
+		INVOKE_ASYNC(locked_down, TYPE_PROC_REF(/obj/machinery/door, hostile_lockdown), user)
+		CHECK_TICK
+
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(_malf_ai_undo_lockdown)), 90 SECONDS)
+
+	var/obj/machinery/computer/communications/random_comms_console = locate() in GLOB.shuttle_caller_list
+	random_comms_console?.post_status("alert", "lockdown")
+
+	minor_announce("Hostile runtime detected in door controllers. Isolation lockdown protocols are now in effect. Please remain calm.", "Network Alert:", TRUE)
+	to_chat(user, span_danger("Lockdown initiated. Network reset in 90 seconds."))
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(minor_announce),
+		"Automatic system reboot complete. Have a secure day.",
+		"Network reset:"), 90 SECONDS)
+	hack_in_progress = FALSE
+
+	return source //For log icon
+
 /datum/uplink_item/events/scrubber_overflow/catastrophic
 	name = "Mass Scrubber Overflow"
 	desc = "When purchased, we'll hack into the station's scrubber network and cause it to overflow. This'll flood most of the scrubber on the station with random reagent foams."
@@ -252,9 +287,6 @@
 /datum/uplink_item/events/operative/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/operative, "a nuclear operative support agent")
 	return source //For log icon
-
-
-
 
 
 /datum/uplink_item/role_restricted/lesser_nuclear_signal
