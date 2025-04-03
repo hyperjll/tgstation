@@ -1,18 +1,4 @@
-// Mostly just other voucher sets, the mining console gets all subtypes of /datum/voucher_set for item sets. So, we gotta start from scratch.
-
-/datum/s_voucher_set
-	/// Name of the set
-	var/name
-	/// Description of the set
-	var/description
-	/// Icon of the set
-	var/icon
-	/// Icon state of the set
-	var/icon_state
-	/// List of items contained in the set
-	var/list/set_items = list()
-
-/datum/s_voucher_set/silicon_friends_kit // 56 TC
+/datum/voucher_set/nukies/silicon_friends_kit // 56 TC
 	name = "Silicon Friends Kit"
 	description = "Contains THREE syndicate silicon support beacons, as well as \
 			three Martyr, one Rescue, and two Weapon Cyborg Modules! Come on, grab your friends!"
@@ -30,7 +16,7 @@
 		/obj/item/borg/upgrade/illegalrescue, // 6 TC
 		)
 
-/datum/s_voucher_set/catwalker_kit // 64 TC
+/datum/voucher_set/nukies/catwalker_kit // 64 TC
 	name = "Cat-Walker Kit"
 	description = "Contains TEN Syndicat Beacons! This shall be a night to remember! \
 			It even comes with two changeling extract medipens in case of accidental self-bombings."
@@ -51,7 +37,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/limborganregen, // 2 TC
 		)
 
-/datum/s_voucher_set/recon_kit // 41 TC?
+/datum/voucher_set/nukies/recon_kit // 41 TC?
 	name = "Recon Kit"
 	description = "The essentials to make sure you gather the proper intelligence on the opposition. \
 			Comes with a pair of X-Ray goggles, Binoculars, a Binary Translator, a Briefcase Launchpad, \
@@ -69,7 +55,7 @@
 		/obj/item/grenade/frag, // 2 TC?
 		)
 
-/datum/s_voucher_set/engineer_gaming // 64 TC
+/datum/voucher_set/nukies/engineer_gaming // 64 TC
 	name = "Engineer Gaming"
 	description = "Makin' bacon. Embrace your inner space texan and make your claim with automated sentry guns today! \
 			Contains 4 disposable sentry guns disguised as toolboxes."
@@ -82,7 +68,7 @@
 		/obj/item/storage/toolbox/emergency/turret/nukie, // 16 TC
 		)
 
-/datum/s_voucher_set/sabotage_kit // 42 TC
+/datum/voucher_set/nukies/sabotage_kit // 42 TC
 	name = "Sabotage Kit"
 	description = "Get in, fuck shit up, profit? Even if you fail to nuke the station, you'll be leaving it in RUINS. \
 			Contains enough EMP supplies to cripple a station, a box of rigged power cells, rigged lights, radiation lights, \
@@ -100,7 +86,7 @@
 		/obj/item/storage/box/syndie_kit/missilephone, // 9 TC
 		)
 
-/datum/s_voucher_set/assault_def_kit // 57 TC
+/datum/voucher_set/nukies/assault_def_kit // 57 TC
 	name = "Tower Defense Kit"
 	description = "The favorite amongst syndicate operatives, get in quick, establish a new capital for the syndicate... \
 			Demand the captain hand over the disk if they want you to move out? \
@@ -113,7 +99,7 @@
 		/obj/item/construction/rcd/syndicate, // 15 TC
 		)
 
-/datum/s_voucher_set/chemical_shooter_kit // 45 TC?
+/datum/voucher_set/nukies/chemical_shooter_kit // 45 TC?
 	name = "Water-Park Kit"
 	description = "The favorite amongst our more clownly friends, for some kind of sick joke probably. \
 			Contains a Hyper-Soaker, a toxic Chemical Sprayer, three large beakers of Nitric Acid, a Chemi-Compiler, and a box of bluespace beakers."
@@ -129,7 +115,7 @@
 		/obj/item/storage/box/beakers/bluespace, // 3 TC?
 		)
 
-/datum/s_voucher_set/bee_liberty_kit // 46 TC?
+/datum/voucher_set/nukies/bee_liberty_kit // 46 TC?
 	name = "Bee Liberation Kit"
 	description = "All who are supremely loyal to the Bee Liberation Front value this kit almost as if it were a badge of honor. \
 			Contains a space-proof bee costume, The Stinger, a Wasp Crossbow, a macro wasp-revenge implanter, \
@@ -145,7 +131,7 @@
 		/obj/item/ammo_box/nadepouch/wasp, // 8 TC?
 		)
 
-/datum/s_voucher_set/false_ninja_kit // 58 TC?
+/datum/voucher_set/nukies/false_ninja_kit // 58 TC?
 	name = "Ninjutsu Kit"
 	description = "A favorite amongst our operatives, for those who watch a little too much of those 'japanese cartoons'. \
 			Contains our re-purposed 'Ninja' MODsuit, a Katana, two chemical kill-switches, a krav maga implant, \
@@ -161,7 +147,7 @@
 		/obj/item/storage/box/syndie_kit/scramimplant, // 6 TC
 		)
 
-/datum/s_voucher_set/mailman_kit // 40 TC?
+/datum/voucher_set/nukies/mailman_kit // 40 TC?
 	name = "Mailman Kit"
 	description = "A rarely seen kit containing mail counterfeiting devices and fultons for transportation of \
 			less-than-safe goods. Absolutely devilish if you know how to use it. \
@@ -182,7 +168,7 @@
 		/obj/item/anomaly_releaser, // 2 TC
 		)
 
-/datum/s_voucher_set/implant_man_kit // 79 TC
+/datum/voucher_set/nukies/implant_man_kit // 79 TC
 	name = "Implant Man Kit"
 	description = "Probably the strangest kit available to our operatives, you'll be a certified robo-operative. \
 			Contains a wide-variety of implants, including several offensive, defensive, and utility-based implants. \
@@ -205,7 +191,7 @@
 		/obj/item/implanter/scram, // 6 TC
 		)
 
-/datum/s_voucher_set/fake_centcom_kit // 43 TC
+/datum/voucher_set/nukies/fake_centcom_kit // 43 TC
 	name = "Central Impersonator Kit"
 	description = "Developed as a tactical espionage kit after previous operatives before you came up with this idea. \
 			It contains nearly everything you'll need to disguise yourself as a representative of NT's Central Command. \
@@ -218,7 +204,7 @@
 		/obj/item/implanter/freedom, // 5 TC
 		)
 
-/datum/s_voucher_set/standard_gl_kit // 54 TC
+/datum/voucher_set/nukies/standard_gl_kit // 54 TC
 	name = "Standard Grenade Launcher Kit"
 	description = "One of our favorites amongst those who love chemistry. \
 			Contains a single Grenade Launcher, a Grenadier's Belt, and several pouches of various grenades."
@@ -236,7 +222,7 @@
 
 // Syndicate Classes below
 
-/datum/s_voucher_set/class_grenadier_kit // 54 TC~~
+/datum/voucher_set/nukies/class_grenadier_kit // 54 TC~~
 	name = "Grenadier Class Kit"
 	description = "Not to be confused with the 'Standard Grenade Launcher Kit', this kit contains \
 			a much more standardized and reliable loadout. \
@@ -258,7 +244,7 @@
 		/obj/item/ammo_box/a40mm/nuke, // 10 TC
 		)
 
-/datum/s_voucher_set/heavy_weapons_kit // 57 TC~~
+/datum/voucher_set/nukies/heavy_weapons_kit // 57 TC~~
 	name = "Heavy Weapons Class Kit"
 	description = "For operatives that aren't afraid of the frontline. \
 			Contains a Antares LMG with a 100 round magazine of 7mm ammunition. \
@@ -276,7 +262,7 @@
 		/obj/item/mod/module/energy_shield, // 8 TC
 		)
 
-/datum/s_voucher_set/assault_trooper_kit // 52 TC
+/datum/voucher_set/nukies/assault_trooper_kit // 52 TC
 	name = "Assault Trooper Class Kit"
 	description = "A no-nonsense loadout for a counter-strike \
 			Contains a Sirius Assault rifle with a 30 round magazine of 7.12x82 ammunition. \
@@ -301,7 +287,7 @@
 		/obj/item/grenade/c4/breaching, // 1 TC
 		)
 
-/datum/s_voucher_set/field_medic_kit // 55 TC
+/datum/voucher_set/nukies/field_medic_kit // 55 TC
 	name = "Field Medic Class Kit"
 	description = "Most operatives simply buy their own medicine, but if you want to double-down.... \
 			Contains a Veritate PDW with five spare magazines, a Premium Medical Suite, a Gorlex Hypospray, \
@@ -321,7 +307,7 @@
 		/obj/item/storage/bag/chemistry/syndimedipens/deluxe, // 6 TC
 		)
 
-/datum/s_voucher_set/infiltrator_kit // 45 TC?
+/datum/voucher_set/nukies/infiltrator_kit // 45 TC?
 	name = "Infiltrator Class Kit"
 	description = "If you want to sneak onto the station/ship and subvert the AI, snatch the nuke disk or other useful items, \
 			and/or commit other acts of sabotage, this is a good loadout. \
@@ -344,7 +330,7 @@
 		/obj/item/pinpointer/nuke/syndicate, // 2 TC
 		)
 
-/datum/s_voucher_set/scout_kit // 42 TC~~
+/datum/voucher_set/nukies/scout_kit // 42 TC~~
 	name = "Scout Class Kit"
 	description = "This is basically designed for flanking. Go in invisible, strike their rear in close quarters, \
 			disappear again once you're done or you need to tactically withdraw. \
@@ -365,7 +351,7 @@
 		/obj/item/pinpointer/nuke/syndicate, // 2 TC
 		)
 
-/datum/s_voucher_set/flamethrower_kit // 46 TC~~
+/datum/voucher_set/nukies/flamethrower_kit // 46 TC~~
 	name = "Firebrand Class Kit"
 	description = "The ultimate loadout for systematic suppression of carbon lifeforms in close quarters. \
 			Contains a certified Vega Flamethrower filled with CLF3 and Nitric Acid, an Elite MODsuit with a flamethrower attachment, \
@@ -381,7 +367,7 @@
 		/obj/item/fireaxe, // 8 TC~~
 		)
 
-/datum/s_voucher_set/engineer_kit // 49 TC?
+/datum/voucher_set/nukies/engineer_kit // 49 TC?
 	name = "Engineer Class Kit"
 	description = "Makin' bacon. \
 			Contains disposable sentry gun, a genuine SPES shotgun with three boxes of buckshot, \
@@ -394,7 +380,7 @@
 		/obj/item/storage/belt/utility/full/powertools/syndircd, // 20 TC?
 		)
 
-/datum/s_voucher_set/marksman_kit // 47 TC?
+/datum/voucher_set/nukies/marksman_kit // 47 TC?
 	name = "Marksman Class Kit"
 	description = "Snipe people coming onto the scene before they ever see you. \
 			Contains a Betelgeuse sniper rifle with an 8x scope and plenty of ammunition for sustained snipers. \
@@ -415,7 +401,7 @@
 		/obj/item/clothing/glasses/thermal/syndi, // 4 TC
 		)
 
-/datum/s_voucher_set/energy_knight_kit // 43 TC?
+/datum/voucher_set/nukies/energy_knight_kit // 43 TC?
 	name = "Energy Knight Class Kit"
 	description = "Go medieval with a huge sword with escalating damage. \
 			Contains the fabled Hadar heavy power-sword, a more powerful energy sword that becomes even better when used! \
