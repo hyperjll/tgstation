@@ -728,10 +728,12 @@
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 
 /datum/reagent/medicine/antimagic/on_mob_metabolize(mob/living/M)
+	..()
 	ADD_TRAIT(M, TRAIT_HOLY, type)
 
 /datum/reagent/medicine/antimagic/on_mob_end_metabolize(mob/living/M)
 	REMOVE_TRAIT(M, TRAIT_HOLY, type)
+	..()
 
 
 /datum/reagent/medicine/hyperzine
