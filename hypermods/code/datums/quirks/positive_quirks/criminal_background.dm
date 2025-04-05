@@ -1,6 +1,6 @@
 /datum/quirk/criminal_background
 	name = "Criminal Background"
-	desc = "You've been brought low in life before and had to scrape by through... less-than-honest work. Luckily, this means you've got some connections."
+	desc = "You've been brought low in life before and had to scrape by through... less-than-honest work. You've got a rare chance of being a sleeper agent for your previous benefactors."
 	icon = FA_ICON_STAR
 	value = 20
 	medical_record_text = "Patient appears to be overly cautious and paranoid, likely brought on by their past."
