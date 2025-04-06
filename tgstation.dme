@@ -6653,6 +6653,7 @@
 #include "hypermods\code\datums\mutations\vitality.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\criminal_background.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\cybernetic_revolutionary.dm"
+#include "hypermods\code\datums\quirks\positive_quirks\dextrous.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\goodies.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\goodvirus.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\mindshield.dm"
