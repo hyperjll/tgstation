@@ -52,6 +52,29 @@ map wawastation
 	minplayers 40
 endmap
 
+map kilostation
+	votable
+endmap
+
+map heliostation
+	votable
+endmap
+
+map pubbystation
+	votable
+	minplayers 20
+endmap
+
+map selenestation
+	votable
+	minplayers 30
+endmap
+
+map theiastation
+	votable
+	minplayers 30
+endmap
+
 # Debug-only maps.
 
 map gateway_test
