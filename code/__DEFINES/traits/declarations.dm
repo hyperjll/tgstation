@@ -1504,4 +1504,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 ///Trait given to mobs which allow them to perform all surgeries upon themselves.
 #define TRAIT_SELF_SURGERY_ABLE "self_surgery_able"
 
+/// While starving, will this mob start accumulating damage?
+#define TRAIT_HUNGER_DAMAGE "hunger_damage"
+
 // END TRAIT DEFINES
