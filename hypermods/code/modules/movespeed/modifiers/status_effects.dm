@@ -12,3 +12,6 @@
 
 /datum/movespeed_modifier/heretic_slow
 	multiplicative_slowdown = 0.50
+
+/datum/movespeed_modifier/status_effect/adrenaline_quirk
+	multiplicative_slowdown = -0.2

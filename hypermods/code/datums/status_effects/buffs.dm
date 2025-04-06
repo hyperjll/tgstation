@@ -52,3 +52,23 @@
 	desc = "You succeeded in performing a Defensive Howl, and are slowly recouperating from any wounds."
 	icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
 	icon_state = "howl"
+
+
+/datum/status_effect/adrenaline_quirk
+	id = "adrenaline_quirk"
+	duration = 4 SECONDS
+	alert_type = /atom/movable/screen/alert/status_effect/adrenaline_quirk
+
+/datum/status_effect/adrenaline_quirk/on_apply()
+	. = ..()
+	if(.)
+		owner.add_movespeed_modifier(/datum/movespeed_modifier/status_effect/adrenaline_quirk)
+
+/datum/status_effect/adrenaline_quirk/on_remove()
+	owner.remove_movespeed_modifier(/datum/movespeed_modifier/status_effect/adrenaline_quirk)
+
+/atom/movable/screen/alert/status_effect/adrenaline_quirk
+	name = "Adrenaline"
+	desc = "Your wounds have resulted in your brain releasing a constant stream of adrenaline. You'll move about 20% faster."
+	icon = 'hypermods/icons/hud/implants.dmi'
+	icon_state = "adrenaline"
