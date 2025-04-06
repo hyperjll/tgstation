@@ -19,7 +19,14 @@
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/clothing/suit/armor/vest/old,
 		/obj/item/defibrillator/compact/loaded,
-		/obj/item/reagent_containers/hypospray/buyable
+		/obj/item/reagent_containers/hypospray/buyable,
+		/obj/item/stack/spacecash/c500,
+		/obj/item/screwdriver/power,
+		/obj/item/weldingtool/hugetank,
+		/obj/item/multitool,
+		/obj/item/clothing/gloves/color/yellow,
+		/obj/item/stack/sheet/cloth/ten,
+		/obj/item/assembly/flash/handheld
 	)
 
 	var/item_to_give = pick(item_list)
