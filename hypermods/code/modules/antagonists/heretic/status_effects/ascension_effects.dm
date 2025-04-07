@@ -25,8 +25,7 @@
 		if(carbon_human.gender == MALE)
 			carbon_human.set_facial_hairstyle("Beard (Very Long)", update = TRUE)
 		if(prob(carbon_human.age * 0.01))
-			var/datum/disease/heart_disease = new /datum/disease/heart_failure()
-			carbon_human.ForceContractDisease(heart_disease, FALSE, TRUE)
+			carbon_human.apply_status_effect(/datum/status_effect/heart_attack)
 
 	if(carbon_human.age > 969)
 		carbon_human.visible_message(span_notice("[carbon_human] becomes older than any man should be.. and crumbles into dust!"))
