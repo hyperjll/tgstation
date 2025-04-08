@@ -175,3 +175,12 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/shrink
 	cost = 8
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/consumable/final_fortuna
+	name = "Final Fortuna"
+	desc = "A highly illegal cocktail of drugs designed to keep you alive for up to a minute, however once it leaves your system it causes massive brain damage. \
+			Often used as a last resort. Limited one per agent."
+	item = /obj/item/reagent_containers/hypospray/medipen/final_fortuna
+	cost = 5
+	purchasable_from = UPLINK_TRAITORS
+	limited_stock = 1

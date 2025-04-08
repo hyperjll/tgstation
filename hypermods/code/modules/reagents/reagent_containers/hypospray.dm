@@ -344,3 +344,14 @@
 	volume = 30
 	amount_per_transfer_from_this = 5
 	list_reagents = list(/datum/reagent/shrinkcompound = 30)
+
+/obj/item/reagent_containers/hypospray/medipen/final_fortuna
+	name = "fortune medipen"
+	desc = "A highly illegal cocktail of drugs designed to keep you alive for up to a minute, however once it leaves your system it causes massive brain damage."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "fortunepen"
+	inhand_icon_state = "tbpen"
+	base_icon_state = "fortunepen"
+	volume = 60
+	amount_per_transfer_from_this = 60
+	list_reagents = list(/datum/reagent/medicine/final_fortuna = 60)
