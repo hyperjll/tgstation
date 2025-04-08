@@ -355,3 +355,10 @@
 	volume = 60
 	amount_per_transfer_from_this = 60
 	list_reagents = list(/datum/reagent/medicine/final_fortuna = 60)
+
+/obj/item/reagent_containers/hypospray/medipen/final_fortuna/attack(mob/living/affected_mob, mob/user)
+	if(!reagents.total_volume)
+		to_chat(user, span_warning("[src] is empty!"))
+		return
+	if(do_after(user, 10 SECONDS, affected_mob))
+		..()
