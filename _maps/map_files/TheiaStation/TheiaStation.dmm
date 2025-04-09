@@ -27581,7 +27581,6 @@
 /area/station/cargo/storage)
 "kUt" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/pill/cyanide,
 /turf/open/floor/iron,
 /area/station/maintenance/department/bridge)
 "kVr" = (
@@ -30679,6 +30678,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/space/basic,
 /area/space/nearstation)
+"mml" = (
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 1
+	},
+/obj/effect/spawner/random/techstorage/custom_shuttle,
+/obj/structure/rack,
+/turf/open/floor/iron,
+/area/station/engineering/storage/tech)
 "mmq" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -37177,7 +37184,6 @@
 "oUO" = (
 /obj/item/clothing/shoes/laceup,
 /obj/item/stack/spacecash/c10,
-/obj/item/reagent_containers/pill/happy,
 /obj/structure/chair/sofa/right{
 	dir = 1
 	},
@@ -73822,7 +73828,7 @@ jEI
 cfg
 nDt
 riY
-olm
+mml
 sWH
 rMW
 rwa

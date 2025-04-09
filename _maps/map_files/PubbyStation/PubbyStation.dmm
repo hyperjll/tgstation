@@ -22445,6 +22445,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "bRm" = (
@@ -22453,6 +22454,9 @@
 	},
 /obj/structure/cable,
 /obj/machinery/light_switch/directional/east,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "bRp" = (
@@ -22660,6 +22664,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "bRU" = (
@@ -22836,6 +22843,9 @@
 "bSK" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/firealarm/directional/east,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "bSM" = (
@@ -23652,7 +23662,13 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "bVJ" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/effect/spawner/random/techstorage/custom_shuttle,
+/obj/structure/rack,
+/obj/effect/turf_decal/tile/green/fourcorners,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "bVK" = (
@@ -36152,6 +36168,9 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
@@ -51738,6 +51757,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "vyL" = (
@@ -54067,6 +54089,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
+/obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "xfm" = (
@@ -87074,8 +87097,8 @@ eMp
 oJj
 bQz
 bRl
-rpu
 bVJ
+bSH
 bTA
 bUU
 hBT

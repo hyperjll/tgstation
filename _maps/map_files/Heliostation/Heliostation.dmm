@@ -26749,10 +26749,6 @@
 	pixel_x = -5;
 	pixel_y = 11
 	},
-/obj/item/reagent_containers/pill/morphine{
-	name = "Exponential Entrophy";
-	pixel_x = 9
-	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/maintenance/aft/lesser)
 "dbi" = (
@@ -35522,6 +35518,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
+/obj/effect/spawner/random/techstorage/custom_shuttle,
+/obj/structure/rack,
 /turf/open/floor/iron,
 /area/station/engineering/storage/tech)
 "gMT" = (

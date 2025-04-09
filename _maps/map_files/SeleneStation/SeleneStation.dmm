@@ -21196,7 +21196,6 @@
 "iud" = (
 /obj/structure/table/reinforced,
 /obj/item/folder/yellow,
-/obj/item/reagent_containers/pill/patch/aiuri,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron,
 /area/station/maintenance/disposal/incinerator)
@@ -34760,6 +34759,8 @@
 /area/station/science/xenobiology)
 "nyR" = (
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/structure/rack,
+/obj/effect/spawner/random/techstorage/custom_shuttle,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "nzb" = (
@@ -42652,7 +42653,6 @@
 /area/station/engineering/atmos)
 "qJT" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/pill/cyanide,
 /obj/item/storage/wallet/random,
 /turf/open/floor/sepia,
 /area/station/maintenance/starboard/fore)
