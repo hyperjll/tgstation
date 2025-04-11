@@ -2,7 +2,7 @@
 	name = "Vitality"
 	desc = "Whether by genetic superiority or by intense physical training, you're much more hardy than normal people."
 	icon = FA_ICON_SHIELD_HEART
-	value = 8
+	value = 9
 	medical_record_text = "Patient has above-average physical health."
 	//mail_goodies = list()
 

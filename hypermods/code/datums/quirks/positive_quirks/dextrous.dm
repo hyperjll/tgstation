@@ -2,7 +2,7 @@
 	name = "Dextrous"
 	desc = "You've got extra-ordinary ability with your hands, and can perform all actions that have a 'progress bar' 10% faster."
 	icon = FA_ICON_RUNNING
-	value = 8
+	value = 7
 	medical_record_text = "Patient demonstrates heightened ability with their hands."
 	//mail_goodies = list()
 
