@@ -1513,4 +1513,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// While starving, will this mob start accumulating damage?
 #define TRAIT_HUNGER_DAMAGE "hunger_damage"
 
+/// While 'determined', will we extra benefits?
+#define TRAIT_NOSOFTCRIT_DETERMINED "too_determined_to_crit"
+
 // END TRAIT DEFINES
