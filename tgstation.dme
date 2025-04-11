@@ -6665,7 +6665,7 @@
 #include "hypermods\code\datums\quirks\positive_quirks\adrenaline_junkie.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\criminal_background.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\cybernetic_revolutionary.dm"
-#include "hypermods\code\datums\quirks\positive_quirks\dextrous.dm"
+#include "hypermods\code\datums\quirks\positive_quirks\dexterous.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\extra_determined.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\good_hearing.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\goodies.dm"

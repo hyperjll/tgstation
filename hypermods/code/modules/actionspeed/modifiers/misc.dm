@@ -7,5 +7,5 @@
 /datum/actionspeed_modifier/haste
 	multiplicative_slowdown = -0.5
 
-/datum/actionspeed_modifier/dextrous
+/datum/actionspeed_modifier/dexterous
 	multiplicative_slowdown = -0.1
