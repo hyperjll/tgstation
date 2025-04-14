@@ -89,7 +89,7 @@
 	new /obj/item/clothing/neck/tie/red(src)
 	new /obj/item/clothing/under/syndicate/tacticool(src)
 	new /obj/item/clothing/under/syndicate/tacticool/skirt(src)
-	new /obj/item/clothing/suit/jacket/trenchcoat(src)
+	new /obj/item/clothing/suit/toggle/jacket/trenchcoat(src)
 	new /obj/item/clothing/gloves/combat(src)
 	new /obj/item/encryptionkey/syndicate(src)
 	new /obj/item/phone(src)
