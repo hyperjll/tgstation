@@ -220,6 +220,7 @@
 "bj" = (
 /obj/machinery/rnd/production/techfab/department/engineering,
 /obj/machinery/light/directional/north,
+/obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -508,6 +509,13 @@
 	dir = 4
 	},
 /area/mine/lounge)
+"cO" = (
+/obj/machinery/porta_turret,
+/obj/machinery/camera/autoname/directional/south,
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 1
+	},
+/area/mine/industrial_techfab)
 "cQ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/airalarm/directional/south,
@@ -688,6 +696,7 @@
 "dH" = (
 /obj/machinery/rnd/production/techfab/department/service,
 /obj/machinery/light/directional/south,
+/obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -3164,6 +3173,7 @@
 "oW" = (
 /obj/machinery/rnd/production/techfab/department/science,
 /obj/machinery/light/directional/north,
+/obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -5359,6 +5369,7 @@
 "Ag" = (
 /obj/machinery/rnd/production/techfab/department/medical,
 /obj/machinery/light/directional/south,
+/obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -5547,6 +5558,7 @@
 "Bz" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -33383,7 +33395,7 @@ DJ
 DJ
 DJ
 Dw
-Dw
+cO
 DJ
 DJ
 DJ
