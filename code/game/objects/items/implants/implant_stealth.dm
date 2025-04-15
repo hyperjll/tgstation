@@ -7,6 +7,7 @@
 	name = "implanter (stealth)"
 	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/stealth
 
 //Box Object
