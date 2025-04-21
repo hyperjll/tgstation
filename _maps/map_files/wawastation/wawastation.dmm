@@ -16353,10 +16353,6 @@
 /obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/glass/reinforced,
 /area/station/engineering/atmos/project)
-"fOe" = (
-/obj/effect/landmark/carpspawn,
-/turf/open/space/openspace,
-/area/space/nearstation)
 "fOi" = (
 /obj/effect/turf_decal/stripes{
 	dir = 8
@@ -22899,11 +22895,9 @@
 /obj/item/canvas,
 /obj/item/canvas,
 /obj/item/canvas,
-/obj/item/chisel{
-	pixel_y = 7
-	},
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
+/obj/item/hand_labeler,
 /turf/open/floor/iron/textured,
 /area/station/commons/storage/art)
 "hYh" = (
@@ -37717,14 +37711,16 @@
 /area/station/maintenance/department/science)
 "ndI" = (
 /obj/structure/table,
-/obj/item/hand_labeler,
-/obj/item/camera,
-/obj/item/camera_film,
-/obj/item/storage/crayons,
-/obj/item/storage/crayons,
-/obj/item/storage/crayons,
 /obj/machinery/airalarm/directional/east,
 /obj/structure/sign/poster/contraband/clown/directional/south,
+/obj/item/storage/toolbox/artistic{
+	pixel_x = -1;
+	pixel_y = 7
+	},
+/obj/item/storage/toolbox/crafter{
+	pixel_x = 2;
+	pixel_y = 1
+	},
 /turf/open/floor/iron/textured,
 /area/station/commons/storage/art)
 "ndR" = (
@@ -39870,7 +39866,7 @@
 	start_on = 1
 	},
 /turf/open/misc/asteroid/airless,
-/area/space/nearstation)
+/area/station/asteroid)
 "nRj" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -40131,7 +40127,14 @@
 /area/station/science/explab)
 "nXO" = (
 /obj/structure/table/wood,
-/obj/item/storage/crayons,
+/obj/item/storage/toolbox/artistic{
+	pixel_x = -1;
+	pixel_y = 7
+	},
+/obj/item/storage/toolbox/crafter{
+	pixel_x = 2;
+	pixel_y = 1
+	},
 /turf/open/floor/carpet/purple,
 /area/station/service/library)
 "nXY" = (
@@ -144281,9 +144284,9 @@ hhX
 hhX
 hhX
 hhX
-hen
-hen
-hen
+hhX
+hhX
+hhX
 hhX
 hhX
 hhX
@@ -144538,9 +144541,9 @@ hhX
 hhX
 hhX
 hhX
-hen
-hen
-hen
+hhX
+hhX
+hhX
 hhX
 hhX
 hhX
@@ -144795,9 +144798,9 @@ vxX
 hhX
 hhX
 fZF
-hen
-hen
-hen
+hhX
+hhX
+hhX
 fZF
 hhX
 hhX
@@ -145052,9 +145055,9 @@ fYe
 fYe
 qHE
 fZF
-hen
-hen
-hen
+hhX
+hhX
+hhX
 fZF
 hhX
 hhX
@@ -147038,11 +147041,11 @@ hhX
 hhX
 hhX
 hhX
-hen
-hen
-hen
-hen
-hen
+hhX
+hhX
+hhX
+hhX
+hhX
 vxX
 vxX
 vxX
@@ -147295,11 +147298,11 @@ hhX
 hhX
 hhX
 hhX
-hen
-fOe
-hen
-hen
-hen
+hhX
+fNW
+hhX
+hhX
+hhX
 vxX
 vxX
 vxX
@@ -147552,11 +147555,11 @@ hhX
 hhX
 hhX
 hhX
-hen
-hen
-hen
-hen
-hen
+hhX
+hhX
+hhX
+hhX
+hhX
 vxX
 vxX
 vxX
@@ -157594,10 +157597,10 @@ vxX
 vxX
 unk
 unk
-cxg
-cxg
-cxg
-cxg
+fYe
+fYe
+fYe
+fYe
 unk
 unk
 vxX
@@ -157850,12 +157853,12 @@ vxX
 vxX
 vxX
 unk
-cxg
-cxg
-cxg
+fYe
+fYe
+fYe
 nQT
-cxg
-cxg
+fYe
+fYe
 unk
 jCD
 gYW
@@ -158107,12 +158110,12 @@ dsG
 vxX
 vxX
 unk
-cxg
-joM
-joM
-joM
-joM
-cxg
+fYe
+ivx
+ivx
+ivx
+ivx
+fYe
 eOx
 wMY
 apb
@@ -158364,12 +158367,12 @@ dsG
 dsG
 dsG
 any
-cxg
-joM
-joM
-joM
-joM
-cxg
+fYe
+ivx
+ivx
+ivx
+ivx
+fYe
 eOx
 fFt
 cTH
@@ -158621,12 +158624,12 @@ fYe
 fYe
 fYe
 unk
-cxg
-cxg
-cxg
-cxg
-cxg
-cxg
+fYe
+fYe
+fYe
+fYe
+fYe
+fYe
 unk
 jCD
 jCD
@@ -158879,10 +158882,10 @@ fYe
 fYe
 unk
 unk
-cxg
-cxg
-cxg
-cxg
+fYe
+fYe
+fYe
+fYe
 unk
 unk
 vxX
@@ -172055,9 +172058,9 @@ vxX
 vxX
 vxX
 vxX
-hen
-hen
-hen
+hhX
+hhX
+hhX
 jVV
 hhX
 hhX
@@ -180979,8 +180982,8 @@ uif
 mNZ
 mNZ
 fYe
-hen
-hen
+hhX
+hhX
 fYe
 mNZ
 mNZ
@@ -181236,9 +181239,9 @@ fYe
 fYe
 fYe
 fYe
-hen
-hen
-hen
+hhX
+hhX
+hhX
 mNZ
 mNZ
 mNZ
@@ -181493,9 +181496,9 @@ mNZ
 mNZ
 mNZ
 fYe
-hen
-hen
-hen
+hhX
+hhX
+hhX
 umg
 hhX
 jVV
@@ -181750,9 +181753,9 @@ hhX
 hhX
 hhX
 hhX
-hen
-hen
-hen
+hhX
+hhX
+hhX
 hhX
 hhX
 jVV
@@ -182007,9 +182010,9 @@ hhX
 hhX
 hhX
 hhX
-hen
-hen
-hen
+hhX
+hhX
+hhX
 hhX
 hhX
 uOY
