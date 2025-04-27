@@ -61,3 +61,11 @@
 	access = ACCESS_MEDICAL
 	contains = list(/obj/machinery/medical_kiosk)
 	crate_name = "medical kiosk crate"
+
+/datum/supply_pack/medical/medmodsuit
+	name = "Medical MODsuit Crate"
+	desc = "Contains a single MODsuit designed for Medical Personnel."
+	cost = CARGO_CRATE_VALUE * 20
+	access = ACCESS_MEDICAL
+	contains = list(/obj/item/mod/control/pre_equipped/medical)
+	crate_name = "medical modsuit crate"
