@@ -39,6 +39,7 @@
 		"zipties",
 		"seclite",
 		"electropack",
+		"flashpayload",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SECURITY)
@@ -57,6 +58,9 @@
 		"ballistic_shield",
 		"handcuffs_s",
 		"bola_energy",
+		"stingbangpayload",
+		"pepperpayload",
+		"dspayload",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SECURITY)
@@ -110,6 +114,7 @@
 		"ioncarbine",
 		"temp_gun",
 		"lasershell",
+		"espayload",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SECURITY)

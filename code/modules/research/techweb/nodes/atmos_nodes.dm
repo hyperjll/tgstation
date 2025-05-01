@@ -42,6 +42,7 @@
 		"atmos_thermal",
 		"pneumatic_seal",
 		"large_welding_tool",
+		"mfpayload",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	discount_experiments = list(
@@ -107,6 +108,7 @@
 		"rcd_ammo",
 		"weldingmask",
 		"magboots",
+		"smfpayload",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	discount_experiments = list(/datum/experiment/ordnance/gaseous/bz = TECHWEB_TIER_4_POINTS)

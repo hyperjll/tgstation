@@ -16,6 +16,10 @@
 		"rapidsyringe",
 		"suppressor",
 		"super_pointy_tape",
+		"emppayload",
+		"cryopayload",
+		"rdpayload",
+		"hepayload",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	hidden = TRUE

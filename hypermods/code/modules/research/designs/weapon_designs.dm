@@ -267,8 +267,152 @@
 	desc = "A bomb payload that doesn't actually do anything. Useful for training security officers in the technique of bomb defusal."
 	id = "dummypayload"
 	build_type = PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 5)
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 1)
 	build_path = /obj/item/bombcore/training
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/emppayload
+	name = "EMP Payload"
+	desc = "A bomb payload with an EMP get-up. Can also be inserted into grenade casings to make a classic EMP grenade."
+	id = "emppayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 5)
+	build_path = /obj/item/bombcore/emp/small
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/flashpayload
+	name = "Flash Payload"
+	desc = "A bomb payload containing flash-creation chemical solutions. Can also be inserted into grenade casings to make a flashbang."
+	id = "flashpayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 2)
+	build_path = /obj/item/bombcore/flash
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/stingbangpayload
+	name = "Stingbang Payload"
+	desc = "A grenade payload with an awful lot of rubber balls. Can be inserted into grenade casings to make a stingbang."
+	id = "stingbangpayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 4, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 3)
+	build_path = /obj/item/bombcore/stingbang
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/cryopayload
+	name = "Cryogenic Payload"
+	desc = "A grenade payload filled with frost-inducing chemicals. Can be inserted into grenade casings to make a cryogenic grenade."
+	id = "cryopayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 3, /datum/material/plasma = SHEET_MATERIAL_AMOUNT * 1)
+	build_path = /obj/item/bombcore/cryogenic
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/mfpayload
+	name = "Metal Foam Payload"
+	desc = "A grenade payload with an aluminium foam compartment. Can be inserted into grenade casings to make a metal foam grenade."
+	id = "mfpayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 4, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 2)
+	build_path = /obj/item/bombcore/metal_foam
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+
+/datum/design/smfpayload
+	name = "Smart Metal Foam Payload"
+	desc = "A grenade payload with an aluminium foam compartment. Can be inserted into grenade casings to make a smart metal foam grenade."
+	id = "smfpayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 4, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 4)
+	build_path = /obj/item/bombcore/smart_metal_foam
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+
+/datum/design/pepperpayload
+	name = "Tear Gas Payload"
+	desc = "A grenade payload with a pepperspray compartment. Can be inserted into grenade casings to make a tear gas grenade."
+	id = "pepperpayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 3)
+	build_path = /obj/item/bombcore/pepper
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/fdpayload
+	name = "Foam Dart Payload"
+	desc = "A grenade payload with everyones favorite foam darts! Can be inserted into grenade casings to make a foam dart grenade."
+	id = "fdpayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 1)
+	build_path = /obj/item/bombcore/foam_dart
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SERVICE
+
+/datum/design/rdpayload
+	name = "Riot Dart Payload"
+	desc = "A grenade payload with riot darts. Can be inserted into grenade casings to make a riot dart grenade."
+	id = "rdpayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 1)
+	build_path = /obj/item/bombcore/riot_dart
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/hepayload
+	name = "HE Payload"
+	desc = "A grenade payload containing an assortment of highly explosive chemicals. Can be inserted into grenade casings to make a HE grenade."
+	id = "hepayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 5)
+	build_path = /obj/item/bombcore/highexplosive
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/dspayload
+	name = "Disabler Stinger Payload"
+	desc = "A grenade payload with an admittedly shoddy looking disabler beam generator. Can be inserted into grenade casings to make a disabler stinger grenade."
+	id = "dspayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 5)
+	build_path = /obj/item/bombcore/estinger
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/espayload
+	name = "Energy Stinger Payload"
+	desc = "A grenade payload with high concentrations of light-based energy. Can be inserted into grenade casings to make a energy stinger grenade."
+	id = "espayload"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 5)
+	build_path = /obj/item/bombcore/estinger_lethal
 	category = list(
 		RND_CATEGORY_EQUIPMENT
 	)

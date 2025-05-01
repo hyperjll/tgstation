@@ -195,6 +195,10 @@
 		wires.interact(user)
 
 	else if(istype(I, /obj/item/bombcore))
+		var/obj/item/bombcore/payload_in_question = I
+		if(payload_in_question.no_big_bombs)
+			to_chat(user, span_warning("It doesn't look like this payload can be placed within any bomb assemblies..."))
+			return
 		if(!payload)
 			if(!user.transferItemToLoc(I, src))
 				return
@@ -344,6 +348,9 @@
 	var/range_medium = 9
 	var/range_light = 17
 	var/range_flame = 17
+	var/grenade_craft = FALSE // Can we be made into a grenade
+	var/grenade_craft_type = null // What type of nade?
+	var/no_big_bombs = FALSE // Can we NOT be placed into a large bomb assembly?
 
 /obj/item/bombcore/ex_act(severity, target) // Little boom can chain a big boom.
 	detonate()
@@ -364,6 +371,26 @@
 
 /obj/item/bombcore/proc/defuse()
 //Note: the machine's defusal is mostly done from the wires code, this is here if you want the core itself to do anything.
+
+/obj/item/bombcore/interact_with_atom(atom/target, mob/living/user, proximity)
+	. = ..()
+	if(istype(target, /obj/item/grenade/chem_grenade))
+		if(!grenade_craft)
+			to_chat(user, span_warning("It doesn't look like this payload can be assembled into any grenades..."))
+			return
+		var/obj/item/grenade/chem_grenade/target_nade = target
+		if(target_nade.stage != GRENADE_WIRED)
+			to_chat(user, span_warning("This grenade must not be fully assembled, but still wired to accept payloads!"))
+			return
+
+		message_admins("[ADMIN_LOOKUPFLW(user)] crafted [grenade_craft_type] with [target] using [src] at [AREACOORD(user)]")
+		log_game("[key_name(user)] crafted [grenade_craft_type] with [target] using [src] at [AREACOORD(user)]")
+
+		var/location = get_turf(target_nade)
+		if (grenade_craft_type) // Just to avoid runtimes
+			new grenade_craft_type(location)
+		qdel(target_nade)
+		qdel(src)
 
 ///Bomb Core Subtypes///
 
@@ -594,6 +621,8 @@
 /obj/item/bombcore/emp
 	name = "EMP payload"
 	desc = "A set of superconducting electromagnetic coils designed to release a powerful pulse to destroy electronics and scramble circuits"
+	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
+	icon_state = "empcore"
 	range_heavy = 15
 	range_medium = 25
 

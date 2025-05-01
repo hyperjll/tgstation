@@ -28,6 +28,8 @@
 	var/obj/item/assembly/prox_sensor/landminemode = null
 	/// Whether or not a grenade can be disassembled. Prevents people from reclaiming reagents within grenades.
 	var/can_dismantle = TRUE
+	/// Whether or not a grenade deletes itself after being used up.
+	var/delete_after_use = FALSE
 
 /obj/item/grenade/chem_grenade/Initialize(mapload)
 	. = ..()
@@ -293,6 +295,9 @@
 
 	active = FALSE
 	update_appearance()
+
+	if(delete_after_use)
+		qdel(src)
 
 //Large chem grenades accept slime cores and use the appropriately.
 /obj/item/grenade/chem_grenade/large
