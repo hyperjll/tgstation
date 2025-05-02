@@ -6829,6 +6829,7 @@
 #include "hypermods\code\game\objects\items\storage\fancy.dm"
 #include "hypermods\code\game\objects\items\storage\itempack.dm"
 #include "hypermods\code\game\objects\items\storage\medkit.dm"
+#include "hypermods\code\game\objects\items\storage\pillbottles.dm"
 #include "hypermods\code\game\objects\items\storage\sixpack.dm"
 #include "hypermods\code\game\objects\items\storage\toolbox.dm"
 #include "hypermods\code\game\objects\items\storage\uplink_kits.dm"
