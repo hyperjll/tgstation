@@ -76,6 +76,23 @@
 	to_chat(user, span_warning("The new failsafe code for this uplink is now: [code].[traitor_datum ? " You may check your antagonist info to recall this." : null]"))
 	return source //For log icon
 
+/datum/uplink_item/deception/mail_counterfeit
+	name = "GLA Brand Mail Counterfeit Device"
+	desc = "A device capable of counterfeiting NT's mail. Can be used to store items within as an easy means of smuggling contraband. \
+			Additionally, you may choose to \"arm\" the item inside, causing the item to be used the moment the mail is opened as if the person had just used it in hand. \
+			The most common usage of this feature is with grenades, as it forces the grenade to prime. Bonus points if the grenade is set to instantly detonate. \
+			Comes with an integrated micro-computer for configuration purposes."
+	item = /obj/item/storage/mail_counterfeit_device
+	cost = 1
+	surplus = 30
+
+/datum/uplink_item/deception/forensics_spofer
+	name = "Forensics Spoofing Kit"
+	desc = "A box that contains the forensics spoofer (and instructions) which can scan and replicate fingerprints and fibers \
+			and apply them to a target object. Helpful for framing crew. Recommend buying soap with your purchase."
+	item = /obj/item/storage/box/syndie_kit/forensics_spoofer
+	cost = 5
+
 
 /datum/uplink_item/deception/trap_disks
 	name = "Box of Syndicate Trapped Disks"
