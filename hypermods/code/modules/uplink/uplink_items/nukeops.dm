@@ -110,6 +110,34 @@
 
 
 
+// ~~ Mechs ~~
+
+/datum/uplink_item/mech/savannah_ivanov
+	name = "Savannah-Ivanov Exosuit"
+	desc = "An insanely overbulked mecha that handily crushes single-pilot opponents. The only real 'drawback' is that it requires TWO operators. \
+			Features high integrity, medium-grade defense, and an innate leap ability allowing you to crush people nearby and destroy the environment. \
+			Those in the gunner seat can shoot aerial missiles directly onto targets. Doesn't come with any additional equipment."
+	item = /obj/vehicle/sealed/mecha/savannah_ivanov
+	cost = 75
+
+/datum/uplink_item/mech/laser_shots
+	name = "CH-PS \"Immolator\" laser"
+	desc = "An energy arm-mounted rifle that fires lethal energy shots."
+	item = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
+	cost = 8
+
+/datum/uplink_item/mech/tesla_cannon
+	name = "MKI Tesla Cannon"
+	desc = "An energy cannon that fires bolts of condensed electricity. Allows for some decent crowd-control."
+	item = /obj/item/mecha_parts/mecha_equipment/weapon/energy/tesla
+	cost = 8
+
+/datum/uplink_item/mech/repair_droid
+	name = "Exosuit Repair Droid"
+	desc = "A single repair droid to install into any mech of choice, allowing for automatic self-repair at the cost of the mech's internal power source."
+	item = /obj/item/mecha_parts/mecha_equipment/repair_droid
+	cost = 8
+
 // Stealthy Tools
 
 
