@@ -366,6 +366,11 @@
 	new /obj/item/clothing/mask/gas/clown_hat(src)
 	new /obj/item/bikehorn(src)
 	new /obj/item/implanter/sad_trombone(src)
+	new /obj/item/storage/backpack/clown(src)
+	new /obj/item/storage/box/survival/hug(src)
+	new /obj/item/stamp/clown(src)
+	new /obj/item/storage/box/clowngadgets(src)
+	new /obj/item/market_uplink/clown(src)
 
 /obj/item/storage/backpack/henchmen
 	name = "wings"

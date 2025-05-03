@@ -1,3 +1,10 @@
+/datum/uplink_item/badass/costumes/mime
+	name = "Mime Costume"
+	desc = "..."
+	item = /obj/item/storage/backpack/duffelbag/syndie/mime
+	purchasable_from = (UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+	progression_minimum = 70 MINUTES
+
 /datum/uplink_item/badass/mythril
 	name = "Mythril"
 	desc = "A single bar of Mythril. From what little we've been able to study of it, this material has inheretly mystical properties. \
