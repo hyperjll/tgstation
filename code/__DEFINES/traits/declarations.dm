@@ -1517,6 +1517,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Demolition modifier when hitting this object is inverted (ie, 1 / demolition)
 #define TRAIT_INVERTED_DEMOLITION "demolition_inverted"
 
+/// Trait given when we escape into our shell
+#define TRAIT_SHELL_RETREATED "shell_retreated"
 ///Trait given to mobs which allow them to perform all surgeries upon themselves.
 #define TRAIT_SELF_SURGERY_ABLE "self_surgery_able"
 
