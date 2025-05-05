@@ -562,13 +562,13 @@ MAX_SHUTTLE_SIZE 300
 
 ### Spy config
 ## Changes refresh period between bounties - in deciseconds
-SPY_BOUNTY_REFRESH_TIMER 7200
+SPY_BOUNTY_REFRESH_TIMER 6000
 ## Changes amount of easy bounties offered at once. Limit = 8
-SPY_BOUNTY_MAX_EASY 4
+SPY_BOUNTY_MAX_EASY 8
 ## Changes amount of medium bounties offered at once. Limit = 6
-SPY_BOUNTY_MAX_MEDIUM 2
+SPY_BOUNTY_MAX_MEDIUM 6
 ## Changes amount of hard bounties offered at once. Limit = 4
-SPY_BOUNTY_MAX_HARD 2
+SPY_BOUNTY_MAX_HARD 4
 ## Changes amount of refreshes necessary per each hard bounty
 ## 1 = A hard bounty is added per refresh (until the max)
 ## 0.5 = A hard bounty is added every 2 refreshes (until the max).
