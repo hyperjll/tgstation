@@ -75,6 +75,10 @@
 	desc = "A payload containing the necessities to create a stingbang. Must be inserted into a chemical grenade casing or a bomb to function."
 	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
 	icon_state = "stingbangcore"
+	range_heavy = 0
+	range_medium = 0
+	range_light = 1
+	range_flame = 0
 	grenade_craft = TRUE
 	grenade_craft_type = /obj/item/grenade/stingbang
 	no_big_bombs = TRUE
@@ -84,6 +88,10 @@
 	desc = "A payload containing the necessities to create a cryogenic grenade. Must be inserted into a chemical grenade casing to function."
 	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
 	icon_state = "cryocore"
+	range_heavy = 0
+	range_medium = 0
+	range_light = 0
+	range_flame = 0
 	grenade_craft = TRUE
 	grenade_craft_type = /obj/item/grenade/cryogenic
 	no_big_bombs = TRUE
@@ -93,6 +101,10 @@
 	desc = "A payload containing the necessities to create a metal foam grenade. Must be inserted into a chemical grenade casing to function."
 	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
 	icon_state = "metalfoamcore"
+	range_heavy = 0
+	range_medium = 0
+	range_light = 0
+	range_flame = 0
 	grenade_craft = TRUE
 	grenade_craft_type = /obj/item/grenade/chem_grenade/metalfoam_stylish
 	no_big_bombs = TRUE
@@ -102,6 +114,10 @@
 	desc = "A payload containing the necessities to create a smart metal foam grenade. Must be inserted into a chemical grenade casing to function."
 	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
 	icon_state = "metalfoamcore"
+	range_heavy = 0
+	range_medium = 0
+	range_light = 0
+	range_flame = 0
 	grenade_craft = TRUE
 	grenade_craft_type = /obj/item/grenade/chem_grenade/smart_metal_foam_stylish
 	no_big_bombs = TRUE
@@ -111,6 +127,10 @@
 	desc = "A payload containing the necessities to create a tear gas grenade. Must be inserted into a chemical grenade casing to function."
 	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
 	icon_state = "peppercore"
+	range_heavy = 0
+	range_medium = 0
+	range_light = 0
+	range_flame = 0
 	grenade_craft = TRUE
 	grenade_craft_type = /obj/item/grenade/chem_grenade/teargas_stylish
 	no_big_bombs = TRUE
@@ -120,6 +140,10 @@
 	desc = "A payload containing the necessities to create a foam dart grenade. Must be inserted into a chemical grenade casing to function."
 	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
 	icon_state = "foamdartcore"
+	range_heavy = 0
+	range_medium = 0
+	range_light = 0
+	range_flame = 0
 	grenade_craft = TRUE
 	grenade_craft_type = /obj/item/grenade/foam_dart
 	no_big_bombs = TRUE
@@ -129,6 +153,10 @@
 	desc = "A payload containing the necessities to create a riot dart grenade. Must be inserted into a chemical grenade casing to function."
 	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
 	icon_state = "riotdartcore"
+	range_heavy = 0
+	range_medium = 0
+	range_light = 0
+	range_flame = 0
 	grenade_craft = TRUE
 	grenade_craft_type = /obj/item/grenade/foam_dart/riot
 	no_big_bombs = TRUE
@@ -138,15 +166,22 @@
 	desc = "A payload containing the necessities to create a highly-explosive grenade. Must be inserted into a chemical grenade casing to function."
 	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
 	icon_state = "hecore"
+	range_heavy = 2
+	range_medium = 0
+	range_light = 3
+	range_flame = 3
 	grenade_craft = TRUE
 	grenade_craft_type = /obj/item/grenade/syndieminibomb/concussion
-	no_big_bombs = TRUE
 
 /obj/item/bombcore/estinger
 	name = "Disabler Stinger Payload"
 	desc = "A payload containing the necessities to create a disabler stinger. Must be inserted into a chemical grenade casing to function."
 	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
 	icon_state = "estingcore"
+	range_heavy = 0
+	range_medium = 0
+	range_light = 1
+	range_flame = 1
 	grenade_craft = TRUE
 	grenade_craft_type = /obj/item/grenade/energy_stinger
 	no_big_bombs = TRUE
@@ -156,6 +191,10 @@
 	desc = "A payload containing the necessities to create a disabler stinger. Must be inserted into a chemical grenade casing to function."
 	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
 	icon_state = "estingcore"
+	range_heavy = 0
+	range_medium = 4
+	range_light = 2
+	range_flame = 3
 	grenade_craft = TRUE
 	grenade_craft_type = /obj/item/grenade/energy_stinger/lethal
 	no_big_bombs = TRUE
