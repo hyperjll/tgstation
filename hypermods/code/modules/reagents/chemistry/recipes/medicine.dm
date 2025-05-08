@@ -58,7 +58,7 @@
 /datum/chemical_reaction/stimulants
 	results = list(/datum/reagent/medicine/stimulants = 3)
 	required_reagents = list(/datum/reagent/vestine = 1, /datum/reagent/medicine/ephedrine = 1, /datum/reagent/oxygen = 2)
-	required_temp = 370
+	required_temp = 300
 
 /datum/chemical_reaction/styptic_powder
 	results = list(/datum/reagent/medicine/styptic_powder = 4)
@@ -67,3 +67,23 @@
 /datum/chemical_reaction/silver_sulfadiazine
 	results = list(/datum/reagent/medicine/silver_sulfadiazine = 5)
 	required_reagents = list(/datum/reagent/ammonia = 1, /datum/reagent/silver = 1, /datum/reagent/sulfur = 1, /datum/reagent/oxygen = 1, /datum/reagent/chlorine = 1)
+
+/datum/chemical_reaction/omnizine
+	results = list(/datum/reagent/medicine/omnizine = 6)
+	required_reagents = list(/datum/reagent/vestine = 1, /datum/reagent/phenol = 2, /datum/reagent/acetone = 2, /datum/reagent/water/salt = 1)
+	required_temp = 300
+
+/datum/chemical_reaction/medicine/pen_acid/alt
+	results = list(/datum/reagent/medicine/pen_acid = 3)
+	required_reagents = list(/datum/reagent/vestine = 1, /datum/reagent/ammonia = 1, /datum/reagent/consumable/salt = 1)
+	required_temp = 300
+
+/datum/chemical_reaction/medicine/atropine/alt
+	results = list(/datum/reagent/medicine/atropine = 6)
+	required_reagents = list(/datum/reagent/vestine = 1, /datum/reagent/acetone = 1, /datum/reagent/diethylamine = 1)
+	required_temp = 300
+
+/datum/chemical_reaction/medicine/modafinil/alt
+	results = list(/datum/reagent/medicine/modafinil = 4)
+	required_reagents = list(/datum/reagent/vestine = 1, /datum/reagent/ammonia = 1, /datum/reagent/toxin/acid = 1)
+	required_temp = 300

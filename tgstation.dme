@@ -7070,6 +7070,7 @@
 #include "hypermods\code\modules\reagents\chemistry\reagents\other_reagents.dm"
 #include "hypermods\code\modules\reagents\chemistry\reagents\pyrotechnic_reagents.dm"
 #include "hypermods\code\modules\reagents\chemistry\reagents\toxin_reagents.dm"
+#include "hypermods\code\modules\reagents\chemistry\recipes\cat2_medicines.dm"
 #include "hypermods\code\modules\reagents\chemistry\recipes\drugs.dm"
 #include "hypermods\code\modules\reagents\chemistry\recipes\medicine.dm"
 #include "hypermods\code\modules\reagents\chemistry\recipes\others.dm"
