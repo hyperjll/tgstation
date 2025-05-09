@@ -125,7 +125,7 @@
 			message_admins("Power lake activated by [ADMIN_LOOKUPFLW(user)] at [ADMIN_VERBOSEJMP(src)]")
 			user.log_message("activated a powerlake", LOG_GAME)
 			notify_ghosts(
-				"[user] has activated a power lale!",
+				"[user.real_name] has activated a power lale!",
 				source = src,
 				header = "Shocking News!",
 			)
