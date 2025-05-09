@@ -30,6 +30,15 @@
 	item = /obj/item/storage/box/syndie_kit/syndicate_teleporter
 	cost = 8
 
+/datum/uplink_item/mobility/dangerous_horse
+	name = "Boxed Syndicate Pony"
+	desc = "A box containing a special breed of horse scientifically engineered by our best geneticists, now in cube form! \
+			This horse can survive in the vacuum of space, doesn't require air to breathe, and is quite robust in combat. \
+			Also comes with an apple for taming purposes, and a sentience potion which only works on our horses. \
+			Despite it's survivability in space, it's not capable of space-traversal. For God's sake, don't make apple pie!"
+	item = /obj/item/storage/box/syndicate/horse_box
+	cost = 10
+
 
 /datum/uplink_item/mobility/airshoes
 	name = "Air Shoes"
