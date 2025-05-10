@@ -1346,3 +1346,15 @@
 /obj/item/storage/box/syndie_kit/impsur_buster/PopulateContents()
 	new /obj/item/autosurgeon/syndicate/strongarm/buster/single_use(src)
 	new /obj/item/autosurgeon/syndicate/strongarm/buster/l/single_use(src)
+
+/obj/item/storage/box/syndie_kit/clover
+	name = "wild east deputy pack"
+	desc = "Contains everything you'll need to be the best deputy you could ever be."
+
+/obj/item/storage/box/syndie_kit/clover/PopulateContents()
+	generate_items_inside(list(
+		/obj/item/clothing/shoes/cowboy/black= 1,
+		/obj/item/clothing/head/cowboy/brown = 1,
+		/obj/item/storage/belt/holster/nukie/clover/full = 1,
+		/obj/item/clothing/under/costume/dutch = 1,
+	), src)
