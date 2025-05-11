@@ -1,6 +1,6 @@
 import { BooleanLike } from 'tgui-core/react';
 
-import { useBackend, useSharedState } from '../backend';
+import { useBackend, useLocalState } from '../backend';
 import {
   Button,
   Flex,
@@ -41,7 +41,7 @@ export const NaniteProgramHub = (props, context) => {
     programs = [],
     categories,
   } = data;
-  const [selectedCategory, setSelectedCategory] = useSharedState(
+  const [selectedCategory, setSelectedCategory] = useLocalState(
     context,
     'category',
   );
