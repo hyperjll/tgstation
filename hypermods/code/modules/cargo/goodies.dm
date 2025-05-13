@@ -216,7 +216,6 @@
 	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 65
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
 	contains = list(/obj/item/storage/box/meteorshells)
 
 /datum/supply_pack/goody/pulseshells
@@ -225,7 +224,6 @@
 	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 80
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
 	contains = list(/obj/item/storage/box/pulseshells)
 
 /datum/supply_pack/goody/frag12shells
@@ -234,7 +232,6 @@
 	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 60
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
 	contains = list(/obj/item/storage/box/frag12shells)
 
 /datum/supply_pack/goody/flechetteshells
@@ -257,7 +254,6 @@
 	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 25
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
 	contains = list(/obj/item/storage/box/ionshells)
 
 /datum/supply_pack/goody/lasershells
@@ -274,7 +270,6 @@
 	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 37.5
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
 	contains = list(/obj/item/storage/box/uraniumshells)
 
 /datum/supply_pack/goody/cryoshotshells
@@ -298,7 +293,6 @@
 	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 40
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
 	contains = list(/obj/item/storage/box/thundershotshells)
 
 /datum/supply_pack/goody/hardlightshells
@@ -314,7 +308,6 @@
 	contraband = TRUE
 	cost = PAYCHECK_COMMAND * 20
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
 	contains = list(/obj/item/storage/box/ripshells)
 
 /datum/supply_pack/goody/anarchyshells
