@@ -1528,4 +1528,10 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// While 'determined', will we extra benefits?
 #define TRAIT_NOSOFTCRIT_DETERMINED "too_determined_to_crit"
 
+/// You have special interactions with bloodsuckers and the occult.
+#define TRAIT_OCCULTIST "occultist"
+
+/// This mob is a ghost critter.
+#define TRAIT_GHOST_CRITTER "ghost_critter"
+
 // END TRAIT DEFINES

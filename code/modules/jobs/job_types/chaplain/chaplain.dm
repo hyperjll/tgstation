@@ -111,6 +111,9 @@
 	SSblackbox.record_feedback("text", "religion_deity", 1, "[new_deity]", 1)
 	SSblackbox.record_feedback("text", "religion_bible", 1, "[new_bible]", 1)
 
+	if(spawned.mind)
+		ADD_TRAIT(spawned.mind, TRAIT_OCCULTIST, JOB_TRAIT)
+
 /datum/outfit/job/chaplain
 	name = "Chaplain"
 	jobtype = /datum/job/chaplain

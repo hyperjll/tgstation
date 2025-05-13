@@ -19,6 +19,7 @@
 #define ROLE_SPY "Spy"
 #define ROLE_INITIAL_INFECTED "Initial Infected"
 #define ROLE_WEREWOLF "Werewolf"
+#define ROLE_BLOODSUCKER "Bloodsucker"
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -43,6 +44,8 @@
 #define ROLE_HERETIC_MIDROUND "Heretic Awakening"
 #define ROLE_INFILTRATOR "Infiltrator"
 #define ROLE_LYCANTHROPY_VICTIM "Lycanthropy Victim"
+#define ROLE_BLOODSUCKERBREAKOUT "Bloodsucker Breakout"
+#define ROLE_SWARMER "Swarmer"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
@@ -51,6 +54,7 @@
 #define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"
 #define ROLE_SPY_INFILTRATOR "Spy Infiltrator"
 #define ROLE_WEREWOLF_INVADER "Werewolf Invader"
+#define ROLE_VAMPIRICACCIDENT "Vampiric Accident"
 
 // Other roles
 #define ROLE_ANOMALY_GHOST "Ectoplasmic Anomaly Ghost"
@@ -150,6 +154,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SPY = 0,
 	ROLE_INITIAL_INFECTED = 14,
 	ROLE_WEREWOLF = 7,
+	ROLE_BLOODSUCKER = 7,
 
 	// Midround
 	ROLE_ABDUCTOR = 0,
@@ -174,6 +179,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_HERETIC_MIDROUND = 0,
 	ROLE_INFILTRATOR = 0,
 	ROLE_LYCANTHROPY_VICTIM = 7,
+	ROLE_SWARMER = 0,
 
 	// Latejoin
 	ROLE_HERETIC_SMUGGLER = 0,
@@ -182,12 +188,14 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_STOWAWAY_CHANGELING = 0,
 	ROLE_SPY_INFILTRATOR = 0,
 	ROLE_WEREWOLF_INVADER = 7,
+	ROLE_VAMPIRICACCIDENT = 7,
 
 	// I'm not too sure why these are here, but they're not moving.
 	ROLE_GLITCH = 0,
 	ROLE_PAI = 0,
 	ROLE_SENTIENCE = 0,
 	ROLE_RECOVERED_CREW = 0,
+	ROLE_BLOODSUCKERBREAKOUT = 7,
 ))
 
 //Job defines for what happens when you fail to qualify for any job during job selection

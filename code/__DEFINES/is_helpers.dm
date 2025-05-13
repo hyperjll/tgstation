@@ -74,6 +74,8 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 
 #define iswallturf(A) (istype(A, /turf/closed/wall))
 
+#define isreinforcedwallturf(A) (istype(A, /turf/closed/wall/r_wall))
+
 #define ismineralturf(A) (istype(A, /turf/closed/mineral))
 
 #define islava(A) (istype(A, /turf/open/lava))
@@ -213,6 +215,8 @@ GLOBAL_LIST_INIT(turfs_pass_meteor, typecacheof(list(
 
 #define isspider(A) (istype(A, /mob/living/basic/spider))
 
+#define isswarmer(A) (istype(A, /mob/living/basic/swarmer))
+
 //Eye mobs
 #define iseyemob(A) (istype(A, /mob/eye))
 
@@ -243,6 +247,18 @@ GLOBAL_LIST_INIT(turfs_pass_meteor, typecacheof(list(
 #define isgrenade(A) (istype(A, /obj/item/grenade))
 
 #define islandmine(A) (istype(A, /obj/effect/mine))
+
+#define isdoor(A) (istype(A, /obj/machinery/door))
+
+#define isgirder(A) (istype(A, /obj/structure/girder))
+
+#define isgrillie(A) (istype(A, /obj/structure/grille))
+
+#define iswindow(A) (istype(A, /obj/structure/window))
+
+#define istable(A) (istype(A, /obj/structure/table))
+
+#define istableframe(A) (istype(A, /obj/structure/table_frame))
 
 #define iscloset(A) (istype(A, /obj/structure/closet))
 
