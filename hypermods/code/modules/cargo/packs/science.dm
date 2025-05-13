@@ -93,15 +93,14 @@
 					/obj/item/stack/cable_coil)
 	crate_name = "cyborg assembly crate"
 	crate_type = /obj/structure/closet/crate/secure/science
-/**
+
 /datum/supply_pack/science/nanitelab
 	name = "Nanite Lab Setup Crate"
 	desc = "Contains a multitude of circuitry required for nanite labs as well as essential supplies for programming and monitoring nanites."
 	cost = CARGO_CRATE_VALUE * 10
 	access = ACCESS_RESEARCH
 	access_view = ACCESS_RESEARCH
-	contains = list(/obj/item/circuitboard/machine/public_nanite_chamber,
-					/obj/item/circuitboard/computer/nanite_chamber_control,
+	contains = list(/obj/item/circuitboard/computer/nanite_chamber_control,
 					/obj/item/circuitboard/machine/nanite_chamber,
 					/obj/item/circuitboard/computer/nanite_cloud_controller,
 					/obj/item/circuitboard/machine/nanite_program_hub,
@@ -111,7 +110,7 @@
 					/obj/item/storage/box/disks_nanite)
 	crate_name = "nanite lab crate"
 	crate_type = /obj/structure/closet/crate/secure/science
-**/
+
 /datum/supply_pack/science/pyrocore
 	name = "Refined Pyroclastic Anomaly Core Crate"
 	desc = "Contains a single Pyroclastic anomaly core."

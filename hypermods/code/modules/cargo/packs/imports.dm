@@ -2,6 +2,7 @@
 	name = "Syndicate Mining Equipment Crate"
 	desc = "(*!&@#CARE NOT FOR NANOTRASEN'S SHODDY EQUIPMENT DESIGNS? BUY OUR SUPERIOR MINING EQUIPMENT TODAY! GUARENTEED TO SERVE ANY MINERS OUT THERE FAR BETTER THAN ANYTHING THOSE POSERS AT NANOTRASEN PROVIDES!!!#@*$"
 	hidden = TRUE
+	contraband = TRUE
 	cost = CARGO_CRATE_VALUE * 10
 	contains = list(
 		/obj/item/clothing/suit/hooded/explorer/syndicate = 2,

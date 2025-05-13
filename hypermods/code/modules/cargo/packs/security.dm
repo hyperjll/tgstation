@@ -248,6 +248,7 @@
 	name = "Random 10mm Ammo Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES THREE RANDOM 10mm MAGAZINES, ENSURE YOUR GOODS ARE NOT STOLEN."
 	contraband = TRUE
+	hidden = TRUE
 	cost = CARGO_CRATE_VALUE * 20
 	contains = list(/obj/item/storage/box/syndie_kit/pistolammo10mm/random)
 	crate_name = "crate"
@@ -256,6 +257,7 @@
 	name = "Random .357 Ammo Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES TWO RANDOM .357 SPEEDLOADERS, ENSURE YOUR GOODS ARE NOT STOLEN."
 	contraband = TRUE
+	hidden = TRUE
 	cost = CARGO_CRATE_VALUE * 30
 	contains = list(/obj/item/storage/box/syndie_kit/revolverammo/random)
 	crate_name = "crate"
@@ -264,6 +266,7 @@
 	name = ".45 Ammo Crate"
 	desc = "Contains one of each kind of .45 ammo magazine for your M1911s: Eight magazines in total."
 	contraband = TRUE
+	hidden = TRUE
 	cost = CARGO_CRATE_VALUE * 25
 	contains = list(/obj/item/ammo_box/magazine/m45,
 					/obj/item/ammo_box/magazine/m45/cs,
@@ -279,6 +282,7 @@
 	name = "7.12x82 Ammo Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES FOUR REGULAR 7.12x82mm MAGAZINES WHICH ARE COMPATIBLE WITH THE AKMS, ENSURE YOUR GOODS ARE NOT STOLEN."
 	contraband = TRUE
+	hidden = TRUE
 	cost = CARGO_CRATE_VALUE * 37.5
 	contains = list(/obj/item/ammo_box/magazine/ak712x82,
 					/obj/item/ammo_box/magazine/ak712x82,
@@ -290,6 +294,7 @@
 	name = "Specialized 7.12x82 Ammo Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES THREE SPECIALIZED 7.12x82mm MAGAZINES FOR THE AKMS, ENSURE YOUR GOODS ARE NOT STOLEN."
 	contraband = TRUE
+	hidden = TRUE
 	cost = CARGO_CRATE_VALUE * 37.5
 	contains = list(/obj/item/ammo_box/magazine/ak712x82/ap,
 					/obj/item/ammo_box/magazine/ak712x82/hp,
@@ -300,6 +305,7 @@
 	name = "Tommy Gun Ammo Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES TWO DRUM MAGAZINES FOR THE 'TOMMY GUN', ENSURE YOUR GOODS ARE NOT STOLEN."
 	contraband = TRUE
+	hidden = TRUE
 	cost = CARGO_CRATE_VALUE * 37.5
 	contains = list(/obj/item/ammo_box/magazine/tommygunm45,
 					/obj/item/ammo_box/magazine/tommygunm45)
@@ -309,6 +315,7 @@
 	name = "Harpoon Quiver Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES A SINGLE HARPOON QUIVER, ENSURE YOUR GOODS ARE NOT STOLEN."
 	contraband = TRUE
+	hidden = TRUE
 	cost = CARGO_CRATE_VALUE * 37.5
 	contains = list(/obj/item/storage/harpoon_quiver)
 	crate_name = "crate"
@@ -317,6 +324,7 @@
 	name = "Composition C4 Crate"
 	desc = "(!&@#$%@ Contains three plastic c4 explosives."
 	contraband = TRUE
+	hidden = TRUE
 	cost = CARGO_CRATE_VALUE * 40
 	contains = list(/obj/item/grenade/c4,
 					/obj/item/grenade/c4,
@@ -327,6 +335,7 @@
 	name = "Fragmentation Grenade Crate"
 	desc = "(!&@#$%@ Contains three Fragmentation Grenades."
 	contraband = TRUE
+	hidden = TRUE
 	cost = CARGO_CRATE_VALUE * 50
 	contains = list(/obj/item/grenade/frag,
 					/obj/item/grenade/frag,
