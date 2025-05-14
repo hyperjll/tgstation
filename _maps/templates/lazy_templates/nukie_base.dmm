@@ -1142,6 +1142,12 @@
 /obj/machinery/autolathe,
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+"kM" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium,
+/area/centcom/syndicate_mothership/expansion_custodialcloset)
 "kQ" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 9
@@ -1365,6 +1371,16 @@
 /obj/structure/chair/stool/directional/west,
 /turf/open/floor/wood/tile,
 /area/centcom/syndicate_mothership/control)
+"mO" = (
+/obj/item/storage/belt/janitor/full,
+/obj/structure/mop_bucket/janitorialcart,
+/obj/item/mop,
+/obj/item/soap/syndie,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/turf/open/floor/mineral/titanium,
+/area/centcom/syndicate_mothership/expansion_custodialcloset)
 "mV" = (
 /obj/structure/flora/tree/dead/style_random,
 /turf/open/misc/asteroid/snow/icemoon,
@@ -1593,8 +1609,8 @@
 /turf/open/floor/mineral/titanium/tiled,
 /area/centcom/syndicate_mothership/control)
 "pa" = (
-/obj/machinery/light/small/directional/south,
 /obj/structure/sign/poster/contraband/moffuchis_pizza/directional/west,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/control)
 "pf" = (
@@ -2221,6 +2237,17 @@
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/centcom/syndicate_mothership)
+"vL" = (
+/obj/machinery/portable_atmospherics/canister/water_vapor,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/mineral/titanium,
+/area/centcom/syndicate_mothership/expansion_custodialcloset)
 "vP" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
@@ -2337,8 +2364,8 @@
 	},
 /area/centcom/syndicate_mothership/control)
 "wP" = (
-/obj/structure/reagent_dispensers/watertank,
-/turf/open/floor/catwalk_floor/iron_smooth,
+/obj/machinery/door/puzzle/keycard/syndicate_custodial,
+/turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/expansion_custodialcloset)
 "wW" = (
 /obj/structure/flora/rock/pile/style_random,
@@ -3470,13 +3497,15 @@
 /turf/open/floor/plastic,
 /area/centcom/syndicate_mothership/expansion_fridgerummage)
 "Ie" = (
-/obj/structure/mop_bucket/janitorialcart{
-	dir = 4
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
 	},
-/obj/item/mop,
-/obj/item/reagent_containers/cup/bucket,
-/obj/item/soap/syndie,
-/turf/open/floor/catwalk_floor/iron_smooth,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/expansion_custodialcloset)
 "If" = (
 /obj/machinery/atmospherics/pipe/smart/simple/general/visible{
@@ -3510,8 +3539,14 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
 "Iq" = (
-/obj/machinery/portable_atmospherics/canister/water_vapor,
-/turf/open/floor/catwalk_floor/iron_smooth,
+/obj/structure/reagent_dispensers/watertank,
+/obj/item/watertank/janitor,
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/expansion_custodialcloset)
 "IC" = (
 /obj/structure/chair/stool/bar/directional/west,
@@ -4695,6 +4730,14 @@
 	},
 /turf/open/misc/asteroid/snow/airless,
 /area/centcom/syndicate_mothership)
+"TO" = (
+/obj/machinery/vending/wardrobe/jani_wardrobe,
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium,
+/area/centcom/syndicate_mothership/expansion_custodialcloset)
 "TR" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
@@ -5317,10 +5360,14 @@
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/control)
 "ZL" = (
-/obj/structure/flora/grass/both/style_random,
-/obj/structure/flora/rock/icy/style_random,
-/turf/open/misc/asteroid/snow/icemoon,
-/area/centcom/syndicate_mothership/control)
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark/corner{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium,
+/area/centcom/syndicate_mothership/expansion_custodialcloset)
 "ZO" = (
 /turf/closed/indestructible/opsglass,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
@@ -7362,11 +7409,11 @@ gw
 km
 gs
 pa
-RD
-RD
-RD
-RD
-RD
+wP
+Ie
+YY
+YY
+YY
 Ox
 sU
 sU
@@ -7464,11 +7511,11 @@ bo
 bo
 WA
 lA
-DZ
-Ox
-Ox
-Ox
-Ox
+YY
+ZL
+kM
+TO
+YY
 Ox
 sU
 sU
@@ -7566,12 +7613,12 @@ DZ
 DZ
 DZ
 DZ
-DZ
+YY
+vL
+mO
+Iq
+YY
 Ox
-Ox
-Ox
-Ox
-sU
 sU
 sU
 sU
@@ -7668,12 +7715,12 @@ mJ
 DY
 lQ
 Nb
-VK
-KA
-ZL
+DZ
+YY
+YY
+YY
+YY
 Ox
-Ox
-sU
 sU
 sU
 sU
@@ -7775,7 +7822,7 @@ To
 KA
 AT
 Ox
-sU
+Ox
 sU
 sU
 sU
