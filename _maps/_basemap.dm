@@ -17,6 +17,11 @@
 		#include "map_files\wawastation\wawastation.dmm"
 		#include "map_files\DorfWorld\dorfworld.dmm"
 		#include "map_files\KiloStation\KiloStation.dmm"
+		#include "map_files\Heliostation\Heliostation.dmm"
+		#include "map_files\NebulaStation\NebulaStation.dmm"
+		#include "map_files\PubbyStation\PubbyStation.dmm"
+		#include "map_files\SeleneStation\SeleneStation.dmm"
+		#include "map_files\TheiaStation\TheiaStation.dmm"
 	#endif
 	#ifdef ALL_TEMPLATES
 		#include "templates.dm"
