@@ -31,4 +31,4 @@
 
 	var/item_to_give = pick(item_list)
 
-	give_item_to_holder(item_to_give, list(LOCATION_BACKPACK = ITEM_SLOT_BACKPACK, LOCATION_HANDS = ITEM_SLOT_HANDS))
+	give_item_to_holder(item_to_give, list(LOCATION_BACKPACK, LOCATION_HANDS))
