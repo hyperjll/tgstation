@@ -1,3 +1,10 @@
+/obj/item/autosurgeon/unlocked
+	name = "autosurgeon"
+	desc = "A single use autosurgeon that can be loaded with any implant, though can only be used once."
+	uses = 1
+	surgery_speed = 0.1
+
+
 /obj/item/autosurgeon/syndicate/taser
 	starting_organ = /obj/item/organ/cyberimp/arm/gun/taser
 
