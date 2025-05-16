@@ -871,4 +871,10 @@
 			soundin = 'sound/misc/moist_impact.ogg'
 		if(SFX_REGEN_BLOODPACK_END)
 			soundin = 'sound/misc/soggy.ogg'
+		if(SFX_SHEEP_BLEAT)
+			soundin = pick(
+				'sound/mobs/non-humanoids/sheep/sheep1.ogg',
+				'sound/mobs/non-humanoids/sheep/sheep2.ogg',
+				'sound/mobs/non-humanoids/sheep/sheep3.ogg',
+			)
 	return soundin

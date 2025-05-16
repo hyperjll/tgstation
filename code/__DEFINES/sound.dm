@@ -270,6 +270,7 @@ GLOBAL_LIST_INIT(announcer_keys, list(
 #define SFX_REGEN_MESH_DROP "regen_mesh_drop"
 #define SFX_REGEN_BLOODPACK_BEGIN "bloodpack_begin"
 #define SFX_REGEN_BLOODPACK_END "bloodpack_end"
+#define SFX_SHEEP_BLEAT "sheep"
 
 // Standard is 44.1khz
 #define MIN_EMOTE_PITCH 40000
