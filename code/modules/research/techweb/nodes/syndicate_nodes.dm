@@ -20,6 +20,8 @@
 		"cryopayload",
 		"rdpayload",
 		"hepayload",
+		"emproof_cell",
+		"emproof_battery",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	hidden = TRUE
