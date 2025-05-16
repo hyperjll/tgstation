@@ -9,6 +9,7 @@
 		"donksoft_refill",
 		"donksofttoyvendor",
 		"largecrossbow",
+		"wt550-gun",
 		"mag_autorifle",
 		"mag_autorifle_ap",
 		"mag_autorifle_ic",

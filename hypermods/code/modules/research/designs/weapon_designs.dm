@@ -417,3 +417,15 @@
 		RND_CATEGORY_EQUIPMENT
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/wt550
+	name = "WT-550 Autorifle"
+	desc = "A long-since recalled rifle originally produced by Nanotrasen but has since been outlawed after much public backlash regarding heat distribution resulting in unintended discombobulation. Uses 4.6x30mm rounds."
+	id = "wt550-gun"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 30, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 10, /datum/material/plastic = SHEET_MATERIAL_AMOUNT * 10, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 3)
+	build_path = /obj/item/gun/ballistic/automatic/wt550/freshprint
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
