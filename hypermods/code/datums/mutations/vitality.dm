@@ -10,7 +10,8 @@
 	energy_coeff = 1
 
 /datum/mutation/human/vitality/on_acquiring(mob/living/carbon/human/acquirer)
-	if(..())
+	. = ..()
+	if(!.)
 		return
 	acquirer.maxHealth += 50
 

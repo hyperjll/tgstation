@@ -10,7 +10,8 @@
 	energy_coeff = 1
 
 /datum/mutation/human/metallineskin/on_acquiring(mob/living/carbon/human/acquirer)
-	if(..())
+	. = ..()
+	if(!.)
 		return
 	acquirer.physiology.brute_mod *= 0.75
 
@@ -32,7 +33,8 @@
 	energy_coeff = 1
 
 /datum/mutation/human/reflectiveskin/on_acquiring(mob/living/carbon/human/acquirer)
-	if(..())
+	. = ..()
+	if(!.)
 		return
 	acquirer.physiology.burn_mod *= 0.75
 

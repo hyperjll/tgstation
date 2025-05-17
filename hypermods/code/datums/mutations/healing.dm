@@ -12,7 +12,8 @@
 	var/regenerative = FALSE
 
 /datum/mutation/human/regenerative/on_acquiring(mob/living/carbon/human/acquirer)
-	if(..())
+	. = ..()
+	if(!.)
 		return
 
 	regenerative = TRUE

@@ -19,7 +19,8 @@
 	)
 
 /datum/mutation/human/superhuman/on_acquiring(mob/living/carbon/human/acquirer)
-	if(..())
+	. = ..()
+	if(!.)
 		return
 
 	superhumanhealing = TRUE
