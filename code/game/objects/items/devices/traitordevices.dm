@@ -106,6 +106,10 @@ effective or pretty fucking useless.
 	if(QDELETED(M) || !ishuman(M) || HAS_TRAIT(M, TRAIT_RADIMMUNE))
 		return
 
+	if(HAS_TRAIT(M, TRAIT_RADHEALING))
+		M.adjustBruteLoss(-round(passed_intensity/0.075))
+		M.adjustFireLoss(-round(passed_intensity/0.075))
+
 	if(passed_intensity >= 5)
 		M.apply_effect(round(passed_intensity/0.075), EFFECT_UNCONSCIOUS) //to save you some math, this is a round(intensity * (4/3)) second long knockout
 

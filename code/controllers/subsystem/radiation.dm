@@ -128,6 +128,12 @@ SUBSYSTEM_DEF(radiation)
 	if (HAS_TRAIT(target, TRAIT_RADIMMUNE))
 		return FALSE
 
+	var/mob/living/living_target = target
+	if(istype(living_target))
+		if(HAS_TRAIT(living_target, TRAIT_RADHEALING))
+			living_target.adjustBruteLoss(-5)
+			living_target.adjustFireLoss(-5)
+
 	return TRUE
 
 /// Returns whether or not the human is covered head to toe in rad-protected clothing.

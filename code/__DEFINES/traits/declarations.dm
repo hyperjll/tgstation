@@ -1536,4 +1536,11 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// This mob is a ghost critter.
 #define TRAIT_GHOST_CRITTER "ghost_critter"
 
+/// Makes you heal from radiation received
+#define TRAIT_RADHEALING "radiation_healing"
+/// Makes you not leave fingerprints (you still leave fibers though)
+#define TRAIT_NO_FINGERPRINTS "no_fingerprints"
+/// Gives you a coinflip chance when eating disliked food to actually like its taste
+#define TRAIT_STABILIZED_EATER "stabilized_eater"
+
 // END TRAIT DEFINES

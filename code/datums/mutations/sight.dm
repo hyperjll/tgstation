@@ -111,7 +111,7 @@
 
 ///X-ray Vision lets you see through walls.
 /datum/mutation/human/xray
-	name = "X Ray Vision"
+	name = "Perfect X-ray Vision"
 	desc = "A strange genome that allows the user to see between the spaces of walls." //actual x-ray would mean you'd constantly be blasting rads, which might be fun for later //hmb
 	text_gain_indication = span_notice("The walls suddenly disappear!")
 	instability = POSITIVE_INSTABILITY_MAJOR
@@ -133,7 +133,7 @@
 
 ///Laser Eyes lets you shoot lasers from your eyes!
 /datum/mutation/human/laser_eyes
-	name = "Laser Eyes"
+	name = "Perfected Laser Eyes"
 	desc = "Reflects concentrated light back from the eyes."
 	quality = POSITIVE
 	locked = TRUE

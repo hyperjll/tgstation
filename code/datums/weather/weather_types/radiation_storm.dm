@@ -46,6 +46,10 @@
 	if(!human.can_mutate())
 		return
 
+	if(HAS_TRAIT(human, TRAIT_RADHEALING))
+		human.adjustBruteLoss(-5)
+		human.adjustFireLoss(-5)
+
 	if(HAS_TRAIT(human, TRAIT_RADIMMUNE))
 		return
 
