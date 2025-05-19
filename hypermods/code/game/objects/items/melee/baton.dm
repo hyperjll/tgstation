@@ -43,6 +43,3 @@
 	target.set_jitter_if_lower(20 SECONDS)
 	target.set_stutter_if_lower(20 SECONDS)
 	target.reagents.add_reagent(/datum/reagent/toxin/sodium_thiopental, 10)
-
-/obj/item/melee/baton/telescopic/sleep_baton/get_wait_description()
-	return span_danger("The baton is still charging!")
