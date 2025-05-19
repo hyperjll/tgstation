@@ -1,8 +1,8 @@
 //does toxin damage, hallucination, targets think they're not hurt at all
 /datum/blobstrain/reagent/regenerative_materia
 	name = "Regenerative Materia"
-	description = "will do medium initial toxin damage, injecting a poison which does more toxin damage and makes targets believe they are fully healed. The core regenerates much faster."
-	analyzerdescdamage = "Does medium initial toxin damage, injecting a poison which does more toxin damage and makes targets believe they are fully healed. Core regenerates much faster."
+	description = "will do medium initial toxin damage, injecting a poison which does more toxin damage and makes targets believe they are fully healed. The core regenerates much faster, small chance to reclaim some resources upon tile death."
+	analyzerdescdamage = "Does medium initial toxin damage, injecting a poison which does more toxin damage and makes targets believe they are fully healed. Core regenerates much faster, small chance to reclaim some resources upon tile death."
 	color = "#A88FB7"
 	complementary_color = "#AF7B8D"
 	message_living = ", and you feel <i>alive</i>"
@@ -38,3 +38,8 @@
 /datum/reagent/blob/regenerative_materia/on_mob_end_metabolize(mob/living/metabolizer)
 	. = ..()
 	metabolizer.remove_status_effect(/datum/status_effect/grouped/screwy_hud/fake_healthy, type)
+
+/datum/blobstrain/reagent/regenerative_materia/death_reaction(obj/structure/blob/B, damage_flag)
+	if(damage_flag == MELEE || damage_flag == BULLET || damage_flag == LASER)
+		if(prob(25))
+			overmind.add_points(1)

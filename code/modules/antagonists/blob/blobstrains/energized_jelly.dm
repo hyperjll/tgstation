@@ -8,10 +8,14 @@
 	color = "#EFD65A"
 	complementary_color = "#00E5B1"
 	reagent = /datum/reagent/blob/energized_jelly
+	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_MOB_STUN
+	var/zap_range = 4
+	var/zap_power = 30000
 
 /datum/blobstrain/reagent/energized_jelly/damage_reaction(obj/structure/blob/B, damage, damage_type, damage_flag)
 	if((damage_flag == MELEE || damage_flag == BULLET || damage_flag == LASER) && B.get_integrity() - damage <= 0 && prob(10))
 		do_sparks(rand(2, 4), FALSE, B)
+		tesla_zap(B.loc, zap_range, zap_power, zap_flags)
 	return ..()
 
 /datum/blobstrain/reagent/energized_jelly/tesla_reaction(obj/structure/blob/B, power)
