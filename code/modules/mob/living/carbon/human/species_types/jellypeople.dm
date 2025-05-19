@@ -43,6 +43,7 @@
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/jelly,
 	)
 	var/datum/action/innate/regenerate_limbs/regenerate_limbs
+	inert_mutation = /datum/mutation/human/acid_touch
 
 /datum/species/jelly/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species, pref_load, regenerate_icons)
 	. = ..()

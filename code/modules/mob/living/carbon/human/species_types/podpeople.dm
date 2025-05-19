@@ -31,6 +31,8 @@
 	mutantstomach = /obj/item/organ/stomach/pod
 	mutanttongue = /obj/item/organ/tongue/pod
 
+	inert_mutation = /datum/mutation/human/spores
+
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/pod,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/pod,
