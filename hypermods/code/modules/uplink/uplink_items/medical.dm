@@ -23,13 +23,13 @@
 	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
-/datum/uplink_item/medical/surgerybag
-	name = "Syndicate Surgery Duffel Bag"
-	desc = "The Syndicate surgery duffel bag is a toolkit containing all surgery tools, surgical drapes, \
-			a Syndicate brand MMI, a straitjacket, a muzzle, and a special implant designed to allow the implantee \
+/datum/uplink_item/medical/surgery_syndie
+	name = "Full Syndicate Surgery Medkit"
+	desc = "The Syndicate surgery medkit is a toolkit containing all surgery tools, surgical drapes, \
+			a syringe, some sedatives, and a special implant designed to allow the implantee \
 			to perform surgery upon themself."
-	item = /obj/item/storage/backpack/duffelbag/syndie/surgery
-	cost = 4
+	item = /obj/item/storage/medkit/surgery_syndie
+	cost = 3
 	surplus = 66
 
 /datum/uplink_item/medical/changelingextract

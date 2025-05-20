@@ -130,6 +130,7 @@
 		/obj/item/stack/sticky_tape/surgical = 1,
 		/obj/item/reagent_containers/syringe = 1,
 		/obj/item/reagent_containers/cup/bottle/sodium_thiopental = 1,
+		/obj/item/implanter/selfsurgery = 1,
 	)
 	generate_items_inside(items_inside,src)
 
