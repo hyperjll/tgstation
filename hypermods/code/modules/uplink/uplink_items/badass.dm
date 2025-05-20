@@ -1,5 +1,5 @@
 /datum/uplink_item/badass/duffelbag
-	name = "Suspicous Duffel Bag"
+	name = "Suspicious Duffel Bag"
 	desc = "A large duffel bag for holding extra tactical supplies. It contains an oiled plastitanium zipper for maximum speed tactical zipping, \
 			and is better balanced on your back than an average duffelbag. Can hold two bulky items!"
 	item = /obj/item/storage/backpack/duffelbag/syndie
