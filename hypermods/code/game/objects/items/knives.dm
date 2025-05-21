@@ -75,6 +75,7 @@
 
 /obj/item/knife/throwing
 	name = "throwing knife"
+	desc = "A wonderfully designed knife capable of putting the real HURT on someone if thrown."
 	icon = 'hypermods/icons/obj/weapons/stabby.dmi'
 	icon_state = "throwingknife"
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/swords_lefthand.dmi'
