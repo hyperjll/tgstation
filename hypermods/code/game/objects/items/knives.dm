@@ -3,11 +3,28 @@
 	var/chemicalinuse = null
 	var/chemicalamount = 1
 	var/chemicalexamine = null
+	var/list/possible_chemicals = list(
+		/datum/reagent/toxin/venom,
+		/datum/reagent/toxin/lexorin,
+		/datum/reagent/toxin/amanitin,
+		/datum/reagent/toxin/staminatoxin,
+		/datum/reagent/toxin/curare,
+		/datum/reagent/toxin/initropidril,
+		/datum/reagent/toxin/pancuronium,
+		/datum/reagent/toxin/heparin
+	)
+
+/obj/item/knife/combat/survival/chemical/Initialize(mapload)
+	. = ..()
+	chemicalinuse = pick(possible_chemicals)
+	chemicalamount = rand(1, 4)
+	var/datum/reagent/reagent_selected = chemicalinuse
+	chemicalexamine = "[reagent_selected.name]"
 
 /obj/item/knife/combat/survival/chemical/examine(mob/user)
 	. = ..()
 	if(IS_TRAITOR(user) || IS_NUKE_OP(user) || user.mind?.has_antag_datum(/datum/antagonist/spy)) //helpful to other syndicates
-		. += "This knife has an internal redspace reagent generator producing [chemicalexamine]."
+		. += "This knife has an internal reagent generator producing [chemicalexamine]."
 
 /obj/item/knife/combat/survival/chemical/afterattack(atom/target, mob/user, proximity = TRUE)
 	. = ..()

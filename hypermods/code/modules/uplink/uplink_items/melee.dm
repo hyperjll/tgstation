@@ -147,74 +147,11 @@
 	surplus = 0
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
-/datum/uplink_item/melee/knifevenom
-	name = "Reagent Knife (Venom)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Venom. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. An excellent backup for agents all around."
-	item = /obj/item/knife/combat/survival/chemical/venom
-	cost = 3
+/datum/uplink_item/melee/reagent_knife
+	name = "Reagent Knife"
+	desc = "A seemingly normal survival knife equipped with an internal reagent generator, it produces an endless supply of a specially selected toxin. \
+			The chemicals within are immediately applied to the target's bloodstream when attacking. There's no guarentee you'll get an especially effective toxin. \
+			Often an effective backup weapon."
+	item = /obj/item/knife/combat/survival/chemical
+	cost = 5
 	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/melee/knifelexorin
-	name = "Reagent Knife (Lexorin)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Lexorin. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Excellent in taking down opponents without self-respiration."
-	item = /obj/item/knife/combat/survival/chemical/lexorin
-	cost = 6
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/melee/knifeamanitin
-	name = "Reagent Knife (Amanitin)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Amanitin. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Excellent for ensuring the target stays down for the count -- even after being rescued."
-	item = /obj/item/knife/combat/survival/chemical/amanitin
-	cost = 4
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/melee/knifestaminatoxin
-	name = "Reagent Knife (Tirizene)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Tirizene. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Excellent for quick take-downs."
-	item = /obj/item/knife/combat/survival/chemical/staminatoxin
-	cost = 2
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/melee/knifecurare
-	name = "Reagent Knife (Curare)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Curare. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Extremely effective against all non-silicon targets."
-	item = /obj/item/knife/combat/survival/chemical/curare
-	cost = 6
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/melee/knifeinitropidril
-	name = "Reagent Knife (Initropidril)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Initropidril. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Often wins your fights for you -- if you're lucky."
-	item = /obj/item/knife/combat/survival/chemical/initropidril
-	cost = 8
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/melee/knifepancuronium
-	name = "Reagent Knife (Pancuronium)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Pancuronium. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. A decent stun and poison combo."
-	item = /obj/item/knife/combat/survival/chemical/pancuronium
-	cost = 6
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/melee/knifeheparin
-	name = "Reagent Knife (Heparin)"
-	desc = "A seemingly normal survival knife equipped with one of our redspace generators, it produces an endless supply of Heparin. \
-			The chemicals within are immediately applied to the target's bloodstream when attacking. Excellent in bleeding victims out."
-	item = /obj/item/knife/combat/survival/chemical/heparin
-	cost = 2
-	surplus = 35
-	purchasable_from = ~UPLINK_SPY
