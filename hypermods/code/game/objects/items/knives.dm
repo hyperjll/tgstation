@@ -94,7 +94,7 @@
 
 /obj/item/melee/syndidagger
 	name = "syndicate dagger"
-	desc = "An old-fashioned syndicate dagger. Rumored to have manufactured to kill syndicate agents specifically."
+	desc = "An old-fashioned syndicate dagger. Rumored to have been manufactured to kill syndicate agents specifically."
 	icon = 'hypermods/icons/obj/weapons/stabby.dmi'
 	icon_state = "syndidagger"
 	force = 10
