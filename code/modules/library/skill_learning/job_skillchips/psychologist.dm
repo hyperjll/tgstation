@@ -15,8 +15,8 @@
 	skill_name = "Reverse Hypnosis"
 	skill_description = "Secretive techniques to use flashes to snap people out of Hypnosis, Brainwashing, and other mind-altering trances."
 	skill_icon = "spa"
-	activate_message = "<span class='notice'>You start thinking in patterns that will render you immune to visions from, and act as a calming influence for, matter in a hyperfractal state.</span>"
-	deactivate_message = "<span class='notice'>Your thoughts become more disordered and jumbled. You are no longer immune to the abyss.</span>"
+	activate_message = "<span class='notice'>Your mind is flooded with information regarding reverse-hypnotherapy.</span>"
+	deactivate_message = "<span class='notice'>You blank out as your knowledge over reverse-hypnotherapy leaves your mind.</span>"
 
 /obj/item/skillchip/reversehypno/on_activate(mob/living/carbon/user, silent = FALSE)
 	. = ..()
