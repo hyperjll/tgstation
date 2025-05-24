@@ -54,9 +54,16 @@
 	. = ..()
 	. += "This stun baton has a A.N.T.A.G Locker installed."
 
-/obj/item/melee/baton/security/antaglocked/dropped(obj/item/source, mob/living/carbon/user)
+/obj/item/melee/baton/security/antaglocked/dropped()
 	if(active)
 		turn_off()
+
+/obj/item/melee/baton/security/antaglocked/emag_act()
+	if(security_lock)
+		playsound(src, SFX_SPARKS, 15, TRUE)
+		if(active)
+			turn_off()
+		security_lock = FALSE
 
 /obj/item/antaglocker
 	name = "A.N.T.A.G Lock"
