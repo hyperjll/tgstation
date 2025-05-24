@@ -514,6 +514,9 @@
 	///When set, inhand_icon_state defaults to this instead of base_icon_state
 	var/base_inhand_state = null
 
+	///When set to true, this security baton will automatically turn off when dropped, and require you to be an actual member of security to turn it back on.
+	var/security_lock = FALSE
+
 /datum/armor/baton_security
 	bomb = 50
 	fire = 80
@@ -550,16 +553,29 @@
 /obj/item/melee/baton/security/proc/convert(datum/source, obj/item/item, mob/user)
 	SIGNAL_HANDLER
 
-	if(!istype(item, /obj/item/conversion_kit) || !convertible)
+	if(istype(item, /obj/item/conversion_kit) || !convertible)
+		var/turf/source_turf = get_turf(src)
+		var/obj/item/melee/baton/baton = new (source_turf)
+		baton.alpha = 20
+		playsound(source_turf, 'sound/items/tools/drill_use.ogg', 80, TRUE, -1)
+		animate(src, alpha = 0, time = 1 SECONDS)
+		animate(baton, alpha = 255, time = 1 SECONDS)
+		qdel(item)
+		qdel(src)
+	else if(istype(item, /obj/item/antaglocker) || !convertible)
+		var/turf/source_turf = get_turf(src)
+		var/obj/item/melee/baton/security/antaglocked/baton = new (source_turf)
+		baton.alpha = 20
+		playsound(source_turf, 'sound/items/tools/drill_use.ogg', 80, TRUE, -1)
+		animate(src, alpha = 0, time = 1 SECONDS)
+		animate(baton, alpha = 255, time = 1 SECONDS)
+		if(cell)
+			baton.cell = cell
+			baton.update_appearance()
+		qdel(item)
+		qdel(src)
+	else
 		return
-	var/turf/source_turf = get_turf(src)
-	var/obj/item/melee/baton/baton = new (source_turf)
-	baton.alpha = 20
-	playsound(source_turf, 'sound/items/tools/drill_use.ogg', 80, TRUE, -1)
-	animate(src, alpha = 0, time = 1 SECONDS)
-	animate(baton, alpha = 255, time = 1 SECONDS)
-	qdel(item)
-	qdel(src)
 
 /obj/item/melee/baton/security/on_saboteur(datum/source, disrupt_duration)
 	. = ..()
@@ -632,8 +648,17 @@
 
 /obj/item/melee/baton/security/attack_self(mob/user)
 	if(cell?.charge >= cell_hit_cost && !active)
-		turn_on(user)
-		balloon_alert(user, "turned on")
+		if(!active && security_lock)
+			var/mob/living/carbon/human/M = user
+			if(!(M.mind?.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_SECURITY))
+				balloon_alert(M, "not authorized!")
+				playsound(src, 'sound/machines/buzz/buzz-two.ogg', 10, TRUE)
+			else
+				turn_on(M)
+				balloon_alert(M, "turned on")
+		else
+			turn_on(user)
+			balloon_alert(user, "turned on")
 	else
 		turn_off()
 		if(!cell)

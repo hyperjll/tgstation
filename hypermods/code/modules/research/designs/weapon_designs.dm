@@ -429,3 +429,15 @@
 		RND_CATEGORY_EQUIPMENT
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/mindshield_nonremove
+	name = "Non-Removable Mindshield Firing Pin"
+	desc = "An upgraded mindshield firing pin specifically made to prevent people from simply replacing the firing pin and using your own firearms against you."
+	id = "mindshield_nonremove"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/silver = SHEET_MATERIAL_AMOUNT * 2, /datum/material/diamond = SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/uranium = SHEET_MATERIAL_AMOUNT * 0.8)
+	build_path = /obj/item/firing_pin/implant/mindshield/noremove
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_FIRING_PINS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
