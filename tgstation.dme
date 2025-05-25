@@ -6828,6 +6828,7 @@
 #include "hypermods\code\game\objects\items\implants\implant_biosig.dm"
 #include "hypermods\code\game\objects\items\implants\implant_camo.dm"
 #include "hypermods\code\game\objects\items\implants\implant_dnascramble.dm"
+#include "hypermods\code\game\objects\items\implants\implant_duster.dm"
 #include "hypermods\code\game\objects\items\implants\implant_fakedeath.dm"
 #include "hypermods\code\game\objects\items\implants\implant_health.dm"
 #include "hypermods\code\game\objects\items\implants\implant_mindhack.dm"

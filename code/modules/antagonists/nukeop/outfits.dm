@@ -59,8 +59,8 @@
 
 	var/obj/item/implant/weapons_auth/weapons_implant = new/obj/item/implant/weapons_auth(nukie)
 	weapons_implant.implant(nukie)
-	var/obj/item/implant/explosive/explosive_implant = new/obj/item/implant/explosive(nukie)
-	explosive_implant.implant(nukie)
+	var/obj/item/implant/duster/duster_implant = new/obj/item/implant/duster(nukie)
+	duster_implant.implant(nukie)
 	nukie.faction |= ROLE_SYNDICATE
 	nukie.update_icons()
 

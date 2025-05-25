@@ -86,6 +86,9 @@
 
 /obj/item/implant/explosive/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	for(var/target_implant in target.implants)
+		if(istype(target_implant, /obj/item/implant/duster))
+			target.balloon_alert(user, "duster implant detected! removing...")
+			qdel(target_implant)
 		if(istype(target_implant, /obj/item/implant/explosive)) //we don't use our own type here, because macrobombs inherit this proc and need to be able to upgrade microbombs
 			var/obj/item/implant/explosive/other_implant = target_implant
 			if(other_implant.master_implant && master_implant) //we cant have two master implants at once
