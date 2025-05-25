@@ -471,11 +471,15 @@
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
 "eF" = (
-/obj/structure/table/wood,
-/obj/item/reagent_containers/cup/rag,
-/obj/effect/turf_decal/tile/bar/opposingcorners,
-/turf/open/floor/iron,
-/area/centcom/syndicate_mothership/control)
+/obj/machinery/atmospherics/pipe/smart/simple/general/visible,
+/obj/machinery/door/airlock/public/glass{
+	name = "Ordnance Chamber"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/iron/smooth_half{
+	dir = 4
+	},
+/area/centcom/syndicate_mothership/expansion_bombthreat)
 "eK" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/airlock/titanium{
@@ -874,11 +878,11 @@
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
 "iL" = (
-/obj/effect/turf_decal/siding/thinplating_new/dark{
-	dir = 8
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/pipe/smart/manifold/pink/visible/layer2{
+	dir = 1
 	},
-/obj/structure/tank_dispenser,
-/turf/open/floor/mineral/plastitanium/red,
+/turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
 "iO" = (
 /obj/effect/turf_decal/stripes/line{
@@ -1228,6 +1232,12 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"lZ" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple/layer2{
+	dir = 9
+	},
+/turf/open/floor/engine/vacuum,
+/area/centcom/syndicate_mothership/expansion_bombthreat)
 "ma" = (
 /obj/structure/rack,
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
@@ -1351,11 +1361,9 @@
 /turf/open/misc/asteroid/snow/airless,
 /area/centcom/syndicate_mothership)
 "ns" = (
-/obj/machinery/door/puzzle/keycard/syndicate_custodial,
-/turf/open/floor/iron/smooth_half{
-	dir = 4
-	},
-/area/centcom/syndicate_mothership/expansion_custodialcloset)
+/obj/machinery/atmospherics/components/unary/portables_connector/visible,
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/centcom/syndicate_mothership/expansion_bombthreat)
 "nw" = (
 /obj/machinery/light/cold/directional/west,
 /obj/structure/closet/crate/cardboard,
@@ -1531,6 +1539,10 @@
 	},
 /turf/open/floor/mineral/titanium/tiled,
 /area/centcom/syndicate_mothership/control)
+"oX" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/junction/layer2,
+/turf/closed/indestructible/syndicate,
+/area/centcom/syndicate_mothership/expansion_bombthreat)
 "pa" = (
 /obj/structure/sign/poster/contraband/moffuchis_pizza/directional/west,
 /obj/machinery/light/small/directional/west,
@@ -2889,6 +2901,26 @@
 "CX" = (
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership)
+"CY" = (
+/obj/machinery/button/door/directional/south{
+	id = "syn_ordmix_vent";
+	pixel_x = 5;
+	pixel_y = -29
+	},
+/obj/machinery/button/ignition/incinerator/ordmix{
+	id = "syn_ordmix_igniter";
+	pixel_x = -6;
+	pixel_y = -30
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/camera/autoname/directional/south{
+	network = list("nukie")
+	},
+/obj/machinery/atmospherics/pipe/smart/simple/pink/visible/layer2{
+	dir = 6
+	},
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/centcom/syndicate_mothership/expansion_bombthreat)
 "De" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/yellow/hidden/layer2,
@@ -3058,6 +3090,15 @@
 /obj/structure/barricade/sandbags,
 /turf/open/misc/asteroid/snow/airless,
 /area/centcom/syndicate_mothership)
+"EP" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple/layer2{
+	dir = 6
+	},
+/turf/open/floor/engine/vacuum,
+/area/centcom/syndicate_mothership/expansion_bombthreat)
 "EV" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -3292,9 +3333,13 @@
 /turf/open/lava/plasma/ice_moon,
 /area/centcom/syndicate_mothership/control)
 "GO" = (
-/obj/machinery/vending/wardrobe/jani_wardrobe,
-/turf/open/floor/catwalk_floor/iron_smooth,
-/area/centcom/syndicate_mothership/expansion_custodialcloset)
+/obj/machinery/light/small/directional/south,
+/obj/machinery/igniter/incinerator_ordmix{
+	id = "syn_ordmix_igniter"
+	},
+/obj/machinery/atmospherics/pipe/heat_exchanging/manifold/layer2,
+/turf/open/floor/engine/vacuum,
+/area/centcom/syndicate_mothership/expansion_bombthreat)
 "GS" = (
 /obj/effect/turf_decal/siding/thinplating,
 /obj/machinery/door/window/survival_pod/left/directional/south{
@@ -5175,6 +5220,15 @@
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/dark/textured_half,
 /area/centcom/syndicate_mothership/control)
+"YB" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/pump/lil_pump{
+	desc = "A betrayer to pump-kind."
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/expansion_bombthreat)
 "YF" = (
 /obj/item/kirbyplants/random,
 /obj/structure/cable,
@@ -6634,7 +6688,7 @@ ZI
 GU
 zZ
 FM
-cq
+YB
 ee
 wM
 yp
@@ -6643,7 +6697,7 @@ If
 bQ
 tn
 lC
-Uv
+EP
 Kv
 RD
 Ox
@@ -6743,10 +6797,10 @@ ae
 ae
 Dl
 XM
-Um
-gj
+CY
+oX
 rY
-eI
+GO
 RD
 Ox
 sU
@@ -6844,11 +6898,11 @@ mB
 tz
 FU
 lO
-jM
+ns
 LH
-Mj
+eF
 wY
-Vj
+lZ
 RD
 Ox
 sU
@@ -7048,7 +7102,7 @@ Tl
 ZF
 AA
 FB
-sV
+iL
 qz
 RD
 Sj
@@ -7357,9 +7411,9 @@ gs
 pa
 wP
 Ie
-YY
-YY
-YY
+ei
+ei
+ei
 Ox
 sU
 sU
@@ -7457,11 +7511,11 @@ bo
 bo
 WA
 lA
-YY
+ei
 ZL
 kM
 TO
-YY
+ei
 Ox
 sU
 sU
@@ -7559,11 +7613,11 @@ DZ
 DZ
 DZ
 DZ
-YY
+ei
 vL
 mO
 Iq
-YY
+ei
 Ox
 sU
 sU
@@ -7662,10 +7716,10 @@ DY
 lQ
 Nb
 DZ
-YY
-YY
-YY
-YY
+ei
+ei
+ei
+ei
 Ox
 sU
 sU
