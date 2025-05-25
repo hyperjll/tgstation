@@ -4,7 +4,7 @@
 	name = "Syndicate Genetics Laboratory Access Card"
 	desc = "For some Operatives, you enjoy tampering and experimentation with the laws of nature a little too much. \
 		For those scientifically inclined, a special Authorization Key can be instantly delivered to your location. \
-		Experiment will your genetics, gain superpowers, tamper with BCI technology, and inflict both upon your foes! \
+		Experiment with your genetics, gain superpowers, tamper with BCI technology, and inflict both upon your foes! \
 		Comes with some useful equipment as well."
 	item = /obj/item/keycard/syndicate_gene
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
