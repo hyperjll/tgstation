@@ -5,7 +5,7 @@
 	new /obj/item/clothing/mask/gas/mime(src)
 	new /obj/item/clothing/suit/toggle/suspenders(src)
 	new /obj/item/clothing/gloves/color/white(src)
-	new /obj/item/clothing/head/frenchberet(src)
+	new /obj/item/clothing/head/beret/frenchberet(src)
 	new /obj/item/stamp/mime(src)
 	new /obj/item/reagent_containers/cup/glass/bottle/bottleofnothing(src)
 	new /obj/item/book/granter/action/spell/mime/mimery(src)
