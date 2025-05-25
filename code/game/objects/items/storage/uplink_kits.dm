@@ -23,6 +23,7 @@
 #define KIT_DEAD_MONEY "dead_money"
 #define KIT_SAM_FISHER "sam_fisher"
 #define KIT_PROP_HUNT "prop_hunt"
+#define KIT_CLOVER "clover"
 
 /// last audited december 2022
 /obj/item/storage/box/syndicate
@@ -194,7 +195,8 @@
 		KIT_DEAD_MONEY = 2,
 		KIT_TRAITOR_2006 = 1,
 		KIT_SAM_FISHER = 1,
-		KIT_PROP_HUNT = 1
+		KIT_PROP_HUNT = 1,
+		KIT_CLOVER = 1
 		)))
 		if(KIT_JAMES_BOND)
 			new /obj/item/gun/ballistic/automatic/pistol(src) // 7 tc
@@ -311,6 +313,16 @@
 			new /obj/item/storage/box/syndie_kit/imp_stealth(src) //8 TC
 			new /obj/item/gun/ballistic/automatic/pistol(src) // 7 TC
 			new /obj/item/clothing/glasses/thermal(src) // 4 TC
+
+		if(KIT_CLOVER)
+			new /obj/item/gun/ballistic/revolver/syndicate/cowboy/wild(src) // 15 TC
+			new /obj/item/storage/box/syndie_kit/pistolammo9mm/random(src) // 2 TC
+			new /obj/item/storage/box/syndie_kit/pistolammo10mm/random(src) // 2 TC
+			new /obj/item/storage/box/syndie_kit/pistolammo45/random(src) // 2 TC
+			new /obj/item/storage/box/syndie_kit/revolverammo/random(src) // 6 TC
+			new /obj/item/clothing/shoes/cowboy/black(src)
+			new /obj/item/clothing/head/cowboy/brown(src)
+			new /obj/item/clothing/under/costume/dutch(src)
 
 /obj/item/storage/toolbox/emergency/old/ancientbundle/ //So the subtype works
 
