@@ -1,6 +1,3 @@
-import { BooleanLike } from 'tgui-core/react';
-
-import { useBackend, useLocalState } from '../backend';
 import {
   Button,
   Flex,
@@ -9,6 +6,9 @@ import {
   Section,
   Tabs,
 } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
+
+import { useBackend, useLocalState } from '../backend';
 import { Window } from '../layouts';
 
 type Data = {

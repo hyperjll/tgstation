@@ -1,10 +1,8 @@
 import { BooleanLike } from 'common/react';
+import { Box, Button, Divider, Dropdown, Section, Stack, Tabs } from 'tgui-core/components';
 
 import { resolveAsset } from '../assets';
 import { useBackend, useLocalState } from '../backend';
-
-import { Box, Button, Divider, Dropdown, Section, Stack, Tabs } from 'tgui-core/components';
-
 import { Window } from '../layouts';
 
 type Objective = {
