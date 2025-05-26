@@ -1,5 +1,5 @@
-import { BooleanLike } from 'common/react';
 import { Box, Button, Divider, Dropdown, Section, Stack, Tabs } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
 import { resolveAsset } from '../assets';
 import { useBackend, useLocalState } from '../backend';
@@ -105,9 +105,9 @@ const BloodsuckerIntro = () => {
           <Stack vertical>
             <Stack.Item>
               <span>
-                You regenerate your health slowly, you&#39;re weak to fire, and
-                you depend on blood to survive. Don&#39;t allow your blood to
-                run too low, or you&#39;ll enter a
+                You regenerate your health slowly, you are weak to fire, and
+                you depend on blood to survive. Dont allow your blood to
+                run too low, or you will enter a
               </span>
               <span className={'color-red'}> Frenzy</span>!<br />
               <span>
@@ -134,7 +134,7 @@ const BloodsuckerIntro = () => {
               <br />
               Use your structures to your advantage. Namely, the{' '}
               <b>Persuasion Rack</b> allows you to convert crewmembers into
-              loyal thralls. If you're confused about anything your structures
+              loyal thralls. If you are confused about anything your structures
               do, try examining them!
               <br />
               Medical and Genetic Analyzers can sell you out, your Masquerade
