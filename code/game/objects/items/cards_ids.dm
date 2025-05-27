@@ -1661,10 +1661,6 @@
 	/// Weak ref to the ID card we're currently attempting to steal access from.
 	var/datum/weakref/theft_target
 
-/obj/item/card/id/advanced/chameleon/Initialize(mapload)
-	. = ..()
-	register_item_context()
-
 /obj/item/card/id/advanced/chameleon/Destroy()
 	theft_target = null
 	return ..()
