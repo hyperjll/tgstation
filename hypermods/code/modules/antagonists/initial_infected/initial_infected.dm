@@ -42,11 +42,14 @@
 
 /datum/antagonist/initial_infected/proc/make_background_clone_icon(datum/outfit/zombie_fit)
 	var/mob/living/carbon/human/dummy/consistent/zombie = new
+	zombie.set_species(/datum/species/zombie/infectious)
 
 	var/icon/zombie_icon = render_preview_outfit(zombie_fit, zombie)
 	zombie_icon.ChangeOpacity(0.7)
-	zombie_icon.Blend(icon('icons/effects/blood.dmi', "maskblood"), ICON_OVERLAY)
-	zombie.set_species(/datum/species/zombie)
+	var/icon/blood_icon = icon('icons/effects/blood.dmi', "uniformblood")
+	blood_icon.Blend(BLOOD_COLOR_RED, ICON_MULTIPLY)
+	zombie_icon.Blend(blood_icon, ICON_OVERLAY)
+
 	qdel(zombie)
 
 	return zombie_icon
