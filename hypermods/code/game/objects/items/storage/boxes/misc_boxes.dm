@@ -73,11 +73,11 @@
 
 /obj/item/storage/box/randomcyberneticimplants/PopulateContents()
 	var/list/item_list = list(
-		/obj/item/organ/cyberimp/arm/toolset,
+		/obj/item/organ/cyberimp/arm/toolkit/toolset,
 		/obj/item/organ/cyberimp/eyes/hud/diagnostic,
 		/obj/item/organ/cyberimp/chest/nutriment/plus,
 		/obj/item/organ/cyberimp/chest/reviver,
-		/obj/item/organ/cyberimp/arm/surgery,
+		/obj/item/organ/cyberimp/arm/toolkit/surgery,
 		/obj/item/organ/eyes/robotic/shield,
 		/obj/item/organ/eyes/robotic/xray,
 		/obj/item/organ/eyes/robotic/glow,

@@ -1,58 +1,58 @@
-/obj/item/organ/cyberimp/arm/gun/laser/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/gun/laser/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/gun/laser/syndicate/l
+/obj/item/organ/cyberimp/arm/toolkit/gun/laser/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/cyberimp/arm/gun/taser/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/gun/taser/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/gun/taser/syndicate/l
+/obj/item/organ/cyberimp/arm/toolkit/gun/taser/syndicate/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/cyberimp/arm/toolset/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/toolset/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/toolset/syndicate/l
+/obj/item/organ/cyberimp/arm/toolkit/toolset/syndicate/l
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/cyberimp/arm/esword/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/esword/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/medibeam/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/medibeam/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/flash/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/flash/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/baton/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/baton/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/combat/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/combat/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/surgery/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/surgery/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/surgery/syndicate/l
+/obj/item/organ/cyberimp/arm/toolkit/surgery/syndicate/l
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/cyberimp/arm/surgery/emagged/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/surgery/emagged/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/surgery/emagged/syndicate/l
+/obj/item/organ/cyberimp/arm/toolkit/surgery/emagged/syndicate/l
 	zone = BODY_ZONE_L_ARM
 
 /obj/item/organ/cyberimp/arm/strongarm/syndicate
@@ -62,7 +62,9 @@
 /obj/item/organ/cyberimp/arm/strongarm/syndicate/l
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/cyberimp/arm/strongarm/buster
+#define DOAFTER_SOURCE_STRONGARM_INTERACTION "strongarm interaction"
+
+/obj/item/organ/cyberimp/arm/toolkit/buster
 	name = "\proper Buster Arm implant"
 	desc = "When implanted, this cybernetic implant will enhance the muscles and bones of the arm to deliver incredibly powerful punches."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
@@ -80,28 +82,40 @@
 	items_to_create = list(/obj/item/gun/magic/hook/buster)
 
 	///The amount of damage the implant adds to our unarmed attacks.
-	punch_damage = 20
+	var/punch_damage = 20
+	///Biotypes we apply an additional amount of damage too
+	var/biotype_bonus_targets = MOB_BEAST | MOB_SPECIAL | MOB_MINING
+	///Extra damage dealt to our targeted mobs
+	var/biotype_bonus_damage = 20
 	///IF true, the throw attack will not smash people into walls
-	non_harmful_throw = FALSE
+	var/non_harmful_throw = TRUE
 	///How far away your attack will throw your oponent
-	attack_throw_range = 6
+	var/attack_throw_range = 6
 	///Minimum throw power of the attack
-	throw_power_min = 1
+	var/throw_power_min = 1
 	///Maximum throw power of the attack
-	throw_power_max = 4
+	var/throw_power_max = 4
 	///How long will the implant malfunction if it is EMP'd
-	emp_base_duration = 30 SECONDS
+	var/emp_base_duration = 30 SECONDS
+	///How long before we get another slam punch; consider that these usually come in pairs of two
+	var/slam_cooldown_duration = 5 SECONDS
+	///Tracks how soon we can perform another slam attack
+	COOLDOWN_DECLARE(slam_cooldown)
 
-/obj/item/organ/cyberimp/arm/strongarm/buster/on_mob_insert(mob/living/carbon/arm_owner)
+/obj/item/organ/cyberimp/arm/toolkit/buster/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/organ_set_bonus, /datum/status_effect/organ_set_bonus/strongarm)
+
+/obj/item/organ/cyberimp/arm/toolkit/buster/on_mob_insert(mob/living/carbon/arm_owner)
 	. = ..()
 	if(ishuman(arm_owner)) //Sorry, only humans
 		RegisterSignal(arm_owner, COMSIG_LIVING_EARLY_UNARMED_ATTACK, PROC_REF(on_attack_hand))
 
-/obj/item/organ/cyberimp/arm/strongarm/on_mob_remove(mob/living/carbon/arm_owner)
+/obj/item/organ/cyberimp/arm/toolkit/on_mob_remove(mob/living/carbon/arm_owner)
 	. = ..()
 	UnregisterSignal(arm_owner, COMSIG_LIVING_EARLY_UNARMED_ATTACK)
 
-/obj/item/organ/cyberimp/arm/strongarm/buster/emp_act(severity)
+/obj/item/organ/cyberimp/arm/toolkit/buster/emp_act(severity)
 	. = ..()
 	if((organ_flags & ORGAN_FAILING) || . & EMP_PROTECT_SELF)
 		return
@@ -109,11 +123,11 @@
 	organ_flags |= ORGAN_FAILING
 	addtimer(CALLBACK(src, PROC_REF(reboot)), 90 / severity)
 
-/obj/item/organ/cyberimp/arm/strongarm/buster/reboot()
+/obj/item/organ/cyberimp/arm/toolkit/buster/proc/reboot()
 	organ_flags &= ~ORGAN_FAILING
 	owner.balloon_alert(owner, "your arm stops spasming!")
 
-/obj/item/organ/cyberimp/arm/strongarm/buster/on_attack_hand(mob/living/carbon/human/source, atom/target, proximity, modifiers, override = TRUE)
+/obj/item/organ/cyberimp/arm/toolkit/buster/proc/on_attack_hand(mob/living/carbon/human/source, atom/target, proximity, modifiers, override = TRUE)
 	SIGNAL_HANDLER
 
 	if(source.get_active_hand() != hand || !proximity)
@@ -180,29 +194,31 @@
 
 	return COMPONENT_CANCEL_ATTACK_CHAIN
 
-/obj/item/organ/cyberimp/arm/strongarm/buster/l
+/obj/item/organ/cyberimp/arm/toolkit/buster/l
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/cyberimp/arm/strongarm/buster/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/buster/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/strongarm/buster/syndicate/l
+/obj/item/organ/cyberimp/arm/toolkit/buster/syndicate/l
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/cyberimp/arm/signaler
+#undef DOAFTER_SOURCE_STRONGARM_INTERACTION
+
+/obj/item/organ/cyberimp/arm/toolkit/signaler
 	name = "arm-concealed signaler"
 	desc = "An illegal cybernetic implant that can produce and conceal a signaling device."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "implant-toolkit"
 	items_to_create = list(/obj/item/assembly/signaler)
 
-/obj/item/organ/cyberimp/arm/signaler/syndicate
+/obj/item/organ/cyberimp/arm/toolkit/signaler/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
 
-/obj/item/organ/cyberimp/arm/syndie_mantis
+/obj/item/organ/cyberimp/arm/toolkit/syndie_mantis
 	name = "G.O.R.L.E.X. mantis blade implant"
 	desc = "Modernized mantis blades designed and coined by Tiger operatives. Energy actuators makes the blade a much deadlier weapon."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
@@ -211,11 +227,11 @@
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/syndie_mantis/l
+/obj/item/organ/cyberimp/arm/toolkit/syndie_mantis/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/cyberimp/arm/syndie_hammer
+/obj/item/organ/cyberimp/arm/toolkit/syndie_hammer
 	name = "Vxtvul Hammer implant"
 	desc = "A folded Vxtvul Hammer designed to be incorporated into preterni chassis. Surgery can permit it to fit in other organic bodies."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
@@ -224,18 +240,18 @@
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/nt_mantis
+/obj/item/organ/cyberimp/arm/toolkit/nt_mantis
 	name = "H.E.P.H.A.E.S.T.U.S. mantis blade implants"
 	desc = "Retractable arm-blade implants to get you out of a pinch. Wielding two will let you double-attack."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
 	icon_state = "mantis"
 	items_to_create = list(/obj/item/mantis/blade/NT)
 
-/obj/item/organ/cyberimp/arm/nt_mantis/l
+/obj/item/organ/cyberimp/arm/toolkit/nt_mantis/l
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	zone = BODY_ZONE_L_ARM
 
-/obj/item/organ/cyberimp/arm/makarov_implant
+/obj/item/organ/cyberimp/arm/toolkit/gun/makarov_implant
 	name = "Makarov implant"
 	desc = "A modified version of the Makarov pistol placed inside of the forearm to allow for easy concealment."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
@@ -244,7 +260,7 @@
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/m1911_implant
+/obj/item/organ/cyberimp/arm/toolkit/gun/m1911_implant
 	name = "M1911 implant"
 	desc = "A modified version of the M1911 pistol placed inside of the forearm to allow for easy concealment."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
@@ -253,7 +269,7 @@
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/deagle_implant
+/obj/item/organ/cyberimp/arm/toolkit/gun/deagle_implant
 	name = "Desert Eagle implant"
 	desc = "A modified version of the Desert Eagle placed inside of the forearm to allow for easy concealment."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
@@ -262,7 +278,7 @@
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/viper_implant
+/obj/item/organ/cyberimp/arm/toolkit/gun/viper_implant
 	name = "Viper implant"
 	desc = "A modified version of the Viper pistol placed inside of the forearm to allow for easy concealment."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
@@ -271,7 +287,7 @@
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
 	aug_overlay = null
 
-/obj/item/organ/cyberimp/arm/cobra_implant
+/obj/item/organ/cyberimp/arm/toolkit/gun/cobra_implant
 	name = "Cobra implant"
 	desc = "A modified version of the Cobra pistol placed inside of the forearm to allow for easy concealment."
 	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'

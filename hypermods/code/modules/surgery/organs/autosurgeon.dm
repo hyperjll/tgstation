@@ -6,117 +6,117 @@
 
 
 /obj/item/autosurgeon/syndicate/taser
-	starting_organ = /obj/item/organ/cyberimp/arm/gun/taser
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/gun/taser
 
 /obj/item/autosurgeon/syndicate/taser/single_use
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/taser/hidden
-	starting_organ = /obj/item/organ/cyberimp/arm/gun/taser
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/gun/taser
 
 /obj/item/autosurgeon/syndicate/taser/hidden/single_use
 	uses = 1
 
 
 /obj/item/autosurgeon/syndicate/toolset
-	starting_organ = /obj/item/organ/cyberimp/arm/toolset
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/toolset
 
 /obj/item/autosurgeon/syndicate/toolset/single_use
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/toolset/hidden
-	starting_organ = /obj/item/organ/cyberimp/arm/toolset
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/toolset
 
 /obj/item/autosurgeon/syndicate/toolset/hidden/single_use
 	uses = 1
 
 
 /obj/item/autosurgeon/syndicate/esword
-	starting_organ = /obj/item/organ/cyberimp/arm/esword
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/esword
 
 /obj/item/autosurgeon/syndicate/esword/single_use
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/esword/hidden
-	starting_organ = /obj/item/organ/cyberimp/arm/esword
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/esword
 
 /obj/item/autosurgeon/syndicate/esword/hidden/single_use
 	uses = 1
 
 
 /obj/item/autosurgeon/syndicate/medibeam
-	starting_organ = /obj/item/organ/cyberimp/arm/medibeam
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/medibeam
 
 /obj/item/autosurgeon/syndicate/medibeam/single_use
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/medibeam/hidden
-	starting_organ = /obj/item/organ/cyberimp/arm/medibeam
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/medibeam
 
 /obj/item/autosurgeon/syndicate/medibeam/hidden/single_use
 	uses = 1
 
 
 /obj/item/autosurgeon/syndicate/flash
-	starting_organ = /obj/item/organ/cyberimp/arm/flash
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/flash
 
 /obj/item/autosurgeon/syndicate/flash/single_use
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/flash/hidden
-	starting_organ = /obj/item/organ/cyberimp/arm/flash
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/flash
 
 /obj/item/autosurgeon/syndicate/flash/hidden/single_use
 	uses = 1
 
 
 /obj/item/autosurgeon/syndicate/baton
-	starting_organ = /obj/item/organ/cyberimp/arm/baton
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/baton
 
 /obj/item/autosurgeon/syndicate/baton/single_use
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/baton/hidden
-	starting_organ = /obj/item/organ/cyberimp/arm/baton
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/baton
 
 /obj/item/autosurgeon/syndicate/baton/hidden/single_use
 	uses = 1
 
 
 /obj/item/autosurgeon/syndicate/combatcybernetics
-	starting_organ = /obj/item/organ/cyberimp/arm/combat
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/combat
 
 /obj/item/autosurgeon/syndicate/combatcybernetics/single_use
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/combatcybernetics/hidden
-	starting_organ = /obj/item/organ/cyberimp/arm/combat
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/combat
 
 /obj/item/autosurgeon/syndicate/combatcybernetics/hidden/single_use
 	uses = 1
 
 
 /obj/item/autosurgeon/syndicate/surgery
-	starting_organ = /obj/item/organ/cyberimp/arm/surgery
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/surgery
 
 /obj/item/autosurgeon/syndicate/surgery/single_use
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/surgery/hidden
-	starting_organ = /obj/item/organ/cyberimp/arm/surgery
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/surgery
 
 /obj/item/autosurgeon/syndicate/surgery/hidden/single_use
 	uses = 1
 
 
 /obj/item/autosurgeon/syndicate/surgeryemagged
-	starting_organ = /obj/item/organ/cyberimp/arm/surgery/emagged
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/surgery/emagged
 
 /obj/item/autosurgeon/syndicate/surgeryemagged/single_use
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/surgeryemagged/hidden
-	starting_organ = /obj/item/organ/cyberimp/arm/surgery/emagged
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/surgery/emagged
 
 /obj/item/autosurgeon/syndicate/surgeryemagged/hidden/single_use
 	uses = 1
@@ -168,7 +168,7 @@
 
 
 /obj/item/autosurgeon/syndicate/emaggedsurgerytoolset
-	starting_organ = /obj/item/organ/cyberimp/arm/surgery/emagged
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/surgery/emagged
 
 /obj/item/autosurgeon/syndicate/emaggedsurgerytoolset/single_use
 	uses = 1
@@ -222,7 +222,7 @@
 	uses = 1
 
 /obj/item/autosurgeon/syndicate/signaler/hidden
-	starting_organ = /obj/item/organ/cyberimp/arm/signaler/syndicate
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/signaler/syndicate
 
 /obj/item/autosurgeon/syndicate/signaler/hidden/single_use
 	uses = 1
@@ -247,29 +247,29 @@
 
 /obj/item/autosurgeon/syndicate/syndie_mantis
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/syndie_mantis
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/syndie_mantis
 
 /obj/item/autosurgeon/syndicate/syndie_hammer
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/syndie_hammer
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/syndie_hammer
 
 
 
 /obj/item/autosurgeon/nt_mantis
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/nt_mantis
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/nt_mantis
 
 /obj/item/autosurgeon/nt_mantis/left
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/nt_mantis/l
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/nt_mantis/l
 
 /obj/item/autosurgeon/syndicate/mantis
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/syndie_mantis
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/syndie_mantis
 
 /obj/item/autosurgeon/syndicate/mantis/left
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/syndie_mantis/l
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/syndie_mantis/l
 
 /obj/item/autosurgeon/syndicate/spinalspeed
 	uses = 1
@@ -277,23 +277,23 @@
 
 /obj/item/autosurgeon/syndicate/makarov_implant
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/makarov_implant
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/gun/makarov_implant
 
 /obj/item/autosurgeon/syndicate/m1911_implant
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/m1911_implant
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/gun/m1911_implant
 
 /obj/item/autosurgeon/syndicate/deagle_implant
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/deagle_implant
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/gun/deagle_implant
 
 /obj/item/autosurgeon/syndicate/viper_implant
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/viper_implant
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/gun/viper_implant
 
 /obj/item/autosurgeon/syndicate/cobra_implant
 	uses = 1
-	starting_organ = /obj/item/organ/cyberimp/arm/cobra_implant
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/gun/cobra_implant
 
 
 /// Previous Multi-surgeons below
@@ -350,16 +350,16 @@
 
 
 /obj/item/autosurgeon/syndicate/toolset_engi //for traitors
-	starting_organ = /obj/item/organ/cyberimp/arm/toolset/syndicate
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/toolset/syndicate
 
 /obj/item/autosurgeon/syndicate/toolset_engi/l //for traitors
-	starting_organ = /obj/item/organ/cyberimp/arm/toolset/syndicate/l
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/toolset/syndicate/l
 
 /obj/item/autosurgeon/syndicate/toolset_surgery //for traitors
-	starting_organ = /obj/item/organ/cyberimp/arm/surgery/syndicate
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/surgery/syndicate
 
 /obj/item/autosurgeon/syndicate/toolset_surgery/l //for traitors
-	starting_organ = /obj/item/organ/cyberimp/arm/surgery/syndicate/l
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/surgery/syndicate/l
 
 /obj/item/autosurgeon/syndicate/toolset_engi/single_use
 	uses = 1
@@ -400,14 +400,14 @@
 	uses = 1
 
 
-/obj/item/autosurgeon/syndicate/strongarm/buster
-	starting_organ = /obj/item/organ/cyberimp/arm/strongarm/buster/syndicate
+/obj/item/autosurgeon/syndicate/toolkit/buster
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/buster/syndicate
 
-/obj/item/autosurgeon/syndicate/strongarm/buster/l
-	starting_organ = /obj/item/organ/cyberimp/arm/strongarm/buster/syndicate/l
+/obj/item/autosurgeon/syndicate/toolkit/buster/l
+	starting_organ = /obj/item/organ/cyberimp/arm/toolkit/buster/syndicate/l
 
-/obj/item/autosurgeon/syndicate/strongarm/buster/single_use
+/obj/item/autosurgeon/syndicate/toolkit/buster/single_use
 	uses = 1
 
-/obj/item/autosurgeon/syndicate/strongarm/buster/l/single_use
+/obj/item/autosurgeon/syndicate/toolkit/buster/l/single_use
 	uses = 1

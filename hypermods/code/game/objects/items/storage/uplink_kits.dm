@@ -1344,8 +1344,8 @@
 	name = "busterarm surgical implant box"
 
 /obj/item/storage/box/syndie_kit/impsur_buster/PopulateContents()
-	new /obj/item/autosurgeon/syndicate/strongarm/buster/single_use(src)
-	new /obj/item/autosurgeon/syndicate/strongarm/buster/l/single_use(src)
+	new /obj/item/autosurgeon/syndicate/toolkit/buster/single_use(src)
+	new /obj/item/autosurgeon/syndicate/toolkit/buster/l/single_use(src)
 
 /obj/item/storage/box/syndie_kit/clover
 	name = "wild east deputy pack"

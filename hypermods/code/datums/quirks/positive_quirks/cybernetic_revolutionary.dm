@@ -13,10 +13,10 @@
 		/obj/item/organ/cyberimp/eyes/hud/diagnostic,
 		/obj/item/organ/cyberimp/eyes/hud/medical,
 		/obj/item/organ/cyberimp/chest/reviver,
-		/obj/item/organ/cyberimp/arm/nt_mantis, // SPICY
+		/obj/item/organ/cyberimp/arm/toolkit/nt_mantis, // SPICY
 		/obj/item/organ/cyberimp/chest/nutriment,
-		/obj/item/organ/cyberimp/arm/surgery,
-		/obj/item/organ/cyberimp/arm/toolset,
+		/obj/item/organ/cyberimp/arm/toolkit/surgery,
+		/obj/item/organ/cyberimp/arm/toolkit/toolset,
 		/obj/item/organ/cyberimp/chest/thrusters,
 		/obj/item/organ/cyberimp/chest/nutriment/plus // nice!
 	)

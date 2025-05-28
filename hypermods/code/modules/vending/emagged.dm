@@ -1382,7 +1382,7 @@
 		/obj/item/grenade/chem_grenade/large = 5,
 		/obj/item/organ/cyberimp/chest/nutriment = 1,
 		/obj/item/organ/cyberimp/mouth/breathing_tube = 1,
-		/obj/item/organ/cyberimp/arm/surgery = 1,
+		/obj/item/organ/cyberimp/arm/toolkit/surgery = 1,
 		/obj/item/implantcase/tracking = 2,
 		/obj/item/reagent_containers/hypospray/medipen/resurrector = 1,
 	)
