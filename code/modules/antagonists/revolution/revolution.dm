@@ -531,6 +531,7 @@
 		if(isnull(real_headrev))
 			continue
 		add_memory_in_range(real_headrev, 5, /datum/memory/revolution_rev_victory, protagonist = real_headrev)
+	SSsecurity_level.set_level(SEC_LEVEL_EPSILON)
 
 /// Handles effects of revs losing, such as making ex-headrevs unrevivable and setting up head of staff memories.
 /datum/team/revolution/proc/defeat_effects()

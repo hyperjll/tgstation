@@ -1082,6 +1082,8 @@ $alert-stripe-colors: (
   'red': hsl(0, 100%, 85.1%),
   'purple': hsl(295.1, 100%, 88%),
   'grey': hsl(0, 0%, 89%),
+  'amber': hsl(178, 100%, 34.9%),
+  'crimson': hsl(117, 82.81%, 25.1%),
 );
 
 $alert-stripe-alternate-colors: (
@@ -1094,6 +1096,8 @@ $alert-stripe-alternate-colors: (
   'red': hsl(0, 100%, 88%),
   'purple': hsl(294.8, 100%, 91%),
   'grey': hsl(0, 0%, 92.2%),
+  'amber': hsl(178, 100%, 34.9%),
+  'crimson': hsl(117, 82.81%, 25.1%),
 );
 
 $alert-major-header-colors: (
@@ -1106,6 +1110,8 @@ $alert-major-header-colors: (
   'red': hsl(340.8, 100%, 25.1%),
   'purple': hsl(266.5, 83%, 30%),
   'grey': hsl(336.1, 100%, 25.1%),
+  'amber': hsl(225, 59.46%, 70.98%),
+  'crimson': hsl(212, 47.88%, 67.65%),
 );
 
 $alert-subheader-header-colors: (
@@ -1118,6 +1124,8 @@ $alert-subheader-header-colors: (
   'red': hsl(220.2, 100%, 26.1%),
   'purple': hsl(220.2, 100%, 26.1%),
   'grey': hsl(220.2, 100%, 26.1%),
+  'amber': hsl(192.4, 100%, 60%),
+  'crimson': hsl(192.4, 100%, 60%),
 );
 
 $border-width: 4;
