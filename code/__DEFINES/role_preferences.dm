@@ -46,6 +46,7 @@
 #define ROLE_LYCANTHROPY_VICTIM "Lycanthropy Victim"
 #define ROLE_BLOODSUCKERBREAKOUT "Bloodsucker Breakout"
 #define ROLE_SWARMER "Swarmer"
+#define ROLE_CORTICAL_BORER "Cortical Borer"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
@@ -180,6 +181,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_INFILTRATOR = 0,
 	ROLE_LYCANTHROPY_VICTIM = 7,
 	ROLE_SWARMER = 0,
+	ROLE_CORTICAL_BORER = 0,
 
 	// Latejoin
 	ROLE_HERETIC_SMUGGLER = 0,

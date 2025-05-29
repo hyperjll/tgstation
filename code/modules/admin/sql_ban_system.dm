@@ -403,6 +403,7 @@
 				ROLE_VOIDWALKER,
 				ROLE_VAMPIRICACCIDENT,
 				ROLE_INFILTRATOR,
+				ROLE_CORTICAL_BORER,
 			),
 		)
 		for(var/department in long_job_lists)

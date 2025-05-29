@@ -43,6 +43,9 @@ GLOBAL_LIST_INIT(bioscrambler_organs_blacklist, typecacheof(list (
 	/obj/item/organ/tongue/dullahan,
 	/obj/item/organ/vocal_cords/colossus,
 	/obj/item/organ/zombie_infection,
+	// hypermods additions (I don't normally put these here, but ill make an exception.)
+	/obj/item/organ/empowered_borer_egg,
+	/obj/item/organ/borer_body,
 )))
 
 /// List of body parts we can apply to people
