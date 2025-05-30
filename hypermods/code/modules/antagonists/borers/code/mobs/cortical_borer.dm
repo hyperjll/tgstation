@@ -42,9 +42,9 @@ GLOBAL_LIST_INIT(borer_second_name, world.file2list("hypermods/code/modules/anta
 	return ..()
 
 //so if a person is debrained, the borer is removed
-/obj/item/organ/brain/Remove(mob/living/carbon/target, special = 0, no_id_transfer = FALSE)
+/obj/item/organ/brain/on_mob_remove(mob/living/carbon/organ_owner, special, no_id_transfer = FALSE, movement_flags)
 	. = ..()
-	var/mob/living/basic/cortical_borer/cb_inside = target.has_borer()
+	var/mob/living/basic/cortical_borer/cb_inside = organ_owner.has_borer()
 	if(cb_inside)
 		cb_inside.leave_host()
 
