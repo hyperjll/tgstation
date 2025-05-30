@@ -203,7 +203,7 @@
 	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
 	button_icon_state = "tainted-bite"
 	desc = "Fill your claws with a random toxin to apply to your target. Successful attacks heal toxin damage and rapidly purge your bloodstream."
-	cooldown_time = 200 SECONDS
+	cooldown_time = 90 SECONDS
 	spell_max_level = 1
 	overlay_icon_state = "bg_default_border"
 	//cast_range = 1 // Touch range
@@ -256,7 +256,7 @@
 	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
 	button_icon_state = "howl"
 
-	cooldown_time = 200 SECONDS
+	cooldown_time = 90 SECONDS
 	spell_max_level = 1
 	overlay_icon_state = "bg_default_border"
 	spell_requirements = NONE
