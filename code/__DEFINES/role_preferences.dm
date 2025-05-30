@@ -102,6 +102,9 @@
 
 #define ROLE_RECOVERED_CREW "Recovered Crew"
 
+#define ROLE_CENTCOM "Central Command"
+#define ROLE_ERT "ERT"
+
 //Spawner roles
 #define ROLE_ANCIENT_CREW "Ancient Crew"
 #define ROLE_ASHWALKER "Ash Walker"
@@ -198,6 +201,9 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SENTIENCE = 0,
 	ROLE_RECOVERED_CREW = 0,
 	ROLE_BLOODSUCKERBREAKOUT = 7,
+	ROLE_DEATHSQUAD = 21,
+	ROLE_ERT = 14,
+	ROLE_CENTCOM = 7,
 ))
 
 //Job defines for what happens when you fail to qualify for any job during job selection

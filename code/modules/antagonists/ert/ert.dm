@@ -2,6 +2,8 @@
 /datum/team/ert
 	name = "Emergency Response Team"
 	var/datum/objective/mission //main mission
+	var/obj/machinery/nuclearbomb/tracked_nuke
+	var/memorized_code
 
 /datum/antagonist/ert
 	name = "Emergency Response Officer"
@@ -26,7 +28,14 @@
 	var/forge_objectives_for_ert = TRUE
 	/// Typepath indicating the kind of job datum this ert member will have.
 	var/ert_job_path = /datum/job/ert_generic
+	/// Do we send this guy straight to centcom?
+	var/send_to_spawnpoint = FALSE
+	/// Give nuke codes?
+	var/nuke_codes = FALSE
+	/// Do we have a mission to kill all revs and possibly nuke the station?
+	var/massacre_mission = FALSE
 
+	job_rank = ROLE_CENTCOM
 
 /datum/antagonist/ert/on_gain()
 	if(random_names)
@@ -35,6 +44,10 @@
 		forge_objectives()
 	if(equip_ert)
 		equipERT()
+	if(send_to_spawnpoint)
+		move_to_spawnpoint()
+	if(nuke_codes)
+		assign_nuke()
 	. = ..()
 
 /datum/antagonist/ert/get_team()
@@ -43,6 +56,61 @@
 /datum/antagonist/ert/New()
 	. = ..()
 	name_source = GLOB.last_names
+
+/datum/antagonist/ert/get_admin_commands()
+	. = ..()
+	.["Send to centcom"] = CALLBACK(src, PROC_REF(admin_send_to_base))
+	.["Grant nuke code"] = CALLBACK(src, PROC_REF(assign_nuke))
+
+/datum/antagonist/ert/proc/admin_send_to_base(mob/admin)
+	owner.current.forceMove(pick(GLOB.emergencyresponseteamspawn))
+
+/// Actually moves our nukie to where they should be
+/datum/antagonist/ert/proc/move_to_spawnpoint()
+	var/turf/destination = get_spawnpoint()
+	owner.current.forceMove(destination)
+	if(!owner.current.onCentCom())
+		message_admins("[ADMIN_LOOKUPFLW(owner.current)] is a ERT MEMBER and move_to_spawnpoint put them somewhere that isn't centcom, help please.")
+		stack_trace("ERT member move_to_spawnpoint resulted in a location not on centcom. (Was moved to: [destination])")
+
+/datum/antagonist/ert/proc/get_spawnpoint()
+	var/team_number = 1
+	if(ert_team)
+		team_number = ert_team.members.Find(owner)
+
+	return GLOB.emergencyresponseteamspawn[((team_number - 1) % GLOB.emergencyresponseteamspawn.len) + 1]
+
+/datum/antagonist/ert/proc/assign_nuke()
+	if(ert_team && !ert_team.tracked_nuke)
+		ert_team.memorized_code = random_nukecode()
+		var/obj/machinery/nuclearbomb/selfdestruct/nuke = locate() in SSmachines.get_machines_by_type(/obj/machinery/nuclearbomb/selfdestruct)
+		if(nuke)
+			ert_team.tracked_nuke = nuke
+			if(nuke.r_code == NUKE_CODE_UNSET)
+				nuke.r_code = ert_team.memorized_code
+			else //Already set by admins/something else?
+				ert_team.memorized_code = nuke.r_code
+		else
+			stack_trace("Station self-destruct not found during ERT team creation.")
+			ert_team.memorized_code = null
+		memorize_code()
+
+/datum/antagonist/ert/proc/memorize_code()
+	if(ert_team && ert_team.tracked_nuke && ert_team.memorized_code)
+		antag_memory += "<B>[ert_team.tracked_nuke] Code</B>: [ert_team.memorized_code]<br>"
+		owner.add_memory(/datum/memory/key/nuke_code, nuclear_code = ert_team.memorized_code)
+		to_chat(owner, "The nuclear authorization code is: <B>[ert_team.memorized_code]</B>")
+	else
+		to_chat(owner, "Nanotrasen has not provided you with the nuclear authorization code.")
+
+/datum/antagonist/ert/admin_add(datum/mind/new_owner, mob/admin)
+	var/send_to_base = input("Would you like [new_owner] to be sent to centcom?","Location Reassignment") in list("Yes", "No")
+	if(send_to_base == "Yes")
+		move_to_spawnpoint()
+
+	var/nuke_codes = input("Would you like [new_owner] to have the station's self-destruct codes?","Grant Nuclear Code") in list("Yes", "No")
+	if(nuke_codes == "Yes")
+		assign_nuke()
 
 /datum/antagonist/ert/proc/update_name()
 	owner.current.fully_replace_character_name(owner.current.real_name,"[role] [pick(name_source)]")
@@ -69,7 +137,10 @@
 		return
 	var/datum/objective/missionobj = new ()
 	missionobj.owner = owner
-	missionobj.explanation_text = "Conduct a routine performance review of [station_name()] and its Captain."
+	if(!massacre_mission)
+		missionobj.explanation_text = "Conduct a routine performance review of [station_name()] and its Captain."
+	else
+		missionobj.explanation_text = "Eliminate all former Nanotrasen employees aboard [station_name()]. If you recieve the nuclear codes, arming the nuke is completely optional."
 	missionobj.completed = TRUE
 	mission = missionobj
 	objectives |= mission
@@ -115,10 +186,16 @@
 	plasmaman_outfit = /datum/outfit/plasmaman/centcom_commander
 	role = "Trooper"
 	rip_and_tear = TRUE
+	job_rank = ROLE_DEATHSQUAD
 
 /datum/antagonist/ert/deathsquad/New()
 	. = ..()
 	name_source = GLOB.commando_names
+
+/datum/antagonist/ert/deathsquad/revs
+	send_to_spawnpoint = TRUE
+	nuke_codes = TRUE
+	massacre_mission = TRUE
 
 /datum/antagonist/ert/deathsquad/leader
 	name = "Deathsquad Officer"

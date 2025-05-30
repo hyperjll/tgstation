@@ -10,7 +10,7 @@
 	number_level = SEC_LEVEL_EPSILON
 	sound = 'hypermods/sound/announcer/alarm/epsilon.ogg'
 	elevating_to_configuration_key = /datum/config_entry/string/alert_epsilon
-	shuttle_call_time_mod = 10 //nobody escapes the station
+	shuttle_call_time_mod = 5 // Good luck.
 
 /**
  * YELLOW

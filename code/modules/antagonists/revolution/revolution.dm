@@ -532,6 +532,10 @@
 			continue
 		add_memory_in_range(real_headrev, 5, /datum/memory/revolution_rev_victory, protagonist = real_headrev)
 	SSsecurity_level.set_level(SEC_LEVEL_EPSILON)
+	SSdynamic.mid_round_budget += 50 // The station has been completely de-stabilized, anyone within the sector's going to want to captialize on that
+	SSshuttle.admin_emergency_no_recall = TRUE
+	SSshuttle.requestEvac(src,"Central Command Automated Announcement: The emergency shuttle is being sent to reclaim potential assets and recover what little may remain of Nanotrasen-Loyal employees. Your shuttle uplink will not be allowed to recall nor cancel it's arrival.")
+	force_event(/datum/round_event_control/ert_setup/revs, "a revolutonary victory")
 
 /// Handles effects of revs losing, such as making ex-headrevs unrevivable and setting up head of staff memories.
 /datum/team/revolution/proc/defeat_effects()

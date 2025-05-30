@@ -7063,6 +7063,7 @@
 #include "hypermods\code\modules\events\cateors\cateor.dm"
 #include "hypermods\code\modules\events\cateors\cateor_storm.dm"
 #include "hypermods\code\modules\events\cateors\stray_cateor.dm"
+#include "hypermods\code\modules\events\ghost_role\ert.dm"
 #include "hypermods\code\modules\events\ghost_role\infiltrator.dm"
 #include "hypermods\code\modules\events\infil\missiles.dm"
 #include "hypermods\code\modules\events\space_vines\vine_controller.dm"
