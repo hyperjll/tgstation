@@ -100,7 +100,7 @@
 	name = "Operative Clothes"
 	desc = "A cool black and tan jumpsuit/jumpskirt used by syndicate operatives. Provides no statistical \
 			advantages over a normal jumpsuit/jumpskirt. Does not have integrated vitals or coordinate sensors."
-	item = /obj/item/storage/backpack/duffelbag/syndie/operativeclothes
+	item = /obj/item/storage/box/syndie_kit/operativeclothes
 	cost = 1
 	surplus = 0
 	cant_discount = TRUE

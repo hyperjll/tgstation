@@ -823,7 +823,7 @@
 		new /obj/item/stock_parts/power_store/cell/hyper(src)
 	new /obj/item/screwdriver(src)
 
-/obj/item/storage/backpack/duffelbag/syndie/operativeclothes/PopulateContents()
+/obj/item/storage/box/syndie_kit/operativeclothes/PopulateContents()
 	new /obj/item/clothing/under/syndicate(src)
 	new /obj/item/clothing/under/syndicate/skirt(src)
 
