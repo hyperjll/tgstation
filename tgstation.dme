@@ -6766,6 +6766,7 @@
 #include "hypermods\code\game\machinery\dna_infuser\infuser_entries\infuser_tier_one_entries.dm"
 #include "hypermods\code\game\machinery\dna_infuser\organ_sets\sheep_organs.dm"
 #include "hypermods\code\game\objects\effects\mines.dm"
+#include "hypermods\code\game\objects\effects\temporary_visuals\miscellaneous.dm"
 #include "hypermods\code\game\objects\items\beelibsword.dm"
 #include "hypermods\code\game\objects\items\bodybag.dm"
 #include "hypermods\code\game\objects\items\bostaff.dm"
