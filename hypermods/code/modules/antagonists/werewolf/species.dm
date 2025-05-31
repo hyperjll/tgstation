@@ -34,15 +34,6 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/werewolf,
 	)
 
-/obj/item/organ/brain/werewolf/get_attacking_limb(mob/living/carbon/human/target)
-	name = "werewolf brain"
-	desc = "a strange mixture of a human and wolf brain"
-	organ_traits = list(TRAIT_PRIMITIVE, TRAIT_CAN_STRIP)
-
-	if(target.body_position == LYING_DOWN)
-		return owner.get_bodypart(BODY_ZONE_HEAD)
-	return ..()
-
 /datum/species/werewolf/prepare_human_for_preview(mob/living/carbon/human/human)
 	human.hair_color = "#bb9966" // brown
 	human.hairstyle = "Business Hair"

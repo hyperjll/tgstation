@@ -33,7 +33,7 @@
 	base_icon_state = "heart"
 	maxHealth = 2 * STANDARD_ORGAN_THRESHOLD
 
-/obj/item/organ/heart/wolf/Initialize(mapload)
+/obj/item/organ/heart/werewolf/Initialize(mapload)
 	. = ..()
 	transform = transform.Scale(1.5)
 
@@ -110,4 +110,14 @@
 		receiver.dna.features["werewolf_tail"] = pick(SSaccessories.tails_list_werewolf)
 		receiver.dna.update_uf_block(DNA_WEREWOLF_TAIL_BLOCK)
 
+	return ..()
+
+/obj/item/organ/brain/werewolf
+	name = "werewolf brain"
+	desc = "a strange mixture of a human and wolf brain"
+	organ_traits = list(TRAIT_PRIMITIVE, TRAIT_CAN_STRIP)
+
+/obj/item/organ/brain/werewolf/get_attacking_limb(mob/living/carbon/human/user, mob/living/carbon/human/target)
+	if(target.body_position == LYING_DOWN && user.body_position == LYING_DOWN) // We're... dogfighting?!? Ba-dum tiss
+		return owner.get_bodypart(BODY_ZONE_HEAD)
 	return ..()
