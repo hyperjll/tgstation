@@ -2,8 +2,8 @@
 	name = "Super-Human Mutator"
 	desc = "This DNA mutator contains a highly experimental mutation that significantly boosts a human's physical and mental attributes to it's peak potential. \
 			Superhuman's slowly regenerate health, have greater stamina, have greater maximum health, slightly resist damage, are immune to stuns, have near-immunity to slips, easily ignore pain, and cannot be dismembered. \
-			Mutadone CANNOT cure this mutation, but this mutation causes great genetic instability. Proceed with extreme caution. Incompatible with hulk mutations."
-	cost = 25
+			This mutation causes great genetic instability. Proceed with extreme caution. Incompatible with hulk mutations."
+	cost = 20
 	surplus = 0
 	progression_minimum = 30 MINUTES
 	item = /obj/item/dnainjector/superhuman
@@ -260,7 +260,7 @@
 
 /datum/uplink_item/medical/regenerative
 	name = "Regenerative Mutator"
-	desc = "A mutator containing a helpful mutation called 'Regenerative', you may inject yourself to grant yourself a slow regeneration effect against all forms of damage, this mutation can be cured by mutadone."
+	desc = "A mutator containing a helpful mutation called 'Regenerative', you may inject yourself to grant yourself a slow regeneration effect against all forms of damage."
 	item = /obj/item/dnainjector/regenerative
 	cost = 3
 	surplus = 0
@@ -290,7 +290,7 @@
 	cost = 5
 	surplus = 20
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
-
+/**
 /datum/uplink_item/armor/superradproof
 	name = "Superior Radproofing Mutation"
 	desc = "An mutator containing a superior version of the 'radproof' mutation, you may inject yourself to render yourself immune to radiation, this mutation cannot be cured by mutadone."
@@ -298,3 +298,4 @@
 	cost = 4
 	surplus = 20
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
+**/

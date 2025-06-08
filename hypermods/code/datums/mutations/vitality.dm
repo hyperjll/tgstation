@@ -1,4 +1,4 @@
-/datum/mutation/human/vitality
+/datum/mutation/vitality
 	name = "Vitality"
 	desc = "A rare mutation that allows the user to sustain far more damage than normal."
 	quality = POSITIVE
@@ -9,13 +9,13 @@
 	instability = 25
 	energy_coeff = 1
 
-/datum/mutation/human/vitality/on_acquiring(mob/living/carbon/human/acquirer)
+/datum/mutation/vitality/on_acquiring(mob/living/carbon/human/acquirer)
 	. = ..()
 	if(!.)
 		return
 	acquirer.maxHealth += 50
 
-/datum/mutation/human/vitality/on_losing(mob/living/carbon/human/owner)
+/datum/mutation/vitality/on_losing(mob/living/carbon/human/owner)
 	if(..())
 		return
 	owner.maxHealth -= 50

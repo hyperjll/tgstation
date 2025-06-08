@@ -35,7 +35,7 @@
 	var/mob/living/carbon/human/user = owner
 
 	if(!QDELING(owner)) // Don't really need to do appearance stuff if we're being deleted
-		old_dna.transfer_identity(user)
+		old_dna.copy_dna(user.dna, COPY_DNA_SE|COPY_DNA_SPECIES)
 		user.updateappearance(mutcolor_update = TRUE)
 		user.domutcheck()
 

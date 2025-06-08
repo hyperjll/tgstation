@@ -29,18 +29,21 @@
 	if(A.totalResistance() >= 14) // A true god amongst men.
 		no_reset = TRUE
 
-/datum/symptom/good_genetic_mutation/Activate(datum/disease/advance/A)
+/datum/symptom/good_genetic_mutation/Activate(datum/disease/advance/disease)
 	. = ..()
 	if(!.)
 		return
-	var/mob/living/carbon/C = A.affected_mob
-	if(!C.has_dna())
+	var/mob/living/carbon/carbon = disease.affected_mob
+	if(!carbon.has_dna())
 		return
-	switch(A.stage)
+	switch(disease.stage)
 		if(1, 3)
-			to_chat(C, span_warning("[pick("Your skin feels rubbery.", "You feel a spark of energy curl up within you.")]"))
+			to_chat(carbon, span_warning("[pick("Your skin feels rubbery.", "You feel a spark of energy curl up within you.")]"))
 		if(4, 5)
-			C.easy_random_mutate((POSITIVE), TRUE, TRUE, TRUE, mutadone_proof)
+			var/datum/mutation/mutation = carbon.get_random_mutation_path(POSITIVE)
+			if(!mutation)
+				return
+			carbon.dna.add_mutation((mutation.quality & mutadone_proof) ? MUTATION_SOURCE_GENE_SYMPTOM : MUTATION_SOURCE_ACTIVATED)
 
 /datum/symptom/good_genetic_mutation/End(datum/disease/advance/A)
 	. = ..()
@@ -49,4 +52,4 @@
 	if(!no_reset)
 		var/mob/living/carbon/M = A.affected_mob
 		if(M.has_dna())
-			M.dna.remove_all_mutations(list(MUT_NORMAL, MUT_EXTRA), FALSE)
+			M.dna.remove_all_mutations(list(MUTATION_SOURCE_GENE_SYMPTOM, MUTATION_SOURCE_ACTIVATED), FALSE)

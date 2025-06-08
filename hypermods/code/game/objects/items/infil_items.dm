@@ -9,9 +9,10 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	var/used = FALSE ///determines wether the injector is used up or nah
-	var/datum/weakref/store  ///the mob currently stored in the injector
+	var/datum/dna/originalDNA // the mob DNA we stole.
+	var/originalname // the name of the mob who'd DNA we got.
 
-/obj/item/adv_mulligan/afterattack(atom/movable/victim, mob/living/carbon/human/user, proximity)
+/obj/item/adv_mulligan/interact_with_atom(atom/movable/victim, mob/living/carbon/human/user, proximity)
 	. = ..()
 	if(!proximity)
 		return
@@ -23,11 +24,13 @@
 	if(ishuman(victim))
 		var/mob/living/carbon/human/target = victim
 		if(user.real_name != target.dna.real_name)
-			store = WEAKREF(target)
+			originalDNA = new target.dna.type
+			target.dna.copy_dna(originalDNA, COPY_DNA_SE|COPY_DNA_SPECIES)
+			originalname = target.real_name
 			to_chat(user, span_notice("You stealthly stab [target.name] with [src]."))
 			icon_state = "dnainjector"
 		else
-			if(store)
+			if(originalDNA)
 				mutate(user)
 			else
 				to_chat(user, span_notice("You can't stab yourself with [src]!"))
@@ -39,26 +42,26 @@
 	if(used)
 		to_chat(user, span_notice("[src] has been already used, you can't activate it again!"))
 		return
-	if(!store)
+	if(!originalDNA)
 		to_chat(user, span_notice("[src] doesn't have any DNA loaded in it!"))
 		return
 
 	if(!do_after(user, 2 SECONDS))
 		return
 
-	var/mob/living/carbon/human/stored = store.resolve()
+	var/mob/living/carbon/human/ourself = user
 
-	user.visible_message(span_warning("[user.name] shivers in pain and soon transforms into [stored.dna.real_name]!"), \
-		span_notice("You inject yourself with [src] and suddenly become a copy of [stored.dna.real_name]."))
+	ourself.visible_message(span_warning("[ourself.name] shivers in pain and soon transforms into [originalname]!"), \
+		span_notice("You inject yourself with [src] and suddenly become a copy of [originalname]."))
 
-	user.real_name = stored.real_name
-	stored.dna.transfer_identity(user, transfer_SE=1)
-	user.updateappearance(mutcolor_update=1)
-	user.domutcheck()
+	ourself.real_name = originalname
+	originalDNA.copy_dna(ourself.dna, COPY_DNA_SE|COPY_DNA_SPECIES)
+	ourself.updateappearance(mutcolor_update=1)
+	ourself.domutcheck()
 	used = TRUE
 
 	icon_state = "dnainjector0"
-	store = null
+	originalDNA = null
 
 /obj/item/adv_mulligan/examine(mob/user)
 	. = ..()

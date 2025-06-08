@@ -1,4 +1,4 @@
-/datum/mutation/human/metallineskin
+/datum/mutation/metallineskin
 	name = "Metalline Skin"
 	desc = "A rare mutation that allows the user to sustain far more Brute damage than normal."
 	quality = POSITIVE
@@ -9,19 +9,19 @@
 	instability = 20
 	energy_coeff = 1
 
-/datum/mutation/human/metallineskin/on_acquiring(mob/living/carbon/human/acquirer)
+/datum/mutation/metallineskin/on_acquiring(mob/living/carbon/human/acquirer)
 	. = ..()
 	if(!.)
 		return
 	acquirer.physiology.brute_mod *= 0.75
 
-/datum/mutation/human/metallineskin/on_losing(mob/living/carbon/human/owner)
+/datum/mutation/metallineskin/on_losing(mob/living/carbon/human/owner)
 	if(..())
 		return
 	owner.physiology.brute_mod /= 0.75
 
 
-/datum/mutation/human/reflectiveskin
+/datum/mutation/reflectiveskin
 	name = "Reflective Skin"
 	desc = "A rare mutation that allows the user to sustain far more Burn damage than normal."
 	quality = POSITIVE
@@ -32,13 +32,13 @@
 	instability = 20
 	energy_coeff = 1
 
-/datum/mutation/human/reflectiveskin/on_acquiring(mob/living/carbon/human/acquirer)
+/datum/mutation/reflectiveskin/on_acquiring(mob/living/carbon/human/acquirer)
 	. = ..()
 	if(!.)
 		return
 	acquirer.physiology.burn_mod *= 0.75
 
-/datum/mutation/human/reflectiveskin/on_losing(mob/living/carbon/human/owner)
+/datum/mutation/reflectiveskin/on_losing(mob/living/carbon/human/owner)
 	if(..())
 		return
 	owner.physiology.burn_mod /= 0.75

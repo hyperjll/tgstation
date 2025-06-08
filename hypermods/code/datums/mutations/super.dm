@@ -1,4 +1,4 @@
-/datum/mutation/human/superhuman
+/datum/mutation/superhuman
 	name = "Super"
 	desc = "A down-right supernatural mutation found only within sentient humanoids. It enhances many of a humanoid's physical and mental attributes to a near unprecedented state."
 	quality = POSITIVE
@@ -8,8 +8,8 @@
 	difficulty = 40
 	instability = 50
 	species_allowed = list(SPECIES_HUMAN)
-	conflicts = list(/datum/mutation/human/hulk)
-	mutadone_proof = TRUE
+	conflicts = list(/datum/mutation/hulk)
+	//mutadone_proof = TRUE
 	var/superhumanhealing = FALSE
 	mutation_traits = list(
 		TRAIT_NO_SLIP_WATER,
@@ -18,7 +18,7 @@
 		TRAIT_NODISMEMBER,
 	)
 
-/datum/mutation/human/superhuman/on_acquiring(mob/living/carbon/human/acquirer)
+/datum/mutation/superhuman/on_acquiring(mob/living/carbon/human/acquirer)
 	. = ..()
 	if(!.)
 		return
@@ -35,7 +35,7 @@
 	acquirer.add_traits(mutation_traits, TRAIT_NODISMEMBER)
 	owner.add_movespeed_mod_immunities("superhuman", /datum/movespeed_modifier/damage_slowdown)
 
-/datum/mutation/human/superhuman/on_losing(mob/living/carbon/human/owner)
+/datum/mutation/superhuman/on_losing(mob/living/carbon/human/owner)
 	if(..())
 		return
 
@@ -51,11 +51,11 @@
 	owner.remove_traits(mutation_traits, TRAIT_NODISMEMBER)
 	owner.remove_movespeed_mod_immunities("superhuman", /datum/movespeed_modifier/damage_slowdown)
 
-/datum/mutation/human/superhuman/on_life(seconds_per_tick, times_fired, mob/living/carbon/human/H)
+/datum/mutation/superhuman/on_life(seconds_per_tick, times_fired, mob/living/carbon/human/H)
 	if(superhumanhealing)
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 
-/datum/mutation/human/superhuman/proc/heal()
+/datum/mutation/superhuman/proc/heal()
 	if(owner.getOxyLoss())
 		owner.adjustOxyLoss(-0.25)
 	if(owner.getBruteLoss())

@@ -259,7 +259,7 @@
 		return
 	if(ishuman(target))
 		var/mob/living/carbon/human/possibleHulk = target
-		if(!possibleHulk.dna || !possibleHulk.dna.check_mutation(/datum/mutation/human/hulk))
+		if(!possibleHulk.dna || !possibleHulk.dna.check_mutation(/datum/mutation/hulk))
 			return
 	var/mob/living/basic/swarmer/swarmer = firer
 	swarmer.teleport_target(target)

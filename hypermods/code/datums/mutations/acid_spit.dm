@@ -1,4 +1,4 @@
-/datum/mutation/human/acid_spit
+/datum/mutation/acid_spit
 	name = "Acid Spit"
 	desc = "An ancient mutation from xenomorphs that changes the salivary glands to produce acid."
 	locked = TRUE
@@ -8,11 +8,11 @@
 	power_path = /datum/action/cooldown/spell/pointed/projectile/acid_spit
 	instability = 20
 	difficulty = 12
-	conflicts = list(/datum/mutation/human/acid_spit/unstable, /datum/mutation/human/acid_spit/syndicate)
+	conflicts = list(/datum/mutation/acid_spit/unstable, /datum/mutation/acid_spit/syndicate)
 	power_coeff = 1
 	energy_coeff = 1
 
-/datum/mutation/human/acid_spit/setup()
+/datum/mutation/acid_spit/setup()
 	. = ..()
 	if(!.)
 		return
@@ -160,14 +160,14 @@
 
 	return ..()
 
-/datum/mutation/human/acid_spit/unstable
+/datum/mutation/acid_spit/unstable
 	name = "Unstable Acid Spit"
 	desc = "An ancient mutation from xenomorphs that changes the salivary glands to produce acid, this is a highly unstable strain."
 	instability = 70
-	conflicts = list(/datum/mutation/human/acid_spit, /datum/mutation/human/acid_spit/syndicate)
+	conflicts = list(/datum/mutation/acid_spit, /datum/mutation/acid_spit/syndicate)
 
 
-/datum/mutation/human/acid_spit/syndicate
+/datum/mutation/acid_spit/syndicate
 	name = "Acid Spit"
 	desc = "An ancient mutation originating from xenomorphs that changes the salivary glands to produce acid."
 	instability = 20
@@ -176,7 +176,7 @@
 	text_gain_indication = span_notice("Your saliva burns your mouth!")
 	text_lose_indication = span_notice("Your saliva cools down.")
 	power_path = /datum/action/cooldown/spell/pointed/projectile/acid_spit/syndicate
-	conflicts = list(/datum/mutation/human/acid_spit, /datum/mutation/human/acid_spit/unstable)
+	conflicts = list(/datum/mutation/acid_spit, /datum/mutation/acid_spit/unstable)
 
 /datum/action/cooldown/spell/pointed/projectile/acid_spit/syndicate
 	name = "Acid Spit"
