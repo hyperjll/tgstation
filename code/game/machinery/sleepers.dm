@@ -32,7 +32,7 @@
 	var/list/possible_chems = list(
 		list(
 			/datum/reagent/medicine/epinephrine,
-			/datum/reagent/medicine/morphine,
+			/datum/reagent/medicine/painkillers,
 			/datum/reagent/medicine/c2/convermol,
 			/datum/reagent/medicine/c2/libital,
 			/datum/reagent/medicine/c2/aiuri,
@@ -40,9 +40,9 @@
 		list(
 			/datum/reagent/medicine/oculine,
 			/datum/reagent/medicine/inacusiate,
+			/datum/reagent/medicine/c2/multiver,
 		),
 		list(
-			/datum/reagent/medicine/c2/multiver,
 			/datum/reagent/medicine/mutadone,
 			/datum/reagent/medicine/mannitol,
 			/datum/reagent/medicine/salbutamol,
@@ -50,6 +50,7 @@
 		),
 		list(
 			/datum/reagent/medicine/omnizine,
+			/datum/reagent/medicine/coagulant,
 		),
 	)
 
