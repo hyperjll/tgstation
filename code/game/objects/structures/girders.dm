@@ -543,6 +543,7 @@
 			B.use(amount)
 			var/turf/T = get_turf(src)
 			T.place_on_top(/turf/closed/wall/mineral/bronze)
+			IS_CLOCK(user) ? T.place_on_top(/turf/closed/wall/clockwork) : T.place_on_top(/turf/closed/wall/mineral/bronze)
 			qdel(src)
 
 	else

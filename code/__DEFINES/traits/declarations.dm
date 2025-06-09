@@ -1557,4 +1557,12 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Gives you a coinflip chance when eating disliked food to actually like its taste
 #define TRAIT_STABILIZED_EATER "stabilized_eater"
 
+// Traits related directly to Clockwork Cult
+/// Given to Clockwork Golems, gives them a reduction on invoke time for certain scriptures.
+#define TRAIT_FASTER_SLAB_INVOKE "faster_slab_invoke"
+/// Prevents the invocation of clockwork scriptures.
+#define TRAIT_NO_SLAB_INVOKE "no_slab_invoke"
+/// Has an item been enchanted by a clock cult Stargazer?
+#define TRAIT_STARGAZED "stargazed"
+
 // END TRAIT DEFINES

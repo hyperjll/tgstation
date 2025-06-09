@@ -136,6 +136,11 @@
 	if(cyborg.emagged)
 		for(var/obj/item/module as anything in emag_modules)
 			add_module(module, FALSE, FALSE)
+	if(IS_CLOCK(cyborg) && !cyborg.clockwork) //this should never happen
+		cyborg.set_clockwork(TRUE, FALSE)
+	if(cyborg.clockwork)
+		for(var/obj/item/module in clock_modules)
+			add_module(module, FALSE, FALSE)
 	for(var/obj/item/module as anything in added_modules)
 		add_module(module, FALSE, FALSE)
 	for(var/obj/item/module as anything in held_modules & modules)

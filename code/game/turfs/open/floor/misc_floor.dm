@@ -191,6 +191,10 @@
 	icon_state = "clockwork_floor"
 	floor_tile = /obj/item/stack/tile/bronze
 
+/turf/open/floor/bronze/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/clockwork_tiles)
+
 /turf/open/floor/bronze/flat
 	icon_state = "reebe"
 	floor_tile = /obj/item/stack/tile/bronze/flat

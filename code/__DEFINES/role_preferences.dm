@@ -20,6 +20,7 @@
 #define ROLE_INITIAL_INFECTED "Initial Infected"
 #define ROLE_WEREWOLF "Werewolf"
 #define ROLE_BLOODSUCKER "Bloodsucker"
+#define ROLE_CLOCK_CULTIST "Clock Cultist"
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -159,6 +160,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_INITIAL_INFECTED = 14,
 	ROLE_WEREWOLF = 7,
 	ROLE_BLOODSUCKER = 7,
+	ROLE_CLOCK_CULTIST = 14,
 
 	// Midround
 	ROLE_ABDUCTOR = 0,

@@ -321,6 +321,8 @@
 	. = ..()
 	if(IS_CULTIST(affected_mob))
 		to_chat(affected_mob, span_userdanger("A vile holiness begins to spread its shining tendrils through your mind, purging the Geometer of Blood's influence!"))
+	if(IS_CLOCK(affected_mob))
+		to_chat(affected_mob, span_userdanger("Your mind burns in agony as you feel the light of the Justicar being ripped away from you by something else!"))
 
 /datum/reagent/water/holywater/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
@@ -353,6 +355,13 @@
 			if(!IS_CULTIST(affected_mob) || affected_mob.mind?.holy_role != HOLY_ROLE_PRIEST)
 				affected_mob.emote("scream")
 				need_mob_update += affected_mob.adjustFireLoss(3 * REM * seconds_per_tick, updating_health = FALSE)
+		else if(IS_CLOCK(affected_mob) && SPT_PROB(10, seconds_per_tick))
+			affected_mob.say(pick("VG OHEAF!","SBE GUR TYBEL-BS ENG'INE!","Gur yvtug jvyy fuvar.","Whfgv`pne fnir zr.","Gur Nex zhfg abg snyy.","Rzvarapr V pnyy gur`r!","Lbh frr bayl qnexarff.","Guv`f vf abg gur raq.","Gv`px, Gbpx"), forced = "holy water")
+			if(prob(10))
+				affected_mob.visible_message(span_danger("[affected_mob] starts having a seizure!"), span_userdanger("You have a seizure!"))
+				affected_mob.Unconscious(12 SECONDS)
+				to_chat(affected_mob, span_bigbrass("[pick("Your failure shall not delay my freedom", "The blind will see only darkness", \
+					"Then my ark will feed upon your vitality", "Do not forget your servitude")]."))
 
 	if(data["deciseconds_metabolized"] >= (1 MINUTES)) // 24 units
 		if(IS_CULTIST(affected_mob))
