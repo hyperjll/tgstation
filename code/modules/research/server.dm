@@ -115,7 +115,7 @@
 /// Master R&D server. As long as this still exists and still holds the HDD for the theft objective, research points generate at normal speed. Destroy it or an antag steals the HDD? Half research speed.
 /obj/machinery/rnd/server/master
 	max_integrity = 1800 //takes roughly ~15s longer to break then full deconstruction.
-	circuit = null
+	circuit = /obj/item/circuitboard/machine/rdserver/master
 	var/obj/item/computer_disk/hdd_theft/source_code_hdd
 	var/deconstruction_state = HDD_PANEL_CLOSED
 	var/front_panel_screws = 4
@@ -260,6 +260,13 @@
 	front_panel_screws = 0
 	hdd_wires = 0
 	deconstruction_state = HDD_OVERLOADED
+
+/obj/machinery/rnd/server/master/RefreshParts()
+	. = ..()
+	if(!stored_research) // Just in case, we don't want more runtimes.
+		return
+	for(var/datum/stock_part/scanning_module/scanning_module in component_parts)
+		stored_research.income_modifier = max(scanning_module.tier * 0.5, 1) // Basically ensures that anything below tier 3 parts doesn't nerf point generation, can get up to 2x
 
 #undef HDD_CUT_LOOSE
 #undef HDD_OVERLOADED
