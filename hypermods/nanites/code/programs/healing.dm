@@ -265,10 +265,10 @@
 	var/spent = FALSE
 
 /datum/nanite_program/corpsepreserve/active_effect()
-	var/datum/reagent/S = host_mob.reagents.has_reagent(/datum/reagent/toxin/formaldehyde)
-	if(S?.volume > 4)
-		return
 	if(host_mob.stat == DEAD)
+		var/datum/reagent/S = host_mob.reagents?.has_reagent(/datum/reagent/toxin/formaldehyde)
+		if(S)
+			return
 		if(!spent)
 			spent = TRUE
 			nanites.adjust_nanites(null, -10)
@@ -288,11 +288,10 @@
 	var/spent = FALSE
 
 /datum/nanite_program/critstable/active_effect()
-	var/datum/reagent/S = host_mob.reagents.has_reagent(/datum/reagent/medicine/epinephrine)
-	if(S?.volume > 14)
-		return
-
 	if(HAS_TRAIT(host_mob, TRAIT_CRITICAL_CONDITION))
+		var/datum/reagent/S = host_mob.reagents?.has_reagent(/datum/reagent/medicine/epinephrine)
+		if(S)
+			return
 		if(!spent)
 			spent = TRUE
 			nanites.adjust_nanites(null, -15)
