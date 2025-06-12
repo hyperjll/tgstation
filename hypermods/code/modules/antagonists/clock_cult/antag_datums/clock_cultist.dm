@@ -185,12 +185,12 @@
 
 ///remove clock cult items from their inventory by dropping them
 /datum/antagonist/clock_cultist/proc/handle_equipment_removal()
-	if(silent || !length(GLOB.types_to_drop_on_clock_deonversion))
+	if(silent || !length(GLOB.types_to_drop_on_clock_deconversion))
 		return
 
 	var/mob/living/current = owner.current
 	for(var/obj/item/object as anything in current.get_all_contents())
-		if(object.type in GLOB.types_to_drop_on_clock_deonversion)
+		if(object.type in GLOB.types_to_drop_on_clock_deconversion)
 			current.dropItemToGround(object, TRUE, TRUE)
 
 /datum/antagonist/clock_cultist/proc/add_forbearance(mob/apply_to)

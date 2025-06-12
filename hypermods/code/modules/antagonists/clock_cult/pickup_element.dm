@@ -21,8 +21,8 @@
 	if(slots_to_count && !length(equip_slots))
 		equip_slots = slots_to_count
 
-	if(!locate(target.type) in GLOB.types_to_drop_on_clock_deonversion)
-		GLOB.types_to_drop_on_clock_deonversion |= target.type
+	if(!locate(target.type) in GLOB.types_to_drop_on_clock_deconversion)
+		GLOB.types_to_drop_on_clock_deconversion |= target.type
 
 
 /datum/element/clockwork_pickup/Detach(datum/target)
