@@ -89,7 +89,7 @@
 		/obj/item/gun/energy/e_gun,
 		/obj/item/stamp/head/captain,
 		)
-	implants = list(/obj/item/implant/mindshield)
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig)
 	skillchips = list(/obj/item/skillchip/disk_verifier)
 
 	var/special_charter
