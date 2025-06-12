@@ -14,6 +14,12 @@
 	desc = "[desc] The display is flickering slightly."
 
 /obj/item/clothing/glasses/hud/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if(antag_locked)
+		playsound(src, SFX_SPARKS, 15, TRUE)
+		RemoveElement(/datum/element/anti_pickup)
+		antag_locked = FALSE
+		return TRUE // Don't scramble the display if we're trying to remove the antag lock
+
 	if(obj_flags & EMAGGED)
 		return FALSE
 	obj_flags |= EMAGGED
@@ -187,6 +193,7 @@
 	flags_cover = GLASSESCOVERSEYES
 	tint = 1
 	glass_colour_type = /datum/client_colour/glass_colour/darkred
+	antag_lockable = TRUE
 
 /obj/item/clothing/glasses/hud/security/sunglasses/Initialize(mapload)
 	. = ..()

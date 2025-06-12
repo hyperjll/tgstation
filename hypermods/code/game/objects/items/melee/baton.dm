@@ -52,7 +52,8 @@
 
 /obj/item/melee/baton/security/antaglocked/examine(mob/user)
 	. = ..()
-	. += "This stun baton has a A.N.T.A.G Locker installed."
+	if(security_lock)
+		. += "This stun baton has a A.N.T.A.G Locker installed."
 
 /obj/item/melee/baton/security/antaglocked/dropped()
 	if(active)
@@ -67,7 +68,8 @@
 
 /obj/item/antaglocker
 	name = "A.N.T.A.G Lock"
-	desc = "The Anti-Non-Trained-Assignee-Gate (or ANTAG) is an electronic upgrade for NT's stun baton design. It connects directly to Nanotrasen's Security Database to verify the neural patterns of the user. "
+	desc = "The Anti-Non-Trained-Assignee-Gate (or ANTAG) is an electronic upgrade for NT's stun baton design and various security equipment. \
+			It connects directly to Nanotrasen's Security Database to verify the neural patterns of the user to prevent unauthorized usage of various equipment."
 	icon = 'hypermods/icons/obj/devices/circuitry_n_data.dmi'
 	icon_state = "antaglocker"
 	custom_price = PAYCHECK_COMMAND * 8

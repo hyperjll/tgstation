@@ -58,6 +58,7 @@
 
 /obj/item/clothing/suit/armor/vest/alt/sec
 	icon_state = "armor_sec"
+	antag_lockable = TRUE
 
 /obj/item/clothing/suit/armor/vest/press
 	name = "press armor vest"
@@ -297,6 +298,7 @@
 	strip_delay = 80
 	equip_delay_other = 60
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
+	antag_lockable = TRUE
 
 /obj/item/clothing/suit/armor/riot/Initialize(mapload)
 	. = ..()
@@ -358,6 +360,7 @@
 	armor_type = /datum/armor/armor_bulletproof
 	strip_delay = 70
 	equip_delay_other = 50
+	antag_lockable = TRUE
 
 /datum/armor/armor_bulletproof
 	melee = 15
@@ -531,6 +534,8 @@
 		/obj/item/tank/internals/emergency_oxygen,
 		/obj/item/tank/internals/plasmaman,
 		)
+	antag_lockable = FALSE
+
 /obj/item/clothing/suit/armor/riot/knight/init_rustle_component()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_PLATE_ARMOR_RUSTLE, 8)
 

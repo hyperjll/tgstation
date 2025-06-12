@@ -42,6 +42,17 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	overlay_mic_idle = null
 	overlay_mic_active = null
 
+	/// Can an A.N.T.A.G Locker be installed to prevent people from picking this thing up?
+	var/antag_lockable = FALSE
+	/// Has an A.N.T.A.G Locker already been installed?
+	var/antag_locked = FALSE
+
+/obj/item/radio/headset/emag_act()
+	if(antag_locked)
+		playsound(src, SFX_SPARKS, 15, TRUE)
+		RemoveElement(/datum/element/anti_pickup)
+		antag_locked = FALSE
+
 /obj/item/radio/headset/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins putting \the [src]'s antenna up [user.p_their()] nose! It looks like [user.p_theyre()] trying to give [user.p_them()]self cancer!"))
 	return TOXLOSS
@@ -74,6 +85,9 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 	if(command)
 		. += span_info("<b>Alt-click</b> to toggle the high-volume mode.")
+
+	if(antag_locked)
+		. += "[src] has a A.N.T.A.G Locker installed."
 
 /obj/item/radio/headset/Initialize(mapload)
 	. = ..()
@@ -198,6 +212,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	desc = "This is used by your elite security force. Protects ears from flashbangs."
 	icon_state = "sec_headset_alt"
 	worn_icon_state = "sec_headset_alt"
+	antag_lockable = TRUE
 
 /obj/item/radio/headset/headset_sec/alt/Initialize(mapload)
 	. = ..()
@@ -281,6 +296,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	desc = "The headset of the boss. Protects ears from flashbangs."
 	icon_state = "com_headset_alt"
 	worn_icon_state = "com_headset_alt"
+	antag_lockable = TRUE
 
 /obj/item/radio/headset/heads/captain/alt/Initialize(mapload)
 	. = ..()
@@ -313,6 +329,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	desc = "The headset of the man in charge of keeping order and protecting the station. Protects ears from flashbangs."
 	icon_state = "com_headset_alt"
 	worn_icon_state = "com_headset_alt"
+	antag_lockable = TRUE
 
 /obj/item/radio/headset/heads/hos/alt/Initialize(mapload)
 	. = ..()
@@ -405,6 +422,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	icon_state = "cent_headset_alt"
 	worn_icon_state = "cent_headset_alt"
 	keyslot2 = null
+	antag_lockable = TRUE
 
 /obj/item/radio/headset/headset_cent/alt/Initialize(mapload)
 	. = ..()
@@ -486,6 +504,13 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 
 		recalculateChannels()
+
+	if(istype(W, /obj/item/antaglocker) && antag_lockable && !antag_locked)
+		balloon_alert(user, "Anti-Theft System Installed!")
+		AddElement(/datum/element/anti_pickup)
+		antag_locked = TRUE
+		qdel(W)
+
 	else
 		return ..()
 

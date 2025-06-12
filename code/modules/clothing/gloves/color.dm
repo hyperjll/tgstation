@@ -24,6 +24,7 @@
 	desc = "These security gloves come with microchips that help the user quickly restrain suspects."
 	icon_state = "sec"
 	clothing_traits = list(TRAIT_FAST_CUFFING)
+	antag_lockable = TRUE
 
 /obj/item/clothing/gloves/color/black/security/blu
 	icon_state = "sec_blu"

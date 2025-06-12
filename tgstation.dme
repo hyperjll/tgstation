@@ -6729,6 +6729,7 @@
 #include "hypermods\code\datums\diseases\advance\symptoms\oxygen.dm"
 #include "hypermods\code\datums\diseases\advance\symptoms\speed.dm"
 #include "hypermods\code\datums\diseases\advance\symptoms\syndicate.dm"
+#include "hypermods\code\datums\elements\anti_pickup.dm"
 #include "hypermods\code\datums\martial\knifeboxing.dm"
 #include "hypermods\code\datums\martial\riggedboxing.dm"
 #include "hypermods\code\datums\mutations\_combined.dm"

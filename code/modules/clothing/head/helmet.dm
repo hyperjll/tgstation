@@ -40,6 +40,7 @@
 	visor_toggle_up_sound = SFX_VISOR_UP
 	visor_toggle_down_sound = SFX_VISOR_DOWN
 	hair_mask = /datum/hair_mask/standard_hat_low
+	antag_lockable = TRUE
 
 /obj/item/clothing/head/helmet/sec/Initialize(mapload)
 	. = ..()
@@ -120,6 +121,7 @@
 	equip_sound = 'sound/items/handling/helmet/helmet_equip1.ogg'
 	pickup_sound = 'sound/items/handling/helmet/helmet_pickup1.ogg'
 	drop_sound = 'sound/items/handling/helmet/helmet_drop1.ogg'
+	antag_lockable = TRUE
 
 /datum/armor/helmet_alt
 	melee = 15
@@ -246,6 +248,7 @@
 	drop_sound = 'sound/items/handling/helmet/helmet_drop1.ogg'
 	visor_toggle_up_sound = SFX_VISOR_UP
 	visor_toggle_down_sound = SFX_VISOR_DOWN
+	antag_lockable = TRUE
 
 /obj/item/clothing/head/helmet/toggleable/riot/Initialize(mapload)
 	. = ..()

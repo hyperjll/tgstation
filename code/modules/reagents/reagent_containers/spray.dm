@@ -235,6 +235,29 @@
 	list_reagents = list(/datum/reagent/consumable/condensedcapsaicin = 50)
 	pickup_sound = 'sound/items/handling/pepper_spray/pepper_spray_pick_up.ogg'
 	drop_sound = 'sound/items/handling/pepper_spray/pepper_spray_drop.ogg'
+	/// Can an A.N.T.A.G Locker be installed to prevent people from picking this thing up?
+	var/antag_lockable = TRUE
+	/// Has an A.N.T.A.G Locker already been installed?
+	var/antag_locked = FALSE
+
+/obj/item/reagent_containers/spray/pepper/examine(mob/user)
+	if(antag_locked)
+		. += "[src] has a A.N.T.A.G Locker installed."
+
+/obj/item/reagent_containers/spray/pepper/attackby(obj/item/attacking_item, mob/user, list/modifiers, list/attack_modifiers)
+	if(istype(attacking_item, /obj/item/antaglocker) && antag_lockable && !antag_locked)
+		balloon_alert(user, "Anti-Theft System Installed!")
+		AddElement(/datum/element/anti_pickup)
+		antag_locked = TRUE
+		qdel(attacking_item)
+
+	return ..()
+
+/obj/item/reagent_containers/spray/pepper/emag_act()
+	if(antag_locked)
+		playsound(src, SFX_SPARKS, 15, TRUE)
+		RemoveElement(/datum/element/anti_pickup)
+		antag_locked = FALSE
 
 /obj/item/reagent_containers/spray/pepper/empty //for protolathe printing
 	list_reagents = null
