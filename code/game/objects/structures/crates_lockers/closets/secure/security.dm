@@ -122,7 +122,7 @@
 	new /obj/item/wallframe/camera/autosetup(src)
 	new /obj/item/computer_disk/security/secureye(src)
 	if(prob(35))
-		new /obj/item/implantcase/deathrattle(src)
+		new /obj/item/implanter/biosig/security(src)
 
 /obj/structure/closet/secure_closet/security/sec
 
