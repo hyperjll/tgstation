@@ -146,7 +146,7 @@
 			A single dose is estimated to last 5 minutes."
 	item = /obj/item/reagent_containers/hypospray/medipen/pumpupplus
 	cost = 2
-
+/**
 /datum/uplink_item/consumable/syndicryo
 	name = "Cryogelidia Pills"
 	desc = "A single bottle of pills containing Cryogelidia, a chemical which freezes you in a protective block of ice. \
@@ -155,6 +155,15 @@
 			Each pill also contains some healing chemicals to help buy time."
 	item = /obj/item/storage/pill_bottle/syndicryo
 	cost = 3
+**/
+
+/datum/uplink_item/consumable/syndicryo
+	name = "Cryogelidia Medipen"
+	desc = "A single medipen containing Cryogelidia, a chemical which freezes you in a protective block of ice. \
+			Best used to stall for time or as a defense mechanism, as this renders escape from pursuers hopeless. \
+			Also contains some healing chemicals to help buy time."
+	item = /obj/item/reagent_containers/hypospray/medipen/syndicryogel
+	cost = 2
 
 /datum/uplink_item/consumable/eigenstasium
 	name = "Eigenstasium Bottle"
