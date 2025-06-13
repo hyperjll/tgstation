@@ -35,8 +35,6 @@
 	color = rgb(190, 135, 0)
 	detachable = FALSE
 	icon_state = "mecha_abooster_proj"
-	iconstate_name = "range"
-	protect_name = "Clockwork Armor"
 	armor_mod = /datum/armor/mecha_equipment_mixed_boost
 
 /datum/armor/mecha_equipment_mixed_boost
