@@ -1,7 +1,8 @@
 /obj/item/implant/wasps
 	name = "wasp revenge implant"
 	desc = "NO! NOT THE BEES!"
-	icon_state = "notthebees"
+	icon = 'icons/mob/simple/bees.dmi'
+	icon_state = "bee_base"
 	actions_types = null
 	var/active = FALSE
 	var/beemount = 5

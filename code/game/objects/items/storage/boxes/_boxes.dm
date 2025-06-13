@@ -17,8 +17,16 @@
 	/// What drawing will we get on the face of the box?
 	var/illustration = "writing"
 
+	/// Below are some icon replacement vars for ui shit
+	var/give_fallback_icon = FALSE // To prevent all syndie kits from showing up as a red box.
+	var/fallback_icon = null
+	var/fallback_icon_state = null
+
 /obj/item/storage/box/Initialize(mapload)
 	. = ..()
+	if(give_fallback_icon && fallback_icon && fallback_icon_state) // Used for certain syndie kits like implants to show a diff icon on the ui
+		icon = fallback_icon
+		icon_state = fallback_icon_state
 	update_appearance()
 
 /obj/item/storage/box/suicide_act(mob/living/carbon/user)
