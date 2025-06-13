@@ -691,6 +691,11 @@
 /obj/item/storage/box/syndie_kit/syndiefirearmauth/PopulateContents()
 	new /obj/item/implanter/weapons_auth(src)
 
+/obj/item/storage/box/syndie_kit/adrenalineimplant
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "adrenal"
+	give_fallback_icon = TRUE
+
 /obj/item/storage/box/syndie_kit/adrenalineimplant/PopulateContents()
 	new /obj/item/implanter/adrenalin(src)
 
@@ -707,17 +712,42 @@
 	new /obj/item/autosurgeon/syndicate/nutrimentplus/hidden/single_use(src)
 	new /obj/item/autosurgeon/syndicate/breathing_tube/hidden/single_use(src)
 
+/obj/item/storage/box/syndie_kit/waspimplant
+	icon = 'icons/mob/simple/bees.dmi'
+	icon_state = "bee_base"
+	give_fallback_icon = TRUE
+
 /obj/item/storage/box/syndie_kit/waspimplant/PopulateContents()
 	new /obj/item/implanter/wasps(src)
+
+/obj/item/storage/box/syndie_kit/waspimplantmacro
+	icon = 'icons/mob/simple/bees.dmi'
+	icon_state = "bee_base"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/waspimplantmacro/PopulateContents()
 	new /obj/item/implanter/wasps/macro(src)
 
+/obj/item/storage/box/syndie_kit/teslaimplant
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "lighting_bolt"
+	give_fallback_icon = TRUE
+
 /obj/item/storage/box/syndie_kit/teslaimplant/PopulateContents()
 	new /obj/item/implanter/tesla(src)
 
+/obj/item/storage/box/syndie_kit/teslaimplantmacro
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "lighting_bolt"
+	give_fallback_icon = TRUE
+
 /obj/item/storage/box/syndie_kit/teslaimplantmacro/PopulateContents()
 	new /obj/item/implanter/tesla/macro(src)
+
+/obj/item/storage/box/syndie_kit/chem_storage_implant_bundle
+	icon = 'hypermods/icons/hud/implants.dmi'
+	icon_state = "chemicalstore"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/chem_storage_implant_bundle/PopulateContents()
 	for(var/i in 1 to 5)
@@ -726,11 +756,21 @@
 	new /obj/item/reagent_containers/syringe(src)
 	new /obj/item/reagent_containers/cup/beaker(src)
 
+/obj/item/storage/box/syndie_kit/chem_storage_implant
+	icon = 'hypermods/icons/hud/implants.dmi'
+	icon_state = "chemicalstore"
+	give_fallback_icon = TRUE
+
 /obj/item/storage/box/syndie_kit/chem_storage_implant/PopulateContents()
 	new /obj/item/implantcase/syndiechem(src)
 	new /obj/item/implanter(src)
 	new /obj/item/reagent_containers/syringe(src)
 	new /obj/item/reagent_containers/cup/beaker(src)
+
+/obj/item/storage/box/syndie_kit/krav_maga
+	icon = 'icons/obj/scrolls.dmi'
+	icon_state ="scroll2"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/krav_maga/PopulateContents()
 	new /obj/item/implanter/krav_maga(src)
@@ -846,6 +886,11 @@
 	for(var/i in 1 to 1)
 		var/drinktype = pick(drinktypes)
 		new drinktype(src)
+
+/obj/item/storage/box/syndie_kit/scramimplant
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "shield1"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/scramimplant/PopulateContents()
 	new /obj/item/implanter/scram(src)
@@ -1233,12 +1278,18 @@
 
 /obj/item/storage/box/syndie_kit/imp_binary
 	name = "binary radio implant box"
+	icon = 'icons/obj/devices/voice.dmi'
+	icon_state = "walkietalkie"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_binary/PopulateContents()
 	new /obj/item/implanter/radio/binary(src)
 
 /obj/item/storage/box/syndie_kit/imp_camo
 	name = "camouflage implant box"
+	icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	icon_state = "ninja_cloak"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_camo/PopulateContents()
 	new /obj/item/implanter/camouflage(src)
@@ -1251,6 +1302,9 @@
 
 /obj/item/storage/box/syndie_kit/imp_dnascramble
 	name = "dna scrambler implant box"
+	icon = 'icons/obj/clothing/suits/costume.dmi'
+	icon_state = "lingspacesuit"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_dnascramble/PopulateContents()
 	new /obj/item/implanter/dnascramble(src)
@@ -1263,6 +1317,9 @@
 
 /obj/item/storage/box/syndie_kit/imp_lifeformradar
 	name = "lifeform radar implant box"
+	icon = 'icons/obj/devices/tracker.dmi'
+	icon_state = "pinpointer_crew"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_lifeformradar/PopulateContents()
 	new /obj/item/implanter/radar(src)
@@ -1276,6 +1333,9 @@
 
 /obj/item/storage/box/syndie_kit/imp_emp
 	name = "emp implant box"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "emp"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_emp/PopulateContents()
 	new /obj/item/implanter/emp(src)

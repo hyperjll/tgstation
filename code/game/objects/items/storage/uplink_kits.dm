@@ -350,6 +350,8 @@
 	desc = "A sleek, sturdy box."
 	icon_state = "syndiebox"
 	illustration = "writing_syndie"
+	fallback_icon = 'icons/obj/storage/box.dmi'
+	fallback_icon_state = "syndiebox"
 
 /obj/item/storage/box/syndie_kit/rebarxbowsyndie
 	name = "Boxed Rebar Crossbow"
@@ -387,18 +389,27 @@
 
 /obj/item/storage/box/syndie_kit/imp_freedom
 	name = "freedom implant box"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "freedom"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_freedom/PopulateContents()
 	new /obj/item/implanter/freedom(src)
 
 /obj/item/storage/box/syndie_kit/imp_microbomb
 	name = "microbomb implant box"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "explosive"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_microbomb/PopulateContents()
 	new /obj/item/implanter/explosive(src)
 
 /obj/item/storage/box/syndie_kit/imp_macrobomb
 	name = "macrobomb implant box"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "explosive"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_macrobomb/PopulateContents()
 	new /obj/item/implanter/explosive_macro(src)
@@ -411,6 +422,9 @@
 
 /obj/item/storage/box/syndie_kit/imp_uplink
 	name = "uplink implant box"
+	icon = 'icons/obj/devices/voice.dmi'
+	icon_state = "radio"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_uplink/PopulateContents()
 	new /obj/item/implanter/uplink(src)
@@ -431,18 +445,27 @@
 
 /obj/item/storage/box/syndie_kit/imp_storage
 	name = "storage implant box"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "storage"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_storage/PopulateContents()
 	new /obj/item/implanter/storage(src)
 
 /obj/item/storage/box/syndie_kit/imp_stealth
 	name = "stealth implant box"
+	icon = 'icons/mob/actions/actions_items.dmi'
+	icon_state = "deploy_box"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_stealth/PopulateContents()
 	new /obj/item/implanter/stealth(src)
 
 /obj/item/storage/box/syndie_kit/imp_radio
 	name = "syndicate radio implant box"
+	icon = 'icons/obj/devices/voice.dmi'
+	icon_state = "walkietalkie"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_radio/PopulateContents()
 	new /obj/item/implanter/radio/syndicate(src)
@@ -459,6 +482,9 @@
 
 /obj/item/storage/box/syndie_kit/emp
 	name = "EMP kit"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "emp"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/emp/PopulateContents()
 	for(var/i in 1 to 5)
