@@ -334,7 +334,7 @@
 /datum/nanite_program/antirad
 	name = "Radiation Resistance"
 	desc = "The nanites apply sterilization tactics to the host to prevent harm via radiation."
-	use_rate = 1.8
+	use_rate = 1
 	rogue_types = list(/datum/nanite_program/pyro)
 
 /datum/nanite_program/antirad/enable_passive_effect()
@@ -364,7 +364,7 @@
 /datum/nanite_program/weatherendure
 	name = "Harsh Weather Endurance"
 	desc = "The nanites provide the host with the required bio-functionality to survive harsher weather such as ash storms and snow storms."
-	use_rate = 1
+	use_rate = 0.2
 	rogue_types = list(/datum/nanite_program/glitch)
 
 /datum/nanite_program/weatherendure/enable_passive_effect()
@@ -379,7 +379,7 @@
 /datum/nanite_program/obsidian
 	name = "Obsidian Skin"
 	desc = "The nanites render the host's flesh or plating with thick insulation capable of enduring lava."
-	use_rate = 2
+	use_rate = 0.8
 	rogue_types = list(/datum/nanite_program/necrotic)
 
 /datum/nanite_program/obsidian/enable_passive_effect()
