@@ -46,6 +46,7 @@
 
 		GLOB.clock_warp_areas += input_area
 		cached_addable_areas -= input_area
+		GLOB.clock_vitality -= cost
 		send_clock_message(null, "[input_area] added to warpable areas.")
 
 /datum/action/innate/clockcult/add_warp_area/proc/choose_starting_warp_areas()
