@@ -24449,6 +24449,7 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
 	},
+/mob/living/basic/bot/repairbot/start_equipped,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "bYZ" = (

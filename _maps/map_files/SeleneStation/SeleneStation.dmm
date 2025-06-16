@@ -29013,7 +29013,7 @@
 /turf/open/floor/wood,
 /area/station/maintenance/department/cargo)
 "luW" = (
-/mob/living/basic/bot/repairbot,
+/mob/living/basic/bot/repairbot/start_equipped,
 /turf/open/floor/iron/half{
 	dir = 8
 	},

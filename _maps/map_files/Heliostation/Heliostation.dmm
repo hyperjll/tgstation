@@ -38198,7 +38198,7 @@
 	dir = 9
 	},
 /obj/machinery/firealarm/directional/west,
-/mob/living/basic/bot/repairbot,
+/mob/living/basic/bot/repairbot/start_equipped,
 /turf/open/floor/iron/dark/side{
 	dir = 9
 	},

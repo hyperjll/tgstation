@@ -22007,7 +22007,6 @@
 "hlJ" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/mob/living/basic/bot/repairbot,
 /obj/machinery/flatpacker,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
@@ -22296,6 +22295,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/mob/living/basic/bot/repairbot/start_equipped,
 /turf/open/floor/iron,
 /area/station/engineering/hallway)
 "hpC" = (
