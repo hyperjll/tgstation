@@ -61,3 +61,11 @@
 	build_path = /obj/item/circuitboard/machine/nanite_program_hub
 	category = list(RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_RESEARCH)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/board/public_nanite_chamber
+	name = "Machine Design (Public Nanite Chamber Board)"
+	desc = "The circuit board for a Public Nanite Chamber."
+	id = "nanite_chamber_public"
+	build_path = /obj/item/circuitboard/machine/public_nanite_chamber
+	category = list(RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_RESEARCH)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE

@@ -7453,6 +7453,7 @@
 #include "hypermods\nanites\code\machines\nanite_cloud_control.dm"
 #include "hypermods\nanites\code\machines\nanite_program_hub.dm"
 #include "hypermods\nanites\code\machines\nanite_programmer.dm"
+#include "hypermods\nanites\code\machines\public_nanite_chamber.dm"
 #include "hypermods\nanites\code\programs\_programs.dm"
 #include "hypermods\nanites\code\programs\buffing.dm"
 #include "hypermods\nanites\code\programs\healing.dm"

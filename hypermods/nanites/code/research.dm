@@ -50,6 +50,7 @@
 		"nanite_programmer",
 		"nanite_program_hub",
 		"nanite_cloud_control",
+		"nanite_chamber_public",
 		"relay_nanites",
 		"access_nanites",
 		"repairing_nanites",
