@@ -35,13 +35,14 @@
 
 	var/datum/objective/anchoring_crystals/crystals_objective = locate() in GLOB.main_clock_cult?.objectives
 	if(!length(crystals_objective?.valid_areas))
+		to_chat(invoker, span_warning("Anchoring crystals don't have any more available spots!!!"))
 		return FALSE
 
 	if(get_charged_anchor_crystals() && !(get_area(invoker) in crystals_objective.valid_areas))
 		var/list/area_list = list()
 		for(var/area/added_area in crystals_objective.valid_areas)
 			area_list += added_area.get_original_area_name()
-		to_chat(invoker, span_warning("This cystal can only be summoned in [english_list(area_list)]."))
+		to_chat(invoker, span_warning("This crystal can only be summoned in [english_list(area_list)]."))
 		return FALSE
 
 	var/area/checked_area = get_area(invoker)
