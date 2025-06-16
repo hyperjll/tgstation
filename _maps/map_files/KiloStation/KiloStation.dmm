@@ -22008,6 +22008,7 @@
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /mob/living/basic/bot/repairbot,
+/obj/machinery/flatpacker,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "hlP" = (
@@ -24116,6 +24117,8 @@
 /obj/structure/table,
 /obj/machinery/cell_charger,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
+/obj/item/flatpack/flatpacker,
+/obj/item/multitool,
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
 "hRY" = (
