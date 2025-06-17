@@ -7442,6 +7442,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/station/security/execution/transfer)
+"cyX" = (
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 1
+	},
+/obj/machinery/nanite_chamber,
+/turf/open/floor/iron/dark,
+/area/station/science/research)
 "cyZ" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/ambrosia,
@@ -23011,6 +23018,19 @@
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/brig)
+"hCD" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/item/nanite_remote,
+/obj/item/nanite_remote,
+/obj/item/clothing/glasses/hud/diagnostic{
+	pixel_y = -6
+	},
+/obj/structure/table,
+/turf/open/floor/iron/dark,
+/area/station/science/research)
 "hCK" = (
 /obj/structure/table,
 /obj/item/clothing/gloves/color/orange,
@@ -23035,23 +23055,8 @@
 /turf/open/floor/iron/dark,
 /area/station/maintenance/port/fore)
 "hCY" = (
-/obj/item/computer_disk{
-	pixel_x = -5;
-	pixel_y = 8
-	},
-/obj/item/computer_disk{
-	pixel_x = 7;
-	pixel_y = 2
-	},
-/obj/item/computer_disk{
-	pixel_x = -8;
-	pixel_y = -3
-	},
 /obj/structure/table,
-/obj/item/computer_disk/ordnance{
-	pixel_x = 2;
-	pixel_y = 1
-	},
+/obj/item/storage/box/disks_nanite,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/office)
 "hDa" = (
@@ -31438,6 +31443,14 @@
 /obj/structure/table,
 /obj/item/storage/toolbox/electrical{
 	pixel_y = 5
+	},
+/obj/item/computer_disk{
+	pixel_x = -8;
+	pixel_y = -3
+	},
+/obj/item/computer_disk/ordnance{
+	pixel_x = 5;
+	pixel_y = -3
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/office)
@@ -41370,6 +41383,19 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
+"nyj" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/item/nanite_scanner,
+/obj/item/nanite_scanner,
+/obj/item/clothing/glasses/hud/diagnostic{
+	pixel_y = -6
+	},
+/obj/structure/table,
+/turf/open/floor/iron/dark,
+/area/station/science/research)
 "nyw" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Emergency Storage"
@@ -42387,6 +42413,7 @@
 /obj/machinery/light/directional/east,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/purple/anticorner/contrasted,
+/obj/machinery/nanite_program_hub,
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/ordnance/office)
 "nSh" = (
@@ -45002,10 +45029,10 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/crew_quarters/bar)
 "oRK" = (
-/obj/structure/chair/office/light,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
+/obj/machinery/nanite_programmer,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/office)
 "oRT" = (
@@ -54852,6 +54879,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/machinery/computer/nanite_chamber_control,
 /turf/open/floor/iron/dark,
 /area/station/science/research)
 "saW" = (
@@ -68916,6 +68944,7 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/psychology)
 "wua" = (
+/obj/machinery/computer/nanite_cloud_controller,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/office)
 "wuc" = (
@@ -113076,7 +113105,7 @@ imS
 imS
 imS
 imS
-saE
+nyj
 jeU
 plp
 uJE
@@ -113333,7 +113362,7 @@ lfd
 dlc
 hhc
 imS
-saE
+hCD
 jeU
 plp
 lKk
@@ -113591,7 +113620,7 @@ mtq
 tCh
 imS
 saE
-jeU
+cyX
 pdg
 iHL
 qGq
