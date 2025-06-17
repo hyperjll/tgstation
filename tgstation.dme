@@ -7104,6 +7104,7 @@
 #include "hypermods\code\modules\antagonists\clock_cult\structures\traps\trap.dm"
 #include "hypermods\code\modules\antagonists\clock_cult\structures\traps\recievers\flipper.dm"
 #include "hypermods\code\modules\antagonists\clock_cult\structures\traps\recievers\skewer.dm"
+#include "hypermods\code\modules\antagonists\clock_cult\structures\traps\recievers\vent.dm"
 #include "hypermods\code\modules\antagonists\clock_cult\structures\traps\senders\delay.dm"
 #include "hypermods\code\modules\antagonists\clock_cult\structures\traps\senders\lever.dm"
 #include "hypermods\code\modules\antagonists\clock_cult\structures\traps\senders\pressure_sensor.dm"

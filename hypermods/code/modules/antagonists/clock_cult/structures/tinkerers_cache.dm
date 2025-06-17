@@ -146,6 +146,10 @@
 	name = "Skewer (Trap)"
 	item_path = /obj/item/clockwork/trap_placer/skewer
 
+/datum/tinker_cache_item/trap/steam_vent
+	name = "Steam Vent (Trap)"
+	item_path = /obj/item/clockwork/trap_placer/steam_vent
+
 /datum/tinker_cache_item/trap/delay
 	name = "Delayer (Trigger)"
 	item_path = /obj/item/wallframe/clocktrap/delay
