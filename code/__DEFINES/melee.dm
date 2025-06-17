@@ -10,6 +10,7 @@
 #define MARTIALART_PSYCHOBRAWL "psychotic brawling"
 #define MARTIALART_SLEEPINGCARP "sleeping carp"
 #define MARTIALART_WRESTLING "wrestling"
+#define MARTIALART_JUNGLEARTS "jungle arts"
 #define MARTIALART_TUNNELARTS "tunnel arts"
 
 /// The number of hits required to crit a target
