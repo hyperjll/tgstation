@@ -3487,10 +3487,8 @@
 /obj/structure/table/glass,
 /obj/machinery/status_display/ai/directional/south,
 /obj/item/surgical_drapes,
-/obj/item/lighter{
-	pixel_x = 15
-	},
 /obj/item/clothing/mask/breath/medical,
+/obj/item/cautery,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/augments)
 "boX" = (
@@ -19962,6 +19960,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/machinery/light/small/directional/north,
+/obj/item/controller{
+	pixel_y = -5;
+	pixel_x = 8
+	},
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
 "gTW" = (
@@ -24437,6 +24439,7 @@
 /obj/machinery/light/small/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/module_duplicator,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
 "iqF" = (
@@ -30999,6 +31002,10 @@
 /obj/item/stock_parts/power_store/cell/high,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/item/storage/box/disks_nanite{
+	pixel_y = 9;
+	pixel_x = 6
+	},
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
 "kmT" = (
@@ -34925,15 +34932,8 @@
 "lCh" = (
 /obj/effect/turf_decal/tile/purple/opposingcorners,
 /obj/effect/turf_decal/siding/green,
-/obj/structure/table,
-/obj/item/multitool/circuit{
-	pixel_x = 7
-	},
-/obj/item/multitool/circuit,
-/obj/item/multitool/circuit{
-	pixel_x = -8
-	},
 /obj/machinery/light/small/directional/south,
+/obj/machinery/nanite_programmer,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
 "lCt" = (
@@ -36610,6 +36610,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white/side,
 /area/station/science/lower)
+"meK" = (
+/obj/machinery/nanite_chamber,
+/turf/open/floor/iron/white,
+/area/station/science/research)
 "meN" = (
 /obj/structure/chair/sofa/bench{
 	dir = 8
@@ -41702,6 +41706,10 @@
 /obj/item/pen{
 	pixel_y = 5
 	},
+/obj/item/nanite_scanner,
+/obj/item/nanite_scanner,
+/obj/item/nanite_remote,
+/obj/item/nanite_remote,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
 "nUK" = (
@@ -49190,6 +49198,24 @@
 "qzj" = (
 /obj/machinery/airalarm/directional/west,
 /obj/structure/table/glass,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/iron/fifty,
+/obj/item/stack/sheet/iron/fifty,
+/obj/item/stack/sheet/iron/fifty,
+/obj/item/stack/sheet/mineral/gold,
+/obj/item/stack/sheet/mineral/gold,
+/obj/item/stack/sheet/mineral/gold,
+/obj/item/stack/sheet/mineral/gold,
+/obj/item/stack/sheet/mineral/diamond,
+/obj/item/stack/sheet/mineral/plasma/five,
+/obj/item/stack/sheet/mineral/silver,
+/obj/item/stack/sheet/mineral/silver,
+/obj/item/stack/sheet/mineral/silver,
+/obj/item/stack/sheet/mineral/silver,
+/obj/item/stack/sheet/mineral/titanium,
+/obj/item/stack/sheet/mineral/titanium,
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "qzp" = (
@@ -49898,8 +49924,8 @@
 "qKe" = (
 /obj/effect/turf_decal/tile/purple/opposingcorners,
 /obj/effect/turf_decal/siding/green,
-/obj/machinery/module_duplicator,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/nanite_cloud_controller,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
 "qKx" = (
@@ -51773,6 +51799,9 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "rpk" = (
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 1
+	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "rpo" = (
@@ -53704,6 +53733,7 @@
 "rWr" = (
 /obj/structure/table,
 /obj/item/flatpack/flatpacker,
+/obj/item/multitool,
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
 "rWs" = (
@@ -59566,7 +59596,7 @@
 /obj/effect/turf_decal/siding/green{
 	dir = 10
 	},
-/obj/structure/table,
+/obj/machinery/nanite_program_hub,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
 "tQx" = (
@@ -65743,8 +65773,14 @@
 	dir = 8
 	},
 /obj/structure/table,
-/obj/item/controller,
 /obj/machinery/newscaster/directional/west,
+/obj/item/multitool/circuit{
+	pixel_x = 7
+	},
+/obj/item/multitool/circuit,
+/obj/item/multitool/circuit{
+	pixel_x = -8
+	},
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
 "vLs" = (
@@ -72675,6 +72711,14 @@
 /obj/item/storage/toolbox/electrical,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light_switch/directional/north,
+/obj/item/clothing/glasses/hud/diagnostic{
+	pixel_y = 12;
+	pixel_x = -8
+	},
+/obj/item/clothing/glasses/hud/diagnostic{
+	pixel_y = 12;
+	pixel_x = 8
+	},
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
 "xKn" = (
@@ -117395,7 +117439,7 @@ aeD
 vbK
 xva
 xUV
-rpk
+meK
 uMU
 vYx
 xWs
