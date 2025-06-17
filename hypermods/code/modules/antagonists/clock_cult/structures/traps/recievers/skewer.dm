@@ -16,7 +16,7 @@
 	component_datum = /datum/component/clockwork_trap/skewer
 	unwrench_path = /obj/item/clockwork/trap_placer/skewer
 	buckle_lying = FALSE
-	max_integrity = 20
+	max_integrity = 50
 	clockwork_desc = "A skewer that can pierce through a target, activated by a linked trigger."
 	COOLDOWN_DECLARE(stab_cooldown)
 	/// If the spear is currently extended
@@ -92,11 +92,17 @@
 
 	return ..()
 
-
 /obj/structure/destructible/clockwork/trap/skewer/post_unbuckle_mob(mob/living/stabbed_mob)
 	if(!has_buckled_mobs())
 		cut_overlay(stab_overlay)
 
+/obj/structure/destructible/clockwork/trap/skewer/screwdriver_act(mob/living/user, obj/item/tool)
+	if(!IS_CLOCK(user))
+		return
+
+	if(extended)
+		retract()
+		return
 
 /// Unbuckling mobs and reverting the trap for when the pokey bit goes back in
 /obj/structure/destructible/clockwork/trap/skewer/proc/retract()
