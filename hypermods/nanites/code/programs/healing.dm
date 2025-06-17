@@ -17,7 +17,7 @@
 	return ..()
 
 /datum/nanite_program/regenerative/active_effect()
-	if(!iscarbon(host_mob))
+	if(iscarbon(host_mob))
 		host_mob.adjustBruteLoss(-0.5, TRUE)
 		host_mob.adjustFireLoss(-0.5, TRUE)
 		return
@@ -33,7 +33,7 @@
 	rogue_types = list(/datum/nanite_program/suffocating, /datum/nanite_program/necrotic)
 
 /datum/nanite_program/regenerative_advanced/active_effect()
-	if(!iscarbon(host_mob))
+	if(iscarbon(host_mob))
 		host_mob.adjustBruteLoss(-3, TRUE)
 		host_mob.adjustFireLoss(-3, TRUE)
 		return
