@@ -225,7 +225,7 @@ SUBSYSTEM_DEF(ticker)
 	if(GLOB.station_was_nuked)
 		return TRUE
 	if(GLOB.revolutionary_win)
-		return TRUE
+		return FALSE
 	return FALSE
 
 /datum/controller/subsystem/ticker/proc/setup()
@@ -514,11 +514,17 @@ SUBSYSTEM_DEF(ticker)
 			queued_players -= next_in_line
 			queue_delay = 0
 
+///Whether the game has started, including roundend.
 /datum/controller/subsystem/ticker/proc/HasRoundStarted()
 	return current_state >= GAME_STATE_PLAYING
 
+///Whether the game is currently in progress, excluding roundend
 /datum/controller/subsystem/ticker/proc/IsRoundInProgress()
 	return current_state == GAME_STATE_PLAYING
+
+///Whether the game is currently in progress, excluding roundend
+/datum/controller/subsystem/ticker/proc/IsPostgame()
+	return current_state == GAME_STATE_FINISHED
 
 /datum/controller/subsystem/ticker/Recover()
 	current_state = SSticker.current_state

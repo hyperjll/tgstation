@@ -281,7 +281,7 @@ export class Uplink extends Component<{}, UplinkState> {
     // Round it and convert it into a percentage
     progressionPercentage = Math.round(progressionPercentage * 1000) / 10;
     return (
-      <Window width={700} height={600} theme="syndicate">
+      <Window width={700} height={845} theme="syndicate">
         <Window.Content>
           <Stack fill vertical>
             <Stack.Item>

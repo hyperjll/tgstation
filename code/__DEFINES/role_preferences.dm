@@ -19,6 +19,8 @@
 #define ROLE_SPY "Spy"
 #define ROLE_INITIAL_INFECTED "Initial Infected"
 #define ROLE_WEREWOLF "Werewolf"
+#define ROLE_BLOODSUCKER "Bloodsucker"
+#define ROLE_CLOCK_CULTIST "Clock Cultist"
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -43,6 +45,9 @@
 #define ROLE_HERETIC_MIDROUND "Heretic Awakening"
 #define ROLE_INFILTRATOR "Infiltrator"
 #define ROLE_LYCANTHROPY_VICTIM "Lycanthropy Victim"
+#define ROLE_BLOODSUCKERBREAKOUT "Bloodsucker Breakout"
+#define ROLE_SWARMER "Swarmer"
+#define ROLE_CORTICAL_BORER "Cortical Borer"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
@@ -51,12 +56,14 @@
 #define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"
 #define ROLE_SPY_INFILTRATOR "Spy Infiltrator"
 #define ROLE_WEREWOLF_INVADER "Werewolf Invader"
+#define ROLE_VAMPIRICACCIDENT "Vampiric Accident"
 
 // Other roles
 #define ROLE_ANOMALY_GHOST "Ectoplasmic Anomaly Ghost"
 #define ROLE_BRAINWASHED "Brainwashed Victim"
 #define ROLE_DEATHSQUAD "Deathsquad"
 #define ROLE_DRONE "Drone"
+#define ROLE_EVIL_CLONE "Evil Clone"
 #define ROLE_EMAGGED_BOT "Malfunctioning Bot"
 #define ROLE_HIVE "Hivemind Host" //Role removed, left here for safety.
 #define ROLE_HYPNOTIZED "Hypnotized Victim"
@@ -74,6 +81,7 @@
 #define ROLE_SENTIENCE "Sentience Potion Spawn"
 #define ROLE_SOULTRAPPED_HERETIC "Soultrapped Heretic"
 #define ROLE_SYNDICATE "Syndicate"
+#define ROLE_EXPERIMENTAL_CLONER "Experimental Cloner"
 
 #define ROLE_CLOWN_OPERATIVE "Clown Operative"
 #define ROLE_FREE_GOLEM "Free Golem"
@@ -94,6 +102,9 @@
 #define ROLE_SYNDICATE_SUPPORT "Syndicate Support Unit"
 
 #define ROLE_RECOVERED_CREW "Recovered Crew"
+
+#define ROLE_CENTCOM "Central Command"
+#define ROLE_ERT "ERT"
 
 //Spawner roles
 #define ROLE_ANCIENT_CREW "Ancient Crew"
@@ -148,6 +159,8 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_SPY = 0,
 	ROLE_INITIAL_INFECTED = 14,
 	ROLE_WEREWOLF = 7,
+	ROLE_BLOODSUCKER = 7,
+	ROLE_CLOCK_CULTIST = 14,
 
 	// Midround
 	ROLE_ABDUCTOR = 0,
@@ -172,6 +185,8 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_HERETIC_MIDROUND = 0,
 	ROLE_INFILTRATOR = 0,
 	ROLE_LYCANTHROPY_VICTIM = 7,
+	ROLE_SWARMER = 0,
+	ROLE_CORTICAL_BORER = 0,
 
 	// Latejoin
 	ROLE_HERETIC_SMUGGLER = 0,
@@ -180,12 +195,17 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_STOWAWAY_CHANGELING = 0,
 	ROLE_SPY_INFILTRATOR = 0,
 	ROLE_WEREWOLF_INVADER = 7,
+	ROLE_VAMPIRICACCIDENT = 7,
 
 	// I'm not too sure why these are here, but they're not moving.
 	ROLE_GLITCH = 0,
 	ROLE_PAI = 0,
 	ROLE_SENTIENCE = 0,
 	ROLE_RECOVERED_CREW = 0,
+	ROLE_BLOODSUCKERBREAKOUT = 7,
+	ROLE_DEATHSQUAD = 21,
+	ROLE_ERT = 14,
+	ROLE_CENTCOM = 7,
 ))
 
 //Job defines for what happens when you fail to qualify for any job during job selection

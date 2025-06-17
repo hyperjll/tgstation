@@ -2,7 +2,7 @@
 
 #define in_range(source, user) (get_dist(source, user) <= 1 && (get_step(source, 0)?:z) == (get_step(user, 0)?:z))
 
-/// Within given range, but not counting z-levels
+/// Within given range and on the same z level (get dist is WEIRD bro)
 #define IN_GIVEN_RANGE(source, other, given_range) (get_dist(source, other) <= given_range && (get_step(source, 0)?:z) == (get_step(other, 0)?:z))
 
 #define isatom(A) (isloc(A))
@@ -73,6 +73,8 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 #define isindestructiblewall(A) (istype(A, /turf/closed/indestructible))
 
 #define iswallturf(A) (istype(A, /turf/closed/wall))
+
+#define isreinforcedwallturf(A) (istype(A, /turf/closed/wall/r_wall))
 
 #define ismineralturf(A) (istype(A, /turf/closed/mineral))
 
@@ -213,6 +215,8 @@ GLOBAL_LIST_INIT(turfs_pass_meteor, typecacheof(list(
 
 #define isspider(A) (istype(A, /mob/living/basic/spider))
 
+#define isswarmer(A) (istype(A, /mob/living/basic/swarmer))
+
 //Eye mobs
 #define iseyemob(A) (istype(A, /mob/eye))
 
@@ -243,6 +247,18 @@ GLOBAL_LIST_INIT(turfs_pass_meteor, typecacheof(list(
 #define isgrenade(A) (istype(A, /obj/item/grenade))
 
 #define islandmine(A) (istype(A, /obj/effect/mine))
+
+#define isdoor(A) (istype(A, /obj/machinery/door))
+
+#define isgirder(A) (istype(A, /obj/structure/girder))
+
+#define isgrillie(A) (istype(A, /obj/structure/grille))
+
+#define iswindow(A) (istype(A, /obj/structure/window))
+
+#define istable(A) (istype(A, /obj/structure/table))
+
+#define istableframe(A) (istype(A, /obj/structure/table_frame))
 
 #define iscloset(A) (istype(A, /obj/structure/closet))
 
@@ -321,6 +337,12 @@ GLOBAL_LIST_INIT(book_types, typecacheof(list(
 	/obj/item/book,
 	/obj/item/spellbook,
 	/obj/item/infuser_book,
+	/obj/item/storage/photo_album,
+	/obj/item/storage/card_binder,
+	/obj/item/codex_cicatrix,
+	/obj/item/toy/eldritch_book,
+	/obj/item/toy/talking/codex_gigas,
+	/obj/item/book_of_babel,
 )))
 
 // Jobs
@@ -340,3 +362,5 @@ GLOBAL_LIST_INIT(book_types, typecacheof(list(
 
 #define isprojectilespell(thing) (istype(thing, /datum/action/cooldown/spell/pointed/projectile))
 #define is_multi_tile_object(atom) (atom.bound_width > ICON_SIZE_X || atom.bound_height > ICON_SIZE_Y)
+
+#define is_area_nearby_station(checked_area) (istype(checked_area, /area/space) || istype(checked_area, /area/space/nearstation) || istype(checked_area, /area/station/asteroid))

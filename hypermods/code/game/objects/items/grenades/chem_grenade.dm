@@ -3,6 +3,7 @@
 	desc = "Used for personnel suppression via biological warfare."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/randomdisease/Initialize(mapload)
 	. = ..()
@@ -24,6 +25,7 @@
 	desc = "Used for deteriorating the eyes of everyone nearby."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/eyebreaker/Initialize(mapload)
 	. = ..()
@@ -44,6 +46,7 @@
 	desc = "Used for deteriorating the mental state of everyone nearby."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/mindbreaker/Initialize(mapload)
 	. = ..()
@@ -95,6 +98,7 @@
 	desc = "Used for clearing rooms of living things."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/syndiefire/Initialize(mapload)
 	. = ..()
@@ -115,6 +119,7 @@
 	desc = "The best grenade to irridiate the fuck out of someone."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/syndierads/Initialize(mapload)
 	. = ..()
@@ -138,6 +143,7 @@
 	desc = "BURN!-brand foaming clf3. In a special applicator for rapid purging of wide areas."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/syndiclf3/Initialize(mapload)
 	. = ..()
@@ -158,6 +164,7 @@
 	desc = "A foam grenade containing an extremely corrosive chemical substance that violently reacts with living organic tissue."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/highacidfoam/Initialize(mapload)
 	. = ..()
@@ -178,6 +185,7 @@
 	desc = "A foam grenade that leaves behind a plethora of blood splatters."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/bloodyfoam/Initialize(mapload)
 	. = ..()
@@ -198,6 +206,7 @@
 	desc = "A foam grenade containing a gaseous chemical that puts people to sleep and can be highly toxic in small amounts if it finds it's way to one's bloodstream."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/nofoam/Initialize(mapload)
 	. = ..()
@@ -218,6 +227,7 @@
 	desc = "A custom made large grenade. Larger splash range and increased ignition temperature compared to basic grenades. Fits exotic and bluespace based containers."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/large/phytosiansmoke/Initialize(mapload)
 	. = ..()
@@ -242,6 +252,7 @@
 	desc = "A custom made large grenade. Larger splash range and increased ignition temperature compared to basic grenades. Fits exotic and bluespace based containers."
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/jellypersonsmoke/Initialize(mapload)
 	. = ..()
@@ -275,6 +286,7 @@
 	beakers += B1
 	beakers += B2
 
+
 /obj/item/grenade/chem_grenade/engiairfoam
 	name = "breatheable air grenade"
 	desc = "A foam grenade containing highly condensed breatheable air, pull the pin and launch into a room that has been vacuumed for easy air distribution."
@@ -283,6 +295,7 @@
 	base_icon_state = "oxy"
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/engiairfoam/Initialize(mapload)
 	. = ..()
@@ -306,6 +319,7 @@
 	base_icon_state = "saxitoxin"
 	stage = GRENADE_READY
 	can_dismantle = FALSE
+	delete_after_use = TRUE
 
 /obj/item/grenade/chem_grenade/saxitoxin/Initialize(mapload)
 	. = ..()
@@ -320,3 +334,71 @@
 
 	beakers += B1
 	beakers += B2
+
+
+/obj/item/grenade/chem_grenade/metalfoam_stylish
+	name = "metal foam grenade"
+	desc = "Used for emergency sealing of hull breaches."
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
+	icon_state = "metalfoam"
+	base_icon_state = "metalfoam"
+	stage = GRENADE_READY
+	can_dismantle = FALSE
+	delete_after_use = TRUE
+
+/obj/item/grenade/chem_grenade/metalfoam_stylish/Initialize(mapload)
+	. = ..()
+	var/obj/item/reagent_containers/cup/beaker/beaker_one = new(src)
+	var/obj/item/reagent_containers/cup/beaker/beaker_two = new(src)
+
+	beaker_one.reagents.add_reagent(/datum/reagent/aluminium, 30)
+	beaker_two.reagents.add_reagent(/datum/reagent/foaming_agent, 10)
+	beaker_two.reagents.add_reagent(/datum/reagent/toxin/acid/fluacid, 10)
+
+	beakers += beaker_one
+	beakers += beaker_two
+
+/obj/item/grenade/chem_grenade/smart_metal_foam_stylish
+	name = "smart metal foam grenade"
+	desc = "Used for emergency sealing of hull breaches, while keeping areas accessible."
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
+	icon_state = "metalfoam"
+	base_icon_state = "metalfoam"
+	stage = GRENADE_READY
+	can_dismantle = FALSE
+	delete_after_use = TRUE
+
+/obj/item/grenade/chem_grenade/smart_metal_foam_stylish/Initialize(mapload)
+	. = ..()
+	var/obj/item/reagent_containers/cup/beaker/large/beaker_one = new(src)
+	var/obj/item/reagent_containers/cup/beaker/beaker_two = new(src)
+
+	beaker_one.reagents.add_reagent(/datum/reagent/aluminium, 75)
+	beaker_two.reagents.add_reagent(/datum/reagent/smart_foaming_agent, 25)
+	beaker_two.reagents.add_reagent(/datum/reagent/toxin/acid/fluacid, 25)
+
+	beakers += beaker_one
+	beakers += beaker_two
+
+/obj/item/grenade/chem_grenade/teargas_stylish
+	name = "teargas grenade"
+	desc = "Used for nonlethal riot control. Contents under pressure. Do not directly inhale contents."
+	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
+	icon_state = "pepper"
+	base_icon_state = "pepper"
+	stage = GRENADE_READY
+	can_dismantle = FALSE
+	delete_after_use = TRUE
+
+/obj/item/grenade/chem_grenade/teargas_stylish/Initialize(mapload)
+	. = ..()
+	var/obj/item/reagent_containers/cup/beaker/large/beaker_one = new(src)
+	var/obj/item/reagent_containers/cup/beaker/large/beaker_two = new(src)
+
+	beaker_one.reagents.add_reagent(/datum/reagent/consumable/condensedcapsaicin, 60)
+	beaker_one.reagents.add_reagent(/datum/reagent/potassium, 40)
+	beaker_two.reagents.add_reagent(/datum/reagent/phosphorus, 40)
+	beaker_two.reagents.add_reagent(/datum/reagent/consumable/sugar, 40)
+
+	beakers += beaker_one
+	beakers += beaker_two

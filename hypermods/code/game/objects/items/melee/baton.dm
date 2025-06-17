@@ -18,6 +18,7 @@
 	stamina_damage = 4
 	knockdown_time = 0 SECONDS
 
+
 /obj/item/melee/baton/telescopic/sleep_baton
 	name = "Incapacitation Baton"
 	desc = "A compact, specialised baton once assigned to Syndicate contractors until being scrapped. The micro-injectors along the end will quickly inject knock-out drugs into targets."
@@ -44,5 +45,31 @@
 	target.set_stutter_if_lower(20 SECONDS)
 	target.reagents.add_reagent(/datum/reagent/toxin/sodium_thiopental, 10)
 
-/obj/item/melee/baton/telescopic/sleep_baton/get_wait_description()
-	return span_danger("The baton is still charging!")
+
+/obj/item/melee/baton/security/antaglocked
+	name = "stun baton"
+	security_lock = TRUE
+
+/obj/item/melee/baton/security/antaglocked/examine(mob/user)
+	. = ..()
+	if(security_lock)
+		. += "This stun baton has a A.N.T.A.G Locker installed."
+
+/obj/item/melee/baton/security/antaglocked/dropped()
+	if(active)
+		turn_off()
+
+/obj/item/melee/baton/security/antaglocked/emag_act()
+	if(security_lock)
+		playsound(src, SFX_SPARKS, 15, TRUE)
+		if(active)
+			turn_off()
+		security_lock = FALSE
+
+/obj/item/antaglocker
+	name = "A.N.T.A.G Lock"
+	desc = "The Anti-Non-Trained-Assignee-Gate (or ANTAG) is an electronic upgrade for NT's stun baton design and various security equipment. \
+			It connects directly to Nanotrasen's Security Database to verify the neural patterns of the user to prevent unauthorized usage of various equipment."
+	icon = 'hypermods/icons/obj/devices/circuitry_n_data.dmi'
+	icon_state = "antaglocker"
+	custom_price = PAYCHECK_COMMAND * 8

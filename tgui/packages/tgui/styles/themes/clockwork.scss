@@ -1,0 +1,19 @@
+.theme-clockwork:root {
+  // Base
+  --color-base: hsl(31.11, 74.31%, 21.37%);
+  --color-primary: hsl(43.71, 65.42%, 41.96%);
+  --secondary-lightness-adjustment: 11.5;
+  --base-gradient-spread: 6;
+  // Components
+  --button-background-selected: hsl(50.74, 58.62%, 54.51%);
+  --button-background-caution: hsl(34.29, 100%, 62.94%);
+  --button-background-danger: hsl(60, 100%, 50%);
+  --notice-box-background: hsl(31.11, 74.31%, 21.37%);
+  --notice-box-color: var(--color-text-fixed-white);
+  --progress-bar-background: hsla(0, 0%, 0%, 0.5);
+  --tooltip-background-lightness: 25;
+
+  .Layout__content {
+    background-image: none;
+  }
+}

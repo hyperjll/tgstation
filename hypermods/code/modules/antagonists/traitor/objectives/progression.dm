@@ -24,7 +24,7 @@
 
 /datum/objective/traitor_objectives
 	name = "traitor objective"
-	explanation_text = "Complete objectives colletively worth more than %REPUTATION% reputation points"
+	explanation_text = "Complete objectives collectively worth more than %REPUTATION% reputation points"
 
 	var/possible_range = list(20 MINUTES, 30 MINUTES)
 	var/required_progression_in_objectives

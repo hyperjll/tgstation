@@ -55,12 +55,12 @@
 		radio.use_command = TRUE
 	if(ispath(uplink_type, /obj/item/uplink) || tc) // /obj/item/uplink understands 0 tc
 		var/obj/item/uplink = new uplink_type(nukie, nukie.key, tc)
-		nukie.equip_to_slot_or_del(uplink, ITEM_SLOT_BACKPACK, indirect_action = TRUE)
+		nukie.equip_to_storage(uplink, ITEM_SLOT_BACK, indirect_action = TRUE, del_on_fail = TRUE)
 
 	var/obj/item/implant/weapons_auth/weapons_implant = new/obj/item/implant/weapons_auth(nukie)
 	weapons_implant.implant(nukie)
-	var/obj/item/implant/explosive/explosive_implant = new/obj/item/implant/explosive(nukie)
-	explosive_implant.implant(nukie)
+	var/obj/item/implant/duster/duster_implant = new/obj/item/implant/duster(nukie)
+	duster_implant.implant(nukie)
 	nukie.faction |= ROLE_SYNDICATE
 	nukie.update_icons()
 

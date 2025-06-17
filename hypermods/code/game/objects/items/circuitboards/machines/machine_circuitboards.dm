@@ -20,3 +20,13 @@
 		/obj/item/stock_parts/power_store/cell = 1)
 	def_components = list(/obj/item/stock_parts/power_store/cell = /obj/item/stock_parts/power_store/cell/high)
 	needs_anchored = FALSE
+
+
+/obj/item/circuitboard/machine/rdserver/master
+	name = "R&D Server"
+	greyscale_colors = CIRCUIT_COLOR_SCIENCE
+	build_path = /obj/machinery/rnd/server // Haha, get trolled.
+	req_components = list(
+		/obj/item/stack/cable_coil = 2,
+		/datum/stock_part/scanning_module = 1,
+	)

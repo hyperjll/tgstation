@@ -15,6 +15,7 @@
 		user.get_organ_by_type(/obj/item/organ/body_egg),
 		user.get_organ_by_type(/obj/item/organ/legion_tumour),
 		user.get_organ_by_type(/obj/item/organ/zombie_infection),
+		user.get_organ_by_type(/obj/item/organ/empowered_borer_egg), //CORTICAL_BORERS
 	)
 
 	for(var/o in bad_organs)

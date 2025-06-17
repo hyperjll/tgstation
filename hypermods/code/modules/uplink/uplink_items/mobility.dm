@@ -6,6 +6,13 @@
 	category = /datum/uplink_category/mobility
 
 
+/datum/uplink_item/mobility/doorjack
+	name = "Airlock Authentication Override Card"
+	desc = "A specialized cryptographic sequencer specifically designed to override station airlock access codes. \
+			After hacking a certain number of airlocks, the device will require some time to recharge."
+	item = /obj/item/card/emag/doorjack
+	cost = 3
+
 /datum/uplink_item/mobility/briefcase_launchpad
 	name = "Briefcase Launchpad"
 	desc = "A briefcase containing a launchpad, a device able to teleport items and people to and from targets up to eight tiles away from the briefcase. \
@@ -22,6 +29,15 @@
 			Comes with 4 charges, recharges randomly. Warranty null and void if exposed to an electromagnetic pulse."
 	item = /obj/item/storage/box/syndie_kit/syndicate_teleporter
 	cost = 8
+
+/datum/uplink_item/mobility/dangerous_horse
+	name = "Boxed Syndicate Pony"
+	desc = "A box containing a special breed of horse scientifically engineered by our best geneticists, now in cube form! \
+			This horse can survive in the vacuum of space, doesn't require air to breathe, and is quite robust in combat. \
+			Also comes with an apple for taming purposes, and a sentience potion which only works on our horses. \
+			Despite it's survivability in space, it's not capable of space-traversal. For God's sake, don't make apple pie!"
+	item = /obj/item/storage/box/syndicate/horse_box
+	cost = 10
 
 
 /datum/uplink_item/mobility/airshoes

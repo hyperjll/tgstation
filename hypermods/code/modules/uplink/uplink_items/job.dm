@@ -1062,3 +1062,13 @@
 	surplus = 0
 	restricted_roles = list(JOB_SHAFT_MINER, JOB_QUARTERMASTER, JOB_CAPTAIN)
 
+/datum/uplink_item/role_restricted/uty_reference
+	name = "Deputy Justice Kit"
+	desc = "A box containing a full wild west getup with all the bells and whistles. \
+			Also comes with a holster and a genuine Wild Revolver with two speedloaders of .357 ammunition! \
+			The Wild Revolver may be spun to change it's caliber, allowing it to use .357, .38, 9mm, 10mm, .45, and even 556 ammo types!"
+	item = /obj/item/storage/box/syndie_kit/clover
+	cost = 14
+	surplus = 1 // Never give up on the dream, kid.
+	progression_minimum = 30 MINUTES
+	restricted_roles = list(JOB_LAWYER, JOB_CAPTAIN)

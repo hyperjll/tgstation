@@ -203,7 +203,7 @@
 	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
 	button_icon_state = "tainted-bite"
 	desc = "Fill your claws with a random toxin to apply to your target. Successful attacks heal toxin damage and rapidly purge your bloodstream."
-	cooldown_time = 200 SECONDS
+	cooldown_time = 90 SECONDS
 	spell_max_level = 1
 	overlay_icon_state = "bg_default_border"
 	//cast_range = 1 // Touch range
@@ -256,7 +256,7 @@
 	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
 	button_icon_state = "howl"
 
-	cooldown_time = 200 SECONDS
+	cooldown_time = 90 SECONDS
 	spell_max_level = 1
 	overlay_icon_state = "bg_default_border"
 	spell_requirements = NONE
@@ -438,3 +438,38 @@
 			cast_on.throw_at(T, 10, 4, owner, TRUE, TRUE, callback = CALLBACK(cast_on, TYPE_PROC_REF(/mob/living, Paralyze), 20))
 	log_combat(owner, cast_on, "has been thrown by a werewolf")
 	return TRUE
+
+
+/datum/action/cooldown/spell/aoe/repulse/werewolf
+	name = "Thrash"
+	desc = "Spin around, flailing your arms at all adjacent targets, knocking them down for a good while and dealing moderate damage."
+
+	cooldown_time = 120 SECONDS
+	spell_max_level = 1
+	overlay_icon_state = "bg_default_border"
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+	invocation_type = INVOCATION_NONE
+
+	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
+	button_icon_state = "thrash"
+	sound = 'hypermods/sound/mobs/humanoid/werewolf/werewolf_attack1.ogg'
+
+	check_flags = AB_CHECK_CONSCIOUS | AB_CHECK_INCAPACITATED | AB_CHECK_HANDS_BLOCKED | AB_CHECK_IMMOBILE
+	aoe_radius = 1
+
+	sparkle_path = /obj/effect/temp_visual/dir_setting/tailsweep/werewolf
+
+/datum/action/cooldown/spell/aoe/repulse/werewolf/can_cast_spell(feedback = TRUE)
+	. = ..()
+	if(!iswerewolf(owner))
+		return FALSE
+
+/datum/action/cooldown/spell/aoe/repulse/werewolf/cast(atom/cast_on)
+	if(iscarbon(cast_on))
+		var/mob/living/carbon/carbon_caster = cast_on
+		playsound(get_turf(carbon_caster), 'hypermods/sound/mobs/humanoid/werewolf/werewolf_attack1.ogg', 20, TRUE, TRUE)
+		carbon_caster.spin(0.6 SECONDS, 1)
+
+	return ..()

@@ -1,6 +1,3 @@
-import { BooleanLike } from 'tgui-core/react';
-
-import { useBackend } from '../backend';
 import {
   Button,
   Input,
@@ -10,6 +7,9 @@ import {
   Section,
   Table,
 } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 export const NaniteRemote = (props) => {

@@ -29,6 +29,8 @@
 	var/datum/action/cooldown/spell/werewolf_def_howl/defhowl_ability
 	/// Throw ability
 	var/datum/action/cooldown/spell/pointed/werewolf_throw/throw_ability
+	/// Thrash ability
+	var/datum/action/cooldown/spell/aoe/repulse/werewolf/thrash_ability
 
 /datum/antagonist/werewolf/on_gain()
 	forge_objectives()
@@ -55,6 +57,9 @@
 	if(!throw_ability)
 		throw_ability = new
 		throw_ability.Grant(owner.current)
+	if(!thrash_ability)
+		thrash_ability = new
+		thrash_ability.Grant(owner.current)
 
 /datum/antagonist/werewolf/remove_innate_effects()
 	QDEL_NULL(transformation)
@@ -63,6 +68,7 @@
 	QDEL_NULL(tainted_ability)
 	QDEL_NULL(defhowl_ability)
 	QDEL_NULL(throw_ability)
+	QDEL_NULL(thrash_ability)
 	return ..()
 
 /datum/antagonist/werewolf/greet()

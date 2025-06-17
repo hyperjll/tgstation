@@ -106,6 +106,11 @@ export function PageMain(props) {
                 alertLevel="blue"
                 onClick={() => setNewAlertLevel('blue')}
               />
+			  
+			  <AlertButton
+                alertLevel="yellow"
+                onClick={() => setNewAlertLevel('yellow')}
+              />
             </Flex.Item>
           </Flex>
         </Section>

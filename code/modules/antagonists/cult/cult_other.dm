@@ -12,7 +12,7 @@
 	equipped.update_body()
 
 ///Returns whether the given mob is convertable to the blood cult
-/proc/is_convertable_to_cult(mob/living/target, datum/team/cult/specific_cult)
+/proc/is_convertable_to_cult(mob/living/target, datum/team/cult/specific_cult, for_clock_cult)
 	if(!istype(target))
 		return FALSE
 	if(isnull(target.mind))
@@ -29,10 +29,12 @@
 	if(specific_cult?.is_sacrifice_target(target.mind))
 		return FALSE
 	var/mob/living/master = target.mind.enslaved_to?.resolve()
-	if(master && !IS_CULTIST(master))
+	if(master && (for_clock_cult ? !IS_CLOCK(master) : !IS_CULTIST(master)))
 		return FALSE
 	if(IS_HERETIC_OR_MONSTER(target))
 		return FALSE
-	if(HAS_MIND_TRAIT(target, TRAIT_UNCONVERTABLE) || issilicon(target) || isbot(target) || isdrone(target))
+	if(HAS_MIND_TRAIT(target, TRAIT_UNCONVERTABLE) || issilicon(target) || isbot(target) || isdrone(target) && !for_clock_cult)
 		return FALSE //can't convert machines, shielded, or braindead
+	if(for_clock_cult ? IS_CULTIST(target) : IS_CLOCK(target))
+		return FALSE
 	return TRUE

@@ -5,17 +5,23 @@
 	prereq_ids = list(TECHWEB_NODE_EXP_TOOLS, TECHWEB_NODE_EXOTIC_AMMO)
 	design_ids = list(
 		"advanced_camera",
-		"ai_cam_upgrade",
 		"borg_syndicate_module",
 		"donksoft_refill",
 		"donksofttoyvendor",
 		"largecrossbow",
+		"wt550-gun",
 		"mag_autorifle",
 		"mag_autorifle_ap",
 		"mag_autorifle_ic",
 		"rapidsyringe",
 		"suppressor",
 		"super_pointy_tape",
+		"emppayload",
+		"cryopayload",
+		"rdpayload",
+		"hepayload",
+		"emproof_cell",
+		"emproof_battery",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	hidden = TRUE

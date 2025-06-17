@@ -19,7 +19,7 @@
 	desc = "A .45 bullet casing."
 	projectile_type = /obj/projectile/bullet/incendiary/c45
 
-/obj/item/ammo_casing/caseless/c45/cs
+/obj/item/ammo_casing/caseless/c45
 	name = ".45 caseless bullet"
 	desc = "Huh? But i thought..."
 	caliber = ".45"

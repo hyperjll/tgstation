@@ -55,6 +55,7 @@
 	name = "Air Shoes"
 	desc = "One pair of highly sought after AIR SHOES. They're equipped with high-end tech capable of propelling the user forward at great speeds or allowing them to hover."
 	contraband = TRUE
+	hidden = TRUE
 	cost = PAYCHECK_COMMAND * 200
 	contains = list(/obj/item/clothing/shoes/bhop/airshoes)
 
@@ -77,6 +78,8 @@
 	name = "Robust Nukie Cola Twelve-Pack"
 	desc = "A twelve-pack of the incredibly robust: Nukie Cola! Warranty does NOT include over-consumption."
 	cost = PAYCHECK_COMMAND * 50
+	contraband = TRUE
+	hidden = TRUE
 	contains = list(/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
 					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
 					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
@@ -95,6 +98,7 @@
 	name = "Medical Variety Kit"
 	desc = "A bluespace first-aid-kit containing a wide-variety of medical supplies. Please note that the contents of the first aid kits purchased may differ from each other."
 	cost = PAYCHECK_CREW * 10
+	contraband = TRUE
 	contains = list(/obj/item/storage/medkit/medical_variety_pack)
 
 
@@ -124,6 +128,7 @@
 	desc = "Three pyrotechnical chemical grenades filled with gunpowder. We're not going to ask why you'd need these."
 	cost = PAYCHECK_COMMAND * 50
 	access_view = ACCESS_ARMORY
+	contraband = TRUE
 	contains = list(/obj/item/grenade/chem_grenade/pyro/explosive,/obj/item/grenade/chem_grenade/pyro/explosive,/obj/item/grenade/chem_grenade/pyro/explosive)
 
 
@@ -256,6 +261,7 @@
 	desc = "15 Laser Buckshot Shells for those who intend to fire past windows to reach their targets."
 	cost = PAYCHECK_COMMAND * 12.5
 	access_view = ACCESS_ARMORY
+	contraband = TRUE
 	contains = list(/obj/item/storage/box/lasershells)
 
 /datum/supply_pack/goody/uraniumshells
@@ -271,6 +277,7 @@
 	desc = "15 Cryoshot Shells for commiting warcrimes."
 	cost = PAYCHECK_COMMAND * 25
 	access_view = ACCESS_ARMORY
+	contraband = TRUE
 	contains = list(/obj/item/storage/box/cryoshotshells)
 
 /datum/supply_pack/goody/breachershells
@@ -308,14 +315,8 @@
 	desc = "15 Anarchy Shells for when aiming isn't the highest priority."
 	cost = PAYCHECK_COMMAND * 10
 	access_view = ACCESS_ARMORY
+	contraband = TRUE
 	contains = list(/obj/item/storage/box/anarchyshells)
-
-
-/datum/supply_pack/goody/enchantedgold
-	name = "Large Beaker of Enchanted Gold"
-	desc = "A single large beaker filled with Enchanted Gold, a highly prized medicinal reagent known for it's ability to quickly support a patients health and maximize their vitality."
-	cost = PAYCHECK_COMMAND * 25
-	contains = list(/obj/item/reagent_containers/cup/beaker/large/enchantedgold)
 
 
 /datum/supply_pack/goody/securityborg
@@ -551,6 +552,7 @@
 	name = "Redspace Crystal Crate"
 	desc = "(!&$#@$ ATTENTION OPERATIVES, PLEASE ENSURE OUR TECHNOLOGIES ARE NOT HARVESTED BY NANOTRASEN OR IT'S ALLIES. GLORY TO THE SYNDICATE."
 	contraband = TRUE
+	hidden = TRUE
 	cost = 5000
 	contains = list(/obj/item/stack/telecrystal)
 	crate_name = "crate"

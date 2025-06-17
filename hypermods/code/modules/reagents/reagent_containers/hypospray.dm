@@ -362,3 +362,26 @@
 		return
 	if(do_after(user, 10 SECONDS, affected_mob))
 		..()
+
+/obj/item/reagent_containers/hypospray/medipen/cryogel
+	name = "cryogelidia medipen"
+	desc = "Contains a moderate amount of cryogelidia to instantly protect the injectee in a protective block of ice."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "fancymedpenmor"
+	inhand_icon_state = "medipen"
+	base_icon_state = "fancymedpenmor"
+	amount_per_transfer_from_this = 40
+	volume = 40
+	list_reagents = list(/datum/reagent/inverse/cryostylane = 20, /datum/reagent/medicine/c2/seiver = 20)
+
+
+/obj/item/reagent_containers/hypospray/medipen/syndicryogel
+	name = "cryogelidia medipen"
+	desc = "Contains an incredibly large dosage of healing chemicals and insta-freezing cryogelidia to ensure your protected while your health recovers."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "fancymedpenmor"
+	inhand_icon_state = "medipen"
+	base_icon_state = "fancymedpenmor"
+	amount_per_transfer_from_this = 100
+	volume = 100
+	list_reagents = list(/datum/reagent/inverse/cryostylane = 30, /datum/reagent/medicine/sal_acid = 10, /datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/antitoxin = 10, /datum/reagent/medicine/c2/seiver = 30, /datum/reagent/medicine/inaprovaline = 10)

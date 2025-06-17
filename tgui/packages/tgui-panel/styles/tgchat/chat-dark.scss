@@ -645,6 +645,82 @@ em {
   font-size: 370%;
 }
 
+.brass {
+  color: #be8700;
+}
+
+.big_brass {
+  color: #be8700;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.clockyellow {
+  color: #daaa18;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.clockgray {
+  color: #42474d;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.clockred {
+  color: #6e001a;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.ratvar {
+  color: #be8700;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+  animation: ratvarcolor 5000ms infinite;
+}
+
+@keyframes ratvarcolor {
+  0% {
+    color: #0d0d0d;
+  }
+  9% {
+    color: #be8700;
+  }
+  18% {
+    color: #0d0d0d;
+  }
+  27% {
+    color: #42474d;
+  }
+  36% {
+    color: #0d0d0d;
+  }
+  45% {
+    color: #af0aaf;
+  }
+  54% {
+    color: #0d0d0d;
+  }
+  63% {
+    color: #1e8ce1;
+  }
+  72% {
+    color: #0d0d0d;
+  }
+  81% {
+    color: #daaa18;
+  }
+  90% {
+    color: #0d0d0d;
+  }
+  100% {
+    color: #6e001a;
+  }
+}
+
 .colossus {
   color: hsl(358.6, 52.1%, 32.7%);
   font-size: 310%;
@@ -1101,6 +1177,8 @@ $alert-stripe-colors: (
   'red': hsl(0, 100%, 12.9%),
   'purple': hsl(295, 100%, 9.4%),
   'grey': hsl(0, 0%, 14.5%),
+  'amber': hsl(178, 100%, 34.9%),
+  'crimson': hsl(117, 82.81%, 25.1%),
 );
 
 $alert-stripe-alternate-colors: (
@@ -1113,6 +1191,8 @@ $alert-stripe-alternate-colors: (
   'red': hsl(0, 100%, 16.1%),
   'purple': hsl(295.1, 100%, 12%),
   'grey': hsl(0, 0%, 16.1%),
+  'amber': hsl(178, 100%, 34.9%),
+  'crimson': hsl(117, 82.81%, 25.1%),
 );
 
 $alert-major-header-colors: (
@@ -1125,6 +1205,8 @@ $alert-major-header-colors: (
   'red': hsl(336.1, 100%, 66.1%),
   'purple': hsl(266.5, 84.3%, 80%),
   'grey': hsl(336.1, 100%, 66.1%),
+  'amber': hsl(225, 59.46%, 70.98%),
+  'crimson': hsl(212, 47.88%, 67.65%),
 );
 
 $alert-subheader-header-colors: (
@@ -1137,6 +1219,8 @@ $alert-subheader-header-colors: (
   'red': hsl(192.4, 100%, 60%),
   'purple': hsl(192.4, 100%, 60%),
   'grey': hsl(192.4, 100%, 60%),
+  'amber': hsl(192.4, 100%, 60%),
+  'crimson': hsl(192.4, 100%, 60%),
 );
 
 $border-width: 4;

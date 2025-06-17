@@ -2566,12 +2566,6 @@
 /obj/structure/mineral_door/wood,
 /turf/open/floor/plating,
 /area/station/service/abandoned_gambling_den)
-"akh" = (
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor5"
-	},
-/turf/open/floor/plating,
-/area/station/service/abandoned_gambling_den)
 "akj" = (
 /obj/machinery/light/small/directional/west,
 /obj/item/cigbutt,
@@ -3332,13 +3326,6 @@
 /area/space/nearstation)
 "amF" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/obj/effect/mapping_helpers/broken_floor,
-/turf/open/floor/wood,
-/area/station/service/abandoned_gambling_den)
-"amG" = (
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor6"
-	},
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/wood,
 /area/station/service/abandoned_gambling_den)
@@ -12771,6 +12758,7 @@
 	dir = 1
 	},
 /obj/structure/desk_bell,
+/obj/item/rag,
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "aYg" = (
@@ -12780,7 +12768,6 @@
 	dir = 1
 	},
 /obj/item/book/manual/wiki/barman_recipes,
-/obj/item/reagent_containers/cup/rag,
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "aYh" = (
@@ -14730,7 +14717,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/aft)
 "bgE" = (
-/obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/robot_debris{
 	icon_state = "gib3"
 	},
@@ -21200,13 +21186,6 @@
 /obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/space,
 /area/space/nearstation)
-"bLt" = (
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor6"
-	},
-/obj/effect/decal/cleanable/robot_debris/old,
-/turf/open/floor/iron/dark,
-/area/station/service/abandoned_gambling_den/gaming)
 "bLu" = (
 /obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/engine,
@@ -21473,10 +21452,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
-/area/station/service/abandoned_gambling_den/gaming)
-"bMD" = (
-/obj/effect/decal/cleanable/oil,
 /turf/open/floor/iron/dark,
 /area/station/service/abandoned_gambling_den/gaming)
 "bME" = (
@@ -28934,9 +28909,6 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/abandoned)
 "cIt" = (
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor6"
-	},
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/department/security/brig)
@@ -36680,7 +36652,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/oil,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/station/maintenance/disposal)
@@ -37447,11 +37418,11 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine)
 "kkQ" = (
-/obj/machinery/computer/scan_consolenew{
-	dir = 8
-	},
 /obj/machinery/camera/directional/east{
 	c_tag = "Genetics Lab East"
+	},
+/obj/machinery/computer/dna_console{
+	dir = 8
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
@@ -38924,7 +38895,6 @@
 /area/station/ai_monitored/turret_protected/ai_sat_ext_as)
 "lqc" = (
 /obj/item/toy/gun,
-/obj/effect/decal/cleanable/oil,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/plating,
 /area/station/maintenance/department/security/brig)
@@ -39408,7 +39378,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
 "lNW" = (
-/obj/machinery/computer/scan_consolenew{
+/obj/machinery/computer/dna_console{
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
@@ -40303,7 +40273,7 @@
 /area/station/science/breakroom)
 "mBu" = (
 /obj/item/book/bible,
-/obj/structure/altar_of_gods,
+/obj/structure/altar/of_gods,
 /turf/open/floor/carpet,
 /area/station/service/chapel)
 "mBz" = (
@@ -40644,11 +40614,11 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "mSc" = (
-/obj/machinery/computer/scan_consolenew{
-	dir = 4
-	},
 /obj/machinery/camera/directional/west{
 	c_tag = "Genetics Lab West"
+	},
+/obj/machinery/computer/dna_console{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
@@ -43420,10 +43390,6 @@
 	},
 /turf/open/floor/carpet,
 /area/station/medical/psychology)
-"pdq" = (
-/obj/effect/decal/cleanable/oil,
-/turf/open/floor/plating,
-/area/station/security/range)
 "pds" = (
 /obj/structure/flora/bush/sparsegrass/style_random,
 /mob/living/basic/pet/dog/corgi/puppy,
@@ -47475,9 +47441,6 @@
 	dir = 8
 	},
 /obj/structure/sign/poster/contraband/random/directional/east,
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor6"
-	},
 /turf/open/floor/iron/dark,
 /area/station/service/abandoned_gambling_den)
 "sqi" = (
@@ -47820,7 +47783,6 @@
 /area/station/engineering/atmos)
 "sBW" = (
 /obj/structure/closet/crate/bin,
-/obj/item/reagent_containers/cup/rag,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/station/service/library/artgallery)
@@ -49783,12 +49745,6 @@
 	},
 /turf/open/floor/carpet,
 /area/station/service/abandoned_gambling_den)
-"uaE" = (
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor6"
-	},
-/turf/open/floor/plating,
-/area/station/security/range)
 "uaS" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -51463,9 +51419,6 @@
 /area/station/engineering/main)
 "vlF" = (
 /obj/item/coin/silver,
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor5"
-	},
 /obj/structure/light_construct/small{
 	dir = 8
 	},
@@ -70319,8 +70272,8 @@ wwG
 gGy
 wYu
 uQR
-uaE
-pdq
+kYq
+kYq
 kYq
 dci
 gwZ
@@ -74511,7 +74464,7 @@ qNQ
 qNQ
 bJa
 bHQ
-bLt
+bHQ
 hBY
 bNF
 bHQ
@@ -76311,7 +76264,7 @@ kjI
 bJh
 bHQ
 bKm
-bMD
+bHQ
 bHQ
 bOA
 bPr
@@ -93176,7 +93129,7 @@ aaa
 aaa
 ljT
 kkk
-akh
+fNg
 alc
 alR
 amF
@@ -93436,7 +93389,7 @@ cBl
 cBm
 cBp
 alS
-amG
+dQr
 fui
 cPO
 aiS

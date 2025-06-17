@@ -1,4 +1,4 @@
-/datum/mutation/human/radiantburst
+/datum/mutation/radiantburst
 	name = "Radiant Burst"
 	desc = "A mutation hidden deep within ethereal genetic code that allows you to blind people nearby."
 	quality = POSITIVE
@@ -11,10 +11,10 @@
 	power_coeff = 1 //increases aoe
 	synchronizer_coeff = 1 //prevents blinding
 	energy_coeff = 1 //reduces cooldown
-	conflicts = list(/datum/mutation/human/glow, /datum/mutation/human/glow/anti)
+	conflicts = list(/datum/mutation/glow, /datum/mutation/glow/anti)
 	species_allowed = list(SPECIES_ETHEREAL)
 
-/datum/mutation/human/radiantburst/modify()
+/datum/mutation/radiantburst/setup()
 	. = ..()
 	var/datum/action/cooldown/spell/aoe/radiantburst/to_modify = .
 	if(!istype(to_modify)) // null or invalid
@@ -29,7 +29,7 @@
 /datum/action/cooldown/spell/aoe/radiantburst
 	name = "Radiant Burst"
 	desc = "You release all the light that is within you, blinding everyone nearby and yourself."
-	button_icon = 'icons/mob/actions/actions_genetic.dmi'
+	button_icon = 'hypermods/icons/mob/actions/actions_genetic.dmi'
 	button_icon_state = "radiantburst"
 	active_icon_state = "radiantburst"
 	base_icon_state = "radiantburst"

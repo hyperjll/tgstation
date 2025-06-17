@@ -67,6 +67,7 @@
 
 /obj/item/clothing/shoes/jackboots/sec
 	icon_state = "jackboots_sec"
+	antag_lockable = TRUE
 
 /obj/item/clothing/shoes/jackboots/floortile
 	name = "floortile camouflage jackboots"

@@ -79,6 +79,12 @@
 	spawnwithmagazine = FALSE
 	pin = null
 
+// Printable WT-550
+
+/obj/item/gun/ballistic/automatic/wt550/freshprint
+	spawnwithmagazine = FALSE
+	pin = null
+
 // Syndicate Medic Specialist Primary
 
 /obj/item/gun/ballistic/automatic/veritate

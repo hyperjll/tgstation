@@ -15,7 +15,7 @@
 	if(damage_flag == BOMB)
 		return 0
 	else if(damage_flag != MELEE && damage_flag != BULLET && damage_flag != LASER)
-		return damage * 1.5
+		return damage * 1.25
 	return ..()
 
 /datum/blobstrain/reagent/explosive_lattice/on_sporedeath(mob/living/spore)

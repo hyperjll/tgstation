@@ -977,9 +977,9 @@
 	products = list(
 		/obj/item/cultivator = 3,
 		/obj/item/plant_analyzer = 4,
-		/obj/item/reagent_containers/cup/bottle/nutrient/ez = 30,
-		/obj/item/reagent_containers/cup/bottle/nutrient/l4z = 20,
-		/obj/item/reagent_containers/cup/bottle/nutrient/rh = 10,
+		/obj/item/reagent_containers/cup/jerrycan/eznutriment = 10,
+		/obj/item/reagent_containers/cup/jerrycan/left4zed = 5,
+		/obj/item/reagent_containers/cup/jerrycan/robustharvest = 5,
 		/obj/item/reagent_containers/spray/pestspray = 20,
 		/obj/item/reagent_containers/syringe = 5,
 		/obj/item/secateurs = 3,
@@ -1382,7 +1382,7 @@
 		/obj/item/grenade/chem_grenade/large = 5,
 		/obj/item/organ/cyberimp/chest/nutriment = 1,
 		/obj/item/organ/cyberimp/mouth/breathing_tube = 1,
-		/obj/item/organ/cyberimp/arm/surgery = 1,
+		/obj/item/organ/cyberimp/arm/toolkit/surgery = 1,
 		/obj/item/implantcase/tracking = 2,
 		/obj/item/reagent_containers/hypospray/medipen/resurrector = 1,
 	)
@@ -1561,7 +1561,7 @@
 		/obj/item/storage/dice/hazard = 1,
 		/obj/item/storage/box/beanbag = 1,
 		/obj/item/circuitboard/machine/dish_drive = 1,
-		/obj/item/reagent_containers/cup/rag = 2,
+		/obj/item/rag = 2,
 		/obj/item/radio/headset/headset_srv = 2,
 	)
 	premium = list(

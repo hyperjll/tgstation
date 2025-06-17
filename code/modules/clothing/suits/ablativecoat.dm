@@ -36,6 +36,7 @@
 	strip_delay = 30
 	equip_delay_other = 40
 	var/hit_reflect_chance = 50
+	antag_lockable = TRUE
 
 /obj/item/clothing/suit/hooded/ablative/Initialize(mapload)
 	. = ..()

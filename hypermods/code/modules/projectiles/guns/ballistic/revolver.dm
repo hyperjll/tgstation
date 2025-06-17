@@ -36,3 +36,34 @@
 	alternative_caliber = CALIBER_357
 	alternative_fire_sound = 'sound/items/weapons/gun/revolver/shot_alt.ogg'
 	alternative_ammo_misfires = FALSE
+
+/obj/item/gun/ballistic/revolver/syndicate/cowboy/wild
+	name = "wild revolver"
+	desc = "A wild-west six-chamber revolver. Can be spun to randomly change ammo types."
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder
+	fire_sound = 'hypermods/sound/weapons/gun/revolver/wild_rev_shotmid.ogg'
+	load_sound = 'hypermods/sound/weapons/gun/revolver/wild_rev_reload.ogg'
+	initial_caliber = CALIBER_357
+	var/list/caliber_list = list(
+		CALIBER_357,
+		CALIBER_38,
+		CALIBER_45,
+		CALIBER_556,
+		CALIBER_9MM,
+		CALIBER_10MM
+	)
+
+/obj/item/gun/ballistic/revolver/syndicate/cowboy/wild/examine(mob/user)
+	. = ..()
+	. += "It's currently chambered in [magazine.caliber]."
+
+/obj/item/gun/ballistic/revolver/syndicate/cowboy/wild/do_spin()
+	. = ..()
+	unload_ammo()
+	magazine.caliber = pick(caliber_list)
+
+/obj/item/gun/ballistic/revolver/syndicate/cowboy/wild/spin()
+	. = ..()
+	sleep(0.25 SECONDS) // Just to ensure the "chamber spun" balloon alert isn't overlapping
+	var/mob/user = usr
+	balloon_alert(user, "Using [magazine.caliber]")

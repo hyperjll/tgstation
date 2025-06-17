@@ -151,6 +151,26 @@
 	fire = 90
 	acid = 50
 
+/obj/machinery/power/apc/get_save_vars()
+	. = ..()
+	if(!auto_name)
+		. -= NAMEOF(src, name)
+	. += NAMEOF(src, opened)
+	. += NAMEOF(src, coverlocked)
+	. += NAMEOF(src, lighting)
+	. += NAMEOF(src, equipment)
+	. += NAMEOF(src, environ)
+
+	. += NAMEOF(src, cell_type)
+	if(cell_type)
+		start_charge = cell.charge / cell.maxcharge // only used in Initialize() so direct edit is fine
+		. += NAMEOF(src, start_charge)
+
+	// TODO save the wire data but need to include states for cute wires, signalers attached to wires, etc.
+	//. += NAMEOF(src, shorted)
+	//. += NAMEOF(src, locked)
+	return .
+
 /obj/machinery/power/apc/Initialize(mapload, ndir)
 	. = ..()
 	//APCs get added to their own processing tasks for the machines subsystem.
@@ -633,6 +653,11 @@
 					INVOKE_ASYNC(src, PROC_REF(set_nightshift), FALSE)
 			if(cell.percent() > APC_CHANNEL_ALARM_TRESHOLD)
 				alarm_manager.clear_alarm(ALARM_POWER)
+
+		if(integration_cog && GLOB.clock_power < GLOB.max_clock_power)
+			var/power_delta = clamp(cell.charge - 10, 0, 10)
+			GLOB.clock_power = min(round(GLOB.clock_power + (power_delta)), GLOB.max_clock_power)
+			cell.charge -= power_delta
 
 	else // no cell, switch everything off
 		charging = APC_NOT_CHARGING

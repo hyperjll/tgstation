@@ -122,7 +122,7 @@
 	new /obj/item/wallframe/camera/autosetup(src)
 	new /obj/item/computer_disk/security/secureye(src)
 	if(prob(35))
-		new /obj/item/implantcase/deathrattle(src)
+		new /obj/item/implanter/biosig/security(src)
 
 /obj/structure/closet/secure_closet/security/sec
 
@@ -222,7 +222,7 @@
 	. = ..()
 	. += span_notice("<b>Right-click</b> with a Security-level ID to reset [src]'s registered ID.")
 
-/obj/structure/closet/secure_closet/brig/genpop/attackby(obj/item/card/id/advanced/prisoner/user_id, mob/user, params)
+/obj/structure/closet/secure_closet/brig/genpop/attackby(obj/item/card/id/advanced/prisoner/user_id, mob/user, list/modifiers, list/attack_modifiers)
 	if(!secure || !istype(user_id))
 		return ..()
 
@@ -238,7 +238,7 @@
 	name = initial(name)
 	update_appearance()
 
-/obj/structure/closet/secure_closet/brig/genpop/attackby_secondary(obj/item/card/id/advanced/used_id, mob/user, params)
+/obj/structure/closet/secure_closet/brig/genpop/attackby_secondary(obj/item/card/id/advanced/used_id, mob/user, list/modifiers, list/attack_modifiers)
 	if(!secure || !istype(used_id))
 		return ..()
 

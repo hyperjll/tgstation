@@ -185,7 +185,7 @@
 	item = /obj/item/ammo_box/c45
 	cost = 1
 	surplus = 0
-	purchasable_from = UPLINK_SERIOUS_OPS
+	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo_restock/ammo45box/ap

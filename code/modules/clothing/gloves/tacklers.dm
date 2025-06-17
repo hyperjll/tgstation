@@ -25,6 +25,7 @@
 	var/skill_mod = 1
 	///How much these gloves affect fishing difficulty
 	var/fishing_modifier = -7
+	antag_lockable = TRUE
 
 /obj/item/clothing/gloves/tackler/Initialize(mapload)
 	. = ..()

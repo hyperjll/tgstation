@@ -23,6 +23,7 @@
 #define KIT_DEAD_MONEY "dead_money"
 #define KIT_SAM_FISHER "sam_fisher"
 #define KIT_PROP_HUNT "prop_hunt"
+#define KIT_CLOVER "clover"
 
 /// last audited december 2022
 /obj/item/storage/box/syndicate
@@ -194,7 +195,8 @@
 		KIT_DEAD_MONEY = 2,
 		KIT_TRAITOR_2006 = 1,
 		KIT_SAM_FISHER = 1,
-		KIT_PROP_HUNT = 1
+		KIT_PROP_HUNT = 1,
+		KIT_CLOVER = 1
 		)))
 		if(KIT_JAMES_BOND)
 			new /obj/item/gun/ballistic/automatic/pistol(src) // 7 tc
@@ -204,7 +206,7 @@
 			new /obj/item/card/id/advanced/chameleon(src) // 2 tc
 			new /obj/item/clothing/under/chameleon(src) // 1 tc
 			new /obj/item/reagent_containers/hypospray/medipen/stimulants(src) // 5 tc
-			new /obj/item/reagent_containers/cup/rag(src)
+			new /obj/item/rag(src)
 			new /obj/item/implanter/freedom(src) // 5 tc
 			new /obj/item/flashlight/emp(src) // 2 tc
 			new /obj/item/grenade/c4/x4(src) // 1ish tc
@@ -312,6 +314,16 @@
 			new /obj/item/gun/ballistic/automatic/pistol(src) // 7 TC
 			new /obj/item/clothing/glasses/thermal(src) // 4 TC
 
+		if(KIT_CLOVER)
+			new /obj/item/gun/ballistic/revolver/syndicate/cowboy/wild(src) // 15 TC
+			new /obj/item/storage/box/syndie_kit/pistolammo9mm/random(src) // 2 TC
+			new /obj/item/storage/box/syndie_kit/pistolammo10mm/random(src) // 2 TC
+			new /obj/item/storage/box/syndie_kit/pistolammo45/random(src) // 2 TC
+			new /obj/item/storage/box/syndie_kit/revolverammo/random(src) // 6 TC
+			new /obj/item/clothing/shoes/cowboy/black(src)
+			new /obj/item/clothing/head/cowboy/brown(src)
+			new /obj/item/clothing/under/costume/dutch(src)
+
 /obj/item/storage/toolbox/emergency/old/ancientbundle/ //So the subtype works
 
 /obj/item/storage/toolbox/emergency/old/ancientbundle/PopulateContents()
@@ -338,6 +350,8 @@
 	desc = "A sleek, sturdy box."
 	icon_state = "syndiebox"
 	illustration = "writing_syndie"
+	fallback_icon = 'icons/obj/storage/box.dmi'
+	fallback_icon_state = "syndiebox"
 
 /obj/item/storage/box/syndie_kit/rebarxbowsyndie
 	name = "Boxed Rebar Crossbow"
@@ -375,18 +389,27 @@
 
 /obj/item/storage/box/syndie_kit/imp_freedom
 	name = "freedom implant box"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "freedom"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_freedom/PopulateContents()
 	new /obj/item/implanter/freedom(src)
 
 /obj/item/storage/box/syndie_kit/imp_microbomb
 	name = "microbomb implant box"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "explosive"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_microbomb/PopulateContents()
 	new /obj/item/implanter/explosive(src)
 
 /obj/item/storage/box/syndie_kit/imp_macrobomb
 	name = "macrobomb implant box"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "explosive"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_macrobomb/PopulateContents()
 	new /obj/item/implanter/explosive_macro(src)
@@ -399,6 +422,9 @@
 
 /obj/item/storage/box/syndie_kit/imp_uplink
 	name = "uplink implant box"
+	icon = 'icons/obj/devices/voice.dmi'
+	icon_state = "radio"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_uplink/PopulateContents()
 	new /obj/item/implanter/uplink(src)
@@ -419,32 +445,34 @@
 
 /obj/item/storage/box/syndie_kit/imp_storage
 	name = "storage implant box"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "storage"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_storage/PopulateContents()
 	new /obj/item/implanter/storage(src)
 
 /obj/item/storage/box/syndie_kit/imp_stealth
 	name = "stealth implant box"
+	icon = 'icons/mob/actions/actions_items.dmi'
+	icon_state = "deploy_box"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_stealth/PopulateContents()
 	new /obj/item/implanter/stealth(src)
 
 /obj/item/storage/box/syndie_kit/imp_radio
 	name = "syndicate radio implant box"
+	icon = 'icons/obj/devices/voice.dmi'
+	icon_state = "walkietalkie"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_radio/PopulateContents()
 	new /obj/item/implanter/radio/syndicate(src)
 
 /obj/item/storage/box/syndie_kit/space
 	name = "boxed space suit and helmet"
-
-/obj/item/storage/box/syndie_kit/space/Initialize(mapload)
-	. = ..()
-	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
-	atom_storage.set_holdable(list(
-		/obj/item/clothing/suit/space/syndicate,
-		/obj/item/clothing/head/helmet/space/syndicate
-	))
+	storage_type = /datum/storage/box/syndicate_space
 
 /obj/item/storage/box/syndie_kit/space/PopulateContents()
 	var/obj/item/clothing/suit/space/syndicate/spess_suit = pick(GLOB.syndicate_space_suits_to_helmets)
@@ -454,6 +482,9 @@
 
 /obj/item/storage/box/syndie_kit/emp
 	name = "EMP kit"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "emp"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/emp/PopulateContents()
 	for(var/i in 1 to 5)
@@ -477,10 +508,7 @@
 
 /obj/item/storage/box/syndie_kit/chemical
 	name = "chemical kit"
-
-/obj/item/storage/box/syndie_kit/chemical/Initialize(mapload)
-	. = ..()
-	atom_storage.max_slots = 15
+	storage_type = /datum/storage/box/syndicate_chemical
 
 /obj/item/storage/box/syndie_kit/chemical/PopulateContents()
 	new /obj/item/reagent_containers/cup/bottle/polonium(src)
@@ -548,6 +576,9 @@
 	new /obj/item/gun/energy/laser/chameleon(src)
 	new /obj/item/chameleon_scanner(src)
 
+/obj/item/storage/box/syndie_kit/throwing_weapons
+	storage_type = /datum/storage/box/syndicate_throwing
+
 //5*(2*4) = 5*8 = 45, 45 damage if you hit one person with all 5 stars.
 //Not counting the damage it will do while embedded (2*4 = 8, at 15% chance)
 /obj/item/storage/box/syndie_kit/throwing_weapons/PopulateContents()
@@ -557,17 +588,6 @@
 		new /obj/item/paperplane/syndicate(src)
 	new /obj/item/restraints/legcuffs/bola/tactical(src)
 	new /obj/item/restraints/legcuffs/bola/tactical(src)
-
-/obj/item/storage/box/syndie_kit/throwing_weapons/Initialize(mapload)
-	. = ..()
-	atom_storage.max_slots = 9 // 5 + 2 + 2
-	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
-	atom_storage.max_total_storage = 18 // 5*2 + 2*1 + 3*2
-	atom_storage.set_holdable(list(
-		/obj/item/restraints/legcuffs/bola/tactical,
-		/obj/item/paperplane/syndicate,
-		/obj/item/throwing_star,
-	))
 
 /obj/item/storage/box/syndie_kit/cutouts
 	icon = 'hypermods/icons/obj/storage/box.dmi'
@@ -895,6 +915,17 @@
 	new /obj/item/jammer(src)
 	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
 	new /obj/item/lighter(src)
+
+/obj/item/storage/box/syndicate/horse_box
+	name = "A pony box"
+	desc = "This is a set containing a syndicate pony cube and an apple, for the best cowboys in the wild station! Don't make an apple pie!"
+	icon_state = "syndiebox"
+	illustration = "writing_syndie"
+
+/obj/item/storage/box/syndicate/horse_box/PopulateContents()
+	new /obj/item/food/monkeycube/dangerous_horse(src)
+	new /obj/item/slimepotion/slime/sentience/nuclear/dangerous_horse(src)
+	new /obj/item/food/grown/apple(src)
 
 #undef KIT_RECON
 #undef KIT_BLOODY_SPAI

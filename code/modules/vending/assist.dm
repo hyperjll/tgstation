@@ -14,7 +14,8 @@
 		/obj/item/stock_parts/matter_bin = 3,
 		/obj/item/stock_parts/micro_laser = 3,
 		/obj/item/stock_parts/scanning_module = 3,
-		/obj/item/wirecutters = 1,
+		/obj/item/wirecutters = 2,
+		/obj/item/stack/sticky_tape/duct = 3,
 		/obj/item/screwdriver = 1,
 		/obj/item/weldingtool/mini = 1,
 		/obj/item/stock_parts/power_store/cell/empty = 4,
@@ -36,6 +37,8 @@
 		/obj/item/stock_parts/power_store/cell/high = 1,
 		/obj/item/stock_parts/power_store/battery/high = 1,
 		/obj/item/market_uplink/blackmarket = 1,
+		/obj/item/assembly/mousetrap = 4,
+		/obj/item/weaponcrafting/stock = 2,
 		/obj/item/ammo_casing/shotgun/beanbag = 10,
 		/obj/item/clothing/gloves/color/fyellow = 4,
 	)

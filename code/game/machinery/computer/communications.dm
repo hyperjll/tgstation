@@ -110,7 +110,7 @@
 		return TRUE
 	return authenticated
 
-/obj/machinery/computer/communications/attackby(obj/I, mob/user, params)
+/obj/machinery/computer/communications/attackby(obj/I, mob/user, list/modifiers, list/attack_modifiers)
 	if(isidcard(I))
 		attack_hand(user)
 	else
@@ -201,10 +201,10 @@
 					return
 
 			var/new_sec_level = SSsecurity_level.text_level_to_number(params["newSecurityLevel"])
-			if (new_sec_level != SEC_LEVEL_GREEN && new_sec_level != SEC_LEVEL_BLUE)
+			if (new_sec_level != SEC_LEVEL_GREEN && new_sec_level != SEC_LEVEL_BLUE && new_sec_level != SEC_LEVEL_YELLOW)
 				return
 			if (SSsecurity_level.get_current_level_as_number() >= SEC_LEVEL_DELTA)
-				to_chat(user, span_warning("Central Command has placed a lock on the alert level due to a doomsday!"))
+				to_chat(user, span_warning("Central Command has placed a lock on the alert level!"))
 				return
 			if (SSsecurity_level.get_current_level_as_number() == new_sec_level)
 				return
@@ -290,8 +290,14 @@
 			state = STATE_MAIN
 		if ("recallShuttle")
 			// AIs cannot recall the shuttle
-			if (!authenticated(user) || HAS_SILICON_ACCESS(user) || syndicate)
+			var/clock_user = IS_CLOCK(usr)
+			if (!authenticated(user) || HAS_SILICON_ACCESS(user) || syndicate || (clock_user && GLOB.main_clock_cult?.member_recalled))
 				return
+			if(clock_user)
+				GLOB.main_clock_cult?.member_recalled = TRUE
+			//if(istype(get_area(src), /area/shuttle/syndicate/cruiser))
+			//	to_chat(usr, span_warning("Unable to connect to shuttle systems due to local interference"))
+			//	return
 			SSshuttle.cancelEvac(user)
 		if ("requestNukeCodes")
 			if (!authenticated_as_non_silicon_captain(user))

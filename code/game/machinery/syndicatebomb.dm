@@ -189,12 +189,16 @@
 	return TRUE
 
 
-/obj/machinery/syndicatebomb/attackby(obj/item/I, mob/user, params)
+/obj/machinery/syndicatebomb/attackby(obj/item/I, mob/user, list/modifiers, list/attack_modifiers)
 
 	if(is_wire_tool(I) && open_panel)
 		wires.interact(user)
 
 	else if(istype(I, /obj/item/bombcore))
+		var/obj/item/bombcore/payload_in_question = I
+		if(payload_in_question.no_big_bombs)
+			to_chat(user, span_warning("It doesn't look like this payload can be placed within any bomb assemblies..."))
+			return
 		if(!payload)
 			if(!user.transferItemToLoc(I, src))
 				return
@@ -344,6 +348,9 @@
 	var/range_medium = 9
 	var/range_light = 17
 	var/range_flame = 17
+	var/grenade_craft = FALSE // Can we be made into a grenade
+	var/grenade_craft_type = null // What type of nade?
+	var/no_big_bombs = FALSE // Can we NOT be placed into a large bomb assembly?
 
 /obj/item/bombcore/ex_act(severity, target) // Little boom can chain a big boom.
 	detonate()
@@ -364,6 +371,26 @@
 
 /obj/item/bombcore/proc/defuse()
 //Note: the machine's defusal is mostly done from the wires code, this is here if you want the core itself to do anything.
+
+/obj/item/bombcore/interact_with_atom(atom/target, mob/living/user, proximity)
+	. = ..()
+	if(istype(target, /obj/item/grenade/chem_grenade))
+		if(!grenade_craft)
+			to_chat(user, span_warning("It doesn't look like this payload can be assembled into any grenades..."))
+			return
+		var/obj/item/grenade/chem_grenade/target_nade = target
+		if(target_nade.stage != GRENADE_WIRED)
+			to_chat(user, span_warning("This grenade must not be fully assembled, but still wired to accept payloads!"))
+			return
+
+		message_admins("[ADMIN_LOOKUPFLW(user)] crafted [grenade_craft_type] with [target] using [src] at [AREACOORD(user)]")
+		log_game("[key_name(user)] crafted [grenade_craft_type] with [target] using [src] at [AREACOORD(user)]")
+
+		var/location = get_turf(target_nade)
+		if (grenade_craft_type) // Just to avoid runtimes
+			new grenade_craft_type(location)
+		qdel(target_nade)
+		qdel(src)
 
 ///Bomb Core Subtypes///
 
@@ -533,7 +560,7 @@
 
 	playsound(loc, 'sound/effects/bamf.ogg', 75, TRUE, 5)
 
-/obj/item/bombcore/chemical/attackby(obj/item/I, mob/user, params)
+/obj/item/bombcore/chemical/attackby(obj/item/I, mob/user, list/modifiers, list/attack_modifiers)
 	if(I.tool_behaviour == TOOL_CROWBAR && beakers.len > 0)
 		I.play_tool_sound(src)
 		for (var/obj/item/B in beakers)
@@ -551,49 +578,48 @@
 			return
 	..()
 
-/obj/item/bombcore/chemical/CheckParts(list/parts_list)
-	..()
+/obj/item/bombcore/chemical/on_craft_completion(list/components, datum/crafting_recipe/current_recipe, atom/crafter)
 	// Using different grenade casings, causes the payload to have different properties.
-	var/obj/item/stock_parts/matter_bin/MB = locate(/obj/item/stock_parts/matter_bin) in src
-	if(MB)
-		max_beakers += MB.rating // max beakers = 2-5.
-		qdel(MB)
-	for(var/obj/item/grenade/chem_grenade/G in src)
+	var/obj/item/stock_parts/matter_bin/bin = locate(/obj/item/stock_parts/matter_bin) in components
+	if(bin)
+		max_beakers += bin.rating // max beakers = 2-5.
+	for(var/obj/item/grenade/chem_grenade/nade in components)
 
-		if(istype(G, /obj/item/grenade/chem_grenade/large))
-			var/obj/item/grenade/chem_grenade/large/LG = G
+		if(istype(nade, /obj/item/grenade/chem_grenade/large))
 			max_beakers += 1 // Adding two large grenades only allows for a maximum of 7 beakers.
 			spread_range += 2 // Extra range, reduced density.
 			temp_boost += 50 // maximum of +150K blast using only large beakers. Not enough to self ignite.
-			for(var/obj/item/slime_extract/S in LG.beakers) // And slime cores.
+			for(var/obj/item/slime_extract/slime in nade.beakers) // And slime cores.
 				if(beakers.len < max_beakers)
-					beakers += S
-					S.forceMove(src)
+					beakers += slime
+					slime.forceMove(src)
 				else
-					S.forceMove(drop_location())
+					slime.forceMove(drop_location())
 
-		if(istype(G, /obj/item/grenade/chem_grenade/cryo))
+		if(istype(nade, /obj/item/grenade/chem_grenade/cryo))
 			spread_range -= 1 // Reduced range, but increased density.
 			temp_boost -= 100 // minimum of -150K blast.
 
-		if(istype(G, /obj/item/grenade/chem_grenade/pyro))
+		if(istype(nade, /obj/item/grenade/chem_grenade/pyro))
 			temp_boost += 150 // maximum of +350K blast, which is enough to self ignite. Which means a self igniting bomb can't take advantage of other grenade casing properties. Sorry?
 
-		if(istype(G, /obj/item/grenade/chem_grenade/adv_release))
-			time_release += 50 // A typical bomb, using basic beakers, will explode over 2-4 seconds. Using two will make the reaction last for less time, but it will be more dangerous overall.
+		if(istype(nade, /obj/item/grenade/chem_grenade/adv_release))
+			time_release += 5 SECONDS // A typical bomb, using basic beakers, will explode over 2-4 seconds. Using two will make the reaction last for less time, but it will be more dangerous overall.
 
-		for(var/obj/item/reagent_containers/cup/B in G)
+		for(var/obj/item/reagent_containers/cup/beaker in nade)
 			if(beakers.len < max_beakers)
-				beakers += B
-				B.forceMove(src)
+				beakers += beaker
+				beaker.forceMove(src)
 			else
-				B.forceMove(drop_location())
+				beaker.forceMove(drop_location())
 
-		qdel(G)
+	return ..()
 
 /obj/item/bombcore/emp
 	name = "EMP payload"
 	desc = "A set of superconducting electromagnetic coils designed to release a powerful pulse to destroy electronics and scramble circuits"
+	icon = 'hypermods/icons/obj/devices/assemblies.dmi'
+	icon_state = "empcore"
 	range_heavy = 15
 	range_medium = 25
 
@@ -618,22 +644,20 @@
 	chosen_theme = null
 	return ..()
 
-/obj/item/bombcore/dimensional/CheckParts(list/parts_list)
+/obj/item/bombcore/dimensional/on_craft_completion(list/components, datum/crafting_recipe/current_recipe, atom/crafter)
 	. = ..()
 	range_heavy = 13
-	for(var/obj/item/grenade/chem_grenade/nade in src)
+	for(var/obj/item/grenade/chem_grenade/nade in components)
 		if(istype(nade, /obj/item/grenade/chem_grenade/large) || istype(nade, /obj/item/grenade/chem_grenade/adv_release))
 			range_heavy += 1
 		for(var/obj/item/thing as anything in nade.beakers) //remove beakers, then delete the grenade.
 			thing.forceMove(drop_location())
-		qdel(nade)
-	var/obj/item/gibtonite/ore = locate() in src
+	var/obj/item/gibtonite/ore = locate() in components
 	switch(ore.quality)
 		if(GIBTONITE_QUALITY_LOW)
 			range_heavy -= 2
 		if(GIBTONITE_QUALITY_HIGH)
 			range_heavy += 4
-	qdel(ore)
 
 /obj/item/bombcore/dimensional/examine(mob/user)
 	. = ..()

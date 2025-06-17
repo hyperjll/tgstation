@@ -273,9 +273,9 @@
 	if(!user.put_in_inactive_hand(food_item))
 		food_item.forceMove(user.drop_location())
 		playsound(user, 'sound/effects/splat.ogg', 50, TRUE)
-		to_chat(span_danger("Before you can even read whats within it, [food_item] suddenly pops out from the book and onto the floor!"))
+		to_chat(user, span_danger("Before you can even read whats within it, [food_item] suddenly pops out from the book and onto the floor!"))
 	else
-		to_chat(span_danger("Before you can even read whats within it, [food_item] suddenly pops out from the book, and into your hand!"))
+		to_chat(user, span_danger("Before you can even read whats within it, [food_item] suddenly pops out from the book, and into your hand!"))
 
 	..()
 
@@ -461,7 +461,7 @@
 
 	for(var/i in 1 to 1)
 		new /obj/structure/flora/tree/random(T)
-		//random_trees.to_chat(span_danger("After reading the book, [random_trees] emerges from it!"))
+		//random_trees.to_chat(user, span_danger("After reading the book, [random_trees] emerges from it!"))
 		//do_teleport(random_trees, get_turf(src), 3, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 	do_teleport(user, get_turf(src), 1, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 
@@ -522,7 +522,7 @@
 					playsound(T,'sound/effects/magic/fireball.ogg', 200, TRUE)
 		usedrecently = FALSE
 	else
-		to_chat(span_notice("[src]'s powers cannot be invoked right now!"))
+		to_chat(user, span_notice("[src]'s powers cannot be invoked right now!"))
 		return // refunded.
 	..()
 
@@ -553,7 +553,7 @@
 		var/spider = pick(spider_list)
 		new spider(T)
 
-	to_chat(span_danger("After reading the book, a bunch of spiderlings emerge from it and leap to the floor!"))
+	to_chat(user, span_danger("After reading the book, a bunch of spiderlings emerge from it and leap to the floor!"))
 	playsound(src, 'sound/effects/phasein.ogg', 100, TRUE)
 	message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] at [ADMIN_VERBOSEJMP(T)]")
 	user.log_message("used a [src] at [AREACOORD(T)].", LOG_ATTACK)
@@ -640,7 +640,7 @@
 		user.visible_message(span_notice("[user] suddenly becomes opaque!"))
 		user.alpha = 255
 	else
-		to_chat(span_notice("[src]'s powers cannot be invoked right now!"))
+		to_chat(user, span_notice("[src]'s powers cannot be invoked right now!"))
 		return // refunded.
 	..()
 
@@ -655,12 +655,12 @@
 
 	for(var/i in 1 to 2 + rand(1,2))
 		var/mob/living/basic/bee/beespawn = new (T)
-		to_chat(span_danger("After reading the book, [beespawn] emerges from it!"))
+		to_chat(user, span_danger("After reading the book, [beespawn] emerges from it!"))
 		for(var/j in 1 to rand(1, 3))
 			step(beespawn, pick(NORTH,SOUTH,EAST,WEST))
 	if(prob(20))
 		var/mob/living/basic/bee/toxin/beespawn2 = new (T)
-		to_chat(span_danger("After reading the book, [beespawn2] emerges from it!"))
+		to_chat(user, span_danger("After reading the book, [beespawn2] emerges from it!"))
 		for(var/j in 1 to rand(1, 3))
 			step(beespawn2, pick(NORTH,SOUTH,EAST,WEST))
 	playsound(T, 'sound/effects/phasein.ogg', 100, TRUE)
@@ -681,8 +681,8 @@
 	book_item.forceMove(get_turf(user))
 	//book_item.do_effect()
 	book_item.uses = 1
-	//to_chat(span_danger("[src]'s powers invoke a [book_item]!"))
-	to_chat(span_danger("The [src]'s words burn away from the page and coalesce into a new [book_item]!"))
+	//to_chat(user, span_danger("[src]'s powers invoke a [book_item]!"))
+	to_chat(user, span_danger("The [src]'s words burn away from the page and coalesce into a new [book_item]!"))
 	message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] which became a [book_item]")
 	user.log_message("used a [src] which became a [book_item].", LOG_ATTACK)
 	..()
@@ -700,9 +700,9 @@
 	var/obj/item/item_chosen = new item_type
 	if(!user.put_in_inactive_hand(item_chosen))
 		item_chosen.forceMove(user.drop_location())
-		to_chat(span_danger("Flipping to a random page, [item_chosen] suddenly pops out from the book and onto the floor!"))
+		to_chat(user, span_danger("Flipping to a random page, [item_chosen.name] suddenly pops out from the book and onto the floor!"))
 	else
-		to_chat(span_danger("Flipping to a random page, [item_chosen] suddenly pops out from the book, and into your hand!"))
+		to_chat(user, span_danger("Flipping to a random page, [item_chosen.name] suddenly pops out from the book, and into your hand!"))
 
 	..()
 /**
@@ -735,10 +735,10 @@
 	crewlist += crewmember2
 	crewlist += antagonist
 
-	//to_chat(span_notice("After flipping the book open the following can be read upon all of it's pages: There is an [total_antagonists] among the following:"))
-	//to_chat(span_notice("[antagtypes]"))
-	//to_chat(span_notice("[antagonist]"))
-	to_chat(span_notice("[crewmember1]"))
+	//to_chat(user, span_notice("After flipping the book open the following can be read upon all of it's pages: There is an [total_antagonists] among the following:"))
+	//to_chat(user, span_notice("[antagtypes]"))
+	//to_chat(user, span_notice("[antagonist]"))
+	to_chat(user, span_notice("[crewmember1]"))
 
 	..()
 
@@ -812,19 +812,19 @@
 		if(prob(95))
 			ADD_TRAIT(user, TRAIT_THERMAL_VISION, TRAIT_STATUS_EFFECT("vision_book"))
 			user.update_sight()
-			to_chat(span_notice("After flipping through the [src], you notice shapes within the walls!"))
+			to_chat(user, span_notice("After flipping through the [src], you notice shapes within the walls!"))
 			sleep(augduration)
 			REMOVE_TRAIT(user, TRAIT_THERMAL_VISION, TRAIT_STATUS_EFFECT("vision_book"))
 			user.update_sight()
-			to_chat(span_notice("Your vision has returned to normal."))
+			to_chat(user, span_notice("Your vision has returned to normal."))
 		else
 			ADD_TRAIT(user, TRAIT_XRAY_VISION, TRAIT_STATUS_EFFECT("vision_book"))
 			user.update_sight()
-			to_chat(span_notice("After flipping through the [src], you notice the walls give way!"))
+			to_chat(user, span_notice("After flipping through the [src], you notice the walls give way!"))
 			sleep(augduration)
 			REMOVE_TRAIT(user, TRAIT_XRAY_VISION, TRAIT_STATUS_EFFECT("vision_book"))
 			user.update_sight()
-			to_chat(span_notice("Your vision has returned to normal."))
+			to_chat(user, span_notice("Your vision has returned to normal."))
 	usedrecently = FALSE
 	..()
 
@@ -886,7 +886,7 @@
 	if(!F)
 		F = get_turf(user)
 		range = 50
-	to_chat(span_warning("As you read the [src], you suddenly find yourself somewhere else!"))
+	to_chat(user, span_warning("As you read the [src], you suddenly find yourself somewhere else!"))
 	if(do_teleport(user, F, range, channel = TELEPORT_CHANNEL_BLUESPACE))
 		do_sparks(5,FALSE,user)
 	..()
@@ -925,9 +925,9 @@
 	var/obj/item/food/pie/cream/pie_item = new (T)
 	if(!user.put_in_inactive_hand(pie_item))
 		pie_item.forceMove(user.drop_location())
-		to_chat(span_danger("As you open the book, an arm reaches out from it and drops [pie_item] onto the floor!"))
+		to_chat(user, span_danger("As you open the book, an arm reaches out from it and drops [pie_item] onto the floor!"))
 	else
-		to_chat(span_danger("As you open the book, an arm reaches out from it and hands you [pie_item]!"))
+		to_chat(user, span_danger("As you open the book, an arm reaches out from it and hands you [pie_item]!"))
 	..()
 
 /obj/item/magicbook/honk2
@@ -942,9 +942,9 @@
 	var/obj/item/food/pie/cream/bluespace/pie_item = new (T)
 	if(!user.put_in_inactive_hand(pie_item))
 		pie_item.forceMove(user.drop_location())
-		to_chat(span_danger("As you open the book, an arm reaches out from it and drops [pie_item] onto the floor!"))
+		to_chat(user, span_danger("As you open the book, an arm reaches out from it and drops [pie_item] onto the floor!"))
 	else
-		to_chat(span_danger("As you open the book, an arm reaches out from it and hands you [pie_item]!"))
+		to_chat(user, span_danger("As you open the book, an arm reaches out from it and hands you [pie_item]!"))
 	..()
 
 /obj/item/magicbook/event

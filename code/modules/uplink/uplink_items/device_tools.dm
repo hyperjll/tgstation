@@ -25,14 +25,6 @@
 	item = /obj/item/book/bible/syndicate
 	cost = 5
 
-/datum/uplink_item/device_tools/tram_remote
-	name = "Tram Remote Control"
-	desc = "When linked to a tram's on board computer systems, this device allows the user to manipulate the controls remotely. \
-		Includes direction toggle and a rapid mode to bypass door safety checks and crossing signals. \
-		Perfect for running someone over in the name of a tram malfunction!"
-	item = /obj/item/assembly/control/transport/remote
-	cost = 2
-
 /datum/uplink_item/device_tools/thermal
 	name = "Thermal Imaging Glasses"
 	desc = "These goggles can be turned to resemble common eyewear found throughout the station. \
@@ -55,13 +47,6 @@
 	desc = "A robust seven-slot set of webbing that is capable of holding all manner of tactical equipment."
 	item = /obj/item/storage/belt/military
 	cost = 1
-
-/datum/uplink_item/device_tools/doorjack
-	name = "Airlock Authentication Override Card"
-	desc = "A specialized cryptographic sequencer specifically designed to override station airlock access codes. \
-			After hacking a certain number of airlocks, the device will require some time to recharge."
-	item = /obj/item/card/emag/doorjack
-	cost = 3
 
 /datum/uplink_item/device_tools/toolbox
 	name = "Full Syndicate Toolbox"
@@ -131,7 +116,7 @@
 			Those who purchase these hooks are eligible for a 10k credits prize upon purchase!"
 	item = /obj/item/climbing_hook/syndicate
 	cost = 1
-	var/random_item_chance = 1
+	var/random_item_chance = 10
 	var/bonus_item_to_give = /obj/item/stack/spacecash/c10000
 
 /datum/uplink_item/device_tools/syndicate_climbing_hook/spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)

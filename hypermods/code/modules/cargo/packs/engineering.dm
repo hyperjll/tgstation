@@ -55,6 +55,22 @@
 	contains = list(/obj/machinery/power/rtg)
 	crate_name = "rtg generator crate"
 
+/datum/supply_pack/engineering/engimodsuit
+	name = "Engineering MODsuit Crate"
+	desc = "Contains a single MODsuit designed for Engineering Personnel."
+	cost = CARGO_CRATE_VALUE * 20
+	access = ACCESS_ENGINE_EQUIP
+	contains = list(/obj/item/mod/control/pre_equipped/engineering)
+	crate_name = "engineering modsuit crate"
+
+/datum/supply_pack/engineering/atmosmodsuit
+	name = "Atmospherics MODsuit Crate"
+	desc = "Contains a single MODsuit designed for Atmospheric Personnel."
+	cost = CARGO_CRATE_VALUE * 30
+	access = ACCESS_ATMOSPHERICS
+	contains = list(/obj/item/mod/control/pre_equipped/atmospheric)
+	crate_name = "atmospherics modsuit crate"
+
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////// Engine Construction /////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////

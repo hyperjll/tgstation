@@ -3,11 +3,28 @@
 	var/chemicalinuse = null
 	var/chemicalamount = 1
 	var/chemicalexamine = null
+	var/list/possible_chemicals = list(
+		/datum/reagent/toxin/venom,
+		/datum/reagent/toxin/lexorin,
+		/datum/reagent/toxin/amanitin,
+		/datum/reagent/toxin/staminatoxin,
+		/datum/reagent/toxin/curare,
+		/datum/reagent/toxin/initropidril,
+		/datum/reagent/toxin/pancuronium,
+		/datum/reagent/toxin/heparin
+	)
+
+/obj/item/knife/combat/survival/chemical/Initialize(mapload)
+	. = ..()
+	chemicalinuse = pick(possible_chemicals)
+	chemicalamount = rand(1, 4)
+	var/datum/reagent/reagent_selected = chemicalinuse
+	chemicalexamine = "[reagent_selected.name]"
 
 /obj/item/knife/combat/survival/chemical/examine(mob/user)
 	. = ..()
 	if(IS_TRAITOR(user) || IS_NUKE_OP(user) || user.mind?.has_antag_datum(/datum/antagonist/spy)) //helpful to other syndicates
-		. += "This knife has an internal redspace reagent generator producing [chemicalexamine]."
+		. += "This knife has an internal reagent generator producing [chemicalexamine]."
 
 /obj/item/knife/combat/survival/chemical/afterattack(atom/target, mob/user, proximity = TRUE)
 	. = ..()
@@ -58,6 +75,7 @@
 
 /obj/item/knife/throwing
 	name = "throwing knife"
+	desc = "A wonderfully designed knife capable of putting the real HURT on someone if thrown."
 	icon = 'hypermods/icons/obj/weapons/stabby.dmi'
 	icon_state = "throwingknife"
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/swords_lefthand.dmi'
@@ -76,7 +94,7 @@
 
 /obj/item/melee/syndidagger
 	name = "syndicate dagger"
-	desc = "An old-fashioned syndicate dagger. Rumored to have manufactured to kill syndicate agents specifically."
+	desc = "An old-fashioned syndicate dagger. Rumored to have been manufactured to kill syndicate agents specifically."
 	icon = 'hypermods/icons/obj/weapons/stabby.dmi'
 	icon_state = "syndidagger"
 	force = 10

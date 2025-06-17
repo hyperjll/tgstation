@@ -77,3 +77,8 @@
 
 	translator.grant_all_languages(source = LANGUAGE_CURATOR)
 	translator.remove_blocked_language(GLOB.all_languages, source=LANGUAGE_ALL)
+
+/datum/job/curator/after_spawn(mob/living/spawned, client/player_client)
+	. = ..()
+	if(spawned.mind)
+		ADD_TRAIT(spawned.mind, TRAIT_OCCULTIST, JOB_TRAIT)

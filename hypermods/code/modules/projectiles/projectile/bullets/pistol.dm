@@ -3,7 +3,7 @@
 /obj/projectile/bullet/c9mm/cs
 	name = "9mm caseless bullet"
 	damage = 17
-	speed = 0.5
+	speed = 1
 
 /obj/projectile/bullet/c9mm/emp
 	name = "9mm EMP bullet"
@@ -137,7 +137,7 @@
 /obj/projectile/bullet/c10mm/cs
 	name = "10mm caseless bullet"
 	damage = 27
-	speed = 0.5
+	speed = 1
 
 /obj/projectile/bullet/c10mm/sp
 	name = "10mm soporific bullet"
@@ -242,4 +242,4 @@
 /obj/projectile/bullet/c22mm
 	name = ".22 bullet"
 	damage = 20
-	speed = 0.5
+	speed = 1

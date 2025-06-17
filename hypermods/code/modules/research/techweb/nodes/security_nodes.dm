@@ -2,11 +2,12 @@
 	id = TECHWEB_NODE_SEC_EQUIP_ADV
 	display_name = "Advanced Security Equipment"
 	description = "Better equipment for more demanding tasks."
-	prereq_ids = list(TECHWEB_NODE_SEC_EQUIP)
+	prereq_ids = list(TECHWEB_NODE_SEC_EQUIP, TECHWEB_NODE_RIOT_SUPRESSION)
 	design_ids = list(
 		"quickcams",
 		"secflash",
 		"secradiomine",
+		"antaglocker",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 
@@ -51,5 +52,6 @@
 		"nt_a762_pen",
 		"nt_a762_vulcan",
 		"enforcer",
+		"mindshield_nonremove",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)

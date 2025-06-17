@@ -592,7 +592,6 @@
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/aisat)
 "alq" = (
-/obj/effect/decal/cleanable/oil,
 /obj/effect/landmark/start/roboticist,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/disposalpipe/segment{
@@ -8006,7 +8005,6 @@
 /turf/open/floor/carpet/blue,
 /area/station/service/lawoffice)
 "dbf" = (
-/obj/effect/decal/cleanable/oil,
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron,
 /area/station/engineering/supermatter/room)
@@ -8869,7 +8867,6 @@
 /area/station/engineering/atmos/storage/gas)
 "dve" = (
 /obj/structure/sign/poster/contraband/random/directional/north,
-/obj/effect/decal/cleanable/oil,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "dvf" = (
@@ -9087,7 +9084,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/patients_rooms)
 "dAj" = (
-/obj/machinery/computer/scan_consolenew{
+/obj/machinery/computer/dna_console{
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
@@ -12993,7 +12990,6 @@
 /area/station/maintenance/department/cargo)
 "fcn" = (
 /obj/structure/cable,
-/obj/effect/decal/cleanable/robot_debris/old,
 /turf/open/floor/iron,
 /area/station/science/robotics/mechbay)
 "fcv" = (
@@ -16534,10 +16530,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay)
-"gyr" = (
-/obj/effect/decal/cleanable/robot_debris/old,
-/turf/open/floor/plating,
-/area/station/maintenance/department/science)
 "gyw" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/sign/warning/cold_temp,
@@ -17046,16 +17038,6 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai_monitored/security/armory)
-"gIO" = (
-/obj/effect/decal/cleanable/robot_debris/old,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/starboard/aft)
 "gIR" = (
 /turf/closed/wall/r_wall,
 /area/station/security/detectives_office)
@@ -19291,10 +19273,6 @@
 /obj/machinery/smartfridge/chemistry/virology/preloaded,
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
-"hHC" = (
-/obj/effect/decal/cleanable/oil,
-/turf/open/floor/iron,
-/area/station/maintenance/disposal/incinerator)
 "hHF" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -20007,11 +19985,6 @@
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/iron,
 /area/station/maintenance/fore)
-"hVM" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/oil,
-/turf/open/floor/iron,
-/area/station/engineering/supermatter/room)
 "hVO" = (
 /turf/closed/wall/r_wall,
 /area/station/medical/chemistry)
@@ -26280,7 +26253,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "koK" = (
-/obj/effect/decal/cleanable/oil,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/engine,
@@ -26460,18 +26432,15 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "ksz" = (
-/obj/effect/decal/cleanable/robot_debris/old,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
+/obj/structure/table/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "bar";
+	name = "Bar Shutters"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/station/maintenance/starboard)
+/obj/item/rag,
+/turf/open/floor/carpet/black,
+/area/station/service/bar)
 "ksA" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/smart/simple/orange/visible{
@@ -27203,7 +27172,6 @@
 "kFS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/obj/effect/decal/cleanable/robot_debris/old,
 /obj/effect/spawner/random/decoration/glowstick,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
@@ -27233,10 +27201,10 @@
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/command/nuke_storage)
 "kGp" = (
-/obj/structure/altar_of_gods,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/altar/of_gods,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "kGx" = (
@@ -30433,9 +30401,6 @@
 /area/station/service/hydroponics)
 "lUm" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/cup/rag{
-	pixel_y = 4
-	},
 /turf/open/floor/iron/terracotta/small,
 /area/station/maintenance/starboard/aft)
 "lUt" = (
@@ -53148,11 +53113,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
-"uSX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/oil,
-/turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
 "uTa" = (
 /obj/effect/decal/cleanable/greenglow/filled,
 /turf/open/floor/engine,
@@ -53437,7 +53397,6 @@
 /area/station/service/kitchen)
 "uYY" = (
 /obj/structure/table/glass,
-/obj/item/reagent_containers/cup/rag,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "uZb" = (
@@ -54587,11 +54546,11 @@
 /turf/open/floor/iron/white,
 /area/station/science)
 "vyj" = (
-/obj/machinery/computer/scan_consolenew,
 /obj/machinery/camera/directional/north{
 	c_tag = "Research - Genetics";
 	network = list("ss13","rd")
 	},
+/obj/machinery/computer/dna_console,
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "vyn" = (
@@ -57497,7 +57456,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/storage_shared)
 "wIH" = (
-/obj/item/reagent_containers/cup/rag,
 /obj/structure/table_frame/wood,
 /turf/open/floor/wood,
 /area/station/service/abandoned_gambling_den)
@@ -59485,7 +59443,6 @@
 "xsB" = (
 /obj/structure/table,
 /obj/item/book/manual/wiki/barman_recipes,
-/obj/item/reagent_containers/cup/rag,
 /obj/item/reagent_containers/cup/glass/shaker,
 /obj/machinery/light/directional/east,
 /turf/open/floor/carpet/neon/simple/black/nodots,
@@ -59639,7 +59596,7 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "xvK" = (
-/obj/machinery/computer/scan_consolenew{
+/obj/machinery/computer/dna_console{
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
@@ -60999,7 +60956,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "yam" = (
-/obj/effect/decal/cleanable/oil,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
@@ -84125,7 +84081,7 @@ fDA
 sIG
 uQo
 ioD
-pzd
+ksz
 kPu
 xIh
 hcn
@@ -84461,7 +84417,7 @@ diW
 diW
 qnV
 nbj
-hHC
+xqA
 gqJ
 qdd
 xqA
@@ -93967,7 +93923,7 @@ eJg
 dCs
 vuF
 psE
-uSX
+vol
 vol
 vfb
 onD
@@ -98571,7 +98527,7 @@ hIE
 wnU
 mdt
 jCx
-gIO
+uHx
 aSl
 rLe
 uco
@@ -99112,7 +99068,7 @@ vUx
 aPX
 aPX
 aPX
-hVM
+aPX
 iOL
 aPX
 jkW
@@ -103174,7 +103130,7 @@ tFE
 ptu
 ouJ
 xaG
-ksz
+lpQ
 xaG
 buj
 aod
@@ -110144,7 +110100,7 @@ tyj
 piu
 srq
 nEq
-gyr
+rxh
 rxh
 tSd
 rxh

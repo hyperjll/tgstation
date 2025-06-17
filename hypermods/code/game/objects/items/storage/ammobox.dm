@@ -593,7 +593,7 @@
 	name = "ammo box (.45 caseless)"
 	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "caseless45box"
-	ammo_type = /obj/item/ammo_casing/caseless/c45/cs
+	ammo_type = /obj/item/ammo_casing/caseless/c45
 
 /obj/item/ammo_box/c45/sp
 	name = "ammo box (.45 soporific)"

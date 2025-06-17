@@ -2,9 +2,9 @@
 /datum/blobstrain/reagent/shifting_fragments
 	name = "Shifting Fragments"
 	description = "will do medium brute damage."
-	effectdesc = "will also cause blob parts to shift away when attacked."
+	effectdesc = "will also cause blob parts to shift away when attacked. Takes 20% less brute and burn damage."
 	analyzerdescdamage = "Does medium brute damage."
-	analyzerdesceffect = "When attacked, may shift away from the attacker."
+	analyzerdesceffect = "When attacked, may shift away from the attacker. Takes 20% less brute and burn damage."
 	color = "#C8963C"
 	complementary_color = "#3C6EC8"
 	reagent = /datum/reagent/blob/shifting_fragments
@@ -25,6 +25,10 @@
 			var/turf/T = get_turf(targeted)
 			targeted.forceMove(get_turf(B))
 			B.forceMove(T) //swap the blobs
+	if(damage_type == BRUTE)
+		return damage * 0.8
+	if(damage_type == BURN)
+		return damage * 0.8
 	return ..()
 
 /datum/reagent/blob/shifting_fragments

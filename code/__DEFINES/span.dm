@@ -140,6 +140,7 @@
 #define span_subheader_announcement_text(str) ("<span class='subheader_announcement_text'>" + str + "</span>")
 #define span_suicide(str) ("<span class='suicide'>" + str + "</span>")
 #define span_suppradio(str) ("<span class='suppradio'>" + str + "</span>")
+#define span_swarmer(str) ("<span class='swarmer'>" + str + "</span>")
 #define span_syndradio(str) ("<span class='syndradio'>" + str + "</span>")
 #define span_tape_recorder(str) ("<span class='tape_recorder'>" + str + "</span>")
 #define span_tinydanger(str) ("<span class='tinydanger'>" + str + "</span>")
@@ -155,3 +156,11 @@
 // Spans that use embedded tgui components:
 // Sorted alphabetically
 #define span_tooltip(tip, main_text) ("<span data-component=\"Tooltip\" data-content=\"" + tip + "\" class=\"tooltip\">" + main_text + "</span>")
+
+// Clock cult stuff
+#define span_brass(str) ("<span class='brass'>" + str + "</span>")
+#define span_bigbrass(str) ("<span class='big_brass'>" + str + "</span>")
+#define span_clockyellow(str) ("<span class='clockyellow'>" + str + "</span>")
+#define span_clockgray(str) ("<span class='clockgray'>" + str + "</span>")
+#define span_clockred(str) ("<span class='clockred'>" + str + "</span>")
+#define span_ratvar(str) ("<span class='ratvar'>" + str + "</span>")

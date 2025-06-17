@@ -166,7 +166,7 @@
 	return TRUE
 
 //ADD
-/obj/item/robot_suit/attackby(obj/item/W, mob/user, params)
+/obj/item/robot_suit/attackby(obj/item/W, mob/user, list/modifiers, list/attack_modifiers)
 	if(istype(W, /obj/item/stack/sheet/iron))
 		var/obj/item/stack/sheet/iron/M = W
 		if(!l_arm && !r_arm && !l_leg && !r_leg && !chest && !head)
@@ -375,6 +375,11 @@
 
 	else if(IS_WRITING_UTENSIL(W))
 		to_chat(user, span_warning("You need to use a multitool to name [src]!"))
+	else if(istype(W, /obj/item/clockwork/clockwork_slab) && IS_CLOCK(user))
+		to_chat(user, span_brass("You adjust the internals of \the [src] to that of clockwork."))
+		be_clockwork = TRUE
+		lawsync = FALSE
+		aisync = FALSE
 	else
 		return ..()
 

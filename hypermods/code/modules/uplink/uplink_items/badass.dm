@@ -1,3 +1,19 @@
+/datum/uplink_item/badass/duffelbag
+	name = "Suspicious Duffel Bag"
+	desc = "A large duffel bag for holding extra tactical supplies. It contains an oiled plastitanium zipper for maximum speed tactical zipping, \
+			and is better balanced on your back than an average duffelbag. Can hold two bulky items!"
+	item = /obj/item/storage/backpack/duffelbag/syndie
+	cost = 2
+	surplus = 50
+
+
+/datum/uplink_item/badass/costumes/mime
+	name = "Mime Costume"
+	desc = "..."
+	item = /obj/item/storage/backpack/duffelbag/syndie/mime
+	purchasable_from = (UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+	progression_minimum = 70 MINUTES
+
 /datum/uplink_item/badass/mythril
 	name = "Mythril"
 	desc = "A single bar of Mythril. From what little we've been able to study of it, this material has inheretly mystical properties. \
@@ -84,7 +100,7 @@
 	name = "Operative Clothes"
 	desc = "A cool black and tan jumpsuit/jumpskirt used by syndicate operatives. Provides no statistical \
 			advantages over a normal jumpsuit/jumpskirt. Does not have integrated vitals or coordinate sensors."
-	item = /obj/item/storage/backpack/duffelbag/syndie/operativeclothes
+	item = /obj/item/storage/box/syndie_kit/operativeclothes
 	cost = 1
 	surplus = 0
 	cant_discount = TRUE

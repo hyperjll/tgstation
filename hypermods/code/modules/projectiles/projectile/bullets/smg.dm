@@ -23,7 +23,7 @@
 /obj/projectile/bullet/c45/cs
 	name = ".45 caseless bullet"
 	damage = 27
-	speed = 0.5
+	speed = 1
 
 /obj/projectile/bullet/c45/sp
 	name = ".45 soporific bullet"

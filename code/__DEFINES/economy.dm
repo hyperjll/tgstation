@@ -28,7 +28,7 @@
 #define DEPARTMENT_DISCOUNT 0.2
 
 //the amount of credits collected by the vending machines that can be redeemed when restocking it.
-#define VENDING_CREDITS_COLLECTION_AMOUNT 0.2
+#define VENDING_CREDITS_COLLECTION_AMOUNT 0.5
 
 #define ACCOUNT_CIV "CIV"
 #define ACCOUNT_CIV_NAME "Civil Budget"

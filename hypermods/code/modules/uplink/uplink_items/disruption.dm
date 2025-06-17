@@ -29,6 +29,14 @@
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_CYBERNETIC_REVOLUTION))
 		cost *= 2
 
+/datum/uplink_item/disruption/tram_remote
+	name = "Tram Remote Control"
+	desc = "When linked to a tram's on board computer systems, this device allows the user to manipulate the controls remotely. \
+		Includes direction toggle and a rapid mode to bypass door safety checks and crossing signals. \
+		Perfect for running someone over in the name of a tram malfunction!"
+	item = /obj/item/assembly/control/transport/remote
+	cost = 2
+
 /datum/uplink_item/disruption/suspiciousphone
 	name = "Protocol CRAB-17 Phone"
 	desc = "The Protocol CRAB-17 Phone, a phone borrowed from an unknown third party, it can be used to crash the space market, funneling the losses of the crew to your bank account.\

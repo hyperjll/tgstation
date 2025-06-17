@@ -71,6 +71,7 @@ GLOBAL_LIST_INIT(hailer_phrases, list(
 	var/safety = TRUE
 	voice_filter = @{"[0:a] asetrate=%SAMPLE_RATE%*0.7,aresample=16000,atempo=1/0.7,lowshelf=g=-20:f=500,highpass=f=500,aphaser=in_gain=1:out_gain=1:delay=3.0:decay=0.4:speed=0.5:type=t [out]; [out]atempo=1.2,volume=15dB [final]; anoisesrc=a=0.01:d=60 [noise]; [final][noise] amix=duration=shortest"}
 	use_radio_beeps_tts = TRUE
+	antag_lockable = TRUE
 
 /obj/item/clothing/mask/gas/sechailer/plasmaman
 	starting_filter_type = /obj/item/gas_filter/plasmaman
@@ -127,6 +128,12 @@ GLOBAL_LIST_INIT(hailer_phrases, list(
 	halt()
 
 /obj/item/clothing/mask/gas/sechailer/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if(antag_locked)
+		playsound(src, SFX_SPARKS, 15, TRUE)
+		RemoveElement(/datum/element/anti_pickup)
+		antag_locked = FALSE
+		return TRUE // Don't scramble the display if we're trying to remove the antag lock
+
 	if(safety)
 		safety = FALSE
 		balloon_alert(user, "vocal circuit fried")

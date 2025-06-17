@@ -71,7 +71,7 @@
 
 
 /obj/item/implant/biosig/syndicate
-	desc = "Beware the man who speaks in hands."
+	desc = "But nobody came."
 	radio_key = /obj/item/encryptionkey/syndicate
 	subspace_transmission = TRUE
 	channel = RADIO_CHANNEL_SYNDICATE
@@ -87,3 +87,19 @@
 	name = "Implant Case - 'Biosignaller'"
 	desc = "A glass case containing a biosignaller implant."
 	imp_type = /obj/item/implant/biosig/syndicate
+
+
+/obj/item/implant/biosig/security
+	desc = "Can anyone hear me? Help."
+	radio_key = /obj/item/encryptionkey/headset_sec
+	subspace_transmission = FALSE
+	channel = RADIO_CHANNEL_SECURITY
+
+/obj/item/implanter/biosig/security
+	name = "implanter (biosignaller)"
+	imp_type = /obj/item/implant/biosig/security
+
+/obj/item/implantcase/biosig/security
+	name = "Implant Case - 'Biosignaller'"
+	desc = "A glass case containing a biosignaller implant."
+	imp_type = /obj/item/implant/biosig/security

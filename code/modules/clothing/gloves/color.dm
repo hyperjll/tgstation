@@ -24,6 +24,7 @@
 	desc = "These security gloves come with microchips that help the user quickly restrain suspects."
 	icon_state = "sec"
 	clothing_traits = list(TRAIT_FAST_CUFFING)
+	antag_lockable = TRUE
 
 /obj/item/clothing/gloves/color/black/security/blu
 	icon_state = "sec_blu"
@@ -41,7 +42,7 @@
 	undyeable = TRUE
 	clothing_traits = list(TRAIT_FINGERPRINT_PASSTHROUGH)
 
-/obj/item/clothing/gloves/color/fingerless/Initialize(mapload)
+/obj/item/clothing/gloves/fingerless/Initialize(mapload)
 	. = ..()
 	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/gripperoffbrand)
 	AddComponent(/datum/component/adjust_fishing_difficulty, -4)

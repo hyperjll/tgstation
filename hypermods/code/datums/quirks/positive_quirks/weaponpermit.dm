@@ -7,4 +7,4 @@
 	//mail_goodies = list()
 
 /datum/quirk/item_quirk/weapon_permit/add_unique(client/client_source)
-	give_item_to_holder(/obj/item/card/weapon_permit, list(LOCATION_BACKPACK = ITEM_SLOT_BACKPACK, LOCATION_HANDS = ITEM_SLOT_HANDS))
+	give_item_to_holder(/obj/item/card/weapon_permit, list(LOCATION_BACKPACK, LOCATION_HANDS))
