@@ -204,7 +204,7 @@
 	color_cutoffs = list(20, 16, 0)
 	glass_colour_type = /datum/client_colour/glass_colour/yellow
 	actions_types = list(/datum/action/item_action/toggle/clock)
-	clock_desc = "Applies passive eye damage that regenerates after unequipping, grants thermal vision, and lets you see all forms of invisibility."
+	clock_desc = "Applies passive eye damage that regenerates after unequipping, grants thermal vision, lets you see past several forms of invisibility but not cloaking, and allows you to see spectral beings."
 	/// Who is currently wearing the goggles
 	var/mob/living/wearer
 	/// Are the glasses enabled (flipped down)
@@ -256,7 +256,7 @@
 /obj/item/clothing/glasses/clockwork/wraith_spectacles/proc/enable()
 	enabled = TRUE
 	color_cutoffs = list(20, 16, 0)
-	invis_override = SEE_INVISIBLE_OBSERVER
+	invis_override = (SEE_INVISIBLE_LIVING|SEE_INVISIBLE_OBSERVER)
 	vision_flags = SEE_MOBS
 
 	if(wearer)
