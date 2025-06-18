@@ -121,6 +121,7 @@
 	new /obj/item/clothing/gloves/tackler(src)
 	new /obj/item/wallframe/camera/autosetup(src)
 	new /obj/item/computer_disk/security/secureye(src)
+	new /obj/item/antaglocker(src)
 	if(prob(35))
 		new /obj/item/implanter/biosig/security(src)
 
