@@ -38,7 +38,7 @@
 		intruding_mob.adjust_wet_stacks(1) //It's wet!
 
 		var/datum/effect_system/fluid_spread/smoke/smoke = new
-		smoke.set_up(range = 1, amount = 4, location = src)
+		smoke.set_up(amount = 4, holder = intruding_mob, location = src)
 		smoke.start()
 
 		COOLDOWN_START(src, vent_cooldown, vent_cd_time)
