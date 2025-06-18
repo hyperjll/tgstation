@@ -9,7 +9,7 @@
 //This doesn't function like a "trap" in of itself, but obscures vision when active.
 /obj/structure/destructible/clockwork/trap/steam_vent
 	name = "steam vent"
-	desc = "Some wired slats embedded in the floor. They feel warm to the touch."
+	desc = "A large vent billowing a constant stream of air and steam. You can just barely hear the sound of hissing coming from it."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "steam_vent"
 	clockwork_desc = "When active, these vents will billow out clouds of excess steam from Reebe, obscuring vision."
