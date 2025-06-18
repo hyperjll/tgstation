@@ -144,11 +144,22 @@
 
 /datum/tinker_cache_item/trap/skewer
 	name = "Skewer (Trap)"
+	power_use = 100
 	item_path = /obj/item/clockwork/trap_placer/skewer
 
 /datum/tinker_cache_item/trap/steam_vent
 	name = "Steam Vent (Trap)"
 	item_path = /obj/item/clockwork/trap_placer/steam_vent
+
+/datum/tinker_cache_item/trap/spike_trap
+	name = "Spike Tile (Trap)"
+	power_use = 100
+	item_path = /obj/item/clockwork/trap_placer/spike_trap
+
+/datum/tinker_cache_item/trap/flame_trap
+	name = "Flame Tile (Trap)"
+	power_use = 100
+	item_path = /obj/item/clockwork/trap_placer/flame_trap
 
 /datum/tinker_cache_item/trap/delay
 	name = "Delayer (Trigger)"
