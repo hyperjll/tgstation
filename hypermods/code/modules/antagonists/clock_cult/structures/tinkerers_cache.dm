@@ -157,7 +157,7 @@
 	item_path = /obj/item/clockwork/trap_placer/spike_trap
 
 /datum/tinker_cache_item/trap/flame_trap
-	name = "Flame Tile (Trap)"
+	name = "Flame Jets (Trap)"
 	power_use = 100
 	item_path = /obj/item/clockwork/trap_placer/flame_trap
 
