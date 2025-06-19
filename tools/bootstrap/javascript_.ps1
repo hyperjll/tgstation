@@ -2,13 +2,13 @@
 ## Downloads a Bun version to a cache directory and invokes it.
  
 $ErrorActionPreference = "Stop"
- 
+
 # Check minimum PowerShell version and required cmdlets
 if ($PSVersionTable.PSVersion.Major -lt 5 -or $PSVersionTable.PSVersion.Minor -lt 1) {
     Write-Error "This script requires PowerShell 5.1 or newer. Your version: $($PSVersionTable.PSVersion)"
     exit 1
 }
- 
+
 function Get-VariableFromFile {
     param([string] $Path, [string] $Key)
     foreach ($Line in Get-Content $Path) {
@@ -20,23 +20,25 @@ function Get-VariableFromFile {
 }
  
 function Get-Bun {
-    if (Test-Path $BunTarget -PathType Leaf) {
+    if (Test-Path $BunExe -PathType Leaf) {
         # Bun already exists
         return
     }
- 
+
     # Test AVX2 support. Bun builds for this
     # https://bun.sh/docs/installation#cpu-requirements-and-baseline-builds
     Get-CoreInfo
     Write-Output "Checking CPU for AVX2 support"
-    $avx2Support = & $CoreInfoExe | Select-String "AVX2\s+\*"
+    $avx2Supported = (& $CoreInfoExe | Select-String "AVX2\s+\*") -ne $null
     $BunRelease= "$BunPlatform"
     $BunTag
-    if ($avx2Support -eq $null) {
+    if (-not $avx2Supported) {
         $BunRelease = "$BunPlatform-baseline"
         $BunTag = " (baseline)"
     }
- 
+
+    $BunSource = "https://github.com/oven-sh/bun/releases/download/bun-v$BunVersion/$BunRelease.zip"
+
     Write-Output "Downloading Bun v$BunVersion$BunTag"
     New-Item $BunTargetDir -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
     try {
@@ -46,8 +48,8 @@ function Get-Bun {
         exit 1
     }
     Rename-Item "$BunZip.downloading" $BunZip
-    Test-BunHash -Baseline ($avx2Support -eq $null)
- 
+    Test-BunHash -Baseline (-not $avx2Supported)
+
     Write-Output "Extracting Bun archive"
     Expand-Archive -Path $BunZip -DestinationPath $BunTargetDir -Force
  
@@ -63,17 +65,17 @@ function Get-Bun {
     Remove-Item $BunZip -Force
     Remove-Item "$BunTargetDir\$BunRelease" -Recurse -Force
 }
- 
+
 # For CPU detection (Bun needs avx2 instructions)
 function Get-CoreInfo {
     $CoreInfoUrl = "https://download.sysinternals.com/files/Coreinfo.zip"
     $CoreInfoCacheDir = "$Cache\coreinfo"
     $CoreInfoZip = "$CoreInfoCacheDir\Coreinfo.zip"
- 
+
     if (Test-Path $CoreInfoExe -PathType Leaf) {
         return
     }
- 
+
     Write-Output "Downloading Coreinfo from Microsoft Sysinternals"
     New-Item $CoreInfoCacheDir -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
     try {
@@ -82,11 +84,12 @@ function Get-CoreInfo {
         Write-Error "Failed to download Coreinfo. $_"
         exit 1
     }
+
     Expand-Archive -Path $CoreInfoZip -DestinationPath $CoreInfoCacheDir -Force
     Remove-Item $CoreInfoZip -Force
- 
+
 }
- 
+
 function Test-BunHash {
     param(
         [bool]$Baseline = $false
@@ -96,7 +99,7 @@ function Test-BunHash {
     if ($Baseline) {
         $BunRelease = "$BunPlatform-baseline"
     }
- 
+
     Write-Output "Verifying Bun checksum"
     $FileHash = Get-FileHash $BunZip -Algorithm SHA256
     $ActualSha = $FileHash.Hash
@@ -107,7 +110,7 @@ function Test-BunHash {
         $EntrySplit = $ShaArrayEntry -split "\s+"
         $EntrySha = $EntrySplit[0]
         $EntryFile = $EntrySplit[1]
-        if ($EntryFile -eq $BunRelease) {
+        if ($EntryFile -eq "$BunRelease.zip") {
             $ExpectedSha = $EntrySha
             break
         }
@@ -125,7 +128,7 @@ function Test-BunHash {
             exit 1
         }
         Write-Output "Checksum mismatch on Bun. Retrying."
-        Remove-Item $BunTarget
+        Remove-Item $BunTargetDir -Recurse -Force
         Get-Bun
     }
 }
@@ -136,15 +139,13 @@ $Cache = "$BaseDir\.cache"
 if ($Env:TG_BOOTSTRAP_CACHE) {
     $Cache = $Env:TG_BOOTSTRAP_CACHE
 }
- 
 $BunVersion = Get-VariableFromFile -Path "$BaseDir\..\..\dependencies.sh" -Key "BUN_VERSION"
 $BunPlatform = "bun-windows-x64"
-$BunSource = "https://github.com/oven-sh/bun/releases/download/bun-v$BunVersion/$BunPlatform.zip"
 $BunTargetDir = "$Cache\bun-v$BunVersion-x64"
-$BunTarget = "$BunTargetDir\bun.exe"
+$BunExe = "$BunTargetDir\bun.exe"
 $BunZip = "$BunTargetDir\bun.zip"
 $CoreInfoExe = "$Cache\coreinfo\Coreinfo.exe"
- 
+
 ## Just print the path and exit
 if ($Args.length -eq 1 -and $Args[0] -eq "Get-Path") {
     Write-Output "$BunTargetDir"
@@ -165,5 +166,5 @@ $Env:PATH = "$BunTargetDir;$ENV:Path"
  
 ## Invoke Bun with all command-line arguments
 $ErrorActionPreference = "Continue"
-& "$BunTarget" @Args
+& "$BunExe" @Args
 exit $LastExitCode
