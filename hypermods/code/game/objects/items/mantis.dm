@@ -9,7 +9,7 @@
 	force = 20
 	armour_penetration = 30
 	wound_bonus = 20
-	bare_wound_bonus = 20
+	exposed_wound_bonus = 20
 	w_class = WEIGHT_CLASS_NORMAL
 	sharpness = SHARP_EDGED
 	tool_behaviour = TOOL_CROWBAR // just a very "sharp" crowbar

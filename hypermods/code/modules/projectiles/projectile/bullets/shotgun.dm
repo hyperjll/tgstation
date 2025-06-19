@@ -8,7 +8,7 @@
 	name = "syndicate buckshot pellet"
 	damage = 14.5 //3.5 more damage so it sucks less?
 	wound_bonus = 2
-	bare_wound_bonus = 2
+	exposed_wound_bonus = 2
 	armour_penetration = 0 //So it doesn't suffer against armor (it's for nukies only)
 
 // Lethal energy shots

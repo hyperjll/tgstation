@@ -27,7 +27,7 @@
 	sharpness = SHARP_EDGED
 	armor_type = /datum/armor/item_energyspear
 	wound_bonus = 10
-	bare_wound_bonus = 25
+	exposed_wound_bonus = 25
 	block_chance = 20
 
 /datum/embedding/espear

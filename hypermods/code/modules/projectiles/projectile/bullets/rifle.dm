@@ -12,7 +12,7 @@
 	damage = 35
 	wound_bonus = -45
 	armour_penetration = 45
-	bare_wound_bonus = -10
+	exposed_wound_bonus = -10
 
 /obj/projectile/bullet/mm712x82/hp
 	name = "7.12x82mm hollow-point bullet"
@@ -20,7 +20,7 @@
 	weak_against_armour = TRUE
 	sharpness = SHARP_EDGED
 	wound_bonus = -35
-	bare_wound_bonus = 35
+	exposed_wound_bonus = 35
 
 /obj/projectile/bullet/incendiary/mm712x82
 	name = "7.12x82mm incendiary bullet"

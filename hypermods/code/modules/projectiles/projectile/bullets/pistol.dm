@@ -41,7 +41,7 @@
 	damage = 20
 	wound_bonus = -30
 	wound_falloff_tile = -2.5
-	bare_wound_bonus = 15
+	exposed_wound_bonus = 15
 	ricochets_max = 2
 	reflect_range_decrease = 1
 	ricochet_chance = 100
@@ -192,7 +192,7 @@
 	damage = 21
 	wound_bonus = -30
 	wound_falloff_tile = -2.5
-	bare_wound_bonus = 15
+	exposed_wound_bonus = 15
 	ricochets_max = 2
 	reflect_range_decrease = 1
 	ricochet_chance = 45
@@ -228,7 +228,7 @@
 	name = ".38 talon bullet"
 	damage = 8 // 8+20 rolls 21-38 wound dmg vs no armor
 	wound_bonus = 20
-	bare_wound_bonus = 0
+	exposed_wound_bonus = 0
 	wound_falloff_tile = -1
 	sharpness = SHARP_EDGED
 

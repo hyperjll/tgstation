@@ -19,7 +19,7 @@
 	block_chance = 30 //Only works in melee, but I bet your ass you could raise its handle to deflect a sword
 	sharpness = NONE //Blunt, breaks bones
 	wound_bonus = -10
-	bare_wound_bonus = 15
+	exposed_wound_bonus = 15
 	max_integrity = 200
 	resistance_flags = ACID_PROOF | FIRE_PROOF
 	w_class = WEIGHT_CLASS_HUGE

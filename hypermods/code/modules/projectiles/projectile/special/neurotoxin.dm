@@ -25,7 +25,7 @@
 	armour_penetration = 0
 	reflectable = NONE
 	wound_bonus = 0
-	bare_wound_bonus = 0
+	exposed_wound_bonus = 0
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 
 /obj/projectile/energy/xenoglob/on_hit(atom/target, blocked, pierce_hit)

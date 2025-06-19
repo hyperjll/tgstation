@@ -9,7 +9,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/axes_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/axes_righthand.dmi'
 	wound_bonus = -15
-	bare_wound_bonus = 20
+	exposed_wound_bonus = 20
 	/// Can the axe ignite it's target?
 	var/ignite_target = TRUE
 
@@ -109,7 +109,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/axes_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/axes_righthand.dmi'
 	wound_bonus = -15
-	bare_wound_bonus = 20
+	exposed_wound_bonus = 20
 	/// Can the axe shock it's target?
 	var/electrocute = TRUE
 

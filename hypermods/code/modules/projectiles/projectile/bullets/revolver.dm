@@ -5,7 +5,7 @@
 	damage = 8 //Total of 48 damage assuming PBS
 	armour_penetration = 10 //In between normal pellets and flechette for AP
 	wound_bonus = 7 //So it might be able to actually wound things
-	bare_wound_bonus = 7
+	exposed_wound_bonus = 7
 	damage_falloff_tile = 0.35 //Loses 0.05 damage less per tile than standard damaging pellets
 	wound_falloff_tile = -1.5 //Still probably won't cause wounds at range
 
@@ -73,7 +73,7 @@
 	ricochets_max = 0
 	sharpness = SHARP_EDGED
 	wound_bonus = 20
-	bare_wound_bonus = 20
+	exposed_wound_bonus = 20
 	embed_type = /datum/embedding/c357dumdum
 	wound_falloff_tile = -5
 	embed_falloff_tile = -15

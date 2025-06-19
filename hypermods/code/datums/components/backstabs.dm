@@ -42,7 +42,7 @@
 	var/multi = backstab_multiplier - 1
 	var/dmg = source.force * multi
 	if(dmg) // Truthy because backstabs can heal lol
-		target.apply_damage(dmg, source.damtype, BODY_ZONE_CHEST, 0, source.wound_bonus*multi, source.bare_wound_bonus*multi, source.sharpness*multi)
+		target.apply_damage(dmg, source.damtype, BODY_ZONE_CHEST, 0, source.wound_bonus*multi, source.exposed_wound_bonus*multi, source.sharpness*multi)
 		if(iscarbon(target))
 			// extra safe to ensure no sleeping
 			var/datum/emote/living/scream/scream_emote = new
