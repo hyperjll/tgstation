@@ -48,6 +48,26 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define STATION_TRAIT_UNNATURAL_ATMOSPHERE "station_trait_unnatural_atmosphere"
 #define STATION_TRAIT_SPIKED_DRINKS "station_trait_spiked_drinks"
 
+#define STATION_TRAIT_DISTANT_SUPPLYLINES "station_trait_distant_supplylines"
+#define STATION_TRAIT_BLACKOUT "station_trait_blackout"
+#define STATION_TRAIT_SLOW_SHUTTLE "station_trait_slow_shuttle"
+#define STATION_TRAIT_ION_STORMS "station_trait_ion_storms"
+#define STATION_TRAIT_RAD_STORMS "station_trait_rad_storms"
+#define STATION_TRAIT_IAN_ADVENTURE "station_trait_ian_adventure"
+#define STATION_TRAIT_SCARVES "station_trait_scarves"
+#define STATION_TRAIT_GALACTIC_GRANT "station_trait_galactic_grant"
+#define STATION_TRAIT_STRONG_SUPPLY_LINES "station_trait_strong_supply_lines"
+#define STATION_TRAIT_DEATHRATTLED_DEPARTMENT "station_trait_deathrattled_department"
+#define STATION_TRAIT_DEATHRATTLED_ALL "station_trait_deathrattled_all"
+#define STATION_TRAIT_BOUNTIFUL_BOUNTIES "station_trait_bountiful_bounties"
+#define STATION_TRAIT_LUCKY_WINNER "station_trait_lucky_winner"
+#define STATION_TRAIT_QUICK_SHUTTLE "station_trait_quick_shuttle"
+#define STATION_TRAIT_ANNOUNCEMENT_INTERN "station_trait_announcement_intern"
+#define STATION_TRAIT_ANNOUNCEMENT_SYSTEM "station_trait_announcement_system"
+#define STATION_TRAIT_NINJAS "station_trait_ninjas"
+#define STATION_TRAIT_POSTAL_WORKER_STRIKE "station_trait_postal_worker_strike"
+#define STATION_TRAIT_JOB_OVERFLOW "station_trait_job_overflow"
+
 // Hud traits
 /// This hud is owned by a client with an open escape menu
 #define TRAIT_ESCAPE_MENU_OPEN "escape_menu_open"
@@ -1186,26 +1206,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_CHUUNIBYOU "chuunibyou"
 /// Has splattercasting
 #define TRAIT_SPLATTERCASTER "splattercaster"
-
-#define STATION_TRAIT_DISTANT_SUPPLYLINES "station_trait_distant_supplylines"
-#define STATION_TRAIT_BLACKOUT "station_trait_blackout"
-#define STATION_TRAIT_SLOW_SHUTTLE "station_trait_slow_shuttle"
-#define STATION_TRAIT_ION_STORMS "station_trait_ion_storms"
-#define STATION_TRAIT_RAD_STORMS "station_trait_rad_storms"
-#define STATION_TRAIT_IAN_ADVENTURE "station_trait_ian_adventure"
-#define STATION_TRAIT_SCARVES "station_trait_scarves"
-#define STATION_TRAIT_GALACTIC_GRANT "station_trait_galactic_grant"
-#define STATION_TRAIT_STRONG_SUPPLY_LINES "station_trait_strong_supply_lines"
-#define STATION_TRAIT_DEATHRATTLED_DEPARTMENT "station_trait_deathrattled_department"
-#define STATION_TRAIT_DEATHRATTLED_ALL "station_trait_deathrattled_all"
-#define STATION_TRAIT_BOUNTIFUL_BOUNTIES "station_trait_bountiful_bounties"
-#define STATION_TRAIT_LUCKY_WINNER "station_trait_lucky_winner"
-#define STATION_TRAIT_QUICK_SHUTTLE "station_trait_quick_shuttle"
-#define STATION_TRAIT_ANNOUNCEMENT_INTERN "station_trait_announcement_intern"
-#define STATION_TRAIT_ANNOUNCEMENT_SYSTEM "station_trait_announcement_system"
-#define STATION_TRAIT_NINJAS "station_trait_ninjas"
-#define STATION_TRAIT_POSTAL_WORKER_STRIKE "station_trait_postal_worker_strike"
-#define STATION_TRAIT_JOB_OVERFLOW "station_trait_job_overflow"
 
 ///Deathmatch traits
 #define TRAIT_DEATHMATCH_EXPLOSIVE_IMPLANTS "deathmath_explosive_implants"
