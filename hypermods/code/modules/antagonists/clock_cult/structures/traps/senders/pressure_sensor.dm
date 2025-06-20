@@ -14,7 +14,7 @@
 	component_datum = /datum/component/clockwork_trap/pressure_sensor
 	alpha = 60
 	layer = RUNE_LAYER
-	max_integrity = 5
+	max_integrity = 50
 	clockwork_desc = "Allows you to send a signal to linked traps when a non-servant steps on the plate."
 
 

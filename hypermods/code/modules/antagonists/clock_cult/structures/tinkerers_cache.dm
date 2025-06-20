@@ -161,6 +161,46 @@
 	power_use = 100
 	item_path = /obj/item/clockwork/trap_placer/flame_trap
 
+/datum/tinker_cache_item/trap/turret
+	name = "Turret Tile (Trap)"
+	power_use = 300
+	item_path = /obj/item/clockwork/trap_placer/turret
+
+/datum/tinker_cache_item/trap/sleepy
+	name = "Sleep Tile (Trap)"
+	power_use = 150
+	item_path = /obj/item/clockwork/trap_placer/sleepy
+
+/datum/tinker_cache_item/trap/spin
+	name = "Spin Plate (Trap)"
+	power_use = 100
+	item_path = /obj/item/clockwork/trap_placer/spin
+
+/datum/tinker_cache_item/trap/emp
+	name = "EMP Tile (Trap)"
+	power_use = 150
+	item_path = /obj/item/clockwork/trap_placer/emp
+
+/datum/tinker_cache_item/trap/explosive
+	name = "Explosive Lattice (Trap)"
+	power_use = 500
+	item_path = /obj/item/clockwork/trap_placer/explosive
+
+/datum/tinker_cache_item/trap/freeze
+	name = "Freeze Tile (Trap)"
+	power_use = 150
+	item_path = /obj/item/clockwork/trap_placer/freeze
+
+/datum/tinker_cache_item/trap/shock
+	name = "Electrified Tile (Trap)"
+	power_use = 150
+	item_path = /obj/item/clockwork/trap_placer/shock
+
+/datum/tinker_cache_item/trap/poison
+	name = "Envenomed Tile (Trap)"
+	power_use = 150
+	item_path = /obj/item/clockwork/trap_placer/poison
+
 /datum/tinker_cache_item/trap/delay
 	name = "Delayer (Trigger)"
 	item_path = /obj/item/wallframe/clocktrap/delay

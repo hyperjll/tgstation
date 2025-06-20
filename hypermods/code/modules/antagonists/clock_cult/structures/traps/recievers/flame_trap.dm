@@ -41,8 +41,8 @@
 		intruding_mob.adjust_fire_stacks(flame_stacks)
 		intruding_mob.ignite_mob()
 
-		COOLDOWN_START(src, flame_cooldown, flame_cd_time)
-		addtimer(CALLBACK(src, PROC_REF(shut_off)), 0.5 SECONDS)
+	COOLDOWN_START(src, flame_cooldown, flame_cd_time)
+	addtimer(CALLBACK(src, PROC_REF(shut_off)), 0.5 SECONDS)
 
 /obj/structure/destructible/clockwork/trap/flame_trap/proc/shut_off()
 	icon_state = initial(icon_state)

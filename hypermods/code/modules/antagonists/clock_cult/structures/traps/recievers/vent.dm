@@ -41,7 +41,7 @@
 		smoke.set_up(amount = 4, holder = intruding_mob, location = src)
 		smoke.start()
 
-		COOLDOWN_START(src, vent_cooldown, vent_cd_time)
+	COOLDOWN_START(src, vent_cooldown, vent_cd_time)
 
 
 /datum/component/clockwork_trap/steam_vent

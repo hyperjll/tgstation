@@ -47,8 +47,8 @@
 		intruding_mob.apply_damage(spike_damage, spike_dmg_type, spike_atk_location) // Fully var editable
 		intruding_mob.Knockdown(spike_knockdown_dur)
 
-		COOLDOWN_START(src, spike_cooldown, spike_cd_time)
-		addtimer(CALLBACK(src, PROC_REF(retract)), 2 SECONDS)
+	COOLDOWN_START(src, spike_cooldown, spike_cd_time)
+	addtimer(CALLBACK(src, PROC_REF(retract)), 2 SECONDS)
 
 /obj/structure/destructible/clockwork/trap/spike_trap/proc/retract()
 	icon_state = initial(icon_state)
