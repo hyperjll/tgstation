@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="../../../../"><link rel="stylesheet" href="dmdoc.css"><title>/obj/item/mod/module/harmbeam - /tg/ Station 13</title></head><body><header><a href="index.html">/tg/ Station 13</a> - <a href="index.html#modules">Modules</a> - <a href="index.html#types">Types</a></header><main><h1>harmbeam <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/mod/module.html">mod/module</a>/<a href="obj/item/mod/module/harmbeam.html">harmbeam</a></aside> <a href="https://github.com/hyperjll/tgstation/blob/05c2f55da404cc78f7aa4824f16fd10a74b582b8/hypermods/code/modules/mod/modules/modules_antag.dm#L576"><img src="git.png" width="16" height="16" title="hypermods/code/modules/mod/modules/modules_antag.dm 576"></a></h1><p>/obj/item/gun/energy/burningpaper
+name = &quot;paper dispenser&quot;
+desc = &quot;A small, easily concealable toy cannon. It fires paper, and lits it.&quot;
+icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+icon_state = &quot;paper_rifle&quot;
+ammo_type = list(/obj/item/ammo_casing/energy/burningpaper)
+fire_sound = 'sound/items/handling/paper_pickup.ogg'
+gun_flags = NOT_A_REAL_GUN
+selfcharge = TRUE</p>
+<p>/obj/item/ammo_casing/energy/burningpaper
+projectile_type = /obj/projectile/bullet/burningpaper
+icon = 'icons/obj/service/bureaucracy.dmi'
+icon_state = &quot;paperplane&quot;
+base_icon_state = &quot;paperplane&quot;
+select_name = &quot;paper&quot;
+fire_sound = 'sound/items/handling/paper_drop.ogg'
+delay = 1
+e_cost = LASER_SHOTS(20, STANDARD_CELL_CHARGE)</p>
+<p>/obj/projectile/bullet/burningpaper
+name = &quot;paper&quot;
+desc = &quot;Protect your eyes.&quot;
+damage = 3 // It's paper.
+damage_type = BRUTE
+icon = 'icons/obj/service/bureaucracy.dmi'
+icon_state = &quot;paperplane&quot;
+base_icon_state = &quot;paperplane&quot;
+range = 10
+shrapnel_type = null
+embed_type = null</p>
+<p>/obj/projectile/bullet/burningpaper/on_hit(atom/target, blocked = 0, pierce_hit)
+..()
+var/obj/item/paper/crisp_paper = new(get_turf(target))
+crisp_paper.desc = &quot;It's crisp and warm to the touch. Must be fresh.&quot;</p>
+<pre><code>crisp_paper.fire_act(1000, 100)
+</code></pre></main><footer>tgstation.dme <a href="https://github.com/hyperjll/tgstation/tree/05c2f55da404cc78f7aa4824f16fd10a74b582b8">05c2f55</a> (master) — <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.10.0</a></footer></body></html>
