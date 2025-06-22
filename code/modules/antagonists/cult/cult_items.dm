@@ -224,8 +224,8 @@ Striking a noncultist, however, will tear their flesh."}
 		),
 		// Time
 		PATH_TIME = list(
-			WIELDER_SPELLS = list(/datum/action/cooldown/spell/pointed/projectile/moon_parade),
-			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/moon_smile),
+			WIELDER_SPELLS = list(/datum/action/cooldown/spell/deja_vu),
+			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/eldritch_echoes),
 			SWORD_PREFIX = "ticking",
 		),
 		// Starter
