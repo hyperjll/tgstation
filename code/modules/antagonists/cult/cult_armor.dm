@@ -190,14 +190,14 @@
 	hoodtype = /obj/item/clothing/head/hooded/cult_hoodie/cult_shield
 
 /datum/armor/cultrobes_cult_shield
-	melee = 50
-	bullet = 40
-	laser = 50
-	energy = 50
-	bomb = 50
-	bio = 30
-	fire = 50
-	acid = 60
+	melee = 25
+	bullet = 20
+	laser = 25
+	energy = 25
+	bomb = 25
+	bio = 10
+	fire = 10
+	acid = 10
 
 /obj/item/clothing/suit/hooded/cultrobes/cult_shield/Initialize(mapload)
 	. = ..()

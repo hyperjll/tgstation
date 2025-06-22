@@ -1,6 +1,7 @@
 /// Some defines for items the daemon forge can create.
 #define NARSIE_ARMOR "Nar'Sien Hardened Armor"
 #define FLAGELLANT_ARMOR "Flagellant's Robe"
+#define SHIELDED_ARMOR "Empowered Cult Robes"
 #define ELDRITCH_SWORD "Eldritch Longsword"
 #define CURSED_BLADE "Cursed Ritual Blade"
 
@@ -24,6 +25,10 @@
 		FLAGELLANT_ARMOR = list(
 			PREVIEW_IMAGE = image(icon = 'icons/obj/clothing/suits/armor.dmi', icon_state = "cultrobes"),
 			OUTPUT_ITEMS = list(/obj/item/clothing/suit/hooded/cultrobes/berserker),
+			),
+		SHIELDED_ARMOR = list(
+			PREVIEW_IMAGE = image(icon = 'icons/obj/clothing/suits/armor.dmi', icon_state = "cult_hoodalt"),
+			OUTPUT_ITEMS = list(/obj/item/clothing/suit/hooded/cultrobes/cult_shield),
 			),
 		ELDRITCH_SWORD = list(
 			PREVIEW_IMAGE = image(icon = 'icons/obj/weapons/sword.dmi', icon_state = "cultblade"),
@@ -57,5 +62,6 @@
 
 #undef NARSIE_ARMOR
 #undef FLAGELLANT_ARMOR
+#undef SHIELDED_ARMOR
 #undef ELDRITCH_SWORD
 #undef CURSED_BLADE
