@@ -203,7 +203,8 @@
 	. = ..()
 	AddComponent( \
 		/datum/component/shielded, \
-		recharge_start_delay = 0 SECONDS, \
+		recharge_start_delay = 20 SECONDS, \
+		charge_increment_delay = 5 SECONDS, \
 		shield_icon_file = 'icons/effects/cult.dmi', \
 		shield_icon = "shield-cult", \
 		run_hit_callback = CALLBACK(src, PROC_REF(shield_damaged)), \
