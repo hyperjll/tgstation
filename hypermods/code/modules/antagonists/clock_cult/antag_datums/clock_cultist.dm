@@ -64,6 +64,7 @@
 	current.faction |= FACTION_CLOCK
 	current.grant_language(/datum/language/ratvar, TRUE, TRUE, LANGUAGE_CULTIST)
 	current.throw_alert("clockinfo", /atom/movable/screen/alert/clockwork/clocksense)
+	ADD_TRAIT(current, TRAIT_SEE_BLESSED_TILES, REF(src))
 	if(!iseminence(current))
 		add_team_hud(current)
 		communicate.Grant(current)
@@ -81,6 +82,7 @@
 	current.remove_language(/datum/language/ratvar, TRUE, TRUE, LANGUAGE_CULTIST)
 	current.clear_alert("clockinfo")
 	current.remove_filter("forbearance")
+	REMOVE_TRAIT(current, TRAIT_SEE_BLESSED_TILES, REF(src))
 	if(!iseminence(current))
 		communicate.Remove(current)
 		recall.Remove(current)
