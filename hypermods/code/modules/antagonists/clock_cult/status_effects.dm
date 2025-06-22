@@ -50,3 +50,36 @@
 
 /datum/movespeed_modifier/clock_interdiction
 	multiplicative_slowdown = 1.5
+
+
+/datum/status_effect/clockwork_slab_regen
+	id = "clockwork_slab_regen"
+	alert_type = null
+	duration = STATUS_EFFECT_PERMANENT
+	/// Whether we healed from our last tick
+	var/healed_last_tick = FALSE
+
+/datum/status_effect/clockwork_slab_regen/tick(seconds_between_ticks)
+	healed_last_tick = FALSE
+	var/need_mob_update = FALSE
+
+	if(owner.getBruteLoss() > 0)
+		need_mob_update += owner.adjustBruteLoss(-0.25, updating_health = FALSE)
+		healed_last_tick = TRUE
+
+	if(owner.getFireLoss() > 0)
+		need_mob_update += owner.adjustFireLoss(-0.25, updating_health = FALSE)
+		healed_last_tick = TRUE
+
+	if(owner.getToxLoss() > 0)
+		need_mob_update += owner.adjustToxLoss(-0.25, updating_health = FALSE, forced = TRUE)
+		healed_last_tick = TRUE
+
+	if(need_mob_update)
+		owner.updatehealth()
+
+	// Technically, "healed this tick" by now.
+	if(healed_last_tick)
+		new /obj/effect/temp_visual/heal(get_turf(owner), COLOR_RED)
+
+	return

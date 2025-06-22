@@ -262,3 +262,38 @@ GLOBAL_LIST_INIT(clockwork_slabs, list())
 			bind_spell(living_user, scripture, positions.Find(position))
 
 #undef MAXIMUM_QUICKBIND_SLOTS
+
+// Upgraded clockwork slab by saccing blood culties on a vitality matrix
+
+/obj/item/clockwork/clockwork_slab/narsie_upgrade
+	name = "Vitality Clockwork Slab"
+	desc = "A mechanical-looking device filled with intricate cogs that swirl to their own accord. You can feel it beating..."
+	clockwork_desc = "A beautiful work of art, harnessing mechanical energy for a variety of useful powers while providing passive regeneration to it's wielder while pocketed or in hand."
+	icon_state = "clockwork_slab_n"
+
+/obj/item/clockwork/clockwork_slab/narsie_upgrade/pickup(mob/user)
+	. = ..()
+	if(!isliving(user))
+		return
+
+	var/mob/living/carbon/human_user = user
+
+	if(!IS_CLOCK(human_user))
+		return
+
+	if(human_user.has_status_effect(/datum/status_effect/clockwork_slab_regen))
+		return
+
+	human_user.apply_status_effect(/datum/status_effect/clockwork_slab_regen)
+
+/obj/item/clockwork/clockwork_slab/narsie_upgrade/dropped(mob/user)
+	. = ..()
+	if(!isliving(user))
+		return
+
+	var/mob/living/carbon/human_user = user
+
+	if(!human_user.has_status_effect(/datum/status_effect/clockwork_slab_regen))
+		return
+
+	human_user.remove_status_effect(/datum/status_effect/clockwork_slab_regen)

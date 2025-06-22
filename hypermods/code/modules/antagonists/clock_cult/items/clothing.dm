@@ -178,6 +178,69 @@
 	animate(wearer, alpha = previous_alpha, time = 3 SECONDS)
 	REMOVE_TRAIT(wearer, TRAIT_UNKNOWN, CLOTHING_TRAIT)
 
+/// Super armor gained by saccing nar'sie cultists at a vitality matrix
+
+/obj/item/clothing/suit/clockwork/shielded
+	name = "shielded clockwork armor"
+	desc = "A bronze suit of armor incorporating evil energies capable of shielding the wearer from harm."
+	icon = 'hypermods/icons/obj/clock_cult/clockwork_garb.dmi'
+	worn_icon = 'hypermods/icons/mob/clock_cult/clockwork_garb_worn.dmi'
+	icon_state = "clockwork_cuirass_shield"
+	inhand_icon_state = null
+	w_class = WEIGHT_CLASS_BULKY
+	armor_type = /datum/armor/suit_clockwork_shield
+
+/datum/armor/suit_clockwork_shield
+	melee = 25
+	bullet = 25
+	laser = 25
+	energy = 25
+	bomb = 80
+	bio = 100
+	fire = 100
+	acid = 100
+
+/datum/armor/suit_clockwork_shield_empowered
+	melee = 35
+	bullet = 35
+	laser = 35
+	energy = 35
+	bomb = 100
+	bio = 100
+	fire = 100
+	acid = 100
+
+/obj/item/clothing/suit/clockwork/shielded/Initialize(mapload)
+	. = ..()
+	AddComponent( \
+		/datum/component/shielded, \
+		recharge_start_delay = 10 SECONDS, \
+		charge_increment_delay = 5 SECONDS, \
+		shield_icon_file = 'hypermods/icons/obj/clock_cult/clockwork_effects.dmi', \
+		shield_icon = "clock_shield", \
+		run_hit_callback = CALLBACK(src, PROC_REF(shield_damaged)), \
+	)
+
+/obj/item/clothing/suit/clockwork/shielded/equipped(mob/living/user, slot)
+	..()
+	if(!IS_CLOCK(user))
+		to_chat(user, span_ratvar("\"I won't allow you.\""))
+		to_chat(user, span_warning("An overwhelming force overpowers you!"))
+		user.dropItemToGround(src, TRUE)
+		user.set_dizzy_if_lower(1 MINUTES)
+		user.Paralyze(100)
+
+///Callback when the shield breaks, since cult robes are stupid and have different effects.
+/obj/item/clothing/suit/clockwork/shielded/proc/shield_damaged(mob/living/wearer, attack_text, new_current_charges)
+	wearer.visible_message(span_danger("[wearer]'s robes neutralize [attack_text] in a burst of sparks!"))
+	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
+	sparks.set_up(1, 1, src)
+	sparks.start()
+	if(new_current_charges == 0)
+		wearer.visible_message(span_danger("The shield around [wearer] suddenly disappears!"))
+
+///
+
 /obj/item/clothing/glasses/clockwork
 	name = "base clock glasses"
 	icon = 'hypermods/icons/obj/clock_cult/clockwork_garb.dmi'

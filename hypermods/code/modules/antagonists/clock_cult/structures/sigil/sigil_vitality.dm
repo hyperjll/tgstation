@@ -33,6 +33,9 @@
 	if(!.)
 		return FALSE
 
+	if(!affected_mob)
+		return FALSE
+
 	if(IS_CLOCK(affected_mob))
 		deltimer(active_timer)
 		active_timer = null
@@ -102,6 +105,10 @@
 	if(IS_CULTIST(affected_mob)) //for now these just give extra vitality, but at some point I need to make them give something unique, maybe the gun?
 		send_clock_message(null, span_clockred("The dog of Nar'sie, [affected_mob] has had their vitality drained, rejoice!"))
 		GLOB.clock_vitality = min(GLOB.clock_vitality + 20, MAX_CLOCK_VITALITY)
+		if(prob(70))
+			new /obj/item/clockwork/clockwork_slab/narsie_upgrade(get_turf(src))
+		else
+			new /obj/item/clothing/suit/clockwork/shielded(get_turf(src))
 	else if(IS_HERETIC(affected_mob))
 		send_clock_message(null, span_clockred("The heretic, [affected_mob] has had their vitality drained, rejoice!"))
 		GLOB.clock_vitality = min(GLOB.clock_vitality + 30, MAX_CLOCK_VITALITY)
