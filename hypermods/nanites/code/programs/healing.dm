@@ -232,8 +232,8 @@
 
 /datum/nanite_program/organrepair
 	name = "Organ Repair"
-	desc = "The nanites begin repairing the host's organs should they be damaged."
-	use_rate = 0.8
+	desc = "The nanites begin repairing the host's organs should they be damaged. Does not include brain damage."
+	use_rate = 0.4
 	rogue_types = list(/datum/nanite_program/necrotic)
 
 /datum/nanite_program/organrepair/check_conditions()
@@ -246,7 +246,7 @@
 		to_chat(host_mob, "<span class='warning'>You feel your innards twitch.")
 
 	var/mob/living/carbon/C = host_mob
-	C.adjustOrganLoss(ORGAN_SLOT_BRAIN, -1)
+	//C.adjustOrganLoss(ORGAN_SLOT_BRAIN, -1)
 	C.adjustOrganLoss(ORGAN_SLOT_HEART, -0.5)
 	C.adjustOrganLoss(ORGAN_SLOT_LUNGS, -0.5)
 	C.adjustOrganLoss(ORGAN_SLOT_LIVER, -0.5)
