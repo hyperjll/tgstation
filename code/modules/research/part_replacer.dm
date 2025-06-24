@@ -69,6 +69,35 @@
 	if(. & ITEM_INTERACT_ANY_BLOCKER)
 		user.Beam(attacked_object, icon_state = "rped_upgrade", time = 0.5 SECONDS)
 
+	if(istype(attacked_object, /obj/machinery/power/apc))
+		var/obj/machinery/power/apc/apc = attacked_object
+
+		var/obj/item/stock_parts/power_store/battery/selected_battery
+
+		var/list/obj/item/battery_list = list()
+		//Assemble a list of current parts, then sort them by their rating!
+		for(var/obj/item/stock_parts/power_store/battery/possible_batteries in contents)
+			if(possible_batteries.get_part_rating() > apc.cell.get_part_rating())
+				battery_list += possible_batteries
+		if(!length(battery_list))
+			balloon_alert(user, "no superior batteries!")
+			return ITEM_INTERACT_FAILURE
+		if(!user.transferItemToLoc(selected_battery, src))
+			balloon_alert(user, "blocked!")
+			return ITEM_INTERACT_BLOCKING
+
+		selected_battery = pick(battery_list)
+
+		apc.cell.forceMove(src)
+		selected_battery.forceMove(apc)
+		apc.cell = selected_battery
+
+		src.contents -= selected_battery // Gotta manually remove to cuz forcemove doesn't do that for whatever reason.
+
+		user.visible_message(span_notice("[user.name] inserts the [selected_battery.name] to [src.name]!"))
+		balloon_alert(user, "[selected_battery.name] inserted")
+		play_rped_sound()
+
 /obj/item/storage/part_replacer/bluespace/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	return interact_with_atom(interacting_with, user, modifiers)
 
@@ -121,6 +150,7 @@
 		new /obj/item/stock_parts/micro_laser(src)
 		new /obj/item/stock_parts/matter_bin(src)
 		new /obj/item/stock_parts/power_store/cell/high(src)
+		new /obj/item/stock_parts/power_store/battery/high(src)
 
 /obj/item/storage/part_replacer/bluespace/tier2/PopulateContents()
 	for(var/i in 1 to 10)
@@ -130,6 +160,7 @@
 		new /obj/item/stock_parts/micro_laser/high(src)
 		new /obj/item/stock_parts/matter_bin/adv(src)
 		new /obj/item/stock_parts/power_store/cell/super(src)
+		new /obj/item/stock_parts/power_store/battery/super(src)
 
 /obj/item/storage/part_replacer/bluespace/tier3/PopulateContents()
 	for(var/i in 1 to 10)
@@ -139,6 +170,7 @@
 		new /obj/item/stock_parts/micro_laser/ultra(src)
 		new /obj/item/stock_parts/matter_bin/super(src)
 		new /obj/item/stock_parts/power_store/cell/hyper(src)
+		new /obj/item/stock_parts/power_store/battery/hyper(src)
 
 /obj/item/storage/part_replacer/bluespace/tier4/PopulateContents()
 	for(var/i in 1 to 10)
@@ -148,6 +180,7 @@
 		new /obj/item/stock_parts/micro_laser/quadultra(src)
 		new /obj/item/stock_parts/matter_bin/bluespace(src)
 		new /obj/item/stock_parts/power_store/cell/bluespace(src)
+		new /obj/item/stock_parts/power_store/battery/bluespace(src)
 
 //used in a cargo crate
 /obj/item/storage/part_replacer/cargo/PopulateContents()
