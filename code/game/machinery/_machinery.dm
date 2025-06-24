@@ -1070,14 +1070,6 @@
 		for(var/obj/item/secondary_part in part_list)
 			if(!istype(secondary_part, required_type))
 				continue
-			// If it's a corrupt or rigged cell, attempting to send it through Bluespace could have unforeseen consequences.
-			if(istype(secondary_part, /obj/item/stock_parts/power_store/cell) && works_from_distance)
-				var/obj/item/stock_parts/power_store/cell/checked_cell = secondary_part
-				// If it's rigged or corrupted, max the charge. Then explode it.
-				if(checked_cell.rigged || checked_cell.corrupted)
-					checked_cell.charge = checked_cell.maxcharge
-					checked_cell.explode()
-					break
 			if(secondary_part.get_part_rating() > current_rating)
 				//store name of part incase we qdel it below
 				var/secondary_part_name = secondary_part.name
