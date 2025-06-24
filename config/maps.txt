@@ -84,6 +84,11 @@ map theiastation
 	minplayers 30
 endmap
 
+map boxstation
+	minplayers 25
+	votable
+endmap
+
 # Debug-only maps.
 
 map gateway_test
