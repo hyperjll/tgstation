@@ -111,6 +111,24 @@
 	deconstruct(disassembled = TRUE)
 	return TRUE
 
+/obj/structure/bed/proc/chill_out(mob/living/target)
+	target.apply_status_effect(/datum/status_effect/bed_rest, BED_STRUCTURE_EFFECT)
+
+/obj/structure/bed/proc/thaw_them(mob/living/target)
+	target.remove_status_effect(/datum/status_effect/bed_rest, BED_STRUCTURE_EFFECT)
+
+/obj/structure/bed/post_buckle_mob(mob/living/buckled)
+	. = ..()
+	set_density(TRUE)
+	update_appearance()
+	chill_out(buckled)
+
+/obj/structure/bed/post_unbuckle_mob(mob/living/buckled)
+	. = ..()
+	set_density(FALSE)
+	update_appearance()
+	thaw_them(buckled)
+
 /// Medical beds
 /obj/structure/bed/medical
 	name = "medical bed"
