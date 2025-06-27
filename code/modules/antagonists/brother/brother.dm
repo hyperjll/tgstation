@@ -37,6 +37,7 @@
 
 	grant_conversion_skills()
 	carbon_owner.equip_conspicuous_item(new /obj/item/assembly/flash)
+	carbon_owner.equip_conspicuous_item(new /obj/item/choice_beacon/brothers)
 
 	var/is_first_brother = team.members.len == 1
 	if (!is_first_brother)
