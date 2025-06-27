@@ -223,6 +223,7 @@
 			on = FALSE
 	low_power_mode = FALSE
 	if(on)
+		playsound(loc, 'hypermods/sound/machines/light_tube_on.ogg', 50, TRUE)
 		var/brightness_set = brightness
 		var/power_set = bulb_power
 		var/color_set = bulb_colour
@@ -259,6 +260,7 @@
 					l_color = color_set
 					)
 	else if(has_emergency_power(LIGHT_EMERGENCY_POWER_USE) && !turned_off())
+		playsound(loc, 'hypermods/sound/machines/light_tube_on.ogg', 20, TRUE) // Sound for when turning off
 		use_power = IDLE_POWER_USE
 		low_power_mode = TRUE
 		START_PROCESSING(SSmachines, src)
@@ -524,8 +526,10 @@
 				break
 			on = !on
 			update(FALSE)
+			playsound(loc, 'hypermods/sound/machines/light_tube_on.ogg', 50, TRUE) // Sound for flicker toggle
 			sleep(rand(5, 15))
 		if(has_power())
+			playsound(loc, 'hypermods/sound/machines/light_tube_on.ogg', 50, TRUE) // Sound for flicker ends with the light on
 			on = (status == LIGHT_OK)
 		else
 			on = FALSE
