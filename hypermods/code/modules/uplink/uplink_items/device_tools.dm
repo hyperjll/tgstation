@@ -139,3 +139,11 @@
 	item = /obj/item/compressionkit
 	cost = 14
 	surplus = 0
+
+/datum/uplink_item/device_tools/illegal_payloads
+	name = "Illegal Grenade Payload Designs"
+	desc = "A design disk containing designs for HE Grenades, Riot Dart Grenades, and EMP Grenades. \
+			You must upload the designs to an autolathe to begin production."
+	item = /obj/item/disk/design_disk/illegal_payloads
+	cost = 7
+	surplus = 0
