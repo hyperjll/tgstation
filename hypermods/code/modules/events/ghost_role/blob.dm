@@ -1,14 +1,17 @@
 /datum/round_event_control/blob
 	name = "Blob"
 	typepath = /datum/round_event/ghost_role/blob
-	weight = 10
+	weight = 0
 	max_occurrences = 1
 
 	min_players = 20
 
-	dynamic_should_hijack = TRUE
+	//dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a new blob overmind."
+
+/datum/round_event_control/blob/can_spawn_event(players_amt, allow_magic)
+	return ..() && SSdynamic.antag_events_enabled
 
 /datum/round_event_control/blob/can_spawn_event(players, allow_magic = FALSE)
 	if(EMERGENCY_PAST_POINT_OF_NO_RETURN) // no blobs if the shuttle is past the point of no return

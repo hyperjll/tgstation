@@ -4,7 +4,7 @@
 	show_in_roundend = TRUE
 	show_in_antagpanel = TRUE
 	show_name_in_check_antagonists = TRUE
-	count_against_dynamic_roll_chance = FALSE
+	//count_against_dynamic_roll_chance = FALSE
 	show_to_ghosts = TRUE
 	/// The antagonist's master, used for objective
 	var/mob/living/doggo_master

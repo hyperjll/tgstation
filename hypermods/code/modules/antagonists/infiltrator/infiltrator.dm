@@ -1,7 +1,7 @@
 /datum/antagonist/traitor/infiltrator/invader
 	name = "Infiltrator"
 	antagpanel_category = "Infiltrator"
-	job_rank = ROLE_INFILTRATOR
+	pref_flag = ROLE_INFILTRATOR
 	hijack_speed = 1
 	hud_icon = 'hypermods/icons/mob/huds/antag_hud.dmi'
 	antag_hud_name = "infil_hud"
@@ -28,7 +28,7 @@
 	if(give_equipment)
 		equip_infiltrator(owner.current)
 	owner.current.mind.set_assigned_role(SSjob.get_job_type(/datum/job/infiltrator))
-	owner.current.mind.special_role = ROLE_INFILTRATOR
+	owner.current.mind.special_roles = ROLE_INFILTRATOR
 	uplink_handler.has_progression = FALSE
 	uplink_handler.has_objectives = FALSE
 

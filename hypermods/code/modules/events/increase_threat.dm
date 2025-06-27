@@ -4,10 +4,10 @@
 	typepath = /datum/round_event/increase_threat
 	weight = 1
 	category = EVENT_CATEGORY_ENTITIES
-	max_occurrences = 1
+	max_occurrences = 2
 
 /datum/round_event/increase_threat/start()
-	SSdynamic.mid_round_budget += 10
+	SSdynamic.try_spawn_midround(LIGHT_MIDROUND)
 
 /datum/round_event/increase_threat/announce(fake)
 	if(SSsecurity_level.get_current_level_as_number() < SEC_LEVEL_BLUE)

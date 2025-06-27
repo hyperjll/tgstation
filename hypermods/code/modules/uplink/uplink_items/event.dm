@@ -304,20 +304,3 @@
 /datum/uplink_item/role_restricted/lesser_nuclear_signal/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
 	force_event(/datum/round_event_control/operative, "a strange signal")
 	return source //For log icon
-
-/datum/uplink_item/role_restricted/spacepirates
-	name = "Summon Space Pirates"
-	desc = "When purchased, your uplink will send an encrypted signal to one of our nearby outposts, and we'll then send in the station coordinates to one of our pirate groups. Be warned that they may destroy cargo's operations. \
-			ATTENTION: WE CANNOT SEND PIRATES TO ANY STATIONS RESIDING UPON A PLANET (IceBox)"
-	item = ABSTRACT_UPLINK_ITEM
-	surplus = 0
-	progression_minimum = 30 MINUTES
-	limited_stock = 1
-	cost = 20
-	cant_discount = TRUE
-	restricted = TRUE
-	restricted_roles = list(JOB_QUARTERMASTER)
-
-/datum/uplink_item/role_restricted/spacepirates/spawn_item(spawn_path, mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
-	force_event(/datum/round_event_control/pirates, "an encrypted signal")
-	return

@@ -46,9 +46,9 @@
 
 /obj/item/syndicateReverseCard/examine(mob/user)
 	. = ..()
-	if(is_special_character(user))
-		. += span_info("Hold this in your hand when you are getting shot at to steal your opponent's gun. You'll lose this, so be careful!")
-		return
 	if(used)
 		. += span_warning("Something sinister is strapped to this card. It looks like it was once masked with some sort of cloaking field, which is now nonfunctional.")
+		return
+	else
+		. += span_info("Hold this in your hand when you are getting shot at to steal your opponent's gun. You'll lose this, so be careful!")
 		return

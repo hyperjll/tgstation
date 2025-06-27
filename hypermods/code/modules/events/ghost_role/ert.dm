@@ -10,7 +10,7 @@
 /datum/round_event_control/ert_setup/revs
 	name = "Anti-Rev Deathsquad"
 	typepath = /datum/round_event/ghost_role/ert_setup/revs
-	admin_setup = null
+	admin_setup = (/datum/event_admin_setup/input_number/minimum_players)
 
 /datum/round_event/ghost_role/ert_setup
 	minimum_required = 1
@@ -40,7 +40,7 @@
 	ert_member.dna.update_dna_identity()
 	var/datum/mind/Mind = new /datum/mind(chosen_one.key)
 	Mind.set_assigned_role(SSjob.get_job_type(/datum/job/ert_generic))
-	Mind.special_role = ROLE_DEATHSQUAD
+	Mind.special_roles = ROLE_DEATHSQUAD
 	Mind.active = TRUE
 	Mind.transfer_to(ert_member)
 	if(!ert_member.client?.prefs.read_preference(/datum/preference/toggle/nuke_ops_species)) // I'm just gonna use the nukie species toggle for this one, nobodies gonna care that much, right?
@@ -72,7 +72,6 @@
 	if(!ert_choice)
 		return
 	ert_team_pick = ert_choice
-	return ..()
 
 /datum/event_admin_setup/ert_setup/apply_to_event(datum/round_event/ghost_role/ert_setup/event)
 	event.ert_team_chosen = ert_team_pick

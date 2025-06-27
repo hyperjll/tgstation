@@ -15,7 +15,7 @@
 /datum/objective/protect/traitor_only/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Protect [target.name] the [!target_role_type ? target.assigned_role.title : target.special_role]. They are believed to be a syndicate agent, use your codewords or aid them in silence. Be sure to confirm their allegiance first."
+		explanation_text = "Protect [target.name] the [!target_role_type ? target.assigned_role.title : target.special_roles]. They are believed to be a syndicate agent, use your codewords or aid them in silence. Be sure to confirm their allegiance first."
 	else
 		explanation_text = "Free objective."
 
@@ -40,4 +40,4 @@
 		target = pick(possible_targets)
 
 	if(target?.current)
-		explanation_text = "Protect [target.name] the [!target_role_type ? target.assigned_role.title : target.special_role]. They are believed to be a syndicate agent, use your codewords or aid them in silence. Be sure to confirm their allegiance first."
+		explanation_text = "Protect [target.name] the [!target_role_type ? target.assigned_role.title : target.special_roles]. They are believed to be a syndicate agent, use your codewords or aid them in silence. Be sure to confirm their allegiance first."

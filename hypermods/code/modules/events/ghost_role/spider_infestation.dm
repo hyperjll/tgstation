@@ -1,14 +1,17 @@
 /datum/round_event_control/spider_infestation
 	name = "Spider Infestation"
 	typepath = /datum/round_event/spider_infestation
-	weight = 10
+	weight = 0
 	max_occurrences = 1
 	min_players = 20
-	dynamic_should_hijack = TRUE
+	//dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns spider eggs, ready to hatch."
 	min_wizard_trigger_potency = 5
 	max_wizard_trigger_potency = 7
+
+/datum/round_event_control/spider_infestation/can_spawn_event(players_amt, allow_magic)
+	return ..() && SSdynamic.antag_events_enabled
 
 /datum/round_event/spider_infestation
 	announce_when = 400
@@ -33,4 +36,3 @@
 		amount--
 	log_game("Midwife spider eggs were spawned via an event.")
 	return TRUE
-

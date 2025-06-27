@@ -3,12 +3,16 @@
 /datum/round_event_control/fugitives
 	name = "Spawn Fugitives"
 	typepath = /datum/round_event/ghost_role/fugitives
+	weight = 0
 	max_occurrences = 1
 	min_players = 20
 	earliest_start = 30 MINUTES //deadchat sink, lets not even consider it early on.
 	category = EVENT_CATEGORY_INVASION
 	description = "Fugitives will hide on the station, followed by hunters."
 	map_flags = EVENT_SPACE_ONLY
+
+/datum/round_event_control/fugitives/can_spawn_event(players_amt, allow_magic)
+	return ..() && SSdynamic.antag_events_enabled
 
 /datum/round_event/ghost_role/fugitives
 	minimum_required = 1
@@ -73,7 +77,6 @@
 	var/mob/living/carbon/human/S = new(landing_turf)
 	player_mind.transfer_to(S)
 	player_mind.set_assigned_role(SSjob.get_job_type(/datum/job/fugitive))
-	player_mind.special_role = ROLE_FUGITIVE
 	player_mind.add_antag_datum(/datum/antagonist/fugitive)
 	var/datum/antagonist/fugitive/fugitiveantag = player_mind.has_antag_datum(/datum/antagonist/fugitive)
 	fugitiveantag.greet(backstory)

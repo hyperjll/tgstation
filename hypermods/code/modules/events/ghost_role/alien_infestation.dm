@@ -1,13 +1,16 @@
 /datum/round_event_control/alien_infestation
 	name = "Alien Infestation"
 	typepath = /datum/round_event/ghost_role/alien_infestation
-	weight = 5
+	weight = 0
 
 	min_players = 10
 
-	dynamic_should_hijack = TRUE
+	//dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
 	description = "A xenomorph larva spawns on a random vent."
+
+/datum/round_event_control/alien_infestation/can_spawn_event(players_amt, allow_magic)
+	return ..() && SSdynamic.antag_events_enabled
 
 /datum/round_event_control/alien_infestation/can_spawn_event(players_amt, allow_magic = FALSE)
 	. = ..()

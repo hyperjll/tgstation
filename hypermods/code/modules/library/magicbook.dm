@@ -218,12 +218,14 @@
 			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Bad mutation activation) at [ADMIN_VERBOSEJMP(selected_turf)]")
 			user.log_message("used a [src] and backfired, resulting in Bad mutation activation.", LOG_ATTACK)
 		if(20)
-			//Increases the dynamic midround threat budget by 1.
+			//Try and use a light midround ruleset
 			selected_turf.visible_message(span_userdanger("Sinister magic flows outward from [src], a sense of dread fills your soul!"))
-			SSdynamic.mid_round_budget += 1
+			var/new_lights = rand(0, 1)
+			SSdynamic.rulesets_to_spawn[LIGHT_MIDROUND] += new_lights // 50/50% chance for it to add room for a new threat.
+			SSdynamic.try_spawn_midround(LIGHT_MIDROUND)
 
-			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Increased Midround Threat) at [ADMIN_VERBOSEJMP(selected_turf)]")
-			user.log_message("used a [src] and backfired, resulting in Increased Midround Threat.", LOG_ATTACK)
+			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Light Midround Threat) at [ADMIN_VERBOSEJMP(selected_turf)]")
+			user.log_message("used a [src] and backfired, resulting in Light Midround Threat.", LOG_ATTACK)
 
 // Random book spawner
 
@@ -965,12 +967,18 @@
 /obj/item/magicbook/threat
 	name = "Threat Report"
 	desc = "A sturdy book detailing a myriad of possible threats near the user's location. At the very back of the book is a red button that reads: 'Feeling lucky?' \
-			Has the potential to shift the station's orbit into more dangerous territory, leading to increased threats."
+			Has the potential to shift the station's orbit into more dangerous territory, leading to additional threats."
 	icon_state = "threat"
 	uses = 1
 
 /obj/item/magicbook/threat/do_effect(mob/user)
-	SSdynamic.mid_round_budget += 10
+	var/new_lights = rand(0, 1)
+	var/new_heavies = rand(1 - new_lights, 1) // guarantee a heavy if no new light
+	var/new_latejoins = rand(1 - new_heavies, 1) // guarantee a latejoin if no new heavy
+
+	SSdynamic.rulesets_to_spawn[LIGHT_MIDROUND] += new_lights
+	SSdynamic.rulesets_to_spawn[HEAVY_MIDROUND] += new_heavies
+	SSdynamic.rulesets_to_spawn[LATEJOIN] += new_latejoins
 
 	message_admins("[ADMIN_LOOKUPFLW(user)] used a [src]")
 	user.log_message("used a [src].", LOG_ATTACK)

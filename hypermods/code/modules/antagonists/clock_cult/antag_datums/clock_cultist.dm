@@ -2,7 +2,7 @@
 	name = "\improper Servant of Rat'var"
 	antagpanel_category = "Clock Cultist"
 	preview_outfit = /datum/outfit/clock/preview
-	job_rank = ROLE_CLOCK_CULTIST
+	pref_flag = ROLE_CLOCK_CULTIST
 	antag_moodlet = /datum/mood_event/cult
 	suicide_cry = ",r For Ratvar!!!"
 	ui_name = "AntagInfoClock"

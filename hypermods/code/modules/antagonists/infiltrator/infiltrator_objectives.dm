@@ -73,7 +73,7 @@
 		target = pick(possible_targets)
 
 	if(target?.current)
-		explanation_text = "Special intel has identified [target.name] the [!target_role_type ? target.assigned_role.title : target.special_role]. as a threat to Nanotrasen, ensure they are eliminated."
+		explanation_text = "Special intel has identified [target.name] the [!target_role_type ? target.assigned_role.title : target.special_roles]. as a threat to Nanotrasen, ensure they are eliminated."
 
 
 //advanced mulligan objective
@@ -160,7 +160,7 @@
 		target = pick(sci_targets)
 
 	if(target?.current)
-		explanation_text = "Make a stance against science's animal experimentation by assassinating [target.name] the [!target_role_type ? target.assigned_role.title : target.special_role]!"
+		explanation_text = "Make a stance against science's animal experimentation by assassinating [target.name] the [!target_role_type ? target.assigned_role.title : target.special_roles]!"
 
 
 

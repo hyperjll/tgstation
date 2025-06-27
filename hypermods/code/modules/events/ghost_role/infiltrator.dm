@@ -23,7 +23,7 @@
 	infiltrator.dna.update_dna_identity()
 	var/datum/mind/Mind = new /datum/mind(chosen_one.key)
 	Mind.set_assigned_role(SSjob.get_job_type(/datum/job/infiltrator))
-	Mind.special_role = ROLE_INFILTRATOR
+	Mind.special_roles = ROLE_INFILTRATOR
 	Mind.active = TRUE
 	Mind.transfer_to(infiltrator)
 	if(!infiltrator.client?.prefs.read_preference(/datum/preference/toggle/nuke_ops_species)) // Eh, we'll let this decide.

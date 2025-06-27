@@ -5,11 +5,14 @@
 	max_occurrences = 1
 	earliest_start = 1 HOURS
 	min_players = 20
-	dynamic_should_hijack = TRUE
+	//dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a slaughter demon, to hunt by travelling through pools of blood."
 	min_wizard_trigger_potency = 6
 	max_wizard_trigger_potency = 7
+
+/datum/round_event_control/slaughter/can_spawn_event(players_amt, allow_magic)
+	return ..() && SSdynamic.antag_events_enabled
 
 /datum/round_event/ghost_role/slaughter
 	minimum_required = 1

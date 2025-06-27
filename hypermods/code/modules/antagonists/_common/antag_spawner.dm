@@ -14,7 +14,7 @@
 	scat.ckey = our_client.ckey
 
 	scat.mind.add_antag_datum(antag_datum, creator_op ? creator_op.get_team() : null)
-	scat.mind.special_role = special_role_name
+	scat.mind.special_roles = special_role_name
 	scat.forceMove(pod)
 	new /obj/effect/pod_landingzone(get_turf(src), pod)
 
@@ -43,7 +43,7 @@
 	doggo.ckey = our_client.key
 
 	doggo.mind.add_antag_datum(antag_datum)
-	doggo.mind.special_role = special_role_name
+	doggo.mind.special_roles = special_role_name
 
 	if(length(GLOB.newplayer_start)) // needed as hud code doesn't render huds if the atom is in nullspace, so just move the dog somewhere safe
 		doggo.forceMove(pick(GLOB.newplayer_start))
@@ -306,7 +306,7 @@
 	if(prob(antag_chance)) // Ten percent chance for the reinforcement to be antag.
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -339,7 +339,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -372,7 +372,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -405,7 +405,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -438,7 +438,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -471,7 +471,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -504,7 +504,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -537,7 +537,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -570,7 +570,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -603,7 +603,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -636,7 +636,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -669,7 +669,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -702,7 +702,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -735,7 +735,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -768,7 +768,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -801,7 +801,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -834,7 +834,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -867,7 +867,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -900,7 +900,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -933,7 +933,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -966,7 +966,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -999,7 +999,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -1032,7 +1032,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -1065,7 +1065,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -1098,7 +1098,7 @@
 	if(prob(antag_chance))
 		respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
 
-	respawned_mind.special_role = special_role_name
+	respawned_mind.special_roles = special_role_name
 
 	respawned.equipOutfit(outfit)
 
@@ -1125,7 +1125,7 @@
 /// Support unit gets it's own very basic antag datum for admin logging.
 /datum/antagonist/traitor/traitor_support
 	name = "Syndicate Support Unit"
-	job_rank = ROLE_SYNDICATE_SUPPORT
+	pref_flag = ROLE_SYNDICATE_SUPPORT
 	employer = "Syndicate Support Unit"
 	show_in_roundend = FALSE
 	give_objectives = TRUE

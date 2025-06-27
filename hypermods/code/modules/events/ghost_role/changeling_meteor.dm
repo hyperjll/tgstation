@@ -8,12 +8,15 @@
 /datum/round_event_control/changeling
 	name = "Changeling Meteor"
 	typepath = /datum/round_event/ghost_role/changeling
-	weight = 8
+	weight = 0
 	max_occurrences = 3
 	min_players = 20
-	dynamic_should_hijack = TRUE
+	//dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
 	description = "A meteor containing a changeling is summoned and thrown at the exterior of the station."
+
+/datum/round_event_control/changeling/can_spawn_event(players_amt, allow_magic)
+	return ..() && SSdynamic.antag_events_enabled
 
 /datum/round_event/ghost_role/changeling
 	minimum_required = 1

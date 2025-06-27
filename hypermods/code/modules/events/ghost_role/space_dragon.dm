@@ -1,14 +1,17 @@
 /datum/round_event_control/space_dragon
 	name = "Spawn Space Dragon"
 	typepath = /datum/round_event/ghost_role/space_dragon
-	weight = 7
+	weight = 0
 	max_occurrences = 1
 	min_players = 20
-	dynamic_should_hijack = TRUE
+	//dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a space dragon, which will try to take over the station."
 	min_wizard_trigger_potency = 6
 	max_wizard_trigger_potency = 7
+
+/datum/round_event_control/space_dragon/can_spawn_event(players_amt, allow_magic)
+	return ..() && SSdynamic.antag_events_enabled
 
 /datum/round_event/ghost_role/space_dragon
 	minimum_required = 1

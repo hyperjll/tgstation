@@ -18,10 +18,10 @@
 
 /datum/antagonist/swarmer
 	name = "\improper Swarmer"
-	job_rank = ROLE_SWARMER
+	pref_flag = ROLE_SWARMER
 	show_to_ghosts = TRUE
 	show_in_antagpanel = FALSE
-	prevent_roundtype_conversion = FALSE
+	//prevent_roundtype_conversion = FALSE
 	var/datum/team/swarmer/swarmer_team
 	var/total_gained_resources = 0
 

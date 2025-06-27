@@ -3,15 +3,17 @@
 /datum/round_event_control/revenant
 	name = "Spawn Revenant" // Did you mean 'griefghost'?
 	typepath = /datum/round_event/ghost_role/revenant
-	weight = 7
+	weight = 0
 	max_occurrences = 1
 	min_players = 5
-	dynamic_should_hijack = TRUE
+	//dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns an angry, soul sucking ghost."
 	min_wizard_trigger_potency = 4
 	max_wizard_trigger_potency = 7
 
+/datum/round_event_control/revenant/can_spawn_event(players_amt, allow_magic)
+	return ..() && SSdynamic.antag_events_enabled
 
 /datum/round_event/ghost_role/revenant
 	var/ignore_mobcheck = FALSE

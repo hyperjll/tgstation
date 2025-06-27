@@ -1,13 +1,17 @@
 /datum/round_event_control/nightmare
 	name = "Spawn Nightmare"
 	typepath = /datum/round_event/ghost_role/nightmare
+	weight = 0
 	max_occurrences = 1
 	min_players = 20
-	dynamic_should_hijack = TRUE
+	//dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a nightmare, aiming to darken the station."
 	min_wizard_trigger_potency = 6
 	max_wizard_trigger_potency = 7
+
+/datum/round_event_control/nightmare/can_spawn_event(players_amt, allow_magic)
+	return ..() && SSdynamic.antag_events_enabled
 
 /datum/round_event/ghost_role/nightmare
 	minimum_required = 1
@@ -28,7 +32,6 @@
 	var/mob/living/carbon/human/S = new (spawn_loc)
 	player_mind.transfer_to(S)
 	player_mind.set_assigned_role(SSjob.get_job_type(/datum/job/nightmare))
-	player_mind.special_role = ROLE_NIGHTMARE
 	player_mind.add_antag_datum(/datum/antagonist/nightmare)
 	S.set_species(/datum/species/shadow/nightmare)
 	playsound(S, 'sound/effects/magic/ethereal_exit.ogg', 50, TRUE, -1)

@@ -3,10 +3,10 @@
 	show_in_antagpanel = TRUE
 	roundend_category = "bloodsuckers"
 	antagpanel_category = "Bloodsucker"
-	job_rank = ROLE_BLOODSUCKER
+	pref_flag = ROLE_BLOODSUCKER
 	antag_hud_name = "bloodsucker"
 	show_name_in_check_antagonists = TRUE
-	can_coexist_with_others = FALSE
+	//can_coexist_with_others = FALSE
 	hijack_speed = 0.5
 	hud_icon = 'hypermods/icons/bloodsuckers/bloodsucker_icons.dmi'
 	ui_name = "AntagInfoBloodsucker"
@@ -224,7 +224,7 @@
 	UnregisterSignal(SSsunlight, list(COMSIG_SOL_RANKUP_BLOODSUCKERS, COMSIG_SOL_NEAR_START, COMSIG_SOL_END, COMSIG_SOL_RISE_TICK, COMSIG_SOL_WARNING_GIVEN))
 	clear_powers_and_stats()
 	check_cancel_sunlight() //check if sunlight should end
-	owner.special_role = null
+	owner.special_roles = null
 	return ..()
 
 /datum/antagonist/bloodsucker/on_body_transfer(mob/living/old_body, mob/living/new_body)
@@ -504,3 +504,7 @@
 			gourmand_objective.owner = owner
 			gourmand_objective.objective_name = "Optional Objective"
 			objectives += gourmand_objective
+
+/datum/antagonist/bloodsucker/morepoints
+	name = "\improper Bloodsucker (Midround)"
+	bloodsucker_level_unspent = 3

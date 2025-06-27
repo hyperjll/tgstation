@@ -1,12 +1,15 @@
 /datum/round_event_control/morph
 	name = "Spawn Morph"
 	typepath = /datum/round_event/ghost_role/morph
-	weight = 0
+	weight = 1 // Raised to 1 from 0, cuz teehee
 	max_occurrences = 1
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a hungry shapeshifting blobby creature."
 	min_wizard_trigger_potency = 4
 	max_wizard_trigger_potency = 7
+
+/datum/round_event_control/morph/can_spawn_event(players_amt, allow_magic)
+	return ..() && SSdynamic.antag_events_enabled
 
 /datum/round_event/ghost_role/morph
 	minimum_required = 1
@@ -26,7 +29,6 @@
 	var/mob/living/basic/morph/corpus_accipientis = new(spawn_loc)
 	player_mind.transfer_to(corpus_accipientis)
 	player_mind.set_assigned_role(SSjob.get_job_type(/datum/job/morph))
-	player_mind.special_role = ROLE_MORPH
 	player_mind.add_antag_datum(/datum/antagonist/morph)
 	SEND_SOUND(corpus_accipientis, sound('sound/effects/magic/mutate.ogg'))
 	message_admins("[ADMIN_LOOKUPFLW(corpus_accipientis)] has been made into a morph by an event.")

@@ -7,7 +7,7 @@
 	name = "\improper Traitor"
 	roundend_category = "traitors"
 	antagpanel_category = "Traitor"
-	job_rank = ROLE_TRAITOR
+	pref_flag = ROLE_TRAITOR
 	antag_moodlet = /datum/mood_event/focused
 	antag_hud_name = "traitor"
 	hijack_speed = 0.5 //10 seconds per hijack stage by default
@@ -74,8 +74,6 @@
 	src.give_objectives = give_objectives
 
 /datum/antagonist/traitor/on_gain()
-	owner.special_role = job_rank
-
 	if(give_uplink)
 		owner.give_uplink(silent = TRUE, antag_datum = src)
 	generate_replacement_codes()
@@ -129,7 +127,6 @@
 		uplink_handler.can_replace_objectives = null
 		uplink_handler.replace_objectives = null
 	owner.take_uplink()
-	owner.special_role = null
 	owner.forget_crafting_recipe(/datum/crafting_recipe/syndicate_uplink_beacon)
 	return ..()
 
@@ -447,3 +444,8 @@
 
 #undef FLAVOR_FACTION_SYNDICATE
 #undef FLAVOR_FACTION_NANOTRASEN
+
+/datum/antagonist/traitor/on_respawn(mob/new_character)
+	SSjob.equip_rank(new_character, new_character.mind.assigned_role, new_character.client)
+	new_character.mind.give_uplink(silent = TRUE, antag_datum = src)
+	return TRUE
