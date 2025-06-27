@@ -1,6 +1,6 @@
 /datum/crafting_recipe/syndifultonpack
 	name = "Syndicate Fulton Extraction Pack"
-	result = /obj/item/extraction_pack/syndicate
+	result = /obj/item/extraction_pack/non_contractor
 	time = 10 SECONDS
 	reqs = list(/obj/item/stack/sheet/cloth = 10,
 				/obj/item/stock_parts/servo = 5,
