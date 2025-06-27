@@ -1,3 +1,8 @@
+/obj/item/extraction_pack/non_miner
+	can_use_indoors = TRUE
+	uses_left = 3
+	beacon_networks = list("station")
+
 /obj/item/extraction_pack/non_contractor
 	can_use_indoors = TRUE
 	uses_left = 3

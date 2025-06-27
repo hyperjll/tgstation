@@ -63,3 +63,27 @@
 		RND_CATEGORY_EQUIPMENT
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/extraction_pack
+	name = "Fulton Extraction Pack"
+	desc = "A fulton extraction pack designed to be used in any environment to secure assets and deliver them to specific locations designated by fulton cores."
+	id = "extraction_pack"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 3, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 3, /datum/material/plastic = SHEET_MATERIAL_AMOUNT * 5)
+	build_path = /obj/item/extraction_pack/non_miner
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_MEDICAL
+
+/datum/design/fulton_core
+	name = "Fulton Core"
+	desc = "A landmark beacon used as an endpoint for fulton extractions. Place one down, and you'll be able to send things to it with an extraction pack!"
+	id = "fulton_core"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/gold = SHEET_MATERIAL_AMOUNT * 1)
+	build_path = /obj/item/fulton_core
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_MEDICAL

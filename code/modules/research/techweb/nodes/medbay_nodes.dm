@@ -81,6 +81,8 @@
 		"medicalbed_emergency",
 		"piercesyringe",
 		"sleeper",
+		"extraction_pack",
+		"fulton_core",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	discount_experiments = list(/datum/experiment/scanning/reagent/haloperidol = TECHWEB_TIER_3_POINTS)
