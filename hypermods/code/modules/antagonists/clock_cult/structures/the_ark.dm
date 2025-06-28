@@ -21,11 +21,19 @@ GLOBAL_VAR_INIT(ratvar_risen, FALSE)
 	break_sound = null
 	debris = null
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF | FREEZE_PROOF
+	armor_type = /datum/armor/the_ark
 
 	///current charge state of the ark
 	var/current_state = ARK_STATE_BASE
 	///tracker for how long until rat'var is summoned in ARK_STATE_ACTIVE/ARK_STATE_SUMMONING
 	var/charging_for = 0
+
+/datum/armor/the_ark
+	melee = 20
+	bullet = 75
+	bomb = 100
+	fire = 100
+	acid = 100
 
 /obj/structure/destructible/clockwork/the_ark/Initialize(mapload)
 	. = ..()
@@ -102,6 +110,9 @@ GLOBAL_VAR_INIT(ratvar_risen, FALSE)
 	playsound(src, 'hypermods/sound/machines/clockcult/ark_damage.ogg', 75, FALSE)
 
 /obj/structure/destructible/clockwork/the_ark/process(seconds_per_tick)
+	if(atom_integrity < max_integrity) // If we're damaged, slowly recover.
+		atom_integrity += 1
+
 	if(current_state >= ARK_STATE_FINAL)
 		return
 
