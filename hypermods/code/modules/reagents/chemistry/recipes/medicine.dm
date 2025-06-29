@@ -30,6 +30,7 @@
 /datum/chemical_reaction/dylovene
 	results = list(/datum/reagent/medicine/dylovene = 3)
 	required_reagents = list(/datum/reagent/potassium = 1, /datum/reagent/silicon = 1, /datum/reagent/nitrogen = 1)
+	required_temp = 160
 
 /datum/chemical_reaction/antitoxin
 	results = list(/datum/reagent/medicine/antitoxin = 4)
