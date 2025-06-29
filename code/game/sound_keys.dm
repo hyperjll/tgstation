@@ -812,6 +812,21 @@
 	key = SFX_REGEN_MESH_DROP
 	file_paths = list('sound/items/regenerative_mesh/regen_mesh_drop1.ogg')
 
+/datum/sound_effect/bloodpack_begin
+	key = SFX_REGEN_BLOODPACK_BEGIN
+	file_paths = list('sound/misc/moist_impact.ogg')
+
+/datum/sound_effect/bloodpack_end
+	key = SFX_REGEN_BLOODPACK_END
+	file_paths = list('sound/misc/soggy.ogg')
+
+/datum/sound_effect/sheep_bleat
+	key = SFX_SHEEP_BLEAT
+	file_paths = list(
+		'sound/mobs/non-humanoids/sheep/sheep1.ogg',
+		'sound/mobs/non-humanoids/sheep/sheep2.ogg',
+		'sound/mobs/non-humanoids/sheep/sheep3.ogg',
+	)
 
 /* assoc lists go next */
 
