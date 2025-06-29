@@ -358,23 +358,23 @@
 
 /datum/techweb_node/nanite_experi_med
 	id = TECHWEB_NODE_NANITE_EXPERI_MED
-	display_name = "Experimental Medical Nanite Programming"
+	display_name = "Advanced Medical Nanite Programming"
 	description = "Nanite programs that provide unique and selective medical features to the host."
 	research_costs = list(
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_3_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_EXPERI)
-	design_ids = list("bodyaugment_nanites", "critstable_nanites", "corpsepreserve_nanites", "organrepair_nanites", "antidismember_nanites", "weakness_nanites", "hardiness_nanites")
+	design_ids = list("bodyaugment_nanites", "critstable_nanites", "corpsepreserve_nanites", "organrepair_nanites", "antidismember_nanites", "weakness_nanites", "hardiness_nanites", "mendingbrute_nanites", "mendingburn_nanites")
 
 /datum/techweb_node/nanite_experi_med_adv
 	id = TECHWEB_NODE_NANITE_EXPERI_MED_ADV
-	display_name = "Advanced Experimental Medical Nanite Programming"
+	display_name = "Experimental Medical Nanite Programming"
 	description = "Nanite programs that provide very useful medical-specific benefits to the host."
 	research_costs = list(
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_4_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_EXPERI_MED)
-	design_ids = list("woundfixer_nanites", "naniteresus_nanites", "synthflesh_nanites", "painnull_nanites", "alcoholic_nanites", "antikpa_nanites", "limbtach_nanites")
+	design_ids = list("mendingtoxin_nanites", "selfresp_nanites", "repairingplus_nanites", "woundfixer_nanites", "naniteresus_nanites", "synthflesh_nanites", "painnull_nanites", "alcoholic_nanites", "antikpa_nanites", "limbtach_nanites")
 
 /datum/techweb_node/nanite_experi_adv
 	id = TECHWEB_NODE_NANITE_EXPERI_ADV
@@ -384,7 +384,7 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_3_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_EXPERI)
-	design_ids = list("mendingbrute_nanites", "mendingburn_nanites", "mendingtoxin_nanites", "selfresp_nanites", "repairingplus_nanites", "antigibbing_nanites", "antirad_nanites", "weatherendure_nanites", "obsidian_nanites", "plantlike_nanites", "lungdestruction_nanites")
+	design_ids = list("antigibbing_nanites", "antirad_nanites", "weatherendure_nanites", "obsidian_nanites", "plantlike_nanites", "lungdestruction_nanites")
 
 /datum/techweb_node/nanite_magical
 	id = TECHWEB_NODE_NANITE_MAGIC
