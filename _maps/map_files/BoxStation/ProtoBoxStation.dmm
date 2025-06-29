@@ -45309,6 +45309,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
+"kOg" = (
+/obj/machinery/nanite_program_hub,
+/turf/open/floor/iron,
+/area/station/science/explab)
 "kOT" = (
 /obj/structure/rack,
 /obj/item/crowbar/red,
@@ -48414,6 +48418,12 @@
 /obj/effect/mapping_helpers/airlock/access/all/service/hydroponics,
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
+"nDJ" = (
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/science/explab)
 "nDV" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/siding/purple{
@@ -49730,6 +49740,8 @@
 	c_tag = "Research Division Testing Lab";
 	network = list("ss13","rd")
 	},
+/obj/item/disk/nanite_program,
+/obj/machinery/computer/nanite_cloud_controller,
 /turf/open/floor/iron,
 /area/station/science/explab)
 "oJa" = (
@@ -58412,6 +58424,7 @@
 /area/station/hallway/primary/aft)
 "woZ" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/nanite_chamber,
 /turf/open/floor/iron/white/corner{
 	dir = 1
 	},
@@ -60515,6 +60528,7 @@
 /obj/machinery/light/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/radio/intercom/directional/north,
+/obj/machinery/nanite_programmer,
 /turf/open/floor/iron,
 /area/station/science/explab)
 "ylC" = (
@@ -107461,7 +107475,7 @@ gXs
 xeP
 bHm
 suU
-jtF
+nDJ
 uhH
 kXt
 cYY
@@ -107975,7 +107989,7 @@ oUq
 oXS
 xaZ
 ezO
-jtF
+kOg
 uhH
 cYY
 qAf
