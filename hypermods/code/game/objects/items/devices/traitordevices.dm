@@ -490,8 +490,8 @@
 	if(ishuman(owner))
 		owner.alpha = 10
 		var/mob/living/carbon/human/H = owner
-		H.physiology.brute_mod *= 4
-		H.physiology.burn_mod *= 4
+		H.physiology.brute_mod *= 2
+		H.physiology.burn_mod *= 2
 	return ..()
 
 /datum/status_effect/cloaking_device/on_remove()
@@ -499,8 +499,8 @@
 	if(ishuman(owner))
 		owner.alpha = initial(owner.alpha)
 		var/mob/living/carbon/human/H = owner
-		H.physiology.brute_mod /= 4
-		H.physiology.burn_mod /= 4
+		H.physiology.brute_mod /= 2
+		H.physiology.burn_mod /= 2
 
 
 /obj/item/storage/portable_chem_mixer/chemicompiler
