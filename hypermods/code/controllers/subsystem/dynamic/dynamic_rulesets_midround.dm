@@ -15,6 +15,7 @@
 	)
 	//cost = 5
 	//requirements = list(50,40,20,10,5,5,3,3,3,3)
+	min_pop = 30 // Ensures good spread of sacrifice targets
 	repeatable = TRUE
 
 /datum/dynamic_ruleset/midround/from_living/hereticmid/assign_role(datum/mind/candidate)
