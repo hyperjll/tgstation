@@ -12,7 +12,7 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/stack/medical/bruise_pack = 1,
-		/obj/item/stack/medical/suture/emergency = 1,
+		/obj/item/stack/medical/bandage = 1,
 		/obj/item/stack/medical/mesh = 1,
 		/obj/item/stack/medical/ointment = 1,
 		/obj/item/stack/medical/bloodpack = 1,
