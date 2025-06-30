@@ -43341,6 +43341,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/storage/tools)
+"jiM" = (
+/obj/machinery/rnd/server/master,
+/turf/open/floor/circuit/telecomms/server,
+/area/station/science/server)
 "jiT" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -103090,7 +103094,7 @@ buU
 byf
 bzu
 bAz
-bzu
+jiM
 bDb
 bEm
 bEm
