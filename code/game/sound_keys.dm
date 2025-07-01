@@ -818,9 +818,6 @@
 		'sound/items/cigs/cig_pack_drop1.ogg',
 		'sound/items/cigs/cig_pack_drop2.ogg',
 	)
-/datum/sound_effect/bloodpack_begin
-	key = SFX_REGEN_BLOODPACK_BEGIN
-	file_paths = list('sound/misc/moist_impact.ogg')
 
 /datum/sound_effect/cig_pack_insert
 	key = SFX_CIG_PACK_INSERT
@@ -851,6 +848,9 @@
 	key = SFX_CIG_PACK_THROW_DROP
 	file_paths = list('sound/items/cigs/cig_pack_throw_drop1.ogg')
 
+/datum/sound_effect/bloodpack_begin
+	key = SFX_REGEN_BLOODPACK_BEGIN
+	file_paths = list('sound/misc/moist_impact.ogg')
 
 /datum/sound_effect/bloodpack_end
 	key = SFX_REGEN_BLOODPACK_END
