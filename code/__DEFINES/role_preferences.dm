@@ -43,6 +43,7 @@
 #define ROLE_SPIDER "Spider"
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
 #define ROLE_VOIDWALKER "Voidwalker"
+#define ROLE_SUNWALKER "Sunwalker"
 #define ROLE_HERETIC_MIDROUND "Heretic Awakening"
 #define ROLE_INFILTRATOR "Infiltrator"
 #define ROLE_LYCANTHROPY_VICTIM "Lycanthropy Victim"

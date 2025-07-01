@@ -109,6 +109,7 @@ GLOBAL_LIST_INIT(phobia_mobs, list(
 	)),
 	"skeletons" = typecacheof(list(/mob/living/basic/skeleton)),
 	"snakes" = typecacheof(list(/mob/living/basic/snake)),
+	"space" = typecacheof(list(/mob/living/basic/voidwalker)),
 	"the supernatural" = typecacheof(list(
 		/mob/dead/observer,
 		/mob/living/basic/bat,
@@ -124,6 +125,7 @@ GLOBAL_LIST_INIT(phobia_mobs, list(
 		/mob/living/basic/wizard,
 		/mob/living/basic/zombie,
 		/mob/living/simple_animal/bot/mulebot/paranormal,
+		/mob/living/basic/voidwalker,
 	)),
 ))
 
@@ -578,8 +580,6 @@ GLOBAL_LIST_INIT(phobia_species, list(
 		/datum/species/plasmaman,
 		/datum/species/skeleton,
 	)),
-	"space" = typecacheof(list(/datum/species/voidwalker)),
-	"supernatural" = typecacheof(list(/datum/species/voidwalker))
 ))
 
 /// Creates a regular expression to match against the given phobia
