@@ -53,3 +53,7 @@
 /datum/map_template/shuttle/arrival/fulp
 	suffix = "fulp"
 	name = "arrival shuttle (Fulp)"
+
+/datum/map_template/shuttle/arrival/fland
+	suffix = "fland"
+	name = "arrival shuttle (Fland)"

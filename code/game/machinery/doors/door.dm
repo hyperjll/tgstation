@@ -75,6 +75,10 @@
 	/// Has this airlock been hit by a jestographic sequencer?
 	var/jestergraphed = FALSE
 
+	/// A placeholder var imported from beestation, i'm putting this here cuz im too lazy to remove it from beestation maps. I may do something with it later.
+	var/req_access_txt
+	var/req_one_access_txt
+
 /datum/armor/machinery_door
 	melee = 30
 	bullet = 30

@@ -31,6 +31,10 @@
 	suffix = "selene"
 	name = "labour shuttle (Selene)"
 
+/datum/map_template/shuttle/labour/fland
+	suffix = "fland"
+	name = "labour shuttle (Fland)"
+
 // MINING SHUTTLES
 /datum/map_template/shuttle/mining
 	port_id = "mining"
@@ -59,6 +63,10 @@
 /datum/map_template/shuttle/mining/nebula
 	suffix = "nebula"
 	name = "mining shuttle (Nebula)"
+
+/datum/map_template/shuttle/mining/fland
+	suffix = "fland"
+	name = "mining shuttle (Fland)"
 
 // MINING COMMON SHUTTLES
 /datum/map_template/shuttle/mining_common

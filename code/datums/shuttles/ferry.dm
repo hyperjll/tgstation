@@ -43,3 +43,8 @@
 	suffix = "nebula"
 	name = "nebula transport ferry"
 	description = "A good ferry for a graceful trip with a breeze. Comes with rechargers."
+
+/datum/map_template/shuttle/ferry/fland
+	suffix = "fland"
+	name = "fland transport ferry"
+	description = "A decent ferry for a graceful trip. Comes with an emergency nanomed."

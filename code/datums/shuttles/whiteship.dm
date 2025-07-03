@@ -56,3 +56,8 @@
 	name = "Obelisk"
 	description = "A large research vessel affected by the Cult of Nar'Sie. PACMAN generator is not wired and next to main grid cabling, so it requires some work."
 	admin_notes = "Not actually an obelisk, has nonsentient cult constructs."
+
+/datum/map_template/shuttle/whiteship/fland
+	suffix = "fland"
+	name = "NT Fland Bar"
+	description = "A small vessel with a bar and garden to serve paying customers on-the-go."

@@ -25,6 +25,10 @@
 	var/initialized_button = FALSE
 	var/silicon_access_disabled = FALSE
 
+	/// A placeholder var imported from beestation, i'm putting this here cuz im too lazy to remove it from beestation maps. I may do something with it later.
+	var/req_access_txt
+	var/req_one_access_txt
+
 /obj/machinery/button/indestructible
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 

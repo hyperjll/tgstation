@@ -27,6 +27,9 @@
 
 	req_one_access = list(ACCESS_ENGINEERING, ACCESS_ROBOTICS)
 
+	/// A placeholder var imported from beestation, i'm putting this here cuz im too lazy to remove it from beestation maps. I may do something with it later.
+	var/freq
+
 /datum/armor/machinery_navbeacon
 	melee = 70
 	bullet = 70

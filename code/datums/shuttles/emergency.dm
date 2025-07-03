@@ -536,4 +536,12 @@
 	credit_cost = CARGO_CRATE_VALUE * 13
 	occupancy_limit = "45"
 
+/datum/map_template/shuttle/emergency/fland
+	suffix = "fland"
+	name = "Fland Emergency Shuttle"
+	description = "A shuttle containing all of the basic ammenities needed for a proper evacuation. \
+	It incidentally comes with a lot of free room."
+	credit_cost = CARGO_CRATE_VALUE * 14
+	occupancy_limit = "52"
+
 #undef EMAG_LOCKED_SHUTTLE_COST

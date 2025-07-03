@@ -89,6 +89,10 @@ map boxstation
 	votable
 endmap
 
+map flandstation
+	minplayers 30
+endmap
+
 # Debug-only maps.
 
 map gateway_test
