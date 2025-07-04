@@ -45,6 +45,7 @@
 	restricted = TRUE
 	cost = 7
 	limited_stock = 1
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/disruption/hacked_module
 	name = "Hacked AI Law Upload Module"
@@ -62,6 +63,7 @@
 	progression_minimum = 20 MINUTES
 	item = /obj/item/powersink
 	cost = 11
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/disruption/mousecubes

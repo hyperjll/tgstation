@@ -9,6 +9,7 @@
 	desc = "A single pair of X-Ray goggles, when worn they allow the wearer to see past any and all obstacles. Doesn't come with chameleon technology for stealth operations."
 	item = /obj/item/clothing/glasses/thermal/xray
 	cost = SPY_UPPER_COST_THRESHOLD
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/spy_unique/laserturret
 	name = "Disposable Laser Turret"

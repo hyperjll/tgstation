@@ -355,6 +355,8 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 #define SYNDIE_ILLEGAL_TECH (1 << 0)
 /// Does this item go off when scanned by a contraband scanner?
 #define SYNDIE_TRIPS_CONTRABAND (1 << 1)
+/// Can this item be redeemed via a security requisitions fulton to claim a reward?
+#define SYNDIE_ITEM_SEC_FULTONABLE (1 << 2)
 
 // Used for traitor objectives
 /// If the objective hasn't been taken yet

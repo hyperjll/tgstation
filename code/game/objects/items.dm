@@ -1911,6 +1911,14 @@
 			return TRUE
 	return FALSE
 
+/obj/item/proc/is_wanted_contraband()
+	for(var/datum/uplink_item/traitor_item as anything in SStraitor.uplink_items)
+		if(istype(src, traitor_item.item))
+			if(!(traitor_item.uplink_item_flags & SYNDIE_ITEM_SEC_FULTONABLE))
+				return FALSE
+			return TRUE
+	return FALSE
+
 /obj/item/apply_main_material_effects(datum/material/main_material, amount, multipier)
 	. = ..()
 	if(material_flags & MATERIAL_GREYSCALE)

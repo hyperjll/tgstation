@@ -89,6 +89,7 @@
 	cost = 2
 	surplus = 10
 	purchasable_from = ~UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosive_tools/explosivemines
 	name = "Box of Explosive Mines"

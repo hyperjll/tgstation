@@ -20,6 +20,7 @@
 	item = /obj/item/grenade/syndieminibomb
 	cost = 6
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/cat
 	name = "Feral cat grenade"

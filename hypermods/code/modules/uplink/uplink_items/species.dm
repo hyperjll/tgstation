@@ -8,6 +8,7 @@
 	progression_minimum = 30 MINUTES
 	item = /obj/item/dnainjector/superhuman
 	restricted_species = list(SPECIES_HUMAN)
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/hulk // cheaper...
 	name = "Hulk Mutator"
@@ -35,6 +36,7 @@
 	progression_minimum = 20 MINUTES
 	item = /obj/item/gun/energy/xenospitter
 	restricted_species = list(SPECIES_PLASMAMAN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/killertomatos
 	name = "Box of Killer Tomatoes"
@@ -69,6 +71,7 @@
 	cost = 1
 	surplus = 0
 	restricted_species = list(SPECIES_PODPERSON)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/eternal_diethylamine
 	name = "Eternal Flask of Diethylamine"
@@ -79,6 +82,7 @@
 	cost = 2
 	surplus = 0
 	restricted_species = list(SPECIES_PODPERSON)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/phytosiansmoke
 	name = "Phytosian Smoke Bomb"
@@ -222,6 +226,7 @@
 	progression_minimum = 30 MINUTES
 	item = /obj/item/book/granter/martial/plasma_fist
 	restricted_species = list(SPECIES_PLASMAMAN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/wirecrawl
 	name = "Modified Yellow Slime Extract"
@@ -230,6 +235,7 @@
 	cost = 16
 	item = /obj/item/book/granter/action/wirecrawl
 	restricted_species = list(SPECIES_ETHEREAL)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 // Hey, if you're reading this, you're probably asking why these aren't listed under species restricted.
 // Don't worry, that's intentional. These items below are only to ensure plasmamen cant purchase them.
@@ -245,6 +251,7 @@
 	surplus = 0
 	cost = 10
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/dangerous/lasereyes
 	name = "Laser Eyes Mutator"
@@ -257,6 +264,7 @@
 	cost = 20
 	 // Just a mutator, not necessarily high tech.
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/regenerative
 	name = "Regenerative Mutator"
@@ -265,6 +273,7 @@
 	cost = 3
 	surplus = 0
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/vitality
 	name = "Vitality Mutation Injector"
@@ -274,6 +283,7 @@
 	surplus = 15
 	progression_minimum = 15 MINUTES
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/metallineskin
 	name = "Metalline Gelatine Injector"
@@ -282,6 +292,7 @@
 	cost = 5
 	surplus = 20
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reflectiveskin
 	name = "Reflective Gelatine Injector"
@@ -290,6 +301,7 @@
 	cost = 5
 	surplus = 20
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 /**
 /datum/uplink_item/armor/superradproof
 	name = "Superior Radproofing Mutation"
@@ -298,4 +310,5 @@
 	cost = 4
 	surplus = 20
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 **/

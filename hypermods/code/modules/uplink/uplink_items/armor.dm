@@ -5,7 +5,7 @@
 /datum/uplink_item/armor
 	category = /datum/uplink_category/armor
 	surplus = 0
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
 
 /datum/uplink_item/armor/webvest
 	name = "Web Vest"
@@ -13,6 +13,7 @@
 	item = /obj/item/clothing/suit/armor/webvest
 	cost = 5
 	surplus = 30
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/webhelmet
 	name = "Web Helmet"
@@ -20,6 +21,7 @@
 	item = /obj/item/clothing/head/helmet/webhelmet
 	cost = 5
 	surplus = 35
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/armoredchameleon
 	name = "Armored Jumpsuit"
@@ -37,6 +39,7 @@
 	cost = 8
 	surplus = 20
 	progression_minimum = 20 MINUTES
+	//uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND // The energy shield is used by ERT also, so...
 
 /datum/uplink_item/armor/armoredtie
 	name = "Armored Tie"
@@ -65,6 +68,7 @@
 	cost = 9
 	surplus = 0
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactiveteleportsyndicate
 	name = "Augmented Teleportation Vest"
@@ -74,6 +78,7 @@
 	cost = 12
 	surplus = 10
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactiveincendiarysyndicate
 	name = "Augmented Incendiary Vest"
@@ -83,6 +88,7 @@
 	cost = 12
 	surplus = 5
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactivestealthsyndicate
 	name = "Augmented Stealth Vest"
@@ -92,6 +98,7 @@
 	cost = 12
 	surplus = 10
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactiveteslasyndicate
 	name = "Augmented Telsa Vest"
@@ -101,6 +108,7 @@
 	cost = 12
 	surplus = 10
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactiverepulsesyndicate
 	name = "Augmented Repulse Vest"
@@ -110,6 +118,7 @@
 	cost = 12
 	surplus = 10
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactivetablesyndicate
 	name = "Augmented Tabletop Vest"
@@ -119,6 +128,7 @@
 	cost = 12
 	surplus = 10
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactivehallucinatingsyndicate
 	name = "Augmented Hallucination Vest"
@@ -128,6 +138,7 @@
 	cost = 12
 	surplus = 10
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactiveradiationsyndicate
 	name = "Augmented Radioactive Vest"
@@ -137,6 +148,7 @@
 	cost = 12
 	surplus = 10
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactivebioscramblingsyndicate
 	name = "Augmented Bioscrambling Vest"
@@ -146,6 +158,7 @@
 	cost = 12
 	surplus = 10
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactivebarricadesyndicate
 	name = "Augmented Barricade Vest"
@@ -155,6 +168,7 @@
 	cost = 12
 	surplus = 10
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/reactiveectoplasmsyndicate
 	name = "Augmented Ectoplasm Vest"
@@ -164,6 +178,7 @@
 	cost = 12
 	surplus = 10
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/dermal_harden
 	name = "Dermal Hardening Cigarettes"
@@ -182,6 +197,7 @@
 	progression_minimum = 20 MINUTES
 	cost = 12
 	surplus = 20
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/suicide_vest
 	name = "Suicide Vest"
@@ -192,3 +208,4 @@
 	cost = 13
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND

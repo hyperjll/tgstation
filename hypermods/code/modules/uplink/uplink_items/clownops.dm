@@ -6,6 +6,7 @@
 	cost = 20
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/dangerous/mushpunch
 	name = "Sapienza Ophioglossoides"

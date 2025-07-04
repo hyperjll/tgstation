@@ -85,6 +85,7 @@
 	item = /obj/item/storage/mail_counterfeit_device
 	cost = 1
 	surplus = 30
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/deception/forensics_spofer
 	name = "Forensics Spoofing Kit"

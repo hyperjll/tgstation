@@ -12,6 +12,7 @@
 	item = /obj/item/mod/module/visor/thermal
 	cost = 2
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/night
 	name = "MODsuit Night Visor Module"
@@ -26,6 +27,7 @@
 	item = /obj/item/mod/module/chameleon
 	cost = 2
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/plate_compression
 	name = "MODsuit Plate Compression Module"
@@ -33,6 +35,7 @@
 	item = /obj/item/mod/module/plate_compression
 	cost = 1
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/noslip
 	name = "MODsuit Anti-Slip Module"
@@ -40,6 +43,7 @@
 	item = /obj/item/mod/module/noslip
 	cost = 1
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/shock_absorber
 	name = "MODsuit Shock-Absorber Module"
@@ -47,6 +51,7 @@
 	item = /obj/item/mod/module/shock_absorber
 	cost = 2
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/modsuit/wraith
 	name = "MODsuit Wraith Cloaking Module"
@@ -55,6 +60,7 @@
 	item = /obj/item/mod/module/stealth/wraith
 	cost = 3
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/mod_modules/dnanoremove
@@ -65,6 +71,7 @@
 	item = /obj/item/mod/module/dna_lock/noremove
 	purchasable_from = ~UPLINK_SPY
 	cost = 2
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/flamethrower
 	name = "MODsuit Flamethrower Module"
@@ -72,6 +79,7 @@
 	item = /obj/item/mod/module/flamethrower
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS || UPLINK_SPY)
 	cost = 4
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/springlock
 	name = "Disguised MODsuit Springlock Module"
@@ -89,6 +97,7 @@
 	item = /obj/item/mod/module/synditeleporter
 	cost = 4
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/syndiantigrav
 	name = "MODsuit Anti-Gravity Module"
@@ -104,6 +113,7 @@
 	item = /obj/item/mod/module/power_kick/syndicate
 	cost = 3
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/demoralizer
 	name = "MODsuit Demoralizer Module"
@@ -112,6 +122,7 @@
 	item = /obj/item/mod/module/demoralizer
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS || UPLINK_SPY) // Probably best not to demoralize your own team.
 	cost = 3
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/camera_blocker
 	name = "MODsuit Camera Camoflauge Module"
@@ -120,6 +131,7 @@
 	item = /obj/item/mod/module/welding/camera_vision
 	cost = 1
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/rad_protection
 	name = "MODsuit Radiation Shielding Module"
@@ -151,6 +163,7 @@
 	item = /obj/item/mod/module/emp_shield/pulse
 	cost = 2
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/miragedispenser
 	name = "MODsuit Mirage Grenade Dispenser Module"
@@ -159,6 +172,7 @@
 	item = /obj/item/mod/module/dispenser/mirage
 	cost = 2
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/fragdispenser
 	name = "MODsuit Fragmentation Grenade Dispenser Module"
@@ -167,6 +181,7 @@
 	item = /obj/item/mod/module/dispenser/frag
 	cost = 6
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/joint_torsion
 	name = "MODsuit Joint Torsion Module"
@@ -183,6 +198,7 @@
 	item = /obj/item/mod/module/recycler/donk
 	cost = 1
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/recyclerc9mm
 	name = "MODsuit 9mm Recycler Module"
@@ -191,6 +207,7 @@
 	item = /obj/item/mod/module/recycler/ammobox/c9mm
 	cost = 4
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/recyclerc45
 	name = "MODsuit .45 Recycler Module"
@@ -199,6 +216,7 @@
 	item = /obj/item/mod/module/recycler/ammobox/c45
 	cost = 5
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/recyclerc357
 	name = "MODsuit .357 Recycler Module"
@@ -207,6 +225,7 @@
 	item = /obj/item/mod/module/recycler/ammobox/c357
 	cost = 7
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/recyclerc10mm
 	name = "MODsuit 10mm Recycler Module"
@@ -215,6 +234,7 @@
 	item = /obj/item/mod/module/recycler/ammobox/c10mm
 	cost = 5
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/recyclerm50
 	name = "MODsuit 50ae Recycler Module"
@@ -223,6 +243,7 @@
 	item = /obj/item/mod/module/recycler/ammobox/m50
 	cost = 7
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/stealth
 	name = "MODsuit Stealth Module"
@@ -230,6 +251,7 @@
 	item = /obj/item/mod/module/stealth/syndicate
 	cost = 5 // The wraith module just came out and it's fucking 3 TC, granted, it's a bit more flimsy. This was previously 8 TC
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/electricpalm
 	name = "MODsuit Electric Palm Module"
@@ -239,6 +261,7 @@
 	item = /obj/item/mod/module/hacker/electricpalm
 	cost = 3
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/energy_net
 	name = "MODsuit Energy Net Module"
@@ -247,6 +270,7 @@
 	item = /obj/item/mod/module/energy_net/syndicate
 	cost = 6
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/stimpackmod
 	name = "MODsuit Stimpack Booster Module"
@@ -255,6 +279,7 @@
 	item = /obj/item/mod/module/adrenaline_boost/syndicate
 	cost = 3
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/pepper_shoulders
 	name = "MODsuit Pepper Defense Module"
@@ -305,3 +330,4 @@
 	item = /obj/item/mod/module/death_sphere
 	cost = 6
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND

@@ -16,6 +16,7 @@
 			Comes loaded with 6 Blast Grenades"
 	item = /obj/item/gun/ballistic/chinalake/unrestricted
 	cost = 16
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surplusonly/fireaxe
 	name = "Fire Axe"
@@ -46,6 +47,7 @@
 	item = /obj/item/melee/syndidagger
 	cost = 3
 	surplus = 50
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surplusonly/orion
 	name = "Orion .22 Silenced Pistol"
@@ -53,6 +55,7 @@
 	item = /obj/item/gun/energy/orion
 	cost = 8
 	surplus = 40
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surplusonly/kestral
 	name = "Kestral Revolver Case"
@@ -91,6 +94,7 @@
 	item = /obj/item/quickhack
 	cost = 2 // Like an airlock card, but worse.
 	surplus = 40
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surplusonly/plasma_gun
 	name = "Plasma Rifle"
@@ -99,6 +103,7 @@
 	item = /obj/item/gun/energy/plasma_gun
 	cost = 11 // Like the antique laser gun, but worse.
 	surplus = 30
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surplusonly/breaching
 	name = "Breaching Charge"
@@ -128,6 +133,7 @@
 	item = /obj/item/clothing/suit/hooded/syndicommand
 	cost = 8
 	surplus = 20
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surplusonly/laserturret
 	name = "Disposable Laser Turret"

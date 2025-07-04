@@ -13,6 +13,7 @@
 	item = /obj/item/shadowcloak
 	cost = 8
 	purchasable_from = ~UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_tools/nuclearshadowcloak
 	name = "Cloaker Belt"
@@ -20,12 +21,14 @@
 	item = /obj/item/shadowcloak
 	cost = 15
 	purchasable_from = UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_tools/syndireverse
 	name = "Bluespace Projectile Weapon Disrupter"
 	desc = "Hidden in an ordinary-looking playing card, this device will teleport an opponent's gun to your hand when they fire at you. Just make sure to hold this in your hand!"
 	item = /obj/item/syndicateReverseCard
 	cost = 4
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_tools/nocturine
 	name = "Nocturine Bottle"
@@ -100,6 +103,7 @@
 	item = /obj/item/holodisguiser
 	cost = 4
 	surplus = 40
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_tools/lightbreaker
 	name = "Light Breaker"
@@ -111,6 +115,7 @@
 	cost = 4
 	surplus = 30
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_tools/cloaking_device
 	name = "Cloaking Device"
@@ -123,6 +128,7 @@
 	cost = 14
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_tools/pickpocket
 	name = "Pickpocket Gun"
@@ -134,3 +140,4 @@
 	cost = 8
 	surplus = 10
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND

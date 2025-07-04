@@ -102,7 +102,7 @@
 	else
 		. += span_notice("\The [cell] is firmly in place. Ctrl-click with an empty hand to remove it.")
 
-/obj/item/inspector/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+/obj/item/inspector/interact_with_atom(atom/movable/interacting_with, mob/living/user, list/modifiers)
 	if(!user.Adjacent(interacting_with))
 		return ITEM_INTERACT_BLOCKING
 	if(cell_cover_open)
@@ -123,6 +123,24 @@
 		COOLDOWN_START(src, scanning_person, 4 SECONDS)
 		if(!do_after(user, 4 SECONDS, interacting_with))
 			return ITEM_INTERACT_BLOCKING
+
+	if(contraband_sender(interacting_with, user))
+		if(!istype(interacting_with, /obj/item)) // Can only send ITEMS not structures/atoms
+			return ITEM_INTERACT_BLOCKING
+		playsound(src, 'sound/items/pshoom/pshoom.ogg', 33, vary = TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, frequency = 0.33, ignore_walls = FALSE) // Taken from the spy uplink to de-sensitize spy sounds
+		balloon_alert(user, "wanted item detected! sending...")
+		if(!do_after(user, 4 SECONDS, interacting_with))
+			return ITEM_INTERACT_BLOCKING
+
+		var/obj/effect/extraction_holder/holder_obj = new(get_turf(interacting_with))
+		holder_obj.appearance = interacting_with.appearance
+		interacting_with.forceMove(holder_obj)
+		var/mutable_appearance/balloon2 = mutable_appearance('icons/effects/fulton_balloon.dmi', "fulton_expand", layer = VEHICLE_LAYER, appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM | KEEP_APART)
+		balloon2.pixel_z = 10
+		holder_obj.add_overlay(balloon2)
+		addtimer(CALLBACK(src, PROC_REF(create_balloon), interacting_with, user, holder_obj, balloon2), 0.4 SECONDS)
+
+		return ITEM_INTERACT_SUCCESS
 
 	if(contraband_scan(interacting_with, user))
 		playsound(src, 'sound/machines/uplink/uplinkerror.ogg', 40)
@@ -182,6 +200,83 @@
 			return TRUE
 
 	return FALSE
+
+/**
+ * Scans the carbon or item for "wanted" contraband, uplink items that can be traded for stuff.
+ *
+ * Arguments:
+ * - scanned - what or who is scanned?
+ * - user - who is performing the scanning?
+ */
+/obj/item/inspector/proc/contraband_sender(scanned, user)
+	if(isitem(scanned))
+		var/obj/item/contraband_item = scanned
+		var/contraband_status = contraband_item.is_wanted_contraband()
+		if((contraband_status && scans_correctly) || (!contraband_status && !scans_correctly))
+			return TRUE
+
+	return FALSE
+
+/**
+ * The balloon animation, stolen and refactored from the fulton extraction pack code.
+ *
+ * Arguments:
+ * - thing - the item that was scanned, and is wanted contraband.
+ * - user - who is responsible for the trade?
+ */
+/obj/item/inspector/proc/create_balloon(atom/movable/thing, mob/living/user, obj/effect/extraction_holder/holder_obj, mutable_appearance/balloon2)
+	var/obj/item/item_thing = thing
+
+	var/mutable_appearance/balloon = mutable_appearance('icons/effects/fulton_balloon.dmi', "fulton_balloon", layer = VEHICLE_LAYER, appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM | KEEP_APART)
+	balloon.pixel_z = 10
+	holder_obj.cut_overlay(balloon2)
+	holder_obj.add_overlay(balloon)
+	playsound(holder_obj.loc, 'sound/items/fulton/fultext_deploy.ogg', vol = 50, vary = TRUE, extrarange = -3)
+
+	animate(holder_obj, pixel_z = 10, time = 2 SECONDS, flags = ANIMATION_RELATIVE)
+	animate(pixel_z = 5, time = 1 SECONDS, flags = ANIMATION_RELATIVE)
+	animate(pixel_z = -5, time = 1 SECONDS, flags = ANIMATION_RELATIVE)
+	animate(pixel_z = 5, time = 1 SECONDS, flags = ANIMATION_RELATIVE)
+	animate(pixel_z = -5, time = 1 SECONDS, flags = ANIMATION_RELATIVE)
+
+	sleep(6 SECONDS)
+
+	playsound(holder_obj.loc, 'sound/items/fulton/fultext_launch.ogg', vol = 50, vary = TRUE, extrarange = -3)
+	animate(holder_obj, pixel_z = 1000, time = 3 SECONDS, flags = ANIMATION_RELATIVE)
+
+	sleep(3 SECONDS)
+
+	for(var/datum/uplink_item/traitor_item as anything in SStraitor.uplink_items)
+		if(istype(item_thing, traitor_item.item))
+			if(!(traitor_item.uplink_item_flags & SYNDIE_ITEM_SEC_FULTONABLE))
+				return
+			qdel(item_thing) // We remove the contraband
+			item_thing = new traitor_item.wanted_item_result(holder_obj) // Then replace it with the reward
+
+	holder_obj.appearance = item_thing.appearance // Be sure to update the appearance
+	holder_obj.add_overlay(balloon) // ... and re-add the balloon visuals.
+	animate(holder_obj, pixel_z = 1000, time = 0 SECONDS, flags = ANIMATION_RELATIVE) // Updating the appearance resets the location, send it back up.
+
+	sleep(1 SECONDS)
+
+	animate(holder_obj, pixel_z = -990, time = 5 SECONDS, flags = ANIMATION_RELATIVE)
+	animate(pixel_z = 5, time = 0.5 SECONDS, flags = ANIMATION_RELATIVE)
+	animate(pixel_z = -5, time = 0.5 SECONDS, flags = ANIMATION_RELATIVE)
+
+	sleep(6 SECONDS)
+
+	var/mutable_appearance/balloon3 = mutable_appearance('icons/effects/fulton_balloon.dmi', "fulton_retract", layer = VEHICLE_LAYER, appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM | KEEP_APART)
+	balloon3.pixel_z = 10
+	holder_obj.cut_overlay(balloon)
+	holder_obj.add_overlay(balloon3)
+
+	sleep(0.4 SECONDS)
+
+	holder_obj.cut_overlay(balloon3)
+	animate(holder_obj, pixel_z = -10, time = 0.5 SECONDS, flags = ANIMATION_RELATIVE)
+	sleep(0.5 SECONDS)
+	item_thing.forceMove(holder_obj.loc)
+	qdel(holder_obj)
 
 /**
  * Create our report

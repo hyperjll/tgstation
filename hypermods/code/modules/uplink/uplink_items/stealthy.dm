@@ -14,6 +14,7 @@
 	item = /obj/item/clothing/gloves/krav_maga/combatglovesplus
 	cost = 5
 	surplus = 0
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/cobra
 	name = "Cobra Case"
@@ -32,6 +33,7 @@
 	item = /obj/item/gun/ballistic/revolver/derringer
 	cost = 3
 	surplus = 50
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/donkbat
 	name = "Donk Baseball Bat"
@@ -64,6 +66,7 @@
 	cost = 4
 	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // Would easily fuck over your fellow operatives or make taking down high priority targets too easy.
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/mindswitch
 	name = "Mindswitch"
@@ -73,6 +76,7 @@
 	cost = 8
 	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // Would easily make taking down high priority targets too easy.
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/bladegloves
 	name = "Bladed Gloves"
@@ -81,6 +85,7 @@
 	item = /obj/item/clothing/gloves/knifeboxing
 	cost = 2
 	surplus = 20
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/riggedboxing
 	name = "Rigged Boxing Gloves"
@@ -104,6 +109,7 @@
 	progression_minimum = 15 MINUTES
 	cost = 1
 	surplus = 0 // occasionally bursts into flames due to sparks from the pod.
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/sleepybaton
 	name = "Incapacitation Baton"
@@ -115,6 +121,7 @@
 	surplus = 10
 	limited_stock = 1
 	purchasable_from = ~UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/pblowgun
 	name = "Professional Blowgun"
@@ -135,3 +142,4 @@
 	cost = 16
 	surplus = 0
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND

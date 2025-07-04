@@ -15,6 +15,7 @@
 	item = /obj/item/mod/control/pre_equipped/civilian/traitor
 	cost = 4
 	surplus = 15
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/suits/interdyne // Finally, it's about time this damn modsuit got more use.
 	name = "Interdyne Medical MODsuit"
@@ -28,6 +29,7 @@
 	progression_minimum = 10 MINUTES
 	cost = 18
 	surplus = 5
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/suits/juggernaut
 	name = "Cybersun Juggernaut MODsuit"
@@ -39,6 +41,7 @@
 	progression_minimum = 40 MINUTES
 	cost = 18
 	surplus = 5
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/suits/inquisitory
 	name = "Syndicate Dark Paladin MODsuit"
@@ -49,3 +52,4 @@
 	progression_minimum = 20 MINUTES
 	cost = 18
 	surplus = 5
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND

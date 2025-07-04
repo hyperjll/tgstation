@@ -42,6 +42,7 @@
 	cost = 1
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Also wouldn't be useful for non-botanist spies.
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/gatfruit_seed
 	name = "Gatfruit Seed Packet"
@@ -310,6 +311,7 @@
 	cost = 3
 	surplus = 50
 	restricted_roles = list(JOB_COOK, JOB_MEDICAL_DOCTOR, JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_SCIENTIST, JOB_CAPTAIN) // Virologist was here.
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/syndie_hypnotism_bundle
 	name = "Hypnotism Bundle"
@@ -428,6 +430,7 @@
 	item = /obj/item/storage/backpack/invisible
 	cost = 4
 	restricted_roles = list(JOB_MIME, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/helpful_barkeep_drinks
 	name = "Beneficial Drinks Care Package"
@@ -474,6 +477,7 @@
 	item = /obj/item/bodybag/invis
 	cost = 6
 	restricted_roles = list(JOB_CORONER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/powerlake
 	name = "Power Lake"
@@ -483,6 +487,7 @@
 	cost = 15
 	surplus = 8
 	restricted_roles = list(JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/lethal_flare
 	name = "Lethal Flare"
@@ -543,6 +548,7 @@
 	cost = 8
 	surplus = 10
 	restricted_roles = list(JOB_PARAMEDIC, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/paramedic_defib
 	name = "Combat Defibrillator"
@@ -585,6 +591,7 @@
 	cost = 2
 	surplus = 35
 	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/nadelauncher
 	name = "Grenade Launcher"
@@ -611,6 +618,7 @@
 	surplus = 0
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Letting virus symptoms pass as spy bounties would be hellish. Both for the spy and for the crew.
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/syndivirusbufferstealth
 	name = "STE. Gene Culture Bottle"
@@ -620,6 +628,7 @@
 	surplus = 0
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/syndivirusbufferresist
 	name = "SRE. Gene Culture Bottle"
@@ -629,6 +638,7 @@
 	surplus = 0
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/syndivirusbufferspeed
 	name = "SPD. Gene Culture Bottle"
@@ -638,6 +648,7 @@
 	surplus = 0
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/syndivirusbuffertrans
 	name = "STR. Gene Culture Bottle"
@@ -647,6 +658,7 @@
 	surplus = 0
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/syndisauce
 	name = "Box of Syndicate Sauce"
@@ -664,6 +676,7 @@
 	item = /obj/item/chainsaw/botany/syndicate
 	cost = 8
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/syndi_donkpockets
 	name = "Syndicate Donk Pockets"
@@ -688,6 +701,7 @@
 	cost = 10
 	progression_minimum = 15 MINUTES
 	restricted_roles = list(JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_PSYCHOLOGIST, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/gibtonite_refiner
 	name = "Gibtonite Refiner"
@@ -724,6 +738,7 @@
 	item = /obj/item/card/emag/doorjack/jester
 	cost = 3 // A temporary doorjacker that also temporarily halts authorized personnel.
 	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/xeno_organ_kit
 	name = "Xenomorph Organ Kit"
@@ -764,6 +779,7 @@
 	surplus = 10
 	refundable = TRUE
 	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/wetfloormine
 	name = "Wet Floor Mine"
@@ -773,6 +789,7 @@
 	cost = 5
 	surplus = 0
 	restricted_roles = list(JOB_JANITOR, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/engimodsuit
 	name = "Syndicate Engineering MODsuit"
@@ -905,6 +922,7 @@
 	cost = 16
 	surplus = 0
 	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/cyborg_factory
 	name = "Cyborg Factory Base"
@@ -918,6 +936,7 @@
 	cost = 25
 	surplus = 0
 	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/tearstache
 	name = "Teachstache Grenade"
@@ -927,6 +946,7 @@
 	cost = 3
 	surplus = 0
 	restricted_roles = list(JOB_ASSISTANT, JOB_CLOWN, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/cursedclownmask
 	name = "Cursed Clown Mask"
@@ -947,6 +967,7 @@
 	cost = 7
 	surplus = 10
 	restricted_roles = list(JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/hotbox
 	name = "Hotbox Lighter"
@@ -956,6 +977,7 @@
 	item = /obj/item/lighter/hotbox
 	cost = 2
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/waspbow
 	name = "Wasp Crossbow"
@@ -965,6 +987,7 @@
 	item = /obj/item/gun/energy/recharge/ebow/wasp
 	cost = 12
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/gibbingtrashcart
 	name = "Trash Compactor"
@@ -992,6 +1015,7 @@
 	cost = 8
 	surplus = 0
 	restricted_roles = list(JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/the_honkrender
 	name = "The Honkrender"
@@ -1001,6 +1025,7 @@
 	cost = 8
 	restricted = TRUE
 	restricted_roles = list(JOB_CLOWN, JOB_CHAPLAIN, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/holocarp
 	name = "Holocarp Parasites"
@@ -1013,6 +1038,7 @@
 	restricted = TRUE
 	refundable = TRUE
 	restricted_roles = list(JOB_COOK, JOB_CHAPLAIN, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/powergloves
 	name = "Power Gloves"
@@ -1024,6 +1050,7 @@
 	cost = 8
 	surplus = 10
 	restricted_roles = list(JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/tunnel_khans
 	name = "Tunnel Khans Scroll"
@@ -1033,6 +1060,7 @@
 	cost = 13
 	item = /obj/item/book/granter/martial/the_tunnel_arts
 	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/mining_points
 	name = "Mining Points Card"
@@ -1051,6 +1079,7 @@
 	cost = 7
 	surplus = 0
 	restricted_roles = list(JOB_BITRUNNER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/syndi_pka_gun
 	name = "Experimental Proto-Kinetic Accelerator"
@@ -1061,6 +1090,7 @@
 	cost = 8
 	surplus = 0
 	restricted_roles = list(JOB_SHAFT_MINER, JOB_QUARTERMASTER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/uty_reference
 	name = "Deputy Justice Kit"

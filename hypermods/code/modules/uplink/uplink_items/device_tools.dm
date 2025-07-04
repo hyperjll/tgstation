@@ -15,6 +15,7 @@
 			Comes with a hand drill and experimental welding tool instead of the usual tools we provide."
 	item = /obj/item/storage/toolbox/syndicate/deluxe
 	cost = 2
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/tactical_gloves
 	name = "Tactical Fingerless Gloves"
@@ -30,6 +31,7 @@
 			Designed to keep a victim unconscious, alive, and secured until they are transported to a required location."
 	item = /obj/item/bodybag/environmental/prisoner/syndicate
 	cost = 2
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/belt_bluecham
 	name = "Bluespace Chameleon Belt"
@@ -53,6 +55,7 @@
 	item = /obj/item/reagent_containers/spray/chemsprayer/freeze
 	cost = 5
 	surplus = 10
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/universal_key
 	name = "Universal Encryption Key"
@@ -120,6 +123,7 @@
 	item = /obj/item/storage/portable_chem_mixer/chemicompiler
 	cost = 8
 	surplus = 0
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/syndicate_radio_mine
 	name = "Radio Mines"
@@ -139,6 +143,7 @@
 	item = /obj/item/compressionkit
 	cost = 14
 	surplus = 0
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/illegal_payloads
 	name = "Illegal Grenade Payload Designs"
@@ -147,3 +152,4 @@
 	item = /obj/item/disk/design_disk/illegal_payloads
 	cost = 7
 	surplus = 0
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND

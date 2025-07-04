@@ -4,7 +4,6 @@
 
 /datum/uplink_item/melee
 	category = /datum/uplink_category/melee
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH
 
 
 /datum/uplink_item/melee/sword
@@ -15,6 +14,7 @@
 	item = /obj/item/melee/energy/sword/saber
 	cost = 6
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/powerfist
 	name = "Power Fist"
@@ -26,6 +26,7 @@
 	item = /obj/item/melee/powerfist
 	cost = 6
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/rapid
 	name = "Gloves of the North Star"
@@ -33,6 +34,7 @@
 	progression_minimum = 20 MINUTES
 	item = /obj/item/clothing/gloves/rapid
 	cost = 8
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/doublesword
 	name = "Double-Bladed Energy Sword"
@@ -42,6 +44,7 @@
 	item = /obj/item/dualsaber
 	cost = 13
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS //nukies get their own version
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/doublesword/get_discount_value(discount_type)
 	switch(discount_type)
@@ -69,6 +72,7 @@
 	progression_minimum = 15 MINUTES
 	surplus = 30
 	cost = 7
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/trident
 	name = "Electrified Trident"
@@ -79,6 +83,7 @@
 	progression_minimum = 25 MINUTES
 	surplus = 20
 	cost = 9
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/bostaff
 	name = "Bo Staff"
@@ -104,6 +109,7 @@
 	progression_minimum = 30 MINUTES
 	surplus = 25
 	cost = 12
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/espear
 	name = "Energy Spear"
@@ -115,6 +121,7 @@
 	progression_minimum = 30 MINUTES
 	surplus = 20
 	cost = 10
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/echainsaw
 	name = "Energy Chainsaw"
@@ -126,6 +133,7 @@
 	progression_minimum = 30 MINUTES
 	surplus = 0
 	cost = 15
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/fireyaxe
 	name = "Fire-y Axe"
@@ -146,6 +154,7 @@
 	cost = 14
 	surplus = 0
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/reagent_knife
 	name = "Reagent Knife"

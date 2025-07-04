@@ -34,6 +34,7 @@
 			Can bite painfully and comes equipped with a syndicate cat hardsuit for space walks."
 	item = /obj/item/antag_spawner/nuke_ops/syndicat
 	cost = 6
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/penetratorturret
 	name = "Disposable Penetrator Turret"
@@ -154,6 +155,7 @@
 	item = /obj/item/construction/rcd/syndicate
 	cost = 15
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/syndie_arcd
 	name = "Syndicate Advanced Rapid-Construction-Device"
@@ -161,6 +163,7 @@
 	item = /obj/item/construction/rcd/syndicate/ranged
 	cost = 30
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/syndie_forcefields
 	name = "Syndicate Forcefield Generator"
@@ -169,6 +172,7 @@
 	item = /obj/item/forcefield_projector/syndicate
 	cost = 12
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 // Ammo
 
@@ -255,6 +259,7 @@
 	item = /obj/item/gun/medicalreagentgun
 	cost = 15
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/hypospray_kit
 	name = "Syndicate Combat Hypospray Kit"
@@ -272,6 +277,7 @@
 	item = /obj/item/gun/medbeam/uber
 	cost = 25
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 // Implants
 

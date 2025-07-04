@@ -19,6 +19,7 @@
 	cost = 16
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/weapon_kits/clownsword
 	name = "Bananium Energy Sword"
@@ -28,6 +29,7 @@
 	cost = 3
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_SPY
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/weapon_kits/clownoppin
 	name = "Ultra Hilarious Firing Pin"
@@ -113,6 +115,7 @@
 	purchasable_from = UPLINK_CLOWN_OPS
 	restricted = TRUE
 	refundable = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcement/monkey_agent
 	name = "Simian Agent Reinforcements"
@@ -123,6 +126,7 @@
 	purchasable_from = UPLINK_CLOWN_OPS
 	restricted = TRUE
 	refundable = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcement/monkey_supplies
 	name = "Simian Agent Supplies"
@@ -133,6 +137,7 @@
 	purchasable_from = UPLINK_CLOWN_OPS
 	restricted = TRUE
 	refundable = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mech/honker
 	name = "Dark H.O.N.K."
@@ -150,6 +155,7 @@
 	cost = 6
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/badass/clownopclumsinessinjector //clowns can buy this too, but it's in the role-restricted items section for them
 	name = "Clumsiness Injector"

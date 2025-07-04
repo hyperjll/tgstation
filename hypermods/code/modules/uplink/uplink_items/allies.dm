@@ -8,6 +8,7 @@
 	limited_stock = 1
 	refundable = TRUE
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // This is necessary cuz it defaults to nukeop only.
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/totborg
 	name = "Cyborg Support Beacon"
@@ -19,6 +20,7 @@
 	limited_stock = 1
 	refundable = TRUE
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/reinforcements/dehy_carp
@@ -28,6 +30,7 @@
 	item = /obj/item/toy/plush/carpplushie/dehy_carp
 	cost = 1
 	purchasable_from = ALL
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/guardian
 	name = "Holoparasites"
@@ -40,6 +43,7 @@
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	restricted = TRUE
 	refundable = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/guardian/nukies // holoparasite ops when?
 	name = "Holoparasites"
@@ -53,6 +57,7 @@
 	cant_discount = TRUE
 	restricted = TRUE
 	refundable = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/hypnotic_flash
 	name = "Hypnotic Flash"
@@ -60,6 +65,7 @@
 	item = /obj/item/assembly/flash/hypnotic
 	cost = 7
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/hypnotic_grenade
 	name = "Hypnotic Grenade"
@@ -67,6 +73,7 @@
 	item = /obj/item/grenade/hypnotic
 	cost = 12
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/potion
 	name = "Syndicate Sentience Potion"
@@ -76,6 +83,7 @@
 	cost = 2
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	restricted = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/reinforcements/megadehydratedcarp
@@ -86,6 +94,7 @@
 	cost = 2
 	surplus = 10
 	purchasable_from = ALL
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/spongecapsules
 	name = "Syndicate Sponge Capsules"
@@ -107,6 +116,7 @@
 	surplus = 10
 	progression_minimum = 15 MINUTES
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/cyborgweapons
 	name = "Weapon Cyborg Module"
@@ -118,6 +128,7 @@
 	surplus = 0
 	progression_minimum = 30 MINUTES
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/cyborgmartyr
 	name = "Martyr Cyborg Module"
@@ -129,6 +140,7 @@
 	surplus = 10
 	progression_minimum = 20 MINUTES
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/betterselfrepair
 	name = "Superior Self-Repair Module"
@@ -171,3 +183,4 @@
 	surplus = 40
 	progression_minimum = 30 MINUTES
 	refundable = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND

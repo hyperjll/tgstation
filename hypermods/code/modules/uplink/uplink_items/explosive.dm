@@ -18,6 +18,7 @@
 	cost = 8
 	limited_stock = 1
 	surplus = 15
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/diseasegrenade
 	name = "Diseased Grenade"
@@ -259,6 +260,7 @@
 	cost = 20
 	surplus = 3
 	purchasable_from = UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/clusterminibombs
 	name = "Syndicate Minibomb Cluster"
@@ -267,6 +269,7 @@
 	cost = 15
 	surplus = 3
 	purchasable_from = UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/clusterspesscarp
 	name = "Space Carp Army"
@@ -275,6 +278,7 @@
 	cost = 15
 	surplus = 3
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/clusteremp
 	name = "EMP Clusterbomb"
@@ -283,6 +287,7 @@
 	cost = 10
 	surplus = 3
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/clustermanhacks
 	name = "Vicserator Clusterbomb"
@@ -291,6 +296,7 @@
 	cost = 20
 	surplus = 3
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/clusteracid
 	name = "Acidic Clusterbomb"
@@ -299,6 +305,7 @@
 	cost = 8
 	surplus = 3
 	purchasable_from = UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/clusterfire
 	name = "Inferno Clusterbomb"
@@ -307,6 +314,7 @@
 	cost = 10
 	surplus = 3
 	purchasable_from = UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/clustersmoke
 	name = "Smoke Clusterbomb"

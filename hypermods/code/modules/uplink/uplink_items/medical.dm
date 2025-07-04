@@ -39,7 +39,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/limborganregen
 	cost = 2
 	surplus = 10
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/medipenkit
 	name = "Medipen Kit"
@@ -87,7 +87,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/restorationnaniteinjector
 	cost = 3
 	surplus = 60
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/restore_nanite_kit
 	name = "Restoration Nanite kit"
@@ -115,7 +115,7 @@
 	item = /obj/item/reagent_containers/cup/bottle/eternal/omnizine
 	cost = 6
 	surplus = 25
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/mutationkit
 	name = "Mutation Toxin Kit"
@@ -133,7 +133,7 @@
 	cost = 2
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/syndihealvirus
 	name = "Syndicate Augmented Healing Virus"
@@ -145,7 +145,7 @@
 	surplus = 5
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/syndihealvirusnukie
 	name = "Syndicate Augmented Healing Virus"
@@ -156,7 +156,7 @@
 	cost = 15
 	surplus = 0
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/hackedhypo
 	name = "Hacked Hypospray"
@@ -177,7 +177,7 @@
 	cost = 8
 	surplus = 0
 	purchasable_from = (UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/evilmeds
 	name = "Box of Premium Medicine"

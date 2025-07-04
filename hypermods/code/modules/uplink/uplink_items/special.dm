@@ -170,6 +170,7 @@
 	item = /obj/item/grenade/c4/vortex
 	cost = 9
 	surplus = 0
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/vortex_charge/New()
 	..()
@@ -187,6 +188,7 @@
 	item = /obj/item/surplus_teleporter
 	cost = 8
 	surplus = 10 // It's a SURPLUS tele. Get it? It can be found it surplus crates!
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/surplus_tele/New()
 	..()
@@ -203,6 +205,7 @@
 	item = /obj/item/deployablemine/explosive/fakeian
 	cost = 12
 	surplus = 0
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/fakeian/New()
 	..()
@@ -275,6 +278,7 @@
 	item = /obj/item/batterer/cargoshuttle
 	cost = 3
 	surplus = 0
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/cargoshuttlebatterer/New()
 	..()
@@ -288,6 +292,7 @@
 	item = /obj/item/card/emag/botemagger
 	cost = 2
 	surplus = 0
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/botemagger/New()
 	..()
@@ -419,6 +424,7 @@
 	cost = 16
 	surplus = 0
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/ninjamodsuit/New()
 	..()
@@ -435,6 +441,7 @@
 	cost = 16
 	surplus = 0
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/ninjasword/New()
 	..()
@@ -463,6 +470,7 @@
 	item = /obj/item/card/emag/silicon_hack
 	cost = 2
 	surplus = 0
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/siliconmag/New()
 	..()

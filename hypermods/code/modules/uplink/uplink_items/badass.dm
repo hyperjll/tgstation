@@ -84,6 +84,7 @@
 	cost = 1
 	surplus = 0
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/badass/whetstone
 	name = "Syndicate Whetstone"
@@ -95,6 +96,7 @@
 	cost = 4
 	surplus = 0
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/badass/operativeclothes
 	name = "Operative Clothes"

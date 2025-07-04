@@ -18,6 +18,7 @@
 	item = /obj/item/mod/control/pre_equipped/infiltrator
 	cost = 6
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/suits/space_suit
 	name = "Syndicate Space Suit"
@@ -34,6 +35,7 @@
 	item = /obj/item/mod/control/pre_equipped/traitor
 	cost = 8
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS //you can't buy it in nuke, because the elite modsuit costs the same while being better
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/suits/modsuit/elite_traitor
 	name = "Elite Syndicate MODsuit"
@@ -45,3 +47,4 @@
 	progression_minimum = 30 MINUTES
 	cost = 16
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND

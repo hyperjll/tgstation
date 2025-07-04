@@ -12,6 +12,7 @@
 			After hacking a certain number of airlocks, the device will require some time to recharge."
 	item = /obj/item/card/emag/doorjack
 	cost = 3
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mobility/briefcase_launchpad
 	name = "Briefcase Launchpad"
@@ -29,6 +30,7 @@
 			Comes with 4 charges, recharges randomly. Warranty null and void if exposed to an electromagnetic pulse."
 	item = /obj/item/storage/box/syndie_kit/syndicate_teleporter
 	cost = 8
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mobility/dangerous_horse
 	name = "Boxed Syndicate Pony"
@@ -56,6 +58,7 @@
 			Additionally, these magboots may invert gravity upon the wearer, allowing for jetpack usage."
 	item = /obj/item/clothing/shoes/magboots/syndie/advanced
 	cost = 6
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mobility/mdrive
 	name = "Mirage Drive"
@@ -64,6 +67,7 @@
 			user and the target exists. Can also be used to deliver rapid-fire attacks onto targets you pass through."
 	item = /obj/item/mdrive
 	cost = 12
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mobility/angelcoolboy
 	name = "Angelic Potion"
@@ -122,6 +126,7 @@
 	cost = 10
 	surplus = 0 // Doesn't function with surplus crates
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	//uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND // That'd kinda suck to have security repo your ride, funny, but awful for that poor syndi.
 	var/the_ride = /obj/vehicle/ridden/syndiway
 
 /datum/uplink_item/mobility/syndiway/spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)

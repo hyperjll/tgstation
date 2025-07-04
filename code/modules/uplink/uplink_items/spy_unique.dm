@@ -52,28 +52,28 @@
 	desc = "A cycler shotgun. It's a shotgun that cycles between two barrels."
 	item = /obj/item/gun/ballistic/shotgun/automatic/dual_tube/deadly
 	cost = SPY_UPPER_COST_THRESHOLD
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE
 
 /datum/uplink_item/spy_unique/bulldog_shotgun
 	name = "Bulldog Shotgun"
 	desc = "A bulldog shotgun. It's a shotgun that shoots bulldogs."
 	item = /obj/item/gun/ballistic/shotgun/bulldog/unrestricted
 	cost = SPY_UPPER_COST_THRESHOLD
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE
 
 /datum/uplink_item/spy_unique/ansem_pistol
 	name = "Ansem Pistol"
 	desc = "A pistol that's really good at making people sleep."
 	item = /obj/item/gun/ballistic/automatic/pistol/clandestine
 	cost = SPY_UPPER_COST_THRESHOLD
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE
 
 /datum/uplink_item/spy_unique/rocket_launcher
 	name = "Rocket Launcher"
 	desc = "A rocket launcher. I would recommend against jumping with it."
 	item = /obj/item/gun/ballistic/rocketlauncher
 	cost = SPY_UPPER_COST_THRESHOLD - 1 // It's a meme item
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE
 
 /datum/uplink_item/spy_unique/shotgun_ammo/breacher_slug
 	name = "Box of Breacher Slugs"
@@ -85,7 +85,7 @@
 	desc = "A stealth belt that lets you sneak behind enemy lines."
 	item = /obj/item/shadowcloak/weaker
 	cost = SPY_UPPER_COST_THRESHOLD
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE
 
 /datum/uplink_item/spy_unique/medkit_lite
 	name = "Syndicate First Medic Kit"
@@ -113,4 +113,4 @@
 	desc = "Heavyweight titanium nunchucks, quickly knocking opponents to the ground, then just as easily smashing the opponent afterward."
 	item = /obj/item/melee/baton/nunchaku
 	cost = SPY_UPPER_COST_THRESHOLD
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE

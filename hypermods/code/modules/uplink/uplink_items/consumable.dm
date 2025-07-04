@@ -14,6 +14,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/manifoldinjector
 	cost = 5
 	surplus = 25
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/stimpack
 	name = "Stimpack"
@@ -23,6 +24,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/stimulants
 	cost = 3
 	surplus = 90
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/consumable/experistimpack
@@ -33,6 +35,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/experistimulants
 	cost = 5
 	surplus = 50
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/donkcostimpack
 	name = "Donk Co. Stimpack"
@@ -42,6 +45,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/donkcostim
 	cost = 5
 	surplus = 40
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/hyperzinepack
 	name = "Hyperzine Injector"
@@ -52,6 +56,7 @@
 	cost = 4
 	surplus = 40
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/juggernaut
 	name = "Juggernaut Stimpack"
@@ -61,6 +66,7 @@
 	cost = 8
 	surplus = 65
 	purchasable_from = UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/stimulant_kit
 	name = "Stimpack kit"
@@ -112,6 +118,7 @@
 	desc = "Strong flavor, dense smoke, infused with omnizine. Perfect for on-the-go healing."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 1
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/syndiecigsvarietypack
 	name = "Syndicate Variety Cigarettes"
@@ -146,6 +153,7 @@
 			A single dose is estimated to last 5 minutes."
 	item = /obj/item/reagent_containers/hypospray/medipen/pumpupplus
 	cost = 2
+
 /**
 /datum/uplink_item/consumable/syndicryo
 	name = "Cryogelidia Pills"
@@ -184,6 +192,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/shrink
 	cost = 8
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/final_fortuna
 	name = "Final Fortuna"
@@ -193,3 +202,4 @@
 	cost = 5
 	purchasable_from = UPLINK_TRAITORS
 	limited_stock = 1
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND

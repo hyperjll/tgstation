@@ -12,6 +12,7 @@
 			Works on both organs and cybernetics. Often useful for installing multiple of our cybernetics."
 	item = /obj/item/autosurgeon/syndicate
 	cost = 4
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surgical/reusableautosurgeon/New()
 	..()
@@ -25,6 +26,7 @@
 	item = /obj/item/cavitymanipulator
 	cost = 4
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surgical/regenerative
 	name = "Regenerative Implant"
