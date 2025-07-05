@@ -17,6 +17,7 @@
 	item = /obj/item/gun/ballistic/chinalake/unrestricted
 	cost = 16
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/marksman_revolver
 
 /datum/uplink_item/surplusonly/fireaxe
 	name = "Fire Axe"
@@ -56,6 +57,7 @@
 	cost = 8
 	surplus = 40
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/taser
 
 /datum/uplink_item/surplusonly/kestral
 	name = "Kestral Revolver Case"
@@ -72,6 +74,7 @@
 	item = /obj/item/storage/toolbox/guncase/spes
 	cost = 13
 	surplus = 40
+	wanted_item_result = /obj/item/gun/energy/taser
 
 /datum/uplink_item/surplusonly/saxitoxinnade
 	name = "Saxitoxin Grenade"

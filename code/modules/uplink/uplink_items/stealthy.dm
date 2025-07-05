@@ -83,6 +83,7 @@
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/ballistic/revolver/golden
 
 /datum/uplink_item/stealthy_weapons/crossbow
 	name = "Miniature Energy Crossbow"
@@ -97,6 +98,7 @@
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/e_gun/stun
 
 /datum/uplink_item/stealthy_weapons/contrabaton
 	name = "Contractor Baton"
@@ -109,3 +111,4 @@
 	limited_stock = 1
 	purchasable_from = UPLINK_TRAITORS | UPLINK_SPY
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/e_gun/advtaser

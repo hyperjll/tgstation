@@ -15,6 +15,7 @@
 	cost = 6
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/e_gun/mini
 
 /datum/uplink_item/melee/powerfist
 	name = "Power Fist"
@@ -27,6 +28,7 @@
 	cost = 6
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/e_gun/mini
 
 /datum/uplink_item/melee/rapid
 	name = "Gloves of the North Star"
@@ -35,6 +37,7 @@
 	item = /obj/item/clothing/gloves/rapid
 	cost = 8
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/e_gun/mini
 
 /datum/uplink_item/melee/doublesword
 	name = "Double-Bladed Energy Sword"
@@ -45,6 +48,7 @@
 	cost = 13
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS //nukies get their own version
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/laser/hellgun
 
 /datum/uplink_item/melee/doublesword/get_discount_value(discount_type)
 	switch(discount_type)
@@ -110,6 +114,7 @@
 	surplus = 25
 	cost = 12
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/photon
 
 /datum/uplink_item/melee/espear
 	name = "Energy Spear"
@@ -122,6 +127,7 @@
 	surplus = 20
 	cost = 10
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/photon
 
 /datum/uplink_item/melee/echainsaw
 	name = "Energy Chainsaw"
@@ -134,6 +140,7 @@
 	surplus = 0
 	cost = 15
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/photon
 
 /datum/uplink_item/melee/fireyaxe
 	name = "Fire-y Axe"
@@ -155,6 +162,7 @@
 	surplus = 0
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/photon
 
 /datum/uplink_item/melee/reagent_knife
 	name = "Reagent Knife"

@@ -72,7 +72,6 @@
 	cost = 12
 	surplus = 25
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/dangerous/syndikammerer
 	name = "Syndicate Kammerer"
@@ -167,6 +166,7 @@
 	cost = 14
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/e_gun/nuclear
 
 /datum/uplink_item/dangerous/demolecularisor
 	name = "Biological Demolecularisor"
@@ -213,6 +213,7 @@
 	progression_minimum = 15 MINUTES
 	purchasable_from = ~UPLINK_SPY // for the best
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/laser/hellgun
 
 /datum/uplink_item/dangerous/explosivereagentgun
 	name = "Explosive Reagent Gun"
@@ -227,3 +228,4 @@
 	cant_discount = TRUE
 	purchasable_from = ~UPLINK_SPY // for the best
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/ballistic/automatic/gyropistol

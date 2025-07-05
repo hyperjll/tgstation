@@ -68,6 +68,7 @@
 	item = /obj/item/mdrive
 	cost = 12
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/marksman_revolver
 
 /datum/uplink_item/mobility/angelcoolboy
 	name = "Angelic Potion"

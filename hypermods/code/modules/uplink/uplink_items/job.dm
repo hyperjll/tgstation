@@ -488,6 +488,7 @@
 	surplus = 8
 	restricted_roles = list(JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/energy/xray
 
 /datum/uplink_item/role_restricted/lethal_flare
 	name = "Lethal Flare"
@@ -1061,6 +1062,7 @@
 	item = /obj/item/book/granter/martial/the_tunnel_arts
 	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	wanted_item_result = /obj/item/gun/ballistic/automatic/pistol/deagle/gold
 
 /datum/uplink_item/role_restricted/mining_points
 	name = "Mining Points Card"
