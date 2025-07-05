@@ -10,8 +10,10 @@
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/bundles_tc/random
-	name = "Random Item"
-	desc = "Picking this will purchase a random item. Useful if you have some TC to spare or if you haven't decided on a strategy yet."
+	name = "Random Item (1+1 Deal)"
+	desc = "Picking this will purchase a random item. Useful if you have some TC to spare or if you haven't decided on a strategy yet. \
+			Now on a Buy-One-Get-One-Free deal indefinitely! Are you feeling lucky? \
+			Please be advised that some items like the bundle kits below are not subject to this deal, as they are already a bundle."
 	item = ABSTRACT_UPLINK_ITEM
 	cost = 0
 	cost_override_string = "Varies"
@@ -30,6 +32,7 @@
 		var/datum/uplink_item/uplink_item = pick(possible_items)
 		log_uplink("[key_name(user)] purchased a random uplink item from [handler.owner]'s uplink with [handler.telecrystals] telecrystals remaining")
 		SSblackbox.record_feedback("tally", "traitor_random_uplink_items_gotten", 1, initial(uplink_item.name))
+		handler.purchase_item_no_cost(user, uplink_item) // Buy the free one first, cuz buying items with low TC sometimes doesn't give the item.
 		handler.purchase_item(user, uplink_item)
 
 /datum/uplink_item/bundles_tc/telecrystal

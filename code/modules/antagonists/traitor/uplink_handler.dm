@@ -128,6 +128,22 @@
 	on_update()
 	return TRUE
 
+/datum/uplink_handler/proc/purchase_item_no_cost(mob/user, datum/uplink_item/to_purchase, atom/movable/source)
+	if(!can_purchase_item(user, to_purchase))
+		return
+
+	if(to_purchase.limited_stock != -1 && !(to_purchase.stock_key in item_stock))
+		item_stock[to_purchase.stock_key] = to_purchase.limited_stock
+
+	to_purchase.purchase(user, src, source)
+
+	if(to_purchase.stock_key in item_stock)
+		item_stock[to_purchase.stock_key] -= 1
+
+	SSblackbox.record_feedback("nested tally", "traitor_uplink_items_bought", 1, list("[initial(to_purchase.name)]", "[to_purchase.cost]"))
+	on_update()
+	return TRUE
+
 /datum/uplink_handler/proc/purchase_raw_tc(mob/user, amount, atom/movable/source)
 	if(shop_locked)
 		return FALSE
