@@ -7714,7 +7714,6 @@
 /area/station/science/robotics/mechbay)
 "dcS" = (
 /obj/structure/rack,
-/obj/item/stack/medical/suture/emergency,
 /obj/effect/spawner/random/trash/soap,
 /obj/item/reagent_containers/blood/random,
 /turf/open/floor/plating,
@@ -32770,10 +32769,6 @@
 /area/station/service/kitchen)
 "neG" = (
 /obj/structure/closet,
-/obj/item/clothing/under/costume/schoolgirl,
-/obj/item/clothing/under/costume/schoolgirl/green,
-/obj/item/clothing/under/costume/schoolgirl/orange,
-/obj/item/clothing/under/costume/schoolgirl/red,
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine/atmos)
 "neL" = (
@@ -44099,7 +44094,6 @@
 /area/station/hallway/primary/central/fore)
 "rQV" = (
 /obj/structure/table/wood,
-/obj/item/stack/medical/suture/emergency,
 /obj/item/stack/medical/suture,
 /obj/item/storage/box/gloves,
 /obj/item/storage/box/rxglasses,
