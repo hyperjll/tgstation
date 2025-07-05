@@ -97,16 +97,18 @@
 /datum/nanite_program/fake_death
 	name = "Death Simulation"
 	desc = "The nanites induce a death-like coma into the host, able to fool most medical scans."
-	use_rate = 3.5
 	rogue_types = list(/datum/nanite_program/nerve_decay, /datum/nanite_program/necrotic, /datum/nanite_program/brain_decay)
+	can_trigger = TRUE
+	trigger_cost = 20
+	trigger_cooldown = 60
+	var/fakedeath_dur = 30 SECONDS
 
-/datum/nanite_program/fake_death/enable_passive_effect()
-	. = ..()
+/datum/nanite_program/fake_death/on_trigger(comm_message)
 	host_mob.emote("deathgasp")
 	host_mob.fakedeath("nanites")
+	addtimer(CALLBACK(src, PROC_REF(unfake_my_death)), fakedeath_dur)
 
-/datum/nanite_program/fake_death/disable_passive_effect()
-	. = ..()
+/datum/nanite_program/fake_death/proc/unfake_my_death()
 	host_mob.cure_fakedeath("nanites")
 
 /datum/nanite_program/comm
