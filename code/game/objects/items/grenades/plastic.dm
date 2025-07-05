@@ -49,8 +49,10 @@
 	AddElement(/datum/element/empprotection, EMP_PROTECT_WIRES)
 	plastic_overlay = mutable_appearance(icon, "[inhand_icon_state]2", HIGH_OBJ_LAYER)
 	set_wires(new /datum/wires/explosive/c4(src))
+	STOP_PROCESSING(SSobj,src)
 
 /obj/item/grenade/c4/Destroy()
+	STOP_PROCESSING(SSobj,src)
 	target = null
 	return ..()
 
@@ -65,6 +67,7 @@
 		return ..()
 
 /obj/item/grenade/c4/detonate(mob/living/lanced_by)
+	STOP_PROCESSING(SSobj,src)
 	if(QDELETED(src))
 		return FALSE
 	if(dud_flags)
@@ -150,7 +153,13 @@
 	target.add_overlay(plastic_overlay)
 	to_chat(user, span_notice("You plant the bomb. Timer counting down from [det_time]."))
 	addtimer(CALLBACK(src, PROC_REF(detonate)), det_time*10)
+
+	START_PROCESSING(SSobj,src)
+
 	return TRUE
+
+/obj/item/grenade/c4/process()
+	playsound(get_turf(target), 'hypermods/sound/effects/c4beep.ogg', 40, vary = FALSE)
 
 /obj/item/grenade/c4/proc/shout_syndicate_crap(mob/player)
 	if(!player)
