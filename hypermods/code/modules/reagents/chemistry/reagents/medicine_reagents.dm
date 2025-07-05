@@ -197,6 +197,8 @@
 	. = ..()
 	affected_mob.regenerate_limbs()
 	affected_mob.regenerate_organs()
+	for(var/datum/wound/iter_wound as anything in affected_mob.all_wounds)
+		iter_wound.remove_wound()
 
 /datum/reagent/medicine/experimentalstimulants
 	name = "Experimental Stimulants"

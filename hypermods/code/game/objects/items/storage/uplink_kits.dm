@@ -1340,6 +1340,15 @@
 /obj/item/storage/box/syndie_kit/imp_emp/PopulateContents()
 	new /obj/item/implanter/emp(src)
 
+/obj/item/storage/box/syndie_kit/imp_ling
+	name = "regenerate implant box"
+	icon = 'hypermods/icons/mob/actions/actions_changeling.dmi'
+	icon_state = "regenerate_clean"
+	give_fallback_icon = TRUE
+
+/obj/item/storage/box/syndie_kit/imp_ling/PopulateContents()
+	new /obj/item/implanter/lingextract(src)
+
 /obj/item/storage/box/syndie_kit/missilephone
 	name = "missile phone box"
 

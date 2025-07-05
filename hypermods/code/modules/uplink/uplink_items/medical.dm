@@ -37,7 +37,7 @@
 	desc = "A medipen containing a highly complex regenerative chemical donated to us by the Tiger Cooperative Fanatics. \
 			Upon it's application, the user will near-instanteously regrow all of their limbs and organs."
 	item = /obj/item/reagent_containers/hypospray/medipen/limborganregen
-	cost = 2
+	cost = 1
 	surplus = 10
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 

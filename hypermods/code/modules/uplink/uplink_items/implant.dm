@@ -191,3 +191,14 @@
 	item = /obj/item/storage/box/syndie_kit/imp_lifeformradar
 	cost = 4
 	surplus = 30
+
+/datum/uplink_item/implants/imp_ling
+	name = "Regenerate Implant"
+	desc = "The pinnacle of the Tiger Cooperative and Cybersun Industries collaborative efforts on genetic engineering. \
+			This implant after being injected into a host will synchronize with the host's DNA and build up a chemical reserve capable of rapidly \
+			regenerating limbs and organs of the host in near instantaneous speeds. \
+			Requires 10 minutes per charge, and can store up to 2 charges. Starts off with no charges."
+	item = /obj/item/storage/box/syndie_kit/imp_ling
+	cost = 4
+	surplus = 30
+	progression_minimum = 10 MINUTES
