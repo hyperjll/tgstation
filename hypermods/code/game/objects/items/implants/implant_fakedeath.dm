@@ -29,8 +29,8 @@
 /obj/item/implant/pseudodeath/proc/fake_death(mob/living/carbon/source)
 	if(QDELETED(source) || source.stat == DEAD)
 		return
-	source.fakedeath("regenerative_coma") // using regen coma stuff here to prevent stacking and possible bugs
-	ADD_TRAIT(source, TRAIT_NOCRITDAMAGE, DISEASE_TRAIT)
+	source.fakedeath("imp_pseudodeath")
+	ADD_TRAIT(source, TRAIT_NOCRITDAMAGE, IMPLANT_TRAIT)
 
 	if(ishuman(source))
 		var/mob/living/carbon/human/H = source
@@ -67,8 +67,8 @@
 	source.set_jitter_if_lower(200 SECONDS)
 	log_game("[source] fakes their death via [src]")
 
-	REMOVE_TRAIT(source, TRAIT_NOCRITDAMAGE, DISEASE_TRAIT)
-	source.cure_fakedeath("regenerative_coma") // technically this cancels regen coma, but they aren't supposed to stack anyways
+	REMOVE_TRAIT(source, TRAIT_NOCRITDAMAGE, IMPLANT_TRAIT)
+	source.cure_fakedeath("imp_pseudodeath")
 
 
 /obj/item/implanter/pseudodeath
