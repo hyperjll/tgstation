@@ -63,3 +63,15 @@
 		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_SECURITY
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+
+/datum/design/noreactsyringe
+	name = "Cryostasis Syringe"
+	desc = "A cryostasis syringe that can hold 10 units of chemicals without reactions."
+	id = "noreactsyringe"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/glass =SHEET_MATERIAL_AMOUNT, /datum/material/iron =HALF_SHEET_MATERIAL_AMOUNT)
+	build_path = /obj/item/reagent_containers/syringe/noreact
+	category = list(
+		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_CHEMISTRY
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE

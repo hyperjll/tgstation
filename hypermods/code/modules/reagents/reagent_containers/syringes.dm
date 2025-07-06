@@ -1,3 +1,17 @@
+/obj/item/reagent_containers/syringe/noreact
+	name = "cryostasis syringe"
+	desc = "A syringe that can hold up to 10 units. Reagents cannot react while within it."
+	reagent_flags = TRANSPARENT | NO_REACT
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "cryostasis_0"
+	base_icon_state = "cryostasis"
+	amount_per_transfer_from_this = 5
+	possible_transfer_amounts = list(5, 10)
+	volume = 10
+	dart_insert_icon = 'hypermods/icons/obj/weapons/guns/toy.dmi'
+	dart_insert_casing_icon_state = "overlay_syringe_cryostasis"
+	dart_insert_projectile_icon_state = "overlay_syringe_cryostasis_proj"
+
 /obj/item/reagent_containers/syringe/mutatehuman
 	name = "syringe (Human Mutation Toxin)"
 	desc = "Contains 15 units of Stable Mutation Toxin. A toxin capable of morphing one's species into a Human."
