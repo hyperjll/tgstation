@@ -317,3 +317,41 @@ As the Captain, your sabre deals extra damage to Assistants (as long as they hav
 You can automatically extract and retract arm implants by 'activating' the empty hand they're on. This includes integrated toolsets, cursed katanas, and vorpal scythes.
 You can combine the Carpet reagent with various different reagents, such as Oil and Cyanide, to create unique carpet types.
 You can bake a birthday cake and then microwave it to create a legendary cake hat. You can then combine it with an energy sword to create an energy cake.
+As a Cortical Borer, you'll passively deal damage to your host, and deal brain damage when performing most actions including getting stronger. Make sure to evolve toxin and brain healing chemicals quickly!
+As a Cortical Borer, you don't understand Galactic Common and won't be able to effectively communicate with your host! You can, however, still make out emotes. Asking yes or no questions with a simple nod or shake-of-the-head will go a long way!
+As a Cortical Borer, it's often an effective strategy to lay low in a non-sentient host to grow stronger so you may more easily survive until you can find a sentient host to piggyback off of.
+As a Cortical Borer, while you can hide yourself well, attempting to crawl into a host or make perform any action while inside one will alert the (potential?) host.
+As a Cortical Borer, attempting to enter a new host will alert them and take some time, which can be interupted should either party move. Trying to enter a host engaged in conversation may be your best bet.
+As a Cortical Borer, many evolution tree abilities simply increase the stats you gain upon growing stronger. The longer you hold off on growing stronger, the stronger you'll become over time.
+As a Werewolf, you cannot wear most bodily armor, jumpsuits, shoes, gloves, or masks. Spacing, lack of air, and electrified airlocks will often be your greatest downfall.
+As a Werewolf, your inability to wear a jumpsuit will prevent you from equipping your Identification Card or any Belt items. Keep your backpack light on load to prevent loss of critical items.
+As a Werewolf, your natural lupine regeneration while transformed will keep you healthy and your hide will reduce incoming damage... but never over-estimate your natural defense. A single shotgun or energy gun could still be the end of you.
+As a Werewolf, you've got a lot of different combat oriented abilities to dominate in one-on-one fights. But, taking on groups of people at once will still prove a challenge.
+As a Werewolf, you start off with all of your abilities from the very start, but going on a killing spree right away is ill-advised. Be sure to stock up on medicine, equipment, and anything that could possibly help keep you alive.
+As a Werewolf, your transformation can be interupted by being moved. Be sure to gain distance from everyone else to prevent having your transformation halted.
+As a Werewolf, your Maul Victim ability while selected will allow you to pry open airlocks without expending it. Always consider whether or not to use it in combat to gain the upper hand against your foes, as it may mean getting stuck for an extended period of time.
+As a Bloodsucker, you'll want to claim a lair far away from any human activity to avoid being found while completely helpless during Sol.
+As an Initial Infected, you'll be able to see other Initial Infected from the very start. Coordinate quietly to sabotage the station to prevent your rampage from coming to an end early!
+As an Initial Infected, your Romerol Payload will be activated should you perish in ANY manner. Try to stay alive to prevent any pre-mature zombie outbreaks in unideal scenarios.
+As a Clockwork Cultist, the very first thing you should do is start placing integration cogs into the station's apc's. You may get some by invoking the Servitude Scripture: Integration Cog.
+As a Clockwork Cultist, the road to victory is a long one. Cogging apcs, gathering competent people into your cult, fortifing reebe, defending anchoring crystals, and finally defending the ark are all going to be difficult.
+As a Clockwork Cultist, standing on brass/bronze tiles will cleanse you of toxin damage and rejuvenate your stamina. Don't mistake this as being immune to stuns or poisons.
+As a Clockwork Cultist, standing on brass/bronze tiles will empower certain weapons or items your cult can obtain.
+As a Clockwork Cultist, you can only have SO many cultists before you can sustain no more, unlike the Blood Cultists you may be up against. Defending anchoring crystals until they're invulnerable will add more capacity for cultists to join you.
+As a Clockwork Cultist, the Stargazer is an incredibly powerful structure. Use it to empower your weapons and armor! Armor often becomes a greater version of itself, and weapons gain a special random enchantment.
+As a Clockwork Cultist, a Vitality Matrix can be used to gather Vitality. A resource which can be expended to unlock warp areas, or even the resurrection of your fallen comrades! Sacrificing those pesky Nar'Sian Cultists or Followers of the old gods may yield special items and bonus vitality.
+As a Clockwork Cultist, while defending the ark, remain vigiliant as a single well-placed TTV bomb or phazon mech could rob you of your victory. Fortifiy the interior of your base as much as possible to prevent this.
+As a Clockwork Cultist, Cogscarabs are your emergency fighting force. They require vitality to make and can be possessed by ghosts to aid you in your cause.
+As a Clockwork Cultist, the Clockwork Marauder can be a decent replacement for a cultist, seeing as how you can only have so many human cultists to begin with.
+As a Clockwork Cultist, Vanguard can protect you from stuns for 30 seconds, but once it runs out you may be stunned for a time equal to a portion of the stuns you were previously immune to.
+As a Clockwork Cultist, placing an Anchoring Crystal will envelop the entire area in brass/bronze work. This will make it easy to spot, but easy for you to reinforce it with things like traps.
+As a Clockwork Cultist, most structures like Ocular Wardens or Prosperity Prisms require a Sigil of Transmission to be nearby to be turned on.
+As a Clockwork Cultist, refrain from sabotaging the station's power network as that could easily rob your entire cult of power which could be used to power many of your defensive structures.
+As a Clockwork Cultist, the Tinkerer's Cache will allow you to procure a wide variety of traps and gadgets to aid you in your cause.
+As a Clockwork Cultist, the Replica Fabricator functions much like an RCD but for clockwork cultists. Use it to quickly build walls, airlocks, windows, and floors!
+As a Clockwork Cultist, many of your traps need to be connected to a trigger, such as a lever or pressure plate to activate. You may connect them using your Clockwork Slab upon the trigger in question, then whatever you want the trigger to activate.
+As a Clockwork Cultist, the Replica Fabricator can be used to produce stacks of Bronze. While not super helpful, Replica Fabricators can absorb materials like Bronze and turn them back into power for your cult. Allowing you to acquire or stockpile power in case the station's power fails.
+As a Clockwork Cultist, the Interdiction Lens slows non-cultists in a large area and rapidly destroys mechanized exosuits like the Phazon. Surround the ark with them to prevent a Phazon from stepping past all your defenses!
+As a Clockwork Cultist, the Prosperity Prism and Ocular Warden are great pick-me-ups when placing defenses. Prosperity Prisms will heal nearby cultists from all damage types and Ocular Wardens will attack nearby non-cultists!
+As a Clockwork Cultist, each Anchoring Crystal will speed up Replica Fabricator speeds, and allow more humans to join your cult! Two are required for the Ark to open, three will grant you a special mech to defend the ark with, and four will allow you to ascend into clockwork golems!
+As a Clockwork Cultist, opening the Ark requires you to invoke the Ark Invigoration scripture. Be warned as doing so will alert the crew, summon all of the clockwork cultists, and prevent you from returning to the station.
