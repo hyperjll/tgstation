@@ -20050,13 +20050,16 @@
 /area/station/ai_monitored/command/nuke_storage)
 "fSj" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/corner{
-	dir = 9
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
 /obj/effect/turf_decal/tile/brown/half/contrasted{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
 /turf/open/floor/iron,
@@ -63277,6 +63280,7 @@
 /obj/item/toy/plush/lizard_plushie{
 	name = "Eats-The-Rubbish"
 	},
+/obj/structure/disposalpipe/junction,
 /turf/open/floor/iron/dark/side,
 /area/station/cargo/sorting)
 "svz" = (
