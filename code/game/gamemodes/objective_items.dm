@@ -944,7 +944,7 @@
 	targetitem = /obj/item/card/id/departmental_budget/eng
 	excludefromjob = list(JOB_CHIEF_ENGINEER, JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN)
 	item_owner = list(JOB_CHIEF_ENGINEER)
-	exists_on_map = TRUE
+	//exists_on_map = TRUE
 	difficulty = 2
 	steal_hint = "A card that grants access to Engineering's funds. \
 		Normally found in the locker of the Chief Engineer, but a particularly keen one may have it on their person or in their wallet."
@@ -957,7 +957,7 @@
 	targetitem = /obj/item/card/id/departmental_budget/sci
 	excludefromjob = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST)
 	item_owner = list(JOB_RESEARCH_DIRECTOR)
-	exists_on_map = TRUE
+	//exists_on_map = TRUE
 	difficulty = 2
 	steal_hint = "A card that grants access to Science's funds. \
 		Normally found in the locker of the Research Director, but a particularly keen one may have it on their person or in their wallet."
@@ -970,7 +970,7 @@
 	targetitem = /obj/item/card/id/departmental_budget/med
 	excludefromjob = list(JOB_CHIEF_MEDICAL_OFFICER, JOB_MEDICAL_DOCTOR, JOB_CHEMIST, JOB_PARAMEDIC, JOB_PSYCHOLOGIST)
 	item_owner = list(JOB_CHIEF_MEDICAL_OFFICER)
-	exists_on_map = TRUE
+	//exists_on_map = TRUE
 	difficulty = 2
 	steal_hint = "A card that grants access to Medical's funds. \
 		Normally found in the locker of the Chief Medical Officer, but a particularly keen one may have it on their person or in their wallet."
@@ -983,8 +983,8 @@
 	targetitem = /obj/item/card/id/departmental_budget/srv
 	excludefromjob = list(JOB_HEAD_OF_PERSONNEL, JOB_BOTANIST, JOB_CHEF, JOB_BARTENDER, JOB_CLOWN, JOB_MIME)
 	item_owner = list(JOB_HEAD_OF_PERSONNEL)
-	exists_on_map = TRUE
-	difficulty = 2
+	//exists_on_map = TRUE
+	difficulty = 3
 	steal_hint = "A card that grants access to Service's funds. \
 		Normally found in the locker of the Head of Personnel, but a particularly keen one may have it on their person or in their wallet."
 
@@ -996,8 +996,8 @@
 	targetitem = /obj/item/card/id/departmental_budget/civ
 	excludefromjob = list(JOB_HEAD_OF_PERSONNEL, JOB_ASSISTANT)
 	item_owner = list(JOB_HEAD_OF_PERSONNEL)
-	exists_on_map = TRUE
-	difficulty = 2
+	//exists_on_map = TRUE
+	difficulty = 3
 	steal_hint = "A card that grants access to the Civilian budget. \
 		Normally found in the locker of the Head of Personnel, but a particularly keen one may have it on their person or in their wallet."
 
@@ -1009,8 +1009,8 @@
 	targetitem = /obj/item/card/id/departmental_budget/sec
 	excludefromjob = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER)
 	item_owner = list(JOB_HEAD_OF_SECURITY)
-	exists_on_map = TRUE
-	difficulty = 3
+	//exists_on_map = TRUE
+	difficulty = 4
 	steal_hint = "A card that grants access to Security's funds. \
 		Normally found in the locker of the Head of Security, but a particularly keen one may have it on their person or in their wallet."
 
@@ -1035,7 +1035,7 @@
 	targetitem = /obj/item/holotool
 	excludefromjob = list(JOB_RESEARCH_DIRECTOR)
 	item_owner = list(JOB_RESEARCH_DIRECTOR)
-	exists_on_map = TRUE
+	//exists_on_map = TRUE
 	difficulty = 3
 	steal_hint = "A highly experimental multi-tool using holographic technology. \
 		Likely found within the Research Director's locker, or on their person."
