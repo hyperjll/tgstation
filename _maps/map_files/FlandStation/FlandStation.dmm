@@ -1440,6 +1440,11 @@
 	},
 /turf/open/floor/iron/techmaint,
 /area/station/medical/storage)
+"atX" = (
+/obj/structure/weightmachine/weightlifter,
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/carpet/green,
+/area/station/security/prison/rec)
 "aua" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /turf/open/floor/iron/dark/side{
@@ -3139,7 +3144,10 @@
 /obj/structure/desk_bell{
 	pixel_x = 8
 	},
-/obj/machinery/door/window/left/directional/east,
+/obj/machinery/door/window/right/directional/west{
+	name = "Hydroponics Desk";
+	req_access = list("hydroponics")
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/service/hydroponics)
 "aQH" = (
@@ -7811,7 +7819,10 @@
 /turf/open/floor/iron/techmaint,
 /area/station/science/robotics/mechbay)
 "cmm" = (
-/obj/machinery/door/window/left/directional/south,
+/obj/machinery/door/window/left/directional/south{
+	name = "Hydroponics Window";
+	req_access = list("hydroponics")
+	},
 /turf/open/floor/grass,
 /area/station/service/hydroponics)
 "cmn" = (
@@ -11742,6 +11753,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/hidden/layer4,
+/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron,
 /area/station/medical/medbay/central)
 "dwC" = (
@@ -14895,6 +14907,11 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/machinery/door/window/left/directional/south{
+	name = "Ore Redemption Access";
+	req_access = list("mineral_storeroom");
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningdock)
 "ezR" = (
@@ -14990,7 +15007,6 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/window/left/directional/north,
 /turf/open/floor/iron,
 /area/station/science/robotics/mechbay)
 "eBi" = (
@@ -16171,6 +16187,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/bedsheet/brown,
 /obj/structure/bed,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/iron/techmaint,
 /area/station/security/prison)
 "eRg" = (
@@ -16726,7 +16743,11 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/window/left/directional/west,
+/obj/machinery/door/window/left/directional/east{
+	name = "Mass Driver";
+	req_access = list("chapel_office");
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/funeral)
 "eXz" = (
@@ -22207,7 +22228,10 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/purple/opposingcorners,
-/obj/machinery/door/window/left/directional/south,
+/obj/machinery/door/window/left/directional/south{
+	name = "Pharmacy Desk";
+	req_access = list("pharmacy")
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/medical/pharmacy)
 "gza" = (
@@ -26914,9 +26938,9 @@
 /obj/effect/turf_decal/loading_area{
 	dir = 1
 	},
-/obj/machinery/door/window/left/directional/east{
-	name = "Ore Redemption Window";
-	dir = 2
+/obj/machinery/door/window/left/directional/south{
+	name = "Ore Redemption Access";
+	req_access = list("mineral_storeroom")
 	},
 /turf/open/floor/iron/dark,
 /area/station/cargo/storage)
@@ -31068,6 +31092,11 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
+"iXp" = (
+/obj/structure/cable,
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/iron/techmaint,
+/area/station/security/prison/garden)
 "iXy" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/electrical{
@@ -38314,6 +38343,11 @@
 /obj/effect/turf_decal/trimline/purple/corner{
 	dir = 1
 	},
+/obj/machinery/door/window/right/directional/east{
+	name = "Research Delivery";
+	req_access = list("science");
+	dir = 2
+	},
 /turf/open/floor/iron/grid/steel,
 /area/station/science/research)
 "ley" = (
@@ -42007,7 +42041,10 @@
 	},
 /obj/effect/turf_decal/tile/yellow/opposingcorners,
 /obj/structure/cable,
-/obj/machinery/door/window/left/directional/north,
+/obj/machinery/door/window/left/directional/north{
+	name = "Engineering Delivery";
+	req_access = list("construction")
+	},
 /turf/open/floor/iron/sepia,
 /area/station/engineering/main)
 "mif" = (
@@ -42598,6 +42635,11 @@
 	name = "Bar Counter Shutters"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/window/right/directional/west{
+	name = "Bar Counter";
+	req_access = list("bar");
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "msf" = (
@@ -44064,6 +44106,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/bedsheet/brown,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/iron/techmaint,
 /area/station/security/prison)
 "mPj" = (
@@ -47266,7 +47309,11 @@
 /obj/item/storage/bag/plants/portaseeder,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/window/left/directional/south,
+/obj/machinery/door/window/right/directional/west{
+	name = "Hydroponics Desk";
+	req_access = list("hydroponics");
+	dir = 2
+	},
 /turf/open/floor/iron/grid/steel,
 /area/station/service/hydroponics)
 "nMr" = (
@@ -49562,7 +49609,10 @@
 /turf/open/floor/iron/dark,
 /area/station/cargo/storage)
 "owM" = (
-/obj/machinery/door/window/left/directional/south,
+/obj/machinery/door/window/left/directional/east{
+	name = "Bridge Deliveries";
+	req_access = list("command")
+	},
 /turf/open/floor/wood,
 /area/station/command/meeting_room)
 "oxg" = (
@@ -53292,8 +53342,12 @@
 /obj/structure/desk_bell{
 	pixel_x = -8
 	},
-/obj/machinery/door/window/left/directional/east,
 /obj/item/rag,
+/obj/machinery/door/window/left/directional/south{
+	name = "Kitchen Counter";
+	req_access = list("kitchen");
+	dir = 4
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/service/kitchen)
 "pDF" = (
@@ -53422,6 +53476,11 @@
 	name = "Bar Counter Shutters"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/window/right/directional/west{
+	name = "Bar Counter";
+	req_access = list("bar");
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "pFI" = (
@@ -55532,7 +55591,11 @@
 	id = "kitchenside";
 	name = "Kitchen Hall Shutters"
 	},
-/obj/machinery/door/window/left/directional/west,
+/obj/machinery/door/window/left/directional/south{
+	name = "Kitchen Counter";
+	req_access = list("kitchen");
+	dir = 8
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/service/kitchen)
 "qkt" = (
@@ -56646,7 +56709,10 @@
 /obj/item/storage/bag/tray,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/delivery,
-/obj/machinery/door/window/left/directional/south,
+/obj/machinery/door/window/left/directional/south{
+	name = "Kitchen Counter";
+	req_access = list("kitchen")
+	},
 /turf/open/floor/iron/grid/steel,
 /area/station/service/kitchen)
 "qAR" = (
@@ -57319,6 +57385,7 @@
 /obj/effect/turf_decal/tile/green/opposingcorners{
 	dir = 1
 	},
+/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "qIJ" = (
@@ -57995,7 +58062,11 @@
 /obj/machinery/door/firedoor,
 /obj/item/paper_bin,
 /obj/item/pen,
-/obj/machinery/door/window/left/directional/east,
+/obj/machinery/door/window/brigdoor/right/directional/west{
+	name = "Security Desk";
+	pixel_x = -8;
+	req_one_access = list("hop","security")
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/security/checkpoint/escape)
 "qSN" = (
@@ -59012,6 +59083,7 @@
 /area/station/hallway/primary/starboard)
 "rlr" = (
 /obj/machinery/digital_clock/directional/north,
+/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "rlu" = (
@@ -60927,6 +60999,11 @@
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen/abandoned)
+"rNv" = (
+/obj/structure/chair,
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/iron,
+/area/station/security/prison/visit)
 "rNz" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -61341,6 +61418,13 @@
 	},
 /turf/open/floor/iron/grid/steel,
 /area/station/commons/dorms)
+"rSf" = (
+/obj/machinery/door/window/left/directional/south{
+	name = "Robotics Delivery";
+	req_access = list("robotics")
+	},
+/turf/open/floor/iron/dark,
+/area/station/science/robotics/mechbay)
 "rSq" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 4
@@ -62079,6 +62163,11 @@
 	name = "Bar Counter Shutters"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/window/right/directional/west{
+	name = "Bar Counter";
+	req_access = list("bar");
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "sdg" = (
@@ -62107,6 +62196,11 @@
 	name = "Bar Counter Shutters"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/window/right/directional/west{
+	name = "Bar Counter";
+	req_access = list("bar");
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "sdA" = (
@@ -63284,7 +63378,11 @@
 	id = "kitchencounter";
 	name = "Kitchen Bar Counter Shutters"
 	},
-/obj/machinery/door/window/left/directional/east,
+/obj/machinery/door/window/left/directional/south{
+	name = "Kitchen Counter";
+	req_access = list("kitchen");
+	dir = 4
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/service/kitchen)
 "sxF" = (
@@ -63748,6 +63846,11 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/item/rag,
+/obj/machinery/door/window/right/directional/west{
+	name = "Bar Counter";
+	req_access = list("bar");
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "sCS" = (
@@ -64586,7 +64689,11 @@
 	id = "kitchencounter";
 	name = "Kitchen Bar Counter Shutters"
 	},
-/obj/machinery/door/window/left/directional/east,
+/obj/machinery/door/window/left/directional/south{
+	name = "Kitchen Counter";
+	req_access = list("kitchen");
+	dir = 4
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/service/kitchen)
 "sRB" = (
@@ -64962,6 +65069,7 @@
 	dir = 5
 	},
 /obj/structure/cable,
+/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron,
 /area/station/medical/medbay/central)
 "sXu" = (
@@ -66798,7 +66906,11 @@
 	},
 /obj/item/paper_bin,
 /obj/item/pen,
-/obj/machinery/door/window/left/directional/west,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Brig Control Desk";
+	req_access = list("armory");
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint)
 "tBH" = (
@@ -71410,7 +71522,11 @@
 /obj/machinery/door/firedoor,
 /obj/item/paper_bin,
 /obj/item/pen,
-/obj/machinery/door/window/left/directional/south,
+/obj/machinery/door/window/left/directional/east{
+	name = "Research Lab Desk";
+	req_access = list("science");
+	dir = 2
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/science/lab)
 "uUU" = (
@@ -71932,7 +72048,11 @@
 /obj/structure/desk_bell{
 	pixel_x = -8
 	},
-/obj/machinery/door/window/left/directional/east,
+/obj/machinery/door/window/left/directional/south{
+	name = "Pharmacy Desk";
+	req_access = list("pharmacy");
+	dir = 4
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/medical/pharmacy)
 "vbM" = (
@@ -72610,6 +72730,11 @@
 	name = "Bar Counter Shutters"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/window/right/directional/west{
+	name = "Bar Counter";
+	req_access = list("bar");
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "vmb" = (
@@ -72930,7 +73055,10 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/delivery,
-/obj/machinery/door/window/left/directional/west,
+/obj/machinery/door/window/right/directional/west{
+	name = "Bar Desk";
+	req_access = list("bar")
+	},
 /turf/open/floor/iron/grid/steel,
 /area/station/service/bar)
 "vpY" = (
@@ -73754,6 +73882,7 @@
 "vxT" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
+/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "vxW" = (
@@ -76222,7 +76351,6 @@
 	name = "navigation beacon (Research Division)"
 	},
 /obj/effect/turf_decal/delivery,
-/obj/machinery/door/window/left/directional/north,
 /turf/open/floor/iron/grid/steel,
 /area/station/science/research)
 "wha" = (
@@ -82000,7 +82128,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/window/left/directional/east,
+/obj/machinery/door/window/right/directional/west{
+	name = "Hydroponics Desk";
+	req_access = list("hydroponics")
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/service/hydroponics)
 "xFS" = (
@@ -115752,7 +115883,7 @@ uqr
 ycg
 uzW
 fhY
-aWc
+rSf
 eBg
 uju
 eWK
@@ -119827,7 +119958,7 @@ eSR
 hHi
 oSc
 nWr
-vae
+atX
 eVO
 vae
 nWr
@@ -120863,7 +120994,7 @@ vdA
 gKz
 uFP
 gNg
-tLe
+iXp
 qOM
 eRO
 bFS
@@ -121889,7 +122020,7 @@ aJK
 gLr
 rCc
 ehr
-cNy
+rNv
 iyG
 pkR
 vvK
