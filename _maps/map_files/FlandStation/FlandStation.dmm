@@ -4655,10 +4655,9 @@
 	id = "xeno1";
 	name = "Creature Cell #1"
 	},
-/obj/machinery/door/window/brigdoor{
-	dir = 8;
-	name = "Creature Pen";
-	req_access_txt = "55"
+/obj/machinery/door/window/left/directional/west{
+	name = "Containment Pen";
+	req_access = list("xenobiology")
 	},
 /turf/open/floor/iron/ridged/steel,
 /area/station/science/xenobiology)
@@ -18337,6 +18336,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
 "fuI" = (
@@ -53290,10 +53290,9 @@
 /turf/open/floor/iron/dark,
 /area/station/command/gateway)
 "pCz" = (
-/obj/machinery/door/window/brigdoor{
-	dir = 8;
-	name = "Creature Pen";
-	req_access_txt = "55"
+/obj/machinery/door/window/left/directional/west{
+	name = "Containment Pen";
+	req_access = list("xenobiology")
 	},
 /turf/open/floor/iron/techmaint,
 /area/station/science/xenobiology)
@@ -63696,10 +63695,9 @@
 	id = "xeno4";
 	name = "Creature Cell #4"
 	},
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
-	name = "Creature Pen";
-	req_access_txt = "55"
+/obj/machinery/door/window/left/directional/east{
+	name = "Containment Pen";
+	req_access = list("xenobiology")
 	},
 /turf/open/floor/iron/ridged/steel,
 /area/station/science/xenobiology)
@@ -64792,10 +64790,9 @@
 	id = "xeno2";
 	name = "Creature Cell #2"
 	},
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
-	name = "Creature Pen";
-	req_access_txt = "55"
+/obj/machinery/door/window/left/directional/east{
+	name = "Containment Pen";
+	req_access = list("xenobiology")
 	},
 /turf/open/floor/iron/ridged/steel,
 /area/station/science/xenobiology)
@@ -66958,10 +66955,9 @@
 	id = "xenosecure";
 	name = "Secure Pen Shutters"
 	},
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
-	name = "Secure Creature Pen";
-	req_access_txt = "55"
+/obj/machinery/door/window/left/directional/east{
+	name = "Maximum Security Test Chamber";
+	req_access = list("xenobiology")
 	},
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
@@ -67022,14 +67018,13 @@
 /turf/open/floor/carpet,
 /area/station/commons/lounge)
 "tCO" = (
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
-	name = "Secure Creature Pen";
-	req_access_txt = "55"
-	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/simple/general/hidden{
 	dir = 4
+	},
+/obj/machinery/door/window/left/directional/east{
+	name = "Maximum Security Test Chamber";
+	req_access = list("xenobiology")
 	},
 /turf/open/floor/iron/techmaint,
 /area/station/science/xenobiology)
@@ -74976,10 +74971,9 @@
 /turf/open/floor/iron/sepia,
 /area/station/hallway/secondary/dock)
 "vMR" = (
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
-	name = "Creature Pen";
-	req_access_txt = "55"
+/obj/machinery/door/window/left/directional/east{
+	name = "Containment Pen";
+	req_access = list("xenobiology")
 	},
 /turf/open/floor/iron/techmaint,
 /area/station/science/xenobiology)
