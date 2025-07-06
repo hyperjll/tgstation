@@ -44131,6 +44131,10 @@
 	id = "customs";
 	name = "Customs Lockdown"
 	},
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Security Customs";
+	req_access = list("security")
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/security/checkpoint/customs)
 "mPD" = (
@@ -57498,6 +57502,7 @@
 	},
 /obj/structure/railing,
 /obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/engineering/hallway)
 "qKz" = (
@@ -71638,6 +71643,11 @@
 /obj/item/folder/red,
 /obj/item/pen,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Arrivals Security Checkpoint";
+	req_access = list("security");
+	dir = 1
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/security/checkpoint/arrivals)
 "uWP" = (
