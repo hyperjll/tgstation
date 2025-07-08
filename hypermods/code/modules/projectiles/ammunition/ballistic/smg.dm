@@ -55,3 +55,4 @@
 	name = ".45 tranquilizer bullet casing"
 	desc = "A .45 tranquilizer bullet casing."
 	projectile_type = /obj/projectile/bullet/c45/tranq
+	harmful = FALSE
