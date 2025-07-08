@@ -84,13 +84,12 @@
 /*
 * Freezes the player in a block of ice, 1s = 1u
 * Will be removed when the required reagent is removed too
-* Does not work via INGEST method (pills, drinking)
 * is processed on the dead.
 */
 
 /datum/reagent/inverse/cryostylane
 	name = "Cryogelidia"
-	description = "Freezes the live or dead patient in a cryostasis ice block. Won't work if you drink it."
+	description = "Freezes the live or dead patient in a cryostasis ice block."
 	color = "#03dbfc"
 	taste_description = "your tongue freezing, shortly followed by your thoughts. Brr!"
 	ph = 14
@@ -99,9 +98,6 @@
 
 /datum/reagent/inverse/cryostylane/on_transfer(atom/transfered_thing, methods, trans_volume)
 	. = ..()
-	if(methods & INGEST)
-		return
-
 	if(!ishuman(transfered_thing))
 		return
 
@@ -110,10 +106,6 @@
 	if(HAS_TRAIT(human_thing, TRAIT_RESISTCOLD))
 		holder.remove_reagent(type, volume)
 		return
-
-	human_thing.apply_status_effect(/datum/status_effect/frozenstasis/irresistable)
-	if(!human_thing.has_status_effect(/datum/status_effect/grouped/stasis, STASIS_CHEMICAL_EFFECT))
-		human_thing.apply_status_effect(/datum/status_effect/grouped/stasis, STASIS_CHEMICAL_EFFECT)
 
 /datum/reagent/inverse/cryostylane/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
@@ -128,6 +120,12 @@
 		return
 	return ..()
 
+/datum/reagent/inverse/cryostylane/on_mob_add(mob/living/affected_mob)
+	. = ..()
+	affected_mob.apply_status_effect(/datum/status_effect/frozenstasis/irresistable)
+	if(!affected_mob.has_status_effect(/datum/status_effect/grouped/stasis, STASIS_CHEMICAL_EFFECT))
+		affected_mob.apply_status_effect(/datum/status_effect/grouped/stasis, STASIS_CHEMICAL_EFFECT)
+
 /datum/reagent/inverse/cryostylane/on_mob_end_metabolize(mob/living/affected_mob)
 	. = ..()
 	affected_mob.remove_status_effect(/datum/status_effect/frozenstasis/irresistable)
@@ -137,4 +135,3 @@
 	. = ..()
 	affected_mob.remove_status_effect(/datum/status_effect/frozenstasis/irresistable)
 	affected_mob.remove_status_effect(/datum/status_effect/grouped/stasis, STASIS_CHEMICAL_EFFECT)
-
