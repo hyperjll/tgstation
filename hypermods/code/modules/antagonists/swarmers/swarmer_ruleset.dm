@@ -15,6 +15,7 @@
 	ruleset_flags = RULESET_INVADER
 	//cost = 10
 	//required_enemies = list(2,2,1,1,1,1,1,0,0,0)
+	min_pop = 30 // Enough to expand and still having enemies
 	repeatable = FALSE
 	signup_atom_appearance = /mob/living/basic/swarmer
 	var/spawn_loc = null
