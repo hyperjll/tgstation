@@ -232,7 +232,7 @@
 
 /datum/reagent/medicine/dylovene
 	name = "Dylovene"
-	description = "Restores toxin damage slowly. Overdose causes minor tissue damage."
+	description = "Restores toxin damage slowly, reverses the severity of zombie infections. Overdose causes minor tissue damage."
 	color = "#6600FF"
 	overdose_threshold = 20
 
@@ -240,6 +240,13 @@
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjustToxLoss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+
+	if(affected_mob.get_organ_slot(ORGAN_SLOT_ZOMBIE))
+		var/obj/item/organ/zombie_infection/z_infection = affected_mob.get_organ_slot(ORGAN_SLOT_ZOMBIE)
+		if(z_infection.damage_mult >= 0.02) // Slowly hinder the damage over time.
+			z_infection.damage_mult -= 0.02 // Needs to be 0.02 to reverse the 0.01 per tick
+			if(prob(10)) // 10% chance per tick to increase the maximum amount of time before someone become a zombie permanently.
+				z_infection.revive_time_max += 1
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
@@ -415,6 +422,29 @@
 	var/need_mob_update
 	need_mob_update += affected_mob.adjustBruteLoss(5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjustToxLoss(4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+
+	if(need_mob_update)
+		return UPDATE_MOB_HEALTH
+
+/datum/reagent/medicine/ambuzol
+	name = "Ambuzol"
+	description = "Restores toxin damage slowly. Hinders and damages zombification infections over time, allowing one to be cured with enough exposure."
+	color = "#0742CA"
+	metabolization_rate = 0.1 * REAGENTS_METABOLISM // super slow
+	self_consuming = TRUE // Zombies/corpses don't process reagents.
+
+/datum/reagent/medicine/ambuzol/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	var/need_mob_update
+	need_mob_update += affected_mob.adjustToxLoss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+
+	if(affected_mob.get_organ_slot(ORGAN_SLOT_ZOMBIE))
+		var/obj/item/organ/zombie_infection/z_infection = affected_mob.get_organ_slot(ORGAN_SLOT_ZOMBIE)
+		if(z_infection.damage_mult >= 0.05) // Slowly hinder the damage over time.
+			z_infection.damage_mult -= 0.05 // Needs to be 0.02 to reverse the 0.01 per tick
+		z_infection.damage += 1
+		if(z_infection.damage >= 100) // If this zombie organ is 100 damage or above, cure us by removing the organ.
+			qdel(z_infection)
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH

@@ -32,6 +32,10 @@
 	required_reagents = list(/datum/reagent/potassium = 1, /datum/reagent/silicon = 1, /datum/reagent/nitrogen = 1)
 	required_temp = 160
 
+/datum/chemical_reaction/ambuzol
+	results = list(/datum/reagent/medicine/ambuzol = 3)
+	required_reagents = list(/datum/reagent/medicine/dylovene = 1, /datum/reagent/ammonia = 1, /datum/reagent/medicine/omnizine = 1)
+
 /datum/chemical_reaction/antitoxin
 	results = list(/datum/reagent/medicine/antitoxin = 4)
 	required_reagents = list(/datum/reagent/lemoline = 1, /datum/reagent/silicon = 1, /datum/reagent/nitrogen = 1, /datum/reagent/potassium = 1)

@@ -71,13 +71,17 @@
 /datum/antagonist/initial_infected/forge_objectives()
 	var/datum/objective/assassinate/zombies/objective_main = new
 	objective_main.owner = owner
-	objective_main.objective_name = "Kill Everyone"
+	objective_main.objective_name = "kill or zombify everyone"
 	objectives += objective_main
 
 
 
 /datum/objective/assassinate/zombies
 	name = "kill or zombify everyone"
+
+/datum/objective/assassinate/zombies/New()
+	explanation_text = "Ensure every single crew member is either dead or zombified by the end of the round."
+	return ..()
 
 /datum/objective/assassinate/zombies/check_completion()
 	return completed || (!considered_alive(target) || considered_afk(target) || considered_exiled(target) || iszombie(target))
@@ -87,7 +91,7 @@
 	if(!target?.current)
 		explanation_text = "Free Objective"
 		CRASH("WARNING! [ADMIN_LOOKUPFLW(owner)] initial infected objectives forged without an original!")
-	explanation_text = "Commit wide-spread carnage and sabotage as you turn the station's crew into zombies! How you go about this is entirely up to you."
+	explanation_text = "Ensure every single crew member is either dead or zombified by the end of the round."
 
 /datum/objective/assassinate/zombies/proc/find_all_targets()
 	var/list/all_targets = list()

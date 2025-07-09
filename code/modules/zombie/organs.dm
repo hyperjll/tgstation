@@ -13,6 +13,9 @@
 	var/revive_time_max = 700
 	var/timer_id
 
+	var/damage_mult = 0 // A percentile of our actual damage.
+	var/damage_mult_per_tick = 0.01 // How much the mult goes up per tick.
+
 /obj/item/organ/zombie_infection/Initialize(mapload)
 	. = ..()
 	if(iscarbon(loc))
@@ -59,9 +62,10 @@
 	if(owner.mob_biotypes & MOB_MINERAL)//does not process in inorganic things
 		return
 	if (causes_damage && !iszombie(owner) && owner.stat != DEAD)
-		owner.adjustToxLoss(0.5 * seconds_per_tick)
+		owner.adjustToxLoss((0.5 * seconds_per_tick) * damage_mult)
 		if (SPT_PROB(5, seconds_per_tick))
 			to_chat(owner, span_danger("You feel sick..."))
+		damage_mult += damage_mult_per_tick
 	if(timer_id || HAS_TRAIT(owner, TRAIT_SUICIDED) || !owner.get_organ_by_type(/obj/item/organ/brain))
 		return
 	if(owner.stat != DEAD && !converts_living)
