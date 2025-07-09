@@ -41,9 +41,9 @@
 		var/obj/item/organ/zombie_infection/z_infection = zombified_mob.get_organ_slot(ORGAN_SLOT_ZOMBIE)
 		if(z_infection.converts_living) // Just in case the check above didn't go through
 			z_infection.zombify(zombified_mob)
-
-		zombified_mob.visible_message(
-			span_userdanger("[zombified_mob] suddenly transforms into a zombie!"),
-			span_userdanger("You activate your romerol payload and transform into a zombie!"))
+			zombified_mob.visible_message(
+				span_userdanger("[zombified_mob.name] suddenly transforms into a zombie!"),
+				span_userdanger("You activate your romerol payload and transform into a zombie!"))
+			z_infection.converts_living = FALSE // Prevents re-zombification while still a zombie
 
 	qdel(src)
