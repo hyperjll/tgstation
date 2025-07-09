@@ -9,7 +9,6 @@
 /datum/chemical_reaction/inaprovaline
 	results = list(/datum/reagent/medicine/inaprovaline = 3)
 	required_reagents = list(/datum/reagent/oxygen = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/iron = 1)
-	required_temp = 280
 
 /datum/chemical_reaction/inaprovalineplus
 	results = list(/datum/reagent/medicine/coagulant/inaprovaline = 1)
@@ -30,7 +29,7 @@
 /datum/chemical_reaction/dylovene
 	results = list(/datum/reagent/medicine/dylovene = 3)
 	required_reagents = list(/datum/reagent/potassium = 1, /datum/reagent/silicon = 1, /datum/reagent/nitrogen = 1)
-	required_temp = 160
+	required_temp = 360
 
 /datum/chemical_reaction/ambuzol
 	results = list(/datum/reagent/medicine/ambuzol = 3)
