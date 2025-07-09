@@ -7,7 +7,7 @@
 	show_name_in_check_antagonists = TRUE
 	show_to_ghosts = TRUE
 	pref_flag = ROLE_WEREWOLF
-	var/special_roles = ROLE_WEREWOLF
+	var/special_role = ROLE_WEREWOLF
 	stinger_sound = 'hypermods/sound/mobs/humanoid/werewolf/werewolf_howl.ogg'
 	hud_icon = 'hypermods/icons/mob/huds/antag_hud.dmi'
 	antag_hud_name = "werewolf"
@@ -136,12 +136,12 @@
 /datum/antagonist/werewolf/lycanthropy
 	name = "\improper Lycanthropy Victim"
 	pref_flag = ROLE_LYCANTHROPY_VICTIM
-	special_roles = ROLE_LYCANTHROPY_VICTIM
+	special_role = ROLE_LYCANTHROPY_VICTIM
 	can_transform = FALSE
 	give_kill_objective = FALSE
 
 /datum/antagonist/werewolf/invader
 	name = "\improper Werewolf Invader"
 	pref_flag = ROLE_WEREWOLF_INVADER
-	special_roles = ROLE_WEREWOLF_INVADER
+	special_role = ROLE_WEREWOLF_INVADER
 	can_transform = TRUE

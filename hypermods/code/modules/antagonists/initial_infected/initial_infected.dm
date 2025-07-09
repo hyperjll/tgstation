@@ -3,7 +3,7 @@
 	antagpanel_category = "Zombies"
 	roundend_category = "Initial Infected"
 	pref_flag = ROLE_INITIAL_INFECTED
-	var/special_roles = ROLE_INITIAL_INFECTED
+	var/special_role = ROLE_INITIAL_INFECTED
 	stinger_sound = 'hypermods/sound/ambience/antag/romerolsmuggler.ogg'
 	hud_icon = 'hypermods/icons/mob/huds/antag_hud.dmi'
 	antag_hud_name = "iinfected"
@@ -13,7 +13,7 @@
 
 /datum/antagonist/initial_infected/greet()
 	play_stinger()
-	to_chat(owner, span_big("You are the [owner.special_roles]!"))
+	to_chat(owner, span_big("You are the Initial Infected!"))
 	owner.announce_objectives()
 
 /datum/antagonist/initial_infected/get_team()
@@ -55,7 +55,6 @@
 	return zombie_icon
 
 /datum/antagonist/initial_infected/on_gain()
-	owner.special_roles = special_roles
 	implant_me()
 	forge_objectives()
 	return ..()
@@ -66,8 +65,7 @@
 
 /datum/antagonist/initial_infected/on_removal()
 	if(owner.current)
-		to_chat(owner.current,span_userdanger("You are no longer the [special_roles]!"))
-	owner.special_roles = null
+		to_chat(owner.current,span_userdanger("You are no longer the Initial Infected!"))
 	return ..()
 
 /datum/antagonist/initial_infected/forge_objectives()

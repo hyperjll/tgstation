@@ -28,7 +28,7 @@
 	if(give_equipment)
 		equip_infiltrator(owner.current)
 	owner.current.mind.set_assigned_role(SSjob.get_job_type(/datum/job/infiltrator))
-	owner.current.mind.special_roles = ROLE_INFILTRATOR
+	//LAZYADD(owner.current.mind.special_roles, ROLE_INFILTRATOR)
 	uplink_handler.has_progression = FALSE
 	uplink_handler.has_objectives = FALSE
 
