@@ -7,13 +7,19 @@
 import { reloadByondCache } from './reloader.js';
 import { createCompiler } from './webpack.js';
 
-const noTmp = process.argv.includes('--no-tmp');
+import { reloadByondCache } from './reloader';
+import { RspackCompiler } from './webpack';
+
 const reloadOnce = process.argv.includes('--reload');
 
 async function setupServer() {
   const compiler = await createCompiler({
     useTmpFolder: !noTmp,
   });
+
+  const compiler = new RspackCompiler();
+
+  await compiler.setup();
 
   // Reload cache once
   if (reloadOnce) {
