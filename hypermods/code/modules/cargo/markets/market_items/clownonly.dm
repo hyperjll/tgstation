@@ -94,6 +94,26 @@
 	stock_max = 3
 	availability_prob = 100
 
+/datum/market_item/clownmain/holographicsword
+	name = "Holographic Energy Sword"
+	desc = "A holographic energy sword re-created after many complaints regarding them being exclusive to holodeck technology! Perfect for self-defense?"
+	item = /obj/item/melee/energy/sword/holographic
+
+	price_min = CARGO_CRATE_VALUE * 10
+	price_max = CARGO_CRATE_VALUE * 15
+	stock_max = 1
+	availability_prob = 100
+
+/datum/market_item/clownmain/holographicdodgeball
+	name = "Dodgeball"
+	desc = "The key to the most degrading of childhood games, nobody expects sudden dodgeball!"
+	item = /obj/item/toy/dodgeball
+
+	price_min = CARGO_CRATE_VALUE * 4
+	price_max = CARGO_CRATE_VALUE * 6
+	stock_max = 2
+	availability_prob = 100
+
 /datum/market_item/clownmain/bananium
 	name = "Bananium"
 	desc = "A single sheet of bananium, highly prized and sought after by all clowns everywhere!"

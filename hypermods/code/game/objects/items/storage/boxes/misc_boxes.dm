@@ -142,7 +142,8 @@
 		/obj/item/storage/box/balloons,
 		/obj/item/reagent_containers/spray/waterflower,
 		/obj/item/bikehorn,
-		/obj/item/food/grown/banana
+		/obj/item/food/grown/banana,
+		/obj/item/reagent_containers/cup/soda_cans/canned_laughter
 	)
 
 	for(var/i in 1 to 3)
