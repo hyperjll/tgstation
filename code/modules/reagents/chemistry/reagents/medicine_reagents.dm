@@ -1296,7 +1296,7 @@
 /datum/reagent/medicine/inaprovaline //is this used anywhere?
 	name = "Inaprovaline"
 	description = "Stabilizes the breathing of patients. Good for those in critical condition."
-	color = "#A4D8D8"
+	color = "#800808"
 	ph = 8.5
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_NO_RANDOM_RECIPE
 

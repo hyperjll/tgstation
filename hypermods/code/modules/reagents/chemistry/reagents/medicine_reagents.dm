@@ -1,47 +1,3 @@
-/datum/reagent/medicine/dermalnanites
-	name = "Dermal Nanites"
-	description = "Specialized nanites that cures all damage types slowly over time. Stabilizes temperature and cleanses radiation. Metabolizes very slowly."
-	color = "#DCDCDC"
-	metabolization_rate = 0.1
-	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	self_consuming = TRUE
-	var/healing = 0.1
-	var/radpower = 10
-
-/datum/reagent/medicine/dermalnanites/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
-	. = ..()
-	var/need_mob_update
-
-	need_mob_update += affected_mob.adjustBruteLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-	need_mob_update += affected_mob.adjustFireLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-	need_mob_update += affected_mob.adjustToxLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
-	need_mob_update += affected_mob.adjustOxyLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
-
-	if(affected_mob.bodytemperature > BODYTEMP_NORMAL)
-		affected_mob.adjust_bodytemperature(-40 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
-	else if(affected_mob.bodytemperature < (BODYTEMP_NORMAL + 1))
-		affected_mob.adjust_bodytemperature(40 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
-
-	if(need_mob_update)
-		return UPDATE_MOB_HEALTH
-
-/datum/reagent/medicine/dermalnanites/on_mob_metabolize(mob/living/carbon/affected_mob)
-	..()
-	if(ishuman(affected_mob))
-		var/mob/living/carbon/human/H = affected_mob
-		H.physiology.brute_mod *= 0.75
-		H.physiology.burn_mod *= 0.75
-		H.physiology.tox_mod *= 0.75
-		H.physiology.oxy_mod *= 0.75
-
-/datum/reagent/medicine/dermalnanites/on_mob_end_metabolize(mob/living/carbon/affected_mob)
-	if(ishuman(affected_mob))
-		var/mob/living/carbon/human/H = affected_mob
-		H.physiology.brute_mod /= 0.75
-		H.physiology.burn_mod /= 0.75
-		H.physiology.tox_mod /= 0.75
-		H.physiology.oxy_mod /= 0.75
-
 /datum/reagent/medicine/bicaridine
 	name = "Bicaridine"
 	description = "Restores bruising. Overdose causes it instead."
@@ -469,6 +425,50 @@
 		iter_wound.remove_wound()
 
 
+/datum/reagent/medicine/dermalnanites
+	name = "Dermal Nanites"
+	description = "Specialized nanites that cures all damage types slowly over time. Stabilizes temperature and cleanses radiation. Metabolizes very slowly."
+	color = "#DCDCDC"
+	metabolization_rate = 0.1
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	self_consuming = TRUE
+	var/healing = 0.1
+	var/radpower = 10
+
+/datum/reagent/medicine/dermalnanites/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	var/need_mob_update
+
+	need_mob_update += affected_mob.adjustBruteLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+	need_mob_update += affected_mob.adjustFireLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+	need_mob_update += affected_mob.adjustToxLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+	need_mob_update += affected_mob.adjustOxyLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
+
+	if(affected_mob.bodytemperature > BODYTEMP_NORMAL)
+		affected_mob.adjust_bodytemperature(-40 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	else if(affected_mob.bodytemperature < (BODYTEMP_NORMAL + 1))
+		affected_mob.adjust_bodytemperature(40 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
+
+	if(need_mob_update)
+		return UPDATE_MOB_HEALTH
+
+/datum/reagent/medicine/dermalnanites/on_mob_metabolize(mob/living/carbon/affected_mob)
+	..()
+	if(ishuman(affected_mob))
+		var/mob/living/carbon/human/H = affected_mob
+		H.physiology.brute_mod *= 0.75
+		H.physiology.burn_mod *= 0.75
+		H.physiology.tox_mod *= 0.75
+		H.physiology.oxy_mod *= 0.75
+
+/datum/reagent/medicine/dermalnanites/on_mob_end_metabolize(mob/living/carbon/affected_mob)
+	if(ishuman(affected_mob))
+		var/mob/living/carbon/human/H = affected_mob
+		H.physiology.brute_mod /= 0.75
+		H.physiology.burn_mod /= 0.75
+		H.physiology.tox_mod /= 0.75
+		H.physiology.oxy_mod /= 0.75
+
 /datum/reagent/medicine/experimentalstimulants
 	name = "Experimental Stimulants"
 	description = "Increases stun resistance, movement speed, and damage resistance in addition to quickly restoring the host's stamina all at the cost of poisoning over time and heart damage. Overdose amplifies the downsides."
@@ -501,7 +501,7 @@
 	need_mob_update += affected_mob.adjustFireLoss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjustToxLoss(0.4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_HEART, 0.4 * REM * seconds_per_tick)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_HEART, 0.4 * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
 
 	affected_mob.AdjustAllImmobility(-80 * REM * seconds_per_tick * normalise_creation_purity())
 	affected_mob.adjustStaminaLoss(-50 * REM * seconds_per_tick * normalise_creation_purity(), updating_stamina = FALSE)
@@ -517,7 +517,7 @@
 	var/need_mob_update
 	need_mob_update += affected_mob.adjustToxLoss(0.6 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_HEART, 0.6 * REM * seconds_per_tick)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_HEART, 0.6 * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
 
 	affected_mob.adjustStaminaLoss(5 * REM * seconds_per_tick * normalise_creation_purity(), updating_stamina = FALSE)
 
@@ -629,13 +629,13 @@
 	need_mob_update += affected_mob.adjustToxLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 	need_mob_update += affected_mob.adjustOxyLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
 
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_HEART, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_LUNGS, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_LIVER, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_STOMACH, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_EYES, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_EARS, -healing * REM * seconds_per_tick)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_HEART, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_LUNGS, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_LIVER, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_STOMACH, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_EYES, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_EARS, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
@@ -666,13 +666,13 @@
 	need_mob_update += affected_mob.adjustToxLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 	need_mob_update += affected_mob.adjustOxyLoss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
 
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_HEART, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_LUNGS, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_LIVER, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_STOMACH, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_EYES, -healing * REM * seconds_per_tick)
-	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_EARS, -healing * REM * seconds_per_tick)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_HEART, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_LUNGS, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_LIVER, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_STOMACH, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_EYES, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_EARS, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
 
 	affected_mob.adjust_nutrition(-2) // Big oof
 
