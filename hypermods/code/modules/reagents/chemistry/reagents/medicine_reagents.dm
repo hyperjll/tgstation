@@ -47,6 +47,8 @@
 	description = "Restores bruising. Overdose causes it instead."
 	color = "#f98a00"
 	overdose_threshold = 30
+	inverse_chem_val = 0.3
+	inverse_chem = /datum/reagent/inverse/bicaridine
 
 /datum/reagent/medicine/bicaridine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
@@ -87,6 +89,8 @@
 	description = "Restores fire damage. Overdose causes it instead."
 	color = "#f4a40b"
 	overdose_threshold = 30
+	inverse_chem_val = 0.3
+	inverse_chem = /datum/reagent/inverse/kelotane
 
 /datum/reagent/medicine/kelotane/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
