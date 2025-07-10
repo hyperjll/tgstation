@@ -44,4 +44,5 @@
 /datum/language_holder/swarmer
 	understood_languages = list(/datum/language/swarmer = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/swarmer = list(LANGUAGE_ATOM))
-	blocked_languages = list(/datum/language/common = list(LANGUAGE_ATOM))
+	blocked_understanding = list(/datum/language/common = list(LANGUAGE_ATOM))
+	blocked_speaking = list(/datum/language/common = list(LANGUAGE_ATOM))
