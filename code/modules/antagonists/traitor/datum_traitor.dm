@@ -282,11 +282,23 @@
 			imprison_tot_objective.find_traitor_target()
 			return imprison_tot_objective
 
-	if(prob(10) && !isnull(employer) && (employer != "Internal Affairs Agent"))
+	if(prob(10) && !isnull(employer) && (employer != "Internal Affairs Agent")) // Why would they protect syndicates?
 		var/datum/objective/protect/traitor_only/protect_tot_objective = new()
 		protect_tot_objective.owner = owner
 		protect_tot_objective.find_traitor_target()
 		return protect_tot_objective
+
+	if(prob(25) && !isnull(employer) && (employer != "Internal Affairs Agent")) // Internal affairs agents aren't going to help syndicates.
+		if(prob(80)) // 20% chance to get a all-antag variant other than traitors-only
+			var/datum/objective/assist/traitor/tot_assist_objective = new()
+			tot_assist_objective.owner = owner
+			tot_assist_objective.find_traitor_target()
+			return tot_assist_objective
+		else
+			var/datum/objective/assist/assist_objective = new()
+			assist_objective.owner = owner
+			assist_objective.find_target()
+			return assist_objective
 
 	if(prob(25) && can_get_rep_objectives)
 		if(prob(50))
