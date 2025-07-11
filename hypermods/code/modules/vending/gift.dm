@@ -5,6 +5,7 @@
 	icon_state = "gifts"
 	icon_deny = "gifts-deny"
 	product_ads = "Toys For All!;Oh its a Gift!;A Gift for Your Loved ones!;Purchase more Gifts, Now!"
+	vend_reply = "Thank you for using this Gift Vendor!"
 	products = list(/obj/item/camera_film = 30,
 					/obj/item/storage/photo_album = 5,
 					/obj/item/hourglass = 2,
