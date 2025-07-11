@@ -1,6 +1,7 @@
 /obj/machinery/vending/wallmed
 	name = "\improper NanoMed"
 	desc = "Wall-mounted Medical Equipment dispenser."
+	icon = 'hypermods/icons/obj/machines/vending.dmi'
 	icon_state = "wallmed"
 	icon_deny = "wallmed-deny"
 	panel_type = "wallmed-panel"
