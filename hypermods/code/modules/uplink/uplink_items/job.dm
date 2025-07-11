@@ -338,6 +338,7 @@
 			but you never know. Contents are sorted to always be worth 40 TC."
 	item = /obj/structure/closet/crate
 	cost = 15
+	cant_discount = TRUE // Already discounted?
 	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Super-hell-no.
 	stock_key = UPLINK_SHARED_STOCK_SURPLUS
