@@ -15,7 +15,6 @@
 					/obj/item/clothing/suit/jacket/capjacket = 1,
 					/obj/item/clothing/glasses/sunglasses/gar/giga = 1,
 					/obj/item/clothing/gloves/captain = 1,
-					/obj/item/clothing/head/costume/crown/fancy = 1,
 					/obj/item/clothing/head/hats/caphat = 1,
 					/obj/item/clothing/head/hats/caphat/parade = 1,
 					/obj/item/clothing/neck/cloak/cap = 1,
