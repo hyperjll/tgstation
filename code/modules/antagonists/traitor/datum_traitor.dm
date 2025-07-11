@@ -111,11 +111,11 @@
 					continue
 		uplink_handler.extra_purchasable += create_uplink_sales(rand(uplink_sales_min, uplink_sales_max), /datum/uplink_category/discounts, -1, uplink_items)
 
+	pick_employer()
+
 	if(give_objectives)
 		forge_traitor_objectives()
 		forge_ending_objective()
-
-	pick_employer()
 
 	owner.teach_crafting_recipe(/datum/crafting_recipe/syndicate_uplink_beacon)
 
@@ -270,7 +270,19 @@
 		kill_objective.find_target()
 		return kill_objective
 
-	if(prob(10))
+	if(prob(10) && !isnull(employer))
+		if(employer != "Internal Affairs Agent") // We aren't hired by nanotrasen/going postal/in legal trouble...
+			var/datum/objective/imprison/imprison_objective = new()
+			imprison_objective.owner = owner
+			imprison_objective.find_target()
+			return imprison_objective
+		else if(employer == "Internal Affairs Agent") // If we are apart of Nanotrasen Internal Affairs, they'd want us to secretly uproot agents of the Syndicate, why would they bother hiring a secret agent to imprison their own employees?
+			var/datum/objective/imprison/vs_traitor/imprison_tot_objective = new()
+			imprison_tot_objective.owner = owner
+			imprison_tot_objective.find_traitor_target()
+			return imprison_tot_objective
+
+	if(prob(10) && !isnull(employer) && (employer != "Internal Affairs Agent"))
 		var/datum/objective/protect/traitor_only/protect_tot_objective = new()
 		protect_tot_objective.owner = owner
 		protect_tot_objective.find_traitor_target()

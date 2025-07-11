@@ -7148,6 +7148,7 @@
 #include "hypermods\code\modules\antagonists\swarmers\swarmer_objs.dm"
 #include "hypermods\code\modules\antagonists\swarmers\swarmer_ruleset.dm"
 #include "hypermods\code\modules\antagonists\traitor\final_objective\cyborg_rift.dm"
+#include "hypermods\code\modules\antagonists\traitor\objectives\imprison.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\progression.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\protect_fellow_tot.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\sabotage_machinery.dm"
