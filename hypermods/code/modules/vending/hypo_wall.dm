@@ -4,6 +4,7 @@
 	icon = 'hypermods/icons/obj/machines/vending.dmi'
 	icon_state = "wallhypo"
 	icon_deny = "wallhypo-deny"
+	panel_type = "wallmed-panel"
 	tiltable = FALSE
 	density = FALSE
 	products = list(/obj/item/reagent_containers/hypospray/buyable = 5,
@@ -25,6 +26,8 @@
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/wallhypo
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/wallhypo, 32)
 
 /obj/item/vending_refill/wallhypo
 	machine_name = "HypoMed"
