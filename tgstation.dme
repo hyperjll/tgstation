@@ -7453,6 +7453,7 @@
 #include "hypermods\code\modules\vending\medical.dm"
 #include "hypermods\code\modules\vending\monkey_wall.dm"
 #include "hypermods\code\modules\vending\snack.dm"
+#include "hypermods\code\modules\vending\wardrobe.dm"
 #include "hypermods\nanites\code\circuitboards.dm"
 #include "hypermods\nanites\code\items.dm"
 #include "hypermods\nanites\code\machines.dm"
