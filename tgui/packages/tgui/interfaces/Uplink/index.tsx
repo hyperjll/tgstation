@@ -21,7 +21,7 @@ import {
   dangerLevelsTooltip,
 } from './calculateDangerLevel';
 import { GenericUplink, type Item } from './GenericUplink';
-import { Objective, ObjectiveMenu } from './ObjectiveMenu';
+import { Objective, type ObjectiveMenu } from './ObjectiveMenu';
 import { PrimaryObjectiveMenu } from './PrimaryObjectiveMenu';
 
 type UplinkItem = {
