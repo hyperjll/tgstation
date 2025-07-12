@@ -305,10 +305,12 @@
 
 	if(prob(25) && can_get_rep_objectives)
 		if(prob(50))
+			can_get_rep_objectives = FALSE // Prevent dupes of the same type of obj
 			var/datum/objective/traitor_progression/prog_objective = new()
 			prog_objective.owner = owner
 			return prog_objective
 		else
+			can_get_rep_objectives = FALSE // Prevent dupes of the same type of obj
 			var/datum/objective/traitor_objectives/tot_secobj_objective = new()
 			tot_secobj_objective.owner = owner
 			return tot_secobj_objective
