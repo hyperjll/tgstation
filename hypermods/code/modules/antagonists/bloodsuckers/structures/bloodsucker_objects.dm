@@ -41,7 +41,6 @@
 ///Bloodbag of Bloodsucker blood (used by Vassals only)
 /obj/item/reagent_containers/blood/o_minus/bloodsucker
 	blood_type = "B++"
-	unique_blood = /datum/reagent/blood/bloodsucker
 
 /obj/item/reagent_containers/blood/o_minus/bloodsucker/examine(mob/user)
 	. = ..()
