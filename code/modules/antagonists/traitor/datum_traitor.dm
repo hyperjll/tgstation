@@ -56,6 +56,9 @@
 	/// Can this version of traitor get reputation-based objectives? Should only go to traitors WITH secondary objectives.
 	var/can_get_rep_objectives = TRUE
 
+	/// Can this traitor get a mindshield objective?
+	var/mindshield_obj_avail = TRUE
+
 /datum/antagonist/traitor/infiltrator
 	// Used to denote traitors who have joined midround and therefore have no access to secondary objectives.
 	// Progression elements are best left to the roundstart antagonists
@@ -309,6 +312,12 @@
 			var/datum/objective/traitor_objectives/tot_secobj_objective = new()
 			tot_secobj_objective.owner = owner
 			return tot_secobj_objective
+
+	if(prob(10) && mindshield_obj_avail)
+		mindshield_obj_avail = FALSE // Prevent Dupes
+		var/datum/objective/mindshield/mindshield_objective = new()
+		mindshield_objective.owner = owner
+		return mindshield_objective
 
 	var/datum/objective/steal/steal_objective = new()
 	steal_objective.owner = owner
