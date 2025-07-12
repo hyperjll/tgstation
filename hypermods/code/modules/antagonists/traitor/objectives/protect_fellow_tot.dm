@@ -1,4 +1,4 @@
-/datum/objective/protect/traitor_only //The opposite of killing a dude.
+/datum/objective/protect/traitor_only
 	name = "protect traitor"
 	martyr_compatible = TRUE
 	admin_grantable = TRUE
