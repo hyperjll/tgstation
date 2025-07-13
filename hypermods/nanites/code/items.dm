@@ -26,12 +26,8 @@
 	new /obj/item/disk/nanite_program/nanite_sting(src)
 	new /obj/item/disk/nanite_program/explosive(src)
 	new /obj/item/disk/nanite_program/meltdown(src)
-	new /obj/item/disk/nanite_program/heart_stop(src)
 	new /obj/item/disk/nanite_program/pacifying(src)
-	new /obj/item/disk/nanite_program/stun(src)
 	new /obj/item/disk/nanite_program/mind_control(src)
-	new /obj/item/disk/nanite_program/dermal_button(src)
-	new /obj/item/disk/nanite_program/stealth(src)
 
 //Names are intentionally all the same - track your nanites, or use a hand labeler
 //This also means that you can give flesh melting nanites to your victims if you feel like it
