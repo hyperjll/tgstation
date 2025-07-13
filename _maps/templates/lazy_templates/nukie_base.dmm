@@ -354,6 +354,7 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 4
 	},
+/obj/effect/turf_decal/siding/thinplating_new/dark,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/expansion_nanites)
 "dV" = (
@@ -958,6 +959,32 @@
 /obj/structure/window/reinforced/plasma/spawner/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
+"jM" = (
+/obj/structure/table,
+/obj/item/storage/box/disks_nanite/random{
+	pixel_x = 6;
+	pixel_y = 9;
+	name = "random nanite program disks box"
+	},
+/obj/item/storage/box/disks_nanite/syndicate{
+	pixel_y = 9;
+	pixel_x = -9
+	},
+/obj/item/disk/nanite_program/adrenaline{
+	pixel_y = -7;
+	pixel_x = -7;
+	name = "adrenaline nanite program disk"
+	},
+/obj/item/disk/nanite_program/construct_tool_super{
+	name = "construct super tool nanite program disk"
+	},
+/obj/item/disk/nanite_program/factory{
+	pixel_y = -7;
+	pixel_x = 6;
+	name = "factory protocol nanite program disk"
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "jO" = (
 /obj/machinery/camera/autoname/directional/south{
 	network = list("nukie")
@@ -1131,22 +1158,47 @@
 /area/centcom/syndicate_mothership/control)
 "lb" = (
 /obj/structure/table,
-/obj/item/storage/box/disks_nanite{
-	pixel_y = 16;
-	pixel_x = -12
+/obj/item/disk/nanite_program/dermal_button{
+	pixel_x = -10;
+	pixel_y = 11;
+	name = "dermal button nanite program disk"
 	},
-/obj/item/storage/box/disks_nanite/syndicate{
-	pixel_x = -12
+/obj/item/disk/nanite_program/mendingbrute{
+	pixel_y = -7;
+	pixel_x = -10;
+	name = "mending brute nanite program disk"
 	},
-/obj/item/storage/box/disks_nanite/random{
-	pixel_y = 16;
-	pixel_x = 12
+/obj/item/disk/nanite_program/mendingburn{
+	pixel_y = -7;
+	name = "mending burn nanite program disk"
 	},
-/obj/item/storage/box/disks_nanite/random{
-	pixel_x = 12
+/obj/item/disk/nanite_program/mendingtoxin{
+	pixel_y = -7;
+	pixel_x = 10;
+	name = "mending toxin nanite program disk"
 	},
-/obj/item/storage/box/disks_nanite/random{
-	pixel_y = 5
+/obj/item/disk/nanite_program/purging_advanced{
+	pixel_y = 11;
+	name = "selective blood purification nanite program disk"
+	},
+/obj/item/disk/nanite_program/repairingplus{
+	pixel_y = 11;
+	pixel_x = 10;
+	name = "synthetic regeneration nanite program disk"
+	},
+/obj/item/disk/nanite_program/weakness{
+	pixel_y = 3;
+	pixel_x = -10;
+	name = "weakness nanite program disk"
+	},
+/obj/item/disk/nanite_program/refractive{
+	pixel_y = 3;
+	name = "refractive nanite program disk"
+	},
+/obj/item/disk/nanite_program/hardening{
+	pixel_x = 10;
+	pixel_y = 3;
+	name = "hardening nanite program disk"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_nanites)
@@ -2339,6 +2391,15 @@
 	},
 /turf/open/misc/asteroid/snow/airless,
 /area/centcom/syndicate_mothership)
+"wy" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "wC" = (
 /obj/structure/chair/sofa/bench/right{
 	dir = 4
@@ -2834,6 +2895,10 @@
 	},
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+"BW" = (
+/obj/machinery/light/cold/directional/east,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "Ca" = (
 /turf/closed/wall/mineral/wood,
 /area/centcom/syndicate_mothership/control)
@@ -3457,6 +3522,7 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
 	},
+/obj/effect/turf_decal/siding/thinplating_new/dark,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/expansion_nanites)
 "HD" = (
@@ -4327,6 +4393,15 @@
 /obj/structure/flora/grass/both/style_random,
 /turf/open/misc/asteroid/snow/airless,
 /area/centcom/syndicate_mothership)
+"PW" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/expansion_nanites)
 "Qa" = (
 /turf/closed/indestructible/syndicate,
 /area/centcom/syndicate_mothership/expansion_nanites)
@@ -4363,44 +4438,11 @@
 	name = "Tinted Window"
 	},
 /obj/machinery/light/cold/directional/west,
-/obj/structure/table/reinforced/plasmarglass,
-/obj/item/assembly/timer{
-	pixel_x = 12;
-	pixel_y = -9
-	},
-/obj/item/assembly/timer{
-	pixel_x = 15
-	},
-/obj/item/assembly/timer{
-	pixel_x = 18;
-	pixel_y = 5
-	},
-/obj/item/assembly/signaler{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/assembly/signaler{
-	pixel_x = 2;
-	pixel_y = 5
-	},
-/obj/item/assembly/signaler{
-	pixel_x = 5;
-	pixel_y = 10
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -6;
-	pixel_y = -4
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -2;
-	pixel_y = 3
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -6;
-	pixel_y = 4
-	},
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
+	},
+/obj/machinery/vending/plasmaresearch{
+	name = "\improper SyndiBomb Vendor"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
@@ -5205,6 +5247,8 @@
 /obj/item/circuit_component/equipment_action,
 /obj/item/shell/bci,
 /obj/item/shell/bci,
+/obj/item/circuit_component/reagent_injector,
+/obj/item/circuit_component/reagent_injector,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_genepowers)
 "XL" = (
@@ -6555,9 +6599,9 @@ HW
 KU
 KU
 KU
-KU
 Qa
 xf
+bf
 bf
 bf
 aA
@@ -6657,9 +6701,9 @@ HW
 nz
 Vt
 KU
-KU
 Uv
 ag
+PW
 Hw
 vq
 DZ
@@ -6759,9 +6803,9 @@ HW
 TX
 HW
 HW
-ub
 Uv
 Zq
+wy
 dR
 gb
 DZ
@@ -6861,10 +6905,10 @@ HW
 nk
 vX
 HW
-uT
 Uv
+jM
 lb
-bf
+BW
 tp
 DZ
 iA
@@ -6963,7 +7007,7 @@ HW
 HW
 TX
 PN
-uT
+Qa
 Qa
 Qa
 Qa
