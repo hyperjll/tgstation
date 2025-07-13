@@ -4308,6 +4308,10 @@
 "PD" = (
 /turf/closed/indestructible/opsglass,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+"PE" = (
+/obj/effect/baseturf_helper/asteroid/snow,
+/turf/closed/indestructible/syndicate,
+/area/centcom/syndicate_mothership/expansion_chemicalwarfare)
 "PF" = (
 /obj/structure/chair/bronze{
 	dir = 8
@@ -5536,7 +5540,7 @@ Ox
 Ox
 Ox
 Ox
-sB
+Ox
 Ox
 Ox
 Ox
@@ -5631,7 +5635,7 @@ sU
 Ox
 Ox
 Ox
-nQ
+PE
 nQ
 nQ
 nQ
@@ -6241,8 +6245,8 @@ KU
 KU
 Ye
 Ye
-Ye
-Ye
+Ox
+Ox
 nQ
 Yg
 yf
