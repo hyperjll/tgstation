@@ -3805,7 +3805,7 @@
 	},
 /area/centcom/syndicate_mothership/expansion_bombthreat)
 "Lw" = (
-/obj/machinery/computer/scan_consolenew,
+/obj/machinery/computer/dna_console,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_genepowers)
 "Lx" = (
