@@ -8,7 +8,8 @@
 
 /datum/uplink_item/explosives/smoke
 	name = "Smoke Grenades"
-	desc = "A box that contains five smoke grenades. Useful for vanishing and ninja fans with katana."
+	desc = "A box that contains five smoke grenades a smoke implant with three uses and a gas smask. For when you want to sow discord, vanish \
+		without a trace, or run with your arms awkwardly trailing behind you."
 	item = /obj/item/storage/box/syndie_kit/smoke
 	cost = 2
 
