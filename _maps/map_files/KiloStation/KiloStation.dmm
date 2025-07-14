@@ -14992,8 +14992,7 @@
 /area/station/engineering/atmos)
 "fdp" = (
 /obj/machinery/power/smes{
-	capacity = 9e+006;
-	charge = 10000
+	charge = 9e+006
 	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
