@@ -60,8 +60,8 @@ export async function findCacheRoot() {
       'userpath',
     );
     if (userpath) {
-      cacheRoot = userpath.replace(/\\$/, '').replace(/\\/g, '/') + '/cache';
-      onCacheRootFound(cacheRoot);
+      cacheRoot = `${userpath.replace(/\\$/, '').replace(/\\/g, '/')}/cache`;
+      await onCacheRootFound(cacheRoot);
       return cacheRoot;
     }
   }
@@ -71,7 +71,7 @@ export async function findCacheRoot() {
 function onCacheRootFound(cacheRoot) {
   logger.log(`found cache at '${cacheRoot}'`);
   // Plant a dummy browser window file, we'll be using this to avoid world topic. For byond 514.
-  fs.closeSync(fs.openSync(cacheRoot + '/dummy.htm', 'w'));
+  await Bun.write(`${cacheRoot}/dummy.htm`, '');
 }
 
 export async function reloadByondCache(bundleDir) {
@@ -103,7 +103,7 @@ export async function reloadByondCache(bundleDir) {
 
     try {
       // Plant a dummy browser window file, we'll be using this to avoid world topic. For byond 515-516.
-      fs.closeSync(fs.openSync(cacheDir + '/dummy.htm', 'w'));
+      await Bun.write(`${cacheDir}/dummy.htm`, '');
 
       for (let file of garbage) {
         fs.unlinkSync(file);

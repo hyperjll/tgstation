@@ -83,5 +83,6 @@ export function retrace(stack) {
       return `  at ${methodName} (${compactPath}:${lineNumber})`;
     })
     .join('\n');
-  return header + '\n' + mappedStack;
+
+  return `${header}\n${mappedStack}`;
 }

@@ -39,21 +39,13 @@ export class DreamSeeker {
     const query = Object.keys(params)
       .map(
         (key) =>
-          encodeURIComponent(key) + '=' + encodeURIComponent(params[key]),
+          `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`,
       )
       .join('&');
     logger.log(
       `topic call at ${this.client.defaults.baseURL}/dummy.htm?${query}`,
     );
-    return this.client.get('/dummy.htm?' + query).catch((e) => {
-      if (isAxiosError(e) && e.code === 'ECONNREFUSED') {
-        // Client exited, remove from list
-        instanceByPid.delete(this.pid);
-        logger.log(`client disconnected`);
-      } else {
-        throw e;
-      }
-    });
+    return this.client.get(`/dummy.htm?${query}`);
   }
 
   /**
@@ -126,6 +118,6 @@ export class DreamSeeker {
   }
 }
 
-function plural(word, n) {
-  return n !== 1 ? word + 's' : word;
+function plural(word: string, n: number): string {
+  return n !== 1 ? `${word}s` : word;
 }
