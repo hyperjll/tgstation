@@ -5,7 +5,6 @@
 /datum/uplink_item/explosives
 	category = /datum/uplink_category/explosives
 
-
 /datum/uplink_item/explosives/smoke
 	name = "Smoke Grenades"
 	desc = "A box that contains five smoke grenades a smoke implant with three uses and a gas smask. For when you want to sow discord, vanish \
@@ -19,13 +18,7 @@
 			in addition to dealing high amounts of damage to nearby personnel."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/grenade/syndieminibomb
-	cost = 6
-	purchasable_from = ~UPLINK_CLOWN_OPS
+	cost = 2
+	limited_stock = 4
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS /// Ops get their own version.
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/explosives/cat
-	name = "Feral cat grenade"
-	desc = "This grenade is filled with 5 feral cats in stasis. Upon activation, the feral cats are awoken and unleashed unto unlucky bystanders. WARNING: The cats are not trained to discern friend from foe!"
-	cost = 5
-	item = /obj/item/grenade/spawnergrenade/cat
-	surplus = 30

@@ -14,28 +14,41 @@
 	item = /obj/item/grenade/c4
 	cost = 1
 
+/datum/uplink_item/explosive_tools/x4
+	name = "Composition X-4"
+	desc = "Similar to C4, but with a stronger blast that is directional instead of circular. X-4 can be placed on a solid surface, such as a wall or window, \
+		and it will blast through the wall, injuring anything on the opposite side, while being safer to the user. For when you want a controlled explosion that \
+		leaves a wider, deeper, hole."
+	item = /obj/item/grenade/c4/x4
+	cost = 2
+	limited_stock = 5
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS //nukies get their own version
+
 /datum/uplink_item/explosive_tools/c4bag
 	name = "Bag of C-4 explosives"
 	desc = "Because sometimes quantity is quality. Contains 10 C-4 plastic explosives."
 	item = /obj/item/storage/backpack/duffelbag/syndie/c4
-	cost = 8 //20% discount!
+	cost = 5 // 50% discount!
 	cant_discount = TRUE
+	limited_stock = 2
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS //nukies get their own version
 
 /datum/uplink_item/explosive_tools/x4bag
 	name = "Bag of X-4 explosives"
 	desc = "Contains 3 X-4 shaped plastic explosives. Similar to C4, but with a stronger blast that is directional instead of circular. \
 			X-4 can be placed on a solid surface, such as a wall or window, and it will blast through the wall, injuring anything on the opposite side, while being safer to the user. \
 			For when you want a controlled explosion that leaves a wider, deeper, hole."
-	progression_minimum = 20 MINUTES
 	item = /obj/item/storage/backpack/duffelbag/syndie/x4
-	cost = 4
+	cost = 4 // 25% discount!
+	limited_stock = 1
 	cant_discount = TRUE
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // nukies get their own version
 
 /datum/uplink_item/explosive_tools/soap_clusterbang
 	name = "Slipocalypse Clusterbang"
 	desc = "A traditional clusterbang grenade with a payload consisting entirely of Syndicate soap. Useful in any scenario!"
 	item = /obj/item/grenade/clusterbuster/soap
-	cost = 3
+	cost = 2
 
 /datum/uplink_item/explosive_tools/detomatix
 	name = "Detomatix disk"
@@ -57,6 +70,7 @@
 	progression_minimum = 30 MINUTES
 	item = /obj/item/sbeacondrop/bomb
 	cost = 11
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS /// Ops get their own version.
 
 /datum/uplink_item/explosive_tools/syndicate_bomb/New()
 	. = ..()

@@ -23,6 +23,7 @@
 	desc = "A variation of the syndicate bomb designed to produce a large EMP effect."
 	item = /obj/item/sbeacondrop/emp
 	cost = 7
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS /// Ops get their own version.
 
 /datum/uplink_item/disruption/syndicate_bomb/emp/New()
 	..()

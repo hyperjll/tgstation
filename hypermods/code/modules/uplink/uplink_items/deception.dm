@@ -27,10 +27,11 @@
 	name = "Pizza Bomb"
 	desc = "A pizza box with a bomb cunningly attached to the lid. The timer needs to be set by opening the box; afterwards, \
 			opening the box again will trigger the detonation after the timer has elapsed. Comes with free pizza, for you or your target!"
-	progression_minimum = 15 MINUTES
 	item = /obj/item/pizzabox/bomb
-	cost = 6
+	cost = 2
+	limited_stock = 4
 	surplus = 8
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS /// Ops get their own version.
 
 /datum/uplink_item/deception/frame
 	name = "F.R.A.M.E. disk"

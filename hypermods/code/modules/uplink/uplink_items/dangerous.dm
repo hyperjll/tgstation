@@ -1,3 +1,13 @@
+/datum/uplink_item/dangerous/cat
+	name = "Feral Cat Grenade Box"
+	desc = "This box contains 5 grenades filled with 5 feral cats in stasis. Upon activation, the feral cats are awoken and unleashed unto unlucky bystanders. WARNING: The cats are not trained to discern friend from foe!"
+	cost = 5
+	item = /obj/item/storage/box/syndie_kit/feral_cat_grenades
+	surplus = 30
+	limited_stock = 2
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+
 /datum/uplink_item/dangerous/throwingknives
 	name = "Throwing Knives"
 	desc = "Exceptionally lethal throwing knives, they perfectly embed into your foes without much \

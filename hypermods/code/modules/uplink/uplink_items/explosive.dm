@@ -148,7 +148,7 @@
 	cost = 7
 	surplus = 40
 	progression_minimum = 10 MINUTES
-	purchasable_from = ~UPLINK_CLOWN_OPS
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // nukies get a box of em for bigger bang-and-buck now
 
 /datum/uplink_item/explosives/gluongrenades
 	name = "Gluon Grenades"
