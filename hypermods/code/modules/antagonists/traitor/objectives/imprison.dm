@@ -13,6 +13,8 @@
 	var/turf/target_turf = get_turf(A)
 	if (istype(target_turf.loc, /area/station/security/prison) && considered_alive(target))
 		return TRUE
+	if (istype(target_turf.loc, /area/shuttle/escape/brig) && considered_alive(target))
+		return TRUE
 	return FALSE
 
 /datum/objective/imprison/update_explanation_text()
