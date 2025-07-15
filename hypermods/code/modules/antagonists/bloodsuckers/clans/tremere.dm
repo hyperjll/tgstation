@@ -6,7 +6,7 @@
 		The Favorite Vassal gains the Batform spell, being able to morph themselves at will."
 	clan_objective = /datum/objective/bloodsucker/tremere_power
 	join_icon_state = "tremere"
-	join_description = "You will burn if you enter the Chapel, lose all default powers, \
+	join_description = "You will burn if you enter the Chapel, lose all non-default powers, \
 		but gain Blood Magic instead, powers you level up overtime."
 
 /datum/bloodsucker_clan/tremere/New(mob/living/carbon/user)

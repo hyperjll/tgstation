@@ -29,6 +29,8 @@
 	///Are we feeding with passive grab or not?
 	var/silent_feed = TRUE
 
+	var/upgraded_power = null
+
 /datum/action/cooldown/bloodsucker/feed/can_use(mob/living/carbon/user, trigger_flags)
 	. = ..()
 	if(!.)

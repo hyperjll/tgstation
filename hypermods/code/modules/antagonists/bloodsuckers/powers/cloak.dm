@@ -16,6 +16,8 @@
 	cooldown_time = 5 SECONDS
 	var/was_running
 
+	var/upgraded_power = null
+
 /// Must have nobody around to see the cloak
 /datum/action/cooldown/bloodsucker/cloak/can_use(mob/living/carbon/user, trigger_flags)
 	. = ..()

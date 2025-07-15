@@ -14,6 +14,7 @@
 	cooldown_time = 10 SECONDS
 	/// A reference to a COPY of the DNA of the mob prior to transformation.
 	var/datum/dna/old_dna
+	var/upgraded_power = null
 
 /datum/action/cooldown/bloodsucker/veil/ActivatePower(trigger_flags)
 	. = ..()

@@ -32,6 +32,7 @@
 		/mob/living/basic/mouse = 3,
 		/mob/living/basic/bat = 1,
 	)
+	var/upgraded_power = null
 
 /datum/action/cooldown/bloodsucker/gohome/can_use(mob/living/carbon/user, trigger_flags)
 	. = ..()
