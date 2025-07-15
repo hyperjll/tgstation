@@ -59169,7 +59169,7 @@
 	height = 7;
 	name = "Cargo Bay";
 	width = 12;
-	shuttle_id = "supply_home"
+	shuttle_id = "cargo_home"
 	},
 /turf/open/space/basic,
 /area/space)
