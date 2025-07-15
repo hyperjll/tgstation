@@ -149,3 +149,21 @@
 
 /datum/dna_block/feature/pod_hair/apply_to_mob(mob/living/carbon/human/target, dna_hash)
 	target.dna.features[feature_key] = SSaccessories.pod_hair_list[deconstruct_block(get_block(dna_hash), length(SSaccessories.pod_hair_list))]
+
+/datum/dna_block/feature/fox_tail
+	feature_key = FEATURE_FOX_TAIL
+
+/datum/dna_block/feature/fox_tail/create_unique_block(mob/living/carbon/human/target)
+	return construct_block(SSaccessories.tails_list_fox.Find(target.dna.features[feature_key]), length(SSaccessories.tails_list_fox))
+
+/datum/dna_block/feature/fox_tail/apply_to_mob(mob/living/carbon/human/target, dna_hash)
+	target.dna.features[feature_key] = SSaccessories.tails_list_fox[deconstruct_block(get_block(dna_hash), length(SSaccessories.tails_list_fox))]
+
+/datum/dna_block/feature/werewolf_tail
+	feature_key = FEATURE_WEREWOLF_TAIL
+
+/datum/dna_block/feature/werewolf_tail/create_unique_block(mob/living/carbon/human/target)
+	return construct_block(SSaccessories.tails_list_werewolf.Find(target.dna.features[feature_key]), length(SSaccessories.tails_list_werewolf))
+
+/datum/dna_block/feature/werewolf_tail/apply_to_mob(mob/living/carbon/human/target, dna_hash)
+	target.dna.features[feature_key] = SSaccessories.tails_list_werewolf[deconstruct_block(get_block(dna_hash), length(SSaccessories.tails_list_werewolf))]

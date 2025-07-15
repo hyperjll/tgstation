@@ -46,9 +46,6 @@
 #define DNA_BLOCK_SIZE 3
 #define DNA_BLOCK_SIZE_COLOR DEFAULT_HEX_COLOR_LEN
 
-#define DNA_FOX_TAIL_BLOCK 17
-#define DNA_WEREWOLF_TAIL_BLOCK 18
-#define DNA_WEREWOLF_EARS_BLOCK 19
 #define DNA_SEQUENCE_LENGTH 4
 #define DNA_MUTATION_BLOCKS 8
 #define DNA_UNIQUE_ENZYMES_LEN 32
@@ -73,6 +70,8 @@
 #define FEATURE_MOTH_MARKINGS "moth_markings"
 #define FEATURE_MUSH_CAP "caps"
 #define FEATURE_POD_HAIR "pod_hair"
+#define FEATURE_FOX_TAIL "fox_tail"
+#define FEATURE_WEREWOLF_TAIL "werewolf_tail"
 
 // Other
 #define FEATURE_WINGS "wings"
