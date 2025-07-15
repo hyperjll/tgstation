@@ -91,12 +91,13 @@
 		message = new_words.Join(" ")
 		message = capitalize(message)
 		speech_args[SPEECH_MESSAGE] = message
-/**
+
 /obj/item/organ/tail/werewolf
 	name = "werewolf tail"
+	desc = "A severed wolf tail. It's suprisingly fluffy."
 	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/werewolf
-	dna_block = /datum/dna_block/feature/werewolf_tail
 	wag_flags = WAG_ABLE
+	dna_block = /datum/dna_block/feature/werewolf_tail
 
 /datum/bodypart_overlay/mutant/tail/werewolf
 	feature_key = FEATURE_WEREWOLF_TAIL
@@ -108,25 +109,9 @@
 /datum/bodypart_overlay/mutant/tail/werewolf/on_mob_insert(obj/item/organ/parent, mob/living/carbon/human/receiver)
 	if(imprint_on_next_insertion && !receiver.dna.features[FEATURE_WEREWOLF_TAIL])
 		receiver.dna.features[FEATURE_WEREWOLF_TAIL] = pick(SSaccessories.tails_list_werewolf)
-		receiver.dna.update_uf_block(FEATURE_WEREWOLF_TAIL)
+		receiver.dna.update_uf_block(/datum/dna_block/feature/werewolf_tail)
 
 	return ..()
-**/
-/obj/item/organ/tail/werewolf
-	name = "werewolf tail"
-	desc = "A severed wolf tail. It's suprisingly fluffy."
-
-	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/werewolf
-
-	wag_flags = WAG_ABLE
-	dna_block = /datum/dna_block/feature/werewolf_tail
-
-/datum/bodypart_overlay/mutant/tail/werewolf
-	feature_key = FEATURE_WEREWOLF_TAIL
-	color_source = ORGAN_COLOR_HAIR
-
-/datum/bodypart_overlay/mutant/tail/werewolf/get_global_feature_list()
-	return SSaccessories.tails_list_werewolf
 
 /obj/item/organ/brain/werewolf
 	name = "werewolf brain"

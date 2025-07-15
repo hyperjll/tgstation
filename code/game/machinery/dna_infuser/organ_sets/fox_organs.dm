@@ -10,11 +10,12 @@
 	bodypart_overlay = /datum/bodypart_overlay/mutant/cat_ears
 	sprite_accessory_override = /datum/sprite_accessory/ears/fox
 
-/o/**bj/item/organ/tail/fox
+/obj/item/organ/tail/fox
 	name = "fox tail"
+	desc = "A severed fox tail. It's wonderfully fluffy."
 	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/fox
-	dna_block = /datum/dna_block/feature/fox_tail
 	wag_flags = WAG_ABLE
+	dna_block = /datum/dna_block/feature/fox_tail
 
 /datum/bodypart_overlay/mutant/tail/fox
 	feature_key = FEATURE_FOX_TAIL
@@ -26,22 +27,6 @@
 /datum/bodypart_overlay/mutant/tail/fox/on_mob_insert(obj/item/organ/parent, mob/living/carbon/receiver)
 	if(imprint_on_next_insertion && !receiver.dna.features[FEATURE_FOX_TAIL])
 		receiver.dna.features[FEATURE_FOX_TAIL] = pick(SSaccessories.tails_list_fox)
-		receiver.dna.update_uf_block(FEATURE_FOX_TAIL)
+		receiver.dna.update_uf_block(/datum/dna_block/feature/fox_tail)
 
 	return ..()
-**/
-/obj/item/organ/tail/fox
-	name = "fox tail"
-	desc = "A severed fox tail. It's wonderfully fluffy."
-
-	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/fox
-
-	wag_flags = WAG_ABLE
-	dna_block = /datum/dna_block/feature/fox_tail
-
-/datum/bodypart_overlay/mutant/tail/fox
-	feature_key = FEATURE_FOX_TAIL
-	color_source = ORGAN_COLOR_HAIR
-
-/datum/bodypart_overlay/mutant/tail/fox/get_global_feature_list()
-	return SSaccessories.tails_list_fox
