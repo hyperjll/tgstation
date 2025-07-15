@@ -31,7 +31,7 @@
 /datum/uplink_item/surgical/regenerative
 	name = "Regenerative Implant"
 	desc = "A surgical implant that when inserted into the body will slowly repair the host. Allowing for slow recovery of all forms of damage. \
-			Beware of health scanners, as constant supervision of your health may give you away. Comes with an autosurgeon."
+			Beware of health scanners, as constant supervision of your health may give you away. Comes with an autosurgeon. Incompatible with Reviver Implants."
 	item = /obj/item/autosurgeon/syndicate/regenerativebetter/hidden/single_use
 	cost = 8
 	surplus = 20
@@ -49,7 +49,7 @@
 /datum/uplink_item/surgical/reviver
 	name = "Reviver Implant"
 	desc = "This implant will attempt to revive and heal you if you lose consciousness, and can even repair your body and \
-			defibrillate your heart should you perish. Comes with an autosurgeon."
+			defibrillate your heart should you perish. Comes with an autosurgeon. Incompatible with Regenerative Implants."
 	item = /obj/item/autosurgeon/syndicate/reviver/tenmincap/hidden/single_use
 	cost = 6
 	surplus = 20

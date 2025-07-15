@@ -299,7 +299,7 @@
 
 /datum/uplink_item/surgical/reviverops
 	name = "Superior Reviver Implant"
-	desc = "This implant will attempt to revive and heal you if you lose consciousness, these superior versions have a drastically lowered cooldown than most. Comes with an autosurgeon."
+	desc = "This implant will attempt to revive and heal you if you lose consciousness, these superior versions have a drastically lowered cooldown than most. Comes with an autosurgeon. Incompatible with Regenerative Implants."
 	item = /obj/item/autosurgeon/syndicate/reviver/fivemincap/hidden/single_use
 	cost = 8
 	surplus = 0
@@ -307,7 +307,7 @@
 
 /datum/uplink_item/surgical/regenerativeops
 	name = "Regenerative Implants"
-	desc = "Three surgical implants that when inserted into the body will very slowly repair the host. Allowing for VERY slow recovery of all forms of damage."
+	desc = "Three surgical implants that when inserted into the body will very slowly repair the host. Allowing for VERY slow recovery of all forms of damage. Incompatible with Reviver Implants."
 	item = /obj/item/storage/box/syndie_kit/regen_implant_box
 	cost = 10
 	surplus = 0
