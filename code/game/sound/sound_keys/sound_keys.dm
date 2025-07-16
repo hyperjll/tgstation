@@ -13,11 +13,6 @@
 /datum/sound_effect/proc/return_sfx()
 	return pick(file_paths)
 
-/datum/sound_effect/assoc
-
-/datum/sound_effect/assoc/return_sfx()
-	return pick_weight(file_paths)
-
 /datum/sound_effect/shatter
 	key = SFX_SHATTER
 	file_paths = list(
