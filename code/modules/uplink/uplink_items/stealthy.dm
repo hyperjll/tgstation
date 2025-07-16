@@ -19,7 +19,8 @@
 
 /datum/uplink_item/stealthy_weapons/edagger
 	name = "Energy Dagger"
-	desc = "A dagger made of energy that looks and functions as a pen when off."
+	desc = "A dagger made of energy that looks and functions as a pen when off. \
+			While active, the dagger has a small chance to block attacks and reflect projectiles."
 	item = /obj/item/storage/box/itempack/edagger
 	cost = 2
 

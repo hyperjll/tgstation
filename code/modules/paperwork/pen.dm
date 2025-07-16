@@ -327,6 +327,14 @@
 	var/hidden_icon = "edagger"
 	var/list/alt_continuous = list("stabs", "pierces", "shanks")
 	var/list/alt_simple = list("stab", "pierce", "shank")
+	block_chance = 0
+	var/block_chance_active = 20
+	block_sound = 'sound/items/weapons/block_blade.ogg'
+	/// The chance for projectiles to be reflected by the blade if we are struck by a reflectable projectile
+	var/reflection_probability = 0
+	var/reflection_probability_active = 20
+	/// For reasons unknown i must add this:
+	var/blade_out = FALSE
 
 /obj/item/pen/edagger/Initialize(mapload)
 	. = ..()
@@ -429,6 +437,9 @@
 		lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 		righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 		set_embed(/datum/embedding/edagger_active)
+		block_chance = block_chance_active
+		reflection_probability = reflection_probability_active
+		blade_out = TRUE
 	else
 		name = initial(name)
 		desc = initial(desc)
@@ -437,6 +448,9 @@
 		lefthand_file = initial(lefthand_file)
 		righthand_file = initial(righthand_file)
 		set_embed(embed_type)
+		block_chance = initial(block_chance)
+		reflection_probability = initial(reflection_probability)
+		blade_out = FALSE
 
 	if(user)
 		balloon_alert(user, "[hidden_name] [active ? "active" : "concealed"]")
@@ -450,6 +464,29 @@
 /obj/item/pen/edagger/proc/on_scan(datum/source, mob/user, list/extra_data)
 	SIGNAL_HANDLER
 	LAZYADD(extra_data[DETSCAN_CATEGORY_ILLEGAL], "Hard-light generator detected.")
+
+/obj/item/pen/edagger/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
+	if(!blade_out)
+		return FALSE
+
+	if(attack_type == PROJECTILE_ATTACK)
+		var/obj/projectile/our_projectile = hitby
+
+		if(our_projectile.reflectable)
+			final_block_chance = 0 //we handle this via IsReflect(), effectively 20% block
+		else
+			final_block_chance -= 15 //We aren't AS good at blocking physical projectiles, like ballistics and thermals
+
+	if(attack_type == LEAP_ATTACK)
+		final_block_chance -= 20 //OH GOD GET IT OFF ME
+
+	if(attack_type == OVERWHELMING_ATTACK)
+		final_block_chance = 0 //Far too small to block these kinds of attacks.
+
+	return ..()
+
+/obj/item/pen/edagger/IsReflect()
+	return (blade_out) && prob(reflection_probability)
 
 /obj/item/pen/survival
 	name = "survival pen"

@@ -9,7 +9,8 @@
 /datum/uplink_item/melee/sword
 	name = "Energy Sword"
 	desc = "The energy sword is an edged weapon with a blade of pure energy. The sword is small enough to be \
-			pocketed when inactive. Activating it produces a loud, distinctive noise."
+			pocketed when inactive. Activating it produces a loud, distinctive noise. \
+			While active, the sword has a decent chance to block attacks and reflect projectiles."
 	progression_minimum = 20 MINUTES
 	item = /obj/item/melee/energy/sword/saber
 	cost = 6

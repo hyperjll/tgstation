@@ -196,6 +196,8 @@
 	embed_type = /datum/embedding/esword
 	var/list/alt_continuous = list("stabs", "pierces", "impales")
 	var/list/alt_simple = list("stab", "pierce", "impale")
+	/// The chance for projectiles to be reflected by the blade if we are struck by a reflectable projectile
+	var/reflection_probability = 50
 
 /obj/item/melee/energy/sword/Initialize(mapload)
 	. = ..()
@@ -207,10 +209,24 @@
 	if(!HAS_TRAIT(src, TRAIT_TRANSFORM_ACTIVE))
 		return FALSE
 
+	if(attack_type == PROJECTILE_ATTACK)
+		var/obj/projectile/our_projectile = hitby
+
+		if(our_projectile.reflectable)
+			final_block_chance = 0 //we handle this via IsReflect(), effectively 50% block
+		else
+			final_block_chance -= 25 //We aren't AS good at blocking physical projectiles, like ballistics and thermals
+
 	if(attack_type == LEAP_ATTACK)
 		final_block_chance -= 25 //OH GOD GET IT OFF ME
 
+	if(attack_type == OVERWHELMING_ATTACK)
+		final_block_chance = 0 //Far too small to block these kinds of attacks.
+
 	return ..()
+
+/obj/item/melee/energy/sword/IsReflect()
+	return HAS_TRAIT(src, TRAIT_TRANSFORM_ACTIVE) && prob(reflection_probability)
 
 /obj/item/melee/energy/sword/cyborg
 	name = "cyborg energy sword"
