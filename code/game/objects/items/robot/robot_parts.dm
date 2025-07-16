@@ -306,6 +306,9 @@
 					O.make_laws()
 					O.log_current_laws()
 
+			var/datum/antagonist/clock_cultist/old_servant_datum = brainmob.mind?.has_antag_datum(/datum/antagonist/clock_cultist) // edit
+			if(be_clockwork && old_servant_datum) // edit
+				old_servant_datum.silent = TRUE // edit
 			brainmob.mind?.remove_antags_for_borging()
 			O.job = JOB_CYBORG
 
@@ -335,6 +338,15 @@
 			if(!locomotion)
 				O.set_lockcharge(TRUE)
 				to_chat(O, span_warning("Error: Servo motors unresponsive."))
+
+// edits
+			if(be_clockwork && O.mind)
+				var/datum/antagonist/clock_cultist/new_servant_datum = new
+				if(old_servant_datum)
+					new_servant_datum.silent = TRUE
+				O.mind.add_antag_datum(new_servant_datum)
+				new_servant_datum.silent = FALSE
+// edits end
 
 		else
 			to_chat(user, span_warning("The MMI must go in after everything else!"))

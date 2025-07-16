@@ -26,3 +26,19 @@
 	desc = "Is that a steam exhaust port?"
 	color = rgb(190, 135, 0)
 	be_clockwork = TRUE
+
+/** // For testing
+/mob/living/silicon/robot/model/clockwork
+	lawupdate = FALSE
+	scrambledcodes = TRUE // These are rogue borgs.
+	ionpulse = TRUE
+	cell = /obj/item/stock_parts/power_store/cell/high
+	clockwork = TRUE
+	color = rgb(190, 135, 0)
+
+/mob/living/silicon/robot/model/clockwork/Initialize(mapload)
+	laws = new /datum/ai_laws/ratvar()
+	laws.associate(src)
+	set_clockwork(TRUE, FALSE)
+	. = ..()
+**/
