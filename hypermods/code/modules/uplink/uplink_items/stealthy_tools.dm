@@ -5,7 +5,7 @@
 			This can be done an unlimited amount of times. Some Syndicate areas and devices can only be accessed \
 			with these cards."
 	item = /obj/item/card/id/advanced/chameleon/black
-	cost = 6
+	cost = 4
 
 /datum/uplink_item/stealthy_tools/shadowcloak
 	name = "Cloaker Belt"
