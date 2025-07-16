@@ -181,7 +181,7 @@
 
 	if(converted_silicon.laws && istype(converted_silicon.laws, /datum/ai_laws/ratvar))
 		return
-	converted_silicon.laws = new /datum/ai_laws/ratvar
+	converted_silicon.laws = new /datum/ai_laws/ratvar()
 	converted_silicon.laws.associate(converted_silicon)
 	converted_silicon.show_laws()
 
