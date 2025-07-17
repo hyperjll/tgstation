@@ -74175,6 +74175,7 @@
 	req_one_access_txt = "31;48"
 	},
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/techmaint,
 /area/station/cargo/office)
 "vxK" = (
