@@ -91,6 +91,8 @@
 	var/datum/supply_pack/supply_pack
 	if(ispath(pack_type, /datum/supply_pack))
 		supply_pack = new pack_type
+		if(isnull(supply_pack.crate_type))
+			supply_pack.crate_type = /obj/structure/closet/crate
 	else  // treat this as a supply pack id and resolving it with SSshuttle
 		if(admin_override_contents)
 			supply_pack = admin_override_contents //Syndicate crates create a new datum while being customized which will result in this being triggered. Outside of this situation this should never trigger
