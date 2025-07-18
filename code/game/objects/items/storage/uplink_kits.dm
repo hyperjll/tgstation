@@ -24,6 +24,9 @@
 #define KIT_SAM_FISHER "sam_fisher"
 #define KIT_PROP_HUNT "prop_hunt"
 #define KIT_CLOVER "clover"
+#define KIT_ABDUCTOR "adbuctor"
+#define KIT_CUBAN_PETE "cuban_pete"
+#define KIT_DRUID "druid"
 
 /// last audited december 2022
 /obj/item/storage/box/syndicate
@@ -196,7 +199,10 @@
 		KIT_TRAITOR_2006 = 1,
 		KIT_SAM_FISHER = 1,
 		KIT_PROP_HUNT = 1,
-		KIT_CLOVER = 1
+		KIT_CLOVER = 1,
+		KIT_ABDUCTOR = 1,
+		KIT_CUBAN_PETE = 1,
+		KIT_DRUID = 1
 		)))
 		if(KIT_JAMES_BOND)
 			new /obj/item/gun/ballistic/automatic/pistol(src) // 7 tc
@@ -323,6 +329,56 @@
 			new /obj/item/clothing/shoes/cowboy/black(src)
 			new /obj/item/clothing/head/cowboy/brown(src)
 			new /obj/item/clothing/under/costume/dutch(src)
+
+		if(KIT_ABDUCTOR)
+			new /obj/item/reagent_containers/hypospray/medipen/atropine(src)
+			new /obj/item/gun/energy/alien/syndie_kit(src) // 10 TC?
+			new /obj/item/gun/energy/alien/syndie_kit(src) // 10 TC?
+			new /obj/item/gun/energy/shrink_ray/syndie_kit(src) // 15 TC?
+			new /obj/item/clothing/shoes/sneakers/black(src)
+			new /obj/item/clothing/suit/armor/abductor/vest(src)
+			new /obj/item/clothing/under/abductor(src)
+			new /obj/item/clothing/head/helmet/abductor(src)
+			new /obj/item/grenade/gluon(src) // 1 TC?
+
+		if(KIT_CUBAN_PETE)
+			new /obj/item/storage/backpack/santabag(src)
+			new /obj/item/assembly/signaler/low_range(src)
+			new /obj/item/assembly/signaler/low_range(src)
+			new /obj/item/assembly/signaler/low_range(src)
+			new /obj/item/grenade/syndieminibomb(src) // 6 TC
+			new /obj/item/grenade/syndieminibomb(src) // 6 TC
+			new /obj/item/sbeacondrop/bomb(src) // 11 TC?
+			new /obj/item/storage/belt/grenade/full(src) // 20 TC?
+			new /obj/item/clothing/head/collectable/petehat(src)
+			new /obj/item/clothing/suit/costume/poncho(src)
+			new /obj/item/clothing/under/pants/camo(src)
+			new /obj/item/clothing/shoes/workboots(src)
+			new /obj/item/reagent_containers/cup/glass/bottle/rum(src)
+
+		if(KIT_DRUID)
+			new /obj/item/clothing/glasses/thermal(src) // 4 TC
+			new /obj/item/gun/ballistic/bow(src) // 2 TC?
+			new /obj/item/clothing/gloves/botanic_leather(src)
+			new /obj/item/clothing/mask/gas/tiki_mask(src)
+			new /obj/item/clothing/under/shorts/green(src)
+			new /obj/item/clothing/shoes/sandal(src)
+			new /obj/item/card/id/advanced/chameleon(src) // 2 TC
+			new /obj/item/gun/syringe/blowgun(src) // 4 TC?
+			new /obj/item/knife/shiv/carrot(src) // 1 TC?
+			new /obj/item/storage/backpack/saddlepack(src)
+			new /obj/item/storage/bag/quiver/full(src) // 2 TC?
+			new /obj/item/reagent_containers/syringe/crude/blastoff(src)
+			new /obj/item/reagent_containers/syringe/crude/blastoff(src)
+			new /obj/item/food/grown/nettle/death(src)
+			new /obj/item/food/grown/nettle/death(src)
+			new /obj/item/food/grown/banana(src)
+			new /obj/item/food/grown/banana(src)
+			new /obj/item/food/grown/cherry_bomb(src) // 10 TC easy especially if they try to make more
+			new /obj/item/food/grown/cherry_bomb(src) // another 10 TC
+			new /obj/item/food/grown/mushroom/walkingmushroom(src)
+			new /obj/item/food/grown/mushroom/walkingmushroom(src)
+			new /obj/item/seeds/kudzu(src) // 3 TC
 
 /obj/item/storage/toolbox/emergency/old/ancientbundle/ //So the subtype works
 

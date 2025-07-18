@@ -6918,6 +6918,7 @@
 #include "hypermods\code\modules\actionspeed\modifiers\misc.dm"
 #include "hypermods\code\modules\actionspeed\modifiers\virus.dm"
 #include "hypermods\code\modules\antagonists\_common\antag_spawner.dm"
+#include "hypermods\code\modules\antagonists\abductor\equipment\gear\abductor_items.dm"
 #include "hypermods\code\modules\antagonists\bloodsuckers\bloodsucker_assets.dm"
 #include "hypermods\code\modules\antagonists\bloodsuckers\bloodsucker\bloodsucker_conversion.dm"
 #include "hypermods\code\modules\antagonists\bloodsuckers\bloodsucker\bloodsucker_datum.dm"
