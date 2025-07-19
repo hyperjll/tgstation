@@ -202,3 +202,12 @@
 	cost = 4
 	surplus = 30
 	progression_minimum = 10 MINUTES
+
+/datum/uplink_item/implants/imp_fulton_recovery
+	name = "Fulton Recovery Implant"
+	desc = "An implant design we've recently developed at the behest of our allies who needed a quick solution for agent corpse recovery. \
+			Within this implant is a highly compressed fulton extraction pack designed to activate upon the host's death, sending them to a specified location. \
+			Often used as a last-ditch escape method to ensure your corpse is recovered. Must be activated at the location you want your corpse to end up first before activation."
+	item = /obj/item/storage/box/syndie_kit/imp_fulton_recovery
+	cost = 2
+	surplus = 30

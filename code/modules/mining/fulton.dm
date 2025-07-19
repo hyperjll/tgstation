@@ -18,6 +18,8 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 	var/safe_for_living_creatures = TRUE
 	/// Maximum force that can be used to extract
 	var/max_force_fulton = MOVE_FORCE_STRONG
+	/// Time to actually attach the fulton to something
+	var/attach_time = 5 SECONDS
 
 /obj/item/extraction_pack/examine()
 	. = ..()
@@ -94,7 +96,7 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 		if(creature.mind)
 			to_chat(thing, span_userdanger("You are being extracted! Stand still to proceed."))
 
-	if(!do_after(user, 5 SECONDS, target = thing))
+	if(!do_after(user, attach_time, target = thing))
 		return .
 
 	balloon_alert_to_viewers("extracting!")

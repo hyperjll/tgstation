@@ -1349,6 +1349,15 @@
 /obj/item/storage/box/syndie_kit/imp_ling/PopulateContents()
 	new /obj/item/implanter/lingextract(src)
 
+/obj/item/storage/box/syndie_kit/imp_fulton_recovery
+	name = "fulton recovery implant box"
+	icon = 'icons/obj/fulton.dmi'
+	icon_state = "extraction_pack"
+	give_fallback_icon = TRUE
+
+/obj/item/storage/box/syndie_kit/imp_fulton_recovery/PopulateContents()
+	new /obj/item/implanter/fulton_recovery/syndi(src)
+
 /obj/item/storage/box/syndie_kit/missilephone
 	name = "missile phone box"
 
