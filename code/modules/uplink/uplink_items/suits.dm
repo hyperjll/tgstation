@@ -8,6 +8,8 @@
 	category = /datum/uplink_category/suits
 	surplus = 40
 
+//---- SUITS
+
 /datum/uplink_item/suits/infiltrator_bundle
 	name = "Infiltrator MODsuit"
 	desc = "Developed by the Roseus Galactic Actors Guild in conjunction with the Gorlex Marauders to produce a functional suit for urban operations, \
