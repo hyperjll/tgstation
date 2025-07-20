@@ -26,7 +26,8 @@
 		/obj/item/reagent_containers/cup/bottle/inacusiate = 1,
 	)
 	contraband = list(
-		/obj/item/storage/box/bandages = 1,
+		/obj/item/reagent_containers/applicator/pill/tox = 2,
+		/obj/item/reagent_containers/applicator/pill/morphine = 2,
 		/obj/item/storage/box/gum/happiness = 1,
 		/obj/item/reagent_containers/hypospray/medipen/formaldehyde = 1,
 	)

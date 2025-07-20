@@ -118,7 +118,9 @@
 		/obj/item/reagent_containers/cup/bottle/inacusiate = 3,
 		/obj/item/storage/pill_bottle/mannitol = 5,
 		/obj/item/reagent_containers/syringe/antiviral = 6,
-		/obj/item/reagent_containers/medigel/sterilizine = 3,
+		/obj/item/reagent_containers/medigel/libital = 2,
+		/obj/item/reagent_containers/medigel/aiuri = 2,
+		/obj/item/reagent_containers/medigel/sterilizine = 1,
 	)
 	contraband = list(
 		/obj/item/reagent_containers/applicator/pill/tox = 3,
