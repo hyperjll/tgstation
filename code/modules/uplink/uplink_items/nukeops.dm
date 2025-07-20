@@ -485,7 +485,7 @@
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_CYBERNETIC_REVOLUTION))
 		cost *= 2
 
-/datum/uplink_item/explosives/syndicate_bomb
+/datum/uplink_item/explosives/military_grade/syndicate_bomb
 	name = "Syndicate Bomb"
 	desc = "The Syndicate bomb is a fearsome device capable of massive destruction. It has an adjustable timer, \
 		with a minimum of %MIN_BOMB_TIMER seconds, and can be bolted to the floor with a wrench to prevent \
@@ -496,7 +496,7 @@
 	item = /obj/item/sbeacondrop/bomb
 	cost = 8
 
-/datum/uplink_item/explosives/syndicate_bomb/New()
+/datum/uplink_item/explosives/military_grade/syndicate_bomb/New()
 	. = ..()
 	desc = replacetext(desc, "%MIN_BOMB_TIMER", SYNDIEBOMB_MIN_TIMER_SECONDS)
 
