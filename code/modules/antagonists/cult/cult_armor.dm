@@ -235,24 +235,24 @@
 /**
  * Flagellant's robes
  * Special type gained from the daemon forge.
- * Provides negative armor and no protection against space,
- * but gives you a 30% (60% if hooded) speed boost to the user.
+ * Provides low armor and no protection against space,
+ * but gives you a 20% (40% if hooded) speed boost to the user.
  */
 /obj/item/clothing/suit/hooded/cultrobes/berserker
 	name = "flagellant's robes"
 	desc = "Blood-soaked robes infused with dark magic; allows the user to move at inhuman speeds, but at the cost of increased damage. Provides an even greater speed boost if its hood is worn."
 	armor_type = /datum/armor/cultrobes_berserker
-	slowdown = -0.3 //the hood gives an additional -0.3 if you have it flipped up, for a total of -0.6
+	slowdown = -0.2 //the hood gives an additional -0.2 if you have it flipped up, for a total of -0.4
 	hoodtype = /obj/item/clothing/head/hooded/cult_hoodie/berserkerhood
 	///Boolean on whether we've given the forced gravity trait, to keep track of it.
 	var/gave_gravity = FALSE
 
 /datum/armor/cultrobes_berserker
-	melee = -45
-	bullet = -45
-	laser = -45
-	energy = -55
-	bomb = -45
+	melee = 10
+	bullet = 10
+	laser = 10
+	energy = 15
+	bomb = 10
 
 /obj/item/clothing/suit/hooded/cultrobes/berserker/equipped(mob/living/user, slot)
 	. = ..()
