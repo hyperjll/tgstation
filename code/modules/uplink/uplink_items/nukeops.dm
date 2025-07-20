@@ -417,14 +417,6 @@
 	cost = 5
 	purchasable_from = UPLINK_SERIOUS_OPS
 
-/datum/uplink_item/explosives/military_grade/x4
-	name = "Composition X-4"
-	desc = "Similar to C4, but with a stronger blast that is directional instead of circular. X-4 can be placed on a solid surface, such as a wall or window, \
-		and it will blast through the wall, injuring anything on the opposite side, while being safer to the user. For when you want a controlled explosion that \
-		leaves a wider, deeper, hole."
-	item = /obj/item/grenade/c4/x4
-	cost = 2
-
 /datum/uplink_item/explosives/military_grade/syndicate_minibomb
 	name = "Syndicate Minibomb"
 	desc = "The minibomb is a grenade with a five-second fuse. Upon detonation, it will create a small hull breach \
@@ -461,44 +453,6 @@
 	item = /obj/item/syndicatedetonator
 	cost = 1
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/explosives/military_grade/c4bag
-	name = "Bag of C-4 explosives"
-	desc = "Because sometimes quantity is quality. Contains 10 C-4 plastic explosives."
-	item = /obj/item/storage/backpack/duffelbag/syndie/c4
-	cost = 5 // 50% discount!
-
-/datum/uplink_item/explosives/military_grade/x4bag
-	name = "Bag of X-4 explosives"
-	desc = "For when you didn't bring the bunker buster to your latest operation. Contains 10 X-4 shaped plastic explosives."
-	item = /obj/item/storage/backpack/duffelbag/syndie/x4
-	cost = 10 // 50% discount!
-
-/datum/uplink_item/explosives/military_grade/emp
-	name = "Syndicate EMP Bomb"
-	desc = "A variation of the syndicate bomb designed to produce a large EMP effect."
-	item = /obj/item/sbeacondrop/emp
-	cost = 6
-
-/datum/uplink_item/explosives/syndicate_bomb/emp/New()
-	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_CYBERNETIC_REVOLUTION))
-		cost *= 2
-
-/datum/uplink_item/explosives/military_grade/syndicate_bomb
-	name = "Syndicate Bomb"
-	desc = "The Syndicate bomb is a fearsome device capable of massive destruction. It has an adjustable timer, \
-		with a minimum of %MIN_BOMB_TIMER seconds, and can be bolted to the floor with a wrench to prevent \
-		movement. The bomb is bulky and cannot be moved; upon ordering this item, a smaller beacon will be \
-		transported to you that will teleport the actual bomb to it upon activation. Note that this bomb can \
-		be defused, and some crew may attempt to do so. \
-		The bomb core can be pried out and manually detonated with other explosives."
-	item = /obj/item/sbeacondrop/bomb
-	cost = 8
-
-/datum/uplink_item/explosives/military_grade/syndicate_bomb/New()
-	. = ..()
-	desc = replacetext(desc, "%MIN_BOMB_TIMER", SYNDIEBOMB_MIN_TIMER_SECONDS)
 
 // Support (Borgs and Reinforcements)
 
