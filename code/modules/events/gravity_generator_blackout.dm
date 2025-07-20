@@ -6,6 +6,7 @@
 	description = "Turns off the gravity generator."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 4
+	min_players = 20 // Low pop doesn't have a whole lot of people to turn grav on, or an AI to do so swiftly.
 
 /datum/round_event_control/gravity_generator_blackout/can_spawn_event(players_amt, allow_magic = FALSE)
 	. = ..()

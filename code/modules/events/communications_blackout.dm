@@ -6,6 +6,7 @@
 	description = "Heavily EMPs all telecommunication machines, blocking all communication for a while."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 3
+	min_players = 20 // Low pop doesn't have a whole lot of people to fix tcomms, or an AI to do so.
 
 /datum/round_event/communications_blackout
 	announce_when = 1
