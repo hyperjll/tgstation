@@ -34,13 +34,16 @@
 
 /obj/item/implant/fulton_recovery/activate()
 	. = ..()
-	var/mob/living/carbon/human/carbon_imp_in = imp_in
-	if(isnull(chosen_area_turf) && !carbon_imp_in.stat == DEAD) // prevent accidental location assigns
-		chosen_area_turf = get_turf(carbon_imp_in)
+	if(isnull(chosen_area_turf))
+		if(imp_in.stat == DEAD) // prevent accidental location assigns
+			balloon_alert(imp_in, "fulton location wasn't set.")
+			return
+		chosen_area_turf = get_turf(imp_in)
 
 		our_fulton.beacon_ref = WEAKREF(chosen_area_turf)
-		balloon_alert(carbon_imp_in, "linked to current location!")
+		balloon_alert(imp_in, "linked to current location!")
 	else
+		var/mob/living/carbon/human/carbon_imp_in = imp_in
 		if(carbon_imp_in.stat == DEAD)
 			our_fulton.interact_with_atom(carbon_imp_in, imp_in)
 		else
