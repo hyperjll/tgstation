@@ -411,7 +411,7 @@
 	if(carbon_mob.getStaminaLoss() < 71)
 		carbon_mob.adjustStaminaLoss(1)
 		if(prob(5))
-			to_chat(carbon_mob, "<span class='warning'>You suddenly feel your flesh re-adjust.")
+			to_chat(carbon_mob, "<span class='notice'>You suddenly feel your flesh re-adjust.")
 
 /datum/nanite_program/mendingburn
 	name = "Burn Mending"
@@ -439,7 +439,7 @@
 	if(carbon_mob.getStaminaLoss() < 71)
 		carbon_mob.adjustStaminaLoss(1)
 		if(prob(5))
-			to_chat(carbon_mob, "<span class='warning'>You suddenly feel your flesh re-adjust.")
+			to_chat(carbon_mob, "<span class='notice'>You suddenly feel your flesh re-adjust.")
 
 /datum/nanite_program/mendingtoxin
 	name = "Toxin Cleansing"
@@ -457,7 +457,7 @@
 	if(iscarbon(host_mob))
 		host_mob.adjustToxLoss(-healing, TRUE)
 		if(prob(5))
-			to_chat(host_mob, "<span class='warning'>For the briefest of moments, you feel your veins bulk up.")
+			to_chat(host_mob, "<span class='notice'>For the briefest of moments, you feel your veins bulk up.")
 
 
 /datum/nanite_program/selfresp
