@@ -23,6 +23,8 @@
 	var/immortal = FALSE
 	///Chance per second that we will move
 	var/move_chance = ANOMALY_MOVECHANCE
+	/// Does this anomaly have an alt icon when it's about to die?
+	var/pulse_icon = null
 
 /obj/effect/anomaly/Initialize(mapload, new_lifespan)
 	. = ..()
@@ -53,6 +55,8 @@
 		return
 	countdown.start()
 
+	playsound(src, 'hypermods/sound/effects/anomaly_appear.ogg', 50, 1)
+
 /obj/effect/anomaly/vv_edit_var(vname, vval)
 	. = ..()
 	if(vname == NAMEOF(src, immortal))
@@ -67,6 +71,9 @@
 		if(loc)
 			detonate()
 		qdel(src)
+	if(death_time < (world.time + (lifespan / 2)) && !isnull(pulse_icon))
+		icon_state = pulse_icon
+		pulse_icon = null // Setting this to null because i don't want it reapplied and there's no reason to revert the icon.
 
 /obj/effect/anomaly/Destroy()
 	STOP_PROCESSING(SSobj, src)

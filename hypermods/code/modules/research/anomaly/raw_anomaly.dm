@@ -1,0 +1,6 @@
+/obj/item/raw_anomaly_core/ice
+	desc = "The raw core of a ice anomaly. It is cold to the touch."
+	name = "raw ice core"
+	anomaly_type = /obj/item/assembly/signaler/anomaly/ice
+	icon = 'hypermods/icons/obj/devices/new_assemblies.dmi'
+	icon_state = "rawcore_ice"
