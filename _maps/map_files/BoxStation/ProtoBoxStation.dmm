@@ -31370,8 +31370,7 @@
 /area/station/maintenance/disposal/incinerator)
 "cga" = (
 /obj/machinery/power/smes{
-	capacity = 9e+006;
-	charge = 10000
+	charge = 9e+006
 	},
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/structure/cable,
