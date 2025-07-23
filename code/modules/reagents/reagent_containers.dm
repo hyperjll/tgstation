@@ -95,6 +95,7 @@
 /obj/item/reagent_containers/create_reagents(max_vol, flags)
 	. = ..()
 	RegisterSignal(reagents, COMSIG_REAGENTS_HOLDER_UPDATED, PROC_REF(on_reagent_change))
+	RegisterSignal(reagents, COMSIG_REAGENTS_DEL_REAGENT, PROC_REF(on_reagents_del))
 
 /obj/item/reagent_containers/attack(mob/living/target_mob, mob/living/user, list/modifiers, list/attack_modifiers)
 	if (!user.combat_mode)
@@ -248,10 +249,26 @@
 
 	else
 		if(isturf(target) && reagents.reagent_list.len && thrown_by)
+			var/turf/T = target
+			if(istype(T, /turf/open))
+				T.add_liquid_from_reagents(reagents, FALSE, reagents.chem_temp)
 			log_combat(thrown_by, target, "splashed (thrown) [english_list(reagents.reagent_list)]", "in [AREACOORD(target)]")
 			thrown_by.log_message("splashed (thrown) [english_list(reagents.reagent_list)] on [target].", LOG_ATTACK)
 			message_admins("[ADMIN_LOOKUPFLW(thrown_by)] splashed (thrown) [english_list(reagents.reagent_list)] on [target] in [ADMIN_VERBOSEJMP(target)].")
-		visible_message(span_notice("[src] spills its contents all over [target]."))
+			visible_message(span_notice("[src] spills its contents all over [target]."))
+			reagents.expose(target, TOUCH)
+		else
+			reagents.expose(target, TOUCH)
+			var/turf/targets_loc = target.loc
+			if(istype(targets_loc, /turf/open))
+				if(thrown_by && !target.can_atmos_pass)
+					var/turf/open/open = get_step(src, get_dir(src, thrown_by))
+					open?.add_liquid_from_reagents(reagents)
+				else
+					targets_loc.add_liquid_from_reagents(reagents)
+			else
+				targets_loc = get_step_towards(targets_loc, thrown_by)
+				targets_loc?.add_liquid_from_reagents(reagents)
 		reagents.expose(target, TOUCH)
 		if(QDELETED(src))
 			return

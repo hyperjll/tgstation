@@ -17,7 +17,7 @@
 	resistance_flags = FLAMMABLE
 	var/mopcount = 0
 	///Maximum volume of reagents it can hold.
-	var/max_reagent_volume = 15
+	var/max_reagent_volume = 50
 	var/mopspeed = 1.5 SECONDS
 	force_string = "robust... against germs"
 	var/static/list/clean_blacklist = typecacheof(list(
@@ -66,6 +66,9 @@
 	if(!clean_succeeded)
 		return
 	reagents.expose(cleaned_turf, TOUCH, 10) //Needed for proper floor wetting.
+	if(cleaned_turf && isturf(cleaned_turf)) // Making sure we are hitting the ACTUAL turf before checking for liquids as opposed to vents and such
+		if(cleaned_turf.liquids)
+			attack_on_liquids_turf(cleaning_source, cleaned_turf, cleaner, cleaned_turf.liquids)
 	var/val2remove = 1
 	if(cleaner?.mind)
 		val2remove = round(cleaner.mind.get_skill_modifier(/datum/skill/cleaning, SKILL_SPEED_MODIFIER), 0.1)
@@ -74,7 +77,7 @@
 /obj/item/mop/advanced
 	desc = "The most advanced tool in a custodian's arsenal, complete with a condenser for self-wetting! Just think of all the viscera you will clean up with this!"
 	name = "advanced mop"
-	max_reagent_volume = 10
+	max_reagent_volume = 20
 	icon_state = "advmop"
 	inhand_icon_state = "advmop"
 	lefthand_file = 'icons/mob/inhands/equipment/custodial_lefthand.dmi'
@@ -88,10 +91,6 @@
 	var/refill_rate = 0.5
 	var/refill_reagent = /datum/reagent/water //Determins what reagent to use for refilling, just in case someone wanted to make a HOLY MOP OF PURGING
 
-/obj/item/mop/advanced/Initialize(mapload)
-	. = ..()
-	START_PROCESSING(SSobj, src)
-
 /obj/item/mop/advanced/attack_self(mob/user)
 	refill_enabled = !refill_enabled
 	if(refill_enabled)
@@ -104,12 +103,11 @@
 /obj/item/mop/advanced/process(seconds_per_tick)
 	var/amadd = min(max_reagent_volume - reagents.total_volume, refill_rate * seconds_per_tick)
 	if(amadd > 0)
+		for(var/datum/reagent/reagent as anything in reagents.reagent_list)
+			if(reagent.type != refill_reagent)
+				reagents.remove_reagent(reagent.type, 1 * seconds_per_tick)
 		reagents.add_reagent(refill_reagent, amadd)
 
 /obj/item/mop/advanced/examine(mob/user)
 	. = ..()
 	. += span_notice("The condenser switch is set to <b>[refill_enabled ? "ON" : "OFF"]</b>.")
-
-/obj/item/mop/advanced/Destroy()
-	STOP_PROCESSING(SSobj, src)
-	return ..()

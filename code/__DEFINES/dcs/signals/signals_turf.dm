@@ -60,3 +60,8 @@
 
 ///from /turf/proc/afterShuttleMove() : (/turf/old_turf)
 #define COMSIG_TURF_AFTER_SHUTTLE_MOVE "turf_after_shuttle_move"
+
+///called on liquid creation
+#define COMSIG_TURF_LIQUIDS_CREATION "turf_liquids_creation"
+	/// Blocks the liquid from being created.
+	#define BLOCK_LIQUID_CREATION (1 << 0)

@@ -40,6 +40,7 @@
 		if(weapon.reagents.total_volume >= weapon.reagents.maximum_volume)
 			balloon_alert(user, "already soaked!")
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+		weapon.reagents.trans_to(reagents, weapon.reagents.total_volume, transferred_by = user) // Place all the reagents in the mop in first, to allow people to store reagents from their mops with an empty bucket, then take the doused amount out.
 		if(!CART_HAS_MINIMUM_REAGENT_VOLUME)
 			balloon_alert(user, "empty!")
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN

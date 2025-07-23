@@ -1597,4 +1597,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Has an item been enchanted by a clock cult Stargazer?
 #define TRAIT_STARGAZED "stargazed"
 
+/// Liquids cannot spread over this turf.
+#define TRAIT_BLOCK_LIQUID_SPREAD "block_liquid_spread"
+
 // END TRAIT DEFINES

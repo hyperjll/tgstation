@@ -220,6 +220,7 @@
 	penetrates_skin = NONE
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	default_container = /obj/item/reagent_containers/condiment/vegetable_oil
+	turf_exposure = TRUE
 
 /datum/reagent/consumable/nutriment/fat/oil/olive
 	name = "Olive Oil"
@@ -384,6 +385,7 @@
 	///40 joules per unit.
 	specific_heat = 40
 	default_container = /obj/item/reagent_containers/cup/bottle/frostoil
+	turf_exposure = TRUE
 
 /datum/reagent/consumable/frostoil/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()

@@ -48,3 +48,6 @@
 #define COMSIG_REAGENTS_CUP_TRANSFER_TO "reagents_cup_transfer_to"
 /// sent when reagents are transfered from some reagent container, to a cup (atom/transfer_from)
 #define COMSIG_REAGENTS_CUP_TRANSFER_FROM "reagents_cup_transfer_from"
+
+///from base of [/datum/reagents/proc/del_reagent]: (/datum/reagent)
+#define COMSIG_REAGENTS_DEL_REAGENT "reagents_del_reagent"

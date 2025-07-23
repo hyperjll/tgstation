@@ -103,6 +103,10 @@
 			if (HAS_TRAIT(loc, TRAIT_ELEVATED_TURF) && !HAS_TRAIT(object, TRAIT_ELEVATING_OBJECT))
 				continue // Do expose tables, don't expose items on tables
 			reagents.expose(object, VAPOR, fraction)
+		if(turf_location.liquids)
+			var/datum/liquid_group/targeted_group = turf_location?.liquids?.liquid_group
+			if(targeted_group?.reagents_per_turf)
+				targeted_group?.trans_to_seperate_group(reagents, min(targeted_group?.reagents_per_turf))
 
 	var/hit = 0
 	for(var/mob/living/foamer in loc)

@@ -148,6 +148,10 @@
 		target.update_appearance()
 		return ITEM_INTERACT_SUCCESS
 
+	if(isturf(target))
+		attack_on_liquids_turf(src, target, user)
+		return ITEM_INTERACT_SUCCESS
+
 	return NONE
 
 /obj/item/reagent_containers/cup/interact_with_atom_secondary(atom/target, mob/living/user, list/modifiers)
