@@ -35,6 +35,37 @@
 	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
 	return FALSE
 
+
+/obj/item/clothing/suit/armor/reactive/liquid
+	name = "reactive elemental armor"
+	desc = "An experimental suit of armor that produces an elemental of a random reagent type to defend the wearer."
+	cooldown_message = span_danger("The elemental generator is still recharging! It doesn't have enough energy to activate!")
+	emp_message = span_warning("The elemental generator is reset to default settings...")
+
+/obj/item/clothing/suit/armor/reactive/liquid/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	owner.visible_message(span_danger("[src] blocks [attack_text], absorbing the attack and forming an elemental to defend the wearer!"))
+
+	playsound(get_turf(src), 'sound/effects/splat.ogg', 100, TRUE)
+
+	var/mob/living/basic/elemental/my_fren_henry = new(get_turf(src))
+	set_faction(my_fren_henry, owner)
+
+	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
+	return TRUE
+
+/obj/item/clothing/suit/armor/reactive/liquid/emp_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	owner.visible_message(span_danger("[src] does not block [attack_text], and forms an elemental to defend itself!"))
+
+	playsound(get_turf(src), 'sound/effects/splat.ogg', 100, TRUE)
+
+	new /mob/living/basic/elemental(get_turf(src))
+
+	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
+	return FALSE
+
+/obj/item/clothing/suit/armor/reactive/liquid/proc/set_faction(mob/living/basic/elemental/my_fren_henry, mob/user)
+	my_fren_henry.faction = list("[REF(user)]", FACTION_HOSTILE)
+
 // Augmented Syndicate Reactive Armors
 
 /obj/item/clothing/suit/armor/reactive/syndicate

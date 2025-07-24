@@ -32,6 +32,7 @@
 		/obj/effect/anomaly/dimensional = /obj/item/anomaly_belt_shell/dimensional,
 		/obj/effect/anomaly/ectoplasm = /obj/item/anomaly_belt_shell/ectoplasm,
 		/obj/effect/anomaly/ice = /obj/item/anomaly_belt_shell/cryo,
+		/obj/effect/anomaly/liquid = /obj/item/anomaly_belt_shell/liquid,
 		)
 
 	if(istype(tool, /obj/item/assembly/signaler/anomaly))
@@ -384,3 +385,47 @@
 		if(C != owner)
 			C.reagents.add_reagent(/datum/reagent/inverse/cryostylane, 10)
 	COOLDOWN_START(src, anomaly_belt_cryo, cooldowndur)
+
+
+/obj/item/anomaly_belt_shell/liquid
+	name = "liquid anomaly belt"
+	desc = "A belt with built-in anomaly core integration. The core installed within it emits a soft bubbling noise."
+	icon_state = "anombelt_liquid"
+	inhand_icon_state = null
+	worn_icon_state = "anombelt_liquid"
+	actions_types = list(/datum/action/item_action/liquid_belt)
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	COOLDOWN_DECLARE(anomaly_belt_liquid)
+	/// A var we're using to determine what reagent is used.
+	var/anomaly_reagent
+
+/datum/action/item_action/liquid_belt/Trigger(trigger_flags)
+	var/obj/item/anomaly_belt_shell/liquid/anom_belt = target
+	if(istype(anom_belt))
+		anom_belt.activate(owner)
+
+/obj/effect/anomaly/liquid/Initialize(mapload, new_lifespan)
+	. = ..()
+	reagents = new(100)
+
+/obj/item/anomaly_belt_shell/liquid/proc/activate(mob/living/carbon/human/owner)
+	if(!COOLDOWN_FINISHED(src, anomaly_belt_liquid))
+		balloon_alert(owner, "on cooldown!")
+		return
+
+	var/list/r_types = subtypesof(/datum/reagent/)
+	for(var/i in 1 to 1)
+		anomaly_reagent = pick(r_types)
+
+	var/turf/open/tile = get_turf(src)
+	if(!tile)
+		return
+
+	owner.reagents.add_reagent(anomaly_reagent, 100)
+
+	tile.add_liquid_from_reagents(owner.reagents)
+	playsound(tile, 'sound/effects/splat.ogg', 50, 1)
+
+	owner.reagents.remove_reagent(anomaly_reagent, 100) // For some reason the reagents persist in the person. Let's change that.
+
+	COOLDOWN_START(src, anomaly_belt_liquid, cooldowndur)
