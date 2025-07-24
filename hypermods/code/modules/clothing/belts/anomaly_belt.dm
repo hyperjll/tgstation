@@ -31,6 +31,7 @@
 		/obj/effect/anomaly/hallucination = /obj/item/anomaly_belt_shell/hallucination,
 		/obj/effect/anomaly/dimensional = /obj/item/anomaly_belt_shell/dimensional,
 		/obj/effect/anomaly/ectoplasm = /obj/item/anomaly_belt_shell/ectoplasm,
+		/obj/effect/anomaly/ice = /obj/item/anomaly_belt_shell/cryo,
 		)
 
 	if(istype(tool, /obj/item/assembly/signaler/anomaly))
@@ -355,3 +356,31 @@
 
 /datum/status_effect/ectoplasm_belt/get_examine_text()
 	return span_notice("[owner.p_They()] [owner.p_do()]n't seem to be all here.")
+
+
+/obj/item/anomaly_belt_shell/cryo
+	name = "cryo anomaly belt"
+	desc = "A belt with built-in anomaly core integration. The core installed within it emits a soft cold glow."
+	icon_state = "anombelt_cryo"
+	inhand_icon_state = null
+	worn_icon_state = "anombelt_cryo"
+	actions_types = list(/datum/action/item_action/cryo_belt)
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	COOLDOWN_DECLARE(anomaly_belt_cryo)
+	var/effectrange = 6
+
+/datum/action/item_action/cryo_belt/Trigger(trigger_flags)
+	var/obj/item/anomaly_belt_shell/cryo/anom_belt = target
+	if(istype(anom_belt))
+		anom_belt.activate(owner)
+
+/obj/item/anomaly_belt_shell/cryo/proc/activate(mob/living/carbon/human/owner)
+	if(!COOLDOWN_FINISHED(src, anomaly_belt_cryo))
+		balloon_alert(owner, "on cooldown!")
+		return
+
+	playsound(get_turf(owner), 'sound/effects/magic/ethereal_exit.ogg', 50, 1)
+	for(var/mob/living/carbon/human/C in range(effectrange, owner))
+		if(C != owner)
+			C.reagents.add_reagent(/datum/reagent/inverse/cryostylane, 10)
+	COOLDOWN_START(src, anomaly_belt_cryo, cooldowndur)

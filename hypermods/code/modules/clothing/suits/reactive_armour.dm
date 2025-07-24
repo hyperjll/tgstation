@@ -1,3 +1,40 @@
+/obj/item/clothing/suit/armor/reactive/cryo
+	name = "reactive cryogenic armor"
+	desc = "An experimental suit of armor that renders the wearer immune to slipping on ice while freezing the area around them."
+	cooldown_message = span_danger("The cryogenic generator is still recharging! It doesn't have enough energy to activate!")
+	emp_message = span_warning("The cryogenic generator is reset to default settings...")
+	clothing_traits = list(TRAIT_NO_SLIP_ICE)
+	/// Area around wearer that is frozen.
+	var/freezing_range = 3
+	/// How long frozen tiles remain frozen?
+	var/freeze_duration = 10 SECONDS
+	/// How much does our temp change when we're EMP'd
+	var/temperature_delta = 300
+
+/obj/item/clothing/suit/armor/reactive/cryo/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	owner.visible_message(span_danger("[src] blocks [attack_text], converting the attack into a burst of cold energy!"))
+	playsound(get_turf(owner), 'sound/effects/magic/ethereal_exit.ogg', 50, 1)
+
+	for(var/any_turf in circle_range_turfs(center = get_turf(owner), radius = freezing_range))
+		if(!isopenturf(any_turf))
+			continue
+		var/turf/open/open_turf = any_turf
+		open_turf.MakeSlippery(TURF_WET_PERMAFROST, freeze_duration, freeze_duration, freeze_duration)
+		//open_turf.temperature = temp -- not necessary.
+
+	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
+	return TRUE
+
+/obj/item/clothing/suit/armor/reactive/cryo/emp_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	owner.visible_message(span_danger("[src] does not block [attack_text], and instead freezes over!"))
+
+	var/mob/living/carbon/human/human_hit = owner
+	human_hit.apply_status_effect(/datum/status_effect/freon)
+	human_hit.adjust_bodytemperature(-temperature_delta)
+
+	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
+	return FALSE
+
 // Augmented Syndicate Reactive Armors
 
 /obj/item/clothing/suit/armor/reactive/syndicate

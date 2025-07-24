@@ -15,6 +15,7 @@
 		/obj/effect/anomaly/hallucination = /obj/item/clothing/suit/armor/reactive/hallucinating,
 		/obj/effect/anomaly/dimensional = /obj/item/clothing/suit/armor/reactive/barricade,
 		/obj/effect/anomaly/ectoplasm = /obj/item/clothing/suit/armor/reactive/ectoplasm,
+		/obj/effect/anomaly/ice = /obj/item/clothing/suit/armor/reactive/cryo,
 		)
 
 	if(istype(tool, /obj/item/assembly/signaler/anomaly))
