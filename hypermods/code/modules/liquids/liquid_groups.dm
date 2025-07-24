@@ -61,7 +61,7 @@ GLOBAL_VAR_INIT(liquid_debug_colors, FALSE)
 	/// Liquids in this group will always evaporate regardless of height
 	var/always_evaporates = FALSE
 	/// The multiplier added to the evaporation rate of all reagents in this group.
-	var/evaporation_multiplier = 1
+	var/evaporation_multiplier = 2
 	///can we merge?
 	var/can_merge = TRUE
 	///number in decimal value that acts as a multiplier to the amount of liquids lost in applications
