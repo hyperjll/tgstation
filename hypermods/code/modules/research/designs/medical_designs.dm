@@ -75,3 +75,14 @@
 		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_CHEMISTRY
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/fultonrecoveryimplant
+	name = "Fulton Recovery Implant Case"
+	id = "fultonrecoveryimplant"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron =SMALL_MATERIAL_AMOUNT*3, /datum/material/glass =SMALL_MATERIAL_AMOUNT*3, /datum/material/plastic =SMALL_MATERIAL_AMOUNT*5)
+	build_path = /obj/item/implantcase/fulton_recovery
+	category = list(
+		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_MISC
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SECURITY
