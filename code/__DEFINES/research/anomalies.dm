@@ -8,6 +8,8 @@
 #define MAX_CORES_BIOSCRAMBLER 8
 #define MAX_CORES_DIMENSIONAL 8
 #define MAX_CORES_ECTOPLASMIC 8
+#define MAX_CORES_CRYO 8
+#define MAX_CORES_LIQUID 8
 
 ///Defines for the different types of explosion a flux anomaly can have
 #define FLUX_NO_EXPLOSION 0
