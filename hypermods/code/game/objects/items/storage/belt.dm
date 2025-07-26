@@ -18,7 +18,7 @@
 	new /obj/item/extinguisher/mini(src)
 	new /obj/item/stack/cable_coil(src)
 
-/obj/item/storage/belt/sabre/syndicate
+/obj/item/storage/belt/sheath/sabre/syndicate
 	name = "syndicate commanders sheath"
 	desc = "A nifty container for an evil sword. Given to the most trusted syndicate operatives."
 	icon = 'hypermods/icons/obj/weapons/sword.dmi'
@@ -28,10 +28,9 @@
 	inhand_icon_state = "scabbard-syndie"
 	worn_icon = 'hypermods/icons/mob/clothing/belt.dmi'
 	worn_icon_state = "scabbard-syndie"
-	w_class = WEIGHT_CLASS_BULKY
-	interaction_flags_click = parent_type::interaction_flags_click | NEED_DEXTERITY | NEED_HANDS
-
-/obj/item/storage/belt/sabre/syndicate/Initialize(mapload)
+	stored_blade = /obj/item/melee/sabre/syndicate
+/**
+/obj/item/storage/belt/sheath/sabre/syndicate/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
 
@@ -40,7 +39,7 @@
 	atom_storage.max_specific_storage = WEIGHT_CLASS_BULKY
 	atom_storage.set_holdable(/obj/item/melee/sabre/syndicate)
 	atom_storage.click_alt_open = FALSE
-
-/obj/item/storage/belt/sabre/syndicate/PopulateContents()
+**/
+/obj/item/storage/belt/sheath/sabre/syndicate/PopulateContents()
 	new /obj/item/melee/sabre/syndicate(src)
 	update_appearance()
