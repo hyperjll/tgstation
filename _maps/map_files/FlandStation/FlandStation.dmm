@@ -69479,7 +69479,13 @@
 /area/station/hallway/primary/starboard)
 "ulP" = (
 /obj/structure/table,
-/obj/effect/spawner/random/exotic/technology,
+/obj/item/raw_anomaly_core/random{
+	pixel_x = -6;
+	pixel_y = 12
+	},
+/obj/item/disk/design_disk/bepis{
+	pixel_x = 4
+	},
 /turf/open/floor/iron/vaporwave,
 /area/station/command/heads_quarters/rd)
 "ulQ" = (
