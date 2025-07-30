@@ -45,6 +45,7 @@
 	default_price = PAYCHECK_CREW * 0.6
 	extra_price = PAYCHECK_CREW
 	payment_department = ACCOUNT_SRV
+	allow_custom = TRUE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/snack
@@ -55,20 +56,24 @@
 
 /obj/machinery/vending/snack/blue
 	icon_state = "snackblue"
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/snack/blue
 
 /obj/machinery/vending/snack/orange
 	icon_state = "snackorange"
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/snack/orange
 
 /obj/machinery/vending/snack/green
 	icon_state = "snackgreen"
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/snack/green
 
 /obj/machinery/vending/snack/teal
 	icon_state = "snackteal"
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/snack/teal

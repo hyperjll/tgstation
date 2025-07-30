@@ -20,6 +20,7 @@
 	extra_price = PAYCHECK_COMMAND * 2.5
 	payment_department = ACCOUNT_SRV
 	light_mask = "cart-light-mask"
+	allow_custom = TRUE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cart

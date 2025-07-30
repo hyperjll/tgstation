@@ -59,6 +59,7 @@
 	extra_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_MED
 	light_mask = "med-light-mask"
+	allow_custom = TRUE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/medical
@@ -71,6 +72,7 @@
 /obj/machinery/vending/medical/syndicate
 	name = "\improper SyndiMed Plus"
 	initial_language_holder = /datum/language_holder/syndicate
+	allow_custom = FALSE
 
 	emagvendorreplace = FALSE
 
@@ -91,6 +93,7 @@
 		/obj/item/clothing/glasses/eyepatch/medical = 2,
 		/obj/item/storage/pill_bottle/painkillers = 1,
 	)
+	allow_custom = FALSE
 
 	emagvendorreplace = FALSE
 //Created out of a necessity to get these dumb chems out of the medical tools vendor.
@@ -147,6 +150,7 @@
 	extra_price = 100
 	payment_department = ACCOUNT_MED
 	refill_canister = /obj/item/vending_refill/drugs
+	allow_custom = TRUE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/drugs

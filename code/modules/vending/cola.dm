@@ -55,6 +55,7 @@
 	default_price = PAYCHECK_CREW * 0.7
 	extra_price = PAYCHECK_CREW
 	payment_department = ACCOUNT_SRV
+	allow_custom = TRUE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cola
@@ -104,12 +105,14 @@
 	icon_state = "Cola_Machine"
 	light_mask = "cola-light-mask"
 	light_color = COLOR_MODERATE_BLUE
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cola/blue
 
 /obj/machinery/vending/cola/black
 	icon_state = "cola_black"
 	light_mask = "cola-light-mask"
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cola/black
 
@@ -120,6 +123,7 @@
 	product_slogans = "Cola in space!"
 	light_mask = "red_cola-light-mask"
 	light_color = COLOR_DARK_RED
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cola/red
 
@@ -130,6 +134,7 @@
 	product_slogans = "Space-up! Like a hull breach in your mouth."
 	light_mask = "space_up-light-mask"
 	light_color = COLOR_DARK_MODERATE_LIME_GREEN
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cola/space_up
 
@@ -141,6 +146,7 @@
 	panel_type = "panel7"
 	light_mask = "starkist-light-mask"
 	light_color = COLOR_LIGHT_ORANGE
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cola/starkist
 
@@ -149,6 +155,7 @@
 	panel_type = "panel7"
 	light_mask = "soda-light-mask"
 	light_color = COLOR_WHITE
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cola/sodie
 
@@ -159,6 +166,7 @@
 	product_slogans = "The POWER that gamers crave! PWR GAME!"
 	light_mask = "pwr_game-light-mask"
 	light_color = COLOR_STRONG_VIOLET
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cola/pwr_game
 
@@ -182,6 +190,7 @@
 	product_ads = "Refreshing!;Thirsty for DNA? Satiate your craving!;Over 1 trillion souls drank!;Made with real DNA!;The hivemind demands your thirst!;Drink up!;Absorb your thirst."
 	light_mask = "shamblers-light-mask"
 	light_color = COLOR_MOSTLY_PURE_PINK
+	allow_custom = FALSE
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cola/shamblers
 

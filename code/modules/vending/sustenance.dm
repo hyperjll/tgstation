@@ -25,6 +25,7 @@
 	default_price = PAYCHECK_LOWER
 	extra_price = PAYCHECK_LOWER * 0.6
 	payment_department = NO_FREEBIES
+	allow_custom = TRUE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/sovietsoda
@@ -42,6 +43,7 @@
 	all_products_free = FALSE
 	displayed_currency_icon = "digging"
 	displayed_currency_name = " LP"
+	allow_custom = FALSE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/sustenance/labor_camp
