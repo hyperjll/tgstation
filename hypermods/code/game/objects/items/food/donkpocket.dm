@@ -9,10 +9,10 @@
 	foodtypes = GRAIN | MEAT
 
 /obj/item/food/donkpocket/syndi/make_bakeable()
-	AddComponent(/datum/component/bakeable, warm_type, rand(baking_time_short, baking_time_long), TRUE, TRUE, child_added_reagents)
+	AddComponent(/datum/component/bakeable, warm_type, rand(baking_time_short, baking_time_long), positive_result, TRUE, list(/datum/reagent/medicine/omnizine = omnizine_to_add))
 
 /obj/item/food/donkpocket/syndi/make_microwaveable()
-	AddElement(/datum/element/microwavable, warm_type, child_added_reagents)
+	AddElement(/datum/element/microwavable, warm_type, string_assoc_list(list(/datum/reagent/medicine/omnizine = omnizine_to_add)), !positive_result)
 
 /obj/item/food/donkpocket/warm/syndi
 	name = "warm donkpocket"

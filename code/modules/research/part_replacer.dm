@@ -98,7 +98,7 @@
 
 		user.visible_message(span_notice("[user.name] inserts the [selected_battery.name] to [src.name]!"))
 		balloon_alert(user, "[selected_battery.name] inserted")
-		play_rped_sound()
+		play_rped_effect()
 
 /obj/item/storage/part_replacer/bluespace/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	return interact_with_atom(interacting_with, user, modifiers)
