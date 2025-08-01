@@ -98,7 +98,7 @@
 
 /datum/reagent/inverse/cryostylane/expose_mob(mob/living/carbon/human/human_thing, methods, reac_volume, show_message, touch_protection)
 	. = ..()
-	if(!ishuman(transfered_thing))
+	if(!ishuman(human_thing))
 		return
 
 	if(HAS_TRAIT(human_thing, TRAIT_RESISTCOLD))
