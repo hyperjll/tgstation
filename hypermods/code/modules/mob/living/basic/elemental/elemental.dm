@@ -6,7 +6,7 @@
 	icon_dead = "elemental_dead"
 	maxHealth = 50
 	health = 50
-	faction = list(FACTION_HOSTILE)
+	faction = list(FACTION_HOSTILE, FACTION_ANOMALY)
 	mob_biotypes = MOB_BEAST | MOB_AQUATIC
 	ai_controller = /datum/ai_controller/basic_controller/elemental
 	can_be_held = FALSE

@@ -103,3 +103,6 @@
 
 /// Clockwork cult faction.
 #define FACTION_CLOCK "clock"
+
+/// Anomaly mob faction.
+#define FACTION_ANOMALY "anomaly"
