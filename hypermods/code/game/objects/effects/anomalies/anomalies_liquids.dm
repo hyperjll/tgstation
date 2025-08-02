@@ -55,5 +55,4 @@
 	var/turf/target_turf = get_turf(src)
 	playsound(target_turf, 'sound/effects/splat.ogg', 100, TRUE)
 
-	// Spawn some hostile syndicate critters and spread them out
 	spawn_and_random_walk(spawned_mob, target_turf, spawn_amt, walk_chance = 50, admin_spawn = ((flags_1 & ADMIN_SPAWNED_1) ? TRUE : FALSE))
