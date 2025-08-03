@@ -11,3 +11,10 @@
 	icon = 'hypermods/icons/obj/devices/new_assemblies.dmi'
 	icon_state = "liquid_core"
 	anomaly_type = /obj/effect/anomaly/liquid
+
+/obj/item/assembly/signaler/anomaly/flesh
+	name = "\improper flesh anomaly core"
+	desc = "The neutralized core of a flesh anomaly. You can hear something gurgle when you shake it. It'd probably be valuable for research."
+	icon = 'hypermods/icons/obj/devices/new_assemblies.dmi'
+	icon_state = "flesh_core"
+	anomaly_type = /obj/effect/anomaly/flesh

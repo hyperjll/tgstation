@@ -11,3 +11,10 @@
 	anomaly_type = /obj/item/assembly/signaler/anomaly/liquid
 	icon = 'hypermods/icons/obj/devices/new_assemblies.dmi'
 	icon_state = "rawcore_liquid"
+
+/obj/item/raw_anomaly_core/flesh
+	desc = "The raw core of a flesh anomaly. You hear something gurgling within it."
+	name = "raw flesh core"
+	anomaly_type = /obj/item/assembly/signaler/anomaly/flesh
+	icon = 'hypermods/icons/obj/devices/new_assemblies.dmi'
+	icon_state = "rawcore_flesh"

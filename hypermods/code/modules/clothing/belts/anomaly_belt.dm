@@ -39,7 +39,7 @@
 		var/obj/item/assembly/signaler/anomaly/anomaly = tool
 		var/armour_path = is_path_in_list(anomaly.anomaly_type, anomaly_belt_types, TRUE)
 		if(!armour_path)
-			armour_path = /obj/item/anomaly_belt_shell/pyro //Lets not cheat the player if an anomaly type doesnt have its own belt coded
+			armour_path = /obj/item/anomaly_belt_shell/stealth //Lets not cheat the player if an anomaly type doesnt have its own belt coded, so we'll do the same thing with reactive armors
 		to_chat(user, span_notice("You insert [anomaly] into the core slot, and the belt gently hums to life."))
 		new armour_path(get_turf(src))
 		qdel(src)
@@ -47,6 +47,52 @@
 		return ITEM_INTERACT_SUCCESS
 
 // Anomaly belts below
+
+/obj/item/anomaly_belt_shell/stealth
+	name = "stealth anomaly belt"
+	desc = "A belt with built-in anomaly core integration. The core installed within it hums softly."
+	icon_state = "anombelt_stealth"
+	inhand_icon_state = null
+	worn_icon_state = "anombelt_stealth"
+	actions_types = list(/datum/action/item_action/stealth_belt)
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	COOLDOWN_DECLARE(anomaly_belt_stealth)
+	///when triggering while on cooldown will only flicker the alpha slightly. this is how much it removes.
+	var/cooldown_alpha_removal = 50
+	///cooldown alpha flicker- how long it takes to return to the original alpha
+	var/cooldown_animation_time = 3 SECONDS
+	///how long they will be fully stealthed
+	var/stealth_time = 4 SECONDS
+	///how long it will animate back the alpha to the original
+	var/animation_time = 2 SECONDS
+	var/in_stealth = FALSE
+
+/datum/action/item_action/stealth_belt/Trigger(trigger_flags)
+	var/obj/item/anomaly_belt_shell/stealth/anom_belt = target
+	if(istype(anom_belt))
+		anom_belt.activate(owner)
+
+/obj/item/anomaly_belt_shell/stealth/proc/activate(mob/living/carbon/human/owner)
+	if(!COOLDOWN_FINISHED(src, anomaly_belt_stealth))
+		balloon_alert(owner, "on cooldown!")
+		return
+
+	owner.alpha = max(0, owner.alpha - cooldown_alpha_removal)
+	animate(owner, alpha = initial(owner.alpha), time = cooldown_animation_time)
+
+	var/mob/living/simple_animal/hostile/illusion/escape/decoy = new(owner.loc)
+	decoy.Copy_Parent(owner, 50)
+	decoy.GiveTarget(owner) //so it starts running right away
+	decoy.Goto(owner, decoy.move_to_delay, decoy.minimum_distance)
+	owner.alpha = 0
+	in_stealth = TRUE
+	addtimer(CALLBACK(src, PROC_REF(end_stealth), owner), stealth_time)
+
+	COOLDOWN_START(src, anomaly_belt_stealth, cooldowndur)
+
+/obj/item/anomaly_belt_shell/stealth/proc/end_stealth(mob/living/carbon/human/owner)
+	in_stealth = FALSE
+	animate(owner, alpha = initial(owner.alpha), time = animation_time)
 
 /obj/item/anomaly_belt_shell/pyro
 	name = "pyro anomaly belt"

@@ -106,3 +106,6 @@
 
 /// Anomaly mob faction.
 #define FACTION_ANOMALY "anomaly"
+
+/// Flesh vine monster faction.
+#define FACTION_FLESH "flesh"
