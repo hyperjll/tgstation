@@ -450,7 +450,7 @@
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
 
-/obj/effect/anomaly/liquid/Initialize(mapload, new_lifespan)
+/obj/item/anomaly_belt_shell/liquid/Initialize(mapload, new_lifespan)
 	. = ..()
 	reagents = new(100)
 
