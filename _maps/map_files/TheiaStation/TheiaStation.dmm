@@ -3402,6 +3402,7 @@
 /area/station/solars/port/fore)
 "boS" = (
 /obj/machinery/deepfryer,
+/obj/structure/railing,
 /turf/open/floor/iron/cafeteria,
 /area/station/security/prison/mess)
 "boY" = (
@@ -24650,6 +24651,10 @@
 "jPi" = (
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
+"jPj" = (
+/obj/machinery/computer/order_console/cook,
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "jPx" = (
 /obj/item/radio/intercom/directional/west,
 /obj/structure/disposalpipe/segment,
@@ -30598,7 +30603,6 @@
 /obj/item/grenade/chem_grenade/glitter,
 /obj/item/grenade/chem_grenade/glitter/blue,
 /obj/item/grenade/chem_grenade/glitter/pink,
-/obj/item/grenade/chem_grenade/glitter/white,
 /obj/item/clothing/head/costume/party,
 /obj/item/clothing/head/costume/party,
 /obj/item/clothing/head/costume/party,
@@ -40719,6 +40723,11 @@
 /obj/structure/window/spawner/directional/north,
 /turf/open/floor/wood,
 /area/station/security/prison/garden)
+"qxR" = (
+/obj/structure/railing,
+/obj/structure/closet/secure_closet/freezer/meat/all_access,
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "qxU" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/camera/directional/north{
@@ -42179,6 +42188,7 @@
 /area/station/engineering/atmos)
 "reC" = (
 /obj/structure/railing,
+/obj/structure/closet/secure_closet/freezer/kitchen/all_access,
 /turf/open/floor/iron/cafeteria,
 /area/station/security/prison/mess)
 "reK" = (
@@ -56358,6 +56368,7 @@
 "wYe" = (
 /obj/structure/railing,
 /obj/structure/cable,
+/obj/structure/closet/secure_closet/freezer/fridge/all_access,
 /turf/open/floor/iron/cafeteria,
 /area/station/security/prison/mess)
 "wYA" = (
@@ -113398,14 +113409,14 @@ ijS
 lSM
 blt
 rfW
-crP
+jPj
 crP
 crP
 crP
 vLy
 uHi
 crP
-reC
+qxR
 hUE
 cqC
 nYc

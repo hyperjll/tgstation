@@ -3775,6 +3775,7 @@
 /obj/effect/turf_decal/trimline/red/corner{
 	dir = 1
 	},
+/obj/machinery/light/small,
 /turf/open/floor/iron,
 /area/station/security/prison/visit)
 "aWZ" = (
@@ -10301,8 +10302,9 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/open/floor/iron,
-/area/station/security/prison)
+/obj/machinery/griddle,
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "cVH" = (
 /obj/machinery/light{
 	dir = 4
@@ -24480,7 +24482,8 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "hcE" = (
-/obj/effect/spawner/random/entertainment/arcade,
+/obj/structure/closet/secure_closet/freezer/meat/all_access,
+/obj/effect/spawner/random/contraband/prison,
 /turf/open/floor/iron/techmaint,
 /area/station/security/prison)
 "hcG" = (
@@ -36816,6 +36819,16 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
+"kHv" = (
+/obj/effect/turf_decal/trimline/red/filled/warning{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/red/warning{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "kHK" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "hop";
@@ -45887,8 +45900,8 @@
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/turf/open/floor/iron,
-/area/station/security/prison)
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "nnw" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
@@ -52335,8 +52348,8 @@
 /obj/effect/turf_decal/trimline/red/corner{
 	dir = 1
 	},
-/turf/open/floor/iron,
-/area/station/security/prison)
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "pki" = (
 /obj/item/storage/box/beakers{
 	pixel_x = 3;
@@ -53526,6 +53539,9 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/service/library/artgallery)
+"pCv" = (
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "pCw" = (
 /obj/effect/turf_decal/bot_white/left,
 /obj/effect/turf_decal/box/corners{
@@ -55934,17 +55950,15 @@
 /turf/open/floor/iron/techmaint,
 /area/station/security/courtroom)
 "qlu" = (
-/obj/structure/table/reinforced,
 /obj/effect/turf_decal/trimline/red/filled/line,
 /obj/effect/turf_decal/trimline/red/line{
 	dir = 1
 	},
-/obj/item/paper_bin{
-	pixel_x = 5;
-	pixel_y = 3
-	},
-/turf/open/floor/iron,
-/area/station/security/prison)
+/obj/structure/closet/secure_closet/freezer/kitchen/all_access,
+/obj/item/kitchen/rollingpin,
+/obj/item/knife/plastic,
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "qlv" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
@@ -57296,8 +57310,8 @@
 /obj/item/seeds/grape,
 /obj/item/seeds/tomato,
 /obj/item/seeds/wheat,
-/turf/open/floor/iron,
-/area/station/security/prison)
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "qEK" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/structure/cable,
@@ -68216,8 +68230,8 @@
 /area/station/command/heads_quarters/captain/private)
 "tPX" = (
 /obj/structure/chair/stool,
-/turf/open/floor/iron,
-/area/station/security/prison)
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "tPY" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
@@ -71724,7 +71738,7 @@
 "uSy" = (
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
-/area/station/security/prison)
+/area/station/security/prison/mess)
 "uSM" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/gloves/color/orange,
@@ -73917,7 +73931,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/security/prison)
+/area/station/security/prison/mess)
 "vuU" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 1
@@ -81315,15 +81329,15 @@
 	},
 /area/station/command/teleporter)
 "xrI" = (
-/obj/structure/chair/stool,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
 	},
 /obj/effect/turf_decal/trimline/red/line{
 	dir = 4
 	},
-/turf/open/floor/iron,
-/area/station/security/prison)
+/obj/structure/cable,
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "xrR" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/engine{
@@ -82274,15 +82288,20 @@
 /area/station/engineering/supermatter/room)
 "xDD" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/crayons,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 10
 	},
 /obj/effect/turf_decal/trimline/red/corner{
 	dir = 4
 	},
-/turf/open/floor/iron,
-/area/station/security/prison)
+/obj/machinery/microwave{
+	desc = "Cooks and boils stuff, somehow.";
+	pixel_y = 5
+	},
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "xDE" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -83009,8 +83028,8 @@
 	dir = 9
 	},
 /obj/structure/cable,
-/turf/open/floor/iron,
-/area/station/security/prison)
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "xMl" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
@@ -83192,6 +83211,10 @@
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/office)
+"xOv" = (
+/obj/machinery/deepfryer,
+/turf/open/floor/iron/cafeteria,
+/area/station/security/prison/mess)
 "xOz" = (
 /obj/structure/closet/emcloset,
 /obj/effect/turf_decal/bot,
@@ -120332,8 +120355,8 @@ nWr
 uKb
 cuR
 bdd
-hTL
-tPX
+xOv
+pCv
 qlu
 vuT
 bFS
@@ -120590,7 +120613,7 @@ auI
 cuR
 smv
 cVC
-acy
+kHv
 pjZ
 uSy
 kVv

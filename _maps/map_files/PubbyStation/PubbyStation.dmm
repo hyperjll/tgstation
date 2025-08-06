@@ -46692,7 +46692,7 @@
 /area/station/command/teleporter)
 "rJS" = (
 /obj/effect/turf_decal/tile/red/opposingcorners,
-/obj/structure/closet/secure_closet/freezer/kitchen,
+/obj/structure/closet/secure_closet/freezer/kitchen/all_access,
 /turf/open/floor/iron/white,
 /area/station/security/prison/mess)
 "rJT" = (

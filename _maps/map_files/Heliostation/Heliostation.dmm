@@ -37077,8 +37077,8 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "hoy" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
 /obj/effect/turf_decal/tile/red/opposingcorners,
+/obj/structure/closet/secure_closet/freezer/fridge/all_access,
 /turf/open/floor/iron/white,
 /area/station/security/prison/mess)
 "hoJ" = (
@@ -38311,10 +38311,10 @@
 /turf/open/floor/carpet,
 /area/station/service/abandoned_gambling_den)
 "hLT" = (
-/obj/structure/closet/secure_closet/freezer/kitchen,
 /obj/effect/turf_decal/tile/red/opposingcorners,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
+/obj/structure/closet/secure_closet/freezer/kitchen/all_access,
 /turf/open/floor/iron/white,
 /area/station/security/prison/mess)
 "hLU" = (
