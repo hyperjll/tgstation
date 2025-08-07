@@ -1,4 +1,4 @@
 author: "Arturlang"
 delete-after: True
 changes:
-  - bugfix: "Action button binding works again"
+  - bugfix: "ghosts can't buy heretic powers"
