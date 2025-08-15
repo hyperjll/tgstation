@@ -187,6 +187,13 @@
 	//the path of the fish_source datum to use for the fishing_spot component
 	var/fish_source_path = /datum/fish_source/vending
 
+	/// Can this vendor be emagged and replaced?
+	var/emagvendorreplace = FALSE
+	/// If the above if TRUE, what machine is this replaced with?
+	var/replacewith = null
+	/// Can you open the maintenance panel? (Prevents hacking and decontruct)
+	var/screwdrivable = TRUE
+
 /datum/armor/machinery_vending
 	melee = 20
 	fire = 50
@@ -418,7 +425,14 @@
 	if(obj_flags & EMAGGED)
 		return FALSE
 	obj_flags |= EMAGGED
-	balloon_alert(user, "product lock disabled")
+	if(emagvendorreplace)
+		//var/turf/T = get_turf(user)
+		balloon_alert(user, "hidden product lock disabled")
+		sleep(1 SECONDS) // I assure you, this ONE sleep fixes a runtime.
+		new replacewith(loc)
+		qdel(src)
+	else
+		balloon_alert(user, "product lock disabled")
 	return TRUE
 
 

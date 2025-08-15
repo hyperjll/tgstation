@@ -12,5 +12,7 @@ GLOBAL_LIST_INIT(phonetic_alphabet, world.file2list("strings/phonetic_alphabet.t
 GLOBAL_LIST_INIT(verbs, world.file2list("strings/names/verbs.txt"))
 GLOBAL_LIST_INIT(wisdoms, world.file2list("strings/wisdoms.txt"))
 
+GLOBAL_LIST_INIT(global_tips, world.file2list("strings/tips.txt"))
+
 //loaded on startup because of "
 //would include in rsc if ' was used

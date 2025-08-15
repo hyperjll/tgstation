@@ -17,6 +17,9 @@
 		return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/vending/screwdriver_act(mob/living/user, obj/item/attack_item)
+	if(!screwdrivable)
+		to_chat(user, span_warning("You attempt to open the maintenance panel of [src], but cannot find it!"))
+		return
 	if(anchored)
 		default_deconstruction_screwdriver(user, icon_state, icon_state, attack_item)
 		return ITEM_INTERACT_SUCCESS

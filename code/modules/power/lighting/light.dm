@@ -526,9 +526,11 @@
 			break
 		on = !on
 		update(FALSE)
+		playsound(loc, 'hypermods/sound/machines/light_tube_on.ogg', 50, TRUE) // Sound for flicker toggle
 		stoplag(rand(0.5 SECONDS, 1.5 SECONDS))
 
 	if(has_power())
+		playsound(loc, 'hypermods/sound/machines/light_tube_on.ogg', 50, TRUE) // Sound for flicker ends with the light on
 		on = (status == LIGHT_OK)
 	else
 		on = FALSE

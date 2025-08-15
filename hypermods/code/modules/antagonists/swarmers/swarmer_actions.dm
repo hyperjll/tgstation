@@ -88,7 +88,7 @@
 	// TODO get swarmers their own colour rather than just boldtext
 	if(!message)
 		return
-	var/rendered = "<B>Swarm communication - [owner]</b> [owner.say_quote(message)]"
+	var/rendered = "<B>Swarm communication - [owner]</b> [owner.generate_messagepart(message)]"
 	for(var/i in GLOB.mob_list)
 		var/mob/listener = i
 		if(isswarmer(listener))
