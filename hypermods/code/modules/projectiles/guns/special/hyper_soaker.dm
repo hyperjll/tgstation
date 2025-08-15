@@ -3,6 +3,8 @@
 	desc = "Harmless fun, unless you're allergic to water."
 	icon = 'hypermods/icons/obj/weapons/guns/water.dmi'
 	icon_state = "water"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_icon_state = "water"
 	w_class = WEIGHT_CLASS_NORMAL
 	clumsy_check = 0 // we do a little trolling
