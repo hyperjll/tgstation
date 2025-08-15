@@ -445,7 +445,7 @@
 
 /obj/machinery/light/attacked_by(obj/item/attacking_object, mob/living/user, list/modifiers, list/attack_modifiers)
 	. = ..()
-	if(!.)
+	if(. <= 0)
 		return
 	if(status != LIGHT_BROKEN && status != LIGHT_EMPTY)
 		return
@@ -516,24 +516,24 @@
 
 /obj/machinery/light/proc/flicker(amount = rand(10, 20))
 	set waitfor = FALSE
-	if(flickering)
+	if(flickering || !on || status != LIGHT_OK)
 		return
+
+	. = TRUE // did we actually flicker? Send this now because we expect immediate response, before sleeping.
 	flickering = TRUE
-	if(on && status == LIGHT_OK)
-		. = TRUE //did we actually flicker? Send this now because we expect immediate response, before sleeping.
-		for(var/i in 1 to amount)
-			if(status != LIGHT_OK || !has_power())
-				break
-			on = !on
-			update(FALSE)
-			playsound(loc, 'hypermods/sound/machines/light_tube_on.ogg', 50, TRUE) // Sound for flicker toggle
-			sleep(rand(5, 15))
-		if(has_power())
-			playsound(loc, 'hypermods/sound/machines/light_tube_on.ogg', 50, TRUE) // Sound for flicker ends with the light on
-			on = (status == LIGHT_OK)
-		else
-			on = FALSE
+	for(var/i in 1 to amount)
+		if(status != LIGHT_OK || !has_power())
+			break
+		on = !on
 		update(FALSE)
+		stoplag(rand(0.5 SECONDS, 1.5 SECONDS))
+
+	if(has_power())
+		on = (status == LIGHT_OK)
+	else
+		on = FALSE
+
+	update(FALSE)
 	flickering = FALSE
 
 // ai attack - make lights flicker, because why not

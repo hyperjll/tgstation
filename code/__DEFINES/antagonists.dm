@@ -461,6 +461,12 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 
 #define MALF_MAX_PP 400
 
+//Uplink spawn loc
+#define UPLINK_PDA "PDA"
+#define UPLINK_RADIO "Radio"
+#define UPLINK_PEN "Pen" //like a real spy!
+#define UPLINK_IMPLANT "Implant"
+
 /// Infiltrator stuff
 #define INFILTRATOR_FACTION_CORPORATE_CLIMBER "Corporate Climber"
 #define INFILTRATOR_FACTION_ANIMAL_RIGHTS_CONSORTIUM "Animal Rights Consortium"
