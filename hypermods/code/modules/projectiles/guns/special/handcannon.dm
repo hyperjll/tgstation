@@ -3,6 +3,8 @@
 	desc = "Since the times of shooting cannonballs from ships has long passed, pirate culture has moved onto making these ship-piercing weapons handheld."
 	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "handcannon"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_icon_state = "handycannon"
 	fire_sound = 'sound/items/weapons/gun/general/cannon.ogg'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cannonball
