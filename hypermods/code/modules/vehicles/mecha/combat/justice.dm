@@ -9,6 +9,7 @@
 	name = "\improper Justice"
 	desc = "Black and red syndicate mech designed for execution orders. \
 		For safety reasons, the syndicate advises against standing too close."
+	icon = 'hypermods/icons/mob/rideables/mecha.dmi'
 	icon_state = "justice"
 	base_icon_state = "justice"
 	movedelay = MOVEDELAY_IDLE
