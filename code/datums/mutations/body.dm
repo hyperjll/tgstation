@@ -134,6 +134,8 @@
 		return
 	REMOVE_TRAIT(owner, TRAIT_DWARF, GENETIC_MUTATION)
 	owner.visible_message(span_danger("[owner] suddenly grows!"), span_notice("Everything around you seems to shrink.."))
+	if(prob(1) || check_holidays(APRIL_FOOLS))
+		owner.say("% OOF! YEAH! HA! HA!", forced=name)
 
 /datum/mutation/acromegaly
 	name = "Acromegaly"
