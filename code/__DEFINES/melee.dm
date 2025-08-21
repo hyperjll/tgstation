@@ -14,4 +14,4 @@
 #define MARTIALART_TUNNELARTS "tunnel arts"
 
 /// The number of hits required to crit a target
-#define HITS_TO_CRIT(damage) round(100 / damage, 0.1)
+#define HITS_TO_CRIT(damage) round(100 / (damage), 0.1)
