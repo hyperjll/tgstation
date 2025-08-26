@@ -82,7 +82,7 @@
 	progression_minimum = 30 MINUTES
 	cost = 17
 	surplus = 0
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS|UPLINK_SPY)
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 	wanted_item_result = /obj/item/gun/ballistic/revolver/golden
 
