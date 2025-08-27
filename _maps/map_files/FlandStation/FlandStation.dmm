@@ -8491,8 +8491,8 @@
 /obj/structure/lattice/catwalk,
 /area/space/nearstation)
 "cuI" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/effect/turf_decal/bot,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/iron/dark,
 /area/station/cargo/storage)
 "cuK" = (
@@ -38607,7 +38607,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "lgf" = (
-/obj/structure/filingcabinet/filingcabinet,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint)
 "lgh" = (
@@ -61628,7 +61628,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/commons/dorms)
 "rQZ" = (
-/obj/structure/filingcabinet/filingcabinet,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -72361,7 +72361,7 @@
 /turf/open/floor/iron/grid/steel,
 /area/station/engineering/atmos/pumproom)
 "vbd" = (
-/obj/structure/filingcabinet/filingcabinet,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/carpet/orange,
 /area/station/command/heads_quarters/qm)
 "vbi" = (

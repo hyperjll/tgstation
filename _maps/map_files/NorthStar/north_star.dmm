@@ -25625,9 +25625,6 @@
 /area/station/service/theater)
 "gIg" = (
 /obj/structure/table/wood,
-/obj/item/airlock_painter/decal/tile{
-	pixel_y = -5
-	},
 /obj/item/airlock_painter,
 /obj/item/airlock_painter/decal{
 	pixel_y = 5
@@ -27766,7 +27763,6 @@
 /obj/item/storage/toolbox/electrical{
 	pixel_y = 10
 	},
-/obj/item/airlock_painter/decal/tile,
 /turf/open/floor/iron/dark,
 /area/station/commons/storage/primary)
 "hmn" = (
@@ -50187,11 +50183,11 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/psychology)
 "mWd" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/effect/turf_decal/siding/wood{
 	dir = 6
 	},
 /obj/machinery/camera/autoname/directional/west,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/carpet,
 /area/station/medical/psychology)
 "mWg" = (
@@ -54250,7 +54246,6 @@
 	pixel_x = -2;
 	pixel_y = 6
 	},
-/obj/item/paper/fluff/ids_for_dummies,
 /obj/machinery/light/directional/north,
 /obj/item/storage/crayons{
 	pixel_x = 16

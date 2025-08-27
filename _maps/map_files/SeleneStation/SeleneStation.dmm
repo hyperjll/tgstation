@@ -4124,11 +4124,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/patients_rooms)
-"bCh" = (
-/obj/effect/decal/cleanable/glitter/blue,
-/obj/effect/decal/cleanable/glitter/white,
-/turf/open/floor/plating,
-/area/station/maintenance/fore)
 "bCq" = (
 /obj/machinery/computer/atmos_alert,
 /obj/machinery/status_display/ai/directional/north,
@@ -6871,7 +6866,6 @@
 "cEU" = (
 /obj/structure/closet/crate/decorations,
 /obj/effect/decal/cleanable/confetti,
-/obj/effect/decal/cleanable/glitter/blue,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "cEV" = (
@@ -17351,7 +17345,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/starboard)
 "gPs" = (
-/obj/structure/filingcabinet/filingcabinet,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/vault,
 /area/station/command/bridge)
 "gPz" = (
@@ -32402,9 +32396,9 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "mDW" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/effect/turf_decal/tile/brown/fourcorners,
 /obj/machinery/light_switch/directional/south,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "mDZ" = (
@@ -34628,10 +34622,6 @@
 	},
 /turf/open/floor/circuit/telecomms/server,
 /area/station/science/server)
-"nwd" = (
-/obj/effect/decal/cleanable/glitter/pink,
-/turf/open/floor/plating,
-/area/station/maintenance/fore)
 "nwf" = (
 /obj/machinery/power/smes/full,
 /obj/structure/cable,
@@ -42846,7 +42836,6 @@
 /area/station/command/heads_quarters/rd)
 "qOr" = (
 /obj/item/food/spiderleg,
-/obj/effect/decal/cleanable/glitter/pink,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "qOt" = (
@@ -56364,7 +56353,6 @@
 /obj/item/food/egg/rainbow,
 /obj/item/grenade/chem_grenade/glitter/blue,
 /obj/item/grenade/chem_grenade/glitter/pink,
-/obj/item/grenade/chem_grenade/glitter/white,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/item/clothing/head/utility/hardhat/reindeer,
 /turf/open/floor/plating,
@@ -83038,7 +83026,7 @@ bKa
 xSD
 aFK
 xSD
-bCh
+xSD
 hFs
 xSD
 vDp
@@ -83549,7 +83537,7 @@ vDp
 vDp
 uOg
 wkW
-nwd
+xSD
 xSD
 cXA
 uOg

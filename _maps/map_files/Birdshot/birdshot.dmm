@@ -16099,8 +16099,8 @@
 /turf/open/floor/wood,
 /area/station/engineering/atmos/office)
 "fIf" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/machinery/airalarm/directional/west,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/iron/grimy,
 /area/station/science/cubicle)
 "fIi" = (
@@ -29608,8 +29608,8 @@
 	},
 /area/station/engineering/break_room)
 "jSl" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/machinery/light_switch/directional/east,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/iron/grimy,
 /area/station/science/cubicle)
 "jSm" = (
@@ -49505,9 +49505,6 @@
 	dir = 1
 	},
 /obj/structure/table/wood,
-/obj/item/paper/fluff/ids_for_dummies{
-	pixel_x = 5
-	},
 /obj/item/paper_bin/carbon{
 	pixel_x = -2;
 	pixel_y = 4
@@ -51929,9 +51926,9 @@
 /turf/open/floor/iron/small,
 /area/station/engineering/atmos/pumproom)
 "rrJ" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/wood,
 /area/station/maintenance/hallway/abandoned_recreation)
 "rrQ" = (
@@ -68126,10 +68123,10 @@
 /turf/open/floor/iron/grimy,
 /area/station/science/cubicle)
 "wvF" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/effect/turf_decal/tile/brown/opposingcorners{
 	dir = 1
 	},
+/obj/structure/filingcabinet/white,
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "wvM" = (
@@ -68847,7 +68844,7 @@
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/server)
 "wHg" = (
-/obj/structure/filingcabinet/filingcabinet,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/iron/grimy,
 /area/station/science/cubicle)
 "wHl" = (

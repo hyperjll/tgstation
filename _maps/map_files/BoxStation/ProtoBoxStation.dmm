@@ -26395,9 +26395,9 @@
 /turf/open/floor/iron,
 /area/station/commons/vacant_room/commissary)
 "bLF" = (
-/obj/structure/filingcabinet/filingcabinet,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/catwalk_floor/iron,
 /area/station/cargo/sorting)
 "bLG" = (

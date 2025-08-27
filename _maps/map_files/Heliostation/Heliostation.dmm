@@ -45778,8 +45778,8 @@
 /area/station/maintenance/solars/port/aft)
 "kGU" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/structure/filingcabinet/filingcabinet,
 /obj/machinery/airalarm/directional/south,
+/obj/structure/filingcabinet/white,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "kGY" = (
