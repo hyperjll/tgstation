@@ -279,7 +279,17 @@
 		kill_objective.find_target()
 		return kill_objective
 
-	if(prob(10) && !isnull(employer))
+	if(prob(HEIST_PROB))
+		var/datum/objective/heist/heist_objective = new()
+		heist_objective.owner = owner
+		return heist_objective
+
+	if(prob(ALEXANDRIA_PROB))
+		var/datum/objective/alexandria/alexandria_objective = new()
+		alexandria_objective.owner = owner
+		return alexandria_objective
+
+	if(prob(IMPRISON_PROB) && !isnull(employer))
 		if(employer != "Internal Affairs Agent") // We aren't hired by nanotrasen/going postal/in legal trouble...
 			var/datum/objective/imprison/imprison_objective = new()
 			imprison_objective.owner = owner
@@ -291,7 +301,7 @@
 			imprison_tot_objective.find_traitor_target()
 			return imprison_tot_objective
 
-	if(prob(10) && !isnull(employer))
+	if(prob(PROTECT_PROB) && !isnull(employer))
 		if(employer != "Internal Affairs Agent") // Why would they protect syndicates?
 			var/datum/objective/protect/traitor_only/protect_tot_objective = new()
 			protect_tot_objective.owner = owner
@@ -303,7 +313,7 @@
 			protect_heads_objective.find_head_target()
 			return protect_heads_objective
 
-	if(prob(25) && !isnull(employer) && (employer != "Internal Affairs Agent")) // Internal affairs agents aren't going to help syndicates.
+	if(prob(ASSIST_PROB) && !isnull(employer) && (employer != "Internal Affairs Agent")) // Internal affairs agents aren't going to help syndicates.
 		if(prob(80)) // 20% chance to get a all-antag variant other than traitors-only
 			var/datum/objective/assist/traitor/tot_assist_objective = new()
 			tot_assist_objective.owner = owner
@@ -315,7 +325,7 @@
 			assist_objective.find_target()
 			return assist_objective
 
-	if(prob(25) && can_get_rep_objectives)
+	if(prob(REPUTATION_PROB) && can_get_rep_objectives)
 		if(prob(50))
 			can_get_rep_objectives = FALSE // Prevent dupes of the same type of obj
 			var/datum/objective/traitor_progression/prog_objective = new()
@@ -327,7 +337,7 @@
 			tot_secobj_objective.owner = owner
 			return tot_secobj_objective
 
-	if(prob(10) && mindshield_obj_avail)
+	if(prob(MINDSHIELD_PROB) && mindshield_obj_avail)
 		mindshield_obj_avail = FALSE // Prevent Dupes
 		var/datum/objective/mindshield/mindshield_objective = new()
 		mindshield_objective.owner = owner
