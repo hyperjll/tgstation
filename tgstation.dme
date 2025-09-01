@@ -6748,6 +6748,7 @@
 #include "hypermods\code\datums\components\backstabs.dm"
 #include "hypermods\code\datums\components\randomcrits.dm"
 #include "hypermods\code\datums\components\crafting\chemistry.dm"
+#include "hypermods\code\datums\components\crafting\doors.dm"
 #include "hypermods\code\datums\components\crafting\guncrafting.dm"
 #include "hypermods\code\datums\components\crafting\misc.dm"
 #include "hypermods\code\datums\components\crafting\ranged_weapon.dm"
