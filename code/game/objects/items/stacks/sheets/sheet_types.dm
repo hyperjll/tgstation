@@ -323,6 +323,7 @@ GLOBAL_LIST_INIT(plasteel_recipes, list ( \
 	material_flags = NONE
 	matter_amount = 12
 	source = /datum/robot_energy_storage/material/plasteel
+	cost = SHEET_MATERIAL_AMOUNT
 
 /datum/armor/sheet_plasteel
 	fire = 100
