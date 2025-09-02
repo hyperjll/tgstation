@@ -87,3 +87,15 @@
 		RND_CATEGORY_EQUIPMENT
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_MEDICAL
+
+/datum/design/anomaly_stabilizer
+	name = "Anomaly Stabilizer"
+	desc = "An advanced tool capable of stabilizing anomalies at the cost of their core, designed to allow anomalies to operate indefinitely and allow constant passive research income."
+	id = "anomaly_stabilizer"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT, /datum/material/silver =SHEET_MATERIAL_AMOUNT, /datum/material/plasma =SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/uranium =SHEET_MATERIAL_AMOUNT)
+	build_path = /obj/item/anomaly_stabilizer
+	category = list(
+		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE

@@ -25,6 +25,8 @@
 	var/move_chance = ANOMALY_MOVECHANCE
 	/// Does this anomaly have an alt icon when it's about to die?
 	var/pulse_icon = null
+	/// Have we been officially stabilized, used to determine whether or not we give research points.
+	var/stabilized = FALSE
 
 /obj/effect/anomaly/Initialize(mapload, new_lifespan)
 	. = ..()
@@ -74,6 +76,10 @@
 	if(death_time < (world.time + (lifespan / 2)) && !isnull(pulse_icon))
 		icon_state = pulse_icon
 		pulse_icon = null // Setting this to null because i don't want it reapplied and there's no reason to revert the icon.
+	if(stabilized)
+		var/datum/techweb/station_techweb = locate(/datum/techweb/science) in SSresearch.techwebs
+		if(station_techweb)
+			station_techweb.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 1))
 
 /obj/effect/anomaly/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -136,8 +142,14 @@
 
 ///Stabilize an anomaly, letting it stay around forever or untill destabilizes by a player. An anomaly without a core can't be signalled, but can be destabilized
 /obj/effect/anomaly/proc/stabilize(anchor = FALSE, has_core = TRUE)
-	immortal = TRUE
-	name = (has_core ? "stable " : "hollow ") + name
+	if(!immortal)
+		immortal = TRUE
+	if(!stabilized)
+		var/obj/machinery/announcement_system/announcement_system = get_announcement_system()
+		if (!isnull(announcement_system))
+			announcement_system.broadcast("[src] that originally manifested in [impact_area] has been stabilized and is now generating passive research.", list(RADIO_CHANNEL_SCIENCE), TRUE)
+		stabilized = TRUE
+		name = (has_core ? "stable " : "hollow ") + name
 	if(!has_core)
 		QDEL_NULL(anomaly_core)
 	if (anchor)
