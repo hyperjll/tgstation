@@ -37866,6 +37866,7 @@
 	req_access_txt = "12"
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/iron/techmaint,
 /area/station/maintenance/aft)
 "kWC" = (
@@ -53025,6 +53026,15 @@
 	},
 /turf/open/floor/iron/grid/steel,
 /area/station/commons/storage/emergency)
+"pvQ" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Storage Room";
+	req_access_txt = "12"
+	},
+/obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
+/turf/open/floor/iron/techmaint,
+/area/station/maintenance/aft)
 "pvR" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 9
@@ -63290,6 +63300,7 @@
 	req_access_txt = "12"
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/iron/techmaint,
 /area/station/maintenance/aft)
 "sqK" = (
@@ -126326,8 +126337,8 @@ vXB
 sNJ
 vXB
 vXB
-jlY
-jlY
+pvQ
+pvQ
 sNJ
 vXB
 vXB
