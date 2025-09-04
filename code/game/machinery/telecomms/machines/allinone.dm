@@ -9,6 +9,28 @@
 	density = TRUE
 	use_power = NO_POWER_USE
 	idle_power_usage = 0
+	autolinkers = list(
+		"hub",
+		"relay",
+		"s_relay",
+		"m_relay",
+		"r_relay",
+		"science",
+		"medical",
+		"supply",
+		"service",
+		"common",
+		"command",
+		"engineering",
+		"entertainment",
+		"security",
+		"receiverA",
+		"receiverB",
+		"broadcasterA",
+		"broadcasterB",
+		"autorelay",
+		"messaging",
+	)
 	/// If this mainframe can process all syndicate chatter regardless of z level
 	var/syndicate = FALSE
 	/// List of all frequencies to their name/color

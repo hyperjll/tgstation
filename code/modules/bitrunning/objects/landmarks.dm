@@ -1,6 +1,6 @@
 /obj/effect/landmark/bitrunning
 	name = "Generic bitrunning effect"
-	icon = 'icons/effects/bitrunning.dmi'
+	icon = 'hypermods/icons/effects/bitrunning.dmi'
 	icon_state = "crate"
 
 /// In case you want to gate the crate behind a special condition.
@@ -78,9 +78,13 @@
 	name = "Bitrunning modular mob segment"
 	icon_state = "mob_segment"
 
+/// A location for bitrunners to spawn.
+/obj/effect/landmark/bitrunning/bitrunner_spawn
+	name = "Bitrunning spawn"
+	icon_state = "mob_segment"
 
 /// Bitrunning safehouses. Typically 7x6 rooms with a single entrance.
 /obj/modular_map_root/safehouse
 	config_file = "strings/modular_maps/safehouse.toml"
-	icon = 'icons/effects/bitrunning.dmi'
+	icon = 'hypermods/icons/effects/bitrunning.dmi'
 	icon_state = "safehouse"

@@ -1,3 +1,4 @@
+/**
 /datum/lazy_template/virtual_domain/fredingtonfastingbear
 	name = "Pizza Party"
 	cost = BITRUNNER_COST_MEDIUM
@@ -8,3 +9,4 @@
 	key = "fredingtonfastingbear"
 	map_name = "fredingtonfastingbear"
 	reward_points = BITRUNNER_REWARD_MEDIUM
+**/
