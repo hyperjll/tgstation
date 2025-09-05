@@ -55,3 +55,17 @@
 		"mindshield_nonremove",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+
+/datum/techweb_node/torment_nexus
+	id = TECHWEB_NODE_TORMENT_NEXUS
+	display_name = "Prisoner Rehabilitation Technology"
+	description = "Utilizing the same technology developed for quantum-scale computing, these simulations can be used for the re-habilitation of prisoners and unruly crew alike."
+	prereq_ids = list(TECHWEB_NODE_BITRUNNING, TECHWEB_NODE_SEC_EQUIP)
+	design_ids = list(
+		"byteforge_sec",
+		"tn_netpod",
+		"tn_quantum_server",
+		"tn_quantum_console",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
+	announce_channels = list(RADIO_CHANNEL_SECURITY)

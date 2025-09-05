@@ -5,9 +5,10 @@
 	has_glitches = FALSE
 	skip_requirements = TRUE
 	bitrunning_network = BITRUNNER_DOMAIN_SECURITY
-	bitrunning_id = "torment_nexus"
+	bitrunning_id = BITRUNNER_DOMAIN_SECURITY
 	broadcasting = TRUE // lets the Warden monitor them in their pod/lets the crew watch them work so they know punishment is real
 	radio_channel_to_use = RADIO_CHANNEL_SECURITY
+	circuit = /obj/item/circuitboard/machine/quantum_server/prisoner
 
 /obj/machinery/quantum_server/prisoner/solo1
 	name = "torment nexus #1"

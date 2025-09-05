@@ -134,3 +134,5 @@
 
 #define TECHWEB_NODE_AI_UPGRADES "ai_upgrades"
 #define TECHWEB_NODE_AI_UPGRADES_ILLEGAL "ai_upgrades_illegal"
+
+#define TECHWEB_NODE_TORMENT_NEXUS "torment_nexus"

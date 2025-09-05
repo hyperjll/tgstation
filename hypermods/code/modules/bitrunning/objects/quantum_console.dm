@@ -1,3 +1,8 @@
+/obj/machinery/computer/quantum_console/prisoner
+	name = "torment nexus console"
+	bitrunning_id = BITRUNNER_DOMAIN_SECURITY
+	circuit = /obj/item/circuitboard/computer/quantum_console/prisoner
+
 /obj/machinery/computer/quantum_console/prisoner_solo1
 	name = "torment nexus #1 console"
 	bitrunning_id = "solo_nexus_1"

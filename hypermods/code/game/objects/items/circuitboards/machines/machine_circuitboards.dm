@@ -30,3 +30,19 @@
 		/obj/item/stack/cable_coil = 2,
 		/datum/stock_part/scanning_module = 1,
 	)
+
+
+/obj/item/circuitboard/machine/quantum_server/prisoner
+	name = "Torment Nexus Server"
+	greyscale_colors = CIRCUIT_COLOR_SECURITY
+	build_path = /obj/machinery/quantum_server/prisoner
+
+/obj/item/circuitboard/machine/netpod/prisoner
+	name = "Torment Nexus Netpod"
+	greyscale_colors = CIRCUIT_COLOR_SECURITY
+	build_path = /obj/machinery/netpod/prisoner
+
+/obj/item/circuitboard/computer/quantum_console/prisoner
+	name = "Torment Nexus Console"
+	greyscale_colors = CIRCUIT_COLOR_SECURITY
+	build_path = /obj/machinery/computer/quantum_console/prisoner

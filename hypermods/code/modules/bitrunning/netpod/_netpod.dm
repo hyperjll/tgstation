@@ -4,6 +4,7 @@
 	misbehaving crewmembers. Critics say that this is just like Greg Orville's book, Twenty Five Eighty Four."
 	bitrunning_id = BITRUNNER_DOMAIN_SECURITY
 	trapped = TRUE
+	circuit = /obj/item/circuitboard/machine/netpod/prisoner
 
 /obj/machinery/netpod/prisoner/solo_1
 	name = "torment nexus #1 pod"
