@@ -257,7 +257,3 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/fullscreen)
 	show_when_dead = TRUE
 	color = "#c90000"
 	alpha = 0
-
-/atom/movable/screen/fullscreen/static_vision/jumpscare
-	alpha = 255
-	color = "#FFFFFF"

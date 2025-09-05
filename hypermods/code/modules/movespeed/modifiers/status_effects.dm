@@ -15,3 +15,6 @@
 
 /datum/movespeed_modifier/status_effect/adrenaline_quirk
 	multiplicative_slowdown = -0.2
+
+/datum/movespeed_modifier/status_effect/shoving_customer
+	multiplicative_slowdown = 1.5
