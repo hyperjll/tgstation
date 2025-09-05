@@ -25,7 +25,7 @@
 	AddComponent(/datum/component/effect_remover, \
 		success_feedback = "You close %THEEFFECT with %THEWEAPON, frying its circuitry in the process.", \
 		tip_text = "Close rift", \
-		on_clear_callback = CALLBACK(src, PROC_REF(on_use)), \
+		on_clear_callback = CALLBACK(src, PROC_REF(on_influence_neutralized)), \
 		effects_we_clear = list(/obj/effect/visible_heretic_influence))
 
 /**
