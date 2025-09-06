@@ -55,9 +55,12 @@
 
 	/// Can this version of traitor get reputation-based objectives? Should only go to traitors WITH secondary objectives.
 	var/can_get_rep_objectives = TRUE
-
 	/// Can this traitor get a mindshield objective?
 	var/mindshield_obj_avail = TRUE
+	/// Can this traitor get a heist objective?
+	var/heist_obj_avail = TRUE
+	/// Can this traitor get a record destruction objective?
+	var/records_obj_avail = TRUE
 
 /datum/antagonist/traitor/infiltrator
 	// Used to denote traitors who have joined midround and therefore have no access to secondary objectives.
@@ -279,12 +282,14 @@
 		kill_objective.find_target()
 		return kill_objective
 
-	if(prob(HEIST_PROB))
+	if(prob(HEIST_PROB) && heist_obj_avail)
+		heist_obj_avail = FALSE // prevent dupes
 		var/datum/objective/heist/heist_objective = new()
 		heist_objective.owner = owner
 		return heist_objective
 
-	if(prob(ALEXANDRIA_PROB))
+	if(prob(ALEXANDRIA_PROB) && records_obj_avail)
+		records_obj_avail = FALSE // prevent dupes
 		var/datum/objective/alexandria/alexandria_objective = new()
 		alexandria_objective.owner = owner
 		return alexandria_objective
