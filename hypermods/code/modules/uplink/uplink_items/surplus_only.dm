@@ -146,3 +146,17 @@
 	item = /obj/item/sbeacondrop/heavylaserturret
 	cost = 7
 	surplus = 20
+
+/datum/uplink_item/surplusonly/surplusboltaction
+	name = "Surplus Bolt-Action Rifle"
+	desc = "A Bolt-Action rifle in rather poor condition. Warranty is null. No refunds."
+	item = /obj/item/gun/ballistic/rifle/boltaction/surplus
+	cost = 1
+	surplus = 70
+
+/datum/uplink_item/surplusonly/surplusboltaction
+	name = "Donk Co. Bolt-Action Rifle"
+	desc = "A mass-manufactured Bolt-Action Sporting Rifle with a distinctively long barrel. The lengthened barrel aids in it's accuracy."
+	item = /obj/item/gun/ballistic/rifle/boltaction/donkrifle
+	cost = 3
+	surplus = 20

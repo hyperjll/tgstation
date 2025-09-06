@@ -95,9 +95,17 @@
 /datum/uplink_item/dangerous/boltactionrifle
 	name = "Bolt-Action Rifle"
 	desc = "A shoddy bolt action rifle, it has 5 lethal 7.62 rounds loaded. It's handling is rather obnoxious and should only be used if you're on a budget."
-	item = /obj/item/gun/ballistic/rifle
+	item = /obj/item/gun/ballistic/rifle/boltaction
 	cost = 3
 	surplus = 60
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/dangerous/boltactionrifleprime
+	name = "Prime Bolt-Action Sporting Rifle"
+	desc = "A bolt action rifle with an in-built scope, it has 5 lethal 7.62 rounds loaded. It's still quite alike the regular version we're selling with it's shoddy handling."
+	item = /obj/item/gun/ballistic/rifle/boltaction/prime
+	cost = 4
+	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/watergun
