@@ -26,6 +26,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 5
 	},
+/obj/machinery/wall_healer/directional/north,
 /turf/open/floor/iron/white/smooth_corner{
 	dir = 4
 	},
@@ -1142,6 +1143,7 @@
 	dir = 4
 	},
 /obj/machinery/light/small/directional/north,
+/obj/machinery/wall_healer/free/directional/north,
 /turf/open/floor/iron/smooth_edge,
 /area/mine/laborcamp/quarters)
 "gg" = (
@@ -7877,6 +7879,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/smooth_large,
 /area/mine/laborcamp/production)
+"NC" = (
+/obj/effect/turf_decal/trimline/brown/filled/line{
+	dir = 6
+	},
+/obj/structure/table,
+/obj/machinery/wall_healer/directional/south,
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 1
+	},
+/area/mine/production)
 "NE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -8194,6 +8206,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
+/obj/machinery/wall_healer/directional/south,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -50344,7 +50357,7 @@ RY
 RY
 dQ
 Cg
-YD
+NC
 pK
 Ob
 IL
