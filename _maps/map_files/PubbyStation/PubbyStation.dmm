@@ -3378,6 +3378,7 @@
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 8
 	},
+/obj/machinery/wall_healer/directional/south,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "amN" = (
@@ -13835,6 +13836,7 @@
 /obj/machinery/camera/directional/east{
 	c_tag = "Cargo Mining Dock"
 	},
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron,
 /area/station/cargo/miningdock)
 "bcJ" = (
@@ -15437,6 +15439,7 @@
 	},
 /obj/machinery/shower/directional/east,
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/machinery/wall_healer/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "bkf" = (
@@ -26327,6 +26330,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
 	},
+/obj/machinery/wall_healer/free/directional/west,
 /turf/open/floor/iron,
 /area/station/security/prison)
 "clG" = (
@@ -32805,6 +32809,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/secondary/command)
+"fYp" = (
+/obj/machinery/wall_healer/directional/east,
+/turf/open/floor/iron/dark,
+/area/station/service/library)
 "fYY" = (
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/window/reinforced/spawner/directional/north,
@@ -34822,6 +34830,16 @@
 /obj/effect/mapping_helpers/mail_sorting/medbay/chemistry,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay)
+"hQt" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/wall_healer/directional/east,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "hQz" = (
 /obj/structure/closet/emcloset/anchored,
 /turf/open/floor/plating,
@@ -35935,6 +35953,10 @@
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
+"iRB" = (
+/obj/machinery/wall_healer/directional/north,
+/turf/open/floor/iron/dark,
+/area/station/service/chapel/monastery)
 "iRD" = (
 /obj/structure/table/wood,
 /obj/item/folder/white,
@@ -36633,6 +36655,7 @@
 "jCr" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/cable,
+/obj/machinery/wall_healer/directional/north,
 /turf/open/floor/iron,
 /area/station/tcommsat/computer)
 "jCv" = (
@@ -45692,6 +45715,10 @@
 /obj/effect/turf_decal/tile/brown/anticorner/contrasted,
 /turf/open/floor/iron,
 /area/station/commons/vacant_room/commissary)
+"qUl" = (
+/obj/machinery/wall_healer/directional/north,
+/turf/open/floor/iron,
+/area/station/commons/dorms)
 "qUv" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -70885,7 +70912,7 @@ hzy
 oTb
 fWh
 fRM
-csS
+iRB
 ykY
 cgG
 ciV
@@ -72460,7 +72487,7 @@ cAK
 xja
 cAK
 cAK
-cAK
+fYp
 cAK
 czQ
 cAK
@@ -77264,7 +77291,7 @@ jsa
 ptB
 hGq
 iWV
-jsa
+hQt
 kjm
 bwr
 aXq
@@ -94948,7 +94975,7 @@ aaa
 apX
 apX
 apX
-com
+qUl
 awv
 axr
 ayq

@@ -1745,6 +1745,7 @@
 	dir = 8
 	},
 /obj/item/clothing/suit/jacket/straight_jacket,
+/obj/machinery/wall_healer/directional/west,
 /turf/open/floor/iron/freezer,
 /area/station/security/medical)
 "aio" = (
@@ -19598,6 +19599,7 @@
 /area/station/science/ordnance)
 "bVQ" = (
 /obj/machinery/light/directional/north,
+/obj/machinery/wall_healer/directional/north,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
 "bVR" = (
@@ -28333,6 +28335,14 @@
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
+"dJn" = (
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 8
+	},
+/obj/machinery/light/directional/west,
+/obj/machinery/wall_healer/directional/west,
+/turf/open/floor/iron,
+/area/station/hallway/primary/fore)
 "dJo" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -41718,6 +41728,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/security/prison/visit)
+"jcB" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/wall_healer/directional/south,
+/turf/open/floor/iron,
+/area/station/engineering/hallway)
 "jcW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/trimline/blue/filled/corner,
@@ -50422,6 +50438,13 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
+"mzp" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/wall_healer/directional/north,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry/lower)
 "mzy" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -51453,6 +51476,7 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "mVl" = (
 /obj/effect/turf_decal/delivery,
+/obj/machinery/wall_healer/directional/south,
 /turf/open/floor/iron/textured_half{
 	dir = 1
 	},
@@ -51461,6 +51485,10 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/science/ordnance/testlab)
+"mVo" = (
+/obj/machinery/wall_healer/free/directional/west,
+/turf/open/floor/iron,
+/area/station/security/prison)
 "mVI" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/left/directional/east{
@@ -54491,6 +54519,7 @@
 	pixel_x = 7;
 	pixel_y = 2
 	},
+/obj/machinery/wall_healer/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningoffice)
 "ocP" = (
@@ -65040,6 +65069,11 @@
 "sjr" = (
 /turf/closed/wall,
 /area/station/security/prison/work)
+"sju" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/wall_healer/directional/south,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry/upper)
 "sjO" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Cell 2"
@@ -91933,7 +91967,7 @@ aaa
 bkV
 bYd
 jJa
-hxF
+sju
 bkX
 brQ
 bQS
@@ -92714,7 +92748,7 @@ uFv
 rVt
 fTe
 bEs
-bVS
+mzp
 bqp
 bun
 bEx
@@ -98810,7 +98844,7 @@ ahI
 cOi
 xSp
 agM
-agM
+mVo
 ahI
 jQo
 jQo
@@ -111776,7 +111810,7 @@ ttI
 ttI
 ttI
 ttI
-ttI
+jcB
 kHY
 wuL
 cCZ
@@ -112964,7 +112998,7 @@ ssn
 oJF
 ssn
 ssn
-els
+dJn
 ssn
 ssn
 els

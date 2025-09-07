@@ -5322,6 +5322,12 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/space/basic,
 /area/space)
+"bvT" = (
+/obj/machinery/wall_healer/directional/north,
+/turf/open/floor/iron/dark/corner{
+	dir = 4
+	},
+/area/station/hallway/primary/central/fore)
 "bvV" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -22511,6 +22517,7 @@
 	},
 /obj/machinery/camera/directional/south,
 /obj/structure/cable,
+/obj/machinery/wall_healer/directional/south,
 /turf/open/floor/iron/grid/steel,
 /area/station/command/bridge)
 "gAr" = (
@@ -23971,6 +23978,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/wall_healer/directional/south,
 /turf/open/floor/iron/dark/corner,
 /area/station/hallway/secondary/exit/departure_lounge)
 "gVa" = (
@@ -59623,6 +59631,13 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
+"roQ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/wall_healer/directional/west,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry/upper)
 "roS" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 8
@@ -63773,6 +63788,10 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron,
 /area/station/medical/treatment_center)
+"syr" = (
+/obj/machinery/wall_healer/directional/west,
+/turf/open/floor/iron/dark,
+/area/station/hallway/secondary/entry/lower)
 "syz" = (
 /obj/item/storage/box/lights/mixed,
 /turf/open/floor/plating{
@@ -66822,6 +66841,16 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
+"tub" = (
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 8
+	},
+/obj/machinery/wall_healer/free/directional/east,
+/turf/open/floor/iron,
+/area/station/security/prison)
 "tuh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -71235,6 +71264,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 4
 	},
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "uJJ" = (
@@ -77548,6 +77578,16 @@
 /obj/item/clothing/mask/breath,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/greater)
+"wtM" = (
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/brown/filled/line{
+	dir = 8
+	},
+/obj/machinery/wall_healer/directional/west,
+/turf/open/floor/iron/dark,
+/area/station/cargo/miningdock)
 "wtQ" = (
 /obj/machinery/holopad,
 /obj/effect/turf_decal/box,
@@ -99081,7 +99121,7 @@ wuF
 aGR
 aGR
 kxS
-bgE
+syr
 gAW
 aKY
 lZu
@@ -103416,7 +103456,7 @@ eTn
 fiF
 vvF
 pUH
-pUH
+roQ
 eJL
 pay
 uMd
@@ -112111,7 +112151,7 @@ doi
 cjE
 sfP
 hJG
-xPt
+bvT
 ekv
 uLa
 eOS
@@ -112693,7 +112733,7 @@ aEP
 kdX
 aRF
 sWT
-sWT
+wtM
 oAy
 lBe
 oZo
@@ -121900,7 +121940,7 @@ qvA
 ogC
 acy
 tzK
-bKi
+tub
 bKi
 uQu
 jRx

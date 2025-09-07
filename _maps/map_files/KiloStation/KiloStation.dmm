@@ -3934,6 +3934,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "brg" = (
@@ -5285,6 +5286,7 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
 	},
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningoffice)
 "bRy" = (
@@ -20642,6 +20644,16 @@
 /obj/structure/sign/poster/contraband/random/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
+"gNl" = (
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/machinery/wall_healer/directional/north,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/exit/departure_lounge)
 "gNq" = (
 /obj/machinery/vending/wardrobe/medi_wardrobe,
 /obj/effect/turf_decal/bot,
@@ -33876,6 +33888,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "kZU" = (
@@ -37692,6 +37705,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/wall_healer/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/medical/medbay/lobby)
 "mlB" = (
@@ -46889,6 +46903,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
+"psR" = (
+/obj/machinery/wall_healer/free/directional/north,
+/turf/open/floor/plating,
+/area/station/security/prison)
 "ptu" = (
 /obj/machinery/air_sensor/oxygen_tank,
 /turf/open/floor/engine/o2,
@@ -58305,6 +58323,7 @@
 /area/station/medical/chemistry)
 "tdf" = (
 /obj/machinery/camera/autoname/directional/north,
+/obj/machinery/wall_healer/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "tdk" = (
@@ -82559,7 +82578,7 @@ glo
 jsI
 xlA
 sAv
-aDD
+psR
 kkV
 myp
 jYh
@@ -114680,7 +114699,7 @@ nTd
 hDa
 tNa
 wpn
-rDh
+gNl
 lux
 hEQ
 beo

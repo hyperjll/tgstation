@@ -8269,6 +8269,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
 	},
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "dnC" = (
@@ -14015,6 +14016,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/machinery/wall_healer/directional/north,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "fyu" = (
@@ -19647,6 +19649,10 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/science/ordnance/storage)
+"hKk" = (
+/obj/machinery/wall_healer/free/directional/east,
+/turf/open/floor/iron,
+/area/station/security/prison/rec)
 "hKp" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/access/any/medical/maintenance,
@@ -24076,6 +24082,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/trimline/red/filled/corner,
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "jEb" = (
@@ -34637,7 +34644,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/construction)
 "nUM" = (
-/obj/item/paper/fluff/ids_for_dummies,
 /obj/machinery/requests_console/auto_name/directional/north,
 /obj/effect/mapping_helpers/requests_console/supplies,
 /obj/effect/mapping_helpers/requests_console/announcement,
@@ -35155,6 +35161,13 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/engineering/supermatter/room)
+"ofN" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/wall_healer/directional/west,
+/turf/open/floor/iron,
+/area/station/hallway/primary/port)
 "ofS" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating,
@@ -39548,6 +39561,7 @@
 	dir = 4
 	},
 /obj/machinery/duct,
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
 "pXX" = (
@@ -41186,6 +41200,16 @@
 /obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
+"qHu" = (
+/obj/effect/turf_decal/trimline/brown/filled/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/brown/filled/mid_joiner{
+	dir = 1
+	},
+/obj/machinery/wall_healer/directional/west,
+/turf/open/floor/iron/textured_large,
+/area/station/cargo/miningdock)
 "qHS" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
@@ -53481,6 +53505,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/wall_healer/directional/west,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
 "vQA" = (
@@ -75600,7 +75625,7 @@ jLf
 xFb
 jLf
 uzK
-jLf
+ofN
 pEe
 oTu
 iWb
@@ -78207,7 +78232,7 @@ iZo
 vzv
 iGL
 kac
-iGH
+qHu
 nsw
 ryN
 nEO
@@ -112631,7 +112656,7 @@ vQV
 nri
 eII
 qPh
-gSM
+hKk
 pLL
 gSM
 mzA

@@ -2527,6 +2527,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/camera/autoname/directional/west,
+/obj/machinery/wall_healer/free/directional/west,
 /turf/open/floor/iron,
 /area/station/security/prison/rec)
 "aWb" = (
@@ -5150,6 +5151,10 @@
 /obj/machinery/chem_heater/withbuffer,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
+"bWG" = (
+/obj/machinery/wall_healer/directional/west,
+/turf/open/floor/iron/smooth_large,
+/area/station/engineering/supermatter/room)
 "bXi" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -23786,6 +23791,11 @@
 /obj/structure/cable,
 /turf/open/floor/iron/small,
 /area/station/security/office)
+"igA" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/machinery/wall_healer/directional/south,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/lobby)
 "igD" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -31096,6 +31106,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/machinery/wall_healer/directional/north,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "kpO" = (
@@ -41280,6 +41291,7 @@
 /obj/effect/turf_decal/tile/brown/opposingcorners,
 /obj/structure/closet/secure_closet/miner,
 /obj/machinery/camera/autoname/directional/north,
+/obj/machinery/wall_healer/directional/north,
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
 "nMA" = (
@@ -45629,6 +45641,7 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted,
 /obj/machinery/light/cold/directional/north,
 /obj/structure/cable,
+/obj/machinery/wall_healer/directional/north,
 /turf/open/floor/iron,
 /area/station/security)
 "pnU" = (
@@ -50623,6 +50636,15 @@
 	},
 /turf/open/floor/wood/tile,
 /area/station/command/corporate_showroom)
+"qWk" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/machinery/wall_healer/directional/south,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "qWo" = (
 /obj/effect/spawner/structure/window/reinforced/tinted,
 /turf/open/floor/plating,
@@ -60009,6 +60031,7 @@
 /obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 1
 	},
+/obj/machinery/wall_healer/directional/south,
 /turf/open/floor/iron/cafeteria,
 /area/station/hallway/secondary/exit/departure_lounge)
 "tYy" = (
@@ -92165,7 +92188,7 @@ tIR
 szg
 tpW
 pUM
-kMe
+bWG
 knw
 fGf
 ayK
@@ -104853,7 +104876,7 @@ xTD
 bmB
 qir
 vnF
-pRQ
+igA
 tFQ
 vsx
 oED
@@ -104873,7 +104896,7 @@ tFQ
 xSO
 qNw
 xUL
-xrC
+qWk
 wYA
 wnY
 wfi

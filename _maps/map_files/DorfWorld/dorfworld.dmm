@@ -1201,6 +1201,12 @@
 /area/station/cargo/storage{
 	has_gravity = 1
 	})
+"jb" = (
+/obj/machinery/wall_healer/directional/east,
+/turf/open/misc/dirt/station,
+/area/mine/abandoned{
+	has_gravity = 1
+	})
 "ji" = (
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -3380,6 +3386,7 @@
 /obj/item/storage/medkit/fire,
 /obj/item/storage/medkit/fire,
 /obj/item/storage/medkit/o2,
+/obj/machinery/wall_healer/directional/south,
 /turf/open/floor/wood,
 /area/station/medical/medbay/central{
 	has_gravity = 1
@@ -31996,7 +32003,7 @@ DT
 DT
 SB
 gw
-tC
+jb
 YF
 AM
 gw

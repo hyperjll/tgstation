@@ -6414,6 +6414,7 @@
 /obj/machinery/iv_drip,
 /obj/effect/decal/cleanable/blood/old,
 /obj/machinery/light/cold/directional/south,
+/obj/machinery/wall_healer/directional/south,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "bBx" = (
@@ -10315,6 +10316,12 @@
 	},
 /turf/open/floor/engine/hull,
 /area/space/nearstation)
+"cCF" = (
+/obj/machinery/wall_healer/directional/north,
+/turf/open/floor/iron/dark/side{
+	dir = 9
+	},
+/area/station/hallway/floor3/fore)
 "cCK" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -13476,6 +13483,7 @@
 	dir = 10
 	},
 /obj/machinery/light/directional/east,
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron,
 /area/station/hallway/floor2/fore)
 "duZ" = (
@@ -17481,6 +17489,7 @@
 /obj/effect/turf_decal/trimline/blue/warning{
 	dir = 1
 	},
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -55722,6 +55731,13 @@
 	},
 /turf/open/floor/iron/white/textured_large,
 /area/station/service/chapel)
+"opT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/wall_healer/directional/south,
+/turf/open/floor/iron/dark/side,
+/area/station/hallway/floor4/fore)
 "opZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/eighties,
@@ -68882,6 +68898,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
+"rOp" = (
+/obj/machinery/wall_healer/directional/west,
+/turf/open/floor/engine,
+/area/station/engineering/supermatter/room)
 "rOB" = (
 /obj/structure/chair/sofa/bench/right{
 	dir = 1
@@ -69751,6 +69771,12 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/engine/vacuum,
 /area/station/engineering/atmos)
+"saX" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/wall_healer/directional/west,
+/turf/open/floor/catwalk_floor/iron,
+/area/station/cargo/miningdock)
 "sbm" = (
 /obj/effect/spawner/structure/window/hollow/end{
 	dir = 8
@@ -70587,6 +70613,7 @@
 	pixel_x = 5
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/wall_healer/directional/south,
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/medbay/lobby)
 "snp" = (
@@ -79759,6 +79786,7 @@
 	codes_txt = "patrol;next_patrol=3-15";
 	location = "3-14"
 	},
+/obj/machinery/wall_healer/directional/east,
 /turf/open/floor/iron,
 /area/station/hallway/floor3/aft)
 "uHI" = (
@@ -81861,6 +81889,10 @@
 /obj/effect/turf_decal/trimline/blue/filled,
 /turf/open/floor/iron,
 /area/station/hallway/floor4/fore)
+"via" = (
+/obj/machinery/wall_healer/directional/east,
+/turf/open/floor/iron,
+/area/station/hallway/floor1/fore)
 "vio" = (
 /obj/structure/chair/stool/bar/directional/north,
 /obj/effect/landmark/start/scientist,
@@ -82466,6 +82498,13 @@
 /obj/effect/baseturf_helper/reinforced_plating/ceiling,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai_upload)
+"vpB" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/machinery/wall_healer/directional/south,
+/turf/open/floor/iron/dark/side,
+/area/station/hallway/floor2/aft)
 "vpD" = (
 /obj/structure/table,
 /obj/item/restraints/legcuffs/beartrap{
@@ -83350,6 +83389,14 @@
 /obj/structure/table/wood/poker,
 /turf/open/floor/carpet/green,
 /area/station/service/bar/atrium)
+"vzV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/wall_healer/free/directional/south,
+/turf/open/floor/iron,
+/area/station/security/prison)
 "vzY" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/bookcase/random/fiction,
@@ -112997,7 +113044,7 @@ aUJ
 vWF
 pxu
 tTy
-grg
+via
 mrU
 cim
 vpb
@@ -124544,7 +124591,7 @@ uPM
 sJt
 nsi
 oQa
-uPM
+saX
 tIK
 nsi
 uPM
@@ -139216,7 +139263,7 @@ xgW
 xgW
 dpR
 xgW
-xgW
+rOp
 xgW
 mVF
 rBP
@@ -203982,7 +204029,7 @@ nyE
 nyE
 hpg
 gCD
-qYb
+vpB
 igE
 aWR
 fYf
@@ -246641,7 +246688,7 @@ tQd
 tQd
 tQd
 tQd
-gec
+cCF
 mso
 uMu
 jWT
@@ -311922,7 +311969,7 @@ kHl
 hJF
 gxn
 rlP
-tBq
+opT
 czp
 czp
 wgO
@@ -331474,7 +331521,7 @@ eWg
 tml
 ikT
 ecf
-owo
+vzV
 rJF
 rJF
 rJF
