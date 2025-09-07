@@ -379,7 +379,7 @@
 	switch(scanned_nanites.get_value())
 		if("Crowbar")
 			var/obj/item/crowbar/nanite/Newitem = new
-			if(!user.put_in_active_hand(Newitem))
+			if(!host_mob.put_in_active_hand(Newitem))
 				host_mob.forceMove(host_mob.drop_location())
 		if("Screwdriver")
 			var/obj/item/screwdriver/nanite/Newitem = new
