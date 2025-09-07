@@ -8,16 +8,18 @@
 			killtraitor.find_traitor_target()
 			objectives += killtraitor
 
-			var/datum/objective/escape/escape_with_identity/infiltrator/escape = new
-			escape.owner = owner
-			escape.find_sec_target()
-			objectives += escape
+			if(!escapewithnewIDobj)
+				escapewithnewIDobj = TRUE
+				var/datum/objective/escape/escape_with_identity/infiltrator/escape = new
+				escape.owner = owner
+				escape.find_sec_target()
+				objectives += escape
 
-			var/datum/objective/assassinate/killsec = new
-			killsec.owner = owner
-			killsec.target = escape.target   //assassinate the officer you're supposed to impersonate
-			killsec.update_explanation_text()
-			objectives += killsec
+				var/datum/objective/assassinate/killsec = new
+				killsec.owner = owner
+				killsec.target = escape.target   //assassinate the officer you're supposed to impersonate
+				killsec.update_explanation_text()
+				objectives += killsec
 
 			var/datum/objective/steal/steal_obj = new
 			steal_obj.owner = owner

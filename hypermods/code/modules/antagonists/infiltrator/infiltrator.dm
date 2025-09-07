@@ -11,6 +11,8 @@
 	var/give_equipment = TRUE ///gives infiltrators equipment
 	var/mincorps = 1
 	var/maxcorps = 2
+	/// Have we been given a (escape with identity) objective already?
+	var/escapewithnewIDobj = FALSE
 
 
 /datum/antagonist/traitor/infiltrator/invader/proc/equip_infiltrator(mob/living/carbon/human/infiltrator = owner.current)
