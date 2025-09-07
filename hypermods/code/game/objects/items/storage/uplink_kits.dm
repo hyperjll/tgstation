@@ -1412,7 +1412,7 @@
 	new /obj/item/autosurgeon/syndicate/nutrimentplus/single_use(src)
 
 /obj/item/storage/box/syndie_kit/impsur_strongarm
-	name = "stormarm surgical implant box"
+	name = "strongarm surgical implant box"
 
 /obj/item/storage/box/syndie_kit/impsur_strongarm/PopulateContents()
 	new /obj/item/autosurgeon/syndicate/strongarm/single_use(src)
