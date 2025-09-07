@@ -378,15 +378,25 @@
 	var/datum/nanite_extra_setting/scanned_nanites = extra_settings[NES_TOOL_CHOICE]
 	switch(scanned_nanites.get_value())
 		if("Crowbar")
-			new /obj/item/crowbar/nanite(host_mob.loc)
+			var/obj/item/crowbar/nanite/Newitem = new
+			if(!user.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("Screwdriver")
-			new /obj/item/screwdriver/nanite(host_mob.loc)
+			var/obj/item/screwdriver/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("Welding Tool")
-			new /obj/item/weldingtool/nanite(host_mob.loc)
+			var/obj/item/weldingtool/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("Wirecutters")
-			new /obj/item/wirecutters/nanite(host_mob.loc)
+			var/obj/item/wirecutters/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("Wrench")
-			new /obj/item/wrench/nanite(host_mob.loc)
+			var/obj/item/wrench/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 
 /obj/item/crowbar/nanite
 	name = "nanite crowbar"
@@ -477,15 +487,25 @@
 	var/datum/nanite_extra_setting/scanned_nanites = extra_settings[NES_MAT_CHOICE]
 	switch(scanned_nanites.get_value())
 		if("One Iron Sheet")
-			new /obj/item/stack/sheet/iron(host_mob.loc)
+			var/obj/item/stack/sheet/iron/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("One Glass Sheet")
-			new /obj/item/stack/sheet/glass(host_mob.loc)
+			var/obj/item/stack/sheet/glass/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("One Plastic Sheet")
-			new /obj/item/stack/sheet/plastic(host_mob.loc)
+			var/obj/item/stack/sheet/plastic/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("One Plasma Sheet")
-			new /obj/item/stack/sheet/mineral/plasma(host_mob.loc)
+			var/obj/item/stack/sheet/mineral/plasma/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("One Wood Sheet")
-			new /obj/item/stack/sheet/mineral/wood(host_mob.loc)
+			var/obj/item/stack/sheet/mineral/wood/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 
 /datum/nanite_program/construct_tool_adv
 	name = "Construct Advanced Nanite Tool"
@@ -506,17 +526,29 @@
 	var/datum/nanite_extra_setting/scanned_nanites = extra_settings[NES_ADV_TOOL_CHOICE]
 	switch(scanned_nanites.get_value())
 		if("Multitool")
-			new /obj/item/multitool/nanite(host_mob.loc)
+			var/obj/item/multitool/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("Jaws of Life")
-			new /obj/item/crowbar/power/nanite(host_mob.loc)
+			var/obj/item/crowbar/power/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("RPD")
-			new /obj/item/pipe_dispenser/nanite(host_mob.loc)
+			var/obj/item/pipe_dispenser/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("Fire Extinguisher")
-			new /obj/item/extinguisher/nanite(host_mob.loc)
+			var/obj/item/extinguisher/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("Crew Pinpointer")
-			new /obj/item/pinpointer/crew/nanite(host_mob.loc)
+			var/obj/item/pinpointer/crew/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 		if("Holofan Projector")
-			new /obj/item/holosign_creator/atmos/nanite(host_mob.loc)
+			var/obj/item/holosign_creator/atmos/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 
 /obj/item/multitool/nanite
 	name = "nanite multitool"
@@ -621,7 +653,9 @@
 	var/datum/nanite_extra_setting/scanned_nanites = extra_settings[NES_SUPER_TOOL_CHOICE]
 	switch(scanned_nanites.get_value())
 		if("Holotool")
-			new /obj/item/holotool/nanite(host_mob.loc)
+			var/obj/item/holotool/nanite/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				host_mob.forceMove(host_mob.drop_location())
 
 /obj/item/holotool/nanite
 	name = "nanite holotool"
