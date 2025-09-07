@@ -140,7 +140,7 @@
 	item = /obj/item/sbeacondrop/emp
 	cost = 6
 
-/datum/uplink_item/explosive_tools/syndicate_bomb/emp/New()
+/datum/uplink_item/explosive_tools/military_grade/emp/New()
 	..()
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_CYBERNETIC_REVOLUTION))
 		cost *= 2
@@ -155,6 +155,7 @@
 		The bomb core can be pried out and manually detonated with other explosives."
 	item = /obj/item/sbeacondrop/bomb
 	cost = 8
+	purchasable_from = UPLINK_ALL_SYNDIE_OPS // just making sure.
 
 /datum/uplink_item/explosive_tools/military_grade/syndicate_bomb/New()
 	. = ..()
