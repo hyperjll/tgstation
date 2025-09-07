@@ -81,30 +81,48 @@
 	var/list/checked_objectives = list()
 	///has the player completed all objectives and got hijack?
 	var/hijacker_rdy = FALSE
-	///Pool of rewards
+	///Pool of rewards -- Each objective is supposed to only be completed once, and each reward should be impactful and not something like implants (of which double purchases aren't helpful)
 	var/reward_items = list(
-		/obj/item/card/emag,
-		/obj/item/card/emag/doorjack,
-		/obj/item/grenade/syndieminibomb,
-		/obj/item/grenade/c4/x4,
-		/obj/item/storage/box/itempack/edagger,
-		/obj/item/guardian_creator/tech,
-		/obj/item/jammer,
-		/obj/item/reagent_containers/hypospray/medipen/stimulants,
-		/obj/item/storage/box/syndie_kit/imp_stealth,
-		/obj/item/toy/plush/carpplushie/dehy_carp/mega,
-		/obj/item/storage/box/spongecapsules,
-		/obj/item/gun/ballistic/automatic/pistol/m1911,
-		/obj/item/storage/box/syndie_kit/pistolammo45/random,
-		/obj/item/storage/box/syndie_kit/emp,
-		/obj/item/sbeacondrop/decoybomb,
-		/obj/item/storage/box/itempack/bombpen,
-		/obj/item/ammo_box/nadepouch/frag,
-		/obj/item/storage/box/syndie_kit/adrenalineimplant,
-		/obj/item/storage/box/syndie_kit/scramimplant,
-		/obj/item/switchblade/backstab,
-		/obj/item/autosurgeon/syndicate,
-		/obj/item/stack/telecrystal/five,
+		/obj/item/storage/box/syndie_kit/chemicalsynth,
+		/obj/item/storage/box/syndie_kit/observe,
+		/obj/item/storage/box/syndie_kit/disruptor,
+		/obj/item/storage/box/syndie_kit/anatomy,
+		/obj/item/storage/box/syndie_kit/breacher,
+		/obj/item/storage/box/syndie_kit/chameleondeluxe,
+		/obj/item/storage/box/syndie_kit/communicator,
+		/obj/item/storage/box/syndie_kit/sleeper,
+		/obj/item/storage/box/syndie_kit/smuggler,
+		/obj/item/storage/briefcase/lobbyist,
+		/obj/item/storage/medkit/emergency/hyperzine,
+		/obj/item/storage/toolbox/guncase/traitor,
+		/obj/item/storage/box/syndie_kit/feral_cat_grenades,
+		/obj/item/storage/toolbox/guncase/traitor/viper,
+		/obj/item/storage/belt/holster/nukie/clover/full,
+		/obj/item/storage/briefcase/sniper_traitor,
+		/obj/item/storage/briefcase/shotgun_traitor,
+		/obj/item/storage/briefcase/akm_traitor,
+		/obj/item/dnainjector/acidspit/syndicate,
+		/obj/item/melee/bostaff,
+		/obj/item/clothing/gloves/rapid,
+		/obj/item/trident/electrified,
+		/obj/item/fireaxe/firey,
+		/obj/item/gun/energy/recharge/ebow,
+		/obj/item/mindbatterer, // admittedly an op item. Getting one for free is pretty neat.
+		/obj/item/storage/toolbox/guncase/traitor/cobra,
+		/obj/item/storage/belt/champion/wrestling,
+		/obj/item/storage/briefcase/pblowgun,
+		/obj/item/grenade/spawnergrenade/minisyndies,
+		/obj/item/storage/backpack/duffelbag/syndie/c4,
+		/obj/item/storage/backpack/duffelbag/syndie/x4,
+		/obj/item/sbeacondrop/bomb,
+		/obj/item/shadowcloak,
+		/obj/item/gun/energy/pickpocket,
+		/obj/item/storage/portable_chem_mixer/chemicompiler,
+		/obj/item/compressionkit,
+		/obj/item/storage/box/syndie_kit/syndicate_teleporter,
+		/obj/item/mod/control/pre_equipped/traitor,
+		/obj/item/storage/box/syndie_kit/stimulant_kit,
+		/obj/item/storage/box/syndie_kit/impsur_strongarm,
 	)
 
 /obj/item/infiltrator_radio/Initialize(mapload)
@@ -127,6 +145,9 @@
 		"spawn" = reward,
 	))
 	reward_items -= reward //cant get duplicate rewards
+	var/obj/item/stack/telecrystal/five/TCbonus = new
+	if(!user.put_in_active_hand(TCbonus))
+		M.forceMove(user.drop_location())
 	var/list/bitch = user.mind.get_all_objectives()
 
 	if(checked_objectives.len == bitch.len)
