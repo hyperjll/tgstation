@@ -74,7 +74,7 @@
 	passive_message = span_notice("Your body feels like it's healing...")
 	required_organ = ORGAN_SLOT_LIVER
 	threshold_descs = list(
-		"Stage Speed 5" = "Being obese allows for slow regeneration.",
+		"Stage Speed 5" = "Being obese doubles the host's regeneration.",
 	)
 	var/fatregen = FALSE
 
@@ -87,8 +87,10 @@
 
 /datum/symptom/heal/calorie/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
 	if(M.getBruteLoss() || M.getFireLoss() || M.getToxLoss())
-		if(!M.reagents.has_reagent(/datum/reagent/medicine/metafactor, 1))
-			M.reagents.add_reagent(/datum/reagent/medicine/metafactor, 0.1)
+		M.adjustBruteLoss(-0.2)
+		M.adjustFireLoss(-0.2)
+		M.adjustToxLoss(-0.1)
+		M.adjust_nutrition(-0.1) // go hungry
 
 	if(fatregen && (HAS_TRAIT_FROM(M, TRAIT_FAT, OBESITY)))
 		M.adjustBruteLoss(-0.2)
