@@ -56,7 +56,7 @@
 			employer = INFILTRATOR_FACTION_CORPORATE_CLIMBER
 		if(2)
 			employer = pick(INFILTRATOR_FACTION_ANIMAL_RIGHTS_CONSORTIUM , INFILTRATOR_FACTION_GORLEX_MARAUDERS)
-	forge_traitor_objectives()
+	//forge_traitor_objectives()
 	traitor_flavor = strings(TRAITOR_FLAVOR_FILE, employer)
 
 /datum/outfit/infiltrator
