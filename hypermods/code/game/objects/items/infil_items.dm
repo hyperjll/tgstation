@@ -147,7 +147,7 @@
 	reward_items -= reward //cant get duplicate rewards
 	var/obj/item/stack/telecrystal/five/TCbonus = new
 	if(!user.put_in_active_hand(TCbonus))
-		user.forceMove(user.drop_location())
+		TCbonus.forceMove(user.drop_location())
 	var/list/bitch = user.mind.get_all_objectives()
 
 	if(checked_objectives.len == bitch.len)
