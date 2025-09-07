@@ -3550,7 +3550,8 @@
 /obj/machinery/light/directional/west,
 /obj/structure/sign/map{
 	icon_state = "map-pubby";
-	pixel_x = -32
+	pixel_x = -32;
+	icon = 'hypermods/icons/obj/signs.dmi'
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
@@ -5736,7 +5737,8 @@
 	},
 /obj/structure/sign/map{
 	icon_state = "map-pubby";
-	pixel_y = 32
+	pixel_y = 32;
+	icon = 'hypermods/icons/obj/signs.dmi'
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
@@ -9167,7 +9169,8 @@
 /obj/machinery/light/directional/north,
 /obj/structure/sign/map{
 	icon_state = "map-pubby";
-	pixel_y = 32
+	pixel_y = 32;
+	icon = 'hypermods/icons/obj/signs.dmi'
 	},
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -9254,7 +9257,8 @@
 "aIc" = (
 /obj/structure/sign/map{
 	icon_state = "map-pubby";
-	pixel_y = 32
+	pixel_y = 32;
+	icon = 'hypermods/icons/obj/signs.dmi'
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -14572,7 +14576,8 @@
 /obj/machinery/vending/cola,
 /obj/structure/sign/map{
 	icon_state = "map-pubby";
-	pixel_y = 32
+	pixel_y = 32;
+	icon = 'hypermods/icons/obj/signs.dmi'
 	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -24401,7 +24406,8 @@
 	},
 /obj/structure/sign/map{
 	icon_state = "map-pubby";
-	pixel_y = 32
+	pixel_y = 32;
+	icon = 'hypermods/icons/obj/signs.dmi'
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
