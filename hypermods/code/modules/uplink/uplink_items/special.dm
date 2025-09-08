@@ -10,7 +10,7 @@
 
 /datum/uplink_item/special/straypod/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_STRONG_SUPPLY_LINES))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_STRONG_SUPPLY_LINES) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -34,7 +34,7 @@
 
 /datum/uplink_item/special/premium_syndibox/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -47,7 +47,7 @@
 
 /datum/uplink_item/special/extratc/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_BOUNTIFUL_BOUNTIES))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_BOUNTIFUL_BOUNTIES) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -62,7 +62,7 @@
 
 /datum/uplink_item/special/bluespacestoragetie/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_SCARVES))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_SCARVES) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -75,7 +75,7 @@
 
 /datum/uplink_item/special/riggedglitterbombs/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_FILLED_MAINT))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_FILLED_MAINT) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -90,7 +90,7 @@
 
 /datum/uplink_item/special/eliteluxurycap/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_QUICK_SHUTTLE))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_QUICK_SHUTTLE) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -104,7 +104,7 @@
 
 /datum/uplink_item/special/milktov/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_POSTAL_WORKER_STRIKE))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_POSTAL_WORKER_STRIKE) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -118,7 +118,7 @@
 
 /datum/uplink_item/special/c20rbundle/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_LATE_ARRIVALS))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_LATE_ARRIVALS) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -145,7 +145,7 @@
 
 /datum/uplink_item/special/bluespace_wave/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_RANDOM_ARRIVALS))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_RANDOM_ARRIVALS) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -158,7 +158,7 @@
 
 /datum/uplink_item/special/moonshine_barrel/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_HANGOVER))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_HANGOVER) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -174,7 +174,7 @@
 
 /datum/uplink_item/special/vortex_charge/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_EMPTY_MAINT))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_EMPTY_MAINT) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -192,7 +192,7 @@
 
 /datum/uplink_item/special/surplus_tele/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_EMPTY_MAINT))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_EMPTY_MAINT) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -209,7 +209,7 @@
 
 /datum/uplink_item/special/fakeian/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_IAN_ADVENTURE))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_IAN_ADVENTURE) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -225,7 +225,7 @@
 
 /datum/uplink_item/special/centcom_official/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_ANNOUNCEMENT_INTERN) || HAS_TRAIT(SSstation, STATION_TRAIT_ANNOUNCEMENT_SYSTEM))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_ANNOUNCEMENT_INTERN) || HAS_TRAIT(SSstation, STATION_TRAIT_ANNOUNCEMENT_SYSTEM) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -239,7 +239,7 @@
 
 /datum/uplink_item/special/stealthmicrobomb/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_DEATHRATTLED_DEPARTMENT) || HAS_TRAIT(SSstation, STATION_TRAIT_DEATHRATTLED_ALL))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_DEATHRATTLED_DEPARTMENT) || HAS_TRAIT(SSstation, STATION_TRAIT_DEATHRATTLED_ALL) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -255,7 +255,7 @@
 
 /datum/uplink_item/special/boxed_dehydrated_carp/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_CARP_INFESTATION))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_CARP_INFESTATION) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -268,7 +268,7 @@
 
 /datum/uplink_item/special/synditaser/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_CYBERNETIC_REVOLUTION))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_CYBERNETIC_REVOLUTION) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
 /datum/uplink_item/special/cargoshuttlebatterer
@@ -282,7 +282,7 @@
 
 /datum/uplink_item/special/cargoshuttlebatterer/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_SLOW_SHUTTLE))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_SLOW_SHUTTLE) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -296,7 +296,7 @@
 
 /datum/uplink_item/special/botemagger/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_BOTS_GLITCHED))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_BOTS_GLITCHED) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -311,7 +311,7 @@
 
 /datum/uplink_item/special/ailawpurger/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_ION_STORMS))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_ION_STORMS) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -324,7 +324,7 @@
 
 /datum/uplink_item/special/ailawfucker/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_ION_STORMS))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_ION_STORMS) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -339,7 +339,7 @@
 
 /datum/uplink_item/special/syndicaterewinder/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_REVOLUTIONARY_TRASHING)) // Cuz i can't think of anything better to use.
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_REVOLUTIONARY_TRASHING) || prob(1)) // Cuz i can't think of anything better to use.
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -353,7 +353,7 @@
 
 /datum/uplink_item/special/magicdehydratedcarp/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_RAD_STORMS)) // Radiation magic powers? Guess that's not far-fetched as far as cartoons go.
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_RAD_STORMS) || prob(1)) // Radiation magic powers? Guess that's not far-fetched as far as cartoons go.
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -368,7 +368,7 @@
 
 /datum/uplink_item/special/spacepiratekit/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_DISTANT_SUPPLYLINES))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_DISTANT_SUPPLYLINES) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -382,7 +382,7 @@
 
 /datum/uplink_item/special/chameleonmutator/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_BLACKOUT))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_BLACKOUT) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -396,7 +396,7 @@
 
 /datum/uplink_item/special/syndicategrant/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_GALACTIC_GRANT))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_GALACTIC_GRANT) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -410,7 +410,7 @@
 
 /datum/uplink_item/special/luckywinner/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_LUCKY_WINNER))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_LUCKY_WINNER) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -428,7 +428,7 @@
 
 /datum/uplink_item/special/ninjamodsuit/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_NINJAS))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_NINJAS) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -445,7 +445,7 @@
 
 /datum/uplink_item/special/ninjasword/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_NINJAS))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_NINJAS) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
@@ -459,7 +459,7 @@
 
 /datum/uplink_item/special/pdadiskdeluxe/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_PDA_GLITCHED))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_PDA_GLITCHED) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
 
@@ -474,6 +474,6 @@
 
 /datum/uplink_item/special/siliconmag/New()
 	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_UNIQUE_AI))
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_UNIQUE_AI) || prob(1))
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = -1
