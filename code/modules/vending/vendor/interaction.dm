@@ -67,6 +67,10 @@
 	PROTECTED_PROC(TRUE)
 
 	. = TRUE
+	if(istype(inserted_item, /obj/item/card/emag)) // Without this, emags would be blocked.
+		to_chat(user, span_warning("You hold [inserted_item] close to [src], causing it to re-shuffle it's stock!"))
+		emag_act(user, inserted_item)
+		return FALSE
 	if(!canLoadItem(inserted_item, user))
 		to_chat(user, span_warning("[src] does not accept [inserted_item]!"))
 		return FALSE
