@@ -80,6 +80,7 @@
 		"anomaly_refinery",
 		"anomaly_neutralizer",
 		"reactive_armour",
+		"space_furnace",
 		"anomaly_belt_shell",
 		"anomaly_stabilizer",
 	)

@@ -317,6 +317,7 @@ As the Captain, your sabre deals extra damage to Assistants (as long as they hav
 You can automatically extract and retract arm implants by 'activating' the empty hand they're on. This includes integrated toolsets, cursed katanas, and vorpal scythes.
 You can combine the Carpet reagent with various different reagents, such as Oil and Cyanide, to create unique carpet types.
 You can bake a birthday cake and then microwave it to create a legendary cake hat. You can then combine it with an energy sword to create an energy cake.
+You can quickly remove radiation from items in a room by releasing water vapor into the air around them (including worn items).
 As a Cortical Borer, you'll passively deal damage to your host, and deal brain damage when performing most actions including getting stronger. Make sure to evolve toxin and brain healing chemicals quickly!
 As a Cortical Borer, you don't understand Galactic Common and won't be able to effectively communicate with your host! You can, however, still make out emotes. Asking yes or no questions with a simple nod or shake-of-the-head will go a long way!
 As a Cortical Borer, it's often an effective strategy to lay low in a non-sentient host to grow stronger so you may more easily survive until you can find a sentient host to piggyback off of.
