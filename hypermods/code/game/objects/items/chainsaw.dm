@@ -7,9 +7,9 @@
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/chainsaw_righthand.dmi'
 	tool_behaviour = TOOL_SAW
-	force = 3
+	force = 5
 	demolition_mod = 1
-	force_on = 5
+	force_on = 15
 //	var/icon_name = "c_saw"
 //	var/item_name = "c_saw"
 /**
@@ -37,7 +37,7 @@
 	inhand_icon_state = "c_saw_s"
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/chainsaw_righthand.dmi'
-	force = 13
+	force = 15
 	demolition_mod = 1.5
 	force_on = 35
 //	icon_name = "c_saw_s"
