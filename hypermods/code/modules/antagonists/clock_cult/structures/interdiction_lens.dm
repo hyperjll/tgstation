@@ -84,11 +84,11 @@
 
 //Dampening field
 
-/datum/proximity_monitor/advanced/projectile_dampener/peaceborg/clockwork
+/datum/proximity_monitor/advanced/bubble/projectile_dampener/peaceborg/clockwork
 	/// 0.75 or 25% less damage is default rn.
 	//bullet_effects.projectile_damage_multiplier = 0.75 // Only -25% damage instead of -50%
 
-/datum/proximity_monitor/advanced/projectile_dampener/peaceborg/clockwork/catch_bullet_effect(obj/projectile/bullet)
+/datum/proximity_monitor/advanced/bubble/projectile_dampener/peaceborg/clockwork/catch_bullet_effect(obj/projectile/bullet)
 	if(isliving(bullet.firer))
 		var/mob/living/living_firer = bullet.firer
 		if(IS_CLOCK(living_firer))
@@ -102,7 +102,7 @@
 
 /obj/item/borg/projectile_dampen/clockcult
 	name = "internal clockcult projectile dampener"
-	dampening_field = /datum/proximity_monitor/advanced/projectile_dampener/peaceborg/clockwork
+	dampening_field = /datum/proximity_monitor/advanced/bubble/projectile_dampener/peaceborg/clockwork
 
 /obj/item/borg/projectile_dampen/clockcult/process_recharge()
 	energy = maxenergy
