@@ -96,3 +96,23 @@
 	affected_mob.update_transform(RESIZE_DEFAULT_SIZE/current_size)
 	current_size = RESIZE_DEFAULT_SIZE
 	..()
+
+/datum/reagent/plantnutriment/speedgrow
+	name = "Speed-Gro"
+	description = "A specialized nutriment, which decreases plant endurance and lifespan, but accelerates the plants production, maturation and age."
+	color = "#6917D1"
+	tox_prob = 10
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/plantnutriment/speedgrow/on_hydroponics_apply(obj/machinery/hydroponics/mytray, mob/user)
+	var/obj/item/seeds/myseed = mytray.myseed
+	if(!isnull(myseed))
+		myseed.adjust_endurance(-round(volume * 0.4))
+		myseed.adjust_lifespan(-round(volume * 0.1))
+		myseed.adjust_production(-round(volume * 0.15))
+		myseed.adjust_maturation(-round(volume * 0.15))
+
+	var/obj/machinery/hydroponics/constructable/the_tray = mytray
+	if(!isnull(the_tray))
+		the_tray.age = (the_tray.age + round(volume * 0.5))
+		the_tray.update_appearance()
