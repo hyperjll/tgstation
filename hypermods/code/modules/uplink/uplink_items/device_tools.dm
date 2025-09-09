@@ -66,7 +66,7 @@
 	item = /obj/item/encryptionkey/universal
 	cost = 3
 	surplus = 0
-
+/** // getting splashed with oil or blood somehow breaks the game with more than 2 arms.
 /datum/uplink_item/device_tools/extraarm
 	name = "Additional Arm"
 	desc = "An additional arm, automatically added to your body upon purchase, allows you to use more items at once"
@@ -81,7 +81,7 @@
 	var/limbs = user.held_items.len
 	user.change_number_of_hands(limbs+1)
 	to_chat(user, "You feel more dexterous")
-
+**/
 /datum/uplink_item/device_tools/syndieomnitool
 	name = "Syndicate Holotool"
 	desc = "Thanks to our agents for procuring NT's Experimental Holotool, we've been able to replicate the design for ourselves. \
