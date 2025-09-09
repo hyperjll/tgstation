@@ -420,6 +420,17 @@
 	model_select_icon = "engineer"
 	model_traits = list(TRAIT_NEGATES_GRAVITY)
 	hat_offset = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))
+	borg_skins = list(
+		"Machinified Engineer" = list(SKIN_ICON_STATE = "engineer", SKIN_HAT_OFFSET = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))),
+		"Hovering Engineer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "hover_engi", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Treaded Engineer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "engi-tread", SKIN_HAT_OFFSET = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))),
+		"Tron Engineer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "tronengiborg", SKIN_HAT_OFFSET = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))),
+		"Abductor Engineer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "abductor_engi", SKIN_HAT_OFFSET = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))),
+		"Paladin Engineer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "paladin_engi", SKIN_HAT_OFFSET = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))),
+		"Test Dummy Engineer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "testdummy_engi", SKIN_HAT_OFFSET = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))),
+		"Icarus Engineer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "icarus", SKIN_HAT_OFFSET = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))),
+		"Butterfly Engineer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "butterfly", SKIN_HAT_OFFSET = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))),
+	)
 
 /obj/item/robot_model/janitor
 	name = "Janitor"
@@ -452,6 +463,11 @@
 	hat_offset = list("north" = list(0, -5), "south" = list(0, -5), "east" = list(4, -5), "west" = list(-4, -5))
 	/// Weakref to the wash toggle action we own
 	var/datum/weakref/wash_toggle_ref
+	borg_skins = list(
+		"Machinified Janitor" = list(SKIN_ICON_STATE = "janitor", SKIN_HAT_OFFSET = list("north" = list(0, -5), "south" = list(0, -5), "east" = list(4, -5), "west" = list(-4, -5))),
+		"Tron Janitor" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "tronjaniborg", SKIN_HAT_OFFSET = list("north" = list(0, -5), "south" = list(0, -5), "east" = list(4, -5), "west" = list(-4, -5))),
+		"Snail Janitor" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "snailborg", SKIN_HAT_OFFSET = list("north" = list(0, -5), "south" = list(0, -5), "east" = list(4, -5), "west" = list(-4, -5))),
+	)
 
 /obj/item/robot_model/janitor/be_transformed_to(obj/item/robot_model/old_model, forced = FALSE)
 	. = ..()
@@ -724,6 +740,11 @@
 	borg_skins = list(
 		"Machinified Doctor" = list(SKIN_ICON_STATE = "medical", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(-1, 3), "west" = list(1, 3))),
 		"Qualified Doctor" = list(SKIN_ICON_STATE = "qualified_doctor", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Hovering Doctor" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "hover_med", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Tron Doctor" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "tronmedicalborg", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(-1, 3), "west" = list(1, 3))),
+		"Abductor Doctor" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "abductor_med", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(-1, 3), "west" = list(1, 3))),
+		"Brain-in-a-Jar" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "brainjar", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(-1, 3), "west" = list(1, 3))),
+		"Doctor K." = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "dr_klein", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(-1, 3), "west" = list(1, 3))),
 	)
 
 /obj/item/robot_model/miner
@@ -757,6 +778,7 @@
 		"Asteroid Miner" = list(SKIN_ICON_STATE = "minerOLD"),
 		"Spider Miner" = list(SKIN_ICON_STATE = "spidermin", SKIN_HAT_OFFSET = list("north" = list(0, -2), "south" = list(0, -2), "east" = list(-2, -2), "west" = list(2, -2))),
 		"Lavaland Miner" = list(SKIN_ICON_STATE = "miner"),
+		"Abductor Miner" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "abductor_miner", SKIN_HAT_OFFSET = list("north" = list(0, 0), "south" = list(0, 0), "east" = list(0, 0), "west" = list(0, 0))),
 	)
 
 /obj/item/robot_model/peacekeeper
@@ -780,6 +802,11 @@
 	model_select_icon = "standard"
 	model_traits = list(TRAIT_PUSHIMMUNE)
 	hat_offset = list("north" = list(0, -2), "south" = list(0, -2), "east" = list(1, -2), "west" = list(-1, -2))
+	borg_skins = list(
+		"Machinified Peacekeeper" = list(SKIN_ICON_STATE = "peace", SKIN_HAT_OFFSET = list("north" = list(0, -2), "south" = list(0, -2), "east" = list(1, -2), "west" = list(-1, -2))),
+		"Rainbow Peacekeeper" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "rainbow_peace", SKIN_HAT_OFFSET = list("north" = list(0, -2), "south" = list(0, -2), "east" = list(1, -2), "west" = list(-1, -2))),
+		"Faz-Keeper" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "fazzkeeper", SKIN_HAT_OFFSET = list("north" = list(0, -2), "south" = list(0, -2), "east" = list(1, -2), "west" = list(-1, -2))),
+	)
 
 /obj/item/robot_model/peacekeeper/do_transform_animation()
 	..()
@@ -809,6 +836,19 @@
 	model_select_icon = "security"
 	model_traits = list(TRAIT_PUSHIMMUNE)
 	hat_offset = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))
+	borg_skins = list(
+		"Machinified Officer" = list(SKIN_ICON_STATE = "sec", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Hovering Officer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "hover_sec", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"CentCom Officer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "centcom", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Treaded Officer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "sec-tread", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Fall-Out Officer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "falloutsecborg", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Droideka Officer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "droideka", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Tron Officer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "tronsecborg", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Angel" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "angel", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Paladin" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "paladin", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Cyberpunk Officer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "cyberpunk_sec", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+		"Police Officer" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "policeborg", SKIN_HAT_OFFSET = list("north" = list(0, 3), "south" = list(0, 3), "east" = list(1, 3), "west" = list(-1, 3))),
+	)
 
 /obj/item/robot_model/security/do_transform_animation()
 	..()
@@ -869,6 +909,7 @@
 		"Tophat" = list(SKIN_ICON_STATE = "tophat", SKIN_LIGHT_KEY = NONE, SKIN_HAT_OFFSET = INFINITY),
 		"Waitress" = list(SKIN_ICON_STATE = "service_f"),
 		"Gardener" = list(SKIN_ICON_STATE = "gardener", SKIN_HAT_OFFSET = INFINITY),
+		"Tron Butler" = list(SKIN_ICON = 'hypermods/icons/mob/silicon/robots.dmi', SKIN_ICON_STATE = "tronservice", SKIN_HAT_OFFSET = list("north" = list(0, 0), "south" = list(0, 0), "east" = list(0, 0), "west" = list(0, 0))),
 	)
 
 /obj/item/robot_model/service/respawn_consumable(mob/living/silicon/robot/cyborg, coeff = 1)
