@@ -96,3 +96,10 @@
 	id = "weakness_nanites"
 	program_type = /datum/nanite_program/weakness
 	category = list(NANITES_CATEGORY_SUPPRESSION)
+
+/datum/design/nanites/gravity
+	name = "Gravito-Kinetic Field Conduction"
+	desc = "The nanites channel an artifical gravitational field through the host."
+	id = "gravity_nanites"
+	program_type = /datum/nanite_program/gravity
+	category = list("Suppression Nanites")

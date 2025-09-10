@@ -420,3 +420,6 @@
 
 /obj/item/disk/nanite_program/lungdestruction
 	program = /datum/nanite_program/lungdestruction
+
+/obj/item/disk/nanite_program/gravity
+	program = /datum/nanite_program/gravity
