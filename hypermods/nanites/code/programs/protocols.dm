@@ -23,7 +23,7 @@
 	use_rate = 0
 	rogue_types = list(/datum/nanite_program/necrotic)
 	protocol_class = NANITE_PROTOCOL_REPLICATION
-	var/boost_duration = 2 MINUTES
+	var/boost_duration = 4 MINUTES
 
 /datum/nanite_program/protocol/kickstart/check_conditions()
 	if(!(world.time < nanites.start_time + boost_duration))
