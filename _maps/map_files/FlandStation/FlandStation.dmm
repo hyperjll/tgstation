@@ -32659,6 +32659,9 @@
 /area/station/engineering/storage)
 "jwC" = (
 /obj/machinery/requests_console/directional/east,
+/obj/machinery/modular_computer/preset/id{
+	dir = 8
+	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "jwE" = (
@@ -56322,6 +56325,9 @@
 /obj/machinery/light_switch{
 	pixel_x = 24
 	},
+/obj/machinery/modular_computer/preset/id{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "qri" = (
@@ -66710,6 +66716,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1
 	},
+/obj/machinery/modular_computer/preset/id{
+	dir = 8
+	},
 /turf/open/floor/iron,
 /area/station/security/office)
 "tsh" = (
@@ -70346,6 +70355,9 @@
 	},
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 8
+	},
+/obj/machinery/modular_computer/preset/id{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/customs)

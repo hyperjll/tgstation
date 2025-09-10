@@ -7389,6 +7389,7 @@
 /obj/machinery/computer/security/telescreen/ce{
 	pixel_y = 28
 	},
+/obj/machinery/modular_computer/preset/id,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "cwl" = (
@@ -8328,6 +8329,9 @@
 	name = "Privacy Shutters Control";
 	pixel_y = 38;
 	req_access = list("qm")
+	},
+/obj/machinery/modular_computer/preset/id{
+	dir = 1
 	},
 /turf/open/floor/carpet/orange,
 /area/station/command/heads_quarters/qm)
@@ -9677,6 +9681,9 @@
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/supplies,
 /obj/effect/mapping_helpers/requests_console/assistance,
+/obj/machinery/modular_computer/preset/id{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/captain)
 "dmU" = (
@@ -10548,6 +10555,9 @@
 "dzL" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
+	},
+/obj/machinery/modular_computer/preset/id{
+	dir = 8
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
@@ -38109,6 +38119,7 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
 	},
+/obj/machinery/modular_computer/preset/id,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/customs)
 "mrR" = (
@@ -42307,6 +42318,9 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/xenobiology)
 "nPo" = (
+/obj/machinery/modular_computer/preset/id{
+	dir = 1
+	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos)
 "nPS" = (
@@ -48740,6 +48754,9 @@
 /turf/closed/wall,
 /area/station/hallway/secondary/exit/departure_lounge)
 "pZI" = (
+/obj/machinery/modular_computer/preset/id{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/office)
 "pZM" = (
@@ -52073,6 +52090,9 @@
 	dir = 8
 	},
 /obj/machinery/keycard_auth/wall_mounted/directional/east,
+/obj/machinery/modular_computer/preset/id{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "rhy" = (
@@ -58760,6 +58780,9 @@
 	req_access = list("research")
 	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 8
+	},
+/obj/machinery/modular_computer/preset/id{
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
