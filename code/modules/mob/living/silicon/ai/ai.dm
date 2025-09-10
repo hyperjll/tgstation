@@ -66,6 +66,11 @@
 
 	deploy_action.Grant(src)
 
+	nanite_menu = new(nanite_settings) // hyper edit
+	nanite_remote = new(nanite_settings) // hyper edit
+	nanite_menu.Grant(src) // hyper edit
+	nanite_remote.Grant(src) // hyper edit
+
 	if(isturf(loc))
 		add_verb(src, list(
 			/mob/living/silicon/ai/proc/ai_network_change,
@@ -141,6 +146,8 @@
 	QDEL_NULL(aiMulti)
 	QDEL_NULL(alert_control)
 	QDEL_NULL(ai_tracking_tool)
+	QDEL_NULL(nanite_remote) // hyper edit
+	QDEL_NULL(nanite_menu) // hyper edit
 	malfhack = null
 	current = null
 	bot_ref = null
