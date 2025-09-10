@@ -276,7 +276,7 @@ GLOBAL_VAR_INIT(liquid_debug_colors, FALSE)
 		return
 	if(QDELETED(turf_reagents))
 		return
-	turf_reagents.expose(member, TOUCH, liquid = TRUE)
+	turf_reagents.expose(member, TOUCH)
 
 /datum/liquid_group/proc/build_turf_reagent()
 	if(!length(members))

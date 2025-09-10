@@ -32,6 +32,8 @@
 			compiled_list[R.type] = R.volume * multiplier
 	if(!compiled_list.len) //No reagents to add, don't bother going further
 		return
+	if(!isopenturf(src)) // If we're in a closed turf, we shouldn't be a liquid puddle.
+		return
 	if(!liquids)
 		liquids = new(src)
 	liquids.liquid_group.add_reagents(liquids, compiled_list, chem_temp)
