@@ -54,6 +54,11 @@
 	else if(istype(weapon, /obj/item/coin))
 		var/obj/item/coin/inserted_coin = weapon
 		value = inserted_coin.value
+	else if(istype(weapon, /obj/item/card/id/departmental_budget))
+		var/obj/item/card/id/departmental_budget/my_dep_card = weapon
+		account_department = my_dep_card.department_ID
+		say("Account department changed! Now accessing the funds of the [my_dep_card.name].")
+		synced_bank_account = SSeconomy.get_dep_account(account_department)
 	if(value)
 		if(synced_bank_account)
 			synced_bank_account.adjust_money(value)
