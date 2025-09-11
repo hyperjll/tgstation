@@ -93,10 +93,18 @@ obj/machinery/power/exporter/Destroy()
 		icon_state = "dominator-Yellow"
 
 /obj/machinery/power/exporter/process()
+	if(isnull(attached)) // prevent constant runtimes
+		if(active)
+			src.say("Cannot detect any power cables, shutting down.")
+			active = FALSE
+			drain_rate = 0
+			icon_state = "dominator"
+			return
+		return
 	var/datum/powernet/powernet = attached.powernet
 	if(isnull(powernet))
 		if(active)
-			src.say("Cannot detect any power cables, shutting down.")
+			src.say("Cannot detect the power net, shutting down.")
 			active = FALSE
 			drain_rate = 0
 			icon_state = "dominator"
