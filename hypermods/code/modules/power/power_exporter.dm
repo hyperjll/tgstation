@@ -94,6 +94,8 @@ obj/machinery/power/exporter/Destroy()
 
 /obj/machinery/power/exporter/process()
 	var/datum/powernet/powernet = attached.powernet
+	if(isnull(powernet))
+		return
 	if(active && anchored && powernet)
 		if(powernet.netexcess >= drain_rate) // Make sure we have a surplus, and that we aren't dipping below it.
 			attached.add_delayedload(drain_rate)
