@@ -17,6 +17,7 @@
 	name = "\improper DNA injector (Super)"
 	desc = "AND THIS... IS HOW TO GO... EVEN FURTHER BEYOND!"
 	add_mutations = list(/datum/mutation/superhuman)
+	mut_type = MUTATION_SOURCE_SYNDI_MUTATOR
 
 /obj/item/dnainjector/reflectiveskin
 	name = "\improper DNA injector (Reflective Skin)"

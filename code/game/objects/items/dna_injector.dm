@@ -18,6 +18,8 @@
 
 	var/used = FALSE
 
+	var/mut_type = MUTATION_SOURCE_MUTATOR
+
 /obj/item/dnainjector/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
@@ -51,7 +53,7 @@
 		if(target.dna.mutation_in_sequence(added_mutation))
 			target.dna.activate_mutation(added_mutation)
 		else
-			target.dna.add_mutation(added_mutation, MUTATION_SOURCE_MUTATOR)
+			target.dna.add_mutation(added_mutation, mut_type)
 	if(fields)
 		if(fields["name"] && fields["UE"] && fields["blood_type"])
 			target.real_name = fields["name"]
@@ -172,7 +174,7 @@
 			mutation = added_mutation.type
 		if(!target.dna.activate_mutation(added_mutation))
 			if(force_mutate)
-				target.dna.add_mutation(added_mutation, MUTATION_SOURCE_MUTATOR)
+				target.dna.add_mutation(added_mutation, mut_type)
 		else if(research && target.client)
 			filled = TRUE
 		for(var/datum/disease/advance/disease in target.diseases)

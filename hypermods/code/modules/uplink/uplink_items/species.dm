@@ -2,8 +2,8 @@
 	name = "Super-Human Mutator"
 	desc = "This DNA mutator contains a highly experimental mutation that significantly boosts a human's physical and mental attributes to it's peak potential. \
 			Superhuman's slowly regenerate health, have greater stamina, have greater maximum health, slightly resist damage, are immune to stuns, have near-immunity to slips, easily ignore pain, and cannot be dismembered. \
-			This mutation causes great genetic instability. Proceed with extreme caution. Incompatible with hulk mutations."
-	cost = 20
+			Mutadone CANNOT cure this mutation, but this mutation causes great genetic instability. Proceed with extreme caution. Incompatible with hulk mutations."
+	cost = 25
 	surplus = 0
 	progression_minimum = 30 MINUTES
 	item = /obj/item/dnainjector/superhuman
