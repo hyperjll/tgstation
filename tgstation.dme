@@ -7392,6 +7392,7 @@
 #include "hypermods\code\modules\power\battery.dm"
 #include "hypermods\code\modules\power\cable.dm"
 #include "hypermods\code\modules\power\port_gen.dm"
+#include "hypermods\code\modules\power\power_exporter.dm"
 #include "hypermods\code\modules\power\lighting\light_items.dm"
 #include "hypermods\code\modules\projectiles\pins.dm"
 #include "hypermods\code\modules\projectiles\ammunition\_ammunition.dm"
