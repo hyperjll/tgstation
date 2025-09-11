@@ -36,6 +36,7 @@
 	admin_setup = list(
 		/datum/event_admin_setup/input_number/surge_spiciness,
 	)
+	min_players = 20 // Low pop likely won't have an engineering team just... sitting on stand by to handle this.
 
 /datum/round_event_control/supermatter_surge/can_spawn_event(players_amt, allow_magic = FALSE)
 	. = ..()
