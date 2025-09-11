@@ -128,7 +128,7 @@
 /datum/uplink_item/medical/resurrector
 	name = "Resurrector Nanite Serum"
 	desc = "A single-use autoinjector which dispenses nanites designed and capable of restoring a corpse back to life very quickly. Has no effect on a living person. \
-			You'll likely be using this to bring your fellow agents back from the grave. THE REAGENTS WITHIN WILL NOT REPAIR THE CORPSE -- SURGERY WILL BE REQUIRED."
+			You'll likely be using this to bring your fellow agents back from the grave."
 	item = /obj/item/reagent_containers/hypospray/medipen/resurrector
 	cost = 2
 	surplus = 0
