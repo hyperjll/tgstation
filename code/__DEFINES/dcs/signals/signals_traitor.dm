@@ -34,6 +34,8 @@
 #define COMSIG_TRAITOR_GRAFFITI_SLIPPED "traitor_demoralise_event"
 /// For when someone is injected with the EHMS virus from /datum/traitor_objective_category/infect
 #define COMSIG_EHMS_INJECTOR_INJECTED "after_ehms_inject"
+/// For when a reverse inducer's cell is completely charged /datum/traitor_objective_category/power_siphon
+#define COMSIG_REVERSE_INDUCER_CHARGED "reverse_inducer_charged"
 
 /// Called by an battle royale implanter when successfully implanting someone. Passes the implanted mob.
 #define COMSIG_ROYALE_IMPLANTED "royale_implanted"
