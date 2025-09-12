@@ -46,6 +46,36 @@
 
 	carbon_imp_in.balloon_alert(carbon_imp_in, "at [get_area_name(target)].")
 
+	var/dist = get_dist(src, target)
+	var/dir = get_dir(carbon_imp_in, target)
+	var/arrow_color
+
+	switch(dist)
+		if (0)
+			return
+		if(1 to 5)
+			arrow_color = COLOR_GREEN
+		if(6 to 10)
+			arrow_color = COLOR_YELLOW
+		if(11 to 15)
+			arrow_color = COLOR_ORANGE
+		else
+			arrow_color = COLOR_RED
+
+	var/datum/hud/user_hud = carbon_imp_in.hud_used
+	if(!user_hud || !istype(user_hud, /datum/hud) || !islist(user_hud.infodisplay))
+		return
+
+	var/atom/movable/screen/multitool_arrow/arrow = new(null, user_hud)
+	arrow.color = arrow_color
+	arrow.screen_loc = around_player
+	arrow.transform = matrix(dir2angle(dir), MATRIX_ROTATE)
+
+	user_hud.infodisplay += arrow
+	user_hud.show_hud(user_hud.hud_version)
+
+	QDEL_IN(arrow, 1.5 SECONDS)
+
 /obj/item/implant/radar/proc/trackable(mob/living/carbon/human/H)
 	var/turf/here = get_turf(src)
 	var/turf/there = get_turf(H)
