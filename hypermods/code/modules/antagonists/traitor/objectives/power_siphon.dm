@@ -44,6 +44,11 @@
 	succeed_objective() // no need for checks here.
 	return
 
+/datum/traitor_objective/power_siphon/can_generate_objective(datum/mind/generating_for, list/possible_duplicates)
+	if(length(possible_duplicates) > 0)
+		return FALSE
+	return TRUE
+
 /datum/traitor_objective/power_siphon/generate_objective(datum/mind/generating_for, list/possible_duplicates)
 	AddComponent(/datum/component/traitor_objective_mind_tracker, generating_for, \
 		signals = list(COMSIG_REVERSE_INDUCER_CHARGED = PROC_REF(on_full_charge)))
