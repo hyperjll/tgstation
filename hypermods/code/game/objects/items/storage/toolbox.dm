@@ -107,21 +107,25 @@
 /obj/item/storage/toolbox/guncase/traitor/ammunition/m10mm
 	name = "10mm magazine case"
 	weapon_to_spawn = /obj/item/ammo_box/magazine/m10mm
+	extra_to_spawn = /obj/item/ammo_box/magazine/m10mm
 	ammo_box_to_spawn = /obj/item/ammo_box/c10mm
 
 /obj/item/storage/toolbox/guncase/traitor/ammunition/m45
 	name = ".45 magazine case"
 	weapon_to_spawn = /obj/item/ammo_box/magazine/m45
+	extra_to_spawn = /obj/item/ammo_box/magazine/m45
 	ammo_box_to_spawn = /obj/item/ammo_box/c45
 
 /obj/item/storage/toolbox/guncase/traitor/ammunition/m50
 	name = "m50 magazine case"
 	weapon_to_spawn = /obj/item/ammo_box/magazine/m50
+	extra_to_spawn = /obj/item/ammo_box/magazine/m50
 	ammo_box_to_spawn = /obj/item/ammo_box/m50
 
 /obj/item/storage/toolbox/guncase/traitor/ammunition/c357
 	name = ".357 speedloader case"
 	weapon_to_spawn = /obj/item/ammo_box/a357
+	extra_to_spawn = /obj/item/ammo_box/a357
 	ammo_box_to_spawn = /obj/item/ammo_box/c357/no_direct
 
 /obj/item/storage/toolbox/guncase/flaregun
