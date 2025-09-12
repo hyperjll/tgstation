@@ -142,11 +142,3 @@
 	contains = list(/obj/item/stack/sheet/mineral/silver/fifty)
 	crate_name = "silver bars crate"
 	crate_type = /obj/structure/closet/crate
-
-/datum/supply_pack/materials/bananiumsupply
-	name = "50 Bananium Sheets Crate"
-	desc = "50 chunks of the clownly bananium. For restocking the ore silo, yes. Definitely for the ore silo and nothing else!"
-	cost = CARGO_CRATE_VALUE * 100
-	contains = list(/obj/item/stack/sheet/mineral/bananium/fifty)
-	crate_name = "bananium crate"
-	crate_type = /obj/structure/closet/crate
