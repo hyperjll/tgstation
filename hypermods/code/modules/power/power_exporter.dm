@@ -20,7 +20,7 @@
 	if(!active)
 		. += "<span class='notice'>The exporter seems to be offline.</span>"
 	else
-		. += "<span class='notice'>The [src] is exporting [drain_rate] watts of power, it has consumed [power_drained] watts so far.</span>"
+		. += "<span class='notice'>[src] is exporting [drain_rate] watts of power, it has consumed [power_drained] watts so far.</span>"
 
 obj/machinery/power/exporter/Initialize()
 	..()
