@@ -130,6 +130,7 @@
 		"c38_flare",
 		"c38_flare_mag",
 		"laser_rifle",
+		"emitter_cannon",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SECURITY)

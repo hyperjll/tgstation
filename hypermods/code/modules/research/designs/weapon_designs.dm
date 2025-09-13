@@ -10,6 +10,18 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
+/datum/design/emitter_cannon
+	name = "Emitter Cannon Part Kit (Modifiable-Lethal)"
+	desc = "A kit to augment a laser gun into a emitter cannon, capable of firing all types of emitter beams with the help of diode disks."
+	id = "emitter_cannon"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 6, /datum/material/gold = SHEET_MATERIAL_AMOUNT * 3)
+	build_path = /obj/item/weaponcrafting/gunkit/emitter_cannon
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_KITS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
 /datum/design/mk58pistol
 	name = "Mk58"
 	desc = "A modernized handgun of remarkable quality often provided to security forces occupying areas with suitable gravity."

@@ -22,3 +22,17 @@
 /datum/crafting_recipe/laserrifle/New()
 	..()
 	blacklist += subtypesof(/obj/item/gun/energy/laser)
+
+/datum/crafting_recipe/emitter_cannon
+	name = "Emitter Cannon"
+	result = /obj/item/gun/energy/emitter
+	reqs = list(
+		/obj/item/gun/energy/laser = 1,
+		/obj/item/weaponcrafting/gunkit/emitter_cannon = 1,
+	)
+	time = 10 SECONDS
+	category = CAT_WEAPON_RANGED
+
+/datum/crafting_recipe/emitter_cannon/New()
+	..()
+	blacklist += subtypesof(/obj/item/gun/energy/laser)

@@ -17,3 +17,14 @@
 	fire_sound = 'sound/items/weapons/pulse.ogg'
 	harmful = FALSE
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/blue
+
+/obj/item/ammo_casing/energy/emitter
+	projectile_type = /obj/projectile/beam/emitter/hitscan
+	e_cost = LASER_SHOTS(20, STANDARD_CELL_CHARGE)
+	select_name = "emitter"
+	delay = 2 SECONDS
+	fire_sound = 'sound/items/weapons/emitter.ogg'
+
+/obj/item/ammo_casing/energy/emitter/cyborg
+	e_cost = LASER_SHOTS(30, STANDARD_CELL_CHARGE)
+	delay = 1 SECONDS
