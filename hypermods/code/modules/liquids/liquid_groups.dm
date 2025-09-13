@@ -953,14 +953,14 @@ GLOBAL_VAR_INIT(liquid_debug_colors, FALSE)
 		return
 	var/turf/members_turf = member.my_turf
 	for(var/atom/movable/target_atom in members_turf)
-		turf_reagents.expose(target_atom, TOUCH, liquid = TRUE)
+		turf_reagents.expose(target_atom, TOUCH)
 
 /datum/liquid_group/proc/expose_atom(atom/target, modifier = 0, method)
 	if(!turf_reagents)
 		return
 	if(HAS_TRAIT(target, LIQUID_PROTECTION))
 		return
-	turf_reagents.expose(target, method, liquid = TRUE)
+	turf_reagents.expose(target, method)
 
 /datum/liquid_group/proc/spread_liquid(turf/new_turf, turf/source_turf)
 	if(isclosedturf(new_turf) || !source_turf.atmos_adjacent_turfs)
