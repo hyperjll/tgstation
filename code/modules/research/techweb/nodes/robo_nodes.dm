@@ -73,6 +73,7 @@
 	description = "Delving into sophisticated AI directives, with hopes that they won't lead to humanity's extinction."
 	prereq_ids = list(TECHWEB_NODE_AI)
 	design_ids = list(
+		"ai_brain",
 		"ai_power_upgrade",
 		"ai_battery_upgrade",
 		"ai_reactivate_camera",

@@ -148,6 +148,23 @@
 	)
 **/
 
+/datum/design/ai_brain
+	name = "AI-uplink brain"
+	desc = "Can be inserted into a body with NO ORGANIC INTERNAL ORGANS (robotic organs only) to allow AIs to control it. Comes with its own health sensors beacon. MUST be a humanoid or bad things happen to the consciousness."
+	id = "ai_brain"
+	build_type = MECHFAB
+	materials = list(
+		/datum/material/titanium = HALF_SHEET_MATERIAL_AMOUNT*1.7,
+		/datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT*1.35,
+		/datum/material/gold =SMALL_MATERIAL_AMOUNT*7.5
+	)
+	construction_time = 10 SECONDS
+	build_path = /obj/item/organ/brain/cybernetic/ai
+	category = list(
+		RND_CATEGORY_MECHFAB_CYBORG + RND_SUBCATEGORY_CYBERNETICS_ADVANCED_LIMBS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
 //Justice (emaged only)
 /datum/design/justice_chassis
 	name = "Exosuit Chassis (\"Justice\")"
