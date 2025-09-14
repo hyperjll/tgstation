@@ -884,6 +884,10 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"eO" = (
+/obj/structure/gulag_vent,
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "eP" = (
 /obj/structure/chair/sofa/left/brown,
 /obj/effect/turf_decal/tile/bar/opposingcorners{
@@ -1143,7 +1147,6 @@
 	dir = 4
 	},
 /obj/machinery/light/small/directional/north,
-/obj/machinery/wall_healer/free/directional/north,
 /turf/open/floor/iron/smooth_edge,
 /area/mine/laborcamp/quarters)
 "gg" = (
@@ -3224,6 +3227,10 @@
 /obj/structure/stone_tile/center/cracked,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"pf" = (
+/obj/structure/fluff/minepost,
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "pg" = (
 /obj/effect/spawner/random/trash/hobo_squat,
 /turf/open/floor/plating,
@@ -3563,6 +3570,10 @@
 /obj/item/soap,
 /turf/open/floor/iron/freezer,
 /area/mine/living_quarters)
+"qP" = (
+/obj/item/stack/cable_coil/cut,
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "qQ" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
@@ -7450,6 +7461,7 @@
 /obj/machinery/camera/autoname/directional/south{
 	network = list("labor")
 	},
+/obj/machinery/wall_healer/free/directional/south,
 /turf/open/floor/iron/white,
 /area/mine/laborcamp/production)
 "Lq" = (
@@ -21347,7 +21359,7 @@ uU
 uU
 uU
 pU
-NC
+eO
 pU
 uU
 uU
@@ -22374,7 +22386,7 @@ uU
 uU
 uU
 uU
-uo
+pf
 pU
 uU
 uU
@@ -23659,7 +23671,7 @@ uU
 uU
 uU
 uU
-uo
+pf
 pU
 pU
 uU
@@ -23917,7 +23929,7 @@ uU
 uU
 pU
 pU
-Gi
+qP
 pU
 pU
 uU
