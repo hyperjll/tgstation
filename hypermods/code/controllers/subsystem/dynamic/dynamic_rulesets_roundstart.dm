@@ -24,7 +24,7 @@
 	max_antag_cap = list("denominator" = 30)
 
 /datum/dynamic_ruleset/roundstart/iinfected/assign_role(datum/mind/candidate)
-	candidate.add_antag_datum(/datum/antagonist/traitor)
+	candidate.add_antag_datum(/datum/antagonist/initial_infected)
 
 //////////////////////////////////////////////
 //                                          //
@@ -52,4 +52,4 @@
 	max_antag_cap = list("denominator" = 38)
 
 /datum/dynamic_ruleset/roundstart/werewolves/assign_role(datum/mind/candidate)
-	candidate.add_antag_datum(/datum/antagonist/traitor)
+	candidate.add_antag_datum(/datum/antagonist/werewolf)
