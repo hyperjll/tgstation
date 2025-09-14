@@ -10,7 +10,7 @@
 	var/obj/item/organ/brain/cybernetic/ai/shell_to_disconnect = owner.get_organ_by_type(/obj/item/organ/brain/cybernetic/ai)
 
 	if(!shell_to_disconnect)
-		QDEL_NULL(undeployment_action) // we shouldn't be here.
+		QDEL_NULL(src) // we shouldn't be here.
 
 	shell_to_disconnect.undeploy()
 	return TRUE
