@@ -1322,6 +1322,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
 /turf/open/floor/iron/smooth,
 /area/mine/laborcamp/production)
 "gM" = (
@@ -4800,6 +4801,16 @@
 /obj/item/seeds/banana,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"wT" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/loading_area{
+	dir = 8
+	},
+/obj/effect/turf_decal/weather/dirt{
+	dir = 4
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "wU" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
@@ -5131,6 +5142,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/smooth,
 /area/mine/laborcamp/production)
 "yV" = (
@@ -6381,6 +6393,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/smooth,
 /area/mine/laborcamp/production)
 "Gg" = (
@@ -8866,6 +8879,16 @@
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/mine/laborcamp/security)
+"SI" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1
+	},
+/obj/effect/turf_decal/weather/dirt,
+/obj/effect/turf_decal/weather/dirt{
+	dir = 8
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "SL" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -10264,6 +10287,7 @@
 /turf/open/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "ZN" = (
+/obj/structure/cable,
 /turf/open/floor/iron/smooth,
 /area/mine/laborcamp/production)
 "ZP" = (
@@ -21066,7 +21090,7 @@ uU
 uU
 uU
 uU
-uU
+pU
 uU
 uU
 uU
@@ -21322,9 +21346,9 @@ uU
 uU
 uU
 uU
-uU
-uU
-uU
+pU
+NC
+pU
 uU
 uU
 uU
@@ -21580,7 +21604,7 @@ uU
 uU
 uU
 uU
-uU
+pU
 uU
 uU
 uU
@@ -22350,8 +22374,8 @@ uU
 uU
 uU
 uU
-uU
-uU
+uo
+pU
 uU
 uU
 uU
@@ -22865,7 +22889,7 @@ uU
 uU
 uU
 uU
-uU
+pU
 uU
 uU
 uU
@@ -23379,7 +23403,7 @@ uU
 uU
 uU
 uU
-pU
+SI
 uU
 uU
 uU
@@ -23635,7 +23659,7 @@ uU
 uU
 uU
 uU
-pU
+uo
 pU
 pU
 uU
@@ -23893,7 +23917,7 @@ uU
 uU
 pU
 pU
-pU
+Gi
 pU
 pU
 uU
@@ -24150,7 +24174,7 @@ pU
 pU
 pU
 tL
-pU
+wT
 pV
 pU
 pU
