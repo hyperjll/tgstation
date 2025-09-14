@@ -796,6 +796,7 @@
 /obj/item/toy/plush/shark{
 	desc = "A plushie depicting a somewhat cartoonish shark. The tag calls it a 'hákarl', noting that it was made by an obscure furniture manufacturer in old Scandinavia. This one seems to have some cable wiring sticking out of its mouth."
 	},
+/obj/structure/cable,
 /turf/open/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "ez" = (
@@ -910,9 +911,7 @@
 /area/mine/laborcamp/quarters)
 "eW" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
+/obj/machinery/power/port_gen/pacman/pre_loaded,
 /turf/open/floor/plating,
 /area/mine/maintenance/service)
 "eX" = (
@@ -2824,10 +2823,8 @@
 /turf/open/indestructible/boss,
 /area/lavaland/surface/outdoors)
 "ni" = (
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
 /obj/structure/cable,
+/obj/machinery/power/port_gen/pacman/pre_loaded,
 /turf/open/floor/plating,
 /area/mine/maintenance/service)
 "nk" = (
@@ -3872,10 +3869,8 @@
 /area/mine/lounge)
 "rZ" = (
 /obj/structure/cable,
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/port_gen/pacman/pre_loaded,
 /turf/open/floor/plating,
 /area/mine/maintenance/service)
 "sa" = (
@@ -7681,6 +7676,12 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood/parquet,
 /area/mine/lobby/raptor)
+"Mk" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable,
+/obj/machinery/power/rtg,
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "Mr" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -9922,11 +9923,16 @@
 /obj/item/seeds/apple,
 /turf/open/floor/iron/dark,
 /area/mine/laborcamp)
+"XK" = (
+/obj/structure/cable,
+/turf/closed/mineral/random/labormineral/volcanic,
+/area/lavaland/surface/outdoors)
 "XM" = (
 /obj/structure/sign/directions/evac/directional/south{
 	pixel_x = -32;
 	pixel_y = 0
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron/dark/textured_large,
 /area/mine/production)
 "XP" = (
@@ -24177,7 +24183,7 @@ aj
 uU
 uU
 uU
-uU
+XK
 uU
 uU
 uU
@@ -41376,7 +41382,7 @@ pU
 pU
 pU
 pU
-pU
+aD
 ON
 ON
 ON
@@ -41633,8 +41639,8 @@ pU
 pU
 pU
 pU
-pU
-pU
+aD
+Mk
 ON
 fU
 nP
