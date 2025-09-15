@@ -100,6 +100,18 @@
 	items_to_add = list(/obj/item/borg/apparatus/universal)
 	require_model = TRUE
 
+/obj/item/borg/upgrade/unitoolset
+	name = "universal engineering omnitool"
+	desc = "A module capable of being installed into any cyborg, granting them a full set of tools or an additional set if they already have one or more."
+	items_to_add = list(/obj/item/borg/cyborg_omnitool/engineering)
+	require_model = TRUE
+
+/obj/item/borg/upgrade/unisurgeryset
+	name = "universal surgical omnitool"
+	desc = "A module capable of being installed into any cyborg, granting them a full set of surgical equipment or an additional set if they already have one or more."
+	items_to_add = list(/obj/item/borg/cyborg_omnitool/medical)
+	require_model = TRUE
+
 /// Security cyborgs
 
 /obj/item/borg/upgrade/secfultons

@@ -6,6 +6,8 @@
 	design_ids = list(
 		"borg_upgrade_unistorage",
 		"borg_upgrade_fulton",
+		"borg_upgrade_unitoolset",
+		"borg_upgrade_unisurgeryset",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 

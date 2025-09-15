@@ -12,6 +12,33 @@
 		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_ALL
 	)
 
+/datum/design/borg_upgrade_unitoolset
+	name = "Universal Toolset"
+	id = "borg_upgrade_unitoolset"
+	build_type = MECHFAB
+	build_path = /obj/item/borg/upgrade/unitoolset
+	materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT*15,
+	)
+	construction_time = 5 SECONDS
+	category = list(
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_ALL
+	)
+
+/datum/design/borg_upgrade_unisurgeryset
+	name = "Universal Surgical Toolset"
+	id = "borg_upgrade_unisurgeryset"
+	build_type = MECHFAB
+	build_path = /obj/item/borg/upgrade/unisurgeryset
+	materials = list(
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT*10,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT*5,
+	)
+	construction_time = 5 SECONDS
+	category = list(
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_ALL
+	)
+
 /datum/design/borg_upgrade_arcd
 	name = "Engineering Cyborg ARCD"
 	id = "borg_upgrade_arcd"
