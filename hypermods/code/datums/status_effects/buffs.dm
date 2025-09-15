@@ -108,5 +108,5 @@
 /atom/movable/screen/alert/status_effect/bed_rest
 	name = "Bed Rest"
 	desc = "You're resting on a bed, the mattress sure is comfy. You'll slowly recover from damage this way."
-	icon = 'icons/obj/bed.dmi'
-	icon_state = "bed"
+	icon = 'hypermods/icons/hud/screen_alert.dmi'
+	icon_state = "bed_rest"
