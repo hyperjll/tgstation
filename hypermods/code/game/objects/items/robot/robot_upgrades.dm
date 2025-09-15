@@ -102,7 +102,14 @@
 
 /// Security cyborgs
 
-
+/obj/item/borg/upgrade/secfultons
+	name = "security cyborg fultons"
+	desc = "A set of fulton equipment for the security cyborg."
+	icon_state = "module_security"
+	require_model = TRUE
+	model_type = list(/obj/item/robot_model/security)
+	model_flags = BORG_MODEL_SECURITY
+	items_to_add = list(/obj/item/extraction_pack/non_miner/cyborg, /obj/item/fulton_core/cyborg)
 
 /// Peacekeeper cyborgs
 

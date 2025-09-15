@@ -3,6 +3,11 @@
 	uses_left = 3
 	beacon_networks = list("station")
 
+/obj/item/extraction_pack/non_miner/cyborg
+	can_use_indoors = TRUE
+	uses_left = INFINITY
+	beacon_networks = list("station")
+
 /obj/item/extraction_pack/non_miner/inf_use
 	uses_left = INFINITY
 
@@ -18,6 +23,17 @@
 
 /obj/item/extraction_pack/non_contractor/inf_use
 	uses_left = INFINITY
+
+/obj/item/fulton_core/cyborg
+	var/cost = 5000
+
+/obj/item/fulton_core/cyborg/attack_self(mob/user)
+	var/mob/living/silicon/robot/borgy = user
+	if(borgy.cell)
+		if(do_after(user, 1.5 SECONDS, user) && !QDELETED(src))
+			balloon_alert(user, "Beacon placed!")
+			borgy.cell.use(cost)
+			new /obj/structure/extraction_point(get_turf(user))
 
 /obj/item/fulton_core/syndicate
 	name = "suspicious extraction beacon assembly kit"

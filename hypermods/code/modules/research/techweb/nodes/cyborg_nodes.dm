@@ -5,6 +5,7 @@
 	prereq_ids = list(TECHWEB_NODE_BORG_UTILITY)
 	design_ids = list(
 		"borg_upgrade_unistorage",
+		"borg_upgrade_fulton",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 

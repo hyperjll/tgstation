@@ -823,6 +823,15 @@
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
 		/obj/item/extinguisher/mini,
 		/obj/item/rsf/donutsynth,
+		/obj/item/reagent_containers/spray/pepper,
+		/obj/item/gun/syringe/security,
+		/obj/item/implanter,
+		/obj/item/radio,
+		/obj/item/inspector,
+		/obj/item/holosign_creator/security,
+		/obj/item/pinpointer/crew,
+		/obj/item/locator,
+		/obj/item/book/manual/wiki/security_space_law,
 	)
 	radio_channels = list(RADIO_CHANNEL_SECURITY)
 	emag_modules = list(
