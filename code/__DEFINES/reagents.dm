@@ -254,3 +254,9 @@
 
 /// Cooldown between patch reagent messages
 #define PATCH_MESSAGE_COOLDOWN 10 SECONDS
+
+/// How many reagents (by default) are transferred each second after embedding?
+#define PATCH_TRANSFER_AMOUNT 0.75
+
+/// Maximum reagents transferred per second after patches are embedded?
+#define PATCH_MAX_TRANSFER_AMOUNT 10

@@ -32,6 +32,8 @@
 	var/printing_speed = 0.75 SECONDS
 	/// Amount of layers which printed pills will be coated in
 	var/pill_layers = 3
+	/// Amount of reagents transferred per second by the patches we print.
+	var/patch_transfer_amt = 0.75
 
 /obj/machinery/chem_master/Initialize(mapload)
 	create_reagents(100)
@@ -40,6 +42,7 @@
 	default_container = printable_containers[printable_containers[1]][1]
 	selected_container = default_container
 	pill_layers = /obj/item/reagent_containers/applicator/pill::layers_remaining
+	patch_transfer_amt = /obj/item/reagent_containers/applicator/patch::reagents_per_second
 
 	register_context()
 
@@ -261,6 +264,8 @@
 
 	data["maxPrintable"] = MAX_CONTAINER_PRINT_AMOUNT
 	data["maxPillDuration"] = PILL_MAX_PRINTABLE_LAYERS
+	data["patchReagentAmt"] = PATCH_TRANSFER_AMOUNT
+	data["maxPatchReagentAmt"] = PATCH_MAX_TRANSFER_AMOUNT
 	data["categories"] = list()
 	for(var/category in printable_containers)
 		//make the category
@@ -292,6 +297,7 @@
 	.["printingProgress"] = printing_progress
 	.["printingTotal"] = printing_total
 	.["selectedPillDuration"] = pill_layers
+	.["patchReagentAmt"] = patch_transfer_amt
 
 	//contents of source beaker
 	var/list/beaker_data = null
@@ -462,6 +468,10 @@
 			pill_layers = clamp(params["duration"], 0, PILL_MAX_PRINTABLE_LAYERS)
 			return TRUE
 
+		if ("setPatchTransferAmt")
+			patch_transfer_amt = clamp(params["transferamt"], 0, PATCH_MAX_TRANSFER_AMOUNT)
+			return TRUE
+
 		if("selectContainer")
 			var/obj/item/reagent_containers/target = locate(params["ref"])
 
@@ -560,6 +570,9 @@
 	if (istype(item, /obj/item/reagent_containers/applicator/pill))
 		var/obj/item/reagent_containers/applicator/pill/pill = item
 		pill.layers_remaining = pill_layers
+	if (istype(item, /obj/item/reagent_containers/applicator/patch))
+		var/obj/item/reagent_containers/applicator/patch/patch = item
+		patch.reagents_per_second = patch_transfer_amt
 	printing_progress++
 	update_appearance(UPDATE_OVERLAYS)
 

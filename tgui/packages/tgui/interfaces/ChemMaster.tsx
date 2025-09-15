@@ -58,6 +58,8 @@ type Data = {
   selectedPillDuration: number;
   maxPrintable: number;
   maxPillDuration: number;
+  patchReagentAmt: number;
+  maxPatchReagentAmt: number;
   beaker: AnalyzableBeaker;
   buffer: AnalyzableBeaker;
   isTransfering: BooleanLike;
@@ -101,6 +103,8 @@ const ChemMasterContent = (props: {
     selectedPillDuration,
     maxPrintable,
     maxPillDuration,
+	patchReagentAmt,
+	maxPatchReagentAmt,
     isTransfering,
     beaker,
     buffer,
@@ -222,6 +226,20 @@ const ChemMasterContent = (props: {
                     onChange={(value) => {
                       act('setPillDuration', {
                         duration: value,
+                      });
+                    }}
+                  />
+                )}
+				{selectedContainerCategory === 'patches' && (
+                  <NumberInput
+                    unit="u"
+                    step={1}
+                    value={patchReagentAmt}
+                    minValue={0.1}
+                    maxValue={maxPatchReagentAmt}
+                    onChange={(value) => {
+                      act('setPatchTransferAmt', {
+                        transferamt: value,
                       });
                     }}
                   />

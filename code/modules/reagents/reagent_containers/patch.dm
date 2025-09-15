@@ -11,6 +11,7 @@
 	// Quick to apply
 	application_delay = 1.5 SECONDS
 	self_delay = 1.5 SECONDS
+	var/reagents_per_second = PATCH_TRANSFER_AMOUNT
 
 /obj/item/reagent_containers/applicator/patch/canconsume(mob/eater, mob/user)
 	if(!iscarbon(eater))
@@ -47,6 +48,7 @@
 		embed = set_embed(/datum/embedding/med_patch)
 	embed.overlay_x = clicked_x - ICON_SIZE_X * 0.5
 	embed.overlay_y = clicked_y - ICON_SIZE_Y * 0.5
+	embed.transfer_per_second = reagents_per_second
 	force_embed(consumer, consumer.get_bodypart(check_zone(giver.zone_selected)) || consumer.get_bodypart(BODY_ZONE_CHEST))
 
 /datum/embedding/med_patch
@@ -61,7 +63,7 @@
 	ignore_throwspeed_threshold = TRUE
 	immune_traits = null
 	/// How many units are transferred per second
-	var/transfer_per_second = 0.75
+	var/transfer_per_second = PATCH_TRANSFER_AMOUNT
 	/// Cooldown for reagent messages, prevents spam
 	COOLDOWN_DECLARE(reagent_message_cd)
 	// pixel_x and pixel_y for our overlay
