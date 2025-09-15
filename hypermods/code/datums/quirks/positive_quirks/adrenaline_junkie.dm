@@ -20,10 +20,8 @@
 		return
 
 	var/totaldamage = (human_holder.getBruteLoss() + human_holder.getFireLoss())
-	if(totaldamage <= 75) // If you've sustained atleast 75+ brute/burn damage
-		return
+	if(totaldamage >= 60 && !human_holder.has_status_effect(/datum/status_effect/adrenaline_quirk)) // If you've sustained atleast 60+ brute/burn damage
+		human_holder.apply_status_effect(/datum/status_effect/adrenaline_quirk)
 
-	if(human_holder.has_status_effect(/datum/status_effect/adrenaline_quirk))
-		return
-
-	human_holder.apply_status_effect(/datum/status_effect/adrenaline_quirk)
+	if(totaldamage <= 59 && human_holder.has_status_effect(/datum/status_effect/adrenaline_quirk)) // If you got da buff and heal just enough, remove buff.
+		human_holder.remove_status_effect(/datum/status_effect/adrenaline_quirk)

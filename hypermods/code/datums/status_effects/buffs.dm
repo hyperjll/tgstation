@@ -56,7 +56,6 @@
 
 /datum/status_effect/adrenaline_quirk
 	id = "adrenaline_quirk"
-	duration = 4 SECONDS
 	alert_type = /atom/movable/screen/alert/status_effect/adrenaline_quirk
 
 /datum/status_effect/adrenaline_quirk/on_apply()
