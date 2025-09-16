@@ -29,6 +29,8 @@ type Data = {
   min_volume: number;
   max_volume: number;
   max_duration: number;
+  patchReagentAmt: number;
+  maxPatchReagentAmt: number;
   packaging_category: string;
   packaging_types: Category[];
   packaging_type: string;
@@ -43,6 +45,8 @@ export const ChemPress = () => {
     min_volume,
     max_volume,
     max_duration,
+	patchReagentAmt,
+	maxPatchReagentAmt,
     packaging_category,
     packaging_types,
     packaging_type,
@@ -96,6 +100,24 @@ export const ChemPress = () => {
                   onChange={(value) =>
                     act('change_pill_duraton', {
                       duration: value,
+                    })
+                  }
+                />
+              </LabeledList.Item>
+            )}
+			{shownCategory.cat_name === 'patches' && (
+              <LabeledList.Item label="U/s">
+                <NumberInput
+                  value={patchReagentAmt}
+                  unit="u"
+                  width="43px"
+                  minValue={0.75}
+                  maxValue={maxPatchReagentAmt}
+                  step={1}
+                  stepPixelSize={2}
+                  onChange={(value) =>
+                    act('change_patch_trans_amt', {
+                      trans_amt: value,
                     })
                   }
                 />

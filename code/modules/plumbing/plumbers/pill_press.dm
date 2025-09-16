@@ -17,6 +17,8 @@
 	var/product_name = "factory"
 	/// Selected duration of produced pills, if they're selected
 	var/pill_duration = 3
+	/// Amount of reagents transferred per second by the patches we print.
+	var/patch_transfer_amt = 0.75
 	/// All packaging types wrapped up in 1 big list
 	var/static/list/packaging_types = null
 	///The type of packaging to use
@@ -88,6 +90,9 @@
 		if (istype(container, /obj/item/reagent_containers/applicator/pill))
 			var/obj/item/reagent_containers/applicator/pill/pill = container
 			pill.layers_remaining = pill_duration
+		if (istype(container, /obj/item/reagent_containers/applicator/patch))
+			var/obj/item/reagent_containers/applicator/patch/patch = container
+			patch.reagents_per_second = patch_transfer_amt
 		stored_products += container
 
 	//dispense stored products on the floor
@@ -130,6 +135,8 @@
 	data["pill_duration"] = pill_duration
 	data["max_volume"] = max_volume
 	data["max_duration"] = PILL_MAX_LAYERS
+	data["patchReagentAmt"] = patch_transfer_amt
+	data["maxPatchReagentAmt"] = PATCH_MAX_TRANSFER_AMOUNT
 	data["product_name"] = product_name
 	data["packaging_type"] = REF(packaging_type)
 	data["packaging_category"] = packaging_category
@@ -164,6 +171,18 @@
 				return FALSE
 
 			pill_duration = clamp(value, 0, PILL_MAX_LAYERS)
+			return TRUE
+
+		if("change_patch_trans_amt")
+			var/value = params["trans_amt"]
+			if(isnull(value))
+				return FALSE
+
+			value = text2num(value)
+			if(isnull(value))
+				return FALSE
+
+			patch_transfer_amt = clamp(value, 0, PATCH_MAX_TRANSFER_AMOUNT)
 			return TRUE
 
 		if("change_product_name")
