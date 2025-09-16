@@ -65267,6 +65267,10 @@
 	dir = 8
 	},
 /area/station/ai_monitored/command/storage/eva)
+"vHD" = (
+/obj/machinery/computer/bank_machine,
+/turf/open/floor/circuit,
+/area/station/ai_monitored/command/nuke_storage)
 "vHO" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -90519,7 +90523,7 @@ abL
 bFM
 uuw
 rUR
-gNm
+vHD
 gNm
 afn
 lKe
