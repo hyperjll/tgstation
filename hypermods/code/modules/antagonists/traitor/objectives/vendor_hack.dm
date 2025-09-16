@@ -14,7 +14,7 @@
 
 
 /datum/traitor_objective/vendor_hack/can_generate_objective(datum/mind/generating_for, list/possible_duplicates)
-	if(length(possible_duplicates) > 1) // Can get two of these.
+	if(length(possible_duplicates) > 0)
 		return FALSE
 	return TRUE
 
