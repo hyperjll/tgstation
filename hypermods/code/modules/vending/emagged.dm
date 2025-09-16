@@ -300,6 +300,7 @@
 				/obj/item/clothing/under/costume/kimono = 2,
 				/obj/item/clothing/under/costume/kimono/red = 2,
 				/obj/item/clothing/under/costume/kimono/purple = 2,
+				/obj/item/clothing/under/costume/kimono/blue = 2,
 				/obj/item/clothing/shoes/sandal/alt = 4,
 				/obj/item/clothing/suit/costume/irs = 20,
 				/obj/item/clothing/head/costume/irs = 20,

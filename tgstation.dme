@@ -7285,6 +7285,7 @@
 #include "hypermods\code\modules\clothing\suits\armor.dm"
 #include "hypermods\code\modules\clothing\suits\costume.dm"
 #include "hypermods\code\modules\clothing\suits\reactive_armour.dm"
+#include "hypermods\code\modules\clothing\under\costume.dm"
 #include "hypermods\code\modules\clothing\under\jobs\security.dm"
 #include "hypermods\code\modules\events\bruhspace_anomaly.dm"
 #include "hypermods\code\modules\events\increase_threat.dm"

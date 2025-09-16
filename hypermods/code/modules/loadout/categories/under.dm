@@ -128,6 +128,10 @@
 	name = "Purple Kimono"
 	item_path = /obj/item/clothing/under/costume/kimono/purple
 
+/datum/loadout_item/under/kimonoblue
+	name = "Blue Kimono"
+	item_path = /obj/item/clothing/under/costume/kimono/blue
+
 /datum/loadout_item/under/yuri
 	name = "Yuri"
 	item_path = /obj/item/clothing/under/costume/yuri
