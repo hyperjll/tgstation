@@ -18,6 +18,7 @@
 		DYNAMIC_TIER_HIGH = 1,
 	)
 	ruleset_flags = RULESET_HIGH_IMPACT
+	min_pop = 30 // plenty of people for the zombie horde/anti-zombie force
 	//cost = 20
 	////scaling_cost = 10
 	//requirements = list(75,70,65,60,55,50,45,40,35,30)
@@ -47,7 +48,7 @@
 	)
 	//cost = 10
 	//scaling_cost = 10
-	min_pop = 20
+	min_pop = 20 // Werewolves are basically designed as mass-murderers and require atleast SOME pop.
 	//requirements = list(50,45,40,30,15,10,10,10,10,10)
 	max_antag_cap = list("denominator" = 38)
 
