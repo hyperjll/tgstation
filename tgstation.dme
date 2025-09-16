@@ -7225,7 +7225,6 @@
 #include "hypermods\code\modules\antagonists\traitor\final_objective\cyborg_rift.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\bank_heist.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\power_siphon.dm"
-#include "hypermods\code\modules\antagonists\traitor\objectives\sabotage_machinery.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\sleeper_protocol.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\tide_bug_department.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\vendor_hack.dm"

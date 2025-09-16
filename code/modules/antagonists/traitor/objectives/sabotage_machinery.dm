@@ -12,7 +12,7 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 	objectives = list(
 		/datum/traitor_objective/sabotage_machinery/trap = 3,
 		/datum/traitor_objective/sabotage_machinery/destroy = 3,
-		/datum/traitor_objective/sabotage_machinery/trap/rare = 1,
+		/datum/traitor_objective/sabotage_machinery/trap_rare = 1,
 	)
 	weight = OBJECTIVE_WEIGHT_DEFAULT
 
@@ -77,7 +77,7 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 		JOB_RESEARCH_DIRECTOR = /obj/machinery/computer/gateway_control,
 		JOB_CAPTAIN = /obj/machinery/teleport/station,
 		JOB_SECURITY_OFFICER = /obj/machinery/gulag_teleporter,
-		JOB_WARDEN = /obj/machinery/computer/security/labor,
+		JOB_WARDEN = /obj/machinery/computer/prisoner/gulag_teleporter_computer,
 		JOB_QUARTERMASTER = /obj/machinery/computer/security/qm,
 		JOB_CHIEF_ENGINEER = /obj/machinery/computer/telecomms/monitor,
 	)
@@ -93,14 +93,23 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 	progression_minimum = 0 MINUTES
 	progression_maximum = 10 MINUTES
 
-	maximum_allowed = 2
-	applicable_jobs = list(
+	maximum_allowed = 3
+	applicable_jobs = list( // Make sure the machine doesn't have subtypes. The bomb will still be planted, but no success is given if bomb is placed on a subtype.
 		JOB_CHIEF_ENGINEER = /obj/machinery/rnd/production/protolathe/department/engineering,
 		JOB_CHIEF_MEDICAL_OFFICER = /obj/machinery/rnd/production/techfab/department/medical,
 		JOB_HEAD_OF_PERSONNEL = /obj/machinery/rnd/production/techfab/department/service,
 		JOB_QUARTERMASTER = /obj/machinery/rnd/production/techfab/department/cargo,
 		JOB_RESEARCH_DIRECTOR = /obj/machinery/rnd/production/protolathe/department/science,
 		JOB_SHAFT_MINER = /obj/machinery/mineral/ore_redemption,
+		JOB_STATION_ENGINEER = /obj/machinery/power/smes/engineering,
+		JOB_ATMOSPHERIC_TECHNICIAN = /obj/machinery/computer/atmos_alert,
+		JOB_SCIENTIST = /obj/machinery/computer/rdconsole,
+		JOB_ROBOTICIST = /obj/machinery/mecha_part_fabricator,
+		JOB_CARGO_TECHNICIAN = /obj/machinery/computer/cargo/request,
+		JOB_SECURITY_OFFICER = /obj/machinery/computer/records/security,
+		JOB_MEDICAL_DOCTOR = /obj/machinery/stasis,
+		JOB_BOTANIST = /obj/machinery/hydroponics/constructable,
+		JOB_WARDEN = /obj/machinery/computer/prisoner/management,
 	)
 
 	/// Bonus reward to grant if you booby trap successfully
@@ -239,6 +248,31 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 /obj/machinery/rnd/server/add_as_sabotage_target()
 	return add_sabotage_machine(src, type)
 
+/obj/machinery/mecha_part_fabricator/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/modular_computer/preset/id/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/gateway_control/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/teleport/station/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/gulag_teleporter/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/prisoner/gulag_teleporter_computer/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/security/qm/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/telecomms/monitor/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+
 /obj/machinery/rnd/production/protolathe/department/add_as_sabotage_target()
 	return add_sabotage_machine(src, type)
 
@@ -246,4 +280,100 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 	return add_sabotage_machine(src, type)
 
 /obj/machinery/mineral/ore_redemption/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/power/smes/engineering/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/atmos_alert/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/rdconsole/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/mecha_part_fabricator/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/cargo/request/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/records/security/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/stasis/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/hydroponics/constructable/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/prisoner/management/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/datum/traitor_objective/sabotage_machinery/trap_rare
+	name = "Sabotage the %MACHINE%"
+	description = "Destroy the %MACHINE% to cause disarray and disrupt the operations of the %JOB%'s department. If you can get another crew member to destroy the machine using the provided booby trap, you will be rewarded with an additional %PROGRESSION% reputation and %TC% telecrystals."
+
+	progression_reward = list(5 MINUTES, 8 MINUTES)
+	telecrystal_reward = 2 // A reward, for tresspassing into hard-to-breach areas
+
+	progression_minimum = 45 MINUTES
+
+	applicable_jobs = list(
+		JOB_HEAD_OF_SECURITY = /obj/machinery/rnd/production/techfab/department/security,
+		JOB_CAPTAIN = /obj/machinery/computer/communications,
+		JOB_AI = /obj/machinery/computer/upload/ai,
+	)
+
+	/// Bonus reward to grant if you booby trap successfully
+	var/bonus_tc = 3
+	/// Bonus progression to grant if you booby trap successfully
+	var/bonus_progression = 5 MINUTES
+	/// Have we given out a traitor trap item?
+	var/traitor_trapper_given = FALSE
+
+/datum/traitor_objective/sabotage_machinery/trap_rare/generate_objective(datum/mind/generating_for, list/possible_duplicates)
+	. = ..()
+	if (!.)
+		return FALSE
+
+	replace_in_name("%TC%", bonus_tc)
+	replace_in_name("%PROGRESSION%", DISPLAY_PROGRESSION(bonus_progression))
+	return TRUE
+
+/datum/traitor_objective/sabotage_machinery/trap_rare/prepare_machine(obj/machinery/machine)
+	RegisterSignal(machine, COMSIG_TRAITOR_MACHINE_TRAP_TRIGGERED, PROC_REF(sabotage_success))
+	return ..()
+
+/// Called when you successfully proc the booby trap, gives a bonus reward
+/datum/traitor_objective/sabotage_machinery/trap_rare/proc/sabotage_success(obj/machinery/machine)
+	progression_reward += bonus_progression
+	telecrystal_reward += bonus_tc
+	succeed_objective()
+
+/datum/traitor_objective/sabotage_machinery/trap_rare/generate_ui_buttons(mob/user)
+	var/list/buttons = list()
+	if(!traitor_trapper_given)
+		buttons += add_ui_button("", "Pressing this will materialize an explosive trap in your hand, which you can conceal within the target machine", "wifi", "summon_gear")
+	return buttons
+
+/datum/traitor_objective/sabotage_machinery/trap_rare/ui_perform_action(mob/living/user, action)
+	. = ..()
+	switch(action)
+		if("summon_gear")
+			if(traitor_trapper_given)
+				return
+			traitor_trapper_given = TRUE
+			var/obj/item/traitor_machine_trapper/tool = new(user.drop_location())
+			user.put_in_hands(tool)
+			tool.balloon_alert(user, "a booby trap materializes in your hand")
+			tool.target_machine_path = applicable_jobs[chosen_job]
+
+
+/obj/machinery/rnd/production/techfab/department/security/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/communications/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/upload/ai/add_as_sabotage_target()
 	return add_sabotage_machine(src, type)
