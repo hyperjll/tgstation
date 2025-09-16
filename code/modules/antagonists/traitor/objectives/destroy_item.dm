@@ -13,8 +13,7 @@
 	abstract_type = /datum/traitor_objective/destroy_item
 
 /datum/traitor_objective/destroy_item/low_risk
-	progression_minimum = 10 MINUTES
-	progression_maximum = 35 MINUTES
+	progression_minimum = 20 MINUTES
 	progression_reward = list(5 MINUTES, 10 MINUTES)
 	telecrystal_reward = 1
 
@@ -23,6 +22,8 @@
 		/datum/objective_item/steal/traitor/fireaxe,
 		/datum/objective_item/steal/traitor/nullrod,
 		/datum/objective_item/steal/traitor/big_crowbar,
+		/datum/objective_item/steal/traitor/pka,
+		/datum/objective_item/steal/traitor/chef_moustache, // cqc'd into oblivion
 	)
 
 /datum/traitor_objective/destroy_item/very_risky
@@ -40,7 +41,7 @@
 		Destruction of this item will help our recruitment efforts."
 
 	progression_minimum = 0 MINUTES
-	progression_maximum = 10 MINUTES
+	progression_maximum = 15 MINUTES
 	progression_reward = list(4 MINUTES, 8 MINUTES)
 	telecrystal_reward = list(0, 1)
 
@@ -52,6 +53,9 @@
 		/datum/objective_item/steal/traitor/lizard_plush,
 		/datum/objective_item/steal/traitor/moth_plush,
 		/datum/objective_item/steal/traitor/insuls,
+		/datum/objective_item/steal/traitor/clown_shoes,
+		/datum/objective_item/steal/traitor/mime_mask,
+		/datum/objective_item/steal/traitor/lawyers_badge,
 	)
 
 /datum/traitor_objective/destroy_item/generate_objective(datum/mind/generating_for, list/possible_duplicates)
