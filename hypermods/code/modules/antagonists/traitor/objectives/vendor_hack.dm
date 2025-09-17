@@ -8,6 +8,8 @@
 	name = "Hack a vending machine to render it aware and hostile."
 	description = "Right click on a vending machine to begin the hacking process. While the vending machine won't come alive for some time, your tampering can still be noticed by on-lookers."
 
+	duplicate_type = /datum/traitor_objective/vendor_hack
+
 	progression_minimum = 10 MINUTES
 	progression_reward = list(3 MINUTES, 5 MINUTES)
 	telecrystal_reward = list(0, 1)

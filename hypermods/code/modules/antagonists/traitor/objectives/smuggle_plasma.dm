@@ -9,7 +9,6 @@
 	description = "We'd like to acquire %TARGET% as cheap as possible, preferably by theft from our enemy. Deliver the goods to %AREA%, where our transport pod will be waiting. \
 		Be sure to send atleast %TARGETAMT%, or you'll have the bill sent straight back to you."
 
-	abstract_type = /datum/traitor_objective/smuggle_plasma
 	duplicate_type = /datum/traitor_objective/smuggle_plasma
 
 	/// Area that the target needs to be delivered to

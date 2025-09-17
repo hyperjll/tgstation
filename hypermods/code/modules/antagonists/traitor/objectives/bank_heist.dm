@@ -12,6 +12,8 @@
 	progression_reward = list(20 MINUTES, 30 MINUTES)
 	telecrystal_reward = list(6, 10)
 
+	duplicate_type = /datum/traitor_objective/bank_heist
+
 	var/progression_objectives_minimum = 10 MINUTES
 
 /datum/traitor_objective/bank_heist/can_generate_objective(datum/mind/generating_for, list/possible_duplicates)
