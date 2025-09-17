@@ -1,3 +1,9 @@
+/datum/traitor_objective_category/smuggle_plasma
+	name = "Smuggle plasma off the station"
+	objectives = list(
+		/datum/traitor_objective/smuggle_plasma = 1,
+	)
+
 /datum/traitor_objective/smuggle_plasma
 	name = "Smuggle atleast %TARGETAMT% of %TARGET% and deliver it to %AREA%"
 	description = "We'd like to acquire %TARGET% as cheap as possible, preferably by theft from our enemy. Deliver the goods to %AREA%, where our transport pod will be waiting. \
