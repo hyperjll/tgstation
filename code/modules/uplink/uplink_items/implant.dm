@@ -11,7 +11,7 @@
 	name = "Freedom Implant"
 	desc = "Can be activated to release common restraints such as handcuffs, legcuffs, and even bolas tethered around the legs."
 	item = /obj/item/storage/box/syndie_kit/imp_freedom
-	cost = 5
+	cost = 3
 
 /datum/uplink_item/implants/freedom/New()
 	. = ..()
