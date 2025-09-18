@@ -89,7 +89,9 @@
 
 /datum/uplink_item/badass/demotivational_posters
 	name = "Syndicate Demotivational Poster Pack"
-	desc = "Contains a selection of demotivational posters to minimise productivity and maximise apathy in the workplace."
+	desc = "Contains a selection of demotivational posters to minimise productivity and maximise apathy in the workplace. \
+			Can have shards of glass inserted within to injure those unwilling to live with them and wear gloves. \
+			Also contains a small amount of contact explosives within each poster to further discourage poster disposal."
 	item = /obj/item/storage/box/syndie_kit/poster_box
 	cost = 1
 

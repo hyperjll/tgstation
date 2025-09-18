@@ -927,7 +927,7 @@
 
 /obj/item/storage/box/syndie_kit/poster_box/PopulateContents()
 	for(var/i in 1 to poster_count)
-		new /obj/item/poster/traitor(src)
+		new /obj/item/poster/traitor/explosive(src)
 
 /obj/item/storage/box/syndie_kit/cowboy
 	name = "western outlaw pack"

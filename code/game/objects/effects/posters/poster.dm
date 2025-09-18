@@ -20,6 +20,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	var/poster_type
 	var/obj/structure/sign/poster/poster_structure
+	var/special_package = FALSE
 
 /obj/item/poster/examine(mob/user)
 	. = ..()
@@ -52,6 +53,8 @@
 		icon_state = poster_structure.poster_item_icon_state
 
 		name = "[name] - [poster_structure.original_name]"
+
+		poster_structure.special_trap = special_package
 
 /obj/item/poster/attackby(obj/item/I, mob/user, list/modifiers, list/attack_modifiers)
 	if(!istype(I, /obj/item/shard))
@@ -107,6 +110,9 @@
 	var/poster_item_type = /obj/item/poster
 	///A sharp shard of material can be hidden inside of a poster, attempts to embed when it is torn down.
 	var/datum/weakref/trap
+
+	/// Do we have a special surpise when ripped off?
+	var/special_trap = FALSE
 
 /obj/structure/sign/poster/Initialize(mapload)
 	. = ..()
@@ -197,6 +203,9 @@
 
 // HO-HO-HOHOHO HU HU-HU HU-HU
 /obj/structure/sign/poster/proc/spring_trap(mob/user)
+	if(special_trap)
+		explosion(user.loc,0,0,1,flame_range = 0)
+
 	var/obj/item/shard/payload = trap?.resolve()
 	if (!payload)
 		return

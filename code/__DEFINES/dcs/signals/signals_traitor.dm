@@ -36,6 +36,10 @@
 #define COMSIG_EHMS_INJECTOR_INJECTED "after_ehms_inject"
 /// For when a reverse inducer's cell is completely charged /datum/traitor_objective_category/power_siphon
 #define COMSIG_REVERSE_INDUCER_CHARGED "reverse_inducer_charged"
+/// After a demotivational poster is placed and then removed by an unsuspecting victim.
+#define COMSIG_POSTER_TRAP_SUCCEED "poster_trap_succeed"
+/// Called specifically by a traitor spraycan produced by a demoralize objective is seen.
+#define COMSIG_SPRAYCAN_DEMORALISING_EVENT "traitor_spraycan_demoralise_event"
 
 /// Called by an battle royale implanter when successfully implanting someone. Passes the implanted mob.
 #define COMSIG_ROYALE_IMPLANTED "royale_implanted"
