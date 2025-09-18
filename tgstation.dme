@@ -7224,6 +7224,7 @@
 #include "hypermods\code\modules\antagonists\swarmers\swarmer_ruleset.dm"
 #include "hypermods\code\modules\antagonists\traitor\final_objective\cyborg_rift.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\bank_heist.dm"
+#include "hypermods\code\modules\antagonists\traitor\objectives\bug_person.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\power_siphon.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\sleeper_protocol.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\smuggle_minerals.dm"
