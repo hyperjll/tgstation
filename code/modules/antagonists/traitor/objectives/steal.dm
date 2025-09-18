@@ -97,13 +97,8 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	minutes_per_telecrystal = 6
 
 	possible_items = list(
-		/datum/objective_item/steal/traitor/cargo_budget,
-		/datum/objective_item/steal/traitor/eng_budget,
-		/datum/objective_item/steal/traitor/sci_budget,
-		/datum/objective_item/steal/traitor/med_budget,
-		/datum/objective_item/steal/traitor/srv_budget,
-		/datum/objective_item/steal/traitor/civ_budget,
 		/datum/objective_item/steal/traitor/clown_shoes,
+		/datum/objective_item/steal/traitor/mime_mask,
 		/datum/objective_item/steal/traitor/lawyers_badge,
 		/datum/objective_item/steal/traitor/chef_moustache,
 		/datum/objective_item/steal/traitor/pka,
@@ -116,7 +111,16 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	telecrystal_reward = 2
 
 	possible_items = list(
-		/datum/objective_item/steal/traitor/chief_engineer_belt
+		/datum/objective_item/steal/traitor/cargo_budget,
+		/datum/objective_item/steal/traitor/eng_budget,
+		/datum/objective_item/steal/traitor/sci_budget,
+		/datum/objective_item/steal/traitor/med_budget,
+		/datum/objective_item/steal/traitor/srv_budget,
+		/datum/objective_item/steal/traitor/civ_budget,
+		/datum/objective_item/steal/traitor/chief_engineer_belt,
+		/datum/objective_item/steal/traitor/telebaton,
+		/datum/objective_item/steal/handtele,
+		/datum/objective_item/steal/hypo,
 	)
 
 /datum/traitor_objective/steal_item/very_risky
@@ -127,6 +131,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	possible_items = list(
 		/datum/objective_item/steal/traitor/det_revolver,
 		/datum/objective_item/steal/traitor/sec_budget,
+		/datum/objective_item/steal/hoslaser,
 	)
 
 /datum/traitor_objective/steal_item/most_risky
@@ -137,9 +142,11 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	possible_items = list(
 		/datum/objective_item/steal/traitor/captain_modsuit,
 		/datum/objective_item/steal/traitor/captain_spare,
+		/datum/objective_item/steal/caplaser,
+		/datum/objective_item/steal/jetpack,
 	)
 
-/datum/traitor_objective/steal_item/most_risky/generate_objective(datum/mind/generating_for, list/possible_duplicates)
+/datum/traitor_objective/steal_item/most_risky/can_generate_objective(datum/mind/generating_for, list/possible_duplicates)
 	if(!handler.get_completion_count(/datum/traitor_objective/steal_item/very_risky))
 		return FALSE
 	return ..()
