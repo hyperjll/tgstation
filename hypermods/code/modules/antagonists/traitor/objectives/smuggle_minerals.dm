@@ -31,7 +31,6 @@
 	var/target_amt = 10
 
 	progression_minimum = 30 MINUTES
-	progression_maximum = 60 MINUTES
 	progression_reward = list(4 MINUTES, 8 MINUTES)
 	telecrystal_reward = list(3, 4)
 

@@ -33,9 +33,7 @@
 	duplicate_type = /datum/traitor_objective/destroy_heirloom
 
 /datum/traitor_objective/destroy_heirloom/common
-	/// 30 minutes in, syndicate won't care about common heirlooms anymore
-	progression_minimum = 0 MINUTES
-	progression_maximum = 30 MINUTES
+	progression_minimum = 10 MINUTES
 	progression_reward = list(8 MINUTES, 12 MINUTES)
 	telecrystal_reward = list(1, 2)
 	target_jobs = list(
@@ -69,9 +67,7 @@
 	)
 
 /datum/traitor_objective/destroy_heirloom/uncommon
-	/// 45 minutes in, syndicate won't care about uncommon heirlooms anymore
-	progression_minimum = 0 MINUTES
-	progression_maximum = 45 MINUTES
+	progression_minimum = 20 MINUTES
 	progression_reward = list(8 MINUTES, 12 MINUTES)
 	telecrystal_reward = list(1, 2)
 	target_jobs = list(
@@ -86,9 +82,7 @@
 	)
 
 /datum/traitor_objective/destroy_heirloom/rare
-	progression_minimum = 15 MINUTES
-	/// 60 minutes in, syndicate won't care about rare heirlooms anymore
-	progression_maximum = 60 MINUTES
+	progression_minimum = 30 MINUTES
 	progression_reward = list(10 MINUTES, 14 MINUTES)
 	telecrystal_reward = list(2, 3)
 	target_jobs = list(
@@ -105,7 +99,7 @@
 	)
 
 /datum/traitor_objective/destroy_heirloom/captain
-	progression_minimum = 30 MINUTES
+	progression_minimum = 40 MINUTES
 	progression_reward = list(10 MINUTES, 14 MINUTES)
 	telecrystal_reward = 4
 	target_jobs = list(

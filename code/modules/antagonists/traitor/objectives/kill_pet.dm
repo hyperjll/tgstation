@@ -12,17 +12,12 @@
 	name = "Kill the %DEPARTMENT HEAD%'s beloved %PET%"
 	description = "The %DEPARTMENT HEAD% has particularly annoyed us by sending us spam emails and we want their %PET% dead to show them what happens when they cross us. "
 
-	progression_minimum = 0 MINUTES
+	progression_minimum = 5 MINUTES
 	telecrystal_reward = list(1, 2)
 	progression_reward = list(3 MINUTES, 6 MINUTES)
 
 	/// Possible heads mapped to their pet type. Can be a list of possible pets
 	var/list/possible_heads = list(
-		JOB_HEAD_OF_PERSONNEL = list(
-			/mob/living/basic/pet/dog/corgi/ian,
-			/mob/living/basic/pet/dog/corgi/puppy/ian
-		),
-		JOB_CAPTAIN = /mob/living/basic/pet/fox/renault,
 		JOB_CHIEF_MEDICAL_OFFICER = /mob/living/basic/pet/cat/runtime,
 		JOB_CHIEF_ENGINEER = /mob/living/basic/parrot/poly,
 		JOB_QUARTERMASTER = list(
@@ -45,6 +40,16 @@
 	progression_reward = list(5 MINUTES, 8 MINUTES)
 	limited_to_department_head = FALSE
 
+	possible_heads = list(
+		JOB_HEAD_OF_PERSONNEL = list(
+			/mob/living/basic/pet/dog/corgi/ian,
+			/mob/living/basic/pet/dog/corgi/puppy/ian
+		),
+		JOB_WARDEN = list(
+			/mob/living/basic/pet/dog/pug/mcgriff
+		)
+	)
+
 /datum/traitor_objective/kill_pet/high_risk
 	progression_minimum = 25 MINUTES
 	progression_reward = list(14 MINUTES, 18 MINUTES)
@@ -57,8 +62,8 @@
 			/mob/living/basic/spider/giant/sgt_araneus,
 			/mob/living/basic/bear/snow/misha,
 		),
-		JOB_WARDEN = list(
-			/mob/living/basic/pet/dog/pug/mcgriff
+		JOB_CAPTAIN = list(
+			/mob/living/basic/pet/fox/renault
 		)
 	)
 

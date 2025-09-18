@@ -91,7 +91,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 /datum/traitor_objective/steal_item/low_risk
 	progression_minimum = 10 MINUTES
-	progression_maximum = 35 MINUTES
 	progression_reward = list(5 MINUTES, 10 MINUTES)
 	telecrystal_reward = 0
 	minutes_per_telecrystal = 6
@@ -106,7 +105,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 /datum/traitor_objective/steal_item/somewhat_risky
 	progression_minimum = 20 MINUTES
-	progression_maximum = 50 MINUTES
 	progression_reward = 10 MINUTES
 	telecrystal_reward = 2
 

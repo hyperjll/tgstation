@@ -90,8 +90,7 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 	progression_reward = list(2 MINUTES, 4 MINUTES)
 	telecrystal_reward = 0 // Only from completing the bonus objective
 
-	progression_minimum = 0 MINUTES
-	progression_maximum = 10 MINUTES
+	progression_minimum = 5 MINUTES
 
 	maximum_allowed = 3
 	applicable_jobs = list( // Make sure the machine doesn't have subtypes. The bomb will still be planted, but no success is given if bomb is placed on a subtype.
