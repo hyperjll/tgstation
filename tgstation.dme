@@ -7227,6 +7227,7 @@
 #include "hypermods\code\modules\antagonists\traitor\objectives\bank_heist.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\bug_person.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\demoralise_crew.dm"
+#include "hypermods\code\modules\antagonists\traitor\objectives\long_term_trespass.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\power_siphon.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\sleeper_protocol.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\smuggle_minerals.dm"
