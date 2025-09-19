@@ -150,3 +150,12 @@
 	cost = 3
 	surplus = 1 // real low chance
 	limited_stock = 1
+
+/datum/uplink_item/badass/eyesnatcher
+	name = "Eye-Snatcher"
+	desc = "An illegal device capable of forcefully removing someone's eyes. It's recommended you subdue your target before attempting to use this."
+	item = /obj/item/eyesnatcher
+	cost = 1
+	surplus = 0
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
