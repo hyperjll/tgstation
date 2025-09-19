@@ -1810,13 +1810,13 @@
 	)
 	premium = list(
 		/obj/item/clothing/head/flatcap = 1,
-		/obj/item/ammo_box/c38/match/bouncy = 1,
+		/obj/item/ammo_box/speedloader/c38/match/bouncy = 1,
 		/obj/item/ammo_casing/c38 = 4,
 		/obj/item/ammo_casing/c38/match = 4,
 	)
 	contraband = list(
 		/obj/item/ammo_casing/c357 = 1,
-		/obj/item/ammo_box/c38/trac = 1,
+		/obj/item/ammo_box/speedloader/c38/trac = 1,
 		/obj/item/ammo_casing/c38/dumdum = 1,
 		/obj/item/ammo_casing/c38/hotshot = 1,
 		/obj/item/ammo_casing/c38/iceblox = 1,

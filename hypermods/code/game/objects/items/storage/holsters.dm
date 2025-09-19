@@ -4,6 +4,6 @@
 
 /obj/item/storage/belt/holster/nukie/clover/full/PopulateContents()
 	generate_items_inside(list(
-		/obj/item/ammo_box/a357 = 2,
+		/obj/item/ammo_box/speedloader/a357 = 2,
 		/obj/item/gun/ballistic/revolver/syndicate/cowboy/wild = 1,
 	), src)

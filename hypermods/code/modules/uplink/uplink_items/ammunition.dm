@@ -258,7 +258,7 @@
 	name = ".357 Speed Loader"
 	desc = "A speed loader that contains seven additional .357 Magnum rounds; usable with the Syndicate revolver. \
 			For when you really need a lot of things dead."
-	item = /obj/item/ammo_box/a357
+	item = /obj/item/ammo_box/speedloader/a357
 	cost = 4
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) //nukies get their own version
 **/
@@ -282,7 +282,7 @@
 	name = ".357 Nutcracker Speed Loader"
 	desc = "A speed loader that contains seven .357 Nutcracker rounds; usable with the .357 Revolver, Python, and Syndicate revolver. \
 			These rounds lose moderate stopping power in exchange for being able to rapidly destroy doors and windows."
-	item = /obj/item/ammo_box/a357/nutcracker
+	item = /obj/item/ammo_box/speedloader/a357/nutcracker
 	cost = 3
 	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 
@@ -290,21 +290,21 @@
 	name = ".357 Metalshock Speed Loader"
 	desc = "A speed loader that contains seven .357 Metalshock rounds; usable with the .357 Revolver, Python, and Syndicate revolver. \
 			These rounds convert some lethality into an electric payload, which can bounce between targets."
-	item = /obj/item/ammo_box/a357/metalshock
+	item = /obj/item/ammo_box/speedloader/a357/metalshock
 	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 
 /datum/uplink_item/ammo/revolver/heartpiercer
 	name = ".357 Heartpiercer Speed Loader"
 	desc = "A speed loader that contains seven .357 Heartpiercer rounds; usable with the .357 Revolver, Python, and Syndicate revolver. \
 			These rounds are less damaging, but penetrate through armor and obstacles alike."
-	item = /obj/item/ammo_box/a357/heartpiercer
+	item = /obj/item/ammo_box/speedloader/a357/heartpiercer
 	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 
 /datum/uplink_item/ammo/revolver/wallstake
 	name = ".357 Wallstake Speed Loader"
 	desc = "A speed loader that contains seven .357 Wallstake rounds; usable with the .357 Revolver, Python, and Syndicate revolver. \
 			These blunt rounds are slightly less damaging but can knock people against walls."
-	item = /obj/item/ammo_box/a357/wallstake
+	item = /obj/item/ammo_box/speedloader/a357/wallstake
 	cost = 3
 	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 

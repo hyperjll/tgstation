@@ -7,7 +7,7 @@
 
 /obj/item/storage/box/syndie_kit/stripperclips/PopulateContents()
 	for(var/i in 1 to 5)
-		new /obj/item/ammo_box/strilka310(src)
+		new /obj/item/ammo_box/speedloader/strilka310(src)
 
 /obj/item/storage/harpoon_quiver
 	name = "quiver"
@@ -146,12 +146,12 @@
 
 /obj/item/storage/box/syndie_kit/revolverammo/random/PopulateContents()
 	var/list/item_list = list(
-		/obj/item/ammo_box/a357,
-		/obj/item/ammo_box/a357/ironfeather,
-		/obj/item/ammo_box/a357/nutcracker,
-		/obj/item/ammo_box/a357/metalshock,
-		/obj/item/ammo_box/a357/heartpiercer,
-		/obj/item/ammo_box/a357/wallstake
+		/obj/item/ammo_box/speedloader/a357,
+		/obj/item/ammo_box/speedloader/a357/ironfeather,
+		/obj/item/ammo_box/speedloader/a357/nutcracker,
+		/obj/item/ammo_box/speedloader/a357/metalshock,
+		/obj/item/ammo_box/speedloader/a357/heartpiercer,
+		/obj/item/ammo_box/speedloader/a357/wallstake
 	)
 
 	for(var/i in 1 to 2)
@@ -163,11 +163,11 @@
 
 /obj/item/storage/box/syndie_kit/revolvershotgunammo/PopulateContents()
 	for(var/i in 1 to 2)
-		new /obj/item/ammo_box/a357/ironfeather(src)
+		new /obj/item/ammo_box/speedloader/a357/ironfeather(src)
 
 /obj/item/storage/box/syndie_kit/stripperclips/PopulateContents()
 	for(var/i in 1 to 5)
-		new /obj/item/ammo_box/strilka310(src)
+		new /obj/item/ammo_box/speedloader/strilka310(src)
 
 /obj/item/storage/box/syndie_kit/deagleammo/random
 	name = "random .50 AE magazine box"

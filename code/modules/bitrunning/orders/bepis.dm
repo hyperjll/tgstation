@@ -51,7 +51,7 @@
 	cost_per_order = 2500
 
 /datum/orderable_item/bepis/c38bouncy
-	purchase_path = /obj/item/ammo_box/c38/match/bouncy
+	purchase_path = /obj/item/ammo_box/speedloader/c38/match/bouncy
 	cost_per_order = 500
 
 /datum/orderable_item/bepis/pistolriottoy
