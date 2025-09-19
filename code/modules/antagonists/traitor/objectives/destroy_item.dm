@@ -40,7 +40,7 @@
 		We believe this luxury item is important for crew morale. \
 		Destruction of this item will help our recruitment efforts."
 
-	progression_minimum = 15 MINUTES
+	progression_minimum = 5 MINUTES
 	progression_reward = list(4 MINUTES, 8 MINUTES)
 	telecrystal_reward = list(0, 1)
 
