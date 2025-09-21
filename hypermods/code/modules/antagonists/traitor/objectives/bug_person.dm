@@ -182,7 +182,7 @@
 		if(target_human.mind != target_mob_mind)
 			balloon_alert(user, "this isn't the right target!")
 			return ITEM_INTERACT_BLOCKING
-	if(!do_after(user, deploy_time, src, hidden = TRUE))
+	if(!do_after(user, deploy_time, target, hidden = TRUE))
 		return ITEM_INTERACT_BLOCKING
 	if(planted_on)
 		return ITEM_INTERACT_BLOCKING
