@@ -7229,6 +7229,7 @@
 #include "hypermods\code\modules\antagonists\traitor\objectives\bank_heist.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\bug_person.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\bug_room.dm"
+#include "hypermods\code\modules\antagonists\traitor\objectives\convert_mob.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\demoralise_crew.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\long_term_trespass.dm"
 #include "hypermods\code\modules\antagonists\traitor\objectives\power_hack.dm"
