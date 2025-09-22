@@ -7,6 +7,7 @@
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/python
+	worn_icon = 'hypermods/icons/mob/clothing/belt.dmi'
 
 /obj/item/gun/ballistic/revolver/derringer
 	name = "derringer pistol"

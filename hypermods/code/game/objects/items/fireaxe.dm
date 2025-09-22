@@ -47,6 +47,7 @@
 	light_on = FALSE
 	sharpness = NONE
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 	force_wielded = 25
 

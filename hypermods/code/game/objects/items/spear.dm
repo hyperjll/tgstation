@@ -29,6 +29,7 @@
 	wound_bonus = 10
 	exposed_wound_bonus = 25
 	block_chance = 20
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /datum/embedding/espear
 	embed_chance = 100

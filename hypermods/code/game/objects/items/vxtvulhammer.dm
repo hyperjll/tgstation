@@ -30,6 +30,7 @@
 	light_color = LIGHT_COLOR_HALOGEN
 	light_range = 2
 	light_power = 2
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 	var/force_wielded = 24
 	var/datum/effect_system/spark_spread/spark_system //It's a surprise tool that'll help us later

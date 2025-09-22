@@ -11,3 +11,4 @@
 	w_class = WEIGHT_CLASS_SMALL
 	internal_magazine = TRUE
 	bolt_type = BOLT_TYPE_NO_BOLT
+	worn_icon = 'hypermods/icons/mob/clothing/belt.dmi'

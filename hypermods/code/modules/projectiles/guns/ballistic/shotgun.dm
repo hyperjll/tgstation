@@ -38,6 +38,7 @@
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/kammerer
 	w_class = WEIGHT_CLASS_HUGE
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 // Syndicate uplink shotgun for traitors
 
@@ -76,6 +77,7 @@
 	actions_types = list()
 	semi_auto = TRUE
 	custom_price = 7500
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /obj/item/gun/ballistic/shotgun/enforcer/nopin
 	pin = null

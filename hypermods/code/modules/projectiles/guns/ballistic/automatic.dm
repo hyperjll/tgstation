@@ -16,6 +16,7 @@
 	mag_display = TRUE
 	mag_display_ammo = FALSE
 	fire_sound = 'hypermods/sound/weapons/rifleshot.ogg'
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /obj/item/gun/ballistic/automatic/akm/Initialize(mapload)
 	. = ..()
@@ -41,6 +42,7 @@
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
 	custom_price = 7500
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /obj/item/gun/ballistic/automatic/lecter/Initialize(mapload)
 	. = ..()
@@ -70,6 +72,7 @@
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
 	custom_price = 8000
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /obj/item/gun/ballistic/automatic/drozd/Initialize(mapload)
 	. = ..()
@@ -103,6 +106,7 @@
 	mag_display = TRUE
 	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
 	rack_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
+	//worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /obj/item/gun/ballistic/automatic/veritate/Initialize(mapload)
 	. = ..()
@@ -129,6 +133,7 @@
 	fire_sound = 'sound/items/weapons/gun/l6/shot.ogg'
 	rack_sound = 'sound/items/weapons/gun/l6/l6_rack.ogg'
 	suppressed_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /obj/item/gun/ballistic/automatic/antares/Initialize(mapload)
 	. = ..()
@@ -150,6 +155,7 @@
 	w_class = WEIGHT_CLASS_HUGE
 	mag_display = TRUE
 	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /obj/item/gun/ballistic/automatic/sirius/Initialize(mapload)
 	. = ..()

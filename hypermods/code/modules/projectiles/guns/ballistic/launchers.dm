@@ -17,6 +17,7 @@
 	bolt_locked = FALSE
 	internal_magazine = TRUE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/chinalake
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /obj/item/gun/ballistic/chinalake/unrestricted
 	pin = /obj/item/firing_pin
@@ -42,6 +43,7 @@
 	bolt_type = BOLT_TYPE_NO_BOLT
 	internal_magazine = TRUE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/grenademulti
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /obj/item/gun/ballistic/rigil_gl/unrestricted
 	pin = /obj/item/firing_pin
