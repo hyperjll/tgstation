@@ -10,6 +10,7 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 /datum/traitor_objective_category/sabotage_machinery
 	name = "Sabotage Worksite"
 	objectives = list(
+		/datum/traitor_objective/sabotage_machinery/vandalize = 5,
 		/datum/traitor_objective/sabotage_machinery/trap = 3,
 		/datum/traitor_objective/sabotage_machinery/destroy = 3,
 		/datum/traitor_objective/sabotage_machinery/trap_rare = 1,
@@ -375,4 +376,61 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 	return add_sabotage_machine(src, type)
 
 /obj/machinery/computer/upload/ai/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+// Destroy these low-priority machines to dissolve the typical nanotrasen experience
+/datum/traitor_objective/sabotage_machinery/vandalize
+	name = "Vandalize the %MACHINE%"
+	description = "Destroy a %MACHINE% to further dissolve the quality of working for Nanotrasen. It doesn't matter which %MACHINE% or where the %MACHINE% is, so long as one is destroyed." // no mention of %JOB% as this is supposed to be low-tier sabotage across the entire station
+
+	progression_reward = list(1 MINUTES, 2 MINUTES)
+	telecrystal_reward = list(0, 1)
+
+	maximum_allowed = 2
+
+	applicable_jobs = list(
+		JOB_CARGO_TECHNICIAN = /obj/machinery/vending/cigarette, // Needed a slot for this vendor, cargo techs are supposed to refill em, but whatevs
+		JOB_GENETICIST = /obj/machinery/dna_scannernew,
+		JOB_BOTANIST = /obj/machinery/vending/hydronutrients,
+		JOB_COOK = /obj/machinery/computer/order_console/cook,
+		JOB_BARTENDER = /obj/machinery/chem_dispenser/drinks/beer,
+		JOB_CURATOR = /obj/machinery/computer/libraryconsole/bookmanagement,
+		JOB_CHEMIST = /obj/machinery/vending/drugs,
+		JOB_MEDICAL_DOCTOR = /obj/machinery/vending/medical,
+		JOB_ASSISTANT = /obj/machinery/wall_healer, // probably won't come up.
+		JOB_STATION_ENGINEER = /obj/machinery/vending/tool,
+		JOB_SECURITY_OFFICER = /obj/machinery/vending/coffee, // no coffee with mah donuts? >:(
+	)
+
+/obj/machinery/vending/cigarette/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/dna_scannernew/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/vending/hydronutrients/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/vending/snack/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/vending/cola/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/computer/libraryconsole/bookmanagement/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/vending/drugs/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/vending/medical/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/wall_healer/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/vending/tool/add_as_sabotage_target()
+	return add_sabotage_machine(src, type)
+
+/obj/machinery/vending/coffee/add_as_sabotage_target()
 	return add_sabotage_machine(src, type)
