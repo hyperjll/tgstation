@@ -8,7 +8,7 @@
 	name = "Place a bug on %TARGET% the %JOB TITLE%"
 	description = "Use the button below to materialize the biological scanner within your hand, where you'll then be able to place it on the person. Additionally, if the bug isn't removed after %TIME% minutes you'll be rewarded with %TC% telecrystals."
 
-	progression_minimum = 20 MINUTES
+	progression_minimum = 0 MINUTES
 
 	progression_reward = list(4 MINUTES, 8 MINUTES)
 	telecrystal_reward = 2
