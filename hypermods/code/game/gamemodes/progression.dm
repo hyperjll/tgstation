@@ -2,7 +2,7 @@
 	name = "traitor progression"
 	explanation_text = "Become a living legend by getting a total of %REPUTATION% reputation points"
 
-	var/possible_range = list(40 MINUTES, 90 MINUTES)
+	var/possible_range = list(60 MINUTES, 90 MINUTES)
 	var/required_total_progression_points
 
 /datum/objective/traitor_progression/New(text)
@@ -26,7 +26,7 @@
 	name = "traitor objective"
 	explanation_text = "Complete objectives collectively worth more than %REPUTATION% reputation points"
 
-	var/possible_range = list(20 MINUTES, 30 MINUTES)
+	var/possible_range = list(30 MINUTES, 40 MINUTES)
 	var/required_progression_in_objectives
 
 /datum/objective/traitor_objectives/New(text)
