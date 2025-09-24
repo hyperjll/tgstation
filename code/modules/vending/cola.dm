@@ -57,6 +57,8 @@
 	payment_department = ACCOUNT_SRV
 	allow_custom = TRUE
 
+	var/force_spiked_drinks = FALSE
+
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/cola
 
@@ -83,7 +85,7 @@
 	if(dispense_returned)
 		return
 	// 35% chance that your drink will be safe, as safe pure acid and sugar that these drinks probably are can be
-	if(!onstation || !HAS_TRAIT(SSstation, STATION_TRAIT_SPIKED_DRINKS) || !prob(65))
+	if(!onstation || (!HAS_TRAIT(SSstation, STATION_TRAIT_SPIKED_DRINKS) && !force_spiked_drinks) || !prob(65))
 		return
 	// Don't fill booze with more booze
 	if (isnull(vended_item.reagents) || vended_item.reagents.has_reagent(/datum/reagent/consumable/ethanol, check_subtypes = TRUE))
