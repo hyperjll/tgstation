@@ -166,8 +166,3 @@
 /obj/structure/closet/secure_closet/RD/PopulateContents()
 	. = ..()
 	new /obj/item/holotool(src)
-
-
-/obj/item/holotool/syndicate
-	name = "syndicate holotool"
-	current_color = "#EE0000"
