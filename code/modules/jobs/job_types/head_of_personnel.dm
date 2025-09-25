@@ -106,6 +106,8 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	suit = /obj/item/clothing/suit/armor/vest/hop
 
+	glasses = /obj/item/clothing/glasses/sunglasses
+
 	chameleon_extras = list(
 		/obj/item/gun/energy/e_gun,
 		/obj/item/stamp/head/hop,

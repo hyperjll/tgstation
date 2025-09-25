@@ -68,6 +68,7 @@
 	head = /obj/item/clothing/head/beret/science/rd
 	ears = /obj/item/radio/headset/heads/rd
 	shoes = /obj/item/clothing/shoes/jackboots
+	glasses = /obj/item/clothing/glasses/hud/diagnostic/sunglasses/rd
 	gloves = /obj/item/clothing/gloves/color/black
 	l_pocket = /obj/item/laser_pointer/purple
 	l_hand = /obj/item/clipboard
