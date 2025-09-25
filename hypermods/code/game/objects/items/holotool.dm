@@ -161,8 +161,3 @@
 	do_sparks(5, 0, src)
 	obj_flags |= EMAGGED
 	return TRUE
-
-// Spawn in RD closet
-/obj/structure/closet/secure_closet/RD/PopulateContents()
-	. = ..()
-	new /obj/item/holotool(src)
