@@ -39,11 +39,11 @@
 	. += span_notice("It is currently set to [current_tool ? current_tool.name : "'off'"] mode.")
 	. += span_notice("Ctrl+Click it to open the radial menu!")
 
-/obj/item/holotool/interact_with_atom(atom/interacting_with, mob/living/M, mob/living/user)
+/obj/item/holotool/interact_with_atom(atom/interacting_with, mob/living/user)
 	if(tool_behaviour == TOOL_SCREWDRIVER)
 		return
 
-	if(tool_behaviour == TOOL_WELDER && ishuman(M))
+	if(tool_behaviour == TOOL_WELDER && ishuman(user))
 		if(!ishuman(interacting_with))
 			return NONE
 		if(user.combat_mode)
