@@ -40,6 +40,12 @@
 	clothing_traits = list(TRAIT_DIAGNOSTIC_HUD, TRAIT_NEARSIGHTED_CORRECTED)
 	custom_premium_price = 500
 
+/obj/item/clothing/glasses/hud/diagnostic/sunglasses/rd
+	name = "scientific diagnostic sunglasses"
+	desc = "Sunglasses with a diagnostic HUD and allow the wearer to recognize various chemical compounds with only a glance."
+	clothing_traits = list(TRAIT_DIAGNOSTIC_HUD, TRAIT_REAGENT_SCANNER, TRAIT_RESEARCH_SCANNER)
+	custom_premium_price = 800
+
 /obj/item/clothing/glasses/hud/security/prescription
 	name = "prescription security HUD"
 	desc = "A heads-up display that scans the humans in view and provides accurate data about their ID status and security records. Fitted specifically for the near-sighted."
@@ -70,8 +76,15 @@
 	clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED)
 	custom_premium_price = 500
 
+/obj/item/clothing/glasses/meson/sunglasses
+	name = "meson sunglasses"
+	desc = "Sunglasses that also function as a meson scanner."
+	icon = 'hypermods/icons/obj/clothing/glasses.dmi'
+	icon_state = "sunhudmeson"
+	worn_icon = 'hypermods/icons/mob/clothing/eyes.dmi'
+
 /obj/item/clothing/glasses/meson/sunglasses/prescription
-	name= "prescription meson sunglasses"
+	name = "prescription meson sunglasses"
 	desc = "Sunglasses that also function as a meson scanner. Fitted specifically for the near-sighted."
 	clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED)
 	custom_premium_price = 500

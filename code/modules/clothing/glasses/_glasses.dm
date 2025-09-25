@@ -386,7 +386,7 @@
 	clothing_traits = list(TRAIT_BOOZE_SLIDER, TRAIT_REAGENT_SCANNER)
 
 /obj/item/clothing/glasses/sunglasses/chemical
-	name = "science glasses"
+	name = "science sunglasses"
 	icon_state = "sunhudsci"
 	desc = "A pair of tacky purple sunglasses that allow the wearer to recognize various chemical compounds with only a glance."
 	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_RESEARCH_SCANNER)
