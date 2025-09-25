@@ -5,8 +5,8 @@
 	)
 
 /datum/traitor_objective/power_siphon
-	name = "Siphon energy from the station"
-	description = "Siphon energy away from the station using a reverse-inducer until it's internal battery is full."
+	name = "Siphon energy from the station using a reverse-inducer"
+	description = "Steal energy away from the station's various apc's using a reverse inducer until it's internal battery is full. This objective will fail should our reverse inducer be destroyed before we can confirm it's internal battery is full."
 
 	progression_reward = list(5 MINUTES, 10 MINUTES)
 	telecrystal_reward = 1
