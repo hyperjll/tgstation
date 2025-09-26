@@ -5368,7 +5368,6 @@
 "aue" = (
 /obj/structure/safe,
 /obj/item/bikehorn/golden,
-/obj/item/ammo_box/a357,
 /obj/item/tank/internals/plasma/full,
 /obj/item/disk/nuclear/fake,
 /obj/item/stack/ore/diamond,
@@ -15473,7 +15472,6 @@
 	dir = 4;
 	pixel_x = -12
 	},
-/obj/machinery/bluespace_vendor/directional/west,
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
 "bkn" = (
@@ -18786,7 +18784,6 @@
 /obj/machinery/camera/directional/south{
 	c_tag = "Research Division Secure Hallway"
 	},
-/obj/machinery/bluespace_vendor/directional/south,
 /obj/effect/turf_decal/tile/purple/half/contrasted,
 /obj/structure/rack,
 /obj/item/multitool{
@@ -19016,13 +19013,6 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
-"bzX" = (
-/obj/machinery/bluespace_vendor/directional/east,
-/obj/effect/turf_decal/tile/blue/half/contrasted{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/station/medical/medbay)
 "bzZ" = (
 /obj/structure/table,
 /obj/machinery/airalarm/directional/west,
@@ -22493,7 +22483,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/office)
 "bRv" = (
-/obj/machinery/atmospherics/components/unary/bluespace_sender,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -29823,7 +29812,6 @@
 	},
 /obj/structure/cable,
 /obj/machinery/light/directional/south,
-/obj/machinery/bluespace_vendor/directional/south,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "dBQ" = (
@@ -35666,11 +35654,6 @@
 /obj/machinery/bouldertech/refinery,
 /turf/open/floor/iron,
 /area/station/cargo/miningfoundry)
-"iDX" = (
-/obj/machinery/computer/slot_machine,
-/obj/machinery/bluespace_vendor/directional/north,
-/turf/open/floor/carpet/lone,
-/area/station/commons/lounge)
 "iEx" = (
 /turf/closed/wall/r_wall,
 /area/station/command/heads_quarters/captain/private)
@@ -36301,17 +36284,6 @@
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
-"jkQ" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
-	dir = 4
-	},
-/obj/structure/cable,
-/obj/machinery/bluespace_vendor/directional/east,
-/turf/open/floor/iron,
-/area/station/hallway/secondary/entry)
 "jlb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -46014,7 +45986,6 @@
 "rgs" = (
 /obj/structure/table,
 /obj/item/instrument/eguitar,
-/obj/machinery/bluespace_vendor/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/exit/departure_lounge)
 "rgw" = (
@@ -48915,7 +48886,6 @@
 	c_tag = "Research Division Entrance"
 	},
 /obj/machinery/light/directional/south,
-/obj/machinery/bluespace_vendor/directional/south,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
@@ -77284,7 +77254,7 @@ jsa
 jsa
 jsa
 lmU
-jkQ
+lmU
 pMG
 qdO
 tfS
@@ -84240,7 +84210,7 @@ cqd
 bvn
 cqd
 byt
-bzX
+cqd
 bIi
 wLW
 bCp
@@ -90128,7 +90098,7 @@ aWq
 aXn
 aYl
 aUf
-iDX
+bap
 bbw
 hHG
 jdA

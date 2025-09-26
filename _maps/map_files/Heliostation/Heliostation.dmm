@@ -12001,7 +12001,6 @@
 	name = "Common Room Camera"
 	},
 /obj/structure/sign/poster/contraband/grey_tide/directional/north,
-/obj/machinery/bluespace_vendor/directional/east,
 /turf/open/floor/iron,
 /area/station/commons/lounge)
 "bhC" = (
@@ -16028,7 +16027,6 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/south,
-/obj/machinery/bluespace_vendor/directional/south,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -27857,11 +27855,6 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
 /area/station/security/prison/shower)
-"dzf" = (
-/obj/effect/landmark/start/hangover,
-/obj/machinery/bluespace_vendor/directional/south,
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
 "dzg" = (
 /obj/structure/broken_flooring/pile/directional/south,
 /obj/structure/cable,
@@ -29793,7 +29786,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/greater)
 "eti" = (
-/obj/machinery/bluespace_vendor/directional/east,
 /obj/structure/sign/departments/security/directional/north,
 /obj/machinery/computer/warrant{
 	dir = 8
@@ -47474,7 +47466,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical)
 "lqS" = (
-/obj/machinery/bluespace_vendor/directional/east,
 /obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/command)
@@ -58976,7 +58967,6 @@
 /obj/item/reagent_containers/cup/glass/drinkingglass/shotglass,
 /obj/item/reagent_containers/cup/glass/bottle/vodka/badminka,
 /obj/item/gun/ballistic/revolver/russian,
-/obj/item/ammo_box/a357,
 /obj/effect/turf_decal/siding/dark_blue{
 	dir = 5
 	},
@@ -68377,7 +68367,6 @@
 "tup" = (
 /obj/structure/closet/lasertag/red,
 /obj/effect/turf_decal/bot_red,
-/obj/machinery/bluespace_vendor/directional/south,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
 "tuv" = (
@@ -79794,9 +79783,6 @@
 /turf/open/floor/carpet/red,
 /area/station/command/heads_quarters/hop)
 "xWc" = (
-/obj/machinery/atmospherics/components/unary/bluespace_sender{
-	dir = 8
-	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
@@ -109193,7 +109179,7 @@ bsZ
 bwl
 fxK
 bwl
-dzf
+caP
 bxa
 byL
 bAE

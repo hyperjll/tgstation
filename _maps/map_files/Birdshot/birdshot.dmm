@@ -3868,7 +3868,6 @@
 /area/station/engineering/supermatter/room)
 "buJ" = (
 /obj/effect/spawner/random/vending/snackvend,
-/obj/machinery/bluespace_vendor/directional/south,
 /turf/open/floor/iron,
 /area/station/commons/fitness/locker_room)
 "buU" = (
@@ -8945,16 +8944,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
-"djO" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/machinery/bluespace_vendor/directional/north,
-/turf/open/floor/iron,
-/area/station/hallway/secondary/recreation)
 "djX" = (
 /obj/structure/table,
 /obj/item/grenade/chem_grenade/smart_metal_foam,
@@ -23983,7 +23972,6 @@
 	},
 /area/station/hallway/secondary/entry)
 "ijN" = (
-/obj/machinery/bluespace_vendor/directional/north,
 /obj/machinery/light/small/directional/west,
 /obj/machinery/photobooth,
 /turf/open/floor/iron/textured_large,
@@ -47306,7 +47294,6 @@
 /area/station/hallway/secondary/entry)
 "pQP" = (
 /obj/effect/turf_decal/tile/brown/opposingcorners,
-/obj/machinery/atmospherics/components/unary/bluespace_sender,
 /turf/open/floor/iron/small,
 /area/station/engineering/atmos/office)
 "pQW" = (
@@ -49321,10 +49308,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/greater)
-"qAj" = (
-/obj/machinery/bluespace_vendor/directional/north,
-/turf/open/floor/iron,
-/area/station/commons/dorms)
 "qAl" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -110232,7 +110215,7 @@ nFW
 tuY
 iAu
 rqw
-qAj
+xcF
 jsU
 xFM
 qak
@@ -112306,7 +112289,7 @@ bqy
 bqy
 bqy
 pzd
-djO
+oss
 nvB
 wkF
 gxl

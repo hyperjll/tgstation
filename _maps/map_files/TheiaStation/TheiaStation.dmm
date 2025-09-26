@@ -57606,10 +57606,6 @@
 "xxB" = (
 /turf/closed/wall/r_wall,
 /area/station/command/heads_quarters/qm)
-"xxO" = (
-/obj/machinery/atmospherics/components/unary/bluespace_sender,
-/turf/open/floor/iron,
-/area/station/engineering/atmos)
 "xxV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/reinforced,
@@ -71237,7 +71233,7 @@ cHx
 puZ
 rgn
 oPq
-xxO
+uus
 qhs
 xjs
 qhs

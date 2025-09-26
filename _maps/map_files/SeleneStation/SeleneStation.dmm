@@ -12899,10 +12899,6 @@
 /obj/machinery/computer/security/telescreen/research/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/science)
-"fbc" = (
-/obj/machinery/bluespace_vendor/directional/east,
-/turf/open/floor/carpet,
-/area/station/hallway/secondary/entry)
 "fbn" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Arrivals Dock"
@@ -13885,7 +13881,6 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Public - Central Hall E"
 	},
-/obj/machinery/bluespace_vendor/directional/north,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
@@ -19451,7 +19446,6 @@
 /obj/item/reagent_containers/cup/glass/drinkingglass/shotglass,
 /obj/item/reagent_containers/cup/glass/bottle/vodka/badminka,
 /obj/item/gun/ballistic/revolver/russian,
-/obj/item/ammo_box/a357,
 /obj/machinery/status_display/ai/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/command/nuke_storage)
@@ -23328,7 +23322,6 @@
 "jmX" = (
 /obj/effect/spawner/random/vending/snackvend,
 /obj/machinery/newscaster/directional/east,
-/obj/machinery/bluespace_vendor/directional/north,
 /turf/open/floor/iron/grimy,
 /area/station/hallway/primary/port)
 "jnb" = (
@@ -37077,11 +37070,6 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/white,
 /area/station/maintenance/department/medical/plasmaman)
-"oww" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/components/unary/bluespace_sender,
-/turf/open/floor/iron,
-/area/station/engineering/atmos)
 "owx" = (
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron/cafeteria,
@@ -39942,7 +39930,6 @@
 "pFC" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/bluespace_vendor/directional/north,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
@@ -40642,7 +40629,6 @@
 "pVg" = (
 /obj/structure/closet/toolcloset,
 /obj/machinery/firealarm/directional/north,
-/obj/machinery/bluespace_vendor/directional/east,
 /turf/open/floor/iron/textured,
 /area/station/commons/storage/tools)
 "pVr" = (
@@ -42679,7 +42665,6 @@
 	c_tag = "Medical - Abandoned Medbay";
 	network = list("ss13","medbay")
 	},
-/obj/machinery/bluespace_vendor/directional/north,
 /turf/open/floor/iron/white,
 /area/station/maintenance/department/medical/plasmaman)
 "qLm" = (
@@ -50278,7 +50263,6 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay)
 "tOE" = (
-/obj/machinery/bluespace_vendor/directional/north,
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 5
 	},
@@ -75118,7 +75102,7 @@ beD
 asr
 paq
 ciN
-fbc
+rFt
 iDC
 syU
 syU
@@ -87257,7 +87241,7 @@ kof
 cUC
 mqQ
 xAK
-oww
+lsk
 oQE
 tnF
 wKw
