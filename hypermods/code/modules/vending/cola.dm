@@ -24,7 +24,7 @@
 /obj/machinery/vending/cola/proc/spike_drinks(mob/living/hacker)
 	force_spiked_drinks = TRUE
 
-	message_admins("[ADMIN_LOOKUPFLW(hacker)] hacked a [name] located at [ADMIN_VERBOSEJMP(src)], resulting in a false alarm!")
+	message_admins("[ADMIN_LOOKUPFLW(hacker)] hacked a [name] located at [ADMIN_VERBOSEJMP(src)], spiking it's drinks!")
 	hacker.log_message("hacked a [name], spiking it's drinks.", LOG_GAME, log_globally = TRUE)
 
 
