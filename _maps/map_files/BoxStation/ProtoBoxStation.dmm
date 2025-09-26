@@ -9903,7 +9903,6 @@
 /obj/item/reagent_containers/cup/glass/drinkingglass/shotglass,
 /obj/item/reagent_containers/cup/glass/drinkingglass/shotglass,
 /obj/item/gun/ballistic/revolver/russian,
-/obj/item/ammo_box/a357,
 /obj/item/reagent_containers/cup/glass/bottle/vodka/badminka,
 /obj/effect/turf_decal/bot_white/left,
 /obj/effect/turf_decal/tile/neutral{
@@ -29024,7 +29023,6 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/engineering/atmos)
 "bVX" = (
-/obj/machinery/atmospherics/components/unary/bluespace_sender,
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
