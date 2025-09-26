@@ -2255,15 +2255,15 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "aGf" = (
-/obj/machinery/computer/station_alert{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/opposingcorners{
 	dir = 1
+	},
+/obj/machinery/computer/station_alert/station_only{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/storage/gas)
@@ -12274,10 +12274,10 @@
 /turf/open/floor/iron,
 /area/station/medical/medbay/central)
 "dGm" = (
-/obj/machinery/computer/station_alert,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "dGo" = (
@@ -13536,11 +13536,11 @@
 /turf/open/floor/iron/techmaint,
 /area/station/hallway/primary/central/aft)
 "eaL" = (
-/obj/machinery/computer/atmos_alert,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/airalarm/directional/north{
 	pixel_y = 22
 	},
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/office)
 "ebk" = (
@@ -14750,11 +14750,11 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "euM" = (
-/obj/machinery/computer/station_alert{
-	dir = 4
-	},
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 9
+	},
+/obj/machinery/computer/station_alert/station_only{
+	dir = 4
 	},
 /turf/open/floor/iron,
 /area/station/security/checkpoint/engineering)
@@ -48168,13 +48168,13 @@
 /turf/open/floor/iron/grid/steel,
 /area/station/medical/medbay/lobby)
 "nYc" = (
-/obj/machinery/computer/station_alert{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
 /obj/machinery/firealarm/directional/west,
+/obj/machinery/computer/station_alert/station_only{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/engine_smes)
 "nYn" = (
@@ -54510,9 +54510,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "pPu" = (
-/obj/machinery/computer/atmos_alert{
-	dir = 4
-	},
 /obj/machinery/camera/directional/west{
 	c_tag = "Atmospherics - Desk";
 	name = "atmospherics camera"
@@ -54520,6 +54517,9 @@
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/opposingcorners{
 	dir = 1
+	},
+/obj/machinery/computer/atmos_alert/station_only{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/storage/gas)
@@ -54785,10 +54785,10 @@
 /turf/open/floor/iron/techmaint,
 /area/station/maintenance/port/fore)
 "pUw" = (
-/obj/machinery/computer/atmos_alert,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "pUF" = (
@@ -64331,9 +64331,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
 "sFR" = (
-/obj/machinery/computer/atmos_alert{
-	dir = 4
-	},
 /obj/machinery/light_switch{
 	pixel_y = -24
 	},
@@ -64342,6 +64339,9 @@
 	},
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
+/obj/machinery/computer/atmos_alert/station_only{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/engine_smes)
 "sFV" = (
@@ -69758,10 +69758,10 @@
 /turf/open/floor/iron/techmaint,
 /area/station/science/auxlab/firing_range)
 "upb" = (
-/obj/machinery/computer/atmos_alert{
+/obj/effect/turf_decal/delivery,
+/obj/machinery/computer/atmos_alert/station_only{
 	dir = 4
 	},
-/obj/effect/turf_decal/delivery,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos)
 "upg" = (

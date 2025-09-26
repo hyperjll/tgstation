@@ -7320,7 +7320,7 @@
 /turf/open/floor/iron,
 /area/station/security/brig/hallway)
 "cSi" = (
-/obj/machinery/computer/atmos_alert{
+/obj/machinery/computer/atmos_alert/station_only{
 	dir = 1
 	},
 /turf/open/floor/iron/dark/herringbone,
@@ -22256,8 +22256,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/computer/station_alert,
 /obj/structure/cable,
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -25883,13 +25883,13 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "klT" = (
-/obj/machinery/computer/station_alert,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/blue/half{
 	dir = 1
 	},
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron/textured_edge{
 	dir = 1
 	},
@@ -26386,8 +26386,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/computer/atmos_alert,
 /obj/structure/cable,
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -36830,12 +36830,12 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/supermatter/room)
 "oNk" = (
-/obj/machinery/computer/station_alert{
-	dir = 1
-	},
 /obj/machinery/light/directional/south,
 /obj/machinery/camera/directional/south{
 	c_tag = "Command - Bridge Aft"
+	},
+/obj/machinery/computer/station_alert/station_only{
+	dir = 1
 	},
 /turf/open/floor/iron/dark/herringbone,
 /area/station/command/bridge)
@@ -40838,13 +40838,13 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/fore)
 "qzX" = (
-/obj/machinery/computer/station_alert{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/diagonal_centre,
+/obj/machinery/computer/station_alert/station_only{
+	dir = 4
+	},
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
 "qAe" = (
@@ -46981,12 +46981,12 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "tcC" = (
-/obj/machinery/computer/atmos_alert{
-	dir = 4
-	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/blue/half{
 	dir = 8
+	},
+/obj/machinery/computer/atmos_alert/station_only{
+	dir = 4
 	},
 /turf/open/floor/iron/textured_edge{
 	dir = 8
@@ -56707,7 +56707,6 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "xfd" = (
-/obj/machinery/computer/station_alert,
 /obj/effect/turf_decal/tile/blue/anticorner{
 	dir = 4
 	},

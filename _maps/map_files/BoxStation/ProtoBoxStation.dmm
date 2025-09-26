@@ -13563,7 +13563,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "aRi" = (
-/obj/machinery/computer/atmos_alert,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
@@ -13572,6 +13571,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/iron/dark/textured,
 /area/station/command/bridge)
 "aRj" = (
@@ -13601,12 +13601,12 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/command/bridge)
 "aRl" = (
-/obj/machinery/computer/station_alert,
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron/dark/textured,
 /area/station/command/bridge)
 "aRm" = (
@@ -27945,11 +27945,11 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "bRu" = (
-/obj/machinery/computer/atmos_alert{
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
+	},
+/obj/machinery/computer/atmos_alert/station_only{
+	dir = 8
 	},
 /turf/open/floor/iron/dark/corner,
 /area/station/engineering/atmos)
@@ -28234,9 +28234,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "bSE" = (
-/obj/machinery/computer/station_alert{
-	dir = 8
-	},
 /obj/machinery/light/directional/east,
 /obj/machinery/button/door{
 	id = "atmos";
@@ -28249,6 +28246,9 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/machinery/computer/station_alert/station_only{
 	dir = 8
 	},
 /turf/open/floor/iron/dark/corner,
@@ -30864,7 +30864,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "cdk" = (
-/obj/machinery/computer/atmos_alert,
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/iron/dark/smooth_half{
 	dir = 1
 	},
@@ -32168,9 +32168,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "cjU" = (
-/obj/machinery/computer/station_alert{
-	dir = 4
-	},
 /obj/machinery/computer/security/telescreen/ce{
 	dir = 4;
 	pixel_x = -24
@@ -32186,6 +32183,9 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/computer/station_alert/station_only{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "cjX" = (
@@ -36095,10 +36095,10 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "cSM" = (
-/obj/machinery/computer/station_alert,
 /obj/item/radio/intercom{
 	pixel_y = 20
 	},
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron/dark/smooth_half{
 	dir = 1
 	},
@@ -51910,10 +51910,10 @@
 /area/station/security/courtroom)
 "qty" = (
 /obj/machinery/airalarm/directional/west,
-/obj/machinery/computer/station_alert{
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/computer/station_alert/station_only{
 	dir = 4
 	},
-/obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat_interior)
 "qtM" = (

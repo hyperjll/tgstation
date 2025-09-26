@@ -80,12 +80,12 @@
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
 "aaO" = (
-/obj/machinery/computer/atmos_alert{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/status_display/evac/directional/west,
 /obj/effect/turf_decal/bot,
+/obj/machinery/computer/atmos_alert/station_only{
+	dir = 4
+	},
 /turf/open/floor/pod/light,
 /area/station/maintenance/floor4/port/fore)
 "aaP" = (
@@ -31432,7 +31432,7 @@
 /turf/open/floor/iron/textured_large,
 /area/station/cargo/storage)
 "ijQ" = (
-/obj/machinery/computer/station_alert,
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "ijS" = (
@@ -40562,7 +40562,7 @@
 /area/station/security/detectives_office/private_investigators_office)
 "kBi" = (
 /obj/effect/turf_decal/tile/blue/opposingcorners,
-/obj/machinery/computer/atmos_alert{
+/obj/machinery/computer/atmos_alert/station_only{
 	dir = 1
 	},
 /turf/open/floor/iron/dark,
@@ -44509,11 +44509,11 @@
 /turf/open/floor/iron,
 /area/station/cargo/miningdock)
 "lBG" = (
-/obj/machinery/computer/station_alert{
-	dir = 4
-	},
 /obj/effect/turf_decal/bot,
 /obj/machinery/status_display/evac/directional/west,
+/obj/machinery/computer/station_alert/station_only{
+	dir = 4
+	},
 /turf/open/floor/pod/light,
 /area/station/maintenance/floor4/port/fore)
 "lBK" = (
@@ -53214,10 +53214,10 @@
 /turf/open/floor/plating,
 /area/station/service/hydroponics)
 "nIw" = (
-/obj/machinery/computer/atmos_alert{
+/obj/item/radio/intercom/directional/east,
+/obj/machinery/computer/atmos_alert/station_only{
 	dir = 8
 	},
-/obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/office)
 "nIB" = (
@@ -54084,7 +54084,7 @@
 /area/station/hallway/floor1/aft)
 "nTP" = (
 /obj/machinery/status_display/evac/directional/north,
-/obj/machinery/computer/station_alert,
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/aisat/service)
 "nTU" = (
@@ -63062,10 +63062,10 @@
 /turf/open/floor/iron/checker,
 /area/station/commons/vacant_room/commissary)
 "qnx" = (
-/obj/machinery/computer/station_alert{
+/obj/effect/turf_decal/tile/yellow/half/contrasted,
+/obj/machinery/computer/station_alert/station_only{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/iron,
 /area/station/engineering/atmos/pumproom)
 "qnB" = (
@@ -71528,7 +71528,7 @@
 /turf/open/floor/catwalk_floor/iron,
 /area/station/engineering/atmos)
 "sAw" = (
-/obj/machinery/computer/station_alert{
+/obj/machinery/computer/station_alert/station_only{
 	dir = 1
 	},
 /turf/open/floor/iron/dark,
@@ -79093,10 +79093,10 @@
 /turf/open/floor/wood/large,
 /area/station/security/prison/safe)
 "uyu" = (
-/obj/machinery/computer/station_alert{
+/obj/machinery/newscaster/directional/west,
+/obj/machinery/computer/station_alert/station_only{
 	dir = 4
 	},
-/obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/office)
 "uyD" = (
@@ -80472,11 +80472,11 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "uOM" = (
-/obj/machinery/computer/atmos_alert{
-	dir = 1
-	},
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /obj/item/radio/intercom/directional/south,
+/obj/machinery/computer/atmos_alert/station_only{
+	dir = 1
+	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos/pumproom)
 "uOS" = (

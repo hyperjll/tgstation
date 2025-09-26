@@ -566,7 +566,7 @@
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/ai)
 "ade" = (
-/obj/machinery/computer/station_alert,
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/ai_sat_ext_as)
 "adf" = (
@@ -575,7 +575,7 @@
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/ai_sat_ext_as)
 "adg" = (
-/obj/machinery/computer/atmos_alert,
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/ai_sat_ext_as)
 "adh" = (
@@ -4666,10 +4666,10 @@
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "arN" = (
-/obj/machinery/computer/station_alert,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
 	},
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "arO" = (
@@ -5273,8 +5273,8 @@
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "atQ" = (
-/obj/machinery/computer/atmos_alert,
 /obj/effect/turf_decal/tile/purple/fourcorners,
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "atR" = (
@@ -22682,11 +22682,11 @@
 /area/station/engineering/atmos)
 "bSd" = (
 /obj/machinery/light/directional/east,
-/obj/machinery/computer/atmos_alert{
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 4
+	},
+/obj/machinery/computer/atmos_alert/station_only{
+	dir = 8
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos/office)
@@ -23369,11 +23369,11 @@
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
 "bUL" = (
-/obj/machinery/computer/station_alert,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
 	},
 /obj/machinery/incident_display/delam/directional/north,
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
 "bUM" = (
@@ -24232,7 +24232,7 @@
 /turf/closed/wall,
 /area/station/command/heads_quarters/ce)
 "bYc" = (
-/obj/machinery/computer/atmos_alert,
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "bYd" = (
@@ -24241,7 +24241,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "bYe" = (
-/obj/machinery/computer/station_alert,
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "bYf" = (

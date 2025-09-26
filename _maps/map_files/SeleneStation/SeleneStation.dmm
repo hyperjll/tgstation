@@ -3491,9 +3491,9 @@
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "brN" = (
-/obj/machinery/computer/station_alert,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
 "brS" = (
@@ -4126,8 +4126,8 @@
 /turf/open/floor/iron/white,
 /area/station/medical/patients_rooms)
 "bCq" = (
-/obj/machinery/computer/atmos_alert,
 /obj/machinery/status_display/ai/directional/north,
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/circuit/green,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
 "bCA" = (
@@ -10194,8 +10194,8 @@
 "dVQ" = (
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/window/reinforced/spawner/directional/north,
-/obj/machinery/computer/atmos_alert,
 /obj/structure/cable,
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/vault,
 /area/station/command/bridge)
 "dVY" = (
@@ -38168,8 +38168,8 @@
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/aisat/hallway)
 "oUQ" = (
-/obj/machinery/computer/atmos_alert,
 /obj/machinery/firealarm/directional/north,
+/obj/machinery/computer/atmos_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/engineering/engine_smes)
 "oUV" = (
@@ -43823,7 +43823,7 @@
 /turf/closed/wall/r_wall,
 /area/station/command/gateway)
 "rjy" = (
-/obj/machinery/computer/station_alert,
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/iron/dark,
 /area/station/engineering/engine_smes)
 "rjE" = (
@@ -51617,8 +51617,8 @@
 "unm" = (
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/window/reinforced/spawner/directional/north,
-/obj/machinery/computer/station_alert,
 /obj/structure/cable,
+/obj/machinery/computer/station_alert/station_only,
 /turf/open/floor/vault,
 /area/station/command/bridge)
 "unn" = (
@@ -60127,7 +60127,7 @@
 /area/station/engineering/atmos)
 "xGz" = (
 /obj/machinery/light/directional/south,
-/obj/machinery/computer/atmos_alert{
+/obj/machinery/computer/atmos_alert/station_only{
 	dir = 1
 	},
 /turf/open/floor/engine,
