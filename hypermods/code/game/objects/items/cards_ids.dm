@@ -69,8 +69,8 @@
 
 /obj/item/assistant_job_selector/proc/spawn_option(obj/choice,mob/living/M)
 	var/obj/new_item = new choice()
-	var/turf/open/T = get_turf(M)
-	new_item.forceMove(T)
+	if(!M.put_in_active_hand(new_item))
+		new_item.forceMove(M.drop_location())
 	qdel(src)
 
 /obj/item/assistant_job_selector/generate_display_names()

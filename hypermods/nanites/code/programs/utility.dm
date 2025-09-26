@@ -380,23 +380,23 @@
 		if("Crowbar")
 			var/obj/item/crowbar/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("Screwdriver")
 			var/obj/item/screwdriver/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("Welding Tool")
 			var/obj/item/weldingtool/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("Wirecutters")
 			var/obj/item/wirecutters/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("Wrench")
 			var/obj/item/wrench/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 
 /obj/item/crowbar/nanite
 	name = "nanite crowbar"
@@ -489,23 +489,23 @@
 		if("One Iron Sheet")
 			var/obj/item/stack/sheet/iron/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("One Glass Sheet")
 			var/obj/item/stack/sheet/glass/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("One Plastic Sheet")
 			var/obj/item/stack/sheet/plastic/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("One Plasma Sheet")
 			var/obj/item/stack/sheet/mineral/plasma/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("One Wood Sheet")
 			var/obj/item/stack/sheet/mineral/wood/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 
 /datum/nanite_program/construct_tool_adv
 	name = "Construct Advanced Nanite Tool"
@@ -528,27 +528,27 @@
 		if("Multitool")
 			var/obj/item/multitool/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("Jaws of Life")
 			var/obj/item/crowbar/power/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("RPD")
 			var/obj/item/pipe_dispenser/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("Fire Extinguisher")
 			var/obj/item/extinguisher/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("Crew Pinpointer")
 			var/obj/item/pinpointer/crew/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 		if("Holofan Projector")
 			var/obj/item/holosign_creator/atmos/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 
 /obj/item/multitool/nanite
 	name = "nanite multitool"
@@ -655,7 +655,7 @@
 		if("Holotool")
 			var/obj/item/holotool/nanite/Newitem = new
 			if(!host_mob.put_in_active_hand(Newitem))
-				host_mob.forceMove(host_mob.drop_location())
+				Newitem.forceMove(host_mob.drop_location())
 
 /obj/item/holotool/nanite
 	name = "nanite holotool"

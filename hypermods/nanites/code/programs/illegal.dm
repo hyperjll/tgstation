@@ -55,15 +55,25 @@
 	var/datum/nanite_extra_setting/scanned_nanites = extra_settings[NES_AMMO_CHOICE]
 	switch(scanned_nanites.get_value())
 		if("9mm Bullets")
-			new /obj/item/ammo_box/c9mm(host_mob.loc)
+			var/obj/item/ammo_box/c9mm/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				Newitem.forceMove(host_mob.drop_location())
 		if("10mm Bullets")
-			new /obj/item/ammo_box/c10mm(host_mob.loc)
+			var/obj/item/ammo_box/c10mm/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				Newitem.forceMove(host_mob.drop_location())
 		if(".45 Bullets")
-			new /obj/item/ammo_box/c45(host_mob.loc)
+			var/obj/item/ammo_box/c45/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				Newitem.forceMove(host_mob.drop_location())
 		if(".357 Bullets")
-			new /obj/item/ammo_box/c357/no_direct(host_mob.loc)
+			var/obj/item/ammo_box/c357/no_direct/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				Newitem.forceMove(host_mob.drop_location())
 		if("Shotgun Shells")
-			new /obj/item/storage/box/lethalshot(host_mob.loc)
+			var/obj/item/storage/box/lethalshot/Newitem = new
+			if(!host_mob.put_in_active_hand(Newitem))
+				Newitem.forceMove(host_mob.drop_location())
 
 
 /datum/nanite_program/construct_c4
@@ -76,7 +86,9 @@
 	rogue_types = list(/datum/nanite_program/meltdown)
 
 /datum/nanite_program/construct_c4/on_trigger()
-	new /obj/item/grenade/c4(host_mob.loc)
+	var/obj/item/grenade/c4/Newitem = new
+	if(!host_mob.put_in_active_hand(Newitem))
+		Newitem.forceMove(host_mob.drop_location())
 
 
 /datum/nanite_program/telecrystal
@@ -89,7 +101,9 @@
 	rogue_types = list(/datum/nanite_program/meltdown)
 
 /datum/nanite_program/telecrystal/on_trigger()
-	new /obj/item/stack/telecrystal(host_mob.loc)
+	var/obj/item/stack/telecrystal/Newitem = new
+	if(!host_mob.put_in_active_hand(Newitem))
+		Newitem.forceMove(host_mob.drop_location())
 
 
 /datum/nanite_program/kravmaga
