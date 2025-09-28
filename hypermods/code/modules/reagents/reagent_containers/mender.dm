@@ -8,7 +8,7 @@
 	fill_icon_state = "mender-fluid"
 	fill_icon = 'hypermods/icons/obj/medical/mender.dmi'
 	volume = 200
-	reagent_flags = SEALED_CONTAINER
+	initial_reagent_flags = SEALED_CONTAINER
 	self_delay = 2.5 SECONDS
 	apply_method = PATCH
 

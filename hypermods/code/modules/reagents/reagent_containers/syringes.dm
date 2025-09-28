@@ -1,7 +1,7 @@
 /obj/item/reagent_containers/syringe/noreact
 	name = "cryostasis syringe"
 	desc = "A syringe that can hold up to 10 units. Reagents cannot react while within it."
-	reagent_flags = TRANSPARENT | NO_REACT
+	initial_reagent_flags = TRANSPARENT | NO_REACT
 	icon = 'hypermods/icons/obj/medical/syringe.dmi'
 	icon_state = "cryostasis_0"
 	base_icon_state = "cryostasis"

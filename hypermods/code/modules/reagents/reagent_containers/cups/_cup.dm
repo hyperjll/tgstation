@@ -205,7 +205,7 @@
 	icon = 'hypermods/icons/obj/toys/forbidden.dmi'
 	icon_state = "ggascan"
 	volume = 30
-	reagent_flags = TRANSPARENT
+	initial_reagent_flags = TRANSPARENT
 	list_reagents = list(/datum/reagent/nitrous_oxide = 10, /datum/reagent/drug/methamphetamine = 10, /datum/reagent/drug/bath_salts = 10)
 	reagent_consumption_method = INHALE
 	consumption_sound = 'sound/effects/spray2.ogg'
