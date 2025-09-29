@@ -27,6 +27,8 @@
 	var/pulse_icon = null
 	/// Have we been officially stabilized, used to determine whether or not we give research points.
 	var/stabilized = FALSE
+	/// Were we stabilized by an anomaly stabilizer specifically and not mapped in as stabilized? Used to prevent the anomaly research facility from providing points.
+	var/was_stabilized_manually = FALSE
 
 /obj/effect/anomaly/Initialize(mapload, new_lifespan)
 	. = ..()
@@ -76,7 +78,7 @@
 	if(death_time < (world.time + (lifespan / 2)) && !isnull(pulse_icon))
 		icon_state = pulse_icon
 		pulse_icon = null // Setting this to null because i don't want it reapplied and there's no reason to revert the icon.
-	if(stabilized)
+	if(stabilized && was_stabilized_manually)
 		var/datum/techweb/station_techweb = locate(/datum/techweb/science) in SSresearch.techwebs
 		if(station_techweb)
 			station_techweb.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 1))
