@@ -356,23 +356,66 @@
 	active_power_cost = DEFAULT_CHARGE_DRAIN * 0.5
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 3
 	incompatible_modules = list(/obj/item/mod/module/sphere_transform)
-	cooldown_time = 1.25 SECONDS
+	cooldown_time = 1 SECONDS
 	required_slots = list(ITEM_SLOT_OCLOTHING|ITEM_SLOT_ICLOTHING, ITEM_SLOT_HEAD|ITEM_SLOT_MASK)
 	/// Time it takes us to complete the animation.
 	var/animate_time = 0.25 SECONDS
+	/// Armor values when active
+	var/datum/armor/armor_mod = /datum/armor/mod_sphere_transform
 	/// List of traits to add/remove from our subject as needed.
-	var/static/list/user_traits = list(
+	var/list/user_traits = list(
 		TRAIT_FORCED_STANDING,
 		TRAIT_HANDS_BLOCKED,
-		TRAIT_LAVA_IMMUNE,
 		TRAIT_NO_SLIP_ALL,
 	)
+	/// Has the module been upgraded with bileworm hide plating?
+	var/hide_upgrade = FALSE
+	/// How much hide is required to reinforce the MOD
+	var/hide_amount = 2 // These are rather rare as of now, should be increased later once other methods of crossing lava are removed
+
+/datum/armor/mod_sphere_transform
+	melee = 20 // Can get up to 70 armor when ash covered and ballin, which is as good as a HECK suit... but you can't really attack anymore
+	bomb = 20
+
+/obj/item/mod/module/death_sphere/on_install()
+	. = ..()
+	RegisterSignal(mod, COMSIG_ATOM_ITEM_INTERACTION, PROC_REF(on_item_interaction))
+
+// Isn't supposed to happen outside of deletion but just in case
+/obj/item/mod/module/death_sphere/on_uninstall(deleting)
+	. = ..()
+	// No need to drop the hide as we're supposed to be inbuilt and unremovable
+	UnregisterSignal(mod, COMSIG_ATOM_ITEM_INTERACTION)
 
 /obj/item/mod/module/death_sphere/activate()
 	if(!mod.wearer.has_gravity())
 		balloon_alert(mod.wearer, "no gravity!")
 		return FALSE
 	return ..()
+
+/obj/item/mod/module/death_sphere/proc/on_item_interaction(atom/movable/source, mob/living/user, obj/item/item, modifiers)
+	SIGNAL_HANDLER
+
+	if(!istype(item, /obj/item/stack/sheet/animalhide/bileworm))
+		return NONE
+
+	if (hide_upgrade)
+		to_chat(user, span_warning("[mod] is already reinforced with bileworm skin!"))
+		return ITEM_INTERACT_BLOCKING
+
+	var/obj/item/stack/sheet/animalhide/bileworm/hide = item
+	if (!hide.use(hide_amount))
+		to_chat(user, span_warning("You need more hide to fully reinforce [mod]!"))
+		return ITEM_INTERACT_BLOCKING
+
+	hide_upgrade = TRUE
+	overlay_state_inactive = "module_bileworm_bracing"
+	user_traits += TRAIT_LAVA_IMMUNE
+	mod.balloon_alert(user, "plating reinforced!")
+	if (active)
+		ADD_TRAIT(mod.wearer, TRAIT_LAVA_IMMUNE, REF(src))
+	update_clothing_slots()
+	return ITEM_INTERACT_SUCCESS
 
 /obj/item/mod/module/death_sphere/on_activation()
 	playsound(src, 'sound/items/modsuit/ballin.ogg', 100, TRUE)
@@ -381,13 +424,15 @@
 	mod.wearer.add_filter("mod_outline", 3, outline_filter(color = "#000000AA"))
 	mod.wearer.base_pixel_y -= 4
 	animate(mod.wearer, animate_time, pixel_y = mod.wearer.base_pixel_y, flags = ANIMATION_PARALLEL)
-	mod.wearer.SpinAnimation(1.5)
+	mod.wearer.SpinAnimation(1.5, tag = "sphere_transform")
 	mod.wearer.add_traits(user_traits, MOD_TRAIT)
 	mod.wearer.RemoveElement(/datum/element/footstep, FOOTSTEP_MOB_HUMAN, 1, -6)
 	mod.wearer.AddElement(/datum/element/footstep, FOOTSTEP_OBJ_ROBOT, 1, -6, sound_vary = TRUE)
 	mod.wearer.add_movespeed_mod_immunities(MOD_TRAIT, /datum/movespeed_modifier/damage_slowdown)
 	mod.wearer.add_movespeed_modifier(/datum/movespeed_modifier/sphere)
 	RegisterSignal(mod.wearer, COMSIG_MOB_STATCHANGE, PROC_REF(on_statchange))
+	for(var/obj/item/part as anything in mod.get_parts(all = TRUE))
+		part.set_armor(part.get_armor().add_other_armor(armor_mod))
 
 /obj/item/mod/module/death_sphere/on_deactivation(display_message = TRUE, deleting = FALSE)
 	if(!deleting)
@@ -397,10 +442,13 @@
 	addtimer(CALLBACK(mod.wearer, TYPE_PROC_REF(/datum, remove_filter), list("mod_ball", "mod_blur", "mod_outline")), animate_time)
 	mod.wearer.remove_traits(user_traits, MOD_TRAIT)
 	mod.wearer.remove_movespeed_mod_immunities(MOD_TRAIT, /datum/movespeed_modifier/damage_slowdown)
+	animate(mod.wearer, tag = "sphere_transform")
 	mod.wearer.RemoveElement(/datum/element/footstep, FOOTSTEP_OBJ_ROBOT, 1, -6, sound_vary = TRUE)
 	mod.wearer.AddElement(/datum/element/footstep, FOOTSTEP_MOB_HUMAN, 1, -6)
 	mod.wearer.remove_movespeed_modifier(/datum/movespeed_modifier/sphere)
 	UnregisterSignal(mod.wearer, COMSIG_MOB_STATCHANGE)
+	for(var/obj/item/part as anything in mod.get_parts(all = TRUE))
+		part.set_armor(part.get_armor().subtract_other_armor(armor_mod))
 
 /obj/item/mod/module/death_sphere/used()
 	if(lavaland_equipment_pressure_check(get_turf(src)))
@@ -413,7 +461,7 @@
 	. = ..()
 	if(!.)
 		return
-	var/obj/projectile/bomb = new /obj/projectile/bullet/mining_bomb/syndicate(mod.wearer.loc)
+	var/obj/projectile/bullet/mining_bomb/syndicate/bomb = new(mod.wearer.loc)
 	bomb.aim_projectile(target, mod.wearer)
 	bomb.firer = mod.wearer
 	playsound(src, 'sound/items/weapons/gun/general/grenade_launch.ogg', 75, TRUE)
@@ -421,17 +469,14 @@
 	drain_power(use_energy_cost)
 
 /obj/item/mod/module/death_sphere/on_active_process(seconds_per_tick)
-	animate(mod.wearer) //stop the animation
-	mod.wearer.SpinAnimation(1.5) //start it back again
 	if(!mod.wearer.has_gravity())
 		deactivate() //deactivate in no grav
 
 /obj/item/mod/module/death_sphere/proc/on_statchange(datum/source)
 	SIGNAL_HANDLER
 
-	if(!mod.wearer.stat)
-		return
-	deactivate()
+	if(mod.wearer.stat)
+		deactivate()
 
 /obj/projectile/bullet/mining_bomb/syndicate
 	name = "bomb"
@@ -454,25 +499,29 @@
 	icon_state = "smine_bomb"
 	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
 	/// Time to prime the explosion
-	prime_time = 0.5 SECONDS
+	prime_time = 0.1 SECONDS
 	/// Time to explode from the priming
-	explosion_time = 2 SECONDS // Up from 1
+	explosion_time = 1.8 SECONDS // compensating for the 3x range on these things
 	/// Damage done on explosion.
 	damage = 20
 	/// Damage multiplier on hostile fauna. If those fauna happen to be ON station, i feel bad for them.
-	fauna_boost = 5
+	fauna_boost = 2 // mult by 2 cuz we already do super high damage
 
 /obj/structure/mining_bomb/syndicate/boom(atom/movable/firer)
 	visible_message(span_danger("[src] explodes!"))
 	playsound(src, 'sound/effects/magic/magic_missile.ogg', 200, vary = TRUE)
-	for(var/turf/closed/mineral/rock in circle_range_turfs(src, 2))
+	for(var/turf/closed/mineral/rock in circle_range_turfs(src, 1))
 		rock.gets_drilled()
-	for(var/mob/living/mob in range(3, src)) // range from 1 to 3
-		mob.apply_damage(damage * (ishostile(mob) ? fauna_boost : 1), BRUTE, spread_damage = TRUE)
-		if(!ishostile(mob) || !firer)
+	for(var/mob/living/victim in range(3, src)) // range from 1 to 3
+		victim.apply_damage(damage * (ishostile(victim) ? fauna_boost : 1), BRUTE, spread_damage = TRUE)
+		to_chat(victim, span_userdanger("You are hit by a mining bomb explosion!"))
+		if(!firer)
 			continue
-		var/mob/living/simple_animal/hostile/hostile_mob = mob
-		hostile_mob.GiveTarget(firer)
+		if(ishostile(victim))
+			var/mob/living/simple_animal/hostile/hostile_mob = victim
+			hostile_mob.GiveTarget(firer)
+		else if(isbasicmob(victim))
+			victim.ai_controller.set_blackboard_key(BB_BASIC_MOB_CURRENT_TARGET, firer)
 	for(var/obj/object in range(1, src))
 		object.take_damage(damage, BRUTE, BOMB)
 	qdel(src)
