@@ -220,6 +220,8 @@ GLOBAL_LIST_INIT(achievements_unlocked, list())
 
 	var/speed_round = (STATION_TIME_PASSED() <= 10 MINUTES)
 
+	var/list/rewards = calculate_rewards()
+
 	for(var/client/C in GLOB.clients)
 		if(!C?.credits)
 			C?.RollCredits()
@@ -291,6 +293,7 @@ GLOBAL_LIST_INIT(achievements_unlocked, list())
 
 	world.TgsTriggerEvent("tg-Roundend", wait_for_completion = TRUE)
 
+	distribute_rewards(rewards)
 	sleep(5 SECONDS)
 	ready_for_reboot = TRUE
 	standard_reboot()

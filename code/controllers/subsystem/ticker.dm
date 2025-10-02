@@ -552,6 +552,8 @@ SUBSYSTEM_DEF(ticker)
 			SSquirks.AssignQuirks(new_player_living, new_player_mob.client)
 		if(ishuman(new_player_living))
 			SEND_SIGNAL(new_player_living, COMSIG_HUMAN_CHARACTER_SETUP_FINISHED)
+		if(new_player_mob.client?.readied_store?.bought_item)
+			new_player_mob.client.readied_store.finalize_purchase_spawn(new_player_mob, new_player_living)
 		CHECK_TICK
 
 	if(captainless)
