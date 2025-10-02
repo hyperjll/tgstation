@@ -7,7 +7,6 @@
 		"advanced_camera",
 		"borg_syndicate_module",
 		"donksoft_refill",
-		"donksofttoyvendor",
 		"largecrossbow",
 		"wt550-gun",
 		"mag_autorifle",

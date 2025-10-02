@@ -59,7 +59,6 @@
 	extra_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_MED
 	light_mask = "med-light-mask"
-	allow_custom = TRUE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/medical

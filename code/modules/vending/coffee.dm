@@ -22,7 +22,6 @@
 	payment_department = ACCOUNT_SRV
 	light_mask = "coffee-light-mask"
 	light_color = COLOR_DARK_MODERATE_ORANGE
-	allow_custom = TRUE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/coffee

@@ -13,9 +13,14 @@
 		/obj/item/transfer_valve = 6,
 	)
 	contraband = list(/obj/item/assembly/health = 3)
+	refill_canister = /obj/item/vending_refill/plasmaresearch
 	default_price = PAYCHECK_CREW
 	extra_price = PAYCHECK_CREW
 	payment_department = ACCOUNT_SCI
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/plasmaresearch
+
+/obj/item/vending_refill/plasmaresearch
+	machine_name = "Bombuddy 3000"
+	icon_state = "refill_bombuddy"

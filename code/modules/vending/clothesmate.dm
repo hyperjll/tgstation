@@ -233,7 +233,6 @@
 	payment_department = NO_FREEBIES
 	light_mask = "wardrobe-light-mask"
 	light_color = LIGHT_COLOR_ELECTRIC_GREEN
-	allow_custom = TRUE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/clothing

@@ -28,7 +28,6 @@
 	default_price = PAYCHECK_CREW * 0.8
 	extra_price = PAYCHECK_COMMAND * 0.8
 	payment_department = ACCOUNT_SRV
-	allow_custom = TRUE
 
 	emagvendorreplace = TRUE
 	replacewith = /obj/machinery/vending/emagged/hydronutrients
