@@ -44,7 +44,7 @@
 /datum/store_item/roundstart/insuls
 	name = "Insulated Gloves"
 	item_path = /obj/item/clothing/gloves/color/yellow
-	item_cost = 1000
+	item_cost = 600
 
 /datum/store_item/roundstart/flash
 	name = "Handheld Flash"
@@ -92,7 +92,7 @@
 	item_cost = 450
 
 /datum/store_item/roundstart/medkitfire
-	name = "Anti-Burns Medkit"
+	name = "Anti-Burn Medkit"
 	item_path = /obj/item/storage/medkit/fire
 	item_cost = 500
 
@@ -124,7 +124,7 @@
 /datum/store_item/roundstart/toolboxmed
 	name = "Medical Toolbox"
 	item_path = /obj/item/storage/toolbox/medical/full
-	item_cost = 350
+	item_cost = 500
 
 
 /datum/store_item/roundstart/reinforcement_securityborg
