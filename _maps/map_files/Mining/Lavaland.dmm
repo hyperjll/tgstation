@@ -601,13 +601,6 @@
 /obj/structure/lattice/catwalk/mining,
 /turf/open/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"dh" = (
-/obj/machinery/mech_bay_recharge_port{
-	dir = 2
-	},
-/obj/machinery/airalarm/directional/east,
-/turf/open/floor/plating,
-/area/mine/mechbay)
 "di" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4052,10 +4045,10 @@
 	},
 /area/mine/cafeteria)
 "sX" = (
-/obj/machinery/mechpad,
 /obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 9
+	dir = 5
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/mine/mechbay)
 "tc" = (
@@ -4145,17 +4138,6 @@
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/open/floor/plating,
 /area/mine/maintenance/service)
-"tB" = (
-/obj/structure/bed,
-/obj/item/bedsheet,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 6
-	},
-/obj/item/radio/intercom/directional/east,
-/turf/open/floor/iron/white/smooth_corner,
-/area/mine/medical)
 "tE" = (
 /turf/open/floor/iron/smooth,
 /area/mine/laborcamp)
@@ -6062,15 +6044,19 @@
 /turf/open/floor/iron/white,
 /area/mine/medical)
 "DT" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/loading_area{
-	dir = 8
-	},
-/obj/effect/turf_decal/weather/dirt{
+/obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 4
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/obj/machinery/camera/autoname/directional/east{
+	network = list("mine")
+	},
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/obj/machinery/computer/mech_bay_power_console{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/mine/mechbay)
 "DV" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6751,22 +6737,6 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/iron/dark,
 /area/mine/laborcamp/security)
-"HP" = (
-/obj/machinery/computer/mech_bay_power_console{
-	dir = 8
-	},
-/obj/machinery/camera/autoname/directional/east{
-	network = list("mine")
-	},
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 4
-	},
-/obj/machinery/power/apc/auto_name/directional/east,
-/obj/structure/cable,
-/turf/open/floor/iron/dark/smooth_edge{
-	dir = 8
-	},
-/area/mine/mechbay)
 "HS" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -8336,25 +8306,15 @@
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "PA" = (
-/obj/structure/tank_holder/extinguisher,
-/obj/effect/turf_decal/trimline/yellow/filled/arrow_ccw{
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/obj/effect/turf_decal/trimline/red/filled/arrow_ccw{
-	dir = 4
+/obj/machinery/door/airlock/external/glass{
+	name = "Labor Camp External Airlock"
 	},
-/obj/effect/turf_decal/trimline/yellow/filled/mid_joiner{
-	dir = 4
-	},
-/obj/effect/turf_decal/trimline/red/filled/mid_joiner{
-	dir = 4
-	},
-/obj/machinery/light/small/directional/east,
-/obj/item/radio/intercom/directional/east,
-/turf/open/floor/iron/textured_edge{
-	dir = 8
-	},
-/area/mine/lounge)
+/turf/open/floor/iron/smooth,
+/area/mine/laborcamp/production)
 "PD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/maintenance/two,
@@ -9734,13 +9694,6 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"WJ" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 5
-	},
-/turf/open/floor/iron/dark,
-/area/mine/mechbay)
 "WK" = (
 /obj/structure/chair/sofa/corp{
 	dir = 8
@@ -24497,7 +24450,7 @@ pU
 pU
 pU
 ff
-Gf
+PA
 ff
 pU
 pU
@@ -48134,8 +48087,8 @@ tV
 tM
 QX
 Qx
-pY
-Vs
+sX
+DT
 CE
 Ni
 IW
