@@ -57,6 +57,9 @@
 
 	LAZYINITLIST(queue[ckey])
 
+	if(isnewplayer(details?.mob)) // Prevent giving lobby afk'ers credits.
+		return
+
 	queue[ckey] += list(list(round_end_bonus, "Played a Round"))
 
 	if(details?.mob?.mind?.assigned_role?.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND)
