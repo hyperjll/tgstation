@@ -1,3 +1,65 @@
+/obj/item/antag_maker
+	name = "suspicious station bounced radio"
+	desc = "A strange device that looks like a basic handheld radio for local telecommunication networks. You get the strangest feeling to put it up to your ear while you're alone..."
+	icon = 'icons/obj/devices/voice.dmi'
+	icon_state = "walkietalkie"
+	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	inhand_icon_state = "walkietalkie"
+	// What antag does this give our user?
+	var/provided_antag_datum = /datum/antagonist/traitor
+
+/obj/item/antag_maker/attack_self(mob/living/carbon/user)
+	if(!user)
+		return
+
+	user.mind?.add_antag_datum(provided_antag_datum)
+	playsound(src.loc, 'sound/effects/chemistry/ahaha.ogg', 10, TRUE) // Very low volume.
+	qdel(src)
+
+/obj/item/antag_maker/heretic
+	provided_antag_datum = /datum/antagonist/heretic
+
+/obj/item/antag_maker/werewolf
+	provided_antag_datum = /datum/antagonist/werewolf
+
+/obj/item/antag_maker/brother
+	provided_antag_datum = /datum/antagonist/brother
+
+/obj/item/antag_maker/changeling
+	provided_antag_datum = /datum/antagonist/changeling
+
+/obj/item/antag_maker/spy
+	provided_antag_datum = /datum/antagonist/spy
+
+/obj/item/antag_maker/bloodsucker
+	provided_antag_datum = /datum/antagonist/bloodsucker
+
+/obj/item/antag_maker/initial_infected
+	provided_antag_datum = /datum/antagonist/initial_infected
+
+/obj/item/antag_maker/cultist
+	provided_antag_datum = /datum/antagonist/cult
+
+/obj/item/antag_maker/clock_cultist
+	provided_antag_datum = /datum/antagonist/clock_cultist
+
+/obj/item/antag_maker/solo_clockie
+	provided_antag_datum = /datum/antagonist/clock_cultist/solo
+
+/obj/item/antag_maker/wizard
+	provided_antag_datum = /datum/antagonist/wizard
+
+/obj/item/antag_maker/nukie
+	provided_antag_datum = /datum/antagonist/nukeop
+
+/obj/item/antag_maker/clown_op
+	provided_antag_datum = /datum/antagonist/nukeop/clownop
+
+/obj/item/antag_maker/abductor_solo
+	provided_antag_datum = /datum/antagonist/abductor/scientist/onemanteam
+
+
 /obj/item/antag_spawner/nuke_ops/syndicat
 	name = "syndicate syndicat beacon"
 	desc = "A single-use beacon designed to quickly launch reinforcement cyborgs into the field."
