@@ -44,7 +44,7 @@
 
 /obj/item/magicbook/proc/do_effect(mob/user)
 	uses -= 1
-	if(!uses)
+	if(uses <= 0)
 		qdel(src)
 		to_chat(user, span_notice("The [src] vanishes within your hands, it's power expended..."))
 		return
@@ -54,7 +54,7 @@
 /obj/item/magicbook/proc/do_backfire(mob/user)
 	uses -= 1
 	get_random_backfire(user)
-	if(!uses)
+	if(uses <= 0)
 		qdel(src)
 		to_chat(user, span_notice("The [src] vanishes within your hands, it's power expended..."))
 		return
