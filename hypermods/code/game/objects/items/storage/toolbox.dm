@@ -124,8 +124,8 @@
 
 /obj/item/storage/toolbox/guncase/traitor/ammunition/c357
 	name = ".357 speedloader case"
-	weapon_to_spawn = /obj/item/ammo_box/speedloader/a357
-	extra_to_spawn = /obj/item/ammo_box/speedloader/a357
+	weapon_to_spawn = /obj/item/ammo_box/speedloader/c357
+	extra_to_spawn = /obj/item/ammo_box/speedloader/c357
 	ammo_box_to_spawn = /obj/item/ammo_box/c357/no_direct
 
 /obj/item/storage/toolbox/guncase/flaregun
@@ -147,7 +147,7 @@
 	icon_state = "hard_case"
 	weapon_to_spawn = /obj/item/gun/ballistic/revolver/c38/kestrel
 	extra_to_spawn = /obj/item/ammo_box/speedloader/c38
-	var/second_extra_to_spawn = /obj/item/ammo_box/speedloader/a357
+	var/second_extra_to_spawn = /obj/item/ammo_box/speedloader/c357
 
 /obj/item/storage/toolbox/guncase/kestral/PopulateContents()
 	new weapon_to_spawn (src)
