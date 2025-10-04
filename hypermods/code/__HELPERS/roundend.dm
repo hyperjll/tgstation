@@ -78,5 +78,5 @@
 					greentexted = FALSE
 					break
 			if(greentexted)
-				queue[ckey] += list(list(1000, "Greentext Bonus"))
+				queue[ckey] += list(list(100, "Greentext Bonus"))
 				return
