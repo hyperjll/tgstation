@@ -1,6 +1,31 @@
 /datum/store_item/roundstart
 	one_time_buy = TRUE
 
+/datum/store_item/roundstart/c50
+	name = "50 Credits"
+	item_cost = 50
+	item_path = /obj/item/stack/spacecash/c50
+
+/datum/store_item/roundstart/c100
+	name = "100 Credits"
+	item_cost = 100
+	item_path = /obj/item/stack/spacecash/c100
+
+/datum/store_item/roundstart/c200
+	name = "200 Credits"
+	item_cost = 200
+	item_path = /obj/item/stack/spacecash/c200
+
+/datum/store_item/roundstart/c500
+	name = "500 Credits"
+	item_cost = 500
+	item_path = /obj/item/stack/spacecash/c500
+
+/datum/store_item/roundstart/c1000
+	name = "1000 Credits"
+	item_cost = 1000
+	item_path = /obj/item/stack/spacecash/c1000
+
 /datum/store_item/roundstart/maint_pill
 	name = "1 Random Maint Pill"
 	item_cost = 100
