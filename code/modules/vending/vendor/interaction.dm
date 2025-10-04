@@ -82,7 +82,7 @@
 
 	. = TRUE
 	if(istype(inserted_item, /obj/item/card/emag)) // Without this, emags would be blocked.
-		to_chat(user, span_warning("You hold [inserted_item] close to [src], causing it to re-shuffle it's stock!"))
+		to_chat(user, span_warning("You hold [inserted_item] close to [src], zapping it's internal circuitry!"))
 		emag_act(user, inserted_item)
 		return FALSE
 	if(!canLoadItem(inserted_item, user))
