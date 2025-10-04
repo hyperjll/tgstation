@@ -8,9 +8,18 @@
 	inhand_icon_state = "walkietalkie"
 	// What antag does this give our user?
 	var/provided_antag_datum = /datum/antagonist/traitor
+	// How many credits do we give the player should they already have antagonist status.
+	var/refund_amount = 5000
 
 /obj/item/antag_maker/attack_self(mob/living/carbon/user)
 	if(!user)
+		return
+
+	var/mob/living/carbon/human/owner = user
+
+	if(owner.mind.antag_datums != null)
+		owner.client.prefs.adjust_metacoins(owner.client.ckey, refund_amount, "You've already become an antagonist. You've been refunded.")
+		qdel(src)
 		return
 
 	user.mind?.add_antag_datum(provided_antag_datum)
@@ -19,45 +28,59 @@
 
 /obj/item/antag_maker/heretic
 	provided_antag_datum = /datum/antagonist/heretic
+	refund_amount = 7000
 
 /obj/item/antag_maker/werewolf
 	provided_antag_datum = /datum/antagonist/werewolf
+	refund_amount = 5000
 
 /obj/item/antag_maker/brother
 	provided_antag_datum = /datum/antagonist/brother
+	refund_amount = 4000
 
 /obj/item/antag_maker/changeling
 	provided_antag_datum = /datum/antagonist/changeling
+	refund_amount = 5000
 
 /obj/item/antag_maker/spy
 	provided_antag_datum = /datum/antagonist/spy
+	refund_amount = 4000
 
 /obj/item/antag_maker/bloodsucker
 	provided_antag_datum = /datum/antagonist/bloodsucker
+	refund_amount = 5000
 
 /obj/item/antag_maker/initial_infected
 	provided_antag_datum = /datum/antagonist/initial_infected
+	refund_amount = 6500
 
 /obj/item/antag_maker/cultist
 	provided_antag_datum = /datum/antagonist/cult
+	refund_amount = 6500
 
 /obj/item/antag_maker/clock_cultist
 	provided_antag_datum = /datum/antagonist/clock_cultist
+	refund_amount = 6500
 
 /obj/item/antag_maker/solo_clockie
 	provided_antag_datum = /datum/antagonist/clock_cultist/solo
+	refund_amount = 6500
 
 /obj/item/antag_maker/wizard
 	provided_antag_datum = /datum/antagonist/wizard
+	refund_amount = 8000
 
 /obj/item/antag_maker/nukie
 	provided_antag_datum = /datum/antagonist/nukeop
+	refund_amount = 7000
 
 /obj/item/antag_maker/clown_op
 	provided_antag_datum = /datum/antagonist/nukeop/clownop
+	refund_amount = 7000
 
 /obj/item/antag_maker/abductor_solo
 	provided_antag_datum = /datum/antagonist/abductor/scientist/onemanteam
+	refund_amount = 5000
 
 
 /obj/item/antag_spawner/nuke_ops/syndicat
