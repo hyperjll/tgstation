@@ -15,6 +15,7 @@
 	return essence_stolen >= target_amount
 
 /datum/objective/revenant_fluff
+	reward_for_completion = FALSE
 
 /datum/objective/revenant_fluff/New()
 	var/list/explanation_texts = list(

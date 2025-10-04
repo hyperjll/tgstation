@@ -22,6 +22,7 @@
 
 /datum/objective/spider
 	explanation_text = "Spread the infestation."
+	reward_for_completion = FALSE
 
 /datum/objective/spider/New(directive)
 	..()

@@ -17,6 +17,7 @@
 
 /datum/objective/pyro_slime
 	explanation_text = "I am fire. I am hunger. The cold is agony. The living pulse with energy; their warmth fuels me. The dead are husks, their embers long faded. Water is death. Fire... fire is freedom."
+	completion_credit_reward = 10
 
 /datum/objective/pyro_slime/check_completion()
 	return owner.current && owner.current.stat != DEAD

@@ -64,6 +64,7 @@
 	name = "clone replace"
 	/// Name and job of the original to replace
 	var/name_and_job
+	completion_credit_reward = 50
 
 /datum/objective/paradox_clone_replace/update_explanation_text()
 	explanation_text = "Take [name_and_job || "someone's"]'s place. Avoid collateral damage - remember, your mission is to blend in!"

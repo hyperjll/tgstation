@@ -105,6 +105,7 @@
 	name = "Kill a command pet"
 	martyr_compatible = TRUE
 	var/mob/living/target_pet ///The assigned target pet for the objective
+	completion_credit_reward = 25
 
 /datum/objective/kill_pet/proc/find_pet_target()
 	var/list/possible_target_pets = list(

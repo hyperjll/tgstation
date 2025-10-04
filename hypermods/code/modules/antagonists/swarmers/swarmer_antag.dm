@@ -54,6 +54,9 @@
 	swarmer_icon.Shift(NORTH, 8)
 	return finish_preview_icon(swarmer_icon)
 
+/datum/objective/swarmer
+	reward_for_completion = FALSE
+
 /datum/objective/swarmer/New()
 	explanation_text = "Have the most resources harvested out of any swarmer by the end of the shift."
 	..()

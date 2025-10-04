@@ -2,6 +2,7 @@
 	name = "get mindshielded"
 	explanation_text = "Extract with a Nanotrasen Loyalty Mindshield implanted in you."
 	admin_grantable = TRUE
+	completion_credit_reward = 50
 
 /datum/objective/mindshield/update_explanation_text()
 	..()

@@ -26,6 +26,7 @@
 	objectives += objective
 
 /datum/objective/sunwalker
+	completion_credit_reward = 10
 
 /datum/objective/sunwalker/New()
 	var/list/explanation_texts = list(

@@ -3,6 +3,7 @@
 	var/target_role_type = FALSE
 	admin_grantable = TRUE
 	martyr_compatible = TRUE
+	completion_credit_reward = 50
 
 /datum/objective/assist/get_target()
 	return find_target()
@@ -36,6 +37,7 @@
 	name = "assist traitor"
 	martyr_compatible = TRUE
 	admin_grantable = TRUE
+	completion_credit_reward = 50
 
 /datum/objective/assist/traitor/get_target()
 	return find_traitor_target()

@@ -86,6 +86,7 @@
 
 /datum/objective/blob_takeover
 	explanation_text = "Reach critical mass!"
+	completion_credit_reward = 200
 
 //Non-overminds get this on blob antag assignment
 /datum/action/innate/blobpop

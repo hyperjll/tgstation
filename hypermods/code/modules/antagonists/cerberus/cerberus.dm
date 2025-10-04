@@ -25,6 +25,7 @@
 
 /datum/objective/cerberus
 	var/mob/living/doggo_master
+	completion_credit_reward = 10
 
 /datum/objective/cerberus/check_completion()
 	return doggo_master.stat != DEAD

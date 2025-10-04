@@ -32,6 +32,7 @@
 	human.set_species(/datum/species/shadow/nightmare)
 
 /datum/objective/nightmare_fluff
+	reward_for_completion = FALSE
 
 /datum/objective/nightmare_fluff/New()
 	var/list/explanation_texts = list(

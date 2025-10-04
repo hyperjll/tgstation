@@ -63,6 +63,7 @@
 
 /datum/objective/bloodsucker/lair
 	name = "claimlair"
+	completion_credit_reward = 10
 
 // EXPLANATION
 /datum/objective/bloodsucker/lair/update_explanation_text()
@@ -92,6 +93,7 @@
 /// Vassalize a certain person / people
 /datum/objective/bloodsucker/conversion
 	name = "vassalization"
+	completion_credit_reward = 50
 
 /////////////////////////////////
 
@@ -117,6 +119,7 @@
 // Vassalize crewmates in a department
 /datum/objective/bloodsucker/conversion/department
 	name = "vassalize department"
+	completion_credit_reward = 125
 
 	///The selected department we have to vassalize.
 	var/datum/job_department/target_department
@@ -167,6 +170,7 @@
 /// Steal hearts. You just really wanna have some hearts.
 /datum/objective/bloodsucker/heartthief
 	name = "heartthief"
+	completion_credit_reward = 25
 
 // GENERATE!
 /datum/objective/bloodsucker/heartthief/New()
@@ -199,6 +203,7 @@
 ///Eat blood from a lot of people
 /datum/objective/bloodsucker/gourmand
 	name = "gourmand"
+	completion_credit_reward = 50
 
 // GENERATE!
 /datum/objective/bloodsucker/gourmand/New()
@@ -228,6 +233,7 @@
 //////////////////////////////
 
 /datum/objective/bloodsucker/vassal
+	completion_credit_reward = 10
 
 // EXPLANATION
 /datum/objective/bloodsucker/vassal/update_explanation_text()
@@ -246,6 +252,7 @@
 /// Steal the Archive of the Kindred - Nosferatu Clan objective
 /datum/objective/bloodsucker/kindred
 	name = "steal kindred archive"
+	completion_credit_reward = 25
 
 // EXPLANATION
 /datum/objective/bloodsucker/kindred/update_explanation_text()
@@ -271,6 +278,7 @@
 /// Max out a Tremere Power - Tremere Clan objective
 /datum/objective/bloodsucker/tremere_power
 	name = "tremerepower"
+	completion_credit_reward = 50
 
 // EXPLANATION
 /datum/objective/bloodsucker/tremere_power/update_explanation_text()
@@ -289,6 +297,7 @@
 /// Convert a crewmate - Ventrue Clan objective
 /datum/objective/bloodsucker/embrace
 	name = "embrace"
+	completion_credit_reward = 50
 
 // EXPLANATION
 /datum/objective/bloodsucker/embrace/update_explanation_text()

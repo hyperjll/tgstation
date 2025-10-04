@@ -315,6 +315,7 @@
 	explanation_text = "Convert a brainwashable person using your flash on them directly. Any handheld flash will work if you lose or break your starting flash."
 	admin_grantable = FALSE
 	martyr_compatible = TRUE
+	completion_credit_reward = 50
 
 /datum/objective/convert_brother/check_completion()
 	return length(team?.members) > 1

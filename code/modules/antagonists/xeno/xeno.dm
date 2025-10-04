@@ -81,6 +81,7 @@
 
 //Xeno Objectives
 /datum/objective/escape_captivity
+	completion_credit_reward = 50
 
 /datum/objective/escape_captivity/New()
 	explanation_text = "Escape from captivity."
@@ -90,6 +91,7 @@
 		return TRUE
 
 /datum/objective/advance_hive
+	completion_credit_reward = 10
 
 /datum/objective/advance_hive/New()
 	explanation_text = "Survive and advance the Hive."

@@ -132,6 +132,7 @@ GLOBAL_DATUM(main_clock_cult, /datum/team/clock_cult)
 #define POSSIBLE_CRYSTAL_AREAS 6
 /datum/objective/anchoring_crystals
 	var/list/valid_areas = list()
+	completion_credit_reward = 150
 
 /datum/objective/anchoring_crystals/New()
 	. = ..()
@@ -155,6 +156,7 @@ GLOBAL_DATUM(main_clock_cult, /datum/team/clock_cult)
 
 /datum/objective/ratvar
 	explanation_text = "Protect The Ark so that Rat'var may enlighten this world!"
+	completion_credit_reward = 200
 
 /datum/objective/ratvar/check_completion()
 	return GLOB.ratvar_risen || completed

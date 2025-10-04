@@ -3,6 +3,8 @@
 	martyr_compatible = TRUE
 	admin_grantable = TRUE
 
+	completion_credit_reward = 150
+
 /datum/objective/protect/traitor_only/check_completion()
 	var/obj/item/organ/brain/brain_target
 	if(isnull(target))

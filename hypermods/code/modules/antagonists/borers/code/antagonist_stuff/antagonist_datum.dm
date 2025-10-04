@@ -70,12 +70,15 @@
 
 /datum/antagonist/cortical_borer/hivemind/forge_objectives()
 	var/datum/objective/custom/borer_objective_produce_eggs = new
+	borer_objective_produce_eggs.reward_for_completion = TRUE
 	borer_objective_produce_eggs.explanation_text = "We require [GLOB.objective_egg_borer_number] different borers to produce [GLOB.objective_egg_egg_number] eggs to spread widely in order to increase our chances of survival."
 
 	var/datum/objective/custom/borer_objective_willing_hosts = new
+	borer_objective_willing_hosts.reward_for_completion = TRUE
 	borer_objective_willing_hosts.explanation_text = "We require [GLOB.objective_willing_hosts] willing hosts to create a backbone for our continued survival, should our prey attempt to exterminate us."
 
 	var/datum/objective/custom/borer_objective_learn_chemicals = new
+	borer_objective_learn_chemicals.reward_for_completion = TRUE
 	borer_objective_learn_chemicals.explanation_text = "We need to learn [GLOB.objective_blood_borer] chemicals from the bloodstreams of our hosts to acquire further chemical insight."
 
 	objectives += borer_objective_produce_eggs

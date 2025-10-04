@@ -117,6 +117,7 @@
 
 
 /datum/objective/eat_hearts
+	completion_credit_reward = 50
 
 /datum/objective/eat_hearts/New()
 	target_amount = rand(4, 9)

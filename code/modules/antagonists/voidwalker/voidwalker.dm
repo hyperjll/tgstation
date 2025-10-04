@@ -32,6 +32,7 @@
 	objectives += objective
 
 /datum/objective/voidwalker_objective
+	completion_credit_reward = 10
 
 /datum/objective/voidwalker_objective/New()
 	var/list/explanation_texts = list(
