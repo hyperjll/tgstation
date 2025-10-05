@@ -100,6 +100,14 @@
 	cost = 2
 	purchasable_from = UPLINK_SERIOUS_OPS
 
+/datum/uplink_item/ammo_restock/c9mm_designs
+	name = "Illegal 9mm Design Disk"
+	desc = "A design disk that can be used to upload 9mm designs onto an autolathe or research network. \
+			Useful if you've acquired a large sum of materials and quality parts."
+	item = /obj/item/disk/design_disk/illegal_9mm
+	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+	cost = 10
+
 /datum/uplink_item/ammo_restock/ammo10mmbox
 	name = "Box of 10mm Rounds"
 	desc = "An ammo box filled with 10mm rounds, used for restocking 10mm magazines. Contains 20 10mm bullets."
@@ -178,6 +186,14 @@
 	item = /obj/item/ammo_box/c10mm/fifty
 	cost = 2
 	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/c10mm_designs
+	name = "Illegal 10mm Design Disk"
+	desc = "A design disk that can be used to upload 10mm designs onto an autolathe or research network. \
+			Useful if you've acquired a large sum of materials and quality parts."
+	item = /obj/item/disk/design_disk/illegal_10mm
+	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+	cost = 10
 
 /datum/uplink_item/ammo_restock/ammo45box
 	name = "Box of .45 Rounds"
@@ -265,6 +281,14 @@
 	cost = 2
 	purchasable_from = UPLINK_SERIOUS_OPS
 
+/datum/uplink_item/ammo_restock/c45mm_designs
+	name = "Illegal .45 Design Disk"
+	desc = "A design disk that can be used to upload .45 designs onto an autolathe or research network. \
+			Useful if you've acquired a large sum of materials and quality parts."
+	item = /obj/item/disk/design_disk/illegal_45
+	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+	cost = 10
+
 /datum/uplink_item/ammo_restock/ammo357box
 	name = "Box of .357 Rounds"
 	desc = "An ammo box filled with .357 rounds, used for restocking .357 speedloaders. Contains 20 .357 rounds."
@@ -316,6 +340,14 @@
 	item = /obj/item/ammo_box/c357/no_direct/fifty
 	cost = 12
 	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/c357mm_designs
+	name = "Illegal .357 Design Disk"
+	desc = "A design disk that can be used to upload .357 designs onto an autolathe or research network. \
+			Useful if you've acquired a large sum of materials and quality parts."
+	item = /obj/item/disk/design_disk/illegal_357
+	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+	cost = 10
 
 /datum/uplink_item/ammo_restock/ammo50box
 	name = "Box of .50 AE Rounds"
@@ -397,6 +429,15 @@
 	item = /obj/item/ammo_box/m50/fifty
 	cost = 8
 	purchasable_from = UPLINK_SERIOUS_OPS
+
+/datum/uplink_item/ammo_restock/c50mm_designs
+	name = "Illegal .50 Design Disk"
+	desc = "A design disk that can be used to upload .50 designs onto an autolathe or research network. \
+			Useful if you've acquired a large sum of materials and quality parts."
+	item = /obj/item/disk/design_disk/illegal_50
+	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+	cost = 10
+
 
 /datum/uplink_item/ammo_restock/ammo712box
 	name = "Box of 7.12x82mm Rounds"

@@ -7544,6 +7544,7 @@
 #include "hypermods\code\modules\research\designs\tool_designs.dm"
 #include "hypermods\code\modules\research\designs\weapon_designs.dm"
 #include "hypermods\code\modules\research\designs\wiremod_designs.dm"
+#include "hypermods\code\modules\research\designs\autolathe\security_designs.dm"
 #include "hypermods\code\modules\research\techweb\nodes\cyborg_nodes.dm"
 #include "hypermods\code\modules\research\techweb\nodes\mech_nodes.dm"
 #include "hypermods\code\modules\research\techweb\nodes\medbay_nodes.dm"
