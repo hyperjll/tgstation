@@ -151,6 +151,7 @@
 
 	var/punctuation = ismob(target) ? "!" : "."
 
+	user.changeNext_move(CLICK_CD_MELEE)
 	user.visible_message(
 		span_danger("[user] splashes the contents of [src] onto [target][punctuation]"),
 		span_danger("You splash the contents of [src] onto [target][punctuation]"),
