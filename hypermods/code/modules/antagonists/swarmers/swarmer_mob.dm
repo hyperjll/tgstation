@@ -240,7 +240,7 @@
 	if(ishuman(target))
 		var/mob/living/carbon/human/victim = target
 		if(!victim.handcuffed)
-			victim.set_handcuffed(new /obj/item/restraints/handcuffs/energy/used(victim))
+			victim.set_handcuffed(new /obj/item/restraints/handcuffs/energy(victim))
 			victim.update_handcuffed()
 			log_combat(src, victim, "handcuffed")
 
