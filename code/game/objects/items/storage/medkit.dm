@@ -40,6 +40,10 @@
 	new possible_alt(src.loc)
 	qdel(src)
 
+/obj/item/storage/medkit/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/cuffable_item)
+
 /obj/item/storage/medkit/regular
 	icon_state = "medkit"
 	desc = "A first aid kit with the ability to heal common types of injuries."

@@ -183,13 +183,15 @@ GLOBAL_LIST_INIT(mystery_fishing, list(
 /obj/structure/mystery_box/proc/generate_valid_types()
 	valid_types = get_sane_item_types(selectable_base_type)
 
+/obj/structure/mystery_box/IsContainedAtomAccessible(atom/contained, atom/movable/user)
+	return TRUE
+
 /// The box has been activated, play the sound and spawn the prop item
 /obj/structure/mystery_box/proc/activate(mob/living/user)
 	box_state = MYSTERY_BOX_CHOOSING
 	update_icon_state()
 	presented_item = new box_item(loc)
 	presented_item.vis_flags = VIS_INHERIT_PLANE
-	presented_item.flags_1 |= IS_ONTOP_1
 	vis_contents += presented_item
 	presented_item.start_animation(src)
 	if(play_sounds)
