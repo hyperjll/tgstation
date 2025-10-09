@@ -31,11 +31,6 @@
 	var/possible_alt = null
 	var/alt_chance = 10
 
-/obj/item/storage/medkit/Initialize(mapload)
-	. = ..()
-	if(possible_alt && prob(alt_chance))
-		replace_with_alt()
-
 /obj/item/storage/medkit/proc/replace_with_alt()
 	new possible_alt(src.loc)
 	qdel(src)
@@ -43,6 +38,8 @@
 /obj/item/storage/medkit/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/cuffable_item)
+	if(possible_alt && prob(alt_chance))
+		replace_with_alt()
 
 /obj/item/storage/medkit/regular
 	icon_state = "medkit"
