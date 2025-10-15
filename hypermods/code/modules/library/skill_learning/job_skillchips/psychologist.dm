@@ -10,11 +10,11 @@
 
 /obj/item/skillchip/reversehypno/on_activate(mob/living/carbon/user, silent = FALSE)
 	. = ..()
-	RegisterSignal(user, COMSIG_MOB_SUCCESSFUL_FLASHED_CARBON, PROC_REF(on_mob_successful_flashed_carbon))
+	RegisterSignal(user, COMSIG_MOB_SUCCESSFUL_FLASHED_MOB, PROC_REF(on_mob_successful_flashed_carbon))
 	to_chat(user, span_notice("You are an expert in flash-based therapy and reverse-hypnotism. You may use a flash to heal brain damage and remove hypnotic effects from those you flash."))
 
 /obj/item/skillchip/reversehypno/on_deactivate(mob/living/carbon/user, silent = FALSE)
-	UnregisterSignal(user, COMSIG_MOB_SUCCESSFUL_FLASHED_CARBON, PROC_REF(on_mob_successful_flashed_carbon))
+	UnregisterSignal(user, COMSIG_MOB_SUCCESSFUL_FLASHED_MOB, PROC_REF(on_mob_successful_flashed_carbon))
 	to_chat(user, span_notice("You are no longer an expert in flash-based therapy and reverse-hypnotism."))
 	return ..()
 
