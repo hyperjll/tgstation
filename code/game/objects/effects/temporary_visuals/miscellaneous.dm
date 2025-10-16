@@ -805,6 +805,9 @@
 	duration = 12 SECONDS
 	amount_to_scale = 12
 
+/obj/effect/temp_visual/circle_wave/star_blast
+	color = COLOR_VOID_PURPLE
+
 /obj/effect/temp_visual/decoy/tensecond
 	desc = "It's a decoy!"
 	duration = 100
