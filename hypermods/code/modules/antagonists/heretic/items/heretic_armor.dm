@@ -9,6 +9,7 @@
 	icon_state = "time_armor"
 	hoodtype = /obj/item/clothing/head/hooded/cult_hoodie/eldritch/time
 	armor_type = /datum/armor/eldritch_armor/time
+	slowdown = -0.05
 
 /obj/item/clothing/suit/hooded/cultrobes/eldritch/time/on_robes_gained(mob/living/user)
 	if(!isliving(user))
@@ -42,6 +43,7 @@
 	worn_icon = 'hypermods/icons/mob/clothing/head/helmet.dmi'
 	icon_state = "time_armor"
 	armor_type = /datum/armor/eldritch_armor/time
+	slowdown = -0.05
 
 /datum/armor/eldritch_armor/time
 	melee = 50

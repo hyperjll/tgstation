@@ -1,4 +1,4 @@
-/datum/heretic_knowledge_tree_column/main/time
+/datum/heretic_knowledge_tree_column/time
 	route = PATH_TIME
 	ui_bgr = "node_time"
 	complexity = "Easy"
@@ -12,7 +12,7 @@
 	)
 	description = list(
 		"The Path of Time revolves around the heretic's age, mobility and self-recovery against single opponents.",
-		"Picking the Path of Ash is recommended as this path can be complicated if you are new to Heretic, or if you're looking for an alternative to Ash's hit-and-run playstyle.",
+		"Picking the Path of Ash first is recommended as this path can be complicated if you are new to Heretic, but this path can be an alternative to Ash's hit-and-run playstyle.",
 	)
 	pros = list(
 		"Perhaps the best mobility out of all heretic paths.",

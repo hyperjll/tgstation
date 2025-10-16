@@ -1,11 +1,10 @@
 /datum/action/cooldown/spell/pointed/target_time_stop
-	name = "Cursed Flames"
-	desc = "A long-ranged spell that ignites a target instantly, \
-		and drenches them with flammable liquids."
+	name = "Targeted Time Stop"
+	desc = "A long-ranged spell that stops time briefly around a target. Possession of this spell doesn't grant immunity to time-stop effects."
 	background_icon_state = "bg_heretic"
 	overlay_icon_state = "bg_heretic_border"
 	button_icon = 'hypermods/icons/mob/actions/actions_ecult.dmi'
-	button_icon_state = "cursed_flames"
+	button_icon_state = "freeze_time"
 	ranged_mousepointer = 'icons/effects/mouse_pointers/throw_target.dmi'
 	//sound = 'sound/effects/magic/voidblink.ogg'
 
