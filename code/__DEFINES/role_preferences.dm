@@ -51,8 +51,6 @@
 #define ROLE_SWARMER "Swarmer"
 #define ROLE_CORTICAL_BORER "Cortical Borer"
 
-// Latejoin roles
-#define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
 #define ROLE_PROVOCATEUR "Provocateur"
 #define ROLE_STOWAWAY_CHANGELING "Stowaway Changeling"
 #define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"
