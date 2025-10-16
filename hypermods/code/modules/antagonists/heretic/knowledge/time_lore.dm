@@ -1,51 +1,54 @@
-/**
- * # The path of Time.
- *
- * Goes as follows:
- *
- * Passage of Time
- * Grasp of Time
- * Skip Time
- * > Sidepaths:
- *   Slow
- *   Fire Shark
- *
- * Mark of Time
- * Ritual of Knowledge
- * Time Mends All
- * > Sidepaths:
- *   Curse of Age (Now in a the Codex Morbus)
- *   Cursed Flames
- * Deja Vu
- * > Sidepaths:
- *   Eldritch Echoes
- *   Space Phase
- *
- * Time Siphon
- * Eternal Haste
- * > Sidepaths:
- *   Cursed Flames
- *   Eldritch Coin
- *
- * At The End Of All
- */
-
 /datum/heretic_knowledge_tree_column/main/time
-	neighbour_type_left = /datum/heretic_knowledge_tree_column/cosmic_to_time
-	neighbour_type_right = /datum/heretic_knowledge_tree_column/time_to_ash
-
 	route = PATH_TIME
 	ui_bgr = "node_time"
+	complexity = "Easy"
+	complexity_color = COLOR_GREEN
+	icon = list(
+		"icon" = 'hypermods/icons/obj/weapons/khopesh.dmi',
+		"state" = "time_blade",
+		"frame" = 1,
+		"dir" = SOUTH,
+		"moving" = FALSE,
+	)
+	description = list(
+		"The Path of Time revolves around the heretic's age, mobility and self-recovery against single opponents.",
+		"Picking the Path of Ash is recommended as this path can be complicated if you are new to Heretic, or if you're looking for an alternative to Ash's hit-and-run playstyle.",
+	)
+	pros = list(
+		"Perhaps the best mobility out of all heretic paths.",
+		"Great self-recovery of all damage types.",
+		"Long-term harassment of particularly pesky foes will steadily turn in your favor.",
+		"High potential should multiple heretics follow this path.",
+		"Mansus grasp, mark and robes all restore your youth.",
+		"High stun resistance.",
+	)
+	cons = list(
+		"Has little damaging offensive or defensive spells.",
+		"Casting spells will drain your youth, which can lead to significant health problems.",
+		"Spell crowd-control is greatly limited.",
+		"The Clockwork Cloak offers little utility outside of passively restoring your youth.",
+	)
+	tips = list(
+		"Your Mansus Grasp steals the youth of your target and heals you slightly, and activation of it's mark will steal more.",
+		"Your Clockwork Cloak will slowly restore your Youth. Maintaining your Youth is essential to casting spells without side-effects.",
+		"Your Skip Time spell allows you to teleport instantly to anywhere in sight. Be wary that using Deja Vu and then attempting to Skip Time to flee is counter-productive.",
+		"Using Deja Vu before picking a fight or using it just out-of-sight of pursuers will often get you out of dangerous situations.",
+		"Eldritch Echoes can often take potential foes out long after you've engaged them or prevent them from re-entering a fight fearing the inevitable unavoidable damage may ruin what chances they have against you.",
+		"Your Spells will grant you a freakish amount of mobility, and Haste will allow you to cut-down on spending them too soon, be sure to acquire it ASAP.",
+		"Your Targeted Time Stop spell is great for stopping possible pursuers in their tracks, but be warned that you aren't currently immune to time stop effects yourself!",
+		"Your ascension grants you a large AoE Time Stop Ability to finally cover your lack of combat spells weakness, and anyone who gets close to you will be permanently cursed with rapid aging.",
+	)
 
 	start = /datum/heretic_knowledge/limited_amount/starting/base_time
-	grasp = /datum/heretic_knowledge/time_grasp
-	tier1 = /datum/heretic_knowledge/spell/time_skip
-	mark = /datum/heretic_knowledge/mark/time_mark
-	ritual_of_knowledge = /datum/heretic_knowledge/knowledge_ritual/time
-	unique_ability = /datum/heretic_knowledge/time_mends_all
-	tier2 = /datum/heretic_knowledge/spell/deja_vu
+	knowledge_tier1 = /datum/heretic_knowledge/spell/time_skip
+	guaranteed_side_tier1 = /datum/heretic_knowledge/spell/slow
+	knowledge_tier2 = /datum/heretic_knowledge/spell/deja_vu
+	guaranteed_side_tier2 = /datum/heretic_knowledge/curse/age
+	robes = /datum/heretic_knowledge/armor/time
+	knowledge_tier3 = /datum/heretic_knowledge/haste
+	guaranteed_side_tier3 = /datum/heretic_knowledge/spell/eldritch_echoes
 	blade = /datum/heretic_knowledge/blade_upgrade/time
-	tier3 =	 /datum/heretic_knowledge/haste
+	knowledge_tier4 = /datum/heretic_knowledge/spell/target_time_stop
 	ascension = /datum/heretic_knowledge/ultimate/time_final
 
 /datum/heretic_knowledge/limited_amount/starting/base_time
@@ -61,24 +64,11 @@
 	result_atoms = list(/obj/item/melee/sickly_blade/time)
 	research_tree_icon_path = 'hypermods/icons/obj/weapons/khopesh.dmi'
 	research_tree_icon_state = "time_blade"
+	mark_type = /datum/status_effect/eldritch/time
+	eldritch_passive = /datum/status_effect/heretic_passive/time
 
-
-/datum/heretic_knowledge/time_grasp
-	name = "Grasp of Time"
-	desc = "Your Mansus Grasp will steal 1-2 years of youth from your target, and slightly heal all damage types for you."
-	gain_text = "At first, they studied me as they do all."
-	cost = 1
-	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
-	research_tree_icon_state = "grasp_time"
-
-/datum/heretic_knowledge/time_grasp/on_gain(mob/user, datum/antagonist/heretic/our_heretic)
-	RegisterSignal(user, COMSIG_HERETIC_MANSUS_GRASP_ATTACK, PROC_REF(on_mansus_grasp))
-
-/datum/heretic_knowledge/time_grasp/on_lose(mob/user, datum/antagonist/heretic/our_heretic)
-	UnregisterSignal(user, COMSIG_HERETIC_MANSUS_GRASP_ATTACK)
-
-/datum/heretic_knowledge/time_grasp/proc/on_mansus_grasp(mob/living/source, mob/living/target)
-	SIGNAL_HANDLER
+/datum/heretic_knowledge/limited_amount/starting/base_time/on_mansus_grasp(mob/living/source, mob/living/target)
+	. = ..()
 
 	if(!istype(target, /mob/living/carbon/human))
 		return
@@ -101,28 +91,7 @@
 	if(!human_target.has_status_effect(/datum/status_effect/rapidaging/lesser))
 		human_target.apply_status_effect(/datum/status_effect/rapidaging/lesser)
 
-
-/datum/heretic_knowledge/spell/time_skip
-	name = "Skip Time"
-	desc = "Grants you Skip Time, a long-range spell that lets you skip the passage of time, \
-		manuvering past any obstacles to your destination.  Requires a focus to use. \
-		Eventually, all obstacles are either moved, destroyed or opened, after all."
-	gain_text = "They took an interest in me, noting the path i chose. \
-			They pointed to a place i couldn't fathom. A place i couldn't reach."
-	action_to_add = /datum/action/cooldown/spell/pointed/skip_time
-	cost = 1
-
-
-/datum/heretic_knowledge/mark/time_mark
-	name = "Mark of Time"
-	desc = "Your Mansus Grasp now applies the Mark of Time. The mark is triggered from an \
-		attack with your Time Blade. When triggered, you steal an additional 5 years of youth \
-		from the target and gain a speed boost for a short time."
-	gain_text = "Beyond the folds of space and time, something stirred yet. \
-			Their eyes fixated upon it for a moment, but my eyes ceased to linger upon it."
-	mark_type = /datum/status_effect/eldritch/time
-
-/datum/heretic_knowledge/mark/time_mark/trigger_mark(mob/living/source, mob/living/target)
+/datum/heretic_knowledge/limited_amount/starting/base_time/trigger_mark(mob/living/source, mob/living/target)
 	. = ..()
 	if(!.)
 		return
@@ -132,9 +101,6 @@
 
 	var/mob/living/carbon/human/human_target = target
 	var/mob/living/carbon/human/heretic = source
-
-	if(!heretic.has_status_effect(/datum/status_effect/timemark))
-		heretic.apply_status_effect(/datum/status_effect/timemark)
 
 	to_chat(human_target, span_danger("Your body reels as your youth is drained!"))
 	human_target.age += 5
@@ -146,28 +112,15 @@
 		human_target.apply_status_effect(/datum/status_effect/rapidaging/lesser)
 
 
-/datum/heretic_knowledge/knowledge_ritual/time
-
-
-/datum/heretic_knowledge/time_mends_all
-	name = "Time Mends All"
-	desc = "While injured, you slowly regenerate all damage types at the cost of your \
-		youth. You gain 40% stun resistance, immunity to knockdown from \
-		batons, and perform all progress bar actions 25% faster. \
-		These effects only apply while you're under 50 years of age."
-	gain_text = "My eyes lit up as i realized what my purpose was. \
-			Beyond the folds of time, lies an ultimate goal. A purpose."
-	cost = 1
-	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
-	research_tree_icon_state = "timemendsall"
-
-/datum/heretic_knowledge/time_mends_all/on_gain(mob/user, datum/antagonist/heretic/our_heretic)
-	var/mob/living/carbon/human_user = user
-	human_user.apply_status_effect(/datum/status_effect/timemendsall)
-
-/datum/heretic_knowledge/time_mends_all/on_lose(mob/user, datum/antagonist/heretic/our_heretic)
-	var/mob/living/carbon/human_user = user
-	human_user.remove_status_effect(/datum/status_effect/timemendsall)
+/datum/heretic_knowledge/spell/time_skip
+	name = "Skip Time"
+	desc = "Grants you Skip Time, a long-range spell that lets you skip the passage of time, \
+		manuvering past any obstacles to your destination.  Requires a focus to use. \
+		Eventually, all obstacles are either moved, destroyed or opened, after all."
+	gain_text = "They took an interest in me, noting the path i chose. \
+			They pointed to a place i couldn't fathom. A place i couldn't reach."
+	action_to_add = /datum/action/cooldown/spell/pointed/skip_time
+	cost = 2
 
 
 /datum/heretic_knowledge/spell/deja_vu
@@ -177,7 +130,40 @@
 	gain_text = "And before i knew it, i was back where i was before. \
 			Knowledge remained, but their attention did not."
 	action_to_add = /datum/action/cooldown/spell/deja_vu
-	cost = 1
+	cost = 2
+
+
+/datum/heretic_knowledge/armor/time
+	desc = "Allows you to transmute a table (or a suit), a mask and a timer to create a clockwork cloak. \
+		It passively restores the wearer's youth, and slightly speeds up the wearer's movement. \
+		Acts as a focus while hooded."
+	gain_text = "Upon the Ivory Marble I sought shelter and lingered. \
+			But when I went and left, that which is left behind sought shelter in you."
+	result_atoms = list(/obj/item/clothing/suit/hooded/cultrobes/eldritch/time)
+	research_tree_icon_state = "time_armor"
+	required_atoms = list(
+		list(/obj/structure/table, /obj/item/clothing/suit) = 1,
+		/obj/item/clothing/mask = 1,
+		/obj/item/assembly/timer = 1,
+	)
+
+
+/datum/heretic_knowledge/haste
+	name = "Eternal Haste"
+	desc = "You are permanently hastened, you perform all progress bar actions 50% faster and move 15% faster. \
+		You'll purge toxins from your body automatically, and will burn through your calories quicker."
+	gain_text = "My heart beats faster, i feel time slip away as i walk these planes."
+	cost = 2
+	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
+	research_tree_icon_state = "haste"
+
+/datum/heretic_knowledge/haste/on_gain(mob/user, datum/antagonist/heretic/our_heretic)
+	var/mob/living/carbon/human_user = user
+	human_user.apply_status_effect(/datum/status_effect/haste)
+
+/datum/heretic_knowledge/haste/on_lose(mob/user, datum/antagonist/heretic/our_heretic)
+	var/mob/living/carbon/human_user = user
+	human_user.remove_status_effect(/datum/status_effect/haste)
 
 
 /datum/heretic_knowledge/blade_upgrade/time
@@ -213,22 +199,15 @@
 		source.adjustOxyLoss(-2)
 
 
-/datum/heretic_knowledge/haste
-	name = "Eternal Haste"
-	desc = "You are permanently hastened, you perform all progress bar actions 50% faster and move 15% faster. \
-		You'll purge toxins from your body automatically, and will burn through your calories quicker."
-	gain_text = "My heart beats faster, i feel time slip away as i walk these planes."
-	cost = 1
-	research_tree_icon_path = 'hypermods/icons/ui_icons/antags/heretic/knowledge.dmi'
-	research_tree_icon_state = "haste"
-
-/datum/heretic_knowledge/haste/on_gain(mob/user, datum/antagonist/heretic/our_heretic)
-	var/mob/living/carbon/human_user = user
-	human_user.apply_status_effect(/datum/status_effect/haste)
-
-/datum/heretic_knowledge/haste/on_lose(mob/user, datum/antagonist/heretic/our_heretic)
-	var/mob/living/carbon/human_user = user
-	human_user.remove_status_effect(/datum/status_effect/haste)
+/datum/heretic_knowledge/spell/target_time_stop
+	name = "Targeted Time Stop"
+	desc = "A long-range spell that causes briefly stops time around a target. \
+		You aren't rendered immune to this time-stop effect."
+	gain_text = "Before I could leave them, one turned and pointed toward me, stopping me in place with great force. \
+		What words they spoke before I could move again, hadn't met my ears."
+	action_to_add = /datum/action/cooldown/spell/pointed/target_time_stop
+	cost = 2
+	is_final_knowledge = TRUE
 
 
 /datum/heretic_knowledge/ultimate/time_final
@@ -270,15 +249,8 @@
 
 	RegisterSignal(user, COMSIG_LIVING_LIFE, PROC_REF(on_life))
 
-	var/mob/living/carbon/human_user = user
-	human_user.remove_status_effect(/datum/status_effect/timemendsall) // Replacing this with a better version.
-	sleep(1 SECONDS) // give it a delay so this shit doesn't bug out/delete each other.
-	human_user.apply_status_effect(/datum/status_effect/timemendsall/ascension)
-
 /datum/heretic_knowledge/ultimate/time_final/on_lose(mob/user, datum/antagonist/heretic/our_heretic)
 	var/mob/living/carbon/human_user = user
-	human_user.remove_status_effect(/datum/status_effect/timemendsall)
-	human_user.remove_status_effect(/datum/status_effect/timemendsall/ascension)
 	UnregisterSignal(human_user, COMSIG_LIVING_LIFE)
 
 /datum/heretic_knowledge/ultimate/time_final/proc/on_life(mob/living/user, seconds_per_tick, times_fired)

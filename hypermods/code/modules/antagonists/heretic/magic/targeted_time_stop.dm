@@ -1,4 +1,4 @@
-/datum/action/cooldown/spell/pointed/cursed_flames
+/datum/action/cooldown/spell/pointed/target_time_stop
 	name = "Cursed Flames"
 	desc = "A long-ranged spell that ignites a target instantly, \
 		and drenches them with flammable liquids."
@@ -17,27 +17,27 @@
 	invocation = "T'RR'R'' R'F'R'NC'!"
 	invocation_type = INVOCATION_SHOUT
 	spell_requirements = NONE
+	/// The radius / range of the time stop.
+	var/timestop_range = 1
+	/// The duration of the time stop.
+	var/timestop_duration = 3 SECONDS
 
-/datum/action/cooldown/spell/pointed/cursed_flames/before_cast(atom/cast_on)
+/datum/action/cooldown/spell/pointed/target_time_stop/before_cast(atom/cast_on)
 	. = ..()
 	if(. & SPELL_CANCEL_CAST)
 		return
 	if(!ismob(cast_on))
 		return SPELL_CANCEL_CAST
 
-/datum/action/cooldown/spell/pointed/cursed_flames/cast(mob/living/carbon/human/cast_on)
+/datum/action/cooldown/spell/pointed/target_time_stop/cast(mob/living/carbon/human/cast_on)
 	. = ..()
 	if(cast_on.can_block_magic(antimagic_flags))
 		cast_on.visible_message(
-			span_danger("You see [cast_on] flash orange, but nothing else happens!"),
-			span_danger("You feel a bit warmer but nothing else happens! You've been protected!")
+			span_danger("You see the world around [cast_on] come to a halt for a fraction of a second, but nothing else happens!"),
+			span_danger("You felt something attempt to slow the world around you to a crawl! You've been protected!")
 		)
 		return
 
 	var/turf/targeted_turf = get_turf(cast_on)
-	playsound(targeted_turf, 'sound/effects/magic/fireball.ogg', 80, TRUE)
 
-	cast_on.adjust_fire_stacks(1)
-	cast_on.ignite_mob()
-
-	cast_on.apply_status_effect(/datum/status_effect/cursed_flames, "cursed_flames")
+	new /obj/effect/timestop/magic(targeted_turf, timestop_range, timestop_duration, null)

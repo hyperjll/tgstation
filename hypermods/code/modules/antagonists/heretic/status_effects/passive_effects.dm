@@ -1,57 +1,3 @@
-/datum/status_effect/timemendsall
-	id = "time mends all"
-	duration = STATUS_EFFECT_PERMANENT
-	alert_type = null
-	var/healing = -4
-	var/stunresist = -40
-	var/toggled = FALSE
-
-/datum/status_effect/timemendsall/tick()
-	var/mob/living/carbon/human/carbon_human = owner
-	if(iscarbon(carbon_human) && carbon_human.age >= 50) // First we determine if your eligable.
-		if(toggled)
-			to_chat(carbon_human, span_notice("You no longer feel time itself wind around your form!"))
-			turnoff()
-	else
-		if(!toggled)
-			to_chat(carbon_human, span_notice("You feel time itself wind around your form..."))
-			turnon()
-
-		carbon_human.AdjustAllImmobility(stunresist)
-
-		if(carbon_human.getBruteLoss())
-			carbon_human.age += 1
-			carbon_human.adjustBruteLoss(healing)
-
-		if(carbon_human.getFireLoss())
-			carbon_human.age += 1
-			carbon_human.adjustFireLoss(healing)
-
-		if(carbon_human.getToxLoss())
-			carbon_human.age += 1
-			carbon_human.adjustToxLoss(healing)
-
-		if(carbon_human.getOxyLoss())
-			carbon_human.age += 1
-			carbon_human.adjustOxyLoss(healing)
-
-/datum/status_effect/timemendsall/proc/turnon()
-	toggled = TRUE
-	ADD_TRAIT(owner, TRAIT_BATON_RESISTANCE, "time_mends_all")
-	owner.add_actionspeed_modifier(/datum/actionspeed_modifier/timemendsall)
-
-/datum/status_effect/timemendsall/proc/turnoff()
-	toggled = FALSE
-	REMOVE_TRAIT(owner, TRAIT_BATON_RESISTANCE, "time_mends_all")
-	owner.remove_actionspeed_modifier(/datum/actionspeed_modifier/timemendsall)
-
-
-/datum/status_effect/timemendsall/ascension
-	id = "ascended time mends all"
-	healing = -12
-	stunresist = -100
-
-
 /datum/status_effect/haste
 	id = "heretic haste"
 	duration = STATUS_EFFECT_PERMANENT
@@ -117,20 +63,3 @@
 	human_owner.adjustFireLoss(30)
 	human_owner.Knockdown(4 SECONDS)
 	to_chat(owner, span_userdanger("The chanting grows inexplicably louder as wounds manifest upon you!"))
-
-
-/datum/status_effect/cursed_flames
-	id = "cursed_flames"
-	status_type = STATUS_EFFECT_REPLACE
-	alert_type = null
-	duration = 20 SECONDS
-	tick_interval = 5 SECONDS
-
-/datum/status_effect/cursed_flames/tick(seconds_between_ticks)
-	. = ..()
-	if(!ishuman(owner))
-		return
-	var/mob/living/carbon/human/human_owner = owner
-	human_owner.adjust_fire_stacks(1)
-	if(human_owner.fire_stacks < 1)
-		human_owner.ignite_mob()
