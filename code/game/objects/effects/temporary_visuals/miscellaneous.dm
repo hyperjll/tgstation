@@ -807,7 +807,6 @@
 
 /obj/effect/temp_visual/circle_wave/star_blast
 	color = COLOR_VOID_PURPLE
-<<<<<<< HEAD
 
 /obj/effect/temp_visual/decoy/tensecond
 	desc = "It's a decoy!"
@@ -815,5 +814,3 @@
 
 /obj/effect/temp_visual/decoy/fading/onesecond
 	duration = 10
-=======
->>>>>>> origin/master
