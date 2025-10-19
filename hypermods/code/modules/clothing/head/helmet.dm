@@ -23,3 +23,15 @@
 /obj/item/clothing/head/helmet/webhelmet/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/seclite_attachable, light_icon_state = "flight")
+
+
+/obj/item/clothing/head/costume/syndieheadband
+	name = "'tactical' maid headband"
+	desc = "Hey! This is just a normal Maid headband dyed Red! You feel like you've been scammed."
+	icon = 'hypermods/icons/obj/clothing/head/hats.dmi'
+	worn_icon = 'hypermods/icons/mob/clothing/head/hats.dmi'
+	icon_state = "syndieheadband"
+
+/obj/item/clothing/head/costume/syndieheadband/real
+	name = "tactical maid headband"
+	desc = "Tacticute."

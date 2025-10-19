@@ -1436,3 +1436,14 @@
 		/obj/item/storage/belt/holster/nukie/clover/full = 1,
 		/obj/item/clothing/under/costume/dutch = 1,
 	), src)
+
+/obj/item/storage/box/syndie_kit/maid_kit
+	name = "'Tactical' Maid Kit"
+
+/obj/item/storage/box/syndie_kit/maid_kit/PopulateContents()
+	new /obj/item/clothing/under/syndicate/syndimaid/real(src)
+	new /obj/item/clothing/shoes/laceup(src)
+	new /obj/item/clothing/gloves/syndimaid_arms/real(src)
+	new /obj/item/clothing/head/costume/syndieheadband/real(src)
+	new /obj/item/clothing/glasses/sunglasses(src)
+	new /obj/item/clothing/accessory/maidapronsynd(src)

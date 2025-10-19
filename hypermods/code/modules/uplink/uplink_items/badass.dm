@@ -159,3 +159,12 @@
 	surplus = 0
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/badass/costumes/syndicate_maid
+	name = "'Tactical' Maid Set"
+	desc = "Get yourself a replica of the legendary 'Maid Syndicate Agents' outfit. \
+			It does not come with the skill and grace of the former legendary agents."
+	purchasable_from = ALL
+	progression_minimum = 110 MINUTES
+	cost = 2
+	item = /obj/item/storage/box/syndie_kit/maid_kit

@@ -164,6 +164,7 @@
 				/obj/item/clothing/head/costume/sombrero/green = 3,
 				/obj/item/clothing/head/costume/nightcap/blue = 3,
 				/obj/item/clothing/head/costume/nightcap/red = 3,
+				/obj/item/clothing/head/costume/syndieheadband = 2,
 			),
 		),
 
@@ -186,6 +187,9 @@
 				/obj/item/storage/belt/fannypack/red = 3,
 				/obj/item/storage/backpack/duffelbag/syndie = 3,
 				/obj/item/storage/backpack/syndicate = 3,
+				/obj/item/clothing/accessory/maidapronsynd = 2,
+				/obj/item/clothing/gloves/syndimaid_arms = 2,
+				/obj/item/clothing/glasses/sunglasses = 1,
 			),
 		),
 
@@ -213,6 +217,7 @@
 				/obj/item/clothing/under/dress/eveninggown = 3,
 				/obj/item/clothing/under/misc/pj/blue = 3,
 				/obj/item/clothing/under/misc/pj/red = 3,
+				/obj/item/clothing/under/syndicate/syndimaid = 2,
 			),
 		),
 
