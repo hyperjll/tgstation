@@ -5,13 +5,8 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
-	})
-"ac" = (
-/turf/open/water/jungle,
-/area/lavaland/surface/outdoors/explored{
-	name = "Mountain Mine Passage";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ah" = (
 /obj/structure/table,
@@ -29,26 +24,30 @@
 	},
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ai" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ak" = (
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ap" = (
 /obj/item/radio/intercom/prison/directional/west,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ar" = (
 /obj/machinery/light/directional/north,
@@ -58,7 +57,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "au" = (
 /obj/structure/chair/comfy/black,
@@ -66,7 +66,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "aw" = (
 /obj/machinery/camera/motion/directional/north,
@@ -92,7 +92,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "aE" = (
 /obj/structure/table/optable/abductor,
@@ -105,14 +106,15 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "aH" = (
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/ce{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "aO" = (
 /obj/machinery/door/airlock/command{
@@ -123,7 +125,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/ce{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "aP" = (
 /obj/effect/spawner/random/maintenance,
@@ -131,7 +133,8 @@
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "aQ" = (
 /obj/structure/rack,
@@ -139,7 +142,8 @@
 /obj/effect/spawner/random/armory/bulletproof_armor,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "aV" = (
 /obj/effect/light_emitter/fake_outdoors,
@@ -158,26 +162,29 @@
 /obj/item/food/dough,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "be" = (
 /obj/structure/table/wood,
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "bf" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "bg" = (
 /turf/closed/wall/mineral/wood,
 /area/station/cargo/bitrunning/den{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "bi" = (
 /obj/structure/table/reinforced/titaniumglass,
@@ -193,7 +200,8 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "bk" = (
 /obj/structure/cable,
@@ -205,21 +213,23 @@
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/cmo{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "bt" = (
 /obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "bv" = (
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "by" = (
 /obj/machinery/door/airlock/research{
@@ -228,13 +238,15 @@
 /obj/effect/mapping_helpers/airlock/access/all/science/robotics,
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "bA" = (
 /obj/effect/spawner/random/structure/closet_empty/crate,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "bD" = (
 /obj/structure/bed,
@@ -244,7 +256,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/cmo{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "bL" = (
 /obj/structure/table/reinforced/titaniumglass,
@@ -258,13 +270,15 @@
 /obj/machinery/telecomms/server/presets/security,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "bR" = (
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "bT" = (
 /obj/structure/fluff/clockwork/fallen_armor,
@@ -278,18 +292,20 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "bY" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "cd" = (
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "cf" = (
 /obj/machinery/door/airlock/command{
@@ -299,7 +315,8 @@
 /obj/effect/mapping_helpers/airlock/access/any/supply/qm,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ci" = (
 /obj/machinery/door/airlock/hatch{
@@ -310,7 +327,8 @@
 /obj/effect/mapping_helpers/airlock/access/any/command/ai_upload,
 /turf/open/floor/iron/dark,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "cl" = (
 /obj/structure/table/wood,
@@ -326,7 +344,8 @@
 /obj/item/flashlight/lantern,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "cw" = (
 /obj/effect/spawner/random/maintenance,
@@ -338,13 +357,15 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "cC" = (
 /obj/structure/table,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "cD" = (
 /obj/structure/railing{
@@ -383,7 +404,8 @@
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "cQ" = (
 /obj/effect/landmark/start/chemist,
@@ -399,12 +421,14 @@
 "cT" = (
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "cU" = (
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "cX" = (
 /turf/open/misc/grass/jungle,
@@ -416,14 +440,15 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "dp" = (
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ds" = (
 /obj/machinery/door/airlock/security/glass{
@@ -434,18 +459,21 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dv" = (
 /obj/machinery/biogenerator,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dy" = (
 /turf/open/floor/wood,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dz" = (
 /obj/machinery/door/window/brigdoor/security/cell/left/directional/south{
@@ -456,7 +484,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dA" = (
 /obj/structure/secure_safe/caps_spare{
@@ -465,7 +494,7 @@
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/captain{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "dE" = (
 /obj/structure/closet/secure_closet/security/sec,
@@ -473,14 +502,16 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dJ" = (
 /mob/living/basic/carp/pet/lia,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dK" = (
 /obj/machinery/vending/dinnerware,
@@ -488,7 +519,8 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dL" = (
 /turf/open/misc/dirt/station,
@@ -501,13 +533,15 @@
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dP" = (
 /obj/machinery/light/directional/east,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dR" = (
 /obj/structure/chair/comfy/black,
@@ -515,12 +549,13 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "dU" = (
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dV" = (
 /obj/structure/window/reinforced/plasma/plastitanium,
@@ -537,7 +572,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "dX" = (
 /obj/effect/spawner/random/maintenance,
@@ -545,7 +580,8 @@
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "dY" = (
 /obj/effect/light_emitter/fake_outdoors,
@@ -556,7 +592,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ef" = (
 /obj/machinery/door/airlock/external{
@@ -577,7 +614,8 @@
 "ej" = (
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "em" = (
 /obj/item/stack/sheet/bronze,
@@ -590,7 +628,8 @@
 /obj/structure/closet/secure_closet/quartermaster,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ep" = (
 /obj/structure/table/bronze,
@@ -603,20 +642,23 @@
 "eu" = (
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ev" = (
 /obj/machinery/hydroponics/soil,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ew" = (
 /obj/structure/cable,
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ex" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -625,13 +667,15 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ey" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ez" = (
 /obj/structure/closet/secure_closet/engineering_chief,
@@ -641,7 +685,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/ce{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "eB" = (
 /obj/item/radio/intercom/directional/west,
@@ -649,7 +693,8 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "eC" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -662,7 +707,8 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "eI" = (
 /obj/effect/landmark/start/roboticist,
@@ -676,7 +722,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "eK" = (
 /obj/effect/spawner/random/food_or_drink/seed{
@@ -697,25 +743,29 @@
 	},
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "eN" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks/beer,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "eP" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/medical/treatment_center{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "eS" = (
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "eT" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/east,
@@ -723,12 +773,14 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "eV" = (
 /turf/closed/wall/mineral/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "eW" = (
 /obj/machinery/door/airlock/command{
@@ -739,7 +791,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/cmo{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "fd" = (
 /obj/structure/sign/poster/abductor,
@@ -752,45 +804,52 @@
 /obj/machinery/telecomms/server/presets/supply,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ff" = (
 /obj/machinery/computer/bank_machine,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fh" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fn" = (
 /obj/structure/closet/crate/trashcart/filled,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fp" = (
 /obj/effect/landmark/start/head_of_security,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fq" = (
 /obj/effect/landmark/start/lawyer,
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fs" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fv" = (
 /obj/item/storage/cans/sixbeer,
@@ -798,7 +857,8 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fw" = (
 /obj/structure/cable,
@@ -815,20 +875,22 @@
 /obj/machinery/chem_dispenser/drinks,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fO" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "fU" = (
 /obj/effect/landmark/start/warden,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fV" = (
 /obj/item/seeds/apple/gold,
@@ -846,14 +908,16 @@
 /obj/structure/rack,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fX" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/shaft_miner,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "fZ" = (
 /obj/structure/filingcabinet,
@@ -861,7 +925,8 @@
 /obj/item/poster/traitor,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ga" = (
 /obj/effect/decal/cleanable/blood/gibs/core,
@@ -881,35 +946,37 @@
 "gk" = (
 /obj/effect/spawner/random/structure/crate,
 /turf/open/misc/dirt/station,
-/area/lavaland/surface/outdoors/explored{
-	name = "Mountain Mine Passage";
-	has_gravity = 1
-	})
+/area/space/nearstation/planetary)
 "gn" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "gp" = (
 /obj/machinery/light/directional/west,
+/obj/machinery/rnd/production/protolathe/department/service,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "gq" = (
 /obj/item/reagent_containers/cup/bucket/wooden,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "gv" = (
 /obj/structure/table/optable,
 /obj/item/surgery_tray/full,
 /turf/open/floor/wood,
 /area/station/medical/treatment_center{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "gw" = (
 /obj/effect/spawner/random/structure/crate,
@@ -927,7 +994,8 @@
 /obj/structure/weightmachine/weightlifter,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "gD" = (
 /obj/structure/table,
@@ -941,7 +1009,8 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "gN" = (
 /obj/structure/fluff/clockwork/alloy_shards/medium_gearbit,
@@ -955,7 +1024,8 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "gR" = (
 /obj/structure/rack,
@@ -964,7 +1034,8 @@
 /obj/item/storage/box/donkpockets/donkpockethonk,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "gU" = (
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
@@ -972,7 +1043,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "gW" = (
 /obj/structure/railing,
@@ -982,7 +1054,8 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ht" = (
 /obj/structure/cable,
@@ -990,35 +1063,40 @@
 /obj/machinery/power/port_gen/pacman/pre_loaded,
 /obj/item/stack/sheet/mineral/plasma/thirty,
 /obj/item/stack/sheet/mineral/plasma/thirty,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "hw" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "hy" = (
 /obj/structure/closet/crate/goldcrate,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "hA" = (
 /obj/machinery/camera/motion/directional/south,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "hC" = (
 /obj/structure/closet/crate/silvercrate,
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "hD" = (
 /obj/structure/cable,
@@ -1026,39 +1104,44 @@
 /obj/machinery/door/airlock/engineering,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "hM" = (
 /obj/effect/landmark/start/depsec/supply,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "hN" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/riot_shield,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "hP" = (
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "hX" = (
 /obj/structure/closet/secure_closet/hop,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "ib" = (
 /turf/closed/wall/mineral/wood,
 /area/station/medical/treatment_center{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ie" = (
 /turf/open/lava/smooth,
@@ -1097,13 +1180,13 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "iq" = (
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/captain{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "ir" = (
 /turf/closed/indestructible/necropolis,
@@ -1115,19 +1198,22 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "iw" = (
 /turf/open/floor/wood,
 /area/station/medical/medbay/central{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "iy" = (
 /obj/structure/chair/stool/directional/west,
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "iB" = (
 /obj/structure/table,
@@ -1138,7 +1224,8 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "iH" = (
 /obj/effect/spawner/xmastree,
@@ -1163,12 +1250,14 @@
 	},
 /turf/open/floor/wood,
 /area/station/medical/medbay/central{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "iK" = (
 /turf/closed/wall/mineral/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "iL" = (
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
@@ -1176,7 +1265,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "iV" = (
 /obj/effect/landmark/start/botanist,
@@ -1190,7 +1280,8 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "iY" = (
 /obj/machinery/door/airlock/external/glass{
@@ -1199,7 +1290,8 @@
 /obj/effect/mapping_helpers/airlock/access/any/supply/general,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "jb" = (
 /obj/machinery/wall_healer/directional/east,
@@ -1211,7 +1303,9 @@
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/wood,
-/area/station/maintenance/starboard/fore)
+/area/station/maintenance/starboard/fore{
+	default_gravity = 1
+	})
 "jj" = (
 /obj/structure/chair/plastic,
 /turf/open/floor/wood,
@@ -1221,13 +1315,15 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "jm" = (
 /obj/machinery/vending/clothing,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "jn" = (
 /obj/structure/mineral_door/silver,
@@ -1241,7 +1337,8 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "jt" = (
 /obj/structure/safe/vault,
@@ -1251,7 +1348,8 @@
 /obj/item/storage/briefcase/secure/riches,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "jw" = (
 /turf/open/floor/wood,
@@ -1259,20 +1357,22 @@
 "jF" = (
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "jI" = (
 /obj/machinery/power/emitter,
 /obj/machinery/light/directional/north,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "jP" = (
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "jR" = (
 /obj/machinery/camera/motion/directional/south,
@@ -1283,7 +1383,8 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "jW" = (
 /obj/structure/showcase/cyborg/old{
@@ -1292,14 +1393,16 @@
 /obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kb" = (
 /obj/structure/cable,
 /obj/machinery/camera/motion/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ke" = (
 /obj/structure/table/wood,
@@ -1308,7 +1411,8 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kh" = (
 /obj/structure/cable,
@@ -1316,7 +1420,8 @@
 /obj/machinery/door/airlock/engineering,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ki" = (
 /obj/structure/rack,
@@ -1328,7 +1433,8 @@
 /obj/machinery/camera/motion/directional/east,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kl" = (
 /obj/machinery/power/apc/auto_name/directional/east,
@@ -1338,13 +1444,15 @@
 /obj/item/bedsheet/brown,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "km" = (
 /obj/structure/cable,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kn" = (
 /obj/structure/chair/stool/bar/directional/east,
@@ -1352,13 +1460,15 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ko" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kq" = (
 /obj/machinery/camera/motion/directional/west,
@@ -1374,7 +1484,8 @@
 /obj/item/blueprints,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kw" = (
 /obj/machinery/suit_storage_unit/captain,
@@ -1382,7 +1493,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "kB" = (
 /obj/structure/dresser,
@@ -1395,7 +1506,8 @@
 /obj/structure/sign/warning/secure_area,
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kJ" = (
 /obj/docking_port/stationary{
@@ -1414,28 +1526,28 @@
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/wood,
 /area/station/medical/treatment_center{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kL" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/medical/treatment_center{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kM" = (
 /obj/structure/water_source/puddle,
 /obj/item/reagent_containers/cup/watering_can,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kN" = (
 /obj/effect/landmark/start/hangover,
 /turf/open/water/jungle,
-/area/lavaland/surface/outdoors/explored{
-	name = "Mountain Mine Passage";
-	has_gravity = 1
-	})
+/area/space/nearstation/planetary)
 "kR" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -1457,12 +1569,14 @@
 /obj/item/hatchet/wooden,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kW" = (
 /turf/closed/wall,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "kX" = (
 /obj/structure/table/reinforced/rglass,
@@ -1470,13 +1584,14 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "la" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ld" = (
 /obj/effect/landmark/start/assistant,
@@ -1492,7 +1607,8 @@
 /obj/structure/chair,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ln" = (
 /obj/structure/chair/comfy/black{
@@ -1502,7 +1618,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "lo" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/east,
@@ -1510,7 +1626,8 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ls" = (
 /obj/effect/light_emitter/fake_outdoors,
@@ -1523,7 +1640,8 @@
 /obj/structure/cable,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "lv" = (
 /obj/machinery/camera/autoname/directional/east,
@@ -1537,7 +1655,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "lA" = (
 /obj/effect/spawner/random/contraband/prison,
@@ -1545,19 +1663,22 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "lB" = (
 /obj/structure/closet/crate/silvercrate,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "lC" = (
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "lE" = (
 /obj/structure/fluff/clockwork/alloy_shards/small,
@@ -1570,13 +1691,15 @@
 /obj/machinery/netpod,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "lG" = (
 /obj/machinery/power/emitter,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "lI" = (
 /obj/structure/girder/bronze,
@@ -1594,7 +1717,8 @@
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "lO" = (
 /obj/effect/spawner/structure/window/bronze,
@@ -1603,21 +1727,24 @@
 /obj/structure/grille,
 /turf/closed/wall/mineral/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "lQ" = (
 /obj/structure/cable,
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "lU" = (
 /obj/item/stack/license_plates/empty/fifty,
 /obj/item/stack/license_plates/empty/fifty,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/work{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "lV" = (
 /obj/machinery/door/airlock/command{
@@ -1628,7 +1755,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/rd{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "lX" = (
 /obj/structure/rack,
@@ -1643,23 +1770,28 @@
 /obj/item/storage/lockbox/loyalty,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ma" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
-/area/station/maintenance/starboard/fore)
+/area/station/maintenance/starboard/fore{
+	default_gravity = 1
+	})
 "mb" = (
 /obj/structure/table,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "md" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "me" = (
 /obj/structure/table,
@@ -1670,7 +1802,8 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mf" = (
 /obj/machinery/door/airlock/command/glass{
@@ -1682,13 +1815,14 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "mg" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ml" = (
 /obj/machinery/door/airlock/abductor,
@@ -1700,14 +1834,16 @@
 "mm" = (
 /turf/closed/wall/mineral/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mp" = (
 /obj/structure/cable,
 /turf/open/floor/iron/solarpanel/airless,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "mq" = (
 /obj/effect/landmark/start/prisoner,
@@ -1715,28 +1851,33 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mt" = (
 /turf/closed/wall/mineral/wood,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mx" = (
 /turf/closed/wall/mineral/wood,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mz" = (
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mH" = (
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mI" = (
 /obj/effect/landmark/start/hangover,
@@ -1745,7 +1886,8 @@
 "mN" = (
 /turf/open/floor/carpet/royalblack,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mO" = (
 /obj/structure/table,
@@ -1761,19 +1903,22 @@
 	},
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mR" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mT" = (
 /obj/machinery/telecomms/processor/preset_four,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mX" = (
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
@@ -1784,7 +1929,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "mY" = (
 /obj/effect/landmark/start/botanist,
@@ -1809,14 +1955,16 @@
 /obj/item/healthanalyzer/simple/miner,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "nb" = (
 /obj/structure/cable,
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "nc" = (
 /obj/structure/cable,
@@ -1826,7 +1974,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ne" = (
 /obj/machinery/vending/sustenance,
@@ -1843,9 +1992,10 @@
 	has_gravity = 1
 	})
 "np" = (
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ns" = (
 /obj/docking_port/stationary{
@@ -1862,7 +2012,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "nv" = (
 /obj/effect/turf_decal/tile/bar{
@@ -1873,13 +2024,15 @@
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "nx" = (
 /obj/machinery/computer/order_console/bitrunning,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ny" = (
 /obj/item/autosurgeon/syndicate,
@@ -1894,21 +2047,24 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "nB" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "nD" = (
 /obj/structure/table/wood,
 /obj/machinery/microwave,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "nF" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -1921,7 +2077,8 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "nG" = (
 /obj/machinery/door/airlock/vault{
@@ -1934,7 +2091,8 @@
 /obj/effect/mapping_helpers/airlock/access/any/supply/vault,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "nI" = (
 /turf/closed/indestructible/rock,
@@ -1957,7 +2115,8 @@
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "nN" = (
 /obj/machinery/camera/motion/directional/north,
@@ -1976,7 +2135,8 @@
 /obj/effect/landmark/start/bitrunner,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "nS" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -1992,7 +2152,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "nZ" = (
 /obj/structure/cable,
@@ -2009,7 +2169,8 @@
 /obj/item/storage/bag/plants/portaseeder,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "od" = (
 /obj/machinery/camera/motion/directional/south,
@@ -2017,47 +2178,53 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "of" = (
 /obj/structure/table/wood,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "og" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "oh" = (
 /obj/structure/table,
 /obj/machinery/microwave,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "oi" = (
 /obj/structure/table,
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ok" = (
 /obj/effect/spawner/random/structure/closet_empty/crate,
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "oo" = (
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "oq" = (
 /obj/machinery/telecomms/processor/preset_three,
@@ -2068,7 +2235,8 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ov" = (
 /obj/structure/bed,
@@ -2077,7 +2245,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "ox" = (
 /obj/structure/rack,
@@ -2085,7 +2253,8 @@
 /obj/effect/spawner/random/armory/bulletproof_helmet,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "oz" = (
 /obj/structure/rack,
@@ -2095,7 +2264,8 @@
 /obj/item/storage/belt/utility,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "oH" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
@@ -2103,7 +2273,8 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "oI" = (
 /obj/structure/mineral_door/silver,
@@ -2116,21 +2287,24 @@
 /obj/structure/closet/secure_closet/detective,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "oP" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood,
 /area/station/engineering/lobby{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "oW" = (
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom/prison/directional/south,
 /turf/open/floor/wood,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "oZ" = (
 /obj/effect/turf_decal/delivery,
@@ -2144,21 +2318,24 @@
 	has_gravity = 1
 	})
 "pi" = (
-/obj/machinery/rnd/production/techfab/department/security,
+/obj/machinery/rnd/production/protolathe/department/security,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "pl" = (
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "po" = (
 /obj/structure/closet/radiation,
 /turf/open/floor/wood,
 /area/station/engineering/lobby{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "pq" = (
 /obj/structure/cable,
@@ -2168,7 +2345,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
 /turf/open/floor/wood,
 /area/station/medical/medbay/central{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "py" = (
 /obj/machinery/door/airlock/research{
@@ -2177,14 +2355,16 @@
 /obj/effect/mapping_helpers/airlock/access/all/science/robotics,
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "pA" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/e_gun,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "pB" = (
 /obj/structure/fluff/clockwork/blind_eye,
@@ -2196,14 +2376,16 @@
 "pC" = (
 /turf/closed/wall/mineral/wood,
 /area/station/engineering/lobby{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "pF" = (
 /obj/structure/cable,
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "pJ" = (
 /obj/structure/cable,
@@ -2211,7 +2393,7 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "pK" = (
 /obj/structure/railing{
@@ -2219,51 +2401,54 @@
 	},
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "pL" = (
 /obj/item/pipe_dispenser,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "pM" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/dirt/station,
-/area/lavaland/surface/outdoors/explored{
-	name = "Mountain Mine Passage";
-	has_gravity = 1
-	})
+/area/space/nearstation/planetary)
 "pQ" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "pY" = (
 /obj/machinery/biogenerator,
 /turf/open/floor/wood,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qb" = (
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qc" = (
 /turf/closed/wall/mineral/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qe" = (
 /obj/effect/spawner/random/contraband/prison,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qh" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -2290,27 +2475,31 @@
 /obj/structure/flora/tree/jungle/style_random,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qp" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/engineering/lobby{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qv" = (
 /obj/machinery/light/directional/east,
-/obj/machinery/rnd/production/techfab/department/medical,
+/obj/machinery/rnd/production/protolathe/department/medical,
 /turf/open/floor/wood,
 /area/station/medical/medbay/central{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qx" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/disablers,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qy" = (
 /obj/vehicle/sealed/mecha/ripley/paddy/preset,
@@ -2318,14 +2507,15 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qz" = (
 /obj/effect/landmark/start/chief_engineer,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/ce{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "qB" = (
 /obj/machinery/airalarm/directional/east,
@@ -2335,15 +2525,17 @@
 	},
 /obj/effect/mapping_helpers/airalarm/tlv_no_checks,
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qE" = (
 /obj/effect/landmark/start/lawyer,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qH" = (
 /turf/closed/indestructible/necropolis,
@@ -2362,7 +2554,8 @@
 /obj/machinery/vending/tool,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qQ" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
@@ -2370,7 +2563,8 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qU" = (
 /obj/machinery/camera/directional/east{
@@ -2381,21 +2575,24 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "qZ" = (
 /obj/structure/chair/stool/bar/directional/east,
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ra" = (
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "rc" = (
 /obj/structure/chair,
@@ -2403,13 +2600,15 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "re" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "rg" = (
 /obj/structure/bed,
@@ -2419,7 +2618,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/ce{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "rj" = (
 /obj/effect/turf_decal/caution/stand_clear,
@@ -2428,14 +2627,16 @@
 	},
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "rn" = (
 /obj/structure/table/wood,
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ru" = (
 /obj/effect/mob_spawn/corpse/human/abductor,
@@ -2469,13 +2670,15 @@
 	},
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "rH" = (
 /obj/machinery/computer/operating,
 /turf/open/floor/wood,
 /area/station/medical/treatment_center{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "rU" = (
 /obj/structure/table/reinforced/plasmarglass,
@@ -2493,7 +2696,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "rX" = (
 /mob/living/simple_animal/hostile/megafauna/clockwork_defender,
@@ -2513,7 +2717,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "sm" = (
 /obj/structure/railing,
@@ -2536,20 +2740,23 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "su" = (
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sv" = (
 /turf/open/floor/circuit/green{
 	luminosity = 2
 	},
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sz" = (
 /obj/structure/table/wood/fancy/orange,
@@ -2569,25 +2776,29 @@
 /obj/item/stack/spacecash/c1000,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sD" = (
 /turf/open/floor/plating,
 /area/station/engineering/supermatter{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sE" = (
 /obj/machinery/light/directional/south,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sG" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sH" = (
 /obj/structure/chair{
@@ -2596,7 +2807,8 @@
 /obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sK" = (
 /obj/structure/railing{
@@ -2611,14 +2823,16 @@
 /obj/item/reagent_containers/cup/bucket/wooden,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sP" = (
 /obj/effect/spawner/random/structure/closet_empty/crate,
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sU" = (
 /obj/machinery/power/apc/auto_name/directional/east,
@@ -2626,32 +2840,37 @@
 /obj/machinery/recharge_station,
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sV" = (
 /obj/item/banner/cargo/mundane,
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sW" = (
 /obj/machinery/computer/quantum_console,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sX" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "sZ" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ta" = (
 /obj/structure/rack,
@@ -2660,7 +2879,8 @@
 /obj/item/stack/sheet/mineral/wood/fifty,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "tb" = (
 /obj/structure/table/wood,
@@ -2681,14 +2901,16 @@
 /obj/item/clothing/glasses/meson,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "td" = (
 /obj/structure/window/fulltile,
 /obj/effect/light_emitter/fake_outdoors,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "tg" = (
 /obj/structure/table/wood,
@@ -2697,7 +2919,8 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "tp" = (
 /obj/structure/table/reinforced/plasmarglass,
@@ -2711,20 +2934,22 @@
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/circuit/red,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "tz" = (
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "tB" = (
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/captain{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "tC" = (
 /turf/open/misc/dirt/station,
@@ -2739,7 +2964,8 @@
 /obj/effect/landmark/start/cyborg,
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "tP" = (
 /obj/effect/spawner/structure/window/bronze,
@@ -2748,43 +2974,49 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/rd{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "tQ" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "tS" = (
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "tW" = (
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "tX" = (
 /obj/machinery/blackbox_recorder,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "tZ" = (
 /obj/effect/light_emitter/fake_outdoors,
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "uc" = (
 /obj/effect/spawner/random/structure/crate,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ui" = (
 /mob/living/basic/bear,
@@ -2794,13 +3026,15 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/engineering/lobby{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ur" = (
 /obj/machinery/suit_storage_unit/mining,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "us" = (
 /obj/item/gun/magic/midas_hand,
@@ -2813,20 +3047,23 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "uv" = (
 /obj/effect/landmark/secequipment,
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "uB" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "uC" = (
 /obj/effect/landmark/event_spawn,
@@ -2837,7 +3074,8 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "uF" = (
 /obj/effect/landmark/start/chaplain,
@@ -2849,7 +3087,8 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "uL" = (
 /obj/effect/landmark/event_spawn,
@@ -2857,7 +3096,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "uN" = (
 /obj/structure/fluff/clockwork/alloy_shards,
@@ -2887,9 +3127,10 @@
 "uR" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/machinery/light/directional/north,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "uV" = (
 /obj/machinery/vending/wardrobe/chef_wardrobe,
@@ -2897,20 +3138,23 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "uW" = (
 /obj/machinery/light/directional/east,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vi" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vm" = (
 /obj/effect/landmark/start/chief_medical_officer,
@@ -2918,12 +3162,13 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/cmo{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "vo" = (
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vu" = (
 /obj/structure/table,
@@ -2937,18 +3182,21 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vw" = (
 /obj/structure/closet/secure_closet/hos,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vx" = (
 /turf/closed/wall/mineral/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vz" = (
 /obj/structure/table/bronze,
@@ -2966,7 +3214,8 @@
 /obj/machinery/ntnet_relay,
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vF" = (
 /obj/machinery/door/airlock/vault{
@@ -2976,7 +3225,8 @@
 /obj/effect/mapping_helpers/airlock/access/any/supply/vault,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vM" = (
 /obj/structure/rack,
@@ -2985,13 +3235,15 @@
 /obj/item/storage/box/donkpockets/donkpocketspicy,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vO" = (
 /obj/item/radio/intercom/prison/directional/north,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vW" = (
 /obj/structure/table,
@@ -3002,18 +3254,21 @@
 /obj/item/storage/box/trackimp,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vY" = (
 /turf/closed/wall/mineral/wood,
 /area/station/medical/medbay/central{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "vZ" = (
 /obj/machinery/telecomms/bus/preset_one,
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wa" = (
 /obj/machinery/light/directional/east,
@@ -3022,7 +3277,8 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wb" = (
 /obj/structure/railing{
@@ -3040,20 +3296,23 @@
 /obj/item/stack/sheet/rglass/fifty,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wh" = (
 /obj/machinery/camera/motion/directional/south,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wl" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/vending/security,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wn" = (
 /obj/structure/cable,
@@ -3062,7 +3321,8 @@
 /obj/item/surgery_tray/full,
 /turf/open/floor/wood,
 /area/station/medical/treatment_center{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wo" = (
 /obj/structure/rack,
@@ -3070,12 +3330,15 @@
 /obj/item/gun/energy/ionrifle,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wp" = (
 /obj/effect/spawner/random/structure/crate,
 /turf/open/floor/wood,
-/area/station/maintenance/starboard/fore)
+/area/station/maintenance/starboard/fore{
+	default_gravity = 1
+	})
 "wr" = (
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/misc/grass/jungle,
@@ -3085,7 +3348,8 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wu" = (
 /obj/structure/cable,
@@ -3093,7 +3357,8 @@
 /obj/effect/mapping_helpers/airlock/access/any/supply/bit_den,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wB" = (
 /obj/structure/lattice/catwalk,
@@ -3101,14 +3366,16 @@
 /turf/open/misc/beach/sand,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "wH" = (
 /obj/effect/spawner/random/structure/closet_empty/crate,
 /obj/machinery/camera/motion/directional/east,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wI" = (
 /obj/effect/turf_decal/caution/stand_clear,
@@ -3123,7 +3390,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "wN" = (
 /obj/machinery/status_display/door_timer{
@@ -3133,7 +3400,8 @@
 	},
 /turf/closed/wall/mineral/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wP" = (
 /obj/structure/table/wood,
@@ -3148,33 +3416,38 @@
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wT" = (
 /obj/effect/landmark/start/quartermaster,
 /turf/open/floor/carpet/royalblack,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wU" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/structure/cable,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wW" = (
 /obj/effect/spawner/random/contraband/prison,
 /obj/machinery/light/directional/north,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "wY" = (
 /obj/structure/bed,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "xb" = (
 /obj/machinery/computer/rdconsole{
@@ -3183,7 +3456,7 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "xe" = (
 /obj/structure/barricade/wooden,
@@ -3210,7 +3483,8 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "xp" = (
 /obj/docking_port/stationary/mining_home{
@@ -3235,14 +3509,16 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "xz" = (
 /obj/structure/chair,
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "xI" = (
 /obj/machinery/camera/motion/directional/south,
@@ -3253,7 +3529,8 @@
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "xM" = (
 /obj/structure/table/reinforced/rglass,
@@ -3264,20 +3541,22 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "xO" = (
 /obj/structure/bed/dogbed/mcgriff,
 /mob/living/basic/pet/dog/pug/mcgriff,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "xQ" = (
 /obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "xS" = (
 /obj/machinery/door/airlock/medical/glass{
@@ -3286,14 +3565,16 @@
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
 /turf/open/floor/wood,
 /area/station/medical/medbay/central{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "xT" = (
 /obj/structure/cable,
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "xV" = (
 /obj/structure/cable,
@@ -3301,12 +3582,13 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "xZ" = (
 /turf/closed/wall/mineral/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yb" = (
 /obj/machinery/computer/prisoner/management{
@@ -3314,13 +3596,15 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yd" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yk" = (
 /obj/machinery/mineral/ore_redemption{
@@ -3330,21 +3614,24 @@
 	},
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yl" = (
 /obj/structure/cable,
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ym" = (
 /obj/machinery/camera/directional/east,
 /obj/effect/light_emitter/fake_outdoors,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yn" = (
 /obj/machinery/navbeacon{
@@ -3359,13 +3646,15 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yv" = (
 /turf/closed/wall/mineral/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yC" = (
 /obj/structure/cable,
@@ -3374,12 +3663,13 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "yF" = (
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yI" = (
 /obj/structure/table/reinforced,
@@ -3389,7 +3679,8 @@
 /obj/machinery/wall_healer/directional/south,
 /turf/open/floor/wood,
 /area/station/medical/medbay/central{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yO" = (
 /obj/effect/landmark/start/chemist,
@@ -3411,7 +3702,8 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yY" = (
 /obj/structure/window/reinforced/spawner/directional/east,
@@ -3419,13 +3711,15 @@
 /obj/structure/cable,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "yZ" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "zf" = (
 /obj/machinery/computer/security{
@@ -3435,24 +3729,28 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "zg" = (
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "zh" = (
 /obj/effect/landmark/start/prisoner,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "zj" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "zm" = (
 /obj/machinery/light/directional/north,
@@ -3460,14 +3758,14 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "zo" = (
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "zq" = (
 /obj/effect/spawner/structure/window/bronze,
@@ -3476,7 +3774,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "zw" = (
 /obj/machinery/computer/cargo{
@@ -3485,7 +3783,8 @@
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "zy" = (
 /obj/effect/spawner/structure/window/bronze,
@@ -3494,7 +3793,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "zA" = (
 /obj/effect/landmark/start/scientist,
@@ -3505,7 +3804,8 @@
 /turf/open/misc/beach/sand,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "zH" = (
 /turf/open/floor/vault/sandstone,
@@ -3516,7 +3816,8 @@
 "zK" = (
 /turf/closed/wall/r_wall,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "zL" = (
 /obj/structure/chair{
@@ -3525,21 +3826,24 @@
 /obj/effect/landmark/start/security_officer,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "zN" = (
 /obj/machinery/camera/motion/directional/west,
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "zR" = (
 /obj/effect/landmark/start/paramedic,
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "zT" = (
 /obj/docking_port/stationary{
@@ -3560,33 +3864,33 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Ab" = (
 /obj/effect/spawner/random/maintenance,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ai" = (
 /obj/machinery/rnd/production/protolathe/department/engineering,
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ap" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/dirt/station,
-/area/lavaland/surface/outdoors/explored{
-	name = "Mountain Mine Passage";
-	has_gravity = 1
-	})
+/area/space/nearstation/planetary)
 "Av" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/medical/medbay/central{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Aw" = (
 /obj/structure/table,
@@ -3594,13 +3898,15 @@
 /obj/item/storage/lockbox/loyalty,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ax" = (
 /obj/machinery/telecomms/bus/preset_two,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "AB" = (
 /mob/living/basic/skeleton/templar,
@@ -3613,14 +3919,16 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "AE" = (
 /obj/machinery/telecomms/broadcaster/preset_right,
 /obj/machinery/light/directional/east,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "AG" = (
 /obj/machinery/camera/motion/directional/north,
@@ -3639,7 +3947,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "AP" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -3655,7 +3963,8 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "AU" = (
 /obj/machinery/light/directional/south,
@@ -3663,13 +3972,14 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Bc" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Bh" = (
 /obj/structure/closet/secure_closet/freezer/kitchen/all_access,
@@ -3685,19 +3995,22 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Bk" = (
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/wood,
 /area/station/engineering/lobby{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Bn" = (
 /obj/structure/cable,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Bo" = (
 /obj/item/bedsheet/syndie,
@@ -3713,7 +4026,8 @@
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Bt" = (
 /obj/machinery/abductor/gland_dispenser,
@@ -3725,13 +4039,15 @@
 "Bv" = (
 /turf/open/floor/wood,
 /area/station/engineering/lobby{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "BD" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "BE" = (
 /obj/structure/chair/comfy/black{
@@ -3741,7 +4057,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "BF" = (
 /obj/structure/cable,
@@ -3751,7 +4067,8 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "BH" = (
 /obj/item/fish/goldfish,
@@ -3765,7 +4082,8 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "BJ" = (
 /obj/structure/table/wood,
@@ -3776,7 +4094,8 @@
 /obj/machinery/rnd/destructive_analyzer,
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "BS" = (
 /obj/structure/table,
@@ -3789,14 +4108,16 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "BT" = (
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "BU" = (
 /obj/effect/spawner/structure/window/bronze,
@@ -3805,7 +4126,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/ce{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "BX" = (
 /obj/machinery/camera/autoname/directional/west,
@@ -3814,7 +4135,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "BY" = (
 /obj/effect/light_emitter/fake_outdoors,
@@ -3828,7 +4150,8 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Cf" = (
 /obj/machinery/recharger{
@@ -3840,13 +4163,15 @@
 /obj/item/pinpointer/nuke,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Cg" = (
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Cj" = (
 /obj/effect/decal/remains/human,
@@ -3860,13 +4185,15 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Cn" = (
 /obj/machinery/byteforge,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Cr" = (
 /obj/effect/landmark/start/hangover,
@@ -3880,20 +4207,23 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Cx" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "CA" = (
 /obj/machinery/telecomms/server/presets/science,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "CC" = (
 /obj/machinery/camera/motion/directional/north,
@@ -3908,25 +4238,28 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "CN" = (
 /obj/structure/closet/secure_closet/security/sec,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "CO" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "CQ" = (
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "CV" = (
 /obj/machinery/computer/camera_advanced,
@@ -3941,14 +4274,16 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Dd" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/laser_gun,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "De" = (
 /obj/structure/railing{
@@ -3959,7 +4294,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Dg" = (
 /obj/effect/light_emitter/fake_outdoors,
@@ -3970,7 +4306,8 @@
 /obj/structure/cable,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Di" = (
 /obj/structure/railing,
@@ -3986,7 +4323,8 @@
 	},
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Dm" = (
 /mob/living/carbon/human/species/monkey,
@@ -4001,13 +4339,15 @@
 /obj/item/multitool,
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Dr" = (
 /obj/machinery/griddle,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Dw" = (
 /obj/machinery/mecha_part_fabricator{
@@ -4015,7 +4355,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Dx" = (
 /obj/effect/spawner/random/maintenance,
@@ -4023,27 +4364,31 @@
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Dy" = (
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Dz" = (
 /obj/effect/landmark/event_spawn,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "DD" = (
 /obj/machinery/light/directional/east,
 /obj/machinery/stasis,
 /turf/open/floor/wood,
 /area/station/medical/treatment_center{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "DH" = (
 /obj/machinery/power/solar_control{
@@ -4054,7 +4399,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/maintenance/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "DK" = (
 /obj/structure/railing{
@@ -4062,19 +4408,22 @@
 	},
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "DM" = (
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/work{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "DP" = (
 /obj/structure/cable,
 /obj/machinery/autolathe,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "DR" = (
 /obj/effect/turf_decal/delivery,
@@ -4082,7 +4431,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "DT" = (
 /turf/closed/mineral/random/jungle,
@@ -4103,18 +4453,21 @@
 /obj/machinery/gulag_teleporter,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ec" = (
 /obj/machinery/telecomms/bus/preset_four,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ed" = (
 /turf/closed/wall/mineral/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ee" = (
 /obj/structure/spawner/lavaland/goliath,
@@ -4128,14 +4481,14 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Ek" = (
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/captain/private{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Es" = (
 /obj/machinery/camera/autoname/directional/east,
@@ -4145,7 +4498,8 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Et" = (
 /obj/structure/cable,
@@ -4157,7 +4511,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Ew" = (
 /turf/closed/wall/mineral/bronze,
@@ -4169,7 +4523,8 @@
 /obj/effect/landmark/start/bitrunner,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ez" = (
 /obj/structure/flora/tree/palm/style_random,
@@ -4179,17 +4534,21 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/medical/medbay/central{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "EM" = (
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
-/area/station/maintenance/starboard/fore)
+/area/station/maintenance/starboard/fore{
+	default_gravity = 1
+	})
 "EN" = (
 /turf/closed/wall/mineral/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ES" = (
 /obj/effect/spawner/random/structure/crate,
@@ -4198,7 +4557,8 @@
 "ET" = (
 /turf/closed/wall/mineral/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "EU" = (
 /obj/machinery/light/directional/north,
@@ -4225,7 +4585,8 @@
 	},
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "EV" = (
 /obj/structure/flora/tree/jungle/style_random,
@@ -4235,7 +4596,8 @@
 /obj/machinery/suit_storage_unit/hos,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "EX" = (
 /obj/structure/railing{
@@ -4244,7 +4606,8 @@
 /obj/effect/spawner/random/entertainment/arcade,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Fc" = (
 /obj/machinery/camera/autoname/motion/directional/north,
@@ -4269,7 +4632,8 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Fi" = (
 /obj/effect/spawner/random/maintenance,
@@ -4278,7 +4642,8 @@
 "Fn" = (
 /turf/open/misc/grass/jungle,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Fz" = (
 /obj/machinery/pdapainter/security,
@@ -4286,7 +4651,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "FB" = (
 /obj/effect/spawner/random/maintenance,
@@ -4294,19 +4660,23 @@
 /obj/effect/spawner/random/maintenance,
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
-/area/station/maintenance/starboard/fore)
+/area/station/maintenance/starboard/fore{
+	default_gravity = 1
+	})
 "FC" = (
 /obj/structure/closet/secure_closet/security/sec,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "FE" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "FH" = (
 /obj/effect/spawner/structure/window/bronze,
@@ -4315,7 +4685,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/cmo{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "FI" = (
 /obj/structure/cable,
@@ -4323,7 +4693,7 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "FK" = (
 /obj/effect/spawner/random/structure/crate,
@@ -4343,19 +4713,21 @@
 /obj/machinery/nuclearbomb/selfdestruct,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Gb" = (
 /turf/closed/wall/mineral/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ge" = (
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Gf" = (
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
@@ -4365,7 +4737,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Gg" = (
 /obj/machinery/camera/motion/directional/north,
@@ -4376,7 +4749,8 @@
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Gi" = (
 /obj/machinery/camera/motion/directional/west,
@@ -4390,7 +4764,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Gn" = (
 /turf/closed/indestructible/necropolis,
@@ -4402,10 +4777,7 @@
 /obj/effect/spawner/random/structure/crate,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/dirt/station,
-/area/lavaland/surface/outdoors/explored{
-	name = "Mountain Mine Passage";
-	has_gravity = 1
-	})
+/area/space/nearstation/planetary)
 "Gv" = (
 /obj/item/storage/fancy/cigarettes/cigpack_robustgold,
 /turf/open/floor/mineral/diamond,
@@ -4417,7 +4789,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Gx" = (
 /obj/structure/cable,
@@ -4425,7 +4798,8 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "GA" = (
 /obj/structure/cable,
@@ -4433,7 +4807,8 @@
 /turf/open/floor/iron/solarpanel/airless,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "GB" = (
 /obj/machinery/chem_dispenser/abductor,
@@ -4447,19 +4822,22 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "GF" = (
 /obj/machinery/light/small/directional/west,
 /obj/effect/landmark/start/cyborg,
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "GG" = (
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "GO" = (
 /obj/machinery/camera/motion/directional/north,
@@ -4488,7 +4866,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "GU" = (
 /obj/structure/cable,
@@ -4496,7 +4875,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/rd{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "GV" = (
 /obj/effect/mapping_helpers/airlock/access/all/science/general,
@@ -4505,26 +4884,29 @@
 	},
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "GY" = (
 /obj/machinery/suit_storage_unit/ce,
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Hb" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/wood,
 /area/station/engineering/lobby{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Hc" = (
 /obj/machinery/telecomms/server/presets/medical,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Hd" = (
 /obj/structure/rack,
@@ -4539,7 +4921,8 @@
 /obj/machinery/camera/motion/directional/west,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "He" = (
 /obj/structure/table/wood,
@@ -4548,7 +4931,8 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Hg" = (
 /obj/structure/table/reinforced/titaniumglass,
@@ -4561,13 +4945,15 @@
 /obj/machinery/telecomms/server/presets/command,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Hs" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/wood,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Hy" = (
 /obj/effect/landmark/start/hangover,
@@ -4579,20 +4965,23 @@
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "HC" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/east,
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "HE" = (
 /obj/machinery/deepfryer,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "HF" = (
 /obj/item/wheelchair/gold,
@@ -4619,7 +5008,8 @@
 /obj/item/stack/spacecash/c1000,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "HO" = (
 /obj/structure/table/wood,
@@ -4627,7 +5017,8 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "HV" = (
 /turf/closed/wall/mineral/wood,
@@ -4640,7 +5031,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ib" = (
 /turf/closed/mineral/random/jungle,
@@ -4652,25 +5044,29 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ie" = (
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "If" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ih" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ii" = (
 /obj/structure/table/wood/fancy/orange,
@@ -4690,14 +5086,16 @@
 /obj/item/stack/spacecash/c1000,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Il" = (
 /obj/machinery/vending/cola/red,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "It" = (
 /obj/effect/spawner/random/maintenance,
@@ -4707,7 +5105,8 @@
 /obj/effect/landmark/start/prisoner,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Iz" = (
 /obj/structure/bonfire/prelit,
@@ -4731,12 +5130,14 @@
 /obj/effect/spawner/random/armory/dragnet,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "IG" = (
 /turf/closed/wall/mineral/wood,
 /area/station/engineering/storage_shared{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "IJ" = (
 /obj/structure/cable,
@@ -4755,14 +5156,16 @@
 /obj/machinery/vending/medical,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "IM" = (
 /obj/structure/lattice/catwalk,
 /turf/open/misc/grass/jungle,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "IO" = (
 /obj/structure/rack,
@@ -4777,7 +5180,8 @@
 /obj/item/stack/sheet/mineral/plastitanium/fifty,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "IP" = (
 /turf/closed/indestructible/necropolis,
@@ -4788,13 +5192,15 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "IW" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ja" = (
 /obj/effect/decal/cleanable/blood,
@@ -4806,14 +5212,15 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Jc" = (
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Jd" = (
 /obj/structure/mineral_door/silver,
@@ -4829,25 +5236,27 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Jj" = (
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Jm" = (
-/obj/effect/spawner/random/structure/closet_maintenance,
-/obj/effect/landmark/start/hangover/closet,
+/obj/machinery/light/directional/west,
 /turf/open/floor/wood,
-/area/station/maintenance/aft/greater{
-	has_gravity = 1
+/area/station/cargo/warehouse{
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Jp" = (
 /turf/open/floor/carpet/green,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Jr" = (
 /obj/structure/cable,
@@ -4855,13 +5264,15 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood,
 /area/station/engineering/lobby{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Jt" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Jv" = (
 /obj/structure/rack,
@@ -4870,7 +5281,8 @@
 /obj/effect/spawner/random/armory/barrier_grenades,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Jw" = (
 /obj/effect/landmark/start/research_director,
@@ -4879,7 +5291,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/rd{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Jx" = (
 /obj/effect/mapping_helpers/airlock/access/all/security/hos,
@@ -4890,7 +5302,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Jy" = (
 /obj/structure/showcase/cyborg/old{
@@ -4898,7 +5311,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "JA" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -4907,7 +5321,8 @@
 /obj/structure/cable,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "JD" = (
 /obj/structure/rack,
@@ -4919,19 +5334,22 @@
 /obj/item/stack/sheet/plastic/fifty,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "JH" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "JS" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "JU" = (
 /obj/structure/cable,
@@ -4941,20 +5359,23 @@
 /obj/effect/mapping_helpers/airlock/access/all/science/robotics,
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "JV" = (
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "Ki" = (
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Kl" = (
 /obj/machinery/suit_storage_unit/hos,
@@ -4962,35 +5383,39 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Ko" = (
 /obj/machinery/rnd/server,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Kp" = (
 /obj/structure/closet/crate/freezer/blood,
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/wood,
 /area/station/medical/medbay/central{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Kq" = (
 /obj/machinery/vending/dinnerware,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Kt" = (
 /obj/structure/cable,
 /obj/machinery/power/port_gen/pacman/pre_loaded,
 /obj/item/stack/sheet/mineral/plasma/thirty,
 /obj/item/stack/sheet/mineral/plasma/thirty,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Kv" = (
 /obj/machinery/computer/crew{
@@ -4999,7 +5424,7 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Kw" = (
 /obj/structure/cable,
@@ -5007,14 +5432,16 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "KA" = (
 /obj/machinery/vending/boozeomat,
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "KB" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
@@ -5025,7 +5452,8 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "KH" = (
 /obj/machinery/power/apc/auto_name/directional/west,
@@ -5036,13 +5464,14 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "KK" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "KP" = (
 /obj/structure/table,
@@ -5053,7 +5482,8 @@
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "KY" = (
 /obj/structure/cable,
@@ -5075,20 +5505,23 @@
 	},
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Lj" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Lm" = (
 /obj/effect/landmark/start/cyborg,
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Lt" = (
 /turf/open/floor/plating,
@@ -5101,13 +5534,15 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Lz" = (
 /obj/machinery/air_sensor/engine_chamber,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "LA" = (
 /obj/machinery/microwave,
@@ -5121,7 +5556,8 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "LM" = (
 /obj/effect/landmark/start/hangover,
@@ -5156,7 +5592,8 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Mv" = (
 /obj/structure/rack,
@@ -5170,7 +5607,8 @@
 /obj/item/gun/grenadelauncher,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Mw" = (
 /obj/effect/spawner/random/structure/crate,
@@ -5181,9 +5619,10 @@
 	})
 "Mz" = (
 /obj/effect/landmark/start/atmospheric_technician,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "MA" = (
 /obj/effect/decal/remains/human,
@@ -5206,7 +5645,8 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "MI" = (
 /obj/structure/cable,
@@ -5214,7 +5654,8 @@
 /obj/machinery/door/airlock/engineering,
 /turf/open/floor/wood,
 /area/station/engineering/lobby{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ML" = (
 /obj/structure/cable,
@@ -5222,7 +5663,7 @@
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/captain{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "MO" = (
 /obj/effect/landmark/start/geneticist,
@@ -5234,7 +5675,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Na" = (
 /turf/open/floor/bronze,
@@ -5248,7 +5690,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/ce{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Nc" = (
 /obj/item/stack/sheet/mineral/gold,
@@ -5270,7 +5712,8 @@
 /obj/structure/cable,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Nh" = (
 /obj/effect/landmark/start/hangover,
@@ -5282,7 +5725,8 @@
 /obj/machinery/telecomms/bus/preset_three,
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Nr" = (
 /obj/structure/rack,
@@ -5290,20 +5734,23 @@
 /obj/item/clothing/suit/hooded/ablative,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Nu" = (
 /obj/structure/cable,
 /obj/structure/table/reinforced,
 /turf/open/floor/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Nz" = (
 /obj/machinery/plate_press,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/work{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "NB" = (
 /obj/effect/landmark/start/coroner,
@@ -5315,14 +5762,14 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "NE" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/cmo{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "NF" = (
 /obj/effect/spawner/structure/window/bronze,
@@ -5331,13 +5778,14 @@
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "NG" = (
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "NI" = (
 /obj/machinery/computer/records/security{
@@ -5345,7 +5793,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "NM" = (
 /obj/structure/cable,
@@ -5353,7 +5802,7 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "NR" = (
 /obj/effect/landmark/start/cook,
@@ -5364,29 +5813,34 @@
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "NU" = (
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "NV" = (
 /obj/machinery/rnd/server/master,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "NW" = (
 /obj/effect/landmark/start/head_of_security,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "NY" = (
 /turf/closed/wall/mineral/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "NZ" = (
 /turf/closed/indestructible/riveted/boss,
@@ -5398,26 +5852,30 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Og" = (
 /obj/machinery/power/smes/full,
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Oj" = (
 /obj/effect/spawner/random/structure/crate,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ol" = (
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Om" = (
 /obj/structure/closet/secure_closet/brig{
@@ -5426,7 +5884,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "On" = (
 /obj/effect/landmark/start/hangover,
@@ -5434,7 +5893,8 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Oo" = (
 /turf/open/misc/dirt/station,
@@ -5447,7 +5907,8 @@
 /obj/effect/light_emitter/fake_outdoors,
 /turf/closed/wall,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Or" = (
 /obj/machinery/camera/motion/directional/east,
@@ -5457,7 +5918,8 @@
 /obj/machinery/flatpacker,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ou" = (
 /obj/structure/table/abductor,
@@ -5475,7 +5937,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Oz" = (
 /mob/living/basic/pet/dog/corgi/ian,
@@ -5484,7 +5946,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "OG" = (
 /obj/structure/closet/abductor,
@@ -5498,19 +5960,22 @@
 /obj/item/bedsheet/red,
 /turf/open/floor/wood,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ON" = (
-/obj/machinery/rnd/production/techfab/department/cargo,
+/obj/machinery/rnd/production/protolathe/department/cargo,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "OP" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "OQ" = (
 /obj/structure/table/wood,
@@ -5518,18 +5983,21 @@
 /obj/machinery/camera/motion/directional/south,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "OW" = (
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "OY" = (
 /obj/structure/flatpack_cart,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "OZ" = (
 /obj/machinery/door/airlock/hatch,
@@ -5544,7 +6012,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Pj" = (
 /obj/structure/rack,
@@ -5558,20 +6026,23 @@
 	},
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Pk" = (
 /obj/effect/spawner/random/maintenance,
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Po" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ps" = (
 /obj/structure/cable,
@@ -5579,32 +6050,35 @@
 /obj/machinery/computer/rdconsole,
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Pu" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Pv" = (
 /turf/closed/wall/mineral/wood,
 /area/station/science/robotics/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Py" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Pz" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "PA" = (
 /turf/open/floor/mineral/titanium,
@@ -5621,31 +6095,34 @@
 /obj/effect/spawner/random/contraband/armory,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "PE" = (
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/rd{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "PJ" = (
 /turf/closed/wall/r_wall,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "PK" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "PM" = (
 /obj/machinery/telecomms/receiver/preset_left,
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "PN" = (
 /obj/structure/rack,
@@ -5667,7 +6144,8 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "PP" = (
 /obj/structure/table/wood,
@@ -5679,14 +6157,16 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "PQ" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/shotgun,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "PU" = (
 /obj/machinery/camera/autoname/directional/east,
@@ -5695,7 +6175,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "PY" = (
 /turf/closed/indestructible/rock,
@@ -5711,19 +6192,21 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Qk" = (
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/ce{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Qn" = (
 /obj/effect/landmark/blobstart,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Qv" = (
 /obj/machinery/camera/motion/directional/west,
@@ -5741,7 +6224,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "QH" = (
 /obj/effect/landmark/start/hangover,
@@ -5749,14 +6232,16 @@
 /obj/structure/cable,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "QI" = (
 /obj/structure/table/wood/fancy/orange,
 /obj/item/food/lizard_surf_n_turf,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "QL" = (
 /obj/structure/table/wood,
@@ -5764,7 +6249,8 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "QP" = (
 /turf/closed/mineral/random/jungle,
@@ -5776,14 +6262,16 @@
 /obj/machinery/telecomms/processor/preset_two,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "QW" = (
 /obj/structure/chair/stool/bar/directional/west,
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Rc" = (
 /obj/item/shield/roman,
@@ -5807,7 +6295,8 @@
 /obj/effect/mapping_helpers/airlock/access/any/supply/vault,
 /turf/open/space/basic,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Rs" = (
 /obj/machinery/status_display/door_timer{
@@ -5817,7 +6306,8 @@
 	},
 /turf/closed/wall/mineral/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ru" = (
 /obj/structure/cable,
@@ -5836,7 +6326,8 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "RD" = (
 /obj/machinery/computer/communications{
@@ -5845,7 +6336,7 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "RE" = (
 /obj/structure/flora/rock,
@@ -5856,7 +6347,9 @@
 	})
 "RH" = (
 /turf/open/floor/wood,
-/area/station/maintenance/starboard/fore)
+/area/station/maintenance/starboard/fore{
+	default_gravity = 1
+	})
 "RI" = (
 /obj/structure/fluff/clockwork/clockgolem_remains,
 /turf/open/floor/bronze,
@@ -5869,7 +6362,8 @@
 /obj/machinery/door/airlock/security/glass,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "RP" = (
 /obj/structure/table/abductor,
@@ -5891,7 +6385,8 @@
 /obj/structure/grille,
 /turf/closed/wall/mineral/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "RV" = (
 /obj/machinery/door/window/brigdoor/security/cell/left/directional/south{
@@ -5902,24 +6397,23 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Sb" = (
 /obj/effect/spawner/random/structure/crate,
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/dirt/station,
-/area/lavaland/surface/outdoors/explored{
-	name = "Mountain Mine Passage";
-	has_gravity = 1
-	})
+/area/space/nearstation/planetary)
 "Sd" = (
 /obj/structure/table/wood,
 /obj/item/fishing_rod,
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Sh" = (
 /obj/effect/landmark/start/clown,
@@ -5936,7 +6430,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Sp" = (
 /obj/machinery/rnd/production/protolathe/department/science,
@@ -5944,20 +6439,23 @@
 /obj/item/stack/sheet/glass/fifty,
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Sx" = (
 /obj/machinery/vending/hydronutrients,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Sy" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/depsec/engineering,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "SB" = (
 /turf/closed/wall,
@@ -5968,7 +6466,8 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "SI" = (
 /obj/structure/closet/secure_closet/research_director,
@@ -5976,14 +6475,15 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/rd{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "SN" = (
 /obj/machinery/light/directional/north,
 /obj/structure/closet/secure_closet/warden,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "SO" = (
 /obj/effect/landmark/start/bartender,
@@ -5993,7 +6493,8 @@
 /obj/effect/landmark/start/security_officer,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ST" = (
 /obj/effect/landmark/start/hangover,
@@ -6024,20 +6525,22 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/tcoms,
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Tc" = (
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/captain/private{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Td" = (
 /obj/machinery/restaurant_portal/restaurant,
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Te" = (
 /obj/machinery/camera/motion/directional/east,
@@ -6053,13 +6556,15 @@
 "Tg" = (
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Tj" = (
 /obj/effect/spawner/random/contraband/prison,
 /turf/open/floor/wood,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ts" = (
 /obj/structure/table/reinforced,
@@ -6070,7 +6575,8 @@
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Tu" = (
 /turf/closed/wall/mineral/abductor,
@@ -6086,7 +6592,7 @@
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/cmo{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "TD" = (
 /obj/structure/table/abductor,
@@ -6105,7 +6611,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "TI" = (
 /obj/structure/lattice/catwalk,
@@ -6114,13 +6620,15 @@
 /turf/open/misc/grass/jungle,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "TJ" = (
 /obj/effect/landmark/start/detective,
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "TL" = (
 /obj/structure/rack,
@@ -6129,20 +6637,23 @@
 /obj/item/storage/box/donkpockets,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "TN" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "TO" = (
 /obj/machinery/door/airlock/wood/glass,
 /obj/effect/mapping_helpers/airlock/access/any/supply/mining,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "TS" = (
 /obj/item/kirbyplants/random,
@@ -6152,20 +6663,22 @@
 /obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "TV" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "TW" = (
 /obj/structure/closet/crate/trashcart/filled,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "TX" = (
 /obj/structure/table,
@@ -6177,7 +6690,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "TZ" = (
 /obj/structure/table/wood,
@@ -6187,14 +6701,16 @@
 	},
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ub" = (
 /obj/machinery/camera/autoname/directional/west,
 /obj/structure/closet/secure_closet/security/sec,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ue" = (
 /obj/structure/table/wood,
@@ -6205,30 +6721,35 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Uf" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ui" = (
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Un" = (
 /obj/structure/closet/secure_closet/miner,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Uq" = (
 /obj/machinery/power/smes/engineering,
 /turf/open/floor/wood,
 /area/station/engineering/main{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ur" = (
 /obj/structure/table/wood,
@@ -6236,26 +6757,29 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Uu" = (
 /obj/structure/bed,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/brig{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Uv" = (
 /turf/closed/wall/mineral/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Uw" = (
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Uy" = (
 /obj/effect/landmark/start/hangover,
@@ -6265,23 +6789,28 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "UA" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "UH" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood,
-/area/station/maintenance/starboard/fore)
+/area/station/maintenance/starboard/fore{
+	default_gravity = 1
+	})
 "UI" = (
 /obj/machinery/telecomms/server/presets/engineering,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "UL" = (
 /obj/machinery/light/directional/west,
@@ -6290,7 +6819,7 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "UM" = (
 /obj/effect/spawner/random/structure/chair_maintenance,
@@ -6302,18 +6831,22 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "UR" = (
 /turf/open/floor/wood,
 /area/station/medical/treatment_center{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "US" = (
 /obj/effect/landmark/generic_maintenance_landmark,
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
-/area/station/maintenance/starboard/fore)
+/area/station/maintenance/starboard/fore{
+	default_gravity = 1
+	})
 "UV" = (
 /obj/structure/cable,
 /obj/machinery/navbeacon{
@@ -6328,13 +6861,15 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Va" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Vc" = (
 /obj/effect/mob_spawn/corpse/human/assistant,
@@ -6346,20 +6881,23 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Vg" = (
 /obj/machinery/telecomms/server/presets/service,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Vj" = (
 /obj/structure/cable,
 /obj/effect/light_emitter/fake_outdoors,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Vk" = (
 /obj/structure/table,
@@ -6369,7 +6907,8 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Vm" = (
 /obj/machinery/telecomms/processor/preset_one,
@@ -6380,55 +6919,63 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Vq" = (
 /obj/machinery/vending/boozeomat/syndicate,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Vu" = (
 /turf/open/floor/carpet/royalblack,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "VF" = (
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "VG" = (
 /obj/machinery/camera/autoname/motion/directional/west,
 /obj/effect/landmark/blobstart,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "VJ" = (
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "VK" = (
 /obj/machinery/telecomms/receiver/preset_right,
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "VO" = (
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/rd{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "VP" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/computer/order_console/mining,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "VT" = (
 /obj/effect/mapping_helpers/airlock/access/all/security/armory,
@@ -6438,7 +6985,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/ai_monitored/security/armory{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "VU" = (
 /obj/structure/table/wood,
@@ -6447,7 +6995,8 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "VV" = (
 /obj/machinery/camera/motion/directional/east,
@@ -6455,20 +7004,23 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "VY" = (
 /obj/structure/cable,
 /mob/living/simple_animal/bot/secbot/pingsky,
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "VZ" = (
 /obj/machinery/telecomms/message_server/preset,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Wa" = (
 /obj/structure/table/reinforced/titaniumglass,
@@ -6482,7 +7034,8 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "We" = (
 /obj/machinery/light/small/directional/south,
@@ -6491,20 +7044,23 @@
 	},
 /turf/open/floor/wood,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Wi" = (
 /obj/effect/spawner/structure/window/bronze,
 /turf/open/floor/wood,
 /area/station/cargo/bitrunning/den{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Wn" = (
 /obj/machinery/camera/motion/directional/east,
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Wo" = (
 /turf/open/floor/catwalk_floor,
@@ -6515,7 +7071,7 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Wx" = (
 /obj/item/coin/gold,
@@ -6528,20 +7084,23 @@
 "WE" = (
 /turf/open/floor/wood,
 /area/station/science/lab{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "WF" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "WI" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/fore{
 	name = "Fore Starboard Fishing House";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "WK" = (
 /turf/open/lava/smooth,
@@ -6553,7 +7112,8 @@
 /obj/machinery/vending/sustenance,
 /turf/open/floor/wood,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "WU" = (
 /obj/machinery/camera/motion/directional/north,
@@ -6564,40 +7124,45 @@
 /obj/machinery/vending/engivend,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Xa" = (
 /obj/machinery/suit_storage_unit/mining,
 /obj/machinery/camera/motion/directional/north,
 /turf/open/floor/wood,
 /area/station/cargo/miningoffice{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Xd" = (
 /obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Xf" = (
 /turf/closed/wall/mineral/wood,
 /area/station/command/heads_quarters/hop{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Xg" = (
 /obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Xh" = (
 /obj/machinery/light/directional/west,
 /obj/machinery/stasis,
 /turf/open/floor/wood,
 /area/station/medical/treatment_center{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Xj" = (
 /obj/machinery/camera/directional/west{
@@ -6606,24 +7171,28 @@
 	},
 /turf/open/floor/wood,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Xk" = (
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Xl" = (
 /obj/effect/landmark/start/psychologist,
 /turf/open/floor/wood,
 /area/station/commons/lounge{
 	name = "\improper Lounge";
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Xn" = (
 /turf/closed/wall/r_wall,
 /area/station/security/office{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Xx" = (
 /obj/structure/bed,
@@ -6632,7 +7201,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/rd{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "XA" = (
 /obj/machinery/camera/motion/directional/south{
@@ -6641,14 +7210,16 @@
 	},
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "XB" = (
 /obj/effect/spawner/random/maintenance,
 /obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/wood,
 /area/station/maintenance/port/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "XE" = (
 /obj/structure/cable,
@@ -6660,7 +7231,8 @@
 /obj/machinery/telecomms/server/presets/common,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "XV" = (
 /obj/structure/chair/comfy/black{
@@ -6673,23 +7245,26 @@
 	})
 "XY" = (
 /obj/effect/landmark/start/depsec/engineering,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "XZ" = (
 /obj/effect/spawner/random/structure/crate,
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Yh" = (
 /obj/structure/weightmachine/weightlifter,
 /obj/machinery/light/directional/north,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Yi" = (
 /obj/structure/closet/crate/goldcrate,
@@ -6697,20 +7272,23 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Yl" = (
 /obj/machinery/pdapainter/supply,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Ym" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/ai,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Yn" = (
 /obj/structure/closet/secure_closet/chief_medical,
@@ -6720,18 +7298,21 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/cmo{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "Yr" = (
 /obj/machinery/camera/directional/west,
 /obj/effect/light_emitter/fake_outdoors,
 /turf/open/floor/wood,
 /area/station/hallway/secondary/exit/departure_lounge{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Yv" = (
 /turf/closed/wall/mineral/wood,
-/area/station/maintenance/starboard/fore)
+/area/station/maintenance/starboard/fore{
+	default_gravity = 1
+	})
 "Yx" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/command/glass{
@@ -6741,7 +7322,7 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "YF" = (
 /obj/item/radio/intercom/directional/east,
@@ -6758,20 +7339,23 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
 /area/station/cargo/warehouse{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "YR" = (
 /turf/closed/wall/mineral/wood,
 /area/station/solars/starboard/aft{
 	has_gravity = 1;
-	outdoors = 1
+	outdoors = 1;
+	default_gravity = 1
 	})
 "YW" = (
 /obj/machinery/seed_extractor,
 /obj/item/radio/intercom/prison/directional/east,
 /turf/open/misc/grass/jungle,
 /area/station/security/prison/garden{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "YX" = (
 /obj/item/chair/wood,
@@ -6784,13 +7368,15 @@
 /obj/machinery/camera/motion/directional/north,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Za" = (
 /obj/item/radio/intercom/directional/east,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/engineering/supermatter/room{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Zc" = (
 /obj/structure/closet/secure_closet/security/sec,
@@ -6798,7 +7384,8 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/lockers{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Zg" = (
 /obj/structure/closet/crate/engineering/electrical,
@@ -6836,13 +7423,15 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/maintenance/solars/starboard/aft{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Zm" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/engineering/storage_shared{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Zq" = (
 /obj/machinery/navbeacon{
@@ -6860,7 +7449,8 @@
 /obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Zv" = (
 /obj/structure/table/wood,
@@ -6874,7 +7464,8 @@
 	},
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "Zw" = (
 /turf/open/indestructible/necropolis/air,
@@ -6891,7 +7482,8 @@
 /obj/effect/mapping_helpers/airlock/access/any/supply/general,
 /turf/open/floor/wood,
 /area/station/cargo/storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ZE" = (
 /obj/machinery/camera/motion/directional/west,
@@ -6904,14 +7496,15 @@
 /turf/open/floor/wood,
 /area/station/command/bridge{
 	has_gravity = 1;
-	default_gravity = STANDARD_GRAVITY
+	default_gravity = 1
 	})
 "ZT" = (
 /obj/machinery/ore_silo,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1
+	has_gravity = 1;
+	default_gravity = 1
 	})
 "ZV" = (
 /obj/effect/landmark/start/hangover,
@@ -10939,10 +11532,10 @@ DT
 DT
 DT
 DT
-dL
-dL
-dL
-dL
+sq
+sq
+sq
+sq
 DT
 DT
 DT
@@ -10968,7 +11561,7 @@ DT
 DT
 DT
 DT
-ac
+nJ
 nJ
 nJ
 nJ
@@ -11194,14 +11787,14 @@ DT
 DT
 DT
 DT
-dL
-dL
-dL
-dL
-dL
+sq
+sq
+sq
+sq
+sq
 Sb
-dL
-dL
+sq
+sq
 DT
 DT
 DT
@@ -11225,8 +11818,8 @@ DT
 DT
 DT
 DT
-ac
-ac
+nJ
+nJ
 DT
 nJ
 nJ
@@ -11452,14 +12045,14 @@ DT
 DT
 DT
 Go
-dL
-dL
-dL
-Cr
-dL
-dL
-dL
-dL
+sq
+sq
+sq
+Uy
+sq
+sq
+sq
+sq
 DT
 DT
 DT
@@ -11482,8 +12075,8 @@ DT
 DT
 DT
 DT
-ac
-ac
+nJ
+nJ
 DT
 DT
 nJ
@@ -11707,16 +12300,16 @@ DT
 DT
 DT
 DT
-dL
-dL
-dL
-ac
-ac
-ac
-ac
-dL
-dL
-dL
+sq
+sq
+sq
+nJ
+nJ
+nJ
+nJ
+sq
+sq
+sq
 DT
 DT
 DT
@@ -11726,21 +12319,21 @@ DT
 DT
 DT
 DT
-ac
-dL
+nJ
+sq
 Ap
-dL
-dL
-dL
-ac
-ac
+sq
+sq
+sq
+nJ
+nJ
 DT
 DT
 DT
 DT
-ac
-ac
-ac
+nJ
+nJ
+nJ
 DT
 DT
 DT
@@ -11963,42 +12556,42 @@ DT
 DT
 DT
 DT
-dL
-dL
-dL
-dL
-ac
-ac
-ac
-ac
-ac
-dL
-dL
+sq
+sq
+sq
+sq
+nJ
+nJ
+nJ
+nJ
+nJ
+sq
+sq
 DT
 DT
 DT
 DT
-dL
-ac
+sq
+nJ
 DT
 DT
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
 DT
 DT
 nJ
@@ -12220,40 +12813,40 @@ DT
 DT
 DT
 DT
-dL
-dL
-dL
-ac
-ac
-ac
-ac
-ac
-ac
-dL
-dL
+sq
+sq
+sq
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+sq
+sq
 DT
 DT
-dL
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+sq
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
 DT
 DT
 DT
@@ -12478,34 +13071,34 @@ DT
 DT
 DT
 gk
-dL
-dL
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+sq
+sq
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
 DT
 DT
 DT
-dL
-ac
+sq
+nJ
 DT
 DT
 DT
@@ -12735,26 +13328,26 @@ DT
 DT
 DT
 pM
-dL
-dL
-ac
-ac
-ac
+sq
+sq
+nJ
+nJ
+nJ
 kN
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
 Ap
-dL
-dL
-ac
+sq
+sq
+nJ
 DT
 DT
 DT
@@ -12992,16 +13585,16 @@ DT
 DT
 DT
 pM
-dL
-Cr
-ac
-ac
-ac
-ac
-ac
-ac
-dL
-dL
+sq
+Uy
+nJ
+nJ
+nJ
+nJ
+nJ
+nJ
+sq
+sq
 DT
 DT
 DT
@@ -13249,16 +13842,16 @@ DT
 DT
 DT
 DT
-dL
-dL
-dL
-ac
-ac
-ac
-ac
-ac
-dL
-dL
+sq
+sq
+sq
+nJ
+nJ
+nJ
+nJ
+nJ
+sq
+sq
 DT
 DT
 DT
@@ -13506,16 +14099,16 @@ DT
 DT
 DT
 DT
-dL
-dL
-dL
-ac
-ac
-ac
-ac
+sq
+sq
+sq
+nJ
+nJ
+nJ
+nJ
 kN
-dL
-dL
+sq
+sq
 DT
 DT
 DT
@@ -13765,14 +14358,14 @@ DT
 DT
 DT
 Sb
-dL
-dL
-ac
-ac
-ac
-dL
-dL
-dL
+sq
+sq
+nJ
+nJ
+nJ
+sq
+sq
+sq
 DT
 DT
 DT
@@ -14021,14 +14614,14 @@ DT
 DT
 DT
 DT
-dL
-dL
-dL
-dL
-dL
-dL
-dL
-dL
+sq
+sq
+sq
+sq
+sq
+sq
+sq
+sq
 Sb
 DT
 DT
@@ -14279,13 +14872,13 @@ DT
 DT
 DT
 DT
-dL
-dL
-dL
-dL
-dL
-dL
-dL
+sq
+sq
+sq
+sq
+sq
+sq
+sq
 DT
 DT
 DT
@@ -14537,10 +15130,10 @@ DT
 DT
 DT
 DT
-dL
+sq
 Sb
-dL
-dL
+sq
+sq
 DT
 DT
 DT
@@ -15899,7 +16492,7 @@ nJ
 nJ
 nJ
 qc
-Jm
+hw
 tS
 tS
 tS
@@ -17450,7 +18043,7 @@ nJ
 Dg
 jw
 qc
-Jm
+hw
 uc
 qc
 IP
@@ -33089,7 +33682,7 @@ yZ
 gp
 Hd
 fW
-gp
+Jm
 Sx
 iK
 Ff
