@@ -310,6 +310,8 @@ GLOBAL_LIST_EMPTY(sfx_datum_by_key)
 #define SFX_ROLLING_PIN_DROP "rolling_pin_drop"
 #define SFX_ROLLING_PIN_ROLLING "rolling_pin_rolling"
 #define SFX_FIRE_MODE_SWITCH "fire_mode_switch"
+#define SFX_REMOTE_MODE_SWITCH "remote_mode_switch"
+#define SFX_REMOTE_ACTION "remote_action"
 #define SFX_REGEN_BLOODPACK_BEGIN "bloodpack_begin"
 #define SFX_REGEN_BLOODPACK_END "bloodpack_end"
 #define SFX_SHEEP_BLEAT "sheep"

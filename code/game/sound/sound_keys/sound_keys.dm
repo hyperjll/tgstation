@@ -1050,6 +1050,22 @@
 	)
 
 
+/datum/sound_effect/remote_mode_switch
+	key = SFX_REMOTE_MODE_SWITCH
+	file_paths = list(
+		'sound/items/door_remote/door_remote_switch1.ogg',
+		'sound/items/door_remote/door_remote_switch2.ogg',
+		'sound/items/door_remote/door_remote_switch3.ogg',
+	)
+
+/datum/sound_effect/remote_action
+	key = SFX_REMOTE_ACTION
+	file_paths = list(
+		'sound/items/door_remote/door_remote_action1.ogg',
+		'sound/items/door_remote/door_remote_action2.ogg',
+	)
+
+
 /datum/sound_effect/bloodpack_begin
 	key = SFX_REGEN_BLOODPACK_BEGIN
 	file_paths = list('sound/misc/moist_impact.ogg')
