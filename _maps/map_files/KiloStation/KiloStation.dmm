@@ -724,6 +724,7 @@
 "akC" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/structure/fireaxecabinet/batteringram/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/security/armory)
 "akD" = (
@@ -867,7 +868,6 @@
 "amn" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/machinery/newscaster/directional/east,
-/obj/effect/landmark/start/hangover/closet,
 /turf/open/floor/wood,
 /area/station/commons/locker)
 "amr" = (
@@ -8594,7 +8594,6 @@
 	dir = 1
 	},
 /obj/machinery/light/small/directional/north,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/station/commons/locker)
@@ -24480,7 +24479,6 @@
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/item/clothing/shoes/winterboots,
 /obj/machinery/airalarm/directional/north,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/station/commons/locker)
@@ -42391,7 +42389,6 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/wardrobe/mixed,
 /obj/machinery/light/small/directional/south,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
@@ -45891,7 +45888,6 @@
 "peZ" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/machinery/newscaster/directional/west,
-/obj/effect/landmark/start/hangover/closet,
 /obj/machinery/button/door/directional/west{
 	id = "Cabin_4Privacy";
 	name = "Cabin 4 Privacy Toggle";
@@ -48657,7 +48653,6 @@
 "pXN" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/machinery/newscaster/directional/east,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/wood,
 /area/station/commons/locker)
@@ -49754,7 +49749,6 @@
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/item/clothing/shoes/winterboots,
 /obj/structure/extinguisher_cabinet/directional/north,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/station/commons/locker)
@@ -56336,7 +56330,6 @@
 /obj/structure/cable,
 /obj/structure/closet/boxinggloves,
 /obj/machinery/status_display/evac/directional/north,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -64516,7 +64509,6 @@
 "vea" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/machinery/newscaster/directional/west,
-/obj/effect/landmark/start/hangover/closet,
 /obj/machinery/button/door/directional/west{
 	id = "Cabin_3Privacy";
 	name = "Cabin 3 Privacy Toggle";

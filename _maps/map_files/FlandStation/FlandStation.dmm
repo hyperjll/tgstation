@@ -46939,6 +46939,7 @@
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/armory/dragnet,
 /obj/effect/spawner/random/armory/barrier_grenades,
+/obj/structure/fireaxecabinet/batteringram/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/security/armory)
 "nDD" = (
@@ -48744,6 +48745,8 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
 	},
+/obj/structure/table,
+/obj/structure/bedsheetbin,
 /turf/open/floor/iron,
 /area/station/security/prison)
 "ogL" = (

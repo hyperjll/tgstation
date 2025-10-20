@@ -2485,7 +2485,6 @@
 "aWl" = (
 /obj/structure/closet/lasertag/blue,
 /obj/machinery/light/directional/west,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
@@ -5551,7 +5550,6 @@
 /area/station/science/ordnance/burnchamber)
 "cfu" = (
 /obj/structure/closet/lasertag/red,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
@@ -11030,7 +11028,6 @@
 /area/station/maintenance/starboard)
 "enI" = (
 /obj/structure/closet/wardrobe/black,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
 	},
@@ -16515,7 +16512,6 @@
 /area/station/medical/medbay/lobby)
 "gxM" = (
 /obj/structure/closet/emcloset,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 6
 	},
@@ -21334,7 +21330,6 @@
 /obj/machinery/camera/directional/east{
 	c_tag = "Public - Fore Primary Hallway W"
 	},
-/obj/effect/landmark/start/hangover/closet,
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 4
@@ -26149,7 +26144,6 @@
 /area/station/security/detectives_office)
 "knI" = (
 /obj/structure/closet/firecloset,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 5
 	},
@@ -29469,7 +29463,6 @@
 /area/station/security/prison/rec)
 "lEf" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
@@ -32820,7 +32813,6 @@
 /area/station/service/kitchen/coldroom)
 "mMD" = (
 /obj/structure/closet/emcloset,
-/obj/effect/landmark/start/hangover/closet,
 /obj/machinery/firealarm/directional/east,
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 4
@@ -32880,7 +32872,6 @@
 "mOl" = (
 /obj/structure/closet/athletic_mixed,
 /obj/machinery/light/directional/south,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron,
 /area/station/commons/locker)
@@ -33081,7 +33072,6 @@
 /area/station/commons/dorms)
 "mSa" = (
 /obj/structure/closet/emcloset,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
 /turf/open/floor/iron,
 /area/station/commons/fitness)
@@ -46044,7 +46034,6 @@
 /area/station/service/hydroponics/garden)
 "sft" = (
 /obj/structure/closet/firecloset,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 5
 	},
@@ -49259,7 +49248,6 @@
 /area/station/security/prison)
 "tsj" = (
 /obj/structure/closet/emcloset,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 6
 	},
@@ -49397,6 +49385,7 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 4
 	},
+/obj/structure/fireaxecabinet/batteringram/directional/east,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai_monitored/security/armory)
 "ttR" = (
@@ -50158,7 +50147,6 @@
 "tKT" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/light/directional/north,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/siding/wideplating_new/dark{
 	dir = 9
 	},
@@ -54854,7 +54842,6 @@
 "vEI" = (
 /obj/structure/closet/wardrobe/mixed,
 /obj/machinery/firealarm/directional/south,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron,
 /area/station/commons/locker)
@@ -59253,7 +59240,6 @@
 /area/station/command/bridge)
 "xox" = (
 /obj/structure/closet/firecloset,
-/obj/effect/landmark/start/hangover/closet,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 4
 	},

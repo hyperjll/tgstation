@@ -21955,7 +21955,6 @@
 	dir = 5
 	},
 /obj/structure/closet/emcloset,
-/obj/effect/landmark/start/hangover/closet,
 /turf/open/floor/iron,
 /area/station/hallway/floor4/fore)
 "fLf" = (
@@ -46723,7 +46722,6 @@
 /area/station/maintenance/floor3/starboard/fore)
 "mcU" = (
 /obj/structure/closet/athletic_mixed,
-/obj/effect/landmark/start/hangover/closet,
 /turf/open/floor/iron/showroomfloor,
 /area/station/commons/fitness)
 "mcV" = (
@@ -67974,6 +67972,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/light/directional/north,
+/obj/structure/fireaxecabinet/batteringram/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/security/armory)
 "rBm" = (
@@ -78226,7 +78225,6 @@
 /area/station/maintenance/floor1/port)
 "ulo" = (
 /obj/structure/closet/emcloset,
-/obj/effect/landmark/start/hangover/closet,
 /turf/open/floor/iron,
 /area/station/commons/fitness)
 "ulp" = (
@@ -88109,7 +88107,6 @@
 "wIQ" = (
 /obj/structure/closet/firecloset,
 /obj/machinery/light/directional/west,
-/obj/effect/landmark/start/hangover/closet,
 /turf/open/floor/iron,
 /area/station/commons/fitness)
 "wIU" = (
@@ -91500,7 +91497,6 @@
 /area/station/science/lobby)
 "xCX" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/effect/landmark/start/hangover/closet,
 /turf/open/floor/iron/showroomfloor,
 /area/station/commons/fitness)
 "xDl" = (

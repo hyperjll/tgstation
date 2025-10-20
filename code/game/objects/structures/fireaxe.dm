@@ -22,6 +22,8 @@
 	var/populate_contents = TRUE
 	/// The tool behavior necessary to unlock the cabinet
 	var/unlocking_tool_behavior = TOOL_MULTITOOL
+	/// Whether we need to unwield the item to put it into the cabinet
+	var/must_be_unwielded = TRUE
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/fireaxecabinet, 32)
 
@@ -72,7 +74,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/fireaxecabinet, 32)
 			update_appearance()
 	else if(open || broken)
 		if(istype(attacking_item, item_path) && !held_item)
-			if(HAS_TRAIT(attacking_item, TRAIT_WIELDED))
+			if(HAS_TRAIT(attacking_item, TRAIT_WIELDED) && must_be_unwielded)
 				balloon_alert(user, "unwield it!")
 				return
 			if(!user.transferItemToLoc(attacking_item, src))
