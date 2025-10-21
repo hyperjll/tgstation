@@ -106,3 +106,6 @@ GLOBAL_LIST_INIT(prototype_organs, typecacheof(list(
 
 //list of all power exporters
 GLOBAL_LIST_EMPTY(power_exporter_list)
+
+// list of all commando nukes
+GLOBAL_LIST_EMPTY(nuke_list)

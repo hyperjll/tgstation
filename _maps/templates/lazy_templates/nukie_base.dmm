@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ab" = (
+/obj/machinery/atmospherics/components/unary/thermomachine,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "ad" = (
 /obj/structure/sink/kitchen/directional/west,
 /obj/item/reagent_containers/cup/bucket,
@@ -19,6 +23,11 @@
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/control)
+"aj" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/vending/cigarette/syndicate,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "al" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
@@ -88,13 +97,46 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"aQ" = (
+/obj/item/pickaxe/drill/jackhammer{
+	pixel_x = 15;
+	pixel_y = -7
+	},
+/obj/item/transfer_valve{
+	pixel_x = -5
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "aX" = (
 /obj/machinery/shower/directional/south,
 /turf/open/floor/iron/freezer,
 /area/centcom/syndicate_mothership/control)
+"ba" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/vending/cola,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
+"bb" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
+"be" = (
+/obj/structure/chair/plastic{
+	dir = 4
+	},
+/obj/effect/landmark/start/commando_nukeop,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "bf" = (
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_nanites)
+"bn" = (
+/obj/effect/decal/cleanable/rubble,
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "bo" = (
 /obj/structure/sink/directional/west,
 /obj/structure/mirror/directional/east,
@@ -164,6 +206,13 @@
 	},
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/control)
+"bX" = (
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = 6;
+	pixel_y = 12
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "bZ" = (
 /obj/effect/decal/cleanable/fuel_pool,
 /turf/open/floor/mineral/plastitanium/red,
@@ -175,6 +224,9 @@
 /obj/structure/window/reinforced/plasma/spawner/directional/north,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
+"cv" = (
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "cw" = (
 /obj/structure/sign/poster/contraband/c20r/directional/south,
 /obj/structure/cable,
@@ -184,6 +236,17 @@
 /obj/effect/baseturf_helper/asteroid/snow,
 /turf/closed/indestructible/syndicate,
 /area/centcom/syndicate_mothership/control)
+"cK" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
+"cN" = (
+/turf/closed/indestructible/fakedoor{
+	name = "Base Access"
+	},
+/area/centcom/syndicate_mothership/firebase_trident)
 "cO" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 9
@@ -234,6 +297,47 @@
 "cX" = (
 /turf/closed/indestructible/syndicate,
 /area/centcom/syndicate_mothership/expansion_genepowers)
+"cZ" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/closet/crate{
+	name = "Donk Co. shipment crate"
+	},
+/obj/item/storage/box/donkpockets{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/obj/item/storage/box/donkpockets/donkpocketberry{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/obj/item/storage/box/donkpockets/donkpockethonk{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/storage/box/donkpockets/donkpocketpizza{
+	pixel_x = -4;
+	pixel_y = 2
+	},
+/obj/item/storage/box/donkpockets/donkpocketspicy{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/storage/box/donkpockets/donkpocketteriyaki{
+	pixel_x = 6;
+	pixel_y = 1
+	},
+/obj/item/storage/toolbox/guncase/traitor/viper,
+/obj/item/storage/toolbox/guncase/traitor/viper,
+/obj/item/storage/toolbox/guncase/traitor/donksoft,
+/obj/item/storage/toolbox/guncase/traitor/donksoft,
+/obj/item/grenade/c4/breaching,
+/obj/item/grenade/c4/breaching,
+/obj/item/grenade/c4/breaching,
+/obj/item/grenade/c4/breaching,
+/obj/item/food/pizza/donkpocket,
+/obj/item/storage/box/donkpockets/donkpocketsyndi,
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
 "dg" = (
 /obj/effect/turf_decal/stripes/box,
 /obj/machinery/shower/directional/south,
@@ -248,6 +352,12 @@
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/centcom/syndicate_mothership/control)
+"dp" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "dq" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/smooth_half,
@@ -274,6 +384,15 @@
 /obj/effect/turf_decal/stripes/box,
 /turf/open/floor/mineral/titanium/tiled,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+"dC" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/caution/stand_clear{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "dF" = (
 /obj/machinery/light/cold/directional/west,
 /obj/structure/table/glass/plasmaglass,
@@ -491,6 +610,31 @@
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/control)
+"eM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/poster/contraband/gorlex_recruitment/directional/south,
+/obj/structure/rack,
+/obj/item/chair/plastic{
+	pixel_x = 0;
+	pixel_y = 5
+	},
+/obj/item/chair/plastic{
+	pixel_x = 0;
+	pixel_y = 9
+	},
+/obj/item/chair/plastic{
+	pixel_x = 0;
+	pixel_y = 13
+	},
+/obj/item/chair/plastic{
+	pixel_x = 0;
+	pixel_y = 17
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "fa" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -511,6 +655,14 @@
 	},
 /turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/control)
+"fd" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/lattice/catwalk,
+/obj/structure/marker_beacon/yellow,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "fi" = (
 /obj/machinery/door/airlock/titanium{
 	name = "Bomb Storage"
@@ -528,6 +680,14 @@
 /obj/machinery/portable_atmospherics/canister/plasma,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"fr" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/lattice/catwalk,
+/obj/effect/turf_decal/sand/plating,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "fu" = (
 /obj/machinery/shower/directional/south,
 /obj/machinery/light/floor,
@@ -574,11 +734,40 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/centcom/syndicate_mothership/control)
+"fG" = (
+/obj/effect/turf_decal/siding/thinplating/dark/corner{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
+"fI" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "fK" = (
 /obj/machinery/hydroponics/constructable,
 /obj/item/seeds/kudzu,
 /turf/open/floor/mineral/titanium/tiled,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"fP" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 8;
+	layer = 4.1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/rack,
+/obj/item/katana/cursed{
+	desc = "A gift from your benefactors.";
+	force = 20
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "fR" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/heat_exchanging/junction,
@@ -656,6 +845,13 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"gH" = (
+/obj/machinery/light/warm/directional/west,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "gJ" = (
 /obj/effect/turf_decal/siding/thinplating_new/light{
 	dir = 4
@@ -735,6 +931,13 @@
 /obj/machinery/light/cold/directional/east,
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+"hi" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/sign/poster/contraband/communist_state/directional/north,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "hp" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/turf_decal/stripes/line{
@@ -777,6 +980,27 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"hL" = (
+/obj/effect/turf_decal/delivery,
+/obj/structure/closet/crate/secure/syndicate/wafflecorp,
+/obj/item/food/waffles,
+/obj/item/food/waffles,
+/obj/item/food/waffles,
+/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
+/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
+/obj/item/lighter/skull,
+/obj/item/storage/box/monkeycubes/syndicate,
+/obj/item/storage/medkit/syndiecigsvarietypack,
+/obj/item/reagent_containers/cup/glass/bottle/rum{
+	pixel_x = -5;
+	pixel_y = 17
+	},
+/obj/item/sbeacondrop/semiautoturret,
+/obj/item/sbeacondrop/semiautoturret,
+/obj/item/reagent_containers/cup/bottle/syrup_bottle/korta_nectar,
+/obj/item/reagent_containers/cup/bottle/syrup_bottle/korta_nectar,
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
 "hN" = (
 /obj/machinery/chem_mass_spec,
 /turf/open/floor/mineral/titanium/tiled/yellow,
@@ -799,6 +1023,12 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/control)
+"hZ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "ia" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
@@ -1000,6 +1230,12 @@
 /obj/effect/turf_decal/trimline/red,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+"jQ" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 10
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "jT" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/cup/glass/bottle/beer{
@@ -1076,6 +1312,42 @@
 "ks" = (
 /turf/closed/wall/mineral/diamond,
 /area/centcom/syndicate_mothership/control)
+"kt" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet/crate/cardboard,
+/obj/item/storage/backpack/duffelbag/syndie,
+/obj/item/storage/backpack/duffelbag/syndie,
+/obj/item/storage/backpack/duffelbag/syndie{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/item/storage/backpack/duffelbag/syndie{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/backpack/duffelbag/syndie{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/item/storage/backpack/duffelbag/syndie{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/item/storage/backpack/duffelbag/syndie{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/item/storage/backpack/duffelbag/syndie{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/item/storage/backpack/duffelbag/syndie{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
 "kz" = (
 /obj/machinery/door/airlock/maintenance/external{
 	name = "Bunk Room 2"
@@ -1098,6 +1370,10 @@
 	},
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"kE" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "kF" = (
 /obj/machinery/light/cold/directional/east,
 /turf/open/floor/iron/smooth,
@@ -1142,6 +1418,14 @@
 /obj/machinery/vending/toyliberationstation,
 /turf/open/floor/catwalk_floor/iron,
 /area/centcom/syndicate_mothership/control)
+"kY" = (
+/obj/structure/lattice/catwalk,
+/obj/item/storage/backpack/duffelbag/clown/syndie{
+	pixel_x = 5;
+	pixel_y = -2
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "la" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/turf_decal/stripes/line{
@@ -1213,11 +1497,26 @@
 	dir = 8
 	},
 /area/centcom/syndicate_mothership/control)
+"lf" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "lg" = (
 /turf/closed/indestructible/fakedoor{
 	name = "BUNKER 4337"
 	},
 /area/centcom/syndicate_mothership)
+"lh" = (
+/obj/structure/table/reinforced/plasmarglass,
+/obj/item/gun/ballistic/rocketlauncher{
+	pixel_x = -8;
+	pixel_y = 20
+	},
+/obj/item/language_manual/codespeak_manual/unlimited,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "lj" = (
 /obj/effect/light_emitter{
 	set_cap = 1;
@@ -1242,6 +1541,15 @@
 /obj/machinery/vending/autodrobe,
 /turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/control)
+"lw" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/thinplating/dark/corner{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "lx" = (
 /obj/machinery/light/small/dim/directional/east,
 /turf/open/floor/mineral/plastitanium/red,
@@ -1284,6 +1592,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden/layer5,
 /turf/open/floor/iron/smooth,
 /area/centcom/syndicate_mothership/control)
+"lI" = (
+/obj/structure/lattice/catwalk,
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
+"lN" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/lattice/catwalk,
+/obj/structure/marker_beacon/yellow,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "lO" = (
 /obj/machinery/atmospherics/pipe/smart/simple/dark/visible{
 	dir = 5
@@ -1300,6 +1620,13 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"lU" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/lattice/catwalk,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "lZ" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple/layer2{
 	dir = 9
@@ -1324,6 +1651,21 @@
 /obj/machinery/chem_dispenser/mutagensaltpeter,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"mo" = (
+/obj/effect/turf_decal/delivery,
+/obj/structure/closet/crate/secure/syndicate/self,
+/obj/item/borg/upgrade/selfrepair/illegal,
+/obj/item/borg/upgrade/selfrepair/illegal,
+/obj/item/borg/upgrade/selfrepair/illegal,
+/obj/item/borg/upgrade/advancedmats,
+/obj/item/borg/upgrade/unisurgeryset,
+/obj/item/borg/upgrade/unitoolset,
+/obj/item/borg/upgrade/unistorage,
+/obj/item/borg/upgrade/unistorage,
+/obj/item/borg/upgrade/piercing_hypospray,
+/obj/item/antag_spawner/loadout/syndiborg,
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
 "mt" = (
 /obj/structure/rack,
 /obj/structure/window/reinforced/plasma/spawner/directional/east,
@@ -1419,6 +1761,10 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/control)
+"ni" = (
+/obj/structure/cable,
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "nk" = (
 /obj/structure/flora/tree/dead/style_random,
 /obj/structure/flora/grass/both/style_random,
@@ -1527,6 +1873,12 @@
 /obj/machinery/light/cold/directional/east,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
+"oq" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "or" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
@@ -1583,6 +1935,12 @@
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership)
+"oO" = (
+/obj/effect/turf_decal/siding/thinplating/dark/corner{
+	dir = 8
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "oR" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/donkpockets,
@@ -1663,6 +2021,11 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+"pt" = (
+/obj/structure/lattice/catwalk,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "px" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/yellow/hidden/layer2,
@@ -1685,6 +2048,12 @@
 /obj/machinery/vending/tool,
 /turf/open/floor/mineral/titanium/yellow,
 /area/centcom/syndicate_mothership/control)
+"pR" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/sign/poster/contraband/ambrosia_vulgaris/directional/north,
+/obj/machinery/vending/medical/syndicate/cybersun,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "pS" = (
 /obj/structure/chair/greyscale{
 	dir = 4
@@ -1803,6 +2172,12 @@
 	dir = 4
 	},
 /area/centcom/syndicate_mothership/control)
+"qK" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "qL" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 4
@@ -1895,6 +2270,41 @@
 	},
 /turf/open/floor/iron/dark/textured_half,
 /area/centcom/syndicate_mothership/control)
+"rv" = (
+/obj/effect/turf_decal/siding/thinplating/dark/corner{
+	icon_state = "siding_thinplating_new_corner"
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
+"rz" = (
+/obj/effect/decal/cleanable/rubble,
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 4
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
+"rC" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/obj/machinery/newscaster/directional/east,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
+"rD" = (
+/obj/effect/turf_decal/bot,
+/obj/item/storage/medkit/brute,
+/obj/item/storage/medkit/fire,
+/obj/item/storage/medkit/o2,
+/obj/item/storage/medkit/toxin,
+/obj/item/storage/medkit,
+/obj/item/defibrillator/loaded,
+/obj/structure/closet/crate/secure/syndicate/interdyne,
+/obj/item/storage/pill_bottle/libital_patch,
+/obj/item/storage/pill_bottle/aiuri_patch,
+/obj/item/storage/medkit/emergency/hyperzine,
+/obj/item/reagent_containers/hypospray/gorlex,
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
 "rG" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
@@ -1902,6 +2312,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden/layer5,
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/centcom/syndicate_mothership/control)
+"rH" = (
+/obj/structure/table/reinforced/plasmarglass,
+/obj/item/food/syndicake{
+	pixel_y = 7;
+	pixel_x = 0
+	},
+/obj/item/food/syndicake{
+	pixel_y = 2;
+	pixel_x = 7
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "rJ" = (
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/item/knife/kitchen,
@@ -1926,6 +2348,13 @@
 /obj/structure/fence/door/opened,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
+"rR" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "rS" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 5
@@ -2032,6 +2461,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/control)
+"sP" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "sQ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/camera/autoname/directional/east{
@@ -2142,6 +2575,12 @@
 /obj/item/pen/red,
 /turf/open/floor/iron/dark/textured_large,
 /area/centcom/syndicate_mothership/control)
+"tx" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 9
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "tz" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
@@ -2160,6 +2599,20 @@
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership)
+"tG" = (
+/obj/docking_port/stationary{
+	area_type = /area/centcom/syndicate_mothership/firebase_trident/hangar;
+	dheight = 1;
+	dir = 8;
+	dwidth = 14;
+	height = 22;
+	name = "syndicate recon secret base";
+	roundstart_template = /datum/map_template/shuttle/infiltrator/advanced;
+	shuttle_id = "syndicate_away_adv";
+	width = 25
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "tJ" = (
 /obj/effect/light_emitter{
 	set_cap = 1;
@@ -2179,6 +2632,17 @@
 "tO" = (
 /turf/closed/indestructible/opsglass,
 /area/centcom/syndicate_mothership)
+"tZ" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 9
+	},
+/obj/machinery/computer/shuttle/syndicate{
+	name = "syndicate shuttle recall terminal";
+	possible_destinations = "syndicate_away_adv";
+	shuttleId = "syndicate_2"
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "ub" = (
 /obj/structure/flora/tree/pine/style_random,
 /obj/structure/flora/grass/both/style_random,
@@ -2203,6 +2667,19 @@
 /obj/structure/statue/uranium/nuke,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
+"un" = (
+/obj/structure/table/reinforced/plasmarglass,
+/obj/item/storage/toolbox/syndicate{
+	pixel_x = -1;
+	pixel_y = 16
+	},
+/obj/item/clothing/mask/chameleon{
+	pixel_x = 13;
+	pixel_y = -1
+	},
+/obj/item/disk/nuclear/nukie,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "uu" = (
 /obj/structure/rack,
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
@@ -2273,6 +2750,13 @@
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_nanites)
+"vt" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/rubble,
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "vv" = (
 /obj/structure/table/reinforced,
 /obj/item/paper/fluff/stations/centcom/disk_memo{
@@ -2294,6 +2778,11 @@
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/control)
+"vB" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/shipping_container/interdyne,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "vI" = (
 /obj/structure/railing,
 /turf/open/floor/catwalk_floor/iron_smooth{
@@ -2368,6 +2857,12 @@
 /obj/item/ammo_box/magazine/tommygunm45,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
+"wl" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "wq" = (
 /obj/machinery/computer/shuttle/syndicate/recall{
 	dir = 8
@@ -2458,6 +2953,19 @@
 	},
 /turf/open/floor/engine/vacuum,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"xc" = (
+/obj/effect/turf_decal/delivery,
+/obj/structure/closet/crate/secure/syndicate/arc,
+/obj/item/storage/harpoon_quiver,
+/obj/item/gun/ballistic/rifle/boltaction/harpoon,
+/obj/item/storage/box/syndie_kit/boxed_dehydrated_carp,
+/obj/item/storage/toolbox/guncase/flaregun,
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
+"xe" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "xf" = (
 /obj/machinery/computer/nanite_cloud_controller,
 /obj/machinery/light/cold/directional/north,
@@ -2484,6 +2992,9 @@
 /obj/item/toy/figure/syndie,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
+"xx" = (
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "xD" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
@@ -2491,6 +3002,26 @@
 	},
 /turf/open/space/basic,
 /area/space/nearstation)
+"xI" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
+"xK" = (
+/obj/machinery/door/poddoor/shutters/indestructible{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
+"xL" = (
+/obj/effect/turf_decal/syndicateemblem/bottom/middle,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
+"xM" = (
+/obj/structure/closet/syndicate/personal,
+/turf/open/floor/iron/dark/textured,
+/area/centcom/syndicate_mothership/firebase_trident)
 "ya" = (
 /turf/open/floor/carpet,
 /area/centcom/syndicate_mothership/control)
@@ -2537,6 +3068,14 @@
 	dir = 8
 	},
 /area/centcom/syndicate_mothership/control)
+"yy" = (
+/obj/structure/lattice/catwalk,
+/obj/item/storage/box/syndie_kit/centcom_costume{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "yA" = (
 /obj/effect/decal/cleanable/insectguts,
 /turf/open/floor/mineral/plastitanium/red,
@@ -2600,6 +3139,14 @@
 /obj/item/stack/spacecash/c100,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/control)
+"zs" = (
+/obj/structure/cable,
+/obj/item/stack/cable_coil{
+	pixel_x = 11;
+	pixel_y = -9
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "zx" = (
 /obj/machinery/light/cold/directional/east,
 /turf/open/floor/mineral/titanium/tiled/yellow,
@@ -2615,6 +3162,13 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership)
+"zz" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/rubble,
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "zE" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
@@ -2690,6 +3244,10 @@
 	},
 /turf/open/misc/ice/icemoon,
 /area/centcom/syndicate_mothership/control)
+"zY" = (
+/obj/structure/sign/poster/contraband/clown/directional/west,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "zZ" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark,
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -2706,6 +3264,12 @@
 "Aj" = (
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
+"Ap" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/light/warm/dim/directional/north,
+/obj/machinery/vending/syndiammo,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Ar" = (
 /obj/structure/railing{
 	dir = 6
@@ -2718,6 +3282,18 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"Au" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/effect/turf_decal/box/corners{
+	dir = 1
+	},
+/obj/effect/turf_decal/box/corners{
+	dir = 4
+	},
+/obj/machinery/holopad/secure/hacked,
+/obj/effect/landmark/start/commando_nukeop_leader,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Ax" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south{
 	name = "Tinted Window"
@@ -2738,6 +3314,19 @@
 	},
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"AD" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 8;
+	layer = 4.1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/rack,
+/obj/item/gun/energy/ionrifle,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "AL" = (
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/iron/smooth_half{
@@ -2787,6 +3376,18 @@
 /obj/item/construction/plumbing,
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+"AS" = (
+/obj/item/tank/internals/plasma/full{
+	pixel_x = -11;
+	pixel_y = 5
+	},
+/obj/item/tank/internals/oxygen{
+	pixel_x = 12;
+	pixel_y = -3
+	},
+/obj/effect/decal/cleanable/rubble,
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "AT" = (
 /obj/structure/flora/tree/dead/style_random,
 /obj/structure/flora/grass/both/style_random,
@@ -2870,10 +3471,21 @@
 /obj/effect/turf_decal/trimline/red,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_chemicalwarfare)
+"BF" = (
+/obj/effect/turf_decal/syndicateemblem/top/middle,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "BH" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood/tile,
 /area/centcom/syndicate_mothership/control)
+"BI" = (
+/obj/item/clothing/head/utility/hardhat/orange{
+	pixel_x = 5;
+	pixel_y = -9
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "BK" = (
 /turf/open/floor/plastic,
 /area/centcom/syndicate_mothership/expansion_fridgerummage)
@@ -2901,6 +3513,12 @@
 "Ca" = (
 /turf/closed/wall/mineral/wood,
 /area/centcom/syndicate_mothership/control)
+"Cd" = (
+/obj/effect/turf_decal/siding/thinplating/dark/corner{
+	dir = 1
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Ce" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/east,
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -2995,6 +3613,11 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/control)
+"CV" = (
+/obj/structure/chair/plastic,
+/obj/effect/landmark/start/commando_nukeop,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "CX" = (
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership)
@@ -3048,6 +3671,10 @@
 	},
 /turf/open/misc/asteroid/snow/airless,
 /area/centcom/syndicate_mothership)
+"Dw" = (
+/obj/effect/turf_decal/syndicateemblem/middle/left,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Dy" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/structure/chair/sofa/bench,
@@ -3057,6 +3684,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden/layer5,
 /turf/open/floor/stone,
 /area/centcom/syndicate_mothership/control)
+"DB" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/machinery/light/warm/dim/directional/south,
+/obj/structure/sign/poster/contraband/interdyne_gene_clinics/directional/south,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "DJ" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing,
@@ -3072,6 +3707,11 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/control)
+"DQ" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/shipping_container/gorlex/red,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "DV" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
@@ -3127,6 +3767,14 @@
 /obj/structure/fence,
 /turf/open/misc/asteroid/snow/airless,
 /area/centcom/syndicate_mothership)
+"Eg" = (
+/obj/structure/lattice/catwalk,
+/obj/effect/decal/cleanable/garbage,
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
+"Ei" = (
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "Ek" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/smooth_half,
@@ -3250,6 +3898,23 @@
 /obj/item/gun/ballistic/automatic/c20r,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/expansion_armory)
+"Ft" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/closet/crate/secure/syndicate/tiger,
+/obj/item/storage/box/syndie_kit/imp_ling,
+/obj/item/storage/box/syndie_kit/imp_ling,
+/obj/item/storage/box/syndie_kit/stabilized_extract_bundle,
+/obj/item/grenade/chem_grenade/bioterrorfoam,
+/obj/item/grenade/chem_grenade/bioterrorfoam,
+/obj/item/grenade/chem_grenade/bioterrorfoam,
+/obj/item/reagent_containers/hypospray/medipen/limborganregen,
+/obj/item/reagent_containers/hypospray/medipen/limborganregen,
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
+"Fu" = (
+/obj/effect/turf_decal/syndicateemblem/top/right,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "FB" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 8
@@ -3299,6 +3964,17 @@
 	},
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/control)
+"Gb" = (
+/obj/structure/lattice/catwalk,
+/obj/item/toy/plush/lizard_plushie/green{
+	name = "Spots-The-Operative"
+	},
+/obj/item/binoculars{
+	pixel_x = -8;
+	pixel_y = -6
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Gd" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
@@ -3340,6 +4016,15 @@
 	},
 /turf/open/lava/plasma/ice_moon,
 /area/centcom/syndicate_mothership/control)
+"Gw" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Gz" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/closet/crate/freezer{
@@ -3565,6 +4250,22 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"HV" = (
+/obj/structure/table/reinforced/plasmarglass,
+/obj/item/paper_bin{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/pen/fourcolor{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/flashlight/lamp{
+	pixel_x = 8;
+	pixel_y = 5
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "HW" = (
 /obj/effect/light_emitter{
 	set_cap = 1;
@@ -3631,6 +4332,10 @@
 	},
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"Ih" = (
+/obj/item/clothing/head/cone,
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "In" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 10
@@ -3678,6 +4383,11 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"IK" = (
+/obj/machinery/power/floodlight,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "IL" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/siding/red,
@@ -3700,6 +4410,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden/layer5,
 /turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/control)
+"IR" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "IV" = (
 /obj/structure/chair/stool/directional/south,
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -3741,6 +4457,10 @@
 	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
+"Jk" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "Jq" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner,
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner{
@@ -3754,6 +4474,63 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"Jt" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet/crate/secure/syndicate/gorlex,
+/obj/item/mod/module/insignia/syndie,
+/obj/item/mod/module/insignia/syndie,
+/obj/item/mod/module/insignia/syndie,
+/obj/item/mod/module/insignia/syndie,
+/obj/item/melee/energy/sword/saber/red,
+/obj/item/melee/energy/sword/saber/red,
+/obj/item/storage/box/itempack/edagger,
+/obj/item/storage/box/itempack/edagger,
+/obj/item/storage/box/itempack/bombpen,
+/obj/item/clothing/suit/armor/webvest,
+/obj/item/clothing/suit/armor/webvest,
+/obj/item/clothing/suit/armor/webvest,
+/obj/item/clothing/suit/armor/webvest,
+/obj/item/clothing/suit/armor/webvest,
+/obj/item/clothing/suit/armor/webvest,
+/obj/item/clothing/suit/armor/webvest,
+/obj/item/clothing/suit/armor/webvest,
+/obj/item/storage/toolbox/guncase/spes,
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
+"Ju" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/trench_tool,
+/obj/item/trench_tool,
+/obj/structure/closet/crate/secure/syndicate,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night/prescription,
+/obj/item/ammo_box/magazine/m9mm,
+/obj/item/ammo_box/magazine/m9mm,
+/obj/item/knife/combat,
+/obj/item/knife/combat,
+/obj/item/grenade/smokebomb,
+/obj/item/grenade/smokebomb,
+/obj/item/grenade/smokebomb,
+/obj/item/grenade/smokebomb,
+/obj/item/climbing_hook/syndicate,
+/obj/item/climbing_hook/syndicate,
+/obj/item/storage/belt/military,
+/obj/item/storage/belt/military,
+/obj/item/storage/belt/holster/nukie,
+/obj/item/storage/belt/holster/nukie,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/clothing/under/syndicate,
+/obj/item/clothing/under/syndicate,
+/obj/item/clothing/under/syndicate/skirt,
+/obj/item/clothing/under/syndicate/skirt,
+/obj/item/clothing/shoes/sneakers/black,
+/obj/item/clothing/shoes/sneakers/black,
+/obj/item/clothing/neck/large_scarf/syndie,
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Jx" = (
 /obj/effect/decal/cleanable/plastic,
 /turf/open/floor/mineral/plastitanium/red,
@@ -3821,6 +4598,13 @@
 /obj/machinery/light/cold/directional/west,
 /turf/open/floor/circuit/red/off,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"Kl" = (
+/obj/structure/marker_beacon/burgundy,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "Kq" = (
 /turf/closed/indestructible/syndicate,
 /area/centcom/syndicate_mothership)
@@ -3884,6 +4668,15 @@
 	},
 /turf/open/lava/plasma/ice_moon,
 /area/centcom/syndicate_mothership/control)
+"KS" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "KU" = (
 /obj/effect/light_emitter{
 	set_cap = 1;
@@ -3918,6 +4711,24 @@
 /obj/item/storage/fancy/donut_box,
 /turf/open/floor/iron/dark/textured_large,
 /area/centcom/syndicate_mothership/control)
+"Lo" = (
+/obj/effect/turf_decal/delivery,
+/obj/structure/closet/crate/secure/syndicate/mi13,
+/obj/item/suppressor,
+/obj/item/suppressor,
+/obj/item/implanter/fulton_recovery/syndi,
+/obj/item/implanter/fulton_recovery/syndi,
+/obj/item/implanter/fulton_recovery/syndi,
+/obj/item/implanter/fulton_recovery/syndi,
+/obj/item/implanter/fulton_recovery/syndi,
+/obj/item/implanter/fulton_recovery/syndi,
+/obj/item/implanter/fulton_recovery/syndi,
+/obj/item/implanter/fulton_recovery/syndi,
+/obj/item/gun/ballistic/automatic/pistol/cobra/tranq,
+/obj/item/sbeacondrop/bomb,
+/obj/item/sbeacondrop/bomb,
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Lu" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -3995,6 +4806,13 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/control)
+"LU" = (
+/obj/structure/chair/plastic{
+	dir = 8
+	},
+/obj/effect/landmark/start/commando_nukeop,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Mb" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -4019,17 +4837,19 @@
 /obj/structure/window/reinforced/plasma/spawner/directional/south,
 /obj/structure/window/reinforced/plasma/spawner/directional/north,
 /obj/structure/rack,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357/bouncy,
-/obj/item/ammo_box/a357/dumdum,
-/obj/item/ammo_box/a357/heartpiercer,
-/obj/item/ammo_box/a357/heartseeker,
-/obj/item/ammo_box/a357/hotshot,
-/obj/item/ammo_box/a357/iceblox,
-/obj/item/ammo_box/a357/ironfeather,
-/obj/item/ammo_box/a357/match,
-/obj/item/ammo_box/a357/metalshock,
+/obj/item/ammo_box/speedloader/c357,
+/obj/item/ammo_box/speedloader/c357/bouncy,
+/obj/item/ammo_box/speedloader/c357/dumdum,
+/obj/item/ammo_box/speedloader/c357/heartpiercer,
+/obj/item/ammo_box/speedloader/c357/heartseeker,
+/obj/item/ammo_box/speedloader/c357/hotshot,
+/obj/item/ammo_box/speedloader/c357/iceblox,
+/obj/item/ammo_box/speedloader/c357/ironfeather,
+/obj/item/ammo_box/speedloader/c357/metalshock,
+/obj/item/ammo_box/speedloader/c357/nutcracker,
+/obj/item/ammo_box/speedloader/c357/phasic,
+/obj/item/ammo_box/speedloader/c357/match,
+/obj/item/ammo_box/speedloader/c357/wallstake,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
 "Mn" = (
@@ -4043,6 +4863,13 @@
 	},
 /turf/open/misc/asteroid/snow/airless,
 /area/centcom/syndicate_mothership)
+"Mr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Ms" = (
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/iron/dark/textured_half{
@@ -4078,6 +4905,16 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership)
+"MB" = (
+/obj/machinery/atmospherics/components/binary/pump,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
+"MC" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "MD" = (
 /obj/machinery/door/airlock/maintenance/external{
 	name = "Bunk Room 1"
@@ -4111,6 +4948,13 @@
 	dir = 8
 	},
 /area/centcom/syndicate_mothership/control)
+"MS" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/water_cooler,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "MU" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
@@ -4132,10 +4976,22 @@
 	name = "Tac-Com"
 	},
 /area/centcom/syndicate_mothership/control)
+"Ne" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Ni" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/wood/tile,
 /area/centcom/syndicate_mothership/control)
+"Nl" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/light/warm/dim/directional/north,
+/obj/machinery/computer/order_console/syndicate_voucher,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "No" = (
 /turf/open/floor/iron/smooth_edge{
 	dir = 4
@@ -4148,6 +5004,11 @@
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"Nx" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/nuclearbomb/commando,
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
 "ND" = (
 /obj/machinery/griddle,
 /obj/structure/sign/poster/contraband/syndiemoth/directional/north,
@@ -4161,6 +5022,10 @@
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"NL" = (
+/obj/structure/lattice/catwalk,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "NP" = (
 /obj/structure/railing/corner,
 /turf/open/misc/asteroid/snow/icemoon,
@@ -4352,6 +5217,16 @@
 	},
 /turf/open/lava/plasma/ice_moon,
 /area/centcom/syndicate_mothership/control)
+"Pv" = (
+/obj/effect/turf_decal/siding/thinplating/dark/corner{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
+"Px" = (
+/obj/effect/turf_decal/syndicateemblem/bottom/right,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Py" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
@@ -4392,6 +5267,17 @@
 /obj/structure/flora/grass/both/style_random,
 /turf/open/misc/asteroid/snow/airless,
 /area/centcom/syndicate_mothership)
+"PO" = (
+/obj/effect/turf_decal/syndicateemblem/middle/right,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
+"PP" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "PW" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
@@ -4506,6 +5392,10 @@
 	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
+"QR" = (
+/obj/item/forcefield_projector/combat,
+/turf/open/space/basic,
+/area/space)
 "QS" = (
 /obj/item/soap/syndie,
 /obj/structure/rack,
@@ -4517,6 +5407,11 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership)
+"Rb" = (
+/obj/effect/turf_decal/syndicateemblem/top/left,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Rc" = (
 /turf/closed/indestructible/opsglass,
 /area/centcom/syndicate_mothership/expansion_genepowers)
@@ -4524,6 +5419,18 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron,
 /area/centcom/syndicate_mothership/control)
+"Rl" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/closet/crate/critter,
+/mob/living/basic/carp/pet/cayenne{
+	name = "Paprika"
+	},
+/obj/item/slimepotion/slime/sentience/nuclear{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/turf/open/floor/iron/dark/textured_large,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Rn" = (
 /obj/item/circuitboard/computer/syndicate_shuttle{
 	pixel_x = 2;
@@ -4612,6 +5519,14 @@
 /obj/effect/baseturf_helper/asteroid/snow,
 /turf/closed/indestructible/syndicate,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"Sb" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/machinery/light/warm/dim/directional/south,
+/obj/structure/extinguisher_cabinet/directional/south,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Sc" = (
 /obj/structure/railing,
 /turf/open/floor/iron/stairs/old{
@@ -4668,6 +5583,17 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"Sr" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/obj/structure/sign/poster/contraband/waffle_corp_rifles/directional/west,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "St" = (
 /obj/effect/decal/cleanable/fuel_pool,
 /obj/machinery/light_switch/directional/east,
@@ -4735,6 +5661,30 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden/layer5,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/centcom/syndicate_mothership/control)
+"SV" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/table,
+/obj/machinery/microwave{
+	pixel_y = 8
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
+"SZ" = (
+/obj/item/pai_card{
+	pixel_x = 14;
+	pixel_y = 0
+	},
+/obj/structure/table/reinforced/plasmarglass,
+/obj/item/toy/nuke{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/toy/cards/deck/syndicate{
+	pixel_x = -2;
+	pixel_y = -6
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Ta" = (
 /obj/machinery/door/puzzle/keycard/syndicate_genetics,
 /turf/open/floor/mineral/plastitanium,
@@ -4770,6 +5720,11 @@
 /obj/machinery/atmospherics/pipe/heat_exchanging/manifold,
 /turf/open/space/basic,
 /area/space/nearstation)
+"Tk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Tl" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -4784,6 +5739,11 @@
 "To" = (
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
+"Tp" = (
+/obj/effect/decal/cleanable/glass/plastitanium/screws,
+/obj/effect/decal/cleanable/ash,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Ts" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
@@ -4952,6 +5912,41 @@
 /obj/machinery/light/cold/directional/east,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/control)
+"UG" = (
+/obj/structure/marker_beacon/burgundy,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
+"UR" = (
+/obj/structure/table/reinforced/plasmarglass,
+/obj/item/flashlight/lantern/syndicate{
+	pixel_x = 10;
+	pixel_y = 9
+	},
+/obj/item/stack/spacecash/c200{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/stack/spacecash/c500{
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/spacecash/c20{
+	pixel_x = -4;
+	pixel_y = 3
+	},
+/obj/item/stack/spacecash/c20{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/stack/spacecash/c100{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Va" = (
 /obj/effect/turf_decal/syndicateemblem/middle/left{
 	dir = 8
@@ -4971,6 +5966,10 @@
 /obj/structure/flora/rock/pile/style_random,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
+"Vq" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Vr" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 5
@@ -4992,12 +5991,23 @@
 /obj/machinery/light/cold/directional/east,
 /turf/open/floor/engine/bz,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"VB" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/computer/order_console/syndicate_voucher,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "VC" = (
 /obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/dark/textured_half{
 	dir = 8
 	},
 /area/centcom/syndicate_mothership/control)
+"VE" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "VF" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south{
 	name = "Tinted Window"
@@ -5034,6 +6044,16 @@
 	},
 /turf/open/floor/plating/snowed/icemoon,
 /area/centcom/syndicate_mothership/control)
+"VP" = (
+/obj/effect/turf_decal/siding/thinplating/dark/corner{
+	icon_state = "siding_thinplating_corner"
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "VQ" = (
 /obj/machinery/door/puzzle/keycard/syndicate_armory,
 /turf/open/floor/mineral/plastitanium,
@@ -5046,6 +6066,9 @@
 	},
 /turf/open/lava/plasma/ice_moon,
 /area/centcom/syndicate_mothership/control)
+"VY" = (
+/turf/closed/indestructible/syndicate,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Wc" = (
 /obj/machinery/vending/coffee,
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -5053,6 +6076,10 @@
 	},
 /turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/control)
+"Wf" = (
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Wo" = (
 /obj/effect/light_emitter{
 	set_cap = 1;
@@ -5129,6 +6156,14 @@
 /obj/structure/sign/poster/contraband/revolver/directional/south,
 /turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/control)
+"WM" = (
+/obj/effect/turf_decal/sand/plating,
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident)
+"WQ" = (
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "WR" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/siding/red{
@@ -5159,6 +6194,9 @@
 /obj/effect/turf_decal/tile/red/full,
 /turf/open/floor/iron/dark/textured_half,
 /area/centcom/syndicate_mothership/control)
+"WZ" = (
+/turf/closed/indestructible/rock,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Xb" = (
 /obj/structure/railing{
 	dir = 1
@@ -5166,6 +6204,30 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/centcom/syndicate_mothership/control)
+"Xe" = (
+/obj/structure/marker_beacon/burgundy,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
+"Xh" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/effect/turf_decal/bot,
+/obj/item/storage/box/syndie_kit/modsuitmodbundle,
+/obj/item/storage/box/syndie_kit/modsuitmodbundle,
+/obj/item/storage/box/syndie_kit/modsuitmodbundle,
+/obj/item/pen/cybersun,
+/obj/item/storage/backpack/duffelbag/syndie/x4,
+/obj/item/forcefield_projector/combat,
+/obj/item/sbeacondrop/emp,
+/obj/item/construction/rcd/syndicate,
+/obj/item/rcd_ammo/syndicate,
+/obj/structure/closet/crate/secure/syndicate/cybersun/night,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Xj" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/siding/red{
@@ -5177,6 +6239,15 @@
 "Xk" = (
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership)
+"Xn" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 1
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Xu" = (
 /obj/structure/chair/stool/directional/west,
 /obj/effect/landmark/start/nukeop,
@@ -5205,6 +6276,11 @@
 	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/centcom/syndicate_mothership/control)
+"Xy" = (
+/obj/structure/marker_beacon/burgundy,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/firebase_trident/hangar)
 "XA" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/south,
 /obj/structure/window/reinforced/plasma/spawner/directional/north,
@@ -5259,6 +6335,10 @@
 /obj/machinery/portable_atmospherics/pipe_scrubber,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"XN" = (
+/obj/effect/turf_decal/syndicateemblem/middle/middle,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership/firebase_trident)
 "XO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/fuel_pool,
@@ -5295,6 +6375,13 @@
 /obj/item/reagent_containers/cup/bucket,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
+"XU" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/obj/structure/sign/poster/contraband/donk_co/directional/west,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "XX" = (
 /obj/structure/sign/poster/contraband/lusty_xenomorph/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
@@ -5303,6 +6390,13 @@
 	dir = 1
 	},
 /area/centcom/syndicate_mothership/control)
+"Yc" = (
+/obj/effect/turf_decal/siding/thinplating/dark/corner{
+	dir = 4
+	},
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Ye" = (
 /turf/closed/indestructible/rock/snow,
 /area/centcom/syndicate_mothership)
@@ -5329,6 +6423,11 @@
 	},
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/expansion_bombthreat)
+"Yr" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership/firebase_trident)
 "Yx" = (
 /turf/open/floor/mineral/titanium/tiled/yellow,
 /area/centcom/syndicate_mothership/control)
@@ -5386,6 +6485,12 @@
 /obj/item/clothing/mask/gas/syndicate,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership)
+"YU" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 8
+	},
+/turf/open/misc/asteroid,
+/area/centcom/syndicate_mothership/firebase_trident)
 "YX" = (
 /obj/structure/railing{
 	dir = 6
@@ -5575,6 +6680,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ox
 Ox
 Ox
@@ -5620,6 +6752,33 @@ Ox
 Ox
 "}
 (2,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -5776,6 +6935,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ox
 Ox
 nQ
@@ -5824,6 +7010,33 @@ xu
 Ox
 "}
 (4,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -5980,6 +7193,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ox
 nQ
 Fa
@@ -6028,6 +7268,33 @@ RT
 Ox
 "}
 (6,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -6180,6 +7447,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 Ye
 Ye
@@ -6232,6 +7526,33 @@ xu
 Ox
 "}
 (8,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -6376,6 +7697,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 Ye
 Kq
@@ -6436,6 +7784,33 @@ Ox
 Ox
 "}
 (10,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -6580,6 +7955,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 Kq
 oN
@@ -6640,6 +8042,33 @@ sU
 sU
 "}
 (12,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -6784,6 +8213,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 Kq
 QD
@@ -6844,6 +8300,33 @@ sU
 sU
 "}
 (14,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -6988,6 +8471,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 KU
 Kq
@@ -7048,6 +8558,33 @@ sU
 sU
 "}
 (16,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -7190,6 +8727,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 KU
 HW
@@ -7252,6 +8816,33 @@ sU
 sU
 "}
 (18,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -7393,6 +8984,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 KU
 Gl
@@ -7456,6 +9074,33 @@ sU
 sU
 "}
 (20,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -7596,6 +9241,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 KU
 uT
@@ -7660,6 +9332,33 @@ sU
 sU
 "}
 (22,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sH
 Ye
 Ye
@@ -7762,6 +9461,33 @@ sU
 sU
 "}
 (23,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -7864,6 +9590,33 @@ sU
 sU
 "}
 (24,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+QR
 Ye
 uT
 uT
@@ -7966,6 +9719,33 @@ sU
 sU
 "}
 (25,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -8068,6 +9848,33 @@ sU
 sU
 "}
 (26,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -8170,6 +9977,33 @@ sU
 sU
 "}
 (27,1,1) = {"
+sU
+sU
+sU
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -8272,6 +10106,33 @@ sU
 sU
 "}
 (28,1,1) = {"
+sU
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -8374,6 +10235,33 @@ sU
 sU
 "}
 (29,1,1) = {"
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+VY
+VY
+VY
+VY
+VY
+WZ
+WZ
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -8476,6 +10364,33 @@ sU
 sU
 "}
 (30,1,1) = {"
+WZ
+WZ
+WZ
+WZ
+VY
+VY
+xK
+xK
+VY
+VY
+cN
+VY
+VY
+VY
+VY
+VY
+VY
+SV
+ba
+aj
+VY
+VY
+WZ
+WZ
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -8578,6 +10493,33 @@ sU
 sU
 "}
 (31,1,1) = {"
+WZ
+WZ
+VY
+VY
+VY
+oq
+dC
+dC
+VP
+Gw
+KS
+Sr
+Yc
+xx
+zY
+Wf
+gH
+lf
+lf
+Mr
+eM
+VY
+WZ
+WZ
+WZ
+sU
+sU
 Ye
 uT
 uT
@@ -8680,6 +10622,33 @@ sU
 sU
 "}
 (32,1,1) = {"
+WZ
+WZ
+VY
+Nl
+XU
+dp
+xc
+mo
+xe
+Rb
+Dw
+WQ
+MC
+Lo
+hL
+Vq
+xx
+be
+be
+rv
+Sb
+VY
+WZ
+WZ
+WZ
+sU
+sU
 Ye
 uT
 uT
@@ -8782,6 +10751,33 @@ sU
 sU
 "}
 (33,1,1) = {"
+WZ
+WZ
+VY
+VB
+xI
+xx
+Ft
+kt
+xe
+BF
+XN
+xL
+MC
+cZ
+Nx
+Vq
+CV
+SZ
+HV
+xe
+xM
+VY
+WZ
+WZ
+WZ
+WZ
+sU
 Ye
 uT
 uT
@@ -8884,6 +10880,33 @@ sU
 sU
 "}
 (34,1,1) = {"
+WZ
+WZ
+VY
+VB
+xI
+xx
+Jt
+Ju
+Yr
+Fu
+PO
+Px
+MC
+rD
+Rl
+xx
+CV
+rH
+un
+Au
+xM
+VY
+WZ
+WZ
+WZ
+WZ
+WZ
 Ye
 uT
 uT
@@ -8986,6 +11009,33 @@ sU
 sU
 "}
 (35,1,1) = {"
+WZ
+WZ
+VY
+pR
+xI
+xx
+xx
+Vq
+Pv
+VE
+VE
+lw
+fG
+xx
+xx
+xx
+CV
+UR
+lh
+xe
+xM
+VY
+WZ
+WZ
+WZ
+WZ
+WZ
 Ye
 uT
 uT
@@ -9088,6 +11138,33 @@ sU
 sU
 "}
 (36,1,1) = {"
+WZ
+WZ
+VY
+Ap
+cK
+rC
+xx
+tx
+YU
+fI
+Xh
+Xn
+YU
+YU
+jQ
+xx
+Tk
+LU
+LU
+Pv
+DB
+VY
+WZ
+WZ
+WZ
+WZ
+WZ
 Ye
 uT
 uT
@@ -9190,6 +11267,33 @@ sU
 sU
 "}
 (37,1,1) = {"
+WZ
+WZ
+VY
+fP
+AD
+VY
+tZ
+Cd
+bn
+oO
+YU
+Cd
+cv
+cv
+oO
+vt
+PP
+IR
+PP
+PP
+MS
+VY
+WZ
+WZ
+WZ
+WZ
+WZ
 Ye
 uT
 uT
@@ -9292,6 +11396,33 @@ sU
 sU
 "}
 (38,1,1) = {"
+WZ
+WZ
+VY
+zz
+YU
+YU
+Cd
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+cv
+oO
+YU
+YU
+YU
+YU
+YU
+Cd
+cv
+bn
+WZ
+WZ
+WZ
 Ye
 uT
 uT
@@ -9394,6 +11525,33 @@ sU
 sU
 "}
 (39,1,1) = {"
+WZ
+WZ
+VY
+wl
+Kl
+rR
+wl
+Kl
+lN
+lU
+lU
+lU
+lN
+Kl
+wl
+wl
+Kl
+wl
+wl
+Kl
+wl
+wl
+Kl
+bb
+VY
+WZ
+WZ
 Ye
 uT
 uT
@@ -9496,6 +11654,33 @@ sU
 sU
 "}
 (40,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+kE
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -9598,6 +11783,33 @@ sU
 sU
 "}
 (41,1,1) = {"
+WZ
+WZ
+Xy
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+kE
+UG
+WZ
+WZ
 Ye
 uT
 uT
@@ -9700,6 +11912,33 @@ sU
 sU
 "}
 (42,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+kE
+Ei
+Ei
+Ei
+kE
+Ei
+Ei
+Ei
+Jk
+Jk
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -9802,6 +12041,33 @@ sU
 sU
 "}
 (43,1,1) = {"
+WZ
+WZ
+sP
+Ei
+kE
+kE
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+Jk
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+UG
+WZ
+WZ
 Ye
 uT
 uT
@@ -9904,6 +12170,33 @@ Ox
 sU
 "}
 (44,1,1) = {"
+WZ
+WZ
+Xy
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+kE
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+kE
+kE
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -10006,6 +12299,33 @@ Ox
 Ox
 "}
 (45,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+kE
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -10108,6 +12428,33 @@ zT
 Ox
 "}
 (46,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+UG
+WZ
+WZ
 Ye
 uT
 uT
@@ -10210,6 +12557,33 @@ kg
 Ox
 "}
 (47,1,1) = {"
+WZ
+WZ
+Xy
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -10312,6 +12686,33 @@ Ox
 Ox
 "}
 (48,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+kE
+Jk
+kE
+Ei
+Ei
+kE
+Ei
+Ei
+Jk
+Ei
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -10414,6 +12815,33 @@ sU
 sU
 "}
 (49,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+UG
+WZ
+WZ
 Ye
 uT
 uT
@@ -10516,6 +12944,33 @@ sU
 sU
 "}
 (50,1,1) = {"
+WZ
+WZ
+Xy
+Ei
+Ei
+kE
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -10618,6 +13073,33 @@ sU
 sU
 "}
 (51,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Ei
+Ei
+kE
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -10720,6 +13202,33 @@ sU
 sU
 "}
 (52,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+UG
+WZ
+WZ
 Ye
 uT
 uT
@@ -10822,6 +13331,33 @@ sU
 sU
 "}
 (53,1,1) = {"
+WZ
+WZ
+Xy
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+Jk
+Ei
+Ei
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -10924,6 +13460,33 @@ sU
 sU
 "}
 (54,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+kE
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -11026,6 +13589,33 @@ sU
 sU
 "}
 (55,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+UG
+WZ
+WZ
 Ye
 uT
 uT
@@ -11128,6 +13718,33 @@ sU
 sU
 "}
 (56,1,1) = {"
+WZ
+WZ
+Xy
+Ei
+Ei
+kE
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+kE
+kE
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -11230,6 +13847,33 @@ sU
 sU
 "}
 (57,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+Jk
+Ei
+Ei
+Ei
+kE
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -11332,6 +13976,33 @@ sU
 sU
 "}
 (58,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Jk
+Ei
+Ei
+Ei
+Ei
+UG
+WZ
+WZ
 Ye
 uT
 uT
@@ -11434,6 +14105,33 @@ sU
 sU
 "}
 (59,1,1) = {"
+WZ
+WZ
+Xy
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+tG
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -11536,6 +14234,33 @@ sU
 sU
 "}
 (60,1,1) = {"
+WZ
+WZ
+sP
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+Ei
+kE
+Ei
+Ei
+Ei
+Ei
+qK
+WZ
+WZ
 Ye
 uT
 uT
@@ -11638,6 +14363,33 @@ sU
 sU
 "}
 (61,1,1) = {"
+WZ
+WZ
+VY
+hi
+Xe
+hZ
+hZ
+Xe
+fd
+fr
+fr
+fr
+fd
+Xe
+hZ
+hZ
+Xe
+hZ
+hZ
+Xe
+hZ
+hZ
+Xe
+hZ
+VY
+WZ
+WZ
 Ye
 uT
 uT
@@ -11740,6 +14492,33 @@ sU
 sU
 "}
 (62,1,1) = {"
+WZ
+WZ
+WZ
+pt
+NL
+NL
+NL
+lI
+lI
+lI
+lI
+lI
+lI
+lI
+Ih
+cv
+bn
+cv
+cv
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
 Ye
 uT
 uT
@@ -11842,6 +14621,33 @@ sU
 sU
 "}
 (63,1,1) = {"
+WZ
+WZ
+WZ
+NL
+DQ
+NL
+vB
+lI
+WM
+rz
+zs
+BI
+aQ
+AS
+bn
+Ih
+cv
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
 Ye
 uT
 uT
@@ -11944,6 +14750,33 @@ sU
 sU
 "}
 (64,1,1) = {"
+WZ
+WZ
+WZ
+kY
+NL
+NL
+NL
+lI
+MB
+Ne
+ni
+IK
+bX
+cv
+cv
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
 Ye
 uT
 uT
@@ -12046,6 +14879,33 @@ sU
 sU
 "}
 (65,1,1) = {"
+WZ
+WZ
+WZ
+yy
+NL
+Gb
+NL
+Eg
+ab
+Tp
+cv
+bn
+cv
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
 Ye
 uT
 uT
@@ -12148,6 +15008,33 @@ sU
 sU
 "}
 (66,1,1) = {"
+sU
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -12250,6 +15137,33 @@ sU
 sU
 "}
 (67,1,1) = {"
+sU
+sU
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+WZ
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -12352,6 +15266,33 @@ sU
 sU
 "}
 (68,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -12454,6 +15395,33 @@ sU
 sU
 "}
 (69,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -12556,6 +15524,33 @@ sU
 sU
 "}
 (70,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -12658,6 +15653,33 @@ sU
 sU
 "}
 (71,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -12760,6 +15782,33 @@ sU
 sU
 "}
 (72,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -12862,6 +15911,33 @@ sU
 sU
 "}
 (73,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -12964,6 +16040,33 @@ sU
 sU
 "}
 (74,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -13066,6 +16169,33 @@ sU
 sU
 "}
 (75,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -13168,6 +16298,33 @@ sU
 sU
 "}
 (76,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -13270,6 +16427,33 @@ sU
 sU
 "}
 (77,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -13372,6 +16556,33 @@ sU
 sU
 "}
 (78,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -13474,6 +16685,33 @@ sU
 sU
 "}
 (79,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -13576,6 +16814,33 @@ sU
 sU
 "}
 (80,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 Ye
 Ye
@@ -13732,6 +16997,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -13780,6 +17072,33 @@ sU
 sU
 "}
 (82,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -13936,6 +17255,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 uT
 uT
@@ -14038,6 +17384,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 Ye
 uT
@@ -14086,6 +17459,33 @@ sU
 sU
 "}
 (85,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -14244,6 +17644,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 Ye
 Ye
@@ -14290,6 +17717,33 @@ sU
 sU
 "}
 (87,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU
@@ -14467,6 +17921,33 @@ sU
 sU
 sU
 sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 Ye
 Ye
 Ye
@@ -14494,6 +17975,33 @@ sU
 sU
 "}
 (89,1,1) = {"
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
+sU
 sU
 sU
 sU

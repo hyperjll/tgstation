@@ -21,6 +21,7 @@
 #define ROLE_WEREWOLF "Werewolf"
 #define ROLE_BLOODSUCKER "Bloodsucker"
 #define ROLE_CLOCK_CULTIST "Clock Cultist"
+#define ROLE_COMMANDO_OPERATIVE "Commando Operative"
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -50,6 +51,7 @@
 #define ROLE_BLOODSUCKERBREAKOUT "Bloodsucker Breakout"
 #define ROLE_SWARMER "Swarmer"
 #define ROLE_CORTICAL_BORER "Cortical Borer"
+#define ROLE_COMMANDO_OPERATIVE_MIDROUND "Commando Operative (Midround)"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"

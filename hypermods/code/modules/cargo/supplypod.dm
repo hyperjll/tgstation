@@ -56,3 +56,24 @@
 	else
 		O.forceMove(src)
 		close()
+
+
+/obj/structure/closet/supplypod/nuke_relocation
+	name = "Syndicate Relocation Pod"
+	desc = "A specalised, blood-red styled pod for relocating high-value assets in active mission areas."
+	specialised = TRUE
+	style = /datum/pod_style/syndicate
+	bluespace = FALSE
+	delays = list(POD_TRANSIT = 25, POD_FALLING = 4, POD_OPENING = 30, POD_LEAVING = 30)
+	reversing = TRUE
+	explosionSize = list(0,0,0,0)
+	/// Turf we return to after exiting
+	var/turf/return_to_turf
+	stay_after_drop = TRUE
+	leavingSound = 'sound/effects/podwoosh.ogg'
+	reverse_option_list = list("Mobs"=TRUE,"Objects"=TRUE,"Anchored"=FALSE,"Underfloor"=FALSE,"Wallmounted"=FALSE,"Unanchored" = TRUE, "Floors"=FALSE,"Walls"=FALSE, "Mecha"=TRUE)
+
+/obj/structure/closet/supplypod/nuke_relocation/preReturn(atom/movable/holder)
+	if(return_to_turf)
+		reverse_dropoff_coords = list(return_to_turf.x, return_to_turf.y, return_to_turf.z)
+	return ..()

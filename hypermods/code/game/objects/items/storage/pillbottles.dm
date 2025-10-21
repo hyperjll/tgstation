@@ -103,3 +103,15 @@
 	custom_premium_price = 300
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/syndicryo
+
+/obj/item/storage/pill_bottle/libital_patch
+	name = "bottle of libital patches"
+	desc = "Contains libital patches used to treat brute damage."
+	spawn_count = 7
+	spawn_type = /obj/item/reagent_containers/applicator/patch/libital
+
+/obj/item/storage/pill_bottle/aiuri_patch
+	name = "bottle of aiuri patches"
+	desc = "Contains aiuri patches used to treat burn damage."
+	spawn_count = 7
+	spawn_type = /obj/item/reagent_containers/applicator/patch/aiuri

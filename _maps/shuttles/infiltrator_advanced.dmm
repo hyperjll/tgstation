@@ -1708,9 +1708,6 @@
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/syndicate/armory)
 "ee" = (
-/obj/machinery/nuclearbomb/syndicate{
-	anchored = 1
-	},
 /obj/machinery/door/window/left/directional/north,
 /obj/effect/turf_decal/stripes/end{
 	dir = 1

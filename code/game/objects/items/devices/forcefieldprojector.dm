@@ -20,6 +20,10 @@
 	var/creation_time = 1 SECONDS
 	/// Checks to make sure the projector isn't busy with making another forcefield.
 	var/force_proj_busy = FALSE
+	/// How quickly the shield regenerates it's integrity
+	var/regen_rate = 2
+	/// Type of field we make.
+	var/field_type = /obj/structure/projected_forcefield
 
 /obj/item/forcefield_projector/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	return ranged_interact_with_atom(interacting_with, user, modifiers)
@@ -61,7 +65,7 @@
 
 	playsound(src,'sound/items/weapons/resonator_fire.ogg',50,TRUE)
 	user.visible_message(span_warning("[user] projects a forcefield!"),span_notice("You project a forcefield."))
-	var/obj/structure/projected_forcefield/F = new(T, src)
+	var/obj/structure/projected_forcefield/F = new field_type(T, src)
 	current_fields += F
 	user.changeNext_move(CLICK_CD_MELEE)
 	return ITEM_INTERACT_SUCCESS
@@ -87,7 +91,7 @@
 
 /obj/item/forcefield_projector/process(seconds_per_tick)
 	if(!LAZYLEN(current_fields))
-		shield_integrity = min(shield_integrity + seconds_per_tick * 2, max_shield_integrity)
+		shield_integrity = min(shield_integrity + seconds_per_tick * regen_rate, max_shield_integrity)
 	else
 		shield_integrity = max(shield_integrity - LAZYLEN(current_fields) * seconds_per_tick * 0.5, 0) //fields degrade slowly over time
 	for(var/obj/structure/projected_forcefield/F in current_fields)

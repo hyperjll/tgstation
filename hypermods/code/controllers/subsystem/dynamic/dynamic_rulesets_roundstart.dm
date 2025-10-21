@@ -54,3 +54,27 @@
 
 /datum/dynamic_ruleset/roundstart/werewolves/assign_role(datum/mind/candidate)
 	candidate.add_antag_datum(/datum/antagonist/werewolf)
+
+//////////////////////////////////////////////
+//                                          //
+//           COMMANDO OPERATIVES            //
+//                                          //
+//////////////////////////////////////////////
+
+/datum/dynamic_ruleset/roundstart/nukies/commando
+	name = "Commando Operatives"
+	config_tag = "Roundstart Commandops"
+	preview_antag_datum = /datum/antagonist/nukeop/commando
+	pref_flag = ROLE_COMMANDO_OPERATIVE
+	weight = list(
+		DYNAMIC_TIER_LOW = 0,
+		DYNAMIC_TIER_LOWMEDIUM = 0,
+		DYNAMIC_TIER_MEDIUMHIGH = 1,
+		DYNAMIC_TIER_HIGH = 3,
+	)
+
+/datum/dynamic_ruleset/roundstart/nukies/commando/assign_role(datum/mind/candidate, datum/team/nuke_team, datum/mind/most_experienced)
+	if(most_experienced == candidate)
+		candidate.add_antag_datum(/datum/antagonist/nukeop/commando/leader)
+	else
+		candidate.add_antag_datum(/datum/antagonist/nukeop/commando)

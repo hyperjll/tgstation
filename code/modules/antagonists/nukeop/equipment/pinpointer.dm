@@ -12,6 +12,8 @@
 			msg += "\"01000001 01001001\"."
 		if(TRACK_INFILTRATOR)
 			msg += "\"vasvygengbefuvc\"."
+		if(TRACK_INFILTRATOR_ADV)
+			msg += "\"vasvygengbefuvc\"."
 		else
 			msg = "Its tracking indicator is blank."
 	. += msg
@@ -52,6 +54,8 @@
 					target = apc
 		if(TRACK_INFILTRATOR)
 			target = SSshuttle.getShuttle("syndicate")
+		if(TRACK_INFILTRATOR_ADV)
+			target = SSshuttle.getShuttle("syndicate_2")
 	..()
 
 /obj/item/pinpointer/nuke/proc/switch_mode_to(new_mode)
