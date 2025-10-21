@@ -3,7 +3,6 @@
 	pref_flag =  ROLE_COMMANDO_OPERATIVE
 	show_to_ghosts = TRUE
 	hijack_speed = 3 //If you can't take out the station, take the shuttle instead.
-	stinger_sound = 'sound/music/antag/ops.ogg'
 
 	/// The DEFAULT outfit we will give to players granted this datum
 	nukeop_outfit = /datum/outfit/syndicate/commando
@@ -86,6 +85,7 @@
 			H.update_icons()
 
 /datum/antagonist/nukeop/commando/leader/greet()
+	play_stinger()
 	to_chat(owner, "<span class='warningplain'><B>You are the Syndicate [title] for this mission. You are responsible for guiding the team.</B></span>")
 	to_chat(owner, "<span class='warningplain'><B>If you feel you are not up to this task, give your disk and radio to another operative.</B></span>")
 	owner.announce_objectives()
