@@ -755,7 +755,7 @@
 		M.adjust_stutter(40 SECONDS)
 		var/obj/item/organ/ears/ears = M.get_organ_slot(ORGAN_SLOT_EARS)
 		if(ears)
-			ears.adjustEarDamage(0, 30)
+			ears.apply_organ_damage(30)
 		M.Paralyze(2 SECONDS)
 		if(prob(30))
 			M.Stun(4 SECONDS)
