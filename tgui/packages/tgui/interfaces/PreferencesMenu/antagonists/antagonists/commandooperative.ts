@@ -12,7 +12,7 @@ const CommandoOperative: Antagonist = {
     `
       Congratulations, agent. You have been chosen to join the Syndicate
       Commando Operative team. Your mission, whether or not you choose
-      to accept it, is to shut down Nanotrasen's second most advanced research facility!
+      to accept it, is to shut down Nanotrasen's most advanced research facility!
     `,
 
     COMMANDO_MECHANICAL_DESCRIPTION,
