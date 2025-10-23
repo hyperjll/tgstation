@@ -88485,6 +88485,7 @@
 /obj/effect/turf_decal/siding/white,
 /obj/machinery/computer/crew,
 /obj/machinery/light/cold/directional/north,
+/obj/structure/fireaxecabinet/jawsofrecovery/directional/north,
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
 "wMQ" = (

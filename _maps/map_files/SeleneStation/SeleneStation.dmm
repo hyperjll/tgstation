@@ -45355,6 +45355,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
 	},
+/obj/structure/fireaxecabinet/jawsofrecovery/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "rRM" = (

@@ -39352,6 +39352,7 @@
 /obj/effect/landmark/start/paramedic,
 /obj/effect/turf_decal/tile/neutral/diagonal_centre,
 /obj/machinery/light/directional/east,
+/obj/structure/fireaxecabinet/jawsofrecovery/directional/east,
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
 "pQU" = (

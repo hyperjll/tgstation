@@ -72174,6 +72174,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/structure/fireaxecabinet/jawsofrecovery/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/medical/paramedic)
 "xxJ" = (

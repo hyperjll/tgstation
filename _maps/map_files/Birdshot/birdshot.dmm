@@ -52377,6 +52377,7 @@
 	},
 /obj/machinery/camera/autoname/directional/east,
 /obj/machinery/light/cold/directional/east,
+/obj/structure/fireaxecabinet/jawsofrecovery/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
 "rxY" = (
