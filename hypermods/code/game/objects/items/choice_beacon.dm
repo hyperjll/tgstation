@@ -21,6 +21,7 @@
 			/obj/item/storage/box/syndie_kit/communicator,
 			/obj/item/storage/box/syndie_kit/sleeper,
 			/obj/item/storage/box/syndie_kit/smuggler,
+			/obj/item/storage/box/syndie_kit/syndie_bb,
 		)
 		for(var/obj/item/storage/box/syndie_kit/bb_kit as anything in possible_bb_kits)
 			bb_kits[initial(bb_kit.name)] = bb_kit

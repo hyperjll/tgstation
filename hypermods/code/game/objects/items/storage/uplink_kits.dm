@@ -1172,6 +1172,23 @@
 	new /obj/item/fulton_core/syndicate(src)
 	new /obj/item/extraction_pack/non_contractor(src)
 
+/obj/item/storage/box/syndie_kit/syndie_bb
+	name = "syndie kit"
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "syndie"
+
+/obj/item/storage/box/syndie_kit/syndie_bb/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
+
+/obj/item/storage/box/syndie_kit/syndie_bb/PopulateContents()
+	new /obj/item/card/emag(src)
+	new /obj/item/card/emag/doorjack(src)
+	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
+	new /obj/item/jammer(src)
+	new /obj/item/stack/telecrystal/five(src)
+	new /obj/item/stack/telecrystal/five(src)
+
 
 /obj/item/storage/box/syndie_kit/romerol_plus/PopulateContents()
 	new /obj/item/reagent_containers/cup/bottle/romerol(src)
