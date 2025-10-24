@@ -117,3 +117,11 @@
 	volume = 100
 	list_reagents = list(/datum/reagent/inverse/cryostylane = 65, /datum/reagent/medicine/sal_acid = 2.5, /datum/reagent/medicine/oxandrolone = 2.5, /datum/reagent/medicine/antitoxin = 12.5, /datum/reagent/medicine/c2/seiver = 15, /datum/reagent/medicine/inaprovaline = 2.5)
 	rename_with_volume = FALSE
+
+/obj/item/reagent_containers/applicator/pill/cyanide
+	name = "cyanide pill"
+	desc = "Used for poisoning people or yourself."
+	icon_state = "pill1"
+	volume = 10
+	list_reagents = list(/datum/reagent/toxin/cyanide = 10)
+	rename_with_volume = TRUE

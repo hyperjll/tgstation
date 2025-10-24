@@ -115,3 +115,9 @@
 	desc = "Contains aiuri patches used to treat burn damage."
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/patch/aiuri
+
+/obj/item/storage/pill_bottle/cyanide
+	name = "bottle of cyanide pills"
+	desc = "Contains pills with a deadly poison. You probably shouldn't consume the pills yourself."
+	spawn_count = 7
+	spawn_type = /obj/item/reagent_containers/applicator/pill/cyanide

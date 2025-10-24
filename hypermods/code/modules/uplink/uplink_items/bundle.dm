@@ -1,3 +1,12 @@
+/datum/uplink_item/bundles_tc/syndicate_mini_kit
+	name = "Syndicate Mini-Kit"
+	desc = "A small, budget-friendly kit for new operatives. Contains a selection of basic tools. \
+			The Syndicate provides only one Mini-Kit per agent."
+	item = /obj/item/storage/box/syndie_kit/mini_kit
+	cost = 10
+	limited_stock = 1
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
 /datum/uplink_item/bundles_tc/goloudbundle
 	name = "NT-Annihilation 'Go Loud' Kit"
 	desc = "For any reason, if you find stealth to be an unviable strategy, we'll understand. Be warned that claiming this kit WILL ALERT EVERYONE TO YOUR TRAITOROUS NATURE. \

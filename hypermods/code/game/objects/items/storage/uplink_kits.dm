@@ -1,3 +1,75 @@
+#define KIT_AMATEUR_ASSASSIN "amateur_assassin"
+#define KIT_INTERN_INFILTRATOR "intern_infiltrator"
+#define KIT_BEGINNER_BOMBER "beginner_bomber"
+#define KIT_STARTER_SABOTEUR "starter_saboteur"
+#define KIT_ROOKIE_RAIDER "rookie_raider"
+
+/obj/item/storage/box/syndie_kit/mini_kit
+	name = "Syndicate Mini-Kit"
+	desc = "A tiny, suspicious-looking box. Contains a starter set of basic tools."
+	icon = 'hypermods/icons/obj/storage/box.dmi'
+	icon_state = "mini_syndiebox"
+	illustration = null
+
+/obj/item/storage/box/syndie_kit/mini_kit/PopulateContents()
+	switch (pick_weight(list(
+		KIT_AMATEUR_ASSASSIN = 3,
+		KIT_INTERN_INFILTRATOR = 3,
+		KIT_BEGINNER_BOMBER = 2,
+		KIT_STARTER_SABOTEUR = 3,
+		KIT_ROOKIE_RAIDER = 2
+		)))
+		if(KIT_AMATEUR_ASSASSIN)
+			new /obj/item/storage/pill_bottle/cyanide(src)
+			new /obj/item/pen/sleepy(src)
+			new /obj/item/clothing/gloves/latex/nitrile(src)
+			new /obj/item/soap/syndie(src)
+			new /obj/item/switchblade(src)
+			new /obj/item/restraints/handcuffs(src)
+			new /obj/item/stack/sticky_tape(src)
+			new /obj/item/clothing/glasses/blindfold(src)
+			new /obj/item/clothing/glasses/thermal(src)
+
+		if(KIT_INTERN_INFILTRATOR)
+			new /obj/item/storage/toolbox/syndicate(src)
+			new /obj/item/storage/box/syndie_kit/chameleon(src)
+			new /obj/item/encryptionkey/syndicate(src)
+			new /obj/item/card/id/advanced/chameleon(src)
+			new /obj/item/implanter/uplink(src)
+
+		if(KIT_BEGINNER_BOMBER)
+			new /obj/item/grenade/syndieminibomb(src)
+			new /obj/item/grenade/c4/x4(src)
+			new /obj/item/grenade/c4/x4(src)
+			new /obj/item/grenade/c4(src)
+			new /obj/item/grenade/c4(src)
+			new /obj/item/grenade/c4(src)
+			new /obj/item/grenade/frag(src)
+			new /obj/item/grenade/frag(src)
+
+		if(KIT_STARTER_SABOTEUR)
+			new /obj/item/card/emag(src)
+			new /obj/item/jammer(src)
+			new /obj/item/crowbar/power/syndicate(src)
+			new /obj/item/clothing/mask/balaclava(src)
+			new /obj/item/multitool/ai_detect(src)
+
+		if(KIT_ROOKIE_RAIDER)
+			new /obj/item/gun/ballistic/automatic/pistol(src)
+			new /obj/item/ammo_box/magazine/m9mm(src)
+			new /obj/item/reagent_containers/hypospray/medipen/stimulants(src)
+			new /obj/item/clothing/shoes/chameleon/noslip(src)
+			new /obj/item/clothing/suit/armor/vest(src)
+			new /obj/item/ammo_box/c9mm(src)
+
+	return
+
+#undef KIT_AMATEUR_ASSASSIN
+#undef KIT_INTERN_INFILTRATOR
+#undef KIT_BEGINNER_BOMBER
+#undef KIT_STARTER_SABOTEUR
+#undef KIT_ROOKIE_RAIDER
+
 /obj/item/storage/box/syndie_kit/flamethrower_bundle/PopulateContents()
 	new /obj/item/flamethrower/full(src)
 	for(var/i in 1 to 3)
