@@ -1089,6 +1089,25 @@
 		'sound/items/gas_mask/gas_mask_equip3.ogg',
 	)
 
+/datum/sound_effect/generic_device_pickup
+	key = SFX_GENERIC_DEVICE_PICKUP
+	file_paths = list(
+		'sound/items/generic_device/generic_device_pickup1.ogg',
+		'sound/items/generic_device/generic_device_pickup2.ogg',
+		'sound/items/generic_device/generic_device_pickup3.ogg',
+		'sound/items/generic_device/generic_device_pickup4.ogg',
+		'sound/items/generic_device/generic_device_pickup5.ogg',
+	)
+
+/datum/sound_effect/generic_device_drop
+	key = SFX_GENERIC_DEVICE_DROP
+	file_paths = list(
+		'sound/items/generic_device/generic_device_drop1.ogg',
+		'sound/items/generic_device/generic_device_drop2.ogg',
+		'sound/items/generic_device/generic_device_drop3.ogg',
+		'sound/items/generic_device/generic_device_drop4.ogg',
+		'sound/items/generic_device/generic_device_drop5.ogg',
+	)
 
 /datum/sound_effect/bloodpack_begin
 	key = SFX_REGEN_BLOODPACK_BEGIN

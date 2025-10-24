@@ -315,6 +315,8 @@ GLOBAL_LIST_EMPTY(sfx_datum_by_key)
 #define SFX_GAS_MASK_PICKUP "gas_mask_pickup"
 #define SFX_GAS_MASK_DROP "gas_mask_drop"
 #define SFX_GAS_MASK_EQUIP "gas_mask_equip"
+#define SFX_GENERIC_DEVICE_PICKUP "generic_device_pickup"
+#define SFX_GENERIC_DEVICE_DROP "generic_device_drop"
 #define SFX_REGEN_BLOODPACK_BEGIN "bloodpack_begin"
 #define SFX_REGEN_BLOODPACK_END "bloodpack_end"
 #define SFX_SHEEP_BLEAT "sheep"
