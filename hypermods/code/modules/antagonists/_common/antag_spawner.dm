@@ -74,6 +74,10 @@
 	provided_antag_datum = /datum/antagonist/nukeop
 	refund_amount = 7000
 
+/obj/item/antag_maker/commando
+	provided_antag_datum = /datum/antagonist/nukeop/commando
+	refund_amount = 7000
+
 /obj/item/antag_maker/clown_op
 	provided_antag_datum = /datum/antagonist/nukeop/clownop
 	refund_amount = 7000

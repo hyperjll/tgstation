@@ -258,6 +258,11 @@
 	item_path = /obj/item/antag_maker/nukie
 	item_cost = 7000
 
+/datum/store_item/roundstart/antag_token_commando
+	name = "Antag Token: Commando Operative"
+	item_path = /obj/item/antag_maker/commando
+	item_cost = 7000
+
 /datum/store_item/roundstart/antag_token_clown_op
 	name = "Antag Token: Clown Operative"
 	item_path = /obj/item/antag_maker/clown_op
