@@ -10,6 +10,8 @@
 	var/provided_antag_datum = /datum/antagonist/traitor
 	// How many credits do we give the player should they already have antagonist status.
 	var/refund_amount = 5000
+	// Safety check to prevent exploits with lag and such
+	var/has_refunded = FALSE
 
 /obj/item/antag_maker/attack_self(mob/living/carbon/user)
 	if(!user)
@@ -18,7 +20,9 @@
 	var/mob/living/carbon/human/owner = user
 
 	if(owner.mind.antag_datums != null)
-		owner.client.prefs.adjust_metacoins(owner.client.ckey, refund_amount, "You've already become an antagonist. You've been refunded.")
+		if(!has_refunded)
+			has_refunded = TRUE
+			owner.client.prefs.adjust_metacoins(owner.client.ckey, refund_amount, "You've already become an antagonist. You've been refunded.")
 		qdel(src)
 		return
 
