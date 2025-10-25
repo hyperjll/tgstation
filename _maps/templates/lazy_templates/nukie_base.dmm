@@ -300,7 +300,8 @@
 "cZ" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/crate{
-	name = "Donk Co. shipment crate"
+	name = "Donk Co. shipment crate";
+	anchored = 1
 	},
 /obj/item/storage/box/donkpockets{
 	pixel_x = 2;
@@ -982,7 +983,9 @@
 /area/centcom/syndicate_mothership/control)
 "hL" = (
 /obj/effect/turf_decal/delivery,
-/obj/structure/closet/crate/secure/syndicate/wafflecorp,
+/obj/structure/closet/crate/secure/syndicate/wafflecorp{
+	anchored = 1
+	},
 /obj/item/food/waffles,
 /obj/item/food/waffles,
 /obj/item/food/waffles,
@@ -1653,7 +1656,9 @@
 /area/centcom/syndicate_mothership/expansion_bioterrorism)
 "mo" = (
 /obj/effect/turf_decal/delivery,
-/obj/structure/closet/crate/secure/syndicate/self,
+/obj/structure/closet/crate/secure/syndicate/self{
+	anchored = 1
+	},
 /obj/item/borg/upgrade/selfrepair/illegal,
 /obj/item/borg/upgrade/selfrepair/illegal,
 /obj/item/borg/upgrade/selfrepair/illegal,
@@ -2298,7 +2303,9 @@
 /obj/item/storage/medkit/toxin,
 /obj/item/storage/medkit,
 /obj/item/defibrillator/loaded,
-/obj/structure/closet/crate/secure/syndicate/interdyne,
+/obj/structure/closet/crate/secure/syndicate/interdyne{
+	anchored = 1
+	},
 /obj/item/storage/pill_bottle/libital_patch,
 /obj/item/storage/pill_bottle/aiuri_patch,
 /obj/item/storage/medkit/emergency/hyperzine,
@@ -2955,7 +2962,9 @@
 /area/centcom/syndicate_mothership/expansion_bombthreat)
 "xc" = (
 /obj/effect/turf_decal/delivery,
-/obj/structure/closet/crate/secure/syndicate/arc,
+/obj/structure/closet/crate/secure/syndicate/arc{
+	anchored = 1
+	},
 /obj/item/storage/harpoon_quiver,
 /obj/item/gun/ballistic/rifle/boltaction/harpoon,
 /obj/item/storage/box/syndie_kit/boxed_dehydrated_carp,
@@ -3900,7 +3909,9 @@
 /area/centcom/syndicate_mothership/expansion_armory)
 "Ft" = (
 /obj/effect/turf_decal/bot,
-/obj/structure/closet/crate/secure/syndicate/tiger,
+/obj/structure/closet/crate/secure/syndicate/tiger{
+	anchored = 1
+	},
 /obj/item/storage/box/syndie_kit/imp_ling,
 /obj/item/storage/box/syndie_kit/imp_ling,
 /obj/item/storage/box/syndie_kit/stabilized_extract_bundle,
@@ -4477,7 +4488,9 @@
 "Jt" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/closet/crate/secure/syndicate/gorlex,
+/obj/structure/closet/crate/secure/syndicate/gorlex{
+	anchored = 1
+	},
 /obj/item/mod/module/insignia/syndie,
 /obj/item/mod/module/insignia/syndie,
 /obj/item/mod/module/insignia/syndie,
@@ -4503,7 +4516,9 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/trench_tool,
 /obj/item/trench_tool,
-/obj/structure/closet/crate/secure/syndicate,
+/obj/structure/closet/crate/secure/syndicate{
+	anchored = 1
+	},
 /obj/item/clothing/glasses/night,
 /obj/item/clothing/glasses/night/prescription,
 /obj/item/ammo_box/magazine/m9mm,
@@ -4713,7 +4728,9 @@
 /area/centcom/syndicate_mothership/control)
 "Lo" = (
 /obj/effect/turf_decal/delivery,
-/obj/structure/closet/crate/secure/syndicate/mi13,
+/obj/structure/closet/crate/secure/syndicate/mi13{
+	anchored = 1
+	},
 /obj/item/suppressor,
 /obj/item/suppressor,
 /obj/item/implanter/fulton_recovery/syndi,
@@ -6225,7 +6242,9 @@
 /obj/item/sbeacondrop/emp,
 /obj/item/construction/rcd/syndicate,
 /obj/item/rcd_ammo/syndicate,
-/obj/structure/closet/crate/secure/syndicate/cybersun/night,
+/obj/structure/closet/crate/secure/syndicate/cybersun/night{
+	anchored = 1
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/firebase_trident)
 "Xj" = (
