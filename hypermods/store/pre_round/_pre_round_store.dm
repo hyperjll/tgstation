@@ -103,7 +103,7 @@ GLOBAL_LIST_INIT(pre_round_items, init_pre_round_items())
 			to_chat(new_player_mob, span_warning("There was an error spawning in your items, you will not be charged"))
 			qdel(created_item)
 			return
-		if(!backpack.atom_storage?.attempt_insert(created_item, new_player_mob, force = STORAGE_NOT_LOCKED))
+		if(!backpack.atom_storage?.attempt_insert(created_item, new_player_mob, override = TRUE, force = STORAGE_NOT_LOCKED))
 			created_item.forceMove(new_player_mob_living.drop_location())
 
 	owners_prefs.adjust_metacoins(new_player_mob.client.ckey, -bought_item::item_cost, "Bought [created_item] for [initial(bought_item.item_cost)] (Pre-round Store)")
