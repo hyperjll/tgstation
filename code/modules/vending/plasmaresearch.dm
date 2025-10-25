@@ -11,6 +11,8 @@
 		/obj/item/clothing/suit/bio_suit = 6,
 		/obj/item/clothing/under/rank/rnd/scientist = 6,
 		/obj/item/transfer_valve = 6,
+		/obj/item/tank/internals/oxygen/empty = 6,
+		/obj/item/tank/internals/plasma/empty = 6,
 	)
 	contraband = list(/obj/item/assembly/health = 3)
 	refill_canister = /obj/item/vending_refill/plasmaresearch
