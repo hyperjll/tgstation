@@ -1,4 +1,5 @@
 /datum/objective/revenant
+	completion_credit_reward = 50
 
 /datum/objective/revenant/New()
 	target_amount = rand(350, 600)
