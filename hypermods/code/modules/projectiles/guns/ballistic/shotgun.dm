@@ -102,6 +102,7 @@
 	actions_types = list()
 	semi_auto = TRUE
 	custom_price = 8000
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 /obj/item/gun/ballistic/shotgun/spes/New()
 	if(prob(10))
