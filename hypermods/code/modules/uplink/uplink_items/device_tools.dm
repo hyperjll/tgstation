@@ -66,22 +66,22 @@
 	item = /obj/item/encryptionkey/universal
 	cost = 3
 	surplus = 0
-/** // getting splashed with oil or blood somehow breaks the game with more than 2 arms.
+
 /datum/uplink_item/device_tools/extraarm
 	name = "Additional Arm"
-	desc = "An additional arm, automatically added to your body upon purchase, allows you to use more items at once"
+	desc = "An additional arm, automatically added to your body upon purchase, allows you to use more items at once."
 	item = /obj/item/bodypart/arm/left //doesn't actually spawn an arm, but it needs an object to show up in the menu :^)
 	cost = 5
 	surplus = 0
 	limited_stock = 2 // It's probably best to not break the UI any further.
 	purchasable_from = ~(UPLINK_SERIOUS_OPS | UPLINK_SPY)
-	 // It's just another arm.
+	// It's just another arm.
 
-/datum/uplink_item/device_tools/extraarm/spawn_item(spawn_item, mob/user)
+/datum/uplink_item/device_tools/extraarm/spawn_item(spawn_item, mob/living/carbon/human/user, datum/uplink_handler/handler, atom/movable/source)
 	var/limbs = user.held_items.len
 	user.change_number_of_hands(limbs+1)
-	to_chat(user, "You feel more dexterous")
-**/
+	to_chat(user, "You feel more dexterous.")
+	return source //For log icon
 
 /datum/uplink_item/device_tools/syndieomnigoggles
 	name = "Syndicate Omni-Goggles"
