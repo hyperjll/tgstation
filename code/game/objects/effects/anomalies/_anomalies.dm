@@ -30,7 +30,7 @@
 	/// Were we stabilized by an anomaly stabilizer specifically and not mapped in as stabilized? Used to prevent the anomaly research facility from providing points.
 	var/was_stabilized_manually = FALSE
 
-/obj/effect/anomaly/Initialize(mapload, new_lifespan)
+/obj/effect/anomaly/Initialize(mapload, new_lifespan, drops_core = TRUE)
 	. = ..()
 
 	if(!mapload)
@@ -41,6 +41,9 @@
 
 	if (!impact_area)
 		return INITIALIZE_HINT_QDEL
+
+	if(!drops_core)
+		anomaly_core = null
 
 	if(anomaly_core)
 		anomaly_core = new anomaly_core(src)
