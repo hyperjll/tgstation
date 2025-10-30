@@ -454,6 +454,7 @@
 	if(last_slogan + slogan_delay <= world.time && slogan_list.len && !shut_up && SPT_PROB(2.5, seconds_per_tick))
 		say(pick(slogan_list))
 		last_slogan = world.time
+		playsound(src, 'hypermods/sound/machines/vending_jingle.ogg', 40, TRUE, extrarange = -3)
 
 	if(shoot_inventory && SPT_PROB(shoot_inventory_chance, seconds_per_tick))
 		throw_item()

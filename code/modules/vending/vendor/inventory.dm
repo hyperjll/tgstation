@@ -191,6 +191,7 @@
 	if(last_shopper != REF(user) || purchase_message_cooldown < world.time)
 		var/vend_response = vend_reply || "Thank you for shopping with [src]!"
 		speak(vend_response)
+		playsound(src, 'hypermods/sound/machines/vending_jingle.ogg', 40, TRUE, extrarange = -3)
 		purchase_message_cooldown = world.time + 5 SECONDS
 		//This is not the best practice, but it's safe enough here since the chances of two people using a machine with the same ref in 5 seconds is fuck low
 		last_shopper = REF(user)
