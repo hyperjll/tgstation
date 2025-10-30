@@ -87,8 +87,8 @@
 /datum/dna_block/feature/accessory/pod_hair
 	feature_key = FEATURE_POD_HAIR
 
-/datum/dna_block/feature/fox_tail
+/datum/dna_block/feature/accessory/fox_tail
 	feature_key = FEATURE_FOX_TAIL
 
-/datum/dna_block/feature/werewolf_tail
+/datum/dna_block/feature/accessory/werewolf_tail
 	feature_key = FEATURE_WEREWOLF_TAIL
