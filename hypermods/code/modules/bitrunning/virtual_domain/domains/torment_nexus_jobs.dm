@@ -6,7 +6,7 @@
 	map_name = "janitor_work_test"
 	bitrunning_network = BITRUNNER_DOMAIN_SECURITY
 	forced_outfit = /datum/outfit/job/prisoner/janitor
-	test_only = TRUE
+	domain_flags = DOMAIN_TEST_ONLY
 
 /datum/lazy_template/virtual_domain/janitor_work/setup_domain(list/created_atoms)
 	custom_spawns = list()
@@ -45,7 +45,7 @@
 	map_name = "janitor_work_mischief"
 	reward_points = BITRUNNER_REWARD_MIN
 	difficulty = BITRUNNER_DIFFICULTY_NONE
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/janitor_work/misdemeanor
 	name = "Janitorial Work: Misdemeanor"
@@ -55,7 +55,7 @@
 	map_name = "janitor_work_medbay"
 	reward_points = BITRUNNER_REWARD_LOW
 	difficulty = BITRUNNER_DIFFICULTY_LOW
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/janitor_work/felony
 	name = "Janitorial Work: Felony"
@@ -65,7 +65,7 @@
 	map_name = "janitor_work_felony"
 	reward_points = BITRUNNER_REWARD_MEDIUM
 	difficulty = BITRUNNER_DIFFICULTY_MEDIUM
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/janitor_work/grand_felony
 	name = "Janitorial Work: Grand Felony"
@@ -75,7 +75,7 @@
 	map_name = "janitor_work_grand_felony"
 	reward_points = BITRUNNER_REWARD_HIGH
 	difficulty = BITRUNNER_DIFFICULTY_HIGH
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/janitor_work/capital
 	name = "Janitorial Work: Capital"
@@ -85,7 +85,7 @@
 	map_name = "janitor_work_capital"
 	reward_points = BITRUNNER_REWARD_EXTREME
 	difficulty = BITRUNNER_DIFFICULTY_OVERKILL
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/customer_push_test
 	name = "Tourist Assistance: Test"
@@ -93,7 +93,7 @@
 	help_text = "Test domain for Tourist Assistance."
 	key = "customer_push_test"
 	map_name = "customer_push_test"
-	test_only = TRUE
+	domain_flags = DOMAIN_TEST_ONLY
 	bitrunning_network = BITRUNNER_DOMAIN_SECURITY
 	forced_outfit = /datum/outfit/job/prisoner/waiter
 
@@ -110,7 +110,7 @@
 	map_name = "customer_push_mischief"
 	reward_points = BITRUNNER_REWARD_MIN
 	difficulty = BITRUNNER_DIFFICULTY_NONE
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/customer_push_test/misdemeanor
 	name = "Tourist Assistance: Misdemeanor"
@@ -120,7 +120,7 @@
 	map_name = "customer_push_misdemeanor"
 	reward_points = BITRUNNER_REWARD_LOW
 	difficulty = BITRUNNER_DIFFICULTY_LOW
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/customer_push_test/felony
 	name = "Tourist Assistance: Felony"
@@ -130,7 +130,7 @@
 	map_name = "customer_push_felony"
 	reward_points = BITRUNNER_REWARD_MEDIUM
 	difficulty = BITRUNNER_DIFFICULTY_MEDIUM
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/customer_push_test/grand_felony
 	name = "Tourist Assistance: Grand Felony"
@@ -140,7 +140,7 @@
 	map_name = "customer_push_grand_felony"
 	reward_points = BITRUNNER_REWARD_HIGH
 	difficulty = BITRUNNER_DIFFICULTY_HIGH
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/customer_push_test/capital
 	name = "Tourist Assistance: Capital"
@@ -150,7 +150,7 @@
 	map_name = "customer_push_capital"
 	reward_points = BITRUNNER_REWARD_EXTREME
 	difficulty = BITRUNNER_DIFFICULTY_OVERKILL
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/outfit/job/prisoner/waiter
 	name = "Waiter (Prisoner)"
@@ -169,7 +169,7 @@
 	help_text = "Test domain for Teleporter Maze."
 	key = "teleporter_maze_test"
 	map_name = "teleporter_maze_test"
-	test_only = TRUE
+	domain_flags = DOMAIN_TEST_ONLY
 	bitrunning_network = BITRUNNER_DOMAIN_SECURITY
 	forced_outfit = /datum/outfit/job/prisoner/scientist
 
@@ -186,7 +186,7 @@
 	map_name = "teleporter_maze_mischief"
 	reward_points = BITRUNNER_REWARD_MIN
 	difficulty = BITRUNNER_DIFFICULTY_NONE
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/teleporter_maze_test/misdemeanor
 	name = "Teleporter Maze Mapping: Misdemeanor"
@@ -196,7 +196,7 @@
 	map_name = "teleporter_maze_misdemeanor"
 	reward_points = BITRUNNER_REWARD_LOW
 	difficulty = BITRUNNER_DIFFICULTY_LOW
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/teleporter_maze_test/felony
 	name = "Teleporter Maze Mapping: Felony"
@@ -206,7 +206,7 @@
 	map_name = "teleporter_maze_felony"
 	reward_points = BITRUNNER_REWARD_MEDIUM
 	difficulty = BITRUNNER_DIFFICULTY_MEDIUM
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/teleporter_maze_test/grand_felony
 	name = "Teleporter Maze Mapping: Grand Felony"
@@ -216,7 +216,7 @@
 	map_name = "teleporter_maze_grand_felony"
 	reward_points = BITRUNNER_REWARD_HIGH
 	difficulty = BITRUNNER_DIFFICULTY_HIGH
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/lazy_template/virtual_domain/teleporter_maze_test/capital
 	name = "Teleporter Maze Mapping: Capital"
@@ -226,7 +226,7 @@
 	map_name = "teleporter_maze_capital"
 	reward_points = BITRUNNER_REWARD_EXTREME
 	difficulty = BITRUNNER_DIFFICULTY_OVERKILL
-	test_only = FALSE
+	domain_flags = NONE
 
 /datum/outfit/job/prisoner/scientist
 	name = "Scientist (Prisoner)"
@@ -246,7 +246,7 @@
 	help_text = "Test domain for Firearms and Target Identification."
 	key = "shooting_gallery_base"
 	map_name = "watcher_hunt"
-	test_only = TRUE
+	domain_flags = DOMAIN_TEST_ONLY
 	var/target_score = 5000
 	var/round_time = 30 SECONDS
 	bitrunning_network = BITRUNNER_DOMAIN_SECURITY
@@ -271,7 +271,7 @@
 	key = "shooting_gallery_mischief"
 	map_name = "shooting_gallery_mischief"
 	difficulty = BITRUNNER_DIFFICULTY_NONE
-	test_only = FALSE
+	domain_flags = NONE
 	reward_points = BITRUNNER_REWARD_MIN
 	target_score = 5000
 
@@ -281,7 +281,7 @@
 	key = "shooting_gallery_misdemeanor"
 	map_name = "shooting_gallery_misdemeanor"
 	difficulty = BITRUNNER_DIFFICULTY_LOW
-	test_only = FALSE
+	domain_flags = NONE
 	reward_points = BITRUNNER_REWARD_LOW
 	target_score = 10000
 
@@ -291,7 +291,7 @@
 	key = "shooting_gallery_felony"
 	map_name = "shooting_gallery_felony"
 	difficulty = BITRUNNER_DIFFICULTY_MEDIUM
-	test_only = FALSE
+	domain_flags = NONE
 	reward_points = BITRUNNER_REWARD_MEDIUM
 	target_score = 15000
 
@@ -301,7 +301,7 @@
 	key = "shooting_gallery_grand_felony"
 	map_name = "shooting_gallery_grand_felony"
 	difficulty = BITRUNNER_DIFFICULTY_HIGH
-	test_only = FALSE
+	domain_flags = NONE
 	reward_points = BITRUNNER_REWARD_HIGH
 	target_score = 20000
 
@@ -311,7 +311,7 @@
 	key = "shooting_gallery_capital"
 	map_name = "shooting_gallery_capital"
 	difficulty = BITRUNNER_DIFFICULTY_OVERKILL
-	test_only = FALSE
+	domain_flags = NONE
 	reward_points = BITRUNNER_REWARD_EXTREME
 	target_score = 30000
 
@@ -323,7 +323,7 @@
 	map_name = "fredingtonfastingbear_torment"
 	bitrunning_network = BITRUNNER_DOMAIN_SECURITY
 	forced_outfit = /datum/outfit/job/prisoner/night_guard
-	test_only = TRUE // Don't show the base class
+	domain_flags = DOMAIN_TEST_ONLY // Don't show the base class
 	var/list/starting_ai_levels = list(
 		/obj/bitrunning/animatronic/standard = 0,
 		/obj/bitrunning/animatronic/janitor = 0,
@@ -349,7 +349,7 @@
 	desc = "Welcome to your first night as a night guard at the Nanotrasen Pizza Express!"
 	key = "fredingtonfastingbear_mischief"
 	difficulty = BITRUNNER_DIFFICULTY_NONE
-	test_only = FALSE
+	domain_flags = NONE
 	reward_points = BITRUNNER_REWARD_MIN
 	starting_ai_levels = list(
 			/obj/bitrunning/animatronic/standard = 0,
@@ -399,7 +399,7 @@
 	reward_points = BITRUNNER_REWARD_LOW
 	key = "fredingtonfastingbear_misdemeanor"
 	difficulty = BITRUNNER_DIFFICULTY_LOW
-	test_only = FALSE
+	domain_flags = NONE
 	starting_ai_levels = list(
 			/obj/bitrunning/animatronic/standard = 0,
 			/obj/bitrunning/animatronic/janitor = 3,
@@ -430,7 +430,7 @@
 /datum/lazy_template/virtual_domain/pizza_guarding_base/felony
 	name = "After-Hours Pizzeria Guarding: Felony"
 	desc = "Welcome to your third night as a night guard at the Nanotrasen Pizza Express!"
-	test_only = FALSE
+	domain_flags = NONE
 	key = "fredingtonfastingbear_felony"
 	difficulty = BITRUNNER_DIFFICULTY_MEDIUM
 	reward_points = BITRUNNER_REWARD_MEDIUM
@@ -464,7 +464,7 @@
 /datum/lazy_template/virtual_domain/pizza_guarding_base/grand_felony
 	name = "After-Hours Pizzeria Guarding: Grand Felony"
 	desc = "Welcome to your fourth night as a night guard at the Nanotrasen Pizza Express!"
-	test_only = FALSE
+	domain_flags = NONE
 	key = "fredingtonfastingbear_grand_felony"
 	difficulty = BITRUNNER_DIFFICULTY_HIGH
 	reward_points = BITRUNNER_REWARD_HIGH
@@ -494,7 +494,7 @@
 /datum/lazy_template/virtual_domain/pizza_guarding_base/capital
 	name = "After-Hours Pizzeria Guarding: Capital"
 	desc = "Welcome to your fifth and final night as a night guard at the Nanotrasen Pizza Express!"
-	test_only = FALSE
+	domain_flags = NONE
 	key = "fredingtonfastingbear_capital"
 	difficulty = BITRUNNER_DIFFICULTY_OVERKILL
 	reward_points = BITRUNNER_REWARD_EXTREME
