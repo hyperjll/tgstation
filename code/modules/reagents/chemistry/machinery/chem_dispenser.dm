@@ -584,7 +584,7 @@
 		/datum/reagent/consumable/tea,
 		/datum/reagent/consumable/tomatojuice,
 		/datum/reagent/consumable/tonic,
-		/datum/reagent/water,
+		/datum/reagent/water
 	)
 	/// The default list of reagents upgrade_reagents tier 2
 	var/static/list/drink_upgrade_reagents_t2 = list(
@@ -709,7 +709,7 @@
 		/datum/reagent/consumable/ethanol/vodka,
 		/datum/reagent/consumable/ethanol/whiskey,
 		/datum/reagent/consumable/ethanol/wine,
-		/datum/reagent/consumable/ethanol/yuyake,
+		/datum/reagent/consumable/ethanol/yuyake
 	)
 	/// The default list of reagents upgrade_reagents tier 2
 	var/static/list/beer_upgrade_reagents_t2 = list(
