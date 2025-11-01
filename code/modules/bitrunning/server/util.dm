@@ -96,7 +96,7 @@
 	for(var/datum/lazy_template/virtual_domain/available as anything in subtypesof(/datum/lazy_template/virtual_domain))
 		var/init_cost = initial(available.cost)
 
-		if(!initial(available.test_only) && \
+		if(!(initial(available.domain_flags) & DOMAIN_TEST_ONLY) && \
 			init_cost <= points && \
 			init_cost > BITRUNNER_COST_NONE && \
 			initial(available.bitrunning_network) == bitrunning_network && \

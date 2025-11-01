@@ -19,7 +19,7 @@ SUBSYSTEM_DEF(bitrunning)
 	var/list/levels = list()
 
 	for(var/datum/lazy_template/virtual_domain/domain as anything in all_domains)
-		if(domain.test_only)
+		if(domain.domain_flags & DOMAIN_TEST_ONLY)
 			continue
 		if(domain.bitrunning_network != bitrunning_network)
 			continue

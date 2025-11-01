@@ -846,7 +846,7 @@
 	new /obj/item/modular_computer/pda/nukeops(src) // ?? TC / Free for nukies
 	new /obj/item/card/id/advanced/chameleon(src) // 2 TC / Free for nukies
 	new /obj/item/mod/control/pre_equipped/nuclear(src) // 8 TC? / Free for nukies
-	new /obj/item/tank/jetpack/oxygen/harness(src) // They kinda need this to fly to the cruiser.
+	new /obj/item/tank/jetpack/harness(src) // They kinda need this to fly to the cruiser.
 	// Tacticool gear
 	new /obj/item/clothing/shoes/combat(src)
 	new /obj/item/clothing/under/syndicate(src)

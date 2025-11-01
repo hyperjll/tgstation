@@ -28,6 +28,8 @@
 	var/list/datum/weakref/spawned_threat_refs = list()
 	/// Scales loot with extra players
 	var/multiplayer_bonus = 1.1
+	/// Extra bonus for every player that nohits the run
+	var/nohit_bonus = 0.8
 	/// What radio channel should we be using?
 	var/radio_channel_to_use = RADIO_CHANNEL_SUPPLY
 	/// The amount of points in the system, used to purchase maps
