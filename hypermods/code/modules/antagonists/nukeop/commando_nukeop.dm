@@ -131,7 +131,7 @@
 	head = /obj/item/clothing/head/helmet/space/syndicate/black/red
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/space/syndicate/black/red
-	suit_store = /obj/item/tank/jetpack/oxygen/harness
+	suit_store = /obj/item/tank/jetpack/harness
 	belt = /obj/item/storage/belt/military
 
 /datum/team/nuclear/commando

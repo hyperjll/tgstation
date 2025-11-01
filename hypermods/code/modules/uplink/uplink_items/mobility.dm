@@ -81,7 +81,7 @@
 /datum/uplink_item/mobility/jetpack
 	name = "Smuggled Jetpack"
 	desc = "A blue jetpack smuggled from NT's suppliers. It's been pre-filled with oxygen."
-	item = /obj/item/tank/jetpack/oxygen
+	item = /obj/item/tank/jetpack
 	cost = 2
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
