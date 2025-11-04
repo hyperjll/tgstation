@@ -11950,7 +11950,7 @@
 	dir = 8
 	},
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai/upload/chamber";
 	name = "AI Antechamber Turret Control";
 	pixel_x = 30
 	},
@@ -19728,7 +19728,7 @@
 	name = "AI Chamber turret control";
 	pixel_x = 3;
 	pixel_y = 28;
-	control_area = "/area/station/ai_monitored/turret_protected/ai"
+	control_area = "/area/station/ai/satellite/chamber"
 	},
 /obj/item/radio/intercom{
 	freerange = 1;
@@ -24570,7 +24570,7 @@
 /area/station/science/research/abandoned)
 "hex" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat_interior";
+	control_area = "/area/station/ai/satellite/interior";
 	name = "AI Antechamber Turret Control";
 	pixel_x = 30
 	},

@@ -18216,7 +18216,7 @@
 	},
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai/upload/chamber";
 	icon_state = "control_stun";
 	name = "AI Upload turret control";
 	pixel_y = 28
@@ -28560,7 +28560,7 @@
 "hwN" = (
 /obj/machinery/camera/autoname/directional/south,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat_interior";
+	control_area = "/area/station/ai/satellite/interior";
 	name = "Antechamber Turret Control";
 	pixel_y = -32
 	},
@@ -31735,7 +31735,8 @@
 	icon_state = "control_stun";
 	name = "AI Chamber turret control";
 	pixel_x = 3;
-	pixel_y = -23
+	pixel_y = -23;
+	control_area = "/area/station/ai/satellite/chamber"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/circuit,

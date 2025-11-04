@@ -2086,7 +2086,7 @@
 "aPs" = (
 /obj/structure/cable,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat/foyer";
+	control_area = "/area/station/ai/satellite/foyer";
 	name = "Foyer Turret Control";
 	pixel_y = -25
 	},
@@ -8825,7 +8825,7 @@
 /obj/structure/cable,
 /obj/machinery/light/small/directional/east,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat_interior";
+	control_area = "/area/station/ai/satellite/interior";
 	name = "Teleporter Room Turret Control";
 	pixel_x = 25
 	},
@@ -16455,7 +16455,7 @@
 /area/station/science)
 "gxn" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat/hallway";
+	control_area = "/area/station/ai/satellite/hallway";
 	name = "Hallway Turret Control";
 	pixel_y = 25
 	},
@@ -22008,7 +22008,8 @@
 /obj/machinery/turretid{
 	name = "AI Chamber turret control";
 	pixel_x = 5;
-	pixel_y = -25
+	pixel_y = -25;
+	control_area = "/area/station/ai/satellite/chamber"
 	},
 /turf/open/floor/circuit/green,
 /area/station/ai/satellite/chamber)
@@ -25432,7 +25433,7 @@
 /area/station/science/ordnance/freezerchamber)
 "kdg" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat/hallway";
+	control_area = "/area/station/ai/satellite/hallway";
 	name = "Hallway Turret Control";
 	pixel_x = 25
 	},
@@ -25972,7 +25973,7 @@
 	dir = 1
 	},
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat/hallway";
+	control_area = "/area/station/ai/satellite/hallway";
 	name = "Hallway Turret Control";
 	pixel_x = -27
 	},
@@ -31658,7 +31659,7 @@
 /area/station/maintenance/department/engine)
 "mpV" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat/hallway";
+	control_area = "/area/station/ai/satellite/hallway";
 	name = "Hallway Turret Control";
 	pixel_y = -25
 	},
@@ -36528,7 +36529,7 @@
 	network = list("ss13","minisat")
 	},
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai/upload/chamber";
 	name = "Upload Turret Control";
 	pixel_y = -25
 	},
@@ -43695,7 +43696,7 @@
 /obj/structure/cable,
 /obj/machinery/light/directional/north,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai/satellite/hallway";
 	name = "Upload Turret Control";
 	pixel_y = 27
 	},
@@ -50694,7 +50695,7 @@
 /obj/structure/cable,
 /obj/machinery/light/small/directional/west,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat/atmos";
+	control_area = "/area/station/ai/satellite/atmos";
 	name = "Atmos Turret Control";
 	pixel_x = -27
 	},

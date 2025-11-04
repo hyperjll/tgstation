@@ -29849,7 +29849,7 @@
 "euY" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat/hallway";
+	control_area = "/area/station/ai/satellite/hallway";
 	name = "Hallway Turret Control";
 	pixel_y = -24;
 	req_access = list("minisat")
@@ -36764,7 +36764,7 @@
 	dir = 8
 	},
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai/upload/chamber";
 	icon_state = "control_stun";
 	name = "AI Upload Turret Control";
 	pixel_y = 28
@@ -38671,7 +38671,8 @@
 	icon_state = "control_stun";
 	name = "AI Chamber turret control";
 	pixel_x = 3;
-	pixel_y = -23
+	pixel_y = -23;
+	control_area = "/area/station/ai/satellite/chamber"
 	},
 /obj/machinery/door/window/brigdoor/left/directional/west{
 	name = "Primary AI Core Access";
@@ -55486,6 +55487,13 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
+	},
+/obj/machinery/turretid{
+	icon_state = "control_stun";
+	name = "AI Chamber turret control";
+	pixel_x = 3;
+	pixel_y = -23;
+	control_area = "/area/station/ai/satellite/chamber"
 	},
 /turf/open/floor/iron/dark/smooth_corner{
 	dir = 1
@@ -77166,7 +77174,7 @@
 	color = "#52B4E9"
 	},
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat_interior";
+	control_area = "/area/station/ai/satellite/interior";
 	name = "Foyer Turret Control";
 	pixel_y = -24;
 	req_access = list("minisat")

@@ -2007,6 +2007,13 @@
 /area/station/hallway/primary/aft)
 "aNk" = (
 /obj/item/radio/intercom/directional/west,
+/obj/machinery/turretid{
+	icon_state = "control_stun";
+	name = "AI Chamber turret control";
+	pixel_x = 3;
+	pixel_y = -23;
+	control_area = "/area/station/ai/satellite/chamber"
+	},
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/interior)
 "aNv" = (
@@ -2816,7 +2823,8 @@
 	icon_state = "control_stun";
 	name = "AI Chamber turret control";
 	pixel_x = 3;
-	pixel_y = -23
+	pixel_y = -23;
+	control_area = "/area/station/ai/satellite/chamber"
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -6593,7 +6601,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai/upload/chamber";
 	icon_state = "control_stun";
 	name = "AI Upload Turret Control";
 	pixel_y = 28
@@ -31030,7 +31038,7 @@
 	dir = 8
 	},
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai/upload/chamber";
 	icon_state = "control_stun";
 	name = "AI Upload Turret Control";
 	pixel_x = 28
@@ -37670,7 +37678,7 @@
 "pfR" = (
 /obj/structure/showcase/cyborg,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat_interior";
+	control_area = "/area/station/ai/satellite/interior";
 	name = "Foyer Turret Control";
 	pixel_x = -4;
 	req_access = list("minisat");

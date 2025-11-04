@@ -370,7 +370,7 @@
 /area/station/cargo/drone_bay)
 "acq" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai";
+	control_area = "/area/station/ai/satellite/chamber";
 	name = "AI Chamber turret control";
 	pixel_x = 5;
 	pixel_y = -24
@@ -6879,7 +6879,7 @@
 /area/station/command/bridge)
 "azk" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai/upload/chamber";
 	name = "AI Upload turret control";
 	pixel_y = -25
 	},
@@ -26725,7 +26725,7 @@
 /area/station/tcommsat/server)
 "cnC" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat_interior";
+	control_area = "/area/station/ai/satellite/interior";
 	name = "AI Satellite turret control";
 	pixel_x = -5;
 	pixel_y = -24
@@ -32239,7 +32239,7 @@
 	cycle_id = "ai-sat-solar"
 	},
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "fxq" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/corner{
@@ -32844,7 +32844,7 @@
 /obj/machinery/power/smes/full,
 /obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "gaZ" = (
 /obj/effect/turf_decal/trimline/dark_blue/line,
 /obj/structure/cable,
@@ -37966,7 +37966,7 @@
 /obj/item/toy/snappop,
 /obj/structure/sign/poster/official/moth_hardhat/directional/east,
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "kEM" = (
 /obj/structure/sign/directions/evac{
 	dir = 1;
@@ -38130,7 +38130,7 @@
 /obj/structure/sign/poster/official/moth_meth/directional/east,
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "kMt" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -40045,7 +40045,7 @@
 	},
 /obj/effect/turf_decal/trimline/yellow/filled/line,
 /turf/open/floor/iron/dark,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "mrR" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
 /obj/structure/closet/crate/hydroponics,
@@ -40240,7 +40240,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron/dark,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "mzl" = (
 /obj/structure/chair,
 /obj/machinery/atmospherics/components/unary/outlet_injector/on,
@@ -40678,7 +40678,7 @@
 /obj/machinery/light/small/directional/east,
 /obj/structure/sign/warning/vacuum/external/directional/west,
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "mVM" = (
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
@@ -40759,6 +40759,15 @@
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
+"mZZ" = (
+/obj/machinery/turretid{
+	control_area = "/area/station/ai/satellite/chamber";
+	name = "AI Chamber turret control";
+	pixel_x = 5;
+	pixel_y = -24
+	},
+/turf/open/floor/iron/white,
+/area/station/ai/satellite/chamber)
 "naq" = (
 /obj/structure/disposaloutlet{
 	dir = 4
@@ -41315,7 +41324,7 @@
 /obj/machinery/space_heater,
 /obj/machinery/status_display/ai/directional/west,
 /turf/open/floor/iron/dark,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "nww" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -43546,7 +43555,7 @@
 /area/station/hallway/secondary/exit)
 "pil" = (
 /turf/closed/wall/r_wall,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "piI" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
@@ -44374,7 +44383,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "pSd" = (
 /obj/structure/table,
 /obj/item/folder/white,
@@ -47221,7 +47230,7 @@
 	},
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "sea" = (
 /obj/structure/flora/bush/lavendergrass/style_random,
 /obj/structure/flora/bush/sparsegrass/style_random,
@@ -47521,7 +47530,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "stc" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/iron/white,
@@ -52066,7 +52075,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "vOB" = (
 /obj/effect/landmark/start/paramedic,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -52970,7 +52979,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "wuO" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -53599,7 +53608,7 @@
 	name = "Solar Maintenance"
 	},
 /turf/open/floor/plating,
-/area/station/ai_monitored/turret_protected/aisat/solars)
+/area/station/maintenance/solars/ai)
 "wSz" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -87976,7 +87985,7 @@ abO
 abO
 abO
 acC
-abY
+mZZ
 abO
 add
 adk
