@@ -17,7 +17,7 @@
 			balloon_alert(hacker, "can't hack!")
 		return FALSE
 	var/area/console_area = get_area(src)
-	if(!console_area || !istype(console_area, /area/station/ai_monitored/command/nuke_storage))
+	if(!console_area || !istype(console_area, /area/station/command/vault))
 		if(feedback && hacker)
 			balloon_alert(hacker, "bank machine must be within the vault!")
 		return FALSE

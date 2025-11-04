@@ -10,7 +10,7 @@
 	///a cache of areas we can are to the warpable list
 	var/static/list/cached_addable_areas
 	///what area types are we blocked from warping to
-	var/static/list/blocked_areas = typecacheof(list(/area/station/service/chapel, /area/station/ai_monitored))
+	var/static/list/blocked_areas = typecacheof(list(/area/station/service/chapel, /area/station/ai, /area/station/security/armory, /area/station/command/eva, /area/station/command/vault))
 	///what area types cost double
 	var/static/list/costly_areas = typecacheof(list(/area/station/command, /area/station/security))
 

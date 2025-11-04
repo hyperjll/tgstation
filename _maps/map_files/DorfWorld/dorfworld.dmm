@@ -141,8 +141,7 @@
 /obj/effect/spawner/random/armory/riot_armor,
 /obj/effect/spawner/random/armory/bulletproof_armor,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "aV" = (
@@ -276,8 +275,7 @@
 "bR" = (
 /obj/structure/cable,
 /turf/closed/wall/mineral/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "bT" = (
@@ -811,8 +809,7 @@
 /obj/machinery/computer/bank_machine,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "fh" = (
@@ -924,8 +921,7 @@
 /obj/item/folder/documents,
 /obj/item/poster/traitor,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "ga" = (
@@ -1079,8 +1075,7 @@
 /obj/structure/closet/crate/goldcrate,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "hA" = (
@@ -1094,8 +1089,7 @@
 /obj/structure/closet/crate/silvercrate,
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "hD" = (
@@ -1118,8 +1112,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/riot_shield,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "hP" = (
@@ -1347,8 +1340,7 @@
 /obj/item/gun/ballistic/revolver/russian,
 /obj/item/storage/briefcase/secure/riches,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "jw" = (
@@ -1356,8 +1348,7 @@
 /area/space/nearstation/planetary)
 "jF" = (
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "jI" = (
@@ -1392,8 +1383,7 @@
 	},
 /obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/circuit/telecomms/mainframe,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "kb" = (
@@ -1450,8 +1440,7 @@
 "km" = (
 /obj/structure/cable,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "kn" = (
@@ -1505,8 +1494,7 @@
 "kC" = (
 /obj/structure/sign/warning/secure_area,
 /turf/closed/wall/r_wall,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "kJ" = (
@@ -1669,8 +1657,7 @@
 "lB" = (
 /obj/structure/closet/crate/silvercrate,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "lC" = (
@@ -1769,8 +1756,7 @@
 	},
 /obj/item/storage/lockbox/loyalty,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "ma" = (
@@ -2090,8 +2076,7 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/any/supply/vault,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "nI" = (
@@ -2252,8 +2237,7 @@
 /obj/effect/spawner/random/armory/riot_helmet,
 /obj/effect/spawner/random/armory/bulletproof_helmet,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "oz" = (
@@ -2320,8 +2304,7 @@
 "pi" = (
 /obj/machinery/rnd/production/protolathe/department/security,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "pl" = (
@@ -2362,8 +2345,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/e_gun,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "pB" = (
@@ -2497,8 +2479,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/disablers,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "qy" = (
@@ -2695,8 +2676,7 @@
 	network = list("ss13","tcomms")
 	},
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "rX" = (
@@ -2754,8 +2734,7 @@
 /turf/open/floor/circuit/green{
 	luminosity = 2
 	},
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "sz" = (
@@ -2839,8 +2818,7 @@
 /obj/structure/cable,
 /obj/machinery/recharge_station,
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "sV" = (
@@ -2963,8 +2941,7 @@
 	},
 /obj/effect/landmark/start/cyborg,
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "tP" = (
@@ -3152,8 +3129,7 @@
 "vi" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "vm" = (
@@ -3224,8 +3200,7 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/effect/mapping_helpers/airlock/access/any/supply/vault,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "vM" = (
@@ -3329,8 +3304,7 @@
 /obj/item/gun/energy/temperature/security,
 /obj/item/gun/energy/ionrifle,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "wp" = (
@@ -3710,8 +3684,7 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/cable,
 /turf/open/floor/circuit/telecomms/mainframe,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "yZ" = (
@@ -3734,8 +3707,7 @@
 	})
 "zg" = (
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "zh" = (
@@ -4045,8 +4017,7 @@
 "BD" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "BE" = (
@@ -4257,8 +4228,7 @@
 	})
 "CQ" = (
 /turf/closed/wall/r_wall,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "CV" = (
@@ -4281,8 +4251,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/laser_gun,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "De" = (
@@ -4305,8 +4274,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "Di" = (
@@ -4322,8 +4290,7 @@
 	req_access = list("captain")
 	},
 /turf/open/floor/circuit/telecomms/mainframe,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "Dm" = (
@@ -4584,8 +4551,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "EV" = (
@@ -4712,8 +4678,7 @@
 "FU" = (
 /obj/machinery/nuclearbomb/selfdestruct,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "Gb" = (
@@ -4748,8 +4713,7 @@
 /obj/machinery/light/small/directional/east,
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "Gi" = (
@@ -4829,8 +4793,7 @@
 /obj/machinery/light/small/directional/west,
 /obj/effect/landmark/start/cyborg,
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "GG" = (
@@ -5129,8 +5092,7 @@
 /obj/effect/spawner/random/armory/dragnet,
 /obj/effect/spawner/random/armory/dragnet,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "IG" = (
@@ -5280,8 +5242,7 @@
 /obj/effect/spawner/random/armory/barrier_grenades,
 /obj/effect/spawner/random/armory/barrier_grenades,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "Jw" = (
@@ -5388,8 +5349,7 @@
 "Ko" = (
 /obj/machinery/rnd/server,
 /turf/open/floor/circuit/telecomms/mainframe,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "Kp" = (
@@ -5512,15 +5472,13 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "Lm" = (
 /obj/effect/landmark/start/cyborg,
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "Lt" = (
@@ -5533,8 +5491,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "Lz" = (
@@ -5606,8 +5563,7 @@
 	},
 /obj/item/gun/grenadelauncher,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "Mw" = (
@@ -5733,8 +5689,7 @@
 /obj/item/clothing/suit/hooded/ablative,
 /obj/item/clothing/suit/hooded/ablative,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "Nu" = (
@@ -5825,8 +5780,7 @@
 "NV" = (
 /obj/machinery/rnd/server/master,
 /turf/open/floor/circuit/telecomms/mainframe,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "NW" = (
@@ -5838,8 +5792,7 @@
 	})
 "NY" = (
 /turf/closed/wall/mineral/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "NZ" = (
@@ -5858,8 +5811,7 @@
 "Og" = (
 /obj/machinery/power/smes/full,
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "Oj" = (
@@ -5873,8 +5825,7 @@
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/circuit/telecomms/mainframe,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "Om" = (
@@ -6094,8 +6045,7 @@
 /obj/effect/spawner/random/maintenance/three,
 /obj/effect/spawner/random/contraband/armory,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "PE" = (
@@ -6164,8 +6114,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/shotgun,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "PU" = (
@@ -6294,8 +6243,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/any/supply/vault,
 /turf/open/space/basic,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "Rs" = (
@@ -6867,8 +6815,7 @@
 "Va" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "Vc" = (
@@ -6937,16 +6884,14 @@
 	})
 "VF" = (
 /turf/closed/wall/r_wall,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "VG" = (
 /obj/machinery/camera/autoname/motion/directional/west,
 /obj/effect/landmark/blobstart,
 /turf/open/floor/mineral/titanium/tiled,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "VJ" = (
@@ -6984,8 +6929,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/security/armory{
-	has_gravity = 1;
+/area/station/security/armory{
 	default_gravity = 1
 	})
 "VU" = (
@@ -7011,8 +6955,7 @@
 /obj/structure/cable,
 /mob/living/simple_animal/bot/secbot/pingsky,
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "VZ" = (
@@ -7043,8 +6986,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "Wi" = (
@@ -7176,8 +7118,7 @@
 	})
 "Xk" = (
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "Xl" = (
@@ -7209,8 +7150,7 @@
 	network = list("vault")
 	},
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "XB" = (
@@ -7271,8 +7211,7 @@
 /obj/structure/cable,
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "Yl" = (
@@ -7286,8 +7225,7 @@
 /obj/structure/cable,
 /obj/effect/landmark/start/ai,
 /turf/open/floor/circuit/telecomms/mainframe,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "Yn" = (
@@ -7448,8 +7386,7 @@
 	},
 /obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/circuit/telecomms/mainframe,
-/area/station/ai_monitored/turret_protected/ai{
-	has_gravity = 1;
+/area/station/ai/satellite/chamber{
 	default_gravity = 1
 	})
 "Zv" = (
@@ -7502,8 +7439,7 @@
 /obj/machinery/ore_silo,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/ai_monitored/command/nuke_storage{
-	has_gravity = 1;
+/area/station/command/vault{
 	default_gravity = 1
 	})
 "ZV" = (

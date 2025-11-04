@@ -51,7 +51,7 @@ GLOBAL_LIST_EMPTY(clock_warp_areas)
 	///are we warping down
 	var/warping = FALSE
 	///what area types are we blocked from warping to
-	var/static/list/blocked_areas = typecacheof(list(/area/station/service/chapel, /area/station/ai_monitored))
+	var/static/list/blocked_areas = typecacheof(list(/area/station/service/chapel, /area/station/ai, /area/station/security/armory, /area/station/command/eva, /area/station/command/vault))
 
 /datum/action/innate/clockcult/warp/IsAvailable(feedback)
 	if(!IS_CLOCK(owner) || owner.incapacitated)

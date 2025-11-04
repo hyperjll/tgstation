@@ -34,12 +34,10 @@
 	var/list/allowed_areas = typecacheof(list(/area/station/command,
 		/area/station/comms,
 		/area/station/security,
-		/area/station/ai_monitored,
 	))
 
-	var/list/blacklisted_areas = typecacheof(list(/area/station/ai_monitored/turret_protected,
+	var/list/blacklisted_areas = typecacheof(list(/area/station/ai,
 		/area/station/security/prison,
-		/area/station/ai_monitored/security, // basically impossible
 	))
 
 	var/list/possible_areas = GLOB.the_station_areas.Copy()
