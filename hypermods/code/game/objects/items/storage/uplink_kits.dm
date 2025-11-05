@@ -839,13 +839,13 @@
 	new /obj/item/reagent_containers/syringe(src)
 	new /obj/item/reagent_containers/cup/beaker(src)
 
-/obj/item/storage/box/syndie_kit/krav_maga
+/obj/item/storage/box/syndie_kit/kaza_ruk
 	icon = 'icons/obj/scrolls.dmi'
 	icon_state ="scroll2"
 	give_fallback_icon = TRUE
 
-/obj/item/storage/box/syndie_kit/krav_maga/PopulateContents()
-	new /obj/item/implanter/krav_maga(src)
+/obj/item/storage/box/syndie_kit/kaza_ruk/PopulateContents()
+	new /obj/item/implanter/kaza_ruk(src)
 
 /obj/item/storage/box/syndie_kit/emp_shield/PopulateContents()
 	new /obj/item/implanter/empshield(src)

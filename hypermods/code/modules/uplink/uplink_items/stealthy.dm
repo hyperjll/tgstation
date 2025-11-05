@@ -10,8 +10,8 @@
 /datum/uplink_item/stealthy_weapons/combatglovesplus
 	name = "Combat Gloves Plus"
 	desc = "A pair of gloves that are fireproof and shock resistant, however unlike the regular Combat Gloves this one uses nanotechnology \
-			to grant the wearer knowledge over Krav Maga. Not as inconspicuous as you may think. To ensure your stealth, wear before use only."
-	item = /obj/item/clothing/gloves/krav_maga/combatglovesplus
+			to grant the wearer knowledge over Krav Ruk. Not as inconspicuous as you may think. To ensure your stealth, wear before use only."
+	item = /obj/item/clothing/gloves/kaza_ruk/combatglovesplus
 	cost = 5
 	surplus = 0
 	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND

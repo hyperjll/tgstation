@@ -56,11 +56,11 @@
 	cost = 5
 	surplus = 60
 
-/datum/uplink_item/implants/kravmaga
-	name = "Krav Maga Implant"
-	desc = "A single sterile implanter containing a neural datachip containing extensive education of Krav Maga, an effective martial art. \
-			Allows the user to 'toggle' knowledge over Krav Maga, allowing you to conceal the martial arts gained."
-	item = /obj/item/storage/box/syndie_kit/krav_maga
+/datum/uplink_item/implants/kaza_ruk
+	name = "Krav Ruk Implant"
+	desc = "A single sterile implanter containing a neural datachip containing extensive education of Krav Ruk, an effective martial art. \
+			Allows the user to 'toggle' knowledge over Krav Ruk, allowing you to conceal the martial arts gained."
+	item = /obj/item/storage/box/syndie_kit/kaza_ruk
 	progression_minimum = 30 MINUTES
 	cost = 12
 	surplus = 10

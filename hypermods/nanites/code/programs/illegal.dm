@@ -111,7 +111,7 @@
 	desc = "The nanites imprint the knowledge of krav maga onto the host, allowing them to use the martial art so long as this program exists."
 	use_rate = 1
 	rogue_types = list(/datum/nanite_program/nerve_decay)
-	var/datum/martial_art/krav_maga/style = new
+	var/datum/martial_art/kaza_ruk/style = new
 
 /datum/nanite_program/kravmaga/enable_passive_effect()
 	. = ..()
