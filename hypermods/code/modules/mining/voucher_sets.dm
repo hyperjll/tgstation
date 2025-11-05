@@ -143,7 +143,7 @@
 		/obj/item/katana, // 10 TC
 		/obj/item/reagent_containers/hypospray/medipen/chemkillswitch, // 8 TC
 		/obj/item/reagent_containers/hypospray/medipen/chemkillswitch, // 8 TC
-		/obj/item/storage/box/syndie_kit/krav_maga, // 12 TC
+		/obj/item/storage/box/syndie_kit/kaza_ruk, // 12 TC
 		/obj/item/storage/box/syndie_kit/scramimplant, // 6 TC
 		)
 
