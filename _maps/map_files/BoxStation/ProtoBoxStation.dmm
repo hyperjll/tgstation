@@ -5181,7 +5181,7 @@
 /area/station/maintenance/fore)
 "apu" = (
 /turf/closed/wall,
-/area/station/ai/satellite/foyer)
+/area/station/ai/satellite/teleporter)
 "apv" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -7816,6 +7816,10 @@
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/trimline/blue/filled/end{
 	dir = 4
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "treatment_center_lockdown";
+	name = "TC Lockdown Shutters"
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/treatment_center)
@@ -18284,7 +18288,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "bhe" = (
-/turf/open/floor/plating,
+/turf/closed/wall/r_wall,
 /area/station/command/heads_quarters/cmo)
 "bhf" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -18815,6 +18819,10 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters"
+	},
 /turf/open/floor/iron/large,
 /area/station/medical/medbay/lobby)
 "biK" = (
@@ -19209,6 +19217,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/end{
 	dir = 1
 	},
+/obj/machinery/vending/chemical,
 /turf/open/floor/iron/textured,
 /area/station/medical/chem_storage)
 "bjM" = (
@@ -19637,7 +19646,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
+/area/station/maintenance/department/medical/central)
 "bls" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/mechanical,
@@ -20865,6 +20874,10 @@
 /obj/effect/turf_decal/trimline/blue/filled/end{
 	dir = 8
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "treatment_center_lockdown";
+	name = "TC Lockdown Shutters"
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/treatment_center)
 "bpz" = (
@@ -22091,6 +22104,11 @@
 	name = "Medbay"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters";
+	dir = 8
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/aft)
 "buI" = (
@@ -23723,6 +23741,15 @@
 /area/station/service/janitor)
 "bAX" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "morgue_shutters";
+	name = "Morgue Shutters"
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virology_shutters";
+	name = "Virology Lockdown Shutters"
+	},
 /turf/open/floor/plating,
 /area/station/medical/morgue)
 "bAZ" = (
@@ -24573,6 +24600,10 @@
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
 /obj/effect/turf_decal/tile/blue/full,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters"
+	},
 /turf/open/floor/iron/large,
 /area/station/medical/medbay/central)
 "bEm" = (
@@ -24777,6 +24808,11 @@
 	dir = 10
 	},
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "morgue_shutters";
+	name = "Morgue Shutters"
+	},
 /turf/open/floor/plating,
 /area/station/medical/morgue)
 "bFp" = (
@@ -28038,7 +28074,7 @@
 /area/space/nearstation)
 "bRN" = (
 /turf/closed/wall,
-/area/station/medical/virology)
+/area/station/ai/satellite/foyer)
 "bRO" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/hangover,
@@ -29842,6 +29878,10 @@
 	name = "Isolation A"
 	},
 /obj/structure/cable,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virology_shutters";
+	name = "Virology Lockdown Shutters"
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/virology)
 "bYY" = (
@@ -29849,6 +29889,10 @@
 /area/station/medical/psychology)
 "bYZ" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters"
+	},
 /turf/open/floor/plating,
 /area/station/medical/medbay/central)
 "bZb" = (
@@ -30875,7 +30919,7 @@
 /area/station/engineering/engine_smes)
 "cdl" = (
 /turf/closed/wall/r_wall,
-/area/station/ai/satellite/atmos)
+/area/station/ai/satellite/service)
 "cdm" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/structure/disposalpipe/segment,
@@ -31077,8 +31121,8 @@
 /turf/open/floor/iron/checker,
 /area/station/command/heads_quarters/ce)
 "cew" = (
-/turf/closed/wall,
-/area/station/ai/satellite/teleporter)
+/turf/closed/wall/r_wall,
+/area/station/ai/satellite/atmos)
 "cex" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Atmospherics South West"
@@ -35486,7 +35530,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/mail_sorting/science/robotics,
 /turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
+/area/station/maintenance/department/medical/central)
 "cHE" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Mech Bay Maintenance"
@@ -35499,7 +35543,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/all/science/robotics,
 /turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
+/area/station/maintenance/department/medical/central)
 "cHF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -36256,14 +36300,14 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/effect/mapping_helpers/airlock/unres,
 /turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
+/area/station/maintenance/department/medical/central)
 "cTK" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
+/area/station/maintenance/department/medical/central)
 "cTO" = (
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -36656,7 +36700,7 @@
 /area/station/maintenance/port/aft)
 "doQ" = (
 /turf/closed/wall,
-/area/station/maintenance/department/medical/morgue)
+/area/station/maintenance/department/medical/central)
 "dpa" = (
 /obj/effect/landmark/start/hangover,
 /obj/effect/decal/cleanable/dirt,
@@ -37169,9 +37213,6 @@
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
-"dHD" = (
-/turf/closed/wall/r_wall,
-/area/station/ai/satellite/interior)
 "dHH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -37997,6 +38038,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters"
+	},
 /turf/open/floor/iron/dark,
 /area/station/maintenance/aft)
 "erd" = (
@@ -41011,6 +41056,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "morgue_shutters";
+	name = "Morgue Shutters"
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "gZg" = (
@@ -41834,6 +41884,10 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters"
+	},
 /turf/open/floor/iron/large,
 /area/station/medical/medbay/lobby)
 "hMM" = (
@@ -42789,6 +42843,13 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
+"iGq" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable/layer3,
+/turf/open/floor/iron/dark,
+/area/station/ai/satellite/interior)
 "iGz" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
@@ -42962,7 +43023,7 @@
 /area/station/maintenance/port/aft)
 "iOD" = (
 /turf/closed/wall/r_wall,
-/area/station/ai/satellite/service)
+/area/station/ai/satellite/teleporter)
 "iOI" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
@@ -44294,6 +44355,11 @@
 /obj/effect/turf_decal/trimline/blue/filled/end{
 	dir = 1
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "treatment_center_lockdown";
+	name = "TC Lockdown Shutters";
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/treatment_center)
 "jYU" = (
@@ -44668,9 +44734,6 @@
 /obj/effect/turf_decal/siding/thinplating_new/end,
 /turf/open/floor/iron/large,
 /area/station/service/hydroponics/garden)
-"kng" = (
-/turf/closed/wall/r_wall,
-/area/station/ai/satellite/teleporter)
 "kno" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "cmoprivacy";
@@ -44678,6 +44741,10 @@
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cmo_privacy";
+	name = "Privacy Shutters"
+	},
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/cmo)
 "knt" = (
@@ -46787,6 +46854,16 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "morgue_shutters";
+	name = "Morgue Shutters"
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters";
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/station/medical/morgue)
 "lZS" = (
@@ -47220,6 +47297,11 @@
 "mug" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "morgue_shutters";
+	name = "Morgue Shutters"
+	},
 /turf/open/floor/plating,
 /area/station/medical/morgue)
 "muJ" = (
@@ -47468,6 +47550,10 @@
 	},
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/tile/yellow/full,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters"
+	},
 /turf/open/floor/iron/large,
 /area/station/medical/storage)
 "mHu" = (
@@ -47753,6 +47839,9 @@
 /obj/structure/broken_flooring/corner/directional/north,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
+"mVs" = (
+/turf/closed/wall/r_wall,
+/area/station/medical/morgue)
 "mWu" = (
 /obj/effect/spawner/random/trash/garbage{
 	spawn_scatter_radius = 1
@@ -47798,6 +47887,10 @@
 /obj/effect/turf_decal/trimline/blue/filled/warning,
 /obj/effect/turf_decal/trimline/blue/filled/warning{
 	dir = 1
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "treatment_center_lockdown";
+	name = "TC Lockdown Shutters"
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/treatment_center)
@@ -48296,6 +48389,9 @@
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
+"nwj" = (
+/turf/closed/wall/r_wall,
+/area/station/ai/satellite/interior)
 "nwF" = (
 /turf/closed/wall,
 /area/station/service/hydroponics/garden)
@@ -48796,6 +48892,10 @@
 	id = "pharmacy_shutters3";
 	name = "Pharmacy Shutters"
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters"
+	},
 /turf/open/floor/plating,
 /area/station/medical/pharmacy)
 "nQI" = (
@@ -48913,7 +49013,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/station/command/heads_quarters/cmo)
+/area/station/maintenance/department/medical/central)
 "nUS" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -49465,7 +49565,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
+/area/station/maintenance/department/medical/central)
 "owp" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/engine,
@@ -49484,6 +49584,10 @@
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "treatment_center_lockdown";
+	name = "TC Lockdown Shutters"
+	},
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/storage)
 "owL" = (
@@ -50200,6 +50304,22 @@
 	name = "Chief Medical Officer's Fax Machine"
 	},
 /obj/machinery/light/cold/directional/south,
+/obj/machinery/button/door/directional/south{
+	id = "cmo_privacy";
+	name = "Privacy Shutters Control"
+	},
+/obj/machinery/button/door/directional/south{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutter Control";
+	pixel_x = 6;
+	pixel_y = -36
+	},
+/obj/machinery/button/door/directional/south{
+	id = "treatment_center_lockdown";
+	name = "Treatment Center Lockdown";
+	pixel_x = -6;
+	pixel_y = -36
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "oZe" = (
@@ -51050,6 +51170,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters"
+	},
 /turf/open/floor/iron/large,
 /area/station/medical/medbay/central)
 "pKb" = (
@@ -51280,6 +51404,10 @@
 	name = "Virology Interior Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virology_shutters";
+	name = "Virology Lockdown Shutters"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "pPV" = (
@@ -51665,6 +51793,10 @@
 	},
 /turf/open/floor/wood,
 /area/station/service/abandoned_gambling_den)
+"qfF" = (
+/obj/machinery/vending/custom,
+/turf/open/floor/iron,
+/area/station/cargo/office)
 "qgd" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -52260,7 +52392,7 @@
 /obj/structure/disposalpipe/sorting/mail,
 /obj/effect/mapping_helpers/mail_sorting/medbay/cmo_office,
 /turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
+/area/station/maintenance/department/medical/central)
 "qJw" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/iron,
@@ -52383,8 +52515,18 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cmo_privacy";
+	name = "Privacy Shutters";
+	dir = 4
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters";
+	dir = 8
+	},
 /turf/open/floor/plating,
-/area/station/command/heads_quarters/cmo)
+/area/station/maintenance/department/medical/central)
 "qQr" = (
 /obj/structure/chair/office/light,
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -52816,7 +52958,7 @@
 /area/station/service/kitchen)
 "rmh" = (
 /turf/closed/wall/r_wall,
-/area/station/maintenance/department/medical/morgue)
+/area/station/maintenance/department/medical/central)
 "rmL" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -53019,6 +53161,11 @@
 /obj/effect/turf_decal/trimline/blue/filled/end,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "treatment_center_lockdown";
+	name = "TC Lockdown Shutters";
+	dir = 8
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/treatment_center)
@@ -53832,6 +53979,11 @@
 	name = "CMO Office"
 	},
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cmo_privacy";
+	name = "Privacy Shutters";
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/cmo)
 "sgo" = (
@@ -53935,6 +54087,18 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/carpet,
 /area/station/service/library)
+"sjR" = (
+/obj/effect/turf_decal/trimline/green/filled/line{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/button/door/directional/north{
+	id = "virology_shutters";
+	name = "Virology Lockdown Shutter Controls";
+	req_access = list("virology")
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/virology)
 "skh" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -53992,7 +54156,7 @@
 /obj/effect/mapping_helpers/airlock/access/any/science/maintenance,
 /obj/effect/mapping_helpers/airlock/unres,
 /turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
+/area/station/maintenance/department/medical/central)
 "slo" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/landmark/event_spawn,
@@ -54370,10 +54534,6 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/service/chapel)
-"sEd" = (
-/obj/machinery/vending/custom,
-/turf/open/floor/iron,
-/area/station/cargo/office)
 "sEj" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -54847,6 +55007,10 @@
 /obj/effect/turf_decal/trimline/neutral/filled/warning{
 	dir = 4
 	},
+/obj/machinery/button/door/directional/east{
+	id = "morgue_shutters";
+	name = "Morgue Privacy Shutter Control"
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "tce" = (
@@ -54860,6 +55024,11 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "treatment_center_lockdown";
+	name = "TC Lockdown Shutters";
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "tcM" = (
@@ -57403,6 +57572,11 @@
 /obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/effect/turf_decal/tile/brown/fourcorners,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "medical_lockdown";
+	name = "Medical Lockdown Shutters";
+	dir = 8
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/break_room)
 "vrx" = (
@@ -57952,6 +58126,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/station/science/explab)
+"vRJ" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "treatment_center_lockdown";
+	name = "TC Lockdown Shutters"
+	},
+/turf/open/floor/plating,
+/area/station/medical/storage)
 "vRO" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -58595,6 +58777,15 @@
 /obj/machinery/holopad,
 /turf/open/floor/iron,
 /area/station/commons/storage/tools)
+"wwG" = (
+/obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "treatment_center_lockdown";
+	name = "TC Lockdown Shutters";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/station/medical/treatment_center)
 "wxC" = (
 /turf/closed/wall/r_wall,
 /area/station/security/lockers)
@@ -58619,7 +58810,7 @@
 /area/station/hallway/primary/fore)
 "wza" = (
 /obj/structure/disposalpipe/segment,
-/turf/closed/wall,
+/turf/closed/wall/r_wall,
 /area/station/medical/morgue)
 "wzP" = (
 /obj/structure/cable,
@@ -58778,13 +58969,6 @@
 	},
 /turf/open/floor/iron/herringbone,
 /area/station/security/brig)
-"wDL" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable/layer3,
-/turf/open/floor/iron/dark,
-/area/station/ai/satellite/interior)
 "wDT" = (
 /obj/machinery/porta_turret/ai{
 	dir = 4
@@ -59844,6 +60028,10 @@
 /area/station/ai/satellite/hallway)
 "xBX" = (
 /obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "treatment_center_lockdown";
+	name = "TC Lockdown Shutters"
+	},
 /turf/open/floor/plating,
 /area/station/medical/treatment_center)
 "xCh" = (
@@ -59993,6 +60181,10 @@
 	dir = 3
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virology_shutters";
+	name = "Virology Lockdown Shutters"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "xIq" = (
@@ -60216,6 +60408,15 @@
 /obj/structure/cable,
 /turf/open/floor/iron/cafeteria,
 /area/station/hallway/secondary/exit/departure_lounge)
+"xWa" = (
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virology_shutters";
+	name = "Virology Lockdown Shutters"
+	},
+/turf/open/floor/plating,
+/area/station/medical/virology)
 "xWg" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
@@ -83618,7 +83819,7 @@ kMs
 bZy
 skx
 boS
-sEd
+qfF
 bNK
 gpu
 nEm
@@ -93651,7 +93852,7 @@ fav
 bAj
 bDG
 rSS
-bfL
+mVs
 bFo
 mug
 wza
@@ -93908,7 +94109,7 @@ stT
 bzG
 poZ
 bno
-bfL
+mVs
 qkU
 lCa
 bAl
@@ -94165,7 +94366,7 @@ bNd
 bNd
 bNd
 bNd
-bfL
+mVs
 pCs
 uOv
 pYA
@@ -94417,7 +94618,7 @@ bqR
 bNd
 uuG
 bwx
-bOq
+xWa
 itK
 qUp
 nXS
@@ -94931,7 +95132,7 @@ btC
 bNd
 bOq
 bOq
-bOq
+xWa
 bwE
 bOr
 bzH
@@ -95185,15 +95386,15 @@ fyA
 fyA
 bpF
 fyA
-bRN
+bNd
 uuG
 bwx
-bOq
+xWa
 bwE
 mKQ
 jEF
 eXp
-bfL
+mVs
 bIo
 jqJ
 blk
@@ -95450,12 +95651,12 @@ bjq
 bzH
 mxR
 pAR
-bfL
+mVs
 gYv
 kEg
 cCp
-bfL
-bfL
+mVs
+mVs
 bKy
 wOy
 nYt
@@ -95703,11 +95904,11 @@ bNd
 bNd
 bNd
 bNd
-bjq
+sjR
 sZs
-bfL
-bfL
-bfL
+mVs
+mVs
+mVs
 bIm
 bCH
 yiN
@@ -95962,7 +96163,7 @@ qCG
 bNd
 wCx
 sZs
-bfL
+mVs
 ssN
 gxo
 uTK
@@ -96219,7 +96420,7 @@ wRt
 pPM
 dKQ
 sCy
-bfL
+mVs
 kHj
 rzw
 vRO
@@ -96476,7 +96677,7 @@ nzO
 nzO
 nzO
 nzO
-bfL
+mVs
 kkI
 eQR
 vRO
@@ -97306,11 +97507,11 @@ aaa
 aaa
 gXs
 gXs
-cdl
-cdl
-cdl
-cdl
-cdl
+cew
+cew
+cew
+cew
+cew
 gXs
 aaa
 gXs
@@ -97562,12 +97763,12 @@ cna
 cna
 cna
 wIL
-cdl
-cdl
+cew
+cew
 ifU
 xNX
 wTJ
-cdl
+cew
 nBt
 nBt
 nBt
@@ -98071,12 +98272,12 @@ cpN
 mOh
 lXl
 mOh
-apu
+bRN
 aaa
 aaa
 aaa
 gXs
-cdl
+cew
 kBm
 lbw
 cZi
@@ -98328,13 +98529,13 @@ cpN
 mOh
 uiO
 ljD
-apu
-apu
-apu
-apu
-apu
-cdl
-cdl
+bRN
+bRN
+bRN
+bRN
+bRN
+cew
+cew
 jUk
 epE
 vto
@@ -98585,17 +98786,17 @@ dGp
 mOh
 fJi
 mqi
-apu
-apu
+bRN
+bRN
 qty
 jdq
 flb
 dPT
-cdl
-cdl
-cdl
+cew
+cew
+cew
 syE
-cdl
+cew
 vFD
 dRP
 dRP
@@ -98795,7 +98996,7 @@ cYq
 pkS
 pQq
 lFX
-bzm
+vRJ
 gje
 bST
 bSo
@@ -98842,13 +99043,13 @@ lGf
 pue
 dlB
 qOS
-apu
+bRN
 eok
 jdr
 uER
 uqT
 qqx
-dHD
+nwj
 lXu
 sgo
 nFB
@@ -99041,16 +99242,16 @@ dyJ
 jrn
 bsy
 bsy
-xBX
+wwG
 jYP
 ruO
-xBX
+wwG
 bsy
 bsy
-xBX
+wwG
 bsy
 bsy
-xBX
+wwG
 bsy
 bye
 cQb
@@ -99106,7 +99307,7 @@ uVu
 xpI
 obJ
 jFI
-wDL
+iGq
 tEu
 haT
 pGY
@@ -99362,7 +99563,7 @@ uqT
 scz
 eiS
 xhh
-dHD
+nwj
 kyr
 sSy
 nFB
@@ -99614,16 +99815,16 @@ mOh
 mOh
 mqi
 wzX
-apu
+bRN
 rDT
 czT
 pjd
 peh
-iOD
-iOD
-iOD
+cdl
+cdl
+cdl
 lEQ
-iOD
+cdl
 vFD
 dRP
 dRP
@@ -99871,12 +100072,12 @@ aaa
 aaa
 aaa
 jYf
-cew
+apu
 iOk
 tXg
-cew
-kng
+apu
 iOD
+cdl
 waW
 eCT
 fbw
@@ -100128,11 +100329,11 @@ aaa
 aaa
 aaa
 gXs
-cew
+apu
 jiT
 ckg
 vBZ
-kng
+iOD
 uDe
 tEP
 ham
@@ -100385,11 +100586,11 @@ aaa
 aaa
 aaa
 gXs
-cew
+apu
 iLc
 lkh
 lbI
-kng
+iOD
 uDe
 tEP
 ogf
@@ -100642,16 +100843,16 @@ aaa
 aaa
 aaa
 gXs
-cew
-cew
-cew
-cew
-kng
+apu
+apu
+apu
+apu
 iOD
+cdl
 wiz
 hbp
 wbn
-iOD
+cdl
 nBt
 nBt
 nBt
@@ -100904,11 +101105,11 @@ gXs
 gXs
 gXs
 gXs
-iOD
-iOD
-iOD
-iOD
-iOD
+cdl
+cdl
+cdl
+cdl
+cdl
 gXs
 aaa
 gXs
@@ -101862,9 +102063,9 @@ mnj
 xeq
 bZE
 mnj
-mnj
+bhe
 qPS
-mnj
+bhe
 mnj
 bvu
 bfF
@@ -102115,14 +102316,14 @@ aYV
 gVZ
 beB
 mnj
-mnj
-mnj
-mnj
-fwE
+bhe
+bhe
+bhe
+bhe
 bhe
 nUF
 bhe
-mnj
+bhe
 rmh
 rmh
 qmf
