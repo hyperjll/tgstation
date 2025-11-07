@@ -421,12 +421,13 @@
 /turf/closed/wall/rust,
 /area/station/service/lawoffice)
 "aeH" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 1;
 	id = "chemistry_shutters";
 	name = "Chemistry Lobby Shutters"
 	},
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/plating,
 /area/station/medical/pharmacy)
 "aeJ" = (
@@ -6497,6 +6498,19 @@
 /obj/structure/sign/departments/engineering,
 /turf/closed/wall,
 /area/station/ai/satellite/foyer)
+"ciP" = (
+/obj/machinery/vending/custom,
+/obj/effect/turf_decal/tile/brown/half/contrasted{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/brown/half/contrasted{
+	dir = 8
+	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
+/turf/open/floor/iron,
+/area/station/cargo/office)
 "ciR" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -12051,6 +12065,16 @@
 /obj/effect/landmark/start/coroner,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
+"ebC" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "chemistry_shutters_2";
+	name = "Chemistry Hall Shutters"
+	},
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/machinery/vending/custom,
+/turf/open/floor/plating,
+/area/station/medical/pharmacy)
 "ebF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -12300,6 +12324,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
 	},
+/obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/virology)
 "egV" = (
@@ -64158,6 +64183,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/item/crowbar/red,
 /turf/open/floor/iron/dark,
 /area/station/medical/virology)
 "uYM" = (
@@ -97455,7 +97481,7 @@ aDL
 ofg
 cRW
 yaH
-cRW
+ebC
 iyI
 iyI
 iyI
@@ -111853,7 +111879,7 @@ rZV
 oNO
 riS
 bsB
-oNO
+ciP
 tQI
 xlf
 liB

@@ -21812,6 +21812,20 @@
 	},
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
+"fJd" = (
+/obj/machinery/vending/custom,
+/obj/machinery/door/window/left/directional/east{
+	name = "Cargo Vending";
+	req_access = list("cargo");
+	dir = 1
+	},
+/obj/machinery/door/window/left/directional/east{
+	name = "Cargo Vending";
+	req_access = list("cargo");
+	dir = 2
+	},
+/turf/open/floor/iron/smooth,
+/area/station/cargo/office)
 "fJl" = (
 /obj/machinery/door/airlock/external/glass,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/engine_equipment,
@@ -30104,6 +30118,22 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/floor2/starboard/aft)
+"hRo" = (
+/obj/structure/cable,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "chem-lock-f";
+	name = "Chemistry Shutters"
+	},
+/obj/machinery/vending/custom,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	name = "Pharmacy Desk";
+	req_access = list("pharmacy");
+	dir = 2
+	},
+/obj/machinery/door/window/brigdoor/left/directional/north,
+/turf/open/floor/plating,
+/area/station/hallway/floor2/aft)
 "hRp" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -118661,7 +118691,7 @@ rNG
 dny
 gPr
 lju
-fgN
+fJd
 rpj
 gqU
 fhZ
@@ -192425,7 +192455,7 @@ eHc
 hBG
 jLQ
 sGu
-nOO
+hRo
 cbu
 xsi
 xsi
@@ -192682,7 +192712,7 @@ ibw
 ubi
 jLQ
 sGu
-nOO
+hRo
 ihj
 aog
 aog

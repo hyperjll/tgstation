@@ -15015,8 +15015,10 @@
 /turf/open/floor/iron/white,
 /area/station/commons/toilet)
 "bsh" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/north,
+/turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "bsi" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -49478,6 +49480,19 @@
 	dir = 4
 	},
 /obj/machinery/firealarm/directional/east,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/screwdriver{
+	pixel_y = 10
+	},
+/obj/item/wirecutters{
+	pixel_y = -3
+	},
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/structure/table/glass,
+/obj/item/assembly/timer,
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "mgS" = (
@@ -71698,6 +71713,12 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
+"uLA" = (
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/lobby)
 "uLG" = (
 /obj/structure/secure_safe/hos,
 /turf/closed/wall/r_wall,
@@ -125361,7 +125382,7 @@ bhD
 boE
 bky
 wiK
-bsh
+uLA
 bsL
 eGq
 qLZ

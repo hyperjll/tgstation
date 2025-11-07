@@ -2588,6 +2588,7 @@
 /obj/effect/turf_decal/siding/thinplating_new{
 	dir = 4
 	},
+/obj/machinery/vending/custom,
 /turf/open/floor/iron,
 /area/station/medical/medbay/lobby)
 "aXA" = (
@@ -3319,6 +3320,13 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
+"bnb" = (
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/east,
+/turf/open/floor/iron,
+/area/station/cargo/lobby)
 "bnp" = (
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/light/directional/north,
@@ -8171,6 +8179,7 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/structure/table/glass,
 /turf/open/floor/iron/white/textured_large,
 /area/station/medical/medbay/central)
 "dfi" = (
@@ -14822,6 +14831,10 @@
 /obj/effect/mapping_helpers/airlock/access/any/engineering/construction,
 /turf/open/floor/iron/dark/textured,
 /area/station/command/eva)
+"fLx" = (
+/obj/structure/closet/secure_closet/medical1,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "fLR" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -15239,6 +15252,16 @@
 	},
 /turf/open/floor/iron/solarpanel/airless,
 /area/station/solars/starboard/fore)
+"fUS" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "pharmacy_shutters";
+	name = "Pharmacy Shutters"
+	},
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/south,
+/turf/open/floor/plating,
+/area/station/medical/pharmacy)
 "fVa" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/engine/n2,
@@ -25113,6 +25136,7 @@
 /obj/item/paper_bin,
 /obj/item/pen,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/structure/table/glass,
 /turf/open/floor/iron/white/textured_large,
 /area/station/medical/medbay/central)
 "jUQ" = (
@@ -32026,6 +32050,7 @@
 /area/station/security/brig/entrance)
 "mwm" = (
 /obj/effect/turf_decal/tile/blue/full,
+/obj/structure/table/glass,
 /turf/open/floor/iron/white/textured_large,
 /area/station/medical/medbay/central)
 "mwx" = (
@@ -32538,6 +32563,7 @@
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 8
 	},
+/obj/structure/bed/medical/anchored,
 /turf/open/floor/iron/white/textured_edge{
 	dir = 4
 	},
@@ -60218,6 +60244,7 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Medical - Exam Room"
 	},
+/obj/structure/bed/medical/anchored,
 /turf/open/floor/iron/white/textured_large,
 /area/station/medical/medbay/central)
 "xJX" = (
@@ -83583,7 +83610,7 @@ wwQ
 ilJ
 ilJ
 rwd
-gdy
+bnb
 oIp
 hXE
 hXE
@@ -102076,7 +102103,7 @@ uxN
 ykY
 vrG
 sIZ
-oqz
+fUS
 jdu
 etQ
 cmr
@@ -102326,7 +102353,7 @@ tlI
 mhn
 xJI
 iEv
-mEF
+fLx
 toI
 jps
 uxN

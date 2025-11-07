@@ -28984,6 +28984,13 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/station/maintenance/disposal)
+"cMM" = (
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/north,
+/turf/open/floor/plating,
+/area/station/cargo/office)
 "cOv" = (
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron/dark,
@@ -30134,6 +30141,7 @@
 "dRj" = (
 /obj/machinery/airalarm/directional/south,
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
+/obj/structure/closet/secure_closet/chemical,
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "dRB" = (
@@ -32378,6 +32386,7 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted,
+/obj/structure/closet/wardrobe/chemistry_white,
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "fFF" = (
@@ -35306,6 +35315,7 @@
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/medical1,
 /turf/open/floor/iron/white,
 /area/station/medical/cryo)
 "int" = (
@@ -44392,11 +44402,12 @@
 /turf/open/floor/iron/dark,
 /area/station/science/server)
 "pSy" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "chemistry_shutters";
 	name = "Chemistry Shutters"
 	},
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/plating,
 /area/station/medical/pharmacy)
 "pSC" = (
@@ -92930,7 +92941,7 @@ lAs
 aRl
 aSe
 aTc
-aSe
+cMM
 apL
 pvZ
 tOf

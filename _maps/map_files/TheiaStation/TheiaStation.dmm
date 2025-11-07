@@ -9710,6 +9710,7 @@
 	dir = 4
 	},
 /obj/item/radio/intercom/directional/south,
+/obj/machinery/vending/custom,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
 "dRm" = (
@@ -43378,12 +43379,13 @@
 /turf/open/floor/plastic,
 /area/station/cargo/storage)
 "rBU" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 4;
 	id = "chemlock";
 	name = "Pharmacy Shutters"
 	},
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/plating,
 /area/station/medical/pharmacy)
 "rBV" = (
