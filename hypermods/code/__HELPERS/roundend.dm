@@ -80,3 +80,10 @@
 			if(greentexted)
 				queue[ckey] += list(list(100, "Greentext Bonus"))
 				return
+
+	var/mob/living/carbon/human/the_player = details?.mob
+	var/datum/bank_account/get_my_bank = the_player?.get_bank_account()
+
+	if(get_my_bank)
+		var/total_credits_to_give = (account_balance / 10, 1000) // 1000 is the value of the max_round_coins, i COULD just tag max_round_coins from preferences, but this might get changed at some point.
+		queue[ckey] += list(list(total_credits_to_give, "Your Bank Account"))
