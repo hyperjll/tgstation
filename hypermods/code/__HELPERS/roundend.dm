@@ -85,5 +85,8 @@
 	var/datum/bank_account/get_my_bank = the_player?.get_bank_account()
 
 	if(get_my_bank)
-		var/total_credits_to_give = (account_balance / 10, 1000) // 1000 is the value of the max_round_coins, i COULD just tag max_round_coins from preferences, but this might get changed at some point.
-		queue[ckey] += list(list(total_credits_to_give, "Your Bank Account"))
+		var/total_acc_credits = get_my_bank.account_balance
+		var/total_credits_to_give = ROUND_UP(total_acc_credits *= 0.1)
+		if(total_credits_to_give >= 1001)
+			total_credits_to_give = 1000 // 1000 is the value of the max_round_coins, i COULD just tag max_round_coins from preferences, but this might get changed at some point.
+		queue[ckey] += list(list(total_credits_to_give, "Leftovers from your Bank Account"))
