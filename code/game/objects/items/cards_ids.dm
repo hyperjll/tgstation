@@ -781,6 +781,14 @@
 	if (registered_account.being_dumped)
 		registered_account.bank_card_talk(span_warning("内部服务器错误"), TRUE)
 		return CLICK_ACTION_SUCCESS
+	if(!isnull(user))
+		var/mob/living/carbon/human/our_player = user
+		if(registered_account.account_id != our_player.account_id)
+			registered_account.bank_card_talk(span_warning("Unauthorized user!"), TRUE)
+			return CLICK_ACTION_BLOCKING
+	else
+		registered_account.bank_card_talk(span_warning("Unknown user!"), TRUE)
+		return CLICK_ACTION_BLOCKING
 	if(registered_account.account_debt)
 		var/choice = tgui_alert(user, "Choose An Action", "Bank Account", list("Withdraw", "Pay Debt"))
 		if(!choice || QDELETED(user) || QDELETED(src) || !alt_click_can_use_id(user) || loc != user)
