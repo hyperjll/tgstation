@@ -5181,7 +5181,7 @@
 /area/station/maintenance/fore)
 "apu" = (
 /turf/closed/wall,
-/area/station/ai/satellite/teleporter)
+/area/station/ai/satellite/foyer)
 "apv" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -19255,13 +19255,14 @@
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "bjT" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 4;
 	id = "pharmacy_shutters";
 	name = "Pharmacy Shutters"
 	},
-/turf/open/floor/plating,
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/west,
+/turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "bjV" = (
 /obj/effect/decal/cleanable/dirt,
@@ -20089,7 +20090,8 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/left/directional/east{
 	name = "Pharmacy Desk";
-	req_access = list("pharmacy")
+	req_access = list("pharmacy");
+	dir = 8
 	},
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -24782,7 +24784,8 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/right/directional/east{
 	name = "Pharmacy Desk";
-	req_access = list("pharmacy")
+	req_access = list("pharmacy");
+	dir = 8
 	},
 /obj/item/folder/white{
 	pixel_x = -5
@@ -30872,7 +30875,7 @@
 /area/station/engineering/engine_smes)
 "cdl" = (
 /turf/closed/wall/r_wall,
-/area/station/ai/satellite/interior)
+/area/station/ai/satellite/atmos)
 "cdm" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/structure/disposalpipe/segment,
@@ -31074,8 +31077,8 @@
 /turf/open/floor/iron/checker,
 /area/station/command/heads_quarters/ce)
 "cew" = (
-/turf/closed/wall/r_wall,
-/area/station/ai/satellite/atmos)
+/turf/closed/wall,
+/area/station/ai/satellite/teleporter)
 "cex" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Atmospherics South West"
@@ -35793,13 +35796,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
-"cKF" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable/layer3,
-/turf/open/floor/iron/dark,
-/area/station/ai/satellite/foyer)
 "cKV" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -37173,6 +37169,9 @@
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
+"dHD" = (
+/turf/closed/wall/r_wall,
+/area/station/ai/satellite/interior)
 "dHH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -43777,9 +43776,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/commons/vacant_room/commissary)
-"jCp" = (
-/turf/closed/wall/r_wall,
-/area/station/ai/satellite/teleporter)
 "jCq" = (
 /turf/open/floor/iron/dark,
 /area/station/security/courtroom)
@@ -44672,6 +44668,9 @@
 /obj/effect/turf_decal/siding/thinplating_new/end,
 /turf/open/floor/iron/large,
 /area/station/service/hydroponics/garden)
+"kng" = (
+/turf/closed/wall/r_wall,
+/area/station/ai/satellite/teleporter)
 "kno" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "cmoprivacy";
@@ -49114,7 +49113,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable/layer3,
 /turf/open/floor/iron/dark,
-/area/station/ai/satellite/interior)
+/area/station/ai/satellite/foyer)
 "obN" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/maintenance,
@@ -54371,6 +54370,10 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/service/chapel)
+"sEd" = (
+/obj/machinery/vending/custom,
+/turf/open/floor/iron,
+/area/station/cargo/office)
 "sEj" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -54956,9 +54959,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/service)
-"thV" = (
-/turf/closed/wall,
-/area/station/ai/satellite/foyer)
 "tit" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -57203,7 +57203,6 @@
 /turf/open/floor/iron,
 /area/station/commons/locker)
 "vge" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 8;
 	id = "pharmacy_shutters3";
@@ -57212,7 +57211,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/east,
+/turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "vgw" = (
 /obj/structure/disposalpipe/segment,
@@ -58777,6 +58778,13 @@
 	},
 /turf/open/floor/iron/herringbone,
 /area/station/security/brig)
+"wDL" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable/layer3,
+/turf/open/floor/iron/dark,
+/area/station/ai/satellite/interior)
 "wDT" = (
 /obj/machinery/porta_turret/ai{
 	dir = 4
@@ -83610,7 +83618,7 @@ kMs
 bZy
 skx
 boS
-skx
+sEd
 bNK
 gpu
 nEm
@@ -97298,11 +97306,11 @@ aaa
 aaa
 gXs
 gXs
-cew
-cew
-cew
-cew
-cew
+cdl
+cdl
+cdl
+cdl
+cdl
 gXs
 aaa
 gXs
@@ -97554,12 +97562,12 @@ cna
 cna
 cna
 wIL
-cew
-cew
+cdl
+cdl
 ifU
 xNX
 wTJ
-cew
+cdl
 nBt
 nBt
 nBt
@@ -98063,12 +98071,12 @@ cpN
 mOh
 lXl
 mOh
-thV
+apu
 aaa
 aaa
 aaa
 gXs
-cew
+cdl
 kBm
 lbw
 cZi
@@ -98320,13 +98328,13 @@ cpN
 mOh
 uiO
 ljD
-thV
-thV
-thV
-thV
-thV
-cew
-cew
+apu
+apu
+apu
+apu
+apu
+cdl
+cdl
 jUk
 epE
 vto
@@ -98577,17 +98585,17 @@ dGp
 mOh
 fJi
 mqi
-thV
-thV
+apu
+apu
 qty
 jdq
 flb
 dPT
-cew
-cew
-cew
+cdl
+cdl
+cdl
 syE
-cew
+cdl
 vFD
 dRP
 dRP
@@ -98834,13 +98842,13 @@ lGf
 pue
 dlB
 qOS
-thV
+apu
 eok
 jdr
 uER
 uqT
 qqx
-cdl
+dHD
 lXu
 sgo
 nFB
@@ -99096,9 +99104,9 @@ hIF
 ddi
 uVu
 xpI
-cKF
-jFI
 obJ
+jFI
+wDL
 tEu
 haT
 pGY
@@ -99354,7 +99362,7 @@ uqT
 scz
 eiS
 xhh
-cdl
+dHD
 kyr
 sSy
 nFB
@@ -99606,7 +99614,7 @@ mOh
 mOh
 mqi
 wzX
-thV
+apu
 rDT
 czT
 pjd
@@ -99863,11 +99871,11 @@ aaa
 aaa
 aaa
 jYf
-apu
+cew
 iOk
 tXg
-apu
-jCp
+cew
+kng
 iOD
 waW
 eCT
@@ -100120,11 +100128,11 @@ aaa
 aaa
 aaa
 gXs
-apu
+cew
 jiT
 ckg
 vBZ
-jCp
+kng
 uDe
 tEP
 ham
@@ -100377,11 +100385,11 @@ aaa
 aaa
 aaa
 gXs
-apu
+cew
 iLc
 lkh
 lbI
-jCp
+kng
 uDe
 tEP
 ogf
@@ -100634,11 +100642,11 @@ aaa
 aaa
 aaa
 gXs
-apu
-apu
-apu
-apu
-jCp
+cew
+cew
+cew
+cew
+kng
 iOD
 wiz
 hbp
