@@ -10,4 +10,7 @@
 	var/mob/living/carbon/human/human_holder = quirk_holder
 	var/datum/bank_account/get_my_bank = human_holder.get_bank_account()
 
+	if(!get_my_bank)
+		return
+
 	get_my_bank.payday_modifier *= 1.5
