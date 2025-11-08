@@ -67,6 +67,7 @@ type Data = {
   selectedContainerRef: string;
   selectedContainerVolume: number;
   selectedContainerCategory?: string;
+  hasBeakerInHand: BooleanLike;
 };
 
 export const ChemMaster = (props) => {
@@ -111,6 +112,7 @@ const ChemMasterContent = (props: {
     categories,
     selectedContainerVolume,
     selectedContainerCategory,
+    hasBeakerInHand,
   } = data;
 
   const [itemCount, setItemCount] = useState<number>(1);
@@ -123,7 +125,7 @@ const ChemMasterContent = (props: {
       <Section
         title="Beaker"
         buttons={
-          beaker && (
+          beaker ? (
             <Box>
               <Box inline color="label" mr={2}>
                 <AnimatedNumber value={beaker.currentVolume} initial={0} />
@@ -133,6 +135,20 @@ const ChemMasterContent = (props: {
                 Eject
               </Button>
             </Box>
+          ) : (
+            <Button
+              icon="eject"
+              onClick={() => act('insert')}
+              style={{
+                opacity: hasBeakerInHand ? 1 : 0.5,
+              }}
+              tooltip={
+                !hasBeakerInHand && 'You need to hold a container in your hand'
+              }
+              tooltipPosition="bottom-start"
+            >
+              Insert
+            </Button>
           )
         }
       >
