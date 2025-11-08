@@ -81,11 +81,26 @@
 				queue[ckey] += list(list(100, "Greentext Bonus"))
 				return
 
-	var/mob/living/carbon/human/the_player = details?.mob
-	var/datum/bank_account/get_my_bank = the_player?.get_bank_account()
+	var/datum/mind/the_players_mind = details?.mob?.mind
 
-	if(get_my_bank)
-		var/total_acc_credits = get_my_bank.account_balance
+	if(isnull(the_players_mind))
+		return
+
+	var/list/user_memories = the_players_mind.memories
+	var/datum/memory/key/account/user_key = user_memories[/datum/memory/key/account]
+
+	if(isnull(user_key))
+		return
+
+	var/get_my_bank = user_key.remembered_id
+
+	if(isnull(get_my_bank))
+		return
+
+	var/datum/bank_account/account = SSeconomy.bank_accounts_by_id["[get_my_bank]"]
+
+	if(!isnull(account))
+		var/total_acc_credits = account.account_balance
 		var/total_credits_to_give = ROUND_UP(total_acc_credits *= 0.1)
 		if(total_credits_to_give >= 1001)
 			total_credits_to_give = 1000 // 1000 is the value of the max_round_coins, i COULD just tag max_round_coins from preferences, but this might get changed at some point.
