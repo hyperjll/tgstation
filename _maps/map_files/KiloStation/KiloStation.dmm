@@ -25979,6 +25979,14 @@
 /obj/item/book/manual/wiki/grenades,
 /obj/item/toy/figure/chemist,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/pharmacy)
 "itC" = (

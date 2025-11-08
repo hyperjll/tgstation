@@ -15625,6 +15625,10 @@
 	pixel_x = 2;
 	pixel_y = 2
 	},
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
 /turf/open/floor/engine,
 /area/station/medical/pharmacy)
 "gcE" = (

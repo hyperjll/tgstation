@@ -32917,6 +32917,14 @@
 	dir = 10
 	},
 /obj/effect/turf_decal/trimline/blue/filled/mid_joiner,
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = 8
+	},
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
 /turf/open/floor/iron/white/smooth_edge{
 	dir = 8
 	},

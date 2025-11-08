@@ -60508,6 +60508,14 @@
 	},
 /obj/machinery/newscaster/directional/south,
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = 8
+	},
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "xYM" = (

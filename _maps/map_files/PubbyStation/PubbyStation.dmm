@@ -48152,6 +48152,14 @@
 	pixel_y = 11
 	},
 /obj/structure/table/glass,
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = 8
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "sSJ" = (

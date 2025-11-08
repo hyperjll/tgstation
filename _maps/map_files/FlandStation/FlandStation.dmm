@@ -12057,6 +12057,14 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = 8
+	},
 /turf/open/floor/iron/grid/steel,
 /area/station/medical/pharmacy)
 "dAM" = (

@@ -8804,6 +8804,7 @@
 "aUk" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /obj/structure/fireaxecabinet/jawsofrecovery/directional/east,
+/obj/machinery/computer/crew,
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
 "aUm" = (
@@ -21352,6 +21353,12 @@
 /obj/item/tank/internals/oxygen,
 /turf/open/floor/plating,
 /area/station/medical/virology)
+"cns" = (
+/obj/machinery/vending/custom,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
+/turf/open/floor/iron,
+/area/station/cargo/lobby)
 "cnu" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -28005,6 +28012,10 @@
 /obj/structure/billboard/nanotrasen,
 /turf/open/space/basic,
 /area/space/nearstation)
+"dCf" = (
+/obj/machinery/vending/chemical,
+/turf/open/floor/iron/white,
+/area/station/medical/pharmacy)
 "dCk" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Chamber"
@@ -29889,6 +29900,14 @@
 /obj/machinery/reagentgrinder,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "evC" = (
@@ -43990,6 +44009,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 5
 	},
+/obj/machinery/vending/drugs,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "jVQ" = (
@@ -61038,6 +61058,7 @@
 /area/station/maintenance/port/greater)
 "qCF" = (
 /obj/effect/turf_decal/tile/dark/half,
+/obj/machinery/vending/assist,
 /turf/open/floor/iron/white/textured_large,
 /area/station/science/lobby)
 "qCQ" = (
@@ -77134,6 +77155,11 @@
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/chamber)
+"wUL" = (
+/obj/effect/turf_decal/trimline/blue/filled/line,
+/obj/structure/bed/medical/emergency,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "wVf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -114372,7 +114398,7 @@ rNZ
 cpi
 vYa
 cWd
-cpi
+cns
 rNZ
 rNZ
 rNZ
@@ -127948,7 +127974,7 @@ biX
 bml
 ucU
 ogF
-bqq
+dCf
 boJ
 fyz
 brF
@@ -128444,7 +128470,7 @@ aEd
 aEd
 aIT
 aQZ
-bhI
+wUL
 aTU
 aUk
 buG
@@ -128701,7 +128727,7 @@ aFd
 jVy
 aPH
 lpB
-bhI
+wUL
 aQK
 aQK
 aQK

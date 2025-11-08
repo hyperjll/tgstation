@@ -3398,6 +3398,7 @@
 /obj/effect/turf_decal/siding/white,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
+/obj/structure/closet/secure_closet/medical1,
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
 "aTh" = (
@@ -33488,6 +33489,11 @@
 "iKD" = (
 /turf/open/floor/mineral/silver,
 /area/station/service/chapel/funeral)
+"iKE" = (
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/structure/closet/secure_closet/medical1,
+/turf/open/floor/iron/white/textured,
+/area/station/medical/storage)
 "iKJ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -39006,6 +39012,14 @@
 /area/station/cargo/storage)
 "kgl" = (
 /obj/structure/table/reinforced,
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
+/obj/item/universal_scanner{
+	pixel_y = -2;
+	pixel_x = -8
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/pharmacy)
 "kgn" = (
@@ -193499,7 +193513,7 @@ scD
 fIU
 mbb
 kiO
-kyO
+iKE
 kAU
 kyO
 rdl
