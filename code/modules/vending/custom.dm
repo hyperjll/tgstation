@@ -14,7 +14,7 @@
 	obj_flags = UNIQUE_RENAME
 
 	/// max number of items that the custom vendor can hold
-	var/max_loaded_items = 20
+	var/max_loaded_items = 100
 	/// where the money is sent
 	VAR_PRIVATE/datum/bank_account/linked_account
 	/// Base64 cache of custom icons.
