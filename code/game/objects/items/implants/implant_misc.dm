@@ -29,7 +29,7 @@
 		return
 
 	uses--
-	empulse(imp_in, 3, 5)
+	empulse(imp_in, 3, 5, emp_source = src)
 
 	if(!uses && deleteonnouses)
 		var/mob/living/carbon/carbon_imp_in = imp_in
