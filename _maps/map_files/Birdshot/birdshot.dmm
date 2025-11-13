@@ -2015,7 +2015,7 @@
 	output_dir = 4
 	},
 /obj/machinery/door/window/right/directional/east{
-	name = "Ore Redemtion Window"
+	name = "Ore Redemption Window"
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/textured_large,
@@ -42221,7 +42221,6 @@
 "odD" = (
 /obj/effect/mapping_helpers/broken_floor,
 /obj/structure/table/wood,
-/obj/machinery/light/small/built/directional/north,
 /obj/item/stack/sheet/iron/ten,
 /obj/effect/turf_decal/siding/wideplating_new/terracotta{
 	dir = 9
