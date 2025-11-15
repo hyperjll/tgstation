@@ -151,6 +151,81 @@
 	item_path = /obj/item/storage/toolbox/medical/full
 	item_cost = 500
 
+/datum/store_item/roundstart/dwarfmut
+	name = "DNA Mutator (Dwarf)"
+	item_path = /obj/item/dnainjector/dwarf
+	item_cost = 250
+
+/datum/store_item/roundstart/glowmut
+	name = "DNA Mutator (Glow)"
+	item_path = /obj/item/dnainjector/glow
+	item_cost = 150
+
+/datum/store_item/roundstart/insulatedmut
+	name = "DNA Mutator (Insulated)"
+	item_path = /obj/item/dnainjector/insulated
+	item_cost = 900
+
+/datum/store_item/roundstart/pressuremut
+	name = "DNA Mutator (Pressure Immunity)"
+	item_path = /obj/item/dnainjector/pressuremut
+	item_cost = 900
+
+/datum/store_item/roundstart/telemut
+	name = "DNA Mutator (Telekinesis)"
+	item_path = /obj/item/dnainjector/telemut
+	item_cost = 600
+
+/datum/store_item/roundstart/thermalmut
+	name = "DNA Mutator (Thermal Vision)"
+	item_path = /obj/item/dnainjector/thermal
+	item_cost = 750
+
+/datum/store_item/roundstart/voidmut
+	name = "DNA Mutator (Void Magnet)"
+	item_path = /obj/item/dnainjector/void
+	item_cost = 600
+
+/datum/store_item/roundstart/chameleonmut
+	name = "DNA Mutator (Chameleon)"
+	item_path = /obj/item/dnainjector/chameleonmut
+	item_cost = 600
+
+/datum/store_item/roundstart/smart_metal_foam
+	name = "Box of Smart Metal Foam Grenades"
+	item_path = /obj/item/storage/box/smart_metal_foam
+	item_cost = 500
+
+/datum/store_item/roundstart/sunglasses
+	name = "Sunglasses"
+	item_path = /obj/item/clothing/glasses/sunglasses
+	item_cost = 600
+
+/datum/store_item/roundstart/robustteclesser
+	name = "Implanter (R.O.B.U.S.T)"
+	item_path = /obj/item/implanter/robusttec/lesser
+	item_cost = 1000
+
+/datum/store_item/roundstart/robusttecantirot
+	name = "Implanter (R.O.T.B.U.S.T)"
+	item_path = /obj/item/implanter/robusttec/antirot
+	item_cost = 500
+
+/datum/store_item/roundstart/implanterradio
+	name = "Implanter (Internal Radio)"
+	item_path = /obj/item/implanter/radio
+	item_cost = 800
+
+/datum/store_item/roundstart/implanterbeacon
+	name = "Implanter (Tracking Beacon)"
+	item_path = /obj/item/implanter/beacon
+	item_cost = 500
+
+/datum/store_item/roundstart/implanterbiosig
+	name = "Implanter (Biosignaller)"
+	item_path = /obj/item/implanter/biosig
+	item_cost = 750
+
 
 /datum/store_item/roundstart/reinforcement_securityborg
 	name = "Security Cyborg Beacon"
