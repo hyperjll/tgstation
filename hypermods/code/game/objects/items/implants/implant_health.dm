@@ -96,6 +96,8 @@
 
 /obj/item/implanter/robusttec/lesser
 	name = "implanter (R.O.B.U.S.T)"
+	icon_state = "implanter0"
+	base_icon_state = "implanter"
 	imp_type = /obj/item/implant/robusttec/lesser
 
 /obj/item/implantcase/robusttec/lesser
@@ -105,6 +107,8 @@
 
 /obj/item/implanter/robusttec/antirot
 	name = "implanter (R.O.T.B.U.S.T)"
+	icon_state = "implanter0"
+	base_icon_state = "implanter"
 	imp_type = /obj/item/implant/robusttec/antirot
 
 /obj/item/implantcase/robusttec/antirot
