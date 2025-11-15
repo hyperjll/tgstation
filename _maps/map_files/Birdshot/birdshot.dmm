@@ -22164,13 +22164,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
-"hDd" = (
-/obj/machinery/power/energy_accumulator/grounding_rod/anchored,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/open/floor/engine,
-/area/station/engineering/supermatter)
 "hDg" = (
 /obj/structure/chair/stool/directional/east,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -92544,7 +92537,7 @@ mss
 nBP
 ibX
 irR
-hDd
+pMM
 nPl
 hCT
 cLw
