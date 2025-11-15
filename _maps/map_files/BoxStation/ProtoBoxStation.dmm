@@ -30235,9 +30235,9 @@
 	pixel_x = 9;
 	pixel_y = 0
 	},
-/obj/item/flatpack{
-	pixel_x = -6;
-	pixel_y = 6
+/obj/item/flatpack/flatpacker{
+	pixel_x = -5;
+	pixel_y = 4
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/lobby)
@@ -48650,8 +48650,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/purple/diagonal_edge,
-/obj/item/flatpack{
-	board = /obj/item/circuitboard/machine/flatpacker
+/obj/item/flatpack/flatpacker{
+	pixel_x = -5;
+	pixel_y = 4
 	},
 /obj/item/multitool,
 /turf/open/floor/iron/white/diagonal,
