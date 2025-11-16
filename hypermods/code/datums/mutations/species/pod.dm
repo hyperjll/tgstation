@@ -27,7 +27,7 @@
 	var/amount = min(cast_on.blood_volume, 15) // We dont need to check if its below 15 realistically since you'd be dead, but whatever
 	var/range = floor(sqrt(amount / 2))
 
-	cast_on.blood_volume -= amount
+	cast_on.adjust_blood_volume(-amount)
 	do_chem_smoke(range, amount, owner, get_turf(cast_on), blood_path)
 	playsound(cast_on, 'sound/effects/smoke.ogg', 50, 1, -3)
 	return TRUE

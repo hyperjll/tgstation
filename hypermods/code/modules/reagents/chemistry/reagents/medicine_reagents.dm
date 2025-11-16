@@ -149,8 +149,7 @@
 	var/need_mob_update
 	need_mob_update += affected_mob.adjustOxyLoss(-7 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
 
-	if(affected_mob.blood_volume < BLOOD_VOLUME_NORMAL)
-		affected_mob.blood_volume += 3
+	affected_mob.adjust_blood_volume(3, maximum = BLOOD_VOLUME_NORMAL)
 
 	affected_mob.reagents.remove_reagent(/datum/reagent/toxin/lexorin, 3)
 
@@ -271,8 +270,7 @@
 	var/need_mob_update
 	need_mob_update += affected_mob.adjustOxyLoss(-1 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
 
-	if(affected_mob.blood_volume < BLOOD_VOLUME_NORMAL)
-		affected_mob.blood_volume += 1
+	affected_mob.adjust_blood_volume(1, maximum = BLOOD_VOLUME_NORMAL)
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
@@ -281,7 +279,7 @@
 	. = ..()
 	var/need_mob_update
 
-	affected_mob.blood_volume -= 6
+	affected_mob.adjust_blood_volume(-6)
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
@@ -576,8 +574,7 @@
 	. = ..()
 	var/need_mob_update
 
-	if(affected_mob.blood_volume < BLOOD_VOLUME_NORMAL)
-		affected_mob.blood_volume += 2
+	affected_mob.adjust_blood_volume(2, maximum = BLOOD_VOLUME_NORMAL)
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH

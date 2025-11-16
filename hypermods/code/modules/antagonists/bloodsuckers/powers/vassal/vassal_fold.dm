@@ -83,7 +83,7 @@
 
 	if(!QDELETED(bloodbag))
 		var/mob/living/living_owner = owner
-		living_owner.blood_volume -= 150
+		living_owner.adjust_blood_volume(-150)
 		QDEL_NULL(bloodbag)
 		var/obj/item/reagent_containers/blood/o_minus/bloodsucker/new_bag = new(owner.drop_location())
 		owner.put_in_hands(new_bag)

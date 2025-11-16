@@ -154,7 +154,7 @@
 		if(11)
 			//Bloodloss
 			selected_turf.visible_message(span_userdanger("[user]'s entire body crumbles inward like a crushed juice box for a split second!"))
-			user.blood_volume -= 50 // About 10% of total blood volume.
+			user.adjust_blood_volume(-50) // About 10% of total blood volume.
 
 			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Bloodloss) at [ADMIN_VERBOSEJMP(selected_turf)]")
 			user.log_message("used a [src] and backfired, resulting in Bloodloss.", LOG_ATTACK)

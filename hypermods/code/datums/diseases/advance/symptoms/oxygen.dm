@@ -38,7 +38,7 @@
 				to_chat(infected_mob, span_warning("[pick("You body begins to sweat.", "You notice how sickly you look.", "It's getting harder to concentrate.")]"))
 		if(4, 5)
 			if(nobloodlimit && infected_mob.blood_volume < BLOOD_VOLUME_NORMAL)
-				infected_mob.blood_volume -= 1
+				infected_mob.adjust_blood_volume(-1)
 			if(infected_mob.blood_volume > BLOOD_VOLUME_NORMAL)
-				infected_mob.blood_volume -= 1
+				infected_mob.adjust_blood_volume(-1)
 	return

@@ -174,8 +174,7 @@
 	if(owner.getToxLoss())
 		owner.adjustToxLoss(1)
 
-	if(owner.blood_volume <= BLOOD_VOLUME_SAFE)
-		owner.blood_volume += 1
+	owner.adjust_blood_volume(1, maximum = BLOOD_VOLUME_SAFE)
 
 	owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, -1)
 	owner.adjustOrganLoss(ORGAN_SLOT_HEART, -1)

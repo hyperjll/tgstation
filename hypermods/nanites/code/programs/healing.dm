@@ -118,7 +118,7 @@
 	if(!iscarbon(host_mob))
 		return
 	var/mob/living/carbon/carbon_host = host_mob
-	carbon_host.blood_volume += blood_restore_amount
+	carbon_host.adjust_blood_volume(blood_restore_amount, maximum = BLOOD_VOLUME_SAFE)
 
 #undef NANITE_BLOOD_RESTORE_DEFAULT
 
@@ -375,7 +375,7 @@
 				Carbon_mob.adjustFireLoss(-10)
 				Carbon_mob.adjustOxyLoss(-101, 0)
 				Carbon_mob.adjustToxLoss(-20, 0, TRUE)
-				Carbon_mob.blood_volume += 10
+				Carbon_mob.adjust_blood_volume(10, maximum = BLOOD_VOLUME_NORMAL)
 				Carbon_mob.set_heartattack(FALSE)
 				Carbon_mob.updatehealth()
 			if(host_mob.revive())

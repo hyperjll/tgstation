@@ -45,6 +45,6 @@
 		return FALSE
 
 /obj/item/stack/medical/bloodpack/heal_carbon(mob/living/patient, mob/user)
-	patient.blood_volume += 10
+	patient.adjust_blood_volume(10, maximum = BLOOD_VOLUME_NORMAL)
 	to_chat(user, span_warning("You've applied the [src] to [patient]."))
 	return TRUE

@@ -440,7 +440,7 @@
 /datum/nanite_program/protocol/blood_storage/active_effect()
 	if(iscarbon(host_mob))
 		var/mob/living/carbon/C = host_mob
-		C.blood_volume -= 2.275
+		C.adjust_blood_volume(-2.275)
 		if(prob(5))
 			host_mob.adjustBruteLoss(-1, TRUE)
 

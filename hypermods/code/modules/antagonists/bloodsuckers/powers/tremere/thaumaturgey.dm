@@ -152,7 +152,7 @@
 			damage = 40
 		if(bloodsucker_power.level_current >= 5)
 			var/mob/living/person_hit = target
-			person_hit.blood_volume -= 60
+			person_hit.adjust_blood_volume(-60)
 			bloodsucker_power.bloodsuckerdatum_power.AddBloodVolume(60)
 		qdel(src)
 		return BULLET_ACT_HIT

@@ -47,7 +47,7 @@
 	user.adjustToxLoss(-2, updating_health = FALSE, forced = TRUE)
 	// Plasmamen won't lose blood, they don't have any, so they don't heal from Burn.
 	if(!HAS_TRAIT(user, TRAIT_NOBLOOD))
-		user.blood_volume -= bloodcost
+		user.adjust_blood_volume(-bloodcost)
 		user.adjustFireLoss(-1.5, updating_health = FALSE)
 	user.updatehealth() // only update health once after we've healed everything we might've
 	// Stop Bleeding
