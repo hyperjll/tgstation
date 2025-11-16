@@ -2,8 +2,8 @@
 	name = "skillchip"
 	desc = "This biochip integrates with user's brain to enable mastery of specific skill. Consult certified Nanotrasen neurosurgeon before use."
 
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
-	icon_state = "skillchip"
+	icon = 'surfshack13/icons/skillchips.dmi'
+	icon_state = "skillchip_white"
 	custom_price = PAYCHECK_CREW * 3
 	w_class = WEIGHT_CLASS_SMALL
 

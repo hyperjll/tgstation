@@ -20,7 +20,7 @@
 
 /datum/export/slime_extract_charged
 	cost = CARGO_CRATE_VALUE
-	unit_name = "\improper EMP-proof slime core"
+	unit_name = "\improper self-recharging slime core"
 	export_types = list(/obj/item/stock_parts/power_store/cell/slime)
 
 /datum/export/slime_extract_hypercharged

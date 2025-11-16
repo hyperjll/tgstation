@@ -1107,13 +1107,16 @@
 	ph = 10.5
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_AFFECTS_WOUNDS
 
-/datum/reagent/space_cleaner/sterilizine/expose_mob(mob/living/carbon/exposed_carbon, methods=TOUCH, reac_volume)
+/datum/reagent/space_cleaner/sterilizine/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume)
 	. = ..()
 	if(!(methods & (TOUCH|VAPOR|PATCH)))
 		return
 
-	for(var/datum/surgery/surgery as anything in exposed_carbon.surgeries)
-		surgery.speed_modifier = min(0.8, surgery.speed_modifier)
+	for(var/datum/surgery/surgery as anything in exposed_mob.surgeries)
+		if(SURGERY_SPEED_MODIFIER_STERILIZINE in surgery.speed_modifier_list)
+			continue
+		surgery.speed_modifier_list += SURGERY_SPEED_MODIFIER_STERILIZINE
+		surgery.speed_modifier += 0.2
 
 /datum/reagent/space_cleaner/sterilizine/on_burn_wound_processing(datum/wound/burn/flesh/burn_wound)
 	burn_wound.sanitization += 0.9
@@ -3112,7 +3115,7 @@
 
 /datum/reagent/brimdust
 	name = "Brimdust"
-	description = "A brimdemon's dust. Consumption is not recommended, although plants like it."
+	description = "A brimdemon's dust. Consumption is not recommended, although it can be used on plants to rapidly heal them."
 	color = "#522546"
 	taste_description = "burning"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -3123,10 +3126,10 @@
 		return UPDATE_MOB_HEALTH
 
 /datum/reagent/brimdust/on_hydroponics_apply(obj/machinery/hydroponics/mytray, mob/user)
-	mytray.adjust_weedlevel(-1)
-	mytray.adjust_pestlevel(-1)
-	mytray.adjust_plant_health(round(volume))
-	mytray.myseed?.adjust_potency(round(volume * 0.5))
+	mytray.adjust_weedlevel(-3)
+	mytray.adjust_pestlevel(-3)
+	mytray.adjust_plant_health(round(volume * 3))
+	mytray.myseed?.adjust_potency(round(volume))
 
 // I made this food....with love.
 // Reagent added to food by chef's with a chef's kiss. Makes people happy.

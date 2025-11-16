@@ -7720,8 +7720,13 @@
 #include "interface\fonts\spess_font.dm"
 #include "interface\fonts\tiny_unicode.dm"
 #include "interface\fonts\vcr_osd_mono.dm"
+#include "surfshack13\code\game\objects\effects\decals\cleanable\misc.dm"
+#include "surfshack13\code\modules\improv_tools.dm"
 #include "surfshack13\code\modules\antagonists\changeling\powers\horrorform.dm"
 #include "surfshack13\code\modules\cargo\goodies.dm"
 #include "surfshack13\code\modules\cargo\packs\security.dm"
+#include "surfshack13\code\modules\clothing\suits\costume.dm"
+#include "surfshack13\code\modules\reagents\reagent_containers\cups\bottle.dm"
 #include "surfshack13\code\modules\surgery\gender_reassignment.dm"
+#include "surfshack13\code\modules\uplink\uplink_items\job.dm"
 // END_INCLUDE

@@ -994,6 +994,7 @@
 		/obj/item/reagent_containers/cup/bottle/ammonia = 10,
 		/obj/item/reagent_containers/cup/bottle/diethylamine = 10,
 		/obj/item/reagent_containers/cup/bottle/saltpetre = 10,
+		/obj/item/reagent_containers/cup/bottle/brimdust = 5,
 	)
 	premium = list(
 		/obj/item/gun/energy/floragun = 2,

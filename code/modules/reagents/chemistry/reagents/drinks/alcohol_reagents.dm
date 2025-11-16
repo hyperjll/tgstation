@@ -105,7 +105,10 @@
 		exposed_mob.adjust_fire_stacks(reac_volume / 15)
 		var/sterilizing_power = boozepwr / 650 // Weak alcohol has less sterilizing power
 		for(var/datum/surgery/surgery as anything in exposed_mob.surgeries)
-			surgery.speed_modifier = min(1 - sterilizing_power, surgery.speed_modifier)
+			if(SURGERY_SPEED_MODIFIER_ETHANOL in surgery.speed_modifier_list)
+				continue
+			surgery.speed_modifier_list += SURGERY_SPEED_MODIFIER_ETHANOL
+			surgery.speed_modifier += 0.1 * power_multiplier
 
 /datum/reagent/consumable/ethanol/beer
 	name = "Beer"

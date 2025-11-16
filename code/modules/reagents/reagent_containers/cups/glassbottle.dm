@@ -883,6 +883,7 @@
 	icon_state = "vodkabottle"
 	list_reagents = list()
 	var/active = FALSE
+	var/bigfire = FALSE
 	var/list/accelerants = list(
 		/datum/reagent/consumable/ethanol,
 		/datum/reagent/fuel,
@@ -916,9 +917,15 @@
 				firestarter = 1
 				break
 	..()
-	if(firestarter && active)
-		target.fire_act()
-		new /obj/effect/hotspot(get_turf(target))
+	if(!firestarter || !active)
+		return
+	target.fire_act()
+	for(var/turf/nearby_turf in RANGE_TURFS((bigfire ? 2 : 1), target))
+		if(locate(/obj/effect/hotspot) in nearby_turf)
+			return
+		var/obj/effect/decal/cleanable/fuel_pool/molotov/pool = nearby_turf.spawn_unique_cleanable(/obj/effect/decal/cleanable/fuel_pool/molotov)
+		pool.burn_amount = (bigfire ? 10 : 5)
+		pool.ignite()
 
 /obj/item/reagent_containers/cup/glass/bottle/molotov/item_interaction(mob/living/user, obj/item/item, list/modifiers)
 	if(!item.get_temperature() || active)
