@@ -52,20 +52,25 @@
 				final_turf_candidates += floor
 		qdel(vine)
 
-	if(length(final_turf_candidates)) //Pick a turf to spawn at if we can
-		var/turf/floor = pick(final_turf_candidates)
-		var/list/selected_mutations = list()
+	if(!length(final_turf_candidates))
+		return
 
-		if(mutations_overridden == FALSE)
-			selected_mutations = list(pick(subtypesof(/datum/spacetendon_mutation)))
-		else
-			selected_mutations = override_mutations
-		if(isnull(potency))
-			potency = rand(50,100)
-		if(isnull(production))
-			production = rand(1, 4)
+	// Pick a turf to spawn at if we can
+	var/turf/floor = pick(final_turf_candidates)
+	var/list/selected_mutations = list()
 
-		new /datum/spacetendons_controller(floor, selected_mutations, potency, production, src) //spawn a controller at turf with randomized stats and a single random mutation
+	if(mutations_overridden)
+		selected_mutations = override_mutations
+	else
+		selected_mutations = list(pick(valid_subtypesof(/datum/spacevine_mutation)))
+
+	if(isnull(potency))
+		potency = rand(50, 100)
+
+	if(isnull(production))
+		production = rand(1, 4)
+
+	new /datum/spacetendons_controller(floor, selected_mutations, potency, production, src) //spawn a controller at turf with randomized stats and a single random mutation
 
 /datum/event_admin_setup/set_location/spacetendons
 	input_text = "Spawn vines at current location?"
