@@ -236,7 +236,7 @@
 	name = "Deathrattled Station"
 	trait_type = STATION_TRAIT_POSITIVE
 	show_in_report = TRUE
-	weight = 1
+	weight = 0
 	report_message = "All members of the station have received an implant to notify each other if one of them dies. This should help improve job-safety!"
 	var/datum/deathrattle_group/deathrattle_group
 	trait_to_give = STATION_TRAIT_DEATHRATTLED_ALL

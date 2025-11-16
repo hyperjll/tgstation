@@ -102,7 +102,7 @@
 	name = "medical HUDSunglasses"
 	desc = "Sunglasses with a medical HUD."
 	icon_state = "sunhudmed"
-	flash_protect = FLASH_PROTECTION_FLASH
+	flash_protect = FLASH_PROTECTION_WELDER
 	flags_cover = GLASSESCOVERSEYES
 	tint = 1
 	glass_colour_type = /datum/client_colour/glass_colour/blue
@@ -144,7 +144,7 @@
 	desc = "Sunglasses with a diagnostic HUD."
 	icon_state = "sunhuddiag"
 	inhand_icon_state = "glasses"
-	flash_protect = FLASH_PROTECTION_FLASH
+	flash_protect = FLASH_PROTECTION_WELDER
 	flags_cover = GLASSESCOVERSEYES
 	tint = 1
 
@@ -186,7 +186,7 @@
 	name = "security HUDSunglasses"
 	desc = "Sunglasses with a security HUD."
 	icon_state = "sunhudsec"
-	flash_protect = FLASH_PROTECTION_FLASH
+	flash_protect = FLASH_PROTECTION_WELDER
 	flags_cover = GLASSESCOVERSEYES
 	tint = 1
 	glass_colour_type = /datum/client_colour/glass_colour/darkred

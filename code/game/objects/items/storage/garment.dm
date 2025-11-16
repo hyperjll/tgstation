@@ -62,6 +62,7 @@
 	new /obj/item/storage/backpack/satchel/cap(src)
 	new /obj/item/storage/backpack/duffelbag/captain(src)
 	new /obj/item/storage/backpack/messenger/cap(src)
+	new /obj/item/clothing/head/caphat/beret(src)
 
 /obj/item/storage/bag/garment/hop/PopulateContents()
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel(src)

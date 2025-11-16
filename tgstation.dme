@@ -7719,4 +7719,8 @@
 #include "interface\fonts\spess_font.dm"
 #include "interface\fonts\tiny_unicode.dm"
 #include "interface\fonts\vcr_osd_mono.dm"
+#include "surfshack13\code\modules\antagonists\changeling\powers\horrorform.dm"
+#include "surfshack13\code\modules\cargo\goodies.dm"
+#include "surfshack13\code\modules\cargo\packs\security.dm"
+#include "surfshack13\code\modules\surgery\gender_reassignment.dm"
 // END_INCLUDE

@@ -138,7 +138,7 @@ PROTECT_ROLES_FROM_ANTAGONIST
 ## "NON_HUMAN_WHITELIST": non-humans will not be able to play as heads of staff, unless that job incorporates the "allow non-humans" flag (Which can be configured via a variable or the job config txt).
 ## "ENFORCED": non-humans cannot be heads of staff, only humans can. the "allow non-humans" setting will be ignored.
 ## Uncomment to enable a human authority mode of your choice.
-#HUMAN_AUTHORITY HUMAN_WHITELIST
+HUMAN_AUTHORITY ENFORCED
 
 ## If late-joining players have a chance to become a traitor/changeling
 ALLOW_LATEJOIN_ANTAGONISTS
@@ -213,10 +213,10 @@ MINIMAL_ACCESS_THRESHOLD 20
 #JOBS_HAVE_MINIMAL_ACCESS
 
 ## Uncomment to give assistants maint access.
-#ASSISTANTS_HAVE_MAINT_ACCESS
+ASSISTANTS_HAVE_MAINT_ACCESS
 
 ## Uncoment to give security maint access. Note that if you deactivate JOBS_HAVE_MINIMAL_ACCESS security already gets maint from that.
-#SECURITY_HAS_MAINT_ACCESS
+SECURITY_HAS_MAINT_ACCESS
 
 ## Uncomment to give everyone maint access.
 #EVERYONE_HAS_MAINT_ACCESS
@@ -423,7 +423,7 @@ OVERFLOW_JOB Assistant
 OVERFLOW_CAP -1
 
 ## Uncomment to bring back old grey suit assistants instead of the now default rainbow colored assistants.
-#GREY_ASSISTANTS
+GREY_ASSISTANTS
 
 ##Limit Spell Choices##
 ## Uncomment to disallow wizards from using certain spells that may be too chaotic/fun for your playerbase

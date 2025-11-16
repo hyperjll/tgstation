@@ -1,3 +1,10 @@
+/datum/supply_pack/goody/baton_key
+	name = "Baton Case Key (ON SALE FOR 249 CREDITS!!!)"
+	desc = "A baton case key, for opening baton cases earned through the Torment Nexus."
+	cost = 249 // if it's not 250 people will think it's cheaper because marketing
+	contains = list(/obj/item/baton_key)
+
+
 /datum/supply_pack/goody/bicaridinebottles
 	name = "Bicaridine Pill Bottles"
 	desc = "Three pill bottles filled with bicaridine pills. Useful in treating brute damage quickly."

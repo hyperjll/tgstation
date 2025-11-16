@@ -5,13 +5,13 @@
 
 /obj/item/clothing/under/rank/cargo/qm
 	name = "quartermaster's uniform"
-	desc = "A brown dress shirt, coupled with a pair of black slacks. It's specially designed to prevent back injuries caused by pushing paper."
+	desc = "It's a jumpsuit worn by the quartermaster. It's specially designed to prevent back injuries caused by pushing paper."
 	icon_state = "qm"
 	inhand_icon_state = "lb_suit"
 
 /obj/item/clothing/under/rank/cargo/qm/skirt
-	name = "quartermaster's skirt"
-	desc = "A brown dress shirt, coupled with a long pleated black skirt. It's specially designed to prevent back injuries caused by pushing paper."
+	name = "quartermaster's jumpskirt"
+	desc = "It's a jumpskirt worn by the quartermaster. It's specially designed to prevent back injuries caused by pushing paper."
 	icon_state = "qm_skirt"
 	inhand_icon_state = "lb_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -20,22 +20,22 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 
 /obj/item/clothing/under/rank/cargo/tech
-	name = "cargo technician's uniform"
-	desc = "A brown sweater and black jeans, because, honestly, who likes shorts?"
+	name = "cargo technician's jumpsuit"
+	desc = "Shooooorts! They're comfy and easy to wear!"
 	icon_state = "cargotech"
 	inhand_icon_state = "lb_suit"
 
 /obj/item/clothing/under/rank/cargo/tech/alt
-	name = "cargo technician's shorts"
-	desc = "I like shooooorts! They're comfy and easy to wear!"
+	name = "cargo technician's uniform"
+	desc = "A brown sweater a, who likes shorts?"
 	icon_state = "cargotech_alt"
 	inhand_icon_state = "lb_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 
 /obj/item/clothing/under/rank/cargo/tech/skirt
-	name = "cargo technician's skirt"
-	desc = "A brown sweater and a black skirt to match."
+	name = "cargo technician's jumpskirt"
+	desc = "I like skiiiiirts! They're comfy and easy to wear!"
 	icon_state = "cargo_skirt"
 	inhand_icon_state = "lb_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -44,8 +44,8 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 
 /obj/item/clothing/under/rank/cargo/tech/skirt/alt
-	name = "cargo technician's shortskirt"
-	desc = "I like skiiiiirts! They're comfy and easy to wear!"
+	name = "cargo technician's skirt"
+	desc = "A brown sweater and a black skirt to match."
 	icon_state = "cargo_skirt_alt"
 
 /obj/item/clothing/under/rank/cargo/miner

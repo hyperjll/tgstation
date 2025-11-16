@@ -418,9 +418,3 @@
 	desc = "If you in your carelessness lost the key to your golfcart you can purchase one. Unfortunately not covered by warranty."
 	cost = PAYCHECK_CREW * 5
 	contains = list(/obj/item/key/golfcart)
-
-/datum/supply_pack/goody/baton_key
-	name = "Baton Case Key (ON SALE FOR 249 CREDITS!!!)"
-	desc = "A baton case key, for opening baton cases earned through the Torment Nexus."
-	cost = 249 // if it's not 250 people will think it's cheaper because marketing
-	contains = list(/obj/item/baton_key)

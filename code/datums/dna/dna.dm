@@ -490,6 +490,10 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	if(!has_dna())
 		return
 
+	if(ishuman(src))
+		var/mob/living/carbon/human/human = src
+		human.physique = gender
+
 /mob/living/carbon/human/updateappearance(icon_update = TRUE, mutcolor_update = FALSE, mutations_overlay_update = FALSE)
 	. = ..()
 	for(var/block_type in GLOB.dna_identity_blocks)

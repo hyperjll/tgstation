@@ -1240,7 +1240,6 @@
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_QM,
 		)
 	job = /datum/job/shaft_miner
 

@@ -1277,11 +1277,7 @@
 		return
 	var/mob/living/carbon/human/human_mob = affected_mob
 	if (ismonkey(human_mob))
-		if (!HAS_TRAIT(human_mob, TRAIT_BORN_MONKEY))
-			//This is the only time mutadone should remove monkeyism
-			human_mob.dna.remove_mutation(/datum/mutation/race, list(MUTATION_SOURCE_ACTIVATED, MUTATION_SOURCE_MUTATOR))
-	else if (HAS_TRAIT(human_mob, TRAIT_BORN_MONKEY))
-		human_mob.monkeyize()
+		human_mob.dna.remove_mutation(/datum/mutation/race, list(MUTATION_SOURCE_ACTIVATED, MUTATION_SOURCE_MUTATOR))
 
 
 /datum/reagent/medicine/mutadone/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)

@@ -88,15 +88,6 @@ map flandstation
 	minplayers 30
 endmap
 
-map birdshot
-	votable
-	maxplayers 30
-endmap
-
-map dorfworld
-	minplayers 20
-endmap
-
 map northstar
 	minplayers 50
 	votable
