@@ -31,7 +31,7 @@
 	/// If we spawn a boulder like on the gulag, we use this in lou of mineralType
 	var/obj/item/boulder/spawned_boulder = null
 	/// How much ore we spawn when we're mining a mineralType.
-	var/mineralAmt = 3
+	var/mineralAmt = 4
 	/// The icon of the image we display when we're pinged by a mining scanner, to be overridden if you want to use an alternate file for a subtype.
 	var/scan_icon = 'icons/effects/ore_visuals.dmi'
 	/// Placeholder for the icon_state of the image we display when we're pinged by a mining scanner

@@ -7,6 +7,7 @@
 - [IceBoxStation](https://tgstation13.org/wiki/IceboxStation)
 - [MetaStation](https://tgstation13.org/wiki/MetaStation)
 - [NebulaStation](https://tgstation13.org/wiki/NebulaStation)
+- [BoxStation](https://tgstation13.org/wiki/BoxStation) (No tg wiki page since its removed map)
 - [TramStation](https://tgstation13.org/wiki/Tramstation)
 - [WawaStation](https://tgstation13.org/wiki/WawaStation)
 

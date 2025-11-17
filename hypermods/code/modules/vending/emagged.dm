@@ -1369,7 +1369,6 @@
 		/obj/item/clothing/under/rank/medical/scrubs/green = 4,
 		/obj/item/clothing/under/rank/medical/scrubs/purple = 4,
 		/obj/item/clothing/under/rank/medical/paramedic = 4,
-		/obj/item/clothing/under/rank/medical/paramedic/skirt = 4,
 		/obj/item/clothing/suit/toggle/labcoat = 4,
 		/obj/item/clothing/suit/toggle/labcoat/paramedic = 4,
 		/obj/item/clothing/suit/apron/surgical = 4,

@@ -15,7 +15,6 @@
 	. = ..()
 	if(!icon_state)
 		icon_state = "pill[rand(1,20)]"
-	AddComponent(/datum/component/germ_sensitive, mapload)
 	RegisterSignal(src, COMSIG_ATOM_STOMACH_DIGESTED, PROC_REF(on_digestion))
 	RegisterSignal(src, COMSIG_ATOM_REAGENT_EXAMINE, PROC_REF(reagent_special_examine))
 

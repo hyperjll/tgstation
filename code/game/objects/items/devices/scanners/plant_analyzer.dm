@@ -62,7 +62,7 @@
 
 /// When we use the analyzer in hand - try to show the results of the last scan
 /obj/item/plant_analyzer/interact(mob/user)
-	if(user.stat != CONSCIOUS || !user.can_read(src) || user.is_blind())
+	if(user.stat != CONSCIOUS || !user.can_read(src, READING_CHECK_LITERACY) || user.is_blind())
 		return
 	if(last_scan_data)
 		return ..()
@@ -206,7 +206,7 @@
 		return NONE
 
 	if(user)
-		if(!user.can_read(src))
+		if(!user.can_read(src, READING_CHECK_LITERACY))
 			return ITEM_INTERACT_BLOCKING
 		START_PROCESSING(SSobj, src)
 		last_tray_scanned = WEAKREF(tray) // sets it to null if no tray

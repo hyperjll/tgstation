@@ -66,11 +66,27 @@
 /obj/structure/plaque/static_plaque/golden/commission/wawa
 	desc = "Spinward Sector Station SS-13\n'Wawa' Class Outpost\nCommissioned 04/06/2564\n'Forever Vertical'"
 
+// Boxstation: added Nov 15, 2010 (pre-git), removed Jul 06, 2020 (#52017)- 9 years, 7 months, 21 days, readded Jan 20, 2025 (SurfShack)
+/obj/structure/plaque/static_plaque/golden/commission/box
+	desc = "Spinward Sector Station SS-02\n'Box' Class Outpost\nCommissioned 15/11/2550\nRecommissioned 20/01/2565\n'Old Faithful'"
+
+// Pubbystation: added Oct 19, 2016 (#20925), removed Dec 10, 2020 (#54588)- 4 years, 1 month, 21 days
+/obj/structure/plaque/static_plaque/golden/commission/pubby
+	desc = "Spinward Sector Station SS-06\n'Pubby' Class Outpost\nCommissioned 19/10/2556\nRecommissioned 10/12/2560\n'No Law But Ours'"
+
+// Kilostation: added Nov 13, 2019 (#46968), removed
+/obj/structure/plaque/static_plaque/golden/commission/kilo
+	desc = "Spinward Sector Station SS-13\n'Kilo' Class Outpost\nCommissioned 13/11/2559\nRecommissioned \n'Forever Different'"
+
+// North Star: added Apr 13, 2023 (#74371), removed Nov 25, 2024 (#87937)- 1 year, 7 months, 12 days
+/obj/structure/plaque/static_plaque/golden/commission/northstar
+	desc = "Spinward Sector Ship SS-13\n'North Star' Class Vessel\nCommissioned 13/04/2563\nRecommissioned 25/11/2564\n'New Opportunities'"
+
+//Removed stations
+
 // Dorf World: added Sep 24, 2024 (#Poopy)
 /obj/structure/plaque/static_plaque/golden/commission/dorfworld
 	desc = "Spinward Sector Station SS-13\n'Dorf World' Class Outpost\nCommissioned 24/09/2563\n'Building from the Ground Up'"
-
-//Removed stations
 
 // Asteroidstation: added Oct 17, 2015 (169ab09f7b52254ee505e54cdea681fab287647b), removed Jun 19, 2016 (#18661)- 8 months, 2 days
 /obj/structure/plaque/static_plaque/golden/commission/asteroid
@@ -79,14 +95,6 @@
 // Birdboat Station: added Sep 17, 2015 (#11829), removed Feb 09, 2017 (#23754)- 1 year, 4 months, 23 days
 /obj/structure/plaque/static_plaque/golden/commission/birdboat
 	desc = "Spinward Sector Station SS-03\n'Birdboat' Class Outpost\nCommissioned 17/09/2555\nDecommissioned 09/02/2557\n'Rocking the Boat'"
-
-// Boxstation: added Nov 15, 2010 (pre-git), removed Jul 06, 2020 (#52017)- 9 years, 7 months, 21 days
-/obj/structure/plaque/static_plaque/golden/commission/box
-	desc = "Spinward Sector Station SS-02\n'Box' Class Outpost\nCommissioned 15/11/2550\nDecommissioned 06/07/2560\n'Old Faithful'"
-
-// Pubbystation: added Oct 19, 2016 (#20925), removed Dec 10, 2020 (#54588)- 4 years, 1 month, 21 days
-/obj/structure/plaque/static_plaque/golden/commission/pubby
-	desc = "Spinward Sector Station SS-06\n'Pubby' Class Outpost\nCommissioned 19/10/2556\nDecommissioned 10/12/2560\n'No Law But Ours'"
 
 // Cerestation: added Mar 29, 2017 (#24665), removed Aug 26th, 2017 (#30196)- 4 months, 28 days
 /obj/structure/plaque/static_plaque/golden/commission/cere
@@ -108,17 +116,9 @@
 /obj/structure/plaque/static_plaque/golden/commission/efficiency
 	desc = "Spinward Sector Station SS-07\n'Efficiency' Class Outpost\nCommissioned 28/01/2556\nDecommissioned 20/12/2556\n'Work Smarter, Not Harder'"
 
-// Kilostation: added Nov 13, 2019 (#46968), removed
-/obj/structure/plaque/static_plaque/golden/commission/kilo
-	desc = "Spinward Sector Station SS-13\n'Kilo' Class Outpost\nCommissioned 13/11/2559\nDecommissioned \n'Forever Different'"
-
 // Ministation: added Jan 29, 2014 (7a76e9456b782e6626bf81e27a912d8232c76b18), removed Dec 27, 2016 (#22453)- 2 years, 10 months, 28 days
 /obj/structure/plaque/static_plaque/golden/commission/mini
 	desc = "Spinward Sector Station SS-08\n'Mini' Class Outpost\nCommissioned 29/01/2554\nDecommissioned 27/12/2556\n'The Littlest Station'"
-
-// North Star: added Apr 13, 2023 (#74371), removed Nov 25, 2024 (#87937)- 1 year, 7 months, 12 days
-/obj/structure/plaque/static_plaque/golden/commission/northstar
-	desc = "Spinward Sector Ship SS-13\n'North Star' Class Vessel\nCommissioned 13/04/2563\nDecommissioned 25/11/2564\n'New Opportunities'"
 
 // Omegastation: added Dec 27, 2016 (#22453), removed Sep 20, 2018 (#40352)- 1 year, 8 months, 24 days
 /obj/structure/plaque/static_plaque/golden/commission/omega

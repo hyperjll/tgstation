@@ -163,7 +163,6 @@
 
 /obj/item/storage/bag/garment/paramedic/PopulateContents()
 	new /obj/item/clothing/under/rank/medical/paramedic(src)
-	new /obj/item/clothing/under/rank/medical/paramedic/skirt(src)
 	new /obj/item/clothing/gloves/latex/nitrile(src)
 	new /obj/item/clothing/shoes/workboots/black(src)
 	new /obj/item/clothing/glasses/hud/health(src)

@@ -215,7 +215,7 @@
 	name = "Space-Ruin Kosmicheskaya Stantsiya 13"
 	description = "The true fate of Kosmicheskaya Stantsiya 13 is an open question to this day. Most corporations deny its existence, for fear of questioning on what became of its crew."
 	always_place = TRUE
-	
+
 /datum/map_template/ruin/space/abandonedteleporter
 	id = "abandonedteleporter"
 	suffix = "abandonedteleporter.dmm"
@@ -457,7 +457,7 @@
 	id = "allamericandiner"
 	suffix = "allamericandiner.dmm"
 	name = "Space-Ruin The All-American Diner"
-	description = "A mothballed \"Restaurant\" station of the popular \"The All-American Diner\" franchise."
+	description = "A fully staffed american diner, floating in the void of space."
 
 /datum/map_template/ruin/space/mimesvclowns
 	id = "mimesvclowns"
