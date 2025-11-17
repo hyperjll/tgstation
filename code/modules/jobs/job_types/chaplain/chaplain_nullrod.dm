@@ -19,6 +19,7 @@ GLOBAL_LIST_INIT(nullrod_variants, init_nullrod_variants())
 		Harms you if you dismiss the scythe without first causing harm to a creature. \
 		The shard also causes you to become Morbid, shifting your interests towards the macabre."
 	rods[/obj/item/melee/skateboard/holyboard] = "A skateboard that grants you flight and anti-magic abilities while ridden. Fits in your bag."
+	rods[/obj/item/guardian_creator/chaplain] = "A deck of cards that when interacted with give a holoparasite that gives limited healing"
 
 	for(var/obj/item/melee/energy/sword/nullrod/energy_nullrod_type as anything in typesof(/obj/item/melee/energy/sword/nullrod))
 		rods[energy_nullrod_type] = "An energy sword, but with a lower force, no armour penetration and a low chance of blocking. Can be switched on and off. \
