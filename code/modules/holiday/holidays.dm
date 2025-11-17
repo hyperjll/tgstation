@@ -466,7 +466,6 @@ GLOBAL_LIST_INIT(holiday_mail, list())
 	)
 	holiday_mail = list(
 		/obj/item/bedsheet/rainbow,
-		/obj/item/clothing/accessory/pride,
 		/obj/item/clothing/gloves/color/rainbow,
 		/obj/item/clothing/head/costume/garland/rainbowbunch,
 		/obj/item/clothing/head/soft/rainbow,

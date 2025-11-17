@@ -178,8 +178,8 @@
 	display = "This employee has been screened for negative mental traits to an acceptable level of accuracy, and is approved for the NT Cyborg program as an alternative to medical resuscitation."
 
 /obj/item/clothing/accessory/pride
-	name = "pride pin"
-	desc = "A Nanotrasen Diversity & Inclusion Center-sponsored holographic pin to show off your pride, reminding the crew of their unwavering commitment to equity, diversity, and inclusion!"
+	name = "'pride' pin"
+	desc = "A pin once utilized by 21st century activists in an attempt to normalize their mental illnesses. It's an incredibly rare find now-a-days."
 	icon_state = "pride"
 	obj_flags = UNIQUE_RENAME | INFINITE_RESKIN
 	unique_reskin = list(

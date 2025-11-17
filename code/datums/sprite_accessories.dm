@@ -1726,10 +1726,6 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 
 // please make sure they're sorted alphabetically and categorized
 
-/datum/sprite_accessory/socks/ace_knee
-	name = "Knee-high (Ace)"
-	icon_state = "ace_knee"
-
 /datum/sprite_accessory/socks/bee_knee
 	name = "Knee-high (Bee)"
 	icon_state = "bee_knee"
@@ -1757,10 +1753,6 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 /datum/sprite_accessory/socks/thin_knee
 	name = "Knee-high (Thin)"
 	icon_state = "thin_knee"
-
-/datum/sprite_accessory/socks/trans_knee
-	name = "Knee-high (Trans)"
-	icon_state = "trans_knee"
 
 /datum/sprite_accessory/socks/uk_knee
 	name = "Knee-High (UK)"
@@ -1830,10 +1822,6 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	name = "Stockings (Fishnet)"
 	icon_state = "fishnet_full"
 
-/datum/sprite_accessory/socks/ace_thigh
-	name = "Thigh-high (Ace)"
-	icon_state = "ace_thigh"
-
 /datum/sprite_accessory/socks/bee_thigh
 	name = "Thigh-high (Bee)"
 	icon_state = "bee_thigh"
@@ -1861,10 +1849,6 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 /datum/sprite_accessory/socks/thin_thigh
 	name = "Thigh-high (Thin)"
 	icon_state = "thin_thigh"
-
-/datum/sprite_accessory/socks/trans_thigh
-	name = "Thigh-high (Trans)"
-	icon_state = "trans_thigh"
 
 /datum/sprite_accessory/socks/uk_thigh
 	name = "Thigh-high (UK)"
