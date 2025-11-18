@@ -3956,7 +3956,7 @@
 /area/station/commons/lounge)
 "aAJ" = (
 /turf/open/floor/carpet,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "aAN" = (
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 9
@@ -4866,7 +4866,7 @@
 	pixel_x = -8
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "aIX" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 4
@@ -7349,7 +7349,7 @@
 "byL" = (
 /obj/effect/turf_decal/trimline/brown/filled/line,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "byM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/trimline/neutral/filled/line,
@@ -8770,7 +8770,7 @@
 	id = "greedygrinnersden"
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "bXG" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/machinery/door/airlock/external{
@@ -13465,7 +13465,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "dAJ" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced/spawner/directional/south,
@@ -14777,7 +14777,7 @@
 	req_access = list("cargo")
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "dWM" = (
 /obj/structure/table,
 /obj/item/radio{
@@ -16958,7 +16958,7 @@
 /obj/machinery/newscaster/directional/north,
 /obj/structure/sign/clock/directional/west,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "ePG" = (
 /turf/closed/wall/r_wall,
 /area/station/science/auxlab/firing_range)
@@ -20397,7 +20397,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "gbZ" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
@@ -22627,7 +22627,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/carpet,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "gSj" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/glass,
@@ -30001,7 +30001,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "jBk" = (
 /obj/effect/turf_decal/trimline/neutral/filled/corner,
 /obj/structure/cable,
@@ -32695,7 +32695,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "ksk" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -33260,7 +33260,7 @@
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "kCQ" = (
 /obj/machinery/duct,
 /obj/structure/cable,
@@ -34070,7 +34070,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "kOr" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -38331,7 +38331,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "min" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 4
@@ -41168,7 +41168,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "nmx" = (
 /obj/structure/chair{
 	dir = 8
@@ -41980,7 +41980,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "nAP" = (
 /obj/machinery/modular_computer/preset/id{
 	dir = 4
@@ -44334,7 +44334,7 @@
 	},
 /obj/machinery/light/warm/directional/west,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "ouz" = (
 /obj/effect/turf_decal/trimline/white/corner{
 	dir = 1
@@ -46771,7 +46771,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "ptg" = (
 /obj/effect/turf_decal/siding/wideplating/corner,
 /obj/structure/cable,
@@ -48469,7 +48469,7 @@
 	dir = 5
 	},
 /turf/open/floor/carpet,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "pUZ" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
@@ -49624,7 +49624,7 @@
 "qqw" = (
 /obj/machinery/pdapainter/supply,
 /turf/open/floor/carpet,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "qqE" = (
 /obj/effect/turf_decal/trimline/white/line{
 	dir = 6
@@ -50052,7 +50052,7 @@
 /area/station/command/meeting_room)
 "qza" = (
 /turf/closed/wall,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "qzh" = (
 /obj/machinery/bouldertech/refinery/smelter,
 /obj/machinery/conveyor{
@@ -52085,7 +52085,7 @@
 	},
 /obj/effect/landmark/start/quartermaster,
 /turf/open/floor/carpet,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "riN" = (
 /obj/structure/table,
 /obj/effect/spawner/random/food_or_drink/refreshing_beverage,
@@ -63133,7 +63133,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "uUN" = (
 /turf/open/floor/iron/stairs/left{
 	dir = 4
@@ -64012,7 +64012,7 @@
 /obj/effect/landmark/event_spawn,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/carpet,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "vju" = (
 /obj/structure/table,
 /obj/item/plate,
@@ -66007,7 +66007,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "vTb" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
@@ -67402,7 +67402,7 @@
 	fax_name = "Quartermaster's Office"
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "wuE" = (
 /obj/structure/railing/corner{
 	dir = 4

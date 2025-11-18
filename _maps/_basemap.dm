@@ -30,7 +30,6 @@
 		#include "map_files\Heliostation\Heliostation.dmm"
 		#include "map_files\NebulaStation\NebulaStation.dmm"
 		#include "map_files\NorthStar\north_star.dmm"
-		#include "map_files\PubbyStation\PubbyStation.dmm"
 		#include "map_files\SeleneStation\SeleneStation.dmm"
 		#include "map_files\TheiaStation\TheiaStation.dmm"
 	#endif

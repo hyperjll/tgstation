@@ -150,7 +150,7 @@
 /area/station/service/janitor)
 "abD" = (
 /turf/open/floor/plating,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "abM" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/stripes/line{
@@ -2031,7 +2031,7 @@
 /obj/structure/cable,
 /obj/item/stamp/denied,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "aNB" = (
 /obj/machinery/component_printer,
 /obj/effect/turf_decal/tile/purple/full,
@@ -3546,7 +3546,7 @@
 /obj/machinery/light_switch/directional/west,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plating,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "brD" = (
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
@@ -6812,7 +6812,7 @@
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/machinery/requests_console/auto_name/directional/east,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "cIm" = (
 /obj/structure/sign/directions/evac/directional/north{
 	dir = 2
@@ -12977,7 +12977,7 @@
 "feL" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "feN" = (
 /obj/machinery/light_switch/directional/south,
 /obj/structure/window/reinforced/spawner/directional/east,
@@ -13345,7 +13345,7 @@
 /obj/effect/landmark/start/quartermaster,
 /obj/machinery/keycard_auth/wall_mounted/directional/east,
 /turf/open/floor/plating,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "flq" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/large,
@@ -23235,7 +23235,7 @@
 "jmi" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "jmm" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/box,
@@ -25639,7 +25639,7 @@
 /area/station/security/brig)
 "kgl" = (
 /turf/closed/wall,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "kgD" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -25728,7 +25728,7 @@
 /obj/machinery/modular_computer/preset/id,
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "kiy" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Captain's Stable"
@@ -26347,7 +26347,7 @@
 /obj/item/radio/intercom/directional/north,
 /obj/structure/table,
 /turf/open/floor/plating,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "kuF" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Bridge Access"
@@ -27565,7 +27565,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "kUf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -31747,7 +31747,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "mKF" = (
 /obj/structure/rack,
 /obj/item/gun/ballistic/automatic/toy,
@@ -33409,7 +33409,7 @@
 	dir = 10
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "ntu" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Art Gallery"
@@ -37514,7 +37514,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "pck" = (
 /obj/effect/turf_decal/tile/purple/full,
 /obj/machinery/portable_atmospherics/canister/plasma,
@@ -38983,7 +38983,7 @@
 /obj/machinery/pdapainter/supply,
 /obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/plating,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "pIz" = (
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
@@ -53415,10 +53415,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/rd)
-"vNV" = (
-/obj/effect/mapping_helpers/engraving,
-/turf/closed/wall,
-/area/station/maintenance/department/engine/atmos)
 "vNY" = (
 /obj/effect/turf_decal/trimline/green/filled/corner{
 	dir = 8
@@ -54852,7 +54848,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "wsr" = (
 /obj/machinery/portable_atmospherics/canister/plasma,
 /obj/effect/turf_decal/bot,
@@ -56283,7 +56279,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/structure/broken_flooring/plating,
 /turf/open/floor/iron,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "wTO" = (
 /obj/structure/closet/crate/trashcart,
 /obj/effect/decal/cleanable/dirt,
@@ -57624,7 +57620,7 @@
 /area/station/command/heads_quarters/rd)
 "xxB" = (
 /turf/closed/wall/r_wall,
-/area/station/command/heads_quarters/qm)
+/area/station/cargo/qm)
 "xxV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/reinforced,
@@ -75880,7 +75876,7 @@ cfg
 fuM
 iZz
 pew
-vNV
+cfg
 pCq
 cfg
 kCh
