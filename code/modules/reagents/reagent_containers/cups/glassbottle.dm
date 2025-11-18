@@ -919,7 +919,7 @@
 	..()
 	if(!firestarter || !active)
 		return
-	if(bartender_check(target) && ranged)
+	if(bartender_check(target))
 		return smash(target)
 	target.fire_act()
 	for(var/turf/nearby_turf in RANGE_TURFS((bigfire ? 2 : 1), target))

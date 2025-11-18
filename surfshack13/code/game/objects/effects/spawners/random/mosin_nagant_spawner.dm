@@ -10,7 +10,7 @@
 /obj/effect/spawner/random/mosin/ammo
 	name = "7.62 stripper clip spawner"
 	loot = list(
-		/obj/item/ammo_box/a762/surplus = 80,
-		/obj/item/ammo_box/a762 = 10,
+		/obj/item/ammo_box/speedloader/a762/surplus = 80,
+		/obj/item/ammo_box/speedloader/a762 = 10,
 		/obj/item/food/rationpack = 1,
 	)

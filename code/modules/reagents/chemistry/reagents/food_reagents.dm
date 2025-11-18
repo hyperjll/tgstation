@@ -834,6 +834,7 @@
 /datum/reagent/consumable/honey/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume)
 	. = ..()
 	if(!(methods & (TOUCH|VAPOR|PATCH)))
+		return
 
 	for(var/datum/surgery/surgery as anything in exposed_mob.surgeries)
 		if(SURGERY_SPEED_MODIFIER_HONEY in surgery.speed_modifier_list)

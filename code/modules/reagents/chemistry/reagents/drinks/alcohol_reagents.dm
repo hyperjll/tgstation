@@ -108,7 +108,7 @@
 			if(SURGERY_SPEED_MODIFIER_ETHANOL in surgery.speed_modifier_list)
 				continue
 			surgery.speed_modifier_list += SURGERY_SPEED_MODIFIER_ETHANOL
-			surgery.speed_modifier += 0.1 * power_multiplier
+			surgery.speed_modifier += 0.1 * sterilizing_power
 
 /datum/reagent/consumable/ethanol/beer
 	name = "Beer"
