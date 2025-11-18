@@ -43,6 +43,7 @@
 		/area/station/engineering,
 		/area/station/science,
 		/area/station/security,
+		/area/station/cargo/qm,
 	))
 
 	var/list/blacklisted_areas = typecacheof(list(/area/station/engineering/hallway,

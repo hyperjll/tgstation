@@ -81,7 +81,7 @@
 
 /obj/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
-	damage = 5
+	damage = 12.5
 	wound_bonus = 5
 	exposed_wound_bonus = 5
 	speed = 1.1

@@ -74,6 +74,7 @@
 		// Cargo
 		/datum/job/bitrunner,
 		/datum/job/shaft_miner,
+		/datum/job/quartermaster,
 		// Service
 		/datum/job/chaplain,
 		/datum/job/bartender,
@@ -94,7 +95,6 @@
 		/datum/job/head_of_personnel,
 		/datum/job/chief_medical_officer,
 		/datum/job/research_director,
-		/datum/job/quartermaster,
 		/datum/job/chief_engineer,
 	)
 

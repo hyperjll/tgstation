@@ -24,7 +24,7 @@
 
 	var/give_objectives = TRUE
 	/// Whether to give secondary objectives to the traitor, which aren't necessary but can be completed for a progression and TC boost.
-	var/give_secondary_objectives = TRUE
+	var/give_secondary_objectives = FALSE
 	var/should_give_codewords = TRUE
 	///give this traitor an uplink?
 	var/give_uplink = TRUE
@@ -74,6 +74,8 @@
 /datum/antagonist/traitor/infiltrator/sleeper_agent
 	name = "\improper Syndicate Sleeper Agent"
 	stinger_sound = 'hypermods/sound/ambience/antag/brothersorsleeper.ogg'
+	give_secondary_objectives = FALSE
+	can_get_rep_objectives = FALSE
 
 /datum/antagonist/traitor/New(give_objectives = TRUE)
 	. = ..()

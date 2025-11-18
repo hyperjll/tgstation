@@ -202,11 +202,11 @@
 	extra_access = list(
 		ACCESS_MINING,
 		ACCESS_MINING_STATION,
+		ACCESS_QM,
 		)
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_QM,
 	)
 	job = /datum/job/bitrunner
 
@@ -301,11 +301,12 @@
 		ACCESS_BIT_DEN,
 		ACCESS_MINING,
 		ACCESS_MINING_STATION,
+		ACCESS_QM,
 		)
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
-		ACCESS_QM,
+		ACCESS_HOP,
 		)
 	job = /datum/job/cargo_technician
 	honorifics = list("Courier")
@@ -650,16 +651,22 @@
 		ACCESS_LAWYER,
 		ACCESS_LIBRARY,
 		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_MINING,
 		ACCESS_MEDICAL,
 		ACCESS_MINERAL_STOREROOM,
+		ACCESS_MINING,
+		ACCESS_MINING_STATION,
 		ACCESS_MORGUE,
 		ACCESS_MORGUE_SECURE,
 		ACCESS_PSYCHOLOGY,
+		ACCESS_QM,
 		ACCESS_RC_ANNOUNCE,
 		ACCESS_SCIENCE,
 		ACCESS_SERVICE,
+		ACCESS_SHIPPING,
 		ACCESS_TELEPORTER,
 		ACCESS_THEATRE,
+		ACCESS_VAULT,
 		ACCESS_WEAPONS,
 	)
 	minimal_wildcard_access = list(
@@ -942,11 +949,9 @@
 
 /datum/id_trim/job/quartermaster
 	assignment = JOB_QUARTERMASTER
-	intern_alt_name = "Quartermaster-in-Training"
 	trim_state = "trim_cargotechnician"
-	department_color = COLOR_COMMAND_BLUE
+	department_color = COLOR_CARGO_BROWN
 	subdepartment_color = COLOR_CARGO_BROWN
-	department_state = "departmenthead"
 	sechud_icon_state = SECHUD_QUARTERMASTER
 	minimal_access = list(
 		ACCESS_AUX_BASE,
@@ -961,23 +966,16 @@
 		ACCESS_RC_ANNOUNCE,
 		ACCESS_SHIPPING,
 		ACCESS_VAULT,
-		ACCESS_KEYCARD_AUTH,
-		ACCESS_COMMAND,
-		ACCESS_EVA,
-		ACCESS_BRIG_ENTRANCE,
 		)
 	extra_access = list(
 		ACCESS_TELEPORTER,
 		)
-	minimal_wildcard_access = list(
-		ACCESS_QM,
-	)
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
+		ACCESS_HOP,
 	)
 	job = /datum/job/quartermaster
-	big_pointer = TRUE
 	pointer_color = COLOR_CARGO_BROWN
 	honorifics = list("Manager")
 	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
@@ -1236,6 +1234,7 @@
 	extra_access = list(
 		ACCESS_BIT_DEN,
 		ACCESS_MAINT_TUNNELS,
+		ACCESS_QM,
 		)
 	template_access = list(
 		ACCESS_CAPTAIN,

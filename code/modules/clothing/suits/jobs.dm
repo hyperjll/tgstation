@@ -263,7 +263,6 @@
 		/obj/item/stamp,
 		/obj/item/storage/bag/mail,
 		/obj/item/universal_scanner,
-		/obj/item/melee/baton/telescopic,
 	)
 
 /obj/item/clothing/suit/toggle/lawyer/greyscale
