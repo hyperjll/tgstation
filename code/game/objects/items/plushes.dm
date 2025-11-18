@@ -887,5 +887,5 @@
 		oviewers -= feeder // remove feeder from targetables
 	peel.throw_at(oviewers.len == 0 ? get_ranged_target_turf(throw_src, pick(GLOB.alldirs), peel.throw_range) : pick(oviewers), peel.throw_range, peel.throw_speed, quickstart = FALSE)
 	playsound(src, 'sound/mobs/non-humanoids/gorilla/gorilla.ogg', 100, FALSE)
-	spasm_animation(5 SECONDS)
+	src.AddComponent(/datum/component/tweak, time=5 SECONDS)
 	qdel(nana)
