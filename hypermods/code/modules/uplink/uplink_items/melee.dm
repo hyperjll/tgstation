@@ -43,7 +43,7 @@
 /datum/uplink_item/melee/doublesword
 	name = "Double-Bladed Energy Sword"
 	desc = "The double-bladed energy sword does slightly more damage than a standard energy sword and will deflect \
-			energy projectiles it blocks, but requires two hands to wield. It also struggles to protect you from tackles."
+			energy projectiles, but requires two hands to wield. It also struggles to protect you from tackles."
 	progression_minimum = 30 MINUTES
 	item = /obj/item/dualsaber
 	cost = 13

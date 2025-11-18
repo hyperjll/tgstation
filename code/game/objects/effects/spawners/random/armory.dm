@@ -43,12 +43,12 @@
 	loot = list(/obj/item/storage/box/slugs)
 
 /obj/effect/spawner/random/armory/strilka
-	name = ".310 Strilka ammo box spawner"
+	name = "7.62mm ammo box spawner"
 	icon_state = "buckshot"
 	spawn_loot_count = 1
 	loot = list(
-		/obj/item/storage/toolbox/ammobox/strilka310,
-		/obj/item/storage/toolbox/ammobox/strilka310/surplus,
+		/obj/item/storage/toolbox/ammobox/a762,
+		/obj/item/storage/toolbox/ammobox/a762/surplus,
 	)
 
 // Weapons

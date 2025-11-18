@@ -79,7 +79,7 @@
 
 /obj/item/storage/box/syndie_kit/stripperclips/PopulateContents()
 	for(var/i in 1 to 5)
-		new /obj/item/ammo_box/speedloader/strilka310(src)
+		new /obj/item/ammo_box/speedloader/a762(src)
 
 /obj/item/storage/harpoon_quiver
 	name = "quiver"
@@ -239,7 +239,7 @@
 
 /obj/item/storage/box/syndie_kit/stripperclips/PopulateContents()
 	for(var/i in 1 to 5)
-		new /obj/item/ammo_box/speedloader/strilka310(src)
+		new /obj/item/ammo_box/speedloader/a762(src)
 
 /obj/item/storage/box/syndie_kit/deagleammo/random
 	name = "random .50 AE magazine box"

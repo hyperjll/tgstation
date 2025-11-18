@@ -2113,8 +2113,6 @@
 /area/awaymission/snowdin/post/hydro)
 "hZ" = (
 /obj/item/gun/ballistic/rifle/boltaction,
-/obj/item/ammo_box/speedloader/strilka310,
-/obj/item/ammo_box/speedloader/strilka310,
 /obj/structure/closet/secure_closet{
 	icon_state = "sec";
 	name = "security officer's locker";
@@ -2124,6 +2122,8 @@
 /obj/item/assembly/flash,
 /obj/item/storage/box/rubbershot,
 /obj/structure/fireaxecabinet/directional/north,
+/obj/item/ammo_box/speedloader/a762,
+/obj/item/ammo_box/speedloader/a762,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/post/secpost)
 "ic" = (

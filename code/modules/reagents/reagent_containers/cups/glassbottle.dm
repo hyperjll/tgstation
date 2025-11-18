@@ -159,7 +159,7 @@
 		var/knockdown_effectiveness = 0
 		if(!HAS_TRAIT(target, TRAIT_HEAD_INJURY_BLOCKED))
 			knockdown_effectiveness = bottle_knockdown_duration + ((force / 10) * 1 SECONDS) - living_target.getarmor(BODY_ZONE_HEAD, MELEE)
-		if(prob(knockdown_effectiveness))
+		if(knockdown_effectiveness && prob(100))
 			living_target.Knockdown(min(knockdown_effectiveness, 20 SECONDS))
 
 	// Displays a custom message which follows the attack

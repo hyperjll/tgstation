@@ -35,8 +35,8 @@
 	price_max = CARGO_CRATE_VALUE * 3
 
 /datum/market_item/weapon/strilka
-	name = "Ammobox of .310 Strilka"
-	desc = "Listen, .310 Strilka isn't exactly rare, but if you want it to come through \
+	name = "Ammobox of 7.62mm Strilka"
+	desc = "Listen, 7.62mm Strilka isn't exactly rare, but if you want it to come through \
 		any source that isn't the Third Soviet diehards, then you get what you get. \
 		Some of this is the good stuff. Some of it is surplus. We make no promises, okay?"
 	stock_max = 7

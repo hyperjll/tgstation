@@ -388,14 +388,14 @@
 	crate_name = "desert eagle crate"
 
 /datum/supply_pack/weaponry/sakhnosks
-	name = "Sakhno SKS Crate"
-	desc = "Contains one Sakhno SKS semi-automatic rifle and three surplus boxes of ammunition."
+	name = "SKS Crate"
+	desc = "Contains one SKS semi-automatic rifle and three surplus boxes of ammunition."
 	cost = CARGO_CRATE_VALUE * 15
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/rifle/sks,
-					/obj/item/storage/toolbox/ammobox/strilka310/surplus,
-					/obj/item/storage/toolbox/ammobox/strilka310/surplus,
-					/obj/item/storage/toolbox/ammobox/strilka310/surplus)
+					/obj/item/storage/toolbox/ammobox/a762/surplus,
+					/obj/item/storage/toolbox/ammobox/a762/surplus,
+					/obj/item/storage/toolbox/ammobox/a762/surplus)
 	crate_name = "sakhno sks crate"
 
 /datum/supply_pack/weaponry/type3uzi
