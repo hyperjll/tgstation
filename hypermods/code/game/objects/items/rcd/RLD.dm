@@ -25,7 +25,7 @@
 		balloon_alert(user, "insufficient charge!")
 	return .
 
-/obj/item/construction/rld/borg/checkResource(amount, mob/user)
+/obj/item/construction/rld/borg/useResource(amount, mob/user)
 	if(!iscyborg(user))
 		return 0
 	var/mob/living/silicon/robot/borgy = user
