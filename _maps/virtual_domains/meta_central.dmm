@@ -4083,7 +4083,7 @@
 /area/virtual_domain)
 "Il" = (
 /obj/structure/lattice,
-/obj/item/ammo_box/speedloader/a762/surplus,
+/obj/item/ammo_box/speedloader/strilka310/surplus,
 /turf/open/space/basic,
 /area/virtual_domain)
 "Io" = (
@@ -7483,7 +7483,7 @@ ht
 Ty
 YA
 hZ
-SN
+Il
 kp
 BK
 di
@@ -7612,7 +7612,7 @@ Za
 sS
 SN
 sS
-Il
+SN
 sS
 SN
 sS

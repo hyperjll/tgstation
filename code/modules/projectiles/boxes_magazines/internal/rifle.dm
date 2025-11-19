@@ -1,14 +1,15 @@
 /obj/item/ammo_box/magazine/internal/boltaction
 	name = "bolt action rifle internal magazine"
-	ammo_type = /obj/item/ammo_casing/a762
-	caliber = CALIBER_A762
+	desc = "Oh god, this shouldn't be here"
+	ammo_type = /obj/item/ammo_casing/strilka310
+	caliber = CALIBER_STRILKA310
 	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/boltaction/surplus
-	ammo_type = /obj/item/ammo_casing/a762/surplus
+	ammo_type = /obj/item/ammo_casing/strilka310/surplus
 
 /obj/item/ammo_box/magazine/internal/boltaction/phasic
-	ammo_type = /obj/item/ammo_casing/a762/phasic
+	ammo_type = /obj/item/ammo_casing/strilka310/phasic
 
 /obj/item/ammo_box/magazine/internal/boltaction/pipegun
 	name = "pipegun internal magazine"
@@ -32,8 +33,8 @@
 
 /obj/item/ammo_box/magazine/internal/enchanted
 	max_ammo = 1
-	caliber = CALIBER_A762
-	ammo_type = /obj/item/ammo_casing/a762/enchanted
+	caliber = CALIBER_STRILKA310
+	ammo_type = /obj/item/ammo_casing/strilka310/enchanted
 
 /obj/item/ammo_box/magazine/internal/boltaction/harpoon
 	max_ammo = 1
@@ -62,9 +63,10 @@
 
 
 /obj/item/ammo_box/magazine/internal/sks
-	name = "sks rifle internal magazine"
-	ammo_type = /obj/item/ammo_casing/a762
-	caliber = CALIBER_A762
+	name = "\improper SKS rifle internal magazine"
+	desc = "Oh god, this shouldn't be here"
+	ammo_type = /obj/item/ammo_casing/strilka310
+	caliber = CALIBER_STRILKA310
 	max_ammo = 10
 
 /obj/item/ammo_box/magazine/internal/sks/empty

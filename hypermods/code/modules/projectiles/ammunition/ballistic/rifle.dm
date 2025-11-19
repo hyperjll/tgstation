@@ -1,4 +1,4 @@
-// 7.62mm (Mosin Nagant)
+// .310 Strilka (Sakhno Rifle)
 
 
 

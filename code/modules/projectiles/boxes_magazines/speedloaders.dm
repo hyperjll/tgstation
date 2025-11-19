@@ -112,25 +112,23 @@
 	ammo_type = /obj/item/ammo_casing/c38/flare
 	ammo_band_color = COLOR_AMMO_HELLFIRE
 
-/obj/item/ammo_box/speedloader/a762
-	name = "stripper clip (7.62mm)"
-	desc = "A stripper clip."
-	icon = 'surfshack13/icons/mosin_nagant/762_ammo.dmi'
-	icon_state = "762"
-	lefthand_file = 'surfshack13/icons/mosin_nagant/762_ammo_lefthand.dmi'
-	righthand_file = 'surfshack13/icons/mosin_nagant/762_ammo_righthand.dmi'
-	inhand_icon_state = "mosin_case"
-	ammo_type = /obj/item/ammo_casing/a762
+/obj/item/ammo_box/speedloader/strilka310
+	name = "stripper clip (.310 Strilka)"
+	desc = "A five-round stripper clip for .310 Strilka rifles."
+	icon_state = "310_strip"
+	ammo_type = /obj/item/ammo_casing/strilka310
 	max_ammo = 5
-	caliber = CALIBER_A762
 	ammo_box_multiload = AMMO_BOX_MULTILOAD_ALL
+	caliber = CALIBER_STRILKA310
 
-/obj/item/ammo_box/speedloader/a762/surplus
-	name = "stripper clip (7.62mm Surplus)"
-	ammo_type = /obj/item/ammo_casing/a762/surplus
+/obj/item/ammo_box/speedloader/strilka310/surplus
+	name = "stripper clip (.310 Surplus)"
+	desc = parent_type::desc + " This one has a few spots of rust where there's not excessive amounts of gun grease."
+	ammo_type = /obj/item/ammo_casing/strilka310/surplus
 
-/obj/item/ammo_box/speedloader/a762/phasic
-	name = "stripper clip (7.62mm Phasic)"
-	desc = "A stripper clip filled with phasic bullets, hastily developed after an incident where a misfire resulted in the destruction of Atrakor Silverscale's priceless Vigoxian Fabergé egg. \
+/obj/item/ammo_box/speedloader/strilka310/phasic
+	name = "stripper clip (.310 Phasic)"
+	desc = parent_type::desc + " These should come with phasic bullets, \
+		hastily developed after an incident where a misfire resulted in the destruction of Atrakor Silverscale's priceless Vigoxian Fabergé egg. \
 		These fancy bullets pass right though valuables until they end up in a far less expensive human skull."
-	ammo_type = /obj/item/ammo_casing/a762/phasic
+	ammo_type = /obj/item/ammo_casing/strilka310/phasic
