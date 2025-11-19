@@ -272,6 +272,9 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		// Current status
 		if (sensor_mode >= SENSOR_LIVING || nanite_sensors)
 			entry["life_status"] = tracked_living_mob.stat
+		else if (sensor_mode == SENSOR_LIVING)
+			// binary sensors should only report alive or dead
+			entry["life_status"] = (tracked_living_mob.stat == DEAD) ? DEAD : CONSCIOUS
 
 		// Damage
 		if (sensor_mode >= SENSOR_VITALS || nanite_sensors)
