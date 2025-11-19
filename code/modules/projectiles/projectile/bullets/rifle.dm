@@ -36,7 +36,7 @@
 	stamina = 80
 
 /obj/projectile/bullet/a762/phasic
-	name = "phasic .310 bullet"
+	name = "phasic 7.62 bullet"
 	projectile_phasing =  PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF | PASSMACHINE | PASSSTRUCTURE | PASSDOORS
 
 // Harpoons (Harpoon Gun)

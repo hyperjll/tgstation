@@ -1,6 +1,5 @@
 /obj/item/ammo_box/magazine/internal/boltaction
 	name = "bolt action rifle internal magazine"
-	desc = "Oh god, this shouldn't be here"
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = CALIBER_A762
 	max_ammo = 5
@@ -63,8 +62,7 @@
 
 
 /obj/item/ammo_box/magazine/internal/sks
-	name = "\improper SKS rifle internal magazine"
-	desc = "Oh god, this shouldn't be here"
+	name = "sks rifle internal magazine"
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = CALIBER_A762
 	max_ammo = 10

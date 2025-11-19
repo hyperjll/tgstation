@@ -132,7 +132,7 @@
 
 
 /obj/item/gun/ballistic/rifle/boltaction/surplus
-	name = "\improper Sakhno M2442 Army"
+	name = "\improper Surplus Mosin Nagant"
 	desc = "A classic Mosin Nagant, ruined by centuries of moisture. Some Space Russians claim that the moisture \
 		is a sign of good luck. A sober user will know that this thing is going to fucking jam. Repeatedly. \
 		Often found in the hands of cargo technicians, Russian military LARPers, Tiger Co-Op terrorist cells, \

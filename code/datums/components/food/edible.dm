@@ -319,8 +319,9 @@ Behavior that's still missing from this component that original food items had t
 /datum/component/edible/proc/OnFried(datum/source, atom/fry_object)
 	SIGNAL_HANDLER
 	var/atom/our_atom = parent
-	fry_object.reagents.maximum_volume = our_atom.reagents.maximum_volume
-	our_atom.reagents.trans_to(fry_object, our_atom.reagents.total_volume)
+	if(!isnull(fry_object?.reagents))
+		fry_object.reagents.maximum_volume = our_atom.reagents.maximum_volume
+		our_atom.reagents.trans_to(fry_object, our_atom.reagents.total_volume)
 	qdel(our_atom)
 	return COMSIG_FRYING_HANDLED
 

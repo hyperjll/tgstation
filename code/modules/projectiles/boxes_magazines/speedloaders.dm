@@ -123,7 +123,7 @@
 	ammo_type = /obj/item/ammo_casing/a762
 	max_ammo = 5
 	caliber = CALIBER_A762
-	multiple_sprites = AMMO_BOX_PER_BULLET
+	ammo_box_multiload = AMMO_BOX_MULTILOAD_ALL
 
 /obj/item/ammo_box/speedloader/a762/surplus
 	name = "stripper clip (7.62mm Surplus)"
