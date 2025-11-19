@@ -64,11 +64,6 @@ map heliostation
 	votable
 endmap
 
-map pubbystation
-	votable
-	minplayers 20
-endmap
-
 map selenestation
 	votable
 	minplayers 30
