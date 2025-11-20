@@ -1,9 +1,10 @@
-// .310 Strilka (Sakhno Rifle)
+// 7.62 (Mosin Nagant)
 
 /obj/item/ammo_casing/strilka310
-	name = ".310 Strilka bullet casing"
-	desc = "A .310 Strilka bullet casing. Casing is a bit of a fib; there is no case, it's just a block of red powder."
-	icon_state = "310-casing"
+	name = "7.62 bullet casing"
+	desc = "A 7.62 bullet casing."
+	icon = 'surfshack13/icons/mosin_nagant/762_ammo.dmi'
+	icon_state = "762-casing"
 	caliber = CALIBER_STRILKA310
 	projectile_type = /obj/projectile/bullet/strilka310
 
@@ -13,7 +14,7 @@
 	AddElement(/datum/element/caseless)
 
 /obj/item/ammo_casing/strilka310/surplus
-	name = ".310 Strilka surplus bullet casing"
+	name = "7.62 surplus bullet casing"
 	desc = parent_type::desc + " Damp red powder at that."
 	projectile_type = /obj/projectile/bullet/strilka310/surplus
 
@@ -21,8 +22,8 @@
 	projectile_type = /obj/projectile/bullet/strilka310/enchanted
 
 /obj/item/ammo_casing/strilka310/phasic
-	name = ".310 Strilka phasic bullet casing"
-	desc = "A phasic .310 Strilka bullet casing."
+	name = "7.62 phasic bullet casing"
+	desc = "A phasic 7.62 bullet casing."
 	projectile_type = /obj/projectile/bullet/strilka310/phasic
 // .223 (M-90gl Carbine)
 

@@ -1,6 +1,6 @@
 /obj/effect/spawner/random/sakhno
-	name = "sakhno rifle spawner"
-	desc = "Mosin? Never heard of her!"
+	name = "mosin rifle spawner"
+	desc = "For the motherland!"
 	icon_state = "pistol"
 	loot = list(
 		/obj/item/gun/ballistic/rifle/boltaction/surplus = 80,
@@ -8,7 +8,7 @@
 		/obj/item/food/rationpack = 1,
 	)
 /obj/effect/spawner/random/sakhno/ammo
-	name = ".310 Strilka stripper clip spawner"
+	name = "7.62 stripper clip spawner"
 	loot = list(
 		/obj/item/ammo_box/speedloader/strilka310/surplus = 80,
 		/obj/item/ammo_box/speedloader/strilka310 = 10,

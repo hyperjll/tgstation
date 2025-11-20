@@ -126,7 +126,7 @@
 	return ..()
 
 /obj/projectile/bullet/strilka310/lionhunter
-	name = "hunter's .310 bullet"
+	name = "hunter's 7.62 bullet"
 	// These stats are only applied if the weapon is fired fully aimed
 	// If fired without aiming or at someone too close, it will do much less
 	damage = 30
@@ -175,7 +175,7 @@
 
 // Extra ammunition can be made with a heretic ritual.
 /obj/item/ammo_box/speedloader/strilka310/lionhunter
-	name = "stripper clip (.310 hunter)"
+	name = "stripper clip (7.62 hunter)"
 	desc = "A stripper clip of mysterious, atypical ammo. It doesn't fit into normal ballistic rifles."
 	icon_state = "lionhunter_strip"
 	ammo_type = /obj/item/ammo_casing/strilka310/lionhunter

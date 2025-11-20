@@ -187,7 +187,7 @@
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design/strilka310_surplus
-	name = ".310 Surplus Bullet Casing (VERY Lethal)"
+	name = "7.62 Surplus Bullet Casing (VERY Lethal)"
 	id = "strilka310_surplus"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 3)

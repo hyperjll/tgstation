@@ -42,7 +42,7 @@
 #define CALIBER_A223 "a223"
 /// The caliber used by the Drozd SMG and the Lecter Rifle.
 #define CALIBER_556 "a556"
-/// The caliber used by bolt action rifles.
+/// The caliber used by bolt action rifles. -- It's since been renamed to "7.62" across all counts to prevent merge conflict issues/bugs from completely replacing the code
 #define CALIBER_STRILKA310 ".310 strilka"
 /// The caliber used by shotguns.
 #define CALIBER_SHOTGUN "shotgun"

@@ -36,7 +36,7 @@
 			new ammo_to_spawn(src)
 
 /obj/item/storage/toolbox/ammobox/strilka310
-	name = ".310 Strilka ammo box (Surplus?)"
+	name = "7.62 ammo box (Surplus?)"
 	desc = "It contains a few clips. Goddamn, this thing smells awful. \
 		Has this been sitting in a warehouse for the last several centuries?"
 	ammo_to_spawn = /obj/item/ammo_box/speedloader/strilka310
