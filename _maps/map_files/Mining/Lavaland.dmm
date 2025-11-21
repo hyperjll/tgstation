@@ -774,11 +774,12 @@
 	},
 /area/mine/laborcamp/production)
 "ep" = (
-/obj/structure/sign/directions/evac/directional/south{
-	pixel_y = 0
+/obj/machinery/door/airlock/external/glass{
+	name = "Mining External Airlock"
 	},
-/turf/closed/wall,
-/area/mine/production)
+/obj/machinery/light/directional/west,
+/turf/open/floor/iron/dark/textured_large,
+/area/mine/cafeteria)
 "et" = (
 /obj/structure/stone_tile/block/cracked{
 	dir = 4
@@ -5864,12 +5865,6 @@
 /obj/effect/turf_decal/trimline/brown/filled/warning,
 /turf/open/floor/iron/dark,
 /area/mine/mechbay)
-"CI" = (
-/obj/structure/railing{
-	dir = 5
-	},
-/turf/open/misc/hay/lavaland,
-/area/lavaland/surface/outdoors)
 "CM" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron/dark/textured_large,
@@ -36781,7 +36776,7 @@ aj
 aj
 aj
 MQ
-ZC
+BP
 ol
 aj
 aj
@@ -38836,7 +38831,7 @@ te
 dz
 px
 DI
-XM
+ep
 BP
 ol
 aj
@@ -43459,7 +43454,7 @@ iu
 iu
 iN
 ix
-Gw
+iu
 Zw
 UD
 iu
