@@ -65,7 +65,7 @@
 	item = /obj/item/powersink
 	cost = 11
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
-	wanted_item_result = /obj/item/gun/energy/xray
+	wanted_item_result = /obj/item/gun/energy/laser/xray
 
 
 /datum/uplink_item/disruption/mousecubes
