@@ -5442,9 +5442,9 @@
 /mob/living/basic/carp/pet/cayenne{
 	name = "Paprika"
 	},
-/obj/item/slimepotion/slime/sentience/nuclear{
-	pixel_x = -6;
-	pixel_y = 3
+/obj/item/slimepotion/sentience/nuclear{
+	pixel_x = 5;
+	pixel_y = -5
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/centcom/syndicate_mothership/firebase_trident)
