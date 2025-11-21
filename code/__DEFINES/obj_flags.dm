@@ -30,6 +30,8 @@
 #define CONDUCTS_ELECTRICITY (1<<13)
 /// Atoms don't spawn anything when deconstructed (they just vanish)
 #define NO_DEBRIS_AFTER_DECONSTRUCTION (1<<14)
+/// Flag which tells an object to hang onto an support atom on late initialize. Usefull only during mapload and supported by some atoms only
+#define MOUNT_ON_LATE_INITIALIZE (1<<15)
 
 // If you add new ones, be sure to add them to /obj/Initialize as well for complete mapping support
 
@@ -44,7 +46,6 @@
 #define NO_MAT_REDEMPTION (1<<5) // Stops you from putting things like an RCD or other items into an ORM or protolathe for materials.
 #define DROPDEL (1<<6) // When dropped, it calls qdel on itself
 #define NOBLUDGEON (1<<7) // when an item has this it produces no "X has been hit by Y with Z" message in the default attackby()
-#define DO_NOT_WARDROBE (1<<8) // Used to denote anything that should not be stashed by SSwardrobe
 /**
  * for all things that are technically items but don't want to be treated as such, given on a case-by-case basis
  * examples of use are hand items, omni-toolsets, non-limb limbs (hand eater, mounted chainsaw, many null rods), borg modules, bodyparts, organs, etc.
