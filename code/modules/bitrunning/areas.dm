@@ -14,7 +14,7 @@
 	name = "Virtual Domain Ruins"
 	icon_state = "bit_ruin"
 	icon = 'icons/area/areas_station.dmi'
-	area_flags = LOCAL_TELEPORT | EVENT_PROTECTED | HIDDEN_AREA | UNLIMITED_FISHING
+	area_flags = LOCAL_TELEPORT | EVENT_PROTECTED | HIDDEN_AREA | UNLIMITED_FISHING | BLOCK_SUICIDE
 	area_flags_mapping = VIRTUAL_AREA
 	default_gravity = STANDARD_GRAVITY
 	requires_power = FALSE
@@ -27,7 +27,7 @@
 
 /area/virtual_domain/safehouse
 	name = "Virtual Domain Safehouse"
-	area_flags = LOCAL_TELEPORT | EVENT_PROTECTED | UNLIMITED_FISHING
+	area_flags = LOCAL_TELEPORT | EVENT_PROTECTED | UNLIMITED_FISHING | BLOCK_SUICIDE
 	area_flags_mapping = UNIQUE_AREA | VIRTUAL_AREA | VIRTUAL_SAFE_AREA
 	icon_state = "bit_safe"
 	requires_power = FALSE
