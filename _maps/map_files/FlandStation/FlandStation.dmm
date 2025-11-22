@@ -14596,7 +14596,7 @@
 /turf/open/floor/iron/dark,
 /area/station/service/library/artgallery)
 "ese" = (
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/chapel,
 /turf/open/floor/carpet/grimy,
 /area/station/service/chapel)
 "esn" = (
@@ -19284,8 +19284,8 @@
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 8
 	},
-/obj/effect/landmark/navigate_destination,
 /obj/structure/cable,
+/obj/effect/landmark/navigate_destination/aiupload,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "fFB" = (
@@ -19440,6 +19440,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/effect/landmark/navigate_destination/gateway,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/entry/lower)
 "fHW" = (
@@ -24501,9 +24502,10 @@
 /turf/open/floor/iron/techmaint,
 /area/station/hallway/secondary/entry/upper)
 "hcy" = (
-/obj/effect/landmark/navigate_destination,
-/turf/open/floor/iron,
-/area/station/engineering/atmos)
+/obj/structure/cable,
+/obj/effect/landmark/navigate_destination/chemfactory,
+/turf/open/floor/iron/white,
+/area/station/maintenance/fore)
 "hcE" = (
 /obj/structure/closet/secure_closet/freezer/meat/all_access,
 /obj/effect/spawner/random/contraband/prison,
@@ -27757,12 +27759,19 @@
 /turf/open/floor/iron/grid/steel,
 /area/station/science/genetics)
 "iaa" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/machinery/door/airlock/external{
-	name = "Labour Shuttle Airlock"
+/obj/structure/lattice,
+/obj/structure/lattice/catwalk,
+/obj/item/stack/marker_beacon{
+	anchored = 1;
+	icon_state = "markerburgundy-on";
+	light_color = "#FA644B";
+	light_power = 3;
+	light_range = 2;
+	name = "landing marker";
+	picked_color = "Burgundy"
 	},
-/turf/open/floor/iron/techmaint,
-/area/station/hallway/secondary/entry)
+/turf/open/space/basic,
+/area/space/nearstation)
 "iac" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -35122,17 +35131,15 @@
 /turf/open/floor/iron/techmaint,
 /area/station/command/heads_quarters/hos)
 "kho" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/obj/effect/landmark/navigate_destination/bridge,
+/turf/open/floor/iron/dark/side{
 	dir = 1
 	},
-/obj/effect/turf_decal/stripes/end,
-/obj/effect/turf_decal/stripes/red/end,
-/obj/effect/mapping_helpers/airlock/unres,
-/obj/machinery/door/airlock/external{
-	name = "Labour Shuttle Airlock"
-	},
-/turf/open/floor/iron/techmaint,
-/area/station/hallway/secondary/entry)
+/area/station/hallway/secondary/command)
 "khq" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
@@ -39421,6 +39428,20 @@
 	burnt = 1
 	},
 /area/station/maintenance/fore)
+"lpP" = (
+/obj/machinery/door/airlock/external/glass{
+	name = "Labour Shuttle Airlock";
+	req_access_txt = "63"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/effect/mapping_helpers/airlock/unres,
+/obj/effect/turf_decal/stripes/end,
+/obj/effect/turf_decal/stripes/red/end,
+/obj/effect/landmark/navigate_destination,
+/turf/open/space/basic,
+/area/station/hallway/secondary/entry)
 "lpS" = (
 /obj/structure/sign/warning/vacuum/external,
 /obj/effect/spawner/structure/window/reinforced,
@@ -47253,7 +47274,6 @@
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 8
 	},
-/obj/effect/landmark/navigate_destination,
 /turf/open/floor/iron/grid/steel,
 /area/station/science/research)
 "nHt" = (
@@ -47753,7 +47773,7 @@
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
 "nPt" = (
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/disposals,
 /turf/open/floor/iron,
 /area/station/maintenance/disposal)
 "nPF" = (
@@ -52921,10 +52941,17 @@
 /turf/open/floor/iron/techmaint,
 /area/station/security/execution)
 "ptw" = (
-/obj/effect/landmark/navigate_destination,
-/obj/structure/cable,
-/turf/open/floor/iron/dark,
-/area/station/command/gateway)
+/obj/effect/turf_decal/loading_area{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 10
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "ptx" = (
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
@@ -53291,18 +53318,11 @@
 /turf/open/floor/plating,
 /area/station/maintenance/solars/starboard)
 "pyo" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
+/obj/docking_port/stationary/mining_home/common{
+	dir = 2
 	},
-/obj/effect/turf_decal/stripes/end,
-/obj/effect/turf_decal/stripes/red/end,
-/obj/effect/mapping_helpers/airlock/unres,
-/obj/machinery/door/airlock/external/glass{
-	name = "Labour Shuttle Airlock";
-	req_access_txt = "63"
-	},
-/turf/open/floor/iron/techmaint,
-/area/station/hallway/secondary/entry)
+/turf/open/space/basic,
+/area/space)
 "pyB" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Visitation"
@@ -55048,6 +55068,14 @@
 "pYl" = (
 /turf/open/floor/iron/grid/steel,
 /area/station/command/bridge)
+"pYq" = (
+/obj/machinery/door/airlock/external/glass{
+	name = "Labour Shuttle Airlock";
+	req_access_txt = "63"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/turf/open/floor/plating,
+/area/station/hallway/secondary/entry)
 "pYr" = (
 /obj/effect/spawner/random/engineering/tank,
 /turf/open/floor/plating{
@@ -55599,7 +55627,7 @@
 /turf/open/floor/iron/dark,
 /area/station/commons/storage/primary)
 "qeQ" = (
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/library,
 /turf/open/floor/carpet/red,
 /area/station/service/library)
 "qfq" = (
@@ -60546,6 +60574,7 @@
 	name = "biohazard Containment Door"
 	},
 /obj/effect/turf_decal/delivery,
+/obj/effect/landmark/navigate_destination/research,
 /turf/open/floor/iron/grid/steel,
 /area/station/science/research)
 "rBU" = (
@@ -69955,13 +69984,10 @@
 /turf/open/floor/iron,
 /area/station/maintenance/disposal)
 "urv" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/machinery/door/airlock/external/glass{
-	name = "Labour Shuttle Airlock";
-	req_access_txt = "63"
-	},
-/turf/open/floor/iron/techmaint,
-/area/station/hallway/secondary/entry)
+/obj/structure/lattice,
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/space/nearstation)
 "urx" = (
 /turf/open/floor/iron/dark/side{
 	dir = 10
@@ -70911,6 +70937,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
+/obj/effect/landmark/navigate_destination/atmos,
 /turf/open/floor/vault,
 /area/station/engineering/break_room)
 "uEV" = (
@@ -74278,7 +74305,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 1
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/cargo,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
 "vxA" = (
@@ -77884,7 +77911,6 @@
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
 /obj/structure/disposalpipe/segment,
-/obj/effect/landmark/navigate_destination,
 /obj/structure/cable,
 /turf/open/floor/iron/grid/steel,
 /area/station/command/bridge)
@@ -100722,9 +100748,9 @@ cfJ
 oFD
 aIu
 nkx
-gde
-qLG
-bfG
+nnx
+csJ
+nnx
 nnx
 nnx
 nnx
@@ -100977,11 +101003,11 @@ cAU
 ygc
 mGZ
 bUG
-oRI
-urv
-wAT
-meU
-pyo
+qHe
+gde
+nnx
+csJ
+nnx
 nnx
 nnx
 nnx
@@ -101235,10 +101261,10 @@ oDW
 ejq
 rVk
 lfr
-xOV
-gde
+sIg
+bfG
 qLG
-xOV
+sIg
 nnx
 nnx
 nnx
@@ -101491,12 +101517,12 @@ qLG
 qLG
 ygc
 rVk
-qHe
-qLG
-nnx
-vLM
-nnx
-nnx
+ptw
+pYq
+wAT
+meU
+lpP
+pyo
 nnx
 nnx
 nnx
@@ -101749,10 +101775,10 @@ aUr
 jnk
 bUG
 qHe
+bfG
+bfG
 qLG
-nnx
-vLM
-nnx
+bfG
 nnx
 nnx
 nnx
@@ -101765,7 +101791,7 @@ iQY
 fGA
 bNs
 aKC
-ptw
+uZf
 aTQ
 xtK
 izV
@@ -102007,9 +102033,9 @@ ygc
 rVk
 hjV
 gde
-gde
-qLG
-bfG
+nnx
+csJ
+nnx
 nnx
 nnx
 nnx
@@ -102262,18 +102288,18 @@ eus
 qLG
 ygc
 bUG
-oRI
-iaa
-wAT
-meU
-kho
+qHe
+gde
+nnx
+csJ
 nnx
 nnx
 nnx
 nnx
 nnx
 nnx
-vLM
+nnx
+rQq
 kWC
 kWC
 kWC
@@ -102520,10 +102546,10 @@ qLG
 ygc
 rVk
 qHe
-xOV
 gde
-qLG
-xOV
+gde
+csJ
+nnx
 nnx
 nnx
 nnx
@@ -102779,14 +102805,14 @@ tTX
 tFw
 gGJ
 gde
+urv
 csJ
-nnx
-nnx
-nnx
-nnx
-nnx
-nnx
-nnx
+csJ
+csJ
+csJ
+csJ
+csJ
+csJ
 vLM
 nnx
 nnx
@@ -103038,11 +103064,11 @@ rfQ
 gde
 csJ
 csJ
+iaa
 csJ
+urv
 csJ
-csJ
-csJ
-csJ
+urv
 csJ
 csJ
 nnx
@@ -119654,7 +119680,7 @@ fdM
 szy
 mbD
 csr
-iiG
+hcy
 txJ
 txJ
 tjf
@@ -127452,7 +127478,7 @@ wIE
 wIE
 uLE
 tmq
-hcy
+tmq
 tmq
 lge
 wrn
@@ -128152,7 +128178,7 @@ iUx
 jrF
 wyw
 kBX
-lhp
+kho
 sjJ
 lRC
 tlM
