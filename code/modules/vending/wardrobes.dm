@@ -483,6 +483,7 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	)
 	premium = list(
 		/obj/item/storage/box/dishdrive = 1,
+		/obj/item/construction/plumbing/service = 1,
 		/obj/item/vending_refill/cola = 1,
 		/obj/item/vending_refill/coffee = 1,
 	)
