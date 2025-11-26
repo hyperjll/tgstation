@@ -80,10 +80,16 @@
 	owner.alpha = max(0, owner.alpha - cooldown_alpha_removal)
 	animate(owner, alpha = initial(owner.alpha), time = cooldown_animation_time)
 
-	var/mob/living/simple_animal/hostile/illusion/escape/decoy = new(owner.loc)
-	decoy.Copy_Parent(owner, 50)
-	decoy.GiveTarget(owner) //so it starts running right away
-	decoy.Goto(owner, decoy.move_to_delay, decoy.minimum_distance)
+	var/mob/living/basic/illusion/escape/decoy = new(owner.loc)
+	decoy.full_setup(
+		owner,
+		target_mob = owner,
+		faction = owner.faction,
+		life = 5 SECONDS,
+		hp = owner.health / 4,
+		damage = 5,
+		replicate = 0,
+	)
 	owner.alpha = 0
 	in_stealth = TRUE
 	addtimer(CALLBACK(src, PROC_REF(end_stealth), owner), stealth_time)
