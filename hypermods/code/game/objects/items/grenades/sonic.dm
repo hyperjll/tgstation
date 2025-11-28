@@ -33,4 +33,4 @@
 	M.adjust_confusion(24 SECONDS)
 	M.adjust_jitter(5 SECONDS)
 	M.soundbang_act(1, 20, 10, 15)
-	M.adjustOrganLoss(ORGAN_SLOT_EARS, -base_damage)
+	M.adjust_organ_loss(ORGAN_SLOT_EARS, -base_damage)

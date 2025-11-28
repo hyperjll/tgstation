@@ -317,8 +317,8 @@ GLOBAL_LIST_INIT(borer_second_name, world.file2list("hypermods/code/modules/anta
 		return
 
 	//there needs to be a negative to having a borer
-	if(prob(5 * host_harm_multiplier * ((upgrade_flags & BORER_STEALTH_MODE) ? 0.1 : 1)) && human_host.getToxLoss() <= (80 * host_harm_multiplier))
-		human_host.adjustToxLoss(2.5 * seconds_per_tick * host_harm_multiplier, TRUE, TRUE)
+	if(prob(5 * host_harm_multiplier * ((upgrade_flags & BORER_STEALTH_MODE) ? 0.1 : 1)) && human_host.get_tox_loss() <= (80 * host_harm_multiplier))
+		human_host.adjust_tox_loss(2.5 * seconds_per_tick * host_harm_multiplier, TRUE, TRUE)
 
 	human_host.apply_status_effect(/datum/status_effect/grouped/screwy_hud/fake_healthy, type)
 
@@ -338,7 +338,7 @@ GLOBAL_LIST_INIT(borer_second_name, world.file2list("hypermods/code/modules/anta
 	//this is regenerating health
 	if(health < maxHealth)
 		if(!(upgrade_flags & BORER_STEALTH_MODE))
-			adjustBruteLoss(maxHealth * -health_regen * seconds_per_tick)
+			adjust_brute_loss(maxHealth * -health_regen * seconds_per_tick)
 
 	//this is so they can evolve
 	mature()

@@ -102,10 +102,10 @@
 				if(heart.organ_flags == ORGAN_ROBOTIC)
 					to_chat(caster, span_notice("This one's heart is robotic! You can't eat that."))
 					return FALSE
-				caster.adjustToxLoss(-30, FALSE)
-				caster.adjustOxyLoss(-30, FALSE)
-				caster.adjustBruteLoss(-30, FALSE)
-				caster.adjustFireLoss(-30, FALSE)
+				caster.adjust_tox_loss(-30, FALSE)
+				caster.adjust_oxy_loss(-30, FALSE)
+				caster.adjust_brute_loss(-30, FALSE)
+				caster.adjust_fire_loss(-30, FALSE)
 				playsound(human_victim, 'sound/effects/wounds/blood1.ogg', 50)
 				caster.visible_message(span_warning("[caster] digs out [human_victim]'s heart and eats it whole!"), span_warning("You eat [human_victim]'s heart."), \
 				span_hear("You hear a sickening squelch as flesh meets teeth."))
@@ -230,7 +230,7 @@
 
 		if(human_victim.stat != DEAD)
 			human_victim.apply_damage(10, BRUTE)
-			caster.adjustToxLoss(-20, 0, TRUE)
+			caster.adjust_tox_loss(-20, 0, TRUE)
 			human_victim.reagents.add_reagent(r_type, 5)
 			caster.reagents.add_reagent(/datum/reagent/medicine/pen_acid, 5)
 			if(prob(40))

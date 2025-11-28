@@ -109,7 +109,7 @@
 	imp_in.SetUnconscious(0)
 	imp_in.SetParalyzed(0)
 	imp_in.SetImmobilized(0)
-	imp_in.adjustStaminaLoss(-75)
+	imp_in.adjust_stamina_loss(-75)
 	imp_in.set_resting(FALSE)
 
 	imp_in.reagents.add_reagent(/datum/reagent/medicine/synaptizine, 10)
@@ -172,7 +172,7 @@
 
 	uses--
 	var/healthlossed = 0
-	healthlossed = (imp_in.getBruteLoss() + imp_in.getFireLoss() + imp_in.getToxLoss())
+	healthlossed = (imp_in.get_brute_loss() + imp_in.get_fire_loss() + imp_in.get_tox_loss())
 
 	if((imp_in.getMaxHealth() / 4) < healthlossed) // Do you have a quarter of your health left or under?
 		do_sparks(5,FALSE,imp_in)

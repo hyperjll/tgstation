@@ -76,11 +76,11 @@
 		return
 	if(prob(TOXICITY_MUTATION_PROB) && istype(crosser) && !isvineimmune(crosser))
 		to_chat(crosser, span_alert("You accidentally touch the vine and feel a strange sensation."))
-		crosser.adjustToxLoss(20)
+		crosser.adjust_tox_loss(20)
 
 /datum/spacetendon_mutation/toxicity/on_eat(obj/structure/spacetendons/holder, mob/living/eater)
 	if(!isvineimmune(eater))
-		eater.adjustToxLoss(20)
+		eater.adjust_tox_loss(20)
 
 /datum/spacetendon_mutation/explosive  // JC IT'S A BOMB
 	name = "Explosive"
@@ -212,7 +212,7 @@
 				span_userdanger("You are smashed by a large vine!"))
 				log_combat(vine, living_mob, "aggressively smashed")
 	else //Living but not a carbon? Maybe a silicon? Can't be wounded so have a big chunk of simple bruteloss with no special effects. They can be entangled.
-		living_mob.adjustBruteLoss(75)
+		living_mob.adjust_brute_loss(75)
 		playsound(living_mob, 'sound/items/weapons/whip.ogg', 50, TRUE, -1)
 		living_mob.visible_message(span_danger("[living_mob] is brutally threshed by [vine]!"), \
 		span_userdanger("You are brutally threshed by [vine]!"))
@@ -306,7 +306,7 @@
 
 	if(prob(THORN_MUTATION_CUT_PROB) && istype(crosser) && !isvineimmune(crosser))
 		var/mob/living/victim = crosser
-		victim.adjustBruteLoss(15)
+		victim.adjust_brute_loss(15)
 		to_chat(victim, span_danger("You cut yourself on the thorny vines."))
 
 /datum/spacetendon_mutation/thorns/on_hit(obj/structure/spacetendons/holder, mob/living/hitter, obj/item/item, expected_damage)
@@ -321,7 +321,7 @@
 
 	if(prob(THORN_MUTATION_CUT_PROB) && istype(hitter) && !isvineimmune(hitter))
 		var/mob/living/victim = hitter
-		victim.adjustBruteLoss(15)
+		victim.adjust_brute_loss(15)
 		to_chat(victim, span_danger("You cut yourself on the thorny vines."))
 
 	return expected_damage

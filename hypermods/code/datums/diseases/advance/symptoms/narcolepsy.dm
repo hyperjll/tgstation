@@ -43,5 +43,5 @@
 				to_chat(M, span_notice("You suddenly find it difficult to blink."))
 
 		if(5)
-			if(stamdrain && (M.getStaminaLoss() < 20))
-				M.adjustStaminaLoss(2.5)
+			if(stamdrain && (M.get_stamina_loss() < 20))
+				M.adjust_stamina_loss(2.5)

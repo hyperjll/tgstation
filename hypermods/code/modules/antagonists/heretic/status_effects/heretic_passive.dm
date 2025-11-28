@@ -16,21 +16,21 @@
 
 	carbon_human.AdjustAllImmobility(stunresist)
 
-	if(carbon_human.getBruteLoss())
+	if(carbon_human.get_brute_loss())
 		carbon_human.age += age_consumption
-		carbon_human.adjustBruteLoss(healing)
+		carbon_human.adjust_brute_loss(healing)
 
-	if(carbon_human.getFireLoss())
+	if(carbon_human.get_fire_loss())
 		carbon_human.age += age_consumption
-		carbon_human.adjustFireLoss(healing)
+		carbon_human.adjust_fire_loss(healing)
 
-	if(carbon_human.getToxLoss())
+	if(carbon_human.get_tox_loss())
 		carbon_human.age += age_consumption
-		carbon_human.adjustToxLoss(healing)
+		carbon_human.adjust_tox_loss(healing)
 
-	if(carbon_human.getOxyLoss())
+	if(carbon_human.get_oxy_loss())
 		carbon_human.age += age_consumption
-		carbon_human.adjustOxyLoss(healing)
+		carbon_human.adjust_oxy_loss(healing)
 
 /datum/status_effect/heretic_passive/time/on_apply()
 	. = ..()

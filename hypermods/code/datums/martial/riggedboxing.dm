@@ -43,8 +43,8 @@
 	to_chat(attacker, span_danger("You [atk_verb]ed [defender]!"))
 	defender.apply_damage(damage, STAMINA, affecting, armor_block)
 	log_combat(attacker, defender, "punched (riggedboxing) ")
-	if(defender.getStaminaLoss() > 50)
-		var/knockout_prob = defender.getStaminaLoss() + rand(-15, 15)
+	if(defender.get_stamina_loss() > 50)
+		var/knockout_prob = defender.get_stamina_loss() + rand(-15, 15)
 		if(defender.stat != DEAD && prob(knockout_prob))
 			defender.visible_message(
 				span_danger("[attacker] knocks [defender] out with a haymaker!"),

@@ -8,7 +8,7 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 
 /datum/reagent/toxin/norepinephricacid/on_mob_life(mob/living/carbon/M)
-	M.adjustOrganLoss(ORGAN_SLOT_EYES, 3, 95)
+	M.adjust_organ_loss(ORGAN_SLOT_EYES, 3, 95)
 	..()
 
 /datum/reagent/toxin/saxitoxin
@@ -18,10 +18,10 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/toxin/saxitoxin/on_mob_life(mob/living/breather, seconds_per_tick, times_fired)
-	breather.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1)
-	breather.adjustFireLoss(1, FALSE)
+	breather.adjust_organ_loss(ORGAN_SLOT_BRAIN, 1)
+	breather.adjust_fire_loss(1, FALSE)
 	if(iscarbon(breather))
-		breather.adjustToxLoss(1, FALSE)
+		breather.adjust_tox_loss(1, FALSE)
 	if(prob(10))
 		breather.Paralyze(20, 1, 0)
 		breather.adjust_jitter(10 SECONDS)
@@ -40,11 +40,11 @@
 /datum/reagent/toxin/nocturine/on_mob_life(mob/living/carbon/affected_mob)
 	switch(current_cycle)
 		if(1 to 3)
-			affected_mob.adjustStaminaLoss(REM * data, 0)
+			affected_mob.adjust_stamina_loss(REM * data, 0)
 			affected_mob.adjust_confusion(2 SECONDS * REM)
 			affected_mob.adjust_drowsiness(4 SECONDS * REM)
 		if(3 to INFINITY)
-			affected_mob.adjustStaminaLoss(REM * data, 0)
+			affected_mob.adjust_stamina_loss(REM * data, 0)
 			affected_mob.Sleeping(7 SECONDS * REM)
 			. = TRUE
 	..()
@@ -64,13 +64,13 @@
 /datum/reagent/toxin/nanitedestroyers/on_mob_delete(mob/living/M)
 	var/delayed_toxin_damage = current_cycle*2*REM
 	M.log_message("has taken [delayed_toxin_damage] toxin damage from nanite destroyers", LOG_ATTACK)
-	M.adjustToxLoss(delayed_toxin_damage)
+	M.adjust_tox_loss(delayed_toxin_damage)
 	..()
 
 /datum/reagent/toxin/nanitedestroyers/on_mob_delete(mob/living/M)
 	var/delayed_brute_damage = current_cycle*1*REM
 	M.log_message("has taken [delayed_brute_damage] brute damage from nanite destroyers", LOG_ATTACK)
-	M.adjustBruteLoss(delayed_brute_damage)
+	M.adjust_brute_loss(delayed_brute_damage)
 	..()
 
 /datum/reagent/toxin/nanitedestroyers/on_mob_delete(mob/living/M)
@@ -78,10 +78,10 @@
 	M.log_message("has taken [delayed_organ_damage] organ damage from nanite destroyers", LOG_ATTACK)
 	if(delayed_organ_damage >= 96)
 		delayed_organ_damage = 95
-	M.adjustOrganLoss(ORGAN_SLOT_HEART, delayed_organ_damage)
-	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, delayed_organ_damage)
-	M.adjustOrganLoss(ORGAN_SLOT_LIVER, delayed_organ_damage)
-	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, delayed_organ_damage)
+	M.adjust_organ_loss(ORGAN_SLOT_HEART, delayed_organ_damage)
+	M.adjust_organ_loss(ORGAN_SLOT_LUNGS, delayed_organ_damage)
+	M.adjust_organ_loss(ORGAN_SLOT_LIVER, delayed_organ_damage)
+	M.adjust_organ_loss(ORGAN_SLOT_STOMACH, delayed_organ_damage)
 	..()
 
 
@@ -138,10 +138,10 @@
 /datum/reagent/toxin/heartbreaker/on_mob_life(mob/living/carbon/M)
 	M.adjust_slurring(slurtimer SECONDS)
 
-	M.adjustOxyLoss(3.5 * REM, FALSE)
-	M.adjustOrganLoss(ORGAN_SLOT_HEART, 1)
+	M.adjust_oxy_loss(3.5 * REM, FALSE)
+	M.adjust_organ_loss(ORGAN_SLOT_HEART, 1)
 
-	M.adjustStaminaLoss(5, 0)
+	M.adjust_stamina_loss(5, 0)
 	return ..()
 
 
@@ -158,9 +158,9 @@
 /datum/reagent/toxin/muscleparalyzers/on_mob_life(mob/living/carbon/affected_mob)
 	switch(current_cycle)
 		if(1 to 10)
-			affected_mob.adjustStaminaLoss(REM * data, 0)
+			affected_mob.adjust_stamina_loss(REM * data, 0)
 		if(10 to INFINITY)
-			affected_mob.adjustStaminaLoss(REM * data, 0)
+			affected_mob.adjust_stamina_loss(REM * data, 0)
 			affected_mob.Paralyze(5 SECONDS * REM)
 			. = TRUE
 	..()
@@ -174,8 +174,8 @@
 	metabolization_rate = 0.04 * REAGENTS_METABOLISM // Slowly metabolized as the body only really gets rid of it when it loses cells to it.
 
 /datum/reagent/toxin/ricin/on_mob_life(mob/living/carbon/M)
-	M.adjustOrganLoss(ORGAN_SLOT_HEART, 0.1)
-	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, 0.1)
-	M.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.2)
-	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, 0.3)
+	M.adjust_organ_loss(ORGAN_SLOT_HEART, 0.1)
+	M.adjust_organ_loss(ORGAN_SLOT_LUNGS, 0.1)
+	M.adjust_organ_loss(ORGAN_SLOT_LIVER, 0.2)
+	M.adjust_organ_loss(ORGAN_SLOT_STOMACH, 0.3)
 	return ..()

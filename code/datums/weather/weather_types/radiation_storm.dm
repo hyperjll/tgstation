@@ -66,8 +66,8 @@
 		return
 
 	if(HAS_TRAIT(human, TRAIT_RADHEALING))
-		human.adjustBruteLoss(-5)
-		human.adjustFireLoss(-5)
+		human.adjust_brute_loss(-5)
+		human.adjust_fire_loss(-5)
 
 	if(HAS_TRAIT(human, TRAIT_RADIMMUNE))
 		return

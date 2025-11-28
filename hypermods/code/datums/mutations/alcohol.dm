@@ -28,14 +28,14 @@
 
 	switch(owner.get_drunk_amount()) // Same as drunken resilience
 		if(6 to 40)
-			owner.adjustBruteLoss(-0.067 * seconds_per_tick * GET_MUTATION_POWER(src), FALSE, required_bodytype = BODYTYPE_ORGANIC)
-			owner.adjustFireLoss(-0.0335 * seconds_per_tick * GET_MUTATION_POWER(src), required_bodytype = BODYTYPE_ORGANIC)
+			owner.adjust_brute_loss(-0.067 * seconds_per_tick * GET_MUTATION_POWER(src), FALSE, required_bodytype = BODYTYPE_ORGANIC)
+			owner.adjust_fire_loss(-0.0335 * seconds_per_tick * GET_MUTATION_POWER(src), required_bodytype = BODYTYPE_ORGANIC)
 		if(41 to 60)
-			owner.adjustBruteLoss(-0.268 * seconds_per_tick * GET_MUTATION_POWER(src), FALSE, required_bodytype = BODYTYPE_ORGANIC)
-			owner.adjustFireLoss(-0.134 * seconds_per_tick * GET_MUTATION_POWER(src), required_bodytype = BODYTYPE_ORGANIC)
+			owner.adjust_brute_loss(-0.268 * seconds_per_tick * GET_MUTATION_POWER(src), FALSE, required_bodytype = BODYTYPE_ORGANIC)
+			owner.adjust_fire_loss(-0.134 * seconds_per_tick * GET_MUTATION_POWER(src), required_bodytype = BODYTYPE_ORGANIC)
 		if(61 to INFINITY)
-			owner.adjustBruteLoss(-0.536 * seconds_per_tick * GET_MUTATION_POWER(src), FALSE, required_bodytype = BODYTYPE_ORGANIC)
-			owner.adjustFireLoss(-0.268 * seconds_per_tick * GET_MUTATION_POWER(src), required_bodytype = BODYTYPE_ORGANIC)
+			owner.adjust_brute_loss(-0.536 * seconds_per_tick * GET_MUTATION_POWER(src), FALSE, required_bodytype = BODYTYPE_ORGANIC)
+			owner.adjust_fire_loss(-0.268 * seconds_per_tick * GET_MUTATION_POWER(src), required_bodytype = BODYTYPE_ORGANIC)
 
 /datum/mutation/alcohol_brewery
 	name = "Auto-brewery Syndrome"

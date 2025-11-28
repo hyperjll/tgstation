@@ -144,12 +144,12 @@
  * All overrides of mob/living and mob/living/carbon
  */
 /// Brute
-/mob/living/proc/getBruteLoss_nonProsthetic()
-	return getBruteLoss()
+/mob/living/proc/get_brute_loss_nonProsthetic()
+	return get_brute_loss()
 
-/mob/living/carbon/getBruteLoss_nonProsthetic()
+/mob/living/carbon/get_brute_loss_nonProsthetic()
 	if(dna?.species?.inherent_biotypes & MOB_ROBOTIC) // technically it's not a prosthetic if it's a "natural" part of their species
-		return getBruteLoss()
+		return get_brute_loss()
 	. = 0
 	for(var/obj/item/bodypart/chosen_bodypart as anything in bodyparts)
 		if(!IS_ORGANIC_LIMB(chosen_bodypart))
@@ -157,12 +157,12 @@
 		. += chosen_bodypart.brute_dam
 
 /// Burn
-/mob/living/proc/getFireLoss_nonProsthetic()
-	return getFireLoss()
+/mob/living/proc/get_fire_loss_nonProsthetic()
+	return get_fire_loss()
 
-/mob/living/carbon/getFireLoss_nonProsthetic()
+/mob/living/carbon/get_fire_loss_nonProsthetic()
 	if(dna?.species?.inherent_biotypes & MOB_ROBOTIC) // technically it's not a prosthetic if it's a "natural" part of their species
-		return getFireLoss()
+		return get_fire_loss()
 	. = 0
 	for(var/obj/item/bodypart/chosen_bodypart as anything in bodyparts)
 		if(!IS_ORGANIC_LIMB(chosen_bodypart))

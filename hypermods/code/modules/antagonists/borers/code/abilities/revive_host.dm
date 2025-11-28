@@ -20,14 +20,14 @@
 
 	cortical_owner.chemical_storage -= chemical_cost
 
-	if(cortical_owner.human_host.getBruteLoss())
-		cortical_owner.human_host.adjustBruteLoss(-(cortical_owner.human_host.getBruteLoss()*0.5))
-	if(cortical_owner.human_host.getToxLoss())
-		cortical_owner.human_host.adjustToxLoss(-(cortical_owner.human_host.getToxLoss()*0.5))
-	if(cortical_owner.human_host.getFireLoss())
-		cortical_owner.human_host.adjustFireLoss(-(cortical_owner.human_host.getFireLoss()*0.5))
-	if(cortical_owner.human_host.getOxyLoss())
-		cortical_owner.human_host.adjustOxyLoss(-(cortical_owner.human_host.getOxyLoss()*0.5))
+	if(cortical_owner.human_host.get_brute_loss())
+		cortical_owner.human_host.adjust_brute_loss(-(cortical_owner.human_host.get_brute_loss()*0.5))
+	if(cortical_owner.human_host.get_tox_loss())
+		cortical_owner.human_host.adjust_tox_loss(-(cortical_owner.human_host.get_tox_loss()*0.5))
+	if(cortical_owner.human_host.get_fire_loss())
+		cortical_owner.human_host.adjust_fire_loss(-(cortical_owner.human_host.get_fire_loss()*0.5))
+	if(cortical_owner.human_host.get_oxy_loss())
+		cortical_owner.human_host.adjust_oxy_loss(-(cortical_owner.human_host.get_oxy_loss()*0.5))
 
 	if(cortical_owner.human_host.blood_volume < BLOOD_VOLUME_BAD)
 		cortical_owner.human_host.blood_volume = BLOOD_VOLUME_BAD

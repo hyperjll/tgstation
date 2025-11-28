@@ -279,7 +279,7 @@
 /obj/item/mod/module/adrenaline_boost/syndicate/on_use()
 	to_chat(mod.wearer, span_notice("You have used the stimulant boost."))
 	mod.wearer.SetAllImmobility(0)
-	mod.wearer.adjustStaminaLoss(-20) // Down from 200
+	mod.wearer.adjust_stamina_loss(-20) // Down from 200
 	mod.wearer.remove_status_effect(/datum/status_effect/speech/stutter)
 	mod.wearer.reagents.add_reagent(/datum/reagent/medicine/stimulants, 5)
 	reagents.remove_reagent(reagent_required, reagents.total_volume * 0.75)

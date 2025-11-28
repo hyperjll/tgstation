@@ -121,7 +121,7 @@
 		return COMPONENT_HOSTILE_NO_ATTACK
 	if(iscyborg(target))
 		var/mob/living/silicon/borg = target
-		borg.adjustBruteLoss(melee_damage_lower)
+		borg.adjust_brute_loss(melee_damage_lower)
 
 ///Revive your pals
 /mob/living/basic/swarmer/proc/attempt_revival(target)

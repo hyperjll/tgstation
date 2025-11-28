@@ -19,7 +19,7 @@
 	if(human_holder.stat == DEAD)
 		return
 
-	var/totaldamage = (human_holder.getBruteLoss() + human_holder.getFireLoss())
+	var/totaldamage = (human_holder.get_brute_loss() + human_holder.get_fire_loss())
 	if(totaldamage >= 60 && !human_holder.has_status_effect(/datum/status_effect/adrenaline_quirk)) // If you've sustained atleast 60+ brute/burn damage
 		human_holder.apply_status_effect(/datum/status_effect/adrenaline_quirk)
 

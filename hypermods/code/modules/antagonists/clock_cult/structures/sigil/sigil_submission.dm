@@ -51,11 +51,11 @@
 			human_converted.uncuff()
 			new /obj/item/clockwork/clockwork_slab(get_turf(src))
 
-		var/brutedamage = converted_mob.getBruteLoss()
-		var/burndamage = converted_mob.getFireLoss()
+		var/brutedamage = converted_mob.get_brute_loss()
+		var/burndamage = converted_mob.get_fire_loss()
 		if(brutedamage || burndamage)
-			converted_mob.adjustBruteLoss(-(round(brutedamage * 0.75)))
-			converted_mob.adjustFireLoss(-(round(burndamage * 0.75)))
+			converted_mob.adjust_brute_loss(-(round(brutedamage * 0.75)))
+			converted_mob.adjust_fire_loss(-(round(burndamage * 0.75)))
 
 		converted_mob.visible_message(span_warning("[converted_mob] sits completely motionless as \
 	 												[(brutedamage || burndamage) ? "a bright light pours from [converted_mob.p_their()] wounds as they close." \

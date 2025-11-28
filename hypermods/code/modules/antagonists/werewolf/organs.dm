@@ -53,8 +53,8 @@
 	if((. & COMSIG_MOB_STOP_REAGENT_TICK) || (organ_flags & ORGAN_FAILING))
 		return
 	if(istype(chem, /datum/reagent/silver))
-		organ_owner.adjustStaminaLoss(7.5 * REM * seconds_per_tick)
-		organ_owner.adjustFireLoss(5.0 * REM * seconds_per_tick, updating_health = TRUE)
+		organ_owner.adjust_stamina_loss(7.5 * REM * seconds_per_tick)
+		organ_owner.adjust_fire_loss(5.0 * REM * seconds_per_tick, updating_health = TRUE)
 
 
 /obj/item/organ/tongue/werewolf

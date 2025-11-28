@@ -27,7 +27,7 @@
 	if(flashed.stat != CONSCIOUS)
 		return
 
-	flashed.adjustOrganLoss(ORGAN_SLOT_BRAIN, -10)
+	flashed.adjust_organ_loss(ORGAN_SLOT_BRAIN, -10)
 	if(prob(10))
 		flashed.cure_trauma_type(resilience = TRAUMA_RESILIENCE_BASIC)
 // I'm making it cure revoluntaries first, as to not accidentally screw over brainwashers/hypnotizers in the event of a rev round.

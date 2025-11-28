@@ -8,10 +8,10 @@
 
 /datum/reagent/consumable/hearty_punch/on_mob_life(mob/living/carbon/M)
 	if(M.health <= 0)
-		M.adjustBruteLoss(-1, 0)
-		M.adjustFireLoss(-1, 0)
-		M.adjustOxyLoss(-1, 0)
-		M.adjustToxLoss(-1, 0)
+		M.adjust_brute_loss(-1, 0)
+		M.adjust_fire_loss(-1, 0)
+		M.adjust_oxy_loss(-1, 0)
+		M.adjust_tox_loss(-1, 0)
 		. = 1
 	return ..() || .
 
@@ -45,7 +45,7 @@
 /datum/reagent/consumable/turbo/on_mob_life(mob/living/carbon/M)
 	if(prob(1))
 		to_chat(M, span_notice("[pick("You feel disregard for the rule of law.", "You feel pumped!", "Your head is pounding.", "Your thoughts are racing..")]"))
-	M.adjustStaminaLoss(-0.25)
+	M.adjust_stamina_loss(-0.25)
 	return ..()
 
 /datum/reagent/consumable/old_timer
@@ -82,15 +82,15 @@
 /datum/reagent/consumable/between_the_sheets/on_mob_life(mob/living/L)
 	..()
 	if(L.IsSleeping())
-		if(L.getBruteLoss() && L.getFireLoss()) //If you are damaged by both types, slightly increased healing but it only heals one. The more the merrier wink wink.
+		if(L.get_brute_loss() && L.get_fire_loss()) //If you are damaged by both types, slightly increased healing but it only heals one. The more the merrier wink wink.
 			if(prob(40))
-				L.adjustBruteLoss(-2)
+				L.adjust_brute_loss(-2)
 			else
-				L.adjustFireLoss(-2)
-		else if(L.getBruteLoss()) //If you have only one, it still heals but not as well.
-			L.adjustBruteLoss(-1)
-		else if(L.getFireLoss())
-			L.adjustFireLoss(-1)
+				L.adjust_fire_loss(-2)
+		else if(L.get_brute_loss()) //If you have only one, it still heals but not as well.
+			L.adjust_brute_loss(-1)
+		else if(L.get_fire_loss())
+			L.adjust_fire_loss(-1)
 
 
 /datum/reagent/rockcandyruby
@@ -101,10 +101,10 @@
 	taste_description = "expensive gemstones"
 
 /datum/reagent/rockcandyruby/on_mob_life(mob/living/carbon/M)
-	M.adjustBruteLoss(-1, 0)
-	M.adjustFireLoss(-1, 0)
-	M.adjustOxyLoss(-1, 0)
-	M.adjustToxLoss(-1, 0)
+	M.adjust_brute_loss(-1, 0)
+	M.adjust_fire_loss(-1, 0)
+	M.adjust_oxy_loss(-1, 0)
+	M.adjust_tox_loss(-1, 0)
 	..()
 	. = 1
 
@@ -152,10 +152,10 @@
 
 /datum/reagent/rockcandytopaz/on_mob_life(mob/living/carbon/M)
 	if(M.health <= 0)
-		M.adjustBruteLoss(-5, 0)
-		M.adjustFireLoss(-5, 0)
-		M.adjustOxyLoss(-5, 0)
-		M.adjustToxLoss(-5, 0)
+		M.adjust_brute_loss(-5, 0)
+		M.adjust_fire_loss(-5, 0)
+		M.adjust_oxy_loss(-5, 0)
+		M.adjust_tox_loss(-5, 0)
 		. = 1
 	return ..() || .
 
@@ -196,10 +196,10 @@
 		H.physiology.oxy_mod /= 0.925
 
 /datum/reagent/rockcandymagic/on_mob_life(mob/living/carbon/M)
-	M.adjustBruteLoss(-0.5, 0)
-	M.adjustFireLoss(-0.5, 0)
-	M.adjustOxyLoss(-0.1, 0)
-	M.adjustToxLoss(-0.25, 0)
+	M.adjust_brute_loss(-0.5, 0)
+	M.adjust_fire_loss(-0.5, 0)
+	M.adjust_oxy_loss(-0.1, 0)
+	M.adjust_tox_loss(-0.25, 0)
 	..()
 	. = 1
 
@@ -229,12 +229,12 @@
 
 /datum/reagent/consumable/coffeeplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
-	affected_mob.adjustBruteLoss(-0.1, 0)
-	affected_mob.adjustFireLoss(-0.1, 0)
-	affected_mob.adjustOxyLoss(-0.1, 0)
-	affected_mob.adjustToxLoss(-0.1, 0)
+	affected_mob.adjust_brute_loss(-0.1, 0)
+	affected_mob.adjust_fire_loss(-0.1, 0)
+	affected_mob.adjust_oxy_loss(-0.1, 0)
+	affected_mob.adjust_tox_loss(-0.1, 0)
 
-	affected_mob.adjustStaminaLoss(-1 * REM * seconds_per_tick)
+	affected_mob.adjust_stamina_loss(-1 * REM * seconds_per_tick)
 	affected_mob.adjust_dizzy(-14 SECONDS * REM * seconds_per_tick)
 	affected_mob.adjust_drowsiness(-9 SECONDS * REM * seconds_per_tick)
 	affected_mob.AdjustSleeping(-6 SECONDS * REM * seconds_per_tick)
@@ -344,11 +344,11 @@
 		if(3)
 			to_chat(carbies, span_alert("How refreshing!"))
 			var/need_mob_update
-			need_mob_update = carbies.adjustOrganLoss(ORGAN_SLOT_BRAIN, 30 * REM, required_organ_flag = affected_organ_flags)
-			need_mob_update += carbies.adjustBruteLoss(-200 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
-			need_mob_update += carbies.adjustFireLoss(-200 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
-			need_mob_update += carbies.adjustToxLoss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
-			need_mob_update += carbies.adjustOxyLoss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+			need_mob_update = carbies.adjust_organ_loss(ORGAN_SLOT_BRAIN, 30 * REM, required_organ_flag = affected_organ_flags)
+			need_mob_update += carbies.adjust_brute_loss(-200 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+			need_mob_update += carbies.adjust_fire_loss(-200 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+			need_mob_update += carbies.adjust_tox_loss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+			need_mob_update += carbies.adjust_oxy_loss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 			if(need_mob_update)
 				return UPDATE_MOB_HEALTH
 		if(4)

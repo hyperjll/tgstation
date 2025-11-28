@@ -201,7 +201,7 @@
 		addtimer(CALLBACK(src, PROC_REF(curse_effect)), curse_timer)
 
 		if(wearer.health >= 0)
-			wearer.adjustFireLoss(5)
+			wearer.adjust_fire_loss(5)
 
 		var/effectselect = rand(1, 4)
 		switch(effectselect)
@@ -213,11 +213,11 @@
 				wearer.adjust_confusion_up_to(3 SECONDS, 10 SECONDS)
 			if(3)
 				//bouts of Tiredness and Stun
-				wearer.adjustStaminaLoss(30)
+				wearer.adjust_stamina_loss(30)
 				wearer.Stun(2 SECONDS)
 				wearer.Knockdown(2 SECONDS)
 			if(4)
 				//minor brain damage
-				wearer.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10)
+				wearer.adjust_organ_loss(ORGAN_SLOT_BRAIN, 10)
 	else
 		cursing = FALSE

@@ -134,10 +134,10 @@
 	var/mob/living/target = get_holder()
 
 	if(target)
-		target.adjustToxLoss(-0.1, FALSE)
-		target.adjustOxyLoss(-0.1, FALSE)
-		target.adjustBruteLoss(-0.1, FALSE)
-		target.adjustFireLoss(-0.1, FALSE)
+		target.adjust_tox_loss(-0.1, FALSE)
+		target.adjust_oxy_loss(-0.1, FALSE)
+		target.adjust_brute_loss(-0.1, FALSE)
+		target.adjust_fire_loss(-0.1, FALSE)
 		target.updatehealth()
 		host_repairing = TRUE
 		addtimer(CALLBACK(src, PROC_REF(host_repair)), 1 SECONDS)

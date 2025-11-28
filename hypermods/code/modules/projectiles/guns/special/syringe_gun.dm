@@ -40,6 +40,6 @@
 	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
 
 /obj/item/gun/syringe/pblowgun/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
-	user.adjustStaminaLoss(10, updating_stamina = FALSE)
-	user.adjustOxyLoss(10)
+	user.adjust_stamina_loss(10, updating_stamina = FALSE)
+	user.adjust_oxy_loss(10)
 	return ..()

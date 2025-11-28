@@ -101,7 +101,7 @@
 	else
 		step(src, move_direction)
 		if(sisyphus)
-			sisyphus.adjustStaminaLoss(rand(5, 15))
+			sisyphus.adjust_stamina_loss(rand(5, 15))
 
 /obj/bitrunning/hungry_customer/proc/check_crossed_special(atom/movable/mover, atom/oldloc, direction)
 	SIGNAL_HANDLER

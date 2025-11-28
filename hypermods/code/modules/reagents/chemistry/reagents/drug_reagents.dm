@@ -23,9 +23,9 @@
 	M.AdjustUnconscious(-50, FALSE)
 	M.AdjustParalyzed(-50, FALSE)
 	M.AdjustImmobilized(-50, FALSE)
-	M.adjustStaminaLoss(-3, 0)
+	M.adjust_stamina_loss(-3, 0)
 	M.adjust_jitter(2 SECONDS)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1)
+	M.adjust_organ_loss(ORGAN_SLOT_BRAIN, 1)
 	if(prob(5))
 		M.emote(pick("twitch", "shiver"))
 	..()
@@ -41,8 +41,8 @@
 		M.visible_message(span_danger("[M]'s hands flip out and flail everywhere!"))
 		M.drop_all_held_items()
 	..()
-	M.adjustToxLoss(1, 0)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, pick(0.5, 0.6, 0.7, 0.8, 0.9, 1))
+	M.adjust_tox_loss(1, 0)
+	M.adjust_organ_loss(ORGAN_SLOT_BRAIN, pick(0.5, 0.6, 0.7, 0.8, 0.9, 1))
 	. = 1
 
 
@@ -67,13 +67,13 @@
 	. = ..()
 	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
 	affected_mob.AdjustKnockdown(-100, FALSE)
-	affected_mob.adjustStaminaLoss(-2, 0)
+	affected_mob.adjust_stamina_loss(-2, 0)
 
 	if(SPT_PROB(2.5, seconds_per_tick))
 		to_chat(affected_mob, span_notice("[pick("Go! Go! GO!", "You feel ready...", "You feel invincible...")]"))
 	if(SPT_PROB(7.5, seconds_per_tick))
 		affected_mob.losebreath++
-		affected_mob.adjustToxLoss(0.2, updating_health = FALSE, required_biotype = affected_biotype)
+		affected_mob.adjust_tox_loss(0.2, updating_health = FALSE, required_biotype = affected_biotype)
 		return UPDATE_MOB_HEALTH
 
 /datum/reagent/drug/pumpupplus/overdose_start(mob/living/affected_mob)
@@ -90,10 +90,10 @@
 		affected_mob.emote(pick("twitch","drool"))
 	if(SPT_PROB(10, seconds_per_tick))
 		affected_mob.losebreath++
-		affected_mob.adjustStaminaLoss(4, updating_stamina = FALSE, required_biotype = affected_biotype)
+		affected_mob.adjust_stamina_loss(4, updating_stamina = FALSE, required_biotype = affected_biotype)
 		need_mob_update = TRUE
 	if(SPT_PROB(7.5, seconds_per_tick))
-		need_mob_update += affected_mob.adjustToxLoss(2, updating_health = FALSE, required_biotype = affected_biotype)
+		need_mob_update += affected_mob.adjust_tox_loss(2, updating_health = FALSE, required_biotype = affected_biotype)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -123,14 +123,14 @@
 	affected_mob.add_mood_event("smoked", /datum/mood_event/smoked)
 	affected_mob.remove_status_effect(/datum/status_effect/jitter)
 	affected_mob.AdjustAllImmobility(-60 * REM * seconds_per_tick)
-	affected_mob.adjustStaminaLoss(-1, 0)
+	affected_mob.adjust_stamina_loss(-1, 0)
 
 	return UPDATE_MOB_HEALTH
 
 /datum/reagent/drug/nicotwaine/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
 	var/need_mob_update
-	need_mob_update = affected_mob.adjustToxLoss(0.2 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
-	need_mob_update += affected_mob.adjustOxyLoss(1.4 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
+	need_mob_update = affected_mob.adjust_tox_loss(0.2 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+	need_mob_update += affected_mob.adjust_oxy_loss(1.4 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH

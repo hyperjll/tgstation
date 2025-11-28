@@ -33,7 +33,7 @@
 		return FALSE
 
 	var/mob/living/carbon/human/human_mob = clicked_on
-	human_mob.adjustBruteLoss(-10)
+	human_mob.adjust_brute_loss(-10)
 	new /obj/effect/temp_visual/heal(get_turf(human_mob), COLOR_RED)
 	playsound(human_mob, 'sound/items/syringeproj.ogg', 70, TRUE)
 
@@ -74,7 +74,7 @@
 		return FALSE
 
 	var/mob/living/carbon/human/human_mob = clicked_on
-	human_mob.adjustFireLoss(-10)
+	human_mob.adjust_fire_loss(-10)
 	new /obj/effect/temp_visual/heal(get_turf(human_mob), COLOR_ORANGE)
 	playsound(human_mob, 'sound/items/syringeproj.ogg', 70, TRUE)
 
@@ -115,7 +115,7 @@
 		return FALSE
 
 	var/mob/living/carbon/human/human_mob = clicked_on
-	human_mob.adjustToxLoss(-10)
+	human_mob.adjust_tox_loss(-10)
 	new /obj/effect/temp_visual/heal(get_turf(human_mob), COLOR_GREEN)
 	playsound(human_mob, 'sound/items/syringeproj.ogg', 70, TRUE)
 
@@ -156,7 +156,7 @@
 		return FALSE
 
 	var/mob/living/carbon/human/human_mob = clicked_on
-	human_mob.adjustOxyLoss(-30)
+	human_mob.adjust_oxy_loss(-30)
 	new /obj/effect/temp_visual/heal(get_turf(human_mob), COLOR_BLUE)
 	playsound(human_mob, 'sound/items/syringeproj.ogg', 70, TRUE)
 

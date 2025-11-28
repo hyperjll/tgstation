@@ -33,8 +33,8 @@
 /obj/projectile/bullet/c45/sp/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	if((blocked != 100) && isliving(target))
 		var/mob/living/L = target
-		L.adjustStaminaLoss(20)
-		if(L.getStaminaLoss() >= 100)
+		L.adjust_stamina_loss(20)
+		if(L.get_stamina_loss() >= 100)
 			L.Sleeping(400)
 	return ..()
 

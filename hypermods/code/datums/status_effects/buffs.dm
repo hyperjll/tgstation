@@ -25,17 +25,17 @@
 	healed_last_tick = FALSE
 	var/need_mob_update = FALSE
 
-	if(owner.getBruteLoss() > 0)
-		need_mob_update += owner.adjustBruteLoss(-0.5, updating_health = FALSE)
+	if(owner.get_brute_loss() > 0)
+		need_mob_update += owner.adjust_brute_loss(-0.5, updating_health = FALSE)
 		healed_last_tick = TRUE
 
-	if(owner.getFireLoss() > 0)
-		need_mob_update += owner.adjustFireLoss(-0.5, updating_health = FALSE)
+	if(owner.get_fire_loss() > 0)
+		need_mob_update += owner.adjust_fire_loss(-0.5, updating_health = FALSE)
 		healed_last_tick = TRUE
 
-	if(owner.getToxLoss() > 0)
+	if(owner.get_tox_loss() > 0)
 		// Forced, so slimepeople are healed as well.
-		need_mob_update += owner.adjustToxLoss(-0.25, updating_health = FALSE, forced = TRUE)
+		need_mob_update += owner.adjust_tox_loss(-0.25, updating_health = FALSE, forced = TRUE)
 		healed_last_tick = TRUE
 
 	if(need_mob_update)
@@ -83,15 +83,15 @@
 	if(owner.stat == DEAD)
 		return
 
-	if(owner.getBruteLoss() > 0)
-		need_mob_update += owner.adjustBruteLoss(-0.1, updating_health = FALSE)
+	if(owner.get_brute_loss() > 0)
+		need_mob_update += owner.adjust_brute_loss(-0.1, updating_health = FALSE)
 
-	if(owner.getFireLoss() > 0)
-		need_mob_update += owner.adjustFireLoss(-0.1, updating_health = FALSE)
+	if(owner.get_fire_loss() > 0)
+		need_mob_update += owner.adjust_fire_loss(-0.1, updating_health = FALSE)
 
-	if(owner.getToxLoss() > 0)
+	if(owner.get_tox_loss() > 0)
 		// Forced, so slimepeople are healed as well.
-		need_mob_update += owner.adjustToxLoss(-0.1, updating_health = FALSE, forced = TRUE)
+		need_mob_update += owner.adjust_tox_loss(-0.1, updating_health = FALSE, forced = TRUE)
 
 	if(need_mob_update)
 		owner.updatehealth()

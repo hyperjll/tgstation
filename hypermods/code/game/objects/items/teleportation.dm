@@ -62,7 +62,7 @@
 	var/turf/destination = get_teleport_loc(current_location, user, teleport_distance)
 
 	var/healthlossed = 0
-	healthlossed = (user.getBruteLoss() + user.getFireLoss() + user.getToxLoss())
+	healthlossed = (user.get_brute_loss() + user.get_fire_loss() + user.get_tox_loss())
 
 	if((user.getMaxHealth() / 4) < healthlossed) // Do you have a quarter of your health left or under?
 		do_sparks(5,FALSE,user)

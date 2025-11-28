@@ -11,17 +11,17 @@
 		revive_dead()
 
 	var/need_mob_update = FALSE
-	if(owner.getOxyLoss())
-		need_mob_update += owner.adjustOxyLoss(-5, updating_health = FALSE)
+	if(owner.get_oxy_loss())
+		need_mob_update += owner.adjust_oxy_loss(-5, updating_health = FALSE)
 		revive_cost += 1
-	if(owner.getBruteLoss())
-		need_mob_update += owner.adjustBruteLoss(-2, updating_health = FALSE)
+	if(owner.get_brute_loss())
+		need_mob_update += owner.adjust_brute_loss(-2, updating_health = FALSE)
 		revive_cost += 10
-	if(owner.getFireLoss())
-		need_mob_update += owner.adjustFireLoss(-2, updating_health = FALSE)
+	if(owner.get_fire_loss())
+		need_mob_update += owner.adjust_fire_loss(-2, updating_health = FALSE)
 		revive_cost += 10
-	if(owner.getToxLoss())
-		need_mob_update += owner.adjustToxLoss(-1, updating_health = FALSE)
+	if(owner.get_tox_loss())
+		need_mob_update += owner.adjust_tox_loss(-1, updating_health = FALSE)
 		revive_cost += 10
 	if(need_mob_update)
 		owner.updatehealth()
@@ -38,17 +38,17 @@
 		revive_dead()
 
 	var/need_mob_update = FALSE
-	if(owner.getOxyLoss())
-		need_mob_update += owner.adjustOxyLoss(-5, updating_health = FALSE)
+	if(owner.get_oxy_loss())
+		need_mob_update += owner.adjust_oxy_loss(-5, updating_health = FALSE)
 		revive_cost += 1
-	if(owner.getBruteLoss())
-		need_mob_update += owner.adjustBruteLoss(-2, updating_health = FALSE)
+	if(owner.get_brute_loss())
+		need_mob_update += owner.adjust_brute_loss(-2, updating_health = FALSE)
 		revive_cost += 10
-	if(owner.getFireLoss())
-		need_mob_update += owner.adjustFireLoss(-2, updating_health = FALSE)
+	if(owner.get_fire_loss())
+		need_mob_update += owner.adjust_fire_loss(-2, updating_health = FALSE)
 		revive_cost += 10
-	if(owner.getToxLoss())
-		need_mob_update += owner.adjustToxLoss(-1, updating_health = FALSE)
+	if(owner.get_tox_loss())
+		need_mob_update += owner.adjust_tox_loss(-1, updating_health = FALSE)
 		revive_cost += 10
 	if(need_mob_update)
 		owner.updatehealth()
@@ -83,24 +83,24 @@
 	return
 
 /obj/item/organ/cyberimp/chest/regenerativebetter/proc/heal()
-	if(owner.getOxyLoss())
-		owner.adjustOxyLoss(-2.5)
-	if(owner.getBruteLoss())
-		owner.adjustBruteLoss(-1)
-	if(owner.getFireLoss())
-		owner.adjustFireLoss(-1)
-	if(owner.getToxLoss())
-		owner.adjustToxLoss(-0.5)
+	if(owner.get_oxy_loss())
+		owner.adjust_oxy_loss(-2.5)
+	if(owner.get_brute_loss())
+		owner.adjust_brute_loss(-1)
+	if(owner.get_fire_loss())
+		owner.adjust_fire_loss(-1)
+	if(owner.get_tox_loss())
+		owner.adjust_tox_loss(-0.5)
 
-	owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.5)
-	owner.adjustOrganLoss(ORGAN_SLOT_HEART, -0.5)
-	owner.adjustOrganLoss(ORGAN_SLOT_EYES, -0.5)
-	owner.adjustOrganLoss(ORGAN_SLOT_EARS, -0.5)
-	owner.adjustOrganLoss(ORGAN_SLOT_LUNGS, -0.5)
-	owner.adjustOrganLoss(ORGAN_SLOT_LIVER, -0.5)
-	owner.adjustOrganLoss(ORGAN_SLOT_STOMACH, -0.5)
-	owner.adjustOrganLoss(ORGAN_SLOT_TONGUE, -0.5)
-	owner.adjustOrganLoss(ORGAN_SLOT_APPENDIX, -0.5)
+	owner.adjust_organ_loss(ORGAN_SLOT_BRAIN, -0.5)
+	owner.adjust_organ_loss(ORGAN_SLOT_HEART, -0.5)
+	owner.adjust_organ_loss(ORGAN_SLOT_EYES, -0.5)
+	owner.adjust_organ_loss(ORGAN_SLOT_EARS, -0.5)
+	owner.adjust_organ_loss(ORGAN_SLOT_LUNGS, -0.5)
+	owner.adjust_organ_loss(ORGAN_SLOT_LIVER, -0.5)
+	owner.adjust_organ_loss(ORGAN_SLOT_STOMACH, -0.5)
+	owner.adjust_organ_loss(ORGAN_SLOT_TONGUE, -0.5)
+	owner.adjust_organ_loss(ORGAN_SLOT_APPENDIX, -0.5)
 
 /obj/item/organ/cyberimp/chest/regenerativebetter/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
@@ -126,24 +126,24 @@
 	return
 
 /obj/item/organ/cyberimp/chest/regenerative/proc/heal()
-	if(owner.getOxyLoss())
-		owner.adjustOxyLoss(-1)
-	if(owner.getBruteLoss())
-		owner.adjustBruteLoss(-0.5)
-	if(owner.getFireLoss())
-		owner.adjustFireLoss(-0.5)
-	if(owner.getToxLoss())
-		owner.adjustToxLoss(-0.25)
+	if(owner.get_oxy_loss())
+		owner.adjust_oxy_loss(-1)
+	if(owner.get_brute_loss())
+		owner.adjust_brute_loss(-0.5)
+	if(owner.get_fire_loss())
+		owner.adjust_fire_loss(-0.5)
+	if(owner.get_tox_loss())
+		owner.adjust_tox_loss(-0.25)
 
-	owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.25)
-	owner.adjustOrganLoss(ORGAN_SLOT_HEART, -0.25)
-	owner.adjustOrganLoss(ORGAN_SLOT_EYES, -0.25)
-	owner.adjustOrganLoss(ORGAN_SLOT_EARS, -0.25)
-	owner.adjustOrganLoss(ORGAN_SLOT_LUNGS, -0.25)
-	owner.adjustOrganLoss(ORGAN_SLOT_LIVER, -0.25)
-	owner.adjustOrganLoss(ORGAN_SLOT_STOMACH, -0.25)
-	owner.adjustOrganLoss(ORGAN_SLOT_TONGUE, -0.25)
-	owner.adjustOrganLoss(ORGAN_SLOT_APPENDIX, -0.25)
+	owner.adjust_organ_loss(ORGAN_SLOT_BRAIN, -0.25)
+	owner.adjust_organ_loss(ORGAN_SLOT_HEART, -0.25)
+	owner.adjust_organ_loss(ORGAN_SLOT_EYES, -0.25)
+	owner.adjust_organ_loss(ORGAN_SLOT_EARS, -0.25)
+	owner.adjust_organ_loss(ORGAN_SLOT_LUNGS, -0.25)
+	owner.adjust_organ_loss(ORGAN_SLOT_LIVER, -0.25)
+	owner.adjust_organ_loss(ORGAN_SLOT_STOMACH, -0.25)
+	owner.adjust_organ_loss(ORGAN_SLOT_TONGUE, -0.25)
+	owner.adjust_organ_loss(ORGAN_SLOT_APPENDIX, -0.25)
 
 /obj/item/organ/cyberimp/chest/regenerative/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
@@ -165,26 +165,26 @@
 	return
 
 /obj/item/organ/cyberimp/chest/jellypersonregen/proc/heal()
-	if(owner.getOxyLoss())
-		owner.adjustOxyLoss(-3)
-	if(owner.getBruteLoss())
-		owner.adjustBruteLoss(-1.5)
-	if(owner.getFireLoss())
-		owner.adjustFireLoss(-1.5)
-	if(owner.getToxLoss())
-		owner.adjustToxLoss(1)
+	if(owner.get_oxy_loss())
+		owner.adjust_oxy_loss(-3)
+	if(owner.get_brute_loss())
+		owner.adjust_brute_loss(-1.5)
+	if(owner.get_fire_loss())
+		owner.adjust_fire_loss(-1.5)
+	if(owner.get_tox_loss())
+		owner.adjust_tox_loss(1)
 
 	owner.adjust_blood_volume(1, maximum = BLOOD_VOLUME_SAFE)
 
-	owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, -1)
-	owner.adjustOrganLoss(ORGAN_SLOT_HEART, -1)
-	owner.adjustOrganLoss(ORGAN_SLOT_EYES, -1)
-	owner.adjustOrganLoss(ORGAN_SLOT_EARS, -1)
-	owner.adjustOrganLoss(ORGAN_SLOT_LUNGS, -1)
-	owner.adjustOrganLoss(ORGAN_SLOT_LIVER, -1)
-	owner.adjustOrganLoss(ORGAN_SLOT_STOMACH, -1)
-	owner.adjustOrganLoss(ORGAN_SLOT_TONGUE, -1)
-	owner.adjustOrganLoss(ORGAN_SLOT_APPENDIX, -1)
+	owner.adjust_organ_loss(ORGAN_SLOT_BRAIN, -1)
+	owner.adjust_organ_loss(ORGAN_SLOT_HEART, -1)
+	owner.adjust_organ_loss(ORGAN_SLOT_EYES, -1)
+	owner.adjust_organ_loss(ORGAN_SLOT_EARS, -1)
+	owner.adjust_organ_loss(ORGAN_SLOT_LUNGS, -1)
+	owner.adjust_organ_loss(ORGAN_SLOT_LIVER, -1)
+	owner.adjust_organ_loss(ORGAN_SLOT_STOMACH, -1)
+	owner.adjust_organ_loss(ORGAN_SLOT_TONGUE, -1)
+	owner.adjust_organ_loss(ORGAN_SLOT_APPENDIX, -1)
 
 /obj/item/organ/cyberimp/chest/jellypersonregen/syndicate
 	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
@@ -281,7 +281,7 @@
 					to_chat(owner, span_alert("You feel your spine tingle."))
 					COOLDOWN_START(src, alertcooldown, 10 SECONDS)
 				owner.adjust_hallucinations(20 SECONDS)
-				owner.adjustFireLoss(1)
+				owner.adjust_fire_loss(1)
 			if(50 to 100)
 				if(COOLDOWN_FINISHED(src, alertcooldown) || !hasexerted)
 					to_chat(owner, span_userdanger("Your spine and brain feel like they're burning!"))
@@ -289,7 +289,7 @@
 				hasexerted = TRUE
 				owner.set_drugginess(2 SECONDS)
 				owner.adjust_hallucinations(20 SECONDS)
-				owner.adjustFireLoss(5)
+				owner.adjust_fire_loss(5)
 			if(100 to INFINITY)//no infinite abuse
 				to_chat(owner, span_userdanger("You feel a slight sense of shame as your brain and spine rip themselves apart from overexertion."))
 				owner.gib()
@@ -313,7 +313,7 @@
 	owner.adjust_eye_blur(2 * severity)
 	owner.adjust_dizzy(severity SECONDS)
 	time_on += severity
-	owner.adjustFireLoss(severity)
+	owner.adjust_fire_loss(severity)
 	to_chat(owner, span_warning("Your spinal implant malfunctions and you feel it scramble your brain!"))
 
 /obj/item/organ/cyberimp/chest/spinalspeed/toy

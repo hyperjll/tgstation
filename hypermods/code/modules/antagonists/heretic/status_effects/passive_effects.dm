@@ -59,7 +59,7 @@
 	playsound(targeted_turf, 'sound/effects/curse/curseattack.ogg', 80, TRUE)
 
 	var/mob/living/carbon/human/human_owner = owner
-	human_owner.adjustBruteLoss(30)
-	human_owner.adjustFireLoss(30)
+	human_owner.adjust_brute_loss(30)
+	human_owner.adjust_fire_loss(30)
 	human_owner.Knockdown(4 SECONDS)
 	to_chat(owner, span_userdanger("The chanting grows inexplicably louder as wounds manifest upon you!"))

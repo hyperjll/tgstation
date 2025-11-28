@@ -362,7 +362,7 @@
 /obj/item/clothing/glasses/clockwork/wraith_spectacles/process(seconds_per_tick)
 	if(enabled && wearer)
 		var/delt_damage = 0.5 * seconds_per_tick
-		wearer.adjustOrganLoss(ORGAN_SLOT_EYES, delt_damage, 70)
+		wearer.adjust_organ_loss(ORGAN_SLOT_EYES, delt_damage, 70)
 		if(damaged_mobs[wearer])
 			var/wearer_data = damaged_mobs[wearer]
 			wearer_data["damage"] = min(wearer_data["damage"] + delt_damage, 70)
@@ -374,7 +374,7 @@
 		mob_data["timer"] += seconds_per_tick
 		if(mob_data["timer"] >= SECONDS_FOR_EYE_HEAL)
 			var/mob/living/living_healed = mob_entry
-			living_healed.adjustOrganLoss(ORGAN_SLOT_EYES, -mob_data["damage"])
+			living_healed.adjust_organ_loss(ORGAN_SLOT_EYES, -mob_data["damage"])
 			damaged_mobs -= mob_entry
 
 	if(!damaged_mobs.len)

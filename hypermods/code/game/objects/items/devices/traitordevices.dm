@@ -358,7 +358,7 @@
 	M.adjust_confusion(10 SECONDS)
 	M.adjust_jitter(3 SECONDS)
 	M.soundbang_act(1, 20, 10, 15)
-	M.adjustOrganLoss(ORGAN_SLOT_EARS, -10)
+	M.adjust_organ_loss(ORGAN_SLOT_EARS, -10)
 	return
 
 /obj/item/bone_gel_dangerous

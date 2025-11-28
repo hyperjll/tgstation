@@ -83,10 +83,10 @@
 	if(heretic.age > 18)
 		heretic.age -= ageamount
 
-	heretic.adjustBruteLoss(-3)
-	heretic.adjustFireLoss(-3)
-	heretic.adjustToxLoss(-3)
-	heretic.adjustOxyLoss(-3)
+	heretic.adjust_brute_loss(-3)
+	heretic.adjust_fire_loss(-3)
+	heretic.adjust_tox_loss(-3)
+	heretic.adjust_oxy_loss(-3)
 
 	if(!human_target.has_status_effect(/datum/status_effect/rapidaging/lesser))
 		human_target.apply_status_effect(/datum/status_effect/rapidaging/lesser)
@@ -182,21 +182,21 @@
 	if(!istype(target, /mob/living/carbon/human))
 		return
 
-	if(source.getBruteLoss())
-		target.adjustBruteLoss(2)
-		source.adjustBruteLoss(-2)
+	if(source.get_brute_loss())
+		target.adjust_brute_loss(2)
+		source.adjust_brute_loss(-2)
 
-	if(source.getFireLoss())
-		target.adjustFireLoss(2)
-		source.adjustFireLoss(-2)
+	if(source.get_fire_loss())
+		target.adjust_fire_loss(2)
+		source.adjust_fire_loss(-2)
 
-	if(source.getToxLoss())
-		target.adjustToxLoss(2)
-		source.adjustToxLoss(-2)
+	if(source.get_tox_loss())
+		target.adjust_tox_loss(2)
+		source.adjust_tox_loss(-2)
 
-	if(source.getOxyLoss())
-		target.adjustOxyLoss(2)
-		source.adjustOxyLoss(-2)
+	if(source.get_oxy_loss())
+		target.adjust_oxy_loss(2)
+		source.adjust_oxy_loss(-2)
 
 
 /datum/heretic_knowledge/spell/target_time_stop

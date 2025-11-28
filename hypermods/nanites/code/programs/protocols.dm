@@ -242,7 +242,7 @@
 	if(!iscarbon(host_mob))
 		if(nanites.nanite_volume < 500 || !prob(10))
 			return
-		return host_mob.adjustBruteLoss(((max(nanites.nanite_volume - 450, 0) / 450) ** 2 ) * 0.5) // 0.5 -> 2 -> 4.5 -> 8 damage per successful tick
+		return host_mob.adjust_brute_loss(((max(nanites.nanite_volume - 450, 0) / 450) ** 2 ) * 0.5) // 0.5 -> 2 -> 4.5 -> 8 damage per successful tick
 
 	if(nanites.nanite_volume < 500)
 		return
@@ -270,11 +270,11 @@
 		current_stage++
 	if(nanites.nanite_volume > 1500) //Nanites start spilling into the bloodstream, causing toxicity
 		if(prob(15))
-			host_mob.adjustToxLoss(0.5, TRUE, forced = TRUE) //Not healthy for slimepeople either
+			host_mob.adjust_tox_loss(0.5, TRUE, forced = TRUE) //Not healthy for slimepeople either
 		current_stage++
 	if(nanites.nanite_volume > 1750) //Nanites have almost reached their physical limit, and the pressure itself starts causing tissue damage
 		if(prob(15))
-			host_mob.adjustBruteLoss(0.75, TRUE)
+			host_mob.adjust_brute_loss(0.75, TRUE)
 		current_stage++
 
 	if(length(organs_to_damage))
@@ -442,7 +442,7 @@
 		var/mob/living/carbon/C = host_mob
 		C.adjust_blood_volume(-2.275)
 		if(prob(5))
-			host_mob.adjustBruteLoss(-1, TRUE)
+			host_mob.adjust_brute_loss(-1, TRUE)
 
 
 /datum/nanite_program/protocol/emergency
@@ -453,7 +453,7 @@
 	rogue_types = list(/datum/nanite_program/necrotic)
 
 /datum/nanite_program/protocol/emergency/active_effect()
-	if(host_mob.getBruteLoss() + host_mob.getFireLoss() + host_mob.getToxLoss() + host_mob.getOxyLoss() >= 75)
+	if(host_mob.get_brute_loss() + host_mob.get_fire_loss() + host_mob.get_tox_loss() + host_mob.get_oxy_loss() >= 75)
 		nanites.adjust_nanites(null, 1.5)
 
 
@@ -466,7 +466,7 @@
 	rogue_types = list(/datum/nanite_program/necrotic)
 
 /datum/nanite_program/protocol/stasis/active_effect()
-	if(host_mob.getBruteLoss() + host_mob.getFireLoss() + host_mob.getToxLoss() + host_mob.getOxyLoss() <= 0)
+	if(host_mob.get_brute_loss() + host_mob.get_fire_loss() + host_mob.get_tox_loss() + host_mob.get_oxy_loss() <= 0)
 		nanites.adjust_nanites(null, 0.5)
 	if(HAS_TRAIT(host_mob, TRAIT_STASIS) || (host_mob.stat == DEAD))
 		nanites.adjust_nanites(null, 2)

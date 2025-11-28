@@ -98,7 +98,7 @@
 			//Eye hurty
 			user.visible_message(span_userdanger("The [src] emits a bright light which blinds [user]!"))
 			user.flash_act(1, 1)
-			user.adjustOrganLoss(ORGAN_SLOT_EYES, 10, 95)
+			user.adjust_organ_loss(ORGAN_SLOT_EYES, 10, 95)
 			user.adjust_eye_blur(20)
 			user.Knockdown(rand(5, 20))
 
@@ -123,7 +123,7 @@
 			//Thrown
 			selected_turf.visible_message(span_userdanger("Unseen forces throw [user]!"))
 			user.Stun(10)
-			user.adjustBruteLoss(10)
+			user.adjust_brute_loss(10)
 			var/throw_dir = pick(GLOB.cardinals)
 			var/atom/throw_target = get_edge_target_turf(user, throw_dir)
 			user.throw_at(throw_target, 200, 4)
@@ -161,7 +161,7 @@
 		if(12)
 			//Getting chunked
 			selected_turf.visible_message(span_userdanger("[user] suddenly lurches forward in agony!"))
-			user.adjustBruteLoss(50)
+			user.adjust_brute_loss(50)
 
 			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Instant Damage) at [ADMIN_VERBOSEJMP(selected_turf)]")
 			user.log_message("used a [src] and backfired, resulting in Instant Damage.", LOG_ATTACK)
@@ -293,10 +293,10 @@
 	playsound(user, 'sound/effects/magic/staff_healing.ogg', 50, TRUE)
 	for(var/mob/living/carbon/C in range(10, get_turf(user)))
 		var/need_mob_update = FALSE
-		need_mob_update += C.adjustBruteLoss(-5, updating_health = FALSE)
-		need_mob_update += C.adjustFireLoss(-5, updating_health = FALSE)
-		need_mob_update += C.adjustToxLoss(-5, updating_health = FALSE)
-		need_mob_update += C.adjustOxyLoss(-5, updating_health = FALSE)
+		need_mob_update += C.adjust_brute_loss(-5, updating_health = FALSE)
+		need_mob_update += C.adjust_fire_loss(-5, updating_health = FALSE)
+		need_mob_update += C.adjust_tox_loss(-5, updating_health = FALSE)
+		need_mob_update += C.adjust_oxy_loss(-5, updating_health = FALSE)
 		if(need_mob_update)
 			C.updatehealth()
 		C.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 2)
@@ -593,7 +593,7 @@
 	for(var/mob/living/carbon/human/M in urange(10, user, 1))
 		M.visible_message(span_danger("An unbelievably bright light fills [M]'s eyes!"))
 		M.flash_act(1, 1)
-		M.adjustOrganLoss(ORGAN_SLOT_EYES, 25, 95)
+		M.adjust_organ_loss(ORGAN_SLOT_EYES, 25, 95)
 		M.adjust_eye_blur(20)
 		M.Knockdown(rand(25, 50))
 	for(var/obj/machinery/light/L in urange(10, user, 1))

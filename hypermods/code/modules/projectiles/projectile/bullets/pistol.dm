@@ -21,8 +21,8 @@
 /obj/projectile/bullet/c9mm/sp/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	if((blocked != 100) && isliving(target))
 		var/mob/living/L = target
-		L.adjustStaminaLoss(20)
-		if(L.getStaminaLoss() >= 100)
+		L.adjust_stamina_loss(20)
+		if(L.get_stamina_loss() >= 100)
 			L.Sleeping(400)
 	return ..()
 
@@ -82,7 +82,7 @@
 	M.adjust_confusion(5 SECONDS)
 	M.adjust_jitter(5 SECONDS)
 	M.soundbang_act(1, 20, 10, 15)
-	M.adjustOrganLoss(ORGAN_SLOT_EARS, -base_damage)
+	M.adjust_organ_loss(ORGAN_SLOT_EARS, -base_damage)
 
 /obj/projectile/bullet/c9mm/mutate
 	name = "9mm mutation bullet"
@@ -147,8 +147,8 @@
 /obj/projectile/bullet/c10mm/sp/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	if((blocked != 100) && isliving(target))
 		var/mob/living/L = target
-		L.adjustStaminaLoss(20)
-		if(L.getStaminaLoss() >= 100)
+		L.adjust_stamina_loss(20)
+		if(L.get_stamina_loss() >= 100)
 			L.Sleeping(400)
 	return ..()
 

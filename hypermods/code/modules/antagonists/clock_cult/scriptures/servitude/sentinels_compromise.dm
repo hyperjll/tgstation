@@ -39,18 +39,18 @@
 	clockwork_say(invoker, text2ratvar("Wounds will close."), TRUE)
 
 	//MMMMMM, CHUNKY
-	var/total_damage = (healed_mob.getBruteLoss() + healed_mob.getFireLoss() + healed_mob.getOxyLoss()) * 0.6
-	healed_mob.adjustStaminaLoss(-healed_mob.staminaloss * 0.6)
-	healed_mob.adjustBruteLoss(-healed_mob.getBruteLoss() * 0.6)
-	healed_mob.adjustFireLoss(-healed_mob.getFireLoss() * 0.6)
-	healed_mob.adjustOxyLoss(-healed_mob.getOxyLoss() * 0.6)
+	var/total_damage = (healed_mob.get_brute_loss() + healed_mob.get_fire_loss() + healed_mob.get_oxy_loss()) * 0.6
+	healed_mob.adjust_stamina_loss(-healed_mob.staminaloss * 0.6)
+	healed_mob.adjust_brute_loss(-healed_mob.get_brute_loss() * 0.6)
+	healed_mob.adjust_fire_loss(-healed_mob.get_fire_loss() * 0.6)
+	healed_mob.adjust_oxy_loss(-healed_mob.get_oxy_loss() * 0.6)
 	healed_mob.blood_volume = BLOOD_VOLUME_NORMAL
 	healed_mob.set_nutrition(NUTRITION_LEVEL_FULL)
 	healed_mob.bodytemperature = BODYTEMP_NORMAL
 	healed_mob.reagents.remove_reagent(/datum/reagent/water/holywater, 100) //if you have over 100 units of holy water then it should take multiple to purge
-	healed_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, -50)
+	healed_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, -50)
 
 	new /obj/effect/temp_visual/heal(get_turf(healed_mob), "#1E8CE1")
 
-	invoker.adjustToxLoss(min(total_damage * 0.5, 80), forced = TRUE)
+	invoker.adjust_tox_loss(min(total_damage * 0.5, 80), forced = TRUE)
 	return TRUE

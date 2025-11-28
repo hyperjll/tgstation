@@ -64,7 +64,7 @@
 	if(owner.mob_biotypes & MOB_MINERAL)//does not process in inorganic things
 		return
 	if (causes_damage && !iszombie(owner) && owner.stat != DEAD)
-		owner.adjustToxLoss((0.5 * seconds_per_tick) * damage_mult)
+		owner.adjust_tox_loss((0.5 * seconds_per_tick) * damage_mult)
 		if (SPT_PROB(5, seconds_per_tick))
 			to_chat(owner, span_danger("You feel sick..."))
 		damage_mult += damage_mult_per_tick

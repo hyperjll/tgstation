@@ -91,8 +91,8 @@ GLOBAL_LIST_EMPTY(anchoring_crystals) //list of all anchoring crystals
 /obj/structure/destructible/clockwork/anchoring_crystal/process(seconds_per_tick)
 	for(var/mob/living/affected_mob in crystal_area)
 		if(IS_CLOCK(affected_mob))
-			affected_mob.adjustToxLoss(-2.5 * seconds_per_tick) //slightly better tox healing as well as better stam healing around it for servants
-			affected_mob.adjustStaminaLoss(-7.5 * seconds_per_tick, TRUE)
+			affected_mob.adjust_tox_loss(-2.5 * seconds_per_tick) //slightly better tox healing as well as better stam healing around it for servants
+			affected_mob.adjust_stamina_loss(-7.5 * seconds_per_tick, TRUE)
 			continue
 		affected_mob.adjust_silence_up_to(5 SECONDS * seconds_per_tick, 2 MINUTES)
 

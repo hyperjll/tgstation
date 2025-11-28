@@ -63,7 +63,7 @@ GLOBAL_VAR_INIT(objective_blood_borer, 3)
 	if(!HAS_TRAIT(cortical_owner.human_host, TRAIT_AGEUSIA))
 		to_chat(cortical_owner.human_host, span_notice("You get a strange aftertaste of [initial(learned_reagent.taste_description)]!"))
 
-	cortical_owner.human_host.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5 * cortical_owner.host_harm_multiplier, maximum = BRAIN_DAMAGE_SEVERE)
+	cortical_owner.human_host.adjust_organ_loss(ORGAN_SLOT_BRAIN, 5 * cortical_owner.host_harm_multiplier, maximum = BRAIN_DAMAGE_SEVERE)
 
 	StartCooldown()
 
@@ -127,7 +127,7 @@ GLOBAL_VAR_INIT(objective_blood_borer, 3)
 	cortical_owner.known_chemicals += learned_reagent.type
 	cortical_owner.blood_chems_learned++
 
-	cortical_owner.human_host.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5 * cortical_owner.host_harm_multiplier, maximum = BRAIN_DAMAGE_SEVERE)
+	cortical_owner.human_host.adjust_organ_loss(ORGAN_SLOT_BRAIN, 5 * cortical_owner.host_harm_multiplier, maximum = BRAIN_DAMAGE_SEVERE)
 
 	if(cortical_owner.blood_chems_learned == BLOOD_CHEM_OBJECTIVE)
 		GLOB.successful_blood_chem += 1

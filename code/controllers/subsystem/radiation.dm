@@ -131,8 +131,8 @@ SUBSYSTEM_DEF(radiation)
 	var/mob/living/living_target = target
 	if(istype(living_target))
 		if(HAS_TRAIT(living_target, TRAIT_RADHEALING))
-			living_target.adjustBruteLoss(-5)
-			living_target.adjustFireLoss(-5)
+			living_target.adjust_brute_loss(-5)
+			living_target.adjust_fire_loss(-5)
 
 	return TRUE
 

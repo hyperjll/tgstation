@@ -22,7 +22,7 @@
 	cortical_owner.chemical_regen += cortical_owner.chem_regen_per_level
 	cortical_owner.level += 1
 
-	cortical_owner.human_host.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10 * cortical_owner.host_harm_multiplier, maximum = BRAIN_DAMAGE_SEVERE)
+	cortical_owner.human_host.adjust_organ_loss(ORGAN_SLOT_BRAIN, 10 * cortical_owner.host_harm_multiplier, maximum = BRAIN_DAMAGE_SEVERE)
 
 	cortical_owner.human_host.adjust_eye_blur(6 SECONDS * cortical_owner.host_harm_multiplier) //about 12 seconds' worth by default
 	to_chat(cortical_owner, span_notice("You have grown!"))

@@ -51,17 +51,17 @@
 		H.physiology.burn_mod /= 0.1
 		H.physiology.tox_mod /= 0.1
 
-	if(source.getOxyLoss())
-		source.adjustOxyLoss(-200, updating_health = FALSE)
-	if(source.getBruteLoss() > 40)
-		var/totalbruteloss = source.getBruteLoss()
-		source.adjustBruteLoss((-totalbruteloss + 40), updating_health = FALSE)
-	if(source.getFireLoss() > 40)
-		var/totalfireloss = source.getFireLoss()
-		source.adjustFireLoss((-totalfireloss + 40), updating_health = FALSE)
-	if(source.getToxLoss() > 15)
-		var/totaltoxloss = source.getToxLoss() // this one gets special treatment to ensure the damage leftover never hits 100
-		source.adjustToxLoss((-totaltoxloss + 15), updating_health = FALSE)
+	if(source.get_oxy_loss())
+		source.adjust_oxy_loss(-200, updating_health = FALSE)
+	if(source.get_brute_loss() > 40)
+		var/totalbruteloss = source.get_brute_loss()
+		source.adjust_brute_loss((-totalbruteloss + 40), updating_health = FALSE)
+	if(source.get_fire_loss() > 40)
+		var/totalfireloss = source.get_fire_loss()
+		source.adjust_fire_loss((-totalfireloss + 40), updating_health = FALSE)
+	if(source.get_tox_loss() > 15)
+		var/totaltoxloss = source.get_tox_loss() // this one gets special treatment to ensure the damage leftover never hits 100
+		source.adjust_tox_loss((-totaltoxloss + 15), updating_health = FALSE)
 
 	source.set_heartattack(FALSE) // Just in case.
 	source.set_jitter_if_lower(200 SECONDS)

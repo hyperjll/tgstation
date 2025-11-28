@@ -256,7 +256,7 @@
 	added_traits = list(TRAIT_VIRUS_RESISTANCE)
 
 /datum/reagent/medicine/spaceacillin/on_mob_life(mob/living/carbon/M, seconds_per_tick, times_fired)
-	M.adjustToxLoss(-0.1, FALSE)
+	M.adjust_tox_loss(-0.1, FALSE)
 
 	if((M.mob_biotypes & MOB_ORGANIC) && prob(0.2))
 		for(var/thing in M.diseases) // can clean viruses from organic lifeforms.
@@ -1616,7 +1616,7 @@
 	. = ..()
 	effect_progress++
 	if(effect_progress >= 10) // .5 per tick is used up, so 5 units x2 = 10. (5u is needed to restore liver by 1hp)
-		metabolizer.adjustOrganLoss(ORGAN_SLOT_LIVER, -1)
+		metabolizer.adjust_organ_loss(ORGAN_SLOT_LIVER, -1)
 		effect_progress = 0
 
 /datum/reagent/medicine/cordiolis_hepatico

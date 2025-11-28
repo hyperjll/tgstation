@@ -96,7 +96,7 @@
 	var/mob/living/carbon/human/user = owner
 	if(!bloodsuckerdatum?.frenzied)
 		return
-	user.adjustFireLoss(1.5 + (bloodsuckerdatum.humanity_lost / 10))
+	user.adjust_fire_loss(1.5 + (bloodsuckerdatum.humanity_lost / 10))
 
 /datum/movespeed_modifier/bloodsucker_frenzy
 	multiplicative_slowdown = -0.4

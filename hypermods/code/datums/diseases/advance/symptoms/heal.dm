@@ -47,18 +47,18 @@
 
 /datum/symptom/heal/fatigue/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
 
-	M.adjustStaminaLoss(-(2.5*power))
+	M.adjust_stamina_loss(-(2.5*power))
 
 	M.AdjustAllImmobility(-(20*resistmult), FALSE)
 
 	if(softcrit && !M.reagents.has_reagent(/datum/reagent/antihardcrit,0.1))
 		M.reagents.add_reagent(/datum/reagent/antihardcrit, 0.1)
 
-	if(movespeedmult && !M.getStaminaLoss() && !M.reagents.has_reagent(/datum/reagent/diseasensstim,0.1))
+	if(movespeedmult && !M.get_stamina_loss() && !M.reagents.has_reagent(/datum/reagent/diseasensstim,0.1))
 		M.reagents.add_reagent(/datum/reagent/diseasensstim, 0.1)
 
 /datum/symptom/heal/fatigue/passive_message_condition(mob/living/M)
-	if(!M.getStaminaLoss())
+	if(!M.get_stamina_loss())
 		return TRUE
 	return FALSE
 
@@ -86,19 +86,19 @@
 		fatregen = TRUE
 
 /datum/symptom/heal/calorie/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
-	if(M.getBruteLoss() || M.getFireLoss() || M.getToxLoss())
-		M.adjustBruteLoss(-0.2)
-		M.adjustFireLoss(-0.2)
-		M.adjustToxLoss(-0.1)
+	if(M.get_brute_loss() || M.get_fire_loss() || M.get_tox_loss())
+		M.adjust_brute_loss(-0.2)
+		M.adjust_fire_loss(-0.2)
+		M.adjust_tox_loss(-0.1)
 		M.adjust_nutrition(-0.1) // go hungry
 
 	if(fatregen && (HAS_TRAIT_FROM(M, TRAIT_FAT, OBESITY)))
-		M.adjustBruteLoss(-0.2)
-		M.adjustFireLoss(-0.2)
-		M.adjustToxLoss(-0.1)
+		M.adjust_brute_loss(-0.2)
+		M.adjust_fire_loss(-0.2)
+		M.adjust_tox_loss(-0.1)
 
 /datum/symptom/heal/calorie/passive_message_condition(mob/living/carbon/infected_mob)
-	if(infected_mob.getBruteLoss() || infected_mob.getFireLoss())
+	if(infected_mob.get_brute_loss() || infected_mob.get_fire_loss())
 		return TRUE
 
 	return FALSE

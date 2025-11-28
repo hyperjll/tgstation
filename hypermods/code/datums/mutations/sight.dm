@@ -51,7 +51,7 @@
 	if(head)
 		head.receive_damage(burn = backfire_damage, damage_source = src)
 	else
-		source.adjustFireLoss(backfire_damage)
+		source.adjust_fire_loss(backfire_damage)
 
 /datum/mutation/laser_eyes/unstable/process(seconds_per_tick)
 	cooldown += seconds_per_tick

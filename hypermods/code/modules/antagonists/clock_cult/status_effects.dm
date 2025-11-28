@@ -6,15 +6,15 @@
 
 /datum/status_effect/clockwork_tile/tick(seconds_between_ticks)
 	if(IS_CLOCK(owner))
-		owner.adjustToxLoss(-4 * seconds_between_ticks)
-		owner.adjustStaminaLoss(-10 * seconds_between_ticks)
+		owner.adjust_tox_loss(-4 * seconds_between_ticks)
+		owner.adjust_stamina_loss(-10 * seconds_between_ticks)
 		return
 	else // We got deconverted, remove this shit.
 		owner.remove_status_effect(/datum/status_effect/clockwork_tile)
 	if(is_species(owner, /datum/species/golem/clockwork))
-		owner.adjustBruteLoss(-1 * seconds_between_ticks)
-		owner.adjustFireLoss(-1 * seconds_between_ticks)
-		owner.adjustToxLoss(-1 * seconds_between_ticks)
+		owner.adjust_brute_loss(-1 * seconds_between_ticks)
+		owner.adjust_fire_loss(-1 * seconds_between_ticks)
+		owner.adjust_tox_loss(-1 * seconds_between_ticks)
 		return
 
 
@@ -63,16 +63,16 @@
 	healed_last_tick = FALSE
 	var/need_mob_update = FALSE
 
-	if(owner.getBruteLoss() > 0)
-		need_mob_update += owner.adjustBruteLoss(-0.25, updating_health = FALSE)
+	if(owner.get_brute_loss() > 0)
+		need_mob_update += owner.adjust_brute_loss(-0.25, updating_health = FALSE)
 		healed_last_tick = TRUE
 
-	if(owner.getFireLoss() > 0)
-		need_mob_update += owner.adjustFireLoss(-0.25, updating_health = FALSE)
+	if(owner.get_fire_loss() > 0)
+		need_mob_update += owner.adjust_fire_loss(-0.25, updating_health = FALSE)
 		healed_last_tick = TRUE
 
-	if(owner.getToxLoss() > 0)
-		need_mob_update += owner.adjustToxLoss(-0.25, updating_health = FALSE, forced = TRUE)
+	if(owner.get_tox_loss() > 0)
+		need_mob_update += owner.adjust_tox_loss(-0.25, updating_health = FALSE, forced = TRUE)
 		healed_last_tick = TRUE
 
 	if(need_mob_update)

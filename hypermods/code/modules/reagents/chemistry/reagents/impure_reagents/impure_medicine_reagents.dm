@@ -13,7 +13,7 @@
 		show_message = 0
 	if(!(methods & (PATCH|TOUCH|VAPOR)))
 		return
-	var/harmies = clamp(carbies.adjustBruteLoss(2 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, 20)
+	var/harmies = clamp(carbies.adjust_brute_loss(2 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, 20)
 
 	var/need_mob_update = harmies
 
@@ -25,7 +25,7 @@
 
 /datum/reagent/inverse/bicaridine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	var/need_mob_update
-	need_mob_update += affected_mob.adjustBruteLoss(2 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+	need_mob_update += affected_mob.adjust_brute_loss(2 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 	. = ..()
@@ -44,7 +44,7 @@
 	var/need_mob_update
 
 	if(!overdosed)
-		need_mob_update += affected_mob.adjustFireLoss(-4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	affected_mob.adjust_bodytemperature(rand(-30,-25) * TEMPERATURE_DAMAGE_COEFFICIENT * REM * seconds_per_tick, 80) // Chilly af
 
 	affected_mob.reagents.remove_reagent(/datum/reagent/teslium, 4)
@@ -59,7 +59,7 @@
 
 /datum/reagent/inverse/kelotane/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
 	var/need_mob_update
-	need_mob_update += affected_mob.adjustFireLoss(2 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+	need_mob_update += affected_mob.adjust_fire_loss(2 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 
 	var/target_temp = affected_mob.get_body_temp_normal(apply_change = FALSE)
 	if(affected_mob.bodytemperature <= target_temp && !affected_mob.has_status_effect(/datum/status_effect/frozenstasis)) // If cold, incase in ice. This re-applies the cube should it be broken.

@@ -362,7 +362,7 @@
 		else if(HAS_TRAIT(affected_mob, TRAIT_EVIL) && SPT_PROB(25, seconds_per_tick)) //Congratulations, your committment to evil has now made holy water a deadly poison to you!
 			if(!IS_CULTIST(affected_mob) || affected_mob.mind?.holy_role != HOLY_ROLE_PRIEST)
 				affected_mob.emote("scream")
-				need_mob_update += affected_mob.adjustFireLoss(3 * REM * seconds_per_tick, updating_health = FALSE)
+				need_mob_update += affected_mob.adjust_fire_loss(3 * REM * seconds_per_tick, updating_health = FALSE)
 		else if(IS_CLOCK(affected_mob) && SPT_PROB(10, seconds_per_tick))
 			affected_mob.say(pick("VG OHEAF!","SBE GUR TYBEL-BS ENG'INE!","Gur yvtug jvyy fuvar.","Whfgv`pne fnir zr.","Gur Nex zhfg abg snyy.","Rzvarapr V pnyy gur`r!","Lbh frr bayl qnexarff.","Guv`f vf abg gur raq.","Gv`px, Gbpx"), forced = "holy water")
 			if(prob(10))

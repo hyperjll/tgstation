@@ -442,7 +442,7 @@
 	if(!ishuman(target))
 		return FALSE
 	var/mob/living/carbon/human/live_or_dead = target
-	if(live_or_dead.stat < UNCONSCIOUS && live_or_dead.getStaminaLoss() < 100)
+	if(live_or_dead.stat < UNCONSCIOUS && live_or_dead.get_stamina_loss() < 100)
 		return FALSE
 	INVOKE_ASYNC(src, PROC_REF(finish_him), src, pilot, live_or_dead)
 	return TRUE
@@ -507,7 +507,7 @@
 	new /obj/effect/temp_visual/mech_attack_aoe_attack(get_turf(src))
 	for(var/mob/living/something_living in range(1, get_turf(src)))
 		if(something_living.stat >= UNCONSCIOUS \
-		|| something_living.getStaminaLoss() >= 100 \
+		|| something_living.get_stamina_loss() >= 100 \
 		|| something_living == pilot)
 			continue
 		if(prob(DISMEMBER_CHANCE_LOW))
@@ -549,7 +549,7 @@
 			break
 		for(var/mob/living/something_living in line_turf.contents)
 			if(something_living.stat >= UNCONSCIOUS \
-			|| something_living.getStaminaLoss() >= 100 \
+			|| something_living.get_stamina_loss() >= 100 \
 			|| is_driver(something_living) \
 			|| is_occupant(something_living))
 				continue

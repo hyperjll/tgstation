@@ -105,7 +105,7 @@
 		* all of the brain healing code past this point.
 		*/
 
-		humanoid.setOrganLoss(ORGAN_SLOT_BRAIN, M.get_organ_loss(ORGAN_SLOT_BRAIN) - 175)
+		humanoid.set_organ_loss(ORGAN_SLOT_BRAIN, M.get_organ_loss(ORGAN_SLOT_BRAIN) - 175)
 
 		if(GLOB.curse_of_madness_triggered)
 			return
