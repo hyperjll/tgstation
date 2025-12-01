@@ -71,6 +71,7 @@
 		"sensor_voice_nanites",
 		"voice_nanites",
 		"research_nanites",
+		"sensor_job_nanites",
 		"sensor_incapacitated_nanites",
 	)
 	research_costs = list(

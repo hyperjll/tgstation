@@ -54,6 +54,13 @@
 	category = list(NANITES_CATEGORY_SENSOR)
 	program_type = /datum/nanite_program/sensor/alive
 
+/datum/design/nanites/sensor_job
+	name = "Job Sensor"
+	desc = "When triggered, the nanites scan the host's biodata and match it with Nanotrasen's private bio-records and output a signal depending on the conditions set in the settings."
+	id = "sensor_job_nanites"
+	category = list(NANITES_CATEGORY_SENSOR)
+	program_type = /datum/nanite_program/sensor/job
+
 /datum/design/nanites/sensor_incapacitated
 	name = "Incapacitated Sensor"
 	desc = "The nanites receive a signal constantly while the host is incapacitated."

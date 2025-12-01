@@ -326,6 +326,79 @@
 	return rule
 
 
+/datum/nanite_program/sensor/job
+	name = "Job Sensor"
+	desc = "When triggered, the nanites scan the host's biodata and match it with Nanotrasen's private bio-records and output a signal depending on the conditions set in the settings."
+	can_trigger = TRUE
+	trigger_cost = 0
+	trigger_cooldown = 5
+
+	///List of all jobs we can add special sensors for.
+	var/static/list/allowed_jobs = list(
+		"Assistant" = "Assistant",
+		"Atmos Tech" = "Atmospheric Technician",
+		"Bartender" = "Bartender",
+		"Botanist" = "Botanist",
+		"Captain" = "Captain",
+		"Cargo Tech" = "Cargo Technician",
+		"Chemist" = "Chemist",
+		"CE" = "Chief Engineer",
+		"CMO" = "Chief Medical Officer",
+		"Clown" = "Clown",
+		"Cook" = "Cook",
+		"Coroner" = "Coroner",
+		"Curator" = "Curator",
+		"Detective" = "Detective",
+		"Geneticist" = "Geneticist",
+		"HoP" = "Head of Personnel",
+		"HoS" = "Head of Security",
+		"Janitor" = "Janitor",
+		"Lawyer" = "Lawyer",
+		"Med Doctor" = "Medical Doctor",
+		"Mime" = "Mime",
+		"Paramedic" = "Paramedic",
+		"Prisoner" = "Prisoner",
+		"Psychologist" = "Psychologist",
+		"QM" = "Quartermaster",
+		"RD" = "Research Director",
+		"Roboticist" = "Roboticist",
+		"Scientist" = "Scientist",
+		"Sec Officer" = "Security Officer",
+		"Miner" = "Shaft Miner",
+		"Engineer" = "Station Engineer",
+		"Warden" = "Warden",
+		"Chaplain" = "Chaplain",
+		"Unknown" = "Unassigned Crewmember",
+	)
+
+/datum/nanite_program/sensor/job/register_extra_settings()
+	. = ..()
+	var/list/job_types = list()
+	for(var/name in allowed_jobs)
+		job_types += name
+	extra_settings[NES_JOB] = new /datum/nanite_extra_setting/type("Assistant", job_types)
+	extra_settings[NES_MODE] = new /datum/nanite_extra_setting/boolean(TRUE, "Is", "Is Not")
+
+/datum/nanite_program/sensor/job/on_trigger(comm_message)
+	var/datum/nanite_extra_setting/job_type = extra_settings[NES_JOB]
+	var/host_job = allowed_jobs[job_type.get_value()]
+	var/job_match = FALSE
+
+	if(host_job)
+		if(host_mob.mind?.assigned_role.title == host_job)
+			job_match = TRUE
+	else // Just in case the default option is null.
+		job_match = FALSE
+
+	var/datum/nanite_extra_setting/mode = extra_settings[NES_MODE]
+	if(mode.get_value())
+		if(job_match)
+			send_code()
+	else
+		if(!job_match)
+			send_code()
+
+
 /datum/nanite_program/sensor/incapacitated
 	name = "Incapacitated Sensor"
 	desc = "The nanites receive a signal constantly while the host is incapacitated."
