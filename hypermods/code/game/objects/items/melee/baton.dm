@@ -50,6 +50,9 @@
 	name = "stun baton"
 	security_lock = TRUE
 
+/obj/item/melee/baton/security/antaglocked/loaded
+	preload_cell_type = /obj/item/stock_parts/power_store/cell/high
+
 /obj/item/melee/baton/security/antaglocked/examine(mob/user)
 	. = ..()
 	if(security_lock)

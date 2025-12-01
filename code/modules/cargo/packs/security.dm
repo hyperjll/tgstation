@@ -153,10 +153,10 @@
 
 /datum/supply_pack/security/baton
 	name = "Stun Batons Crate"
-	desc = "Arm the Civil Protection Forces with three stun batons. Batteries included."
+	desc = "Arm the Civil Protection Forces with three stun batons. A.N.T.A.G Locks and Batteries included."
 	cost = CARGO_CRATE_VALUE * 3
 	access_view = ACCESS_SECURITY
-	contains = list(/obj/item/melee/baton/security/loaded = 3)
+	contains = list(/obj/item/melee/baton/security/antaglocked/loaded = 3)
 	crate_name = "stun baton crate"
 
 /datum/supply_pack/security/wall_flash
