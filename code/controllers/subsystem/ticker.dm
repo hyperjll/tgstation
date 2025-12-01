@@ -285,6 +285,10 @@ SUBSYSTEM_DEF(ticker)
 
 	PostSetup()
 
+	var/motd = global.config.motd
+	if(motd)
+		to_chat(world, "<div class=\"motd\">[motd]</div>", handle_whitespace=FALSE)
+
 	return TRUE
 
 /datum/controller/subsystem/ticker/proc/PostSetup()
