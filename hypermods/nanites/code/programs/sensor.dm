@@ -68,7 +68,7 @@
 
 /datum/nanite_program/sensor/health/register_extra_settings()
 	. = ..()
-	extra_settings[NES_HEALTH_PERCENT] = new /datum/nanite_extra_setting/number(50, -99, 100, "%")
+	extra_settings[NES_HEALTH_PERCENT] = new /datum/nanite_extra_setting/number(50, -100, 100, "%")
 	extra_settings[NES_DIRECTION] = new /datum/nanite_extra_setting/boolean(TRUE, "Above", "Below")
 
 /datum/nanite_program/sensor/health/check_event()
@@ -104,17 +104,11 @@
 	name = "Critical Health Sensor"
 	desc = "The nanites receive a signal when the host first reaches critical health."
 	can_rule = TRUE
-	var/spent = FALSE
 
 /datum/nanite_program/sensor/crit/check_event()
 	if(HAS_TRAIT(host_mob, TRAIT_CRITICAL_CONDITION))
-		if(spent)
-			return FALSE
-		spent = TRUE
 		return TRUE
-	spent = FALSE
 	return FALSE
-
 
 /datum/nanite_program/sensor/crit/make_rule(datum/nanite_program/target)
 	var/datum/nanite_rule/crit/rule = new(target)
@@ -124,6 +118,11 @@
 	name = "Death Sensor"
 	desc = "The nanites receive a signal when they detect the host is dead."
 	can_rule = TRUE
+
+/datum/nanite_program/sensor/death/check_event()
+	if(host_mob.stat == DEAD)
+		return TRUE
+	return FALSE
 
 /datum/nanite_program/sensor/death/on_death(gibbed)
 	send_code()
@@ -140,7 +139,7 @@
 
 /datum/nanite_program/sensor/nanite_volume/register_extra_settings()
 	. = ..()
-	extra_settings[NES_NANITE_PERCENT] = new /datum/nanite_extra_setting/number(50, -99, 100, "%")
+	extra_settings[NES_NANITE_PERCENT] = new /datum/nanite_extra_setting/number(50, -100, 100, "%")
 	extra_settings[NES_DIRECTION] = new /datum/nanite_extra_setting/boolean(TRUE, "Above", "Below")
 
 /datum/nanite_program/sensor/nanite_volume/check_event()
@@ -180,8 +179,8 @@
 
 /datum/nanite_program/sensor/damage/register_extra_settings()
 	. = ..()
-	extra_settings[NES_DAMAGE_TYPE] = new /datum/nanite_extra_setting/type(BRUTE, list(BRUTE, BURN, TOX, OXY))
-	extra_settings[NES_DAMAGE] = new /datum/nanite_extra_setting/number(50, 0, 500)
+	extra_settings[NES_DAMAGE_TYPE] = new /datum/nanite_extra_setting/type(BRUTE, list(BRUTE, BURN, TOX, OXY, STAMINA))
+	extra_settings[NES_DAMAGE] = new /datum/nanite_extra_setting/number(0, 0, 500)
 	extra_settings[NES_DIRECTION] = new /datum/nanite_extra_setting/boolean(TRUE, "Above", "Below")
 
 /datum/nanite_program/sensor/damage/check_event()
@@ -200,6 +199,9 @@
 			damage_amt = host_mob.get_tox_loss()
 		if(OXY)
 			damage_amt = host_mob.get_oxy_loss()
+		if(STAMINA)
+			var/mob/living/carbon/human/tired_fella = host_mob
+			damage_amt = tired_fella.get_stamina_loss()
 
 	if(check_above)
 		if(damage_amt >= damage.get_value())
@@ -241,7 +243,7 @@
 	RegisterSignal(host_mob, COMSIG_MOVABLE_HEAR, PROC_REF(on_hear))
 
 /datum/nanite_program/sensor/voice/on_mob_remove()
-	UnregisterSignal(host_mob, COMSIG_MOVABLE_HEAR, PROC_REF(on_hear))
+	UnregisterSignal(host_mob, COMSIG_MOVABLE_HEAR)
 	return ..()
 
 /datum/nanite_program/sensor/voice/proc/on_hear(datum/source, list/hearing_args)
@@ -272,6 +274,7 @@
 		"Pod" = /datum/species/pod,
 		"Fly" = /datum/species/fly,
 		"Jelly" = /datum/species/jelly,
+		"Monkey" = /datum/species/monkey,
 	)
 
 /datum/nanite_program/sensor/species/register_extra_settings()
@@ -306,3 +309,63 @@
 	else
 		if(!species_match)
 			send_code()
+
+
+/datum/nanite_program/sensor/alive
+	name = "Vital Sensor"
+	desc = "The nanites receive a signal constantly while the host is alive."
+	can_rule = TRUE
+
+/datum/nanite_program/sensor/alive/check_event()
+	if(host_mob.stat != DEAD)
+		return TRUE
+	return FALSE
+
+/datum/nanite_program/sensor/alive/make_rule(datum/nanite_program/target)
+	var/datum/nanite_rule/alive/rule = new(target)
+	return rule
+
+
+/datum/nanite_program/sensor/incapacitated
+	name = "Incapacitated Sensor"
+	desc = "The nanites receive a signal constantly while the host is incapacitated."
+	can_rule = TRUE
+
+/datum/nanite_program/sensor/incapacitated/check_event()
+	if(host_mob.incapacitated)
+		return TRUE
+	return FALSE
+
+/datum/nanite_program/sensor/incapacitated/make_rule(datum/nanite_program/target)
+	var/datum/nanite_rule/incapacitated/rule = new(target)
+	return rule
+
+
+/datum/nanite_program/sensor/name
+	name = "Name Sensor"
+	desc = "Sends a signal when the nanites detect the host mob's identity to be that of the one specified."
+
+/datum/nanite_program/sensor/name/register_extra_settings()
+	. = ..()
+	extra_settings[NES_NAME] = new /datum/nanite_extra_setting/text("")
+
+/datum/nanite_program/sensor/name/check_event()
+	var/datum/nanite_extra_setting/nanite_name_input = extra_settings[NES_NAME]
+	if(host_mob.name == nanite_name_input)
+		return TRUE
+	return FALSE
+
+
+/datum/nanite_program/sensor/resting
+	name = "Resting Sensor"
+	desc = "The nanites receive a signal constantly while the host is resting/laying down."
+	can_rule = TRUE
+
+/datum/nanite_program/sensor/resting/check_event()
+	if(host_mob.resting)
+		return TRUE
+	return FALSE
+
+/datum/nanite_program/sensor/resting/make_rule(datum/nanite_program/target)
+	var/datum/nanite_rule/resting/rule = new(target)
+	return rule
