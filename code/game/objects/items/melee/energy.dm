@@ -216,6 +216,9 @@
 	if(!HAS_TRAIT(src, TRAIT_TRANSFORM_ACTIVE))
 		return FALSE
 
+	if(attack_type == OVERWHELMING_ATTACK)
+		return FALSE
+
 	if(attack_type == PROJECTILE_ATTACK)
 		var/obj/projectile/our_projectile = hitby
 
@@ -226,9 +229,6 @@
 
 	if(attack_type == LEAP_ATTACK)
 		final_block_chance -= 25 //OH GOD GET IT OFF ME
-
-	if(attack_type == OVERWHELMING_ATTACK)
-		final_block_chance = 0 //Far too small to block these kinds of attacks.
 
 	return ..()
 
@@ -524,6 +524,12 @@
 /obj/item/melee/energy/sword/surplus/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
 	if(!HAS_TRAIT(src, TRAIT_TRANSFORM_ACTIVE))
 		return FALSE
+
+	if(attack_type == OVERWHELMING_ATTACK)
+		return FALSE
+
+	if(attack_type == LEAP_ATTACK)
+		final_block_chance -= 25
 
 	if(prob(final_block_chance) && charge)
 		expend_charge(owner)
