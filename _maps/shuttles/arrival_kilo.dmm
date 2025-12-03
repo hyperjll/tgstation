@@ -20,8 +20,12 @@
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/arrival)
 "ae" = (
-/obj/structure/sign/nanotrasen,
-/turf/closed/wall/mineral/titanium,
+/obj/effect/turf_decal/bot,
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/obj/structure/sign/nanotrasen/directional/south,
+/turf/open/floor/mineral/plastitanium,
 /area/shuttle/arrival)
 "ag" = (
 /turf/template_noop,
@@ -69,6 +73,7 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/chair/comfy/shuttle,
 /obj/machinery/light/directional/north,
+/obj/structure/sign/nanotrasen/directional/north,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/arrival)
 "ak" = (
@@ -114,6 +119,7 @@
 	},
 /obj/structure/chair/comfy/shuttle,
 /obj/machinery/light/small/directional/west,
+/obj/structure/sign/nanotrasen/directional/north,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/arrival)
 "au" = (
@@ -199,6 +205,7 @@
 	dir = 1
 	},
 /obj/machinery/light/small/directional/west,
+/obj/structure/sign/nanotrasen/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/arrival)
 "aN" = (
@@ -355,13 +362,13 @@ aY
 lA
 "}
 (5,1,1) = {"
-ae
+ac
 aj
 rV
 aT
 aV
-aN
 ae
+ac
 "}
 (6,1,1) = {"
 lA
@@ -419,11 +426,11 @@ ab
 "}
 (12,1,1) = {"
 ac
-ae
+ac
 at
 aW
 aM
-ae
+ac
 ac
 "}
 (13,1,1) = {"

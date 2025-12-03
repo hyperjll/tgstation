@@ -589,6 +589,7 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 	icon_state = "lawdrobe"
 	product_ads = "OBJECTION! Get the rule of law for yourself!"
 	vend_reply = "Thank you for using the LawDrobe!"
+	extra_price = PAYCHECK_COMMAND * 3
 	products = list(
 		/obj/item/clothing/accessory/lawyers_badge = 2,
 		/obj/item/clothing/neck/tie = 3,
@@ -620,6 +621,7 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/reagent_containers/cup/fish_feed = 1,
 	)
 	premium = list(
+		/obj/item/mod/control/pre_equipped/portable_suit = 1,
 		/obj/item/clothing/glasses/hud/security = 2,
 		/obj/item/clothing/glasses/hud/security/prescription = 2,
 	)

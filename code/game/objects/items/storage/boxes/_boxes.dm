@@ -24,6 +24,8 @@
 
 /obj/item/storage/box/Initialize(mapload)
 	. = ..()
+	if(foldable_result == /obj/item/stack/sheet/cardboard)
+		set_custom_materials(list(/datum/material/cardboard = SHEET_MATERIAL_AMOUNT))
 	if(give_fallback_icon && fallback_icon && fallback_icon_state) // Used for certain syndie kits like implants to show a diff icon on the ui
 		icon = fallback_icon
 		icon_state = fallback_icon_state
