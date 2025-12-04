@@ -55,14 +55,13 @@
 	if(!istype(I, /obj/item/shard))
 		return ..()
 
-	if (poster_structure.trap?.resolve())
+	if (locate(/obj/item/shard) in (poster_structure?.contents || contents))
 		balloon_alert(user, "already trapped!")
 		return
 
-	if(!user.transferItemToLoc(I, poster_structure))
+	if(!user.transferItemToLoc(I, src))
 		return
 
-	poster_structure.trap = WEAKREF(I)
 	to_chat(user, span_notice("You conceal \the [I] inside the rolled up poster."))
 
 /obj/item/poster/interact_with_atom(turf/closed/wall_structure, mob/living/user, list/modifiers)
@@ -91,6 +90,9 @@
 	var/obj/structure/sign/poster/placed_poster = poster_structure || new poster_type(src)
 	placed_poster.poster_item_type = type
 	placed_poster.forceMove(wall_structure)
+	var/obj/item/shard/trap = locate() in contents
+	if(trap)
+		trap.forceMove(placed_poster)
 	poster_structure = null
 	flick("poster_being_set", placed_poster)
 	playsound(src, 'sound/items/poster/poster_being_created.ogg', 100, TRUE)
@@ -130,8 +132,6 @@
 	var/poster_item_desc = "This hypothetical poster item should not exist, let's be honest here."
 	var/poster_item_icon_state = "rolled_poster"
 	var/poster_item_type = /obj/item/poster
-	///A sharp shard of material can be hidden inside of a poster, attempts to embed when it is torn down.
-	var/datum/weakref/trap
 
 	/// Do we have a special surpise when ripped off?
 	var/special_trap = FALSE
@@ -228,7 +228,7 @@
 	if(special_trap)
 		explosion(user.loc,0,0,1,flame_range = 0)
 
-	var/obj/item/shard/payload = trap?.resolve()
+	var/obj/item/shard/payload = locate() in contents
 	if (!payload)
 		return
 
