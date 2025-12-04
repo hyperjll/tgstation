@@ -2,6 +2,7 @@
 	title = JOB_CHIEF_MEDICAL_OFFICER
 	description = "Coordinate doctors and other medbay employees, ensure they \
 		know how to save lives, check for injuries on the crew monitor."
+	department_head = list(JOB_CAPTAIN)
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	head_announce = RADIO_CHANNEL_MEDICAL
 	faction = FACTION_STATION
