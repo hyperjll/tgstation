@@ -354,13 +354,14 @@
 	var/list/surplus_only_items = subtypesof(/datum/uplink_item/surplusonly/)
 	possible_items += surplus_only_items
 
-	for(var/datum/uplink_item/item_path as anything in SStraitor.uplink_items_by_type)
-		var/datum/uplink_item/uplink_item = SStraitor.uplink_items_by_type[item_path]
+	for(var/datum/uplink_item/uplink_item as anything in SStraitor.uplink_items)
 		if(src == uplink_item || !uplink_item.item)
 			continue
 		if(!handler.check_if_restricted(uplink_item))
 			continue
 		if(!uplink_item.surplus)
+			continue
+		if(handler.not_enough_reputation(uplink_item))
 			continue
 		possible_items += uplink_item
 	return possible_items

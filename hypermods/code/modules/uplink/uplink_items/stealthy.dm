@@ -26,6 +26,21 @@
 	cost = 7
 	surplus = 30
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/handgun45,
+		/datum/uplink_item/ammo/handgun45/ap,
+		/datum/uplink_item/ammo/handgun45/hp,
+		/datum/uplink_item/ammo/handgun45/inc,
+		/datum/uplink_item/ammo/handgun45/random,
+		/datum/uplink_item/ammo/handgun45/cs,
+		/datum/uplink_item/ammo/handgun45/emp,
+		/datum/uplink_item/ammo/handgun45/sp,
+		/datum/uplink_item/ammo/handgun45/venom,
+		/datum/uplink_item/ammo/handgun45/pacify,
+		/datum/uplink_item/ammo/handgun45/delay,
+		/datum/uplink_item/ammo/handgun45/tranq,
+		/datum/uplink_item/ammo_restock/ammo45box,
+	)
 
 /datum/uplink_item/stealthy_weapons/derringer
 	name = "Derringer Pistol"
@@ -34,6 +49,19 @@
 	cost = 3
 	surplus = 50
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/revolver,
+		/datum/uplink_item/ammo_nuclear/basic/revolver,
+		/datum/uplink_item/ammo_nuclear/special/revolver/phasic,
+		/datum/uplink_item/ammo_nuclear/special/revolver/heartseeker,
+		/datum/uplink_item/ammo/revolver/random,
+		/datum/uplink_item/ammo/revolver/ironfeather,
+		/datum/uplink_item/ammo/revolver/nutcracker,
+		/datum/uplink_item/ammo/revolver/metalshock,
+		/datum/uplink_item/ammo/revolver/heartpiercer,
+		/datum/uplink_item/ammo/revolver/wallstake,
+		/datum/uplink_item/ammo_restock/ammo357box,
+	)
 
 /datum/uplink_item/stealthy_weapons/donkbat
 	name = "Donk Baseball Bat"
@@ -101,6 +129,30 @@
 	item = /obj/item/gun/ballistic/shotgun/cane
 	cost = 6
 	surplus = 20
+	relevant_child_items = list(
+		/datum/uplink_item/ammo_restock/mysteryshells,
+		/datum/uplink_item/ammo_restock/lethalshells,
+		/datum/uplink_item/ammo_restock/dartshells,
+		/datum/uplink_item/ammo_restock/incendiaryshells,
+		/datum/uplink_item/ammo_restock/dragonshells,
+		/datum/uplink_item/ammo_restock/syndieshotshells,
+		/datum/uplink_item/ammo_restock/syndieslugshells,
+		/datum/uplink_item/ammo_restock/tasershells,
+		/datum/uplink_item/ammo_restock/meteorshells,
+		/datum/uplink_item/ammo_restock/pulseshells,
+		/datum/uplink_item/ammo_restock/frag12shells,
+		/datum/uplink_item/ammo_restock/flechetteshells,
+		/datum/uplink_item/ammo_restock/rubbershotshells,
+		/datum/uplink_item/ammo_restock/ionshells,
+		/datum/uplink_item/ammo_restock/lasershells,
+		/datum/uplink_item/ammo_restock/uraniumshells,
+		/datum/uplink_item/ammo_restock/cryoshotshells,
+		/datum/uplink_item/ammo_restock/bioterrorshells,
+		/datum/uplink_item/ammo_restock/thundershotshells,
+		/datum/uplink_item/ammo_restock/hardlightshells,
+		/datum/uplink_item/ammo_restock/ripshells,
+		/datum/uplink_item/ammo_restock/anarchyshells,
+	)
 
 /datum/uplink_item/stealthy_weapons/syndispraycan
 	name = "Syndicate Hellcan"

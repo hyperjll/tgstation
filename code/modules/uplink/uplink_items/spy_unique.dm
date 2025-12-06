@@ -54,9 +54,29 @@
 	cost = SPY_UPPER_COST_THRESHOLD
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE
 	relevant_child_items = list(
-		/datum/uplink_item/spy_unique/shotgun_ammo,
 		/datum/uplink_item/spy_unique/shotgun_ammo/breacher_slug,
-		/datum/uplink_item/spy_unique/shotgun_ammo/slugs,
+		/datum/uplink_item/ammo_restock/mysteryshells,
+		/datum/uplink_item/ammo_restock/lethalshells,
+		/datum/uplink_item/ammo_restock/dartshells,
+		/datum/uplink_item/ammo_restock/incendiaryshells,
+		/datum/uplink_item/ammo_restock/dragonshells,
+		/datum/uplink_item/ammo_restock/syndieshotshells,
+		/datum/uplink_item/ammo_restock/syndieslugshells,
+		/datum/uplink_item/ammo_restock/tasershells,
+		/datum/uplink_item/ammo_restock/meteorshells,
+		/datum/uplink_item/ammo_restock/pulseshells,
+		/datum/uplink_item/ammo_restock/frag12shells,
+		/datum/uplink_item/ammo_restock/flechetteshells,
+		/datum/uplink_item/ammo_restock/rubbershotshells,
+		/datum/uplink_item/ammo_restock/ionshells,
+		/datum/uplink_item/ammo_restock/lasershells,
+		/datum/uplink_item/ammo_restock/uraniumshells,
+		/datum/uplink_item/ammo_restock/cryoshotshells,
+		/datum/uplink_item/ammo_restock/bioterrorshells,
+		/datum/uplink_item/ammo_restock/thundershotshells,
+		/datum/uplink_item/ammo_restock/hardlightshells,
+		/datum/uplink_item/ammo_restock/ripshells,
+		/datum/uplink_item/ammo_restock/anarchyshells,
 	)
 
 /datum/uplink_item/spy_unique/bulldog_shotgun
@@ -74,7 +94,6 @@
 		/datum/uplink_item/ammo_nuclear/special/meteor,
 		/datum/uplink_item/spy_unique/shotgun_ammo,
 		/datum/uplink_item/spy_unique/shotgun_ammo/breacher_slug,
-		/datum/uplink_item/spy_unique/shotgun_ammo/slugs,
 	)
 
 /datum/uplink_item/spy_unique/ansem_pistol
@@ -84,10 +103,18 @@
 	cost = SPY_UPPER_COST_THRESHOLD
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE
 	relevant_child_items = list(
-		/datum/uplink_item/ammo_nuclear/basic/m10mm,
-		/datum/uplink_item/ammo_nuclear/ap/m10mm,
-		/datum/uplink_item/ammo_nuclear/hp/m10mm,
-		/datum/uplink_item/ammo_nuclear/incendiary/m10mm,
+		/datum/uplink_item/ammo/pistol10mm,
+		/datum/uplink_item/ammo/pistol10mm/ap,
+		/datum/uplink_item/ammo/pistol10mm/hp,
+		/datum/uplink_item/ammo/pistol10mm/fire,
+		/datum/uplink_item/ammo/pistol10mm/random,
+		/datum/uplink_item/ammo/pistol10mm/cs,
+		/datum/uplink_item/ammo/pistol10mm/emp,
+		/datum/uplink_item/ammo/pistol10mm/sleepy,
+		/datum/uplink_item/ammo/pistol10mm/bleedout,
+		/datum/uplink_item/ammo/pistol10mm/rad,
+		/datum/uplink_item/ammo/pistol10mm/fragment,
+		/datum/uplink_item/ammo_restock/ammo10mmbox,
 	)
 
 /datum/uplink_item/spy_unique/makarov_pistol
@@ -98,9 +125,19 @@
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/pistol,
-		/datum/uplink_item/ammo/pistolap,
-		/datum/uplink_item/ammo/pistolhp,
-		/datum/uplink_item/ammo/pistolfire,
+		/datum/uplink_item/ammo/pistol/ap,
+		/datum/uplink_item/ammo/pistol/hp,
+		/datum/uplink_item/ammo/pistol/fire,
+		/datum/uplink_item/ammo/pistol/random,
+		/datum/uplink_item/ammo/pistol/caseless,
+		/datum/uplink_item/ammo/pistol/emp,
+		/datum/uplink_item/ammo/pistol/sleepy,
+		/datum/uplink_item/ammo/pistol/cryo,
+		/datum/uplink_item/ammo/pistol/richochet,
+		/datum/uplink_item/ammo/pistol/bomb,
+		/datum/uplink_item/ammo/pistol/sonic,
+		/datum/uplink_item/ammo/pistol/mutate,
+		/datum/uplink_item/ammo_restock/ammo9mmbox,
 	)
 
 /datum/uplink_item/spy_unique/toy_pistol

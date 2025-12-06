@@ -24,6 +24,21 @@
 	cost = 6
 	surplus = 45
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/handgun45,
+		/datum/uplink_item/ammo/handgun45/ap,
+		/datum/uplink_item/ammo/handgun45/hp,
+		/datum/uplink_item/ammo/handgun45/inc,
+		/datum/uplink_item/ammo/handgun45/random,
+		/datum/uplink_item/ammo/handgun45/cs,
+		/datum/uplink_item/ammo/handgun45/emp,
+		/datum/uplink_item/ammo/handgun45/sp,
+		/datum/uplink_item/ammo/handgun45/venom,
+		/datum/uplink_item/ammo/handgun45/pacify,
+		/datum/uplink_item/ammo/handgun45/delay,
+		/datum/uplink_item/ammo/handgun45/tranq,
+		/datum/uplink_item/ammo_restock/ammo45box,
+	)
 
 /datum/uplink_item/dangerous/viper
 	name = "Viper Case"
@@ -34,6 +49,20 @@
 	cost = 8
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/pistol10mm,
+		/datum/uplink_item/ammo/pistol10mm/ap,
+		/datum/uplink_item/ammo/pistol10mm/hp,
+		/datum/uplink_item/ammo/pistol10mm/fire,
+		/datum/uplink_item/ammo/pistol10mm/random,
+		/datum/uplink_item/ammo/pistol10mm/cs,
+		/datum/uplink_item/ammo/pistol10mm/emp,
+		/datum/uplink_item/ammo/pistol10mm/sleepy,
+		/datum/uplink_item/ammo/pistol10mm/bleedout,
+		/datum/uplink_item/ammo/pistol10mm/rad,
+		/datum/uplink_item/ammo/pistol10mm/fragment,
+		/datum/uplink_item/ammo_restock/ammo10mmbox,
+	)
 
 /datum/uplink_item/dangerous/fisher // Normally only available in a special kit, fuck that, this thing's cool as shit.
 	name = "Ansem/SC Pistol Case"
@@ -46,6 +75,20 @@
 	cost = 11
 	surplus = 20
 	//purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // Eh, i'll allow it.
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/pistol10mm,
+		/datum/uplink_item/ammo/pistol10mm/ap,
+		/datum/uplink_item/ammo/pistol10mm/hp,
+		/datum/uplink_item/ammo/pistol10mm/fire,
+		/datum/uplink_item/ammo/pistol10mm/random,
+		/datum/uplink_item/ammo/pistol10mm/cs,
+		/datum/uplink_item/ammo/pistol10mm/emp,
+		/datum/uplink_item/ammo/pistol10mm/sleepy,
+		/datum/uplink_item/ammo/pistol10mm/bleedout,
+		/datum/uplink_item/ammo/pistol10mm/rad,
+		/datum/uplink_item/ammo/pistol10mm/fragment,
+		/datum/uplink_item/ammo_restock/ammo10mmbox,
+	)
 
 /datum/uplink_item/dangerous/normalrevolver
 	name = ".357 Revolver"
@@ -55,6 +98,19 @@
 	cost = 9
 	surplus = 70
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/revolver,
+		/datum/uplink_item/ammo_nuclear/basic/revolver,
+		/datum/uplink_item/ammo_nuclear/special/revolver/phasic,
+		/datum/uplink_item/ammo_nuclear/special/revolver/heartseeker,
+		/datum/uplink_item/ammo/revolver/random,
+		/datum/uplink_item/ammo/revolver/ironfeather,
+		/datum/uplink_item/ammo/revolver/nutcracker,
+		/datum/uplink_item/ammo/revolver/metalshock,
+		/datum/uplink_item/ammo/revolver/heartpiercer,
+		/datum/uplink_item/ammo/revolver/wallstake,
+		/datum/uplink_item/ammo_restock/ammo357box,
+	)
 
 /datum/uplink_item/dangerous/python
 	name = "Python"
@@ -64,6 +120,19 @@
 	cost = 11
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/revolver,
+		/datum/uplink_item/ammo_nuclear/basic/revolver,
+		/datum/uplink_item/ammo_nuclear/special/revolver/phasic,
+		/datum/uplink_item/ammo_nuclear/special/revolver/heartseeker,
+		/datum/uplink_item/ammo/revolver/random,
+		/datum/uplink_item/ammo/revolver/ironfeather,
+		/datum/uplink_item/ammo/revolver/nutcracker,
+		/datum/uplink_item/ammo/revolver/metalshock,
+		/datum/uplink_item/ammo/revolver/heartpiercer,
+		/datum/uplink_item/ammo/revolver/wallstake,
+		/datum/uplink_item/ammo_restock/ammo357box,
+	)
 
 /datum/uplink_item/dangerous/deagle
 	name = "Desert Eagle"
@@ -73,6 +142,20 @@
 	cost = 10
 	surplus = 45
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/deagle,
+		/datum/uplink_item/ammo/deagle/random,
+		/datum/uplink_item/ammo/deagle/ap,
+		/datum/uplink_item/ammo/deagle/hp,
+		/datum/uplink_item/ammo/deagle/inc,
+		/datum/uplink_item/ammo/deagle/cs,
+		/datum/uplink_item/ammo/deagle/emp,
+		/datum/uplink_item/ammo/deagle/hi,
+		/datum/uplink_item/ammo/deagle/demo,
+		/datum/uplink_item/ammo/deagle/rod,
+		/datum/uplink_item/ammo/deagle/bomb,
+		/datum/uplink_item/ammo/deagle/rep,
+	)
 
 /datum/uplink_item/dangerous/sniper_rifle
 	name = "Anti-Materiel Sniper Rifle"
@@ -82,6 +165,10 @@
 	cost = 12
 	surplus = 25
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/sniper,
+		/datum/uplink_item/ammo/snipersurplus,
+	)
 
 /datum/uplink_item/dangerous/syndikammerer
 	name = "Syndicate Kammerer"
@@ -91,6 +178,30 @@
 	cost = 9
 	surplus = 35
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo_restock/mysteryshells,
+		/datum/uplink_item/ammo_restock/lethalshells,
+		/datum/uplink_item/ammo_restock/dartshells,
+		/datum/uplink_item/ammo_restock/incendiaryshells,
+		/datum/uplink_item/ammo_restock/dragonshells,
+		/datum/uplink_item/ammo_restock/syndieshotshells,
+		/datum/uplink_item/ammo_restock/syndieslugshells,
+		/datum/uplink_item/ammo_restock/tasershells,
+		/datum/uplink_item/ammo_restock/meteorshells,
+		/datum/uplink_item/ammo_restock/pulseshells,
+		/datum/uplink_item/ammo_restock/frag12shells,
+		/datum/uplink_item/ammo_restock/flechetteshells,
+		/datum/uplink_item/ammo_restock/rubbershotshells,
+		/datum/uplink_item/ammo_restock/ionshells,
+		/datum/uplink_item/ammo_restock/lasershells,
+		/datum/uplink_item/ammo_restock/uraniumshells,
+		/datum/uplink_item/ammo_restock/cryoshotshells,
+		/datum/uplink_item/ammo_restock/bioterrorshells,
+		/datum/uplink_item/ammo_restock/thundershotshells,
+		/datum/uplink_item/ammo_restock/hardlightshells,
+		/datum/uplink_item/ammo_restock/ripshells,
+		/datum/uplink_item/ammo_restock/anarchyshells,
+	)
 
 /datum/uplink_item/dangerous/boltactionrifle
 	name = "Bolt-Action Rifle"
@@ -99,6 +210,9 @@
 	cost = 3
 	surplus = 60
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/boltactionammo,
+	)
 
 /datum/uplink_item/dangerous/boltactionrifleprime
 	name = "Prime Bolt-Action Sporting Rifle"
@@ -107,6 +221,9 @@
 	cost = 4
 	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/boltactionammo,
+	)
 
 /datum/uplink_item/dangerous/watergun
 	name = "Extended Capacity Hyper-Soaker"
@@ -125,6 +242,9 @@
 	cost = 15
 	surplus = 25
 	purchasable_from = UPLINK_SERIOUS_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/tommygun,
+	)
 
 /datum/uplink_item/dangerous/akm
 	name = "AKM Assault Rifle"
@@ -135,6 +255,12 @@
 	cost = 13
 	surplus = 20
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/akm,
+		/datum/uplink_item/ammo/akmap,
+		/datum/uplink_item/ammo/akmhp,
+		/datum/uplink_item/ammo/akmincendiary,
+	)
 
 /datum/uplink_item/dangerous/flamethrower_bundle
 	name = "Flamethrower"
@@ -219,6 +345,9 @@
 	item = /obj/item/gun/ballistic/rifle/boltaction/harpoon
 	surplus = 15
 	cost = 14
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/magspears,
+	)
 
 /datum/uplink_item/dangerous/toxinreagentgun
 	name = "Toxin Reagent Gun"

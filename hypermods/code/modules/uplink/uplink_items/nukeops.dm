@@ -56,6 +56,10 @@
 	desc = "A classic grenade launcher favored for it's incredible destructive capabilities and decisive battles. \
 			The launcher comes fully loaded with blast grenades with several blast grenades to spare, and two FRAG grenades for extra-powerful shots."
 	item = /obj/item/storage/toolbox/guncase/chinalake
+	relevant_child_items = list(
+		/datum/uplink_item/ammo_nuclear/basic/blastnade,
+		/datum/uplink_item/ammo_nuclear/basic/fragnade,
+	)
 
 /datum/uplink_item/ammo_nuclear/basic/blastnade
 	name = "Blast Grenade Casing"
@@ -78,6 +82,9 @@
 			This deadly weapon fires exceptionally quickly with deadly accuracy. Comes with two extra magazines."
 	item = /obj/item/storage/toolbox/guncase/tommygun
 	cost = 20
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/tommygun,
+	)
 
 // ~~ Dual-Pistol Bundle ~~
 
@@ -87,6 +94,33 @@
 			For all you pistol lovers out there."
 	item = /obj/item/storage/toolbox/guncase/pistols
 	cost = 11 // Bit of even pricing between low and med cost
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/pistol10mm,
+		/datum/uplink_item/ammo/pistol10mm/ap,
+		/datum/uplink_item/ammo/pistol10mm/hp,
+		/datum/uplink_item/ammo/pistol10mm/fire,
+		/datum/uplink_item/ammo/pistol10mm/random,
+		/datum/uplink_item/ammo/pistol10mm/cs,
+		/datum/uplink_item/ammo/pistol10mm/emp,
+		/datum/uplink_item/ammo/pistol10mm/sleepy,
+		/datum/uplink_item/ammo/pistol10mm/bleedout,
+		/datum/uplink_item/ammo/pistol10mm/rad,
+		/datum/uplink_item/ammo/pistol10mm/fragment,
+		/datum/uplink_item/ammo_restock/ammo10mmbox,
+		/datum/uplink_item/ammo/handgun45,
+		/datum/uplink_item/ammo/handgun45/ap,
+		/datum/uplink_item/ammo/handgun45/hp,
+		/datum/uplink_item/ammo/handgun45/inc,
+		/datum/uplink_item/ammo/handgun45/random,
+		/datum/uplink_item/ammo/handgun45/cs,
+		/datum/uplink_item/ammo/handgun45/emp,
+		/datum/uplink_item/ammo/handgun45/sp,
+		/datum/uplink_item/ammo/handgun45/venom,
+		/datum/uplink_item/ammo/handgun45/pacify,
+		/datum/uplink_item/ammo/handgun45/delay,
+		/datum/uplink_item/ammo/handgun45/tranq,
+		/datum/uplink_item/ammo_restock/ammo45box,
+	)
 
 // ~~ Elemental-Pistol Bundle ~~
 
@@ -206,6 +240,9 @@
 	cost = 15
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/syndie_rcd_ammo,
+	)
 
 /datum/uplink_item/device_tools/syndie_arcd
 	name = "Syndicate Advanced Rapid-Construction-Device"
@@ -214,6 +251,9 @@
 	cost = 30
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/syndie_rcd_ammo,
+	)
 
 /datum/uplink_item/device_tools/syndie_forcefields
 	name = "Syndicate Forcefield Generator"

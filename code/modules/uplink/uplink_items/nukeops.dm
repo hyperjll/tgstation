@@ -81,7 +81,6 @@
 		/datum/uplink_item/ammo_nuclear/special/meteor,
 		/datum/uplink_item/spy_unique/shotgun_ammo,
 		/datum/uplink_item/spy_unique/shotgun_ammo/breacher_slug,
-		/datum/uplink_item/spy_unique/shotgun_ammo/slugs,
 	)
 
 /datum/uplink_item/ammo_nuclear/basic/buck
@@ -134,10 +133,18 @@
 			with suppressors. Comes with three spare magazines."
 	item = /obj/item/storage/toolbox/guncase/clandestine
 	relevant_child_items = list(
-		/datum/uplink_item/ammo_nuclear/basic/m10mm,
-		/datum/uplink_item/ammo_nuclear/ap/m10mm,
-		/datum/uplink_item/ammo_nuclear/hp/m10mm,
-		/datum/uplink_item/ammo_nuclear/incendiary/m10mm,
+		/datum/uplink_item/ammo/pistol10mm,
+		/datum/uplink_item/ammo/pistol10mm/ap,
+		/datum/uplink_item/ammo/pistol10mm/hp,
+		/datum/uplink_item/ammo/pistol10mm/fire,
+		/datum/uplink_item/ammo/pistol10mm/random,
+		/datum/uplink_item/ammo/pistol10mm/cs,
+		/datum/uplink_item/ammo/pistol10mm/emp,
+		/datum/uplink_item/ammo/pistol10mm/sleepy,
+		/datum/uplink_item/ammo/pistol10mm/bleedout,
+		/datum/uplink_item/ammo/pistol10mm/rad,
+		/datum/uplink_item/ammo/pistol10mm/fragment,
+		/datum/uplink_item/ammo_restock/ammo10mmbox,
 	)
 
 //Medium-cost: 14 TC each. Meant for more expensive purchases with a goal in mind.
@@ -159,6 +166,10 @@
 		/datum/uplink_item/ammo_nuclear/basic/smg,
 		/datum/uplink_item/ammo_nuclear/hp/smg,
 		/datum/uplink_item/ammo_nuclear/incendiary/smg,
+		/datum/uplink_item/ammo_nuclear/special/smgvenom,
+		/datum/uplink_item/ammo_nuclear/special/smgpacify,
+		/datum/uplink_item/ammo_nuclear/special/smgdelay,
+		/datum/uplink_item/ammo_nuclear/special/smgtranq,
 	)
 
 /datum/uplink_item/ammo_nuclear/basic/smg
@@ -214,6 +225,13 @@
 		/datum/uplink_item/ammo_nuclear/basic/revolver,
 		/datum/uplink_item/ammo_nuclear/special/revolver/phasic,
 		/datum/uplink_item/ammo_nuclear/special/revolver/heartseeker,
+		/datum/uplink_item/ammo/revolver/random,
+		/datum/uplink_item/ammo/revolver/ironfeather,
+		/datum/uplink_item/ammo/revolver/nutcracker,
+		/datum/uplink_item/ammo/revolver/metalshock,
+		/datum/uplink_item/ammo/revolver/heartpiercer,
+		/datum/uplink_item/ammo/revolver/wallstake,
+		/datum/uplink_item/ammo_restock/ammo357box,
 	)
 
 /datum/uplink_item/ammo_nuclear/basic/revolver
@@ -328,6 +346,10 @@
 		/datum/uplink_item/ammo_nuclear/basic/carbine,
 		/datum/uplink_item/ammo_nuclear/special/carbine,
 		/datum/uplink_item/ammo_nuclear/basic/carbine/a40mm,
+		/datum/uplink_item/ammo_nuclear/special/shocker40mm,
+		/datum/uplink_item/ammo_nuclear/special/spread40mm,
+		/datum/uplink_item/ammo_nuclear/special/sucking40mm,
+		/datum/uplink_item/ammo_nuclear/special/nuke40mm,
 	)
 
 /datum/uplink_item/ammo_nuclear/basic/carbine

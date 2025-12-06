@@ -30,9 +30,19 @@
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/pistol,
-		/datum/uplink_item/ammo/pistolap,
-		/datum/uplink_item/ammo/pistolhp,
-		/datum/uplink_item/ammo/pistolfire,
+		/datum/uplink_item/ammo/pistol/ap,
+		/datum/uplink_item/ammo/pistol/hp,
+		/datum/uplink_item/ammo/pistol/fire,
+		/datum/uplink_item/ammo/pistol/random,
+		/datum/uplink_item/ammo/pistol/caseless,
+		/datum/uplink_item/ammo/pistol/emp,
+		/datum/uplink_item/ammo/pistol/sleepy,
+		/datum/uplink_item/ammo/pistol/cryo,
+		/datum/uplink_item/ammo/pistol/richochet,
+		/datum/uplink_item/ammo/pistol/bomb,
+		/datum/uplink_item/ammo/pistol/sonic,
+		/datum/uplink_item/ammo/pistol/mutate,
+		/datum/uplink_item/ammo_restock/ammo9mmbox,
 	)
 
 /datum/uplink_item/dangerous/throwingweapons
@@ -55,4 +65,11 @@
 		/datum/uplink_item/ammo_nuclear/basic/revolver,
 		/datum/uplink_item/ammo_nuclear/special/revolver/phasic,
 		/datum/uplink_item/ammo_nuclear/special/revolver/heartseeker,
+		/datum/uplink_item/ammo/revolver/random,
+		/datum/uplink_item/ammo/revolver/ironfeather,
+		/datum/uplink_item/ammo/revolver/nutcracker,
+		/datum/uplink_item/ammo/revolver/metalshock,
+		/datum/uplink_item/ammo/revolver/heartpiercer,
+		/datum/uplink_item/ammo/revolver/wallstake,
+		/datum/uplink_item/ammo_restock/ammo357box,
 	)
