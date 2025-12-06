@@ -53,6 +53,11 @@
 	item = /obj/item/gun/ballistic/shotgun/automatic/dual_tube/deadly
 	cost = SPY_UPPER_COST_THRESHOLD
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE
+	relevant_child_items = list(
+		/datum/uplink_item/spy_unique/shotgun_ammo,
+		/datum/uplink_item/spy_unique/shotgun_ammo/breacher_slug,
+		/datum/uplink_item/spy_unique/shotgun_ammo/slugs,
+	)
 
 /datum/uplink_item/spy_unique/bulldog_shotgun
 	name = "Bulldog Shotgun"
@@ -60,6 +65,17 @@
 	item = /obj/item/gun/ballistic/shotgun/bulldog/unrestricted
 	cost = SPY_UPPER_COST_THRESHOLD
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE
+	relevant_child_items = list(
+		/datum/uplink_item/ammo_nuclear/basic/buck,
+		/datum/uplink_item/ammo_nuclear/basic/donk,
+		/datum/uplink_item/ammo_nuclear/basic/flechette,
+		/datum/uplink_item/ammo_nuclear/basic/slug,
+		/datum/uplink_item/ammo_nuclear/incendiary/dragon,
+		/datum/uplink_item/ammo_nuclear/special/meteor,
+		/datum/uplink_item/spy_unique/shotgun_ammo,
+		/datum/uplink_item/spy_unique/shotgun_ammo/breacher_slug,
+		/datum/uplink_item/spy_unique/shotgun_ammo/slugs,
+	)
 
 /datum/uplink_item/spy_unique/ansem_pistol
 	name = "Ansem Pistol"
@@ -67,6 +83,36 @@
 	item = /obj/item/gun/ballistic/automatic/pistol/clandestine
 	cost = SPY_UPPER_COST_THRESHOLD
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE
+	relevant_child_items = list(
+		/datum/uplink_item/ammo_nuclear/basic/m10mm,
+		/datum/uplink_item/ammo_nuclear/ap/m10mm,
+		/datum/uplink_item/ammo_nuclear/hp/m10mm,
+		/datum/uplink_item/ammo_nuclear/incendiary/m10mm,
+	)
+
+/datum/uplink_item/spy_unique/makarov_pistol
+	name = "Makarov Pistol"
+	desc = "A Makarov pistol - Reliable and sturdy."
+	item = /obj/item/gun/ballistic/automatic/pistol
+	cost = SPY_LOWER_COST_THRESHOLD
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/pistol,
+		/datum/uplink_item/ammo/pistolap,
+		/datum/uplink_item/ammo/pistolhp,
+		/datum/uplink_item/ammo/pistolfire,
+	)
+
+/datum/uplink_item/spy_unique/toy_pistol
+	name = "Donksoft Riot Pistol"
+	desc = "A Donksoft Riot Pistol - A toy pistol that fires foam darts at higher than normal velocity."
+	item = /obj/item/gun/ballistic/automatic/pistol/toy/riot/clandestine
+	cost = SPY_LOWER_COST_THRESHOLD
+	cost = SPY_LOWER_COST_THRESHOLD
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/toydarts,
+	)
 
 /datum/uplink_item/spy_unique/rocket_launcher
 	name = "Rocket Launcher"
@@ -74,6 +120,10 @@
 	item = /obj/item/gun/ballistic/rocketlauncher
 	cost = SPY_UPPER_COST_THRESHOLD - 1 // It's a meme item
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND | SYNDIE_ITEM_SEC_FULTONABLE
+	relevant_child_items = list(
+		/datum/uplink_item/ammo_nuclear/ap/rocket,
+		/datum/uplink_item/ammo_nuclear/basic/rocket,
+	)
 
 /datum/uplink_item/spy_unique/shotgun_ammo/breacher_slug
 	name = "Box of Breacher Slugs"

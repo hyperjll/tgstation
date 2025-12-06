@@ -107,6 +107,9 @@
 	/// Uses the purchase log, so items purchased that are not visible in the purchase log will not count towards this.
 	/// However, they won't be purchasable afterwards.
 	var/lock_other_purchases = FALSE
+	/// A lazylist of typepaths to uplink items relevant to this this item
+	/// EX: a pistol would list its magazines or modifications here
+	var/list/relevant_child_items
 	/// If this item is wanted contraband and is shipped off by a contraband scanner, what is the item type we give to the scanner? Don't give this to atoms, just obj/items.
 	var/wanted_item_result = /obj/item/stack/spacecash/c500
 
