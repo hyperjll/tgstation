@@ -247,8 +247,7 @@
 /datum/supply_pack/weaponry/ammo10mmrestock
 	name = "Random 10mm Ammo Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES THREE RANDOM 10mm MAGAZINES, ENSURE YOUR GOODS ARE NOT STOLEN."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = CARGO_CRATE_VALUE * 20
 	contains = list(/obj/item/storage/box/syndie_kit/pistolammo10mm/random)
 	crate_name = "crate"
@@ -256,8 +255,7 @@
 /datum/supply_pack/weaponry/ammo357restock
 	name = "Random .357 Ammo Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES TWO RANDOM .357 SPEEDLOADERS, ENSURE YOUR GOODS ARE NOT STOLEN."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = CARGO_CRATE_VALUE * 30
 	contains = list(/obj/item/storage/box/syndie_kit/revolverammo/random)
 	crate_name = "crate"
@@ -265,8 +263,7 @@
 /datum/supply_pack/weaponry/ammo45restock
 	name = ".45 Ammo Crate"
 	desc = "Contains one of each kind of .45 ammo magazine for your M1911s: Eight magazines in total."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = CARGO_CRATE_VALUE * 25
 	contains = list(/obj/item/ammo_box/magazine/m45,
 					/obj/item/ammo_box/magazine/m45/cs,
@@ -281,8 +278,7 @@
 /datum/supply_pack/weaponry/ammoakmsrestock
 	name = "7.12x82 Ammo Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES FOUR REGULAR 7.12x82mm MAGAZINES WHICH ARE COMPATIBLE WITH THE AKMS, ENSURE YOUR GOODS ARE NOT STOLEN."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = CARGO_CRATE_VALUE * 37.5
 	contains = list(/obj/item/ammo_box/magazine/ak712x82,
 					/obj/item/ammo_box/magazine/ak712x82,
@@ -293,8 +289,7 @@
 /datum/supply_pack/weaponry/ammovarietyakmsrestock
 	name = "Specialized 7.12x82 Ammo Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES THREE SPECIALIZED 7.12x82mm MAGAZINES FOR THE AKMS, ENSURE YOUR GOODS ARE NOT STOLEN."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = CARGO_CRATE_VALUE * 37.5
 	contains = list(/obj/item/ammo_box/magazine/ak712x82/ap,
 					/obj/item/ammo_box/magazine/ak712x82/hp,
@@ -304,8 +299,7 @@
 /datum/supply_pack/weaponry/ammorestock
 	name = "Tommy Gun Ammo Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES TWO DRUM MAGAZINES FOR THE 'TOMMY GUN', ENSURE YOUR GOODS ARE NOT STOLEN."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = CARGO_CRATE_VALUE * 37.5
 	contains = list(/obj/item/ammo_box/magazine/tommygunm45,
 					/obj/item/ammo_box/magazine/tommygunm45)
@@ -314,8 +308,7 @@
 /datum/supply_pack/weaponry/ammorestock
 	name = "Harpoon Quiver Crate"
 	desc = "(!&@#$%@ OPERATIVE, WITHIN THIS CRATE LIES A SINGLE HARPOON QUIVER, ENSURE YOUR GOODS ARE NOT STOLEN."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = CARGO_CRATE_VALUE * 37.5
 	contains = list(/obj/item/storage/harpoon_quiver)
 	crate_name = "crate"
@@ -323,8 +316,7 @@
 /datum/supply_pack/weaponry/c4
 	name = "Composition C4 Crate"
 	desc = "(!&@#$%@ Contains three plastic c4 explosives."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = CARGO_CRATE_VALUE * 40
 	contains = list(/obj/item/grenade/c4,
 					/obj/item/grenade/c4,
@@ -334,8 +326,7 @@
 /datum/supply_pack/weaponry/fragnade
 	name = "Fragmentation Grenade Crate"
 	desc = "(!&@#$%@ Contains three Fragmentation Grenades."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = CARGO_CRATE_VALUE * 50
 	contains = list(/obj/item/grenade/frag,
 					/obj/item/grenade/frag,
@@ -347,6 +338,7 @@
 	desc = "Contains two Gyrojet Pistols and 2 specialized .75 magazines."
 	cost = CARGO_CRATE_VALUE * 100
 	access = ACCESS_ARMORY
+	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/gun/ballistic/automatic/gyropistol,
 					/obj/item/gun/ballistic/automatic/gyropistol,
 					/obj/item/ammo_box/magazine/m75,
@@ -358,6 +350,7 @@
 	desc = "Contains two M1911 Pistols and 4 .45 ACP magazines."
 	cost = CARGO_CRATE_VALUE * 17.5
 	access = ACCESS_ARMORY
+	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/m1911,
 					/obj/item/gun/ballistic/automatic/pistol/m1911,
 					/obj/item/ammo_box/magazine/m45,
@@ -382,6 +375,7 @@
 	desc = "Contains one Desert Eagle, and two magazines for it."
 	cost = CARGO_CRATE_VALUE * 30
 	access = ACCESS_ARMORY
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/deagle,
 					/obj/item/ammo_box/magazine/m50,
 					/obj/item/ammo_box/magazine/m50)
@@ -403,6 +397,7 @@
 	desc = "Contains two Type U3 Uzi's and 4 spare magazines -- popular among gangsters."
 	cost = CARGO_CRATE_VALUE * 40
 	access = ACCESS_ARMORY
+	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/gun/ballistic/automatic/mini_uzi,
 					/obj/item/gun/ballistic/automatic/mini_uzi,
 					/obj/item/ammo_box/magazine/uzim9mm,
@@ -416,5 +411,6 @@
 	desc = "Contains one liberation station vending machine, thank the Americans later."
 	cost = CARGO_CRATE_VALUE * 250
 	access = ACCESS_ARMORY
+	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/machinery/vending/liberationstation/expensive)
 	crate_name = "liberty vendor crate"

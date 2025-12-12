@@ -16,7 +16,7 @@
 /datum/supply_pack/medical/syndichem
 	name = "SyndiChem Vending Machine"
 	desc = "Sponsored by the big dogs themselves, this vendor contains useful supplies in the hands of chemists everywhere!"
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = CARGO_CRATE_VALUE * 10
 	access = ACCESS_PHARMACY
 	contains = list(/obj/machinery/vending/syndichem)
@@ -74,6 +74,6 @@
 	name = "Cortical Borer Cages"
 	desc = "Troublesome brain worms dumping one to many unprescribed drugs into your patients? Well this crate is for you!"
 	cost = CARGO_CRATE_VALUE * 10
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/cortical_cage = 3)
 	crate_name = "anti-borer crate"

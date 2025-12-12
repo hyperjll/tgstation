@@ -340,6 +340,6 @@
 /datum/supply_pack/vendingmachines/magivend
 	name = "MagiVend Machine"
 	desc = "A rare vending machines of unknown origin. Probably has magicks within."
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND
 	cost = PAYCHECK_COMMAND * 25
 	contains = list(/obj/machinery/vending/magivend)

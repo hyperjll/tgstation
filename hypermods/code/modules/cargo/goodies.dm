@@ -54,8 +54,7 @@
 /datum/supply_pack/goody/airshoes
 	name = "Air Shoes"
 	desc = "One pair of highly sought after AIR SHOES. They're equipped with high-end tech capable of propelling the user forward at great speeds or allowing them to hover."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = PAYCHECK_COMMAND * 200
 	contains = list(/obj/item/clothing/shoes/bhop/airshoes)
 
@@ -78,8 +77,7 @@
 	name = "Robust Nukie Cola Twelve-Pack"
 	desc = "A twelve-pack of the incredibly robust: Nukie Cola! Warranty does NOT include over-consumption."
 	cost = PAYCHECK_COMMAND * 50
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	contains = list(/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
 					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
 					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
@@ -98,7 +96,7 @@
 	name = "Medical Variety Kit"
 	desc = "A bluespace first-aid-kit containing a wide-variety of medical supplies. Please note that the contents of the first aid kits purchased may differ from each other."
 	cost = PAYCHECK_CREW * 10
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/storage/medkit/medical_variety_pack)
 
 
@@ -128,7 +126,7 @@
 	desc = "Three pyrotechnical chemical grenades filled with gunpowder. We're not going to ask why you'd need these."
 	cost = PAYCHECK_COMMAND * 50
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/grenade/chem_grenade/pyro/explosive,/obj/item/grenade/chem_grenade/pyro/explosive,/obj/item/grenade/chem_grenade/pyro/explosive)
 
 
@@ -208,12 +206,13 @@
 	desc = "15 Taser Slugs for quickly subdueing targets."
 	cost = PAYCHECK_COMMAND * 25
 	access_view = ACCESS_ARMORY
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	contains = list(/obj/item/storage/box/tasershells)
 
 /datum/supply_pack/goody/meteorshells
 	name = "Meteor Shells"
 	desc = "15 Meteor Shells for high-power destruction of any and all targets."
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = PAYCHECK_COMMAND * 65
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/meteorshells)
@@ -221,7 +220,7 @@
 /datum/supply_pack/goody/pulseshells
 	name = "Pulse Shells"
 	desc = "15 Pulse Shells for those precious few who enjoy the suffering of others."
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = PAYCHECK_COMMAND * 80
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/pulseshells)
@@ -229,7 +228,7 @@
 /datum/supply_pack/goody/frag12shells
 	name = "Frag-12 Shells"
 	desc = "15 Frag-12 Shells for quick and easy demolition of armored foes."
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = PAYCHECK_COMMAND * 60
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/frag12shells)
@@ -251,7 +250,7 @@
 /datum/supply_pack/goody/ionshells
 	name = "ION Shells"
 	desc = "15 ION Shells for shutting down silicon life in an effective manner."
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = PAYCHECK_COMMAND * 25
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/ionshells)
@@ -261,13 +260,13 @@
 	desc = "15 Laser Buckshot Shells for those who intend to fire past windows to reach their targets."
 	cost = PAYCHECK_COMMAND * 12.5
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/storage/box/lasershells)
 
 /datum/supply_pack/goody/uraniumshells
 	name = "Uranium Shells"
 	desc = "15 Uranium Shells for penetrating armor -- and the person."
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = PAYCHECK_COMMAND * 37.5
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/uraniumshells)
@@ -277,7 +276,7 @@
 	desc = "15 Cryoshot Shells for commiting warcrimes."
 	cost = PAYCHECK_COMMAND * 25
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	contains = list(/obj/item/storage/box/cryoshotshells)
 
 /datum/supply_pack/goody/breachershells
@@ -290,7 +289,7 @@
 /datum/supply_pack/goody/thundershotshells
 	name = "Thundershot Shells"
 	desc = "15 Thundershot Shells for mass-harm of incredibly dangerous targets."
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = PAYCHECK_COMMAND * 40
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/thundershotshells)
@@ -305,7 +304,7 @@
 /datum/supply_pack/goody/ripshells
 	name = "RIP Shells"
 	desc = "15 RIP Shells for quick elimination of the enemy."
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = PAYCHECK_COMMAND * 20
 	access_view = ACCESS_ARMORY
 	contains = list(/obj/item/storage/box/ripshells)
@@ -315,7 +314,7 @@
 	desc = "15 Anarchy Shells for when aiming isn't the highest priority."
 	cost = PAYCHECK_COMMAND * 10
 	access_view = ACCESS_ARMORY
-	contraband = TRUE
+	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/storage/box/anarchyshells)
 
 
@@ -551,8 +550,7 @@
 /datum/supply_pack/misc/telecrystal
 	name = "Redspace Crystal Crate"
 	desc = "(!&$#@$ ATTENTION OPERATIVES, PLEASE ENSURE OUR TECHNOLOGIES ARE NOT HARVESTED BY NANOTRASEN OR IT'S ALLIES. GLORY TO THE SYNDICATE."
-	contraband = TRUE
-	hidden = TRUE
+	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	cost = 5000
 	contains = list(/obj/item/stack/telecrystal)
 	crate_name = "crate"
