@@ -491,6 +491,13 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 	recalculateChannels()
 
+	if(istype(W, /obj/item/antaglocker) && antag_lockable && !antag_locked)
+		balloon_alert(user, "Anti-Theft System Installed!")
+		AddElement(/datum/element/anti_pickup)
+		antag_locked = TRUE
+		qdel(W)
+		return
+
 /obj/item/radio/headset/recalculateChannels()
 	. = ..()
 	if(keyslot2)
