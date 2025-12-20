@@ -46,9 +46,9 @@
 			AddComponent(/datum/component/traitor_objective_register, disk, \
 				fail_signals = list(COMSIG_QDELETING))
 
-/datum/traitor_objective/sleeper_protocol/proc/on_surgery_success(datum/source, datum/surgery_step/step, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results)
+/datum/traitor_objective/sleeper_protocol/proc/on_surgery_success(datum/source, datum/surgery_operation/operation, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results)
 	SIGNAL_HANDLER
-	if(istype(step, /datum/surgery_step/brainwash/sleeper_agent))
+	if(istype(operation, /datum/surgery_operation/organ/brainwash/sleeper))
 		succeed_objective()
 
 /datum/traitor_objective/sleeper_protocol/can_generate_objective(datum/mind/generating_for, list/possible_duplicates)
@@ -63,15 +63,16 @@
 
 /datum/traitor_objective/sleeper_protocol/generate_objective(datum/mind/generating_for, list/possible_duplicates)
 	AddComponent(/datum/component/traitor_objective_mind_tracker, generating_for, \
-		signals = list(COMSIG_MOB_SURGERY_STEP_SUCCESS = PROC_REF(on_surgery_success)))
+		signals = list(COMSIG_LIVING_SURGERY_SUCCESS = PROC_REF(on_surgery_success)))
 	return TRUE
 
 /datum/traitor_objective/sleeper_protocol/ungenerate_objective()
 	disk = null
+
 /obj/item/disk/surgery/sleeper_protocol
 	name = "Suspicious Surgery Disk"
 	desc = "The disk provides instructions on how to turn someone into a sleeper agent for the Syndicate."
-	surgeries = list(/datum/surgery/advanced/brainwashing_sleeper)
+	surgeries = list(/datum/surgery_operation/organ/brainwash/sleeper)
 
 /datum/traitor_objective/sleeper_protocol/everybody //Much harder for non-med and non-robo
 	progression_minimum = 30 MINUTES

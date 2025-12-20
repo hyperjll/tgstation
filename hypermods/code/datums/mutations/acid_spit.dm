@@ -198,8 +198,9 @@
 
 /datum/action/cooldown/spell/pointed/projectile/acid_spit/syndicate/can_cast_spell(feedback)
 	. = ..()
-	if(!get_location_accessible(owner, BODY_ZONE_PRECISE_MOUTH))
-		to_chat(owner, span_notice("Something is covering your mouth!"))
+	var/mob/living/carbon/spell_owner = owner
+	if(!spell_owner.is_location_accessible(BODY_ZONE_PRECISE_MOUTH))
+		to_chat(spell_owner, span_notice("Something is covering your mouth!"))
 		return FALSE
 
 /obj/projectile/bullet/acid_spit/syndicate

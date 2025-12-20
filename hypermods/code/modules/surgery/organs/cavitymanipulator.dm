@@ -79,7 +79,7 @@
 	var/obj/item/bodypart/chest/target_chest = target.get_bodypart(BODY_ZONE_CHEST)
 	item_for_cavity = target_chest.cavity_item
 
-	if(item_for_cavity || ((stored_item.w_class > WEIGHT_CLASS_NORMAL) && !is_type_in_typecache(stored_item, GLOB.heavy_cavity_implants)) || HAS_TRAIT(stored_item, TRAIT_NODROP) || isorgan(stored_item))
+	if(item_for_cavity || ((stored_item.w_class > WEIGHT_CLASS_NORMAL) && !istype(stored_item, /obj/item/transfer_valve)) || HAS_TRAIT(stored_item, TRAIT_NODROP) || isorgan(stored_item))
 		to_chat(user, span_warning("You can't seem to fit [stored_item] in [target]'s chest cavity!"))
 		return FALSE
 
