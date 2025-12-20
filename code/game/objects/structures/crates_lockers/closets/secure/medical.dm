@@ -6,7 +6,7 @@
 
 /obj/structure/closet/secure_closet/medical1/PopulateContents()
 	..()
-	var/static/items_inside = list(
+	var/list/items_inside = list(
 		/obj/item/storage/box/beakers = 1,
 		/obj/item/reagent_containers/dropper = 2,
 		/obj/item/storage/belt/medical = 1,
@@ -159,7 +159,7 @@
 /obj/structure/closet/secure_closet/paramedic/PopulateContents()
 	..()
 
-	var/static/items_inside = list(
+	var/list/items_inside = list(
 		/obj/item/storage/medkit/emergency = 1,
 		/obj/item/storage/box/bandages = 1,
 		/obj/item/pinpointer/crew = 1,
