@@ -230,13 +230,6 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 			stack_trace("Human without active suit sensors is in suit_sensors_list: [tracked_human] ([tracked_human.type]) ([uniform.type])")
 			continue
 
-		if(nanite_sensors) // Just making sure the crew monitor picks you up if you have sensors turned off or n/a
-			if(istype(uniform) && (uniform.has_sensor == NO_SENSORS || !uniform.sensor_mode))
-				GLOB.suit_sensors_list |= tracked_human
-		if(!nanite_sensors) // Huh, lost my monitoring nanites and still dont got sensors, better clock out.
-			if(uniform.has_sensor == NO_SENSORS || !uniform.sensor_mode)
-				GLOB.suit_sensors_list -= tracked_human
-
 		var/sensor_mode = uniform.sensor_mode
 
 		// The entry for this human
