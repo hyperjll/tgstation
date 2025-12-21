@@ -66,6 +66,7 @@ SUBSYSTEM_DEF(research)
 		/obj/item/assembly/signaler/anomaly/bioscrambler = MAX_CORES_BIOSCRAMBLER,
 		/obj/item/assembly/signaler/anomaly/dimensional = MAX_CORES_DIMENSIONAL,
 		/obj/item/assembly/signaler/anomaly/ectoplasm = MAX_CORES_ECTOPLASMIC,
+		/obj/item/assembly/signaler/anomaly/weather = MAX_CORES_WEATHER,
 		/obj/item/assembly/signaler/anomaly/ice = MAX_CORES_CRYO,
 		/obj/item/assembly/signaler/anomaly/liquid = MAX_CORES_LIQUID,
 		/obj/item/assembly/signaler/anomaly/flesh = MAX_CORES_FLESH,
