@@ -1607,7 +1607,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Trait that signals to objects on this turf that its open (has UNDERFLOOR_INTERACTIBLE) but still covers them
 #define TRAIT_UNCOVERED_TURF "uncovered_turf"
 ///Trait given to mobs which allow them to perform all surgeries upon themselves.
-#define TRAIT_SELF_SURGERY_ABLE "self_surgery_able"
+#define TRAIT_PERFECT_SELF_SURGERY "perfect_self_surgery"
 
 /// A trait that blocks the metabolism of formaldehyde
 #define TRAIT_BLOCK_FORMALDEHYDE_METABOLISM "block_formaldehyde_metabolism"
@@ -1617,7 +1617,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// While starving, will this mob start accumulating damage?
 #define TRAIT_HUNGER_DAMAGE "hunger_damage"
-/// Allows a mob to perform any operation on themselves.
+/// Allows a mob to perform any operation on themselves, albeit with a penalty. Used for the self-surgery skillchip.
 #define TRAIT_SELF_SURGERY "self_surgery"
 /// This mob's surgical operations ignore ALL speed modifiers (even positive ones!) besides tool quality.
 /// The mob can also no longer fail their operations, unless the operation says otherwise

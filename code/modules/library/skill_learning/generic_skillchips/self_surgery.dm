@@ -2,7 +2,7 @@
 	name = "4U70-P3R4710N skillchip"
 	desc = "A skillchip containing old Nanotrasen medical training protocols, which one could use to perform surgical operations on themselves. \
 		This one doesn't look like it's in the best condition - bit rot has probably rendered it somewhat risky to use."
-	auto_traits = list(TRAIT_SELF_SURGERY_ABLE)
+	auto_traits = list(TRAIT_SELF_SURGERY)
 	skill_name = "Self Surgery"
 	skill_description = "Allows you to perform surgery on yourself."
 	skill_icon = FA_ICON_USER_DOCTOR

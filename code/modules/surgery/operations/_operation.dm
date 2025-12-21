@@ -727,7 +727,7 @@ GLOBAL_DATUM_INIT(operations, /datum/operation_holder, new)
 		total_mod *= get_morbid_modifier(surgeon, tool)
 		total_mod *= get_mob_surgery_speed_mod(patient)
 		// Using TRAIT_SELF_SURGERY on a surgery which doesn't normally allow self surgery imparts a penalty
-		if(patient == surgeon && HAS_TRAIT(surgeon, TRAIT_SELF_SURGERY) && !(operation_flags & OPERATION_SELF_OPERABLE))
+		if(patient == surgeon && HAS_TRAIT(surgeon, TRAIT_SELF_SURGERY) && !(operation_flags & OPERATION_SELF_OPERABLE) && !HAS_TRAIT(surgeon, TRAIT_PERFECT_SELF_SURGERY))
 			total_mod *= 1.5
 	return round(total_mod, 0.01)
 
@@ -850,7 +850,7 @@ GLOBAL_DATUM_INIT(operations, /datum/operation_holder, new)
 
 		// Using TRAIT_SELF_SURGERY on a surgery which doesn't normally allow self surgery imparts a flat penalty
 		// (On top of the 1.5x real time surgery modifier, an effective time modifier of 3x under standard conditions)
-		if(patient == surgeon && HAS_TRAIT(surgeon, TRAIT_SELF_SURGERY) && !(operation_flags & OPERATION_SELF_OPERABLE))
+		if(patient == surgeon && HAS_TRAIT(surgeon, TRAIT_SELF_SURGERY) && !(operation_flags & OPERATION_SELF_OPERABLE) && !HAS_TRAIT(surgeon, TRAIT_PERFECT_SELF_SURGERY))
 			operation_args[OPERATION_SPEED] += 1.5
 
 		// Otherwise if we have TRAIT_IGNORE_SURGERY_MODIFIERS we cannot possibly fail, unless we specifically allow failure

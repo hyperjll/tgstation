@@ -118,19 +118,19 @@
 
 
 /obj/item/implant/selfsurgery
-	name = "self-awareness implant"
+	name = "self-surgery implant"
 	desc = "An implant designed to alter the host's neural structure to allow them to endure surgical procedures while maintaining focus."
 	actions_types = null
 
 /obj/item/implant/selfsurgery/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	. = ..()
 	if(.)
-		target.add_traits(list(TRAIT_SELF_SURGERY_ABLE), IMPLANT_TRAIT)
+		target.add_traits(list(TRAIT_SELF_SURGERY, TRAIT_PERFECT_SELF_SURGERY), IMPLANT_TRAIT)
 
 /obj/item/implant/selfsurgery/removed(mob/target, silent = FALSE, special = FALSE)
 	. = ..()
 	if(.)
-		target.remove_traits(list(TRAIT_SELF_SURGERY_ABLE), IMPLANT_TRAIT)
+		target.remove_traits(list(TRAIT_SELF_SURGERY, TRAIT_PERFECT_SELF_SURGERY), IMPLANT_TRAIT)
 
 /obj/item/implanter/selfsurgery
 	name = "implanter (self-surgery)"
