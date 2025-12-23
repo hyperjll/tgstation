@@ -25,7 +25,7 @@
 	/// codes as set on map: "tag1;tag2" or "tag1=value;tag2=value"
 	var/codes_txt = ""
 
-	req_one_access = list(ACCESS_ENGINEERING, ACCESS_ROBOTICS)
+	req_one_access = list(ACCESS_CARGO, ACCESS_ENGINEERING, ACCESS_ROBOTICS)
 
 	/// A placeholder var imported from beestation, i'm putting this here cuz im too lazy to remove it from beestation maps. I may do something with it later.
 	var/freq
