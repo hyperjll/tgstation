@@ -20,9 +20,11 @@
 	icon_state = "blackcorn"
 	icon = 'hypermods/icons/obj/service/hydroponics/harvest.dmi'
 	trash_type = /obj/item/grown/corncob/black
-	grind_results = list(/datum/reagent/gunpowder = 0, /datum/reagent/consumable/nutriment/fat/oil/corn = 0)
 	tastes = list("gunpowder" = 1)
 	distill_reagent = /datum/reagent/consumable/ethanol/whiskey
+
+/obj/item/food/grown/corn/blackcorn/grind_results()
+	return list(/datum/reagent/gunpowder = 0.02, /datum/reagent/consumable/nutriment/fat/oil/corn = 0.1)
 
 /obj/item/grown/corncob/black
 	seed = /obj/item/seeds/corn/blackcorn
@@ -52,9 +54,11 @@
 	icon = 'hypermods/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "clearcorn"
 	trash_type = /obj/item/grown/corncob/clear
-	grind_results = list(/datum/reagent/consumable/ethanol = 0, /datum/reagent/consumable/nutriment/fat/oil/corn = 0)
 	tastes = list("ethanol" = 1)
 	distill_reagent = /datum/reagent/consumable/ethanol/whiskey
+
+/obj/item/food/grown/corn/clearcorn/grind_results()
+	return list(/datum/reagent/consumable/ethanol = 0, /datum/reagent/consumable/nutriment/fat/oil/corn = 0)
 
 /obj/item/grown/corncob/clear
 	seed = /obj/item/seeds/corn/clearcorn

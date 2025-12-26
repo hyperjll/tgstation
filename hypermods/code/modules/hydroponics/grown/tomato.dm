@@ -18,4 +18,6 @@
 	desc = "I'm the bomb and i'm about to... uh... line?"
 	icon = 'hypermods/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "seething_tomato"
-	grind_results = list(/datum/reagent/clf3 = 0)
+
+/obj/item/food/grown/tomato/seething/grind_results()
+	return list(/datum/reagent/clf3 = 0.1)

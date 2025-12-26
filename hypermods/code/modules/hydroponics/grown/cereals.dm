@@ -21,5 +21,7 @@
 	desc = "Known for containing trace amounts of a nigh-untraceable lethal poison suspected to have been used to kill many important people in the past."
 	icon = 'hypermods/icons/obj/service/hydroponics/harvest.dmi'
 	icon_state = "ricin_rice"
-	grind_results = list(/datum/reagent/consumable/rice = 0)
 	tastes = list("rice with a hint of death" = 1)
+
+/obj/item/food/grown/rice/ricin/grind_results()
+	return list(/datum/reagent/toxin/ricin = 0.01)

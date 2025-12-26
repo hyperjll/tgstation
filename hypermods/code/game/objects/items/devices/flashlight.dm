@@ -7,8 +7,10 @@
 	color = LIGHT_COLOR_GREEN
 	icon_state = "glowstick"
 	inhand_icon_state = "glowstick"
-	grind_results = list(/datum/reagent/phenol = 15, /datum/reagent/hydrogen = 10, /datum/reagent/oxygen = 5, /datum/reagent/gunpowder = 20)
 	var/fuel = 0
+
+/obj/item/flashlight/syndirig/glowstick/grind_results()
+	return list(/datum/reagent/phenol = 15, /datum/reagent/hydrogen = 10, /datum/reagent/oxygen = 5, /datum/reagent/gunpowder = 20)
 
 /obj/item/flashlight/syndirig/glowstick/Initialize(mapload)
 	fuel = rand(100, 600)

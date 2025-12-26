@@ -10,9 +10,11 @@
 	throw_range = 7
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT*0.1)
 	pressure_resistance = 2
-	grind_results = list(/datum/reagent/iron = 2, /datum/reagent/iodine = 1)
 	sharpness = SHARP_POINTY
 	numbneedle = TRUE
+
+/obj/item/pen/hypo/grind_results()
+	return list(/datum/reagent/iron = 2, /datum/reagent/iodine = 1)
 
 /obj/item/pen/hypo/Initialize(mapload)
 	. = ..()
@@ -64,10 +66,12 @@
 	throw_range = 10
 	custom_materials = list(/datum/material/titanium = SMALL_MATERIAL_AMOUNT*0.1)
 	pressure_resistance = 2
-	grind_results = list(/datum/reagent/iron = 2, /datum/reagent/iodine = 1)
 	embed_type = /datum/embedding/cybersunpen
 	sharpness = SHARP_POINTY
 	custom_price = 200
+
+/obj/item/pen/cybersun/grind_results()
+	return list(/datum/reagent/iron = 2, /datum/reagent/iodine = 1)
 
 /datum/embedding/cybersunpen
 	embed_chance = 100
@@ -86,7 +90,6 @@
 	throw_range = 10
 	custom_materials = list(/datum/material/titanium = SMALL_MATERIAL_AMOUNT*0.1)
 	pressure_resistance = 2
-	grind_results = list(/datum/reagent/iron = 2, /datum/reagent/iodine = 1)
 	embed_type = /datum/embedding/cybersunpen
 	sharpness = SHARP_POINTY
 
