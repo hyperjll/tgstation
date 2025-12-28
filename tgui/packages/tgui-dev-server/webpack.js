@@ -60,7 +60,9 @@ export class RspackCompiler {
       stats
         ?.toString(this.config.stats)
         .split('\n')
-        .forEach((line) => logger.log(line));
+        .forEach((line) => {
+          logger.log(line);
+        });
     });
   }
 }

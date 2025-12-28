@@ -187,7 +187,7 @@
 
 
 // Randomly pick a symptom to activate.
-/datum/disease/advance/stage_act(seconds_per_tick, times_fired)
+/datum/disease/advance/stage_act(seconds_per_tick)
 	. = ..()
 	if(!.)
 		return
