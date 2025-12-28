@@ -6,14 +6,14 @@
 	inverse_chem_val = 0.3
 	inverse_chem = /datum/reagent/inverse/bicaridine
 
-/datum/reagent/medicine/bicaridine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/bicaridine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(-2 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/bicaridine/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/bicaridine/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -26,14 +26,14 @@
 	color = "#24e7d9"
 	overdose_threshold = 30
 
-/datum/reagent/medicine/dexalin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/dexalin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_oxy_loss(-2 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/dexalin/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/dexalin/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_oxy_loss(4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
@@ -48,14 +48,14 @@
 	inverse_chem_val = 0.3
 	inverse_chem = /datum/reagent/inverse/kelotane
 
-/datum/reagent/medicine/kelotane/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/kelotane/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_fire_loss(-2 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/kelotane/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/kelotane/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_fire_loss(4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -69,7 +69,7 @@
 	overdose_threshold = 30
 	taste_description = "a roll of gauze"
 
-/datum/reagent/medicine/antitoxin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/antitoxin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	if(affected_mob.adjust_tox_loss(-2 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype))
 		. = UPDATE_MOB_HEALTH
@@ -78,7 +78,7 @@
 		if(reagent != src)
 			affected_mob.reagents.remove_reagent(reagent.type, 1 * reagent.purge_multiplier * REM * seconds_per_tick)
 
-/datum/reagent/medicine/antitoxin/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/antitoxin/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_tox_loss(4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
@@ -92,7 +92,7 @@
 	overdose_threshold = 30
 	taste_description = "grossness"
 
-/datum/reagent/medicine/tricordrazine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/tricordrazine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	if(prob(20)) // 20% chance to do nothing
 		return
@@ -104,7 +104,7 @@
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/tricordrazine/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/tricordrazine/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(2 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -121,7 +121,7 @@
 	overdose_threshold = 30
 	taste_description = "diet morphine"
 
-/datum/reagent/medicine/painkillers/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/painkillers/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
 	if(totaldamage <= 25)
@@ -131,7 +131,7 @@
 		if(need_mob_update)
 			return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/painkillers/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/painkillers/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_tox_loss(0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
@@ -144,7 +144,7 @@
 	color = "#0742CA"
 	overdose_threshold = 25
 
-/datum/reagent/medicine/dexalinplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/dexalinplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_oxy_loss(-7 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
@@ -156,7 +156,7 @@
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/dexalinplus/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/dexalinplus/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_oxy_loss(10 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
@@ -171,7 +171,7 @@
 	color = "#084936"
 	overdose_threshold = 20
 
-/datum/reagent/medicine/dermaline/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/dermaline/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_fire_loss(-4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -179,7 +179,7 @@
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/dermaline/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/dermaline/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	var/need_mob_update
 	affected_mob.adjust_bodytemperature(-40 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	affected_mob.losebreath++
@@ -195,7 +195,7 @@
 	color = "#6600FF"
 	overdose_threshold = 20
 
-/datum/reagent/medicine/dylovene/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/dylovene/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_tox_loss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
@@ -210,7 +210,7 @@
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/dylovene/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/dylovene/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(1 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -225,7 +225,7 @@
 	overdose_threshold = 30
 	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS)
 
-/datum/reagent/medicine/hyronalin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/hyronalin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_tox_loss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
@@ -233,7 +233,7 @@
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/hyronalin/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/hyronalin/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_fire_loss(0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -247,7 +247,7 @@
 	color = "#b34700"
 	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS, TRAIT_RADIMMUNE)
 
-/datum/reagent/medicine/arithrazine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/arithrazine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_tox_loss(-1 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
@@ -265,7 +265,7 @@
 	clot_rate = 0.5 // .2 better than sangurite (0.3)
 	passive_bleed_modifier = 0.5 // .2 better than sangurite (0.7)
 
-/datum/reagent/medicine/coagulant/tranexamicacid/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/coagulant/tranexamicacid/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_oxy_loss(-1 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
@@ -275,7 +275,7 @@
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/coagulant/tranexamicacid/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/coagulant/tranexamicacid/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 
@@ -296,7 +296,7 @@
 	clot_rate = 0.1 // .2 worse than sangurite (0.3)
 	passive_bleed_modifier = 0.9 // .2 worse than sangurite (0.7)
 
-/datum/reagent/medicine/coagulant/inaprovaline/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/coagulant/inaprovaline/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_oxy_loss(-10 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
@@ -328,7 +328,7 @@
 		return
 	affected_mob.adjust_jitter(60 SECONDS)
 
-/datum/reagent/medicine/barozine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/barozine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	if(prob(30))
 		var/need_mob_update
@@ -347,7 +347,7 @@
 	REMOVE_TRAIT(M, TRAIT_RESISTHIGHPRESSURE, type)
 	REMOVE_TRAIT(M, TRAIT_RESISTLOWPRESSURE, type)
 
-/datum/reagent/medicine/barozine/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/barozine/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_tox_loss(6 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
@@ -361,7 +361,7 @@
 	color = "#710000"
 	overdose_threshold = 30
 
-/datum/reagent/medicine/ultravasculine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/ultravasculine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(-6 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -375,7 +375,7 @@
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/ultravasculine/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/ultravasculine/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -391,7 +391,7 @@
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM // super slow
 	self_consuming = TRUE // Zombies/corpses don't process reagents.
 
-/datum/reagent/medicine/ambuzol/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/ambuzol/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_tox_loss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
@@ -415,7 +415,7 @@
 	self_consuming = TRUE
 	metabolization_rate = 1
 
-/datum/reagent/medicine/changelingextract/on_mob_metabolize(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/changelingextract/on_mob_metabolize(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	affected_mob.regenerate_limbs()
 	affected_mob.regenerate_organs()
@@ -433,7 +433,7 @@
 	var/healing = 0.1
 	var/radpower = 10
 
-/datum/reagent/medicine/dermalnanites/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/dermalnanites/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 
@@ -492,7 +492,7 @@
 		H.physiology.burn_mod /= 0.9
 	..()
 
-/datum/reagent/medicine/experimentalstimulants/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/experimentalstimulants/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -510,7 +510,7 @@
 	affected_mob.reagents.remove_reagent(/datum/reagent/toxin/chloralhydrate, 3)
 	affected_mob.reagents.remove_reagent(/datum/reagent/toxin/lexorin, 3)
 
-/datum/reagent/medicine/experimentalstimulants/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/experimentalstimulants/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_tox_loss(0.6 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
@@ -546,7 +546,7 @@
 		M.physiology.brute_mod /= 0.8
 		M.physiology.burn_mod /= 0.8
 
-/datum/reagent/medicine/juggernaut/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/juggernaut/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(-1 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -555,7 +555,7 @@
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/juggernaut/overdose_process(mob/living/M, seconds_per_tick, times_fired)
+/datum/reagent/medicine/juggernaut/overdose_process(mob/living/M, seconds_per_tick)
 	if(prob(45))
 		M.drop_all_held_items()
 		M.Paralyze(5, 1, 0)
@@ -570,7 +570,7 @@
 	color = "#660000"
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 
-/datum/reagent/medicine/filgrastim/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/filgrastim/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 
@@ -588,7 +588,7 @@
 	clot_rate = 0.7 // .4 better than sangurite (0.3)
 	passive_bleed_modifier = 0.3 // .4 better than sangurite (0.7)
 
-/datum/reagent/medicine/coagulant/proconvertin/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/coagulant/proconvertin/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 
@@ -602,7 +602,7 @@
 	description = "A less effective version of leporazine, it will effectively regulate a patient's body temperature, ensuring it never leaves safe levels."
 	color = "#ddc8e9"
 
-/datum/reagent/medicine/teporone/on_mob_life(mob/living/carbon/M, seconds_per_tick, times_fired)
+/datum/reagent/medicine/teporone/on_mob_life(mob/living/carbon/M, seconds_per_tick)
 	if(M.bodytemperature > BODYTEMP_NORMAL)
 		M.adjust_bodytemperature(-10 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	else if(M.bodytemperature < (BODYTEMP_NORMAL + 1))
@@ -618,7 +618,7 @@
 	var/healing = 10
 	self_consuming = TRUE
 
-/datum/reagent/medicine/healingnanites/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/healingnanites/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -655,7 +655,7 @@
 	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/hyperzine)
 	..()
 
-/datum/reagent/medicine/hyperzine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/hyperzine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -707,7 +707,7 @@
 	var/healing = 0.5
 	var/gold_text
 
-/datum/reagent/medicine/enchantedgold/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/enchantedgold/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -742,7 +742,7 @@
 	var/healing = 2
 	var/gold_text
 
-/datum/reagent/medicine/enchantedsupergold/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/enchantedsupergold/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(-healing * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -821,7 +821,7 @@
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	var/wasenhanced = FALSE
 
-/datum/reagent/medicine/antiwater/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/antiwater/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_fire_loss(-1 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -849,12 +849,12 @@
 	color = "#C8A5DC" // rgb: 200, 165, 220
 	overdose_threshold = 3 //To prevent people stacking massive amounts of a very strong healing reagent
 
-/datum/reagent/medicine/lavaland_extract/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/lavaland_extract/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	affected_mob.heal_bodypart_damage(5,5)
 	..()
 	return TRUE
 
-/datum/reagent/medicine/lavaland_extract/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/lavaland_extract/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_brute_loss(3 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -992,7 +992,7 @@
 		active = TRUE
 		affected_mob.add_traits(subject_traits, type)
 
-/datum/reagent/medicine/final_fortuna/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/final_fortuna/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	if(!active)
 		return
@@ -1008,7 +1008,7 @@
 	affected_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, 200, 200)
 	affected_mob.updatehealth()
 
-/datum/reagent/medicine/final_fortuna/overdose_process(mob/living/carbon/human/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/medicine/final_fortuna/overdose_process(mob/living/carbon/human/affected_mob, seconds_per_tick)
 	affected_mob.remove_traits(subject_traits, type)
 	affected_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, 200, 200)
 	affected_mob.updatehealth()

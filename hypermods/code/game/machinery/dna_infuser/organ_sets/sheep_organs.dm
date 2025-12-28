@@ -8,7 +8,7 @@
 	/// The cooldown until the next time this heart cam speed you up.
 	COOLDOWN_DECLARE(sheep_boost_cooldown)
 
-/obj/item/organ/heart/sheep/on_life(seconds_per_tick, times_fired)
+/obj/item/organ/heart/sheep/on_life(seconds_per_tick)
 	. = ..()
 	if(owner.health < 5 && COOLDOWN_FINISHED(src, sheep_boost_cooldown))
 		COOLDOWN_START(src, sheep_boost_cooldown, rand(25 SECONDS, 1 MINUTES))
@@ -29,7 +29,7 @@
 	desc = "A sheep's liver. Rumored to provide healing for those weak of heart."
 	icon_state = "liver"
 
-/obj/item/organ/liver/sheep/handle_chemical(mob/living/carbon/organ_owner, datum/reagent/chem, seconds_per_tick, times_fired)
+/obj/item/organ/liver/sheep/handle_chemical(mob/living/carbon/organ_owner, datum/reagent/chem, seconds_per_tick)
 	. = ..()
 	//parent returned COMSIG_MOB_STOP_REAGENT_TICK or we are failing
 	if((. & COMSIG_MOB_STOP_REAGENT_TICK) || (organ_flags & ORGAN_FAILING))
@@ -42,7 +42,7 @@
 	. = ..()
 	AddElement(/datum/element/organ_set_bonus, /datum/status_effect/organ_set_bonus/sheep)
 
-///bonus of the rat: you can ventcrawl!
+///bonus of the sheep: you're thermally insulated!
 /datum/status_effect/organ_set_bonus/sheep
 	id = "organ_set_bonus_sheep"
 	organs_needed = 2

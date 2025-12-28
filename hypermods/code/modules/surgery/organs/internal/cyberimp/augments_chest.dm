@@ -74,7 +74,7 @@
 	slot = ORGAN_SLOT_HEART_AID
 	var/healing = FALSE
 
-/obj/item/organ/cyberimp/chest/regenerativebetter/on_life(seconds_per_tick, times_fired)
+/obj/item/organ/cyberimp/chest/regenerativebetter/on_life(seconds_per_tick)
 	if(healing)
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 	else
@@ -117,7 +117,7 @@
 	slot = ORGAN_SLOT_HEART_AID
 	var/healing = FALSE
 
-/obj/item/organ/cyberimp/chest/regenerative/on_life(seconds_per_tick, times_fired)
+/obj/item/organ/cyberimp/chest/regenerative/on_life(seconds_per_tick)
 	if(healing)
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 	else
@@ -159,7 +159,7 @@
 	//implant_color = "#AD5000"
 	slot = ORGAN_SLOT_HEART_AID
 
-/obj/item/organ/cyberimp/chest/jellypersonregen/on_life(seconds_per_tick, times_fired)
+/obj/item/organ/cyberimp/chest/jellypersonregen/on_life(seconds_per_tick)
 	if(isjellyperson(owner))
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 	return

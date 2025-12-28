@@ -36,7 +36,7 @@
 
 	qdel(src) // Remove the disease from us, we transformed.
 
-/datum/disease/transformation/lycanthropy/stage_act(seconds_per_tick, times_fired)
+/datum/disease/transformation/lycanthropy/stage_act(seconds_per_tick)
 	. = ..()
 	if(!.)
 		return

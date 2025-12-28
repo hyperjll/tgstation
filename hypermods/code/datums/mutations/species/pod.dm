@@ -70,7 +70,7 @@
 	if(owner && GET_MUTATION_ENERGY(src) < 1) // And this is where this turns from a helpfull mutation into murder
 		owner.physiology?.bleed_mod /= 0.9
 
-/datum/mutation/sapblood/on_life(seconds_per_tick, times_fired)
+/datum/mutation/sapblood/on_life(seconds_per_tick)
 	. = ..()
 	if(HAS_TRAIT(owner, TRAIT_NOBLOOD) || !length(owner.all_wounds))
 		return

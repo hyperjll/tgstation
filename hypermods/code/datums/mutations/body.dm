@@ -197,7 +197,7 @@
 	text_gain_indication = span_notice("You feel blubbery and lethargic!")
 	text_lose_indication = span_notice("You feel fit!")
 
-/datum/mutation/fat/on_life(seconds_per_tick, times_fired)
+/datum/mutation/fat/on_life(seconds_per_tick)
 	if(HAS_TRAIT(owner, TRAIT_STASIS) || owner.stat == DEAD)
 		return
 
@@ -260,7 +260,7 @@
 	power_coeff = 1
 	energy_coeff = 1
 
-/datum/mutation/dizzy/on_life(seconds_per_tick, times_fired)
+/datum/mutation/dizzy/on_life(seconds_per_tick)
 	if(SPT_PROB(2.5 / GET_MUTATION_ENERGY(src), seconds_per_tick))
 		to_chat(owner, span_warning("[pick("You feel dizzy.", "Your head spins.")]"))
 		owner.adjust_dizzy_up_to(1 MINUTES * GET_MUTATION_SYNCHRONIZER(src) * GET_MUTATION_POWER(src), 3 MINUTES)
@@ -274,7 +274,7 @@
 	instability = 5
 	synchronizer_coeff = 1
 
-/datum/mutation/ear_cancer/on_life(seconds_per_tick, times_fired)
+/datum/mutation/ear_cancer/on_life(seconds_per_tick)
 	var/obj/item/organ/ears/ears = owner.get_organ_slot(ORGAN_SLOT_EARS) // RIP THEM OUT TO STOP THE NOISE
 	if(ears && SPT_PROB(5 * GET_MUTATION_SYNCHRONIZER(src), seconds_per_tick))
 		to_chat(owner, span_warning("Your ears start to ring!"))

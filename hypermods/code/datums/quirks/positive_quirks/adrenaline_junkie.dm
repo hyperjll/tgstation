@@ -12,7 +12,7 @@
 /datum/quirk/adrenaline_junkie/remove(client/client_source)
 	UnregisterSignal(quirk_holder, COMSIG_LIVING_HEALTH_UPDATE)
 
-/datum/quirk/adrenaline_junkie/proc/do_adrenaline_shit(datum/source, seconds_per_tick, times_fired)
+/datum/quirk/adrenaline_junkie/proc/do_adrenaline_shit(datum/source, seconds_per_tick)
 	SIGNAL_HANDLER
 
 	var/mob/living/carbon/human/human_holder = quirk_holder

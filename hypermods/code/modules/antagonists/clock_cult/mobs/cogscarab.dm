@@ -44,7 +44,7 @@ GLOBAL_LIST_EMPTY(cogscarabs)
 	GLOB.cogscarabs -= src
 	return ..()
 
-/mob/living/basic/drone/cogscarab/Life(seconds, times_fired)
+/mob/living/basic/drone/cogscarab/Life(seconds)
 	if(!on_reebe(src) && !GLOB.ratvar_risen && length(GLOB.abscond_markers) && stay_on_reebe)
 		try_servant_warp(src, get_turf(pick(GLOB.abscond_markers)))
 	. = ..()

@@ -67,7 +67,7 @@
 
 	return to_add
 
-/datum/species/werewolf/spec_life(mob/living/carbon/human/werewolf, seconds_per_tick, times_fired)
+/datum/species/werewolf/spec_life(mob/living/carbon/human/werewolf, seconds_per_tick)
 	. = ..()
 	if(werewolf.stat == DEAD)
 		return

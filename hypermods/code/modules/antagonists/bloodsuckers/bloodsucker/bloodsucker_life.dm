@@ -2,7 +2,7 @@
 #define BLOODSUCKER_PASSIVE_BLOOD_DRAIN 0.1
 
 /// Runs from COMSIG_LIVING_LIFE, handles Bloodsucker constant proccesses.
-/datum/antagonist/bloodsucker/proc/LifeTick(mob/living/source, seconds_per_tick, times_fired)
+/datum/antagonist/bloodsucker/proc/LifeTick(mob/living/source, seconds_per_tick)
 	SIGNAL_HANDLER
 	if(isbrain(owner?.current))
 		return

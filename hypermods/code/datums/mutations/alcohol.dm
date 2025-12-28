@@ -21,7 +21,7 @@
 
 	REMOVE_TRAIT(owner, TRAIT_ALCOHOL_TOLERANCE, GENETIC_MUTATION)
 
-/datum/mutation/alcohol_tolerance/on_life(seconds_per_tick, times_fired)
+/datum/mutation/alcohol_tolerance/on_life(seconds_per_tick)
 	. = ..()
 	if(GET_MUTATION_POWER(src) <= 1)
 		return
@@ -48,6 +48,6 @@
 	power_coeff = 1
 	energy_coeff = 1
 
-/datum/mutation/alcohol_brewery/on_life(seconds_per_tick, times_fired)
+/datum/mutation/alcohol_brewery/on_life(seconds_per_tick)
 	if(prob(15 / GET_MUTATION_ENERGY(src)))
 		owner.reagents?.add_reagent(/datum/reagent/consumable/ethanol, 1.5 * seconds_per_tick * GET_MUTATION_POWER(src) * GET_MUTATION_SYNCHRONIZER(src))

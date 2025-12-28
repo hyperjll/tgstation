@@ -20,7 +20,7 @@
 		qdel(phobetor_tears)
 	..()
 
-/datum/brain_trauma/special/bluespace_prophet/phobetor/on_life(seconds_per_tick, times_fired)
+/datum/brain_trauma/special/bluespace_prophet/phobetor/on_life(seconds_per_tick)
 	if(!COOLDOWN_FINISHED(src, portal_cooldown))
 		return
 	COOLDOWN_START(src, portal_cooldown, 10 SECONDS)

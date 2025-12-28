@@ -51,7 +51,7 @@
 	owner.remove_traits(mutation_traits, TRAIT_NODISMEMBER)
 	owner.remove_movespeed_mod_immunities("superhuman", /datum/movespeed_modifier/damage_slowdown)
 
-/datum/mutation/superhuman/on_life(seconds_per_tick, times_fired, mob/living/carbon/human/H)
+/datum/mutation/superhuman/on_life(seconds_per_tick, mob/living/carbon/human/H)
 	if(superhumanhealing)
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 

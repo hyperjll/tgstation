@@ -253,7 +253,7 @@
 	var/mob/living/carbon/human_user = user
 	UnregisterSignal(human_user, COMSIG_LIVING_LIFE)
 
-/datum/heretic_knowledge/ultimate/time_final/proc/on_life(mob/living/user, seconds_per_tick, times_fired)
+/datum/heretic_knowledge/ultimate/time_final/proc/on_life(mob/living/user, seconds_per_tick)
 	SIGNAL_HANDLER
 
 	for(var/atom/thing_in_range as anything in range(10, user))

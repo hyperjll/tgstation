@@ -17,7 +17,7 @@
 	color = "#ffffc6"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/toxin/saxitoxin/on_mob_life(mob/living/breather, seconds_per_tick, times_fired)
+/datum/reagent/toxin/saxitoxin/on_mob_life(mob/living/breather, seconds_per_tick)
 	breather.adjust_organ_loss(ORGAN_SLOT_BRAIN, 1)
 	breather.adjust_fire_loss(1, FALSE)
 	if(iscarbon(breather))

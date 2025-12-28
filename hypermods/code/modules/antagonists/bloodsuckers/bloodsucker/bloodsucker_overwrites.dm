@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Prevents Bloodsuckers from getting affected by blood
-/mob/living/carbon/human/handle_blood(seconds_per_tick, times_fired)
+/mob/living/carbon/human/handle_blood(seconds_per_tick)
 	if(mind && IS_BLOODSUCKER(src))
 		return FALSE
 	return ..()

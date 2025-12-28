@@ -55,7 +55,7 @@
 	quality = DRINK_NICE
 	taste_description = "simpler times"
 
-/datum/reagent/consumable/old_timer/on_mob_life(mob/living/carbon/human/metabolizer, seconds_per_tick, times_fired)
+/datum/reagent/consumable/old_timer/on_mob_life(mob/living/carbon/human/metabolizer, seconds_per_tick)
 	. = ..()
 	if(SPT_PROB(40, seconds_per_tick) && istype(metabolizer))
 		metabolizer.age += 1
@@ -215,7 +215,7 @@
 	glass_price = DRINK_PRICE_STOCK
 	metabolized_traits = list(TRAIT_STIMULATED)
 
-/datum/reagent/consumable/coffeeplus/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/consumable/coffeeplus/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
 
@@ -227,7 +227,7 @@
 	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/coffeeplus)
 	..()
 
-/datum/reagent/consumable/coffeeplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/consumable/coffeeplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	affected_mob.adjust_brute_loss(-0.1, 0)
 	affected_mob.adjust_fire_loss(-0.1, 0)
@@ -254,7 +254,7 @@
 	name = "Moonshine"
 	boozepwr = 95
 
-/datum/reagent/consumable/ethanol/moonshine/traitor/on_mob_life(mob/living/carbon/M, seconds_per_tick, times_fired)
+/datum/reagent/consumable/ethanol/moonshine/traitor/on_mob_life(mob/living/carbon/M, seconds_per_tick)
 	. = ..()
 	if(IS_TRAITOR(M))
 		M.reagents.remove_reagent(/datum/reagent/consumable/ethanol/moonshine/traitor, 2)
@@ -274,7 +274,7 @@
 	taste_description = "a roll of the dice"
 	var/r_type = ""
 
-/datum/reagent/consumable/rainbow_chili/on_mob_life(mob/living/carbon/M, seconds_per_tick, times_fired)
+/datum/reagent/consumable/rainbow_chili/on_mob_life(mob/living/carbon/M, seconds_per_tick)
 	. = ..()
 	var/list/r_types = subtypesof(/datum/reagent/)
 	for(var/i in 1 to 1)
@@ -296,7 +296,7 @@
 	metabolization_rate = 1 * REAGENTS_METABOLISM
 	taste_description = "extra sweet slime"
 
-/datum/reagent/consumable/vhfcs/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/consumable/vhfcs/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	holder.add_reagent(/datum/reagent/consumable/sugar, 2.4 * REM * seconds_per_tick)
 
@@ -370,7 +370,7 @@
 	color = "#fa8c0b"
 	taste_description = "uncomfortable"
 
-/datum/reagent/consumable/clockwork_orange/on_mob_life(mob/living/carbon/human/metabolizer, seconds_per_tick, times_fired)
+/datum/reagent/consumable/clockwork_orange/on_mob_life(mob/living/carbon/human/metabolizer, seconds_per_tick)
 	. = ..()
 	if(SPT_PROB(20, seconds_per_tick) && istype(metabolizer))
 		if(metabolizer.age > 13)

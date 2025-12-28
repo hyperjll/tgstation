@@ -24,7 +24,7 @@
 
 	regenerative = FALSE
 
-/datum/mutation/regenerative/on_life(seconds_per_tick, times_fired, mob/living/carbon/human/H)
+/datum/mutation/regenerative/on_life(seconds_per_tick, mob/living/carbon/human/H)
 	if(regenerative)
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 

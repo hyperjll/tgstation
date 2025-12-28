@@ -63,7 +63,7 @@
 		affected_mob.add_mood_event("maintenance_fun", /datum/mood_event/maintenance_high)
 		metabolization_rate *= 0.8
 
-/datum/reagent/drug/pumpupplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/drug/pumpupplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
 	affected_mob.AdjustKnockdown(-100, FALSE)
@@ -80,7 +80,7 @@
 	. = ..()
 	to_chat(affected_mob, span_userdanger("You can't stop shaking, your heart beats faster and faster..."))
 
-/datum/reagent/drug/pumpupplus/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/drug/pumpupplus/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
 	var/need_mob_update
@@ -115,7 +115,7 @@
 	mytray.adjust_toxic(round(volume))
 	mytray.adjust_pestlevel(-rand(2, 4))
 
-/datum/reagent/drug/nicotwaine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/drug/nicotwaine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
 	if(SPT_PROB(0.3, seconds_per_tick))
 		var/smoke_message = pick("You feel both relaxed and full of vigor!", "A wave of energy washes over you.","You blink and realize you hadn't blinked in a while.","You feel full of vigor.")
@@ -127,7 +127,7 @@
 
 	return UPDATE_MOB_HEALTH
 
-/datum/reagent/drug/nicotwaine/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/drug/nicotwaine/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
 	var/need_mob_update
 	need_mob_update = affected_mob.adjust_tox_loss(0.2 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
