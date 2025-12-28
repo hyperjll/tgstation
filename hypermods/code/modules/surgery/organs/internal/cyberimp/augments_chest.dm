@@ -21,7 +21,7 @@
 		need_mob_update += owner.adjust_fire_loss(-2, updating_health = FALSE)
 		revive_cost += 10
 	if(owner.get_tox_loss())
-		need_mob_update += owner.adjust_tox_loss(-1, updating_health = FALSE)
+		need_mob_update += owner.adjust_tox_loss(-1, updating_health = FALSE, forced = TRUE)
 		revive_cost += 10
 	if(need_mob_update)
 		owner.updatehealth()
@@ -48,7 +48,7 @@
 		need_mob_update += owner.adjust_fire_loss(-2, updating_health = FALSE)
 		revive_cost += 10
 	if(owner.get_tox_loss())
-		need_mob_update += owner.adjust_tox_loss(-1, updating_health = FALSE)
+		need_mob_update += owner.adjust_tox_loss(-1, updating_health = FALSE, forced = TRUE)
 		revive_cost += 10
 	if(need_mob_update)
 		owner.updatehealth()
@@ -90,7 +90,7 @@
 	if(owner.get_fire_loss())
 		owner.adjust_fire_loss(-1)
 	if(owner.get_tox_loss())
-		owner.adjust_tox_loss(-0.5)
+		owner.adjust_tox_loss(-0.5, forced = TRUE)
 
 	owner.adjust_organ_loss(ORGAN_SLOT_BRAIN, -0.5)
 	owner.adjust_organ_loss(ORGAN_SLOT_HEART, -0.5)
@@ -133,7 +133,7 @@
 	if(owner.get_fire_loss())
 		owner.adjust_fire_loss(-0.5)
 	if(owner.get_tox_loss())
-		owner.adjust_tox_loss(-0.25)
+		owner.adjust_tox_loss(-0.25, forced = TRUE)
 
 	owner.adjust_organ_loss(ORGAN_SLOT_BRAIN, -0.25)
 	owner.adjust_organ_loss(ORGAN_SLOT_HEART, -0.25)

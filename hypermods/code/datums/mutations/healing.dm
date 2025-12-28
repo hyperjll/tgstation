@@ -36,7 +36,7 @@
 	if(owner.get_fire_loss())
 		owner.adjust_fire_loss(-0.5)
 	if(owner.get_tox_loss())
-		owner.adjust_tox_loss(-0.35)
+		owner.adjust_tox_loss(-0.35, forced = TRUE)
 
 	owner.adjust_organ_loss(ORGAN_SLOT_BRAIN, -0.25)
 	owner.adjust_organ_loss(ORGAN_SLOT_HEART, -0.25)

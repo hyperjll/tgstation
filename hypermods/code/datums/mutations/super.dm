@@ -63,7 +63,7 @@
 	if(owner.get_fire_loss())
 		owner.adjust_fire_loss(-0.25)
 	if(owner.get_tox_loss())
-		owner.adjust_tox_loss(-0.25)
+		owner.adjust_tox_loss(-0.25, forced = TRUE)
 
 	owner.adjust_stamina_loss(-2.5)
 
