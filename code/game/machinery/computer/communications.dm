@@ -295,10 +295,7 @@
 				return
 			if(clock_user)
 				GLOB.main_clock_cult?.member_recalled = TRUE
-			//if(istype(get_area(src), /area/shuttle/syndicate/cruiser))
-			//	to_chat(usr, span_warning("Unable to connect to shuttle systems due to local interference"))
-			//	return
-			SSshuttle.cancelEvac(user)
+			SSshuttle.cancel_evac(user)
 		if ("requestNukeCodes")
 			if (!authenticated_as_non_silicon_captain(user))
 				return
