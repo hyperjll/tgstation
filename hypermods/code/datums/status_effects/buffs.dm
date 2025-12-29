@@ -103,3 +103,47 @@
 	desc = "You're resting on a bed, the mattress sure is comfy. You'll slowly recover from damage this way."
 	icon = 'hypermods/icons/hud/screen_alert.dmi'
 	icon_state = "bed_rest"
+
+
+/datum/status_effect/auto_pump
+	id = "auto_pump"
+	duration = 5 MINUTES
+	alert_type = /atom/movable/screen/alert/status_effect/auto_pump
+
+/datum/status_effect/auto_pump/on_apply()
+	. = ..()
+	if(.)
+		owner.add_traits(list(TRAIT_NOBREATH, TRAIT_STABLEHEART, TRAIT_NOCRITDAMAGE), "auto-pump")
+
+/datum/status_effect/auto_pump/on_remove()
+	owner.remove_traits(list(TRAIT_NOBREATH, TRAIT_STABLEHEART, TRAIT_NOCRITDAMAGE), "auto-pump")
+	playsound(owner.loc, 'hypermods/sound/items/autopumpend.ogg', 30, TRUE)
+
+/datum/status_effect/auto_pump/tick(seconds_between_ticks)
+	var/need_mob_update = FALSE
+
+	if(owner.stat == DEAD)
+		return
+
+	var/total_damage = (owner.get_brute_loss() + owner.get_fire_loss() + owner.get_tox_loss())
+
+	if(total_damage >= 100)
+		need_mob_update += owner.adjust_brute_loss(-0.25, updating_health = FALSE)
+		need_mob_update += owner.adjust_fire_loss(-0.25, updating_health = FALSE)
+		need_mob_update += owner.adjust_tox_loss(-0.25, updating_health = FALSE, forced = TRUE)
+
+	if(owner.get_oxy_loss() > 0)
+		need_mob_update += owner.adjust_oxy_loss(-0.5, updating_health = FALSE)
+
+	owner.adjust_blood_volume(0.4, maximum = BLOOD_VOLUME_SAFE)
+
+	if(need_mob_update)
+		owner.updatehealth()
+
+	return ..()
+
+/atom/movable/screen/alert/status_effect/auto_pump
+	name = "Auto-Pump Life-Support"
+	desc = "You've had an Auto-Pump attached to you, and have been granted temporary life-support."
+	icon = 'hypermods/icons/obj/medical/imported_medical.dmi'
+	icon_state = "autopump_status"

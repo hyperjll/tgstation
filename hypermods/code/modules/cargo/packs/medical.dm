@@ -77,3 +77,11 @@
 	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/cortical_cage = 3)
 	crate_name = "anti-borer crate"
+
+/datum/supply_pack/medical/auto_pumps
+	name = "Auto-Pump Package"
+	desc = "Contains three experimental DeForest Medical 'Auto-Pump' devices capable of quickly reviving personnel in critical condition."
+	cost = CARGO_CRATE_VALUE * 7.5
+	access = ACCESS_MEDICAL
+	contains = list(/obj/item/auto_pump = 3)
+	crate_name = "auto-pump crate"

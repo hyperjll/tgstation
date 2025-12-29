@@ -226,6 +226,11 @@
 	item_path = /obj/item/implanter/biosig
 	item_cost = 750
 
+/datum/store_item/roundstart/auto_pump
+	name = "Life-Support Auto-Pump"
+	item_path = /obj/item/auto_pump
+	item_cost = 900
+
 
 /datum/store_item/roundstart/reinforcement_securityborg
 	name = "Security Cyborg Beacon"

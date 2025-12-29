@@ -36,6 +36,13 @@
 	contains = list(/obj/item/reagent_containers/hypospray/medipen/salacid,/obj/item/reagent_containers/hypospray/medipen/oxandrolone,/obj/item/reagent_containers/hypospray/medipen/salbutamol)
 
 
+/datum/supply_pack/goody/auto_pump
+	name = "Auto-Pump"
+	desc = "Contains a singular experimental life-support device known as an 'Auto-Pump'. Useful as a quick-and-easy revival tool for personnel in critical condition. Produced by DeForest Medical."
+	cost = PAYCHECK_COMMAND * 1.5
+	contains = list(/obj/item/auto_pump)
+
+
 /datum/supply_pack/goody/bluespacerped
 	name = "Bluespace RPED"
 	desc = "A single bluespace RPED for quick installation of parts. Parts not included."

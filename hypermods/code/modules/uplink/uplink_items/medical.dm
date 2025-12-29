@@ -188,3 +188,13 @@
 	cost = 12
 	surplus = 0
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS)
+
+/datum/uplink_item/medical/auto_pump
+	name = "Auto-Pump"
+	desc = "An experimental medical device produced by DeForest Medical after it's schematics were reportedly donated to them by an unknown party. \
+			It's supply is currently low as DeForest Medical hasn't begun mass-production, leaving our agents unable to acquire them in abundance. \
+			This medical device may be used to apply a temporary life-support effect for 5 minutes to any person in dire need. \
+			Perfect for counter-acting bloodloss, oxygen aspyxiation, and critical condition all in a pinch."
+	item = /obj/item/auto_pump
+	cost = 2
+	surplus = 20

@@ -359,6 +359,7 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 			) = 5,
 		list(//RARE medical chems
 			/obj/item/reagent_containers/cup/galaxy_gas = 1,
+			/obj/item/auto_pump = 2,
 			) = 1,
 		) = 1,
 

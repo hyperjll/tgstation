@@ -6959,6 +6959,7 @@
 #include "hypermods\code\game\objects\items\circuitboards\machines\machine_circuitboards.dm"
 #include "hypermods\code\game\objects\items\devices\anomaly_neutralizer.dm"
 #include "hypermods\code\game\objects\items\devices\anomaly_stabilizer.dm"
+#include "hypermods\code\game\objects\items\devices\autopump.dm"
 #include "hypermods\code\game\objects\items\devices\compressionkit.dm"
 #include "hypermods\code\game\objects\items\devices\doorCharge.dm"
 #include "hypermods\code\game\objects\items\devices\flashlight.dm"
