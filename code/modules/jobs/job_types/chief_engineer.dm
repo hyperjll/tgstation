@@ -75,7 +75,7 @@
 	glasses = /obj/item/clothing/glasses/meson/sunglasses
 	gloves = /obj/item/clothing/gloves/color/yellow
 	head = /obj/item/clothing/head/utility/hardhat/welding/white/up
-	shoes = /obj/item/clothing/shoes/sneakers/brown
+	shoes = /obj/item/clothing/shoes/workboots
 	l_pocket = /obj/item/modular_computer/pda/heads/ce
 
 	backpack = /obj/item/storage/backpack/industrial

@@ -52,7 +52,6 @@
 	suit = /obj/item/clothing/suit/armor/vest/warden/alt
 	suit_store = /obj/item/gun/energy/disabler
 	backpack_contents = list(
-		/obj/item/evidencebag = 1,
 		/obj/item/gun/ballistic/automatic/pistol/mk58/rubber = 1,
 		/obj/item/ammo_box/magazine/v38/rubber = 1,
 		/obj/item/ammo_box/magazine/v38 = 1,
