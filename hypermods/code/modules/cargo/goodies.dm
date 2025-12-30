@@ -39,7 +39,7 @@
 /datum/supply_pack/goody/auto_pump
 	name = "Auto-Pump"
 	desc = "Contains a singular experimental life-support device known as an 'Auto-Pump'. Useful as a quick-and-easy revival tool for personnel in critical condition. Produced by DeForest Medical."
-	cost = PAYCHECK_COMMAND * 1.5
+	cost = PAYCHECK_CREW * 50
 	contains = list(/obj/item/auto_pump)
 
 
@@ -102,7 +102,7 @@
 /datum/supply_pack/goody/medicalvarietykit
 	name = "Medical Variety Kit"
 	desc = "A bluespace first-aid-kit containing a wide-variety of medical supplies. Please note that the contents of the first aid kits purchased may differ from each other."
-	cost = PAYCHECK_CREW * 10
+	cost = PAYCHECK_CREW * 20
 	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/storage/medkit/medical_variety_pack)
 
