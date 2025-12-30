@@ -123,6 +123,7 @@
 			return TRUE
 		if("set_extra_setting")
 			program.set_extra_setting(params["target_setting"], params["value"])
+			log_game("[key_name(usr)] edited [program.name]'s extra setting '[params["target_setting"]]' into [params["value"]].")
 			playsound(src, "terminal_type", 25, FALSE)
 			return TRUE
 		if("set_restart_timer")

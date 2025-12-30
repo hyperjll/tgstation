@@ -420,7 +420,7 @@
 
 /datum/nanite_program/sensor/name/register_extra_settings()
 	. = ..()
-	extra_settings[NES_NAME] = new /datum/nanite_extra_setting/text("")
+	extra_settings[NES_NAME] = new /datum/nanite_extra_setting/text("Unknown")
 	extra_settings[NES_MODE] = new /datum/nanite_extra_setting/boolean(TRUE, "Is", "Is Not")
 
 /datum/nanite_program/sensor/name/check_event()
