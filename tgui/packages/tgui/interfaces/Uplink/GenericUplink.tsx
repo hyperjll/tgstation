@@ -215,6 +215,28 @@ const ItemList = (props: ItemListProps) => {
                         </Button>
                       }
                     >
+                      {item.insufficient_population ? (
+                        <Box
+                          style={{
+                            opacity: '0.5',
+                          }}
+                          mt="-12px"
+                          mb="-8px"
+                        >
+                          <Icon
+                            name="lock"
+                            lineHeight="36px"
+                            position="absolute"
+                            top="-2px"
+                          />
+                          <p style={{ textIndent: '1.5em' }}>
+                            {item.population_tooltip}
+                          </p>
+                        </Box>
+                      ) : (
+                        ''
+                      )}
+
                       <Box
                         style={{
                           opacity: '0.75',
