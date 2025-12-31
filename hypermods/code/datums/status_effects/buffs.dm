@@ -147,3 +147,35 @@
 	desc = "You've had an Auto-Pump attached to you, and have been granted temporary life-support."
 	icon = 'hypermods/icons/obj/medical/imported_medical.dmi'
 	icon_state = "autopump_status"
+
+
+/datum/status_effect/neuralboosted
+	id = "neuralboosted"
+	duration = INFINITY
+	alert_type = /atom/movable/screen/alert/status_effect/neuralboosted
+
+/datum/status_effect/neuralboosted/tick(seconds_between_ticks)
+	owner.AdjustAllImmobility(-10, FALSE)
+
+	return ..()
+
+/datum/status_effect/neuralboosted/on_apply()
+	. = ..()
+	if(.)
+		owner.add_actionspeed_modifier(/datum/actionspeed_modifier/neuralboosted)
+		owner.add_movespeed_modifier(/datum/movespeed_modifier/neuralboosted)
+		owner.maxHealth += 10
+		owner.add_traits(list(TRAIT_STRENGTH), "neuralboosted")
+
+/datum/status_effect/neuralboosted/on_remove()
+	owner.remove_actionspeed_modifier(/datum/actionspeed_modifier/neuralboosted)
+	owner.remove_movespeed_modifier(/datum/movespeed_modifier/neuralboosted)
+	owner.maxHealth -= 10
+	owner.remove_traits(list(TRAIT_STRENGTH), "neuralboosted")
+
+
+/atom/movable/screen/alert/status_effect/neuralboosted
+	name = "Neural Boosted"
+	desc = "Your brain's been permanently enhanced by a Neural Booster. Many of your physical and mental abilities have been improved."
+	icon = 'hypermods/icons/hud/screen_alert.dmi'
+	icon_state = "neuralboosted"

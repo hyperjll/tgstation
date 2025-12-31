@@ -431,3 +431,13 @@
 /obj/item/reagent_containers/cup/bottle/uranium
 	name = "uranium bottle"
 	list_reagents = list(/datum/reagent/uranium = 30)
+
+/obj/item/reagent_containers/cup/bottle/mindwipe
+	name = "mindwipe bottle"
+	desc = "WARNING: Contents of bottle are designed to reverse extensive brain damage, but will leave the victim in a hollow state. Mindwiping requires atleast 5 units in a host to function. Emergencies only."
+	list_reagents = list(/datum/reagent/medicine/mindwipe = 5)
+
+/obj/item/reagent_containers/cup/bottle/neuralbooster
+	name = "neural booster bottle"
+	desc = "A bottle designed to contain an advanced mix of drugs that enhances the functionality of your brain. Multiple neural boosts aren't recommended."
+	list_reagents = list(/datum/reagent/medicine/neuralbooster = 5)

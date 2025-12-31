@@ -4,3 +4,6 @@
 
 /datum/movespeed_modifier/neuraloverclock
 	multiplicative_slowdown = -0.75
+
+/datum/movespeed_modifier/neuralboosted
+	multiplicative_slowdown = -0.1

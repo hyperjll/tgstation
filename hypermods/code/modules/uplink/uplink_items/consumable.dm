@@ -203,3 +203,14 @@
 	purchasable_from = UPLINK_TRAITORS
 	limited_stock = 1
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/consumable/mindwipe
+	name = "Mindwipe Bottle"
+	desc = "A dubiously legal chemical compound capable of rendering a victim a hollow husk of their former self. \
+			Often used as a last resort to treat severe mental damage such as brain damage, severe brain trauma, and insanity. \
+			The hollowed state is irreversible. Hollow victims cannot speak, see color, and cannot be afflicted with bad or good moods. \
+			Only one mindwipe is capable per purchase."
+	item = /obj/item/reagent_containers/cup/bottle/mindwipe
+	cost = 4
+	purchasable_from = UPLINK_TRAITORS | UPLINK_SPY
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

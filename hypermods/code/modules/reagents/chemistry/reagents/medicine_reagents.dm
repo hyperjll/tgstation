@@ -1012,3 +1012,47 @@
 	affected_mob.remove_traits(subject_traits, type)
 	affected_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, 200, 200)
 	affected_mob.updatehealth()
+
+
+/datum/reagent/medicine/mindwipe
+	name = "Mindwipe"
+	description = "A specially synthesized drug which completely wipes the brain of most of its memories and past traumas, leaving only a blank emotionless vessel. Doesn't wipe certain personality traits, knowledge, or survival instincts. Irreversible without extensive rehabilitation."
+	color = "#9C27F5"
+	taste_description = "a mistake."
+	ph = 4
+	metabolization_rate = 5 // to ensure all 5 units in a bottle is metabolized and used for the effects.
+
+/datum/reagent/medicine/mindwipe/expose_mob(mob/living/carbon/human/human_thing, methods, reac_volume, show_message, touch_protection)
+	. = ..()
+	if(!ishuman(human_thing))
+		return
+
+/datum/reagent/medicine/mindwipe/metabolize_reagent(mob/living/carbon/human/affected_mob, seconds_per_tick)
+	if(affected_mob.reagents.has_reagent(/datum/reagent/medicine/mindwipe, 5))
+		affected_mob.mindwipe()
+		holder.remove_reagent(type, volume) // remove it all shortly after ingestion
+		return
+
+	return ..()
+
+
+/datum/reagent/medicine/neuralbooster
+	name = "Neural Booster"
+	description = "An advanced drug which permanently enhances brain functionality, leading to enhanced physical and mental ability."
+	color = "#9C27F5"
+	taste_description = "a thousand batteries dumping their acidic contents directly onto your brain."
+	ph = 2
+	metabolization_rate = 5 // to ensure all 5 units in a bottle is metabolized and used for the effects.
+
+/datum/reagent/medicine/neuralbooster/expose_mob(mob/living/carbon/human/human_thing, methods, reac_volume, show_message, touch_protection)
+	. = ..()
+	if(!ishuman(human_thing))
+		return
+
+/datum/reagent/medicine/neuralbooster/metabolize_reagent(mob/living/carbon/human/affected_mob, seconds_per_tick)
+	if(affected_mob.reagents.has_reagent(/datum/reagent/medicine/neuralbooster, 5))
+		affected_mob.neuralboost()
+		holder.remove_reagent(type, volume) // remove it all shortly after ingestion
+		return
+
+	return ..()

@@ -9,3 +9,6 @@
 
 /datum/actionspeed_modifier/dexterous
 	multiplicative_slowdown = -0.1
+
+/datum/actionspeed_modifier/neuralboosted
+	multiplicative_slowdown = -0.1

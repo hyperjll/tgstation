@@ -385,3 +385,17 @@
 	amount_per_transfer_from_this = 100
 	volume = 100
 	list_reagents = list(/datum/reagent/inverse/cryostylane = 30, /datum/reagent/medicine/sal_acid = 10, /datum/reagent/medicine/oxandrolone = 10, /datum/reagent/medicine/antitoxin = 10, /datum/reagent/medicine/c2/seiver = 30, /datum/reagent/medicine/inaprovaline = 10)
+
+
+/obj/item/reagent_containers/hypospray/medipen/lrd
+	name = "L.R.D"
+	desc = "A Localized Resuscitation Device, made to easily provide effective general trauma care. Contains a multi-use hypo-needle which injects large quantities of a chemical cocktail capable of combatting bleeding, pain, and infection alike."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "lrd"
+	inhand_icon_state = "medipen"
+	base_icon_state = "lrd"
+	list_reagents = list(/datum/reagent/medicine/morphine = 20, /datum/reagent/medicine/sal_acid = 20, /datum/reagent/medicine/oxandrolone = 20, /datum/reagent/medicine/coagulant/tranexamicacid = 20, /datum/reagent/medicine/spaceacillin = 20)
+	amount_per_transfer_from_this = 50
+	volume = 100
+	custom_price = 200
+	custom_premium_price = 500
