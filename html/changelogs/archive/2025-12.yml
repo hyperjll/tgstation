@@ -836,6 +836,18 @@
   - balance: When you are shocked, you remain standing for a short period of time
       before being forced to the ground. You are still stunned for the duration of
       this effect, that remains unchanged.
+  - rscdel: Wardens no longer spawn with an evidence bag
+  - bugfix: Naive and Desensitized people get less sad at death
+  SmArtKar:
+  - bugfix: Bandanas tied around your neck no longer hide your identity or your snout
+  TealSeer:
+  - bugfix: fixed cargo PDA app missing currency name
+  TheNobodyofimportance:
+  - bugfix: Adds midround clownops to the antag pref
+  arbuzik456:
+  - rscadd: Added casual way of wearing jeans and different pants.
+  archbtw0:
+  - spellcheck: Fix a duplicate 'the'
   jlsnow301:
   - bugfix: Fixed importing chat tabs from a file. They should still exist on reload
   lelandkemble:
@@ -854,3 +866,22 @@
   vinylspiders:
   - bugfix: fixes a pushed crate not removing on_climbable trait properly off the
       mob standing atop it
+  - bugfix: fixes tablesmashing onto platforms
+2025-12-31:
+  ElGitificador:
+  - spellcheck: fixed typo in syndol description.
+  Melbert:
+  - rscadd: Adds screen hud elements for ghost toggles
+  SmArtKar:
+  - balance: Changed Coveroli in Albuterol's recipe to standard Convermol
+  TheRyeGuyWhoWillNowDie:
+  - balance: the security gas mask is pepper-proof again.
+  Y0SH1M4S73R:
+  - bugfix: If, for some godforsaken reason, you find yourself with a weapon that
+      has more than 100% armor penetration, it will now properly ignore armor in its
+      entirety instead of ENHANCING it, which it used to do.
+  - bugfix: The Spinward Sector Fishery Association would like to apologize for using
+      a bitwise XOR instead of exponentiation in the source code of their automated
+      fish price evaluation system.
+  necromanceranne:
+  - bugfix: Batons respect chest armor specifically once again.
