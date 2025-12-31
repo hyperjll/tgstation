@@ -302,6 +302,10 @@
 		if (MOOD_HAPPY4 to INFINITY)
 			mood_level = MOOD_LEVEL_HAPPY4
 
+	if(mob_parent.has_status_effect(/datum/status_effect/hollow)) //don't bother updating, they're a hollow shell of their former self.
+		mob_parent.mob_mood.set_sanity(SANITY_NEUTRAL) // Im using set_sanity here for safety reasons as opposed to forcing it, like with mood. bite me.
+		mob_parent.mob_mood.mood_level = MOOD_LEVEL_NEUTRAL
+
 	update_mood_icon()
 	SEND_SIGNAL(mob_parent, COMSIG_CARBON_MOOD_UPDATE)
 

@@ -6,10 +6,6 @@
 /datum/status_effect/hollow/tick(seconds_between_ticks)
 	owner.adjust_organ_loss(ORGAN_SLOT_BRAIN, -0.1)
 
-	if(!owner.mob_mood?.mood_level == MOOD_LEVEL_NEUTRAL)
-		owner.mob_mood.set_sanity(SANITY_NEUTRAL) // Im using set_sanity here for safety reasons as opposed to forcing it, like with mood. bite me.
-		owner.mob_mood.mood_level = MOOD_LEVEL_NEUTRAL
-
 	return ..()
 
 /datum/status_effect/hollow/on_apply()
