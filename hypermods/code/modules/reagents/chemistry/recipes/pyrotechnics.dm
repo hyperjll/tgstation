@@ -9,6 +9,7 @@
 	required_reagents = list(/datum/reagent/vestine = 1, /datum/reagent/teslium = 1, /datum/reagent/iodine = 1)
 	mix_message = "<span class='danger'>A jet of sparks flies from the mixture as it merges into a metallic mixture.</span>"
 	required_temp = 300
+	reaction_tags = REACTION_TAG_DAMAGING | REACTION_TAG_EXPLOSIVE | REACTION_TAG_CHEMICAL | REACTION_TAG_BURN
 
 /datum/chemical_reaction/tatp
 	results = list(/datum/reagent/tatp = 4)
