@@ -104,12 +104,12 @@
 
 /obj/item/reagent_containers/applicator/patch/mender/toxin
 	name = "auto-mender (toxin)"
-	list_reagents = list(/datum/reagent/medicine/dylovene = 150, /datum/reagent/medicine/antitoxin = 25, /datum/reagent/medicine/painkillers = 25)
+	list_reagents = list(/datum/reagent/medicine/dylovene = 150, /datum/reagent/medicine/antitoxin = 25, /datum/reagent/drug/painkillers = 25)
 
 /obj/item/reagent_containers/applicator/patch/mender/oxy
 	name = "auto-mender (oxygen)"
-	list_reagents = list(/datum/reagent/medicine/dexalin = 150, /datum/reagent/medicine/coagulant/inaprovaline = 25, /datum/reagent/medicine/painkillers = 25)
+	list_reagents = list(/datum/reagent/medicine/dexalin = 150, /datum/reagent/medicine/coagulant/inaprovaline = 25, /datum/reagent/drug/painkillers = 25)
 
 /obj/item/reagent_containers/applicator/patch/mender/all
 	name = "auto-mender (advanced)"
-	list_reagents = list(/datum/reagent/medicine/tricordrazine = 100, /datum/reagent/medicine/omnizine = 25, /datum/reagent/medicine/coagulant = 25, /datum/reagent/medicine/painkillers = 50)
+	list_reagents = list(/datum/reagent/medicine/tricordrazine = 100, /datum/reagent/medicine/omnizine = 25, /datum/reagent/medicine/coagulant = 25, /datum/reagent/drug/painkillers = 50)

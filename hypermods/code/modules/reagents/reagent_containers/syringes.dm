@@ -127,3 +127,9 @@
 
 /obj/item/reagent_containers/syringe/contraband/stimulants
 	list_reagents = list(/datum/reagent/medicine/stimulants = 15)
+
+/obj/item/reagent_containers/syringe/contraband/opium
+	list_reagents = list(/datum/reagent/drug/opium = 15)
+
+/obj/item/reagent_containers/syringe/contraband/heroin
+	list_reagents = list(/datum/reagent/drug/heroin = 15)

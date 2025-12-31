@@ -114,30 +114,6 @@
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
-/datum/reagent/medicine/painkillers
-	name = "Painkillers"
-	description = "Slowly heals brute and burn damage types while you have under 25 TOTAL damage of those types. Overdose causes minor toxin damage."
-	color = "#f2feff"
-	overdose_threshold = 30
-	taste_description = "diet morphine"
-
-/datum/reagent/medicine/painkillers/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
-	. = ..()
-	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
-	if(totaldamage <= 25)
-		var/need_mob_update
-		need_mob_update += affected_mob.adjust_brute_loss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-		need_mob_update += affected_mob.adjust_fire_loss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-		if(need_mob_update)
-			return UPDATE_MOB_HEALTH
-
-/datum/reagent/medicine/painkillers/overdose_process(mob/living/affected_mob, seconds_per_tick)
-	. = ..()
-	var/need_mob_update
-	need_mob_update += affected_mob.adjust_tox_loss(0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
-	if(need_mob_update)
-		return UPDATE_MOB_HEALTH
-
 /datum/reagent/medicine/dexalinplus
 	name = "Dexalin Plus"
 	description = "Restores oxygen loss and restores blood volume quickly. Overdose causes both instead."

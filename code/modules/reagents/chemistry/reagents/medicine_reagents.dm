@@ -1949,6 +1949,7 @@
 		/datum/reagent/toxin/fentanyl,
 		/datum/reagent/drug/krokodil,
 		/datum/reagent/inverse/krokodil,
+		/datum/reagent/drug/painkillers,
 	)
 
 /datum/reagent/medicine/naloxone/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)

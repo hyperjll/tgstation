@@ -223,6 +223,7 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 			/obj/item/reagent_containers/cup/bottle/multiver = 1,
 			/obj/item/reagent_containers/hypospray/medipen = 1,
 			/obj/item/reagent_containers/syringe/convermol = 1,
+			/obj/item/reagent_containers/syringe/contraband/opium = 1,
 			) = 4,
 		list(//drinks
 			/obj/item/reagent_containers/cup/glass/bottle/vodka = 1,
@@ -353,9 +354,10 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 			/obj/item/storage/box/bandages = 1,
 			) = 5,
 		list(//medical chems
-			/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 1,
-			/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
+			/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 2,
+			/obj/item/reagent_containers/hypospray/medipen/salacid = 2,
 			/obj/item/reagent_containers/syringe/contraband/methamphetamine = 1,
+			/obj/item/reagent_containers/syringe/contraband/heroin = 1,
 			) = 5,
 		list(//RARE medical chems
 			/obj/item/reagent_containers/cup/galaxy_gas = 1,

@@ -38,3 +38,13 @@
 	)
 	time = 20 SECONDS
 	category = CAT_CHEMISTRY
+
+/datum/crafting_recipe/bruise_pack
+	name = "Bruise Pack"
+	result = /obj/item/stack/medical/bruise_pack
+	reqs = list(
+		/obj/item/stack/medical/gauze = 3,
+		/datum/reagent/drug/opium = 15
+	)
+	time = 8 SECONDS
+	category = CAT_CHEMISTRY

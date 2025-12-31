@@ -86,6 +86,8 @@
 		/obj/item/storage/pill_bottle/lsd,
 		/obj/item/storage/pill_bottle/psicodine,
 		/obj/item/storage/box/flat/fentanylpatches,
+		/obj/item/reagent_containers/syringe/contraband/opium,
+		/obj/item/reagent_containers/syringe/contraband/heroin,
 	)
 
 /obj/effect/spawner/random/contraband/permabrig_weapon

@@ -134,3 +134,125 @@
 	need_mob_update += affected_mob.adjust_oxy_loss(1.4 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
+
+
+/datum/reagent/drug/painkillers
+	name = "Painkillers"
+	description = "Slowly heals brute and burn damage types while you have under 25 TOTAL damage of those types. Overdose causes minor toxin damage."
+	color = "#f2feff"
+	overdose_threshold = 30
+	addiction_types = list(/datum/addiction/opioids = 10)
+	taste_description = "diet morphine"
+	metabolized_traits = list(TRAIT_ANALGESIA)
+
+/datum/reagent/drug/painkillers/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	if(volume >= 10)
+		affected_mob.add_movespeed_mod_immunities("painkillers", /datum/movespeed_modifier/damage_slowdown)
+
+/datum/reagent/drug/painkillers/on_mob_end_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.remove_movespeed_mod_immunities("painkillers", /datum/movespeed_modifier/damage_slowdown)
+
+/datum/reagent/drug/painkillers/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+	. = ..()
+	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
+	if(totaldamage <= 25)
+		var/need_mob_update
+		need_mob_update += affected_mob.adjust_brute_loss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		if(need_mob_update)
+			return UPDATE_MOB_HEALTH
+
+/datum/reagent/drug/painkillers/overdose_process(mob/living/affected_mob, seconds_per_tick)
+	. = ..()
+	var/need_mob_update
+	need_mob_update += affected_mob.adjust_tox_loss(0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+	if(need_mob_update)
+		return UPDATE_MOB_HEALTH
+
+/datum/reagent/drug/opium
+	name = "Opium"
+	description = "A relatively mild opioid. Provides body-wide pain relief, and slows mental activity. Overdose will causes brain damage, but has a high overdose limit."
+	color = "#F5BE27"
+	taste_description = "a tangy numbness"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	overdose_threshold = 100
+	ph = 10
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	addiction_types = list(/datum/addiction/opioids = 12)
+	metabolized_traits = list(TRAIT_ANALGESIA)
+
+/datum/reagent/drug/opium/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
+
+/datum/reagent/drug/opium/on_mob_end_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
+
+/datum/reagent/drug/opium/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+	. = ..()
+	if(current_cycle > 5)
+		affected_mob.add_mood_event("numb", /datum/mood_event/narcotic_medium, name)
+	if(affected_mob.disgust < DISGUST_LEVEL_VERYGROSS && SPT_PROB(50 * (2 - creation_purity), seconds_per_tick))
+		affected_mob.adjust_disgust(0.5 * REM * seconds_per_tick)
+
+	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
+	if(totaldamage <= 50)
+		var/need_mob_update
+		need_mob_update += affected_mob.adjust_brute_loss(-0.4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		if(need_mob_update)
+			return UPDATE_MOB_HEALTH
+
+/datum/reagent/drug/opium/overdose_process(mob/living/affected_mob, seconds_per_tick)
+	. = ..()
+	if(SPT_PROB(35, seconds_per_tick))
+		if(affected_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, 1.5 * REM * seconds_per_tick * normalise_creation_purity(), required_organ_flag = affected_organ_flags))
+			return UPDATE_MOB_HEALTH
+		affected_mob.set_dizzy_if_lower(4 SECONDS)
+		affected_mob.set_jitter_if_lower(4 SECONDS)
+
+/datum/reagent/drug/heroin
+	name = "Heroin"
+	description = "A strong synthesized opioid. Causes euphoria and strong pain relief. Very easy to overdose on or go into withdrawal over."
+	color = "#B3B3B3"
+	taste_description = "synthesized numbness"
+	metabolization_rate = 0.4 * REAGENTS_METABOLISM
+	overdose_threshold = 10
+	ph = 6
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	addiction_types = list(/datum/addiction/opioids = 30)
+	metabolized_traits = list(TRAIT_ANALGESIA)
+
+/datum/reagent/drug/heroin/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
+
+/datum/reagent/drug/heroin/on_mob_end_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
+
+/datum/reagent/drug/heroin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+	. = ..()
+	if(current_cycle > 5)
+		affected_mob.add_mood_event("numb", /datum/mood_event/narcotic_heavy, name)
+	if(affected_mob.disgust < DISGUST_LEVEL_VERYGROSS && SPT_PROB(50 * (2 - creation_purity), seconds_per_tick))
+		affected_mob.adjust_disgust(1 * REM * seconds_per_tick)
+
+	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
+	if(totaldamage <= 75)
+		var/need_mob_update
+		need_mob_update += affected_mob.adjust_brute_loss(-0.8 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.8 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		if(need_mob_update)
+			return UPDATE_MOB_HEALTH
+
+/datum/reagent/drug/heroin/overdose_process(mob/living/affected_mob, seconds_per_tick)
+	. = ..()
+	if(SPT_PROB(60, seconds_per_tick))
+		if(affected_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, 1.5 * REM * seconds_per_tick * normalise_creation_purity(), required_organ_flag = affected_organ_flags))
+			return UPDATE_MOB_HEALTH
+		affected_mob.set_dizzy_if_lower(10 SECONDS)
+		affected_mob.set_jitter_if_lower(10 SECONDS)

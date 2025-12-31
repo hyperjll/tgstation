@@ -107,7 +107,7 @@
 	desc = "Used for treating minor brute or burn damage."
 	icon_state = "pill1"
 	volume = 10
-	list_reagents = list(/datum/reagent/medicine/painkillers = 10)
+	list_reagents = list(/datum/reagent/drug/painkillers = 10)
 	rename_with_volume = TRUE
 
 /obj/item/reagent_containers/applicator/pill/syndicryo
