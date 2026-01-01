@@ -212,5 +212,5 @@
 			Only one mindwipe is capable per purchase."
 	item = /obj/item/reagent_containers/cup/bottle/mindwipe
 	cost = 4
-	purchasable_from = UPLINK_TRAITORS | UPLINK_SPY
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
