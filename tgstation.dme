@@ -6927,6 +6927,7 @@
 #include "hypermods\code\game\objects\effects\decals\cleanable\misc.dm"
 #include "hypermods\code\game\objects\effects\particles\smoke.dm"
 #include "hypermods\code\game\objects\effects\spawners\gibspawner.dm"
+#include "hypermods\code\game\objects\effects\spawners\random\techstorage.dm"
 #include "hypermods\code\game\objects\effects\temporary_visuals\miscellaneous.dm"
 #include "hypermods\code\game\objects\items\battering_ram.dm"
 #include "hypermods\code\game\objects\items\beelibsword.dm"

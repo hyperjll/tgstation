@@ -126,6 +126,7 @@ GLOBAL_LIST_INIT(common_loot, list( //common: basic items
 
 	list(//medical and chemicals
 		/obj/item/grenade/chem_grenade/cleaner = 1,
+		/obj/item/grenade/chem_grenade/smart_metal_foam = 1,
 		/obj/item/lead_pipe = 1,
 		/obj/item/reagent_containers/cup/beaker = 1,
 		/obj/item/reagent_containers/cup/bottle/random_buffer = 2,
@@ -138,8 +139,10 @@ GLOBAL_LIST_INIT(common_loot, list( //common: basic items
 		) = 1,
 
 	list(//food
-		/obj/item/reagent_containers/cup/glass/bottle/beer = 1,
-		/obj/item/reagent_containers/cup/glass/coffee = 1,
+		/obj/effect/spawner/random/food_or_drink/booze = 2,
+		/obj/item/reagent_containers/cup/glass/coffee = 5,
+		/obj/effect/spawner/random/food_or_drink/snack = 3,
+		/obj/effect/spawner/random/food_or_drink/snack/lizard = 3,
 		) = 1,
 
 	list(//misc
@@ -151,12 +154,32 @@ GLOBAL_LIST_INIT(common_loot, list( //common: basic items
 		/obj/item/stack/sticky_tape = 1,
 		/obj/item/tank/internals/emergency_oxygen = 1,
 		/obj/item/paper/paperslip/fishing_tip = 1,
+		/obj/effect/spawner/random/bedsheet = 1,
 
 		//light sources
 		/obj/effect/spawner/random/decoration/glowstick = 1,
 		/obj/item/clothing/head/utility/hardhat/red = 1,
 		/obj/item/flashlight = 1,
 		/obj/item/flashlight/flare = 1,
+		) = 1,
+
+	list(//better stock parts
+		list(//tier 2 stock parts
+			/obj/item/stock_parts/capacitor/adv = 1,
+			/obj/item/stock_parts/servo/nano = 1,
+			/obj/item/stock_parts/matter_bin/adv = 1,
+			/obj/item/stock_parts/micro_laser/high = 1,
+			/obj/item/stock_parts/scanning_module/adv = 1,
+			) = 4,
+		list(//subspace stock parts, telecomms
+			/obj/item/stock_parts/subspace/ansible = 1,
+			/obj/item/stock_parts/subspace/filter = 1,
+			/obj/item/stock_parts/subspace/amplifier = 1,
+			/obj/item/stock_parts/subspace/treatment = 1,
+			/obj/item/stock_parts/subspace/analyzer = 1,
+			/obj/item/stock_parts/subspace/crystal = 1,
+			/obj/item/stock_parts/subspace/transmitter = 1,
+			) = 1,
 		) = 1,
 	))
 
@@ -194,6 +217,23 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 		/obj/item/pen/screwdriver = 1,
 		) = 8,
 
+	list(//rarer equipment
+		/obj/item/grenade/chem_grenade/pyro = 2,
+		/obj/item/grenade/chem_grenade/cryo = 2,
+		/obj/item/grenade/chem_grenade/large = 3,
+		/obj/item/grenade/chem_grenade/adv_release = 2,
+		/obj/item/dnainjector/densebones = 1,
+		/obj/item/dnainjector/thickskin = 1,
+		/obj/item/dnainjector/fat = 1,
+		/obj/item/dnainjector/ear_cancer = 1,
+		/obj/item/dnainjector/lisp = 1,
+		/obj/item/dnainjector/void = 1,
+		/obj/item/dnainjector/paranoia = 1,
+		/obj/item/dnainjector/olfaction = 1,
+		/obj/item/dnainjector/gigantism = 1,
+		/obj/item/dnainjector/antenna = 1,
+		) = 6,
+
 	list(//strange objects
 		/obj/item/relic = 5,
 		) = 8,
@@ -212,18 +252,45 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 		/obj/item/survivalcapsule/fishing = 1,
 		) = 8,
 
+	list(//machines
+		/obj/effect/spawner/random/techstorage/service_all/random_pick = 5,
+		/obj/effect/spawner/random/techstorage/rnd_all/random_pick = 3,
+		/obj/effect/spawner/random/techstorage/security_all/random_pick = 2,
+		/obj/effect/spawner/random/techstorage/engineering_all/random_pick = 3,
+		/obj/effect/spawner/random/techstorage/tcomms_all/random_pick = 2,
+		/obj/effect/spawner/random/techstorage/medical_all/random_pick = 4,
+		/obj/effect/spawner/random/techstorage/ai_all/random_pick = 2,
+		/obj/effect/spawner/random/techstorage/command_all/random_pick = 1,
+		/obj/effect/spawner/random/techstorage/rnd_secure_all/random_pick = 1,
+		) = 4,
+
 	list(//medical and chemicals
 		list(//basic healing items
-			/obj/item/stack/medical/gauze = 1,
-			/obj/item/stack/medical/mesh = 1,
-			/obj/item/stack/medical/suture = 1,
-			/obj/item/stack/medical/bandage = 1,
+			/obj/item/stack/medical/gauze = 2,
+			/obj/item/stack/medical/mesh = 2,
+			/obj/item/stack/medical/suture = 2,
+			/obj/item/stack/medical/bandage = 3,
+			/obj/item/stack/medical/bone_gel = 1,
+			/obj/item/stack/medical/bloodpack = 1,
 			) = 4,
 		list(//medical chems
-			/obj/item/reagent_containers/cup/bottle/multiver = 1,
-			/obj/item/reagent_containers/hypospray/medipen = 1,
-			/obj/item/reagent_containers/syringe/convermol = 1,
-			/obj/item/reagent_containers/syringe/contraband/opium = 1,
+			/obj/item/reagent_containers/cup/bottle/multiver = 2,
+			/obj/item/reagent_containers/hypospray/medipen = 3,
+			/obj/item/reagent_containers/syringe/convermol = 2,
+			/obj/item/reagent_containers/syringe/calomel = 2,
+			/obj/item/reagent_containers/syringe/antiviral = 2,
+			/obj/item/reagent_containers/syringe/noreact = 1,
+			/obj/item/reagent_containers/hypospray/medipen/arithrazine = 1,
+			/obj/item/reagent_containers/hypospray/medipen/bicaridine = 1,
+			/obj/item/reagent_containers/hypospray/medipen/kelotane = 1,
+			/obj/item/reagent_containers/hypospray/medipen/dermaline = 1,
+			/obj/item/reagent_containers/hypospray/medipen/hyronalin = 1,
+			/obj/item/reagent_containers/hypospray/medipen/dylovene = 1,
+			/obj/item/reagent_containers/cup/bottle/epinephrine = 2,
+			/obj/item/reagent_containers/cup/bottle/mannitol = 2,
+			/obj/item/reagent_containers/cup/bottle/syriniver = 2,
+			/obj/item/reagent_containers/cup/bottle/salglu_solution = 2,
+			/obj/item/reagent_containers/cup/bottle/ipecacide = 1,
 			) = 4,
 		list(//drinks
 			/obj/item/reagent_containers/cup/glass/bottle/vodka = 1,
@@ -240,6 +307,19 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 			/obj/item/reagent_containers/cup/jerrycan/space_cleaner = 2, //If you can't find the janitor, the medbay might also appreciate some readymade cleaner.
 			/obj/item/reagent_containers/cup/jerrycan/sus = 1, //what assitant wouldn't like a vibrant jug o' phlog?
 			/obj/item/reagent_containers/cup/jerrycan/diethylamine = 1, //Im sure the botanist would appreciate it, but it is also really cool for maintenance science projects.
+			) = 2,
+		list(//medical equipment
+			/obj/item/reagent_containers/hypospray/buyable = 2,
+			/obj/item/reagent_containers/hypospray/medipen/lrd = 1,
+			) = 1,
+		list(//contraband
+			/obj/item/reagent_containers/syringe/contraband/opium = 4,
+			/obj/item/reagent_containers/syringe/contraband/space_drugs = 2,
+			/obj/item/reagent_containers/syringe/contraband/krokodil = 1,
+			/obj/item/reagent_containers/syringe/contraband/saturnx = 1,
+			/obj/item/reagent_containers/syringe/contraband/morphine = 1,
+			/obj/item/reagent_containers/hypospray/medipen/cryogel = 1,
+			/obj/item/reagent_containers/cup/bottle/traitor = 1,
 			) = 2,
 		) = 8,
 
@@ -298,6 +378,13 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 		/obj/item/instrument/violin/golden = 2,
 		) = 2,
 
+	list(//contraband & weapons
+		/obj/item/gun/ballistic/flaregun = 10,
+		/obj/item/storage/toolbox/guncase/flaregun = 1,
+		/obj/effect/spawner/random/contraband = 4,
+		/obj/item/reagent_containers/cup/glass/coffee/syndicate = 2,
+		) = 2,
+
 	list(//fakeout items, keep this list at low relative weight
 		/obj/item/clothing/shoes/jackboots = 1,
 		/obj/item/dice/d20 = 1, //To balance out the stealth die of fates in oddities
@@ -321,7 +408,7 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 		/obj/item/fishing_rod/telescopic/master = 1,
 		/obj/item/spess_knife = 1,
 		/obj/item/gun/ballistic/automatic/pistol/doorhickey = 1,
-		) = 1,
+		) = 3,
 
 	list(//equipment
 		/obj/item/clothing/glasses/hud/security = 1,
@@ -332,7 +419,15 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 		/obj/item/clothing/head/helmet/toggleable/justice = 1,
 		/obj/item/storage/belt/military/assault = 1,
 		/obj/item/storage/belt/security = 1,
-		) = 1,
+		) = 3,
+
+	list(//actual weapons and shit
+		/obj/item/gun/ballistic/rifle/boltaction/pipegun/pistol = 2,
+		/obj/item/gun/ballistic/automatic/pistol/toy = 3,
+		/obj/item/gun/ballistic/bow = 2,
+		/obj/item/dnainjector/acid_touch/unstable = 1,
+		/obj/item/dnainjector/cryokinesis = 1,
+		) = 3,
 
 	list(//paint
 		/obj/item/paint/anycolor = 1,
@@ -344,27 +439,58 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 		/obj/item/paint/violet = 1,
 		/obj/item/paint/white = 1,
 		/obj/item/paint/yellow = 1,
-		) = 1,
+		) = 3,
 
 	list(//medical and chemicals
+		list(//basic healing items
+			/obj/item/stack/medical/suture/medicated = 4,
+			/obj/item/stack/medical/mesh/advanced = 4,
+			/obj/item/reagent_containers/applicator/patch/mender/brute = 1,
+			/obj/item/reagent_containers/applicator/patch/mender/burn = 1,
+			/obj/item/reagent_containers/applicator/patch/mender/toxin = 1,
+			/obj/item/reagent_containers/applicator/patch/mender/oxy = 1,
+			) = 4,
 		list(//medkits
-			/obj/item/storage/box/hug/medical = 1,
-			/obj/item/storage/medkit/emergency = 1,
-			/obj/item/storage/medkit/regular = 1,
-			/obj/item/storage/box/bandages = 1,
-			) = 5,
+			/obj/item/storage/box/hug/medical = 2,
+			/obj/item/storage/medkit/emergency = 3,
+			/obj/item/storage/medkit/regular = 2,
+			/obj/item/storage/box/bandages = 3,
+			/obj/item/storage/medkit/surgery = 1,
+			/obj/item/storage/medkit/fire = 2,
+			/obj/item/storage/medkit/toxin = 2,
+			/obj/item/storage/medkit/o2 = 2,
+			/obj/item/storage/medkit/brute = 2,
+			/obj/item/storage/medkit/advanced = 1,
+			) = 4,
+		list(//rarer medkits
+			/obj/item/storage/medkit/expanded/regular = 10,
+			/obj/item/storage/medkit/expanded/fire = 3,
+			/obj/item/storage/medkit/expanded/toxin = 3,
+			/obj/item/storage/medkit/expanded/o2 = 3,
+			/obj/item/storage/medkit/expanded/brute = 3,
+			/obj/item/storage/medkit/expanded/advanced = 1,
+			) = 2,
 		list(//medical chems
 			/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 2,
 			/obj/item/reagent_containers/hypospray/medipen/salacid = 2,
-			/obj/item/reagent_containers/syringe/contraband/methamphetamine = 1,
-			/obj/item/reagent_containers/syringe/contraband/heroin = 1,
+			/obj/item/reagent_containers/hypospray/medipen/penacid = 2,
+			/obj/item/reagent_containers/hypospray/medipen/salbutamol = 2,
+			/obj/item/reagent_containers/hypospray/medipen/atropine = 1,
+			/obj/item/reagent_containers/hypospray/medipen/blood_loss = 2,
 			) = 5,
-		list(//RARE medical chems
+		list(//RARER medical chems
 			/obj/item/reagent_containers/cup/galaxy_gas = 1,
-			/obj/item/auto_pump = 2,
-			/obj/item/reagent_containers/cup/bottle/mindwipe = 1,
+			/obj/item/reagent_containers/hypospray/medipen/spacepen = 2,
+			/obj/item/auto_pump = 3,
+			/obj/item/reagent_containers/cup/bottle/wittel = 1,
+			/obj/item/reagent_containers/applicator/patch/mender/all = 1,
 			) = 1,
-		) = 1,
+		list(//Contraband medical stuff
+			/obj/item/reagent_containers/syringe/contraband/methamphetamine = 3,
+			/obj/item/reagent_containers/syringe/contraband/heroin = 3,
+			/obj/item/reagent_containers/cup/bottle/mindwipe = 1,
+			) = 2,
+		) = 3,
 
 	list(//misc
 		/obj/item/book/granter/crafting_recipe/dusting/pipegun_prime = 1,
@@ -377,6 +503,17 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 		/obj/item/skillchip/intj = 1,
 		/obj/item/tattoo_kit = 1,
 		/obj/item/folder/ancient_paperwork = 1,
+		/obj/item/storage/box/randomextract = 1,
+		/obj/item/storage/box/randomextractcross = 1,
+		/obj/effect/spawner/random/exotic/languagebook = 1,
+		/obj/item/implantcase/biosig = 1,
+		) = 3,
+
+	list(//contraband
+		/obj/item/raw_anomaly_core/random = 1,
+		/obj/effect/spawner/random/contraband/grenades = 2,
+		/obj/effect/spawner/random/exotic/syndie = 1,
+		/obj/item/dnainjector/no_fingerprints = 1,
 		) = 1,
 
 ))
