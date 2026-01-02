@@ -7585,6 +7585,7 @@
 #include "hypermods\code\modules\reagents\chemistry\recipes\toxins.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\condiment.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\hypospray.dm"
+#include "hypermods\code\modules\reagents\reagent_containers\jerrycan.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\medigel.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\mender.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\patch.dm"

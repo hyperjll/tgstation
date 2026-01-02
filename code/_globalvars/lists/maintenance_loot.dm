@@ -389,6 +389,10 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 		/obj/item/clothing/shoes/jackboots = 1,
 		/obj/item/dice/d20 = 1, //To balance out the stealth die of fates in oddities
 		) = 1,
+
+	list(//maintenance jerrycan -- like the maint pill but can have up to 4 diff chems.
+		/obj/item/reagent_containers/cup/jerrycan/random = 1,
+		) = 3,
 ))
 
 
