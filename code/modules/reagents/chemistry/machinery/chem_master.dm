@@ -580,9 +580,11 @@
 	if (istype(item, /obj/item/reagent_containers/applicator/pill))
 		var/obj/item/reagent_containers/applicator/pill/pill = item
 		pill.layers_remaining = pill_layers
+		balloon_alert(user, "[pill] set to [pill_layers] seconds!")
 	if (istype(item, /obj/item/reagent_containers/applicator/patch))
 		var/obj/item/reagent_containers/applicator/patch/patch = item
 		patch.reagents_per_second = patch_transfer_amt
+		balloon_alert(user, "[patch] set to [patch_transfer_amt] U/s!")
 	printing_progress++
 	update_appearance(UPDATE_OVERLAYS)
 
