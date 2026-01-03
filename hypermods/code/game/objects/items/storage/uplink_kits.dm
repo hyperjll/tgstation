@@ -315,7 +315,7 @@
 
 /obj/item/storage/box/syndie_kit/trappeddisks/PopulateContents()
 	for(var/i in 1 to 5)
-		new /obj/item/computer_disk/black_market/trap(src)
+		new /obj/item/disk/computer/black_market/trap(src)
 
 /obj/item/storage/box/syndie_kit/molotovs/PopulateContents()
 	new /obj/item/lighter(src)
@@ -1127,7 +1127,7 @@
 	new /obj/item/implantcase/biosig/syndicate(src)
 	new /obj/item/implantcase/biosig/syndicate(src)
 	new /obj/item/implantcase/biosig/syndicate(src)
-	new /obj/item/computer_disk/syndicate/observe(src)
+	new /obj/item/disk/computer/syndicate/observe(src)
 
 /obj/item/storage/box/syndie_kit/disruptor
 	name = "electrical disruptor kit"

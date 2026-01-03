@@ -8,7 +8,7 @@
 		/obj/item/assembly/igniter = 3,
 		/obj/item/assembly/prox_sensor = 5,
 		/obj/item/assembly/signaler = 4,
-		/obj/item/computer_disk/ordnance = 4,
+		/obj/item/disk/computer/ordnance = 4,
 		/obj/item/stock_parts/capacitor = 3,
 		/obj/item/stock_parts/servo = 3,
 		/obj/item/stock_parts/matter_bin = 3,
@@ -66,15 +66,15 @@
 	icon_deny = "cart-deny"
 	panel_type = "panel6"
 	products = list(
-		/obj/item/computer_disk/medical = 10,
-		/obj/item/computer_disk/engineering = 10,
-		/obj/item/computer_disk/security = 10,
-		/obj/item/computer_disk/ordnance = 10,
-		/obj/item/computer_disk/quartermaster = 10,
-		/obj/item/computer_disk/command/captain = 3,
+		/obj/item/disk/computer/medical = 10,
+		/obj/item/disk/computer/engineering = 10,
+		/obj/item/disk/computer/security = 10,
+		/obj/item/disk/computer/ordnance = 10,
+		/obj/item/disk/computer/quartermaster = 10,
+		/obj/item/disk/computer/command/captain = 3,
 		/obj/item/modular_computer/pda = 10,
 		/obj/item/modular_computer/pda/syndicate = 1,
-		/obj/item/computer_disk/black_market/trap = 1,
+		/obj/item/disk/computer/black_market/trap = 1,
 	)
 	refill_canister = /obj/item/vending_refill/cart
 	default_price = PAYCHECK_COMMAND
@@ -955,12 +955,12 @@
 	product_ads = "Get your gamer gear!;The best GPUs for all of your space-crypto needs!;The most robust cooling!;The finest RGB in space!"
 	vend_reply = "Game on!"
 	products = list(
-		/obj/item/computer_disk = 8,
+		/obj/item/disk/computer = 8,
 		/obj/item/modular_computer/laptop = 4,
 		/obj/item/modular_computer/pda = 4,
-		/obj/item/computer_disk/black_market = 1,
-		/obj/item/computer_disk/maintenance/scanner = 1,
-		/obj/item/computer_disk/maintenance/spectre_meter = 1,
+		/obj/item/disk/computer/black_market = 1,
+		/obj/item/disk/computer/maintenance/scanner = 1,
+		/obj/item/disk/computer/maintenance/spectre_meter = 1,
 	)
 	premium = list(
 		/obj/item/pai_card = 2,

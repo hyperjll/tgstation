@@ -38,7 +38,7 @@
 /datum/uplink_item/device_tools/camera_app
 	name = "SyndEye Program"
 	desc = "A data disk containing a unique PC app that allows you to watch cameras and track crewmembers."
-	item = /obj/item/computer_disk/syndicate/camera_app
+	item = /obj/item/disk/computer/syndicate/camera_app
 	cost = 1
 	surplus = 90
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

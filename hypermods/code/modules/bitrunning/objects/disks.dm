@@ -1,4 +1,4 @@
-/obj/item/bitrunning_disk/item/tier4
+/obj/item/disk/bitrunning/item/tier4
 	name = "bitrunning gear: overpowered"
 	selectable_items = list(
 		/obj/item/sbeacondrop/heavylaserturret,

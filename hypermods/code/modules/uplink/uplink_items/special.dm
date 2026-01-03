@@ -453,7 +453,7 @@
 	name = "Deluxe Trapped Disk"
 	desc = "A single high-end bomb disguised as a data disk that explodes should it's contents be tampered with. \
 			We highly advise you don't try and extract the programs yourself."
-	item = /obj/item/computer_disk/black_market/trap/highend
+	item = /obj/item/disk/computer/black_market/trap/highend
 	cost = 4
 	surplus = 0
 

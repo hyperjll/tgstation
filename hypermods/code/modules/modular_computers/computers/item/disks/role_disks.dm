@@ -1,4 +1,4 @@
-/obj/item/computer_disk/security/full
+/obj/item/disk/computer/security/full
 	name = "security officer data disk"
 	desc = "Removable disk used to download security-related tablet apps."
 	icon_state = "datadisk9"
@@ -8,7 +8,7 @@
 		/datum/computer_file/program/secureye,
 	)
 
-/obj/item/computer_disk/security/secureye
+/obj/item/disk/computer/security/secureye
 	name = "secureye data disk"
 	desc = "Removable disk used to download a camera-network program onto tablets in case of a network outage."
 	icon_state = "datadisk9"
