@@ -315,7 +315,7 @@
 
 /obj/item/storage/box/syndie_kit/trappeddisks/PopulateContents()
 	for(var/i in 1 to 5)
-		new /obj/item/disk/computer/black_market/trap(src)
+		new /obj/item/disk/computer/syndicate/trap(src)
 
 /obj/item/storage/box/syndie_kit/molotovs/PopulateContents()
 	new /obj/item/lighter(src)

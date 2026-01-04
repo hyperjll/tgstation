@@ -74,7 +74,7 @@
 		/obj/item/disk/computer/command/captain = 3,
 		/obj/item/modular_computer/pda = 10,
 		/obj/item/modular_computer/pda/syndicate = 1,
-		/obj/item/disk/computer/black_market/trap = 1,
+		/obj/item/disk/computer/syndicate/trap = 1,
 	)
 	refill_canister = /obj/item/vending_refill/cart
 	default_price = PAYCHECK_COMMAND

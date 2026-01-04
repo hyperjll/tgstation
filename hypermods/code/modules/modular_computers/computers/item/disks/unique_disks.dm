@@ -1,11 +1,10 @@
-/obj/item/disk/computer/black_market/trap
-	icon_state = "datadisksyndicate" // this typically gets replaced, but it's the thought that counts.
+/obj/item/disk/computer/syndicate/trap
 	var/dev_range = -1
 	var/hev_range = 0
 	var/weak_range = 7
 	var/timer = 20 SECONDS
 
-/obj/item/disk/computer/black_market/trap/remove_file(datum/computer_file/file)
+/obj/item/disk/computer/syndicate/trap/remove_file(datum/computer_file/file)
 	if(!(file in stored_files))
 		return FALSE
 	stored_files.Remove(file)
@@ -14,7 +13,7 @@
 	explosion(src, devastation_range = dev_range, heavy_impact_range = hev_range, light_impact_range = weak_range, explosion_cause = src)
 	return TRUE
 
-/obj/item/disk/computer/black_market/trap/highend
+/obj/item/disk/computer/syndicate/trap/highend
 	dev_range = -1
 	hev_range = 2
 	weak_range = 9
