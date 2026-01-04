@@ -178,6 +178,10 @@
 		/obj/item/grenade/chem_grenade/antiweed,
 		/obj/item/grenade/spawnergrenade/syndiesoap,
 		/obj/effect/spawner/random/contraband/grenades/dangerous,
+		/obj/item/grenade/spawnergrenade/bananapeel,
+		/obj/item/grenade/foam_dart,
+		/obj/item/grenade/chem_grenade/engiairfoam,
+		/obj/item/grenade/chem_grenade/smart_metal_foam_stylish,
 	)
 
 /obj/effect/spawner/random/contraband/grenades/dangerous
@@ -188,6 +192,9 @@
 		/obj/item/grenade/iedcasing/spawned = 2,
 		/obj/item/grenade/empgrenade = 2,
 		/obj/item/grenade/antigravity = 2,
+		/obj/item/grenade/stingbang = 2,
+		/obj/item/grenade/energy_stinger = 2,
+		/obj/item/grenade/foam_dart/riot = 1,
 		/obj/effect/spawner/random/contraband/grenades/cluster = 1,
 		/obj/effect/spawner/random/contraband/grenades/lethal = 1,
 	)
@@ -222,4 +229,7 @@
 		/obj/item/grenade/spawnergrenade/cat = 1,
 		/obj/item/grenade/frag = 1,
 		/obj/item/grenade/chem_grenade/bioterrorfoam = 1,
+		/obj/item/grenade/chem_grenade/pyro/explosive = 1,
+		/obj/item/grenade/energy_stinger/lethal = 2,
+		/obj/item/grenade/stingbang/mega = 1,
 	)
