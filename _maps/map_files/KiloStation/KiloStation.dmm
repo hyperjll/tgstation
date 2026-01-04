@@ -6401,14 +6401,6 @@
 	pixel_x = 8;
 	pixel_y = 6
 	},
-/obj/item/computer_disk/engineering{
-	pixel_x = 10;
-	pixel_y = -8
-	},
-/obj/item/computer_disk/engineering{
-	pixel_x = 10;
-	pixel_y = -8
-	},
 /obj/item/stamp/head/ce,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
@@ -6754,6 +6746,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/medical/exam_room)
 "clL" = (
@@ -8803,6 +8796,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
+/obj/item/disk/computer/engineering,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "cYt" = (
@@ -11066,6 +11060,14 @@
 	},
 /turf/closed/wall/r_wall,
 /area/station/science/ordnance/bomb)
+"dJu" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible,
+/obj/effect/turf_decal/bot,
+/obj/machinery/portable_atmospherics/canister/anesthetic_mix,
+/obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/machinery/vitals_reader/directional/north,
+/turf/open/floor/iron/dark,
+/area/station/medical/cryo)
 "dJw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -12268,7 +12270,6 @@
 "efS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/light/built/directional/north,
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal/incinerator)
@@ -12560,6 +12561,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue/opposingcorners,
+/obj/machinery/vitals_reader/directional/south,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/exam_room)
 "ekL" = (
@@ -14168,6 +14170,7 @@
 /obj/machinery/computer/operating{
 	dir = 1
 	},
+/obj/machinery/vitals_reader/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "eMC" = (
@@ -15417,7 +15420,9 @@
 /turf/open/floor/circuit/red,
 /area/station/ai/upload/chamber)
 "fjn" = (
-/obj/structure/sink/directional/south,
+/obj/structure/sink/directional/south{
+	pixel_y = 8
+	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/firealarm/directional/north{
 	pixel_x = 26
@@ -15426,6 +15431,7 @@
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 4
 	},
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/virology)
 "fjw" = (
@@ -18380,15 +18386,13 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/bridge)
 "gbB" = (
-/obj/item/computer_disk/medical,
-/obj/item/computer_disk/medical,
-/obj/item/computer_disk/medical,
 /obj/item/clothing/neck/stethoscope{
 	pixel_y = 5
 	},
 /obj/structure/table/reinforced/rglass,
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /obj/item/stamp/head/cmo,
+/obj/item/disk/computer/medical,
 /turf/open/floor/iron/showroomfloor,
 /area/station/command/heads_quarters/cmo)
 "gbF" = (
@@ -21818,6 +21822,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/machinery/vitals_reader/directional/south,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/surgery/fore)
 "hjj" = (
@@ -30865,6 +30870,7 @@
 	},
 /obj/machinery/light_switch/directional/east,
 /obj/effect/turf_decal/tile/purple/half/contrasted,
+/obj/item/disk/computer/ordnance,
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/ordnance/storage)
 "jYx" = (
@@ -31480,14 +31486,6 @@
 /obj/structure/table,
 /obj/item/storage/toolbox/electrical{
 	pixel_y = 5
-	},
-/obj/item/computer_disk{
-	pixel_x = -8;
-	pixel_y = -3
-	},
-/obj/item/computer_disk/ordnance{
-	pixel_x = 5;
-	pixel_y = -3
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/office)
@@ -35127,9 +35125,6 @@
 "ltQ" = (
 /obj/structure/table,
 /obj/item/clipboard,
-/obj/item/computer_disk/ordnance,
-/obj/item/computer_disk/ordnance,
-/obj/item/computer_disk/ordnance,
 /obj/item/circuitboard/aicore{
 	pixel_y = 5
 	},
@@ -42527,14 +42522,7 @@
 /obj/structure/table,
 /obj/item/clipboard,
 /obj/item/folder/yellow,
-/obj/item/computer_disk/quartermaster,
-/obj/item/computer_disk/quartermaster,
-/obj/item/computer_disk/quartermaster,
 /obj/item/pen/fountain,
-/obj/item/stamp{
-	pixel_x = 8;
-	pixel_y = 2
-	},
 /obj/item/stamp/denied{
 	pixel_x = 8;
 	pixel_y = 6
@@ -42551,6 +42539,11 @@
 /obj/item/flashlight/lamp/green{
 	pixel_x = -5;
 	pixel_y = 7
+	},
+/obj/item/disk/computer/quartermaster,
+/obj/item/stamp/granted{
+	pixel_x = 8;
+	pixel_y = 12
 	},
 /turf/open/floor/carpet/orange,
 /area/station/command/heads_quarters/qm)
@@ -46386,10 +46379,6 @@
 	pixel_y = 4
 	},
 /obj/item/pen,
-/obj/item/stamp{
-	pixel_x = 8;
-	pixel_y = 2
-	},
 /obj/item/stamp/denied{
 	pixel_x = 8;
 	pixel_y = 6
@@ -46409,6 +46398,10 @@
 	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
+	},
+/obj/item/stamp/granted{
+	pixel_x = 8;
+	pixel_y = 12
 	},
 /turf/open/floor/iron/dark,
 /area/station/cargo/office)
@@ -49402,6 +49395,11 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
+"qkJ" = (
+/obj/effect/turf_decal/delivery,
+/obj/effect/spawner/random/maintenance,
+/turf/open/floor/iron,
+/area/station/cargo/storage)
 "qld" = (
 /obj/effect/turf_decal/box,
 /obj/machinery/light/directional/north,
@@ -50361,6 +50359,12 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/station/medical/pharmacy)
+"qCn" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/random/maintenance,
+/turf/open/floor/iron,
+/area/station/cargo/storage)
 "qCI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -54998,7 +55002,6 @@
 /obj/structure/table,
 /obj/item/wrench/medical,
 /obj/machinery/light/directional/west,
-/obj/machinery/status_display/evac/directional/west,
 /obj/item/storage/pill_bottle/mannitol{
 	pixel_x = 8;
 	pixel_y = 7
@@ -55006,6 +55009,7 @@
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted,
 /obj/item/screwdriver,
+/obj/machinery/vitals_reader/directional/west,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/cryo)
 "sbX" = (
@@ -63005,6 +63009,7 @@
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 1
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/cryo)
 "uCd" = (
@@ -69955,6 +69960,10 @@
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 1
 	},
+/obj/item/disk/computer/ordnance{
+	pixel_x = -6;
+	pixel_y = 10
+	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/ordnance)
 "wJe" = (
@@ -73085,6 +73094,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
+/obj/machinery/vitals_reader/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/medical/surgery/aft)
 "xLk" = (
@@ -94136,7 +94146,7 @@ bXe
 huR
 bXe
 gsy
-srg
+dJu
 uZT
 gKd
 pMj
@@ -113950,7 +113960,7 @@ baS
 eQD
 tNj
 owA
-baS
+qCn
 mlH
 rpF
 tGb
@@ -114719,7 +114729,7 @@ hjL
 cXd
 wdL
 xYx
-wdL
+qkJ
 iFE
 suA
 mEH

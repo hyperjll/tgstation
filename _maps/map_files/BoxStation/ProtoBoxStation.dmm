@@ -135,6 +135,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/machinery/vitals_reader/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/fore)
 "aaH" = (
@@ -5135,9 +5136,6 @@
 /area/space/nearstation)
 "apr" = (
 /obj/item/clipboard,
-/obj/item/computer_disk/quartermaster,
-/obj/item/computer_disk/quartermaster,
-/obj/item/computer_disk/quartermaster,
 /obj/item/coin/silver,
 /obj/item/paper_bin/carbon{
 	pixel_x = -3;
@@ -16625,14 +16623,6 @@
 /obj/effect/turf_decal/siding/purple{
 	dir = 4
 	},
-/obj/item/computer_disk/ordnance,
-/obj/item/computer_disk/ordnance{
-	pixel_x = -10
-	},
-/obj/item/computer_disk/ordnance{
-	pixel_x = -5;
-	pixel_y = 6
-	},
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/box,
@@ -16646,11 +16636,17 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Starboard Primary Hallway 2"
 	},
+/obj/structure/railing/corner/end/flip{
+	dir = 8
+	},
 /turf/open/floor/iron/white/corner{
 	dir = 1
 	},
 /area/station/service/kitchen)
 "bbA" = (
+/obj/structure/railing/corner/end{
+	dir = 4
+	},
 /turf/open/floor/iron/white/corner{
 	dir = 1
 	},
@@ -20124,10 +20120,6 @@
 /turf/closed/wall,
 /area/station/medical/medbay/central)
 "bmQ" = (
-/obj/item/stamp{
-	pixel_x = -3;
-	pixel_y = 3
-	},
 /obj/item/stamp/denied{
 	pixel_x = 4;
 	pixel_y = -2
@@ -20138,6 +20130,10 @@
 	},
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 8
+	},
+/obj/item/stamp/granted{
+	pixel_y = -2;
+	pixel_x = -4
 	},
 /turf/open/floor/iron,
 /area/station/cargo/office)
@@ -21085,7 +21081,6 @@
 "bqn" = (
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/light/small/directional/south,
-/obj/effect/decal/cleanable/robot_debris,
 /turf/open/floor/iron/dark/textured_large,
 /area/station/cargo/bitrunning/den)
 "bqo" = (
@@ -25363,6 +25358,9 @@
 	},
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/purple/opposingcorners,
+/obj/item/disk/computer/ordnance,
+/obj/item/disk/computer/ordnance,
+/obj/item/disk/computer/ordnance,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
 "bHw" = (
@@ -26863,6 +26861,7 @@
 /obj/effect/turf_decal/box/white{
 	color = "#52B4E9"
 	},
+/obj/machinery/vitals_reader/directional/east,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/medical/treatment_center)
 "bNk" = (
@@ -32245,9 +32244,6 @@
 /area/station/command/heads_quarters/ce)
 "cjY" = (
 /obj/structure/table/reinforced,
-/obj/item/computer_disk/engineering,
-/obj/item/computer_disk/engineering,
-/obj/item/computer_disk/engineering,
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
@@ -41694,6 +41690,7 @@
 	},
 /obj/machinery/iv_drip,
 /obj/structure/bed/medical/emergency,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "hCD" = (
@@ -42503,6 +42500,7 @@
 /area/station/security/prison/mess)
 "ipA" = (
 /obj/structure/tank_holder/extinguisher,
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/white,
 /area/station/medical/cryo)
 "ipS" = (
@@ -42527,6 +42525,7 @@
 /obj/item/reagent_containers/syringe,
 /obj/effect/turf_decal/tile/blue/full,
 /obj/item/radio/intercom/directional/west,
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/large,
 /area/station/medical/treatment_center)
 "iqT" = (
@@ -44308,6 +44307,7 @@
 	},
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/purple/opposingcorners,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
@@ -44895,6 +44895,7 @@
 	dir = 4
 	},
 /obj/structure/table/optable,
+/obj/machinery/vitals_reader/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "ksV" = (
@@ -47420,6 +47421,12 @@
 /mob/living/carbon/human/species/monkey,
 /turf/open/floor/grass,
 /area/station/science/genetics)
+"mzM" = (
+/obj/structure/railing,
+/turf/open/floor/iron/white/corner{
+	dir = 1
+	},
+/area/station/service/kitchen)
 "mzO" = (
 /obj/structure/table,
 /obj/item/paper_bin,
@@ -48727,6 +48734,7 @@
 	},
 /obj/machinery/iv_drip,
 /obj/structure/bed/medical/emergency,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "nIN" = (
@@ -49046,6 +49054,7 @@
 /area/station/command/teleporter)
 "nVp" = (
 /obj/effect/landmark/start/hangover,
+/obj/structure/railing,
 /turf/open/floor/iron/white/corner{
 	dir = 1
 	},
@@ -54702,6 +54711,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/effect/landmark/start/paramedic,
 /obj/structure/cable,
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "sLm" = (
@@ -55166,13 +55176,13 @@
 /area/station/medical/cryo)
 "tiJ" = (
 /obj/structure/table/glass,
-/obj/structure/extinguisher_cabinet/directional/north,
 /obj/item/reagent_containers/cup/bottle/epinephrine,
 /obj/item/reagent_containers/cup/bottle/multiver{
 	pixel_x = 6
 	},
 /obj/item/reagent_containers/syringe,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/large,
 /area/station/medical/treatment_center)
 "tiO" = (
@@ -55446,10 +55456,6 @@
 	name = "Dud Rocket";
 	desc = "An 84mm High Explosive rocket. This one's a dud. Pretty sure."
 	},
-/obj/item/computer_disk/quartermaster{
-	pixel_x = 9;
-	pixel_y = 13
-	},
 /obj/effect/spawner/random/entertainment/lighter{
 	pixel_x = -7;
 	pixel_y = -4
@@ -55457,6 +55463,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/item/disk/computer/quartermaster,
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/qm)
 "ttC" = (
@@ -55882,10 +55889,11 @@
 /area/station/service/kitchen)
 "tMn" = (
 /obj/structure/table/glass,
-/obj/item/computer_disk/medical,
-/obj/item/computer_disk/medical,
 /obj/machinery/status_display/evac/directional/north,
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/item/disk/computer/medical,
+/obj/item/disk/computer/medical,
+/obj/item/disk/computer/medical,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "tMN" = (
@@ -60153,15 +60161,6 @@
 	pixel_x = 3;
 	pixel_y = -2
 	},
-/obj/item/computer_disk/ordnance{
-	pixel_x = -10
-	},
-/obj/item/computer_disk/ordnance{
-	pixel_x = -10
-	},
-/obj/item/computer_disk/ordnance{
-	pixel_x = -10
-	},
 /turf/open/floor/iron/cafeteria,
 /area/station/command/heads_quarters/rd)
 "xFk" = (
@@ -60626,6 +60625,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /obj/structure/table/glass,
 /obj/machinery/light/cold/directional/east,
+/obj/machinery/vitals_reader/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/cryo)
 "yaM" = (
@@ -98768,7 +98768,7 @@ kDU
 tqj
 aYL
 eWv
-bbA
+mzM
 fcF
 gVZ
 bdb
@@ -99025,7 +99025,7 @@ aVB
 dHA
 osO
 baj
-bbA
+mzM
 aYV
 gVZ
 lII
@@ -99539,7 +99539,7 @@ cCq
 dHA
 cAg
 bak
-bbA
+mzM
 aYV
 gVZ
 cBm
@@ -99796,7 +99796,7 @@ irV
 psh
 osO
 bPP
-bbA
+mzM
 aYV
 gVZ
 bdc
@@ -100053,7 +100053,7 @@ rsI
 ykl
 aYM
 gAO
-bbA
+mzM
 bhl
 gVZ
 bdb
@@ -101099,7 +101099,7 @@ izD
 fqU
 eyf
 mEN
-fnj
+jtt
 ipA
 aFa
 mKI

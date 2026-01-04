@@ -999,6 +999,11 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
+"atx" = (
+/obj/effect/turf_decal/box/white,
+/obj/effect/spawner/random/structure/crate,
+/turf/open/floor/iron/textured,
+/area/station/cargo/storage)
 "atz" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/closet/crate/coffin,
@@ -1135,6 +1140,7 @@
 	},
 /obj/item/radio/intercom/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/vitals_reader/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/fore)
 "avP" = (
@@ -2030,6 +2036,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /obj/item/stamp/denied,
+/obj/item/stamp/granted,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/qm)
 "aNB" = (
@@ -18935,6 +18942,7 @@
 /obj/structure/table/optable,
 /obj/effect/turf_decal/bot_red,
 /obj/effect/decal/cleanable/blood/old,
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/dark/textured_half{
 	dir = 1
 	},
@@ -19350,6 +19358,7 @@
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/structure/table/reinforced,
 /obj/machinery/light/no_nightlight/directional/west,
+/obj/machinery/vitals_reader/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "hzj" = (
@@ -20117,6 +20126,7 @@
 /obj/effect/turf_decal/box/white{
 	color = "#EFB341"
 	},
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/iron/textured,
 /area/station/cargo/storage)
 "hSg" = (
@@ -20682,8 +20692,9 @@
 /obj/item/stack/medical/suture,
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/structure/table/reinforced,
-/obj/machinery/airalarm/directional/east,
 /obj/machinery/light/no_nightlight/directional/east,
+/obj/machinery/airalarm/directional/south,
+/obj/machinery/vitals_reader/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "ier" = (
@@ -26538,6 +26549,15 @@
 	dir = 8
 	},
 /area/station/engineering/atmos/hfr_room)
+"kwV" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/obj/machinery/cryo_cell,
+/obj/machinery/vitals_reader/directional/west,
+/turf/open/floor/iron/textured,
+/area/station/medical/cryo)
 "kxf" = (
 /obj/effect/spawner/random/structure/crate_loot,
 /obj/machinery/light/small/directional/north,
@@ -40238,6 +40258,7 @@
 /area/space/nearstation)
 "qjw" = (
 /obj/structure/closet/crate,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "qjz" = (
@@ -41938,6 +41959,7 @@
 	color = "#EFB341"
 	},
 /obj/structure/closet/crate,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/iron/textured,
 /area/station/cargo/storage)
 "qTy" = (
@@ -45055,6 +45077,12 @@
 	},
 /turf/open/floor/engine,
 /area/station/maintenance/disposal/incinerator)
+"siy" = (
+/obj/effect/turf_decal/box/white,
+/obj/effect/spawner/random/maintenance,
+/obj/effect/spawner/random/structure/crate,
+/turf/open/floor/iron/textured,
+/area/station/cargo/storage)
 "siz" = (
 /obj/structure/chair/office/light{
 	dir = 4
@@ -48509,6 +48537,7 @@
 	dir = 6
 	},
 /obj/machinery/light_switch/directional/east,
+/obj/machinery/vitals_reader/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "tIk" = (
@@ -52558,6 +52587,13 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/paramedic)
+"vse" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/vitals_reader/directional/north,
+/turf/open/floor/iron/white/textured_half{
+	dir = 1
+	},
+/area/station/medical/cryo)
 "vsF" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -53387,12 +53423,12 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/directional/east,
 /obj/structure/table/wood,
-/obj/item/stamp{
-	pixel_x = -6;
-	pixel_y = 10
-	},
 /obj/item/stamp/denied,
 /obj/item/dest_tagger,
+/obj/item/stamp/granted{
+	pixel_x = 8;
+	pixel_y = 12
+	},
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "vKR" = (
@@ -54417,6 +54453,14 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
+"weo" = (
+/obj/effect/turf_decal/box/white{
+	color = "#EFB341"
+	},
+/obj/effect/spawner/random/maintenance,
+/obj/effect/spawner/random/structure/crate,
+/turf/open/floor/iron/textured,
+/area/station/cargo/storage)
 "wes" = (
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 8
@@ -80771,7 +80815,7 @@ uXa
 kMY
 hSf
 hSf
-hSf
+weo
 jDs
 jnr
 qjw
@@ -81283,7 +81327,7 @@ qzC
 xtr
 hfj
 kMY
-hSf
+weo
 hSf
 hSf
 jDs
@@ -82313,7 +82357,7 @@ lkl
 nft
 qKg
 muQ
-muQ
+atx
 xbV
 wuM
 kJv
@@ -82827,7 +82871,7 @@ ifv
 nft
 muQ
 muQ
-muQ
+siy
 xbV
 jnr
 pSa
@@ -90456,7 +90500,7 @@ qsd
 qsd
 qsd
 qsd
-bzN
+kwV
 wAc
 opd
 ufo
@@ -91227,7 +91271,7 @@ qYV
 fiE
 rAW
 mRe
-qqf
+vse
 qqf
 vcE
 lQz

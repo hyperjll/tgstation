@@ -9210,6 +9210,7 @@
 /area/station/security/checkpoint/escape)
 "aVT" = (
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted,
+/obj/machinery/vitals_reader/directional/west,
 /turf/open/floor/iron/white/textured,
 /area/station/medical/treatment_center)
 "aVU" = (
@@ -9327,6 +9328,7 @@
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 8
 	},
+/obj/machinery/vitals_reader/directional/east,
 /turf/open/floor/iron/white/textured,
 /area/station/medical/treatment_center)
 "aWk" = (
@@ -9924,6 +9926,7 @@
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 4
 	},
+/obj/machinery/vitals_reader/directional/west,
 /turf/open/floor/iron/white/textured,
 /area/station/medical/treatment_center)
 "aZa" = (
@@ -9990,10 +9993,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/station/science/research)
-"aZn" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/station/medical/treatment_center)
 "aZp" = (
 /turf/closed/wall,
 /area/station/construction/mining/aux_base)
@@ -19912,6 +19911,7 @@
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 1
 	},
+/obj/machinery/vitals_reader/directional/east,
 /turf/open/floor/iron/white/textured,
 /area/station/medical/treatment_center)
 "bYW" = (
@@ -20860,18 +20860,6 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/table,
-/obj/item/computer_disk{
-	pixel_x = -5;
-	pixel_y = 8
-	},
-/obj/item/computer_disk/ordnance{
-	pixel_x = 1;
-	pixel_y = 5
-	},
-/obj/item/computer_disk{
-	pixel_x = 7;
-	pixel_y = 2
-	},
 /obj/item/binoculars,
 /turf/open/floor/plating,
 /area/station/science/ordnance/testlab)
@@ -21849,7 +21837,6 @@
 /obj/effect/spawner/random/maintenance/two,
 /obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small/built/directional/south,
 /turf/open/floor/iron/textured_large,
 /area/station/maintenance/department/science/central)
 "csu" = (
@@ -21922,6 +21909,7 @@
 "csX" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "ctl" = (
@@ -29224,6 +29212,7 @@
 /area/station/command/heads_quarters/rd)
 "egh" = (
 /obj/machinery/smartfridge/organ,
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "egr" = (
@@ -29304,9 +29293,6 @@
 /obj/item/stamp/head/cmo,
 /obj/item/stamp/denied,
 /obj/item/sensor_device,
-/obj/item/computer_disk/medical,
-/obj/item/computer_disk/medical,
-/obj/item/computer_disk/medical,
 /obj/item/clothing/glasses/hud/health,
 /obj/item/toy/figure/cmo,
 /obj/item/clothing/neck/stethoscope,
@@ -30524,15 +30510,10 @@
 /turf/open/floor/iron/grimy,
 /area/station/command/heads_quarters/ce)
 "eGY" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral/half/contrasted,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small/built/directional/south,
-/obj/structure/cable,
+/obj/effect/turf_decal/bot,
+/obj/effect/spawner/random/structure/crate,
 /turf/open/floor/iron,
-/area/station/maintenance/department/science)
+/area/station/cargo/storage)
 "eGZ" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "AI Chamber - Core";
@@ -30909,8 +30890,8 @@
 	dir = 8
 	},
 /obj/item/kirbyplants/random,
-/obj/machinery/newscaster/directional/east,
 /obj/structure/cable,
+/obj/machinery/vitals_reader/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/cryo)
 "eOn" = (
@@ -39552,17 +39533,12 @@
 	pixel_x = -6;
 	pixel_y = -1
 	},
-/obj/item/computer_disk/quartermaster{
-	pixel_x = 6;
-	pixel_y = 1
+/obj/item/disk/computer/quartermaster{
+	pixel_x = 4
 	},
-/obj/item/computer_disk/quartermaster{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/obj/item/computer_disk/quartermaster{
-	pixel_x = 6;
-	pixel_y = 7
+/obj/item/stamp/granted{
+	pixel_x = 3;
+	pixel_y = 12
 	},
 /turf/open/floor/carpet/red,
 /area/station/command/heads_quarters/qm)
@@ -40456,6 +40432,8 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/light/directional/east,
 /obj/machinery/computer/security/telescreen/ordnance/directional/east,
+/obj/item/disk/computer/ordnance,
+/obj/item/disk/computer/ordnance,
 /turf/open/floor/iron/dark/textured,
 /area/station/science/ordnance/testlab)
 "iCY" = (
@@ -40846,6 +40824,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 5
 	},
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/theatre)
 "iMk" = (
@@ -43163,10 +43142,6 @@
 /area/station/maintenance/port)
 "jEQ" = (
 /obj/structure/table,
-/obj/item/stamp{
-	pixel_x = 8;
-	pixel_y = 7
-	},
 /obj/item/stamp/denied{
 	pixel_x = 8
 	},
@@ -43180,6 +43155,10 @@
 	},
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 4
+	},
+/obj/item/stamp/granted{
+	pixel_x = 8;
+	pixel_y = 12
 	},
 /turf/open/floor/iron/dark/side{
 	dir = 8
@@ -53508,6 +53487,7 @@
 	},
 /obj/machinery/firealarm/directional/north,
 /obj/item/kirbyplants/random,
+/obj/machinery/vitals_reader/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/cryo)
 "nIU" = (
@@ -63735,6 +63715,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/machinery/vitals_reader/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "rBe" = (
@@ -66216,18 +66197,6 @@
 /area/station/command/heads_quarters/rd)
 "sGg" = (
 /obj/structure/table/reinforced,
-/obj/item/computer_disk/engineering{
-	pixel_x = -6;
-	pixel_y = 8
-	},
-/obj/item/computer_disk/engineering{
-	pixel_x = -4;
-	pixel_y = 6
-	},
-/obj/item/computer_disk/engineering{
-	pixel_x = -2;
-	pixel_y = 4
-	},
 /obj/item/paper/monitorkey{
 	pixel_x = 5;
 	pixel_y = 2
@@ -66272,6 +66241,10 @@
 /obj/machinery/computer/records/medical/laptop{
 	dir = 8;
 	pixel_y = 1
+	},
+/obj/item/disk/computer/medical{
+	pixel_x = -5;
+	pixel_y = 6
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
@@ -68085,6 +68058,7 @@
 	pixel_y = 2
 	},
 /obj/structure/cable,
+/obj/item/disk/computer/engineering,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "toy" = (
@@ -71687,6 +71661,7 @@
 	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/machinery/light/directional/west,
+/obj/machinery/vitals_reader/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "uKz" = (
@@ -72085,6 +72060,7 @@
 /obj/item/soap/nanotrasen,
 /obj/item/wrench/medical,
 /obj/machinery/light_switch/directional/east,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/cryo)
 "uTW" = (
@@ -75118,10 +75094,6 @@
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/stamp{
-	pixel_x = -6;
-	pixel_y = 10
-	},
 /obj/item/stamp/denied{
 	pixel_x = -6;
 	pixel_y = 4
@@ -75131,6 +75103,10 @@
 	pixel_y = 4
 	},
 /obj/item/radio/intercom/directional/south,
+/obj/item/stamp/granted{
+	pixel_x = -6;
+	pixel_y = 12
+	},
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "wdZ" = (
@@ -117996,7 +117972,7 @@ xuH
 vTa
 hKX
 tVd
-xyS
+czo
 bUl
 xyS
 pIz
@@ -118510,7 +118486,7 @@ tNB
 lZP
 csX
 tVd
-xyS
+eGY
 tVd
 csX
 vwt
@@ -125133,10 +125109,10 @@ fVF
 piO
 piO
 piO
-aZn
+piO
 aWU
 qwN
-aZn
+piO
 piO
 piO
 piO
@@ -126675,10 +126651,10 @@ cDm
 piO
 piO
 piO
-aZn
+piO
 xqB
 qXK
-aZn
+piO
 piO
 piO
 piO
@@ -132617,7 +132593,7 @@ bCO
 bEk
 bJT
 hzN
-eGY
+vHF
 bJT
 tMc
 gkr

@@ -7920,18 +7920,12 @@
 "cSr" = (
 /obj/structure/cable,
 /obj/structure/table/glass,
-/obj/item/computer_disk/medical{
-	pixel_x = -5
-	},
-/obj/item/computer_disk/medical{
-	pixel_x = -4;
-	pixel_y = 2
-	},
 /obj/effect/mapping_helpers/broken_floor,
 /obj/item/stamp/head/cmo{
 	pixel_x = 8;
 	pixel_y = 7
 	},
+/obj/item/disk/computer/medical,
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/cmo)
 "cSs" = (
@@ -23518,6 +23512,7 @@
 "iaA" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/light/small/directional/north,
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/surgery/theatre)
 "iaB" = (
@@ -25718,6 +25713,8 @@
 "iHv" = (
 /obj/structure/table,
 /obj/machinery/computer/security/telescreen/ordnance/directional/north,
+/obj/item/disk/computer/ordnance,
+/obj/item/disk/computer/ordnance,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -32178,9 +32175,17 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "kEH" = (
-/obj/effect/turf_decal/bot_white,
-/turf/open/floor/iron/dark,
-/area/station/cargo/storage)
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/item/stack/medical/mesh{
+	pixel_x = 3
+	},
+/obj/item/stack/medical/suture{
+	pixel_x = 5
+	},
+/obj/machinery/vitals_reader/directional/north,
+/turf/open/floor/iron/white,
+/area/station/medical/treatment_center)
 "kEW" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/heater/on{
 	dir = 8
@@ -39430,6 +39435,7 @@
 	dir = 10
 	},
 /obj/item/radio/intercom/directional/south,
+/obj/item/disk/computer/medical,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "naa" = (
@@ -40813,16 +40819,16 @@
 	pixel_x = -1;
 	pixel_y = 8
 	},
-/obj/item/stamp{
-	pixel_x = -7;
-	pixel_y = 0
-	},
 /obj/item/radio{
 	pixel_x = 9;
 	pixel_y = 4
 	},
 /obj/effect/turf_decal/tile/brown/opposingcorners{
 	dir = 1
+	},
+/obj/item/stamp/granted{
+	pixel_x = -9;
+	pixel_y = -1
 	},
 /turf/open/floor/iron,
 /area/station/cargo/office)
@@ -45733,10 +45739,13 @@
 /obj/structure/table/reinforced/titaniumglass,
 /obj/effect/turf_decal/bot,
 /obj/item/folder/yellow,
-/obj/item/computer_disk/engineering,
 /obj/item/phone{
 	pixel_x = -6;
 	pixel_y = 7
+	},
+/obj/item/disk/computer/engineering{
+	pixel_x = 6;
+	pixel_y = 9
 	},
 /turf/open/floor/catwalk_floor/titanium,
 /area/station/command/heads_quarters/ce)
@@ -55022,7 +55031,7 @@
 /obj/machinery/portable_atmospherics/canister/anesthetic_mix,
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /obj/effect/turf_decal/stripes,
-/obj/machinery/airalarm/directional/north,
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/white/small,
 /area/station/medical/cryo)
 "spA" = (
@@ -57169,6 +57178,7 @@
 /obj/effect/turf_decal/stripes,
 /obj/effect/mapping_helpers/broken_floor,
 /obj/machinery/camera/autoname/directional/north,
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/white/small,
 /area/station/medical/cryo)
 "sYS" = (
@@ -57984,6 +57994,7 @@
 /obj/machinery/iv_drip,
 /obj/effect/turf_decal/bot_white,
 /obj/machinery/light/small/directional/north,
+/obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "tms" = (
@@ -63761,6 +63772,7 @@
 /obj/item/stack/medical/suture{
 	pixel_x = 5
 	},
+/obj/machinery/vitals_reader/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "vdY" = (
@@ -68894,10 +68906,6 @@
 /area/station/science/ordnance/storage)
 "wCI" = (
 /obj/structure/table/wood,
-/obj/item/stamp{
-	pixel_x = 7;
-	pixel_y = 9
-	},
 /obj/item/stamp/denied{
 	pixel_x = 7;
 	pixel_y = 4
@@ -68909,6 +68917,10 @@
 /obj/item/clipboard{
 	pixel_x = -6;
 	pixel_y = 10
+	},
+/obj/item/stamp/granted{
+	pixel_x = 7;
+	pixel_y = 12
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm)
@@ -69600,10 +69612,6 @@
 "wOh" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/table/glass,
-/obj/item/computer_disk/ordnance{
-	pixel_x = -15;
-	pixel_y = 7
-	},
 /obj/item/paper_bin{
 	pixel_x = 1;
 	pixel_y = 3
@@ -70061,18 +70069,6 @@
 /area/station/hallway/primary/aft)
 "wTJ" = (
 /obj/structure/table,
-/obj/item/computer_disk{
-	pixel_x = 16;
-	pixel_y = 8
-	},
-/obj/item/computer_disk{
-	pixel_x = 15;
-	pixel_y = 6
-	},
-/obj/item/computer_disk{
-	pixel_x = 14;
-	pixel_y = 4
-	},
 /obj/item/raw_anomaly_core/random{
 	pixel_x = 15;
 	pixel_y = 11
@@ -72663,6 +72659,7 @@
 	pixel_x = -5
 	},
 /obj/machinery/light/cold/directional/north,
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/small,
 /area/station/medical/cryo)
 "xFe" = (
@@ -87429,7 +87426,7 @@ uzJ
 vzD
 amq
 mRD
-kEH
+mRD
 mRD
 gGA
 rfP
@@ -102125,7 +102122,7 @@ blb
 blb
 syk
 syk
-vdX
+kEH
 gaF
 pnZ
 gaF
