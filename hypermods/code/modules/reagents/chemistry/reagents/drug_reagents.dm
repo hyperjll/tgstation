@@ -138,7 +138,7 @@
 
 /datum/reagent/drug/painkillers
 	name = "Painkillers"
-	description = "Slowly heals brute and burn damage types while you have under 25 TOTAL damage of those types. Overdose causes minor toxin damage."
+	description = "Slowly heals brute and burn damage types while you have under 25 brute/burn damage of those types. Overdose causes minor toxin damage."
 	color = "#f2feff"
 	overdose_threshold = 30
 	addiction_types = list(/datum/addiction/opioids = 10)
@@ -159,8 +159,8 @@
 	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
 	if(totaldamage <= 25)
 		var/need_mob_update
-		need_mob_update += affected_mob.adjust_brute_loss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-		need_mob_update += affected_mob.adjust_fire_loss(-0.5 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_brute_loss(-0.4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 		if(need_mob_update)
 			return UPDATE_MOB_HEALTH
 
@@ -173,7 +173,7 @@
 
 /datum/reagent/drug/opium
 	name = "Opium"
-	description = "A relatively mild opioid. Provides body-wide pain relief, and slows mental activity. Overdose will causes brain damage, but has a high overdose limit."
+	description = "A relatively mild opioid, heals brute and burn damage while you have under 50 brute/burn damage. Provides body-wide pain relief, and slows mental activity. Overdose will causes brain damage, but has a high overdose limit."
 	color = "#F5BE27"
 	taste_description = "a tangy numbness"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
@@ -201,8 +201,8 @@
 	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
 	if(totaldamage <= 50)
 		var/need_mob_update
-		need_mob_update += affected_mob.adjust_brute_loss(-0.4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-		need_mob_update += affected_mob.adjust_fire_loss(-0.4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_brute_loss(-0.6 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.6 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 		if(need_mob_update)
 			return UPDATE_MOB_HEALTH
 
@@ -216,7 +216,7 @@
 
 /datum/reagent/drug/heroin
 	name = "Heroin"
-	description = "A strong synthesized opioid. Causes euphoria and strong pain relief. Very easy to overdose on or go into withdrawal over."
+	description = "A strong synthesized opioid, heals brute and burn damage while you have under 75 brute/burn damage. Causes euphoria and strong pain relief. Very easy to overdose on or go into withdrawal over."
 	color = "#B3B3B3"
 	taste_description = "synthesized numbness"
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
