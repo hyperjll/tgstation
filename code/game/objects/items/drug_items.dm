@@ -126,8 +126,9 @@
 	icon_state = "opium1"
 	tastes = list("amber", "a bitter vanilla")
 	food_reagents = list(
-		/datum/reagent/medicine/morphine = 10,
-		/datum/reagent/consumable/sugar = 1
+		/datum/reagent/medicine/morphine = 2,
+		/datum/reagent/consumable/sugar = 1,
+		/datum/reagent/drug/opium = 10
 	)
 
 /obj/item/food/drug/opium/examine()
@@ -146,14 +147,15 @@
 	. = ..()
 	reagents.clear_reagents()
 	var/mult = max(potency / 20, 1) // 20 = base, 100 = 5x, 200 = 10x
-	reagents.add_reagent(/datum/reagent/medicine/morphine, (rand(4, 25) / 10) * mult)
+	reagents.add_reagent(/datum/reagent/medicine/morphine, (rand(2, 5) / 10) * mult)
 	reagents.add_reagent(/datum/reagent/consumable/sugar, rand(1, 7) / 10)
+	reagents.add_reagent(/datum/reagent/drug/opium, (rand(4, 25) / 10) * mult)
 
 /obj/item/food/drug/opium/raw/interact_with_atom(obj/item/I, mob/user) // allows for combining opium up to 10u, refining it until rich and fragrant.
 	if(istype(I, /obj/item/food/drug/opium/raw))
 		var/obj/item/food/drug/opium/raw/other = I
 
-		var/current = reagents.get_reagent_amount(/datum/reagent/medicine/morphine)
+		var/current = reagents.get_reagent_amount(/datum/reagent/drug/opium)
 		if(current >= 10)
 			to_chat(user, span_notice("This chunk can't hold any more."))
 			return TRUE
@@ -162,7 +164,7 @@
 		var/transferred = other.reagents.trans_to(src, capacity_left)
 
 		if(transferred > 0)
-			var/overflow = reagents.get_reagent_amount(/datum/reagent/medicine/morphine) - 10
+			var/overflow = reagents.get_reagent_amount(/datum/reagent/drug/opium) - 10
 			if(overflow > 0)
 				reagents.trans_to(other, overflow)
 

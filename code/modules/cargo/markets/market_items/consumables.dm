@@ -119,8 +119,8 @@
 	price_max = CARGO_CRATE_VALUE * 0.5
 	availability_prob = 35
 
-/datum/market_item/consumable/heroin
-	name = "Heroin"
+/datum/market_item/consumable/opium
+	name = "Raw Opium"
 	desc = "Chase the dragon."
 	item = /obj/item/food/drug/opium
 
