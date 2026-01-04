@@ -1,4 +1,5 @@
 /obj/item/clothing/glasses/hud
+	gender = NEUTER
 	name = "HUD"
 	desc = "A heads-up display that provides important info in (almost) real time."
 	flags_1 = null //doesn't protect eyes because it's a monocle, duh
@@ -99,6 +100,7 @@
 	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_MEDICAL_HUD)
 
 /obj/item/clothing/glasses/hud/health/sunglasses
+	gender = PLURAL
 	name = "medical HUDSunglasses"
 	desc = "Sunglasses with a medical HUD."
 	icon_state = "sunhudmed"
@@ -141,6 +143,7 @@
 	icon_state = length(color_cutoffs) ? initial(icon_state) : "night_off"
 
 /obj/item/clothing/glasses/hud/diagnostic/sunglasses
+	gender = PLURAL
 	name = "diagnostic sunglasses"
 	desc = "Sunglasses with a diagnostic HUD."
 	icon_state = "sunhuddiag"
@@ -185,6 +188,7 @@
 	user.update_worn_glasses()
 
 /obj/item/clothing/glasses/hud/security/sunglasses
+	gender = PLURAL
 	name = "security HUDSunglasses"
 	desc = "Sunglasses with a security HUD."
 	icon_state = "sunhudsec"
@@ -220,6 +224,7 @@
 	icon_state = length(color_cutoffs) ? initial(icon_state) : "night_off"
 
 /obj/item/clothing/glasses/hud/security/sunglasses/gars
+	gender = PLURAL
 	name = "\improper HUD gar glasses"
 	desc = "GAR glasses with a HUD."
 	icon_state = "gar_sec"
@@ -302,6 +307,7 @@
 	thermal_overload()
 
 /obj/item/clothing/glasses/hud/spacecop
+	gender = PLURAL
 	name = "police aviators"
 	desc = "For thinking you look cool while brutalizing protestors and minorities."
 	icon_state = "bigsunglasses"
@@ -312,6 +318,7 @@
 
 
 /obj/item/clothing/glasses/hud/spacecop/hidden // for the undercover cop
+	gender = PLURAL
 	name = "sunglasses"
 	desc = "These sunglasses are special, and let you view potential criminals."
 	icon_state = "sun"
