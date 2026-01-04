@@ -1,7 +1,7 @@
 /obj/item/rgb_lights
 	name = "RGB camera lights upgrade"
 	desc = "A fancy cosmetic upgrade for artificial intelligence units, causes any cameras they peer through with camera lights on to be tinted a random color of the rainbow."
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = 'icons/obj/devices/floppy_disks.dmi'
 	icon_state = "datadisk1"
 
 /obj/item/rgb_lights/pre_attack(atom/A, mob/living/user, proximity)

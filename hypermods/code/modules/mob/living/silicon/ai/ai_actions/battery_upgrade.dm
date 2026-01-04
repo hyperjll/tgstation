@@ -1,7 +1,7 @@
 /obj/item/battery_upgrade
 	name = "electrical storage upgrade"
 	desc = "A borderline illegal upgrade for artificial intelligence units, increasing their total battery capacity by an estimated 10 points."
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = 'icons/obj/devices/floppy_disks.dmi'
 	icon_state = "datadisk1"
 
 /obj/item/battery_upgrade/pre_attack(atom/A, mob/living/user, proximity)

@@ -1,7 +1,7 @@
 /obj/item/spacecoin_miner_upgrade
 	name = "spacecoin miner upgrade"
 	desc = "An upgrade for artificial intelligence units, which directs half of their power generation toward money generation for the station's cargo department."
-	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon = 'icons/obj/devices/floppy_disks.dmi'
 	icon_state = "datadisk1"
 
 /obj/item/spacecoin_miner_upgrade/pre_attack(atom/A, mob/living/user, proximity)
