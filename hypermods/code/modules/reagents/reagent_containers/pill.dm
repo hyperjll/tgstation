@@ -125,3 +125,11 @@
 	volume = 10
 	list_reagents = list(/datum/reagent/toxin/cyanide = 10)
 	rename_with_volume = TRUE
+
+/obj/item/reagent_containers/applicator/pill/antidepressant
+	name = "anti-depressant pill"
+	desc = "Used for supressing poor moods and certain mental illnesses."
+	icon_state = "pill18"
+	volume = 10
+	list_reagents = list(/datum/reagent/drug/antidepressants = 10)
+	rename_with_volume = TRUE

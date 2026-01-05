@@ -306,6 +306,9 @@
 		mob_parent.mob_mood.set_sanity(SANITY_NEUTRAL) // Im using set_sanity here for safety reasons as opposed to forcing it, like with mood. bite me.
 		mob_parent.mob_mood.mood_level = MOOD_LEVEL_NEUTRAL
 
+	if(mob_parent.has_status_effect(/datum/status_effect/antidepressants) && mob_parent.mob_mood.mood_level <= MOOD_LEVEL_SAD1) // If we're sad and on anti-depressants we return to neutral.
+		mob_parent.mob_mood.mood_level = MOOD_LEVEL_NEUTRAL
+
 	update_mood_icon()
 	SEND_SIGNAL(mob_parent, COMSIG_CARBON_MOOD_UPDATE)
 

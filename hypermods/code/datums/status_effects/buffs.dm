@@ -179,3 +179,15 @@
 	desc = "Your brain's been permanently enhanced by a Neural Booster. Many of your physical and mental abilities have been improved."
 	icon = 'hypermods/icons/hud/screen_alert.dmi'
 	icon_state = "neuralboosted"
+
+
+/datum/status_effect/antidepressants
+	id = "antidepressants"
+	duration = INFINITY
+	alert_type = /atom/movable/screen/alert/status_effect/antidepressants
+
+/atom/movable/screen/alert/status_effect/antidepressants
+	name = "Anti-Depressants"
+	desc = "You're on Anti-Depressants. You feel like everything will be alright."
+	icon = 'hypermods/icons/hud/screen_alert.dmi'
+	icon_state = "antidepressants"

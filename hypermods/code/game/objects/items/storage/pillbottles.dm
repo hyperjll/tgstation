@@ -116,8 +116,29 @@
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/patch/aiuri
 
+/obj/item/storage/pill_bottle/styptic_powder
+	name = "bottle of styptic powder patches"
+	desc = "Contains styptic powder patches used to treat brute damage."
+	spawn_count = 7
+	spawn_type = /obj/item/reagent_containers/applicator/patch/styptic_powder
+
+/obj/item/storage/pill_bottle/silver_sulfadiazine
+	name = "bottle of silver sulfadiazine patches"
+	desc = "Contains silver sulfadiazine patches used to treat burn damage."
+	spawn_count = 7
+	spawn_type = /obj/item/reagent_containers/applicator/patch/silver_sulfadiazine
+
 /obj/item/storage/pill_bottle/cyanide
 	name = "bottle of cyanide pills"
 	desc = "Contains pills with a deadly poison. You probably shouldn't consume the pills yourself."
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/cyanide
+
+/obj/item/storage/pill_bottle/antidepressant
+	name = "bottle of anti-depressant pills"
+	desc = "Contains pills with a neurological enhancer. Used for suppressing mental illnesses and poor moods."
+	spawn_count = 7
+	spawn_type = /obj/item/reagent_containers/applicator/pill/antidepressant
+
+/obj/item/storage/pill_bottle/antidepressant/less
+	spawn_count = 3

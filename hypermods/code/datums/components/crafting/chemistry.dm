@@ -33,7 +33,7 @@
 	reqs = list(
 		/obj/item/reagent_containers/cup/bottle = 1,
 		/datum/reagent/medicine/mindwipe = 5,
-		/datum/reagent/medicine/mannitol = 10,
+		/datum/reagent/drug/antidepressants = 10,
 		/datum/reagent/medicine/neurine = 10,
 	)
 	time = 20 SECONDS

@@ -36,3 +36,9 @@
 	required_reagents = list(/datum/reagent/drug/painkillers = 2, /datum/reagent/medicine/morphine = 1, /datum/reagent/oxygen = 1)
 	required_temp = 480
 	reaction_tags = REACTION_TAG_OTHER | REACTION_TAG_HEALING | REACTION_TAG_DRUG
+
+/datum/chemical_reaction/antidepressants
+	results = list(/datum/reagent/drug/antidepressants = 1)
+	required_reagents = list(/datum/reagent/medicine/epinephrine = 2, /datum/reagent/medicine/ultravasculine = 1, /datum/reagent/silicon = 1)
+	required_temp = 300
+	reaction_tags = REACTION_TAG_OTHER | REACTION_TAG_DRUG

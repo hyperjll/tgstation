@@ -88,6 +88,7 @@
 		/obj/item/storage/box/flat/fentanylpatches,
 		/obj/item/reagent_containers/syringe/contraband/opium,
 		/obj/item/reagent_containers/syringe/contraband/heroin,
+		/obj/item/storage/pill_bottle/antidepressant/less,
 	)
 
 /obj/effect/spawner/random/contraband/permabrig_weapon

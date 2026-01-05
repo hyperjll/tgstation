@@ -256,3 +256,39 @@
 			return UPDATE_MOB_HEALTH
 		affected_mob.set_dizzy_if_lower(10 SECONDS)
 		affected_mob.set_jitter_if_lower(10 SECONDS)
+
+
+/datum/reagent/drug/antidepressants
+	name = "Anti-Depressants"
+	description = "A drug which acts as an emotional stabilizer within the host's mind, eliminating major negative moods and suppressing the symptoms of certain neurological diseases or mental illnesses."
+	color = "#FFFFFF" // pure cu- I-I MEAN... Anti-Sad Juic- no, wait that's even worse. I'll stop.
+	taste_description = "fluffy-wuffy clouds and cotton-candy kisses"
+	ph = 12
+	overdose_threshold = 20
+	metabolization_rate = 0.4 * REAGENTS_METABOLISM
+	addiction_types = list(/datum/addiction/opioids = 6)
+	var/isaspastic = FALSE
+
+/datum/reagent/drug/antidepressants/expose_mob(mob/living/carbon/human/human_thing, methods, reac_volume, show_message, touch_protection)
+	. = ..()
+	if(!ishuman(human_thing))
+		return
+
+/datum/reagent/drug/antidepressants/overdose_process(mob/living/affected_mob, seconds_per_tick)
+	. = ..()
+	if(SPT_PROB(12, seconds_per_tick))
+		if(affected_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, 0.8 * REM * seconds_per_tick * normalise_creation_purity(), required_organ_flag = affected_organ_flags))
+			return UPDATE_MOB_HEALTH
+		affected_mob.set_dizzy_if_lower(20 SECONDS)
+	if(!isaspastic)
+		affected_mob.apply_status_effect(/datum/status_effect/spasms/antidepressants)
+		isaspastic = TRUE
+
+/datum/reagent/drug/antidepressants/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.apply_status_effect(/datum/status_effect/antidepressants)
+
+/datum/reagent/drug/antidepressants/on_mob_end_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.remove_status_effect(/datum/status_effect/antidepressants)
+	affected_mob.remove_status_effect(/datum/status_effect/spasms/antidepressants)

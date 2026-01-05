@@ -24,3 +24,7 @@
 	desc = "You've been reduced to a hollow shell of your former self, unable to speak and unable to recover. You are all and you are nothing."
 	icon = 'hypermods/icons/hud/screen_alert.dmi'
 	icon_state = "hollow"
+
+
+/datum/status_effect/spasms/antidepressants
+	id = "antidepressants_overdose"
