@@ -5,6 +5,7 @@
 	overdose_threshold = 30
 	inverse_chem_val = 0.3
 	inverse_chem = /datum/reagent/inverse/bicaridine
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/bicaridine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -25,6 +26,7 @@
 	description = "Restores oxygen loss. Overdose causes it instead."
 	color = "#24e7d9"
 	overdose_threshold = 30
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/dexalin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -47,6 +49,7 @@
 	overdose_threshold = 30
 	inverse_chem_val = 0.3
 	inverse_chem = /datum/reagent/inverse/kelotane
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/kelotane/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -68,6 +71,7 @@
 	color = "#24ea28"
 	overdose_threshold = 30
 	taste_description = "a roll of gauze"
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/antitoxin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -91,6 +95,7 @@
 	color = "#C8A5DC"
 	overdose_threshold = 30
 	taste_description = "grossness"
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/tricordrazine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -119,6 +124,7 @@
 	description = "Restores oxygen loss and restores blood volume quickly. Overdose causes both instead."
 	color = "#0742CA"
 	overdose_threshold = 25
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/dexalinplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -146,6 +152,7 @@
 	description = "Restores fire damage greatly. Overdose causes a drop in bodily temperature and oxygen loss. Overdoses in small amounts."
 	color = "#084936"
 	overdose_threshold = 20
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/dermaline/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -170,6 +177,7 @@
 	description = "Restores toxin damage slowly, reverses the severity of zombie infections. Overdose causes minor tissue damage."
 	color = "#6600FF"
 	overdose_threshold = 20
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/dylovene/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -200,6 +208,7 @@
 	color = "#00cc7a"
 	overdose_threshold = 30
 	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS)
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/hyronalin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -222,6 +231,7 @@
 	description = "A strong all-purpose radiation cure/blocker that also heals minor toxin damage, side effects include minor bruising of the patient. Has no overdose effects."
 	color = "#b34700"
 	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS, TRAIT_RADIMMUNE)
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/arithrazine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -240,6 +250,7 @@
 	overdose_threshold = 15
 	clot_rate = 0.5 // .2 better than sangurite (0.3)
 	passive_bleed_modifier = 0.5 // .2 better than sangurite (0.7)
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/coagulant/tranexamicacid/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -336,6 +347,7 @@
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
 	color = "#710000"
 	overdose_threshold = 30
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/ultravasculine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -404,7 +416,6 @@
 	description = "Specialized nanites that cures all damage types slowly over time. Stabilizes temperature and cleanses radiation. Metabolizes very slowly."
 	color = "#DCDCDC"
 	metabolization_rate = 0.1
-	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	self_consuming = TRUE
 	var/healing = 0.1
 	var/radpower = 10
@@ -545,6 +556,7 @@
 	description = "A granulocyte colony stimulating factor analog, which helps the body create more blood."
 	color = "#660000"
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/filgrastim/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -563,6 +575,7 @@
 	overdose_threshold = 10
 	clot_rate = 0.7 // .4 better than sangurite (0.3)
 	passive_bleed_modifier = 0.3 // .4 better than sangurite (0.7)
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/coagulant/proconvertin/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -577,6 +590,7 @@
 	name = "Teporone"
 	description = "A less effective version of leporazine, it will effectively regulate a patient's body temperature, ensuring it never leaves safe levels."
 	color = "#ddc8e9"
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/medicine/teporone/on_mob_life(mob/living/carbon/M, seconds_per_tick)
 	if(M.bodytemperature > BODYTEMP_NORMAL)

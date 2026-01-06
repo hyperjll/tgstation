@@ -2,7 +2,6 @@
 	name = "Blood"
 	description = "Are you sure this is tomato juice?"
 	color = "#C80000" // rgb: 146, 209, 125
-	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	taste_description = "iron"
 
 /datum/reagent/diseasedblood/expose_mob(mob/living/L, methods=TOUCH, reac_volume, show_message = 1, permeability = 1)
@@ -57,6 +56,7 @@
 	description = "Commonly synthesized in off-station laboratories, used in several high-quality medicines."
 	color ="#FFF44F"
 	taste_description = "lemony"
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/vestine
 	name = "Vestine"

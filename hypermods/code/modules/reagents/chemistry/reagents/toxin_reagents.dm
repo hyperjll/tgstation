@@ -133,6 +133,7 @@
 	toxpwr = 0
 	taste_description = "sourness"
 	metabolization_rate = 1 * REAGENTS_METABOLISM
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	var/slurtimer = (3 * REM)
 
 /datum/reagent/toxin/heartbreaker/on_mob_life(mob/living/carbon/M)
@@ -172,6 +173,7 @@
 	color = "#FFFFFF"
 	toxpwr = 0
 	metabolization_rate = 0.04 * REAGENTS_METABOLISM // Slowly metabolized as the body only really gets rid of it when it loses cells to it.
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/toxin/ricin/on_mob_life(mob/living/carbon/M)
 	M.adjust_organ_loss(ORGAN_SLOT_HEART, 0.1)

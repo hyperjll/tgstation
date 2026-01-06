@@ -52,7 +52,6 @@
 	color = "#e38e44"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 35
-	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	addiction_types = list(/datum/addiction/stimulants = 0.6) //0.26 per 2 seconds
 	metabolized_traits = list(TRAIT_BATON_RESISTANCE, TRAIT_ANALGESIA, TRAIT_STIMULATED)
 
@@ -143,6 +142,7 @@
 	overdose_threshold = 30
 	addiction_types = list(/datum/addiction/opioids = 10)
 	taste_description = "diet morphine"
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	metabolized_traits = list(TRAIT_ANALGESIA)
 
 /datum/reagent/drug/painkillers/on_mob_metabolize(mob/living/affected_mob)
