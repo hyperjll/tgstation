@@ -265,7 +265,9 @@
 	taste_description = "fluffy-wuffy clouds and cotton-candy kisses"
 	ph = 12
 	overdose_threshold = 20
-	metabolization_rate = 0.4 * REAGENTS_METABOLISM
+	metabolization_rate = 0.12 * REAGENTS_METABOLISM
+	metabolized_traits = list(TRAIT_FEARLESS)
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	addiction_types = list(/datum/addiction/opioids = 6)
 	var/isaspastic = FALSE
 
