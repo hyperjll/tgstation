@@ -52,6 +52,9 @@
 		return FALSE
 	return TRUE
 
+/obj/machinery/computer/shuttle/syndicate/drop_pod/commando
+	shuttleId = "torrent_of_death"
+
 /obj/machinery/computer/camera_advanced/shuttle_docker/syndicate
 	name = "syndicate shuttle navigation computer"
 	desc = "Used to designate a precise transit location for the syndicate shuttle."

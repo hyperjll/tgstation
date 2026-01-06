@@ -199,6 +199,9 @@
 /area/shuttle/assault_pod
 	name = "Steel Rain"
 
+/area/shuttle/assault_pod/commando
+	name = "Torrent of Death"
+
 /area/shuttle/sbc_starfury
 	name = "SBC Starfury"
 

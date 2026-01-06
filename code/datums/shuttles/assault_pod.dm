@@ -5,3 +5,7 @@
 /datum/map_template/shuttle/assault_pod/default
 	suffix = "default"
 	name = "assault pod (Default)"
+
+/datum/map_template/shuttle/assault_pod/commando
+	suffix = "commando"
+	name = "assault pod (Commando)"

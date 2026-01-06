@@ -2,6 +2,10 @@
 	name = "assault pod"
 	shuttle_id = "steel_rain"
 
+/obj/docking_port/mobile/assault_pod/commando
+	name = "assault pod"
+	shuttle_id = "torrent_of_death"
+
 /obj/docking_port/mobile/assault_pod/request(obj/docking_port/stationary/S)
 	if(!(z in SSmapping.levels_by_trait(ZTRAIT_STATION))) //No launching pods that have already launched
 		return ..()
@@ -32,6 +36,9 @@
 
 
 /obj/item/assault_pod/attack_self(mob/living/user)
+	if(user?.mind?.has_antag_datum(/datum/antagonist/nukeop/commando) && shuttle_id == "steel_rain") // We won't need a subtype if the targeting device always picks the right one of the two.
+		shuttle_id = "torrent_of_death"
+
 	var/target_area = tgui_input_list(user, "Area to land", "Landing Zone", GLOB.teleportlocs)
 	if(isnull(target_area))
 		return

@@ -2,36 +2,35 @@
 "b" = (
 /obj/machinery/porta_turret/syndicate/pod,
 /turf/closed/wall/mineral/plastitanium,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "c" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "d" = (
 /turf/closed/wall/mineral/plastitanium,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "e" = (
 /obj/machinery/door/airlock/centcom{
 	aiControlDisabled = 1;
 	name = "Assault Pod"
 	},
-/obj/docking_port/mobile/assault_pod{
-	name = "steel rain";
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/obj/docking_port/mobile/assault_pod/commando{
 	port_direction = 4;
 	preferred_direction = 4
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/plating,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "h" = (
-/obj/machinery/computer/shuttle/syndicate/drop_pod,
+/obj/machinery/computer/shuttle/syndicate/drop_pod/commando,
 /turf/closed/wall/mineral/plastitanium,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "p" = (
 /turf/open/floor/mineral/plastitanium/red,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "t" = (
 /obj/machinery/door/airlock/centcom{
 	aiControlDisabled = 1;
@@ -39,44 +38,44 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/plating,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "D" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/sleeper/syndie/fullupgrade,
 /turf/open/floor/mineral/plastitanium/red,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "H" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "L" = (
 /obj/machinery/light/directional/south,
 /obj/machinery/sleeper/syndie/fullupgrade{
 	dir = 1
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "M" = (
 /obj/machinery/sleeper/syndie/fullupgrade{
 	dir = 8
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "Q" = (
 /obj/machinery/sleeper/syndie/fullupgrade{
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "R" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Assault Pod"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/plating,
-/area/shuttle/assault_pod)
+/area/shuttle/assault_pod/commando)
 "V" = (
 /turf/template_noop,
 /area/template_noop)
