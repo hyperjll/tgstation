@@ -16,10 +16,8 @@
 		/obj/item/stack/medical/ointment = 2,
 		/obj/item/stack/medical/bloodpack = 2,
 		/obj/item/reagent_containers/cup/bottle/toxin = 1,
-		/obj/item/reagent_containers/cup/bottle/morphine = 1,
-		/obj/item/reagent_containers/cup/bottle/epinephrine= 1,
-		/obj/item/reagent_containers/cup/bottle/multiver = 1,
-		/obj/item/storage/box/rxglasses = 1)
+		/obj/item/storage/box/rxglasses = 1,
+		/obj/effect/spawner/random/medical/chem_supplies = 3)
 	generate_items_inside(items_inside,src)
 
 /obj/structure/closet/secure_closet/medical2
@@ -74,6 +72,7 @@
 	new /obj/item/clothing/glasses/blindfold(src)
 	new /obj/item/circuitboard/machine/chem_dispenser/psych(src)
 	new /obj/item/assembly/flash(src)
+	new /obj/effect/spawner/random/medical/chem_supplies(src)
 
 /obj/structure/closet/secure_closet/chief_medical
 	name = "chief medical officer's locker"
@@ -131,13 +130,10 @@
 	new /obj/item/reagent_containers/dropper(src)
 	new /obj/item/reagent_containers/cup/bottle/acidic_buffer(src) //hopefully they get the hint
 	new /obj/item/reagent_containers/cup/bottle/ipecacide(src)
-	new /obj/item/reagent_containers/cup/bottle/bicaridine(src)
-	new /obj/item/reagent_containers/cup/bottle/dermaline(src)
-	new /obj/item/reagent_containers/cup/bottle/dylovene(src)
-	new /obj/item/reagent_containers/cup/bottle/dexalin(src)
-	new /obj/item/reagent_containers/cup/bottle/hyronalin(src)
 	new /obj/item/reagent_containers/cup/bottle/inaprovaline(src)
 	new /obj/item/reagent_containers/cup/bottle/atropine(src)
+	for(var/i in 1 to 5)
+		new /obj/effect/spawner/random/medical/chem_supplies(src)
 
 /obj/structure/closet/secure_closet/chemical/heisenberg //contains one of each beaker, syringe etc.
 	name = "advanced chemical closet"
@@ -167,6 +163,7 @@
 		/obj/item/radio/headset/headset_med = 2,
 		/obj/item/emergency_bed = 2,
 		/obj/item/storage/bag/garment/paramedic = 2,
+		/obj/effect/spawner/random/medical/chem_supplies = 2,
 	)
 	generate_items_inside(items_inside,src)
 

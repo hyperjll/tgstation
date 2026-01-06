@@ -4485,7 +4485,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/medical3,
+/obj/structure/closet/secure_closet/medical1,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/central)
 "bjS" = (
@@ -20043,6 +20043,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
+"fPo" = (
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = 6
+	},
+/turf/open/space/basic,
+/area/space)
 "fPr" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/plating,
@@ -26880,6 +26886,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
 /obj/structure/disposalpipe/segment,
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/obj/effect/mapping_helpers/airlock/access/all/science/genetics,
 /turf/open/floor/iron/grid,
 /area/station/medical/medbay/lobby)
 "hLI" = (
@@ -41008,6 +41015,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/medical/general,
+/obj/effect/mapping_helpers/airlock/access/all/science/genetics,
 /turf/open/floor/iron/grid,
 /area/station/medical/medbay/lobby)
 "lNL" = (
@@ -53056,6 +53064,9 @@
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/window/left/directional/south,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/techmaint,
 /area/station/medical/medbay/lobby)
 "puI" = (
@@ -70108,6 +70119,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/yellow,
+/obj/machinery/vending/snack/random,
 /turf/open/floor/iron/dark/side{
 	dir = 8
 	},
@@ -75522,6 +75534,15 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/hangover,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/supplies{
+	pixel_y = 12
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/surgery/theatre)
 "vNu" = (
@@ -84156,6 +84177,22 @@
 /area/station/cargo/storage)
 "yar" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/medkit{
+	pixel_y = 9
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -92377,7 +92414,7 @@ nnx
 nnx
 nnx
 nnx
-nnx
+fPo
 nnx
 nnx
 nnx

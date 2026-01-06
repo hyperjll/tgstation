@@ -3965,6 +3965,9 @@
 	pixel_x = -6;
 	pixel_y = 4
 	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = -6
+	},
 /turf/open/floor/iron/white/smooth_corner{
 	dir = 8
 	},
@@ -5771,15 +5774,24 @@
 	dir = 1
 	},
 /obj/structure/table,
-/obj/item/reagent_containers/cup/bottle/epinephrine{
-	pixel_y = 6;
-	pixel_x = -4
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
 	},
-/obj/item/reagent_containers/cup/bottle/multiver{
-	pixel_x = 4;
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
 	pixel_y = 6
 	},
-/obj/item/reagent_containers/cup/bottle/morphine,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = -6
+	},
 /turf/open/floor/iron/white/smooth_corner{
 	dir = 1
 	},
@@ -7648,6 +7660,9 @@
 /obj/item/storage/box/bandages{
 	pixel_y = 6
 	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = -6
+	},
 /turf/open/floor/iron/white,
 /area/mine/laborcamp/production)
 "LR" = (
@@ -7947,6 +7962,10 @@
 	},
 /obj/structure/table,
 /obj/machinery/wall_healer/directional/south,
+/obj/effect/spawner/random/medical/minor_healing,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = 6
+	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
@@ -9601,7 +9620,7 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/brown/filled/line,
 /obj/structure/table,
-/obj/item/storage/medkit/regular,
+/obj/effect/spawner/random/medical/medkit,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},

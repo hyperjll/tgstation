@@ -21189,6 +21189,9 @@
 	dir = 8
 	},
 /obj/structure/rack,
+/obj/effect/spawner/random/medical/minor_healing,
+/obj/effect/spawner/random/medical/minor_healing,
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
 "hkB" = (
@@ -21211,6 +21214,7 @@
 	pixel_x = 9;
 	pixel_y = 1
 	},
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "hkH" = (
@@ -23669,6 +23673,15 @@
 "icY" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/table/reinforced,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = 6
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/medbay/central)
 "idd" = (
@@ -25275,6 +25288,9 @@
 /obj/machinery/camera/directional/east,
 /obj/effect/turf_decal/siding/red{
 	dir = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
 	},
 /turf/open/floor/iron/white,
 /area/station/security/medical)
@@ -32184,6 +32200,9 @@
 	pixel_x = 5
 	},
 /obj/machinery/vitals_reader/directional/north,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "kEW" = (
@@ -36952,6 +36971,9 @@
 	pixel_y = 11
 	},
 /obj/structure/reagent_dispensers/wall/virusfood/directional/south,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "mij" = (
@@ -41746,13 +41768,13 @@
 /turf/open/floor/iron/smooth,
 /area/station/engineering/break_room)
 "nQH" = (
-/obj/structure/closet{
-	name = "Paramedic Supplies"
-	},
 /obj/effect/turf_decal/siding/blue{
 	dir = 5
 	},
 /obj/machinery/light_switch/directional/north,
+/obj/structure/closet/secure_closet/paramedic,
+/obj/effect/spawner/random/medical/minor_healing,
+/obj/effect/spawner/random/medical/medkit,
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
 "nQP" = (
@@ -52611,15 +52633,15 @@
 /turf/open/floor/iron/grimy,
 /area/station/science/cubicle)
 "rxX" = (
-/obj/structure/closet{
-	name = "Paramedic Supplies"
-	},
 /obj/effect/turf_decal/siding/blue{
 	dir = 4
 	},
 /obj/machinery/camera/autoname/directional/east,
 /obj/machinery/light/cold/directional/east,
 /obj/structure/fireaxecabinet/jawsofrecovery/directional/east,
+/obj/structure/closet/secure_closet/paramedic,
+/obj/effect/spawner/random/medical/minor_healing,
+/obj/effect/spawner/random/medical/medkit,
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
 "rxY" = (
@@ -63773,6 +63795,9 @@
 	pixel_x = 5
 	},
 /obj/machinery/vitals_reader/directional/south,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "vdY" = (

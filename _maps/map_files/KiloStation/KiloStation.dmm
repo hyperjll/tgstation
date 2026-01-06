@@ -2148,6 +2148,12 @@
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 4
 	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/exam_room)
 "aHD" = (
@@ -11643,6 +11649,9 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/port)
 "dSJ" = (
@@ -11822,6 +11831,12 @@
 "dVk" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/storage)
 "dVB" = (
@@ -33429,6 +33444,9 @@
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = 6
+	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/medical)
 "kTk" = (
@@ -61849,6 +61867,12 @@
 	name = "Chemistry Desk";
 	req_access = list("pharmacy")
 	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
 /turf/open/floor/plating,
 /area/station/medical/pharmacy)
 "uiu" = (
@@ -67371,15 +67395,13 @@
 /turf/open/floor/iron,
 /area/station/cargo/bitrunning/den)
 "vUr" = (
-/obj/structure/table/glass,
-/obj/item/crowbar{
-	pixel_x = -8;
-	pixel_y = 11
-	},
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/paramedic,
+/obj/effect/spawner/random/medical/chem_supplies,
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/dark,
 /area/station/medical/paramedic)
 "vUs" = (
@@ -72225,6 +72247,10 @@
 	dir = 8
 	},
 /obj/structure/fireaxecabinet/jawsofrecovery/directional/south,
+/obj/item/crowbar{
+	pixel_x = -8;
+	pixel_y = 11
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/paramedic)
 "xxJ" = (

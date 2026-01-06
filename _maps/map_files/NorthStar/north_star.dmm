@@ -11545,6 +11545,9 @@
 /obj/item/storage/box/evidence,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/red/fourcorners,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = 6
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/detectives_office/private_investigators_office)
 "cTB" = (
@@ -12643,6 +12646,8 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/paramedic,
+/obj/effect/spawner/random/medical/minor_healing,
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
 "dil" = (
@@ -19998,6 +20003,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/structure/closet/secure_closet/security/med,
 /turf/open/floor/iron/dark,
 /area/station/security/detectives_office/private_investigators_office)
 "fjS" = (
@@ -37926,6 +37932,7 @@
 	name = "Pharmacy Desk";
 	req_access = list("pharmacy")
 	},
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "jSD" = (
@@ -39024,6 +39031,9 @@
 /obj/item/universal_scanner{
 	pixel_y = -2;
 	pixel_x = -8
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
 	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/pharmacy)
@@ -40600,7 +40610,6 @@
 /turf/open/floor/pod/light,
 /area/station/maintenance/floor1/starboard/fore)
 "kBc" = (
-/obj/structure/table/reinforced,
 /obj/machinery/flasher/directional/south{
 	id = "virosec_flash"
 	},
@@ -40608,6 +40617,9 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red/fourcorners,
+/obj/machinery/computer/security{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/detectives_office/private_investigators_office)
 "kBi" = (
@@ -43194,6 +43206,7 @@
 /obj/machinery/computer/operating{
 	dir = 1
 	},
+/obj/machinery/vitals_reader/directional/south,
 /turf/open/floor/iron/showroomfloor{
 	name = "lab floor"
 	},
@@ -63316,6 +63329,14 @@
 	},
 /turf/open/floor/engine,
 /area/station/maintenance/floor1/port/aft)
+"qpL" = (
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/paramedic,
+/obj/effect/spawner/random/medical/minor_healing,
+/turf/open/floor/iron/white,
+/area/station/medical/paramedic)
 "qqf" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible/layer4{
 	dir = 8
@@ -70638,6 +70659,10 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/wall_healer/directional/south,
+/obj/effect/spawner/random/medical/minor_healing,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/medbay/lobby)
 "snp" = (
@@ -74226,6 +74251,7 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/red/fourcorners,
+/obj/machinery/recharger,
 /turf/open/floor/iron/dark,
 /area/station/security/detectives_office/private_investigators_office)
 "thM" = (
@@ -82366,6 +82392,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/item/radio/intercom/directional/east,
+/obj/machinery/computer/records/security{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/detectives_office/private_investigators_office)
 "vnX" = (
@@ -88276,6 +88305,12 @@
 /obj/structure/table/reinforced/rglass,
 /obj/effect/turf_decal/box/white,
 /obj/effect/turf_decal/tile/green/opposingcorners,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "wJB" = (
@@ -93439,6 +93474,18 @@
 /obj/machinery/light/cold/no_nightlight/directional/west,
 /turf/open/floor/iron/white,
 /area/station/science/cytology)
+"yaH" = (
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/structure/table/reinforced/rglass,
+/obj/effect/spawner/random/medical/minor_healing,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/turf/open/floor/iron/white/textured,
+/area/station/medical/treatment_center)
 "yaK" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -196633,7 +196680,7 @@ sRR
 tOW
 rwv
 bCd
-dzM
+yaH
 gcm
 txp
 aaU
@@ -196885,7 +196932,7 @@ dUh
 grN
 rmd
 sFG
-loQ
+qpL
 sRR
 tDX
 kRM
@@ -197147,7 +197194,7 @@ biz
 dzM
 kUl
 ghy
-dzM
+yaH
 dYM
 scx
 dzM

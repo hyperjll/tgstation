@@ -2980,6 +2980,7 @@
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 8
 	},
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "alr" = (
@@ -15670,6 +15671,9 @@
 	pixel_x = 1;
 	pixel_y = 1
 	},
+/obj/effect/spawner/random/medical/chem_supplies,
+/obj/effect/spawner/random/medical/chem_supplies,
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/central)
 "blb" = (
@@ -15733,6 +15737,9 @@
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
@@ -17261,6 +17268,9 @@
 /obj/machinery/door/firedoor,
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/paramedic)
 "bsH" = (
@@ -19029,6 +19039,8 @@
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 1
 	},
+/obj/effect/spawner/random/medical/minor_healing,
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/medical)
 "bAe" = (
@@ -19560,10 +19572,10 @@
 /turf/open/floor/iron,
 /area/station/security/checkpoint/medical)
 "bCx" = (
-/obj/structure/closet/secure_closet/chemical,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/chemical/heisenberg,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
 "bCE" = (
@@ -19998,6 +20010,8 @@
 "bEz" = (
 /obj/structure/closet/crate/medical,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/effect/spawner/random/medical/chem_supplies,
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical)
 "bEE" = (
@@ -30211,6 +30225,7 @@
 /obj/item/hemostat,
 /obj/item/cautery,
 /obj/item/hemostat,
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine)
 "dSK" = (
@@ -40361,6 +40376,9 @@
 /obj/item/reagent_containers/syringe,
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron,
 /area/station/medical/treatment_center)
 "mDW" = (
@@ -43643,6 +43661,9 @@
 /obj/item/reagent_containers/cup/bottle/epinephrine,
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/machinery/vitals_reader/directional/east,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron,
 /area/station/medical/treatment_center)
 "pkM" = (
@@ -55221,6 +55242,10 @@
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/structure/table,
+/obj/effect/spawner/random/medical/minor_healing,
+/obj/effect/spawner/random/medical/minor_healing,
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "xTi" = (

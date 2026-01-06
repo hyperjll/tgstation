@@ -5201,6 +5201,9 @@
 	},
 /obj/machinery/airalarm/directional/north,
 /obj/structure/extinguisher_cabinet/directional/east,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/white/textured,
 /area/station/medical/treatment_center)
 "aFV" = (
@@ -5397,6 +5400,9 @@
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 5
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = 6
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
@@ -12846,6 +12852,7 @@
 	name = "Pharmacy Desk";
 	req_access = list("pharmacy")
 	},
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "bkL" = (
@@ -13570,6 +13577,12 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/north,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "bnq" = (
@@ -36204,6 +36217,7 @@
 	name = "Pharmacy Desk";
 	req_access = list("pharmacy")
 	},
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "hab" = (
@@ -36668,6 +36682,9 @@
 	name = "Medbay RC"
 	},
 /obj/effect/mapping_helpers/requests_console/assistance,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/white/textured,
 /area/station/medical/treatment_center)
 "hit" = (
@@ -39516,6 +39533,9 @@
 	c_tag = "Medbay - Pharmacy";
 	name = "Pharmacy Camera";
 	network = list("ss13","medbay")
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
@@ -45652,6 +45672,13 @@
 /obj/machinery/light/small/directional/south,
 /obj/structure/table/reinforced/rglass,
 /obj/structure/sign/poster/official/cleanliness/directional/south,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "kDe" = (
@@ -68042,6 +68069,7 @@
 	pixel_x = -7;
 	pixel_y = 7
 	},
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "tot" = (
@@ -75535,6 +75563,9 @@
 	},
 /obj/item/reagent_containers/syringe,
 /obj/structure/window/reinforced/spawner/directional/east,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = 6
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/medbay/lobby)
 "wmK" = (

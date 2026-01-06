@@ -211,6 +211,11 @@
 "adx" = (
 /turf/closed/wall,
 /area/station/science/auxlab/firing_range)
+"ady" = (
+/obj/structure/closet/crate/medical,
+/obj/effect/spawner/random/contraband/narcotics,
+/turf/open/floor/plating,
+/area/station/maintenance/department/medical/morgue)
 "adG" = (
 /obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
 	dir = 9
@@ -1141,6 +1146,8 @@
 /obj/item/radio/intercom/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/vitals_reader/directional/south,
+/obj/effect/spawner/random/medical/chem_supplies,
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/fore)
 "avP" = (
@@ -14104,6 +14111,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 1
 	},
+/obj/structure/closet/secure_closet/medical1,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "fyw" = (
@@ -19359,6 +19367,9 @@
 /obj/structure/table/reinforced,
 /obj/machinery/light/no_nightlight/directional/west,
 /obj/machinery/vitals_reader/directional/west,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "hzj" = (
@@ -30946,6 +30957,7 @@
 "mpB" = (
 /obj/machinery/light/small/directional/north,
 /obj/effect/turf_decal/trimline/yellow/filled/corner,
+/obj/structure/closet/secure_closet/chemical,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "mpE" = (
@@ -33862,6 +33874,7 @@
 	dir = 4
 	},
 /obj/machinery/newscaster/directional/east,
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "nAL" = (
@@ -34052,6 +34065,8 @@
 	dir = 9
 	},
 /obj/machinery/airalarm/directional/west,
+/obj/effect/spawner/random/medical/chem_supplies,
+/obj/effect/spawner/random/medical/chem_supplies,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "nEY" = (
@@ -90257,7 +90272,7 @@ hpj
 hpj
 xDv
 jxZ
-wWR
+ady
 wvD
 hCa
 baU

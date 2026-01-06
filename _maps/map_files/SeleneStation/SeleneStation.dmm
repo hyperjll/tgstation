@@ -8180,6 +8180,18 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/effect/turf_decal/tile/blue/full,
 /obj/structure/table/glass,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
 /turf/open/floor/iron/white/textured_large,
 /area/station/medical/medbay/central)
 "dfi" = (
@@ -20613,6 +20625,7 @@
 /obj/structure/table/glass,
 /obj/machinery/airalarm/directional/east,
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/effect/spawner/random/medical/medkit,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery)
 "iiO" = (
@@ -22577,6 +22590,12 @@
 	dir = 1;
 	id = "pharmacy_shutters";
 	name = "Pharmacy Shutters"
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
@@ -29399,6 +29418,7 @@
 	pixel_y = 8
 	},
 /obj/machinery/light/small/directional/west,
+/obj/effect/spawner/random/contraband/narcotics,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/break_room)
 "lCf" = (
@@ -32057,6 +32077,18 @@
 "mwm" = (
 /obj/effect/turf_decal/tile/blue/full,
 /obj/structure/table/glass,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
 /turf/open/floor/iron/white/textured_large,
 /area/station/medical/medbay/central)
 "mwx" = (
@@ -39918,6 +39950,12 @@
 	pixel_x = -7;
 	pixel_y = -1
 	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/minor_healing{
+	pixel_y = 7
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "pFg" = (
@@ -41447,6 +41485,17 @@
 "qjy" = (
 /turf/open/floor/wood,
 /area/station/maintenance/fore)
+"qjR" = (
+/obj/structure/table/glass,
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/surgery)
 "qka" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/orange/visible{
 	dir = 1
@@ -45313,8 +45362,13 @@
 "rQt" = (
 /obj/structure/table/glass,
 /obj/machinery/airalarm/directional/west,
-/obj/item/book/manual/wiki/surgery,
+/obj/item/book/manual/wiki/surgery{
+	pixel_x = 6
+	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery)
 "rQu" = (
@@ -58628,6 +58682,12 @@
 "xee" = (
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/surgery)
 "xeH" = (
@@ -100537,7 +100597,7 @@ qPe
 ycg
 nHM
 ycg
-xee
+qjR
 vXl
 iiw
 qiC
