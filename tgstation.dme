@@ -7359,6 +7359,7 @@
 #include "hypermods\code\modules\cargo\markets\market_items\clothing.dm"
 #include "hypermods\code\modules\cargo\markets\market_items\clownonly.dm"
 #include "hypermods\code\modules\cargo\markets\market_items\consumables.dm"
+#include "hypermods\code\modules\cargo\markets\market_items\machinery.dm"
 #include "hypermods\code\modules\cargo\markets\market_items\misc.dm"
 #include "hypermods\code\modules\cargo\markets\market_items\tools.dm"
 #include "hypermods\code\modules\cargo\markets\market_items\weapons.dm"

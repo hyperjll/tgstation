@@ -264,6 +264,7 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 		/obj/effect/spawner/random/techstorage/ai_all/random_pick = 2,
 		/obj/effect/spawner/random/techstorage/command_all/random_pick = 1,
 		/obj/effect/spawner/random/techstorage/rnd_secure_all/random_pick = 1,
+		/obj/item/circuitboard/machine/ltsrbt = 2,
 		) = 4,
 
 	list(//medical and chemicals
