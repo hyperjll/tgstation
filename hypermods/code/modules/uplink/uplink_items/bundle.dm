@@ -38,9 +38,9 @@
 
 /datum/uplink_item/bundles_tc/drugpeddler
 	name = "Drug Peddling Kit"
-	desc = "A box containing 12 hardcore street drugs, for commercial purposes only... \
-			but we'll make an exception for you. Sell them, distribute them, or use these hardcore drugs yourself! \
-			Contents of these kits can vary between purchases. Use with caution."
+	desc = "A box containing hardcore street drugs like Meth, Kronkaine, and Opium. \
+			Can additionally include up to 12 additional hardcore drugs of various kinds! \
+			Please refrain from personal use. Distribute with malicious intent."
 	cost = 4
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

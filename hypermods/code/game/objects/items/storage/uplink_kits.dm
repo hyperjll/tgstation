@@ -1049,7 +1049,6 @@
 
 /obj/item/storage/box/syndie_kit/drugpeddler/PopulateContents()
 	var/list/item_list = list(
-		/obj/item/food/drug/moon_rock,
 		/obj/item/food/drug/saturnx,
 		/obj/item/reagent_containers/cup/blastoff_ampoule,
 		/obj/item/reagent_containers/hypospray/medipen/morphine,
@@ -1072,6 +1071,7 @@
 		/obj/item/reagent_containers/syringe/contraband/bath_salts,
 		/obj/item/reagent_containers/syringe/contraband/fentanyl,
 		/obj/item/reagent_containers/syringe/contraband/space_drugs,
+		/obj/item/reagent_containers/syringe/contraband/heroin,
 		/obj/item/reagent_containers/hypospray/medipen/invisibility/stable,
 		/obj/item/reagent_containers/hypospray/medipen/pumpupplus
 	)
@@ -1079,6 +1079,11 @@
 	for(var/i in 1 to 12)
 		var/item = pick(item_list)
 		new item(src)
+
+	// It's on the house...
+	new /obj/item/storage/box/methdealer(src)
+	new /obj/item/storage/box/opiumdealer(src)
+	new /obj/item/storage/box/kronkdealer(src)
 
 /obj/item/storage/box/syndie_kit/chemicalsynth
 	name = "chemical synthesis kit"
