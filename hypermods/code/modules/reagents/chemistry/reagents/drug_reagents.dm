@@ -14,7 +14,7 @@
 	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/syndimeth)
 	..()
 
-/datum/reagent/drug/syndimethamphetamine/on_mob_life(mob/living/carbon/M)
+/datum/reagent/drug/syndimethamphetamine/on_mob_life(mob/living/carbon/M, metabolization_ratio)
 	var/high_message = pick("You feel hyper.", "You feel like you need to go faster.", "You feel like you can run the world.")
 	if(prob(5))
 		to_chat(M, span_notice("[high_message]"))
@@ -25,7 +25,7 @@
 	M.AdjustImmobilized(-50, FALSE)
 	M.adjust_stamina_loss(-3, 0)
 	M.adjust_jitter(2 SECONDS)
-	M.adjust_organ_loss(ORGAN_SLOT_BRAIN, 1)
+	M.adjust_organ_loss(ORGAN_SLOT_BRAIN, 1 * metabolization_ratio * normalise_creation_purity())
 	if(prob(5))
 		M.emote(pick("twitch", "shiver"))
 	..()
@@ -62,7 +62,7 @@
 		affected_mob.add_mood_event("maintenance_fun", /datum/mood_event/maintenance_high)
 		metabolization_rate *= 0.8
 
-/datum/reagent/drug/pumpupplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+/datum/reagent/drug/pumpupplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
 	affected_mob.AdjustKnockdown(-100, FALSE)
@@ -72,14 +72,14 @@
 		to_chat(affected_mob, span_notice("[pick("Go! Go! GO!", "You feel ready...", "You feel invincible...")]"))
 	if(SPT_PROB(7.5, seconds_per_tick))
 		affected_mob.losebreath++
-		affected_mob.adjust_tox_loss(0.2, updating_health = FALSE, required_biotype = affected_biotype)
+		affected_mob.adjust_tox_loss(0.2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
 		return UPDATE_MOB_HEALTH
 
 /datum/reagent/drug/pumpupplus/overdose_start(mob/living/affected_mob)
 	. = ..()
 	to_chat(affected_mob, span_userdanger("You can't stop shaking, your heart beats faster and faster..."))
 
-/datum/reagent/drug/pumpupplus/overdose_process(mob/living/affected_mob, seconds_per_tick)
+/datum/reagent/drug/pumpupplus/overdose_process(mob/living/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
 	var/need_mob_update
@@ -89,10 +89,10 @@
 		affected_mob.emote(pick("twitch","drool"))
 	if(SPT_PROB(10, seconds_per_tick))
 		affected_mob.losebreath++
-		affected_mob.adjust_stamina_loss(4, updating_stamina = FALSE, required_biotype = affected_biotype)
+		affected_mob.adjust_stamina_loss(4 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_stamina = FALSE, required_biotype = affected_biotype)
 		need_mob_update = TRUE
 	if(SPT_PROB(7.5, seconds_per_tick))
-		need_mob_update += affected_mob.adjust_tox_loss(2, updating_health = FALSE, required_biotype = affected_biotype)
+		need_mob_update += affected_mob.adjust_tox_loss(2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -114,7 +114,7 @@
 	mytray.adjust_toxic(round(volume))
 	mytray.adjust_pestlevel(-rand(2, 4))
 
-/datum/reagent/drug/nicotwaine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+/datum/reagent/drug/nicotwaine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	if(SPT_PROB(0.3, seconds_per_tick))
 		var/smoke_message = pick("You feel both relaxed and full of vigor!", "A wave of energy washes over you.","You blink and realize you hadn't blinked in a while.","You feel full of vigor.")
@@ -126,11 +126,11 @@
 
 	return UPDATE_MOB_HEALTH
 
-/datum/reagent/drug/nicotwaine/overdose_process(mob/living/affected_mob, seconds_per_tick)
+/datum/reagent/drug/nicotwaine/overdose_process(mob/living/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	var/need_mob_update
-	need_mob_update = affected_mob.adjust_tox_loss(0.2 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
-	need_mob_update += affected_mob.adjust_oxy_loss(1.4 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
+	need_mob_update = affected_mob.adjust_tox_loss(0.2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
+	need_mob_update += affected_mob.adjust_oxy_loss(1.4 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -154,13 +154,13 @@
 	. = ..()
 	affected_mob.remove_movespeed_mod_immunities("painkillers", /datum/movespeed_modifier/damage_slowdown)
 
-/datum/reagent/drug/painkillers/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+/datum/reagent/drug/painkillers/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
 	if(totaldamage <= 25)
 		var/need_mob_update
-		need_mob_update += affected_mob.adjust_brute_loss(-0.4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-		need_mob_update += affected_mob.adjust_fire_loss(-0.4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_brute_loss(-0.4 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.4 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 		if(need_mob_update)
 			return UPDATE_MOB_HEALTH
 
@@ -191,7 +191,7 @@
 	. = ..()
 	affected_mob.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
-/datum/reagent/drug/opium/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+/datum/reagent/drug/opium/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	if(current_cycle > 5)
 		affected_mob.add_mood_event("numb", /datum/mood_event/narcotic_medium, name)
@@ -201,8 +201,8 @@
 	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
 	if(totaldamage <= 50)
 		var/need_mob_update
-		need_mob_update += affected_mob.adjust_brute_loss(-0.6 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-		need_mob_update += affected_mob.adjust_fire_loss(-0.6 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_brute_loss(-0.6 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.6 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 		if(need_mob_update)
 			return UPDATE_MOB_HEALTH
 
@@ -234,7 +234,7 @@
 	. = ..()
 	affected_mob.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
-/datum/reagent/drug/heroin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+/datum/reagent/drug/heroin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	if(current_cycle > 5)
 		affected_mob.add_mood_event("numb", /datum/mood_event/narcotic_heavy, name)
@@ -244,8 +244,8 @@
 	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
 	if(totaldamage <= 75)
 		var/need_mob_update
-		need_mob_update += affected_mob.adjust_brute_loss(-0.8 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-		need_mob_update += affected_mob.adjust_fire_loss(-0.8 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_brute_loss(-0.8 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.8 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 		if(need_mob_update)
 			return UPDATE_MOB_HEALTH
 

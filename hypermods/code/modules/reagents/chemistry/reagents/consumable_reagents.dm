@@ -6,7 +6,7 @@
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 	taste_description = "bravado in the face of disaster"
 
-/datum/reagent/consumable/hearty_punch/on_mob_life(mob/living/carbon/M)
+/datum/reagent/consumable/hearty_punch/on_mob_life(mob/living/carbon/M, metabolization_ratio)
 	if(M.health <= 0)
 		M.adjust_brute_loss(-1, 0)
 		M.adjust_fire_loss(-1, 0)
@@ -23,7 +23,7 @@
 	taste_description = "your brain coming out your nose"
 	addiction_types = list(/datum/addiction/hallucinogens = 8)
 
-/datum/reagent/consumable/changelingsting/on_mob_life(mob/living/carbon/target)
+/datum/reagent/consumable/changelingsting/on_mob_life(mob/living/carbon/target, metabolization_ratio)
 	var/datum/antagonist/changeling/changeling = target.mind?.has_antag_datum(/datum/antagonist/changeling)
 	changeling?.adjust_chemicals(metabolization_rate * REM * 0.5)
 	return ..()
@@ -44,10 +44,10 @@
 	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/cheapturbo)
 	..()
 
-/datum/reagent/consumable/turbo/on_mob_life(mob/living/carbon/M)
+/datum/reagent/consumable/turbo/on_mob_life(mob/living/carbon/M, seconds_per_tick, metabolization_ratio)
 	if(prob(1))
 		to_chat(M, span_notice("[pick("You feel disregard for the rule of law.", "You feel pumped!", "Your head is pounding.", "Your thoughts are racing..")]"))
-	M.adjust_stamina_loss(-0.25)
+	M.adjust_stamina_loss(-0.25 * metabolization_ratio * seconds_per_tick * normalise_creation_purity())
 	return ..()
 
 /datum/reagent/consumable/old_timer
@@ -57,7 +57,7 @@
 	quality = DRINK_NICE
 	taste_description = "simpler times"
 
-/datum/reagent/consumable/old_timer/on_mob_life(mob/living/carbon/human/metabolizer, seconds_per_tick)
+/datum/reagent/consumable/old_timer/on_mob_life(mob/living/carbon/human/metabolizer, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	if(SPT_PROB(40, seconds_per_tick) && istype(metabolizer))
 		metabolizer.age += 1
@@ -81,18 +81,18 @@
 	quality = DRINK_GOOD
 	taste_description = "seduction"
 
-/datum/reagent/consumable/between_the_sheets/on_mob_life(mob/living/L)
+/datum/reagent/consumable/between_the_sheets/on_mob_life(mob/living/L, seconds_per_tick, metabolization_ratio)
 	..()
 	if(L.IsSleeping())
 		if(L.get_brute_loss() && L.get_fire_loss()) //If you are damaged by both types, slightly increased healing but it only heals one. The more the merrier wink wink.
 			if(prob(40))
-				L.adjust_brute_loss(-2)
+				L.adjust_brute_loss(-2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity())
 			else
-				L.adjust_fire_loss(-2)
+				L.adjust_fire_loss(-2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity())
 		else if(L.get_brute_loss()) //If you have only one, it still heals but not as well.
-			L.adjust_brute_loss(-1)
+			L.adjust_brute_loss(-1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity())
 		else if(L.get_fire_loss())
-			L.adjust_fire_loss(-1)
+			L.adjust_fire_loss(-1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity())
 
 
 /datum/reagent/rockcandyruby
@@ -102,7 +102,7 @@
 	metabolization_rate = 0.025 * REAGENTS_METABOLISM
 	taste_description = "expensive gemstones"
 
-/datum/reagent/rockcandyruby/on_mob_life(mob/living/carbon/M)
+/datum/reagent/rockcandyruby/on_mob_life(mob/living/carbon/M, metabolization_ratio)
 	M.adjust_brute_loss(-1, 0)
 	M.adjust_fire_loss(-1, 0)
 	M.adjust_oxy_loss(-1, 0)
@@ -117,7 +117,7 @@
 	metabolization_rate = 0.025 * REAGENTS_METABOLISM
 	taste_description = "expensive gemstones"
 
-/datum/reagent/rockcandysapphire/on_mob_life(mob/living/carbon/M)
+/datum/reagent/rockcandysapphire/on_mob_life(mob/living/carbon/M, metabolization_ratio)
 	if(M.on_fire)
 		M.adjust_fire_stacks(-1)
 
@@ -152,7 +152,7 @@
 	metabolization_rate = 0.025 * REAGENTS_METABOLISM
 	taste_description = "expensive gemstones"
 
-/datum/reagent/rockcandytopaz/on_mob_life(mob/living/carbon/M)
+/datum/reagent/rockcandytopaz/on_mob_life(mob/living/carbon/M, metabolization_ratio)
 	if(M.health <= 0)
 		M.adjust_brute_loss(-5, 0)
 		M.adjust_fire_loss(-5, 0)
@@ -197,7 +197,7 @@
 		H.physiology.tox_mod /= 0.925
 		H.physiology.oxy_mod /= 0.925
 
-/datum/reagent/rockcandymagic/on_mob_life(mob/living/carbon/M)
+/datum/reagent/rockcandymagic/on_mob_life(mob/living/carbon/M, metabolization_ratio)
 	M.adjust_brute_loss(-0.5, 0)
 	M.adjust_fire_loss(-0.5, 0)
 	M.adjust_oxy_loss(-0.1, 0)
@@ -229,7 +229,7 @@
 	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/coffeeplus)
 	..()
 
-/datum/reagent/consumable/coffeeplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+/datum/reagent/consumable/coffeeplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	affected_mob.adjust_brute_loss(-0.1, 0)
 	affected_mob.adjust_fire_loss(-0.1, 0)
@@ -256,7 +256,7 @@
 	name = "Moonshine"
 	boozepwr = 95
 
-/datum/reagent/consumable/ethanol/moonshine/traitor/on_mob_life(mob/living/carbon/M, seconds_per_tick)
+/datum/reagent/consumable/ethanol/moonshine/traitor/on_mob_life(mob/living/carbon/M, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	if(IS_TRAITOR(M))
 		M.reagents.remove_reagent(/datum/reagent/consumable/ethanol/moonshine/traitor, 2)
@@ -276,7 +276,7 @@
 	taste_description = "a roll of the dice"
 	var/r_type = ""
 
-/datum/reagent/consumable/rainbow_chili/on_mob_life(mob/living/carbon/M, seconds_per_tick)
+/datum/reagent/consumable/rainbow_chili/on_mob_life(mob/living/carbon/M, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	var/list/r_types = subtypesof(/datum/reagent/)
 	for(var/i in 1 to 1)
@@ -298,7 +298,7 @@
 	metabolization_rate = 1 * REAGENTS_METABOLISM
 	taste_description = "extra sweet slime"
 
-/datum/reagent/consumable/vhfcs/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+/datum/reagent/consumable/vhfcs/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	holder.add_reagent(/datum/reagent/consumable/sugar, 2.4 * REM * seconds_per_tick)
 
@@ -372,7 +372,7 @@
 	color = "#fa8c0b"
 	taste_description = "uncomfortable"
 
-/datum/reagent/consumable/clockwork_orange/on_mob_life(mob/living/carbon/human/metabolizer, seconds_per_tick)
+/datum/reagent/consumable/clockwork_orange/on_mob_life(mob/living/carbon/human/metabolizer, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	if(SPT_PROB(20, seconds_per_tick) && istype(metabolizer))
 		if(metabolizer.age > 13)

@@ -17,11 +17,11 @@
 	color = "#ffffc6"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/toxin/saxitoxin/on_mob_life(mob/living/breather, seconds_per_tick)
-	breather.adjust_organ_loss(ORGAN_SLOT_BRAIN, 1)
-	breather.adjust_fire_loss(1, FALSE)
+/datum/reagent/toxin/saxitoxin/on_mob_life(mob/living/breather, seconds_per_tick, metabolization_ratio)
+	breather.adjust_organ_loss(ORGAN_SLOT_BRAIN, 1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity())
+	breather.adjust_fire_loss(1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), FALSE)
 	if(iscarbon(breather))
-		breather.adjust_tox_loss(1, FALSE)
+		breather.adjust_tox_loss(1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), FALSE)
 	if(prob(10))
 		breather.Paralyze(20, 1, 0)
 		breather.adjust_jitter(10 SECONDS)
@@ -134,13 +134,12 @@
 	taste_description = "sourness"
 	metabolization_rate = 1 * REAGENTS_METABOLISM
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	var/slurtimer = (3 * REM)
 
-/datum/reagent/toxin/heartbreaker/on_mob_life(mob/living/carbon/M)
-	M.adjust_slurring(slurtimer SECONDS)
+/datum/reagent/toxin/heartbreaker/on_mob_life(mob/living/carbon/M, metabolization_ratio)
+	M.adjust_slurring((3 * REM) SECONDS)
 
-	M.adjust_oxy_loss(3.5 * REM, FALSE)
-	M.adjust_organ_loss(ORGAN_SLOT_HEART, 1)
+	M.adjust_oxy_loss(3.5 * metabolization_ratio * normalise_creation_purity(), FALSE)
+	M.adjust_organ_loss(ORGAN_SLOT_HEART, 1 * metabolization_ratio * normalise_creation_purity())
 
 	M.adjust_stamina_loss(5, 0)
 	return ..()
@@ -156,13 +155,13 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	data = 35
 
-/datum/reagent/toxin/muscleparalyzers/on_mob_life(mob/living/carbon/affected_mob)
+/datum/reagent/toxin/muscleparalyzers/on_mob_life(mob/living/carbon/affected_mob, metabolization_ratio)
 	switch(current_cycle)
 		if(1 to 10)
-			affected_mob.adjust_stamina_loss(REM * data, 0)
+			affected_mob.adjust_stamina_loss(metabolization_ratio * data, 0)
 		if(10 to INFINITY)
-			affected_mob.adjust_stamina_loss(REM * data, 0)
-			affected_mob.Paralyze(5 SECONDS * REM)
+			affected_mob.adjust_stamina_loss(metabolization_ratio * data, 0)
+			affected_mob.Paralyze(5 SECONDS * metabolization_ratio)
 			. = TRUE
 	..()
 
@@ -175,9 +174,9 @@
 	metabolization_rate = 0.04 * REAGENTS_METABOLISM // Slowly metabolized as the body only really gets rid of it when it loses cells to it.
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/toxin/ricin/on_mob_life(mob/living/carbon/M)
-	M.adjust_organ_loss(ORGAN_SLOT_HEART, 0.1)
-	M.adjust_organ_loss(ORGAN_SLOT_LUNGS, 0.1)
-	M.adjust_organ_loss(ORGAN_SLOT_LIVER, 0.2)
-	M.adjust_organ_loss(ORGAN_SLOT_STOMACH, 0.3)
+/datum/reagent/toxin/ricin/on_mob_life(mob/living/carbon/M, metabolization_ratio)
+	M.adjust_organ_loss(ORGAN_SLOT_HEART, 0.1 * metabolization_ratio * normalise_creation_purity())
+	M.adjust_organ_loss(ORGAN_SLOT_LUNGS, 0.1 * metabolization_ratio * normalise_creation_purity())
+	M.adjust_organ_loss(ORGAN_SLOT_LIVER, 0.2 * metabolization_ratio * normalise_creation_purity())
+	M.adjust_organ_loss(ORGAN_SLOT_STOMACH, 0.3 * metabolization_ratio * normalise_creation_purity())
 	return ..()

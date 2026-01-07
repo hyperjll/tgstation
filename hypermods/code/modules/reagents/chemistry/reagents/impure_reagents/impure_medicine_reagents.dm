@@ -23,9 +23,9 @@
 		to_chat(carbies, span_danger("You feel thousands of tiny cuts scour your body!"))
 	. = ..()
 
-/datum/reagent/inverse/bicaridine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+/datum/reagent/inverse/bicaridine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	var/need_mob_update
-	need_mob_update += affected_mob.adjust_brute_loss(2 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+	need_mob_update += affected_mob.adjust_brute_loss(2 * metabolization_ratio * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 	. = ..()
@@ -40,11 +40,11 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	tox_damage = 0
 
-/datum/reagent/inverse/kelotane/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+/datum/reagent/inverse/kelotane/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	var/need_mob_update
 
 	if(!overdosed)
-		need_mob_update += affected_mob.adjust_fire_loss(-4 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-4 * metabolization_ratio * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	affected_mob.adjust_bodytemperature(rand(-30,-25) * TEMPERATURE_DAMAGE_COEFFICIENT * REM * seconds_per_tick, 80) // Chilly af
 
 	affected_mob.reagents.remove_reagent(/datum/reagent/teslium, 4)

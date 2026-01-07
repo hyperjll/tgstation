@@ -8,7 +8,7 @@
 	var/shock_timer = 0
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/tazinide/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
+/datum/reagent/tazinide/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	shock_timer++
 	if(shock_timer >= rand(2, 10)) //Random shocks are wildly unpredictable
