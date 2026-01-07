@@ -29,9 +29,9 @@
 	name = "Black Market LTSRBT"
 	desc = "Need a faster and better way of transporting your illegal goods from and to the \
 		station? Fear not, the Long-To-Short-Range-Bluespace-Transceiver (LTSRBT for short) \
-		is here to help. Requires a multitool to unpack and a black market uplink to function. doesn't come with either."
+		is here to help. Requires a multitool to unpack and a black market uplink to function. Doesn't come with either."
 	item = /obj/item/flatpack/ltsrbt
-	cost = 2
+	cost = 1
 	surplus = 0
 	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
 	cant_discount = TRUE
