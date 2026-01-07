@@ -33,7 +33,7 @@
 
 /datum/chemical_reaction/heroin
 	results = list(/datum/reagent/drug/heroin = 1)
-	required_reagents = list(/datum/reagent/drug/painkillers = 2, /datum/reagent/medicine/morphine = 1, /datum/reagent/oxygen = 1)
+	required_reagents = list(/datum/reagent/drug/opium = 2, /datum/reagent/medicine/morphine = 1, /datum/reagent/oxygen = 1)
 	required_temp = 480
 	reaction_tags = REACTION_TAG_OTHER | REACTION_TAG_HEALING | REACTION_TAG_DRUG
 
