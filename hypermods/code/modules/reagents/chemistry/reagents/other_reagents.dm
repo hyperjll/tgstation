@@ -70,6 +70,7 @@
 	color = "#FFFFFF"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	self_consuming = TRUE
+	addiction_types = list(/datum/addiction/medicine = 10)
 	var/current_size = RESIZE_DEFAULT_SIZE
 	var/newsize = 1
 	var/delay = 1 SECONDS // Timer between size adjustments

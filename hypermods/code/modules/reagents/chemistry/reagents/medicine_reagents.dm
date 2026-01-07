@@ -96,6 +96,7 @@
 	overdose_threshold = 30
 	taste_description = "grossness"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	addiction_types = list(/datum/addiction/medicine = 2)
 
 /datum/reagent/medicine/tricordrazine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -232,6 +233,7 @@
 	color = "#b34700"
 	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS, TRAIT_RADIMMUNE)
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	addiction_types = list(/datum/addiction/medicine = 3)
 
 /datum/reagent/medicine/arithrazine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()

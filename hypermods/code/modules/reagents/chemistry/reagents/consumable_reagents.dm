@@ -21,6 +21,7 @@
 	color = "#2E6671" // rgb: 46, 102, 113
 	quality = DRINK_GOOD
 	taste_description = "your brain coming out your nose"
+	addiction_types = list(/datum/addiction/hallucinogens = 8)
 
 /datum/reagent/consumable/changelingsting/on_mob_life(mob/living/carbon/target)
 	var/datum/antagonist/changeling/changeling = target.mind?.has_antag_datum(/datum/antagonist/changeling)
@@ -33,6 +34,7 @@
 	color = "#e94c3a"
 	quality = DRINK_VERYGOOD
 	taste_description = "the outlaw spirit"
+	addiction_types = list(/datum/addiction/maintenance_drugs = 10)
 
 /datum/reagent/consumable/turbo/on_mob_metabolize(mob/living/L)
 	..()
@@ -213,6 +215,7 @@
 	taste_description = "bitterness"
 	glass_price = DRINK_PRICE_STOCK
 	metabolized_traits = list(TRAIT_STIMULATED)
+	addiction_types = list(/datum/addiction/stimulants = 4)
 
 /datum/reagent/consumable/coffeeplus/overdose_process(mob/living/affected_mob, seconds_per_tick)
 	. = ..()
