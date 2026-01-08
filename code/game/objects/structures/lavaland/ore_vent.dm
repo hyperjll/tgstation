@@ -540,14 +540,13 @@
 	discovered = TRUE
 	unique_vent = TRUE
 	boulder_size = BOULDER_SIZE_SMALL
-	mineral_breakdown = list(
-		/datum/material/iron = 1,
-		/datum/material/glass = 1,
-	)
+	mineral_breakdown = list()
 
 /obj/structure/ore_vent/starter_resources/Initialize(mapload)
 	. = ..()
 	var/list/super_low_pop_mats = list(
+		/datum/material/iron = 20,
+		/datum/material/glass = 20,
 		/datum/material/plasma = 10,
 		/datum/material/titanium = 10,
 		/datum/material/silver = 5,
@@ -558,17 +557,26 @@
 		/datum/material/plastic = 20,
 	)
 	var/list/low_pop_mats = list(
+		/datum/material/iron = 20,
+		/datum/material/glass = 20,
 		/datum/material/plastic = 10,
 		/datum/material/plasma = 5,
 		/datum/material/titanium = 1,
 		/datum/material/silver = 1,
 		/datum/material/gold = 1,
 	)
+	var/list/normal_pop_mats = list(
+		/datum/material/iron = 1,
+		/datum/material/glass = 1,
+	)
+
 	var/player_count = length(GLOB.alive_player_list)
 	if(player_count <= 10)
 		mineral_breakdown |= super_low_pop_mats
 	if(player_count <= 20 && player_count >= 11)
 		mineral_breakdown |= low_pop_mats
+	if(player_count >= 21)
+		mineral_breakdown |= normal_pop_mats
 
 /obj/structure/ore_vent/random
 	// Todo: determine if we need a boulder_size default thats unique from the override performed in vent_size_setup.
