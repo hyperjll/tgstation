@@ -320,3 +320,100 @@
 	name = "glowy after-image trail implant"
 	desc = "Donk Co's first forray into the world of entertainment implants. Projects a series of after-images as you move, perfect for starting a dance party all on your own."
 	syndicate_implant = FALSE
+
+
+/obj/item/organ/cyberimp/chest/dualwield
+	name = "C.C.M.S implant"
+	desc = "Short for Complementary Combat Maneuvering System, it processes spinal nerve signals and enacts forced complementary maneuvers on the opposite side of the user's body when they attack. In layman's terms, it lets you dual wield."
+	icon = 'hypermods/icons/obj/medical/organs/organs.dmi'
+	icon_state = "ccms"
+	aug_overlay = "ccms_overlay"
+	visual = TRUE
+	slot = ORGAN_SLOT_BRAIN_CEREBELLUM
+	organ_flags = ORGAN_ROBOTIC | ORGAN_HIDDEN
+	/// How often does this particular variant actually work?
+	var/proc_chance = 100
+	/// Side-effect chance, if it happens, the dual-wield is cancelled. Tho, this only happens with the refurbished subtype.
+	var/side_effect_chance = 0
+
+/obj/item/organ/cyberimp/chest/dualwield/Insert(mob/living/carbon/organ_owner, special)
+	. = ..()
+	register()
+
+/obj/item/organ/cyberimp/chest/dualwield/Remove(mob/living/carbon/organ_owner, special)
+	. = ..()
+	unregister()
+
+/obj/item/organ/cyberimp/chest/dualwield/proc/register()
+	RegisterSignal(owner, COMSIG_MOB_ITEM_ATTACK, PROC_REF(on_item_attack))
+
+/obj/item/organ/cyberimp/chest/dualwield/proc/unregister()
+	UnregisterSignal(owner, COMSIG_MOB_ITEM_ATTACK)
+
+/obj/item/organ/cyberimp/chest/dualwield/proc/on_item_attack(mob/living/carbon/human/source, atom/target, list/modifiers)
+	SIGNAL_HANDLER
+
+	if(!isliving(target))
+		return
+
+	var/mob/living/attacked_mob = target
+	var/obj/item/weapon = source.get_active_held_item()
+
+	if(!(source.combat_mode)) // No dual wielding outside of combat mode.
+		return
+
+	if(weapon != source.get_active_held_item()) // Just to be extra careful about loops.
+		return
+
+	var/item = source.get_inactive_held_item()
+
+	if(!item)
+		return
+
+	var/attack_time = (source.next_move - world.time) * 0.5 // Allows us to attack in the "gaps" between our owner's attacks, because it looks cool as fuck.
+
+	if(prob(proc_chance))
+		addtimer(CALLBACK(src, PROC_REF(complement_attack), source, item, attacked_mob), attack_time, TIMER_UNIQUE) // TIMER_UNIQUE makes sure this will never go exponential even if a loop is found.
+
+/obj/item/organ/cyberimp/chest/dualwield/proc/complement_attack(mob/living/carbon/human/source, obj/item/item, mob/living/attacked_mob)
+	if(QDELETED(owner) || QDELETED(attacked_mob))
+		return
+
+	if(owner.get_inactive_held_item() != item)
+		return
+
+	if(handle_side_effects(src, item, attacked_mob)) // If handle_side_effects returns true, that means we misfired.
+		return
+
+	if(attacked_mob.IsReachableBy(owner))
+		unregister() // Prevent looping in on ourselves if the user switches items during the delay.
+		item.attack(attacked_mob, owner)
+		register()
+
+/obj/item/organ/cyberimp/chest/dualwield/proc/handle_side_effects(mob/living/carbon/human/source, obj/item/item, mob/living/attacked_mob)
+	return FALSE // Returning true means we misfired, i.e. failed to dual wield even though it should have triggered under normal circumstances.
+
+/obj/item/organ/cyberimp/chest/dualwield/refurbished
+	name = "refurbished C.C.M.S implant"
+	desc = "A refurbished dual wielding implant. It looks old and the nerve filaments have degraded, but it's still functional."
+	icon_state = "ccms_refurbished"
+	aug_overlay = "ccms_refurbished_overlay"
+	organ_flags = ORGAN_ROBOTIC
+	side_effect_chance = 20
+
+/obj/item/organ/cyberimp/chest/dualwield/refurbished/handle_side_effects(mob/living/carbon/human/source, obj/item/item, mob/target)
+	if(prob(side_effect_chance)) // Low probability for it to not work at all.
+		owner.visible_message(
+			message = span_warning("[owner]'s arm twitches."),
+			self_message = span_danger("Your C.C.M.S misfires!")
+		)
+		return TRUE // Cancels the complementary attack.
+
+	if(prob(30)) // And if it does work, it might cause some damage.
+		owner.visible_message(
+			message = span_warning("[owner]'s arm spazzes out!"),
+			self_message = span_danger("Your arm spazzes out!")
+		)
+		var/obj/item/bodypart/arm = owner.get_holding_bodypart_of_item(item)
+		if(arm)
+			arm.receive_damage(brute = 10, wound_bonus = 10, sharpness = NONE) // You can get away with like 5 spazzes before you get a dislocation.

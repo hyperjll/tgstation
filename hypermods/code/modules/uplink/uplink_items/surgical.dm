@@ -260,3 +260,13 @@
 	surplus = 5
 	progression_minimum = 35 MINUTES
 	item = /obj/item/autosurgeon/syndicate/syndie_hammer
+
+/datum/uplink_item/surgical/dualwield
+	name = "Dual-Wield Implant"
+	desc = "An implant that allows the user to dual-wield their weapons. \
+			While installed, every attack you make upon a foe will quickly be followed up with whatever item is in your other hand. \
+			Incompatible with Anti-Drop Implants. Comes with an autosurgeon."
+	cost = 4
+	surplus = 40
+	progression_minimum = 10 MINUTES
+	item = /obj/item/autosurgeon/syndicate/dualwield

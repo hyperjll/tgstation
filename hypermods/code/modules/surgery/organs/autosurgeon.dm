@@ -411,3 +411,16 @@
 
 /obj/item/autosurgeon/syndicate/toolkit/buster/l/single_use
 	uses = 1
+
+
+/obj/item/autosurgeon/dualwield
+	starting_organ = /obj/item/organ/cyberimp/chest/dualwield
+
+/obj/item/autosurgeon/syndicate/dualwield
+	starting_organ = /obj/item/organ/cyberimp/chest/dualwield
+
+/obj/item/autosurgeon/dualwield_refurbished
+	starting_organ = /obj/item/organ/cyberimp/chest/dualwield/refurbished
+
+/obj/item/autosurgeon/syndicate/dualwield_refurbished
+	starting_organ = /obj/item/organ/cyberimp/chest/dualwield/refurbished

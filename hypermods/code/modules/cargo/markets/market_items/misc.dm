@@ -39,3 +39,13 @@
 	price_max = CARGO_CRATE_VALUE *3
 	stock_max = 5
 	availability_prob = 40
+
+/datum/market_item/misc/dualwield
+	name = "refurbished C.C.M.S implant"
+	desc = "A refurbished dual wielding implant. It's old and might misfire, but it's still functional."
+	item = /obj/item/organ/cyberimp/chest/dualwield/refurbished
+
+	price_min = CARGO_CRATE_VALUE * 6
+	price_max = CARGO_CRATE_VALUE * 8
+	stock_max = 2
+	availability_prob = 25
