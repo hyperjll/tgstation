@@ -659,6 +659,7 @@
 		/obj/item/storage/box/bandages = 2,
 		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 5,
 		/obj/item/storage/pill_bottle/inaprovaline = 3,
+		/obj/item/storage/pill_bottle/painkillers = 5,
 	)
 	contraband = list(
 		/obj/item/storage/box/gum/happiness = 3,
@@ -717,6 +718,7 @@
 		/obj/item/reagent_containers/cup/bottle/toxin = 3,
 		/obj/item/reagent_containers/cup/bottle/oculine = 3,
 		/obj/item/reagent_containers/cup/bottle/inacusiate = 3,
+		/obj/item/reagent_containers/cup/bottle/naloxone = 2,
 		/obj/item/storage/pill_bottle/mannitol = 5,
 		/obj/item/reagent_containers/syringe/antiviral = 6,
 		/obj/item/reagent_containers/medigel/libital = 2,
@@ -733,6 +735,7 @@
 	premium = list(
 		/obj/item/reagent_containers/medigel/synthflesh = 5,
 		/obj/item/storage/pill_bottle/psicodine = 2,
+		/obj/item/storage/pill_bottle/antidepressant/less = 4,
 		/obj/item/storage/pill_bottle/sansufentanyl = 1,
 		/obj/item/storage/pill_bottle/bicaridine = 3,
 		/obj/item/storage/pill_bottle/kelotane = 3,

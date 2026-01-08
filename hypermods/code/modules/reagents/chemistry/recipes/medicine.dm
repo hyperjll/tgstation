@@ -92,10 +92,14 @@
 
 /datum/chemical_reaction/ultravasculine
 	results = list(/datum/reagent/medicine/ultravasculine = 2)
-	required_reagents = list(/datum/reagent/toxin/plasma = 5, /datum/reagent/toxin/histamine = 2)
+	required_reagents = list(/datum/reagent/toxin/plasma = 2, /datum/reagent/medicine/diphenhydramine = 2)
 	optimal_ph_min = 1
 	optimal_ph_max = 5
 	reaction_tags = REACTION_TAG_CHEMICAL | REACTION_TAG_TOXIN
+
+/datum/chemical_reaction/ultravasculine/alt
+	results = list(/datum/reagent/medicine/ultravasculine = 2)
+	required_reagents = list(/datum/reagent/toxin/plasma = 5, /datum/reagent/toxin/histamine = 2)
 
 /datum/chemical_reaction/tricordrazine
 	results = list(/datum/reagent/medicine/tricordrazine = 3)

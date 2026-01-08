@@ -1953,6 +1953,10 @@
 		/datum/reagent/drug/krokodil,
 		/datum/reagent/inverse/krokodil,
 		/datum/reagent/drug/painkillers,
+		/datum/reagent/drug/opium,
+		/datum/reagent/drug/heroin,
+		/datum/reagent/drug/antidepressants,
+		/datum/reagent/consumable/lean,
 	)
 
 /datum/reagent/medicine/naloxone/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)

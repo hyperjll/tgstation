@@ -116,6 +116,10 @@
 	name = "inaprovaline bottle"
 	list_reagents = list(/datum/reagent/medicine/inaprovaline = 30)
 
+/obj/item/reagent_containers/cup/bottle/naloxone
+	name = "naloxone bottle"
+	list_reagents = list(/datum/reagent/medicine/naloxone = 30)
+
 /obj/item/reagent_containers/cup/bottle/higadrite
 	name = "higadrite bottle"
 	desc = "A small bottle of higadrite, used for stabilizing livers. \
