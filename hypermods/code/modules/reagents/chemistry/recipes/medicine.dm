@@ -91,8 +91,8 @@
 	reaction_tags = REACTION_TAG_HEALING | REACTION_TAG_OXY
 
 /datum/chemical_reaction/ultravasculine
-	results = list(/datum/reagent/medicine/ultravasculine = 2)
-	required_reagents = list(/datum/reagent/toxin/plasma = 2, /datum/reagent/medicine/diphenhydramine = 2)
+	results = list(/datum/reagent/medicine/ultravasculine = 1)
+	required_reagents = list(/datum/reagent/toxin/plasma = 1, /datum/reagent/medicine/diphenhydramine = 1)
 	optimal_ph_min = 1
 	optimal_ph_max = 5
 	reaction_tags = REACTION_TAG_CHEMICAL | REACTION_TAG_TOXIN
