@@ -191,3 +191,64 @@
 	desc = "You're on Anti-Depressants. You feel like everything will be alright."
 	icon = 'hypermods/icons/hud/screen_alert.dmi'
 	icon_state = "antidepressants"
+
+
+/datum/status_effect/immortality_regen
+	id = "immortality_regen"
+	duration = INFINITY
+	alert_type = null
+
+/datum/status_effect/immortality_regen/tick(seconds_between_ticks)
+	var/need_mob_update = FALSE
+
+	if(owner.get_brute_loss() > 0)
+		need_mob_update += owner.adjust_brute_loss(-0.5, updating_health = FALSE)
+
+	if(owner.get_fire_loss() > 0)
+		need_mob_update += owner.adjust_fire_loss(-0.5, updating_health = FALSE)
+
+	if(owner.get_tox_loss() > 0)
+		// Forced, so slimepeople are healed as well.
+		need_mob_update += owner.adjust_tox_loss(-0.25, updating_health = FALSE, forced = TRUE)
+
+	if(owner.get_oxy_loss() > 0)
+		need_mob_update += owner.adjust_oxy_loss(-0.5, updating_health = FALSE)
+
+	if(need_mob_update)
+		owner.updatehealth()
+
+	return ..()
+
+
+/datum/status_effect/extra_lives
+	id = "extra_lives"
+	duration = INFINITY
+	alert_type = null
+	var/extra_lives = 9
+
+/datum/status_effect/extra_lives/tick(seconds_between_ticks)
+	if(owner.stat != DEAD)
+		return
+
+	owner.revive(ADMIN_HEAL_ALL)
+
+	do_sparks(5,FALSE,owner)
+	var/turf/emergency_turf = find_safe_turf(owner.z, extended_safety_checks = TRUE)
+	var/range = 0
+	if(!emergency_turf)
+		emergency_turf = get_turf(owner)
+		range = 50
+	if(do_teleport(owner, emergency_turf, range, channel = TELEPORT_CHANNEL_BLUESPACE))
+		do_sparks(5,FALSE,owner)
+
+	extra_lives--
+
+	to_chat(owner, span_notice("You've lost a life. You have [extra_lives] lives left."))
+
+	if(extra_lives <= 0)
+		qdel(src)
+
+	return ..()
+
+/datum/status_effect/extra_lives/single
+	extra_lives = 1

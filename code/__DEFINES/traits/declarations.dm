@@ -495,6 +495,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_PERCEPTUAL_TRAUMA_BYPASS "trauma_bypass"
 /// mob is immune to hallucinations
 #define TRAIT_HALLUCINATION_IMMUNE "hallucination_immune"
+/// Determines who's capable of making/modifying soul contracts.
+#define TRAIT_DEVILISH "devilish"
 
 //---- Brain trauma resists
 /// Unable to gain any brain trauma whatsoever
@@ -551,6 +553,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_WEAK_SOUL "weak_soul"
 /// This mob has no soul
 #define TRAIT_NO_SOUL "no_soul"
+/// This mob's soul has been sold. Likely from an infernal contract.
+#define TRAIT_SOUL_SOLD "soul_sold"
 /// Prevents mob from riding mobs when buckled onto something
 #define TRAIT_CANT_RIDE "cant_ride"
 /// Prevents a mob from being unbuckled, currently only used to prevent people from falling over on the tram

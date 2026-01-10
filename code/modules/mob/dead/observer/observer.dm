@@ -267,6 +267,9 @@ Works together with spawning an observer, noted above.
 	if(IS_FAKE_KEY(key)) // Skip aghosts.
 		return
 
+	if(HAS_TRAIT(src, TRAIT_SOUL_SOLD))
+		can_reenter_corpse = FALSE
+
 	if(HAS_TRAIT(src, TRAIT_CORPSELOCKED) && !admin_ghost)
 		if(can_reenter_corpse) //If you can re-enter the corpse you can't leave when corpselocked
 			return
@@ -299,7 +302,7 @@ Works together with spawning an observer, noted above.
 	. = ..()
 	if(. && can_reenter_corpse)
 		var/mob/dead/observer/ghost = .
-		ghost.mind.current?.med_hud_set_status()
+		ghost.mind?.current?.med_hud_set_status()
 
 /*
 This is the proc mobs get to turn into a ghost. Forked from ghostize due to compatibility issues.

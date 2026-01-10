@@ -1106,3 +1106,20 @@
 	surplus = 1 // Never give up on the dream, kid.
 	progression_minimum = 30 MINUTES
 	restricted_roles = list(JOB_LAWYER, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/faustian_bargain_kit
+	name = "Faustian Bargain Kit"
+	desc = "A briefcase provided to us by a rather suspicious business man who claimed to be working with the 'Dark Lord'. \
+			According to him, the kit provided can be used to provide wonderful gifts to anyone signing the contracts within in exchange for their soul. \
+			These gifts can prove incredibly powerful in the right hands, though you won't be able to make the deals yourself. \
+			Be warned that soulless individuals cannot be revived after death, and aren't able to be forced into signing any contracts."
+	item = /obj/item/storage/briefcase/soul_contractor
+	cost = 12
+	limited_stock = 1
+	surplus = 0 // Doesn't work properly in surplus crates.
+	restricted_roles = list(JOB_LAWYER, JOB_CHAPLAIN, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/faustian_bargain_kit/spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)
+	..() // Make sure the kit is given.
+	ADD_TRAIT(user, TRAIT_DEVILISH, SOUL_CONTRACT_TRAIT) // Ensure those who buy this can actually use it.
+	return source //For log icon

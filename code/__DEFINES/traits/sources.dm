@@ -37,6 +37,8 @@
 #define CHANGELING_TRAIT "changeling"
 #define CULT_TRAIT "cult"
 #define LICH_TRAIT "lich"
+#define DEVIL_TRAIT "devil"
+#define SOUL_CONTRACT_TRAIT "soul_contract"
 ///Comes from a holy source.
 #define HOLY_TRAIT "holy"
 
