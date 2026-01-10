@@ -42643,6 +42643,7 @@
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 1
 	},
+/obj/item/tgui_book/manual/dsm,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/psychology)
 "nXp" = (

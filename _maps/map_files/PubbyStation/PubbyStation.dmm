@@ -9508,6 +9508,8 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 4
 	},
+/obj/structure/closet/secure_closet/psychology,
+/obj/item/tgui_book/manual/dsm,
 /turf/open/floor/iron/white,
 /area/station/medical/psychology)
 "aKa" = (

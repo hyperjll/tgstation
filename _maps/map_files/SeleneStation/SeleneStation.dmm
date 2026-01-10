@@ -52204,6 +52204,7 @@
 	pixel_x = 4;
 	pixel_y = 16
 	},
+/obj/item/tgui_book/manual/dsm,
 /turf/open/floor/wood,
 /area/station/medical/psychology)
 "uyP" = (

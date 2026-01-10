@@ -59343,6 +59343,7 @@
 /obj/item/toy/figure/psychologist{
 	pixel_y = 18
 	},
+/obj/item/tgui_book/manual/dsm,
 /turf/open/floor/wood,
 /area/station/medical/psychology)
 "pUv" = (

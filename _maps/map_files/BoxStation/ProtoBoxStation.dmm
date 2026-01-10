@@ -29637,6 +29637,7 @@
 /obj/machinery/light/directional/south,
 /obj/structure/closet/secure_closet/psychology,
 /obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/item/tgui_book/manual/dsm,
 /turf/open/floor/iron/white,
 /area/station/medical/psychology)
 "bYe" = (

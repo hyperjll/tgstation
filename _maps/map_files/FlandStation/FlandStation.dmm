@@ -27811,6 +27811,7 @@
 /area/station/engineering/atmospherics_engine)
 "iao" = (
 /obj/structure/closet/secure_closet/psychology,
+/obj/item/tgui_book/manual/dsm,
 /turf/open/floor/wood,
 /area/station/medical/psychology)
 "iaw" = (
