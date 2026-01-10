@@ -64120,7 +64120,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/dna_infuser,
-/obj/item/infuser_book,
+/obj/item/tgui_book/manual/infuser,
 /turf/open/floor/iron/grid/steel,
 /area/station/science/genetics)
 "sBM" = (

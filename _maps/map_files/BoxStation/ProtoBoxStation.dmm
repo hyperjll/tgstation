@@ -53430,8 +53430,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/obj/item/infuser_book,
 /obj/structure/table/reinforced,
+/obj/item/tgui_book/manual/infuser,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/science/genetics)
 "rFc" = (

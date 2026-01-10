@@ -25064,9 +25064,9 @@
 	dir = 4
 	},
 /obj/machinery/dna_infuser,
-/obj/item/infuser_book,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/radio/intercom/directional/east,
+/obj/item/tgui_book/manual/infuser,
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "iyR" = (

@@ -31759,6 +31759,7 @@
 "mHA" = (
 /obj/machinery/dna_infuser,
 /obj/effect/turf_decal/bot,
+/obj/item/tgui_book/manual/infuser,
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "mHB" = (
@@ -48020,7 +48021,6 @@
 /area/station/security/prison/visit)
 "tuv" = (
 /obj/structure/table,
-/obj/item/infuser_book,
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "tuE" = (

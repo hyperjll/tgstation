@@ -46460,6 +46460,7 @@
 "lYU" = (
 /obj/effect/turf_decal/tile/purple/opposingcorners,
 /obj/machinery/dna_infuser,
+/obj/item/tgui_book/manual/infuser,
 /turf/open/floor/iron,
 /area/station/science/genetics)
 "lYV" = (

@@ -54136,6 +54136,7 @@
 /obj/machinery/light/directional/east,
 /obj/machinery/dna_infuser,
 /obj/structure/cable,
+/obj/item/tgui_book/manual/infuser,
 /turf/open/floor/iron/white/textured_large,
 /area/station/science/genetics)
 "nTK" = (
@@ -54412,7 +54413,6 @@
 	req_access = list("genetics")
 	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
-/obj/item/infuser_book,
 /turf/open/floor/iron/dark/textured,
 /area/station/science/genetics)
 "oaz" = (
