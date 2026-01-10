@@ -582,46 +582,7 @@
 	cooldown_time = 5 SECONDS
 	required_slots = list(ITEM_SLOT_GLOVES)
 	device = /obj/item/pneumatic_cannon/paperplane/selfcharge
-/**
-/obj/item/gun/energy/burningpaper
-	name = "paper dispenser"
-	desc = "A small, easily concealable toy cannon. It fires paper, and lits it."
-	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
-	icon_state = "paper_rifle"
-	ammo_type = list(/obj/item/ammo_casing/energy/burningpaper)
-	fire_sound = 'sound/items/handling/paper_pickup.ogg'
-	gun_flags = NOT_A_REAL_GUN
-	selfcharge = TRUE
 
-/obj/item/ammo_casing/energy/burningpaper
-	projectile_type = /obj/projectile/bullet/burningpaper
-	icon = 'icons/obj/service/bureaucracy.dmi'
-	icon_state = "paperplane"
-	base_icon_state = "paperplane"
-	select_name = "paper"
-	fire_sound = 'sound/items/handling/paper_drop.ogg'
-	delay = 1
-	e_cost = LASER_SHOTS(20, STANDARD_CELL_CHARGE)
-
-/obj/projectile/bullet/burningpaper
-	name = "paper"
-	desc = "Protect your eyes."
-	damage = 3 // It's paper.
-	damage_type = BRUTE
-	icon = 'icons/obj/service/bureaucracy.dmi'
-	icon_state = "paperplane"
-	base_icon_state = "paperplane"
-	range = 10
-	shrapnel_type = null
-	embed_type = null
-
-/obj/projectile/bullet/burningpaper/on_hit(atom/target, blocked = 0, pierce_hit)
-	..()
-	var/obj/item/paper/crisp_paper = new(get_turf(target))
-	crisp_paper.desc = "It's crisp and warm to the touch. Must be fresh."
-
-	crisp_paper.fire_act(1000, 100)
-**/
 /obj/item/mod/module/harmbeam
 	name = "MOD demedical beamgun module"
 	desc = "A wrist mounted variant of the medbeam gun, this particular version does the exact opposite than heal."
