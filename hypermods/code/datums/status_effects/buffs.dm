@@ -250,5 +250,8 @@
 
 	return ..()
 
+/datum/status_effect/extra_lives/three
+	extra_lives = 3
+
 /datum/status_effect/extra_lives/single
 	extra_lives = 1

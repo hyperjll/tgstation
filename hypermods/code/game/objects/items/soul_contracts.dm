@@ -161,7 +161,7 @@
 	ADD_TRAIT(our_signee, TRAIT_NOCRITDAMAGE, SOUL_CONTRACT_TRAIT) // Not going to be permanently stuck in crit by that alone.
 	our_signee.apply_status_effect(/datum/status_effect/immortality_regen)
 	to_chat(user, span_notice("You feel your very being compress inward, while you may be more frail, you can no longer die by most means!"))
-	our_signee.maxHealth -= 50
+	our_signee.maxHealth -= 25
 
 	qdel(src)
 
@@ -197,6 +197,6 @@
 /obj/item/soul_contract/proc/grantExtraLives(obj/item/I, mob/user)
 	var/mob/living/carbon/human/our_signee = user
 
-	our_signee.apply_status_effect(/datum/status_effect/extra_lives)
+	our_signee.apply_status_effect(/datum/status_effect/extra_lives/three)
 
 	qdel(src)

@@ -1118,6 +1118,7 @@
 	limited_stock = 1
 	surplus = 0 // Doesn't work properly in surplus crates.
 	restricted_roles = list(JOB_LAWYER, JOB_CHAPLAIN, JOB_CAPTAIN)
+	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Wouldn't work well as a spy bounty.
 
 /datum/uplink_item/role_restricted/faustian_bargain_kit/spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)
 	..() // Make sure the kit is given.
