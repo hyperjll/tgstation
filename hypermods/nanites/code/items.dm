@@ -92,6 +92,9 @@
 /obj/item/disk/nanite_program/blood_restoring
 	program = /datum/nanite_program/blood_restoring
 
+/obj/item/disk/nanite_program/regenerative_oxy
+	program = /datum/nanite_program/regenerative_oxy
+
 /obj/item/disk/nanite_program/nervous
 	program = /datum/nanite_program/nervous
 
