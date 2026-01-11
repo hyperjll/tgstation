@@ -63076,6 +63076,14 @@
 	dir = 4
 	},
 /area/station/engineering/atmos)
+"skE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/machinery/drone_dispenser/preloaded,
+/turf/open/floor/iron/white,
+/area/station/science/research/abandoned)
 "skP" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "Biohazard";
@@ -115504,7 +115512,7 @@ eCf
 qoq
 vSc
 uZx
-czW
+skE
 tGb
 tGb
 tGb
