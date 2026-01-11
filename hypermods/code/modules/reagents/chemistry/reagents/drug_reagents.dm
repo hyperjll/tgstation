@@ -144,6 +144,7 @@
 	taste_description = "diet morphine"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	metabolized_traits = list(TRAIT_ANALGESIA)
+	var/damage_threshold = 50
 
 /datum/reagent/drug/painkillers/on_mob_metabolize(mob/living/affected_mob)
 	. = ..()
@@ -157,7 +158,7 @@
 /datum/reagent/drug/painkillers/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
-	if(totaldamage <= 25)
+	if(totaldamage <= damage_threshold)
 		var/need_mob_update
 		need_mob_update += affected_mob.adjust_brute_loss(-0.4 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 		need_mob_update += affected_mob.adjust_fire_loss(-0.4 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -182,6 +183,7 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	addiction_types = list(/datum/addiction/opioids = 12)
 	metabolized_traits = list(TRAIT_ANALGESIA)
+	var/damage_threshold = 100
 
 /datum/reagent/drug/opium/on_mob_metabolize(mob/living/affected_mob)
 	. = ..()
@@ -199,7 +201,7 @@
 		affected_mob.adjust_disgust(0.5 * REM * seconds_per_tick)
 
 	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
-	if(totaldamage <= 50)
+	if(totaldamage <= damage_threshold)
 		var/need_mob_update
 		need_mob_update += affected_mob.adjust_brute_loss(-0.6 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 		need_mob_update += affected_mob.adjust_fire_loss(-0.6 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
@@ -225,6 +227,7 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	addiction_types = list(/datum/addiction/opioids = 30)
 	metabolized_traits = list(TRAIT_ANALGESIA)
+	var/damage_threshold = 150
 
 /datum/reagent/drug/heroin/on_mob_metabolize(mob/living/affected_mob)
 	. = ..()
@@ -242,7 +245,7 @@
 		affected_mob.adjust_disgust(1 * REM * seconds_per_tick)
 
 	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
-	if(totaldamage <= 75)
+	if(totaldamage <= damage_threshold)
 		var/need_mob_update
 		need_mob_update += affected_mob.adjust_brute_loss(-0.8 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 		need_mob_update += affected_mob.adjust_fire_loss(-0.8 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
