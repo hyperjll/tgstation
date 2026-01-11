@@ -255,3 +255,48 @@
 
 /datum/status_effect/extra_lives/single
 	extra_lives = 1
+
+
+/datum/status_effect/eternal_youth
+	id = "eternal_youth"
+	duration = INFINITY
+	alert_type = null
+
+/datum/status_effect/eternal_youth/on_apply()
+	. = ..()
+	if(.)
+		owner.add_traits(list(TRAIT_NODISMEMBER), "eternal_youth")
+
+/datum/status_effect/eternal_youth/tick(seconds_between_ticks)
+	if(owner.stat != DEAD)
+		return
+
+	var/need_mob_update = FALSE
+
+	if(owner.get_brute_loss() > 0)
+		need_mob_update += owner.adjust_brute_loss(-1, updating_health = FALSE)
+
+	if(owner.get_fire_loss() > 0)
+		need_mob_update += owner.adjust_fire_loss(-1, updating_health = FALSE)
+
+	if(owner.get_tox_loss() > 0)
+		// Forced, so slimepeople are healed as well.
+		need_mob_update += owner.adjust_tox_loss(-0.5, updating_health = FALSE, forced = TRUE)
+
+	if(owner.get_oxy_loss() > 0)
+		need_mob_update += owner.adjust_oxy_loss(-1, updating_health = FALSE)
+
+	if(need_mob_update)
+		owner.updatehealth()
+
+	if(!ishuman(owner))
+		return ..()
+
+	var/mob/living/carbon/human/affected_mob = owner
+	affected_mob.AdjustAllImmobility(-40)
+
+	affected_mob.age = 18
+	return ..()
+
+/datum/status_effect/eternal_youth/on_remove()
+	owner.remove_traits(list(TRAIT_NODISMEMBER), "eternal_youth")

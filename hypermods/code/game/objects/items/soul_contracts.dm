@@ -52,6 +52,7 @@
 		"chaos",
 		"syndicate allegiance",
 		"extra lives",
+		"eternal youth",
 	)
 	var/power_to_give = null
 	var/mob/living/contract_maker = null
@@ -135,18 +136,21 @@
 	if(power_to_give == "extra lives")
 		grantExtraLives(I, user)
 		return
+	if(power_to_give == "eternal youth")
+		grantEternalYouth(I, user)
+		return
 
 /obj/item/soul_contract/proc/grantGreatWealth(obj/item/I, mob/user)
 	var/mob/living/carbon/human/our_signee = user
 
-	var/obj/item/stack/spacecash/c10000/Newitem = new
+	var/obj/item/stack/spacecash/c100000/Newitem = new
 	if(!our_signee.put_in_active_hand(Newitem))
 		Newitem.forceMove(our_signee.drop_location())
 
 	var/datum/bank_account/get_my_bank = our_signee.get_bank_account()
 
 	if(!get_my_bank)
-		var/obj/item/stack/spacecash/c10000/compensation = new
+		var/obj/item/stack/spacecash/c100000/compensation = new
 		if(!our_signee.put_in_active_hand(compensation))
 			compensation.forceMove(our_signee.drop_location())
 	else
@@ -198,5 +202,12 @@
 	var/mob/living/carbon/human/our_signee = user
 
 	our_signee.apply_status_effect(/datum/status_effect/extra_lives/three)
+
+	qdel(src)
+
+/obj/item/soul_contract/proc/grantEternalYouth(obj/item/I, mob/user)
+	var/mob/living/carbon/human/our_signee = user
+
+	our_signee.apply_status_effect(/datum/status_effect/eternal_youth)
 
 	qdel(src)
