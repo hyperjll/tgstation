@@ -439,7 +439,7 @@
 		/obj/item/reagent_containers/cup/soda_cans/devilskiss = 2,
 		/obj/item/reagent_containers/cup/soda_cans/turbo = 2,
 		/obj/item/reagent_containers/cup/soda_cans/fireball = 2,
-		/obj/item/reagent_containers/cup/soda_cans/mutate_fizz = 3,
+		/obj/item/reagent_containers/cup/soda_cans/mutate_fizz = 1,
 		/obj/item/reagent_containers/cup/soda_cans/gold_soda = 3,
 		/obj/item/reagent_containers/cup/soda_cans/sleepy_time = 3,
 	)
