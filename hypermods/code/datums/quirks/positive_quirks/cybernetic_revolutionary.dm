@@ -3,6 +3,7 @@
 	desc = "You believe in the superiority of cybernetic enhancements and have since opted to have one installed!"
 	icon = FA_ICON_LUNGS
 	value = 8
+	hardcore_value = -8
 	medical_record_text = "Patient has had a cybernetic organ installed within them."
 
 /datum/quirk/cyber_rev/add_unique(client/player_client)

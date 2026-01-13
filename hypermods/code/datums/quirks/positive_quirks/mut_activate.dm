@@ -3,6 +3,7 @@
 	desc = "You previously volunteered for genetic experimentation, and came out of it with a positive mutation."
 	icon = FA_ICON_DNA
 	value = 6
+	hardcore_value = -2
 	medical_record_text = "Patient was previously used in genetic experimentation, and the changes were certainly positive."
 	//mail_goodies = list()
 

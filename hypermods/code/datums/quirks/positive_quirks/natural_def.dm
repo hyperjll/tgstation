@@ -3,6 +3,7 @@
 	desc = "You've been through thick and thin many times before, and have become naturally resistant to physical damage. You'll take 5% less brute and burn damage."
 	icon = FA_ICON_SHIELD_ALT
 	value = 8
+	hardcore_value = -3
 	medical_record_text = "Patient has above-average robustness against most forms of physical damage."
 	//mail_goodies = list()
 

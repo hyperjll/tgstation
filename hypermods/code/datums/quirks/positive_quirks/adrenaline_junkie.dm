@@ -3,6 +3,7 @@
 	desc = "While gravely injured, something primal kicks in and gives you the kick-in-the-ass you need to move faster than normal."
 	icon = FA_ICON_PERSON_FALLING_BURST
 	value = 10
+	hardcore_value = -2
 	medical_record_text = "Patient is prone to abnormally large adrenaline releases during stressful situations."
 	//mail_goodies = list()
 

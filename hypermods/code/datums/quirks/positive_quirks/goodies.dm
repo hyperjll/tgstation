@@ -3,6 +3,7 @@
 	desc = "Just before your trip, you got a bit scared and decided to prepare for the worst. You'll be bringing something extra with you aboard Space Station 13."
 	icon = FA_ICON_BRIEFCASE
 	value = 7
+	hardcore_value = -1
 	medical_record_text = "Patient exhibits an almost supernatural ability to sense incoming 'potential' danger, and is often driven to prepare in advance."
 	//mail_goodies = list()
 

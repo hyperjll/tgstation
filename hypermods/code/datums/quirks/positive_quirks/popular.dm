@@ -4,6 +4,7 @@
 			You'll likely recieve some luxury or otherwise useful items in the mail."
 	icon = FA_ICON_BOX_OPEN
 	value = 9
+	hardcore_value = -1
 	medical_record_text = "Patient was busy opening mail during the interview and kept unwrapping expensive goods."
 	mail_goodies = list(
 		/obj/item/stack/spacecash/c500,
