@@ -253,6 +253,12 @@
 		to_chat(our_signee, span_notice("You can't seek Vengeance upon yourself, no matter how masochistic you may be."))
 		return
 
+	to_chat(selected_target, span_danger("You're suddenly assaulted by a barrage of invisible blows at a rate you couldn't possibly process or counter! A demonic voice then speaks into your dying mind: '[our_signee] sends their regards.'"))
+	playsound(selected_target.loc, 'sound/effects/magic/demon_attack1.ogg', 50, TRUE)
+	selected_target.emote("flip")
+	selected_target.emote("spin")
+	selected_target.apply_status_effect(/datum/status_effect/no_gravity)
+
 	selected_target.take_overall_damage(brute = 300) // instant death for most people.
 
 	selected_target.add_traits(list(TRAIT_CURSED), "vengence-wish") // bad luck
