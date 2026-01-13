@@ -50,12 +50,18 @@
 		"wealth",
 		"immortality",
 		"chaos",
-		"syndicate allegiance",
 		"extra lives",
 		"eternal youth",
+		"vengeance",
+		"perfect health",
+		"syndicate allegiance",
 	)
+	/// The power chosen above.
 	var/power_to_give = null
+	/// Who initially made this contract?
 	var/mob/living/contract_maker = null
+	/// How many times can we use this contract?
+	var/uses = 1
 
 /obj/item/soul_contract/examine(mob/user)
 	. = ..()
@@ -112,14 +118,6 @@
 	if(!user) // Something fucked up happened.
 		return
 
-	ADD_TRAIT(user, TRAIT_SOUL_SOLD, SOUL_CONTRACT_TRAIT)
-	to_chat(user, span_notice("As you finish signing the contract, you feel a part of yourself be shackled by invisible chains..."))
-	playsound(src.loc, 'hypermods/sound/effects/magebook_used.ogg', 80, TRUE)
-	playsound(src.loc, 'sound/effects/chemistry/ahaha.ogg', 30, TRUE)
-
-	contract_maker.maxHealth += 10
-	to_chat(contract_maker, span_danger("A contract granting [power_to_give] has been signed by [user]. A part of their essence has been bestowed upon you as thanks."))
-
 	/// This little chunk down here gets the proc for whatever reward we're granting the user.
 	if(power_to_give == "wealth")
 		grantGreatWealth(I, user)
@@ -130,15 +128,35 @@
 	if(power_to_give == "chaos")
 		causeChaos(I, user)
 		return
-	if(power_to_give == "syndicate allegiance")
-		makeSyndicate(I, user)
-		return
 	if(power_to_give == "extra lives")
 		grantExtraLives(I, user)
 		return
 	if(power_to_give == "eternal youth")
 		grantEternalYouth(I, user)
 		return
+	if(power_to_give == "vengeance")
+		deliverVengeance(I, user)
+		return
+	if(power_to_give == "perfect health")
+		grantPerfectHealth(I, user)
+		return
+	if(power_to_give == "syndicate allegiance")
+		makeSyndicate(I, user)
+		return
+
+/obj/item/soul_contract/proc/afterWishEffects(obj/item/I, mob/user)
+	ADD_TRAIT(user, TRAIT_SOUL_SOLD, SOUL_CONTRACT_TRAIT)
+	to_chat(user, span_notice("As you finish signing the contract, you feel a part of yourself be shackled by invisible chains..."))
+	playsound(src.loc, 'hypermods/sound/effects/magebook_used.ogg', 80, TRUE)
+	playsound(src.loc, 'sound/effects/chemistry/ahaha.ogg', 30, TRUE)
+
+	if(contract_maker) // Just in case the guy got gibbed or smth before we signed it.
+		contract_maker.maxHealth += 10
+		to_chat(contract_maker, span_danger("A contract granting [power_to_give] has been signed by [user]. A part of their essence has been bestowed upon you as thanks."))
+
+	uses--
+	if(uses <= 0)
+		qdel(src)
 
 /obj/item/soul_contract/proc/grantGreatWealth(obj/item/I, mob/user)
 	var/mob/living/carbon/human/our_signee = user
@@ -156,18 +174,17 @@
 	else
 		get_my_bank.payday_modifier *= 10
 
-	qdel(src)
+	afterWishEffects(I, user)
 
 /obj/item/soul_contract/proc/grantImmortality(obj/item/I, mob/user)
 	var/mob/living/carbon/human/our_signee = user
 
-	ADD_TRAIT(our_signee, TRAIT_NODEATH, SOUL_CONTRACT_TRAIT)
-	ADD_TRAIT(our_signee, TRAIT_NOCRITDAMAGE, SOUL_CONTRACT_TRAIT) // Not going to be permanently stuck in crit by that alone.
+	our_signee.add_traits(list(TRAIT_NODEATH, TRAIT_NOCRITDAMAGE, TRAIT_NO_OXYLOSS_PASSOUT), SOUL_CONTRACT_TRAIT) // Not going to be permanently stuck in crit by that alone.
 	our_signee.apply_status_effect(/datum/status_effect/immortality_regen)
 	to_chat(user, span_notice("You feel your very being compress inward, while you may be more frail, you can no longer die by most means!"))
 	our_signee.maxHealth -= 25
 
-	qdel(src)
+	afterWishEffects(I, user)
 
 /obj/item/soul_contract/proc/causeChaos(obj/item/I, mob/user)
 	var/new_lights = rand(1, 2)
@@ -185,7 +202,7 @@
 	force_event(random_event, "a [src]")
 	force_event(random_event, "a [src]")
 
-	qdel(src)
+	afterWishEffects(I, user)
 
 /obj/item/soul_contract/proc/makeSyndicate(obj/item/I, mob/user)
 	var/mob/living/carbon/human/our_signee = user
@@ -196,18 +213,93 @@
 
 	our_signee.mind.add_antag_datum(/datum/antagonist/traitor/infiltrator/sleeper_agent)
 
-	qdel(src)
+	afterWishEffects(I, user)
 
 /obj/item/soul_contract/proc/grantExtraLives(obj/item/I, mob/user)
 	var/mob/living/carbon/human/our_signee = user
 
 	our_signee.apply_status_effect(/datum/status_effect/extra_lives/three)
 
-	qdel(src)
+	afterWishEffects(I, user)
 
 /obj/item/soul_contract/proc/grantEternalYouth(obj/item/I, mob/user)
 	var/mob/living/carbon/human/our_signee = user
 
 	our_signee.apply_status_effect(/datum/status_effect/eternal_youth)
 
-	qdel(src)
+	/// A few quirks commonly associated with the elderly.
+	if(our_signee.has_quirk(/datum/quirk/badback))
+		our_signee.remove_quirk(/datum/quirk/badback)
+	if(our_signee.has_quirk(/datum/quirk/item_quirk/blindness))
+		our_signee.remove_quirk(/datum/quirk/item_quirk/blindness)
+	if(our_signee.has_quirk(/datum/quirk/item_quirk/deafness))
+		our_signee.remove_quirk(/datum/quirk/item_quirk/deafness)
+
+	afterWishEffects(I, user)
+
+/obj/item/soul_contract/proc/deliverVengeance(obj/item/I, mob/user)
+	var/mob/living/carbon/human/our_signee = user
+	var/possible_targets = list()
+	var/random_addict_quirks = list()
+
+	for(var/mob/living/all_players as anything in GLOB.alive_player_list)
+		possible_targets |= all_players
+
+	var/mob/living/selected_target = tgui_input_list(our_signee, "Whom do you seek Vengeance upon?", "Target of Vengeance", possible_targets)
+	if(!selected_target) // Didn't select someone.
+		to_chat(our_signee, span_notice("But you refrained..."))
+		return
+	if(selected_target == our_signee) // Uh...
+		to_chat(our_signee, span_notice("You can't seek Vengeance upon yourself, no matter how masochistic you may be."))
+		return
+
+	selected_target.take_overall_damage(brute = 300) // instant death for most people.
+
+	selected_target.add_traits(list(TRAIT_CURSED), "vengence-wish") // bad luck
+
+	for(var/type in subtypesof(/datum/quirk/item_quirk/addict)) // grab an addiction-based quirk
+		random_addict_quirks |= type
+
+	var/datum/quirk/item_quirk/addict/quirk_type = pick(random_addict_quirks) // pick one
+	selected_target.add_quirk(quirk_type) // and give it to that mf
+
+	afterWishEffects(I, user)
+
+/obj/item/soul_contract/proc/grantPerfectHealth(obj/item/I, mob/user)
+	var/mob/living/carbon/human/our_signee = user
+	var/all_quirks_to_remove = list(
+		/datum/quirk/badback,
+		/datum/quirk/item_quirk/blindness,
+		/datum/quirk/item_quirk/deafness,
+		/datum/quirk/item_quirk/asthma,
+		/datum/quirk/item_quirk/anosmia,
+		/datum/quirk/blooddeficiency,
+		/datum/quirk/item_quirk/chronic_illness,
+		/datum/quirk/item_quirk/food_allergic,
+		/datum/quirk/item_quirk/immunodeficiency,
+		/datum/quirk/hemiplegic,
+		/datum/quirk/item_quirk/brainproblems,
+		/datum/quirk/insanity,
+		/datum/quirk/mute,
+		/datum/quirk/item_quirk/narcolepsy,
+		/datum/quirk/item_quirk/nearsighted,
+		/datum/quirk/paraplegic,
+		/datum/quirk/prosopagnosia,
+		/datum/quirk/prosthetic_limb,
+		/datum/quirk/prosthetic_organ,
+		/datum/quirk/quadruple_amputee,
+		/datum/quirk/item_quirk/scarred_eye,
+		/datum/quirk/tin_man,
+		/datum/quirk/unstable,
+		/datum/quirk/hunger_damage
+	)
+	// Full heal, and immunity to dismemberment, soft crit, critical condition damage, and a permanent spaceacillin effect.
+	our_signee.revive(ADMIN_HEAL_ALL)
+	our_signee.add_traits(list(TRAIT_NOCRITDAMAGE, TRAIT_NODISMEMBER, TRAIT_NOSOFTCRIT, TRAIT_VIRUS_RESISTANCE), "perfecthealth-wish")
+	// It's a PERFECT health wish... It should remove certain debilitating quirks.
+
+	for(var/datum/quirk/quirk_type as anything in all_quirks_to_remove)
+		if(our_signee.has_quirk(quirk_type))
+			our_signee.remove_quirk(quirk_type)
+
+	afterWishEffects(I, user)

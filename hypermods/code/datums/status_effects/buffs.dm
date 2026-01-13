@@ -214,6 +214,8 @@
 	if(owner.get_oxy_loss() > 0)
 		need_mob_update += owner.adjust_oxy_loss(-0.5, updating_health = FALSE)
 
+	owner.adjust_blood_volume(0.2, maximum = BLOOD_VOLUME_SAFE)
+
 	if(need_mob_update)
 		owner.updatehealth()
 
@@ -285,6 +287,8 @@
 
 	if(owner.get_oxy_loss() > 0)
 		need_mob_update += owner.adjust_oxy_loss(-1, updating_health = FALSE)
+
+	owner.adjust_blood_volume(0.5, maximum = BLOOD_VOLUME_SAFE)
 
 	if(need_mob_update)
 		owner.updatehealth()
