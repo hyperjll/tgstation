@@ -54,6 +54,7 @@
 		"eternal youth",
 		"vengeance",
 		"perfect health",
+		"status",
 		"syndicate allegiance",
 	)
 	/// The power chosen above.
@@ -139,6 +140,9 @@
 		return
 	if(power_to_give == "perfect health")
 		grantPerfectHealth(I, user)
+		return
+	if(power_to_give == "status")
+		grantCaptaincy(I, user)
 		return
 	if(power_to_give == "syndicate allegiance")
 		makeSyndicate(I, user)
@@ -307,5 +311,39 @@
 	for(var/datum/quirk/quirk_type as anything in all_quirks_to_remove)
 		if(our_signee.has_quirk(quirk_type))
 			our_signee.remove_quirk(quirk_type)
+
+	afterWishEffects(I, user)
+
+/obj/item/soul_contract/proc/grantCaptaincy(obj/item/I, mob/user)
+	var/mob/living/carbon/human/our_signee = user
+
+	var/equipment_loss_warning = tgui_alert(user, "Do you acknowledge the potential loss of everything you have equipped?", "Equipment Loss Warning", list("Yes", "No"))
+	if(equipment_loss_warning == "No")
+		to_chat(user, span_notice("But you refrained for now."))
+		return
+
+	message_admins("[key_name(our_signee)] has replaced the Captain")
+	SEND_SOUND(world, sound('sound/effects/magic/timeparadox2.ogg'))
+
+	for (var/mob/living/carbon/human/crewmate as anything in GLOB.human_list)
+		if (!crewmate.mind)
+			continue
+		crewmate.Unconscious(5 SECONDS) // Everyone falls unconscious but not everyone gets told about a new captain
+		if (crewmate == our_signee || IS_HUMAN_INVADER(crewmate))
+			continue
+		to_chat(crewmate, span_danger("The world goes black as screams of agony fill your ears.\n\
+			Fire blazes within the confines of your mind as visions of tortured souls fill your eyes. \
+			Sitting upon a mountain of writhing bodies, a bloodied throne of countless skulls sits... you snap back to reality. \n\
+			Everything is just as it was and always has been. \n\n\
+			A peculiar thought rises from the depths of your mind. \n\
+			[span_hypnophrase("I'm so glad that [our_signee.real_name] is our legally appointed Captain!")] \n\
+			For a moment, you feel like everything will be alright."))
+		if (is_captain_job(crewmate.mind.assigned_role))
+			crewmate.forceEquipOutfit(/datum/outfit/job/security)
+			GLOB.manifest.modify(crewmate.real_name, JOB_SECURITY_OFFICER, JOB_SECURITY_OFFICER)
+
+	our_signee.forceEquipOutfit(/datum/outfit/job/captain)
+	GLOB.manifest.modify(our_signee.real_name, JOB_CAPTAIN, JOB_CAPTAIN)
+	minor_announce("Captain [our_signee.real_name] on deck!")
 
 	afterWishEffects(I, user)

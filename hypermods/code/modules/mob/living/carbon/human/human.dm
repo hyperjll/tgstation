@@ -34,6 +34,17 @@
 	if(!src.has_status_effect(/datum/status_effect/neuralboosted))
 		src.apply_status_effect(/datum/status_effect/neuralboosted)
 
+/mob/living/carbon/human/proc/forceEquipOutfit(dresscode) // Taken from select equipment admin verb. Uses by the status infernal contact wish.
+	for(var/obj/item/item in src.get_equipped_items(NONE))
+		qdel(item)
+
+	var/obj/item/organ/brain/human_brain = src.get_organ_slot(BRAIN)
+	human_brain.destroy_all_skillchips() // get rid of skillchips to prevent runtimes
+
+	src.equipOutfit(dresscode)
+
+	src.regenerate_icons()
+
 
 /mob/living/carbon/human/species/werewolf
 	race = /datum/species/werewolf
