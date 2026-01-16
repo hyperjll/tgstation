@@ -14,6 +14,8 @@
 	/// In the preview icon, a nuclear fission explosive device, only appearing if there's an icon state for it.
 	nuke_icon_state = "old_nuclearbomb_base"
 
+	infiltrator_id = null // our ship spawns at map load.
+
 /// Gets the position we spawn at
 /datum/antagonist/nukeop/commando/get_spawnpoint()
 	var/team_number = 1
@@ -147,112 +149,7 @@
 		var/first_name = human_to_rename.client?.prefs?.read_preference(/datum/preference/name/operative_alias) || pick(GLOB.operative_aliases)
 		var/chosen_name = "[syndicate_name] [first_name] "
 		human_to_rename.fully_replace_character_name(human_to_rename.real_name, chosen_name)
-/**
-/datum/team/nuclear/commando/get_result()
-	var/shuttle_evacuated = EMERGENCY_ESCAPED_OR_ENDGAMED
-	var/shuttle_landed_base = SSshuttle.emergency.is_hijacked()
-	var/disk_rescued = is_disk_rescued()
-	var/syndies_didnt_escape = !is_infiltrator_docked_at_syndiebase()
-	var/team_is_dead = are_all_operatives_dead()
-	var/station_was_nuked = GLOB.station_was_nuked
-	var/station_nuke_source = GLOB.station_nuke_source
 
-	// The nuke detonated on the syndicate base
-	if(station_nuke_source == DETONATION_HIT_SYNDIE_BASE)
-		return NUKE_RESULT_FLUKE
-
-	// The station was nuked
-	if(station_was_nuked)
-		// The station was nuked and the infiltrator failed to escape
-		if(syndies_didnt_escape)
-			return NUKE_RESULT_NOSURVIVORS
-
-	// The station was not nuked, but something was
-	else if(station_nuke_source && !disk_rescued)
-		// The station was not nuked, but something was, and the syndicates didn't escape it
-		if(syndies_didnt_escape)
-			return NUKE_RESULT_WRONG_STATION_DEAD
-		// The station was not nuked, but something was, and the syndicates returned to their base
-		else
-			return NUKE_RESULT_WRONG_STATION
-
-	// Nuke didn't blow, but nukies somehow hijacked the emergency shuttle to land at the base anyways.
-	else if(shuttle_landed_base)
-		if(disk_rescued)
-			return NUKE_RESULT_HIJACK_DISK
-		else
-			return NUKE_RESULT_HIJACK_NO_DISK
-
-	// No nuke went off, the station rescued the disk
-	else if(disk_rescued)
-		// No nuke went off, the shuttle left, and the team is dead
-		if(shuttle_evacuated && team_is_dead)
-			return NUKE_RESULT_CREW_WIN_SYNDIES_DEAD
-		// No nuke went off, but the nuke ops survived
-		else
-			return NUKE_RESULT_CREW_WIN
-
-	// No nuke went off, but the disk was left behind
-	else
-		// No nuke went off, the disk was left, but all the ops are dead
-		if(team_is_dead)
-			return NUKE_RESULT_DISK_LOST
-		// No nuke went off, the disk was left, there are living ops, but the shuttle left successfully
-		else if(shuttle_evacuated)
-			return NUKE_RESULT_DISK_STOLEN
-
-	CRASH("[type] - got an undefined / unexpected result.")
-
-/datum/team/nuclear/commando/roundend_report()
-	var/list/parts = list()
-	parts += "<span class='header'>[syndicate_name] Operatives:</span>"
-
-	switch(get_result())
-		if(NUKE_RESULT_FLUKE)
-			parts += "<span class='redtext big'>Humiliating Syndicate Defeat!</span>"
-			parts += "<B>The crew of [station_name()] gave [syndicate_name] operatives back their bomb! The syndicate base was destroyed!</B> Next time, don't lose the nuke!"
-		if(NUKE_RESULT_NUKE_WIN)
-			parts += "<span class='greentext big'>Syndicate Major Victory!</span>"
-			parts += "<B>[syndicate_name] operatives have destroyed [station_name()]!</B>"
-		if(NUKE_RESULT_NOSURVIVORS)
-			parts += "<span class='neutraltext big'>Total Annihilation!</span>"
-			parts += "<B>[syndicate_name] operatives destroyed [station_name()] but did not leave the area in time and got caught in the explosion.</B> Next time, don't lose the disk!"
-		if(NUKE_RESULT_WRONG_STATION)
-			parts += "<span class='redtext big'>Crew Minor Victory!</span>"
-			parts += "<B>[syndicate_name] operatives secured the authentication disk but blew up something that wasn't [station_name()].</B> Next time, don't do that!"
-		if(NUKE_RESULT_WRONG_STATION_DEAD)
-			parts += "<span class='redtext big'>[syndicate_name] operatives have earned Darwin Award!</span>"
-			parts += "<B>[syndicate_name] operatives blew up something that wasn't [station_name()] and got caught in the explosion.</B> Next time, don't do that!"
-		if(NUKE_RESULT_HIJACK_DISK)
-			parts += "<span class='greentext big'>Syndicate Miniscule Victory!</span>"
-			parts += "<B>[syndicate_name] operatives failed to destroy [station_name()], but they managed to secure the disk and hijack the emergency shuttle, causing it to land on the syndicate base. Good job?</B>"
-		if(NUKE_RESULT_HIJACK_NO_DISK)
-			parts += "<span class='greentext big'>Syndicate Insignificant Victory!</span>"
-			parts += "<B>[syndicate_name] operatives failed to destroy [station_name()] or secure the disk, but they managed to hijack the emergency shuttle, causing it to land on the syndicate base. Good job?</B>"
-		if(NUKE_RESULT_CREW_WIN_SYNDIES_DEAD)
-			parts += "<span class='redtext big'>Crew Major Victory!</span>"
-			parts += "<B>The Research Staff has saved the disk and killed the [syndicate_name] Operatives</B>"
-		if(NUKE_RESULT_CREW_WIN)
-			parts += "<span class='redtext big'>Crew Major Victory!</span>"
-			parts += "<B>The Research Staff has saved the disk and stopped the [syndicate_name] Operatives!</B>"
-		if(NUKE_RESULT_DISK_LOST)
-			parts += "<span class='neutraltext big'>Neutral Victory!</span>"
-			parts += "<B>The Research Staff failed to secure the authentication disk but did manage to kill most of the [syndicate_name] Operatives!</B>"
-		if(NUKE_RESULT_DISK_STOLEN)
-			parts += "<span class='greentext big'>Syndicate Minor Victory!</span>"
-			parts += "<B>[syndicate_name] operatives survived the assault but did not achieve the destruction of [station_name()].</B> Next time, don't lose the disk!"
-		else
-			parts += "<span class='neutraltext big'>Neutral Victory</span>"
-			parts += "<B>Mission aborted!</B>"
-
-	var/text = "<br><span class='header'>The syndicate operatives were:</span>"
-	text += printplayerlist(members)
-	text += "<br>"
-
-	parts += text
-
-	return "<div class='panel redborder'>[parts.Join("<br>")]</div>"
-**/
 /datum/team/nuclear/commando/antag_listing_entry()
 	var/disk_report = "<b>Nuclear Disk(s)</b><br>"
 	disk_report += "<table cellspacing=5>"

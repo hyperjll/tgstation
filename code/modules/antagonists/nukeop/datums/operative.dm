@@ -195,6 +195,9 @@
 	return GLOB.nukeop_start[((team_number - 1) % GLOB.nukeop_start.len) + 1]
 
 /datum/antagonist/nukeop/proc/spawn_infiltrator()
+	if(isnull(infiltrator_id))
+		return
+
 	var/datum/map_template/shuttle/infiltrator/ship = SSmapping.shuttle_templates[infiltrator_id]
 	var/x = (world.maxx - TRANSITIONEDGE - ship.width)
 	var/y = (world.maxy - TRANSITIONEDGE - ship.height)
