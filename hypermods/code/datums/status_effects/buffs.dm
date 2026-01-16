@@ -228,6 +228,11 @@
 	alert_type = null
 	var/extra_lives = 9
 
+/datum/status_effect/extra_lives/on_apply()
+	. = ..()
+	if(.)
+		owner.add_traits(list(TRAIT_BOMBGIBIMMUNE), "extra_lives")
+
 /datum/status_effect/extra_lives/tick(seconds_between_ticks)
 	if(owner.stat != DEAD)
 		return
@@ -251,6 +256,9 @@
 		qdel(src)
 
 	return ..()
+
+/datum/status_effect/extra_lives/on_remove()
+	owner.remove_traits(list(TRAIT_BOMBGIBIMMUNE), "extra_lives")
 
 /datum/status_effect/extra_lives/three
 	extra_lives = 3
@@ -304,3 +312,51 @@
 
 /datum/status_effect/eternal_youth/on_remove()
 	owner.remove_traits(list(TRAIT_NODISMEMBER), "eternal_youth")
+
+
+/datum/status_effect/protection_wish
+	id = "protection_wish"
+	duration = INFINITY
+	alert_type = null
+	var/healthcheck
+
+/datum/status_effect/protection_wish_cd
+	id = "protection_wish_cd"
+	duration = 1200
+	alert_type = null
+
+/datum/status_effect/protection_wish/on_apply()
+	. = ..()
+	if(.)
+		var/mob/living/carbon/human/our_human = owner
+		our_human.add_traits(list(TRAIT_BOMBGIBIMMUNE), "protection_wish")
+		our_human.physiology.brute_mod *= 0.5
+		our_human.physiology.burn_mod *= 0.5
+		our_human.physiology.tox_mod *= 0.5
+		our_human.physiology.oxy_mod *= 0.5
+
+/datum/status_effect/protection_wish/tick(seconds_between_ticks)
+	if(owner.has_status_effect(/datum/status_effect/protection_wish_cd))
+		return ..()
+
+	if(healthcheck && (healthcheck - owner.health) > 5)
+		to_chat(owner, span_notice("As your health plummets, you suddenly find yourself transported elsewhere!"))
+		do_sparks(5,FALSE,owner)
+		var/turf/emergency_turf = find_safe_turf(owner.z, extended_safety_checks = TRUE)
+		var/range = 0
+		if(!emergency_turf)
+			emergency_turf = get_turf(owner)
+			range = 50
+		if(do_teleport(owner, emergency_turf, range, channel = TELEPORT_CHANNEL_BLUESPACE))
+			do_sparks(5,FALSE,owner)
+			owner.apply_status_effect(/datum/status_effect/protection_wish_cd)
+	healthcheck = owner.health
+	return ..()
+
+/datum/status_effect/protection_wish/on_remove()
+	var/mob/living/carbon/human/our_human = owner
+	our_human.remove_traits(list(TRAIT_BOMBGIBIMMUNE), "protection_wish")
+	our_human.physiology.brute_mod /= 0.5
+	our_human.physiology.burn_mod /= 0.5
+	our_human.physiology.tox_mod /= 0.5
+	our_human.physiology.oxy_mod /= 0.5

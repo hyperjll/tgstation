@@ -15,6 +15,8 @@
 	var/bodypart_color = COLOR_DARK_LIME
 	/// Determines whether or not our version of hulk breaks their arm when destroying walls.
 	var/no_recoil = TRUE
+	/// Determines whether or not you lose this version of Hulk when entering critical condition.
+	var/lose_on_crit = TRUE
 	mutation_traits = list(
 		TRAIT_CHUNKYFINGERS,
 		TRAIT_HULK,
@@ -66,7 +68,7 @@
 	source.say("WAAAAAAAAAAAAAAGH!", forced="hulk")
 
 /datum/mutation/hulk/on_life(seconds_per_tick)
-	if(owner.health < owner.crit_threshold)
+	if(owner.health < owner.crit_threshold && lose_on_crit)
 		on_losing(owner)
 		to_chat(owner, span_danger("You suddenly feel very weak."))
 		qdel(src)

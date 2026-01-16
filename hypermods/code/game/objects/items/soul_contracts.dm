@@ -55,6 +55,8 @@
 		"vengeance",
 		"perfect health",
 		"status",
+		"protection",
+		"ultimate power",
 		"syndicate allegiance",
 	)
 	/// The power chosen above.
@@ -144,6 +146,12 @@
 	if(power_to_give == "status")
 		grantCaptaincy(I, user)
 		return
+	if(power_to_give == "protection")
+		grantProtection(I, user)
+		return
+	if(power_to_give == "ultimate power")
+		grantUltimatePower(I, user)
+		return
 	if(power_to_give == "syndicate allegiance")
 		makeSyndicate(I, user)
 		return
@@ -183,7 +191,7 @@
 /obj/item/soul_contract/proc/grantImmortality(obj/item/I, mob/user)
 	var/mob/living/carbon/human/our_signee = user
 
-	our_signee.add_traits(list(TRAIT_NODEATH, TRAIT_NOCRITDAMAGE, TRAIT_NO_OXYLOSS_PASSOUT), SOUL_CONTRACT_TRAIT) // Not going to be permanently stuck in crit by that alone.
+	our_signee.add_traits(list(TRAIT_NODEATH, TRAIT_NOCRITDAMAGE, TRAIT_NO_OXYLOSS_PASSOUT, TRAIT_BOMBGIBIMMUNE), SOUL_CONTRACT_TRAIT)
 	our_signee.apply_status_effect(/datum/status_effect/immortality_regen)
 	to_chat(user, span_notice("You feel your very being compress inward, while you may be more frail, you can no longer die by most means!"))
 	our_signee.maxHealth -= 25
@@ -345,5 +353,22 @@
 	our_signee.forceEquipOutfit(/datum/outfit/job/captain)
 	GLOB.manifest.modify(our_signee.real_name, JOB_CAPTAIN, JOB_CAPTAIN)
 	minor_announce("Captain [our_signee.real_name] on deck!")
+
+	afterWishEffects(I, user)
+
+/obj/item/soul_contract/proc/grantProtection(obj/item/I, mob/user)
+	var/mob/living/carbon/human/our_signee = user
+
+	our_signee.apply_status_effect(/datum/status_effect/protection_wish)
+
+	afterWishEffects(I, user)
+
+/obj/item/soul_contract/proc/grantUltimatePower(obj/item/I, mob/user)
+	var/mob/living/carbon/human/our_signee = user
+
+	our_signee.dna.add_mutation(/datum/mutation/hulk/no_loss_on_crit/free, "ultimate-power-wish")
+	our_signee.dna.add_mutation(/datum/mutation/strength/free, "ultimate-power-wish")
+	our_signee.dna.add_mutation(/datum/mutation/laser_eyes/free, "ultimate-power-wish")
+	our_signee.maxHealth += 25
 
 	afterWishEffects(I, user)

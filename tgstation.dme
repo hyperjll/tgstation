@@ -6876,6 +6876,7 @@
 #include "hypermods\code\datums\mutations\alcohol.dm"
 #include "hypermods\code\datums\mutations\body.dm"
 #include "hypermods\code\datums\mutations\defense.dm"
+#include "hypermods\code\datums\mutations\free.dm"
 #include "hypermods\code\datums\mutations\healing.dm"
 #include "hypermods\code\datums\mutations\radiantburst.dm"
 #include "hypermods\code\datums\mutations\radproof.dm"
