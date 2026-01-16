@@ -10,8 +10,14 @@
 /obj/item/stack/sheet/mineral/gold/fifty
 	amount = 50
 
+/obj/item/stack/sheet/mineral/gold/five
+	amount = 5
+
 /obj/item/stack/sheet/mineral/silver/fifty
 	amount = 50
+
+/obj/item/stack/sheet/mineral/silver/five
+	amount = 5
 
 /obj/item/stack/sheet/mineral/bananium/fifty
 	amount = 50
