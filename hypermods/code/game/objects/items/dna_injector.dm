@@ -2,17 +2,13 @@
 	name = "\improper DNA injector (Regenerative)"
 	desc = "A small diagram of the human body can be found on the side, a big cartoon heart obscures most of the diagram."
 	add_mutations = list(/datum/mutation/regenerative)
+	mut_type = MUTATION_SOURCE_SYNDI_MUTATOR
 
 /obj/item/dnainjector/radproof
 	name = "\improper DNA injector (Radproof)"
 	desc = "A small label with pen scribbles can be found on the side, it simply reads: 'Fuck radiation storms.'"
 	add_mutations = list(/datum/mutation/radproof)
-/**
-/obj/item/dnainjector/radproof/super
-	name = "\improper DNA injector (Superior Radproof)"
-	desc = "A small label with pen scribbles can be found on the side, it simply reads: 'Fuck radiation storms.'"
-	add_mutations = list(/datum/mutation/radproof/super)
-**/
+
 /obj/item/dnainjector/superhuman
 	name = "\improper DNA injector (Super)"
 	desc = "AND THIS... IS HOW TO GO... EVEN FURTHER BEYOND!"
@@ -23,16 +19,19 @@
 	name = "\improper DNA injector (Reflective Skin)"
 	desc = "You're gonna be a fashion model, aren't you?"
 	add_mutations = list(/datum/mutation/reflectiveskin)
+	mut_type = MUTATION_SOURCE_SYNDI_MUTATOR
 
 /obj/item/dnainjector/metallineskin
 	name = "\improper DNA injector (Metalline Skin)"
 	desc = "Ever wanted to be an X-Man?"
 	add_mutations = list(/datum/mutation/metallineskin)
+	mut_type = MUTATION_SOURCE_SYNDI_MUTATOR
 
 /obj/item/dnainjector/vitality
 	name = "\improper DNA injector (Vitality)"
 	desc = "To give you the proper boost you need. Won't do anything to your genitals, though."
 	add_mutations = list(/datum/mutation/vitality)
+	mut_type = MUTATION_SOURCE_SYNDI_MUTATOR
 
 /obj/item/dnainjector/firebreath
 	name = "\improper DNA injector (Fire Breath)"
@@ -48,6 +47,7 @@
 	name = "\improper DNA injector (Acid Spit)"
 	desc = "Lets you spit acid."
 	add_mutations = list(/datum/mutation/acid_spit/syndicate)
+	mut_type = MUTATION_SOURCE_SYNDI_MUTATOR
 
 /obj/item/dnainjector/radiantburst
 	name = "\improper DNA injector (Radiant Burst)"
@@ -113,6 +113,7 @@
 	name = "\improper DNA injector (Stabilized Laser Eyes)"
 	desc = "Gives you Stabilized Laser Eyes."
 	add_mutations = list(/datum/mutation/laser_eyes/unstable/syndicate)
+	mut_type = MUTATION_SOURCE_SYNDI_MUTATOR
 
 /obj/item/dnainjector/meson_vision
 	name = "\improper DNA injector (Meson Visual Enhancement)"
@@ -133,6 +134,7 @@
 	name = "\improper DNA injector (Refined X-Ray Vision)"
 	desc = "Gives you Refined X-Ray Vision."
 	add_mutations = list(/datum/mutation/weaker_xray/syndicate)
+	mut_type = MUTATION_SOURCE_SYNDI_MUTATOR
 
 /obj/item/dnainjector/spores
 	name = "\improper DNA injector (Agaricale Pores)"
