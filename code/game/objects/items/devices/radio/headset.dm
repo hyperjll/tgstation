@@ -42,11 +42,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	overlay_mic_idle = null
 	overlay_mic_active = null
 
-	/// Can an A.N.T.A.G Locker be installed to prevent people from picking this thing up?
-	var/antag_lockable = FALSE
-	/// Has an A.N.T.A.G Locker already been installed?
-	var/antag_locked = FALSE
-
 /obj/item/radio/headset/emag_act()
 	if(antag_locked)
 		playsound(src, SFX_SPARKS, 15, TRUE)
@@ -206,13 +201,13 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	icon_state = "sec_headset"
 	worn_icon_state = "sec_headset"
 	keyslot = /obj/item/encryptionkey/headset_sec
+	antag_lockable = TRUE
 
 /obj/item/radio/headset/headset_sec/alt
 	name = "security bowman headset"
 	desc = "This is used by your elite security force. Protects ears from flashbangs."
 	icon_state = "sec_headset_alt"
 	worn_icon_state = "sec_headset_alt"
-	antag_lockable = TRUE
 
 /obj/item/radio/headset/headset_sec/alt/Initialize(mapload)
 	. = ..()
@@ -483,13 +478,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	playsound(src, 'sound/machines/click.ogg', 50, TRUE)
 	loc.balloon_alert(user, "encryption key installed")
 	return ITEM_INTERACT_SUCCESS
-
-	if(istype(W, /obj/item/antaglocker) && antag_lockable && !antag_locked)
-		balloon_alert(user, "Anti-Theft System Installed!")
-		AddElement(/datum/element/anti_pickup)
-		antag_locked = TRUE
-		qdel(W)
-		return
 
 /obj/item/radio/headset/recalculateChannels()
 	. = ..()

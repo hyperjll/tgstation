@@ -97,6 +97,11 @@
 	/// A very brief cooldown to prevent "important" radio sounds from overlapping.
 	COOLDOWN_DECLARE(important_audio_cooldown)
 
+	/// Can an A.N.T.A.G Locker be installed to prevent people from picking this thing up?
+	var/antag_lockable = FALSE
+	/// Has an A.N.T.A.G Locker already been installed?
+	var/antag_locked = FALSE
+
 /obj/item/radio/Initialize(mapload)
 	set_wires(new /datum/wires/radio(src))
 	. = ..()
@@ -586,6 +591,12 @@
 		return screwdriver_act(user, tool)
 	if(istype(tool, /obj/item/encryptionkey))
 		return install_key(user, tool)
+	if(istype(tool, /obj/item/antaglocker) && antag_lockable && !antag_locked)
+		balloon_alert(user, "Anti-Theft System Installed!")
+		AddElement(/datum/element/anti_pickup)
+		antag_locked = TRUE
+		qdel(tool)
+		return
 	return NONE
 
 /obj/item/radio/screwdriver_act_secondary(mob/living/user, obj/item/tool)
