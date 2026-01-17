@@ -82,7 +82,7 @@
 						"... We call upon you, in the face of adversity ...",
 						"... to complete us, removing that which is undesirable ...")
 	invoke_msg = "... Arise, our champion! Become that which your soul craves, live in the world as your true form!!"
-	favor_cost = 1000
+	favor_cost = 500
 
 /datum/religion_rites/synthconversion/perform_rite(mob/living/user, atom/religious_tool)
 	if(!ismovable(religious_tool))
@@ -132,7 +132,7 @@
 		"...Help us in our great conquest!",
 	)
 	invoke_msg = "The end of flesh is near!"
-	favor_cost = 2000
+	favor_cost = 250
 
 /datum/religion_rites/machine_blessing/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	..()
@@ -142,31 +142,44 @@
 			// Arms
 			list(
 				/obj/item/organ/cyberimp/arm/toolkit/combat = 1,
-				/obj/item/organ/cyberimp/arm/toolkit/surgery = 1000000,
-				/obj/item/organ/cyberimp/arm/toolkit/toolset = 1500000,
+				/obj/item/organ/cyberimp/arm/toolkit/nt_mantis = 3,
+				/obj/item/organ/cyberimp/arm/toolkit/surgery = 5,
+				/obj/item/organ/cyberimp/arm/toolkit/toolset = 8,
 			) = 15,
 			// Eyes
 			list(
-				/obj/item/organ/cyberimp/eyes/hud/diagnostic = 1,
-				/obj/item/organ/cyberimp/eyes/hud/medical = 1,
-				/obj/item/organ/eyes/robotic/glow = 1,
-				/obj/item/organ/eyes/robotic/shield = 2,
+				/obj/item/organ/cyberimp/eyes/hud/diagnostic = 2,
+				/obj/item/organ/cyberimp/eyes/hud/medical = 2,
+				/obj/item/organ/cyberimp/eyes/hud/security = 1,
+				/obj/item/organ/eyes/robotic/glow = 2,
+				/obj/item/organ/eyes/robotic/shield = 3,
+				/obj/item/organ/eyes/robotic/thermals = 1,
 			) = 15,
 			// Chest
 			list(
-				/obj/item/organ/cyberimp/chest/reviver = 1,
-				/obj/item/organ/cyberimp/chest/thrusters = 2,
+				/obj/item/organ/cyberimp/chest/reviver = 3,
+				/obj/item/organ/cyberimp/chest/thrusters = 3,
+				/obj/item/organ/cyberimp/chest/nutriment = 3,
+				/obj/item/organ/cyberimp/chest/dualwield = 1,
 			) = 9,
 			// Brain / Head
 			list(
-				/obj/item/organ/cyberimp/brain/anti_drop = 50,
-				/obj/item/organ/cyberimp/brain/connector = 50,
+				/obj/item/organ/cyberimp/brain/anti_drop = 30,
+				/obj/item/organ/cyberimp/brain/connector = 30,
 				/obj/item/organ/cyberimp/brain/anti_stun = 10,
+				/obj/item/organ/cyberimp/brain/surgical_processor = 30,
 			) = 10,
 			// Misc
 			list(
 				/obj/item/organ/cyberimp/mouth/breathing_tube = 1,
 			) = 5,
+			// Legs
+			list(
+				/obj/item/organ/cyberimp/leg/airshoes = 1,
+				/obj/item/organ/cyberimp/leg/jumpboots = 7,
+				/obj/item/organ/cyberimp/leg/magboot = 5,
+				/obj/item/organ/cyberimp/leg/galosh = 5,
+			) = 15,
 		)
 	)
 	new blessing(altar_turf)
@@ -202,7 +215,7 @@
 	name = "Purchase Vend-a-tray"
 	desc = "Summons a Vend-a-tray. You can use it to sell items!"
 	invoke_msg = "I need a vend-a-tray to make some more money!"
-	money_cost = 300
+	money_cost = 50
 
 /datum/religion_rites/greed/vendatray/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	..()
@@ -215,12 +228,25 @@
 	name = "Purchase Personal Vending Machine"
 	desc = "Summons a custom vending machine. You can use it to sell MANY items!"
 	invoke_msg = "If I get a custom vending machine for my products, I can be RICH!"
-	money_cost = 1000 //quite a step up from vendatray
+	money_cost = 500 //quite a step up from vendatray
 
 /datum/religion_rites/greed/custom_vending/invoke_effect(mob/living/user, atom/movable/religious_tool)
 	..()
 	var/altar_turf = get_turf(religious_tool)
 	new /obj/machinery/vending/custom/greed(altar_turf)
+	playsound(get_turf(religious_tool), 'sound/effects/cashregister.ogg', 60, TRUE)
+	return TRUE
+
+/datum/religion_rites/greed/anything_gift
+	name = "Purchase Anything Gift"
+	desc = "Summons a fabulously wrapped gift that could contain... ANYTHING!"
+	invoke_msg = "If I could get some goods to sell, I can be rich!"
+	money_cost = 300 // Delicious!
+
+/datum/religion_rites/greed/anything_gift/invoke_effect(mob/living/user, atom/movable/religious_tool)
+	..()
+	var/altar_turf = get_turf(religious_tool)
+	new /obj/item/gift/anything(altar_turf)
 	playsound(get_turf(religious_tool), 'sound/effects/cashregister.ogg', 60, TRUE)
 	return TRUE
 
@@ -234,7 +260,7 @@
 	"... to become one with the deep.",
 	"My form will become twisted ...")
 	invoke_msg = "... but my smile I will keep!"
-	favor_cost = 150 //150u of organic slurry
+	favor_cost = 50 //50u of organic slurry
 
 /datum/religion_rites/maint_adaptation/perform_rite(mob/living/carbon/human/user, atom/religious_tool)
 	if(!ishuman(user))
@@ -265,7 +291,7 @@
 	desc = "Only available after maintenance adaptation. Your eyes will adapt as well, becoming useless in the light."
 	ritual_length = 10 SECONDS
 	invoke_msg = "I no longer want to see the light."
-	favor_cost = 300 //300u of organic slurry, i'd consider this a reward of the sect
+	favor_cost = 100 //100u of organic slurry, i'd consider this a reward of the sect
 
 /datum/religion_rites/adapted_eyes/perform_rite(mob/living/carbon/human/user, atom/religious_tool)
 	if(!ishuman(user))

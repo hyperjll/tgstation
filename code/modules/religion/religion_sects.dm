@@ -150,7 +150,7 @@
 	name = "Mechanical God"
 	quote = "May you find peace in a metal shell."
 	desc = "Bibles now recharge cyborgs and heal robotic limbs if targeted, but they \
-	do not heal organic limbs. You can now sacrifice cells, with favor depending on their charge."
+	heal organic limbs at a reduced rate. You can now sacrifice cells, with favor depending on their charge."
 	tgui_icon = "robot"
 	alignment = ALIGNMENT_NEUT
 	desired_items = list(/obj/item/stock_parts/power_store = "with battery charge")
@@ -187,8 +187,9 @@
 	var/obj/item/bodypart/bodypart = blessed.get_bodypart(chap.zone_selected)
 	if(IS_ORGANIC_LIMB(bodypart))
 		if(!did_we_charge)
-			to_chat(chap, span_warning("[GLOB.deity] scoffs at the idea of healing such fleshy matter!"))
-			return BLESSING_IGNORED
+			if(bodypart.heal_damage(1,1,BODYTYPE_ORGANIC))
+				blessed.update_damage_overlays()
+				return BLESSING_SUCCESS
 
 		blessed.visible_message(span_notice("[chap] charges [blessed] with the power of [GLOB.deity]!"))
 		to_chat(blessed, span_boldnotice("You feel charged by the power of [GLOB.deity]!"))
@@ -260,7 +261,7 @@
 	tgui_icon = "dollar-sign"
 	altar_icon_state = "convertaltar-yellow"
 	alignment = ALIGNMENT_EVIL //greed is not good wtf
-	rites_list = list(/datum/religion_rites/greed/vendatray, /datum/religion_rites/greed/custom_vending)
+	rites_list = list(/datum/religion_rites/greed/vendatray, /datum/religion_rites/greed/custom_vending, /datum/religion_rites/greed/anything_gift)
 	altar_icon_state = "convertaltar-yellow"
 
 /datum/religion_sect/greed/tool_examine(mob/living/holy_creature) //display money policy
