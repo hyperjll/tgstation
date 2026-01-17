@@ -31,6 +31,10 @@
 	desc = "Use this if your friends left you behind."
 	possible_destinations = "syndicate_away"
 
+/obj/machinery/computer/shuttle/syndicate/recall/commando
+	shuttleId = "syndicate_adv"
+	possible_destinations = "syndicate_away_adv"
+
 /obj/machinery/computer/shuttle/syndicate/drop_pod
 	name = "syndicate assault pod control"
 	desc = "Controls the drop pod's launch system."
