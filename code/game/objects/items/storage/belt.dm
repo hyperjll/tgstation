@@ -596,7 +596,7 @@
 
 /obj/item/storage/belt/sheath/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/update_icon_updates_onmob)
+	AddElement(/datum/element/update_icon_updates_onmob, action_slots)
 	RegisterSignal(src, COMSIG_ATOM_STORED_ITEM, PROC_REF(post_resheath))
 
 /obj/item/storage/belt/sheath/Destroy(force)
@@ -737,6 +737,7 @@
 	icon_state = "sheath"
 	inhand_icon_state = "sheath"
 	worn_icon_state = "sheath"
+	action_slots = ITEM_SLOT_BELT | ITEM_SLOT_SUITSTORE
 	storage_type = /datum/storage/sabre_belt
 	stored_blade = /obj/item/melee/sabre
 
@@ -746,6 +747,7 @@
 	icon_state = "grass_sheath"
 	inhand_icon_state = "grass_sheath"
 	worn_icon_state = "grass_sheath"
+	action_slots = ITEM_SLOT_BELT | ITEM_SLOT_SUITSTORE
 	storage_type = /datum/storage/green_sabre_belt
 
 /obj/item/storage/belt/sheath/gladius
@@ -754,6 +756,7 @@
 	icon_state = "gladius_sheath"
 	inhand_icon_state = "gladius_sheath"
 	worn_icon_state = "gladius_sheath"
+	action_slots = ITEM_SLOT_BELT | ITEM_SLOT_SUITSTORE
 	storage_type = /datum/storage/gladius_belt
 	stored_blade = /obj/item/claymore/gladius
 

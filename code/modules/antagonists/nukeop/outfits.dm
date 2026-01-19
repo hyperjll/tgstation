@@ -63,7 +63,7 @@
 	weapons_implant.implant(nukie)
 	var/obj/item/implant/duster/duster_implant = new/obj/item/implant/duster(nukie)
 	duster_implant.implant(nukie)
-	nukie.faction |= ROLE_SYNDICATE
+	nukie.add_faction(ROLE_SYNDICATE)
 	nukie.update_icons()
 
 /datum/outfit/syndicate/full
