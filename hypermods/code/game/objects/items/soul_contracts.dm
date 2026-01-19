@@ -97,11 +97,11 @@
 		to_chat(user, span_notice("You forge the contract to grant the signee [power_to_give] in exchange for their soul."))
 		return
 
-	if(!HAS_TRAIT(user, TRAIT_DEVILISH) && HAS_TRAIT(user, TRAIT_NO_SOUL)) // Contract was made, but your potential buyer has nothing to offer.
+	if(!HAS_TRAIT(user, TRAIT_DEVILISH) && HAS_TRAIT(user, TRAIT_NO_SOUL)) // Contract was made, but your potential buyer has no soul to sell.
 		to_chat(user, span_notice("You've got no soul to give in exchange!"))
 		return
 
-	if(!HAS_TRAIT(user, TRAIT_DEVILISH) && HAS_TRAIT(user, TRAIT_SOUL_SOLD)) // Contract was made, but your potential buyer has nothing to offer.
+	if(!HAS_TRAIT(user, TRAIT_DEVILISH) && (HAS_TRAIT(user, TRAIT_SOUL_SOLD) || user.has_status_effect(/datum/status_effect/extra_lives/three/devil))) // Contract was made, but your potential buyer has already sold their soul.
 		to_chat(user, span_notice("Your soul has already been sold!"))
 		return
 
@@ -110,7 +110,7 @@
 		return
 
 	var/trade_offer = tgui_alert(user, "Sell your soul for [power_to_give]? This cannot be undone.", "Soul Ownership Contract", list("Yes", "No"))
-	if(trade_offer == "No")
+	if(trade_offer == "No" || !trade_offer)
 		to_chat(user, span_notice("But you refrained..."))
 		return
 	else
@@ -157,7 +157,8 @@
 		return
 
 /obj/item/soul_contract/proc/afterWishEffects(obj/item/I, mob/user)
-	ADD_TRAIT(user, TRAIT_SOUL_SOLD, SOUL_CONTRACT_TRAIT)
+	if(!user.has_status_effect(/datum/status_effect/extra_lives))
+		ADD_TRAIT(user, TRAIT_SOUL_SOLD, SOUL_CONTRACT_TRAIT)
 	to_chat(user, span_notice("As you finish signing the contract, you feel a part of yourself be shackled by invisible chains..."))
 	playsound(src.loc, 'hypermods/sound/effects/magebook_used.ogg', 80, TRUE)
 	playsound(src.loc, 'sound/effects/chemistry/ahaha.ogg', 30, TRUE)
@@ -230,7 +231,7 @@
 /obj/item/soul_contract/proc/grantExtraLives(obj/item/I, mob/user)
 	var/mob/living/carbon/human/our_signee = user
 
-	our_signee.apply_status_effect(/datum/status_effect/extra_lives/three)
+	our_signee.apply_status_effect(/datum/status_effect/extra_lives/three/devil)
 
 	afterWishEffects(I, user)
 
@@ -311,14 +312,20 @@
 		/datum/quirk/unstable,
 		/datum/quirk/hunger_damage
 	)
-	// Full heal, and immunity to dismemberment, soft crit, critical condition damage, and a permanent spaceacillin effect.
-	our_signee.revive(ADMIN_HEAL_ALL)
-	our_signee.add_traits(list(TRAIT_NOCRITDAMAGE, TRAIT_NODISMEMBER, TRAIT_NOSOFTCRIT, TRAIT_VIRUS_RESISTANCE), "perfecthealth-wish")
 	// It's a PERFECT health wish... It should remove certain debilitating quirks.
 
 	for(var/datum/quirk/quirk_type as anything in all_quirks_to_remove)
 		if(our_signee.has_quirk(quirk_type))
 			our_signee.remove_quirk(quirk_type)
+
+	// Forcibly cure all uncurable diseases
+	for(var/datum/disease/disease as anything in our_signee.diseases)
+		if(disease.severity == DISEASE_SEVERITY_UNCURABLE)
+			qdel(disease)
+
+	// Full heal, and immunity to dismemberment, soft crit, critical condition damage, and a permanent spaceacillin effect.
+	our_signee.revive(ADMIN_HEAL_ALL)
+	our_signee.add_traits(list(TRAIT_NOCRITDAMAGE, TRAIT_NODISMEMBER, TRAIT_NOSOFTCRIT, TRAIT_VIRUS_RESISTANCE), "perfecthealth-wish")
 
 	afterWishEffects(I, user)
 

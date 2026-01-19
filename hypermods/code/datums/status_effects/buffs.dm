@@ -227,6 +227,8 @@
 	duration = INFINITY
 	alert_type = null
 	var/extra_lives = 9
+	/// Were we gained by selling our soul?
+	var/soul_sold = FALSE
 
 /datum/status_effect/extra_lives/on_apply()
 	. = ..()
@@ -237,7 +239,7 @@
 	if(owner.stat != DEAD)
 		return
 
-	owner.revive(ADMIN_HEAL_ALL)
+	owner.revive(ADMIN_HEAL_ALL, force_grab_ghost = TRUE)
 
 	do_sparks(5,FALSE,owner)
 	var/turf/emergency_turf = find_safe_turf(owner.z, extended_safety_checks = TRUE)
@@ -259,9 +261,14 @@
 
 /datum/status_effect/extra_lives/on_remove()
 	owner.remove_traits(list(TRAIT_BOMBGIBIMMUNE), "extra_lives")
+	if(soul_sold) // To prevent ghosts from being locked outta their bodies despite having extra lives.
+		ADD_TRAIT(owner, TRAIT_SOUL_SOLD, SOUL_CONTRACT_TRAIT)
 
 /datum/status_effect/extra_lives/three
 	extra_lives = 3
+
+/datum/status_effect/extra_lives/three/devil
+	soul_sold = TRUE
 
 /datum/status_effect/extra_lives/single
 	extra_lives = 1
