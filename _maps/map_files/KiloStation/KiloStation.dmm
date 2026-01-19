@@ -45627,6 +45627,9 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/structure/secure_safe/caps_spare{
+	pixel_y = 30
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "oZX" = (
@@ -49041,10 +49044,6 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
-"qer" = (
-/obj/structure/secure_safe/caps_spare,
-/turf/closed/wall/r_wall,
-/area/station/command/bridge)
 "qew" = (
 /obj/machinery/atmospherics/pipe/smart/simple/purple/visible{
 	dir = 4
@@ -105756,7 +105755,7 @@ jJh
 czT
 czT
 hbE
-qer
+fYh
 oZS
 hIY
 qXv
