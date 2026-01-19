@@ -481,11 +481,13 @@
 				to_chat(breather, span_notice("There is an unpleasant smell in the air."))
 		if(5 to 15)
 			//At somewhat higher pp, warning becomes more obvious
+			breather.adjust_tox_loss(0.1 * miasma_pp) // about 10 toxin damage per breath at 101.34 pKa. What a horrible way to go.
 			if(prob(15))
 				to_chat(breather, span_warning("You smell something horribly decayed inside this room."))
 				breather.add_mood_event("smell", /datum/mood_event/disgust/bad_smell)
 		if(15 to 30)
 			//Small chance to vomit. By now, people have internals on anyway
+			breather.adjust_organ_loss(ORGAN_SLOT_LUNGS, 0.01 * miasma_pp) // about 1 lung damage per breath at 101.34 pKa.
 			if(prob(5))
 				to_chat(breather, span_warning("The stench of rotting carcasses is unbearable!"))
 				breather.add_mood_event("smell", /datum/mood_event/disgust/nauseating_stench)
