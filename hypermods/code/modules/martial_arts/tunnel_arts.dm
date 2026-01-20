@@ -25,7 +25,7 @@
 	. = ..()
 	new_holder.add_traits(tunnel_traits, TUNNEL_ARTS_TRAIT)
 	RegisterSignal(new_holder, COMSIG_ATOM_ATTACKBY, PROC_REF(on_attackby))
-	new_holder.faction |= FACTION_RAT //:D
+	new_holder.add_faction(FACTION_RAT) //:D
 
 /datum/martial_art/the_tunnel_arts/deactivate_style(mob/living/remove_from)
 	remove_from.remove_traits(tunnel_traits, TUNNEL_ARTS_TRAIT)

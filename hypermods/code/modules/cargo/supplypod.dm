@@ -16,8 +16,8 @@
 		return
 	take_contents(holder)
 	playsound(holder, close_sound, soundVolume*0.75, TRUE, -3)
-	holder.setClosed()
-	addtimer(CALLBACK(src, PROC_REF(preReturn), holder), delays[POD_LEAVING] * 0.2) //Start to leave a bit after closing for cinematic effect
+	holder.set_closed()
+	addtimer(CALLBACK(src, PROC_REF(pre_return), holder), delays[POD_LEAVING] * 0.2) //Start to leave a bit after closing for cinematic effect
 
 /obj/structure/closet/supplypod/smugglepod/mouse_drop_receive(atom/movable/O, mob/living/user, params)
 	if(!istype(O) || O.anchored || istype(O, /atom/movable/screen))
@@ -73,7 +73,7 @@
 	leavingSound = 'sound/effects/podwoosh.ogg'
 	reverse_option_list = list("Mobs"=TRUE,"Objects"=TRUE,"Anchored"=FALSE,"Underfloor"=FALSE,"Wallmounted"=FALSE,"Unanchored" = TRUE, "Floors"=FALSE,"Walls"=FALSE, "Mecha"=TRUE)
 
-/obj/structure/closet/supplypod/nuke_relocation/preReturn(atom/movable/holder)
+/obj/structure/closet/supplypod/nuke_relocation/pre_return(atom/movable/holder)
 	if(return_to_turf)
 		reverse_dropoff_coords = list(return_to_turf.x, return_to_turf.y, return_to_turf.z)
 	return ..()

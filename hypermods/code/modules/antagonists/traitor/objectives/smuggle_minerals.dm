@@ -93,8 +93,8 @@
 	for(var/obj/item/stack/item_in_pod in source.contents)
 		if((item_in_pod.type == smuggle_item_target || item_in_pod.parent_type == smuggle_item_target) && item_in_pod.amount >= target_amt)
 			succeed_objective()
-			source.startExitSequence(source)
+			source.start_exit_sequence(source)
 			return
 
 	fail_objective(penalty_cost = telecrystal_penalty)
-	source.startExitSequence(source)
+	source.start_exit_sequence(source)

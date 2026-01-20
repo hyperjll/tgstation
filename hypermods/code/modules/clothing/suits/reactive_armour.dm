@@ -48,7 +48,7 @@
 	playsound(get_turf(src), 'sound/effects/splat.ogg', 100, TRUE)
 
 	var/mob/living/basic/elemental/my_fren_henry = new(get_turf(src))
-	set_faction(my_fren_henry, owner)
+	my_fren_henry.add_ally(owner)
 
 	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
 	return TRUE
@@ -62,9 +62,6 @@
 
 	reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
 	return FALSE
-
-/obj/item/clothing/suit/armor/reactive/liquid/proc/set_faction(mob/living/basic/elemental/my_fren_henry, mob/user)
-	my_fren_henry.faction = list("[REF(user)]", FACTION_HOSTILE)
 
 // Augmented Syndicate Reactive Armors
 
@@ -210,7 +207,6 @@
 		decoy.full_setup(
 			owner,
 			target_mob = owner,
-			faction = owner.faction,
 			life = 5 SECONDS,
 			hp = owner.health / 4,
 			damage = 5,

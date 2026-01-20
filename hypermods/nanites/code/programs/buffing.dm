@@ -399,8 +399,8 @@
 
 /datum/nanite_program/plantlike/enable_passive_effect()
 	. = ..()
-	host_mob.faction |= "plants"
-	host_mob.faction |= "vines"
+	host_mob.add_faction("plants")
+	host_mob.add_faction("vines")
 
 /datum/nanite_program/plantlike/disable_passive_effect()
 	. = ..()

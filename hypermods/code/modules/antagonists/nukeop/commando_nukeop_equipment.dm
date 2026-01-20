@@ -485,7 +485,7 @@
 		return
 	if(found_nuke.anchored)
 		return
-	tracked_pod.startExitSequence(tracked_pod)
+	tracked_pod.start_exit_sequence(tracked_pod)
 	STOP_PROCESSING(SSobj, src)
 	say("Pod in transit to LZ!")
 

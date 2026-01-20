@@ -61,7 +61,7 @@
 			spawned_mob = new mob_class(get_turf(holder))//Spawn our specific mob_class
 		if(faction)
 			spawned_mob.faction = faction // Ensuring that whatever spawns always gets the roles set via the var, then add whatever is innate.
-		spawned_mob.faction |= mob_faction
+		spawned_mob.add_faction(mob_faction)
 		if(prob(50))
 			for(var/j in 1 to rand(1, 3))
 				step(spawned_mob, pick(NORTH,SOUTH,EAST,WEST))
