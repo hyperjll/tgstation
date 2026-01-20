@@ -42,6 +42,9 @@
 
 	var/temporary_split_key
 
+	var/starting_reagents = null
+	var/starting_reagents_temp = 300
+
 /obj/effect/abstract/liquid_turf/Initialize(mapload, datum/liquid_group/group_to_add)
 	. = ..()
 	if(!small_fire)
@@ -62,6 +65,9 @@
 
 	if(QDELETED(liquid_group) && QDELETED(group_to_add))
 		liquid_group = new(1, src)
+
+	if(!isnull(starting_reagents))
+		liquid_group.add_reagents(reagent_list = starting_reagents, chem_temp = starting_reagents_temp)
 
 	if(!SSliquids)
 		CRASH("Liquid Turf created with the liquids sybsystem not yet initialized!")
@@ -306,3 +312,12 @@
 
 /obj/effect/abstract/fire/big_fire
 	icon_state = "fire_big"
+
+/obj/effect/abstract/liquid_turf/water
+	starting_reagents = list(/datum/reagent/water = 10)
+
+/obj/effect/abstract/liquid_turf/milk // good for yer bones
+	starting_reagents = list(/datum/reagent/consumable/milk = 10)
+
+/obj/effect/abstract/liquid_turf/acid // yowzers
+	starting_reagents = list(/datum/reagent/toxin/acid = 10)
