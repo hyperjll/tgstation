@@ -20,6 +20,7 @@
 	var/surgeryspd = FALSE
 	var/constructspd = FALSE
 	var/gunspd = FALSE
+	symptom_cure = /datum/reagent/medicine/diphenhydramine
 
 /datum/symptom/actionspd/Start(datum/disease/advance/A)
 	. = ..()

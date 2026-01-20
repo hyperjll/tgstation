@@ -7,6 +7,7 @@
 	transmittable = 2
 	level = 12
 	severity = 6
+	symptom_cure = /datum/reagent/bluespace
 
 /datum/symptom/bluespace/Activate(datum/disease/advance/A)
 	. = ..()

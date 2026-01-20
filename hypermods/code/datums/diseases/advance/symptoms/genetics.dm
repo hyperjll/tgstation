@@ -16,6 +16,7 @@
 		"Resistance 16" = "The host's genetic alterations are not undone when the virus is cured.",
 		"Stage Speed 10" = "The virus activates dormant mutations at a much faster rate.",
 	)
+	symptom_cure = /datum/reagent/acetaldehyde
 
 /datum/symptom/good_genetic_mutation/Start(datum/disease/advance/A)
 	. = ..()

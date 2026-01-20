@@ -18,6 +18,7 @@
 	var/resistmult = 1
 	var/softcrit = FALSE
 	var/movespeedmult = FALSE
+	symptom_cure = /datum/reagent/medicine/haloperidol
 
 /datum/symptom/heal/fatigue/Activate(datum/disease/advance/A)
 	. = ..()
@@ -77,6 +78,7 @@
 		"Stage Speed 5" = "Being obese doubles the host's regeneration.",
 	)
 	var/fatregen = FALSE
+	symptom_cure = /datum/reagent/toxin/lipolicide
 
 /datum/symptom/heal/calorie/Start(datum/disease/advance/A)
 	. = ..()

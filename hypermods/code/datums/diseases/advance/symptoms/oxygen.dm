@@ -16,6 +16,7 @@
 	)
 	var/nobloodlimit = FALSE
 	var/stealthy = FALSE
+	symptom_cure = /datum/reagent/medicine/c2/tirimol
 
 /datum/symptom/anemia/Start(datum/disease/advance/A)
 	. = ..()

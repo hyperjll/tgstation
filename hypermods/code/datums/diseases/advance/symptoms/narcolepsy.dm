@@ -12,6 +12,7 @@
 		"Resistance 8" = "The stamina drain no longer occurs.",
 	)
 	var/stamdrain = TRUE
+	symptom_cure = /datum/reagent/medicine/modafinil
 
 /datum/symptom/insomnia/Start(datum/disease/advance/A)
 	. = ..()

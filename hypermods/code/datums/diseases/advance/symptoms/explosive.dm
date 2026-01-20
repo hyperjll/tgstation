@@ -15,6 +15,7 @@
 	var/chemmult = 1
 	var/tempmodifier = FALSE
 	var/messagechance = 10
+	symptom_cure = /datum/reagent/pentaerythritol
 
 /datum/symptom/explosive/Start(datum/disease/advance/A)
 	. = ..()

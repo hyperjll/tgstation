@@ -7,6 +7,7 @@
 	transmittable = 10
 	level = 0
 	threshold_descs = list()
+	symptom_cure = null
 
 /datum/symptom/syndicatebuffstealth // 4 TC
 	name = "STE Genes"
@@ -17,6 +18,7 @@
 	transmittable = 5
 	level = 0
 	threshold_descs = list()
+	symptom_cure = null
 
 /datum/symptom/syndicatebuffresist // 4 TC
 	name = "SRE Genes"
@@ -27,6 +29,7 @@
 	transmittable = 5
 	level = 0
 	threshold_descs = list()
+	symptom_cure = null
 
 /datum/symptom/syndicatebuffspeed // 4 TC
 	name = "SPD Genes"
@@ -37,6 +40,7 @@
 	transmittable = 5
 	level = 0
 	threshold_descs = list()
+	symptom_cure = null
 
 /datum/symptom/syndicatebufftrans // 4 TC
 	name = "STR Genes"
@@ -47,6 +51,7 @@
 	transmittable = 10
 	level = 0
 	threshold_descs = list()
+	symptom_cure = null
 
 
 /datum/symptom/supersyndicatebuff // Used only for the syndicate virus under medical
@@ -58,3 +63,4 @@
 	transmittable = -20
 	level = 0
 	threshold_descs = list()
+	symptom_cure = null
