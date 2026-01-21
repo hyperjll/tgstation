@@ -201,11 +201,29 @@
 	else if (isliving(AM))
 		var/mob/living/L = AM
 		if(liquid_group.slippery)
-			if(prob(7) && !(L.movement_type & FLYING) && L.body_position == STANDING_UP)
+			if(prob(liquid_group.slip_chance) && !(L.movement_type & FLYING) && L.body_position == STANDING_UP)
 				L.slip(30, T, NO_SLIP_WHEN_WALKING, 0, TRUE)
 
 	if(fire_state)
 		AM.fire_act((T20C+50) + (50*fire_state), 125)
+
+/obj/effect/abstract/liquid_turf/CanAllowThrough(atom/movable/mover, border_dir)
+	. = ..()
+	if(!liquid_group)
+		return TRUE
+
+	var/mob/living/L = mover
+	if(liquid_group.sticky && isliving(L))
+		if(prob(liquid_group.sticky_chance) && !(L.movement_type & FLYING) && L.body_position == STANDING_UP)
+			stuck_react(L)
+			return FALSE
+
+	return TRUE
+
+/// Show some feedback when you fail to move over sticky substances.
+/obj/effect/abstract/liquid_turf/proc/stuck_react(atom/movable/stuck_guy)
+	loc.balloon_alert(stuck_guy, "stuck in liquid!")
+	stuck_guy.Shake(duration = 0.1 SECONDS)
 
 /obj/effect/abstract/liquid_turf/proc/mob_fall(datum/source, mob/M)
 	SIGNAL_HANDLER
@@ -321,3 +339,6 @@
 
 /obj/effect/abstract/liquid_turf/acid // yowzers
 	starting_reagents = list(/datum/reagent/toxin/acid = 10)
+
+/obj/effect/abstract/liquid_turf/glue // the annoying sticky shit
+	starting_reagents = list(/datum/reagent/glue = 10)

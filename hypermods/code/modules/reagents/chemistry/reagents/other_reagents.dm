@@ -117,3 +117,22 @@
 	if(!isnull(the_tray))
 		the_tray.age = (the_tray.age + round(volume * 0.5))
 		the_tray.update_appearance()
+
+/datum/reagent/glue
+	name = "Glue"
+	description = "A common arts & crafts reagent well-known for it's easy-to-apply adhesive properties."
+	color = "#FFFFFF"
+	metabolization_rate = 0.1 * REAGENTS_METABOLISM
+	evaporates = FALSE
+	slippery = FALSE
+	sticky = TRUE
+	sticky_chance = 40
+
+/datum/reagent/glue/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
+	. = ..()
+	var/need_mob_update
+	need_mob_update += affected_mob.adjust_tox_loss(0.4 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
+	need_mob_update = affected_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, 0.1 * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
+
+	if(need_mob_update)
+		return UPDATE_MOB_HEALTH

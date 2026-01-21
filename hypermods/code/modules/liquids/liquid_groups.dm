@@ -72,6 +72,12 @@ GLOBAL_VAR_INIT(liquid_debug_colors, FALSE)
 	var/list/splitting_array = list()
 	///are we slippery
 	var/slippery = TRUE
+	///how slippery?
+	var/slip_chance = 0
+	/// are we sticky?
+	var/sticky = FALSE
+	/// chance to 'catch' someone's movement similar to webbing. Requires the turf to be sticky.
+	var/sticky_chance = 10
 
 ///NEW/DESTROY
 /datum/liquid_group/New(height, obj/effect/abstract/liquid_turf/created_liquid)
@@ -285,6 +291,7 @@ GLOBAL_VAR_INIT(liquid_debug_colors, FALSE)
 
 	exposure = FALSE
 	slippery = FALSE
+	sticky = FALSE
 	for(var/reagent_type in reagents.reagent_list)
 		var/datum/reagent/pulled_reagent = reagent_type
 		var/amount = pulled_reagent.volume / length(members)
@@ -297,6 +304,16 @@ GLOBAL_VAR_INIT(liquid_debug_colors, FALSE)
 			exposure = TRUE
 		if(pulled_reagent.slippery)
 			slippery = TRUE
+			if(pulled_reagent.slip_chance && slip_chance < pulled_reagent.slip_chance)
+				slip_chance = pulled_reagent.slip_chance
+				if(slip_chance > 100) // safety check in case someone fucks shit up.
+					slip_chance = 100
+		if(pulled_reagent.sticky)
+			sticky = TRUE
+			if(pulled_reagent.sticky_chance && sticky_chance < pulled_reagent.sticky_chance)
+				sticky_chance = pulled_reagent.sticky_chance
+				if(sticky_chance > 100) // safety check in case someone fucks shit up.
+					sticky_chance = 100
 
 
 /datum/liquid_group/proc/process_turf_disperse()

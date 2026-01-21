@@ -1127,6 +1127,7 @@
 	ph = 2.75
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	var/acidpwr = 10 //the amount of protection removed from the armour
+	evaporates = FALSE
 
 // ...Why? I mean, clearly someone had to have done this and thought, well,
 // acid doesn't hurt plants, but what brought us here, to this point?

@@ -15,6 +15,12 @@
 	var/turf_exposure = FALSE
 	/// are we slippery?
 	var/slippery = TRUE
+	/// how slippery, slip chance will override each other, highest takes all.
+	var/slip_chance = 7
+	/// are we sticky?
+	var/sticky = FALSE
+	/// chance to 'catch' someone's movement similar to webbing. Requires the turf to be sticky.
+	var/sticky_chance = 10
 	///are we able to merge
 	var/can_merge = TRUE
 

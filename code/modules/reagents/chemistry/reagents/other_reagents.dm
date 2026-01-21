@@ -9,6 +9,8 @@
 	ph = 7.4
 	default_container = /obj/item/reagent_containers/blood
 	turf_exposure = TRUE
+	evaporates = FALSE // prevent the crime scene from cleaning itself.
+	slip_chance = 5 // blood is often viscous. It'll have less slip chance.
 
 /datum/glass_style/shot_glass/blood
 	required_drink_type = /datum/reagent/blood
@@ -112,6 +114,7 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_CLEANS
 	default_container = /obj/item/reagent_containers/cup/glass/waterbottle
 	var/cooling_temperature = 2
+	slip_chance = 25
 
 /datum/glass_style/shot_glass/water
 	required_drink_type = /datum/reagent/water
@@ -534,6 +537,7 @@
 	var/lube_kind = TURF_WET_LUBE ///What kind of slipperiness gets added to turfs
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	turf_exposure = TRUE
+	slip_chance = 50
 
 /datum/reagent/lube/expose_turf(turf/open/exposed_turf, reac_volume)
 	. = ..()
@@ -553,6 +557,7 @@
 	description = "This \[REDACTED\] has been outlawed after the incident on \[DATA EXPUNGED\]."
 	lube_kind = TURF_WET_SUPERLUBE
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_NO_RANDOM_RECIPE
+	slip_chance = 100 // zamn
 
 /datum/reagent/spraytan
 	name = "Spray Tan"
@@ -1287,6 +1292,7 @@
 	burning_volume = 0.2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	addiction_types = list(/datum/addiction/alcohol = 4)
+	liquid_fire_power = 25
 
 /datum/glass_style/drinking_glass/fuel
 	required_drink_type = /datum/reagent/fuel
@@ -1839,6 +1845,7 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	addiction_types = null
 	default_container = /obj/effect/decal/cleanable/blood/oil
+	liquid_fire_power = 15
 
 /datum/reagent/stable_plasma
 	name = "Stable Plasma"
