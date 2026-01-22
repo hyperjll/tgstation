@@ -7032,6 +7032,7 @@
 #include "hypermods\code\game\objects\items\food\pie.dm"
 #include "hypermods\code\game\objects\items\food\pizza.dm"
 #include "hypermods\code\game\objects\items\food\snacks.dm"
+#include "hypermods\code\game\objects\items\food\sweets.dm"
 #include "hypermods\code\game\objects\items\granters\spellbook.dm"
 #include "hypermods\code\game\objects\items\granters\wirecrawl.dm"
 #include "hypermods\code\game\objects\items\granters\crafting\cannon.dm"

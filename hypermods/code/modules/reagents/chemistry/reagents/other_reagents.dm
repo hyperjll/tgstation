@@ -123,6 +123,7 @@
 	description = "A common arts & crafts reagent well-known for it's easy-to-apply adhesive properties."
 	color = "#FFFFFF"
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	evaporates = FALSE
 	slippery = FALSE
 	sticky = TRUE
@@ -136,3 +137,11 @@
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
+
+/datum/reagent/bicarodyne
+	name = "Bicarodyne"
+	description = "Not to be confused with Bicaridine, Bicarodyne is a volatile chemical that reacts violently in the presence of most human endorphins."
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	color = "#C8A5DC" //rgb: 200, 165, 220
+	metabolization_rate = 0.01
+	self_consuming = TRUE

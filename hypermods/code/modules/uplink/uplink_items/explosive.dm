@@ -330,3 +330,14 @@
 	cost = 2
 	surplus = 10
 	progression_minimum = 10 MINUTES
+
+/datum/uplink_item/explosives/caber
+	name = "Ullapool Caber"
+	desc = "A singular contact-dependant grenade attached to a stick. \
+			Simply hit the bastard and leave the security team to try and glue them back together. \
+			Explosive is powerful enough to cause slight-to-moderate harm to the user. \
+			Small enough to fit in pockets, and turns into a decent edged weapon after exploding."
+	item = /obj/item/melee/caber
+	progression_minimum = 7 MINUTES
+	cost = 4
+	surplus = 30

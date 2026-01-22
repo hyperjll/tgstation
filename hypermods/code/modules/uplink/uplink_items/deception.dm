@@ -221,3 +221,30 @@
 	cost = 2
 	surplus = 30
 	//purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // probably not necessary to restrict from nukies, i don't think anyone's stupid enough to glue their own gear.
+
+/datum/uplink_item/deception/chocolatebar_bicarodyne
+	name = "Bicarodyne Chocolate Bar"
+	desc = "A wonderfully sweet chocolate bar made from real cocoa! \
+			We've installed a microscopic reagent reservoir within the chocolate containing a rare reagent known as Bicarodyne \
+			which causes explosions within the host when they're hugged. \
+			Eat chocolate bar can ATLEAST provide 3 minor explosions provided you begin hugging your victim after they eat this. \
+			The Bicarodyne payload is too sensitive to be extracted via grinding."
+	item = /obj/item/food/chocolatebar/bicarodyne
+	cost = 3
+	surplus = 30
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
+/datum/uplink_item/deception/chocolatebar_bicarodyne/New()
+	..()
+	if(check_holidays(VALENTINES))
+		cost = 2 // 33% off!
+
+/datum/uplink_item/deception/reverse_insulation_suit
+	name = "Quick Vent Jumpsuit"
+	desc = "A wonder of thermo-dynamics outfitted with one of our chameleon-tech jumpsuits. \
+			Those who wear this jumpsuit will rapidly begin to cool, even to extremely dangerous levels. \
+			Cannot be taken off after being worn."
+	item = /obj/item/clothing/under/chameleon/reverse_insulation
+	cost = 4
+	surplus = 30
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)

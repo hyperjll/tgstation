@@ -429,6 +429,10 @@
 		if(HAS_TRAIT(src, TRAIT_BADTOUCH))
 			to_chat(helper, span_warning("[src] looks visibly upset as you hug [p_them()]."))
 
+		if(src.reagents.has_reagent(/datum/reagent/bicarodyne))
+			explosion(src.loc,0,0,1,flame_range = 0)
+			src.reagents.remove_reagent(/datum/reagent/bicarodyne, 10) // usually the traitor chocolate bar contains 30 units, so 3 deadly hugs.
+
 	SEND_SIGNAL(src, COMSIG_CARBON_HELP_ACT, helper)
 	SEND_SIGNAL(helper, COMSIG_CARBON_HELPED, src)
 

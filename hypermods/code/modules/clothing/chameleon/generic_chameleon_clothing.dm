@@ -59,3 +59,15 @@
 	fire = 50
 	acid = 50
 	wound = 10
+
+/obj/item/clothing/under/chameleon/reverse_insulation/equipped(mob/living/user, slot)
+	. = ..()
+	if(slot_flags & slot)
+		ADD_TRAIT(src, TRAIT_NODROP, STICKY_CLOTHING_TRAIT)
+		addtimer(CALLBACK(src, PROC_REF(drop_my_temp), user, slot), 4 SECONDS) // give it 4 seconds before your temp drops to FUCKING NOTHING.
+
+/obj/item/clothing/under/chameleon/reverse_insulation/proc/drop_my_temp(mob/living/user, slot)
+	if(!user || QDELETED(src))
+		return
+	addtimer(CALLBACK(src, PROC_REF(drop_my_temp), user, slot), 4 SECONDS)
+	user.adjust_bodytemperature(-200)
