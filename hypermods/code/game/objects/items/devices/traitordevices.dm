@@ -85,13 +85,13 @@
 
 
 /obj/item/stock_parts/power_store/cell/bluespace/syndirig
-	rigged = TRUE
+	var/exploding = FALSE
 
-/obj/item/stock_parts/power_store/cell/bluespace/syndirig/explode()
-	if (charge==0)
+/obj/item/stock_parts/power_store/cell/bluespace/syndirig/try_explode()
+	if (charge==0 || exploding)
 		return
-	//explosion(T, 0, 1, 2, 2)
 	addtimer(CALLBACK(src, PROC_REF(syndiplode)), 60 SECONDS)
+	exploding = TRUE
 
 /obj/item/stock_parts/power_store/cell/bluespace/syndirig/proc/syndiplode()
 	explosion(src, -1, 4, 10, 0)
