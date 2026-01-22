@@ -187,6 +187,7 @@
 			return
 
 	dropped_thing.visible_message(span_boldwarning("[dropped_thing] falls into [parent]!"), span_userdanger("[oblivion_message]"))
+	playsound(dropped_thing.loc, 'hypermods/sound/effects/falling.ogg', 70, TRUE)
 
 	var/oldtransform = dropped_thing.transform
 	var/oldcolor = dropped_thing.color
