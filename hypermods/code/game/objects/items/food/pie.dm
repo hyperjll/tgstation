@@ -16,3 +16,16 @@
 /obj/item/food/pie/cream/bluespace/stun_and_blur(atom/movable/hit_atom)
 	do_teleport(hit_atom, get_turf(src), 5, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 	..()
+
+/obj/item/food/pie/cream/explosive
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment = 8,
+		/datum/reagent/consumable/banana = 5,
+		/datum/reagent/gunpowder = 15,
+	)
+	stunning = TRUE
+	crafting_complexity = FOOD_COMPLEXITY_3
+
+/obj/item/food/pie/cream/explosive/stun_and_blur(atom/movable/hit_atom)
+	explosion(hit_atom.loc,0,1,3,flame_range = 3)
+	..()

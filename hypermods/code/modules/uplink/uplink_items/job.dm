@@ -1124,3 +1124,13 @@
 	..() // Make sure the kit is given.
 	ADD_TRAIT(user, TRAIT_DEVILISH, SOUL_CONTRACT_TRAIT) // Ensure those who buy this can actually use it.
 	return source //For log icon
+
+/datum/uplink_item/role_restricted/pie_bomb
+	name = "Explosive Banana-Cream Pie"
+	desc = "A freshly baked banana-cream pie in all of it's glory. \
+			However, unlike most banana-cream pies, we baked this one in a factory. A BOMB factory. It's a bomb. \
+			Sponsored by your friends at Donk Co."
+	item = /obj/item/food/pie/cream/explosive
+	cost = 4
+	surplus = 0
+	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
