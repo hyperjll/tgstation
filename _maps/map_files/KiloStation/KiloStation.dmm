@@ -6069,6 +6069,7 @@
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/structure/rack,
 /obj/effect/turf_decal/stripes/line,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "cdV" = (
@@ -9645,10 +9646,10 @@
 /turf/open/floor/engine/vacuum,
 /area/station/engineering/atmos)
 "dmf" = (
-/obj/machinery/door/airlock/engineering/glass{
-	name = "Cargo Requests"
+/obj/machinery/door/airlock/highsecurity{
+	name = "Cargo Requests & ENG Bank Access"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/engineering/engine_equipment,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/ce,
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "dmp" = (
@@ -22889,6 +22890,7 @@
 "hzO" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/structure/closet,
+/obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "hAc" = (
@@ -32697,6 +32699,11 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "kHs" = (
+/obj/machinery/computer/bank_machine{
+	dir = 1;
+	account_department = "ENG";
+	account_dept_name = "Engineering Budget"
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "kHw" = (
@@ -35415,6 +35422,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "lxL" = (
@@ -39733,6 +39741,12 @@
 /obj/effect/mapping_helpers/airlock/access/all/service/crematorium,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/funeral)
+"mSG" = (
+/obj/machinery/computer/cargo/request,
+/obj/machinery/newscaster/directional/north,
+/obj/structure/extinguisher_cabinet/directional/east,
+/turf/open/floor/iron/dark,
+/area/station/engineering/main)
 "mSM" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/turf_decal/delivery,
@@ -51800,6 +51814,7 @@
 /area/station/engineering/atmos)
 "rbp" = (
 /obj/structure/sign/departments/cargo/directional/east,
+/obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "rbz" = (
@@ -68782,6 +68797,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
+/obj/effect/spawner/random/engineering/tracking_beacon,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "wpw" = (
@@ -112212,11 +112228,11 @@ iFa
 cAq
 oQk
 oQk
-cuV
-kHs
+qZX
+mSG
 rbp
 kHs
-cuV
+qZX
 vLG
 cuV
 sOJ
@@ -112469,11 +112485,11 @@ mFb
 qeX
 cXQ
 cAq
-cuV
-fuB
-cuV
-cuV
-cuV
+qZX
+qZX
+qZX
+qZX
+qZX
 aAU
 oQk
 xBz
