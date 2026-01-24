@@ -245,6 +245,7 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 		/obj/item/storage/belt/medical = 1,
 		/obj/item/storage/belt/utility = 1,
 		/obj/item/pen/screwdriver = 1,
+		/obj/item/storage/portable_chem_mixer = 1,
 		) = 8,
 
 	list(//rarer equipment
@@ -563,6 +564,7 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 		/obj/item/clothing/head/helmet/toggleable/justice = 1,
 		/obj/item/storage/belt/military/assault = 1,
 		/obj/item/storage/belt/security = 1,
+		/obj/item/storage/portable_chem_mixer/fully_stocked = 1,
 		) = 3,
 
 	list(//actual weapons and shit

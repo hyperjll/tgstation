@@ -85,3 +85,11 @@
 	access = ACCESS_MEDICAL
 	contains = list(/obj/item/auto_pump = 3)
 	crate_name = "auto-pump crate"
+
+/datum/supply_pack/medical/fully_stocked_porta_chem
+	name = "Fully-Stocked Portable Chemical Mixers"
+	desc = "Contains two portable chemical mixers fully stocked with bottles containing an assortment of basic chemicals for practical on-the-go chemistry."
+	cost = CARGO_CRATE_VALUE * 15
+	access = ACCESS_PHARMACY
+	contains = list(/obj/item/storage/portable_chem_mixer/fully_stocked = 2)
+	crate_name = "portable chemical crate"
