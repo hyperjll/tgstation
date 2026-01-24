@@ -515,7 +515,7 @@
 	///List in which all currently dispensable reagents go
 	dispensable_reagents = list()
 
-/obj/item/storage/portable_chem_mixer/Initialize(mapload)
+/obj/item/storage/portable_chem_mixer/chemicompiler/Initialize(mapload)
 	. = ..()
 	atom_storage.locked = STORAGE_FULLY_LOCKED
 	//register_context()
