@@ -23,8 +23,8 @@ SUBSYSTEM_DEF(bitrunning)
 			continue
 		if(domain.bitrunning_network != bitrunning_network)
 			continue
-		var/can_view = domain.difficulty < scanner_tier && domain.cost <= points + 5
-		var/can_view_reward = domain.difficulty < (scanner_tier + 1) && domain.cost <= points + 3
+		var/can_view = domain.can_view_name(scanner_tier, points)
+		var/can_view_reward = domain.can_view_reward(scanner_tier, points)
 		if(bitrunning_network == BITRUNNER_DOMAIN_SECURITY)
 			can_view = TRUE
 			can_view_reward = TRUE

@@ -15,6 +15,7 @@
 	suicide_cry = "FOR NANOTRASEN!!"
 	// Not 'true' antags, this disables certain interactions that assume the owner is a baddie
 	antag_flags = ANTAG_FAKE|ANTAG_SKIP_GLOBAL_LIST
+	desensitized_modifier = DESENSITIZED_THRESHOLD * 0.5
 	var/datum/team/ert/ert_team
 	var/leader = FALSE
 	var/datum/outfit/outfit = /datum/outfit/centcom/ert/security
@@ -48,14 +49,6 @@
 	if(nuke_codes)
 		assign_nuke()
 	. = ..()
-
-/datum/antagonist/ert/apply_innate_effects(mob/living/mob_override)
-	var/mob/living/carbon/human/officer = mob_override || owner.current
-	ADD_TRAIT(officer, TRAIT_DESENSITIZED, REF(src))
-
-/datum/antagonist/ert/remove_innate_effects(mob/living/mob_override)
-	var/mob/living/carbon/human/officer = mob_override || owner.current
-	REMOVE_TRAIT(officer, TRAIT_DESENSITIZED, REF(src))
 
 /datum/antagonist/ert/get_team()
 	return ert_team

@@ -249,7 +249,7 @@
 			color_set = color
 		if(reagents || !is_full_charge())
 			START_PROCESSING(SSmachines, src)
-			if (reagents?.spark_act(active_power_usage, TRUE) & SPARK_ACT_DESTRUCTIVE)
+			if (reagents?.spark_act(active_power_usage, SPARK_ACT_ENCLOSED) & SPARK_ACT_DESTRUCTIVE)
 				message_admins("A rigged lightbulb at [AREACOORD(src)] has exploded.")
 				qdel(src)
 				return
@@ -289,7 +289,7 @@
 		playsound(loc, 'hypermods/sound/machines/light_tube_on.ogg', 20, TRUE) // Sound for when turning off
 		use_power = IDLE_POWER_USE
 		low_power_mode = TRUE
-		if (reagents?.spark_act(idle_power_usage, TRUE) & SPARK_ACT_DESTRUCTIVE)
+		if (reagents?.spark_act(idle_power_usage, SPARK_ACT_ENCLOSED) & SPARK_ACT_DESTRUCTIVE)
 			message_admins("A rigged lightbulb at [AREACOORD(src)] has exploded.")
 			qdel(src)
 			return

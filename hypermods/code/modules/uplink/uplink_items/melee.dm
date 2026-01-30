@@ -100,7 +100,7 @@
 	name = "Katana"
 	desc = "A brilliantly made katana capable of major damage against pretty much anyone. Has high damage, blocking ability, and inflicts wounds easily. \
 			Doesn't do anything special other than kill, for when you just want to get the job done. Not easily concealable."
-	item = /obj/item/katana
+	item = /obj/item/storage/belt/sheath/katana
 	progression_minimum = 25 MINUTES
 	surplus = 25
 	cost = 10
