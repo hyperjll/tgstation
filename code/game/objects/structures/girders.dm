@@ -263,33 +263,3 @@
 	stack_amount = 1
 	always_drop_stack = TRUE
 	can_weld_apart = TRUE
-
-/obj/structure/girder/bronze/attackby(obj/item/W, mob/living/user, list/modifiers, list/attack_modifiers)
-	add_fingerprint(user)
-	if(W.tool_behaviour == TOOL_WELDER)
-		if(!W.tool_start_check(user, amount = 0, heat_required = HIGH_TEMPERATURE_REQUIRED))
-			return
-		balloon_alert(user, "slicing apart...")
-		if(W.use_tool(src, user, 40, volume=50))
-			var/obj/item/stack/sheet/bronze/B = new(drop_location(), 2)
-			transfer_fingerprints_to(B)
-			qdel(src)
-
-	else if(istype(W, /obj/item/stack/sheet/bronze))
-		var/obj/item/stack/sheet/bronze/B = W
-		var/amount = construction_cost[B.type]
-		if(B.get_amount() < amount)
-			balloon_alert(user, "need [amount] sheets!")
-			return
-		balloon_alert(user, "adding plating...")
-		if(do_after(user, 5 SECONDS, target = src))
-			if(B.get_amount() < amount)
-				return
-			B.use(amount)
-			var/turf/T = get_turf(src)
-			T.place_on_top(/turf/closed/wall/mineral/bronze)
-			IS_CLOCK(user) ? T.place_on_top(/turf/closed/wall/clockwork) : T.place_on_top(/turf/closed/wall/mineral/bronze)
-			qdel(src)
-
-	else
-		return ..()
