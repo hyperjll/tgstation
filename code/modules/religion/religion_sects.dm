@@ -183,7 +183,7 @@
 		eth_stomach.adjust_charge(0.06 * STANDARD_CELL_CHARGE)
 		did_we_charge = TRUE
 
-	//if we're not targeting a robot part we stop early
+	//if we're not targeting a robot part we barely heal it.
 	var/obj/item/bodypart/bodypart = blessed.get_bodypart(chap.zone_selected)
 	if(IS_ORGANIC_LIMB(bodypart))
 		if(!did_we_charge)
@@ -230,7 +230,7 @@
 	alignment = ALIGNMENT_NEUT
 	max_favor = 10000
 	desired_items = list(/obj/item/flashlight/flare/candle = "already lit")
-	rites_list = list(/datum/religion_rites/fireproof, /datum/religion_rites/burning_sacrifice, /datum/religion_rites/infinite_candle)
+	rites_list = list(/datum/religion_rites/fireproof, /datum/religion_rites/burning_sacrifice, /datum/religion_rites/infinite_candle, /datum/religion_rites/rising_pheonix)
 	altar_icon_state = "convertaltar-red"
 
 /datum/religion_sect/pyre/on_select()

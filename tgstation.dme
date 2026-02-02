@@ -7660,6 +7660,8 @@
 #include "hypermods\code\modules\reagents\reagent_containers\cups\bottle.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\cups\glassbottle.dm"
 #include "hypermods\code\modules\reagents\reagent_containers\cups\soda.dm"
+#include "hypermods\code\modules\religion\rites.dm"
+#include "hypermods\code\modules\religion\pyre\pyre_rites.dm"
 #include "hypermods\code\modules\research\designs.dm"
 #include "hypermods\code\modules\research\anomaly\anomaly_core.dm"
 #include "hypermods\code\modules\research\anomaly\raw_anomaly.dm"
