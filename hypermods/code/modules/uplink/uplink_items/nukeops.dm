@@ -424,11 +424,13 @@
 	cant_discount = TRUE
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
 
+/datum/uplink_item/dangerous/gatling
+	name = "Gatling Gun"
+	desc = "A huge man-portable minigun chambering 7mm rounds. Makes up for its lack of mobility and discretion with sheer firepower. Has an internal drum of 7mm bullets, swift recovery from overheating and an endless supply of ammunition thanks to an internal autolathe printing rounds."
+	item = /obj/item/deployable_turret_folded/gatling
+	cost = 40
+
 // Badass (meme items)
-
-
-
-// Base Keys
 
 
 
