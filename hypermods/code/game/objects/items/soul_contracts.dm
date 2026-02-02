@@ -26,7 +26,7 @@
 	<li>Step One: Grab a complimentary extra-sharp pen and your infernal contract of choice from the provided briefcase.</li>
 	<li>Step Two: Present your contract to your victim in a safe, isolated manner. Wouldn't want them ratting you out, would we? Be sure to inquire what bargain they'd like struck!</li>
 	<li>Step Three: Let your contract be signed by the victim in question! Be sure to give them what they want!</li></ul>
-	<b>As you collect more souls, you'll be given some of their essence to keep you alive and likely a small bonus depending on the deal you've struck.</li>
+	<b>As you collect more souls, you'll be given some of their essence to keep you alive.</li>
 	<b>You can expend part of your own essence, making you more vulnerable, to forge more infernal contracts, provided you still have your briefcase.</li>
 	<b>To do so, use the briefcase in-hand to choose whether or not you'd like more infernal contracts.</li>
 	<b><li>Oh, and if you do a REALLY good job, we may just reward you for your great service. Just trust your old pal Nick on this one.</li></b>"}
@@ -57,7 +57,6 @@
 		"status",
 		"protection",
 		"ultimate power",
-		"syndicate allegiance",
 	)
 	/// The power chosen above.
 	var/power_to_give = null
