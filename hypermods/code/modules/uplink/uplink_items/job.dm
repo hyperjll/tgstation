@@ -1134,3 +1134,12 @@
 	cost = 4
 	surplus = 0
 	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/etwenty
+	name = "The E20"
+	desc = "A seemingly innocent die with a lethal secret. When rolled, it will explode for the strength of the roll. Comparable to expert-crafted bombs on a Nat 20!"
+	item = /obj/item/dice/d20/e20
+	cost = 10
+	surplus = 0
+	restricted_roles = list(JOB_CURATOR, JOB_CAPTAIN)
+	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY

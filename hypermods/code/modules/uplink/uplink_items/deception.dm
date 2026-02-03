@@ -248,3 +248,14 @@
 	cost = 4
 	surplus = 30
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
+/datum/uplink_item/deception/station_announcer
+	name = "False Station Announcement Maker"
+	desc = "An exceptionally useful deception device to make any kind of encrypted message you want broadcasted to the entire station. \
+			This device allows ANY custom message and title to be displayed, but all messages will be considered to have been sent by Nanotrasen's Central Command. \
+			Can also be used to send custom classified messages to all communication consoles. Messages may be recieved by unknown third-parties. \
+			Each device may send one announcement every 2 minutes."
+	item = /obj/item/station_announcer
+	cost = 10
+	surplus = 20
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
