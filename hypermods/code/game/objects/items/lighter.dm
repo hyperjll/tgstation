@@ -16,11 +16,8 @@
 
 		var/obj/item/food/grown/tohotbox = target
 
-		var/location = get_turf(tohotbox)
-		var/datum/effect_system/fluid_spread/smoke/chem/S = new
-		S.attach(location)
-		playsound(location, 'sound/effects/smoke.ogg', 50, TRUE, -3)
-		if(S)
-			S.set_up(amount = smokeamt, holder = tohotbox, location = location, carry = tohotbox.reagents, silent = FALSE)
-			S.start(log = TRUE)
+		var/turf_location = get_turf(tohotbox)
+		do_chem_smoke(amount = smokeamt, holder = tohotbox, location = turf_location, carry = tohotbox.reagents, carry_limit = null, smoke_type = /datum/effect_system/fluid_spread/smoke/chem)
+
+		playsound(turf_location, 'sound/effects/smoke.ogg', 50, TRUE, -3)
 		qdel(tohotbox)

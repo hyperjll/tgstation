@@ -33,25 +33,17 @@
 	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 
 	var/force_wielded = 24
-	var/datum/effect_system/spark_spread/spark_system //It's a surprise tool that'll help us later
 	var/charging = FALSE
 	var/supercharged = FALSE
 	var/toy = FALSE
 
 /obj/item/melee/vxtvulhammer/Initialize(mapload) //For the sparks when you begin to charge it
 	. = ..()
-	spark_system = new
-	spark_system.set_up(5, 0, src)
-	spark_system.attach(src)
 	set_light_on(FALSE)
 	AddComponent(/datum/component/two_handed, \
 		force_wielded = force_wielded, \
 		unwield_callback = CALLBACK(src, PROC_REF(on_unwield)), \
 	)
-
-/obj/item/melee/vxtvulhammer/Destroy() //Even though the hammer won't probably be destroyed, Ever™
-	QDEL_NULL(spark_system)
-	return ..()
 
 /obj/item/melee/vxtvulhammer/update_icon_state()
 	. = ..()
@@ -107,7 +99,7 @@
 		charging = TRUE
 		to_chat(user, span_notice("You begin charging the weapon, concentration flowing into it..."))
 		user.visible_message(span_warning("[user] flicks the hammer on, tilting [user.p_their()] head down as if in thought."))
-		spark_system.start() //Generates sparks when you charge
+		do_sparks(5, FALSE, src, spark_type = /datum/effect_system/basic/spark_spread)
 		if(!do_after(user, 5 SECONDS))
 			if(!charging) //So no duplicate messages
 				return

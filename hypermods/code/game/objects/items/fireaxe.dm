@@ -127,9 +127,7 @@
 	if(prob(20))
 		target.Stun(1 SECONDS)
 		target.Knockdown(5 SECONDS)
-		var/datum/effect_system/lightning_spread/s = new /datum/effect_system/lightning_spread
-		s.set_up(5, 1, target.loc)
-		s.start()
+		do_sparks(5, TRUE, target.loc, spark_type = /datum/effect_system/basic/lightning_spread)
 		target.visible_message(span_danger("[target.name] is shocked by [src]!"), \
 			span_userdanger("You feel a powerful shock course through your body!"), \
 			span_hear("You hear a loud electrical crackle!"))

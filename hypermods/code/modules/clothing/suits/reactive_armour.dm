@@ -236,9 +236,7 @@
 	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE
 
 /obj/item/clothing/suit/armor/reactive/syndicate/tesla/cooldown_activation(mob/living/carbon/human/owner)
-	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
-	sparks.set_up(1, 1, src)
-	sparks.start()
+	do_sparks(1, TRUE, src, spark_type = /datum/effect_system/basic/spark_spread)
 	..()
 
 /obj/item/clothing/suit/armor/reactive/syndicate/tesla/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
@@ -298,9 +296,7 @@
 	clothing_traits = list(TRAIT_MADNESS_IMMUNE)
 
 /obj/item/clothing/suit/armor/reactive/syndicate/hallucinating/cooldown_activation(mob/living/carbon/human/owner)
-	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
-	sparks.set_up(1, 1, src)
-	sparks.start()
+	do_sparks(1, TRUE, src, spark_type = /datum/effect_system/basic/spark_spread)
 	return ..()
 
 /obj/item/clothing/suit/armor/reactive/syndicate/hallucinating/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
@@ -415,9 +411,7 @@
 		r_legs = typesof(/obj/item/bodypart/leg/right)
 
 /obj/item/clothing/suit/armor/reactive/syndicate/bioscrambling/cooldown_activation(mob/living/carbon/human/owner)
-	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
-	sparks.set_up(1, 1, src)
-	sparks.start()
+	do_sparks(1, TRUE, src, spark_type = /datum/effect_system/basic/spark_spread)
 	..()
 
 /obj/item/clothing/suit/armor/reactive/syndicate/bioscrambling/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)

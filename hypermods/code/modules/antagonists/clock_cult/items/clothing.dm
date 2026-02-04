@@ -233,9 +233,7 @@
 ///Callback when the shield breaks, since cult robes are stupid and have different effects.
 /obj/item/clothing/suit/clockwork/shielded/proc/shield_damaged(mob/living/wearer, attack_text, new_current_charges)
 	wearer.visible_message(span_danger("[wearer]'s robes neutralize [attack_text] in a burst of sparks!"))
-	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
-	sparks.set_up(1, 1, src)
-	sparks.start()
+	do_sparks(1, TRUE, get_turf(src), spark_type = /datum/effect_system/basic/spark_spread)
 	if(new_current_charges == 0)
 		wearer.visible_message(span_danger("The shield around [wearer] suddenly disappears!"))
 

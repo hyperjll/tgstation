@@ -37,9 +37,7 @@
 		playsound(src, 'sound/machines/clockcult/steam_whoosh.ogg', 50, TRUE)
 		intruding_mob.adjust_wet_stacks(1) //It's wet!
 
-		var/datum/effect_system/fluid_spread/smoke/smoke = new
-		smoke.set_up(amount = 4, holder = intruding_mob, location = src)
-		smoke.start()
+		do_smoke(4, intruding_mob, src, smoke_type = /datum/effect_system/fluid_spread/smoke)
 
 	COOLDOWN_START(src, vent_cooldown, vent_cd_time)
 

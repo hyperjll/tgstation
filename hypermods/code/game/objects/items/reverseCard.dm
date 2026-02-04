@@ -30,12 +30,8 @@
 
 /obj/item/syndicateReverseCard/proc/switcharoo(mob/firer, mob/user, obj/item/gun/target_gun) //this proc teleports the target_gun out of the firer's hands and into the user's. The firer gets the card.
 	//first, the sparks!
-	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
-	s.set_up(12, 1, firer)
-	s.start()
-	var/datum/effect_system/spark_spread/p = new /datum/effect_system/spark_spread
-	p.set_up(12, 1, user)
-	p.start()
+	do_sparks(12, TRUE, firer, spark_type = /datum/effect_system/basic/spark_spread)
+	do_sparks(12, TRUE, user, spark_type = /datum/effect_system/basic/spark_spread)
 	//next, we move the gun to the user and the card to the firer
 	to_chat(user, "The [src] vanishes from your hands, and [target_gun] appears in them!")
 	to_chat(firer, span_warning("[target_gun] vanishes from your hands, and a [src] appears in them!"))

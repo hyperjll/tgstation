@@ -15,9 +15,7 @@
 	. += ("<span class='notice'>It has [charges] charges left. Recharge with bluespace crystals.</span>")
 
 /obj/item/compressionkit/proc/sparks()
-	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
-	s.set_up(5, 1, get_turf(src))
-	s.start()
+	do_sparks(5, TRUE, get_turf(src), spark_type = /datum/effect_system/basic/spark_spread)
 
 /obj/item/compressionkit/interact_with_atom(atom/interacting_with, mob/living/user)
 	. = ..()

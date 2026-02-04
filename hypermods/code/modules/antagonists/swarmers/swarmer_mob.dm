@@ -244,9 +244,7 @@
 			victim.update_handcuffed()
 			log_combat(src, victim, "handcuffed")
 
-	var/datum/effect_system/spark_spread/sparks = new
-	sparks.set_up(4,0,get_turf(target))
-	sparks.start()
+	do_sparks(4, FALSE, get_turf(target), spark_type = /datum/effect_system/basic/spark_spread)
 	playsound(src, 'sound/effects/sparks/sparks4.ogg', 50, TRUE)
 	do_teleport(target, safe_turf , 0, channel = TELEPORT_CHANNEL_BLUESPACE)
 
