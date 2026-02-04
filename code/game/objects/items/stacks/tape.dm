@@ -78,6 +78,8 @@
 		return ITEM_INTERACT_BLOCKING
 
 	target.set_embed(conferred_embed)
+	if(!istype(target, /obj/item/sticker) || !target.GetComponent(/datum/component/can_stick))
+		target.AddComponent(/datum/component/can_stick)
 	to_chat(user, span_notice("You finish wrapping [target] with [src]."))
 	target.name = "[prefix] [target.name]"
 
