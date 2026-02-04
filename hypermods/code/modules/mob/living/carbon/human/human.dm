@@ -48,3 +48,6 @@
 
 /mob/living/carbon/human/species/werewolf
 	race = /datum/species/werewolf
+
+/mob/living/carbon/human/species/protogen
+	race = /datum/species/protogen

@@ -74,6 +74,9 @@
 #define FEATURE_POD_HAIR "pod_hair"
 #define FEATURE_FOX_TAIL "fox_tail"
 #define FEATURE_WEREWOLF_TAIL "werewolf_tail"
+#define FEATURE_PROTOGEN_TAIL "protogen_tail"
+#define FEATURE_PROTOGEN_SNOUT "protogen_snout"
+#define FEATURE_PROTOGEN_ANTENNAE "protogen_antennae"
 
 // Other
 #define FEATURE_WINGS "wings"

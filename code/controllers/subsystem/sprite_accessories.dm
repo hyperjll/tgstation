@@ -104,6 +104,9 @@ SUBSYSTEM_DEF(accessories) // just 'accessories' for brevity
 	// hyper's add-on's
 	feature_list[FEATURE_FOX_TAIL] = INIT_ACCESSORY(/datum/sprite_accessory/tails/fox)
 	feature_list[FEATURE_WEREWOLF_TAIL] = INIT_ACCESSORY(/datum/sprite_accessory/tails/werewolf)
+	feature_list[FEATURE_PROTOGEN_TAIL] = INIT_ACCESSORY(/datum/sprite_accessory/tails/protogen)
+	feature_list[FEATURE_PROTOGEN_SNOUT] = INIT_ACCESSORY(/datum/sprite_accessory/protogen/snout)
+	feature_list[FEATURE_PROTOGEN_ANTENNAE] = INIT_ACCESSORY(/datum/sprite_accessory/protogen/antennae)
 
 /// This proc just initializes all /datum/sprite_accessory/hair_gradient into an list indexed by gradient-style name
 /datum/controller/subsystem/accessories/proc/init_hair_gradients()

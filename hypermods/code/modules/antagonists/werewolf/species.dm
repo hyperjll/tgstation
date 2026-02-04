@@ -52,6 +52,12 @@
 			SPECIES_PERK_DESC = "Werewolves slowly recover from brute and burn damage on their own, and will regrow their limbs with time.",
 		),
 		list(
+			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+			SPECIES_PERK_ICON = "paw",
+			SPECIES_PERK_NAME = "Sturdy",
+			SPECIES_PERK_DESC = "Werewolves deal increased unarmed damage, take less damage, and are immune to stuns and aggressive grabs.",
+		),
+		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "paw",
 			SPECIES_PERK_NAME = "Primal Primate",

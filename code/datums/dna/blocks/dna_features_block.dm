@@ -92,3 +92,12 @@
 
 /datum/dna_block/feature/accessory/werewolf_tail
 	feature_key = FEATURE_WEREWOLF_TAIL
+
+/datum/dna_block/feature/accessory/protogen_tail
+	feature_key = FEATURE_PROTOGEN_TAIL
+
+/datum/dna_block/feature/accessory/protogen_snout
+	feature_key = FEATURE_PROTOGEN_SNOUT
+
+/datum/dna_block/feature/accessory/protogen_antennae
+	feature_key = FEATURE_PROTOGEN_ANTENNAE
