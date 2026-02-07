@@ -49,7 +49,6 @@
 	RegisterSignal(parent, COMSIG_LIVING_IGNITED, PROC_REF(on_ignite))
 	RegisterSignal(parent, COMSIG_COMPONENT_CLEAN_ACT, PROC_REF(on_clean))
 	RegisterSignal(parent, COMSIG_ATOM_EXAMINE, PROC_REF(on_examine))
-	RegisterSignal(parent, COMSIG_ATOM_ATTACK_HAND, PROC_REF(on_attacked))
 
 /datum/component/sticker/UnregisterFromParent()
 	UnregisterSignal(parent, list(COMSIG_LIVING_IGNITED, COMSIG_COMPONENT_CLEAN_ACT, COMSIG_ATOM_EXAMINE))
@@ -73,20 +72,16 @@
 	SIGNAL_HANDLER
 
 	UnregisterSignal(our_sticker, list(COMSIG_QDELETING, COMSIG_MOVABLE_MOVED))
-	var/atom/parent_atom = parent
-	var/turf/drop_location = listening_turf || parent_atom.drop_location()
-	if(!istype(our_sticker, /obj/item/sticker))
-		our_sticker.forceMove(drop_location)
 	our_sticker = null
 	qdel(src)
 
 /// Handles overlay creation from supplied atom, adds created icon to the parent object, moves source atom to the nullspace.
 /datum/component/sticker/proc/stick(atom/movable/stickering_atom, px, py)
-	var/atom/parent_atom = parent
-
 	our_sticker = stickering_atom
 	our_sticker.moveToNullspace()
 	RegisterSignals(our_sticker, list(COMSIG_QDELETING, COMSIG_MOVABLE_MOVED), PROC_REF(sticker_gone))
+
+	var/atom/parent_atom = parent
 
 	sticker_overlay = mutable_appearance(icon = our_sticker.icon, icon_state = our_sticker.icon_state, layer = parent_atom.layer + 0.01, appearance_flags = RESET_COLOR)
 	sticker_overlay.color = our_sticker.color
@@ -101,11 +96,9 @@
 /datum/component/sticker/proc/peel()
 	var/atom/parent_atom = parent
 	var/turf/drop_location = listening_turf || parent_atom.drop_location()
-	var/mob/living/carbon/user = usr
 
 	UnregisterSignal(our_sticker, list(COMSIG_QDELETING, COMSIG_MOVABLE_MOVED))
-	if(!user.put_in_active_hand(our_sticker))
-		our_sticker.forceMove(drop_location)
+	our_sticker.forceMove(drop_location)
 	our_sticker = null
 	peel_callback?.Invoke(parent)
 
@@ -114,12 +107,7 @@
 /datum/component/sticker/proc/on_ignite(datum/source)
 	SIGNAL_HANDLER
 
-	var/atom/parent_atom = parent
-	var/turf/drop_location = listening_turf || parent_atom.drop_location()
-	if(!istype(our_sticker, /obj/item/sticker))
-		our_sticker.forceMove(drop_location)
-	else
-		qdel(our_sticker) // which qdels us
+	qdel(our_sticker) // which qdels us
 
 /datum/component/sticker/proc/on_clean(datum/source, clean_types)
 	SIGNAL_HANDLER
@@ -133,23 +121,11 @@
 /datum/component/sticker/proc/on_turf_expose(datum/source, datum/gas_mixture/air, exposed_temperature)
 	SIGNAL_HANDLER
 
-	var/atom/parent_atom = parent
-	var/turf/drop_location = listening_turf || parent_atom.drop_location()
 	if(exposed_temperature >= FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
-		if(!istype(our_sticker, /obj/item/sticker))
-			our_sticker.forceMove(drop_location)
-		else
-			qdel(our_sticker) // which qdels us
+		qdel(our_sticker) // which qdels us
 
 /datum/component/sticker/proc/on_examine(atom/source, mob/user, list/examine_list)
 	SIGNAL_HANDLER
 
 	if(!isnull(examine_text))
 		examine_list += span_warning(examine_text)
-
-/datum/component/sticker/proc/on_attacked(atom/source)
-	SIGNAL_HANDLER
-
-	playsound(source, 'sound/items/duct_tape/duct_tape_snap.ogg', 50, TRUE)
-
-	peel()
