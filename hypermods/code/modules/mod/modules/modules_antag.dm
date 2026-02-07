@@ -706,7 +706,7 @@
 	playsound(src, 'sound/items/airhorn/airhorn.ogg', 100, TRUE)
 	//to_chat(source, "[icon2html(src, source)]<font color='red' size='5'>HONK</font>")
 	for(var/mob/living/carbon/M in ohearers(6, source))
-		if(!M.can_hear())
+		if(!HAS_TRAIT(M, TRAIT_DEAF))
 			continue
 		var/turf/turf_check = get_turf(M)
 		if(isspaceturf(turf_check) && !turf_check.Adjacent(M)) //in space nobody can hear you honk.
