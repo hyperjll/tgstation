@@ -15515,9 +15515,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/aft)
-"bkr" = (
-/turf/open/floor/iron/dark,
-/area/station/hallway/primary/aft)
 "bks" = (
 /obj/machinery/vending/modularpc,
 /turf/open/floor/iron/dark,
@@ -90968,7 +90965,7 @@ dyg
 xPQ
 bis
 bKM
-bkr
+bIE
 blC
 cqe
 eKI
