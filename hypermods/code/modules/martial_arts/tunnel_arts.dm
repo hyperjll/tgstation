@@ -2,7 +2,7 @@
 #define CHAOS_REIGNS_COMBO "DH"
 #define ONE_THOUSAND_FISTS_COMBO "HH"
 
-#define TUNNEL_ARTS_TRAIT "sleeping_carp"
+#define TUNNEL_ARTS_TRAIT "tunnel_arts"
 //god's sketchiest solution
 
 /datum/martial_art/the_tunnel_arts
@@ -17,8 +17,7 @@
 		TRAIT_HARDLY_WOUNDED,
 		TRAIT_NOSOFTCRIT,
 		TRAIT_BATON_RESISTANCE,
-		TRAIT_PERFECT_ATTACKER,
-		TRAIT_NOGUNS
+		TRAIT_PERFECT_ATTACKER
 	)
 
 /datum/martial_art/the_tunnel_arts/activate_style(mob/living/new_holder)
