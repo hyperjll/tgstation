@@ -748,7 +748,6 @@
 /obj/structure/table,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "aoo" = (
@@ -1343,6 +1342,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "ayA" = (
@@ -8106,7 +8106,6 @@
 /obj/structure/table,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "ddy" = (
@@ -9566,7 +9565,7 @@
 "dIH" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat/foyer";
+	control_area = "/area/station/ai/satellite/foyer";
 	name = "Foyer Turret Control";
 	pixel_y = 25
 	},
@@ -10182,6 +10181,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/airlock/red_alert_access,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "dVv" = (
