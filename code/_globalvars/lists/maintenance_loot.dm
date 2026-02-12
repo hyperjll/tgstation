@@ -653,6 +653,7 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 		/obj/item/storage/box/randomextractcross = 1,
 		/obj/effect/spawner/random/exotic/languagebook = 1,
 		/obj/item/implantcase/biosig = 1,
+		/obj/item/disk/nanite_program/no_emp = 1,
 		) = 3,
 
 	list(//contraband

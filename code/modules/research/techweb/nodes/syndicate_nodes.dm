@@ -22,6 +22,7 @@
 		"emproof_cell",
 		"emproof_battery",
 		"fultonrecoveryimplant",
+		"nanite_disk_noshock",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	hidden = TRUE
