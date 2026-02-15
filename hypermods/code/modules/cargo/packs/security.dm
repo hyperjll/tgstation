@@ -179,12 +179,12 @@
 	contains = list(/obj/item/gun/ballistic/automatic/ar,
 					/obj/item/gun/ballistic/automatic/ar,
 					/obj/item/gun/ballistic/automatic/ar,
-					/obj/item/ammo_box/magazine/r556,
-					/obj/item/ammo_box/magazine/r556,
-					/obj/item/ammo_box/magazine/r556,
-					/obj/item/ammo_box/magazine/r556,
-					/obj/item/ammo_box/magazine/r556,
-					/obj/item/ammo_box/magazine/r556)
+					/obj/item/ammo_box/magazine/m223,
+					/obj/item/ammo_box/magazine/m223,
+					/obj/item/ammo_box/magazine/m223,
+					/obj/item/ammo_box/magazine/m223,
+					/obj/item/ammo_box/magazine/m223,
+					/obj/item/ammo_box/magazine/m223)
 	crate_name = "nt-arg rifle crate"
 
 /datum/supply_pack/security/armory/ntargriflesingle
@@ -193,7 +193,7 @@
 	cost = CARGO_CRATE_VALUE * 40
 	access = ACCESS_ARMORY
 	contains = list(/obj/item/gun/ballistic/automatic/ar,
-					/obj/item/ammo_box/magazine/r556)
+					/obj/item/ammo_box/magazine/m223)
 	crate_name = "nt-arg rifle crate"
 
 /**
