@@ -10866,9 +10866,6 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "eoZ" = (
-/obj/machinery/door/airlock/command/glass{
-	name = "Research Director's Bedroom"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/any/science/rd,
 /obj/structure/cable,
@@ -10876,6 +10873,9 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	name = "Lockdown Shutters";
 	id = "nanitelock"
+	},
+/obj/machinery/door/airlock/research/glass{
+	name = "Nanite Lab"
 	},
 /turf/open/floor/iron/white,
 /area/station/science/nanite)
@@ -19341,7 +19341,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/junction/flip,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "hyx" = (
@@ -22040,6 +22040,10 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/disposal/bin,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "iJZ" = (
@@ -25296,11 +25300,11 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/airlock/access/all/science/general,
+/obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research/glass{
 	name = "Break Room"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/science/general,
-/obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/station/science/breakroom)
 "jXz" = (
@@ -35745,7 +35749,6 @@
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "u_dangerous_l"
 	},
-/obj/item/stack/sheet/animalhide/lizard,
 /obj/machinery/duct,
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/prison/toilet)
