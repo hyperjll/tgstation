@@ -8291,6 +8291,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
+/obj/machinery/scanner_gate/preset_guns,
 /turf/open/floor/iron/techmaint,
 /area/station/security/execution/transfer)
 "crQ" = (
@@ -12568,6 +12569,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
+/obj/machinery/scanner_gate/preset_guns,
 /turf/open/floor/iron/techmaint,
 /area/station/security/checkpoint)
 "dLb" = (
@@ -19142,6 +19144,7 @@
 	dir = 1
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
+/obj/machinery/scanner_gate/preset_guns,
 /turf/open/floor/iron/techmaint,
 /area/station/security/checkpoint)
 "fDD" = (
@@ -41618,6 +41621,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/machinery/scanner_gate/preset_guns,
 /turf/open/floor/iron/techmaint,
 /area/station/security/brig)
 "lYx" = (
