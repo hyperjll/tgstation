@@ -8,6 +8,7 @@
 /datum/objective/blood_worm/kill
 	name = "KILL"
 	explanation_text = "We must prevent all members of station command from escaping alive on the emergency shuttle."
+	completion_credit_reward = 100
 
 /datum/objective/blood_worm/kill/check_completion()
 	for (var/mob/player_mob as anything in GLOB.player_list)
@@ -27,6 +28,7 @@
 	name = "CONSUME"
 
 	var/blood_required = 0
+	completion_credit_reward = 50
 
 /datum/objective/blood_worm/consume/New(text)
 	blood_required = rand(20, 30) * 100
@@ -42,6 +44,7 @@
 	name = "MULTIPLY"
 
 	var/times_required = 0
+	completion_credit_reward = 50
 
 /datum/objective/blood_worm/multiply/New(text)
 	times_required = rand(2, 3)
@@ -57,6 +60,7 @@
 	name = "CONQUER"
 
 	var/worms_required = 0
+	completion_credit_reward = 100
 
 /datum/objective/blood_worm/conquer/New(text)
 	worms_required = rand(3, 4)
