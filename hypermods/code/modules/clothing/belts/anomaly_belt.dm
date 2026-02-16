@@ -458,7 +458,7 @@
 
 /obj/item/anomaly_belt_shell/liquid/Initialize(mapload, new_lifespan)
 	. = ..()
-	reagents = new(100)
+	create_reagents(100, SEALED_CONTAINER)
 
 /obj/item/anomaly_belt_shell/liquid/proc/activate(mob/living/carbon/human/owner)
 	if(!COOLDOWN_FINISHED(src, anomaly_belt_liquid))
@@ -473,11 +473,9 @@
 	if(!tile)
 		return
 
-	owner.reagents.add_reagent(anomaly_reagent, 100)
+	src.reagents.add_reagent(anomaly_reagent, 100)
 
-	tile.add_liquid_from_reagents(owner.reagents)
+	tile.add_liquid_from_reagents(src.reagents)
 	playsound(tile, 'sound/effects/splat.ogg', 50, 1)
-
-	owner.reagents.remove_reagent(anomaly_reagent, 100) // For some reason the reagents persist in the person. Let's change that.
 
 	COOLDOWN_START(src, anomaly_belt_liquid, cooldowndur)
