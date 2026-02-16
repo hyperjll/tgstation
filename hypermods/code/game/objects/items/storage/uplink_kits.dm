@@ -26,7 +26,7 @@
 			new /obj/item/soap/syndie(src)
 			new /obj/item/switchblade(src)
 			new /obj/item/restraints/handcuffs(src)
-			new /obj/item/stack/sticky_tape(src)
+			new /obj/item/stack/medical/wrap/sticky_tape(src)
 			new /obj/item/clothing/glasses/blindfold(src)
 			new /obj/item/clothing/glasses/thermal(src)
 

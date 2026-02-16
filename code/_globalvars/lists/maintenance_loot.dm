@@ -340,7 +340,7 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 
 	list(//medical and chemicals
 		list(//basic healing items
-			/obj/item/stack/medical/gauze = 2,
+			/obj/item/stack/medical/wrap/gauze = 2,
 			/obj/item/stack/medical/mesh = 2,
 			/obj/item/stack/medical/suture = 2,
 			/obj/item/stack/medical/bandage = 3,

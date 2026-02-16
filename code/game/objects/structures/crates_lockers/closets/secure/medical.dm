@@ -12,7 +12,7 @@
 		/obj/item/storage/belt/medical = 1,
 		/obj/item/storage/box/syringes = 1,
 		/obj/item/stack/medical/bruise_pack = 2,
-		/obj/item/stack/medical/gauze = 2,
+		/obj/item/stack/medical/wrap/gauze = 2,
 		/obj/item/stack/medical/ointment = 2,
 		/obj/item/stack/medical/bloodpack = 2,
 		/obj/item/reagent_containers/cup/bottle/toxin = 1,

@@ -23,7 +23,7 @@
 		/obj/item/gun/ballistic/revolver/c38,
 		/obj/item/gun/ballistic/rifle/boltaction/pipegun/pistol,
 		/obj/item/gun/ballistic/rifle/rebarxbow,
-		/obj/item/stack/sticky_tape/pointy,
+		/obj/item/stack/medical/wrap/sticky_tape/pointy,
 		/obj/item/screwdriver/power,
 		/obj/item/crowbar/power,
 		/obj/item/weldingtool/experimental,

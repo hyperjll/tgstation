@@ -643,12 +643,12 @@
 	panel_type = "panel11"
 	product_ads = "Go save some lives!;The best stuff for your medbay.;Only the finest tools.;Natural chemicals!;This stuff saves lives.;Don't you want some?;Ping!"
 	products = list(
-		/obj/item/stack/medical/gauze = 8,
+		/obj/item/stack/medical/wrap/gauze = 8,
 		/obj/item/reagent_containers/syringe = 12,
 		/obj/item/reagent_containers/dropper = 3,
 		/obj/item/healthanalyzer = 4,
 		/obj/item/wrench/medical = 1,
-		/obj/item/stack/sticky_tape/surgical = 3,
+		/obj/item/stack/medical/wrap/sticky_tape/surgical = 3,
 		/obj/item/healthanalyzer/simple = 4,
 		/obj/item/stack/medical/ointment = 2,
 		/obj/item/stack/medical/suture = 2,
@@ -677,6 +677,7 @@
 		/obj/item/storage/belt/medical = 3,
 		/obj/item/sensor_device = 2,
 		/obj/item/pinpointer/crew = 2,
+		/obj/item/tourniquet = 6,
 		/obj/item/storage/medkit/medical_variety_pack = 1,
 		/obj/item/storage/medkit/expanded/regular = 1,
 		/obj/item/storage/medkit/expanded/brute = 1,
@@ -779,7 +780,7 @@
 		/obj/item/healthanalyzer/simple = 2,
 		/obj/item/stack/medical/bone_gel = 2,
 		/obj/item/storage/box/bandages = 1,
-		/obj/item/stack/medical/gauze = 3,
+		/obj/item/stack/medical/wrap/gauze = 3,
 		/obj/item/reagent_containers/applicator/pill/iron = 5,
 		/obj/item/reagent_containers/cup/bottle/salglu_solution = 2,
 		/obj/item/reagent_containers/cup/bottle/oculine = 1,
@@ -1719,10 +1720,10 @@
 		/obj/item/grenade/chem_grenade/pyro = 5,
 		/obj/item/grenade/chem_grenade/adv_release = 5,
 		/obj/item/flatpack/autolathe = 1,
-		/obj/item/stack/sticky_tape/pointy/super = 1,
-		/obj/item/stack/sticky_tape/pointy = 2,
-		/obj/item/stack/sticky_tape/super = 1,
-		/obj/item/stack/sticky_tape = 2,
+		/obj/item/stack/medical/wrap/sticky_tape/pointy/super = 1,
+		/obj/item/stack/medical/wrap/sticky_tape/pointy = 2,
+		/obj/item/stack/medical/wrap/sticky_tape/super = 1,
+		/obj/item/stack/medical/wrap/sticky_tape = 2,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/chem_wardrobe
 	extra_price = PAYCHECK_COMMAND * 0.8

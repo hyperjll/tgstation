@@ -33,7 +33,7 @@
 /datum/market_item/misc/pointytape
 	name = "Pointy Tape"
 	desc = "A single roll of pointy tape! This stuff can make anything embeddable! Banned in the Spinward Sector, use with caution."
-	item = /obj/item/stack/sticky_tape/pointy
+	item = /obj/item/stack/medical/wrap/sticky_tape/pointy
 
 	price_min = CARGO_CRATE_VALUE *1.8
 	price_max = CARGO_CRATE_VALUE *3

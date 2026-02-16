@@ -18,7 +18,7 @@
 		/obj/item/healthanalyzer/simple = 2,
 		/obj/item/stack/medical/bone_gel = 2,
 		/obj/item/storage/box/bandages = 1,
-		/obj/item/stack/medical/gauze = 3,
+		/obj/item/stack/medical/wrap/gauze = 3,
 		/obj/item/reagent_containers/applicator/pill/iron = 5,
 		/obj/item/storage/pill_bottle/painkillers = 3,
 		/obj/item/reagent_containers/cup/bottle/salglu_solution = 2,

@@ -120,10 +120,10 @@
 	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
 
 /obj/item/storage/box/syndie_kit/tapepackage/PopulateContents()
-	new /obj/item/stack/sticky_tape/pointy/super(src)
-	new /obj/item/stack/sticky_tape/pointy(src)
-	new /obj/item/stack/sticky_tape/super(src)
-	new /obj/item/stack/sticky_tape(src)
+	new /obj/item/stack/medical/wrap/sticky_tape/pointy/super(src)
+	new /obj/item/stack/medical/wrap/sticky_tape/pointy(src)
+	new /obj/item/stack/medical/wrap/sticky_tape/super(src)
+	new /obj/item/stack/medical/wrap/sticky_tape(src)
 
 
 /obj/item/storage/box/clowngadgets

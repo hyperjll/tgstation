@@ -15,7 +15,7 @@
 		/obj/item/stock_parts/micro_laser = 3,
 		/obj/item/stock_parts/scanning_module = 3,
 		/obj/item/wirecutters = 2,
-		/obj/item/stack/sticky_tape/duct = 3,
+		/obj/item/stack/medical/wrap/sticky_tape/duct = 3,
 		/obj/item/screwdriver = 1,
 		/obj/item/weldingtool/mini = 1,
 		/obj/item/stock_parts/power_store/cell/empty = 4,

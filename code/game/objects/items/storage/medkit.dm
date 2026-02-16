@@ -73,7 +73,7 @@
 	if(empty)
 		return
 	var/list/items_inside = list(
-		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/wrap/gauze = 1,
 		/obj/item/stack/medical/bloodpack = 1,
 		/obj/item/stack/medical/bandage = 1,
 		/obj/item/stack/medical/ointment = 1,

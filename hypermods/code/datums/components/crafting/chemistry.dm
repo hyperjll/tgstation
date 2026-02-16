@@ -43,7 +43,7 @@
 	name = "Bruise Pack"
 	result = /obj/item/stack/medical/bruise_pack
 	reqs = list(
-		/obj/item/stack/medical/gauze = 3,
+		/obj/item/stack/medical/wrap/gauze = 3,
 		/datum/reagent/drug/opium = 15
 	)
 	time = 8 SECONDS
