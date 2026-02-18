@@ -10,7 +10,7 @@
 	pref_flag = ROLE_BLOODSUCKER
 	preview_antag_datum = /datum/antagonist/bloodsucker
 	//required_candidates = 1
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 1,
 		DYNAMIC_TIER_MEDIUMHIGH = 2,
@@ -39,7 +39,7 @@
 	pref_flag = ROLE_VAMPIRICACCIDENT
 	//antag_flag_override = ROLE_BLOODSUCKER
 	//required_candidates = 1
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 1,
 		DYNAMIC_TIER_MEDIUMHIGH = 2,
@@ -66,7 +66,7 @@
 	pref_flag = ROLE_BLOODSUCKERBREAKOUT
 	//antag_flag_override = ROLE_BLOODSUCKER
 	//required_candidates = 1
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 1,
 		DYNAMIC_TIER_MEDIUMHIGH = 2,

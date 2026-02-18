@@ -5,7 +5,7 @@
 	preview_antag_datum = /datum/antagonist/clock_cultist
 	minimum_required_age = 14
 	//required_candidates = 3
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 1,
 		DYNAMIC_TIER_MEDIUMHIGH = 3,

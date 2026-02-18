@@ -6,7 +6,7 @@
 	pref_flag = ROLE_SWARMER
 	//required_type = /mob/dead/observer
 	//required_candidates = 1
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 0,
 		DYNAMIC_TIER_MEDIUMHIGH = 1,

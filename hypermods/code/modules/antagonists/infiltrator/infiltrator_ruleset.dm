@@ -5,7 +5,7 @@
 	pref_flag = ROLE_INFILTRATOR
 	//required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	//required_candidates = 1
-	weight = list( // Hehe, super high weights
+	weight = alist( // Hehe, super high weights
 		DYNAMIC_TIER_LOW = 1,
 		DYNAMIC_TIER_LOWMEDIUM = 1,
 		DYNAMIC_TIER_MEDIUMHIGH = 2,

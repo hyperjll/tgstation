@@ -7,7 +7,7 @@
 	//antag_flag_override = ROLE_HERETIC
 	//required_candidates = 1
 	midround_type = LIGHT_MIDROUND
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 1,
 		DYNAMIC_TIER_MEDIUMHIGH = 3,

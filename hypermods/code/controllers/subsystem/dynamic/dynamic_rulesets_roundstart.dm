@@ -11,7 +11,7 @@
 	preview_antag_datum = /datum/antagonist/initial_infected
 	minimum_required_age = 0
 	//required_candidates = 1
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 0,
 		DYNAMIC_TIER_MEDIUMHIGH = 1,
@@ -40,7 +40,7 @@
 	preview_antag_datum = /datum/antagonist/werewolf
 	minimum_required_age = 0
 	//required_candidates = 1
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 1,
 		DYNAMIC_TIER_MEDIUMHIGH = 1,
@@ -66,7 +66,7 @@
 	config_tag = "Roundstart Commandops"
 	preview_antag_datum = /datum/antagonist/nukeop/commando
 	pref_flag = ROLE_COMMANDO_OPERATIVE
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 0,
 		DYNAMIC_TIER_MEDIUMHIGH = 1,

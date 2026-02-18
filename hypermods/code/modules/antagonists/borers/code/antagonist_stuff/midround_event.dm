@@ -74,7 +74,7 @@
 	preview_antag_datum = /datum/antagonist/cortical_borer
 	pref_flag = ROLE_CORTICAL_BORER
 	midround_type = HEAVY_MIDROUND
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 1,
 		DYNAMIC_TIER_MEDIUMHIGH = 2,

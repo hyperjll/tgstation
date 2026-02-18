@@ -32,7 +32,7 @@
 	//antag_flag_override = ROLE_WEREWOLF
 	preview_antag_datum = /datum/antagonist/werewolf
 	//required_candidates = 1
-	weight = list(
+	weight = alist(
 		DYNAMIC_TIER_LOW = 0,
 		DYNAMIC_TIER_LOWMEDIUM = 0,
 		DYNAMIC_TIER_MEDIUMHIGH = 1,
