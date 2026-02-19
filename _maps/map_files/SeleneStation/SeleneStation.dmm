@@ -8054,7 +8054,7 @@
 /area/station/engineering/supermatter/room)
 "dbH" = (
 /obj/structure/table/glass,
-/obj/item/stack/medical/gauze,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/white,
 /area/station/maintenance/starboard)
 "dbQ" = (
@@ -9490,10 +9490,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical)
-"dHI" = (
-/obj/item/stack/medical/gauze,
-/turf/open/floor/plating,
-/area/station/maintenance/starboard)
 "dHJ" = (
 /obj/machinery/door/airlock/external{
 	name = "MiniSat External Access"
@@ -13751,10 +13747,10 @@
 /area/station/commons/storage/primary)
 "fqi" = (
 /obj/structure/table,
-/obj/item/stack/sticky_tape{
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/item/stack/medical/wrap/sticky_tape{
 	amount = 2
 	},
-/obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/station/security/detectives_office)
 "fqm" = (
@@ -41030,9 +41026,9 @@
 /area/space/nearstation)
 "qbx" = (
 /obj/structure/rack,
-/obj/item/stack/medical/gauze,
 /obj/item/reagent_containers/hypospray/medipen/atropine,
 /obj/item/reagent_containers/hypospray/medipen/blood_loss,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "qbE" = (
@@ -111152,7 +111148,7 @@ xBU
 xBU
 qkR
 cAq
-dHI
+wpj
 cAq
 wTS
 xBU
