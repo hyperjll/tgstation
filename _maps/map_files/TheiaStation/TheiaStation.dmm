@@ -20699,13 +20699,13 @@
 /turf/open/floor/engine/n2,
 /area/station/engineering/atmos)
 "ieo" = (
-/obj/item/stack/medical/gauze,
 /obj/item/stack/medical/suture,
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/structure/table/reinforced,
 /obj/machinery/light/no_nightlight/directional/east,
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/vitals_reader/directional/east,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "ier" = (
@@ -43636,7 +43636,6 @@
 /area/station/cargo/sorting)
 "rCr" = (
 /obj/structure/table,
-/obj/item/stack/medical/gauze,
 /obj/item/stack/medical/mesh,
 /obj/item/stack/medical/suture,
 /obj/item/reagent_containers/cup/beaker{
@@ -43648,6 +43647,7 @@
 	dir = 4
 	},
 /obj/machinery/light/directional/east,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "rCs" = (
