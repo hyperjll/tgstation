@@ -45011,6 +45011,7 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 32
 	},
+/obj/machinery/restaurant_portal/bar,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "mZq" = (
@@ -46156,6 +46157,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "npK" = (
@@ -54095,17 +54097,6 @@
 	},
 /turf/open/floor/iron/checker,
 /area/station/cargo/storage)
-"pIR" = (
-/obj/effect/turf_decal/siding/wood,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/item/kirbyplants/random,
-/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
-	dir = 8
-	},
-/turf/open/floor/wood,
-/area/station/commons/lounge)
 "pIV" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /obj/machinery/portable_atmospherics/pump,
@@ -57775,6 +57766,7 @@
 /area/station/command/vault)
 "qIu" = (
 /obj/structure/table/wood/poker,
+/obj/item/stack/spacecash/c10,
 /turf/open/floor/carpet/red,
 /area/station/commons/lounge)
 "qIB" = (
@@ -62950,6 +62942,7 @@
 "sis" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/structure/table,
+/obj/item/holosign_creator/robot_seat/restaurant,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
 "siB" = (
@@ -65163,7 +65156,7 @@
 	dir = 6
 	},
 /obj/machinery/firealarm/directional/west,
-/obj/effect/landmark/start/hangover,
+/obj/item/kirbyplants/random,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "sRn" = (
@@ -71362,6 +71355,7 @@
 	},
 /obj/machinery/firealarm/directional/east,
 /obj/machinery/camera/directional/east,
+/obj/machinery/restaurant_portal/restaurant,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "uJa" = (
@@ -73046,6 +73040,7 @@
 /obj/item/radio/intercom{
 	pixel_x = 28
 	},
+/obj/item/kirbyplants/random,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "viL" = (
@@ -79080,6 +79075,7 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners{
 	dir = 1
 	},
+/obj/item/holosign_creator/robot_seat/bar,
 /turf/open/floor/iron/dark,
 /area/station/service/bar)
 "wOw" = (
@@ -104671,7 +104667,7 @@ xxe
 wOu
 gci
 kLE
-pIR
+sxF
 cpF
 uBu
 nZF
