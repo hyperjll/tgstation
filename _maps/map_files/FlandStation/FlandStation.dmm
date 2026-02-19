@@ -286,10 +286,10 @@
 	pixel_x = 10;
 	pixel_y = 10
 	},
-/obj/item/stack/medical/gauze{
+/obj/item/storage/box/bodybags,
+/obj/item/stack/medical/wrap/gauze{
 	pixel_x = 8
 	},
-/obj/item/storage/box/bodybags,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "adt" = (
@@ -2554,6 +2554,7 @@
 	pixel_x = -1;
 	pixel_y = 2
 	},
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/dark,
 /area/station/command/gateway)
 "aJc" = (
@@ -6924,6 +6925,10 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
 /turf/open/floor/iron/ameridiner,
 /area/station/science/genetics)
 "bVJ" = (
@@ -8377,10 +8382,10 @@
 /obj/item/stack/medical/ointment{
 	pixel_y = 4
 	},
-/obj/item/stack/medical/gauze,
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "ctx" = (
@@ -8689,6 +8694,9 @@
 	dir = 10
 	},
 /mob/living/carbon/human/species/monkey,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/ameridiner,
 /area/station/science/genetics)
 "cyf" = (
@@ -10332,6 +10340,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
+/mob/living/carbon/human/species/monkey,
 /turf/open/floor/iron/grid/steel,
 /area/station/medical/virology)
 "cVI" = (
@@ -14239,6 +14248,7 @@
 /obj/effect/turf_decal/siding/dark_green{
 	dir = 4
 	},
+/mob/living/carbon/human/species/monkey,
 /turf/open/floor/iron/grid/steel,
 /area/station/medical/virology)
 "emc" = (
@@ -15219,6 +15229,9 @@
 "eCA" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1
 	},
 /turf/open/floor/iron/ameridiner,
 /area/station/science/genetics)
@@ -17265,7 +17278,6 @@
 /area/station/commons/fitness/recreation/entertainment)
 "fdE" = (
 /obj/structure/table,
-/obj/item/stack/medical/gauze,
 /obj/item/stack/medical/bruise_pack{
 	pixel_x = 4
 	},
@@ -17279,6 +17291,7 @@
 /obj/machinery/status_display/evac{
 	pixel_x = -32
 	},
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "fdM" = (
@@ -21506,6 +21519,7 @@
 /obj/effect/turf_decal/siding/dark_green{
 	dir = 1
 	},
+/mob/living/carbon/human/species/monkey,
 /turf/open/floor/iron/grid/steel,
 /area/station/medical/virology)
 "gle" = (
@@ -21560,6 +21574,8 @@
 /obj/item/radio/intercom{
 	pixel_x = -28
 	},
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
 /turf/open/floor/iron/grid/steel,
 /area/station/science/genetics)
 "gmw" = (
@@ -27778,6 +27794,9 @@
 "hZS" = (
 /obj/machinery/vending/wardrobe/gene_wardrobe,
 /obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
 	dir = 6
 	},
 /turf/open/floor/iron/grid/steel,
@@ -36599,11 +36618,11 @@
 /area/station/hallway/secondary/service)
 "kDJ" = (
 /obj/structure/rack,
-/obj/item/stack/medical/gauze,
 /obj/item/stack/medical/bruise_pack,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/spawner/random/exotic/technology,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "kDQ" = (
@@ -39324,7 +39343,6 @@
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 1
 	},
-/obj/item/stack/medical/gauze,
 /obj/machinery/vitals_reader/directional/north,
 /turf/open/floor/iron/white,
 /area/station/security/medical)
@@ -50453,6 +50471,7 @@
 /area/space/nearstation)
 "oFX" = (
 /obj/item/kirbyplants/random,
+/obj/machinery/defibrillator_mount/directional/west,
 /turf/open/floor/iron,
 /area/station/medical/treatment_center)
 "oGf" = (
@@ -52132,8 +52151,9 @@
 	pixel_x = -26;
 	pixel_y = 30
 	},
-/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
-	dir = 4
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden/layer2{
+	dir = 1
 	},
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
@@ -56458,7 +56478,6 @@
 /area/station/science/xenobiology/hallway)
 "qrx" = (
 /obj/structure/table,
-/obj/item/stack/medical/gauze,
 /obj/item/stack/medical/ointment{
 	pixel_y = 4
 	},
@@ -56467,6 +56486,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -26
 	},
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/dark/side{
 	dir = 9
 	},
@@ -63901,7 +63921,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 8
 	},
-/obj/item/kirbyplants/random,
+/obj/machinery/defibrillator_mount/mobile,
 /turf/open/floor/iron,
 /area/station/medical/treatment_center)
 "syr" = (
@@ -67427,6 +67447,7 @@
 	},
 /obj/item/stack/medical/bruise_pack,
 /obj/item/stack/medical/ointment,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/engine{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
@@ -68192,6 +68213,8 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/storage/box/disks,
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
 /turf/open/floor/iron/grid/steel,
 /area/station/science/genetics)
 "tNW" = (
@@ -69991,6 +70014,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
 /turf/open/floor/iron/grid/steel,
 /area/station/science/genetics)
 "uqQ" = (
@@ -70065,8 +70090,10 @@
 /area/station/hallway/primary/fore)
 "usf" = (
 /obj/effect/turf_decal/tile/purple/opposingcorners,
-/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/hidden/layer4{
+	dir = 4
+	},
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "usp" = (
@@ -71251,7 +71278,6 @@
 /area/station/engineering/storage)
 "uHW" = (
 /obj/structure/rack,
-/obj/item/stack/medical/gauze,
 /obj/item/stack/medical/bruise_pack,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
@@ -72616,7 +72642,6 @@
 /obj/item/stack/medical/ointment{
 	pixel_y = 4
 	},
-/obj/item/stack/medical/gauze,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
 	},
@@ -72624,6 +72649,7 @@
 	pixel_x = -28;
 	pixel_y = 1
 	},
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/freezer,
 /area/station/medical/patients_rooms)
 "vcg" = (
@@ -80107,6 +80133,9 @@
 /obj/machinery/door/window/left/directional/north{
 	name = "Monkey Pen";
 	req_access = list("genetics")
+	},
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
+	dir = 10
 	},
 /turf/open/floor/iron/ameridiner,
 /area/station/science/genetics)
