@@ -13877,7 +13877,6 @@
 	},
 /obj/structure/fluff/broken_canister_frame,
 /obj/machinery/camera/autoname/directional/north,
-/obj/item/stack/sticky_tape/super,
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/plating,
 /area/station/commons/storage/tools)
@@ -25607,6 +25606,7 @@
 	pixel_y = 3
 	},
 /obj/item/assembly/signaler,
+/obj/item/stack/medical/wrap/sticky_tape/super,
 /turf/open/floor/iron/smooth,
 /area/station/commons/storage/tools)
 "iGl" = (
@@ -70042,11 +70042,11 @@
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/stack/medical/gauze{
+/obj/item/stack/medical/wrap/gauze{
 	pixel_x = -2;
 	pixel_y = 8
 	},
-/obj/item/stack/medical/gauze,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "wSL" = (
