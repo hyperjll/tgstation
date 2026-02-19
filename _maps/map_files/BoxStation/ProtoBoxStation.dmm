@@ -24897,9 +24897,6 @@
 /area/station/medical/surgery/fore)
 "bFG" = (
 /obj/structure/table/glass,
-/obj/item/stack/medical/gauze{
-	pixel_x = 1
-	},
 /obj/item/stack/medical/mesh,
 /obj/machinery/button/door/directional/west{
 	id = "chemistry_access_shutters";
@@ -24908,6 +24905,7 @@
 	},
 /obj/item/stack/medical/suture,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/large,
 /area/station/medical/treatment_center)
 "bFI" = (
@@ -36376,10 +36374,6 @@
 /area/station/cargo/miningoffice)
 "cYq" = (
 /obj/structure/table/glass,
-/obj/item/stack/medical/gauze{
-	pixel_x = -2;
-	pixel_y = 8
-	},
 /obj/item/stack/medical/mesh{
 	pixel_x = 6;
 	pixel_y = 5
@@ -36394,6 +36388,10 @@
 /obj/effect/turf_decal/tile/blue/full,
 /obj/effect/spawner/random/medical/chem_supplies{
 	pixel_x = -6
+	},
+/obj/item/stack/medical/wrap/gauze{
+	pixel_x = -2;
+	pixel_y = 8
 	},
 /turf/open/floor/iron/large,
 /area/station/medical/treatment_center)
@@ -37106,9 +37104,9 @@
 /obj/machinery/vending/wallmed/directional/south,
 /obj/structure/cable,
 /obj/structure/table/glass,
-/obj/item/stack/sticky_tape/surgical,
 /obj/item/stack/medical/bone_gel,
 /obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/item/stack/medical/wrap/sticky_tape/surgical,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "dCN" = (
@@ -42006,6 +42004,7 @@
 	name = "Privacy Shutters"
 	},
 /obj/machinery/door/firedoor,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/plating,
 /area/station/security/checkpoint/medical)
 "hRR" = (
@@ -45474,9 +45473,9 @@
 /area/station/maintenance/department/electrical)
 "kQk" = (
 /obj/structure/table/glass,
-/obj/item/stack/sticky_tape/surgical,
 /obj/item/stack/medical/bone_gel,
 /obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/item/stack/medical/wrap/sticky_tape/surgical,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/fore)
 "kQK" = (
@@ -54942,12 +54941,10 @@
 /area/station/ai/satellite/maintenance)
 "sWJ" = (
 /obj/structure/table/glass,
-/obj/item/stack/medical/gauze{
-	pixel_x = 2
-	},
 /obj/item/stack/medical/mesh,
 /obj/item/stack/medical/suture,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/large,
 /area/station/medical/treatment_center)
 "sXh" = (
@@ -60648,6 +60645,7 @@
 /obj/structure/table/glass,
 /obj/machinery/light/cold/directional/east,
 /obj/machinery/vitals_reader/directional/east,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/white,
 /area/station/medical/cryo)
 "yaM" = (
