@@ -11354,7 +11354,7 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
 /obj/item/bonesetter,
-/obj/item/stack/sticky_tape/surgical,
+/obj/item/stack/medical/wrap/sticky_tape/surgical,
 /turf/open/floor/iron/freezer,
 /area/station/medical/surgery/theatre)
 "beK" = (
@@ -13572,7 +13572,6 @@
 	},
 /obj/item/stack/medical/suture,
 /obj/item/stack/medical/mesh,
-/obj/item/stack/medical/gauze,
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 1
 	},
@@ -13583,6 +13582,7 @@
 /obj/effect/spawner/random/medical/chem_supplies{
 	pixel_x = 6
 	},
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "bnq" = (
@@ -36670,9 +36670,6 @@
 	pixel_x = 10;
 	pixel_y = 10
 	},
-/obj/item/stack/medical/gauze{
-	pixel_x = 8
-	},
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 4
 	},
@@ -36684,6 +36681,9 @@
 /obj/effect/mapping_helpers/requests_console/assistance,
 /obj/effect/spawner/random/medical/chem_supplies{
 	pixel_x = -6
+	},
+/obj/item/stack/medical/wrap/gauze{
+	pixel_x = 5
 	},
 /turf/open/floor/iron/white/textured,
 /area/station/medical/treatment_center)
@@ -38682,7 +38682,7 @@
 /obj/structure/table/reinforced/rglass,
 /obj/item/bonesetter,
 /obj/item/stack/medical/bone_gel,
-/obj/item/stack/sticky_tape/surgical,
+/obj/item/stack/medical/wrap/sticky_tape/surgical,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "hTQ" = (
@@ -38997,7 +38997,7 @@
 /obj/structure/table/reinforced/rglass,
 /obj/item/bonesetter,
 /obj/item/stack/medical/bone_gel,
-/obj/item/stack/sticky_tape/surgical,
+/obj/item/stack/medical/wrap/sticky_tape/surgical,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "iaG" = (
