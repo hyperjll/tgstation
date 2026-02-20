@@ -23,6 +23,9 @@
 		"emproof_battery",
 		"fultonrecoveryimplant",
 		"nanite_disk_noshock",
+		"experimental_cloner",
+		"experimental_cloner_scanner",
+		"experimental_cloner_computer",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	hidden = TRUE

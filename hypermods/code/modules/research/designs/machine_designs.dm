@@ -8,6 +8,26 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
+/datum/design/board/experimental_cloner
+	name = "Experimental Cloner Board"
+	desc = "The circuit board for a cloning machine."
+	id = "experimental_cloner"
+	build_path = /obj/item/circuitboard/machine/experimental_cloner
+	category = list(
+		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_MEDICAL
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+
+/datum/design/board/experimental_cloner_scanner
+	name = "Cloner Scanner Board"
+	desc = "The circuit board for a cloning machine scanner."
+	id = "experimental_cloner_scanner"
+	build_path = /obj/item/circuitboard/machine/experimental_cloner_scanner
+	category = list(
+		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_MEDICAL
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+
 
 /datum/design/board/byteforge_sec
 	name = "Byteforge Board"

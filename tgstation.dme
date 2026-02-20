@@ -7676,6 +7676,7 @@
 #include "hypermods\code\modules\research\anomaly\anomaly_core.dm"
 #include "hypermods\code\modules\research\anomaly\raw_anomaly.dm"
 #include "hypermods\code\modules\research\designs\biogenerator_designs.dm"
+#include "hypermods\code\modules\research\designs\comp_board_designs.dm"
 #include "hypermods\code\modules\research\designs\electronics_designs.dm"
 #include "hypermods\code\modules\research\designs\machine_designs.dm"
 #include "hypermods\code\modules\research\designs\mechfabricator_designs.dm"
