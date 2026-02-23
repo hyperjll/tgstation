@@ -75,7 +75,7 @@
 	var/list/items_inside = list(
 		/obj/item/stack/medical/wrap/gauze = 1,
 		/obj/item/stack/medical/bloodpack = 1,
-		/obj/item/stack/medical/bandage = 1,
+		/obj/item/storage/box/bandages = 1,
 		/obj/item/stack/medical/ointment = 1,
 		/obj/item/reagent_containers/hypospray/medipen/ekit = 1,
 		/obj/item/storage/pill_bottle/iron = 1,
@@ -174,8 +174,10 @@
 	if(empty)
 		return
 	var/list/items_inside = list(
-		/obj/item/reagent_containers/applicator/patch/aiuri = 2,
-		/obj/item/reagent_containers/applicator/patch/silver_sulfadiazine = 2,
+		/obj/item/stack/medical/mesh = 1,
+		/obj/item/stack/medical/ointment = 1,
+		/obj/item/reagent_containers/applicator/patch/aiuri = 1,
+		/obj/item/reagent_containers/applicator/patch/silver_sulfadiazine = 1,
 		/obj/item/reagent_containers/spray/hercuri = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 1,
 		/obj/item/storage/pill_bottle/kelotane = 1)
@@ -255,8 +257,10 @@
 	if(empty)
 		return
 	var/list/items_inside = list(
-		/obj/item/reagent_containers/applicator/patch/libital = 2,
-		/obj/item/reagent_containers/applicator/patch/styptic_powder = 2,
+		/obj/item/stack/medical/suture = 1,
+		/obj/item/stack/medical/bruise_pack = 1,
+		/obj/item/reagent_containers/applicator/patch/libital = 1,
+		/obj/item/reagent_containers/applicator/patch/styptic_powder = 1,
 		/obj/item/storage/pill_bottle/probital = 1,
 		/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
 		/obj/item/storage/pill_bottle/bicaridine = 1,
@@ -279,9 +283,11 @@
 	if(empty)
 		return
 	var/list/items_inside = list(
-		/obj/item/reagent_containers/applicator/patch/synthflesh = 2,
+		/obj/item/stack/medical/suture/medicated = 1,
+		/obj/item/stack/medical/mesh/advanced = 1,
+		/obj/item/reagent_containers/applicator/patch/synthflesh = 1,
 		/obj/item/reagent_containers/medigel/synthflesh/big = 1,
-		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
+		/obj/item/reagent_containers/hypospray/medipen/atropine = 1,
 		/obj/item/storage/pill_bottle/tricordrazine = 1,
 		/obj/item/storage/pill_bottle/penacid = 1)
 	generate_items_inside(items_inside,src)
@@ -333,8 +339,8 @@
 		/obj/item/stack/medical/wrap/gauze = 2,
 		/obj/item/stack/medical/suture/medicated = 2,
 		/obj/item/stack/medical/mesh/advanced = 2,
-		/obj/item/reagent_containers/applicator/patch/libital = 4,
-		/obj/item/reagent_containers/applicator/patch/aiuri = 4,
+		/obj/item/storage/pill_bottle/libital_patch = 1,
+		/obj/item/storage/pill_bottle/aiuri_patch = 1,
 	)
 	generate_items_inside(items_inside,src)
 
