@@ -349,6 +349,12 @@
 		if (SANITY_LEVEL_INSANE)
 			mood_screen_object.color = "#f15d36"
 
+	if((mob_parent.mob_mood.mood_level <= MOOD_LEVEL_SAD2 && mob_parent.mob_mood.sanity_level >= SANITY_LEVEL_UNSTABLE) && !mob_parent.has_status_effect(/datum/status_effect/misery))
+		mob_parent.apply_status_effect(/datum/status_effect/misery)
+
+	if((mob_parent.mob_mood.mood_level >= MOOD_LEVEL_HAPPY4 && mob_parent.mob_mood.sanity_level >= SANITY_LEVEL_GREAT) && !mob_parent.has_status_effect(/datum/status_effect/contentment))
+		mob_parent.apply_status_effect(/datum/status_effect/contentment)
+
 	if (!conflicting_moodies.len) // there's no special icons, use the normal icon states
 		mood_screen_object.icon_state = "mood[mood_level]"
 		return

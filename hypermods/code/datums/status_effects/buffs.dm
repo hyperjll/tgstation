@@ -367,3 +367,89 @@
 	our_human.physiology.burn_mod /= 0.5
 	our_human.physiology.tox_mod /= 0.5
 	our_human.physiology.oxy_mod /= 0.5
+
+
+/datum/status_effect/contentment
+	id = "contentment"
+	duration = INFINITY
+	alert_type = /atom/movable/screen/alert/status_effect/contentment
+	var/laststand_chance = 0.1 // % chance when entering critical condition for a last stand.
+
+/datum/status_effect/contentment/tick(seconds_between_ticks)
+	if(!owner)
+		return
+
+	var/mob/living/carbon/human/moody_human = owner
+	if(moody_human.mob_mood.sanity_level >= SANITY_LEVEL_NEUTRAL)
+		owner.remove_status_effect(/datum/status_effect/contentment)
+
+	if(HAS_TRAIT(moody_human, TRAIT_CRITICAL_CONDITION))
+		if(prob(laststand_chance))
+			moody_human.last_stand()
+
+	return ..()
+
+/atom/movable/screen/alert/status_effect/contentment
+	name = "Contentment"
+	desc = "You're in great mental health and have grown content with your current predicament."
+	icon = 'hypermods/icons/hud/screen_alert.dmi'
+	icon_state = "contentment"
+
+/datum/status_effect/last_stand_cd
+	id = "last_stand_cd"
+	duration = 10 MINUTES
+	alert_type = null
+
+/datum/status_effect/last_stand
+	id = "last_stand"
+	duration = 5 MINUTES
+	alert_type = /atom/movable/screen/alert/status_effect/last_stand
+	var/laststand_chance = 0.1 // % chance when entering critical condition for a last stand.
+
+/datum/status_effect/last_stand/on_apply()
+	. = ..()
+	if(.)
+		if(owner.get_oxy_loss())
+			owner.adjust_oxy_loss(-200, updating_health = FALSE)
+		if(owner.get_brute_loss() > 40)
+			var/totalbruteloss = owner.get_brute_loss()
+			owner.adjust_brute_loss((-totalbruteloss + 40), updating_health = FALSE)
+		if(owner.get_fire_loss() > 40)
+			var/totalfireloss = owner.get_fire_loss()
+			owner.adjust_fire_loss((-totalfireloss + 40), updating_health = FALSE)
+		if(owner.get_tox_loss() > 15)
+			var/totaltoxloss = owner.get_tox_loss() // this one gets special treatment to ensure the damage leftover never hits 100
+			owner.adjust_tox_loss((-totaltoxloss + 15), updating_health = FALSE)
+
+		owner.adjust_blood_volume(50, maximum = BLOOD_VOLUME_SAFE)
+
+		owner.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOCRITDAMAGE), "last_stand")
+
+		owner.apply_status_effect(/datum/status_effect/last_stand_cd)
+
+/datum/status_effect/last_stand/tick(seconds_between_ticks)
+	var/need_mob_update = FALSE
+
+	if(owner.get_brute_loss() > 0)
+		need_mob_update += owner.adjust_brute_loss(-0.2, updating_health = FALSE)
+
+	if(owner.get_fire_loss() > 0)
+		need_mob_update += owner.adjust_fire_loss(-0.2, updating_health = FALSE)
+
+	if(owner.get_tox_loss() > 0)
+		// Forced, so slimepeople are healed as well.
+		need_mob_update += owner.adjust_tox_loss(-0.2, updating_health = FALSE, forced = TRUE)
+
+	if(need_mob_update)
+		owner.updatehealth()
+
+	return ..()
+
+/datum/status_effect/last_stand/on_remove()
+	owner.remove_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOCRITDAMAGE), "last_stand")
+
+/atom/movable/screen/alert/status_effect/last_stand
+	name = "Last Stand"
+	desc = "Something deep within you has awakened. Despite your broken body, you've refused to die. It'll be more difficult to put you down, but not impossible."
+	icon = 'hypermods/icons/hud/screen_alert.dmi'
+	icon_state = "last_stand"
