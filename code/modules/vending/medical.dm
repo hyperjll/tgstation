@@ -143,6 +143,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/arithrazine = 4,
 		/obj/item/reagent_containers/hypospray/medipen/hyronalin = 4,
 		/obj/item/reagent_containers/hypospray/medipen/bicaridine = 2,
+		/obj/item/reagent_containers/hypospray/medipen/kelotane = 2,
 		/obj/item/reagent_containers/hypospray/medipen/dermaline = 2,
 		/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 1,
