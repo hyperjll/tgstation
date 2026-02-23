@@ -40,6 +40,8 @@
 	var/force_unwielded = 5
 	/// How much damage to do wielded
 	var/force_wielded = 20
+	/// Is it being swung?
+	var/swung = FALSE
 
 /datum/armor/item_batteringram
 	fire = 100
@@ -55,10 +57,18 @@
 	return ..()
 
 /obj/item/batteringram/pre_attack(atom/A, mob/living/user, params)
+	if(swung)
+		return TRUE
 	if(!isturf(A) && !istype(A, /obj/structure/fireaxecabinet/batteringram))
+		swung = TRUE
 		visible_message(span_warning("[user] swings [src] back for a blow into [A]!"))
 		playsound(user, 'sound/items/weapons/throw.ogg', 50, TRUE)
+		if(!do_after(user, 0.5 SECONDS, A))
+			balloon_alert(user, "interrupted!")
+			swung = FALSE
+			return TRUE
 
+		swung = FALSE
 	return ..()
 
 /obj/item/batteringram/attack(mob/living/target_mob, mob/living/user, params)
@@ -72,13 +82,9 @@
 		var/throwtarget = get_step(target_mob, get_dir(user, target_mob))
 		target_mob.safe_throw_at(throwtarget, 1, 1, force = MOVE_FORCE_STRONG, spin = no_gravity)
 
-/obj/item/batteringram/interact_with_atom(atom/target, mob/user, click_parameters)
+/obj/item/batteringram/afterattack(atom/target, mob/user, click_parameters)
 	. = ..()
 	var/mob/living/living_user = user
-
-	if(!do_after(user, 1 SECONDS, target))
-		balloon_alert(user, "interrupted!")
-		return FALSE
 
 	if(!isliving(target))
 		if(istype(target, /obj/machinery/door))
@@ -91,7 +97,7 @@
 				playsound(living_user, 'sound/items/weapons/thudswoosh.ogg', 100)
 				return
 
-		playsound(target, hitsound, 80, TRUE)
+		playsound(target, hitsound, 100, TRUE)
 		for(var/mob/bystanders in urange(2, target)) // BLAM BLAM
 			if(!bystanders.stat && !isAI(bystanders))
 				shake_camera(bystanders, 1, 0.5)
