@@ -9,6 +9,7 @@
 	base_icon_state = "battering_ram"
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/axes_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/axes_righthand.dmi'
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 	name = "battering ram"
 	desc = "An extremely heavy and unwieldy hunk of metal used to break down airlocks. Why would anyone ram a sliding airlock?"
 
