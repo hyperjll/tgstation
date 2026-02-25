@@ -576,6 +576,8 @@
 		. += span_notice("It can be attached and modified.")
 	else
 		. += span_notice("It cannot be modified or attached.")
+	if(antag_locked)
+		. += "[src] has a A.N.T.A.G Locker installed."
 
 /obj/item/radio/update_overlays()
 	. = ..()

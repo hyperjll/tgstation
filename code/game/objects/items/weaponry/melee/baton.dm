@@ -509,6 +509,8 @@
 
 	///When set to true, this security baton will automatically turn off when dropped, and require you to be an actual member of security to turn it back on.
 	var/security_lock = FALSE
+	///Determines if this baton is under the effects of an A.N.T.A.G lock.
+	var/antag_locked = FALSE
 
 /datum/armor/baton_security
 	bomb = 50
@@ -524,6 +526,8 @@
 			cell = new preload_cell_type(src)
 	RegisterSignal(src, COMSIG_ATOM_ATTACKBY, PROC_REF(convert))
 	update_appearance()
+	if(antag_locked)
+		AddElement(/datum/element/anti_pickup)
 
 /obj/item/melee/baton/security/get_cell()
 	return cell
@@ -555,20 +559,30 @@
 		animate(baton, alpha = 255, time = 1 SECONDS)
 		qdel(item)
 		qdel(src)
-	else if(istype(item, /obj/item/antaglocker) || !convertible)
+	else if(istype(item, /obj/item/antaglocker) || !antag_locked)
 		var/turf/source_turf = get_turf(src)
-		var/obj/item/melee/baton/security/antaglocked/baton = new (source_turf)
-		baton.alpha = 20
+		balloon_alert(user, "Anti-Theft System Installed!")
+		AddElement(/datum/element/anti_pickup)
+		antag_locked = TRUE
 		playsound(source_turf, 'sound/items/tools/drill_use.ogg', 80, TRUE, -1)
-		animate(src, alpha = 0, time = 1 SECONDS)
-		animate(baton, alpha = 255, time = 1 SECONDS)
-		if(cell)
-			baton.cell = cell
-			baton.update_appearance()
 		qdel(item)
-		qdel(src)
 	else
 		return
+
+/obj/item/melee/baton/security/emag_act()
+	if(antag_locked)
+		playsound(src, SFX_SPARKS, 15, TRUE)
+		RemoveElement(/datum/element/anti_pickup)
+		antag_locked = FALSE
+	if(security_lock)
+		playsound(src, SFX_SPARKS, 15, TRUE)
+		if(active)
+			turn_off()
+		security_lock = FALSE
+
+/obj/item/melee/baton/security/dropped()
+	if(active && security_lock)
+		turn_off()
 
 /obj/item/melee/baton/security/on_saboteur(datum/source, disrupt_duration)
 	. = ..()
@@ -606,6 +620,10 @@
 		. += span_notice("\The [src] is [round(cell.percent())]% charged.")
 	else
 		. += span_warning("\The [src] does not have a power source installed.")
+	if(antag_locked)
+		. += "This stun baton has an A.N.T.A.G lock installed."
+	if(security_lock)
+		. += "This stun baton has an internal security lock installed."
 
 /obj/item/melee/baton/security/screwdriver_act(mob/living/user, obj/item/tool)
 	if(tryremovecell(user))
