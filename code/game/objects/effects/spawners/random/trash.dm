@@ -89,6 +89,7 @@
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis/empty = 1,
 		/obj/item/storage/fancy/cigarettes/cigpack_mindbreaker/empty = 1,
 		/obj/item/storage/fancy/cigarettes/cigpack_syndicate/empty = 1,
+		/obj/item/storage/fancy/cigarettes/cigpack_interdyne/empty = 1,
 	)
 
 /obj/effect/spawner/random/trash/cigbutt

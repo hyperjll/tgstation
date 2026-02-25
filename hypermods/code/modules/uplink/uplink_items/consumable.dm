@@ -115,28 +115,49 @@
 
 /datum/uplink_item/consumable/syndiecigs
 	name = "Syndicate Smokes"
-	desc = "Strong flavor, dense smoke, infused with omnizine. Perfect for on-the-go healing."
+	desc = "Strong flavor, dense smoke, easy on the lungs, infused with omnizine. A classic amongst the Syndicate."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
 	cost = 1
 	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
+/datum/uplink_item/consumable/interdynecigs
+	name = "Interdyne Herbal Smokes"
+	desc = "A draught of drugs disguised as cigarettes within a stylish package. \
+			These sponsored cigarettes are especially easy on the lungs and will alleviate damage, and keep you in high spirits."
+	item = /obj/item/storage/fancy/cigarettes/cigpack_interdyne
+	cost = 1
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
 /datum/uplink_item/consumable/syndiecigsvarietypack
-	name = "Syndicate Variety Cigarettes"
-	desc = "Four different cigarette packs that resemble your regular nanotrasen approved brands. \
-			Each packet of cigarettes contains one of the following: Salicylic Acid, Oxandrolone, Salbutamol, and Pentetic Acid."
+	name = "Syndicate Variety Smokes"
+	desc = "A kit containing cigarette packs that resemble your regular nanotrasen approved brands. \
+			Each packet of color-coded cigarettes contains one of the following: Salicylic Acid, Oxandrolone, Salbutamol, and Pentetic Acid. \
+			Now comes with a packet of Syndicate Smokes and Interdyne Herbals!"
 	item = /obj/item/storage/medkit/syndiecigsvarietypack
-	cost = 2
+	cost = 3
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/syndiecigsvarietypackdeluxe
-	name = "Syndicate Variety Cigarettes Deluxe Edition"
-	desc = "Contains 9 cigarette packs that give up on stealth for increased benefits, but you get atleast 1 decent pack for healing brute, burn, toxins, and aspyxiation. \
-			Additionally, we've included several other packs of cigarettes with varying useful chemicals. Also includes a lighter."
+	name = "Syndicate Variety Smokes Deluxe Edition"
+	desc = "Contains our entire assortment of cigarette types, perfect for an entire team! \
+			Additionally, we've included several other packs of cigarettes with varying useful chemicals. \
+			Also includes a lighter."
 	item = /obj/item/storage/medkit/syndiecigsvarietypackdeluxe
 	cost = 6
 	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/consumable/interdynecigars
+	name = "Interdyne Herbal Cigars"
+	desc = "An intense cocktail of drugs infused within cigars all contained inside a stylish case. \
+			These cigars are especially easy on the lungs, alleviate damage, and keep you in high spirits. \
+			Each cigar lasts significantly longer than our cigarettes."
+	item = /obj/item/storage/fancy/cigarettes/cigars/interdyne
+	cost = 3
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/saturnx
 	name = "Stable Saturn-X Autoinjector"

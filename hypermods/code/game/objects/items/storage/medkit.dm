@@ -222,16 +222,16 @@
 /obj/item/storage/medkit/medipenkit/PopulateContents()
 	new /obj/item/reagent_containers/hypospray/medipen/bicaridine(src)
 	new /obj/item/reagent_containers/hypospray/medipen/bicaridine(src)
-	new /obj/item/reagent_containers/hypospray/medipen/bicaridine(src)
+		new /obj/item/reagent_containers/hypospray/medipen/bicaridine(src)
 	new /obj/item/reagent_containers/hypospray/medipen/salacid(src)
 	new /obj/item/reagent_containers/hypospray/medipen/kelotane(src)
 	new /obj/item/reagent_containers/hypospray/medipen/kelotane(src)
-	new /obj/item/reagent_containers/hypospray/medipen/kelotane(src)
+		new /obj/item/reagent_containers/hypospray/medipen/kelotane(src)
 	new /obj/item/reagent_containers/hypospray/medipen/oxandrolone(src)
 	new /obj/item/reagent_containers/hypospray/medipen/arithrazine(src)
 	new /obj/item/reagent_containers/hypospray/medipen/hyronalin(src)
 	new /obj/item/reagent_containers/hypospray/medipen/penacid(src)
-	new /obj/item/reagent_containers/hypospray/medipen/penacid(src)
+		new /obj/item/reagent_containers/hypospray/medipen/penacid(src)
 	new /obj/item/reagent_containers/hypospray/medipen/salbutamol(src)
 	new /obj/item/reagent_containers/hypospray/medipen/blood_loss(src)
 
@@ -246,6 +246,8 @@
 	icon_state = "cigarettepacker"
 
 /obj/item/storage/medkit/syndiecigsvarietypack/PopulateContents()
+	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
+	new /obj/item/storage/fancy/cigarettes/cigpack_interdyne(src)
 	new /obj/item/storage/fancy/cigarettes/robust_sal_acid(src)
 	new /obj/item/storage/fancy/cigarettes/dromedary_oxandrolone(src)
 	new /obj/item/storage/fancy/cigarettes/space_cigarette_pen_acid(src)
@@ -258,15 +260,17 @@
 
 /obj/item/storage/medkit/syndiecigsvarietypackdeluxe/Initialize(mapload)
 	. = ..()
-	atom_storage.max_slots = 10
+	atom_storage.max_slots = 12
 
 /obj/item/storage/medkit/syndiecigsvarietypackdeluxe/PopulateContents()
+	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
+	new /obj/item/storage/fancy/cigarettes/cigpack_interdyne(src)
 	new /obj/item/storage/fancy/cigarettes/deluxe_antibrute_cigarette_pack(src)
 	new /obj/item/storage/fancy/cigarettes/deluxe_antiburn_cigarette_pack(src)
 	new /obj/item/storage/fancy/cigarettes/deluxe_antioxygen_cigarette_pack(src)
 	new /obj/item/storage/fancy/cigarettes/deluxe_antitoxin_cigarette_pack(src)
-	new /obj/item/storage/fancy/cigarettes/deluxe_speedup_cigarette_pack(src)
 	new /obj/item/storage/fancy/cigarettes/deluxe_cureall_cigarette_pack(src)
+	new /obj/item/storage/fancy/cigarettes/deluxe_speedup_cigarette_pack(src)
 	new /obj/item/storage/fancy/cigarettes/deluxe_sensory_cigarette_pack(src)
 	new /obj/item/storage/fancy/cigarettes/deluxe_strange_cigarette_pack(src)
 	new /obj/item/storage/fancy/cigarettes/deluxe_slimey_cigarette_pack(src)

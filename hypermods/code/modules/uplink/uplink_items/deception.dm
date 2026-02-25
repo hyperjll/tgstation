@@ -259,3 +259,13 @@
 	cost = 10
 	surplus = 20
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
+/datum/uplink_item/consumable/payloadcigars
+	name = "Payload Cigars"
+	desc = "The forefront in our research on Bluespace Reagent Reservoir Capsules (B.R.R.C). \
+			Each cigar contains one of our B.R.R.C's allowing for a grant total of 300 units in reagent capacity. \
+			Perfect for unloading tons of reagents into an unsuspecting target, or making your very own super-cigar chemical mixes! \
+			Still contains a small amount of Nicotine, to ensure victims are fooled."
+	item = /obj/item/storage/fancy/cigarettes/cigars/payload
+	cost = 2
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

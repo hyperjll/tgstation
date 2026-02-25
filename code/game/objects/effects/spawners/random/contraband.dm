@@ -24,6 +24,7 @@
 		/obj/item/reagent_containers/cup/blastoff_ampoule = 5,
 		/obj/item/food/drug/moon_rock = 5,
 		/obj/item/storage/fancy/cigarettes/cigpack_syndicate = 10,
+		/obj/item/storage/fancy/cigarettes/cigpack_interdyne = 1,
 		/obj/item/storage/fancy/cigarettes/cigpack_shadyjims = 10,
 		/obj/item/storage/box/donkpockets = 10,
 		/obj/effect/spawner/random/contraband/plus = 10,

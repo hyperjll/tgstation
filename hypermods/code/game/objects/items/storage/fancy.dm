@@ -6,6 +6,32 @@
 /obj/item/storage/fancy/cigarettes/trick_cigs
 	spawn_type = /obj/item/cigarette/syndicate/explosive
 
+/obj/item/storage/fancy/cigarettes/cigars/payload // 300 unit maximum cigars
+	spawn_type = /obj/item/cigarette/cigar/payload
+
+// Alternative version of Syndicate Smokes -- Interdyne Herbals
+
+/obj/item/storage/fancy/cigarettes/cigpack_interdyne
+	name = "interdyne herbals packet"
+	desc = "An interdyne pharmaceuticals branded cigarette packet. You both want and don't want to know what's infused into these cigarettes."
+	icon = 'hypermods/icons/obj/cigarettes.dmi'
+	icon_state = "interdyne"
+	base_icon_state = "interdyne"
+	spawn_type = /obj/item/cigarette/interdyne
+
+/obj/item/storage/fancy/cigarettes/cigpack_interdyne/empty
+	spawn_count = 0
+	spawn_coupon = FALSE
+	open_status = FANCY_CONTAINER_OPEN
+
+/obj/item/storage/fancy/cigarettes/cigars/interdyne // Interdyne Herbal Cigars
+	name = "\improper Interdyne herbal cigar case"
+	desc = "A case of pharmaceutical cigars, these sell like hotcakes across the Spinward Sector for their medicinal properties and variety in taste."
+	icon = 'hypermods/icons/obj/cigarettes.dmi'
+	icon_state = "cigarcase_interdyne"
+	base_icon_state = "cigarcase_interdyne"
+	spawn_type = /obj/item/cigarette/cigar/interdyne
+
 // Dermal Hardening Cigarettes
 
 /obj/item/storage/fancy/cigarettes/dermal_harden

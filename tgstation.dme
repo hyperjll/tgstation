@@ -7008,6 +7008,7 @@
 #include "hypermods\code\game\objects\items\cards_ids.dm"
 #include "hypermods\code\game\objects\items\chainsaw.dm"
 #include "hypermods\code\game\objects\items\choice_beacon.dm"
+#include "hypermods\code\game\objects\items\cigarettes.dm"
 #include "hypermods\code\game\objects\items\cigs_lighters.dm"
 #include "hypermods\code\game\objects\items\control_wand.dm"
 #include "hypermods\code\game\objects\items\crayons.dm"
