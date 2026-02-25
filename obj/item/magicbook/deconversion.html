@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="../../../"><link rel="stylesheet" href="dmdoc.css"><title>/obj/item/magicbook/deconversion - /tg/ Station 13</title></head><body><header><a href="index.html">/tg/ Station 13</a> - <a href="index.html#modules">Modules</a> - <a href="index.html#types">Types</a></header><main><h1>deconversion <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/magicbook/deconversion.html">magicbook/deconversion</a></aside> <a href="https://github.com/hyperjll/tgstation/blob/98d63add1880436c22b8483ae8724c7417218db5/hypermods/code/modules/library/magicbook.dm#L756"><img src="git.png" width="16" height="16" title="hypermods/code/modules/library/magicbook.dm 756"></a></h1><p>/obj/item/magicbook/antag_reveal
+name = &quot;Enemy Catalouge&quot;
+desc = &quot;&quot;
+icon_state = &quot;antag_reveal&quot;</p>
+<p>/obj/item/magicbook/antag_reveal/do_effect(mob/user)
+var/list/crewmembers = list() // All crew members on station.
+var/list/antags = list() // All antagonists involved
+var/list/crewlist = list() // Used to randomize names in the feedback.
+var/list/antagtypes = list() // What antagonists can the player be informed of?</p>
+<pre><code>for(var/mob/living/carbon/human/C in range(100, get_turf(user)))
+	if(C != user &amp;&amp; C.mind) // No, i don't want to antag-check myself.
+		crewmembers += C
+
+for(var/mob/living/carbon/human/A in range(100, get_turf(user)))
+	if(A != user &amp;&amp; A.mind &amp;&amp; (IS_TRAITOR(A)) || (IS_CULTIST(A)) || (IS_CHANGELING(A)) || (IS_HERETIC(A)) || (IS_REVOLUTIONARY(A)) || (IS_SPY(A))) // No, i don't want to antag-check myself.
+		antags += A
+		for(var/datum/antagonist/antag_datum as anything in A.mind.antag_datums)
+			antagtypes += antag_datum
+
+var/crewmember1 = pick(crewmembers)
+var/crewmember2 = pick(crewmembers)
+var/antagonist = pick(antags)
+
+crewlist += crewmember1
+crewlist += crewmember2
+crewlist += antagonist
+
+//to_chat(user, span_notice(&quot;After flipping the book open the following can be read upon all of it's pages: There is an [total_antagonists] among the following:&quot;))
+//to_chat(user, span_notice(&quot;[antagtypes]&quot;))
+//to_chat(user, span_notice(&quot;[antagonist]&quot;))
+to_chat(user, span_notice(&quot;[crewmember1]&quot;))
+
+..()
+</code></pre>
+<p>/obj/item/magicbook/antag_reveal2
+name = &quot;Enemy Catalouge Vol. 2&quot;
+desc = &quot;&quot;
+icon_state = &quot;antag_reveal2&quot;</p>
+<p>/obj/item/magicbook/antag_reveal2/do_effect(mob/user)</p>
+<pre><code>..()
+</code></pre></main><footer>tgstation.dme <a href="https://github.com/hyperjll/tgstation/tree/98d63add1880436c22b8483ae8724c7417218db5">98d63ad</a> (master) — <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.11.0</a></footer></body></html>

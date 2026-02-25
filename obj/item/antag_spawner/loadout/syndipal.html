@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="../../../../"><link rel="stylesheet" href="dmdoc.css"><title>/obj/item/antag_spawner/loadout/syndipal - /tg/ Station 13</title></head><body><header><a href="index.html">/tg/ Station 13</a> - <a href="index.html#modules">Modules</a> - <a href="index.html#types">Types</a></header><main><h1>syndipal <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/antag_spawner/loadout.html">antag_spawner/loadout</a>/<a href="obj/item/antag_spawner/loadout/syndipal.html">syndipal</a></aside> <a href="https://github.com/hyperjll/tgstation/blob/98d63add1880436c22b8483ae8724c7417218db5/hypermods/code/modules/antagonists/_common/antag_spawner.dm#L1203"><img src="git.png" width="16" height="16" title="hypermods/code/modules/antagonists/_common/antag_spawner.dm 1203"></a></h1><p>/obj/item/antag_spawner/nanotrasen/
+name = &quot;nanotrasen  beacon&quot;
+desc = &quot;A beacon of some sort, it's often used by nanotrasen employees to call-in additional personnel. For emergencies only.&quot;
+/// The name of the special role given to the recruit
+special_role_name = &quot;&quot;
+/// Style used by the droppod
+pod_style = /datum/pod_style
+/// The applied outfit
+var/datum/outfit/job//outfit = /datum/outfit/job/
+/// Chance for reinforcement to be selected as an antagonist.
+var/antag_chance = 10</p>
+<p>/obj/item/antag_spawner/nanotrasen//spawn_antag(client/our_client, turf/T, kind, datum/mind/user)
+var/mob/living/carbon/human/respawned = new()
+our_client.prefs.safe_transfer_prefs_to(respawned, is_antag = FALSE)
+respawned.ckey = our_client.key
+var/datum/mind/respawned_mind = respawned.mind
+if(length(GLOB.newplayer_start))
+respawned.forceMove(pick(GLOB.newplayer_start))
+else
+respawned.forceMove(locate(1,1,1))</p>
+<pre><code>if(prob(antag_chance))
+	respawned_mind.add_antag_datum(/datum/antagonist/traitor/infiltrator)
+
+respawned_mind.special_roles = special_role_name
+
+respawned.equipOutfit(outfit)
+
+var/obj/structure/closet/supplypod/pod = setup_pod()
+respawned.forceMove(pod)
+new /obj/effect/pod_landingzone(spawn_location ? spawn_location : get_turf(src), pod)
+</code></pre></main><footer>tgstation.dme <a href="https://github.com/hyperjll/tgstation/tree/98d63add1880436c22b8483ae8724c7417218db5">98d63ad</a> (master) — <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.11.0</a></footer></body></html>

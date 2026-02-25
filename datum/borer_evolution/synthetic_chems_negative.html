@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="../../"><link rel="stylesheet" href="dmdoc.css"><title>/datum/borer_evolution/synthetic_chems_negative - /tg/ Station 13</title></head><body><header><a href="index.html">/tg/ Station 13</a> - <a href="index.html#modules">Modules</a> - <a href="index.html#types">Types</a></header><main><h1>synthetic_chems_negative <aside>/<a href="datum.html">datum</a>/<a href="datum/borer_evolution.html">borer_evolution</a>/<a href="datum/borer_evolution/synthetic_chems_negative.html">synthetic_chems_negative</a></aside> <a href="https://github.com/hyperjll/tgstation/blob/98d63add1880436c22b8483ae8724c7417218db5/hypermods/code/modules/antagonists/borers/code/evolution/evolution_general.dm#L63"><img src="git.png" width="16" height="16" title="hypermods/code/modules/antagonists/borers/code/evolution/evolution_general.dm 63"></a></h1><p>/datum/borer_evolution/synthetic_chems_positive
+name = &quot;Synthetic Chemicals (+)&quot;
+desc = &quot;Gain access to a list of helpful, synthetic-compatible chemicals.&quot;
+gain_text = &quot;Once we had established that robots weren't safe either, we began to experiment with them. Interestingly enough, some of them never needed to be oiled again.&quot;
+tier = 6
+evo_cost = 6
+var/static/list/added_chemicals = list(
+//datum/reagent/medicine/system_cleaner,
+//datum/reagent/medicine/liquid_solder,
+/datum/reagent/fuel/oil,
+/datum/reagent/fuel,
+)</p>
+<p>/datum/borer_evolution/synthetic_chems_positive/on_evolve(mob/living/basic/cortical_borer/cortical_owner)
+. = ..()
+cortical_owner.potential_chemicals |= added_chemicals</p></main><footer>tgstation.dme <a href="https://github.com/hyperjll/tgstation/tree/98d63add1880436c22b8483ae8724c7417218db5">98d63ad</a> (master) — <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.11.0</a></footer></body></html>

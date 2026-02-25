@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="../../../"><link rel="stylesheet" href="dmdoc.css"><title>/obj/item/choice_beacon/brothers - /tg/ Station 13</title></head><body><header><a href="index.html">/tg/ Station 13</a> - <a href="index.html#modules">Modules</a> - <a href="index.html#types">Types</a></header><main><h1>brothers <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/choice_beacon.html">choice_beacon</a>/<a href="obj/item/choice_beacon/brothers.html">brothers</a></aside> <a href="https://github.com/hyperjll/tgstation/blob/98d63add1880436c22b8483ae8724c7417218db5/hypermods/code/game/objects/items/choice_beacon.dm#L1"><img src="git.png" width="16" height="16" title="hypermods/code/game/objects/items/choice_beacon.dm 1"></a></h1><p>/obj/item/chainsaw/energy/attack_self(mob/user)
+on = !on
+to_chat(user, &quot;As you pull the starting cord dangling from [src], [on ? &quot;it begins to whirr.&quot; : &quot;the chain stops moving.&quot;]&quot;)
+force = on ? force_on : initial(force)
+throwforce = on ? force_on : initial(force)
+icon_state = &quot;echainsaw_[on ? &quot;on&quot; : &quot;off&quot;]&quot;
+inhand_icon_state = &quot;echainsaw_[on ? &quot;on&quot; : &quot;off&quot;]&quot;
+var/datum/component/butchering/butchering = src.GetComponent(/datum/component/butchering)
+butchering.butchering_enabled = on</p>
+<pre><code>if(on)
+	hitsound = 'sound/items/weapons/chainsawhit.ogg'
+	chainsaw_loop.start()
+else
+	hitsound = SFX_SWING_HIT
+	chainsaw_loop.stop()
+
+toolspeed = on ? 0.5 : initial(toolspeed) //Turning it on halves the speed
+if(src == user.get_active_held_item()) //update inhands
+	user.update_held_items()
+update_item_action_buttons()
+</code></pre></main><footer>tgstation.dme <a href="https://github.com/hyperjll/tgstation/tree/98d63add1880436c22b8483ae8724c7417218db5">98d63ad</a> (master) — <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.11.0</a></footer></body></html>
