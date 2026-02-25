@@ -749,6 +749,7 @@
 /obj/item/ammo_box/magazine/v38,
 /obj/item/ammo_box/magazine/v38/ap,
 /obj/item/gun/ballistic/automatic/pistol/mk58,
+/obj/item/storage/box/biosignaller/security,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/mine/laborcamp/security)
 "ee" = (
@@ -4834,10 +4835,6 @@
 /obj/item/chair/wood,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"wG" = (
-/obj/structure/lattice/catwalk,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
 "wJ" = (
 /obj/structure/table/wood/poker,
 /obj/item/toy/cards/deck{
@@ -6372,6 +6369,14 @@
 /obj/machinery/recharger,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
+	},
+/obj/item/gun/ballistic/flaregun{
+	pixel_y = 10;
+	pixel_x = -3
+	},
+/obj/item/ammo_casing/shotgun/flare{
+	pixel_x = 10;
+	pixel_y = 5
 	},
 /turf/open/floor/iron/dark,
 /area/mine/laborcamp/security)
@@ -8362,6 +8367,14 @@
 	dir = 10
 	},
 /obj/item/radio/intercom/directional/south,
+/obj/item/storage/box/beaconimp{
+	pixel_x = -9;
+	pixel_y = 13
+	},
+/obj/item/storage/box/trackimp{
+	pixel_x = 9;
+	pixel_y = 13
+	},
 /turf/open/floor/iron/dark,
 /area/mine/laborcamp/security)
 "Pp" = (
@@ -10340,6 +10353,7 @@
 	},
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/item/gun/ballistic/automatic/pistol/mk58/rubber,
+/obj/item/storage/box/flareshot,
 /turf/open/floor/iron/dark,
 /area/mine/laborcamp/security)
 "ZL" = (
@@ -37586,8 +37600,8 @@ aD
 aD
 aD
 aD
-wG
-wG
+eM
+eM
 pU
 pU
 pU

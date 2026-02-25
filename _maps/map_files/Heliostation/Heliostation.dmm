@@ -2271,6 +2271,15 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/spawner/random/armory/riot_shield,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "alx" = (
@@ -2667,6 +2676,11 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/spawner/random/armory/bulletproof_armor,
 /obj/effect/spawner/random/armory/bulletproof_helmet,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "anR" = (
@@ -3386,12 +3400,26 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/spawner/random/armory/disablers,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "asU" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/spawner/random/armory/laser_gun,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "asV" = (
@@ -3416,6 +3444,15 @@
 /obj/item/gun/energy/temperature/security,
 /obj/item/clothing/suit/hooded/ablative,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "atd" = (
@@ -3736,6 +3773,11 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/spawner/random/armory/riot_armor,
 /obj/effect/spawner/random/armory/riot_helmet,
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "avD" = (
@@ -26806,6 +26848,15 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/spawner/random/armory/e_gun,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "dbT" = (
@@ -41812,6 +41863,22 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/spawner/random/armory/barrier_grenades,
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "jfu" = (
@@ -69889,6 +69956,11 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/spawner/random/armory/shotgun,
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "tXX" = (
@@ -75176,6 +75248,21 @@
 /obj/structure/cable,
 /turf/open/floor/stone,
 /area/station/service/kitchen/abandoned)
+"weL" = (
+/obj/effect/turf_decal/trimline/red/filled/line,
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
+/obj/structure/closet/secure_closet/armory4,
+/turf/open/floor/iron/dark/textured,
+/area/station/security/armory)
 "weM" = (
 /obj/machinery/light/dim/directional/north,
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
@@ -76381,6 +76468,21 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/smooth_half,
 /area/station/science/robotics/lab)
+"wEX" = (
+/obj/effect/turf_decal/trimline/red/filled/line,
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
+/obj/structure/closet/secure_closet/armory2,
+/turf/open/floor/iron/dark/textured,
+/area/station/security/armory)
 "wEY" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -109688,7 +109790,7 @@ aoS
 aoS
 arT
 asU
-auH
+weL
 tXG
 awI
 fTJ
@@ -109945,7 +110047,7 @@ apE
 aoS
 asV
 anN
-auH
+wEX
 avC
 awJ
 fTJ

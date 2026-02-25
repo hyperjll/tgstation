@@ -290,6 +290,22 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/barrier_grenades/six,
 /obj/effect/turf_decal/tile/dark_red/half/contrasted,
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "afM" = (
@@ -15940,6 +15956,11 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/laser_gun,
 /obj/effect/turf_decal/tile/dark_red/half/contrasted,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "gkh" = (
@@ -17068,6 +17089,11 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/shotgun,
 /obj/effect/turf_decal/tile/dark_red/half/contrasted,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "gIR" = (
@@ -19515,6 +19541,14 @@
 /obj/effect/spawner/random/armory/bulletproof_helmet,
 /obj/effect/spawner/random/armory/bulletproof_helmet,
 /obj/effect/spawner/random/armory/riot_helmet,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "hLl" = (
@@ -20648,6 +20682,15 @@
 /obj/effect/spawner/random/armory/rubbershot,
 /obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
 	dir = 4
+	},
+/obj/item/gun/ballistic/automatic/lecter,
+/obj/item/gun/ballistic/automatic/lecter,
+/obj/item/ammo_box/magazine/r556/rubber,
+/obj/item/ammo_box/magazine/r556/rubber,
+/obj/item/ammo_box/magazine/r556/rubber,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
@@ -24596,6 +24639,12 @@
 	},
 /obj/machinery/light/directional/north,
 /obj/effect/spawner/random/armory/dragnet,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "jLy" = (
@@ -33965,6 +34014,12 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/e_gun,
 /obj/effect/turf_decal/tile/dark_red/half/contrasted,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "njU" = (
@@ -34793,6 +34848,11 @@
 /obj/item/gun/energy/ionrifle,
 /obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
 	dir = 8
+	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
 	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
@@ -36052,6 +36112,13 @@
 	},
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/disablers,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "oaD" = (
@@ -53160,6 +53227,15 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 4
 	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "uSP" = (
@@ -57245,6 +57321,11 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "wDB" = (
@@ -57729,6 +57810,15 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 9
+	},
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/machinery/door/window/brigdoor/left/directional/north{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)

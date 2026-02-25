@@ -2170,6 +2170,12 @@
 /obj/item/gun/energy/temperature/security,
 /obj/item/clothing/suit/hooded/ablative,
 /obj/machinery/light/directional/west,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "aiO" = (
@@ -2178,6 +2184,12 @@
 /obj/machinery/light/directional/east,
 /obj/effect/spawner/random/armory/rubbershot,
 /obj/effect/spawner/random/armory/rubbershot,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "aiR" = (
@@ -2259,18 +2271,40 @@
 "ajg" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/e_gun,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "ajh" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/bulletproof_helmet,
 /obj/effect/spawner/random/armory/bulletproof_armor,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "ajj" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/laser_gun,
 /obj/structure/fireaxecabinet/batteringram/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "ajk" = (
@@ -2471,6 +2505,12 @@
 /obj/structure/rack,
 /obj/machinery/newscaster/directional/west,
 /obj/effect/spawner/random/armory/disablers,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "ajQ" = (
@@ -2483,6 +2523,16 @@
 "ajR" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/dragnet,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "ajS" = (
@@ -2503,6 +2553,12 @@
 /obj/structure/rack,
 /obj/item/radio/intercom/directional/east,
 /obj/effect/spawner/random/armory/shotgun,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "ajW" = (
@@ -2790,6 +2846,7 @@
 /obj/machinery/flasher/portable,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "akM" = (
@@ -34887,6 +34944,22 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
+"hRp" = (
+/obj/structure/closet/secure_closet/armory2,
+/obj/item/gun/ballistic/automatic/lecter,
+/obj/item/ammo_box/magazine/r556/rubber,
+/obj/item/ammo_box/magazine/r556/rubber,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/armory)
 "hRF" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -35695,6 +35768,10 @@
 /obj/machinery/bouldertech/refinery,
 /turf/open/floor/iron,
 /area/station/cargo/miningfoundry)
+"iEv" = (
+/obj/structure/window/reinforced/spawner/directional/south,
+/turf/open/floor/iron/dark,
+/area/station/security/armory)
 "iEx" = (
 /turf/closed/wall/r_wall,
 /area/station/command/heads_quarters/captain/private)
@@ -35947,6 +36024,11 @@
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/service/kitchen/coldroom)
+"iNU" = (
+/obj/machinery/flasher/portable,
+/obj/structure/window/reinforced/spawner/directional/north,
+/turf/open/floor/iron/dark,
+/area/station/security/armory)
 "iOf" = (
 /obj/effect/landmark/start/hangover,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -46918,6 +47000,22 @@
 	req_access = list("armory")
 	},
 /obj/effect/spawner/random/armory/barrier_grenades,
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "rPu" = (
@@ -50217,6 +50315,7 @@
 "ulV" = (
 /obj/effect/landmark/event_spawn,
 /mob/living/simple_animal/bot/secbot/beepsky/armsky,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "umb" = (
@@ -53276,6 +53375,16 @@
 /obj/effect/spawner/random/armory/riot_helmet,
 /obj/effect/spawner/random/armory/riot_shield,
 /obj/effect/spawner/random/armory/riot_armor,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "wEl" = (
@@ -78564,8 +78673,8 @@ aby
 abI
 ahL
 pWo
-akM
-akM
+iEv
+hRp
 wEc
 ajh
 ajR
@@ -79083,7 +79192,7 @@ aim
 aiO
 ajj
 ajT
-afH
+iNU
 afH
 amh
 amZ

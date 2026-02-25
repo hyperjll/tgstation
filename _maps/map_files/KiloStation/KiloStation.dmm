@@ -817,6 +817,11 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "alz" = (
@@ -1628,6 +1633,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
+	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
@@ -9416,6 +9426,10 @@
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 1
+	},
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/armory)
@@ -51612,6 +51626,22 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
+/obj/item/antaglocker{
+	pixel_y = 7;
+	pixel_x = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "qXa" = (
@@ -54632,6 +54662,10 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/armory)
 "rTD" = (
@@ -60215,6 +60249,10 @@
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 4
+	},
+/obj/machinery/door/window/brigdoor/left/directional/east{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/armory)
@@ -70348,6 +70386,12 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
+	},
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "wPU" = (
@@ -70837,6 +70881,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access = list("armory");
+	name = "Armory Equipment Guarding Door"
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/armory)
