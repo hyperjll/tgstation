@@ -205,9 +205,6 @@
 		else
 			new /obj/item/storage/medkit/expanded/advanced(src)
 	new /obj/item/reagent_containers/cup/bottle/omnizine(src)
-	new /obj/item/storage/pill_bottle/iron(src)
-	new /obj/item/storage/pill_bottle/mannitol(src)
-	new /obj/item/storage/pill_bottle/mutadone(src)
 
 /obj/item/storage/medkit/emergency/combatmedipens/PopulateContents()
 	for(var/i in 1 to 3)
@@ -220,17 +217,15 @@
 	icon_state = "medipenkit"
 
 /obj/item/storage/medkit/medipenkit/PopulateContents()
-	new /obj/item/reagent_containers/hypospray/medipen/bicaridine(src)
-	new /obj/item/reagent_containers/hypospray/medipen/bicaridine(src)
+	for(var/i in 1 to 3)
 		new /obj/item/reagent_containers/hypospray/medipen/bicaridine(src)
 	new /obj/item/reagent_containers/hypospray/medipen/salacid(src)
-	new /obj/item/reagent_containers/hypospray/medipen/kelotane(src)
-	new /obj/item/reagent_containers/hypospray/medipen/kelotane(src)
+	for(var/i in 1 to 3)
 		new /obj/item/reagent_containers/hypospray/medipen/kelotane(src)
 	new /obj/item/reagent_containers/hypospray/medipen/oxandrolone(src)
 	new /obj/item/reagent_containers/hypospray/medipen/arithrazine(src)
 	new /obj/item/reagent_containers/hypospray/medipen/hyronalin(src)
-	new /obj/item/reagent_containers/hypospray/medipen/penacid(src)
+	for(var/i in 1 to 2)
 		new /obj/item/reagent_containers/hypospray/medipen/penacid(src)
 	new /obj/item/reagent_containers/hypospray/medipen/salbutamol(src)
 	new /obj/item/reagent_containers/hypospray/medipen/blood_loss(src)
