@@ -24721,9 +24721,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "bEI" = (
-/obj/structure/disposalpipe/segment{
-	dir = 9
-	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -24988,11 +24985,11 @@
 	},
 /area/station/science/research)
 "bFR" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
 /obj/structure/cable,
+/obj/structure/disposalpipe/junction/flip,
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "bFS" = (
@@ -25334,6 +25331,18 @@
 /obj/machinery/light_switch/directional/north,
 /obj/structure/cable,
 /obj/structure/table,
+/obj/item/assembly/signaler{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/obj/item/assembly/health,
+/obj/item/assembly/voice{
+	pixel_y = 10
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -6;
+	pixel_y = 3
+	},
 /turf/open/floor/iron,
 /area/station/science/explab)
 "bHn" = (
@@ -25674,12 +25683,12 @@
 	},
 /area/station/science/research)
 "bIE" = (
-/obj/structure/disposalpipe/segment{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "bIG" = (
@@ -29379,6 +29388,7 @@
 /area/station/engineering/atmos)
 "bWV" = (
 /obj/machinery/airalarm/directional/north,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
 "bWX" = (
@@ -31075,6 +31085,7 @@
 /area/station/engineering/atmos)
 "cdH" = (
 /obj/item/radio/intercom/directional/east,
+/obj/machinery/light/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
 "cdJ" = (
@@ -34021,9 +34032,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
@@ -37728,6 +37736,7 @@
 /obj/structure/chair/office{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/station/science/explab)
 "dZO" = (
@@ -38326,6 +38335,7 @@
 	name = "Chemistry Lab"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/chemistry,
+/obj/effect/landmark/navigate_destination/chemfactory,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
 "eyf" = (
@@ -41912,12 +41922,12 @@
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "hHq" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "hHz" = (
@@ -43605,6 +43615,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/station/engineering/main)
+"jjs" = (
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/turf/open/floor/iron/white/side{
+	dir = 8
+	},
+/area/station/science/explab)
 "jjF" = (
 /obj/machinery/portable_atmospherics/canister/anesthetic_mix,
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
@@ -43730,6 +43748,13 @@
 	},
 /obj/item/multitool/circuit,
 /obj/item/radio/intercom/directional/west,
+/obj/item/stock_parts/power_store/cell/high{
+	pixel_x = 9
+	},
+/obj/item/stock_parts/power_store/cell/high{
+	pixel_x = 9;
+	pixel_y = 9
+	},
 /turf/open/floor/iron/white/side{
 	dir = 4
 	},
@@ -46698,6 +46723,14 @@
 	},
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmos)
+"lLI" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/iron/white/side{
+	dir = 9
+	},
+/area/station/science/research)
 "lMo" = (
 /obj/machinery/computer/pod/old/mass_driver_controller/ordnancedriver{
 	id = "chapelgun"
@@ -48937,6 +48970,10 @@
 /obj/effect/spawner/random/trash/moisture_trap,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
+"nLa" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/iron/white,
+/area/station/science/explab)
 "nLe" = (
 /obj/effect/turf_decal/stripes/corner,
 /obj/effect/turf_decal/siding/brown{
@@ -49617,6 +49654,9 @@
 /turf/open/floor/iron/small,
 /area/station/hallway/primary/central)
 "orP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
 /turf/open/floor/iron/white,
 /area/station/science/explab)
 "orS" = (
@@ -50661,6 +50701,14 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
+"pia" = (
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/open/floor/iron/white/side{
+	dir = 9
+	},
+/area/station/science/research)
 "pit" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /obj/machinery/atmospherics/pipe/smart/simple/violet/visible/layer1{
@@ -51883,6 +51931,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "qcV" = (
@@ -52788,6 +52839,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/yellow/visible,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
 "qUn" = (
@@ -54051,6 +54103,12 @@
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/science/breakroom)
+"rWx" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/iron/white,
+/area/station/science/explab)
 "rYJ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
@@ -54713,6 +54771,10 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
+"sDc" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "sDj" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -56243,6 +56305,16 @@
 /obj/machinery/duct,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
+"tXA" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/turf/open/floor/iron/white/side{
+	dir = 9
+	},
+/area/station/science/research)
 "tXF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark/herringbone,
@@ -56550,6 +56622,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/station/science/explab)
 "umk" = (
@@ -56822,6 +56895,10 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/station/cargo/bitrunning/den)
 "uCq" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/bin,
 /turf/open/floor/iron/white/corner{
 	dir = 1
 	},
@@ -57093,6 +57170,11 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/fore)
+"uNB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/directional/west,
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "uNL" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -60162,6 +60244,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white/side,
 /area/station/science/explab)
 "xwI" = (
@@ -60263,6 +60346,8 @@
 /obj/structure/cable,
 /obj/structure/table,
 /obj/machinery/power/apc/auto_name/directional/north,
+/obj/item/relic,
+/obj/item/relic,
 /turf/open/floor/iron,
 /area/station/science/explab)
 "xBT" = (
@@ -98494,7 +98579,7 @@ iog
 lmd
 ceF
 ceF
-kvr
+uNB
 kvr
 cmd
 aku
@@ -99004,7 +99089,7 @@ bZN
 gkv
 sTl
 ceF
-ceF
+sDc
 ceF
 ceF
 ccE
@@ -107220,8 +107305,8 @@ bIE
 qcT
 umb
 xwx
-uSh
-orP
+rWx
+nLa
 dZN
 orP
 sTc
@@ -107472,15 +107557,15 @@ bBD
 cFi
 bBD
 bYl
-bYl
-bYl
-bBD
+tXA
+lLI
+pia
 jTP
 vIT
 uSh
 dIG
 vMk
-vMk
+jjs
 uCq
 xeP
 itG
