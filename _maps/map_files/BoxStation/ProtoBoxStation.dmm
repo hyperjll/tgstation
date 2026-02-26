@@ -30685,7 +30685,7 @@
 	req_access = list("research")
 	},
 /obj/machinery/button/door{
-	id = "testlab";
+	id = "nanite_lockdown";
 	name = "Nanite Lab Lockdown";
 	pixel_y = -4;
 	req_access = list("research")
@@ -61046,7 +61046,6 @@
 /obj/machinery/light/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/radio/intercom/directional/north,
-/obj/machinery/nanite_programmer,
 /turf/open/floor/iron,
 /area/station/science/explab)
 "ylC" = (
