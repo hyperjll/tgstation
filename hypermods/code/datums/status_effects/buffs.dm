@@ -380,7 +380,7 @@
 		return
 
 	var/mob/living/carbon/human/moody_human = owner
-	if(moody_human.mob_mood.sanity_level >= SANITY_LEVEL_NEUTRAL)
+	if(moody_human.mob_mood.sanity_level >= SANITY_LEVEL_DISTURBED)
 		owner.remove_status_effect(/datum/status_effect/contentment)
 
 	if(HAS_TRAIT(moody_human, TRAIT_CRITICAL_CONDITION))
