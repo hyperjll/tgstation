@@ -655,6 +655,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/cigarette/robust
 	desc = "A Robust brand cigarette."
+	list_reagents = list(/datum/reagent/drug/nicotine = 15, /datum/reagent/silver = 3)
 
 /obj/item/cigarette/greytide
 	name = "grey mainthol"
@@ -691,6 +692,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/cigarette/carp
 	desc = "A Carp Classic brand cigarette. A small label on its side indicates that it does NOT contain carpotoxin."
+	list_reagents = list(/datum/reagent/drug/nicotine = 15, /datum/reagent/consumable/nutriment/protein = 2)
 
 /obj/item/cigarette/carp/Initialize(mapload)
 	. = ..()
