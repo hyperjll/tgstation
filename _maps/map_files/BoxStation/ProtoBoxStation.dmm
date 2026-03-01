@@ -563,8 +563,12 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
 "aci" = (
-/obj/vehicle/ridden/secway,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Armory Equipment Guarding Door";
+	req_access = list("armory")
+	},
+/obj/structure/closet/secure_closet/armory4,
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "acj" = (
@@ -1327,12 +1331,7 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "aes" = (
-/obj/structure/window/reinforced/spawner/directional/west,
-/obj/machinery/door/window/brigdoor/left/directional/north{
-	name = "Armory Equipment Guarding Door";
-	req_access = list("armory")
-	},
-/obj/structure/closet/secure_closet/armory4,
+/obj/vehicle/ridden/secway,
 /turf/open/floor/iron/smooth,
 /area/station/security/armory)
 "aet" = (
