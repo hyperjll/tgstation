@@ -1,3 +1,10 @@
+/obj/item/storage/fancy/cigarettes/cigars/security // A rare cigar case available to security, contains trace amounts of opium and dylovene in addition to the usual nicotine.
+	name = "\improper security-issue cigar case"
+	desc = "A case of premium cigars, a small tag reads: 'Contains Opium and Dylovene! Do not smoke if allergic to either'. Seems very expensive."
+	spawn_type = /obj/item/cigarette/cigar/security
+
+// Deadly donuts
+
 /obj/item/storage/fancy/donut_box/deadly
 	spawn_type = /obj/item/food/donut/deadly
 

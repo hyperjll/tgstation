@@ -19,6 +19,10 @@
 	list_reagents = list(/datum/reagent/drug/nicotine = 10, /datum/reagent/drug/nicotwaine = 5, /datum/reagent/medicine/omnizine = 30, /datum/reagent/consumable/nutriment/vitamin = 5, /datum/reagent/drug/happiness = 30, /datum/reagent/drug/opium = 15, /datum/reagent/medicine/ultravasculine = 2.5, /datum/reagent/medicine/ambuzol = 5, /datum/reagent/medicine/mannitol = 7.5)
 	choke_time_max = 30 SECONDS
 
+/obj/item/cigarette/cigar/security
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/nicotine = 25, /datum/reagent/drug/opium = 5, /datum/reagent/medicine/dylovene = 5)
+
 /obj/item/cigarette/cigar/payload
 	smoke_all = TRUE
 	chem_volume = 300
