@@ -2615,6 +2615,10 @@
 	dir = 10
 	},
 /obj/effect/turf_decal/trimline/red/filled/line,
+/obj/item/storage/fancy/cigarettes/cigars{
+	pixel_x = -10;
+	pixel_y = 6
+	},
 /turf/open/floor/iron/dark/small,
 /area/station/security/warden)
 "ahU" = (
@@ -2681,6 +2685,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "aic" = (
@@ -4842,6 +4847,9 @@
 "anZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "aoa" = (
@@ -5019,12 +5027,12 @@
 /turf/open/floor/iron/dark/small,
 /area/station/security/courtroom)
 "aoI" = (
-/obj/structure/disposalpipe/segment{
-	dir = 9
-	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/spawner/random/trash/grille_or_waste,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "aoJ" = (
@@ -5247,6 +5255,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/junction,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "apy" = (
@@ -25370,6 +25379,9 @@
 /area/station/maintenance/aft)
 "bHs" = (
 /obj/machinery/light/small/directional/south,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "bHt" = (
@@ -53685,6 +53697,13 @@
 	},
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
+"rGl" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/station/maintenance/fore)
 "rGs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -54333,7 +54352,6 @@
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "siY" = (
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/broken_floor,
@@ -54341,6 +54359,9 @@
 	spawn_scatter_radius = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "sjf" = (
@@ -95971,7 +95992,7 @@ nrZ
 aYt
 hiQ
 aib
-apx
+rGl
 apx
 bHs
 arP
