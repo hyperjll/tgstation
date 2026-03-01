@@ -155,6 +155,9 @@
 	new /obj/item/clothing/suit/utility/radiation(src)
 	new /obj/item/clothing/head/utility/radiation(src)
 
+	if(prob(50))
+		new /obj/item/storage/pill_bottle/potassiodide(src)
+
 /*
  * Bombsuit closet
  */
