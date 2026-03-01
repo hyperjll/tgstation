@@ -58,6 +58,18 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+/datum/design/ai_turret_maintenance
+	name = "AI-Turret Self-Repair Upgrade"
+	desc = "An upgrade package that lets an AI repair all of their available turrets by a moderate amount."
+	id = "ai_turret_maintenance"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 5)
+	build_path = /obj/item/aiupgrade/ai_turret_maintenance
+	category = list(
+		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
 /datum/design/ai_battery_upgrade
 	name = "AI Electrical Storage Upgrade"
 	desc = "An upgrade package that lets an AI store larger amounts of backup power."

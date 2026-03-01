@@ -6,7 +6,7 @@
 	unlock_text = span_notice("Access to Brute Healing Bluespace Capsules acquired.")
 
 /datum/action/innate/ai/ranged/heal_brute
-	name = "bluespace brutepack capsule"
+	name = "Launch Bluespace Brutepack"
 	desc = "Use to remotely heal a human's brute damage. Uses 50 battery."
 	button_icon = 'icons/obj/storage/medkit.dmi'
 	button_icon_state = "oldbrute"
@@ -15,7 +15,6 @@
 	disable_text = span_notice("You stop focusing on remote brute healing.")
 
 /datum/action/innate/ai/ranged/heal_brute/do_ability(mob/living/clicker, atom/clicked_on)
-
 	if (!isAI(clicker))
 		return FALSE
 	var/mob/living/silicon/ai/ai_clicker = clicker
@@ -25,7 +24,7 @@
 		return FALSE
 
 	if(!ishuman(clicked_on))
-		clicked_on.balloon_alert(ai_clicker, "not an human!")
+		clicked_on.balloon_alert(ai_clicker, "not a human!")
 		return FALSE
 
 	if(ai_clicker.battery - 50 <= 0)
@@ -47,7 +46,7 @@
 	unlock_text = span_notice("Access to Brute Healing Bluespace Capsules acquired.")
 
 /datum/action/innate/ai/ranged/heal_burn
-	name = "bluespace burnpack capsule"
+	name = "Launch Bluespace Burnpack"
 	desc = "Use to remotely heal a human's burn damage. Uses 50 battery."
 	button_icon = 'icons/obj/storage/medkit.dmi'
 	button_icon_state = "oldointment"
@@ -56,7 +55,6 @@
 	disable_text = span_notice("You stop focusing on remote burn healing.")
 
 /datum/action/innate/ai/ranged/heal_burn/do_ability(mob/living/clicker, atom/clicked_on)
-
 	if (!isAI(clicker))
 		return FALSE
 	var/mob/living/silicon/ai/ai_clicker = clicker
@@ -66,7 +64,7 @@
 		return FALSE
 
 	if(!ishuman(clicked_on))
-		clicked_on.balloon_alert(ai_clicker, "not an human!")
+		clicked_on.balloon_alert(ai_clicker, "not a human!")
 		return FALSE
 
 	if(ai_clicker.battery - 50 <= 0)
@@ -88,7 +86,7 @@
 	unlock_text = span_notice("Access to Brute Healing Bluespace Capsules acquired.")
 
 /datum/action/innate/ai/ranged/heal_tox
-	name = "bluespace toxpack capsule"
+	name = "Launch Bluespace Toxpack"
 	desc = "Use to remotely heal a human's toxin damage. Uses 50 battery."
 	button_icon = 'icons/obj/storage/medkit.dmi'
 	button_icon_state = "oldantitoxin"
@@ -97,7 +95,6 @@
 	disable_text = span_notice("You stop focusing on remote toxin healing.")
 
 /datum/action/innate/ai/ranged/heal_tox/do_ability(mob/living/clicker, atom/clicked_on)
-
 	if (!isAI(clicker))
 		return FALSE
 	var/mob/living/silicon/ai/ai_clicker = clicker
@@ -107,7 +104,7 @@
 		return FALSE
 
 	if(!ishuman(clicked_on))
-		clicked_on.balloon_alert(ai_clicker, "not an human!")
+		clicked_on.balloon_alert(ai_clicker, "not a human!")
 		return FALSE
 
 	if(ai_clicker.battery - 50 <= 0)
@@ -129,7 +126,7 @@
 	unlock_text = span_notice("Access to Brute Healing Bluespace Capsules acquired.")
 
 /datum/action/innate/ai/ranged/heal_oxy
-	name = "bluespace oxypack capsule"
+	name = "Launch Bluespace Oxypack"
 	desc = "Use to remotely heal a human's oxygen damage. Uses 50 battery."
 	button_icon = 'icons/obj/storage/medkit.dmi'
 	button_icon_state = "oldo2"
@@ -138,7 +135,6 @@
 	disable_text = span_notice("You stop focusing on remote oxygen healing.")
 
 /datum/action/innate/ai/ranged/heal_oxy/do_ability(mob/living/clicker, atom/clicked_on)
-
 	if (!isAI(clicker))
 		return FALSE
 	var/mob/living/silicon/ai/ai_clicker = clicker
@@ -148,7 +144,7 @@
 		return FALSE
 
 	if(!ishuman(clicked_on))
-		clicked_on.balloon_alert(ai_clicker, "not an human!")
+		clicked_on.balloon_alert(ai_clicker, "not a human!")
 		return FALSE
 
 	if(ai_clicker.battery - 50 <= 0)
