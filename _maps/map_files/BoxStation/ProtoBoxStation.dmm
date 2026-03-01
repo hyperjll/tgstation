@@ -2158,6 +2158,9 @@
 /obj/item/clothing/mask/surgical,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/structure/table/glass,
+/obj/item/storage/toolbox/medical/full{
+	pixel_y = 13
+	},
 /turf/open/floor/iron/white,
 /area/station/security/brig)
 "agN" = (
@@ -2615,7 +2618,7 @@
 	dir = 10
 	},
 /obj/effect/turf_decal/trimline/red/filled/line,
-/obj/item/storage/fancy/cigarettes/cigars{
+/obj/item/storage/fancy/cigarettes/cigars/security{
 	pixel_x = -10;
 	pixel_y = 6
 	},
@@ -57727,7 +57730,8 @@
 /obj/machinery/vending/custom,
 /obj/machinery/door/window/right/directional/east{
 	name = "Vendor Access";
-	max_integrity = 250
+	max_integrity = 250;
+	req_access = list("pharmacy")
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
