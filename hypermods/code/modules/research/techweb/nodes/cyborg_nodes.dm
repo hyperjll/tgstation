@@ -44,14 +44,3 @@
 		"borg_upgrade_rapidlightingdevice",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
-
-/datum/techweb_node/borg_janitor
-	id = TECHWEB_NODE_BORG_JANITOR
-	display_name = "Janitorial Cyborg Upgrades"
-	description = "Tra-la-la, just cleaning up the crime scene!"
-	prereq_ids = list(TECHWEB_NODE_CYBERNETICS)
-	design_ids = list(
-		"borg_upgrade_janisprayer",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
-

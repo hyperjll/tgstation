@@ -26,7 +26,6 @@
 #define TECHWEB_NODE_BORG_ENGI_ADV "borg_engi_adv"
 #define TECHWEB_NODE_BORG_MEDICAL_ADV "borg_medical_adv"
 #define TECHWEB_NODE_BORG_SERVICES_ADV "borg_services_adv"
-#define TECHWEB_NODE_BORG_JANITOR "borg_janitorial"
 #define TECHWEB_NODE_BOTANY_EQUIP "botany_equip"
 #define TECHWEB_NODE_CAFETERIA_EQUIP "cafeteria_equip"
 #define TECHWEB_NODE_CHEM_SYNTHESIS "chem_synthesis"
