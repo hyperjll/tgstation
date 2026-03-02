@@ -27,3 +27,8 @@
 	name = "ai-turret self-repair upgrade"
 	desc = "A legal upgrade that allows an artificial intelligence to perform on-demand repair of their self-defense turrets."
 	to_gift = /datum/ai_module/repair_turrets
+
+/obj/item/aiupgrade/ai_construction
+	name = "ai remote construction upgrade"
+	desc = "A questionably legal upgrade that grants an A.I of choice access to an experimental remote-RCD prototype."
+	to_gift = /datum/ai_module/construction
