@@ -83,6 +83,7 @@
 		"ai_heal_tox",
 		"ai_heal_oxy",
 		"ai_turret_maintenance",
+		"ai_construction",
 		"ai_spacecoin_miner_upgrade",
 		"antimov_module",
 		"asimovpp_module",
