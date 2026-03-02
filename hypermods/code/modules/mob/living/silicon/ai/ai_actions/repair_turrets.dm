@@ -4,7 +4,6 @@
 	one_purchase = TRUE
 	power_type = /datum/action/innate/ai/repair_turrets
 	unlock_sound = 'sound/items/tools/rped.ogg'
-	var/battery_per_use = 10
 
 /datum/action/innate/ai/repair_turrets
 	name = "AI Turret Repair"
