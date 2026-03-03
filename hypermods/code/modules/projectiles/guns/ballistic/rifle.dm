@@ -28,7 +28,8 @@
 
 /obj/item/gun/ballistic/rifle/sniper_rifle/hristov/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/scope, range_modifier = 4) //enough range to at least make extremely good use of the penetrator rounds
+	ADD_TRAIT(src, TRAIT_CONTRABAND_EXCEPTION, INNATE_TRAIT)
+	AddComponent(/datum/component/scope, range_modifier = 4)
 
 /obj/item/gun/ballistic/rifle/sniper_rifle/hristov/freshprint
 	pin = null

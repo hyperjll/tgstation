@@ -115,6 +115,10 @@
 	custom_price = 2500
 	worn_icon = 'hypermods/icons/mob/clothing/belt.dmi'
 
+/obj/item/gun/ballistic/automatic/pistol/mk58/Initialize(mapload) // this is a security pistol, not contraband.
+	. = ..()
+	ADD_TRAIT(src, TRAIT_CONTRABAND_EXCEPTION, INNATE_TRAIT)
+
 /obj/item/gun/ballistic/automatic/pistol/mk58/nopin
 	pin = null
 
