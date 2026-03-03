@@ -32,3 +32,8 @@
 	name = "ai remote construction upgrade"
 	desc = "A questionably legal upgrade that grants an A.I of choice access to an experimental remote-RCD prototype."
 	to_gift = /datum/ai_module/construction
+
+/obj/item/aiupgrade/sniper
+	name = "personnel remote-harm upgrade"
+	desc = "A illegal upgrade that allows an artificial intelligence to remotely shoot personnel for minor damage at the cost of their internal battery's charge."
+	to_gift = /datum/ai_module/sniper

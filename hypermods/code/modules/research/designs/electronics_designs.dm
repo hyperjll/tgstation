@@ -70,6 +70,18 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+/datum/design/ai_sniper
+	name = "AI Remote-Harm Upgrade"
+	desc = "A illegal upgrade package that grants the AI of choice the ability to shoot living creatures remotely, dealing minor damage at the cost of it's internal battery."
+	id = "ai_sniper"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 5, /datum/material/gold =SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/diamond =SHEET_MATERIAL_AMOUNT * 2.5)
+	build_path = /obj/item/aiupgrade/sniper
+	category = list(
+		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
 /datum/design/ai_construction
 	name = "AI Remote Construction Upgrade"
 	desc = "A questionably legal upgrade package that grants the AI of choice an experimental ranged RCD capable of creating basic structures using it's internal battery."
