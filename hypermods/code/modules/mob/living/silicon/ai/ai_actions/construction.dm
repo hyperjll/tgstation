@@ -1,4 +1,3 @@
-// Prepare yourself for some of the worst code i've ever made. Legit the most hacky spaghetti code I've ever made.
 /datum/ai_module/construction
 	name = "Remote Rapid Construction"
 	description = "A rare prototype program which branched off long ago from early RCD technology.."
@@ -119,3 +118,49 @@
 	rcd_effect.end_animation()
 
 	ai_clicker.battery -= (battery_cost * obj_discount)
+
+/obj/item/ai_construction_upgrade
+	name = "remote construction upgrade"
+	desc = "An upgrade for A.I's with the remote construction upgrade installed. It grants them new things to construct."
+	icon = 'icons/obj/devices/floppy_disks.dmi'
+	icon_state = "datadisk1"
+	/// Actual new stuff we can build, requires a typepath.
+	var/list/new_constructions = list()
+	/// If any new stuff should be discounted, add it to one of these for the appropriate discount amount.
+	var/list/new_eighty_off = list()
+	var/list/new_sixty_off = list()
+	var/list/new_fourty_off = list()
+	var/list/new_twenty_off = list()
+
+/obj/item/ai_construction_upgrade/pre_attack(atom/A, mob/living/user, proximity)
+	if(!proximity)
+		return ..()
+	if(!isAI(A))
+		return ..()
+	var/mob/living/silicon/ai/AI = A
+	var/datum/action/innate/ai/ranged/construction/action = locate(/datum/action/innate/ai/ranged/construction) in AI.actions
+	if(!action)
+		to_chat(user, "[AI] doesn't have the appropriate upgrade(s) installed!")
+		return FALSE
+	if(length(new_constructions))
+		action.possible_objects |= new_constructions
+	if(length(new_eighty_off))
+		action.eighty_off |= new_eighty_off
+	if(length(new_sixty_off))
+		action.sixty_off |= new_sixty_off
+	if(length(new_fourty_off))
+		action.fourty_off |= new_fourty_off
+	if(length(new_twenty_off))
+		action.twenty_off |= new_twenty_off
+	log_silicon("[key_name(user)] has upgraded [key_name(AI)] with a [src].")
+	message_admins("[ADMIN_LOOKUPFLW(user)] has upgraded [ADMIN_LOOKUPFLW(AI)] with a [src].")
+	to_chat(user, span_notice("You install [src], allowing for turret construction if it didn't already."))
+	qdel(src)
+	return TRUE
+
+/obj/item/ai_construction_upgrade/turrets
+	name = "turret construction upgrade"
+	desc = "A illegal upgrade for A.I's with the remote construction upgrade installed. This particular variant allows A.I's to build new turrets."
+	new_constructions = list(
+		/obj/machinery/porta_turret/ai,
+	)

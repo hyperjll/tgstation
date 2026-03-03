@@ -71,12 +71,24 @@
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/ai_construction
-	name = "AI-Turret Self-Repair Upgrade"
+	name = "AI Remote Construction Upgrade"
 	desc = "A questionably legal upgrade package that grants the AI of choice an experimental ranged RCD capable of creating basic structures using it's internal battery."
 	id = "ai_construction"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 5, /datum/material/gold =SHEET_MATERIAL_AMOUNT * 2.5)
 	build_path = /obj/item/aiupgrade/ai_construction
+	category = list(
+		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/ai_construction_turrets
+	name = "AI Turret Construction Upgrade"
+	desc = "A illegal upgrade package that grants the AI of choice with a Remote Construction Upgrade installed the ability to construct new turrets."
+	id = "ai_construction_turrets"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 5, /datum/material/gold =SHEET_MATERIAL_AMOUNT * 5)
+	build_path = /obj/item/ai_construction_upgrade/turrets
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)
