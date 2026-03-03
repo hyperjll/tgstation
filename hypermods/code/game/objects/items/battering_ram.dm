@@ -11,12 +11,11 @@
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/axes_righthand.dmi'
 	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
 	name = "battering ram"
-	desc = "An extremely heavy and unwieldy hunk of metal used to break down airlocks. Why would anyone ram a sliding airlock?"
+	desc = "An extremely heavy and unwieldy hunk of metal coated in insulating rubber used to break down airlocks. Why would anyone ram a sliding airlock?"
 
 	w_class = WEIGHT_CLASS_HUGE
 	item_flags = SLOWS_WHILE_IN_HAND | IMMUTABLE_SLOW
 	slot_flags = ITEM_SLOT_BACK
-	obj_flags = CONDUCTS_ELECTRICITY
 	resistance_flags = FIRE_PROOF
 	armor_type = /datum/armor/item_batteringram
 
@@ -52,6 +51,25 @@
 /obj/item/batteringram/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=force_unwielded, force_wielded=force_wielded, require_twohands = TRUE, icon_wielded="[base_icon_state]1")
+	RegisterSignal(src, COMSIG_ITEM_EQUIPPED, PROC_REF(check_add_insulated))
+	RegisterSignal(src, COMSIG_ITEM_DROPPED, PROC_REF(check_remove_insulated))
+
+/obj/item/batteringram/Destroy(force)
+	UnregisterSignal(src, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_DROPPED))
+	. = ..()
+
+/obj/item/batteringram/proc/check_add_insulated(datum/source, mob/equipper, slot)
+	SIGNAL_HANDLER
+	//this shouldnt be equippable, but just incase
+	if(!(slot & ITEM_SLOT_HANDS))
+		return
+	ADD_TRAIT(equipper, TRAIT_AIRLOCK_SHOCKIMMUNE, REF(src))
+
+/obj/item/batteringram/proc/check_remove_insulated(datum/source, mob/user)
+	SIGNAL_HANDLER
+
+	if(HAS_TRAIT(user, TRAIT_AIRLOCK_SHOCKIMMUNE))
+		REMOVE_TRAIT(user, TRAIT_AIRLOCK_SHOCKIMMUNE, REF(src))
 
 /obj/item/batteringram/update_icon_state()
 	icon_state = "[base_icon_state]0"
@@ -61,6 +79,8 @@
 	if(swung)
 		return TRUE
 	if(!isturf(A) && !istype(A, /obj/structure/fireaxecabinet/batteringram))
+		if(!user.can_perform_action(src, FORBID_TELEKINESIS_REACH))
+			return TRUE
 		swung = TRUE
 		visible_message(span_warning("[user] swings [src] back for a blow into [A]!"))
 		playsound(user, 'sound/items/weapons/throw.ogg', 50, TRUE)
