@@ -103,7 +103,7 @@
 	return ..()
 
 /datum/antagonist/clock_cultist/get_preview_icon()
-	var/icon/icon = render_preview_outfit(preview_outfit)
+	var/datum/universal_icon/icon = render_preview_outfit(preview_outfit)
 	return finish_preview_icon(icon)
 
 /datum/antagonist/clock_cultist/on_mindshield(mob/implanter)

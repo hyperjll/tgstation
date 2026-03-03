@@ -107,9 +107,9 @@
 	werewolfman.hair_color = COLOR_DARK_MODERATE_ORANGE
 	werewolfman.set_species(/datum/species/werewolf)
 
-	var/icon/werewolf_icon = render_preview_outfit(/datum/outfit/job/assistant, werewolfman)
+	var/datum/universal_icon/werewolf_icon = render_preview_outfit(/datum/outfit/job/assistant, werewolfman)
 
-	var/icon/final_icon = werewolf_icon
+	var/datum/universal_icon/final_icon = werewolf_icon
 
 	qdel(werewolfman)
 

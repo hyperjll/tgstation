@@ -50,8 +50,8 @@
 	return swarmer_team
 
 /datum/antagonist/swarmer/get_preview_icon()
-	var/icon/swarmer_icon = icon('hypermods/icons/swarmers/swarmer.dmi', "swarmer")
-	swarmer_icon.Shift(NORTH, 8)
+	var/datum/universal_icon/swarmer_icon = uni_icon('hypermods/icons/swarmers/swarmer.dmi', "swarmer")
+	swarmer_icon.shift(NORTH, 8)
 	return finish_preview_icon(swarmer_icon)
 
 /datum/objective/swarmer

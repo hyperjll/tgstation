@@ -12,7 +12,7 @@
 	preview_outfit_behind = /datum/outfit/commando_operative
 
 	/// In the preview icon, a nuclear fission explosive device, only appearing if there's an icon state for it.
-	nuke_icon_state = "old_nuclearbomb_base"
+	nuke_icon_state = "nuclearbomb_base"
 
 	infiltrator_id = null // our ship spawns at map load.
 

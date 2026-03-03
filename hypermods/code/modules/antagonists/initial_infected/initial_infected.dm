@@ -33,10 +33,10 @@
 	log_admin("[key_name(admin)] has romerol'd [key_name(new_owner)].")
 
 /datum/antagonist/initial_infected/get_preview_icon()
-	var/icon/final_icon = render_preview_outfit(preview_outfit)
+	var/datum/universal_icon/final_icon = render_preview_outfit(preview_outfit)
 
-	final_icon.Blend(make_background_clone_icon(preview_outfit), ICON_UNDERLAY, -8, 0)
-	final_icon.Scale(64, 64)
+	final_icon.blend_icon(make_background_clone_icon(preview_outfit), ICON_UNDERLAY, -8, 0)
+	final_icon.scale(64, 64)
 
 	return finish_preview_icon(final_icon)
 
@@ -44,11 +44,11 @@
 	var/mob/living/carbon/human/dummy/consistent/zombie = new
 	zombie.set_species(/datum/species/zombie/infectious)
 
-	var/icon/zombie_icon = render_preview_outfit(zombie_fit, zombie)
-	zombie_icon.ChangeOpacity(0.7)
-	var/icon/blood_icon = icon('icons/effects/blood.dmi', "uniformblood")
-	blood_icon.Blend(BLOOD_COLOR_RED, ICON_MULTIPLY)
-	zombie_icon.Blend(blood_icon, ICON_OVERLAY)
+	var/datum/universal_icon/zombie_icon = render_preview_outfit(zombie_fit, zombie)
+	zombie_icon.change_opacity(0.7)
+	var/datum/universal_icon/blood_icon = uni_icon('icons/effects/blood.dmi', "uniformblood")
+	blood_icon.blend_color(BLOOD_COLOR_RED, ICON_MULTIPLY)
+	zombie_icon.blend_icon(blood_icon, ICON_OVERLAY)
 
 	qdel(zombie)
 

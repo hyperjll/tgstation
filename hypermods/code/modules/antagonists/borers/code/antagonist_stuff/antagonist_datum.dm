@@ -58,7 +58,9 @@
 	return ..()
 
 /datum/antagonist/cortical_borer/get_preview_icon()
-	return finish_preview_icon(icon('hypermods/code/modules/antagonists/borers/icons/animal.dmi', "brainslug"))
+	var/datum/universal_icon/borer_icon = uni_icon('hypermods/code/modules/antagonists/borers/icons/animal.dmi', "brainslug")
+	borer_icon.shift(NORTH, 8)
+	return finish_preview_icon(borer_icon)
 
 /datum/antagonist/cortical_borer/hivemind
 	name = "Hivemind Cortical Borer"
