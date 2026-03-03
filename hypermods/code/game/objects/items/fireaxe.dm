@@ -116,14 +116,14 @@
 
 /obj/item/fireaxe/electric/attack(mob/living/carbon/victim, mob/living/carbon/user)
 	if(electrocute || HAS_TRAIT(src, TRAIT_WIELDED))
-		shock(victim)
+		shock_attack(victim)
 
 	if(!isliving(victim))
 		return ..()
 
 	return ..()
 
-/obj/item/fireaxe/electric/proc/shock(mob/living/target)
+/obj/item/fireaxe/electric/proc/shock_attack(mob/living/target)
 	if(prob(20))
 		target.Stun(1 SECONDS)
 		target.Knockdown(5 SECONDS)
