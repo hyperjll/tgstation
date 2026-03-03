@@ -1541,3 +1541,12 @@
 	new /obj/item/clothing/head/costume/syndieheadband/real(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/clothing/accessory/maidapronsynd(src)
+
+/obj/item/storage/box/syndie_kit/left_arm // this is just a placeholder for the "Additional Arm" uplink item.
+	name = "arm box"
+	icon = 'icons/mob/human/bodyparts.dmi'
+	icon_state = "default_human_l_arm"
+	give_fallback_icon = TRUE
+
+/obj/item/storage/box/syndie_kit/left_arm/PopulateContents()
+	new /obj/item/bodypart/arm/left(src)

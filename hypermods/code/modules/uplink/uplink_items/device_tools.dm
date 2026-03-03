@@ -70,7 +70,7 @@
 /datum/uplink_item/device_tools/extraarm
 	name = "Additional Arm"
 	desc = "An additional arm, automatically added to your body upon purchase, allows you to use more items at once."
-	item = /obj/item/bodypart/arm/left //doesn't actually spawn an arm, but it needs an object to show up in the menu :^)
+	item = /obj/item/storage/box/syndie_kit/left_arm // Placeholder item so left arms aren't globally considered contraband
 	cost = 5
 	surplus = 0
 	limited_stock = 2 // It's probably best to not break the UI any further.

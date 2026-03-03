@@ -423,6 +423,15 @@
 	req_access = list(ACCESS_SECURITY)
 	scangate_mode = SCANGATE_GUNS
 
+/obj/machinery/scanner_gate/preset_contraband
+	locked = TRUE
+	req_access = list(ACCESS_SECURITY)
+	scangate_mode = SCANGATE_CONTRABAND
+
+/obj/machinery/scanner_gate/preset_contraband/Initialize(mapload)
+	. = ..()
+	n_spect = new(src)
+
 #undef SCANGATE_NONE
 #undef SCANGATE_MINDSHIELD
 #undef SCANGATE_DISEASE
