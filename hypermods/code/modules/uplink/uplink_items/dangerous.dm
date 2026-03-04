@@ -175,7 +175,7 @@
 	desc = "A shotgun that doesn't need to have it's pump racked to switch to the next shell, can have 8 shells loaded at any time. \
 			It'll be loaded with lethal shells upon purchase."
 	item = /obj/item/gun/ballistic/shotgun/automatic/combat/kammerer/syndicate
-	cost = 9
+	cost = 10
 	surplus = 35
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	relevant_child_items = list(
@@ -201,6 +201,38 @@
 		/datum/uplink_item/ammo_restock/hardlightshells,
 		/datum/uplink_item/ammo_restock/ripshells,
 		/datum/uplink_item/ammo_restock/anarchyshells,
+	)
+
+/datum/uplink_item/dangerous/hushpup
+	name = "Hushpup Shotgun"
+	desc = "A semi-automatic shotgun with an in-built silencer and a four-shell capacity. \
+			It'll be loaded with lethal shells upon purchase."
+	item = /obj/item/gun/ballistic/shotgun/hushpup
+	cost = 10
+	surplus = 0 // No surplus crates
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	relevant_child_items = list(
+		/datum/uplink_item/ammo_restock/mysteryshells,
+		/datum/uplink_item/ammo_restock/lethalshells,
+		/datum/uplink_item/ammo_restock/dartshells,
+		/datum/uplink_item/ammo_restock/incendiaryshells,
+		/datum/uplink_item/ammo_restock/dragonshells,
+		/datum/uplink_item/ammo_restock/syndieshotshells,
+		/datum/uplink_item/ammo_restock/syndieslugshells,
+		/datum/uplink_item/ammo_restock/tasershells,
+		/datum/uplink_item/ammo_restock/meteorshells,
+		/datum/uplink_item/ammo_restock/pulseshells,
+		/datum/uplink_item/ammo_restock/frag12shells,
+		/datum/uplink_item/ammo_restock/flechetteshells,
+		/datum/uplink_item/ammo_restock/rubbershotshells,
+		/datum/uplink_item/ammo_restock/ionshells,
+		/datum/uplink_item/ammo_restock/lasershells,
+		/datum/uplink_item/ammo_restock/uraniumshells,
+		/datum/uplink_item/ammo_restock/cryoshotshells,
+		/datum/uplink_item/ammo_restock/bioterrorshells,
+		/datum/uplink_item/ammo_restock/thundershotshells,
+		/datum/uplink_item/ammo_restock/hardlightshells,
+		/datum/uplink_item/ammo_restock/ripshells,
 	)
 
 /datum/uplink_item/dangerous/boltactionrifle

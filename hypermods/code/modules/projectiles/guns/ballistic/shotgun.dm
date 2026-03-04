@@ -111,3 +111,27 @@
 
 /obj/item/gun/ballistic/shotgun/enforcer/nopin
 	pin = null
+
+/obj/item/gun/ballistic/shotgun/hushpup
+	name = "\improper Hushpup"
+	desc = "A semi-automatic silenced shotgun with a four-shell capacity. One of very few shotguns manufactured with an in-built silencer now-a-days."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "hushpup"
+	inhand_icon_state = "hushpup"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	fire_sound = 'hypermods/sound/weapons/gun/shotgun/hushpup.ogg'
+	fire_sound_volume = 20
+	fire_delay = 2
+	burst_size = 1
+	burst_delay = 1
+	inhand_x_dimension = 32
+	inhand_y_dimension = 32
+	pin = /obj/item/firing_pin
+	actions_types = list()
+	semi_auto = TRUE
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/kammerer
+	w_class = WEIGHT_CLASS_HUGE
+	weapon_weight = WEAPON_MEDIUM
+	can_suppress = FALSE
