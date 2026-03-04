@@ -94,6 +94,7 @@
 	item = /obj/item/storage/box/syndie_kit/thievesgloves
 	cost = 5
 	surplus = 20
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
 /datum/uplink_item/stealthy_tools/holodisguiser
 	name = "Holographic Disguiser"
@@ -141,3 +142,15 @@
 	surplus = 10
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/stealthy_tools/thievery
+	name = "The Art of Thievery"
+	desc = "An instruction manual detailing high-performance techniques regarding pickpocketing. \
+			After reading, the user will be granted the ability to conceal any attempts to pickpocket/strip someone from both the victim and on-lookers. \
+			Items pickpocketed will be in-hand, and pickpocketing will take twice as long. \
+			Cannot be toggled off, or taken from you."
+	item = /obj/item/book/granter/thievery
+	cost = 8
+	surplus = 0
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
