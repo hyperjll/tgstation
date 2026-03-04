@@ -44,7 +44,7 @@
 
 /datum/uplink_item/medical/medipenkit
 	name = "Medipen Kit"
-	desc = "A bluespace-compressed medkit containing multiple medicinal medipens filled with various reagents. Useful in a pinch."
+	desc = "A bluespace-compressed medkit containing 14 medicinal medipens designed for rapid healing in a pinch."
 	item = /obj/item/storage/medkit/medipenkit
 	cost = 3
 	surplus = 35
