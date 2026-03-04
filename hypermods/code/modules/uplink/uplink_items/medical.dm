@@ -60,9 +60,7 @@
 /datum/uplink_item/medical/combistimpack
 	name = "Chemical Combi-Stimpack Bag"
 	desc = "A bag containing one combat medipen loaded with 25 units of Omnizine and 5 units of Tranexamic Acid. \
-			One cardiac combi-stimpacks loaded with Penthrite and Saline-Glucose Solution, \
-			One bloodloss combi-stimpacks loaded with Filgrastim and Proconvertin, and \
-			One lifesupport combi-stimpacks loaded with Atropine and Protozine. \
+			Contains three experimental combi-stimpacks for various situations. \
 			Also comes with an auto-mender for both brute and burn damage."
 	item = /obj/item/storage/bag/chemistry/syndimedipens
 	cost = 3
