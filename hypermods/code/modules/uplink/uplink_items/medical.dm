@@ -17,7 +17,8 @@
 
 /datum/uplink_item/medical/deluxe_medical_variety_pack
 	name = "Deluxe Medical Variety Pack"
-	desc = "A bluespace-compressed medkit containing one of each variety of first aid kits. Contains a bottle of omnizine, and some iron/mannitol/mutadone pills."
+	desc = "A bluespace-compressed medkit containing one of each variety of first aid kits, though we may have misplaced our 'advanced' medkit stock. \
+			Contains a singular bottle of omnizine."
 	item = /obj/item/storage/medkit/deluxe_medical_variety_pack
 	cost = 5
 	surplus = 30
