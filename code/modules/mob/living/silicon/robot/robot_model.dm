@@ -259,6 +259,12 @@
 	if(transform)
 		INVOKE_ASYNC(new_model, PROC_REF(do_transform_animation))
 	qdel(src)
+
+	if(cyborg.start_with_uni_hand && cyborg.shell)
+		var/obj/item/borg/upgrade/unistorage/uni_board = new(src)
+		uni_board.action(cyborg, cyborg)
+		cyborg.add_to_upgrades(uni_board)
+		cyborg.start_with_uni_hand = FALSE // make sure future transformations don't give a free universal apparatus.
 	return new_model
 
 /obj/item/robot_model/proc/be_transformed_to(obj/item/robot_model/old_model, forced = FALSE)

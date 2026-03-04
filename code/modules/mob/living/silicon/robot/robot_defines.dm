@@ -36,7 +36,7 @@
 	var/deployed = FALSE
 	var/mob/living/silicon/ai/mainframe = null
 	var/datum/action/innate/undeployment/undeployment_action = new
-
+	var/start_with_uni_hand = FALSE
 
 	// Parts
 	var/custom_name = ""

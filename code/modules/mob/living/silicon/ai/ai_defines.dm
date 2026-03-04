@@ -190,3 +190,6 @@
 	var/datum/nanite_remote_settings/nanite_settings = new //Stores the settings for the AI's nanite remote.
 	var/datum/action/innate/internal_nanite_menu/nanite_menu //This action opens menu to modify the settings.
 	var/datum/action/innate/ai/ranged/internal_nanite_remote/nanite_remote //This action actually uses the remote.
+
+	/// Action given to AI's on lowpop to give them a shell to immediately interact with the round.
+	var/datum/action/innate/ai/request_shell/low_pop_shell = new()

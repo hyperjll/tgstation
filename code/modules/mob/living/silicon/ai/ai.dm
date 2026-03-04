@@ -72,6 +72,10 @@
 	nanite_menu.Grant(src) // hyper edit
 	nanite_remote.Grant(src) // hyper edit
 
+	var/player_count = length(GLOB.alive_player_list)
+	if(player_count <= 20)
+		low_pop_shell.Grant(src)
+
 	if(isturf(loc))
 		add_verb(src, list(
 			/mob/living/silicon/ai/proc/ai_network_change,
