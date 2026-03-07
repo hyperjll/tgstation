@@ -71977,7 +71977,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron/techmaint,
-/area/station/security/detectives_office)
+/area/station/maintenance/central/lesser)
 "vby" = (
 /obj/machinery/igniter/incinerator_atmos,
 /obj/machinery/air_sensor/incinerator_tank{
