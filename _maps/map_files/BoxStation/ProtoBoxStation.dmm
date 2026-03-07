@@ -18761,11 +18761,14 @@
 /area/station/medical/pharmacy)
 "bip" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/cup/beaker/large{
-	pixel_y = 5
-	},
 /obj/item/reagent_containers/dropper{
 	pixel_y = -4
+	},
+/obj/item/storage/portable_chem_mixer/fully_stocked{
+	pixel_y = 13
+	},
+/obj/item/storage/portable_chem_mixer/fully_stocked{
+	pixel_y = 13
 	},
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 4
@@ -19599,7 +19602,12 @@
 /area/station/cargo/storage)
 "bkL" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/box/beakers{
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/storage/box/beakers/big{
+	pixel_x = -6;
 	pixel_y = 7
 	},
 /obj/item/assembly/igniter{

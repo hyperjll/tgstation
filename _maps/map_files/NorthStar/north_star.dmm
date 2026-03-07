@@ -13070,7 +13070,7 @@
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "dpH" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/miningdock)
@@ -21993,10 +21993,12 @@
 "fKC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "fKH" = (
 /obj/machinery/atmospherics/pipe/smart/simple/purple/hidden/layer1{
 	dir = 4
@@ -28899,7 +28901,7 @@
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "hzX" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/wood,
@@ -36858,6 +36860,7 @@
 /area/station/maintenance/floor4/starboard)
 "jCU" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/floor1/port)
 "jDc" = (
@@ -37881,7 +37884,7 @@
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "jQu" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -40551,21 +40554,19 @@
 /area/station/maintenance/floor1/port/aft)
 "kzr" = (
 /obj/structure/rack,
-/obj/item/reagent_containers/cup/bottle/ethanol{
-	pixel_x = -5;
-	pixel_y = 3
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = 6
 	},
-/obj/item/reagent_containers/cup/bottle/carbon{
-	pixel_x = 7;
-	pixel_y = 3
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_x = -6
 	},
-/obj/item/reagent_containers/cup/bottle/chlorine{
-	pixel_x = 1
+/obj/effect/spawner/random/medical/chem_supplies{
+	pixel_y = 6
 	},
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "kzE" = (
 /turf/closed/wall/r_wall,
 /area/station/maintenance/floor1/port)
@@ -44666,21 +44667,12 @@
 /area/station/maintenance/floor1/port)
 "lBB" = (
 /obj/structure/rack,
-/obj/item/reagent_containers/cup/bottle/phosphorus{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/potassium{
-	pixel_x = 7;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/sodium{
-	pixel_x = 1
-	},
+/obj/item/storage/portable_chem_mixer/fully_stocked,
+/obj/item/storage/portable_chem_mixer/fully_stocked,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 4
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "lBD" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -50539,7 +50531,7 @@
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "mYp" = (
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /obj/item/radio/intercom/prison/directional/north,
@@ -55883,7 +55875,7 @@
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "opC" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -65043,21 +65035,18 @@
 /area/station/service/bar/atrium)
 "qHH" = (
 /obj/structure/rack,
-/obj/item/reagent_containers/cup/bottle/iron{
-	pixel_x = -5;
-	pixel_y = 3
+/obj/item/storage/box/beakers/big{
+	pixel_x = -6;
+	pixel_y = 7
 	},
-/obj/item/reagent_containers/cup/bottle/lithium{
-	pixel_x = 7;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/multiver{
-	pixel_x = 1
+/obj/item/storage/box/beakers{
+	pixel_x = 6;
+	pixel_y = 7
 	},
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "qHR" = (
 /obj/machinery/smartfridge,
 /obj/machinery/door/firedoor,
@@ -71113,7 +71102,7 @@
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "ssj" = (
 /turf/open/floor/iron/kitchen/herringbone,
 /area/station/service/kitchen)
@@ -74580,21 +74569,21 @@
 /area/station/solars/starboard/aft)
 "tkz" = (
 /obj/structure/rack,
-/obj/item/reagent_containers/cup/bottle/epinephrine{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/fluorine{
+/obj/item/reagent_containers/cup/bottle/acidic_buffer{
 	pixel_x = 7;
 	pixel_y = 3
 	},
-/obj/item/reagent_containers/cup/bottle/iodine{
+/obj/item/reagent_containers/cup/bottle/basic_buffer{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/cup/bottle/random_buffer{
 	pixel_x = 1
 	},
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "tkB" = (
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/floor3/starboard)
@@ -75225,10 +75214,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/machinery/camera/emp_proof/directional/east,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "trV" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -84439,22 +84429,10 @@
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/cmo)
 "vLM" = (
-/obj/structure/rack,
-/obj/item/reagent_containers/cup/bottle/mercury{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/nitrogen{
-	pixel_x = 7;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/oxygen{
-	pixel_x = 1
-	},
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 4
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "vLP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -87758,23 +87736,12 @@
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "wAe" = (
-/obj/structure/rack,
-/obj/item/reagent_containers/cup/bottle/acidic_buffer{
-	pixel_x = 7;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/basic_buffer{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/cup/bottle/formaldehyde{
-	pixel_x = 1
-	},
 /obj/structure/sign/warning/chem_diamond/directional/north,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "wAz" = (
 /obj/machinery/vending/autodrobe,
 /obj/machinery/light_switch/directional/east,
@@ -87872,7 +87839,7 @@
 /area/station/cargo/sorting)
 "wCn" = (
 /turf/closed/wall/r_wall,
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "wCu" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -87915,7 +87882,7 @@
 /turf/open/floor/iron/dark/textured_edge{
 	dir = 8
 	},
-/area/station/medical/chemistry)
+/area/station/medical/chem_storage)
 "wCT" = (
 /obj/structure/chair/stool/directional/north,
 /obj/structure/railing{
@@ -92650,6 +92617,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/effect/mapping_helpers/airlock/access/any/medical/maintenance,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/floor1/port)
 "xMJ" = (
