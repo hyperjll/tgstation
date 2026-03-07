@@ -10072,6 +10072,12 @@
 "cUe" = (
 /turf/closed/wall/r_wall,
 /area/station/science/nanite)
+"cUn" = (
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "cUs" = (
 /obj/effect/turf_decal/caution/stand_clear,
 /turf/open/floor/plating,
@@ -10170,6 +10176,12 @@
 /obj/effect/mapping_helpers/airlock/access/all/science/general,
 /turf/open/floor/iron/techmaint,
 /area/station/science/research/abandoned)
+"cVr" = (
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
+	dir = 10
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "cVu" = (
 /obj/machinery/teleport/hub,
 /turf/open/floor/iron/tech/grid,
@@ -14565,6 +14577,13 @@
 /obj/structure/cable,
 /turf/open/floor/iron/ameridiner,
 /area/station/engineering/supermatter/room)
+"euo" = (
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "euq" = (
 /turf/open/floor/iron/dark,
 /area/station/maintenance/department/chapel)
@@ -33391,6 +33410,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/xenobiology)
+"jLC" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "jLM" = (
 /obj/machinery/status_display/ai{
 	pixel_y = 32
@@ -49747,6 +49772,13 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/solars/starboard)
+"ozS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "ozV" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/manifold{
 	dir = 8
@@ -50939,6 +50971,13 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/aft)
+"oUk" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "oUx" = (
 /obj/machinery/computer/slot_machine,
 /turf/open/floor/wood,
@@ -66884,12 +66923,10 @@
 /turf/open/floor/carpet/grimy,
 /area/station/commons/fitness/recreation/entertainment)
 "tCz" = (
-/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
-	dir = 9
-	},
 /obj/structure/cable,
 /obj/machinery/camera/directional/south,
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
+/obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
 "tCE" = (
@@ -71380,6 +71417,10 @@
 /obj/structure/cable,
 /turf/open/floor/circuit,
 /area/station/ai/satellite/interior)
+"uUh" = (
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "uUi" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
 	dir = 6
@@ -71516,6 +71557,12 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/science/research/abandoned)
+"uWy" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "uWB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden/layer2{
 	dir = 8
@@ -75534,6 +75581,10 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/greater)
+"vVg" = (
+/obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/hidden/layer4,
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "vVl" = (
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
@@ -76541,6 +76592,9 @@
 /area/station/engineering/atmos)
 "wmg" = (
 /obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 8
 	},
 /turf/open/floor/iron/white,
@@ -77985,6 +78039,12 @@
 /obj/structure/rack,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/greater)
+"wIw" = (
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
+	dir = 10
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/chemistry)
 "wIx" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
@@ -119298,7 +119358,7 @@ qPK
 kVw
 hEw
 hEw
-hEw
+oUk
 iyE
 czp
 bSt
@@ -119555,9 +119615,9 @@ erv
 sDW
 cmS
 cmS
-cmS
+euo
 lKY
-kLQ
+vVg
 bSt
 tfF
 xQK
@@ -119812,10 +119872,10 @@ cEa
 kLQ
 bSt
 bSt
-bSt
+cUn
 cNW
-bSt
-bSt
+cVr
+uWy
 mTU
 xQK
 vfs
@@ -120069,7 +120129,7 @@ bSt
 bSt
 bSt
 bSt
-bSt
+cUn
 cNW
 bSt
 bSt
@@ -120326,7 +120386,7 @@ bSt
 bSt
 bSt
 bSt
-bSt
+cUn
 cNW
 bSt
 bSt
@@ -120583,7 +120643,7 @@ bSt
 bSt
 bSt
 bSt
-bSt
+cUn
 cNW
 bSt
 bSt
@@ -120840,7 +120900,7 @@ bSt
 bSt
 bSt
 iZu
-bSt
+cUn
 cNW
 bSt
 bSt
@@ -121097,10 +121157,10 @@ bSt
 bSt
 bSt
 bSt
-bSt
-cNW
-bSt
-bSt
+wIw
+ozS
+uUh
+jLC
 fbw
 xQK
 bfV
