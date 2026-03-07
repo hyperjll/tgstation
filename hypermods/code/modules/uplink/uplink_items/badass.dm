@@ -14,17 +14,6 @@
 	purchasable_from = (UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
 	progression_minimum = 70 MINUTES
 
-/datum/uplink_item/badass/mythril
-	name = "Mythril"
-	desc = "A single bar of Mythril. From what little we've been able to study of it, this material has inheretly mystical properties. \
-			Items manufactured from Mythril adopt mystical attributes, though few know how to manufacture with it and fewer how to acquire it. \
-			For those wondering, we've long since exhausted what means we can use to study this material, and will be selling off our surplus."
-	item = /obj/item/stack/sheet/mineral/mythril/five
-	cost = 2
-	surplus = 0
-	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
-	cant_discount = TRUE
-
 /datum/uplink_item/badass/ltsrbt
 	name = "Black Market LTSRBT"
 	desc = "Need a faster and better way of transporting your illegal goods from and to the \
