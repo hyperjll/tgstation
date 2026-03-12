@@ -55,7 +55,7 @@
 	name = "China Lake Case (???)"
 	desc = "A classic grenade launcher favored for it's incredible destructive capabilities and decisive battles. \
 			The launcher comes fully loaded with blast grenades with several blast grenades to spare, and two FRAG grenades for extra-powerful shots."
-	item = /obj/item/storage/toolbox/guncase/chinalake
+	item = /obj/item/storage/toolbox/guncase/chinalake_professional
 	relevant_child_items = list(
 		/datum/uplink_item/ammo_nuclear/basic/blastnade,
 		/datum/uplink_item/ammo_nuclear/basic/fragnade,

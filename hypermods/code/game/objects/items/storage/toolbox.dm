@@ -39,13 +39,13 @@
 		new extra_to_spawn (src)
 	new /obj/item/clothing/under/chameleon/armored (src)
 
-/obj/item/storage/toolbox/guncase/chinalake
+/obj/item/storage/toolbox/guncase/chinalake_professional
 	name = "china lake case"
 	weapon_to_spawn = /obj/item/gun/ballistic/chinalake
 	extra_to_spawn = /obj/item/ammo_casing/caseless/chinalake/blast
 	var/second_extra_to_spawn = /obj/item/ammo_casing/caseless/chinalake/frag
 
-/obj/item/storage/toolbox/guncase/chinalake/PopulateContents()
+/obj/item/storage/toolbox/guncase/chinalake_professional/PopulateContents()
 	new weapon_to_spawn (src)
 	for(var/i in 1 to 4)
 		new extra_to_spawn (src)
