@@ -29,8 +29,8 @@
 	name = "Conscience Stabilizers"
 	description = "A reagent specifically used to stabilize critical patients to allow them to move despite the severity of their injuries. Impossible to synthesize outside of virology."
 	color = "#78008C"
-	metaboliz	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
-ation_rate = 0.25 * REAGENTS_METABOLISM
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 
 /datum/reagent/antihardcrit/on_mob_metabolize(mob/living/L)
 	..()
