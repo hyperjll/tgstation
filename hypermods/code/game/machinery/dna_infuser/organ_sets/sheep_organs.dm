@@ -10,9 +10,9 @@
 
 /obj/item/organ/heart/sheep/on_life(seconds_per_tick)
 	. = ..()
-	if(owner.health < 5 && COOLDOWN_FINISHED(src, sheep_boost_cooldown))
+	if(owner.health < 5 && COOLDOWN_FINISHED(src, sheep_boost_cooldown) && !(organ_flags & ORGAN_FAILING))
 		COOLDOWN_START(src, sheep_boost_cooldown, rand(25 SECONDS, 1 MINUTES))
-		to_chat(owner, span_userdanger("You feel yourself dying, but you something primal kicks in to keep you moving!"))
+		to_chat(owner, span_userdanger("You feel yourself dying, but something primal kicks in to keep you moving!"))
 		owner.heal_overall_damage(brute = 15, burn = 15, required_bodytype = BODYTYPE_ORGANIC)
 		if(damage_heart_toggle)
 			var/mob/living/carbon/my_human = owner
