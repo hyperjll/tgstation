@@ -107,11 +107,11 @@
 
 /datum/uplink_item/deception/syndistache
 	name = "Syndicate Moustache"
-	desc = "A moustache to prevent people from recognizing you. Be sure to conceal your real identification card or it won't work. \
-			The moustache provided is completely fire proof, and has minor protection technology installed to aid you should you be found out. \
-			Also allows you to properly use internals, and even has a slot for smoking cigarettes. Comes with an in-built voice changer."
+	desc = "A moustache capable of concealing your identity. Be sure to conceal your real identification card or it won't work. \
+			The moustache provided is completely fire proof, boasts minor protection, and it even has a slot for smoking cigarettes or cigars on-the-go. \
+			Comes with an in-built voice changer, but no chameleon technology."
 	item = /obj/item/clothing/mask/gas/fakemoustache/syndicate
-	cost = 3
+	cost = 2
 	surplus = 50
 
 /datum/uplink_item/deception/voice_changer

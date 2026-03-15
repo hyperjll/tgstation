@@ -6,8 +6,8 @@
 	armor_type = /datum/armor/fakemoustache/syndicate
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	flags_cover = PEPPERPROOF
-	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
-	//var/obj/item/clothing/mask/cigarette/cig
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS | PLASMAMAN_PREVENT_IGNITION
+	clothing_traits = list(TRAIT_VOICE_MATCHES_ID)
 	var/voice_change = TRUE
 
 /obj/item/clothing/mask/gas/fakemoustache/syndicate/worn_overlays(mutable_appearance/standing, isinhands)
@@ -22,7 +22,7 @@
 /obj/item/clothing/mask/gas/fakemoustache/syndicate/examine(mob/user)
 	. = ..()
 	if(cig)
-		. += span_notice("There is a [cig.name] jammed into the filter slot.")
+		. += span_notice("There is a [cig.name] attached.")
 
 /obj/item/clothing/mask/gas/fakemoustache/syndicate/Exited(atom/movable/gone)
 	. = ..()
