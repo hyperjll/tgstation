@@ -404,6 +404,7 @@
 	color = "#A4D8D8"
 	self_consuming = TRUE
 	metabolization_rate = 1
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 
 /datum/reagent/medicine/changelingextract/on_mob_metabolize(mob/living/carbon/affected_mob, seconds_per_tick)
 	. = ..()
@@ -419,6 +420,7 @@
 	color = "#DCDCDC"
 	metabolization_rate = 0.1
 	self_consuming = TRUE
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	var/healing = 0.1
 	var/radpower = 10
 
@@ -463,6 +465,7 @@
 	metabolization_rate = 0.05
 	overdose_threshold = 30
 	addiction_types = list(/datum/addiction/stimulants = 6) //1.2 per 2 seconds
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	metabolized_traits = list(TRAIT_BATON_RESISTANCE, TRAIT_ANALGESIA, TRAIT_STIMULATED)
 
 /datum/reagent/medicine/experimentalstimulants/on_mob_metabolize(mob/living/L)
@@ -518,6 +521,7 @@
 	color = "#ff1a1a"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 60
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	addiction_types = list(/datum/addiction/stimulants = 2) //0.4 per 2 seconds
 
 /datum/reagent/medicine/juggernaut/on_mob_metabolize(mob/living/L)
@@ -607,6 +611,7 @@
 	description = "Specialized nanites that quickly heals all damage types and restores the integrity of essential organs."
 	color = "#DCDCDC"
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	var/healing = 10
 	self_consuming = TRUE
 
@@ -677,6 +682,7 @@
 	description = "A serum of nanites capable of restoring corpses to living people in a timely manner."
 	taste_description = "a bunch of tiny robots"
 	self_consuming = TRUE
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	metabolization_rate = 1
 
 /datum/reagent/medicine/resurrector_nanites/expose_mob(mob/living/carbon/M)
@@ -861,6 +867,7 @@
 	name = "Holy Blessing"
 	description = "Grants the user temporary rhabdophobia?"
 	color = "#ff0066"
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 
 /datum/reagent/medicine/antimagic/on_mob_metabolize(mob/living/M)
@@ -936,6 +943,7 @@
 	color = "#ad0a0a"
 	metabolization_rate = REAGENTS_METABOLISM * 5
 	overdose_threshold = 61
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	var/static/list/subject_traits = list(
 		TRAIT_STABLEHEART,
 		TRAIT_NOHARDCRIT,
@@ -983,6 +991,7 @@
 	description = "A specially synthesized drug which completely wipes the brain of most of its memories and past traumas, leaving only a blank emotionless vessel. Doesn't wipe certain personality traits, knowledge, or survival instincts. Irreversible without extensive rehabilitation."
 	color = "#9C27F5"
 	taste_description = "a mistake."
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	ph = 4
 	metabolization_rate = 5 // to ensure all 5 units in a bottle is metabolized and used for the effects.
 
@@ -1005,6 +1014,7 @@
 	description = "An advanced drug which permanently enhances brain functionality, leading to enhanced physical and mental ability."
 	color = "#9C27F5"
 	taste_description = "a thousand batteries dumping their acidic contents directly onto your brain."
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	ph = 2
 	metabolization_rate = 5 // to ensure all 5 units in a bottle is metabolized and used for the effects.
 

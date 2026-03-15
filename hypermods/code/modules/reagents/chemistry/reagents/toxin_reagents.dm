@@ -57,6 +57,7 @@
 	color = "#FFFFFF"
 	toxpwr = 0
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	var/delayed_toxin_damage = 0
 	var/delayed_brute_damage = 0
 	var/delayed_organ_damage = 0
@@ -91,6 +92,7 @@
 	color = "#2E2E61" // rgb: 46, 46, 97
 	taste_description = "a numbing sensation"
 	metabolization_rate = 1 * REAGENTS_METABOLISM
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	var/list/paralyzeparts = list(TRAIT_PARALYSIS_L_ARM, TRAIT_PARALYSIS_R_ARM, TRAIT_PARALYSIS_R_LEG, TRAIT_PARALYSIS_L_LEG)
 
 /datum/reagent/toxin/staminatoxin/neurotoxin_alien/expose_mob(mob/living/M, methods, reac_volume, show_message, permeability)

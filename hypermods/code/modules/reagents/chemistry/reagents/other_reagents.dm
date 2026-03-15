@@ -3,6 +3,7 @@
 	description = "Are you sure this is tomato juice?"
 	color = "#C80000" // rgb: 146, 209, 125
 	taste_description = "iron"
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 
 /datum/reagent/diseasedblood/expose_mob(mob/living/L, methods=TOUCH, reac_volume, show_message = 1, permeability = 1)
 	if((methods & (PATCH|INGEST|INJECT)) || ((methods & VAPOR) && prob(min(reac_volume,100)*permeability)))
@@ -14,6 +15,7 @@
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
 	color = "#000000"
 	taste_description = "air"
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 
 /datum/reagent/liquid_air/expose_turf(turf/open/exposed_turf, reac_volume)
 	. = ..()
@@ -27,7 +29,8 @@
 	name = "Conscience Stabilizers"
 	description = "A reagent specifically used to stabilize critical patients to allow them to move despite the severity of their injuries. Impossible to synthesize outside of virology."
 	color = "#78008C"
-	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	metaboliz	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
+ation_rate = 0.25 * REAGENTS_METABOLISM
 
 /datum/reagent/antihardcrit/on_mob_metabolize(mob/living/L)
 	..()
@@ -42,6 +45,7 @@
 	description = "A minor neurological sitmulant capable of boosting the host's movement speed. Impossible to synthesize outside of virology."
 	color = "#78008C"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 
 /datum/reagent/diseasensstim/on_mob_metabolize(mob/living/L)
 	..()
@@ -63,11 +67,13 @@
 	description = "Produced by Vahlen Pharmaceuticals as a miracle component for producing difficult-to-make or otherwise luxorious reagents."
 	color ="#253654"
 	taste_description = "vaugely evil"
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 
 /datum/reagent/shrinkcompound
 	name = "Shrink Compound"
 	description = "A highly experimental chemical compound that results in temporary molecular compression of the host."
 	color = "#FFFFFF"
+	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	self_consuming = TRUE
 	addiction_types = list(/datum/addiction/medicine = 10)

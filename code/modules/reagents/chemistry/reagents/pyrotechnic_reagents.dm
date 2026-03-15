@@ -3,6 +3,7 @@
 	name = "Thermite"
 	description = "Thermite produces an aluminothermic reaction known as a thermite reaction. Can be used to melt walls."
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 	color = "#550000"
 	taste_description = "sweet tasting metal"
 	turf_exposure = TRUE
@@ -24,6 +25,7 @@
 	color = COLOR_GRAY
 	taste_description = "oil"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/nitroglycerin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
@@ -40,6 +42,7 @@
 	color = COLOR_YELLOW
 	taste_description = "metal"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 //It has stable IN THE NAME. IT WAS MADE FOR THIS MOMENT.
 /datum/reagent/stabilizing_agent/on_hydroponics_apply(obj/machinery/hydroponics/mytray, mob/user)
@@ -53,6 +56,7 @@
 	taste_description = "burning"
 	penetrates_skin = NONE
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 	turf_exposure = TRUE
 
 /datum/reagent/clf3/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
@@ -90,6 +94,7 @@
 	color = "#5A64C8"
 	taste_description = "air and bitterness"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/sorium/on_spark_act(power_charge, spark_flags)
 	var/range = clamp(sqrt(volume), 1, 6)
@@ -102,6 +107,7 @@
 	color = "#210021"
 	taste_description = "compressed bitterness"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/liquid_dark_matter/on_spark_act(power_charge, spark_flags)
 	var/range = clamp(sqrt(volume / 2), 1, 6)
@@ -115,6 +121,7 @@
 	metabolization_rate = 0.125 * REAGENTS_METABOLISM
 	taste_description = "salt"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/gunpowder/on_new(data)
 	. = ..()
@@ -160,6 +167,7 @@
 	color = COLOR_WHITE
 	taste_description = "salt"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/rdx/on_spark_act(power_charge, spark_flags)
 	if (power_charge)
@@ -178,6 +186,7 @@
 	color = COLOR_WHITE
 	taste_description = "death"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/tatp/on_spark_act(power_charge, spark_flags)
 	reagent_explode(holder, volume, strengthdiv = 1.5 + rand() * 1.5, clear_holder_reagents = FALSE, flame_factor = 1)
@@ -189,6 +198,7 @@
 	color = "#C8C8C8"
 	taste_description = "salt"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/flash_powder/on_spark_act(power_charge, spark_flags)
 	// Even weaker version of the normal flash effect
@@ -219,6 +229,7 @@
 	color = "#C8C8C8"
 	taste_description = "smoke"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/smoke_powder/on_spark_act(power_charge, spark_flags)
 	// Can't really make a cloud of smoke if we're inside of an enclosed container
@@ -241,6 +252,7 @@
 	color = "#C8C8C8"
 	taste_description = "loud noises"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/sonic_powder/on_spark_act(power_charge, spark_flags)
 	// Even weaker version of the normal flash effect
@@ -257,6 +269,7 @@
 	taste_description = "burning"
 	self_consuming = TRUE
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/phlogiston/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume, show_message = TRUE, touch_protection = 0)
 	. = ..()
@@ -292,6 +305,7 @@
 	self_consuming = TRUE
 	penetrates_skin = NONE
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 	liquid_fire_power = 1
 
 // why, just why
@@ -339,6 +353,7 @@
 	inverse_chem = /datum/reagent/inverse/cryostylane
 	burning_volume = 0.05
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED | REAGENT_DEAD_PROCESS
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 	turf_exposure = TRUE
 
 /datum/reagent/cryostylane/burn(datum/reagents/holder)
@@ -393,6 +408,7 @@
 	burning_temperature = null
 	burning_volume = 0.05
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/pyrosium/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
@@ -418,6 +434,7 @@
 	self_consuming = TRUE
 	var/shock_timer = 0
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/teslium/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
@@ -460,6 +477,7 @@
 	color = "#CAFF43"
 	taste_description = "jelly"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 
 /datum/reagent/teslium/energized_jelly/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	if(!isjellyperson(affected_mob)) //everyone but jellypeople get shocked as normal.
@@ -478,6 +496,7 @@
 	color = "#A6FAFF55"
 	taste_description = "the inside of a fire extinguisher"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
 	turf_exposure = TRUE
 
 /datum/reagent/firefighting_foam/expose_turf(turf/open/exposed_turf, reac_volume)
