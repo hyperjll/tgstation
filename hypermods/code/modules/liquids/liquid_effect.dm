@@ -216,14 +216,24 @@
 	if(liquid_group.sticky && isliving(L))
 		if(prob(liquid_group.sticky_chance) && !(L.movement_type & FLYING) && L.body_position == STANDING_UP)
 			stuck_react(L)
-			return FALSE
+			return TRUE
 
 	return TRUE
 
 /// Show some feedback when you fail to move over sticky substances.
-/obj/effect/abstract/liquid_turf/proc/stuck_react(atom/movable/stuck_guy)
-	loc.balloon_alert(stuck_guy, "stuck in liquid!")
-	stuck_guy.Shake(duration = 0.1 SECONDS)
+/obj/effect/abstract/liquid_turf/proc/stuck_react(mob/living/victim)
+	if(victim.get_stamina_loss() > 90)
+		if(victim.body_position != LYING_DOWN)
+			to_chat(victim, span_warning("You slip and tumble over the spilled liquids due to exhaustion!"))
+
+		victim.SetKnockdown(3 SECONDS)
+		return
+
+	if(prob(25))
+		loc.balloon_alert(victim, "hampered by liquids!")
+		victim.Shake(duration = 0.2 SECONDS)
+
+	victim.adjust_stamina_loss(rand(10, 15))
 
 /obj/effect/abstract/liquid_turf/proc/mob_fall(datum/source, mob/M)
 	SIGNAL_HANDLER
