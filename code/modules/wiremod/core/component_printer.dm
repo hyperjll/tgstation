@@ -482,7 +482,7 @@
 		data["materials"] = materials
 		data["integrated_circuit"] = TRUE
 
-	else if(istype(weapon, /obj/item/multitool/circuit))
+	else if(istype(tool, /obj/item/multitool/circuit))
 		var/list/errors = list()
 		var/option = alert(user, "Load a custom/saved circuit by file or direct input?", "Load by file or string", "File", "Direct Input")
 		var/txt
