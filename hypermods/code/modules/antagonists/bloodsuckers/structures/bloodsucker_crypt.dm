@@ -339,7 +339,7 @@
 	var/torture_time = 15
 	var/torture_dmg_brute = 2
 	var/torture_dmg_burn = 0
-	var/obj/item/bodypart/selected_bodypart = pick(target.bodyparts)
+	var/obj/item/bodypart/selected_bodypart = pick(target.get_bodyparts())
 	// Get Weapon
 	var/obj/item/held_item = user.get_inactive_held_item()
 	/// Weapon Bonus

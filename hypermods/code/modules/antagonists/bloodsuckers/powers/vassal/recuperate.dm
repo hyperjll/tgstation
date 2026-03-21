@@ -52,7 +52,7 @@
 	user.updatehealth() // only update health once after we've healed everything we might've
 	// Stop Bleeding
 	if(istype(user) && user.is_bleeding())
-		for(var/obj/item/bodypart/part in user.bodyparts)
+		for(var/obj/item/bodypart/part in user.get_bodyparts())
 			part.generic_bleedstacks--
 
 /datum/action/cooldown/bloodsucker/recuperate/ContinueActive(mob/living/user, mob/living/target)

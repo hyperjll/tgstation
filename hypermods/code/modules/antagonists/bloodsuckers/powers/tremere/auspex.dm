@@ -110,7 +110,7 @@
 		if(IS_BLOODSUCKER(living_mob) || IS_VASSAL(living_mob))
 			continue
 		if(level_current >= 4)
-			var/obj/item/bodypart/bodypart = pick(living_mob.bodyparts)
+			var/obj/item/bodypart/bodypart = pick(living_mob.get_bodyparts())
 			living_mob.cause_wound_of_type_and_severity(WOUND_SLASH, bodypart, WOUND_SEVERITY_MODERATE, WOUND_SEVERITY_CRITICAL)
 			living_mob.adjust_brute_loss(15)
 		if(level_current >= 5)

@@ -375,14 +375,14 @@
 		var/mob/living/carbon/C = M
 		visible_message(span_warning("[M] is trying to apply [src] rather hastily to [C]!"), span_notice("You hastily begin applying the [src] to [C]."))
 		if(do_after(user, 4 SECONDS))
-			for(var/i in C.bodyparts)
+			for(var/i in C.get_bodyparts())
 				var/obj/item/bodypart/bone = i // fine to just, use these raw, its a meme anyway
 				var/datum/wound/blunt/bone/severe/oof_ouch = new
 				oof_ouch.apply_wound(bone, wound_source = "bone gel")
 				var/datum/wound/blunt/bone/critical/oof_OUCH = new
 				oof_OUCH.apply_wound(bone, wound_source = "bone gel")
 
-			for(var/i in C.bodyparts)
+			for(var/i in C.get_bodyparts())
 				var/obj/item/bodypart/bone = i
 				bone.receive_damage(brute=15)
 			qdel(src)
