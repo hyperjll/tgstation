@@ -98,8 +98,5 @@ GLOBAL_LIST_INIT(prototype_organs, typecacheof(list(
 	/obj/item/organ/eyes/dullahan,
 ), only_root_path = TRUE))
 
-//list of all power exporters
-GLOBAL_LIST_EMPTY(power_exporter_list)
-
 // list of all commando nukes
 GLOBAL_LIST_EMPTY(nuke_list)

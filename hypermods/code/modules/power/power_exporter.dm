@@ -1,30 +1,43 @@
+#define DISCONNECTED 0
+#define CLAMPED_OFF 1
+#define OPERATING 2
+
+#define PAY_INTERVAL_TIME 1 MINUTES
+
 /obj/machinery/power/exporter
 	name = "power exporter"
-	desc = "It exports surplus electrical power over vast distances using highly secretive experimental technology. Exporting electrical energy this way is a decent method to earn a living."
+	desc = "Sell surplus power abroad using highly secretive experimental technology. The more power sold, the cheaper it becomes."
 	icon = 'icons/obj/machines/dominator.dmi'
 	icon_state = "dominator"
 	circuit = /obj/item/circuitboard/machine/power_exporter
 	density = 1
 	anchored = FALSE
 	verb_say = "states"
-	var/drain_rate = 0 // amount of power to drain per tick
-	var/power_drained = 0 // has drained this much power
-	var/active = FALSE
-	var/checkForPay = 0
-	var/creditMult = 0.25
-
+	STATIC_COOLDOWN_DECLARE(pay_interval)
+	/// DISCONNECTED, CLAMPED_OFF, OPERATING
+	var/mode = DISCONNECTED
+	/// currently drained amount to payout for
+	var/power_drained = 0
+	var/total_power_drained = 0
+	/// total amount of money generated, the more power you make the cheaper you have to sell it.
+	var/static/total_payout = 0
+	/// Cable node machine is attached to.
 	var/obj/structure/cable/attached
+	/// how much more money you get from having better parts
+	var/payout_multiplier = 1
+
+/obj/machinery/power/exporter/Initialize()
+	if(!COOLDOWN_STARTED(src, pay_interval))
+		COOLDOWN_START(src, pay_interval, PAY_INTERVAL_TIME)
+	. = ..()
 
 /obj/machinery/power/exporter/examine(mob/user)
 	. = ..()
 	if(!anchored)
-		. += "<span class='notice'>[src] isn't anchored.</span>"
-	else
-		. += "<span class='notice'>[src] IS anchored.</span>"
-	if(!active)
-		. += "<span class='notice'>[src] seems to be offline.</span>"
-	else
-		. += "<span class='notice'>[src] is exporting [drain_rate] watts of power, it has consumed [power_drained] watts so far.</span>"
+		. += span_notice("[src] isn't anchored")
+	if(mode == OPERATING)
+		var/payout = round(power_drained / max(1000, total_payout*0.2)) * payout_multiplier
+		. += span_notice("[power_drained * 0.001] kW have been stored and will be sold next cycle for an estimated [payout] credits")
 	if(!isnull(attached))
 		var/datum/powernet/powernet = attached.powernet
 		var/total_excess_power = (powernet.netexcess * 0.001)
@@ -33,136 +46,120 @@
 		else
 			. += "<span class='notice'>[src] has to first be anchored onto exposed power lines to detect the powernet.</span>"
 
-obj/machinery/power/exporter/Initialize()
-	..()
-	GLOB.power_exporter_list += src
+/obj/machinery/power/exporter/examine_more(mob/user)
+	. = ..()
+	. += "The power meter displays [total_power_drained* 0.001] KW."
+	. += "The export meter displays a total of [total_payout] credits."
 
-obj/machinery/power/exporter/Destroy()
-	GLOB.power_exporter_list -= src
-	return ..()
-
-/obj/machinery/power/exporter/RefreshParts()
-	SHOULD_CALL_PARENT(FALSE)
-
-	var/power_coefficient = 0
-	for(var/datum/stock_part/capacitor/capacitor in component_parts)
-		power_coefficient += capacitor.tier
-	creditMult = initial(creditMult) * power_coefficient
-
-/obj/machinery/power/exporter/attackby(obj/item/O, mob/user, params)
-	if(!active)
-		if(istype(O, /obj/item/wrench))
-			var/turf/T = src.loc
-			if(isturf(T) && T.underfloor_accessibility >= UNDERFLOOR_INTERACTABLE)
-				attached = locate(/obj/structure/cable) in T
-				if(isnull(attached))
-					to_chat(user, span_warning("[src] will not function without being anchored atop exposed power lines!"))
-			if(!anchored && !isinspace())
-				connect_to_network()
-				to_chat(user, span_notice("You secure the [src] to the floor."))
-				anchored = TRUE
-			else if(anchored)
-				disconnect_from_network()
-				attached = null
-				to_chat(user, span_notice("You unsecure and disconnect the [src]."))
-				anchored = FALSE
-			playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
-			return
-	return ..()
-
-/obj/machinery/power/exporter/attack_hand(mob/user)
-	if(!anchored)
-		to_chat(user, span_warning("This device must be anchored by a wrench!"))
-		return
-	..()
-
-/obj/machinery/power/exporter/interact(mob/user)
-	if(!anchored)
-		to_chat(user, span_warning("This device must be anchored by a wrench!"))
-		return
-	if(!Adjacent(user) && (!isAI(user)))
-		return
-	if(active)
-		src.say("Manual shutdown engaged.")
-		active = FALSE
-		drain_rate = 0
-		icon_state = "dominator"
-	else
-		if(isnull(attached))
-			return
-
-		var/datum/powernet/powernet = attached.powernet
-		if(isnull(powernet))
-			if(active)
-				src.say("Cannot detect the power net, shutting down.")
-				return
-			return
-
-		var/power_drain_amt = tgui_input_number(user, "How much power would you like to siphon? (In Kilowatts)", "Power Exporter", default = 1, max_value = 10000, min_value = 1)
-
-		if(isnull(power_drain_amt) || power_drain_amt <= 0)
-			to_chat(user, span_notice("But you refrained from inputing any power draw..."))
-			return
-
-		if(!Adjacent(user))
-			return
-
-		var/power_in_watts = power_drain_amt * 1000
-
-		if((powernet.netexcess -= power_in_watts) >= power_in_watts) // Get the excess, and deduct how much we'd draw from the powernet. If the powernet can currently support our constant draw, then it's go time.
-			drain_rate = power_in_watts
-			active = TRUE
-			icon_state = "dominator-Yellow"
+/obj/machinery/power/exporter/wrench_act(mob/living/user, obj/item/tool)
+	. = TRUE
+	if(mode == DISCONNECTED)
+		var/turf/T = loc
+		if(isturf(T) && T.underfloor_accessibility >= UNDERFLOOR_INTERACTABLE)
+			attached = locate() in T
+			if(!attached)
+				to_chat(user, span_warning("\The [src] must be placed over an exposed, powered cable node!"))
+			else
+				set_mode(CLAMPED_OFF)
+				user.visible_message( \
+					"[user] attaches \the [src] to the cable.", \
+					span_notice("You bolt \the [src] into the floor and connect it to the cable."),
+					span_hear("You hear some wires being connected to something."))
 		else
-			src.say("The power drain amount requested exceeds the available energy surplus.")
-			return
+			to_chat(user, span_warning("\The [src] must be placed over an exposed, powered cable node!"))
+	else
+		set_mode(DISCONNECTED)
+		user.visible_message( \
+			"[user] detaches \the [src] from the cable.", \
+			span_notice("You unbolt \the [src] from the floor and detach it from the cable."),
+			span_hear("You hear some wires being disconnected from something."))
+	tool.play_tool_sound(src, 50)
+
+/obj/machinery/power/exporter/proc/set_mode(value)
+	if(value == mode)
+		return
+	switch(value)
+		if(DISCONNECTED)
+			attached = null
+			if(mode == OPERATING)
+				STOP_PROCESSING(SSobj, src)
+				icon_state = "dominator"
+			set_anchored(FALSE)
+		if(CLAMPED_OFF)
+			if(!attached)
+				return
+			if(mode == OPERATING)
+				STOP_PROCESSING(SSobj, src)
+				icon_state = "dominator"
+			set_anchored(TRUE)
+		if(OPERATING)
+			if(!attached)
+				return
+			START_PROCESSING(SSobj, src)
+			icon_state = "dominator-Yellow"
+			set_anchored(TRUE)
+
+	mode = value
+	update_appearance()
+
+/obj/machinery/power/exporter/attack_hand(mob/user, list/modifiers)
+	. = ..()
+	if(.)
+		return
+	switch(mode)
+		if(DISCONNECTED)
+			..()
+		if(CLAMPED_OFF)
+			set_mode(OPERATING)
+		if(OPERATING)
+			say("Shutdown engaged.")
+			set_mode(CLAMPED_OFF)
 
 /obj/machinery/power/exporter/process()
-	if(isnull(attached)) // prevent constant runtimes
-		if(active)
-			src.say("Cannot detect any power cables, shutting down.")
-			active = FALSE
-			drain_rate = 0
-			icon_state = "dominator"
-			return
+	if(mode != OPERATING)
 		return
-	var/datum/powernet/powernet = attached.powernet
-	if(isnull(powernet))
-		if(active)
-			src.say("Cannot detect the power net, shutting down.")
-			active = FALSE
-			drain_rate = 0
-			icon_state = "dominator"
-			return
+
+	drain_power()
+	if(COOLDOWN_FINISHED(src, pay_interval))
+		pay()
+		COOLDOWN_START(src, pay_interval, PAY_INTERVAL_TIME)
+
+/obj/machinery/power/exporter/proc/drain_power()
+	if(!attached)
+		set_mode(DISCONNECTED)
 		return
-	if(active && anchored && powernet)
-		if(powernet.netexcess >= drain_rate) // Make sure we have a surplus, and that we aren't dipping below it.
-			attached.add_delayedload(drain_rate)
-			power_drained += drain_rate
-			checkForPay++
-			if(checkForPay >= 10) // Just to avoid constant say proc spam
-				processPayment()
-				checkForPay = 0
-		else
-			src.say("Power export levels have exceeded energy surplus, shutting down.")
-			active = FALSE
-			drain_rate = 0
-			icon_state = "dominator"
-	else
-		active = FALSE
-		drain_rate = 0
-		icon_state = "dominator"
 
-/obj/machinery/power/exporter/proc/processPayment()
-	var/cargo_money = (((power_drained / 1000) * 0.3) * creditMult) // aprox 30% of the money goes straight to cargo.
-	var/engi_money = (((power_drained / 1000) * 0.7) * creditMult) // the 70% leftover goes straight to the engi budget.
+	var/power_drain_amount = round(attached.surplus())
 
-	src.say("Exported [power_drained] watts of power! Cargo budget has recieved [cargo_money] cr. Engineering budget has recieved [engi_money] cr.")
+	attached.add_load(power_drain_amount)
+	power_drained += power_drain_amount
 
-	var/datum/bank_account/cargo_bank = SSeconomy.get_dep_account(ACCOUNT_CAR)
-	cargo_bank.adjust_money(cargo_money)
+/obj/machinery/power/exporter/proc/pay()
+	var/payout = (power_drained / max(1000, total_payout*0.2))
 
+	payout = payout * payout_multiplier
+	total_payout += payout
+	//70% goes straight to the engi budget. 30% of the money goes to cargo.
 	var/datum/bank_account/engi_bank = SSeconomy.get_dep_account(ACCOUNT_ENG)
-	engi_bank.adjust_money(engi_money)
+	var/engi_payout = round(payout * 0.7)
+	engi_bank.adjust_money(engi_payout)
+	var/datum/bank_account/cargo_bank = SSeconomy.get_dep_account(ACCOUNT_CAR)
+	var/cargo_payout = round(payout - engi_payout)
+	cargo_bank.adjust_money(cargo_payout)
 
-	power_drained = 0 // reset the power drained to avoid exponental inf money gen
+	say("Sold [power_drained * 0.001] KW! Engineering and cargo recieved [engi_payout] cr and [cargo_payout] cr.")
+	total_power_drained += power_drained
+	power_drained = 0
+
+/obj/machinery/power/exporter/RefreshParts()
+	. = ..()
+	for(var/datum/stock_part/capacitor/capacitor in component_parts)
+		payout_multiplier = capacitor.tier
+	//incase someone makes tier 25 parts or some bs
+	if(payout_multiplier > 4)
+		WARNING("This needs to be rebalanced for higher tier parts.")
+
+#undef PAY_INTERVAL_TIME
+#undef DISCONNECTED
+#undef CLAMPED_OFF
+#undef OPERATING
