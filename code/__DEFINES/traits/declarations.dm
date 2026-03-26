@@ -1633,9 +1633,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 ///Trait given to mobs which allow them to perform all surgeries upon themselves.
 #define TRAIT_PERFECT_SELF_SURGERY "perfect_self_surgery"
 
-/// A trait that blocks the metabolism of formaldehyde
-#define TRAIT_BLOCK_FORMALDEHYDE_METABOLISM "block_formaldehyde_metabolism"
-
 ///Attached to objects currently on tables and such, allowing them to walk on other objects without the climbing delay
 #define TRAIT_ON_CLIMBABLE "on_climbable"
 
