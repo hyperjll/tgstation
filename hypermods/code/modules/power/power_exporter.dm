@@ -41,9 +41,9 @@
 	if(!isnull(attached))
 		var/datum/powernet/powernet = attached.powernet
 		var/total_excess_power = (powernet.netexcess * 0.001)
-		if(powernet)
-			. += "<span class='notice'>The powernet currently has approximately [total_excess_power] kilowatts to pull from.</span>"
-		else
+		if(powernet && !(mode == OPERATING))
+			. += "<span class='notice'>The powernet currently has an estimated [total_excess_power] KW in excess to pull from.</span>"
+		if(!powernet)
 			. += "<span class='notice'>[src] has to first be anchored onto exposed power lines to detect the powernet.</span>"
 
 /obj/machinery/power/exporter/examine_more(mob/user)
