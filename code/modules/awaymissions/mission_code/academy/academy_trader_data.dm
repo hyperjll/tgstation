@@ -42,7 +42,7 @@
 		/obj/item/card/emag/doorjack = list(PAYCHECK_CREW * 20, INFINITY, "Good work retriving the contraband"),
 		/obj/item/card/emag/battlecruiser = list(PAYCHECK_CREW * 20, INFINITY, "Good work retriving the con- oh, i recognize this, ill see if i can scramble a team for the station"),//to-do, spawn a red alert security ert if this item is sold
 		/obj/item/disk/nuclear/fake = list(PAYCHECK_CREW * 20, INFINITY, "Good work retriving the contraband, hard to tell these apart."),
-		/obj/item/gun/ballistic/revolver/badass = list(PAYCHECK_CREW * 20, INFINITY, "Good work retriving the contraband"),
+		/obj/item/gun/ballistic/revolver/syndicate = list(PAYCHECK_CREW * 20, INFINITY, "Good work retriving the contraband"),
 		/obj/item/crowbar/power/syndicate = list(PAYCHECK_CREW * 20, INFINITY, "Good work retriving the contraband"),
 		/obj/item/documents/syndicate = list(PAYCHECK_CREW * 5, INFINITY, "sorry but these are out-dated, we cant gleem much from this"),
 		/obj/item/documents/syndicate/blue = list(PAYCHECK_CREW * 50, INFINITY, "hope you didnt look over these, here take some extra"),
