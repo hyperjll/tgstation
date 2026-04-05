@@ -13,7 +13,7 @@
 	icon_state = "paper_rifle"
 	force = 10
 	gasPerThrow = 0
-	checktank = FALSE
+	needs_air = FALSE
 	range_multiplier = 3
 	fire_mode = PCANNON_FIFO
 	throw_amount = 1
