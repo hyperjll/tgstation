@@ -63,16 +63,12 @@
 			arrow_color = COLOR_RED
 
 	var/datum/hud/user_hud = carbon_imp_in.hud_used
-	if(!user_hud || !istype(user_hud, /datum/hud) || !islist(user_hud.infodisplay))
+	if(!user_hud)
 		return
 
-	var/atom/movable/screen/multitool_arrow/arrow = new(null, user_hud)
+	var/atom/movable/screen/multitool_arrow/arrow = user_hud.add_screen_object(/atom/movable/screen/multitool_arrow, HUD_MULTITOOL_ARROW, HUD_GROUP_INFO, update_screen = TRUE)
 	arrow.color = arrow_color
-	arrow.screen_loc = around_player
 	arrow.transform = matrix(dir2angle(dir), MATRIX_ROTATE)
-
-	user_hud.infodisplay += arrow
-	user_hud.show_hud(user_hud.hud_version)
 
 	QDEL_IN(arrow, 1.5 SECONDS)
 

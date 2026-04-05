@@ -7,5 +7,4 @@
 /datum/hud/living/swarmer/New(mob/living/basic/swarmer/owner)
 	..()
 
-	alien_plasma_display = new /atom/movable/screen/swarmer_resource_counter(null, src)
-	infodisplay += alien_plasma_display
+	add_screen_object(/atom/movable/screen/swarmer_resource_counter, HUD_SWARMER_RESOURCES, HUD_GROUP_INFO, update_screen = TRUE)

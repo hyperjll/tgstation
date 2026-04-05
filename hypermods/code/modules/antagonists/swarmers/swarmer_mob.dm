@@ -103,8 +103,9 @@
 	update_resource_display()
 
 /mob/living/basic/swarmer/proc/update_resource_display()
-	if(hud_used)
-		hud_used.alien_plasma_display.maptext = MAPTEXT("<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='blue'>[resources]</font></div>")
+	var/atom/movable/screen/swarmer_resource_counter/swarmer_resources = owner.current?.hud_used?.screen_objects[HUD_SWARMER_RESOURCES]
+	if(!isnull(swarmer_resources))
+		swarmer_resources.maptext = MAPTEXT("<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='blue'>[resources]</font></div>")
 
 /mob/living/basic/swarmer/proc/on_swarmer_pre_attack(mob/living/basic/swarmer/our_swarmer, atom/target, proximity, modifiers)
 	SIGNAL_HANDLER
