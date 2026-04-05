@@ -119,14 +119,15 @@
 		return
 	RegisterSignal(he_drive.canon_client, COMSIG_CLIENT_MOUSEDOWN, PROC_REF(driver_mousedown))
 	activate_engines()
-	var/datum/hud/user_hud = he_drive.hud_used
-	if(!user_hud)
-		return
-	charge_arrow = new /atom/movable/screen/justice_charge_arrow(null, user_hud)
-	charge_arrow.screen_loc = around_player
-	charge_arrow.icon_state = charge_arrow.inactive_icon
-	user_hud.infodisplay += charge_arrow
-	user_hud.show_hud(user_hud.hud_version)
+
+//	var/datum/hud/user_hud = he_drive.hud_used
+//	if(!user_hud)
+//		return
+//	charge_arrow = new /atom/movable/screen/justice_charge_arrow(null, user_hud)
+//	charge_arrow.screen_loc = around_player
+//	charge_arrow.icon_state = charge_arrow.inactive_icon
+//	user_hud.infodisplay += charge_arrow
+//	user_hud.show_hud(user_hud.hud_version)
 
 /obj/vehicle/sealed/mecha/justice/mob_exit(mob/exiter, silent, randomstep, forced)
 	. = ..()
@@ -144,8 +145,8 @@
 /obj/vehicle/sealed/mecha/justice/proc/null_arrow(datum/hud/user_hud)
 	if(isnull(user_hud))
 		return
-	user_hud.infodisplay -= charge_arrow
-	user_hud.show_hud(user_hud.hud_version)
+//	user_hud.infodisplay -= charge_arrow
+//	user_hud.show_hud(user_hud.hud_version)
 
 /obj/vehicle/sealed/mecha/justice/proc/driver_mousedown(client/source, atom/target, turf/location, control, params)
 	SIGNAL_HANDLER
