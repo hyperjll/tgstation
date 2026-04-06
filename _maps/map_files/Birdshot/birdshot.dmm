@@ -29316,12 +29316,6 @@
 	},
 /turf/open/floor/wood,
 /area/station/engineering/main)
-"jJq" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/obj/effect/spawner/random/structure/grille,
-/turf/open/space/basic,
-/area/space/nearstation)
 "jJw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -118348,7 +118342,7 @@ dDB
 dDB
 dDB
 dDB
-jJq
+wCc
 dDB
 dDB
 dDB
@@ -122717,7 +122711,7 @@ dDB
 dDB
 dDB
 dDB
-jJq
+wCc
 wCc
 wCc
 wCc
