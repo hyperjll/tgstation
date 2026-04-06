@@ -103,7 +103,7 @@
 	update_resource_display()
 
 /mob/living/basic/swarmer/proc/update_resource_display()
-	var/atom/movable/screen/swarmer_resource_counter/swarmer_resources = owner.current?.hud_used?.screen_objects[HUD_SWARMER_RESOURCES]
+	var/atom/movable/screen/swarmer_resource_counter/swarmer_resources = hud_used.screen_objects[HUD_SWARMER_RESOURCES]
 	if(!isnull(swarmer_resources))
 		swarmer_resources.maptext = MAPTEXT("<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='blue'>[resources]</font></div>")
 

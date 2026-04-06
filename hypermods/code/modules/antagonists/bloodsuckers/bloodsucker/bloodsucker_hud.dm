@@ -43,6 +43,10 @@
 	else if(bloodsucker_blood_volume > BLOOD_VOLUME_BAD)
 		valuecolor = "#FFAAAA"
 
+	var/atom/movable/screen/bloodsucker/blood_counter/blood_display = owner.current?.hud_used?.screen_objects[HUD_BLOODSUCKER_BLOOD]
+	var/atom/movable/screen/bloodsucker/rank_counter/vamprank_display = owner.current?.hud_used?.screen_objects[HUD_BLOODSUCKER_RANK]
+	var/atom/movable/screen/bloodsucker/sunlight_counter/sunlight_display = owner.current?.hud_used?.screen_objects[HUD_BLOODSUCKER_SUNLIGHT]
+
 	blood_display?.maptext = FORMAT_BLOODSUCKER_HUD_TEXT(valuecolor, bloodsucker_blood_volume)
 
 	if(vamprank_display)
