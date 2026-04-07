@@ -51304,6 +51304,10 @@
 /obj/item/reagent_containers/spray/cleaner,
 /obj/structure/reagent_dispensers/wall/virusfood/directional/south,
 /obj/effect/turf_decal/tile/green/full,
+/obj/item/tgui_book/manual/idc{
+	pixel_y = 7;
+	pixel_x = 10
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "pAZ" = (

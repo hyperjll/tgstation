@@ -41582,6 +41582,7 @@
 /obj/machinery/smartfridge/chemistry/virology/preloaded,
 /obj/machinery/firealarm/directional/west,
 /obj/effect/turf_decal/tile/green/fourcorners,
+/obj/item/tgui_book/manual/idc,
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "nCP" = (

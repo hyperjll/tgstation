@@ -6146,6 +6146,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/item/tgui_book/manual/idc,
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "aJT" = (

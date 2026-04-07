@@ -36370,6 +36370,7 @@
 	dir = 4
 	},
 /obj/machinery/duct,
+/obj/item/tgui_book/manual/idc,
 /turf/open/floor/iron/white/textured_large,
 /area/station/medical/virology)
 "oyu" = (

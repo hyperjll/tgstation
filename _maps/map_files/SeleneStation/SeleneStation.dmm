@@ -19329,6 +19329,7 @@
 /obj/structure/reagent_dispensers/wall/virusfood/directional/south,
 /obj/effect/turf_decal/tile/green/anticorner/contrasted,
 /obj/machinery/smartfridge/chemistry/virology/preloaded,
+/obj/item/tgui_book/manual/idc,
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "hHF" = (

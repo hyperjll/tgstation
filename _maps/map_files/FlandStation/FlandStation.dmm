@@ -44283,6 +44283,10 @@
 	},
 /obj/item/reagent_containers/dropper,
 /obj/item/reagent_containers/spray/cleaner,
+/obj/item/tgui_book/manual/idc{
+	pixel_x = -6;
+	pixel_y = 8
+	},
 /turf/open/floor/iron/grid,
 /area/station/medical/virology)
 "mSg" = (
