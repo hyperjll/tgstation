@@ -297,7 +297,7 @@ GLOBAL_VAR_INIT(liquid_debug_colors, FALSE)
 		var/amount = pulled_reagent.volume / length(members)
 		if(!amount)
 			continue
-		if(pulled_reagent.type in turf_reagents.previous_reagent_list)
+		if(pulled_reagent.type in turf_reagents.reagent_list)
 			turf_reagents.remove_all_type(pulled_reagent.type, 100000)
 		turf_reagents.add_reagent(pulled_reagent.type, amount)
 		if(pulled_reagent.turf_exposure && amount > 10)
