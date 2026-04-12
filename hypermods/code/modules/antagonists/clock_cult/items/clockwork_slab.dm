@@ -42,7 +42,7 @@ GLOBAL_LIST_INIT(clockwork_slabs, list())
 	var/list/owned_scriptures = list()
 
 	//Initialise an empty list for quickbinding
-	var/list/quick_bound_scriptures = list(
+	var/alist/quick_bound_scriptures = alist(
 		1 = null,
 		2 = null,
 		3 = null,
