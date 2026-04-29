@@ -23,7 +23,7 @@
 
 /datum/reagent/medicine/dexalin
 	name = "Dexalin"
-	description = "Restores oxygen loss. Overdose causes it instead."
+	description = "Restores oxygen loss. Purges lexorin. Overdose causes it instead."
 	color = "#24e7d9"
 	overdose_threshold = 30
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -32,6 +32,9 @@
 	. = ..()
 	var/need_mob_update
 	need_mob_update += affected_mob.adjust_oxy_loss(-2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+
+	affected_mob.reagents.remove_reagent(/datum/reagent/toxin/lexorin, 1)
+
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -44,7 +47,7 @@
 
 /datum/reagent/medicine/kelotane
 	name = "Kelotane"
-	description = "Restores fire damage. Overdose causes it instead."
+	description = "Restores burn damage. Overdose causes it instead."
 	color = "#f4a40b"
 	overdose_threshold = 30
 	inverse_chem_val = 0.3
@@ -122,7 +125,7 @@
 
 /datum/reagent/medicine/dexalinplus
 	name = "Dexalin Plus"
-	description = "Restores oxygen loss and restores blood volume quickly. Overdose causes both instead."
+	description = "Restores oxygen loss and restores blood volume quickly. Purges lexorin, curare, and initropidril. Overdose causes both instead."
 	color = "#0742CA"
 	overdose_threshold = 25
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -135,6 +138,8 @@
 	affected_mob.adjust_blood_volume(3, maximum = BLOOD_VOLUME_NORMAL)
 
 	affected_mob.reagents.remove_reagent(/datum/reagent/toxin/lexorin, 3)
+	affected_mob.reagents.remove_reagent(/datum/reagent/toxin/curare, 3)
+	affected_mob.reagents.remove_reagent(/datum/reagent/toxin/initropidril, 3)
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
@@ -277,7 +282,7 @@
 
 /datum/reagent/medicine/coagulant/inaprovaline
 	name = "Inaprovaline Plus"
-	description = "Stabilizes the breathing of patients, and heals asphyxiation damage quickly. It also increases blood clotting efficiency. Good for those in critical condition."
+	description = "Stabilizes the breathing of patients, and alleviates asphyxiation damage. Slowly alleviates all types of damage in patients in Critical Condition. It also increases blood clotting efficiency."
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
 	color = "#ff0000"
 	ph = 8.5
@@ -288,11 +293,20 @@
 /datum/reagent/medicine/coagulant/inaprovaline/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	var/need_mob_update
-	need_mob_update += affected_mob.adjust_oxy_loss(-10 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
-
-	if(affected_mob.losebreath >= 5)
-		affected_mob.losebreath -= 5
-
+	if(affected_mob.health <= affected_mob.crit_threshold)
+		var/need_mob_update
+		need_mob_update = affected_mob.adjust_tox_loss(-1.5 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+		need_mob_update += affected_mob.adjust_brute_loss(-1.5 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-1.5 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_oxy_loss(-10 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
+	else
+		need_mob_update = affected_mob.adjust_oxy_loss(-1 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
+	if(affected_mob.losebreath >= 4)
+		var/obj/item/organ/lungs/affected_lungs = affected_mob.get_organ_slot(ORGAN_SLOT_LUNGS)
+		var/our_respiration_type = affected_lungs ? affected_lungs.respiration_type : affected_mob.mob_respiration_type // use lungs' respiration type or mob_respiration_type if no lungs
+		if(our_respiration_type & affected_respiration_type)
+			affected_mob.losebreath -= 4 * metabolization_ratio * seconds_per_tick
+			need_mob_update = TRUE
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -303,6 +317,38 @@
 /datum/reagent/medicine/coagulant/inaprovaline/on_mob_delete(mob/living/M)
 	REMOVE_TRAIT(M, TRAIT_COAGULATING, type)
 	return ..()
+
+// Super Inaprovaline from combining the plus version with Salbutamol.
+
+/datum/reagent/medicine/coagulant/inaprovaline/super
+	name = "Super Inaprovaline"
+	description = "Stabilizes the breathing of patients, and alleviates asphyxiation damage. Alleviates all types of damage in patients in Critical Condition. It also increases blood clotting efficiency."
+	metabolization_rate = 1.25 * REAGENTS_METABOLISM
+	color = "#ff0000"
+	ph = 6.5
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_NO_RANDOM_RECIPE
+	clot_rate = 0.2 // .1 worse than sangurite (0.3)
+	passive_bleed_modifier = 0.8 // .1 worse than sangurite (0.7)
+
+/datum/reagent/medicine/coagulant/inaprovaline/super/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
+	. = ..()
+	var/need_mob_update
+	if(affected_mob.health <= affected_mob.crit_threshold)
+		var/need_mob_update
+		need_mob_update = affected_mob.adjust_tox_loss(-2 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+		need_mob_update += affected_mob.adjust_brute_loss(-2 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_fire_loss(-2 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+		need_mob_update += affected_mob.adjust_oxy_loss(-10 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
+	else
+		need_mob_update = affected_mob.adjust_oxy_loss(-3 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
+	if(affected_mob.losebreath >= 4)
+		var/obj/item/organ/lungs/affected_lungs = affected_mob.get_organ_slot(ORGAN_SLOT_LUNGS)
+		var/our_respiration_type = affected_lungs ? affected_lungs.respiration_type : affected_mob.mob_respiration_type // use lungs' respiration type or mob_respiration_type if no lungs
+		if(our_respiration_type & affected_respiration_type)
+			affected_mob.losebreath -= 4 * metabolization_ratio * seconds_per_tick
+			need_mob_update = TRUE
+	if(need_mob_update)
+		return UPDATE_MOB_HEALTH
 
 /datum/reagent/medicine/barozine
 	name = "Barozine"

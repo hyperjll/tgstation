@@ -26,6 +26,13 @@
 	optimal_ph_max = 8
 	reaction_tags = REACTION_TAG_HEALING | REACTION_TAG_OXY
 
+/datum/chemical_reaction/inaprovalinesuper
+	results = list(/datum/reagent/medicine/coagulant/inaprovaline/super = 1)
+	required_reagents = list(/datum/reagent/medicine/coagulant/inaprovaline = 1, /datum/reagent/medicine/salbutamol = 1)
+	optimal_ph_min = 5
+	optimal_ph_max = 8
+	reaction_tags = REACTION_TAG_HEALING | REACTION_TAG_OXY
+
 /datum/chemical_reaction/bicaridine
 	results = list(/datum/reagent/medicine/bicaridine = 4)
 	required_reagents = list(/datum/reagent/carbon = 1, /datum/reagent/oxygen = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/lemoline = 1)

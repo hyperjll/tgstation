@@ -1129,8 +1129,15 @@
 	metabolized_traits = list(TRAIT_BLOOD_FOUNTAIN)
 
 /datum/reagent/toxin/heparin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
-	if(holder.has_reagent(/datum/reagent/medicine/coagulant)) //Directly purges coagulants from the system. Get rid of the heparin BEFORE attempting to use coagulants.
+	//Directly purges coagulants from the system. Get rid of the heparin BEFORE attempting to use coagulants.
+	if(holder.has_reagent(/datum/reagent/medicine/coagulant))
 		holder.remove_reagent(/datum/reagent/medicine/coagulant, 5 * metabolization_ratio * seconds_per_tick)
+	if(holder.has_reagent(/datum/reagent/medicine/coagulant/inaprovaline))
+		holder.remove_reagent(/datum/reagent/medicine/coagulant/inaprovaline, 5 * metabolization_ratio * seconds_per_tick)
+	if(holder.has_reagent(/datum/reagent/medicine/coagulant/inaprovaline/super))
+		holder.remove_reagent(/datum/reagent/medicine/coagulant/inaprovaline/super, 5 * metabolization_ratio * seconds_per_tick)
+	if(holder.has_reagent(/datum/reagent/medicine/coagulant/tranexamicacid))
+		holder.remove_reagent(/datum/reagent/medicine/coagulant/tranexamicacid, 5 * metabolization_ratio * seconds_per_tick)
 	return ..()
 
 /datum/reagent/toxin/rotatium //Rotatium. Fucks up your rotation and is hilarious
