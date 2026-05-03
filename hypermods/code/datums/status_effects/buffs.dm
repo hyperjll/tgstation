@@ -373,14 +373,14 @@
 	id = "contentment"
 	duration = INFINITY
 	alert_type = /atom/movable/screen/alert/status_effect/contentment
-	var/laststand_chance = 0.1 // % chance when entering critical condition for a last stand.
+	var/laststand_chance = 0.1 // % chance while in critical condition for a last stand.
 
 /datum/status_effect/contentment/tick(seconds_between_ticks)
 	if(!owner)
 		return
 
 	var/mob/living/carbon/human/moody_human = owner
-	if(moody_human.mob_mood.sanity_level >= SANITY_LEVEL_DISTURBED)
+	if(moody_human.mob_mood.sanity_level >= SANITY_LEVEL_DISTURBED || owner.has_status_effect(/datum/status_effect/last_stand))
 		owner.remove_status_effect(/datum/status_effect/contentment)
 
 	if(HAS_TRAIT(moody_human, TRAIT_CRITICAL_CONDITION))
@@ -404,7 +404,6 @@
 	id = "last_stand"
 	duration = 5 MINUTES
 	alert_type = /atom/movable/screen/alert/status_effect/last_stand
-	var/laststand_chance = 0.1 // % chance when entering critical condition for a last stand.
 
 /datum/status_effect/last_stand/on_apply()
 	. = ..()
