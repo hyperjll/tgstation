@@ -1,15 +1,15 @@
-/datum/component/enchantment/electricution
+/datum/component/enchantment/electrocution
 	max_level = 3
 	examine_description = "It has been blessed with the power of electricity and will shock targets."
 
-/datum/component/enchantment/electricution/Destroy()
+/datum/component/enchantment/electrocution/Destroy()
 	UnregisterSignal(parent, COMSIG_ITEM_ATTACK)
 	return ..()
 
-/datum/component/enchantment/electricution/apply_effect(obj/item/target)
+/datum/component/enchantment/electrocution/apply_effect(obj/item/target)
 	RegisterSignal(target, COMSIG_ITEM_ATTACK, PROC_REF(shock_target))
 
-/datum/component/enchantment/electricution/proc/shock_target(datum/source, atom/movable/target, mob/living/user)
+/datum/component/enchantment/electrocution/proc/shock_target(datum/source, atom/movable/target, mob/living/user)
 	user.Beam(target, icon_state = "lightning[rand(1,12)]", time = 2, maxdistance = 32)
 	if(!iscarbon(target))
 		return
