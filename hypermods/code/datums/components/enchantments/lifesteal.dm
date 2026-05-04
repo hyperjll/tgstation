@@ -8,9 +8,9 @@
 	return ..()
 
 /datum/component/enchantment/lifesteal/apply_effect(obj/item/target)
-	RegisterSignal(target, COMSIG_ITEM_ATTACK, PROC_REF(tap_soul))
+	RegisterSignal(target, COMSIG_ITEM_ATTACK, PROC_REF(steal_life))
 
-/datum/component/enchantment/lifesteal/proc/tap_soul(datum/source, mob/living/target, mob/living/user)
+/datum/component/enchantment/lifesteal/proc/steal_life(datum/source, mob/living/target, mob/living/user)
 	if(!istype(target) || target.stat != CONSCIOUS)
 		return
 	var/obj/item/parentItem = parent
