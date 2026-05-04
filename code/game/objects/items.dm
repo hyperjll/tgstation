@@ -239,6 +239,9 @@
 	/// Do we apply a click cooldown when resisting this object if it is restraining them?
 	var/resist_cooldown = CLICK_CD_BREAKOUT
 
+	/// Hyper addition here, i'm not sure why coders haven't added this var yet:
+	var/reflect_chance = 0
+
 /obj/item/Initialize(mapload)
 	if(attack_verb_continuous)
 		attack_verb_continuous = string_list(attack_verb_continuous)
@@ -847,6 +850,8 @@
 
 ///This proc determines if and at what an object will reflect energy projectiles if it's in l_hand,r_hand or wear_suit
 /obj/item/proc/IsReflect(def_zone)
+	if(prob(reflect_chance))
+		return TRUE
 	return FALSE
 
 /obj/item/singularity_pull(atom/singularity, current_size)

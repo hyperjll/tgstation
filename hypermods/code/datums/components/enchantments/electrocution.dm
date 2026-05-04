@@ -1,6 +1,7 @@
 /datum/component/enchantment/electrocution
 	max_level = 3
 	examine_description = "It has been blessed with the power of electricity and will shock targets."
+	forbidden_item_type = /obj/item/clothing
 
 /datum/component/enchantment/electrocution/Destroy()
 	UnregisterSignal(parent, COMSIG_ITEM_ATTACK)

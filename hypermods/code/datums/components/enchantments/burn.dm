@@ -1,6 +1,7 @@
 /datum/component/enchantment/burn
 	examine_description = "It has been blessed with the power of fire and will set struck targets on fire."
 	max_level = 3
+	forbidden_item_type = /obj/item/clothing
 
 /datum/component/enchantment/burn/Destroy()
 	UnregisterSignal(parent, COMSIG_ITEM_ATTACK)

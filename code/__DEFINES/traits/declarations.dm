@@ -1677,8 +1677,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_FASTER_SLAB_INVOKE "faster_slab_invoke"
 /// Prevents the invocation of clockwork scriptures.
 #define TRAIT_NO_SLAB_INVOKE "no_slab_invoke"
-/// Has an item been enchanted by a clock cult Stargazer?
-#define TRAIT_STARGAZED "stargazed"
+
+/// Has an item been enchanted?
+#define TRAIT_ENCHANTED "enchanted"
 
 /// Liquids cannot spread over this turf.
 #define TRAIT_BLOCK_LIQUID_SPREAD "block_liquid_spread"

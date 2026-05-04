@@ -6,7 +6,7 @@
 	element_flags = ELEMENT_BESPOKE | ELEMENT_DETACH_ON_HOST_DESTROY
 	argument_hash_start_idx = 2
 
-	/// What slots will attempt to shock the equpper
+	/// What slots will attempt to shock the equipper
 	var/list/equip_slots = list()
 
 

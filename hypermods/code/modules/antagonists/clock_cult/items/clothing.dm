@@ -539,7 +539,7 @@
 
 /obj/item/clothing/head/helmet/clockwork/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_HEAD))
+	AddComponent(/datum/component/wearertargeting/earprotection)
 	AddElement(/datum/element/clockwork_pickup, ~(ITEM_SLOT_HANDS))
 	//AddComponent(/datum/component/turf_checker, GLOB.clock_turf_types, null, TRUE, PROC_REF(set_empowered_state))
 

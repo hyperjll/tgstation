@@ -1,6 +1,7 @@
 /datum/component/enchantment/blinding
 	examine_description = "It has been blessed with the power to emit a blinding light when striking a target."
 	max_level = 1
+	forbidden_item_type = /obj/item/clothing
 
 /datum/component/enchantment/blinding/Destroy()
 	UnregisterSignal(parent, COMSIG_ITEM_ATTACK)

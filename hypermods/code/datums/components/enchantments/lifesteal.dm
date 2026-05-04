@@ -1,6 +1,7 @@
 /datum/component/enchantment/lifesteal
 	examine_description = "It has been blessed with the power of ripping the lifeforce from conscious living entities and will heal the wielder when a target is struck."
 	max_level = 3
+	forbidden_item_type = /obj/item/clothing
 
 /datum/component/enchantment/lifesteal/Destroy()
 	UnregisterSignal(parent, COMSIG_ITEM_ATTACK)
