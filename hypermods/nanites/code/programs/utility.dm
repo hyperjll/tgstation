@@ -441,6 +441,11 @@
 /obj/item/wirecutters/nanite
 	name = "nanite wirecutters"
 	desc = "Your typical pair of wirecutters, upon closer inspection, the material is moving ever-so-slightly."
+	random_color = FALSE
+	greyscale_config = null
+	greyscale_config_inhand_left = null
+	greyscale_config_inhand_right = null
+	greyscale_colors = null
 
 /obj/item/wirecutters/nanite/Initialize(mapload)
 	. = ..()

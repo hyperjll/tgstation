@@ -6,8 +6,12 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	icon = 'hypermods/icons/obj/clock_cult/tools.dmi'
 	icon_state = "cutters_brass"
-	random_color = FALSE
 	toolspeed = BRASS_TOOLSPEED_MOD
+	random_color = FALSE
+	greyscale_config = null
+	greyscale_config_inhand_left = null
+	greyscale_config_inhand_right = null
+	greyscale_colors = null
 
 /obj/item/wirecutters/brass/Initialize(mapload)
 	. = ..()
