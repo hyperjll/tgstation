@@ -16,8 +16,7 @@
 /obj/machinery/vending/crowbar_act(mob/living/user, obj/item/attack_item)
 	if(!component_parts)
 		return ITEM_INTERACT_FAILURE
-	default_deconstruction_crowbar(attack_item)
-	return ITEM_INTERACT_SUCCESS
+	return default_deconstruction_crowbar(user, attack_item)
 
 /obj/machinery/vending/wrench_act(mob/living/user, obj/item/tool)
 	. = NONE
@@ -32,11 +31,9 @@
 		to_chat(user, span_warning("You attempt to open the maintenance panel of [src], but cannot find it!"))
 		return
 	if(anchored)
-		default_deconstruction_screwdriver(user, icon_state, icon_state, attack_item)
-		return ITEM_INTERACT_SUCCESS
-	else
-		to_chat(user, span_warning("You must first secure [src]."))
-		return ITEM_INTERACT_FAILURE
+		return default_deconstruction_screwdriver(user, attack_item)
+	to_chat(user, span_warning("You must first secure [src]."))
+	return ITEM_INTERACT_FAILURE
 
 /obj/machinery/vending/on_set_panel_open(old_value)
 	update_appearance(UPDATE_OVERLAYS)

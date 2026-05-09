@@ -70,6 +70,8 @@
 #define CALIBER_JUNK "junk"
 /// The caliber used by the (gatfruit) peashooter
 #define CALIBER_PEA "pea"
+/// The caliber used in the naval cannon
+#define CALIBER_40MM_SHELL "40MM_shell"
 /// The caliber used by the cannonballs.
 #define CALIBER_CANNONBALL "cannonball"
 /// The caliber used solely by the orion silenced pistol.
