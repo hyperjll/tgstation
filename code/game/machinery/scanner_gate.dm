@@ -169,6 +169,17 @@
 	set_scanline("passive")
 
 /obj/machinery/scanner_gate/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+	if(istype(tool, /obj/item/inspector))
+		if(n_spect)
+			to_chat(user, span_warning("The scanner is already equipped with an N-Spect scanner."))
+			return ITEM_INTERACT_BLOCKING
+		else
+			to_chat(user, span_notice("You install an N-Spect scanner on [src]."))
+			n_spect = tool
+			if(!user.transferItemToLoc(tool, src))
+				return ITEM_INTERACT_BLOCKING
+			return ITEM_INTERACT_SUCCESS
+
 	if(panel_open && is_wire_tool(tool))
 		wires.interact(user)
 		return ITEM_INTERACT_SUCCESS
@@ -195,12 +206,30 @@
 	locked = TRUE
 	return ITEM_INTERACT_SUCCESS
 
+/obj/machinery/scanner_gate/crowbar_act(mob/living/user, obj/item/tool)
+	. = ..()
+	if(n_spect)
+		if(locked)
+			balloon_alert(user, "locked!")
+			return ITEM_INTERACT_BLOCKING
+
+		to_chat(user, span_notice("You uninstall [n_spect] from [src]."))
+		n_spect.forceMove(drop_location())
+		return ITEM_INTERACT_SUCCESS
+
 /obj/machinery/scanner_gate/screwdriver_act(mob/living/user, obj/item/tool)
 	return locked ? NONE : default_deconstruction_screwdriver(user, tool)
 
 /obj/machinery/scanner_gate/update_icon_state()
 	. = ..()
 	icon_state = panel_open ? "[base_icon_state]_open" : base_icon_state
+
+/obj/machinery/scanner_gate/Exited(atom/gone)
+	. = ..()
+	if(gone == n_spect)
+		n_spect = null
+		if(scangate_mode == SCANGATE_CONTRABAND)
+			scangate_mode = SCANGATE_NONE
 
 /obj/machinery/scanner_gate/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if(obj_flags & EMAGGED)
