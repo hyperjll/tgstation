@@ -450,5 +450,4 @@
 	cost = 8
 	surplus = 50
 	progression_minimum = /datum/uplink_item/dangerous/pistol::progression_minimum
-	population_minimum = /datum/uplink_item/dangerous/pistol::population_minimum
 	relevant_child_items = /datum/uplink_item/dangerous/pistol::relevant_child_items

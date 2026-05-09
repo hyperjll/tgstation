@@ -173,7 +173,7 @@
 	name = "Clown Bot"
 	desc = "A crate containing one Clown Bot."
 	cost = PAYCHECK_COMMAND * 2.5
-	contains = list(/mob/living/basic/bot/honkbot)
+	contains = list(/mob/living/basic/bot/secbot/honkbot)
 
 /datum/supply_pack/goody/medbot
 	name = "Medical Bot"
@@ -185,7 +185,7 @@
 	name = "Securitron"
 	desc = "A crate containing one Securitron."
 	cost = PAYCHECK_COMMAND * 5
-	contains = list(/mob/living/simple_animal/bot/secbot)
+	contains = list(/mob/living/basic/bot/secbot)
 
 /datum/supply_pack/goody/hygienebot
 	name = "Hygiene Bot"

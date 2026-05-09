@@ -714,9 +714,9 @@
 		if("Firebot")
 			new /mob/living/basic/bot/firebot(host_mob.loc)
 		if("Honkbot")
-			new /mob/living/basic/bot/honkbot(host_mob.loc)
+			new /mob/living/basic/bot/secbot/honkbot(host_mob.loc)
 		if("Securitron")
-			new /mob/living/simple_animal/bot/secbot(host_mob.loc)
+			new /mob/living/basic/bot/secbot(host_mob.loc)
 
 
 /datum/nanite_program/researchplus

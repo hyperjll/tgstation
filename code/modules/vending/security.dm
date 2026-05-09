@@ -37,7 +37,7 @@
 		/obj/item/storage/medkit/regular = 2,
 		/obj/item/storage/pill_bottle/tricordrazine = 2,
 		/obj/item/pinpointer/crew = 2,
-		/mob/living/simple_animal/bot/secbot = 3,
+		/mob/living/basic/bot/secbot = 3,
 		/obj/item/antag_spawner/nanotrasen/securityborg = 2,
 	)
 	refill_canister = /obj/item/vending_refill/security
