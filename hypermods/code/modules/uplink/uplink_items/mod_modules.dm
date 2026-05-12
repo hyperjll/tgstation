@@ -325,8 +325,8 @@
 /datum/uplink_item/mod_modules/samusreference
 	name = "MODsuit Spherical Death Module"
 	desc = "A MODsuit module which allows the user to compress both them and the MODsuit into a ball. \
-			Spherical MODsuit's can cross over more hazards, can't be used in low pressure environments such as lavaland, and can't be used without gravity. \
-			Allows the user to place bombs while rolling which can blow anyone and anything sky-high."
+			Spherical MODsuit's can cross over more hazards, but can't be used without gravity. \
+			Allows the user to shoot micro-missiles while rolling which deal moderate damage at the cost of the MODsuit's battery."
 	item = /obj/item/mod/module/death_sphere
 	cost = 6
 	purchasable_from = ~UPLINK_SPY

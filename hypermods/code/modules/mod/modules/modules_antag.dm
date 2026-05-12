@@ -349,7 +349,7 @@
 /obj/item/mod/module/death_sphere
 	name = "syndicate MOD death sphere module"
 	desc = "A module able to move the suit's parts around, turning it and the user into a sphere. \
-		The sphere can move quickly, even through lava, and launch highly explosive bombs to decimate area and people alike."
+		The sphere can move quickly, even through lava, and launch highly explosive micromissiles to decimate area and people alike."
 	icon_state = "sphere"
 	module_type = MODULE_ACTIVE
 	removable = TRUE
@@ -361,61 +361,29 @@
 	/// Time it takes us to complete the animation.
 	var/animate_time = 0.25 SECONDS
 	/// Armor values when active
-	var/datum/armor/armor_mod = /datum/armor/mod_sphere_transform
+	var/datum/armor/armor_mod = /datum/armor/mod_deathsphere_transform
 	/// List of traits to add/remove from our subject as needed.
 	var/list/user_traits = list(
 		TRAIT_FORCED_STANDING,
 		TRAIT_HANDS_BLOCKED,
 		TRAIT_NO_SLIP_ALL,
+		TRAIT_LAVA_IMMUNE,
 	)
-	/// Has the module been upgraded with bileworm hide plating?
-	var/hide_upgrade = FALSE
-	/// How much hide is required to reinforce the MOD
-	var/hide_amount = 2 // These are rather rare as of now, should be increased later once other methods of crossing lava are removed
 
-/datum/armor/mod_sphere_transform
-	melee = 20 // Can get up to 70 armor when ash covered and ballin, which is as good as a HECK suit... but you can't really attack anymore
-	bomb = 20
-
-/obj/item/mod/module/death_sphere/on_install()
-	. = ..()
-	RegisterSignal(mod, COMSIG_ATOM_ITEM_INTERACTION, PROC_REF(on_item_interaction))
-
-// Isn't supposed to happen outside of deletion but just in case
-/obj/item/mod/module/death_sphere/on_uninstall(deleting)
-	. = ..()
-	// No need to drop the hide as we're supposed to be inbuilt and unremovable
-	UnregisterSignal(mod, COMSIG_ATOM_ITEM_INTERACTION)
+/datum/armor/mod_deathsphere_transform
+	melee = 40
+	bullet = 40
+	laser = 50
+	energy = 50
+	bomb = 75
+	fire = 75
+	acid = 50
 
 /obj/item/mod/module/death_sphere/activate()
 	if(!mod.wearer.has_gravity())
 		balloon_alert(mod.wearer, "no gravity!")
 		return FALSE
 	return ..()
-
-/obj/item/mod/module/death_sphere/proc/on_item_interaction(atom/movable/source, mob/living/user, obj/item/item, modifiers)
-	SIGNAL_HANDLER
-
-	if(!istype(item, /obj/item/stack/sheet/animalhide/bileworm))
-		return NONE
-
-	if (hide_upgrade)
-		to_chat(user, span_warning("[mod] is already reinforced with bileworm skin!"))
-		return ITEM_INTERACT_BLOCKING
-
-	var/obj/item/stack/sheet/animalhide/bileworm/hide = item
-	if (!hide.use(hide_amount))
-		to_chat(user, span_warning("You need more hide to fully reinforce [mod]!"))
-		return ITEM_INTERACT_BLOCKING
-
-	hide_upgrade = TRUE
-	overlay_state_inactive = "module_bileworm_bracing"
-	user_traits += TRAIT_LAVA_IMMUNE
-	mod.balloon_alert(user, "plating reinforced!")
-	if (active)
-		ADD_TRAIT(mod.wearer, TRAIT_LAVA_IMMUNE, REF(src))
-	update_clothing_slots()
-	return ITEM_INTERACT_SUCCESS
 
 /obj/item/mod/module/death_sphere/on_activation()
 	playsound(src, 'sound/items/modsuit/ballin.ogg', 100, TRUE)
@@ -450,23 +418,23 @@
 	for(var/obj/item/part as anything in mod.get_parts(all = TRUE))
 		part.set_armor(part.get_armor().subtract_other_armor(armor_mod))
 
-/obj/item/mod/module/death_sphere/used()
-	if(lavaland_equipment_pressure_check(get_turf(src)))
-		balloon_alert(mod.wearer, "not enough pressure!")
-		playsound(src, 'sound/items/weapons/gun/general/dry_fire.ogg', 25, TRUE)
-		return FALSE
-	return ..()
-
 /obj/item/mod/module/death_sphere/on_select_use(atom/target)
 	. = ..()
 	if(!.)
 		return
-	var/obj/projectile/bullet/mining_bomb/syndicate/bomb = new(mod.wearer.loc)
-	bomb.aim_projectile(target, mod.wearer)
-	bomb.firer = mod.wearer
-	playsound(src, 'sound/items/weapons/gun/general/grenade_launch.ogg', 75, TRUE)
-	INVOKE_ASYNC(bomb, TYPE_PROC_REF(/obj/projectile, fire))
 	drain_power(use_energy_cost)
+	INVOKE_ASYNC(src, PROC_REF(fire_missile), target)
+	for (var/i in 1 to 2)
+		addtimer(CALLBACK(src, PROC_REF(fire_missile), target), 0.2 SECONDS * i)
+
+/obj/item/mod/module/death_sphere/proc/fire_missile(atom/target)
+	var/obj/projectile/bullet/mining_missile/syndicate/missile = new(mod.wearer.loc)
+	missile.aim_projectile(target, mod.wearer)
+	missile.firer = mod.wearer
+	if (isliving(target))
+		missile.set_homing_target(target)
+	playsound(src, 'sound/items/weapons/gun/general/rocket_launch.ogg', 30, TRUE)
+	missile.fire()
 
 /obj/item/mod/module/death_sphere/on_active_process(seconds_per_tick)
 	if(!mod.wearer.has_gravity())
@@ -478,53 +446,24 @@
 	if(mod.wearer.stat)
 		deactivate()
 
-/obj/projectile/bullet/mining_bomb/syndicate
-	name = "bomb"
-	desc = "A bomb. Spending your time reading this doesn't seem like the best use of your time."
-	icon_state = "smine_bomb"
+/obj/projectile/bullet/mining_missile/syndicate
+	name = "micromissile"
+	desc = "A missile. Spending your time reading this doesn't seem like the best use of your time."
+	icon_state = "smine_missile"
 	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
-
-/obj/projectile/bullet/mining_bomb/syndicate/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/projectile_drop, /obj/structure/mining_bomb/syndicate)
-	RegisterSignal(src, COMSIG_PROJECTILE_ON_SPAWN_DROP, PROC_REF(handle_drop))
-
-/obj/projectile/bullet/mining_bomb/syndicate/handle_drop(datum/source, obj/structure/mining_bomb/syndicate/bomb)
-	SIGNAL_HANDLER
-	addtimer(CALLBACK(bomb, TYPE_PROC_REF(/obj/structure/mining_bomb/syndicate, prime), firer), bomb.prime_time)
-
-/obj/structure/mining_bomb/syndicate
-	name = "mining bomb"
-	desc = "A bomb. Spending your time reading this doesn't seem like the best use of your time."
-	icon_state = "smine_bomb"
-	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
-	/// Time to prime the explosion
-	prime_time = 0.1 SECONDS
-	/// Time to explode from the priming
-	explosion_time = 1.8 SECONDS // compensating for the 3x range on these things
-	/// Damage done on explosion.
-	damage = 20
-	/// Damage multiplier on hostile fauna. If those fauna happen to be ON station, i feel bad for them.
-	fauna_boost = 2 // mult by 2 cuz we already do super high damage
-
-/obj/structure/mining_bomb/syndicate/boom(atom/movable/firer)
-	visible_message(span_danger("[src] explodes!"))
-	playsound(src, 'sound/effects/magic/magic_missile.ogg', 200, vary = TRUE)
-	for(var/turf/closed/mineral/rock in circle_range_turfs(src, 1))
-		rock.gets_drilled()
-	for(var/mob/living/victim in range(3, src)) // range from 1 to 3
-		victim.apply_damage(damage * (ishostile(victim) ? fauna_boost : 1), BRUTE, spread_damage = TRUE)
-		to_chat(victim, span_userdanger("You are hit by a mining bomb explosion!"))
-		if(!firer)
-			continue
-		if(ishostile(victim))
-			var/mob/living/simple_animal/hostile/hostile_mob = victim
-			hostile_mob.GiveTarget(firer)
-		else if(isbasicmob(victim))
-			victim.ai_controller.set_blackboard_key(BB_BASIC_MOB_CURRENT_TARGET, firer)
-	for(var/obj/object in range(1, src))
-		object.take_damage(damage, BRUTE, BOMB)
-	qdel(src)
+	damage = 7 // 7 * 2 = 14, *3 = 42 damage between 3 missiles
+	range = 9
+	homing_turn_speed = 12
+	suppressed = SUPPRESSED_VERY
+	armor_flag = BOMB
+	light_system = OVERLAY_LIGHT
+	light_range = 1
+	light_power = 1
+	light_color = LIGHT_COLOR_INTENSE_RED
+	embed_type = null
+	can_hit_turfs = TRUE
+	/// Damage multiplier against lavaland fauna
+	fauna_boost = 2
 
 /obj/item/mod/module/power_kick/syndicate
 	name = "syndicate MOD power kick module"
