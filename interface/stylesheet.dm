@@ -162,21 +162,8 @@ h1.alert, h2.alert		{color: #000000;}
 .clockyellow 			{color: #DAAA18;	font-weight: bold;	font-style: italic;}
 .clockgray 				{color: #42474D;	font-weight: bold;	font-style: italic;}
 .clockred 				{color: #6E001A;	font-weight: bold;	font-style: italic;}
-.ratvar 				{color: #BE8700;	font-size: 6;	font-weight: bold;	font-style: italic;	animation: ratvarcolor 5000ms infinite;}
-	@keyframes ratvarcolor {
-		0% { color: #0d0d0d; }
-		9% { color: #BE8700; }
-		18% { color: #0d0d0d; }
-		27% { color: #42474D; }
-		36% { color: #0d0d0d; }
-		45% { color: #AF0AAF; }
-		54% { color: #0d0d0d; }
-		63% { color: #1E8CE1; }
-		72% { color: #0d0d0d; }
-		81% { color: #DAAA18; }
-		90% { color: #0d0d0d; }
-		100% { color: #6E001A; }
-}
+.ratvar 				{color: #BE8700;	font-size: 6;	font-weight: bold;	font-style: italic;}
+
 .brown					{color: #3d2009;}
 .orange 				{color: #b8761a;}
 .yellow					{color: #c7b72c;}
