@@ -66,11 +66,6 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered)
-"iU" = (
-/obj/effect/mapping_helpers/broken_floor,
-/obj/effect/decal/cleanable/glass,
-/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
-/area/ruin/unpowered)
 "ky" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
@@ -105,9 +100,6 @@
 /obj/effect/decal/cleanable/ash,
 /turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered)
-"rn" = (
-/turf/open/lava/smooth/lava_land_surface,
-/area/lavaland/surface)
 "rr" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/glass,
@@ -254,7 +246,7 @@
 /turf/open/floor/plating/lavaland_atmos,
 /area/ruin/unpowered)
 "GF" = (
-/obj/structure/window/reinforced/shuttle/unanchored,
+/obj/structure/window/reinforced/shuttle,
 /turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered)
 "GS" = (
@@ -457,7 +449,7 @@ FL
 yZ
 yZ
 fy
-iU
+GF
 fy
 yZ
 hT
@@ -603,7 +595,7 @@ FL
 (9,1,1) = {"
 Fq
 Fq
-Lz
+GF
 TF
 bl
 Er
@@ -625,7 +617,7 @@ FL
 (10,1,1) = {"
 Fq
 Fq
-Cg
+GF
 GF
 xz
 Lz
@@ -714,8 +706,8 @@ SV
 SV
 FL
 Fq
-Lz
-lu
+GF
+GF
 lu
 lu
 Rm
@@ -737,8 +729,8 @@ SV
 FL
 FL
 Fq
-rn
-lu
+Fq
+GF
 lu
 XT
 yZ
@@ -760,8 +752,8 @@ FL
 FL
 FL
 FL
-Lz
-py
+GF
+GF
 St
 yZ
 FL
