@@ -91,6 +91,11 @@
 /obj/effect/landmark/carpspawn,
 /turf/open/space/basic,
 /area/space)
+"aaH" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/mob/living/basic/bot/secbot/beepsky/officer,
+/turf/open/floor/iron,
+/area/station/hallway/primary/aft)
 "aaI" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -4250,7 +4255,7 @@
 "bvR" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/bot/secbot/ed209,
+/mob/living/basic/bot/secbot/ed209,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "bwc" = (
@@ -22066,13 +22071,6 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/chemistry)
 "hlC" = (
-/obj/machinery/turretid{
-	icon_state = "control_stun";
-	name = "AI Chamber turret control";
-	pixel_x = 3;
-	pixel_y = 28;
-	control_area = "/area/station/ai/satellite/chamber"
-	},
 /obj/machinery/door/window{
 	atom_integrity = 300;
 	base_state = "leftsecure";
@@ -22087,6 +22085,12 @@
 	name = "AI Core Shutter"
 	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/turretid{
+	name = "AI Chamber turret control";
+	pixel_x = 5;
+	pixel_y = -24;
+	control_area = "/area/station/ai/satellite/chamber"
+	},
 /turf/open/floor/engine,
 /area/station/ai/satellite/chamber)
 "hlJ" = (
@@ -24823,6 +24827,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/mob/living/basic/bot/secbot/beepsky/armsky,
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/armory)
 "ibL" = (
@@ -39109,8 +39114,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/mob/living/simple_animal/bot/secbot/pingsky,
 /obj/structure/cable/layer3,
+/mob/living/basic/bot/secbot/pingsky,
 /turf/open/floor/engine,
 /area/station/ai/satellite/interior)
 "mJk" = (
@@ -47412,7 +47417,6 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/mob/living/simple_animal/bot/secbot/beepsky/armsky,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
@@ -67724,7 +67728,6 @@
 /area/station/service/bar/atrium)
 "vYs" = (
 /obj/structure/chair,
-/mob/living/simple_animal/bot/secbot/beepsky/officer,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
@@ -98654,7 +98657,7 @@ xSC
 xYY
 usF
 ruB
-jhg
+aaH
 sYn
 ntE
 naw

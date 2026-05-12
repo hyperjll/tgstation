@@ -20277,9 +20277,6 @@
 	codes_txt = "patrol;next_patrol=1-1";
 	location = "1-0"
 	},
-/mob/living/simple_animal/bot/secbot/beepsky/officer{
-	name = "Beepsky the First"
-	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/floor1/fore)
 "fnq" = (
@@ -26268,6 +26265,7 @@
 /obj/effect/turf_decal/trimline/red/line{
 	dir = 8
 	},
+/mob/living/basic/bot/secbot/beepsky/officer,
 /turf/open/floor/iron/dark,
 /area/station/hallway/floor4/aft)
 "gQx" = (
@@ -30127,9 +30125,6 @@
 	codes_txt = "patrol;next_patrol=3-8";
 	location = "3-7"
 	},
-/mob/living/simple_animal/bot/secbot/beepsky/officer{
-	name = "Beepsky the Third"
-	},
 /turf/open/floor/iron,
 /area/station/hallway/floor3/fore)
 "hQE" = (
@@ -31846,14 +31841,13 @@
 "inl" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
+/obj/effect/decal/cleanable/dirt,
 /obj/machinery/turretid{
-	icon_state = "control_stun";
 	name = "AI Chamber turret control";
-	pixel_x = 3;
-	pixel_y = -23;
+	pixel_x = 5;
+	pixel_y = -24;
 	control_area = "/area/station/ai/satellite/chamber"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/circuit,
 /area/station/ai/satellite/chamber)
 "inq" = (
@@ -38470,6 +38464,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/mob/living/basic/bot/secbot/beepsky,
 /turf/open/floor/iron/dark,
 /area/station/hallway/floor1/fore)
 "jZa" = (
@@ -42122,14 +42117,6 @@
 	dir = 6
 	},
 /area/station/security/brig)
-"kTz" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/turf_decal/tile/red{
-	dir = 4
-	},
-/mob/living/simple_animal/bot/secbot/beepsky/armsky,
-/turf/open/floor/iron/dark,
-/area/station/security/armory)
 "kTI" = (
 /obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 1
@@ -42792,6 +42779,7 @@
 /area/station/medical/storage)
 "lbx" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/mob/living/basic/bot/secbot/pingsky,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/interior)
 "lbF" = (
@@ -51254,6 +51242,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/mob/living/basic/bot/secbot/beepsky/armsky,
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "nho" = (
@@ -66853,7 +66842,6 @@
 	codes_txt = "patrol;next_patrol=4-0";
 	location = "4-3"
 	},
-/mob/living/simple_animal/bot/secbot/beepsky,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -76574,9 +76562,6 @@
 	codes_txt = "patrol;next_patrol=2-11";
 	location = "2-10"
 	},
-/mob/living/simple_animal/bot/secbot/beepsky/officer{
-	name = "Beepsky the Second"
-	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/floor2/aft)
 "tKc" = (
@@ -82905,7 +82890,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/mob/living/simple_animal/bot/secbot/pingsky,
 /turf/open/floor/circuit,
 /area/station/ai/satellite/interior)
 "vrw" = (
@@ -323297,7 +323281,7 @@ sRf
 sHY
 hAP
 qtQ
-kTz
+lOp
 gUH
 fCS
 fFf

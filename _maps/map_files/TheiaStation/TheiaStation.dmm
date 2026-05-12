@@ -3836,12 +3836,21 @@
 /turf/open/floor/carpet,
 /area/station/commons/lounge)
 "bwI" = (
-/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/mob/living/simple_animal/bot/secbot/beepsky,
-/turf/open/floor/iron,
-/area/station/security/brig)
+/mob/living/basic/bot/secbot/beepsky/armsky,
+/turf/open/floor/iron/dark,
+/area/station/security/armory)
 "bxk" = (
 /obj/machinery/computer/mech_bay_power_console{
 	dir = 1
@@ -15915,13 +15924,9 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "gjO" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/mob/living/simple_animal/bot/secbot/beepsky/armsky,
-/obj/structure/cable,
-/turf/open/floor/iron/dark,
-/area/station/security/armory)
+/mob/living/basic/bot/secbot/pingsky,
+/turf/open/floor/iron/dark/herringbone,
+/area/station/ai/satellite/foyer)
 "gjS" = (
 /obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
@@ -18745,7 +18750,6 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "hlx" = (
-/mob/living/simple_animal/bot/secbot/pingsky,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/ai_slipper{
@@ -32918,6 +32922,7 @@
 	codes_txt = "patrol;next_patrol=security2";
 	location = "security1"
 	},
+/mob/living/basic/bot/secbot/beepsky,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "ndm" = (
@@ -71978,7 +71983,7 @@ esH
 jPi
 lYY
 vbd
-lig
+gjO
 kdq
 nXg
 jPi
@@ -100744,7 +100749,7 @@ eme
 bmM
 bmM
 bmM
-bwI
+bmM
 bmM
 bmM
 blg
@@ -101767,7 +101772,7 @@ lwD
 qFN
 qmk
 lTX
-lTX
+bwI
 lTX
 nUW
 wuG
@@ -102023,7 +102028,7 @@ vuI
 kxo
 gQF
 uXy
-gjO
+xAs
 xAs
 kFH
 nUW

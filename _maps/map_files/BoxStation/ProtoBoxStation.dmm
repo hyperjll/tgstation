@@ -1339,6 +1339,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/mob/living/basic/bot/secbot/beepsky/armsky,
 /turf/open/floor/iron/smooth,
 /area/station/security/armory)
 "aeu" = (
@@ -19551,7 +19552,6 @@
 /area/station/maintenance/disposal)
 "bkA" = (
 /obj/effect/landmark/event_spawn,
-/mob/living/simple_animal/bot/secbot/beepsky/armsky,
 /turf/open/floor/iron/smooth,
 /area/station/security/armory)
 "bkB" = (
@@ -31827,6 +31827,7 @@
 /obj/effect/turf_decal/trimline/neutral/line{
 	dir = 1
 	},
+/mob/living/basic/bot/secbot/beepsky/officer,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "chr" = (
@@ -34856,7 +34857,6 @@
 /area/station/construction)
 "cCh" = (
 /obj/item/bedsheet/red,
-/mob/living/simple_animal/bot/secbot/beepsky/officer,
 /turf/open/floor/plating,
 /area/station/security/processing)
 "cCi" = (
@@ -41309,6 +41309,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable/layer3,
+/mob/living/basic/bot/secbot/pingsky,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/interior)
 "hbc" = (
@@ -56080,7 +56081,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable/layer3,
-/mob/living/simple_animal/bot/secbot/pingsky,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/interior)
 "tEv" = (

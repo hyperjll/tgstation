@@ -1414,7 +1414,6 @@
 /area/station/cargo/drone_bay)
 "afP" = (
 /obj/machinery/holopad/secure,
-/mob/living/simple_animal/bot/secbot/pingsky,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/interior)
 "afQ" = (
@@ -7081,11 +7080,14 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/security/brig)
 "azZ" = (
-/mob/living/simple_animal/bot/secbot/beepsky{
-	name = "Officer Beepsky"
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
 	},
-/turf/open/floor/plating,
-/area/station/maintenance/department/security/brig)
+/mob/living/basic/bot/secbot/pingsky,
+/turf/open/floor/iron/grimy,
+/area/station/ai/satellite/interior)
 "aAa" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -15083,6 +15085,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/mob/living/basic/bot/secbot/beepsky,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/aft)
 "bhP" = (
@@ -50315,8 +50318,8 @@
 /area/station/medical/morgue)
 "ulV" = (
 /obj/effect/landmark/event_spawn,
-/mob/living/simple_animal/bot/secbot/beepsky/armsky,
 /obj/structure/window/reinforced/spawner/directional/north,
+/mob/living/basic/bot/secbot/beepsky/armsky,
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "umb" = (
@@ -72010,7 +72013,7 @@ nPA
 uQl
 rMJ
 aiu
-azZ
+ajD
 aiu
 ayA
 cRA
@@ -88679,7 +88682,7 @@ acD
 acL
 sYY
 adb
-ieU
+azZ
 sFL
 adM
 kUt

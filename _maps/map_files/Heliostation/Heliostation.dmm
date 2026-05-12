@@ -95,7 +95,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/mob/living/simple_animal/bot/secbot/beepsky/armsky,
+/mob/living/basic/bot/secbot/beepsky/armsky,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/armory)
 "aav" = (
@@ -120,7 +120,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment,
-/mob/living/simple_animal/bot/secbot/beepsky/officer,
 /obj/structure/cable,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/brig)
@@ -36388,6 +36387,7 @@
 	location = "security";
 	name = "Patrol Beacon"
 	},
+/mob/living/basic/bot/secbot/beepsky/officer,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "hbS" = (
@@ -43032,6 +43032,7 @@
 /area/station/science/research)
 "jAG" = (
 /obj/structure/cable,
+/mob/living/basic/bot/secbot/pingsky,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/station/ai/satellite/interior)
 "jAW" = (
@@ -73585,7 +73586,6 @@
 	},
 /obj/structure/cable/layer3,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/mob/living/simple_animal/bot/secbot/pingsky,
 /obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge,
 /area/station/ai/satellite/hallway)
@@ -109534,7 +109534,7 @@ aoS
 hkd
 arS
 asT
-aau
+auH
 dbH
 awQ
 hpH
@@ -110305,7 +110305,7 @@ apM
 kvp
 asa
 atb
-auH
+aau
 alw
 awQ
 psZ

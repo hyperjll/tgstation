@@ -32051,10 +32051,10 @@
 "joP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
-/mob/living/simple_animal/bot/secbot/pingsky,
 /obj/machinery/holopad,
 /obj/effect/turf_decal/box,
 /obj/structure/cable,
+/mob/living/basic/bot/secbot/pingsky,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/interior)
 "jpj" = (
@@ -40825,6 +40825,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/mob/living/basic/bot/secbot,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "lPv" = (
@@ -67190,11 +67191,9 @@
 /turf/closed/wall,
 /area/station/science/research/abandoned)
 "tGf" = (
-/mob/living/simple_animal/bot/secbot/beepsky{
-	name = "Officer Beepsky"
-	},
-/turf/open/floor/carpet/grimy,
-/area/station/maintenance/central/lesser)
+/mob/living/basic/bot/secbot/beepsky/officer,
+/turf/open/floor/iron,
+/area/station/security/office)
 "tGj" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -74073,11 +74072,7 @@
 /obj/effect/turf_decal/trimline/red/filled/warning{
 	dir = 4
 	},
-/mob/living/simple_animal/bot/secbot{
-	health = 45;
-	icon_state = "secbot1";
-	name = "Sergeant-at-Armsky"
-	},
+/mob/living/basic/bot/secbot/beepsky/armsky,
 /turf/open/floor/iron/dark,
 /area/station/security/armory)
 "vBh" = (
@@ -76522,11 +76517,6 @@
 "wkJ" = (
 /obj/effect/landmark/start/assistant,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4,
-/mob/living/simple_animal/bot/secbot{
-	health = 45;
-	icon_state = "secbot1";
-	name = "Sergeant-at-Armsky"
-	},
 /turf/open/floor/carpet/green,
 /area/station/commons/dorms)
 "wkU" = (
@@ -110411,7 +110401,7 @@ cMg
 uag
 skY
 eKE
-tGf
+kAO
 kAO
 eGL
 hQo
@@ -117857,7 +117847,7 @@ mhV
 kKG
 lgf
 wdt
-scg
+tGf
 dCw
 wTK
 giZ
