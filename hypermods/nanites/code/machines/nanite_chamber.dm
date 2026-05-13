@@ -82,12 +82,13 @@
 	addtimer(CALLBACK(src, PROC_REF(complete_injection), locked_state), 11 SECONDS)
 
 /obj/machinery/nanite_chamber/proc/complete_injection(locked_state)
-	//TODO MACHINE DING
+	playsound(src, 'sound/machines/ding.ogg', 50)
 	locked = locked_state
 	set_busy(FALSE)
 	if(!occupant || !linked_console.linked_techweb)
 		return
 	occupant.AddComponent(/datum/component/nanites, linked_console.linked_techweb)
+	src.say("Nanites installed in [occupant.name].")
 
 /obj/machinery/nanite_chamber/proc/remove_nanites()
 	if(machine_stat & (NOPOWER|BROKEN))
@@ -109,12 +110,13 @@
 	addtimer(CALLBACK(src, PROC_REF(complete_removal), locked_state), 9 SECONDS)
 
 /obj/machinery/nanite_chamber/proc/complete_removal(locked_state)
-	//TODO MACHINE DING
+	playsound(src, 'sound/machines/ding.ogg', 50)
 	locked = locked_state
 	set_busy(FALSE)
 	if(!occupant)
 		return
 	SEND_SIGNAL(occupant, COMSIG_NANITE_DELETE)
+	src.say("Nanites installed in [occupant.name].")
 
 /obj/machinery/nanite_chamber/update_icon(updates=ALL)
 	icon = chamber_icon
