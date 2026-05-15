@@ -80,7 +80,7 @@
 /datum/nanite_program/coagulating
 	name = "Rapid Coagulation"
 	desc = "The nanites induce rapid coagulation when the host is wounded, dramatically reducing bleeding rate."
-	use_rate = 0.10
+	use_rate = 0.2
 	rogue_types = list(/datum/nanite_program/suffocating)
 
 /datum/nanite_program/coagulating/enable_passive_effect()
@@ -98,7 +98,7 @@
 /datum/nanite_program/conductive
 	name = "Electric Conduction"
 	desc = "The nanites act as a grounding rod for electric shocks, protecting the host. Shocks can still damage the nanites themselves."
-	use_rate = 0.20
+	use_rate = 0.25
 	program_flags = NANITE_SHOCK_IMMUNE
 	rogue_types = list(/datum/nanite_program/nerve_decay)
 
@@ -132,7 +132,7 @@
 	name = "Bodily Augmentation"
 	desc = "The nanites attach to cells in the body and reinforce them, allowing the host to sustain more damage than normal without falling into a critical state or dying outright."
 	use_rate = 0.8
-	rogue_types = list(/datum/nanite_program/regenerative)
+	rogue_types = list(/datum/nanite_program/toxic)
 
 /datum/nanite_program/bodily_augment/enable_passive_effect()
 	if(..())
@@ -147,6 +147,7 @@
 /datum/nanite_program/sticky_fingers
 	name = "Nanite-Secured Fingers"
 	desc = "The nanites form netting within the host's fingers that attaches easily to anything the host(s) may hold. Preventing disarms from would-be attackers."
+	use_rate = 0.8
 	can_trigger = TRUE
 	trigger_cost = 5
 	trigger_cooldown = 20
@@ -191,7 +192,7 @@
 	name = "Metabolism Suppression"
 	desc = "The nanites expend a small amount of themselves to synthesize nutrients for the host, slowing the hosts metabolism."
 	use_rate = 0.2
-	rogue_types = list(/datum/nanite_program/metabolic_synthesis)
+	rogue_types = list(/datum/nanite_program/necrotic)
 
 /datum/nanite_program/metabolic_suppression/check_conditions()
 	if(!iscarbon(host_mob))
@@ -227,7 +228,7 @@
 /datum/nanite_program/painnull
 	name = "Pain Nullification"
 	desc = "The nanites shut down pain receptors in the body to allow for unhindered movement in the host."
-	use_rate = 0.2
+	use_rate = 0.7
 	rogue_types = list(/datum/nanite_program/nerve_decay)
 
 /datum/nanite_program/painnull/enable_passive_effect()
@@ -272,7 +273,7 @@
 /datum/nanite_program/slipresist
 	name = "Slip Resistance"
 	desc = "The nanites build around the feet of the host, and attach themselves lightly to the floor to prevent some means of slipping."
-	use_rate = 1.2
+	use_rate = 1.5
 	rogue_types = list(/datum/nanite_program/glitch)
 
 /datum/nanite_program/slipresist/enable_passive_effect()
@@ -287,7 +288,7 @@
 /datum/nanite_program/magicshield
 	name = "Magical Shielding"
 	desc = "The nanites can detect strange, mystical energies and will expend themselves to protect the host."
-	use_rate = 1
+	use_rate = 2
 	rogue_types = list(/datum/nanite_program/glitch)
 
 /datum/nanite_program/magicshield/enable_passive_effect()
@@ -349,7 +350,7 @@
 /datum/nanite_program/antigrab
 	name = "Grab Resistance"
 	desc = "The nanites bulk the host's frame, preventing them from being grabbed aggressively."
-	use_rate = 0.5
+	use_rate = 0.6
 	rogue_types = list(/datum/nanite_program/flesh_eating)
 
 /datum/nanite_program/antigrab/enable_passive_effect()

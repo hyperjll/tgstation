@@ -17,7 +17,7 @@
 	return ..()
 
 /datum/nanite_program/regenerative/active_effect()
-	if(iscarbon(host_mob))
+	if(!iscarbon(host_mob))
 		host_mob.adjust_brute_loss(-0.5, TRUE)
 		host_mob.adjust_fire_loss(-0.5, TRUE)
 		return
@@ -33,7 +33,7 @@
 	rogue_types = list(/datum/nanite_program/suffocating, /datum/nanite_program/necrotic)
 
 /datum/nanite_program/regenerative_advanced/active_effect()
-	if(iscarbon(host_mob))
+	if(!iscarbon(host_mob))
 		host_mob.adjust_brute_loss(-3, TRUE)
 		host_mob.adjust_fire_loss(-3, TRUE)
 		return
@@ -59,15 +59,14 @@
 
 /datum/nanite_program/purging
 	name = "Blood Purification"
-	desc = "The nanites purge toxins and chemicals from the host's bloodstream. Doesn't consume nanites until the host is poisoned."
+	desc = "The nanites purge toxins and chemicals from the host's bloodstream. Consumes nanites even if it has no effect."
 	use_rate = 1
 	rogue_types = list(/datum/nanite_program/suffocating, /datum/nanite_program/necrotic)
 
 /datum/nanite_program/purging/check_conditions()
-	var/foreign_reagent = length(host_mob.reagents?.reagent_list)
-	if(!host_mob.get_tox_loss() && !foreign_reagent)
-		return FALSE
-	return ..()
+	. = ..()
+	if(!. || !host_mob.reagents)
+		return FALSE // No trying to purge simple mobs
 
 /datum/nanite_program/purging/active_effect()
 	host_mob.adjust_tox_loss(-1)
@@ -154,18 +153,14 @@
 	name = "Selective Blood Purification"
 	desc = "The nanites purge toxins and dangerous chemicals from the host's bloodstream, while ignoring beneficial chemicals. \
 			The added processing power required to analyze the chemicals severely increases the nanite consumption rate. \
-			Doesn't consume nanites should the host not be poisoned."
+			Consumes nanites even if it has no effect."
 	use_rate = 2
 	rogue_types = list(/datum/nanite_program/suffocating, /datum/nanite_program/necrotic)
 
 /datum/nanite_program/purging_advanced/check_conditions()
-	var/foreign_reagent = FALSE
-	for(var/datum/reagent/toxin/toxic_reagents in host_mob.reagents.reagent_list)
-		foreign_reagent = TRUE
-		break
-	if(!host_mob.get_tox_loss() && !foreign_reagent)
+	. = ..()
+	if(!. || !host_mob.reagents)
 		return FALSE
-	return ..()
 
 /datum/nanite_program/purging_advanced/active_effect()
 	host_mob.adjust_tox_loss(-1)
@@ -237,7 +232,7 @@
 	desc = "The nanites expend themselves to enrich the host's blood with oxygen, whether it be synthesized or extracted from the environment around the host. \
 			Doesn't consume nanites should the host not be oxygen-deprived."
 	use_rate = 0.2
-	rogue_types = list(/datum/nanite_program/necrotic)
+	rogue_types = list(/datum/nanite_program/suffocating)
 
 /datum/nanite_program/regenerative_oxy/check_conditions()
 	if(!iscarbon(host_mob))

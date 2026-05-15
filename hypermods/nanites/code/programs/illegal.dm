@@ -4,7 +4,7 @@
 	unique = TRUE
 	can_trigger = TRUE
 	trigger_cost = 100
-	trigger_cooldown = 200
+	trigger_cooldown = 600
 	rogue_types = list(/datum/nanite_program/meltdown)
 
 /datum/nanite_program/freedom/on_trigger()
@@ -14,35 +14,13 @@
 		var/mob/living/carbon/C_host_mob = host_mob
 		C_host_mob.uncuff()
 
-/**
-// Currently broken?
-/datum/nanite_program/invisibility
-	name = "Nanite Invisibility"
-	desc = "The nanites expend themselves to create a light-altering field around the host, granting limited invisibility for 30 seconds."
-	unique = TRUE
-	trigger_cost = 30
-	trigger_cooldown = 600
-	rogue_types = list(/datum/nanite_program/meltdown)
-
-/datum/nanite_program/invisibility/trigger()
-	if(..())
-		return
-	host_mob.alpha = 60
-	addtimer(CALLBACK(src, .proc/invis_down), 300)
-
-/datum/nanite_program/invisibility/proc/invis_down()
-	if(..())
-		return
-	host_mob.alpha = 255
-**/
-
 /datum/nanite_program/construct_ammo
 	name = "Construct Ammunition"
 	desc = "The nanites expend a moderate amount of themselves to create a ammo box loaded with a certain kind of ammunition, ready for use."
 	unique = FALSE
 	can_trigger = TRUE
 	trigger_cost = 100
-	trigger_cooldown = 30
+	trigger_cooldown = 300
 	rogue_types = list(/datum/nanite_program/meltdown)
 
 /datum/nanite_program/construct_ammo/register_extra_settings()
@@ -53,28 +31,20 @@
 		return
 
 	var/datum/nanite_extra_setting/scanned_nanites = extra_settings[NES_AMMO_CHOICE]
+	var/obj/item/new_ammo
 	switch(scanned_nanites.get_value())
 		if("9mm Bullets")
-			var/obj/item/ammo_box/c9mm/Newitem = new
-			if(!host_mob.put_in_active_hand(Newitem))
-				Newitem.forceMove(host_mob.drop_location())
+			new_ammo = new /obj/item/ammo_box/c9mm(host_mob.loc)
 		if("10mm Bullets")
-			var/obj/item/ammo_box/c10mm/Newitem = new
-			if(!host_mob.put_in_active_hand(Newitem))
-				Newitem.forceMove(host_mob.drop_location())
+			new_ammo = new /obj/item/ammo_box/c10mm(host_mob.loc)
 		if(".45 Bullets")
-			var/obj/item/ammo_box/c45/Newitem = new
-			if(!host_mob.put_in_active_hand(Newitem))
-				Newitem.forceMove(host_mob.drop_location())
+			new_ammo = new /obj/item/ammo_box/c45(host_mob.loc)
 		if(".357 Bullets")
-			var/obj/item/ammo_box/c357/no_direct/Newitem = new
-			if(!host_mob.put_in_active_hand(Newitem))
-				Newitem.forceMove(host_mob.drop_location())
+			new_ammo = new /obj/item/ammo_box/c357/no_direct(host_mob.loc)
 		if("Shotgun Shells")
-			var/obj/item/storage/box/lethalshot/Newitem = new
-			if(!host_mob.put_in_active_hand(Newitem))
-				Newitem.forceMove(host_mob.drop_location())
-
+			new_ammo = new /obj/item/storage/box/lethalshot(host_mob.loc)
+	if(!host_mob.put_in_active_hand(new_ammo))
+		new_ammo.forceMove(host_mob.drop_location())
 
 /datum/nanite_program/construct_c4
 	name = "Explosives Construction"
@@ -82,7 +52,7 @@
 	unique = TRUE
 	can_trigger = TRUE
 	trigger_cost = 100
-	trigger_cooldown = 60
+	trigger_cooldown = 600
 	rogue_types = list(/datum/nanite_program/meltdown)
 
 /datum/nanite_program/construct_c4/on_trigger()
@@ -96,8 +66,8 @@
 	desc = "The nanites use nearly 100% of their typical maximum capacity (500) worth of themselves to create a single telecrystal where the host is."
 	unique = TRUE
 	can_trigger = TRUE
-	trigger_cost = 495
-	trigger_cooldown = 60
+	trigger_cost = 400
+	trigger_cooldown = 300
 	rogue_types = list(/datum/nanite_program/meltdown)
 
 /datum/nanite_program/telecrystal/on_trigger()
@@ -136,9 +106,9 @@
 	name = "Suicide Procedure"
 	desc = "The nanites expend a large portion of themselves to synthesize cyanide within the host's blood. Resulting in either a severely damaged liver, or death in the host."
 	can_trigger = TRUE
-	trigger_cost = 25
+	trigger_cost = 50
 	trigger_cooldown = 300
 	rogue_types = list(/datum/nanite_program/toxic)
 
 /datum/nanite_program/suicidal/on_trigger()
-	host_mob.reagents.add_reagent(/datum/reagent/toxin/cyanide, 50)
+	host_mob.reagents.add_reagent(/datum/reagent/toxin/cyanide, 20)

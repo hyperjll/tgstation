@@ -13,20 +13,33 @@
 
 /datum/nanite_program/paralyzing
 	name = "Paralysis"
-	desc = "The nanites force muscle contraction, effectively paralyzing the host."
-	use_rate = 3
+	desc = "The nanites force muscle contraction, effectively paralyzing the host. \
+			Costs more nanites the longer the effect remains active."
+	use_rate = 2
 	rogue_types = list(/datum/nanite_program/nerve_decay)
+	var/paralysis_timer = 0
+	var/warned = FALSE
 
 /datum/nanite_program/paralyzing/active_effect()
-	host_mob.Stun(40)
+	paralysis_timer++
+	if(paralysis_timer > 30) // 30 second grace period.
+		host_mob.Stun(40)
+		use_rate += 0.1
+		if(!warned)
+			to_chat(host_mob, span_warning("Your muscles seize! You cannot move!"))
+			warned = TRUE
+	else
+		use_rate = 2 // setting this value in disable_passive_effect doesn't work.
 
 /datum/nanite_program/paralyzing/enable_passive_effect()
 	. = ..()
-	to_chat(host_mob, span_warning("Your muscles seize! You can't move!"))
+	to_chat(host_mob, span_warning("Your muscles begin to seize! Something is wrong!"))
 
 /datum/nanite_program/paralyzing/disable_passive_effect()
 	. = ..()
 	to_chat(host_mob, span_notice("Your muscles relax, and you can move again."))
+	paralysis_timer = 0 // reset timer.
+	warned = FALSE // and of course...
 
 /datum/nanite_program/shocking
 	name = "Electric Shock"
@@ -42,7 +55,7 @@
 
 /datum/nanite_program/stun
 	name = "Neural Shock"
-	desc = "The nanites pulse the host's nerves when triggered, inapacitating them for a short period."
+	desc = "The nanites pulse the host's nerves when triggered, incapacitating them for a short period."
 	can_trigger = TRUE
 	trigger_cost = 4
 	trigger_cooldown = 300
@@ -100,7 +113,7 @@
 	rogue_types = list(/datum/nanite_program/nerve_decay, /datum/nanite_program/necrotic, /datum/nanite_program/brain_decay)
 	can_trigger = TRUE
 	trigger_cost = 20
-	trigger_cooldown = 60
+	trigger_cooldown = 120
 	var/fakedeath_dur = 30 SECONDS
 
 /datum/nanite_program/fake_death/on_trigger(comm_message)
@@ -217,7 +230,7 @@
 	desc = "The nanites expend themselves to create alcoholic substances, and invest them into the host's bloodstream, causing temporary drunkeness."
 	can_trigger = TRUE
 	trigger_cost = 20
-	trigger_cooldown = 200
+	trigger_cooldown = 600
 	rogue_types = list(/datum/nanite_program/suffocating)
 
 /datum/nanite_program/alcoholic/on_trigger()

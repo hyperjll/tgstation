@@ -19,11 +19,12 @@
  */
 /datum/nanite_program/protocol/kickstart
 	name = "Kickstart Protocol"
-	desc = "Replication Protocol: the nanites focus on early growth, heavily boosting replication rate for a few minutes after the initial implantation."
+	desc = "Replication Protocol: the nanites focus on early growth, heavily boosting replication rate for a few minutes after the initial implantation, \
+			resulting in an additional 420 nanite volume being produced during the first two minutes."
 	use_rate = 0
 	rogue_types = list(/datum/nanite_program/necrotic)
 	protocol_class = NANITE_PROTOCOL_REPLICATION
-	var/boost_duration = 4 MINUTES
+	var/boost_duration = 1200
 
 /datum/nanite_program/protocol/kickstart/check_conditions()
 	if(!(world.time < nanites.start_time + boost_duration))
@@ -31,7 +32,7 @@
 	return ..()
 
 /datum/nanite_program/protocol/kickstart/active_effect()
-	nanites.adjust_nanites(null, 3.5)
+	nanites.adjust_nanites(null, 4)
 
 /datum/nanite_program/protocol/factory
 	name = "Factory Protocol"
@@ -356,7 +357,7 @@
 	var/boost = 3
 
 /datum/nanite_program/protocol/eclipse/check_conditions()
-	if(host_mob.stat == DEAD) // Just to give this one a bit more use, let's consider death to be unconscious.
+	if(host_mob.stat == DEAD)
 		return TRUE
 	return ..()
 
