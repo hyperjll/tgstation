@@ -2,6 +2,7 @@
 /datum/species/golem/clockwork
 	name = "Clockwork Golem"
 	id = SPECIES_GOLEM_CLOCKWORK
+	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_CLOCKWORK
 	inherent_traits = list(
 		TRAIT_GENELESS,
 		TRAIT_LAVA_IMMUNE,

@@ -10,6 +10,7 @@ GLOBAL_LIST_EMPTY(cogscarabs)
 	icon_state = "drone_clock"
 	icon_living = "drone_clock"
 	icon_dead = "drone_clock_dead"
+	mob_biotypes = MOB_CLOCKWORK
 	health = 35
 	maxHealth = 35
 	faction = list(FACTION_NEUTRAL, FACTION_SILICON, FACTION_TURRET, FACTION_CLOCK)

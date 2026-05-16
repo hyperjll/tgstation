@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(clockwork_marauders)
 	icon = 'hypermods/icons/mob/clock_cult/clockwork_mobs.dmi'
 	icon_state = "clockwork_marauder"
 	icon_living = "clockwork_marauder"
-	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_CLOCKWORK
 	sentience_type = SENTIENCE_HUMANOID
 	maxHealth = 140
 	health = 140
@@ -128,7 +128,7 @@ GLOBAL_LIST_EMPTY(clockwork_marauders)
 
 /obj/item/nullrod/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/bane, /mob/living/basic/clockwork_marauder, 1, 15, FALSE)
+	AddComponent(/datum/component/bane, affected_biotypes = MOB_CLOCKWORK, added_damage = 15)
 
 #undef MARAUDER_SHIELD_MAX
 #undef WELDER_REPAIR_AMOUNT

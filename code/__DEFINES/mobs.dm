@@ -126,6 +126,10 @@
 #define MOB_CRUSTACEAN (1 << 14)
 ///The mob is all boney
 #define MOB_SKELETAL (1 << 15)
+///The mob is a lycan or a werewolf. They're two different things, but we'll lump them together.
+#define MOB_LYCAN (1 << 16)
+///The mob is a clockwork cult exclusive mob type.
+#define MOB_CLOCKWORK (1 << 17)
 
 /// Readable biotypes, keep this in the same order as the flags are
 #define MOB_BIOTYPES_READABLE list(\
@@ -145,6 +149,8 @@
 	"mining", \
 	"crustacean", \
 	"skeletal", \
+	"lycan", \
+	"clockwork", \
 )
 
 //Lung respiration type flags

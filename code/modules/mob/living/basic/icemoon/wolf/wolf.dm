@@ -11,7 +11,7 @@
 	friendly_verb_simple = "howl at"
 
 	butcher_results = list(
-		/obj/item/food/meat/slab = 2,
+		/obj/item/food/meat/slab/canine = 2,
 		/obj/item/stack/sheet/sinew/wolf = 2,
 		/obj/item/stack/sheet/bone = 2
 	)

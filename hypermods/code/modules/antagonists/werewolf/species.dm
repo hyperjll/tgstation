@@ -1,6 +1,8 @@
 /datum/species/werewolf
-	name = "werewolf"
+	name = "Werewolf"
+	plural_form = "Werewolves"
 	id = SPECIES_WEREWOLF
+	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_LYCAN
 	inherent_traits = list(
 		TRAIT_NO_UNDERWEAR,
 		TRAIT_USES_SKINTONES,
@@ -21,6 +23,7 @@
 	mutant_organs = list(
 		/obj/item/organ/tail/werewolf = "Werewolf",
 	)
+	meat = /obj/item/food/meat/slab/canine
 	skinned_type = /obj/item/stack/sheet/animalhide/carbon/human
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	no_equip_flags = ITEM_SLOT_MASK | ITEM_SLOT_OCLOTHING | ITEM_SLOT_GLOVES | ITEM_SLOT_FEET | ITEM_SLOT_ICLOTHING | ITEM_SLOT_SUITSTORE
