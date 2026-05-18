@@ -25,7 +25,7 @@
 /obj/item/implant/fulton_recovery/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	. = ..()
 	if(.)
-		RegisterSignal(target, COMSIG_LIVING_DEATH, PROC_REF(activate))
+		RegisterSignal(target, COMSIG_LIVING_DEATH, PROC_REF(fulton_recovery))
 
 /obj/item/implant/fulton_recovery/removed(mob/target, silent = FALSE, special = FALSE)
 	. = ..()
@@ -35,13 +35,16 @@
 /obj/item/implant/fulton_recovery/activate()
 	. = ..()
 	if(isnull(chosen_area_turf))
-		if(imp_in.stat == DEAD) // prevent accidental location assigns
-			balloon_alert(imp_in, "fulton location wasn't set.")
-			return
 		chosen_area_turf = get_turf(imp_in)
-
 		our_fulton.beacon_ref = WEAKREF(chosen_area_turf)
 		balloon_alert(imp_in, "linked to current location!")
+		for(var/datum/action/implant_action as anything in actions)
+			implant_action.Remove(imp_in)
+
+/obj/item/implant/fulton_recovery/proc/fulton_recovery()
+	if(isnull(chosen_area_turf))
+		balloon_alert(imp_in, "fulton location wasn't set.")
+		return
 	else
 		var/mob/living/carbon/human/carbon_imp_in = imp_in
 		if(carbon_imp_in.stat == DEAD)
