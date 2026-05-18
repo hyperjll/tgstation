@@ -215,6 +215,7 @@
 	desc = "It's a medical kit designed to contain medipens of various kinds."
 	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "medipenkit"
+	storage_type = /datum/storage/medkit/surgery/evil // give you all that precious storage.
 
 /obj/item/storage/medkit/medipenkit/PopulateContents()
 	for(var/i in 1 to 3)
@@ -276,6 +277,10 @@
 	icon = 'icons/obj/storage/medkit.dmi'
 	icon_state = "medkit"
 
+/obj/item/storage/medkit/mutatekit/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 8
+
 /obj/item/storage/medkit/mutatekit/PopulateContents()
 	new /obj/item/reagent_containers/syringe/mutatehuman(src)
 	new /obj/item/reagent_containers/syringe/mutateslime(src)
@@ -290,6 +295,10 @@
 	name = "hypospray kit"
 	icon = 'hypermods/icons/obj/storage/medkit.dmi'
 	icon_state = "hypospraykit"
+
+/obj/item/storage/medkit/hypospray/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 9
 
 /obj/item/storage/medkit/hypospray/PopulateContents()
 	new /obj/item/reagent_containers/cup/bottle/libital(src)

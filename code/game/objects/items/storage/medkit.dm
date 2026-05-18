@@ -113,7 +113,7 @@
 	icon_state = "medkit_tactical_lite"
 	inhand_icon_state = "medkit-tactical-lite"
 	damagetype_healed = HEAL_ALL_DAMAGE
-	storage_type = /datum/storage/medkit/surgery
+	storage_type = /datum/storage/medkit/surgery/evil
 
 /obj/item/storage/medkit/surgery_syndie/PopulateContents()
 	if(empty)
