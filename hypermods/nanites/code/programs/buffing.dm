@@ -146,20 +146,20 @@
 
 /datum/nanite_program/sticky_fingers
 	name = "Nanite-Secured Fingers"
-	desc = "The nanites form netting within the host's fingers that attaches easily to anything the host(s) may hold. Preventing disarms from would-be attackers."
+	desc = "The nanites form netting within the host's fingers that attaches easily to anything the host(s) may hold. Preventing the host from dropping any held items."
 	use_rate = 0.8
 	can_trigger = TRUE
 	trigger_cost = 5
 	trigger_cooldown = 20
 	rogue_types = list(/datum/nanite_program/toxic)
 	var/list/stored_items = list()
-	var/stickyfingers = 0
+	var/stickyfingers = FALSE
 
 /datum/nanite_program/sticky_fingers/on_trigger()
 	if(..())
 		return
 
-	if(stickyfingers == 0)
+	if(stickyfingers == FALSE)
 		for(var/obj/item/I in host_mob.held_items)
 			stored_items += I
 
@@ -170,13 +170,15 @@
 		for(var/obj/item/I in stored_items)
 			to_chat(host_mob, span_notice("Your [host_mob.get_held_index_name(host_mob.get_held_index_of_item(I))]'s suddenly develop strangely sticky pads!"))
 			ADD_TRAIT(I, TRAIT_NODROP, "anti-drop nanites")
-			stickyfingers = 1
+			stickyfingers = TRUE
+		return
 
-	if(stickyfingers == 1)
+	if(stickyfingers == TRUE)
 		for(var/obj/item/I in stored_items)
 			REMOVE_TRAIT(I, TRAIT_NODROP, "anti-drop nanites")
 			to_chat(host_mob, span_notice("You feel the nanites within your fingers retract and fade..."))
-			stickyfingers = 0
+			stickyfingers = FALSE
+		return
 
 /datum/nanite_program/sticky_fingers/disable_passive_effect()
 	if(..())
@@ -185,7 +187,8 @@
 	for(var/obj/item/I in stored_items)
 		REMOVE_TRAIT(I, TRAIT_NODROP, "anti-drop nanites")
 		to_chat(host_mob, span_notice("You feel the nanites within your fingers retract and fade..."))
-		stickyfingers = 0
+		stickyfingers = FALSE
+	return
 
 
 /datum/nanite_program/metabolic_suppression
