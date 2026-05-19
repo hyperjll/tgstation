@@ -23,3 +23,8 @@
 	var/response = SEND_SIGNAL(target_mob, COMSIG_NANITE_SCAN, user, TRUE)
 	if(!response)
 		to_chat(user, span_info("No nanites detected in the subject."))
+
+/mob/living/attack_ghost(mob/dead/observer/user)
+	. = ..()
+	if (user.ghost_hud_flags & GHOST_NANITE)
+		SEND_SIGNAL(src, COMSIG_NANITE_SCAN, user, TRUE)

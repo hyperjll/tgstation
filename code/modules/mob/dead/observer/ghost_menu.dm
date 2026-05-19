@@ -129,6 +129,12 @@ GLOBAL_DATUM_INIT(ghost_menu, /datum/ghost_menu, new)
 			"tooltip" = "Allows you to perform a chemical scan by clicking on someone.",
 		),
 		list(
+			"name" = "Nanite Scanner",
+			"enabled" = (user.ghost_hud_flags & GHOST_NANITE),
+			"flag" = GHOST_NANITE,
+			"tooltip" = "Allows you to perform a nanite scan by clicking on someone.",
+		),
+		list(
 			"name" = "Gas Scanner",
 			"enabled" = (user.ghost_hud_flags & GHOST_GAS),
 			"flag" = GHOST_GAS,

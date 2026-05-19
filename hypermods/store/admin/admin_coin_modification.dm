@@ -11,9 +11,9 @@ ADMIN_VERB(adjust_players_metacoins, R_FUN, "Adjust Metacoins", "You can modifiy
 
 	if(adjustment_amount + chosen_client.prefs.metacoins < 0)
 		adjustment_amount = -chosen_client.prefs.metacoins
-	log_admin("[key_name(user)] adjusted the metaoins of [key_name(chosen_client)] by [adjustment_amount].")
+	log_admin("[key_name(user)] adjusted the metacoins of [key_name(chosen_client)] by [adjustment_amount].")
 	message_admins("[key_name_admin(user)] adjusted the metacoins of [key_name(chosen_client)] by [adjustment_amount].")
-	chosen_client.prefs.adjust_metacoins(chosen_client.ckey, adjustment_amount, "Admin [user.ckey] adjusted coins", announces = FALSE)
+	chosen_client.prefs.adjust_metacoins(chosen_client.ckey, adjustment_amount, "Admin [user.ckey] adjusted metacoins", announces = FALSE)
 	BLACKBOX_LOG_ADMIN_VERB("Adjust Metacoins")
 
 ADMIN_VERB(mass_add_metacoins, R_FUN, "Mass Add Coins", "You give everyone some metacoins.", ADMIN_CATEGORY_FUN)
@@ -28,6 +28,19 @@ ADMIN_VERB(mass_add_metacoins, R_FUN, "Mass Add Coins", "You give everyone some 
 			continue
 
 		player.client.prefs.adjust_metacoins(player.client.ckey, adjustment_amount, "You have been gifted some coins from the staff")
-	log_admin("[key_name(user)] has mass adjusted metaoins.")
-	message_admins("[key_name_admin(user)] has mass adjusted metaoins.")
+	log_admin("[key_name(user)] has mass adjusted metacoins.")
+	message_admins("[key_name_admin(user)] has mass adjusted metacoins.")
 	BLACKBOX_LOG_ADMIN_VERB("Mass Add Coins")
+
+ADMIN_VERB(check_players_metacoins, R_FUN, "Check Metacoins", "Check a certain players Metacoins balance.", ADMIN_CATEGORY_FUN)
+	var/mob/chosen_player
+	chosen_player = tgui_input_list(user, "Choose a Player", "Player List", GLOB.player_list)
+	if(!chosen_player)
+		return
+	var/client/chosen_client = chosen_player.client
+
+	var/chosen_player_balance = chosen_client.prefs.metacoins
+
+	log_admin("[key_name(user)] checked the metacoins of [key_name(chosen_client)], they have [chosen_player_balance].")
+	message_admins("[key_name_admin(user)] checked the metacoins of [key_name(chosen_client)], they have [chosen_player_balance].")
+	BLACKBOX_LOG_ADMIN_VERB("Check Metacoins")

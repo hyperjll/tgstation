@@ -65,10 +65,13 @@
 #define GHOST_HEALTH (1<<2)
 #define GHOST_CHEM (1<<3)
 #define GHOST_GAS (1<<4)
+/// Hyper Edit
+#define GHOST_NANITE (1<<5)
+/// Hyper End
 /// Represents tray view. Not a real view flag, as tray is not persistent, but used as an identifier for one.
-#define GHOST_TRAY (1<<5)
+#define GHOST_TRAY (1<<6)
 /// Repesents darkness level setting. Not a real view flag, as darkness level cycles through values, but used as an identifier for one.
-#define GHOST_DARKNESS_LEVEL (1<<6)
+#define GHOST_DARKNESS_LEVEL (1<<7)
 
 #define ALL_GHOST_FLAGS list( \
 	GHOST_DATA_HUDS, \
@@ -76,4 +79,5 @@
 	GHOST_HEALTH, \
 	GHOST_CHEM, \
 	GHOST_GAS, \
+	GHOST_NANITE, \
 )

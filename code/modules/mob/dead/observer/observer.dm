@@ -39,7 +39,7 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	var/mob/observetarget = null //The target mob that the ghost is observing. Used as a reference in logout()
 
 	///Flags of huds the ghost currently has enabled, data huds & ghost vision by default.
-	///Selection: GHOST_DATA_HUDS | GHOST_VISION | GHOST_HEALTH | GHOST_CHEM | GHOST_GAS
+	///Selection: GHOST_DATA_HUDS | GHOST_VISION | GHOST_HEALTH | GHOST_CHEM | GHOST_GAS | GHOST_NANITE
 	var/ghost_hud_flags = NONE
 	///The shape the ghost will make while orbiting mobs.
 	var/ghost_orbit = GHOST_ORBIT_CIRCLE
@@ -625,7 +625,16 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, span_notice("Gas scan enabled."))
 	else
 		to_chat(src, span_notice("Gas scan disabled."))
+/// Hyper Edit
+/mob/dead/observer/verb/toggle_nanite_scan()
+	set name = "Toggle Nanite Scan"
 
+	toggle_ghost_hud_flag(GHOST_NANITE)
+	if(ghost_hud_flags & GHOST_NANITE)
+		to_chat(src, span_notice("Nanite scan enabled."))
+	else
+		to_chat(src, span_notice("Nanite scan disabled."))
+/// Hyper End
 /mob/dead/observer/verb/restore_ghost_appearance()
 	set name = "Restore Ghost Character"
 

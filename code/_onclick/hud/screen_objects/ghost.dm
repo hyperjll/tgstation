@@ -123,7 +123,14 @@
 	desc = "Toggles your ability to gas scan objects on click."
 	hud_icon_state = "atmos_vision"
 	relevant_flag = GHOST_GAS
-
+/// Hyper Edit
+/atom/movable/screen/ghost/hudbox/nanite_scanner
+	name = "Nanite Scanner"
+	desc = "Toggles your ability to nanite scan mobs on click."
+	icon = 'hypermods/icons/hud/screen_ghost.dmi'
+	hud_icon_state = "nanite_vision"
+	relevant_flag = GHOST_NANITE
+/// Hyper End
 /atom/movable/screen/ghost/hudbox/ghost
 	name = "Ghost Vision"
 	desc = "Toggles whether you can see other ghosts."
