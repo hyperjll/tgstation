@@ -16,6 +16,9 @@
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/execution_syringes,
+	)
 
 /datum/uplink_item/stealthy_weapons/edagger
 	name = "Energy Dagger"

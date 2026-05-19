@@ -462,3 +462,12 @@
 	cost = 4 //2 TC per magazine
 	item = /obj/item/storage/box/syndie_kit/sniperammo_bundle
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/ammo/execution_syringes
+	name = "Execution Syringes"
+	desc = "A box containing 7 50-unit syringes filled with a potent mix of toxins for guaranteed lethality. \
+			Pairs well with the dart pistol!"
+	cost = 4
+	item = /obj/item/storage/box/syringes/execution/uplink_bought
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	progression_minimum = 10 MINUTES

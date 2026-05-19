@@ -15,6 +15,18 @@
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/syringe/piercing/sedative(src)
 
+/obj/item/storage/box/syringes/execution
+	name = "box of execution syringes"
+	desc = "A box full of syringes filled with lethal chemicals."
+	illustration = "syringe"
+
+/obj/item/storage/box/syringes/execution/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/syringe/lethal/execution(src)
+
+/obj/item/storage/box/syringes/execution/uplink_bought
+	icon_state = "syndiebox"
+
 
 /obj/item/storage/box/nadecasings
 	name = "grenade casing box"
