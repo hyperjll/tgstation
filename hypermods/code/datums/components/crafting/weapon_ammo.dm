@@ -1,6 +1,6 @@
 /datum/crafting_recipe/cannonball
 	name = "Cannonball"
-	result = /obj/item/ammo_casing/caseless/cannonball
+	result = /obj/item/ammo_casing/cannonball
 	time = 5 SECONDS
 	reqs = list(/obj/item/stack/sheet/iron = 10)
 	category = CAT_WEAPON_AMMO
@@ -9,7 +9,7 @@
 
 /datum/crafting_recipe/cannonball/emp
 	name = "EMP Cannonball"
-	result = /obj/item/ammo_casing/caseless/cannonball/emp
+	result = /obj/item/ammo_casing/cannonball/emp
 	time = 5 SECONDS
 	reqs = list(/obj/item/stack/sheet/iron = 10,
 				/obj/item/stack/cable_coil = 10,
@@ -21,7 +21,7 @@
 
 /datum/crafting_recipe/cannonball/explosive
 	name = "Explosive Cannonball"
-	result = /obj/item/ammo_casing/caseless/cannonball/explosive
+	result = /obj/item/ammo_casing/cannonball/explosive
 	time = 5 SECONDS
 	reqs = list(/obj/item/stack/sheet/iron = 10,
 				/datum/reagent/gunpowder = 50)

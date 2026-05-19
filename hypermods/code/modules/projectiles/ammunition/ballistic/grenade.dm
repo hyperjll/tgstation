@@ -1,4 +1,4 @@
-/obj/item/ammo_casing/caseless/chinalake
+/obj/item/ammo_casing/chinalake
 	name = "Blast Grenade"
 	desc = "A cased high explosive grenade specially designed to be fired out of a china-lake grenade launcher."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
@@ -7,14 +7,18 @@
 	caliber = CALIBER_40MM
 	projectile_type = /obj/projectile/bullet/clblastnade
 
-/obj/item/ammo_casing/caseless/chinalake/blast
+/obj/item/ammo_casing/chinalake/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/caseless)
+
+/obj/item/ammo_casing/chinalake/blast
 	name = "Blast Grenade"
 	desc = "A cased high explosive grenade specially designed to be fired out of a china-lake grenade launcher."
 	base_icon_state = "Blast_grenade"
 	icon_state = "Blast_grenade"
 	projectile_type = /obj/projectile/bullet/clblastnade
 
-/obj/item/ammo_casing/caseless/chinalake/frag
+/obj/item/ammo_casing/chinalake/frag
 	name = "Frag Grenade"
 	desc = "A cased extremely explosive grenade specially designed to be fired out of a china-lake grenade launcher."
 	base_icon_state = "Frag_grenade"

@@ -19,11 +19,15 @@
 	desc = "A .45 bullet casing."
 	projectile_type = /obj/projectile/bullet/incendiary/c45
 
-/obj/item/ammo_casing/caseless/c45
+/obj/item/ammo_casing/c45/cs
 	name = ".45 caseless bullet"
-	desc = "Huh? But i thought..."
+	desc = "A caseless .45 bullet casing"
 	caliber = ".45"
 	projectile_type = /obj/projectile/bullet/c45/cs
+
+/obj/item/ammo_casing/c45/cs/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/caseless)
 
 /obj/item/ammo_casing/c45/sp
 	name = ".45 soporific bullet casing"

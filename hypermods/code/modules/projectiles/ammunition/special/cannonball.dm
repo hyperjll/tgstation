@@ -1,4 +1,4 @@
-/obj/item/ammo_casing/caseless/cannonball
+/obj/item/ammo_casing/cannonball
 	name = "compact cannonball"
 	desc = "A compact cannonball that fits within your hand. It's incredibly difficult to hold this without straining."
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
@@ -6,21 +6,25 @@
 	caliber = CALIBER_CANNONBALL
 	projectile_type = /obj/projectile/bullet/cannonball
 
-/obj/item/ammo_casing/caseless/cannonball/emp
+/obj/item/ammo_casing/cannonball/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/caseless)
+
+/obj/item/ammo_casing/cannonball/emp
 	name = "compact electro-magnetic cannonball"
 	desc = "A compact cannonball fitted with magnetic technology that fits within your hand. It's incredibly difficult to hold this without straining."
 	icon_state = "emp_cannonballs"
 	caliber = CALIBER_CANNONBALL
 	projectile_type = /obj/projectile/bullet/cannonball/emp
 
-/obj/item/ammo_casing/caseless/cannonball/explosive
+/obj/item/ammo_casing/cannonball/explosive
 	name = "compact explosive cannonball"
 	desc = "A compact cannonball loaded with gunpowder that fits within your hand. It's incredibly difficult to hold this without straining."
 	icon_state = "biggest_cannonballs"
 	caliber = CALIBER_CANNONBALL
 	projectile_type = /obj/projectile/bullet/cannonball/explosive
 
-/obj/item/ammo_casing/caseless/cannonball/meteorslug
+/obj/item/ammo_casing/cannonball/meteorslug
 	name = "compact meteorball"
 	desc = "A compact meteor that fits within your hand. It's incredibly difficult to hold this without straining."
 	icon_state = "meteor_cannonballs"

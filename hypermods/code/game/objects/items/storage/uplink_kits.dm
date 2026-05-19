@@ -109,7 +109,7 @@
 		/obj/item/ammo_box/magazine/m9mm/ap,
 		/obj/item/ammo_box/magazine/m9mm/hp,
 		/obj/item/ammo_box/magazine/m9mm/fire,
-		/obj/item/ammo_box/magazine/m9mm/caseless,
+		/obj/item/ammo_box/magazine/m9mm/cs,
 		/obj/item/ammo_box/magazine/m9mm/emp,
 		/obj/item/ammo_box/magazine/m9mm/sp,
 		/obj/item/ammo_box/magazine/m9mm/cryo,
@@ -878,7 +878,7 @@
 /obj/item/storage/box/syndie_kit/piratekit/PopulateContents()
 	new /obj/item/gun/ballistic/handcannon/syndicate(src)
 	for(var/i in 1 to 4)
-		new /obj/item/ammo_casing/caseless/cannonball(src)
+		new /obj/item/ammo_casing/cannonball(src)
 	new /obj/item/book/granter/crafting_recipe/syndipiratemanual(src)
 
 /obj/item/storage/box/syndie_kit/riggedglitterbombs

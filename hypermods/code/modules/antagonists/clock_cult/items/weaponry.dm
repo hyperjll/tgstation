@@ -299,7 +299,7 @@
 
 /// Recharges a bolt, done after the delay in shoot_live_shot
 /obj/item/gun/ballistic/bow/clockwork/proc/recharge_bolt()
-	var/obj/item/ammo_casing/caseless/arrow/clockbolt/bolt = new
+	var/obj/item/ammo_casing/arrow/clockbolt/bolt = new
 	magazine.give_round(bolt)
 	chambered = bolt
 	update_icon()
@@ -327,15 +327,19 @@
 	return ..() //fires, removing the arrow
 
 /obj/item/ammo_box/magazine/internal/bow/clockwork
-	ammo_type = /obj/item/ammo_casing/caseless/arrow/clockbolt
+	ammo_type = /obj/item/ammo_casing/arrow/clockbolt
 	start_empty = FALSE
 
-/obj/item/ammo_casing/caseless/arrow/clockbolt
+/obj/item/ammo_casing/arrow/clockbolt
 	name = "energy bolt"
 	desc = "An arrow made from a strange energy."
 	icon = 'hypermods/icons/obj/clock_cult/ammo.dmi'
 	icon_state = "arrow_redlight"
 	projectile_type = /obj/projectile/energy/clockbolt
+
+/obj/item/ammo_casing/arrow/clockbolt/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/caseless)
 
 /obj/projectile/energy/clockbolt
 	name = "energy bolt"

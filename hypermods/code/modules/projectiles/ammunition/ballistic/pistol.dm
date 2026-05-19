@@ -1,10 +1,14 @@
 // 10mm
 
-/obj/item/ammo_casing/caseless/c10mm
+/obj/item/ammo_casing/c10mm/cs
 	name = "10mm caseless bullet casing"
 	desc = "Huh? But i thought..."
 	caliber = CALIBER_10MM
 	projectile_type = /obj/projectile/bullet/c10mm/cs
+
+/obj/item/ammo_casing/c10mm/cs/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/caseless)
 
 /obj/item/ammo_casing/c10mm/sp
 	name = "10mm soporific bullet casing"
@@ -43,11 +47,15 @@
 
 // 9mm (Makarov, Stechkin APS, PP-95)
 
-/obj/item/ammo_casing/caseless/c9mm
+/obj/item/ammo_casing/c9mm/cs
 	name = "9mm caseless bullet casing"
 	desc = "Huh? But i thought..."
 	caliber = CALIBER_9MM
 	projectile_type = /obj/projectile/bullet/c9mm/cs
+
+/obj/item/ammo_casing/c9mm/cs/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/caseless)
 
 /obj/item/ammo_casing/c9mm/emp
 	name = "9mm EMP bullet casing"
@@ -102,10 +110,14 @@
 	desc = "A .50AE incendiary bullet casing."
 	projectile_type = /obj/projectile/bullet/incendiary/a50ae
 
-/obj/item/ammo_casing/caseless/a50ae
+/obj/item/ammo_casing/a50ae/cs
 	name = ".50AE caseless bullet casing"
-	desc = "Huh? But i thought..."
+	desc = "A .50AE caseless bullet casing."
 	projectile_type = /obj/projectile/bullet/a50ae/cs
+
+/obj/item/ammo_casing/a50ae/cs/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/caseless)
 
 /obj/item/ammo_casing/a50ae/emp
 	name = ".50AE EMP bullet casing"

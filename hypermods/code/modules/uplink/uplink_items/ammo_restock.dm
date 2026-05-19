@@ -381,7 +381,7 @@
 /datum/uplink_item/ammo_restock/ammo50box/caseless
 	name = "Box of .50 AE-Caseless Rounds"
 	desc = "An ammo box filled with .50 AE-Caseless rounds, used for restocking .50 AE magazines. Contains 20 .50 AE-Caseless bullets."
-	item = /obj/item/ammo_box/m50/caseless
+	item = /obj/item/ammo_box/m50/cs
 	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo_restock/ammo50box/emp

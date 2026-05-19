@@ -38,7 +38,7 @@
 	name = "9mm Caseless Magazine"
 	desc = "An additional 8-round 9mm magazine, compatible with the Makarov pistol. \
 			These rounds leave behind no casings, ensuring little evidence is left behind."
-	item = /obj/item/ammo_box/magazine/m9mm/caseless
+	item = /obj/item/ammo_box/magazine/m9mm/cs
 	cost = 1
 
 /datum/uplink_item/ammo/pistol/emp

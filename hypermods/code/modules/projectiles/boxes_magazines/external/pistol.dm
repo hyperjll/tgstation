@@ -6,7 +6,7 @@
 	icon_state = "9x19p"
 	base_icon_state = "9x19p"
 	desc = "A 10mm pistol magazine. Loaded with rounds which are engineered without casings, but suffer damage and speed as a result."
-	ammo_type = /obj/item/ammo_casing/caseless/c10mm
+	ammo_type = /obj/item/ammo_casing/c10mm/cs
 
 /obj/item/ammo_box/magazine/m10mm/sp
 	name = "pistol magazine (10mm soporific)"
@@ -50,12 +50,12 @@
 
 // Makarov
 
-/obj/item/ammo_box/magazine/m9mm/caseless
+/obj/item/ammo_box/magazine/m9mm/cs
 	name = "pistol magazine (9mm caseless)"
 	icon_state = "9x19p"
 	base_icon_state = "9x19p"
 	desc = "A gun magazine. Loaded with rounds that leave behind no casings."
-	ammo_type = /obj/item/ammo_casing/caseless/c9mm
+	ammo_type = /obj/item/ammo_casing/c9mm/cs
 
 /obj/item/ammo_box/magazine/m9mm/emp
 	name = "pistol magazine (9mm EMP)"
@@ -151,7 +151,7 @@
 	icon = 'hypermods/icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "cs45-8"
 	base_icon_state = "cs45"
-	ammo_type = /obj/item/ammo_casing/caseless/c45
+	ammo_type = /obj/item/ammo_casing/c45/cs
 	caliber = CALIBER_45
 	max_ammo = 8
 	multiple_sprites = AMMO_BOX_PER_BULLET
@@ -292,7 +292,7 @@
 /obj/item/ammo_box/magazine/m50/cs
 	name = "handgun magazine (.50ae Caseless)"
 	desc = "A .50 AE pistol magazine. Loaded with rounds which leave behind no casings."
-	ammo_type = /obj/item/ammo_casing/caseless/a50ae
+	ammo_type = /obj/item/ammo_casing/a50ae/cs
 
 /obj/item/ammo_box/magazine/m50/emp
 	name = "handgun magazine (.50ae EMP)"

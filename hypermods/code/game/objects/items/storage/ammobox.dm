@@ -459,7 +459,7 @@
 	name = "ammo box (9mm caseless)"
 	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "caseless9mmbox"
-	ammo_type = /obj/item/ammo_casing/caseless/c9mm
+	ammo_type = /obj/item/ammo_casing/c9mm/cs
 
 /obj/item/ammo_box/c9mm/fire
 	name = "ammo box (9mm incendiary)"
@@ -532,7 +532,7 @@
 	name = "ammo box (10mm caseless)"
 	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "caseless10mmbox"
-	ammo_type = /obj/item/ammo_casing/caseless/c10mm
+	ammo_type = /obj/item/ammo_casing/c10mm/cs
 
 /obj/item/ammo_box/c10mm/sp
 	name = "ammo box (10mm soporific)"
@@ -593,7 +593,7 @@
 	name = "ammo box (.45 caseless)"
 	icon = 'hypermods/icons/obj/weapons/guns/ammobox.dmi'
 	icon_state = "caseless45box"
-	ammo_type = /obj/item/ammo_casing/caseless/c45
+	ammo_type = /obj/item/ammo_casing/c45/cs
 
 /obj/item/ammo_box/c45/sp
 	name = "ammo box (.45 soporific)"
@@ -678,10 +678,10 @@
 	icon_state = "inc50aebox"
 	ammo_type = /obj/item/ammo_casing/a50ae/inc
 
-/obj/item/ammo_box/m50/caseless
+/obj/item/ammo_box/m50/cs
 	name = "ammo box (.50 AE caseless)"
 	icon_state = "caseless50aebox"
-	ammo_type = /obj/item/ammo_casing/caseless/a50ae
+	ammo_type = /obj/item/ammo_casing/a50ae/cs
 
 /obj/item/ammo_box/m50/emp
 	name = "ammo box (.50 AE EMP)"
