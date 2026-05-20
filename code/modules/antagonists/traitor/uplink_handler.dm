@@ -225,7 +225,7 @@
 			potential_duplicate_objectives[current_type] += potential_duplicate
 
 		added_types += current_type
-		current_type = type2parent(current_type)
+		current_type = current_type::parent_type
 	return TRUE
 
 /datum/uplink_handler/proc/get_completion_count(datum/traitor_objective/type)

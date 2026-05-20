@@ -70,7 +70,7 @@
 			continue
 		already_targeting += task.target //Removing primary objective kill targets from the list
 
-	var/parent_type = type2parent(type)
+	var/parent_type = type::parent_type
 	//don't roll head of staff types if you haven't completed the normal version
 	if(heads_of_staff && !handler.get_completion_count(parent_type))
 		// Locked if they don't have any of the risky bug room objective completed

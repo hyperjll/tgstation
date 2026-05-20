@@ -119,4 +119,4 @@ SUBSYSTEM_DEF(traitor)
 			objective_list[current_type] = list(objective)
 		else
 			objective_list[current_type] += objective
-		current_type = type2parent(current_type)
+		current_type = current_type::parent_type
