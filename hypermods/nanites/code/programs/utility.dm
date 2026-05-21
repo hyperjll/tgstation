@@ -333,16 +333,21 @@
 	desc = "The nanites aid the research servers by performing a portion of its calculations, providing additional general research point generation and nanite point generation."
 	use_rate = 0.1
 	rogue_types = list(/datum/nanite_program/toxic)
+	var/point_gen = 0.1
 
-/datum/nanite_program/research/active_effect()
+/datum/nanite_program/research/enable_passive_effect()
+	. = ..()
 	if(!iscarbon(host_mob))
 		return
-	var/points = 0.1
 	if(!host_mob.client) //less brainpower
-		points *= 0.25
-	var/datum/techweb/station_techweb = locate(/datum/techweb/science) in SSresearch.techwebs
-	station_techweb.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = points))
-	station_techweb.add_point_list(list(TECHWEB_POINT_TYPE_NANITES = points))
+		point_gen *= 0.25
+	nanites.bonus_research_val += point_gen
+	nanites.bonus_gen_res_val += point_gen
+
+/datum/nanite_program/research/disable_passive_effect()
+	. = ..()
+	nanites.bonus_research_val -= point_gen
+	nanites.bonus_gen_res_val -= point_gen
 
 /datum/nanite_program/accelerated_synthesis
 	name = "Accelerated Synthesis"
@@ -560,17 +565,21 @@
 	desc = "The nanites adopt research server programming and may expend themselves to generate both general and nanite research points in substantial amounts."
 	use_rate = 0.7
 	rogue_types = list(/datum/nanite_program/glitch)
+	var/point_gen = 0.2
 
-/datum/nanite_program/researchplus/active_effect()
+/datum/nanite_program/researchplus/enable_passive_effect()
+	. = ..()
 	if(!iscarbon(host_mob))
 		return
-	var/points = 0.2
 	if(!host_mob.client) //less brainpower
-		points *= 0.25
-	var/datum/techweb/station_techweb = locate(/datum/techweb/science) in SSresearch.techwebs
-	station_techweb.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = points))
-	station_techweb.add_point_list(list(TECHWEB_POINT_TYPE_NANITES = points))
+		point_gen *= 0.25
+	nanites.bonus_research_val += point_gen
+	nanites.bonus_gen_res_val += point_gen
 
+/datum/nanite_program/researchplus/disable_passive_effect()
+	. = ..()
+	nanites.bonus_research_val -= point_gen
+	nanites.bonus_gen_res_val -= point_gen
 
 /datum/nanite_program/deadchat
 	name = "Otherworldly Programming"
