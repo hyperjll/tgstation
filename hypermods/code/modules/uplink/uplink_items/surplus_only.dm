@@ -170,3 +170,24 @@
 	cost = 4
 	surplus = 2
 	cant_discount = TRUE
+
+/datum/uplink_item/surplusonly/fletching
+	name = "Fletching for the Modern Spacer"
+	desc = "A how-to guide to crafting and maintaining wooden bows, fletching arrows, and... making violins?"
+	item = /obj/item/book/granter/crafting_recipe/fletching
+	cost = 5
+	surplus = 40
+
+/datum/uplink_item/surplusonly/donk_secret_recipe
+	name = "Donk Co. Secret Recipe"
+	desc = "Documents detailing how to make several Donk Co. branded prototypes."
+	item = /obj/item/book/granter/crafting_recipe/donk_secret_recipe
+	cost = 2
+	surplus = 4
+
+/datum/uplink_item/surplusonly/death_sandwich
+	name = "Sandwich of Death Recipe"
+	desc = "An ancient composition notebook with the instructions for an ancient and ultimate sandwich scrawled upon its loose-leaf pages."
+	item = /obj/item/book/granter/crafting_recipe/death_sandwich
+	cost = 3
+	surplus = 4
