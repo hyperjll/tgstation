@@ -477,6 +477,9 @@ GLOBAL_LIST_EMPTY(crematoriums)
 		if(victim.incorporeal_move) //can't cook revenants!
 			continue
 
+		if(HAS_TRAIT(victim, TRAIT_TEMPORARY_BODY)) // prevents torment nexus bitrunners from cremating themselves to escape
+			continue
+
 		if (victim.stat != DEAD)
 			victim.emote("scream")
 
