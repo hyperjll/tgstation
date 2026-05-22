@@ -11,6 +11,7 @@
 
 /obj/item/reagent_containers/cup/bottle/modafinil
 	name = "modafinil bottle"
+	desc = "A small bottle of Modafinil. Used to suppress sleep."
 	list_reagents = list(/datum/reagent/medicine/modafinil = 30)
 
 /obj/item/reagent_containers/cup/bottle/methamphetamine
@@ -21,23 +22,25 @@
 
 /obj/item/reagent_containers/cup/bottle/libital
 	name = "libital bottle"
-	desc = "A small bottle of libital."
+	desc = "A small bottle of libital. Treats brute damage."
 	custom_price = 25
 	list_reagents = list(/datum/reagent/medicine/c2/libital = 30)
 
 /obj/item/reagent_containers/cup/bottle/aiuri
 	name = "aiuri bottle"
-	desc = "A small bottle of aiuri."
+	desc = "A small bottle of aiuri. Treats burn damage."
 	custom_price = 25
 	list_reagents = list(/datum/reagent/medicine/c2/aiuri = 30)
 
 /obj/item/reagent_containers/cup/bottle/syriniver
 	name = "syriniver bottle"
+	desc = "A small bottle of syriniver. Treats toxin damage."
 	list_reagents = list(/datum/reagent/medicine/c2/syriniver = 30)
 	custom_price = 25
 
 /obj/item/reagent_containers/cup/bottle/convermol
 	name = "convermol bottle"
+	desc = "A small bottle of convermol. Treats oxygen loss in exchange for small toxin damage."
 	list_reagents = list(/datum/reagent/medicine/c2/convermol = 30)
 	custom_price = 25
 
@@ -48,6 +51,7 @@
 
 /obj/item/reagent_containers/cup/bottle/nocturine
 	name = "nocturine bottle"
+	desc = "A small bottle of nocturine. A potent sleep-agent."
 	list_reagents = list(/datum/reagent/toxin/nocturine = 30)
 
 /obj/item/reagent_containers/cup/bottle/nocturine/full
@@ -56,21 +60,25 @@
 
 /obj/item/reagent_containers/cup/bottle/sal_acid
 	name = "salicyclic acid bottle"
+	desc = "A small bottle of salicyclic acid. Used to treat severe brute damage."
 	list_reagents = list(/datum/reagent/medicine/sal_acid = 30)
 	custom_premium_price = 50
 
 /obj/item/reagent_containers/cup/bottle/oxandrolone
 	name = "oxandrolone bottle"
+	desc = "A small bottle of oxandrolone. Used to treat severe burn damage."
 	list_reagents = list(/datum/reagent/medicine/oxandrolone = 30)
 	custom_premium_price = 50
 
 /obj/item/reagent_containers/cup/bottle/salbutamol
 	name = "salbutamol bottle"
+	desc = "A small bottle of salbutamol. Used to alleviate oxygen loss quickly."
 	list_reagents = list(/datum/reagent/medicine/salbutamol = 30)
 	custom_premium_price = 50
 
 /obj/item/reagent_containers/cup/bottle/coagulant
 	name = "sanguirite bottle"
+	desc = "A small bottle of sanguirite. A potent coagulant."
 	list_reagents = list(/datum/reagent/medicine/coagulant = 30)
 	custom_premium_price = 50
 
@@ -82,42 +90,52 @@
 
 /obj/item/reagent_containers/cup/bottle/oculine
 	name = "oculine bottle"
+	desc = "A small bottle of oculine. Used to repair eye damage."
 	list_reagents = list(/datum/reagent/medicine/oculine = 30)
 
 /obj/item/reagent_containers/cup/bottle/inacusiate
 	name = "inacusiate bottle"
+	desc = "A small bottle of inacusiate. Used to repair ear damage."
 	list_reagents = list(/datum/reagent/medicine/inacusiate = 30)
 
 /obj/item/reagent_containers/cup/bottle/ipecacide
 	name = "ipecacide bottle"
+	desc = "A small bottle of ipecacide. A chemical used to induce vomiting in the event of poisoning."
 	list_reagents = list(/datum/reagent/impurity/ipecacide = 30)
 
 /obj/item/reagent_containers/cup/bottle/bicaridine
 	name = "bicaridine bottle"
+	desc = "A small bottle of bicaridine. Used to treat brute damage."
 	list_reagents = list(/datum/reagent/medicine/bicaridine = 30)
 
 /obj/item/reagent_containers/cup/bottle/dermaline
 	name = "dermaline bottle"
+	desc = "A small bottle of dermaline. Used to treat burn damage."
 	list_reagents = list(/datum/reagent/medicine/dermaline = 30)
 
 /obj/item/reagent_containers/cup/bottle/dylovene
 	name = "dylovene bottle"
+	desc = "A small bottle of dylovene. Used to treat minor toxin damage."
 	list_reagents = list(/datum/reagent/medicine/dylovene = 30)
 
 /obj/item/reagent_containers/cup/bottle/dexalin
 	name = "dexalin bottle"
+	desc = "A small bottle of dexalin. Used to treat oxygen loss and blood loss."
 	list_reagents = list(/datum/reagent/medicine/dexalin = 30)
 
 /obj/item/reagent_containers/cup/bottle/hyronalin
 	name = "hyronalin bottle"
+	desc = "A small bottle of hyronalin. Used to treat toxins and radiation."
 	list_reagents = list(/datum/reagent/medicine/hyronalin = 30)
 
 /obj/item/reagent_containers/cup/bottle/inaprovaline
 	name = "inaprovaline bottle"
+	desc = "A small bottle of inaprovaline. Used to stabilize patients in critical condition."
 	list_reagents = list(/datum/reagent/medicine/inaprovaline = 30)
 
 /obj/item/reagent_containers/cup/bottle/naloxone
 	name = "naloxone bottle"
+	desc = "A small bottle of naloxone. A powerful opioid antagonist that purges drowsiness and narcotics from the patient, restores breath loss and accelerates addiction recovery."
 	list_reagents = list(/datum/reagent/medicine/naloxone = 30)
 
 /obj/item/reagent_containers/cup/bottle/higadrite

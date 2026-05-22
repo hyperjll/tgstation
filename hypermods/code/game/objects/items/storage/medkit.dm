@@ -85,11 +85,12 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/reagent_containers/applicator/patch/mender/oxy = 1,
-		/obj/item/storage/pill_bottle/dexalin = 1,
+		/obj/item/storage/pill_bottle/inaprovaline/less = 1,
+		/obj/item/storage/pill_bottle/dexalin/less = 1,
 		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/reagent_containers/hypospray/medipen/salbutamol = 1,
-		/obj/item/reagent_containers/applicator/pill/tranex = 2,
-		/obj/item/storage/pill_bottle/coagulant = 1,
+		/obj/item/storage/pill_bottle/tranex/less = 1,
+		/obj/item/storage/pill_bottle/coagulant/less = 1,
 		)
 	generate_items_inside(items_inside,src)
 
@@ -105,7 +106,7 @@
 		/obj/item/reagent_containers/applicator/patch/mender/brute = 1,
 		/obj/item/stack/medical/bruise_pack = 1,
 		/obj/item/stack/medical/suture = 1,
-		/obj/item/storage/pill_bottle/painkillers = 1,
+		/obj/item/storage/pill_bottle/painkillers/less = 1,
 		/obj/item/reagent_containers/medigel/libital = 1,
 		/obj/item/reagent_containers/medigel/styptic_powder = 1,
 		/obj/item/reagent_containers/hypospray/medipen/bicaridine = 1,
@@ -339,9 +340,9 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/stack/medical/wrap/gauze = 1,
-		/obj/item/stack/medical/bloodpack = 2,
-		/obj/item/stack/medical/suture/medicated = 2,
-		/obj/item/stack/medical/mesh/advanced = 2,
+		/obj/item/stack/medical/bloodpack = 1,
+		/obj/item/stack/medical/suture = 2,
+		/obj/item/stack/medical/mesh = 2,
 		/obj/item/stack/medical/bone_gel = 1,
 		/obj/item/stack/medical/wrap/sticky_tape/surgical = 1,
 		/obj/item/reagent_containers/hypospray/medipen = 1,
@@ -349,6 +350,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 1,
 		/obj/item/storage/pill_bottle/multiver/less = 1,
 		/obj/item/storage/pill_bottle/painkillers = 1,
+		/obj/item/storage/pill_bottle/antidepressant/less = 1,
 	)
 	generate_items_inside(items_inside,src)
 
@@ -361,11 +363,15 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/applicator/patch/libital = 3,
-		/obj/item/reagent_containers/applicator/patch/styptic_powder = 3,
+		/obj/item/storage/pill_bottle/libital_patch/less = 1,
+		/obj/item/storage/pill_bottle/styptic_powder/less = 1,
+		/obj/item/stack/medical/suture = 1,
+		/obj/item/stack/medical/bruise_pack = 1,
+		/obj/item/stack/medical/bloodpack = 1,
+		/obj/item/reagent_containers/medigel/libital = 1,
 		/obj/item/storage/pill_bottle/probital = 1,
 		/obj/item/storage/pill_bottle/bicaridine = 1,
-		/obj/item/storage/pill_bottle/bicartranex = 1,
+		/obj/item/storage/pill_bottle/bicartranex/less = 1,
 		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 2,
 		/obj/item/reagent_containers/hypospray/medipen/bicaridine = 1,
 		/obj/item/reagent_containers/hypospray/medipen/salacid = 2,
@@ -381,13 +387,17 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/applicator/patch/aiuri = 3,
-		/obj/item/reagent_containers/applicator/patch/silver_sulfadiazine = 3,
+		/obj/item/storage/pill_bottle/aiuri_patch/less = 1,
+		/obj/item/storage/pill_bottle/silver_sulfadiazine/less = 1,
+		/obj/item/stack/medical/mesh = 1,
+		/obj/item/stack/medical/ointment = 1,
+		/obj/item/reagent_containers/medigel/aiuri = 1,
+		/obj/item/reagent_containers/spray/mine_salve = 1,
 		/obj/item/reagent_containers/spray/hercuri = 2,
 		/obj/item/reagent_containers/hypospray/medipen/dermaline = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 2,
 		/obj/item/storage/pill_bottle/kelotane = 1,
-		/obj/item/storage/pill_bottle/dermaline = 1,
+		/obj/item/storage/pill_bottle/dermaline/less = 1,
 		/obj/item/reagent_containers/medigel/synthflesh/big = 1,
 	)
 	generate_items_inside(items_inside,src)
@@ -402,15 +412,18 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/storage/pill_bottle/multiver/less = 1,
-		/obj/item/reagent_containers/applicator/patch/ondansetron = 2,
-		/obj/item/reagent_containers/syringe/syriniver = 2,
-		/obj/item/reagent_containers/cup/bottle/syriniver = 1,
+		/obj/item/storage/pill_bottle/dylovene/less = 1,
+		/obj/item/storage/pill_bottle/ondansetron = 1,
+		/obj/item/reagent_containers/syringe/syriniver = 1,
 		/obj/item/reagent_containers/cup/bottle/calomel = 1,
 		/obj/item/reagent_containers/cup/bottle/higadrite = 1,
+		/obj/item/reagent_containers/cup/bottle/naloxone = 1,
+		/obj/item/reagent_containers/cup/bottle/ipecacide = 1,
 		/obj/item/storage/pill_bottle/potassiodide = 1,
 		/obj/item/storage/pill_bottle/mutadone = 1,
-		/obj/item/storage/pill_bottle/antitoxin = 1,
-		/obj/item/reagent_containers/hypospray/medipen/penacid = 2,
+		/obj/item/storage/pill_bottle/antitoxin/less = 1,
+		/obj/item/reagent_containers/hypospray/medipen/hyronalin = 1,
+		/obj/item/reagent_containers/hypospray/medipen/penacid = 1,
 		/obj/item/reagent_containers/cup/beaker/large/formaldehyde = 1,
 	)
 	generate_items_inside(items_inside,src)
@@ -424,15 +437,18 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/hypospray/medipen = 3,
-		/obj/item/reagent_containers/syringe/convermol = 3,
+		/obj/item/stack/medical/bloodpack = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/reagent_containers/hypospray/medipen/ekit = 1,
+		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 1,
+		/obj/item/reagent_containers/syringe/convermol = 2,
 		/obj/item/reagent_containers/cup/bottle/convermol = 1,
 		/obj/item/reagent_containers/cup/bottle/inaprovaline = 1,
 		/obj/item/reagent_containers/cup/bottle/salbutamol = 1,
 		/obj/item/reagent_containers/cup/bottle/diphenhydramine = 1,
 		/obj/item/reagent_containers/hypospray/medipen/salbutamol = 2,
-		/obj/item/storage/pill_bottle/tranex = 1,
-		/obj/item/storage/pill_bottle/dexalinplus = 1,
+		/obj/item/storage/pill_bottle/tranex/less = 1,
+		/obj/item/storage/pill_bottle/dexalinplus/less = 1,
 	)
 	generate_items_inside(items_inside,src)
 
@@ -447,14 +463,16 @@
 	if(empty)
 		return
 	var/static/items_inside = list(
-		/obj/item/reagent_containers/medigel/synthflesh/big = 4,
+		/obj/item/stack/medical/suture/medicated = 1,
+		/obj/item/stack/medical/mesh/advanced = 1,
+		/obj/item/reagent_containers/medigel/synthflesh/big = 3,
 		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
-		/obj/item/reagent_containers/hypospray/medipen/penthrite/better = 2,
+		/obj/item/reagent_containers/hypospray/medipen/penthrite/better = 1,
 		/obj/item/reagent_containers/cup/bottle/oculine = 1,
 		/obj/item/reagent_containers/cup/bottle/inacusiate = 1,
-		/obj/item/reagent_containers/cup/bottle/methamphetamine = 1,
-		/obj/item/storage/pill_bottle/tricordrazine = 1,
-		/obj/item/storage/pill_bottle/tranex = 1,
+		/obj/item/storage/pill_bottle/tricordrazine/less = 1,
+		/obj/item/storage/pill_bottle/dexalinplus/less = 1,
+		/obj/item/storage/pill_bottle/tranex/less = 1,
 		/obj/item/storage/pill_bottle/penacid = 1
 	)
 	generate_items_inside(items_inside,src)

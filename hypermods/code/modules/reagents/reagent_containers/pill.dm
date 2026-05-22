@@ -104,8 +104,8 @@
 
 /obj/item/reagent_containers/applicator/pill/painkillers
 	name = "painkiller"
-	desc = "Used for treating minor brute or burn damage."
-	icon_state = "pill1"
+	desc = "Used for treating minor brute or burn damage and warding off agony."
+	icon_state = "pill9"
 	volume = 10
 	list_reagents = list(/datum/reagent/drug/painkillers = 10)
 	rename_with_volume = TRUE

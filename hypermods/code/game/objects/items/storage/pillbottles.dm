@@ -5,12 +5,18 @@
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/bicaridine
 
+/obj/item/storage/pill_bottle/bicaridine/less
+	spawn_count = 3
+
 /obj/item/storage/pill_bottle/bicartranex
 	name = "bottle of wounded pills"
 	desc = "Contains pills used to cure brute damage in patients and clot bleeding wounds while restoring blood."
 	custom_premium_price = 200
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/bicartranex
+
+/obj/item/storage/pill_bottle/bicartranex/less
+	spawn_count = 3
 
 /obj/item/storage/pill_bottle/kelotane
 	name = "bottle of kelotane pills"
@@ -19,12 +25,18 @@
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/kelotane
 
+/obj/item/storage/pill_bottle/kelotane/less
+	spawn_count = 3
+
 /obj/item/storage/pill_bottle/dermaline
 	name = "bottle of dermaline pills"
 	desc = "Contains pills used to relieve burns in patients."
 	custom_premium_price = 200
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/dermaline
+
+/obj/item/storage/pill_bottle/dermaline/less
+	spawn_count = 3
 
 /obj/item/storage/pill_bottle/dylovene
 	name = "bottle of dylovene pills"
@@ -33,12 +45,18 @@
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/dylovene
 
+/obj/item/storage/pill_bottle/dylovene/less
+	spawn_count = 3
+
 /obj/item/storage/pill_bottle/antitoxin
 	name = "bottle of anti-toxin pills"
 	desc = "Contains pills used to cure toxin damage in patients."
 	custom_premium_price = 100
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/antitoxin
+
+/obj/item/storage/pill_bottle/antitoxin/less
+	spawn_count = 3
 
 /obj/item/storage/pill_bottle/dexalin
 	name = "bottle of dexalin pills"
@@ -47,12 +65,18 @@
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/dexalin
 
+/obj/item/storage/pill_bottle/dexalin/less
+	spawn_count = 3
+
 /obj/item/storage/pill_bottle/dexalinplus
 	name = "bottle of dexalin plus pills"
 	desc = "Contains pills used to heal oxygen damage and blood loss, even in non-critical state patients."
 	custom_premium_price = 100
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/dexalinplus
+
+/obj/item/storage/pill_bottle/dexalinplus/less
+	spawn_count = 3
 
 /obj/item/storage/pill_bottle/tranex
 	name = "bottle of tranexamic acid pills"
@@ -61,12 +85,18 @@
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/tranex
 
+/obj/item/storage/pill_bottle/tranex/less
+	spawn_count = 3
+
 /obj/item/storage/pill_bottle/tricordrazine
 	name = "bottle of tricordrazine pills"
 	desc = "Contains pills used to heal most forms of damage without hassle."
 	custom_premium_price = 200
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/tricordrazine
+
+/obj/item/storage/pill_bottle/tricordrazine/less
+	spawn_count = 3
 
 /obj/item/storage/pill_bottle/inaprovaline
 	name = "bottle of inaprovaline pills"
@@ -75,12 +105,18 @@
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/inaprovaline
 
+/obj/item/storage/pill_bottle/inaprovaline/less
+	spawn_count = 3
+
 /obj/item/storage/pill_bottle/coagulant
 	name = "bottle of sanguirite pills"
 	desc = "Contains pills used to relieve bleeding quickly."
 	custom_premium_price = 100
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/coagulant
+
+/obj/item/storage/pill_bottle/coagulant/less
+	spawn_count = 3
 
 /obj/item/storage/pill_bottle/antiviral
 	name = "bottle of spaceacillin pills"
@@ -90,12 +126,18 @@
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/antiviral
 
+/obj/item/storage/pill_bottle/antiviral/less
+	spawn_count = 3
+
 /obj/item/storage/pill_bottle/painkillers
 	name = "bottle of painkillers"
-	desc = "Contains pills used for treating minor brute or burn damage."
+	desc = "Contains pills used for treating minor brute or burn damage while combatting agony."
 	custom_premium_price = 100
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/pill/painkillers
+
+/obj/item/storage/pill_bottle/painkillers/less
+	spawn_count = 3
 
 /obj/item/storage/pill_bottle/syndicryo
 	name = "bottle of cryogelidia pills"
@@ -110,11 +152,17 @@
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/patch/libital
 
+/obj/item/storage/pill_bottle/libital_patch/less
+	spawn_count = 3
+
 /obj/item/storage/pill_bottle/aiuri_patch
 	name = "bottle of aiuri patches"
 	desc = "Contains aiuri patches used to treat burn damage."
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/patch/aiuri
+
+/obj/item/storage/pill_bottle/aiuri_patch/less
+	spawn_count = 3
 
 /obj/item/storage/pill_bottle/styptic_powder
 	name = "bottle of styptic powder patches"
@@ -122,11 +170,17 @@
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/patch/styptic_powder
 
+/obj/item/storage/pill_bottle/styptic_powder/less
+	spawn_count = 3
+
 /obj/item/storage/pill_bottle/silver_sulfadiazine
 	name = "bottle of silver sulfadiazine patches"
 	desc = "Contains silver sulfadiazine patches used to treat burn damage."
 	spawn_count = 7
 	spawn_type = /obj/item/reagent_containers/applicator/patch/silver_sulfadiazine
+
+/obj/item/storage/pill_bottle/silver_sulfadiazine/less
+	spawn_count = 3
 
 /obj/item/storage/pill_bottle/cyanide
 	name = "bottle of cyanide pills"

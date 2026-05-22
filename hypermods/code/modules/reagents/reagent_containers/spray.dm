@@ -121,3 +121,11 @@
 		return
 	last_generate = world.time
 	reagents.add_reagent(generate_type, generate_amount)
+
+
+/obj/item/reagent_containers/spray/mine_salve
+	name = "medical spray (miner's salve)"
+	desc = "A medical spray bottle. This one contains miner's salve, a medicine used to negate intense agony and burn wounds. May induce feelings of perfect health."
+	icon = 'icons/obj/medical/chemical.dmi'
+	icon_state = "sprayer_med_red"
+	list_reagents = list(/datum/reagent/medicine/mine_salve = 100)

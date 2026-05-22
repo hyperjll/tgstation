@@ -180,7 +180,7 @@
 		/obj/item/reagent_containers/applicator/patch/silver_sulfadiazine = 1,
 		/obj/item/reagent_containers/spray/hercuri = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 1,
-		/obj/item/storage/pill_bottle/kelotane = 1)
+		/obj/item/storage/pill_bottle/kelotane/less = 1)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/toxin
@@ -207,7 +207,7 @@
 		/obj/item/reagent_containers/applicator/patch/ondansetron = 1,
 		/obj/item/reagent_containers/syringe/syriniver = 2,
 		/obj/item/storage/pill_bottle/potassiodide = 1,
-		/obj/item/storage/pill_bottle/antitoxin = 1,
+		/obj/item/storage/pill_bottle/antitoxin/less = 1,
 		/obj/item/reagent_containers/hypospray/medipen/penacid = 1,
 		)
 	generate_items_inside(items_inside,src)
@@ -263,7 +263,7 @@
 		/obj/item/reagent_containers/applicator/patch/styptic_powder = 1,
 		/obj/item/storage/pill_bottle/probital = 1,
 		/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
-		/obj/item/storage/pill_bottle/bicaridine = 1,
+		/obj/item/storage/pill_bottle/bicaridine/less = 1,
 		)
 	generate_items_inside(items_inside,src)
 
@@ -288,7 +288,7 @@
 		/obj/item/reagent_containers/applicator/patch/synthflesh = 1,
 		/obj/item/reagent_containers/medigel/synthflesh/big = 1,
 		/obj/item/reagent_containers/hypospray/medipen/atropine = 1,
-		/obj/item/storage/pill_bottle/tricordrazine = 1,
+		/obj/item/storage/pill_bottle/tricordrazine/less = 1,
 		/obj/item/storage/pill_bottle/penacid = 1)
 	generate_items_inside(items_inside,src)
 
