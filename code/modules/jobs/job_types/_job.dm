@@ -138,6 +138,9 @@
 	/// How desensitized this job is to seeing death as a base - applied with the job
 	var/desensitized_base = 1.0
 
+	/// Will this role allow the player to use an Antag Token?
+	var/antag_tokenable = TRUE
+
 /datum/job/New()
 	. = ..()
 	var/new_spawn_positions = CHECK_MAP_JOB_CHANGE(title, "spawn_positions")

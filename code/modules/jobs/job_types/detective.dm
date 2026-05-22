@@ -46,6 +46,8 @@
 
 	job_tone = "objection"
 
+	antag_tokenable = FALSE
+
 
 /datum/outfit/job/detective
 	name = "Detective"

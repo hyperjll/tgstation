@@ -43,6 +43,8 @@
 	rpg_title = "Jailor"
 	job_flags = STATION_JOB_FLAGS | JOB_BOLD_SELECT_TEXT | JOB_ANTAG_PROTECTED
 
+	antag_tokenable = FALSE
+
 /datum/job/warden/after_spawn(mob/living/spawned, client/player_client)
 	. = ..()
 	if(!ishuman(spawned) || !prob(PIG_COP_PROBABILITY))

@@ -26,6 +26,13 @@
 		qdel(src)
 		return
 
+	if(!owner.mind.assigned_role.antag_tokenable)
+		if(!has_used)
+			has_used = TRUE
+			owner.client.prefs.adjust_metacoins(owner.client.ckey, refund_amount, "Your role is incompatible with antagonism! You've been refunded.")
+		qdel(src)
+		return
+
 	user.mind?.add_antag_datum(provided_antag_datum)
 	playsound(src.loc, 'sound/effects/chemistry/ahaha.ogg', 10, TRUE) // Very low volume.
 	qdel(src)
