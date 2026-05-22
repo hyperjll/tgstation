@@ -69,7 +69,7 @@
 		return FALSE // No trying to purge simple mobs
 
 /datum/nanite_program/purging/active_effect()
-	host_mob.adjust_tox_loss(-1)
+	host_mob.adjust_tox_loss(-1, forced = TRUE)
 	for(var/datum/reagent/reagents as anything in host_mob.reagents.reagent_list)
 		host_mob.reagents.remove_reagent(reagents.type, amount = 1)
 
@@ -163,7 +163,7 @@
 		return FALSE
 
 /datum/nanite_program/purging_advanced/active_effect()
-	host_mob.adjust_tox_loss(-1)
+	host_mob.adjust_tox_loss(-1, forced = TRUE)
 	for(var/datum/reagent/toxin/toxic_reagents in host_mob.reagents.reagent_list)
 		host_mob.reagents.remove_reagent(toxic_reagents.type, 1)
 
