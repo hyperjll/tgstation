@@ -137,10 +137,10 @@
 
 /datum/reagent/drug/painkillers
 	name = "Painkillers"
-	description = "Slowly heals brute and burn damage types while you have under 25 brute/burn damage of those types. Overdose causes minor toxin damage."
+	description = "Slowly heals brute and burn damage types while you have under 50 brute/burn damage of those types. Overdose causes minor toxin damage."
 	color = "#f2feff"
 	overdose_threshold = 30
-	addiction_types = list(/datum/addiction/opioids = 10)
+	addiction_types = list(/datum/addiction/opioids = 20)
 	taste_description = "diet morphine"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	metabolized_traits = list(TRAIT_ANALGESIA)
@@ -174,14 +174,14 @@
 
 /datum/reagent/drug/opium
 	name = "Opium"
-	description = "A relatively mild opioid, heals brute and burn damage while you have under 50 brute/burn damage. Provides body-wide pain relief, and slows mental activity. Overdose will causes brain damage, but has a high overdose limit."
+	description = "A relatively mild opioid, heals brute and burn damage while you have under 100 brute/burn damage. Provides body-wide pain relief, and slows mental activity. Overdose will causes brain damage, but has a high overdose limit."
 	color = "#F5BE27"
 	taste_description = "a tangy numbness"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 100
 	ph = 10
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	addiction_types = list(/datum/addiction/opioids = 12)
+	addiction_types = list(/datum/addiction/opioids = 50)
 	metabolized_traits = list(TRAIT_ANALGESIA)
 	var/damage_threshold = 100
 
@@ -218,14 +218,14 @@
 
 /datum/reagent/drug/heroin
 	name = "Heroin"
-	description = "A strong synthesized opioid, heals brute and burn damage while you have under 75 brute/burn damage. Causes euphoria and strong pain relief. Very easy to overdose on or go into withdrawal over."
+	description = "A strong synthesized opioid, heals brute and burn damage while you have under 150 brute/burn damage. Causes euphoria and strong pain relief. Very easy to overdose on or go into withdrawal over."
 	color = "#B3B3B3"
 	taste_description = "synthesized numbness"
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 	overdose_threshold = 10
 	ph = 6
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	addiction_types = list(/datum/addiction/opioids = 30)
+	addiction_types = list(/datum/addiction/opioids = 10)
 	metabolized_traits = list(TRAIT_ANALGESIA)
 	var/damage_threshold = 150
 
