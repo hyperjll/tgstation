@@ -198,7 +198,7 @@
 	if(current_cycle > 5)
 		affected_mob.add_mood_event("numb", /datum/mood_event/narcotic_medium, name)
 	if(affected_mob.disgust < DISGUST_LEVEL_VERYGROSS && SPT_PROB(50 * (2 - creation_purity), seconds_per_tick))
-		affected_mob.adjust_disgust(0.5 * REM * seconds_per_tick)
+		affected_mob.adjust_disgust(0.4 * REM * seconds_per_tick)
 
 	var/totaldamage = (affected_mob.get_brute_loss() + affected_mob.get_fire_loss())
 	if(totaldamage <= damage_threshold)
