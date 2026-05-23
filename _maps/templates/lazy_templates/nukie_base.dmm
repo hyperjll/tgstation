@@ -1891,11 +1891,11 @@
 /obj/structure/window/reinforced/plasma/spawner/directional/south,
 /obj/structure/window/reinforced/plasma/spawner/directional/north,
 /obj/structure/rack,
-/obj/item/ammo_casing/caseless/chinalake/blast,
-/obj/item/ammo_casing/caseless/chinalake/blast,
-/obj/item/ammo_casing/caseless/chinalake/frag,
-/obj/item/ammo_casing/caseless/chinalake/frag,
 /obj/machinery/light/cold/directional/east,
+/obj/item/ammo_casing/chinalake/blast,
+/obj/item/ammo_casing/chinalake/blast,
+/obj/item/ammo_casing/chinalake/frag,
+/obj/item/ammo_casing/chinalake/frag,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/expansion_armory)
 "oq" = (
