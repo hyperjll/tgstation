@@ -1,3 +1,8 @@
+/datum/config_entry/number/public_mats_vote
+	default = 10 // Ten mintues
+	min_val = -1 // See config_entry below.
+
+
 /datum/config_entry/string/alert_yellow
 	default = "The security alert level has been changed to yellow. There is currently a critical engineering issue on the station. Such engineering issues are to be assumed hazardous to all life. Crewmembers are advised to avoid damaged areas, and report them as needed."
 
