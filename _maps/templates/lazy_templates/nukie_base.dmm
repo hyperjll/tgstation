@@ -104,22 +104,6 @@
 /obj/machinery/light/cold/directional/north,
 /turf/open/floor/mineral/titanium,
 /area/centcom/syndicate_mothership/control)
-"br" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/yellow/hidden/layer2,
-/obj/docking_port/stationary{
-	area_type = /area/centcom/syndicate_mothership;
-	dheight = 1;
-	dir = 4;
-	dwidth = 12;
-	height = 17;
-	name = "syndicate recon outpost";
-	shuttle_id = "syndicate_away";
-	width = 23
-	},
-/turf/open/floor/mineral/titanium,
-/area/centcom/syndicate_mothership/control)
 "bB" = (
 /obj/structure/railing{
 	dir = 4
@@ -11220,7 +11204,7 @@ Tc
 Ib
 Ib
 en
-br
+xj
 xj
 Me
 ZZ
