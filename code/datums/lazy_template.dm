@@ -139,3 +139,7 @@
 /datum/lazy_template/reebe
 	key = LAZY_TEMPLATE_KEY_REEBE
 	map_name = "reebe"
+
+/datum/lazy_template/commando_base
+	key = LAZY_TEMPLATE_KEY_COMMANDOBASE
+	map_name = "commando_base"

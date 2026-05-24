@@ -72,6 +72,7 @@
 		DYNAMIC_TIER_MEDIUMHIGH = 1,
 		DYNAMIC_TIER_HIGH = 3,
 	)
+	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_COMMANDOBASE)
 
 /datum/dynamic_ruleset/roundstart/nukies/commando/assign_role(datum/mind/candidate, datum/team/nuke_team, datum/mind/most_experienced)
 	if(most_experienced == candidate)

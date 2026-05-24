@@ -22,7 +22,7 @@
 	if(nuke_team)
 		team_number = nuke_team.members.Find(owner)
 
-	return GLOB.commando_nukeop_start[((team_number - 1) % GLOB.nukeop_start.len) + 1]
+	return GLOB.commando_nukeop_start[((team_number - 1) % GLOB.commando_nukeop_start.len) + 1]
 
 /datum/antagonist/nukeop/commando/leader/get_spawnpoint()
 	return pick(GLOB.commando_nukeop_leader_start)
@@ -65,6 +65,28 @@
 	new_character.forceMove(pick(GLOB.commando_nukeop_start))
 	equip_op()
 	return TRUE
+
+/datum/antagonist/nukeop/commando/give_alias()
+	if(nuke_team?.syndicate_name)
+		var/mob/living/carbon/human/human_to_rename = owner.current
+		if(istype(human_to_rename)) // Reinforcements get a real name
+			var/first_name = owner.current.client?.prefs?.read_preference(/datum/preference/name/operative_alias) || pick(GLOB.operative_aliases)
+			var/chosen_name = "[nuke_team.syndicate_name] [first_name] "
+			human_to_rename.fully_replace_character_name(human_to_rename.real_name, chosen_name)
+		else
+			var/number = 1
+			number = nuke_team.members.Find(owner)
+			owner.current.real_name = "[nuke_team.syndicate_name] Operative #[number]"
+
+/// Actually moves our commando to where they should be
+/datum/antagonist/nukeop/commando/move_to_spawnpoint()
+	// Ensure that the commando base is loaded, and wait for it if required
+	SSmapping.lazy_load_template(LAZY_TEMPLATE_KEY_COMMANDOBASE)
+	var/turf/destination = get_spawnpoint()
+	owner.current.forceMove(destination)
+	if(!owner.current.onSyndieBase())
+		message_admins("[ADMIN_LOOKUPFLW(owner.current)] is a COMMANDO OP and move_to_spawnpoint put them somewhere that isn't the commando base, help please.")
+		stack_trace("Commando op move_to_spawnpoint resulted in a location not on the commando base. (Was moved to: [destination])")
 
 
 /datum/antagonist/nukeop/commando/leader
@@ -113,28 +135,6 @@
 
 	return capitalize(newname)
 
-/datum/antagonist/nukeop/commando/give_alias()
-	if(nuke_team?.syndicate_name)
-		var/mob/living/carbon/human/human_to_rename = owner.current
-		if(istype(human_to_rename)) // Reinforcements get a real name
-			var/first_name = owner.current.client?.prefs?.read_preference(/datum/preference/name/operative_alias) || pick(GLOB.operative_aliases)
-			var/chosen_name = "[nuke_team.syndicate_name] [first_name] "
-			human_to_rename.fully_replace_character_name(human_to_rename.real_name, chosen_name)
-		else
-			var/number = 1
-			number = nuke_team.members.Find(owner)
-			owner.current.real_name = "[nuke_team.syndicate_name] Operative #[number]"
-
-/datum/outfit/commando_operative
-	name = "Commando Operative (Preview only)"
-
-	glasses = /obj/item/clothing/glasses/night
-	back = /obj/item/storage/backpack/fireproof
-	head = /obj/item/clothing/head/helmet/space/syndicate/black/red
-	uniform = /obj/item/clothing/under/syndicate
-	suit = /obj/item/clothing/suit/space/syndicate/black/red
-	suit_store = /obj/item/tank/jetpack/harness
-	belt = /obj/item/storage/belt/military
 
 /datum/team/nuclear/commando
 
@@ -184,6 +184,89 @@
 	for(var/obj/machinery/nuclearbomb/beer/beernuke as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/nuclearbomb/beer))
 		beernuke.r_code = memorized_code
 
+/datum/team/nuclear/commando/get_result()
+	var/shuttle_evacuated = EMERGENCY_ESCAPED_OR_ENDGAMED
+	var/shuttle_landed_base = SSshuttle.emergency.is_hijacked()
+	var/disk_rescued = is_disk_rescued()
+	var/syndies_didnt_escape = !is_adv_infiltrator_docked_at_syndiebase()
+	var/team_is_dead = are_all_operatives_dead()
+	var/station_was_nuked = GLOB.station_was_nuked
+	var/station_nuke_source = GLOB.station_nuke_source
+
+	// The nuke detonated on the syndicate base
+	if(station_nuke_source == DETONATION_HIT_SYNDIE_BASE)
+		return NUKE_RESULT_FLUKE
+
+	// The station was nuked
+	if(station_was_nuked)
+		// The station was nuked and the infiltrator failed to escape
+		if(syndies_didnt_escape)
+			return NUKE_RESULT_NOSURVIVORS
+		// The station was nuked and the infiltrator escaped, and the nuke ops won
+		else
+			return NUKE_RESULT_NUKE_WIN
+
+	// The station was not nuked, but something was
+	else if(station_nuke_source && !disk_rescued)
+		// The station was not nuked, but something was, and the syndicates didn't escape it
+		if(syndies_didnt_escape)
+			return NUKE_RESULT_WRONG_STATION_DEAD
+		// The station was not nuked, but something was, and the syndicates returned to their base
+		else
+			return NUKE_RESULT_WRONG_STATION
+
+	// Nuke didn't blow, but nukies somehow hijacked the emergency shuttle to land at the base anyways.
+	else if(shuttle_landed_base)
+		if(disk_rescued)
+			return NUKE_RESULT_HIJACK_DISK
+		else
+			return NUKE_RESULT_HIJACK_NO_DISK
+
+	// No nuke went off, the station rescued the disk
+	else if(disk_rescued)
+		// No nuke went off, the shuttle left, and the team is dead
+		if(shuttle_evacuated && team_is_dead)
+			return NUKE_RESULT_CREW_WIN_SYNDIES_DEAD
+		// No nuke went off, but the nuke ops survived
+		else
+			return NUKE_RESULT_CREW_WIN
+
+	// No nuke went off, but the disk was left behind
+	else
+		// No nuke went off, the disk was left, but all the ops are dead
+		if(team_is_dead)
+			return NUKE_RESULT_DISK_LOST
+		// No nuke went off, the disk was left, there are living ops, but the shuttle left successfully
+		else if(shuttle_evacuated)
+			return NUKE_RESULT_DISK_STOLEN
+
+	CRASH("[type] - got an undefined / unexpected result.")
+
+/// Returns whether or not syndicate operatives escaped.
+/proc/is_adv_infiltrator_docked_at_syndiebase()
+	var/obj/docking_port/mobile/infiltrator/infiltrator_port = SSshuttle.getShuttle("adv_syndicate")
+
+	var/datum/lazy_template/nukie_base/nukie_template = GLOB.lazy_templates[LAZY_TEMPLATE_KEY_COMMANDOBASE]
+	if(!nukie_template)
+		return FALSE // if its not even loaded, cant be docked
+
+	for(var/datum/turf_reservation/loaded_area as anything in nukie_template.reservations)
+		var/infiltrator_turf = get_turf(infiltrator_port)
+		if(infiltrator_turf in loaded_area.reserved_turfs)
+			return TRUE
+	return FALSE
+
+
+/datum/outfit/commando_operative
+	name = "Commando Operative (Preview only)"
+
+	glasses = /obj/item/clothing/glasses/night
+	back = /obj/item/storage/backpack/fireproof
+	head = /obj/item/clothing/head/helmet/space/syndicate/black/red
+	uniform = /obj/item/clothing/under/syndicate
+	suit = /obj/item/clothing/suit/space/syndicate/black/red
+	suit_store = /obj/item/tank/jetpack/harness
+	belt = /obj/item/storage/belt/military
 
 /datum/outfit/syndicate/commando
 	name = "Syndicate Commando Operative"
@@ -195,6 +278,29 @@
 	backpack_contents = list(
 		/obj/item/syndicate_voucher = 1,
 	)
+
+/datum/outfit/syndicate/commando/post_equip(mob/living/carbon/human/nukie, visuals_only = FALSE)
+	if(visuals_only)
+		return
+
+	// We don't require the nukiebase be loaded to function, but lets go ahead and kick off loading just in case
+	INVOKE_ASYNC(SSmapping, TYPE_PROC_REF(/datum/controller/subsystem/mapping, lazy_load_template), LAZY_TEMPLATE_KEY_COMMANDOBASE)
+	var/obj/item/radio/radio = nukie.ears
+	radio.set_frequency(FREQ_SYNDICATE)
+	radio.freqlock = RADIO_FREQENCY_LOCKED
+	if(command_radio)
+		radio.command = TRUE
+		radio.use_command = TRUE
+	if(ispath(uplink_type, /obj/item/uplink) || tc) // /obj/item/uplink understands 0 tc
+		var/obj/item/uplink = new uplink_type(nukie, nukie.key, tc)
+		nukie.equip_to_storage(uplink, ITEM_SLOT_BACK, indirect_action = TRUE, del_on_fail = TRUE)
+
+	var/obj/item/implant/weapons_auth/weapons_implant = new/obj/item/implant/weapons_auth(nukie)
+	weapons_implant.implant(nukie)
+	var/obj/item/implant/duster/duster_implant = new/obj/item/implant/duster(nukie)
+	duster_implant.implant(nukie)
+	nukie.add_faction(ROLE_SYNDICATE)
+	nukie.update_icons()
 
 /datum/outfit/syndicate/commando/plasmaman
 	name = "Syndicate Commando Operative (Plasmaman)"

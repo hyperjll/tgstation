@@ -29,7 +29,9 @@
 /turf/closed/wall/r_wall/plastitanium/syndicate,
 /area/shuttle/syndicate/bridge)
 "ah" = (
-/obj/machinery/computer/camera_advanced/shuttle_docker/syndicate,
+/obj/machinery/computer/camera_advanced/shuttle_docker/syndicate{
+	shuttleId = "syndicate_adv"
+	},
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -1161,9 +1163,6 @@
 	id = "infiltrator_starboardblast";
 	name = "Infiltrator Starboard Hatch"
 	},
-/obj/docking_port/mobile/infiltrator{
-	shuttle_id = "syndicate_adv"
-	},
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/box,
 /obj/machinery/button/door/directional/north{
@@ -1171,6 +1170,7 @@
 	name = "Infiltrator Starboard Hatch Control";
 	req_access = list("syndicate")
 	},
+/obj/docking_port/mobile/adv_infiltrator,
 /turf/open/floor/pod/dark,
 /area/shuttle/syndicate/airlock)
 "cX" = (

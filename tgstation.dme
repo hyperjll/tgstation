@@ -7833,6 +7833,7 @@
 #include "hypermods\code\modules\research\techweb\nodes\robo_nodes.dm"
 #include "hypermods\code\modules\research\techweb\nodes\security_nodes.dm"
 #include "hypermods\code\modules\security_levels\security_level_datums.dm"
+#include "hypermods\code\modules\shuttle\mobile_port\variants\adv_infiltrator.dm"
 #include "hypermods\code\modules\spells\spell_types\aoe_spell\knock.dm"
 #include "hypermods\code\modules\spells\spell_types\jaunt\wirecrawl.dm"
 #include "hypermods\code\modules\spells\spell_types\pointed\blind.dm"
