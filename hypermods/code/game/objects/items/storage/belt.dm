@@ -22,7 +22,7 @@
 	name = "syndicate commanders sheath"
 	desc = "A nifty container for an evil sword. Given to the most trusted syndicate operatives."
 	icon = 'hypermods/icons/obj/weapons/sword.dmi'
-	icon_state = "scabbard_syndie"
+	icon_state = "scabbard-syndie"
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/swords_righthand.dmi'
 	inhand_icon_state = "scabbard-syndie"
