@@ -92,17 +92,17 @@
 	force_drop_equipment = TRUE
 
 /obj/item/antag_maker/nukie
-	provided_antag_datum = /datum/antagonist/nukeop
+	provided_antag_datum = /datum/antagonist/nukeop/leader
 	refund_amount = 10000
 	force_drop_equipment = TRUE
 
 /obj/item/antag_maker/commando
-	provided_antag_datum = /datum/antagonist/nukeop/commando
+	provided_antag_datum = /datum/antagonist/nukeop/commando/leader
 	refund_amount = 10000
 	force_drop_equipment = TRUE
 
 /obj/item/antag_maker/clown_op
-	provided_antag_datum = /datum/antagonist/nukeop/clownop
+	provided_antag_datum = /datum/antagonist/nukeop/leader/clownop
 	refund_amount = 10000
 	force_drop_equipment = TRUE
 
