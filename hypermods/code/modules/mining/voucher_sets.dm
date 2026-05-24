@@ -1,3 +1,198 @@
+/// Standard Classes Below
+
+/datum/voucher_set/nukies/class_grenadier_kit // 54 TC~~
+	name = "Grenadier Class Kit"
+	description = "Not to be confused with the 'Standard Grenade Launcher Kit', this kit contains \
+			a much more standardized and reliable loadout. \
+			Contains a Rigil Grenade Launcher, a pouch of stingbangs and fragmentation grenades, \
+			4 boxes of 40mm grenades, and some variety 40mm grenades to spice things up."
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "grenade_launcher"
+	set_items = list(
+		/obj/item/gun/ballistic/rigil_gl, // 6 TC~~
+		/obj/item/ammo_box/nadepouch/stingbang, //4 TC
+		/obj/item/ammo_box/nadepouch/frag, // 7 TC
+		/obj/item/ammo_box/a40mm, // 2TC
+		/obj/item/ammo_box/a40mm, // 2TC
+		/obj/item/ammo_box/a40mm, // 2TC
+		/obj/item/ammo_box/a40mm, // 2TC
+		/obj/item/ammo_box/a40mm/shocker, // 7 TC
+		/obj/item/ammo_box/a40mm/spread, // 6 TC
+		/obj/item/ammo_box/a40mm/sucking, // 6 TC
+		/obj/item/ammo_box/a40mm/nuke, // 10 TC
+		)
+
+/datum/voucher_set/nukies/heavy_weapons_kit // 57 TC~~
+	name = "Heavy Weapons Class Kit"
+	description = "For operatives that aren't afraid of the frontline. \
+			Contains a Antares LMG with a 100 round magazine of 7mm ammunition. \
+			Also contains SIX additional magazines and an energy shield module."
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "lmg"
+	set_items = list(
+		/obj/item/gun/ballistic/automatic/antares, // 20 TC?
+		/obj/item/ammo_box/magazine/r7mm, // 4 TC~~
+		/obj/item/ammo_box/magazine/r7mm, // 4 TC~~
+		/obj/item/ammo_box/magazine/r7mm/hollow, // 5 TC~~
+		/obj/item/ammo_box/magazine/r7mm/ap, // 6 TC~~
+		/obj/item/ammo_box/magazine/r7mm/incen, // 5 TC~~
+		/obj/item/ammo_box/magazine/r7mm/match, // 5 TC~~
+		/obj/item/mod/module/energy_shield, // 8 TC
+		)
+
+/datum/voucher_set/nukies/assault_trooper_kit // 52 TC
+	name = "Assault Trooper Class Kit"
+	description = "A no-nonsense loadout for a counter-strike \
+			Contains a Sirius Assault rifle with a 30 round magazine of 7.12x82 ammunition. \
+			Also contains three additional magazines, two AP magazines, and one magazine each of HP and Incendiary. \
+			Comes with one FRAGmentation grenade, a pouch of regular frag grenades, a pouch of flashbangs, \
+			and two breaching charges."
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "assault_rifle"
+	set_items = list(
+		/obj/item/gun/ballistic/automatic/sirius, // 13 TC?
+		/obj/item/ammo_box/magazine/ak712x82, // 3 TC
+		/obj/item/ammo_box/magazine/ak712x82, // 3 TC
+		/obj/item/ammo_box/magazine/ak712x82, // 3 TC
+		/obj/item/ammo_box/magazine/ak712x82/ap, // 4 TC
+		/obj/item/ammo_box/magazine/ak712x82/ap, // 4 TC
+		/obj/item/ammo_box/magazine/ak712x82/hp, // 4 TC
+		/obj/item/ammo_box/magazine/ak712x82/incendiary, // 4 TC
+		/obj/item/grenade/frag/mega, // 3 TC
+		/obj/item/ammo_box/nadepouch/frag, // 7 TC
+		/obj/item/ammo_box/nadepouch/flashbang, // 2 TC
+		/obj/item/grenade/c4/breaching, // 1 TC
+		/obj/item/grenade/c4/breaching, // 1 TC
+		)
+
+/datum/voucher_set/nukies/field_medic_kit // 55 TC
+	name = "Field Medic Class Kit"
+	description = "Most operatives simply buy their own medicine, but if you want to double-down.... \
+			Contains a Veritate PDW with five spare magazines, a Premium Medical Suite, a Gorlex Hypospray, \
+			a Hypospray Kit, and a Deluxe Combi-Stimpack bag."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "vector"
+	set_items = list(
+		/obj/item/gun/ballistic/automatic/veritate, // 12 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/storage/medkit/tactical/premium, // 15 TC
+		/obj/item/reagent_containers/hypospray/gorlex, // 8 TC
+		/obj/item/storage/medkit/hypospray, // 4 TC
+		/obj/item/storage/bag/chemistry/syndimedipens/deluxe, // 6 TC
+		)
+
+/datum/voucher_set/nukies/infiltrator_kit // 45 TC?
+	name = "Infiltrator Class Kit"
+	description = "If you want to sneak onto the station/ship and subvert the AI, snatch the nuke disk or other useful items, \
+			and/or commit other acts of sabotage, this is a good loadout. \
+			Contains a Cobra loaded with tranquilizers with four spare tranquilizer magazines, an EMAG, \
+			a Doorjack, a Chameleon Projector, a Chameleon Kit, an Advanced Mulligan, a Chameleon Module, and a surplus pinpointer."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "Cobra"
+	set_items = list(
+		/obj/item/gun/ballistic/automatic/pistol/cobra/tranq, // 9 TC (7 + 2)
+		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
+		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
+		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
+		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
+		/obj/item/card/emag, // 4 TC
+		/obj/item/card/emag/doorjack, // 3 TC
+		/obj/item/chameleon, // 7 TC
+		/obj/item/storage/box/syndie_kit/chameleon, // 2 TC (also contains a voice mask)
+		/obj/item/adv_mulligan, // 7 TC? This shit kinda op for a nukeop
+		/obj/item/mod/module/chameleon, // 2 TC
+		/obj/item/pinpointer/nuke/syndicate, // 2 TC
+		)
+
+/datum/voucher_set/nukies/scout_kit // 42 TC~~
+	name = "Scout Class Kit"
+	description = "This is basically designed for flanking. Go in invisible, strike their rear in close quarters, \
+			disappear again once you're done or you need to tactically withdraw. \
+			Contains a Bellatrix submachine gun using 9mm rounds with five spare magazines, a Doorjack, a Cloaking Device, \
+			a Light Breaker, and a surplus pinpointer."
+	icon = 'hypermods/icons/obj/weapons/guns/48x32.dmi'
+	icon_state = "mp52"
+	set_items = list(
+		/obj/item/gun/ballistic/automatic/bellatrix, // 12 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
+		/obj/item/card/emag/doorjack, // 3 TC
+		/obj/item/cloaking_device, // 14 TC
+		/obj/item/lightbreaker, // 4 TC
+		/obj/item/pinpointer/nuke/syndicate, // 2 TC
+		)
+
+/datum/voucher_set/nukies/flamethrower_kit // 46 TC~~
+	name = "Firebrand Class Kit"
+	description = "The ultimate loadout for systematic suppression of carbon lifeforms in close quarters. \
+			Contains a certified Vega Flamethrower filled with CLF3 and Nitric Acid, an Elite MODsuit with a flamethrower attachment, \
+			a Stechkin APS machine pistol, two incendiary magazines, a minibomb, a stimulant syringe, \
+			two pouches of incendiary grenades, and a single fireaxe."
+	icon = 'hypermods/icons/obj/weapons/guns/water.dmi'
+	icon_state = "syndthrower1"
+	set_items = list(
+		/obj/item/storage/backpack/duffelbag/syndie/firestarter, // 20 TC
+		/obj/item/gun/water/nukeop, // 10 TC~~
+		/obj/item/ammo_box/nadepouch/incendiary, // 4 TC
+		/obj/item/ammo_box/nadepouch/incendiary, // 4 TC
+		/obj/item/fireaxe, // 8 TC~~
+		)
+
+/datum/voucher_set/nukies/engineer_kit // 49 TC?
+	name = "Engineer Class Kit"
+	description = "Makin' bacon. \
+			Contains disposable sentry gun, a genuine SPES shotgun with three boxes of buckshot, \
+			and a full belt of power tools including a single pair of jaws of life and a syndicate RCD."
+	icon = 'icons/obj/weapons/turrets.dmi'
+	icon_state = "toolbox_lethal"
+	set_items = list(
+		/obj/item/storage/toolbox/emergency/turret/nukie, // 16 TC
+		/obj/item/storage/toolbox/guncase/spes, // 13 TC
+		/obj/item/storage/belt/utility/full/powertools/syndircd, // 20 TC?
+		)
+
+/datum/voucher_set/nukies/marksman_kit // 47 TC?
+	name = "Marksman Class Kit"
+	description = "Snipe people coming onto the scene before they ever see you. \
+			Contains a Betelgeuse sniper rifle with an 8x scope and plenty of ammunition for sustained snipers. \
+			Also comes with a pair of thermal goggles for target tracking."
+	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
+	icon_state = "sniper"
+	set_items = list(
+		/obj/item/ammo_box/magazine/sniper_rounds/betelgeuse, // 14 TC?
+		/obj/item/ammo_box/magazine/sniper_rounds, // 2 TC
+		/obj/item/ammo_box/magazine/sniper_rounds, // 2 TC
+		/obj/item/ammo_box/magazine/sniper_rounds, // 2 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/penetrator, // 4 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/penetrator, // 4 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/penetrator, // 4 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/incendiary, // 4 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/disruptor, // 2 TC
+		/obj/item/ammo_box/magazine/sniper_rounds/marksman, // 5 TC
+		/obj/item/clothing/glasses/thermal/syndi, // 4 TC
+		)
+
+/datum/voucher_set/nukies/energy_knight_kit // 43 TC?
+	name = "Energy Knight Class Kit"
+	description = "Go medieval with a huge sword with escalating damage. \
+			Contains the fabled Hadar heavy power-sword, a more powerful energy sword that becomes even better when used! \
+			Also contains a Cybersun Juggernaut MODsuit for maximum defense."
+	icon = 'hypermods/icons/obj/weapons/heavy_power_sword.dmi'
+	icon_state = "hadar_sword2_low"
+	set_items = list(
+		/obj/item/storage/toolbox/guncase/hadar, // 25 TC?
+		/obj/item/mod/control/pre_equipped/juggernaut, // 18 TC
+		)
+
+/// Meme/Gimmick Classes Below
+
 /datum/voucher_set/nukies/silicon_friends_kit // 56 TC
 	name = "Silicon Friends Kit"
 	description = "Contains THREE syndicate silicon support beacons, as well as \
@@ -218,197 +413,4 @@
 		/obj/item/ammo_box/nadepouch/frag, // 7 TC
 		/obj/item/ammo_box/nadepouch/rads, // 4 TC
 		/obj/item/ammo_box/nadepouch/highacidfoam, // 5 TC
-		)
-
-// Syndicate Classes below
-
-/datum/voucher_set/nukies/class_grenadier_kit // 54 TC~~
-	name = "Grenadier Class Kit"
-	description = "Not to be confused with the 'Standard Grenade Launcher Kit', this kit contains \
-			a much more standardized and reliable loadout. \
-			Contains a Rigil Grenade Launcher, a pouch of stingbangs and fragmentation grenades, \
-			4 boxes of 40mm grenades, and some variety 40mm grenades to spice things up."
-	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
-	icon_state = "grenade_launcher"
-	set_items = list(
-		/obj/item/gun/ballistic/rigil_gl, // 6 TC~~
-		/obj/item/ammo_box/nadepouch/stingbang, //4 TC
-		/obj/item/ammo_box/nadepouch/frag, // 7 TC
-		/obj/item/ammo_box/a40mm, // 2TC
-		/obj/item/ammo_box/a40mm, // 2TC
-		/obj/item/ammo_box/a40mm, // 2TC
-		/obj/item/ammo_box/a40mm, // 2TC
-		/obj/item/ammo_box/a40mm/shocker, // 7 TC
-		/obj/item/ammo_box/a40mm/spread, // 6 TC
-		/obj/item/ammo_box/a40mm/sucking, // 6 TC
-		/obj/item/ammo_box/a40mm/nuke, // 10 TC
-		)
-
-/datum/voucher_set/nukies/heavy_weapons_kit // 57 TC~~
-	name = "Heavy Weapons Class Kit"
-	description = "For operatives that aren't afraid of the frontline. \
-			Contains a Antares LMG with a 100 round magazine of 7mm ammunition. \
-			Also contains SIX additional magazines and an energy shield module."
-	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
-	icon_state = "lmg"
-	set_items = list(
-		/obj/item/gun/ballistic/automatic/antares, // 20 TC?
-		/obj/item/ammo_box/magazine/r7mm, // 4 TC~~
-		/obj/item/ammo_box/magazine/r7mm, // 4 TC~~
-		/obj/item/ammo_box/magazine/r7mm/hollow, // 5 TC~~
-		/obj/item/ammo_box/magazine/r7mm/ap, // 6 TC~~
-		/obj/item/ammo_box/magazine/r7mm/incen, // 5 TC~~
-		/obj/item/ammo_box/magazine/r7mm/match, // 5 TC~~
-		/obj/item/mod/module/energy_shield, // 8 TC
-		)
-
-/datum/voucher_set/nukies/assault_trooper_kit // 52 TC
-	name = "Assault Trooper Class Kit"
-	description = "A no-nonsense loadout for a counter-strike \
-			Contains a Sirius Assault rifle with a 30 round magazine of 7.12x82 ammunition. \
-			Also contains three additional magazines, two AP magazines, and one magazine each of HP and Incendiary. \
-			Comes with one FRAGmentation grenade, a pouch of regular frag grenades, a pouch of flashbangs, \
-			and two breaching charges."
-	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
-	icon_state = "assault_rifle"
-	set_items = list(
-		/obj/item/gun/ballistic/automatic/sirius, // 13 TC?
-		/obj/item/ammo_box/magazine/ak712x82, // 3 TC
-		/obj/item/ammo_box/magazine/ak712x82, // 3 TC
-		/obj/item/ammo_box/magazine/ak712x82, // 3 TC
-		/obj/item/ammo_box/magazine/ak712x82/ap, // 4 TC
-		/obj/item/ammo_box/magazine/ak712x82/ap, // 4 TC
-		/obj/item/ammo_box/magazine/ak712x82/hp, // 4 TC
-		/obj/item/ammo_box/magazine/ak712x82/incendiary, // 4 TC
-		/obj/item/grenade/frag/mega, // 3 TC
-		/obj/item/ammo_box/nadepouch/frag, // 7 TC
-		/obj/item/ammo_box/nadepouch/flashbang, // 2 TC
-		/obj/item/grenade/c4/breaching, // 1 TC
-		/obj/item/grenade/c4/breaching, // 1 TC
-		)
-
-/datum/voucher_set/nukies/field_medic_kit // 55 TC
-	name = "Field Medic Class Kit"
-	description = "Most operatives simply buy their own medicine, but if you want to double-down.... \
-			Contains a Veritate PDW with five spare magazines, a Premium Medical Suite, a Gorlex Hypospray, \
-			a Hypospray Kit, and a Deluxe Combi-Stimpack bag."
-	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
-	icon_state = "vector"
-	set_items = list(
-		/obj/item/gun/ballistic/automatic/veritate, // 12 TC~~
-		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
-		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
-		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
-		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
-		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
-		/obj/item/storage/medkit/tactical/premium, // 15 TC
-		/obj/item/reagent_containers/hypospray/gorlex, // 8 TC
-		/obj/item/storage/medkit/hypospray, // 4 TC
-		/obj/item/storage/bag/chemistry/syndimedipens/deluxe, // 6 TC
-		)
-
-/datum/voucher_set/nukies/infiltrator_kit // 45 TC?
-	name = "Infiltrator Class Kit"
-	description = "If you want to sneak onto the station/ship and subvert the AI, snatch the nuke disk or other useful items, \
-			and/or commit other acts of sabotage, this is a good loadout. \
-			Contains a Cobra loaded with tranquilizers with four spare tranquilizer magazines, an EMAG, \
-			a Doorjack, a Chameleon Projector, a Chameleon Kit, an Advanced Mulligan, a Chameleon Module, and a surplus pinpointer."
-	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
-	icon_state = "Cobra"
-	set_items = list(
-		/obj/item/gun/ballistic/automatic/pistol/cobra/tranq, // 9 TC (7 + 2)
-		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
-		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
-		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
-		/obj/item/ammo_box/magazine/m45/tranq, // 4 TC
-		/obj/item/card/emag, // 4 TC
-		/obj/item/card/emag/doorjack, // 3 TC
-		/obj/item/chameleon, // 7 TC
-		/obj/item/storage/box/syndie_kit/chameleon, // 2 TC (also contains a voice mask)
-		/obj/item/adv_mulligan, // 7 TC? This shit kinda op for a nukeop
-		/obj/item/mod/module/chameleon, // 2 TC
-		/obj/item/pinpointer/nuke/syndicate, // 2 TC
-		)
-
-/datum/voucher_set/nukies/scout_kit // 42 TC~~
-	name = "Scout Class Kit"
-	description = "This is basically designed for flanking. Go in invisible, strike their rear in close quarters, \
-			disappear again once you're done or you need to tactically withdraw. \
-			Contains a Bellatrix submachine gun using 9mm rounds with five spare magazines, a Doorjack, a Cloaking Device, \
-			a Light Breaker, and a surplus pinpointer."
-	icon = 'hypermods/icons/obj/weapons/guns/48x32.dmi'
-	icon_state = "mp52"
-	set_items = list(
-		/obj/item/gun/ballistic/automatic/bellatrix, // 12 TC~~
-		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
-		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
-		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
-		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
-		/obj/item/ammo_box/magazine/smgm9mm, // 2 TC~~
-		/obj/item/card/emag/doorjack, // 3 TC
-		/obj/item/cloaking_device, // 14 TC
-		/obj/item/lightbreaker, // 4 TC
-		/obj/item/pinpointer/nuke/syndicate, // 2 TC
-		)
-
-/datum/voucher_set/nukies/flamethrower_kit // 46 TC~~
-	name = "Firebrand Class Kit"
-	description = "The ultimate loadout for systematic suppression of carbon lifeforms in close quarters. \
-			Contains a certified Vega Flamethrower filled with CLF3 and Nitric Acid, an Elite MODsuit with a flamethrower attachment, \
-			a Stechkin APS machine pistol, two incendiary magazines, a minibomb, a stimulant syringe, \
-			two pouches of incendiary grenades, and a single fireaxe."
-	icon = 'hypermods/icons/obj/weapons/guns/water.dmi'
-	icon_state = "syndthrower1"
-	set_items = list(
-		/obj/item/storage/backpack/duffelbag/syndie/firestarter, // 20 TC
-		/obj/item/gun/water/nukeop, // 10 TC~~
-		/obj/item/ammo_box/nadepouch/incendiary, // 4 TC
-		/obj/item/ammo_box/nadepouch/incendiary, // 4 TC
-		/obj/item/fireaxe, // 8 TC~~
-		)
-
-/datum/voucher_set/nukies/engineer_kit // 49 TC?
-	name = "Engineer Class Kit"
-	description = "Makin' bacon. \
-			Contains disposable sentry gun, a genuine SPES shotgun with three boxes of buckshot, \
-			and a full belt of power tools including a single pair of jaws of life and a syndicate RCD."
-	icon = 'icons/obj/weapons/turrets.dmi'
-	icon_state = "toolbox_lethal"
-	set_items = list(
-		/obj/item/storage/toolbox/emergency/turret/nukie, // 16 TC
-		/obj/item/storage/toolbox/guncase/spes, // 13 TC
-		/obj/item/storage/belt/utility/full/powertools/syndircd, // 20 TC?
-		)
-
-/datum/voucher_set/nukies/marksman_kit // 47 TC?
-	name = "Marksman Class Kit"
-	description = "Snipe people coming onto the scene before they ever see you. \
-			Contains a Betelgeuse sniper rifle with an 8x scope and plenty of ammunition for sustained snipers. \
-			Also comes with a pair of thermal goggles for target tracking."
-	icon = 'hypermods/icons/obj/weapons/guns/64x32.dmi'
-	icon_state = "sniper"
-	set_items = list(
-		/obj/item/ammo_box/magazine/sniper_rounds/betelgeuse, // 14 TC?
-		/obj/item/ammo_box/magazine/sniper_rounds, // 2 TC
-		/obj/item/ammo_box/magazine/sniper_rounds, // 2 TC
-		/obj/item/ammo_box/magazine/sniper_rounds, // 2 TC
-		/obj/item/ammo_box/magazine/sniper_rounds/penetrator, // 4 TC
-		/obj/item/ammo_box/magazine/sniper_rounds/penetrator, // 4 TC
-		/obj/item/ammo_box/magazine/sniper_rounds/penetrator, // 4 TC
-		/obj/item/ammo_box/magazine/sniper_rounds/incendiary, // 4 TC
-		/obj/item/ammo_box/magazine/sniper_rounds/disruptor, // 2 TC
-		/obj/item/ammo_box/magazine/sniper_rounds/marksman, // 5 TC
-		/obj/item/clothing/glasses/thermal/syndi, // 4 TC
-		)
-
-/datum/voucher_set/nukies/energy_knight_kit // 43 TC?
-	name = "Energy Knight Class Kit"
-	description = "Go medieval with a huge sword with escalating damage. \
-			Contains the fabled Hadar heavy power-sword, a more powerful energy sword that becomes even better when used! \
-			Also contains a Cybersun Juggernaut MODsuit for maximum defense."
-	icon = 'hypermods/icons/obj/weapons/heavy_power_sword.dmi'
-	icon_state = "hadar_sword2_low"
-	set_items = list(
-		/obj/item/storage/toolbox/guncase/hadar, // 25 TC?
-		/obj/item/mod/control/pre_equipped/juggernaut, // 18 TC
 		)
