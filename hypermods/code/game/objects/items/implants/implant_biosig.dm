@@ -11,7 +11,7 @@
 /obj/item/implant/biosig/Initialize(mapload)
 	. = ..()
 	radio = new(src)
-	radio.listening = FALSE
+	radio.set_listening(FALSE)
 	radio.subspace_transmission = subspace_transmission
 	radio.canhear_range = 0
 	if(radio_key)
@@ -46,6 +46,10 @@
 /obj/item/implant/biosig/removed(mob/target, silent = FALSE, special = FALSE)
 	. = ..()
 	UnregisterSignal(target, COMSIG_LIVING_DEATH)
+
+/obj/item/implant/biosig/Destroy()
+	QDEL_NULL(radio)
+	return ..()
 
 /obj/item/implant/biosig/get_data()
 	. = {"<b>Implant Specifications:</b><BR>

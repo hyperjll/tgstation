@@ -136,7 +136,7 @@
 	. = ..()
 	radio = new(src)
 	radio.keyslot = new encryptionkey // Should broadcast exclusively on the centcom channel.
-	radio.listening = FALSE
+	radio.set_listening(FALSE)
 	radio.recalculateChannels()
 
 /obj/effect/mine/radio/Destroy()
