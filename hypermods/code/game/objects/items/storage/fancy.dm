@@ -13,8 +13,30 @@
 /obj/item/storage/fancy/cigarettes/trick_cigs
 	spawn_type = /obj/item/cigarette/syndicate/explosive
 
+// Syndicate Payload Cigars
+
 /obj/item/storage/fancy/cigarettes/cigars/payload // 300 unit maximum cigars
 	spawn_type = /obj/item/cigarette/cigar/payload
+
+// Placebo Smokes (Customizable Cigs/Cigars!)
+
+/obj/item/storage/fancy/cigarettes/cigars/placebo
+	name = "placebo cigar case"
+	desc = "A case of placebo cigars. Expensive, but ideal for pranks on your more opulent peers."
+	spawn_type = /obj/item/cigarette/cigar/placebo
+
+/obj/item/storage/fancy/cigarettes/cigpack_placebo
+	name = "placebo packet"
+	desc = "An oddly blank cigarette packet with no details pertaining to any manufacturer. The only label you can find is a barely legible 'Empty' on the bottom side of the packet."
+	icon = 'hypermods/icons/obj/cigarettes.dmi'
+	icon_state = "placebo"
+	base_icon_state = "placebo"
+	spawn_type = /obj/item/cigarette/placebo
+
+/obj/item/storage/fancy/cigarettes/cigpack_placebo/empty
+	spawn_count = 0
+	spawn_coupon = FALSE
+	open_status = FANCY_CONTAINER_OPEN
 
 // Alternative version of Syndicate Smokes -- Interdyne Herbals
 

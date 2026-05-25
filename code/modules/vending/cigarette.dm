@@ -20,6 +20,8 @@
 		/obj/item/vape = 5,
 		/obj/item/cigarette/dart = 1,
 		/obj/item/storage/fancy/cigarettes/cigpack_greytide = 1,
+		/obj/item/storage/fancy/cigarettes/cigpack_placebo = 2,
+		/obj/item/storage/fancy/cigarettes/cigars/placebo = 2,
 	)
 	premium = list(
 		/obj/item/storage/fancy/cigarettes/cigpack_robustgold = 3,
@@ -51,6 +53,7 @@
 		/obj/item/storage/fancy/cigarettes/cigpack_carp = 3,
 		/obj/item/storage/fancy/cigarettes/cigpack_midori = 1,
 		/obj/item/storage/fancy/cigarettes/cigpack_greytide = 1,
+		/obj/item/storage/fancy/cigarettes/cigpack_placebo = 1,
 		/obj/item/storage/box/matches = 10,
 		/obj/item/lighter/greyscale = 4,
 		/obj/item/storage/fancy/rollingpapers = 5,

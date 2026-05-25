@@ -105,6 +105,9 @@
 	contraband = list(
 		/obj/item/vape = 5,
 		/obj/item/cigarette/dart = 1,
+		/obj/item/storage/fancy/cigarettes/cigpack_greytide = 1,
+		/obj/item/storage/fancy/cigarettes/cigpack_placebo = 2,
+		/obj/item/storage/fancy/cigarettes/cigars/placebo = 2,
 		/obj/item/storage/fancy/cigarettes/deluxe_cureall_cigarette_pack = 1,
 		/obj/item/storage/fancy/cigarettes/deluxe_speedup_cigarette_pack = 1,
 	)

@@ -27,6 +27,13 @@
 	smoke_all = TRUE
 	chem_volume = 300
 
+/obj/item/cigarette/placebo
+	smoke_all = TRUE
+	list_reagents = null
+
+/obj/item/cigarette/cigar/placebo
+	smoke_all = TRUE
+	list_reagents = null
 
 // Trick cigs
 
