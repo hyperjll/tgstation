@@ -8,15 +8,14 @@
 	cost = CARGO_CRATE_VALUE * 1.5
 	contains = list(/obj/item/storage/box/monkeycubes)
 	crate_name = "monkey cube crate"
-/**
-/datum/supply_pack/service/clerkbeacons
-	name = "Clerk Beacon Crate"
-	desc = "A crate containing a implanter for a clerk beacon as well as a handheld beacon."
-	cost = CARGO_CRATE_VALUE * 50
-	contains = list(/obj/item/implanter/clerksignaller,
-					/obj/item/choice_beacon_cooldown)
-	crate_name = "clerk beacon crate"
-**/
+
+/datum/supply_pack/service/beeexpansion
+	name = "Bee Expansionism"
+	desc = "A crate containing 2 apiaries and 2 queen bees, for both delicious honey and exotic reagent production."
+	cost = PAYCHECK_CREW * 40
+	contains = list(/obj/structure/beebox,/obj/structure/beebox,/obj/item/queen_bee/bought,/obj/item/queen_bee/bought)
+	crate_name = "bee expansion crate"
+
 /datum/supply_pack/service/mysterysoda
 	name = "Mystery Fizz Twelve-Pack"
 	desc = "A crate containing twelve mystery soda's. You'll never know what you'll get!"
