@@ -119,6 +119,18 @@
 	list_reagents = list(/datum/reagent/medicine/haloperidol = 15)
 	icon_state = "syringe"
 
+/obj/item/reagent_containers/syringe/ceftriaxone
+	name = "syringe (Ceftriaxone)"
+	desc = "Contains 15 units of advanced antibiotics."
+	list_reagents = list(/datum/reagent/medicine/ceftriaxone = 15)
+	icon_state = "syringe"
+
+/obj/item/reagent_containers/syringe/vasopressin
+	name = "syringe (Vasopressin)"
+	desc = "Contains 15 units of blood-pressure inducing drugs."
+	list_reagents = list(/datum/reagent/drug/vasopressin = 15)
+	icon_state = "syringe"
+
 /obj/item/reagent_containers/syringe/piercing/sedative
 	name = "piercing syringe"
 	desc = "A diamond-tipped syringe that pierces armor when launched at high velocity. It can hold up to 10 units."

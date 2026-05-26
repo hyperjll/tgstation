@@ -297,3 +297,18 @@
 	. = ..()
 	affected_mob.remove_status_effect(/datum/status_effect/antidepressants)
 	affected_mob.remove_status_effect(/datum/status_effect/spasms/antidepressants)
+
+
+/datum/reagent/drug/vasopressin
+	name = "Vasopressin"
+	description = "A hormone used to increase blood pressure. Acts quickly, and metabolizes slowly."
+	color = "#EBEBEB"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+
+/datum/reagent/drug/vasopressin/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.apply_status_effect(/datum/status_effect/high_blood_pressure)
+
+/datum/reagent/drug/vasopressin/on_mob_end_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.remove_status_effect(/datum/status_effect/high_blood_pressure)

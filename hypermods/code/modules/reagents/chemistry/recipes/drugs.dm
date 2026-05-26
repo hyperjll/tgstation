@@ -42,3 +42,9 @@
 	required_reagents = list(/datum/reagent/medicine/epinephrine = 2, /datum/reagent/medicine/ultravasculine = 1, /datum/reagent/silicon = 1)
 	required_temp = 300
 	reaction_tags = REACTION_TAG_OTHER | REACTION_TAG_DRUG
+
+/datum/chemical_reaction/vasopressin
+	results = list(/datum/reagent/drug/vasopressin = 2)
+	required_reagents = list(/datum/reagent/ammonia = 2, /datum/reagent/silicon = 1, /datum/reagent/hydrogen = 1)
+	required_temp = 300
+	reaction_tags = REACTION_TAG_OTHER | REACTION_TAG_DRUG

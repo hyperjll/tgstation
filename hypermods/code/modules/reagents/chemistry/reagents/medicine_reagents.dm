@@ -980,7 +980,6 @@
 	carbies.add_mood_event("painful_medicine", /datum/mood_event/painful_medicine)
 
 
-
 /datum/reagent/medicine/final_fortuna
 	name = "Final Fortuna"
 	description = "Prevents death but weakens tendons and kills once it leaves your system."
@@ -1052,7 +1051,6 @@
 
 	return ..()
 
-
 /datum/reagent/medicine/neuralbooster
 	name = "Neural Booster"
 	description = "An advanced drug which permanently enhances brain functionality, leading to enhanced physical and mental ability."
@@ -1074,3 +1072,30 @@
 		return
 
 	return ..()
+
+
+/datum/reagent/medicine/ceftriaxone
+	name = "Ceftriaxone"
+	description = "Third-generation cephalosporin antibiotic used for the treatment of infections. Increases body immunity for some time, but causes pain."
+	color = "#35E53D"
+	metabolization_rate = 0.2 * REAGENTS_METABOLISM
+	ph = 5.6
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
+	added_traits = list(TRAIT_VIRUS_RESISTANCE)
+
+/datum/reagent/medicine/ceftriaxone/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	if((affected_mob.mob_biotypes & MOB_ORGANIC) && prob(0.4))
+		for(var/thing in affected_mob.diseases) // can clean viruses from organic lifeforms.
+			var/datum/disease/D = thing
+			D.cure()
+
+	var/need_mob_update
+	if(SPT_PROB(25, seconds_per_tick))
+		need_mob_update += affected_mob.adjust_brute_loss(0.1 * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+		affected_mob.set_jitter_if_lower(12 SECONDS)
+	need_mob_update += affected_mob.adjust_tox_loss(-0.1 * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+
+	if(need_mob_update)
+		return UPDATE_MOB_HEALTH

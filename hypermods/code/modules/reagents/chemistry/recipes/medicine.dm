@@ -155,3 +155,8 @@
 	results = list(/datum/reagent/medicine/modafinil = 4)
 	required_reagents = list(/datum/reagent/vestine = 1, /datum/reagent/ammonia = 1, /datum/reagent/toxin/acid = 1)
 	required_temp = 300
+
+/datum/chemical_reaction/medicine/ceftriaxone
+	results = list(/datum/reagent/medicine/ceftriaxone = 2)
+	required_reagents = list(/datum/reagent/medicine/spaceacillin = 1, /datum/reagent/toxin/formaldehyde = 1, /datum/reagent/toxin/acid/fluacid = 1)
+	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_HEALING | REACTION_TAG_OTHER
