@@ -22,7 +22,7 @@
 		host_mob.adjust_fire_loss(-0.5, TRUE)
 		return
 	var/healing_given = (lavaland_equipment_pressure_check(get_turf(host_mob)) ? 0.5 : 0.3)
-	host_mob.heal_overall_damage(brute = healing_given, brute = healing_given, required_bodytype = BODYTYPE_ORGANIC)
+	host_mob.heal_overall_damage(brute = healing_given, burn = healing_given, required_bodytype = BODYTYPE_ORGANIC)
 
 /datum/nanite_program/regenerative_advanced
 	name = "Bio-Reconstruction"
@@ -38,7 +38,7 @@
 		host_mob.adjust_fire_loss(-3, TRUE)
 		return
 	var/healing_given = (lavaland_equipment_pressure_check(get_turf(host_mob)) ? 1.5 : 1.2)
-	host_mob.heal_overall_damage(brute = healing_given, brute = healing_given, required_bodytype = BODYTYPE_ORGANIC)
+	host_mob.heal_overall_damage(brute = healing_given, burn = healing_given, required_bodytype = BODYTYPE_ORGANIC)
 
 /datum/nanite_program/temperature
 	name = "Temperature Adjustment"
@@ -147,7 +147,7 @@
 		host_mob.adjust_brute_loss(-1.5, TRUE)
 		host_mob.adjust_fire_loss(-1.5, TRUE)
 		return
-	host_mob.heal_overall_damage(brute = 1.5, brute = 1.5, required_bodytype = BODYTYPE_ROBOTIC)
+	host_mob.heal_overall_damage(brute = 1.5, burn = 1.5, required_bodytype = BODYTYPE_ROBOTIC)
 
 /datum/nanite_program/purging_advanced
 	name = "Selective Blood Purification"
@@ -442,7 +442,7 @@
 		host_mob.adjust_brute_loss(-0.5, TRUE)
 		return
 	var/mob/living/carbon/carbon_mob = host_mob
-	carbon_mob.heal_overall_damage(brute = healing, brute = healing, required_bodytype = BODYTYPE_ORGANIC)
+	carbon_mob.heal_overall_damage(brute = healing, burn = 0, required_bodytype = BODYTYPE_ORGANIC)
 	if(carbon_mob.get_stamina_loss() < 71)
 		carbon_mob.adjust_stamina_loss(1)
 		if(prob(5))
@@ -470,7 +470,7 @@
 		host_mob.adjust_fire_loss(-0.5, TRUE)
 		return
 	var/mob/living/carbon/carbon_mob = host_mob
-	carbon_mob.heal_overall_damage(burn = healing, burn = healing, required_bodytype = BODYTYPE_ORGANIC)
+	carbon_mob.heal_overall_damage(brute = 0, burn = healing, required_bodytype = BODYTYPE_ORGANIC)
 	if(carbon_mob.get_stamina_loss() < 71)
 		carbon_mob.adjust_stamina_loss(1)
 		if(prob(5))
@@ -548,8 +548,7 @@
 		host_mob.adjust_brute_loss(-healing, TRUE)
 		host_mob.adjust_fire_loss(-healing, TRUE)
 		return
-	host_mob.heal_overall_damage(brute = healing, brute = healing, required_bodytype = BODYTYPE_ROBOTIC)
-	host_mob.heal_overall_damage(burn = healing, burn = healing, required_bodytype = BODYTYPE_ROBOTIC)
+	host_mob.heal_overall_damage(brute = healing, burn = healing, required_bodytype = BODYTYPE_ROBOTIC)
 
 
 /datum/nanite_program/woundfixer
