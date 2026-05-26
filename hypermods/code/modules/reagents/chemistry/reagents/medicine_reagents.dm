@@ -1095,7 +1095,7 @@
 	if(SPT_PROB(25, seconds_per_tick))
 		need_mob_update += affected_mob.adjust_brute_loss(0.1 * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 		affected_mob.set_jitter_if_lower(12 SECONDS)
-	need_mob_update += affected_mob.adjust_tox_loss(-0.1 * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+	need_mob_update += affected_mob.adjust_tox_loss(-0.1 * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_bodytype)
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
