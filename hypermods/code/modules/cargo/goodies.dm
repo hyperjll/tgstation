@@ -1,62 +1,50 @@
 /datum/supply_pack/goody/bicaridinebottles
 	name = "Bicaridine Pill Bottles"
 	desc = "Three pill bottles filled with bicaridine pills. Useful in treating brute damage quickly."
-	cost = PAYCHECK_CREW * 30
+	cost = PAYCHECK_CREW * 10
 	contains = list(/obj/item/storage/pill_bottle/bicaridine,/obj/item/storage/pill_bottle/bicaridine,/obj/item/storage/pill_bottle/bicaridine)
 
 /datum/supply_pack/goody/kelotanebottles
 	name = "Kelotane Pill Bottles"
 	desc = "Three pill bottles filled with kelotane pills. Useful in treating burn damage quickly."
-	cost = PAYCHECK_CREW * 30
+	cost = PAYCHECK_CREW * 10
 	contains = list(/obj/item/storage/pill_bottle/kelotane,/obj/item/storage/pill_bottle/kelotane,/obj/item/storage/pill_bottle/kelotane)
 
 /datum/supply_pack/goody/antitoxinbottles
 	name = "Anti-Toxin Pill Bottles"
 	desc = "Three pill bottles filled with anti-toxin pills. Useful in treating toxin damage quickly."
-	cost = PAYCHECK_CREW * 30
+	cost = PAYCHECK_CREW * 10
 	contains = list(/obj/item/storage/pill_bottle/antitoxin,/obj/item/storage/pill_bottle/antitoxin,/obj/item/storage/pill_bottle/antitoxin)
 
 /datum/supply_pack/goody/dexalinbottles
 	name = "Dexalin Pill Bottles"
 	desc = "Three pill bottles filled with dexalin pills. Useful in treating oxygen damage quickly."
-	cost = PAYCHECK_CREW * 30
+	cost = PAYCHECK_CREW * 10
 	contains = list(/obj/item/storage/pill_bottle/dexalin,/obj/item/storage/pill_bottle/dexalin,/obj/item/storage/pill_bottle/dexalin)
 
 /datum/supply_pack/goody/tricordrazinebottles
 	name = "Tricordrazine Pill Bottles"
 	desc = "Three pill bottles filled with tricordrazine pills. Useful in treating most damage quickly."
-	cost = PAYCHECK_CREW * 50
+	cost = PAYCHECK_CREW * 20
 	contains = list(/obj/item/storage/pill_bottle/tricordrazine,/obj/item/storage/pill_bottle/tricordrazine,/obj/item/storage/pill_bottle/tricordrazine)
-
 
 /datum/supply_pack/goody/raremedipens
 	name = "Rare Medicine Medipens"
 	desc = "Three rare medipens filled with chemicals capable of curing severe brute, burn or oxygen damage."
-	cost = PAYCHECK_CREW * 20
+	cost = PAYCHECK_CREW * 10
 	contains = list(/obj/item/reagent_containers/hypospray/medipen/salacid,/obj/item/reagent_containers/hypospray/medipen/oxandrolone,/obj/item/reagent_containers/hypospray/medipen/salbutamol)
-
 
 /datum/supply_pack/goody/auto_pump
 	name = "Auto-Pump"
 	desc = "Contains a singular experimental life-support device known as an 'Auto-Pump'. Useful as a quick-and-easy revival tool for personnel in critical condition. Produced by DeForest Medical."
-	cost = PAYCHECK_CREW * 50
+	cost = PAYCHECK_CREW * 30
 	contains = list(/obj/item/auto_pump)
-
 
 /datum/supply_pack/goody/bluespacerped
 	name = "Bluespace RPED"
 	desc = "A single bluespace RPED for quick installation of parts. Parts not included."
 	cost = PAYCHECK_CREW * 60
 	contains = list(/obj/item/storage/part_replacer/bluespace)
-
-/**
-/datum/supply_pack/goody/selfchargecells
-	name = "Self-Recharging Power Cells"
-	desc = "Three bluespace power cells we've augmented with... less-than-legal technology. We'll sell them to you... discreetly."
-	cost = PAYCHECK_COMMAND * 50
-	contains = list(/obj/item/stock_parts/cell/bluespace/selfcharge/empty,/obj/item/stock_parts/cell/bluespace/selfcharge/empty,/obj/item/stock_parts/cell/bluespace/selfcharge/empty)
-**/
-
 
 /datum/supply_pack/goody/airshoes
 	name = "Air Shoes"
@@ -65,24 +53,15 @@
 	cost = PAYCHECK_COMMAND * 200
 	contains = list(/obj/item/clothing/shoes/bhop/airshoes)
 
-/**
-/datum/supply_pack/goody/goldflask
-	name = "Captain's Flask"
-	desc = "A golden flask, it's so pompous it's been branded as 'Captain Only'. Be we all know the captain won't be seeing this, won't we?"
-	cost = 4000
-	contains = list(/obj/item/reagent_containers/food/drinks/flask/gold)
-**/
-
 /datum/supply_pack/goody/medicalweaponry
 	name = "Medical Weaponry"
 	desc = "Contains a syringe gun, for long-range reagent distribution."
 	cost = PAYCHECK_COMMAND * 10
 	contains = list(/obj/item/gun/syringe)
 
-
 /datum/supply_pack/goody/nukiecola
-	name = "Robust Nukie Cola Twelve-Pack"
-	desc = "A twelve-pack of the incredibly robust: Nukie Cola! Warranty does NOT include over-consumption."
+	name = "Robust Nukie Cola Six-Pack"
+	desc = "A six-pack of the incredibly robust: Nukie Cola! Warranty does NOT include over-consumption."
 	cost = PAYCHECK_COMMAND * 50
 	order_flags = ORDER_CONTRABAND | ORDER_EMAG_ONLY
 	contains = list(/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
@@ -90,14 +69,7 @@
 					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
 					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
 					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
-					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
-					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
-					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
-					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
-					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
-					/obj/item/reagent_containers/cup/soda_cans/robust_nukie,
 					/obj/item/reagent_containers/cup/soda_cans/robust_nukie)
-
 
 /datum/supply_pack/goody/medicalvarietykit
 	name = "Medical Variety Kit"
@@ -106,13 +78,11 @@
 	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/storage/medkit/medical_variety_pack)
 
-
 /datum/supply_pack/goody/syringeresupply
 	name = "Box of Variety Syringes"
 	desc = "A single box of syringes, containing 4 syringes in total. They come in different forms."
 	cost = PAYCHECK_CREW * 6
 	contains = list(/obj/item/storage/box/syringes/variety)
-
 
 /datum/supply_pack/goody/beakerresupply
 	name = "Box of Variety Beakers"
@@ -120,13 +90,11 @@
 	cost = PAYCHECK_CREW * 14
 	contains = list(/obj/item/storage/box/beakers/variety)
 
-
 /datum/supply_pack/goody/enchantedgold
 	name = "Large Beaker of Enchanted Gold"
 	desc = "A single large beaker filled with Enchanted Gold, a highly prized medicinal reagent known for it's ability to quickly support a patients health and maximize their vitality."
 	cost = PAYCHECK_COMMAND * 25
 	contains = list(/obj/item/reagent_containers/cup/beaker/large/enchantedgold)
-
 
 /datum/supply_pack/goody/explosivegrenades
 	name = "Explosive Grenades"
@@ -136,62 +104,11 @@
 	order_flags = ORDER_CONTRABAND
 	contains = list(/obj/item/grenade/chem_grenade/pyro/explosive,/obj/item/grenade/chem_grenade/pyro/explosive,/obj/item/grenade/chem_grenade/pyro/explosive)
 
-
 /datum/supply_pack/goody/cyberneticimplants
 	name = "Cybernetic Implants"
 	desc = "A box containing 2 random cybernetic implants, for improving work productivity in employees."
 	cost = PAYCHECK_CREW * 20
 	contains = list(/obj/item/storage/box/randomcyberneticimplants)
-
-
-/datum/supply_pack/goody/beeexpansion
-	name = "Bee Expansionism"
-	desc = "A crate containing 2 apiaries and 2 queen bees, for both delicious honey and exotic reagent production."
-	cost = PAYCHECK_CREW * 40
-	contains = list(/obj/structure/beebox,/obj/structure/beebox,/obj/item/queen_bee/bought,/obj/item/queen_bee/bought)
-
-
-/datum/supply_pack/goody/cleanbot
-	name = "Janitorial Bot"
-	desc = "A crate containing one Janitorial Bot."
-	cost = PAYCHECK_COMMAND * 2
-	contains = list(/mob/living/basic/bot/cleanbot)
-
-/datum/supply_pack/goody/firebot
-	name = "Firefighting Bot"
-	desc = "A crate containing one Firefighting Bot."
-	cost = PAYCHECK_COMMAND * 2
-	contains = list(/mob/living/basic/bot/firebot)
-
-/datum/supply_pack/goody/repairbot
-	name = "Repair Bot"
-	desc = "A crate containing one Repair Bot."
-	cost = PAYCHECK_COMMAND * 3
-	contains = list(/mob/living/basic/bot/repairbot)
-
-/datum/supply_pack/goody/honkbot
-	name = "Clown Bot"
-	desc = "A crate containing one Clown Bot."
-	cost = PAYCHECK_COMMAND * 2.5
-	contains = list(/mob/living/basic/bot/secbot/honkbot)
-
-/datum/supply_pack/goody/medbot
-	name = "Medical Bot"
-	desc = "A crate containing one Medical Bot."
-	cost = PAYCHECK_COMMAND * 3
-	contains = list(/mob/living/basic/bot/medbot)
-
-/datum/supply_pack/goody/secbot
-	name = "Securitron"
-	desc = "A crate containing one Securitron."
-	cost = PAYCHECK_COMMAND * 5
-	contains = list(/mob/living/basic/bot/secbot)
-
-/datum/supply_pack/goody/hygienebot
-	name = "Hygiene Bot"
-	desc = "A crate containing one Hygiene Bot."
-	cost = PAYCHECK_COMMAND * 2.5
-	contains = list(/mob/living/basic/bot/hygienebot)
 
 
 /datum/supply_pack/goody/incendiaryshells
@@ -551,7 +468,6 @@
 	contains = list(/obj/item/antag_spawner/nanotrasen/chaplain)
 
 
-
 /// MISC.
 
 /datum/supply_pack/misc/telecrystal
@@ -562,7 +478,6 @@
 	contains = list(/obj/item/stack/telecrystal)
 	crate_name = "crate"
 	crate_type = /obj/structure/closet/crate
-
 
 /datum/supply_pack/misc/randomjunk
 	name = "Random Junk Crate"
