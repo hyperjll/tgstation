@@ -236,6 +236,7 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/clothing/under/rank/cargo/miner/lavaland = 3,
 		/obj/item/clothing/under/rank/cargo/bitrunner = 3,
 		/obj/item/storage/briefcase/secure = 1,
+		/obj/item/storage/lockbox/personal = 1,
 	)
 	contraband = list(
 		/obj/item/storage/box/emergencypizza = 1,
