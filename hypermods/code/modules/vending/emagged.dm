@@ -1005,6 +1005,9 @@
 		/obj/item/reagent_containers/cup/bottle/saltpetre = 10,
 	)
 	premium = list(
+		/obj/item/soil_sack = 8,
+		/obj/item/soil_sack/vermaculite = 3,
+		/obj/item/soil_sack/gel = 3,
 		/obj/item/gun/energy/floragun = 2,
 		/obj/item/geneshears = 2,
 	)
