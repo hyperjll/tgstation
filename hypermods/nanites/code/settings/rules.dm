@@ -179,6 +179,8 @@
 	var/rule_job_input = "Assistant"
 	// IS or IS NOT the name we input
 	var/mode = TRUE
+	// What name is displayed on the rule?
+	var/display_name = "Assistant"
 
 /datum/nanite_rule/job/check_rule()
 	var/mob/living/carbon/human/our_fella = program.host_mob
