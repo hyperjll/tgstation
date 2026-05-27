@@ -277,7 +277,10 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_1_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_BASE)
-	design_ids = list("construct_tool_nanites", "convert_nanites")
+	design_ids = list(
+		"construct_tool_nanites",
+		"convert_nanites",
+	)
 
 /datum/techweb_node/nanite_tools_adv
 	id = TECHWEB_NODE_NANITE_ADV_TOOL
@@ -287,7 +290,10 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_2_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_BASIC_TOOL, TECHWEB_NODE_EXP_TOOLS)
-	design_ids = list("construct_tool_adv_nanites", "botsummon_nanites")
+	design_ids = list(
+		"construct_tool_adv_nanites",
+		"botsummon_nanites",
+	)
 
 /datum/techweb_node/nanite_tools_super
 	id = TECHWEB_NODE_NANITE_SUPER_TOOL
@@ -297,7 +303,9 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_3_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_ADV_TOOL)
-	design_ids = list("construct_tool_super_nanites")
+	design_ids = list(
+		"construct_tool_super_nanites",
+	)
 
 
 /datum/techweb_node/nanite_experimental
@@ -308,7 +316,15 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_2_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_BIO, TECHWEB_NODE_NANITE_SMART)
-	design_ids = list("stickyfingers_nanites", "accelerated_synthesis_nanites", "bluespace_blood_nanites", "extinguisher_nanites", "antishove_nanites", "gravity_nanites")
+	design_ids = list(
+		"stickyfingers_nanites",
+		"accelerated_synthesis_nanites",
+		"bluespace_blood_nanites",
+		"extinguisher_nanites",
+		"antishove_nanites",
+		"gravity_nanites",
+		"sensor_organ_nanites",
+	)
 
 /datum/techweb_node/nanite_brainaug
 	id = TECHWEB_NODE_NANITE_BRAINAUG
@@ -318,7 +334,10 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_3_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_NEURAL, TECHWEB_NODE_NANITE_EXPERI)
-	design_ids = list("kravmaga_nanites", "neuraltrauma_nanites")
+	design_ids = list(
+		"kravmaga_nanites",
+		"neuraltrauma_nanites",
+	)
 
 /datum/techweb_node/nanite_illegal
 	id = TECHWEB_NODE_NANITE_ILLEGAL
@@ -328,7 +347,14 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_5_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_SYNDICATE_BASIC, TECHWEB_NODE_NANITE_SYNAPTIC)
-	design_ids = list("freedom_nanites", "construct_ammo_nanites", "construct_c4_nanites", "slipresist_nanites", "braintrauma_nanites", "suicidal_nanites")
+	design_ids = list(
+		"freedom_nanites",
+		"construct_ammo_nanites",
+		"construct_c4_nanites",
+		"slipresist_nanites",
+		"braintrauma_nanites",
+		"suicidal_nanites",
+	)
 
 /datum/techweb_node/nanite_telecrystal
 	id = TECHWEB_NODE_NANITE_TC
@@ -338,7 +364,9 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_5_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_ILLEGAL)
-	design_ids = list("telecrystal_nanites")
+	design_ids = list(
+		"telecrystal_nanites",
+	)
 
 /datum/techweb_node/nanite_experi_med
 	id = TECHWEB_NODE_NANITE_EXPERI_MED
@@ -348,7 +376,17 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_3_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_EXPERI, TECHWEB_NODE_NANITE_NEURAL)
-	design_ids = list("bodyaugment_nanites", "critstable_nanites", "corpsepreserve_nanites", "organrepair_nanites", "antidismember_nanites", "weakness_nanites", "hardiness_nanites", "mendingbrute_nanites", "mendingburn_nanites")
+	design_ids = list(
+		"bodyaugment_nanites",
+		"critstable_nanites",
+		"corpsepreserve_nanites",
+		"organrepair_nanites",
+		"antidismember_nanites",
+		"weakness_nanites",
+		"hardiness_nanites",
+		"mendingbrute_nanites",
+		"mendingburn_nanites",
+	)
 
 /datum/techweb_node/nanite_experi_med_adv
 	id = TECHWEB_NODE_NANITE_EXPERI_MED_ADV
@@ -358,7 +396,18 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_4_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_EXPERI_MED, TECHWEB_NODE_NANITE_HARMONIC)
-	design_ids = list("mendingtoxin_nanites", "selfresp_nanites", "repairingplus_nanites", "woundfixer_nanites", "naniteresus_nanites", "synthflesh_nanites", "painnull_nanites", "alcoholic_nanites", "antikpa_nanites", "limbtach_nanites")
+	design_ids = list(
+		"mendingtoxin_nanites",
+		"selfresp_nanites",
+		"repairingplus_nanites",
+		"woundfixer_nanites",
+		"naniteresus_nanites",
+		"synthflesh_nanites",
+		"painnull_nanites",
+		"alcoholic_nanites",
+		"antikpa_nanites",
+		"limbtach_nanites",
+	)
 
 /datum/techweb_node/nanite_experi_adv
 	id = TECHWEB_NODE_NANITE_EXPERI_ADV
@@ -368,7 +417,14 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_3_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_EXPERI, TECHWEB_NODE_NANITE_SYNAPTIC)
-	design_ids = list("antigibbing_nanites", "antirad_nanites", "weatherendure_nanites", "obsidian_nanites", "plantlike_nanites", "lungdestruction_nanites")
+	design_ids = list(
+		"antigibbing_nanites",
+		"antirad_nanites",
+		"weatherendure_nanites",
+		"obsidian_nanites",
+		"plantlike_nanites",
+		"lungdestruction_nanites",
+	)
 
 /datum/techweb_node/nanite_magical
 	id = TECHWEB_NODE_NANITE_MAGIC
@@ -378,4 +434,7 @@
 		TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS,
 		TECHWEB_POINT_TYPE_NANITES = TECHWEB_TIER_4_POINTS*NANITE_POINT_CONVERSION_RATE,)
 	prereq_ids = list(TECHWEB_NODE_NANITE_EXPERI_ADV)
-	design_ids = list("magicshield_nanites", "deadchat_nanites")
+	design_ids = list(
+		"magicshield_nanites",
+		"deadchat_nanites",
+	)

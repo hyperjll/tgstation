@@ -49,14 +49,12 @@
 	rule.above = above
 	rule.threshold = threshold
 
-//TODO allow inversion
 /datum/nanite_rule/crit
 	name = "Crit"
 	desc = "Checks if the host is in critical condition."
 
 /datum/nanite_rule/crit/check_rule()
 	return HAS_TRAIT(program.host_mob, TRAIT_CRITICAL_CONDITION)
-
 
 /datum/nanite_rule/death
 	name = "Death"
@@ -132,6 +130,38 @@
 /datum/nanite_rule/damage/display()
 	return "[damage_type] [above ? ">" : "<"] [threshold]"
 
+/datum/nanite_rule/species
+	name = "Species"
+	desc = "Checks the host's species."
+	// What's the name we're looking for.
+	var/rule_specie_input = /datum/species/human
+	// IS or IS NOT the name we input
+	var/mode = TRUE
+	// What name is displayed on the rule?
+	var/display_name = "Human"
+
+/datum/nanite_rule/species/check_rule()
+	var/mob/living/carbon/human/our_fella = program.host_mob
+	if(!iscarbon(our_fella))
+		return FALSE
+
+	if(mode)
+		if(is_species(our_fella, rule_specie_input))
+			return TRUE
+	else
+		if(is_species(our_fella, rule_specie_input))
+			return FALSE
+	return FALSE
+
+/datum/nanite_rule/species/copy_to(datum/nanite_program/new_program)
+	var/datum/nanite_rule/species/rule = new(new_program)
+	rule.rule_specie_input = rule_specie_input
+	rule.mode = mode
+	rule.display_name = display_name
+
+/datum/nanite_rule/species/display()
+	return "[name] [mode ? "Is" : "Is Not"] [display_name]"
+
 
 /datum/nanite_rule/alive
 	name = "Alive"
@@ -142,6 +172,32 @@
 		return TRUE
 	return FALSE
 
+/datum/nanite_rule/job
+	name = "Job"
+	desc = "Checks the host's assigned job."
+	// What's the name we're looking for.
+	var/rule_job_input = "Assistant"
+	// IS or IS NOT the name we input
+	var/mode = TRUE
+
+/datum/nanite_rule/job/check_rule()
+	var/mob/living/carbon/human/our_fella = program.host_mob
+
+	if(mode)
+		if(our_fella.mind?.assigned_role.title == rule_job_input)
+			return TRUE
+	else
+		if(our_fella.mind?.assigned_role.title == rule_job_input)
+			return FALSE
+	return FALSE
+
+/datum/nanite_rule/job/copy_to(datum/nanite_program/new_program)
+	var/datum/nanite_rule/job/rule = new(new_program)
+	rule.rule_job_input = rule_job_input
+	rule.mode = mode
+
+/datum/nanite_rule/job/display()
+	return "[name] [mode ? "Is" : "Is Not"] [rule_job_input]"
 
 /datum/nanite_rule/incapacitated
 	name = "Incapacitated"
@@ -152,6 +208,32 @@
 		return TRUE
 	return FALSE
 
+/datum/nanite_rule/name
+	name = "Name"
+	desc = "Checks the host's name."
+	// What's the name we're looking for.
+	var/rule_name_input = "Unknown"
+	// IS or IS NOT the name we input
+	var/mode = TRUE
+
+/datum/nanite_rule/name/check_rule()
+	var/mob/living/carbon/human/our_fella = program.host_mob
+
+	if(mode)
+		if(our_fella.name == rule_name_input)
+			return TRUE
+	else
+		if(our_fella.name == rule_name_input)
+			return FALSE
+	return FALSE
+
+/datum/nanite_rule/name/copy_to(datum/nanite_program/new_program)
+	var/datum/nanite_rule/name/rule = new(new_program)
+	rule.rule_name_input = rule_name_input
+	rule.mode = mode
+
+/datum/nanite_rule/name/display()
+	return "[name] [mode ? "Is" : "Is Not"] [rule_name_input]"
 
 /datum/nanite_rule/resting
 	name = "Resting"
@@ -162,3 +244,51 @@
 		return TRUE
 	return FALSE
 
+/datum/nanite_rule/organ_damage
+	name = "Organ Damage"
+	desc = "Checks a specific organ's damage within the host."
+
+	var/threshold = 50
+	var/above = TRUE
+	var/damage_type = BRAIN
+
+/datum/nanite_rule/organ_damage/check_rule()
+	var/mob/living/carbon/human/our_fella = program.host_mob
+	if(!iscarbon(our_fella))
+		return FALSE
+
+	var/damage_amt = 0
+	switch(damage_type)
+		if("BRAIN")
+			damage_amt = our_fella.get_organ_loss(ORGAN_SLOT_BRAIN)
+		if("HEART")
+			damage_amt = our_fella.get_organ_loss(ORGAN_SLOT_HEART)
+		if("LUNGS")
+			damage_amt = our_fella.get_organ_loss(ORGAN_SLOT_LUNGS)
+		if("LIVER")
+			damage_amt = our_fella.get_organ_loss(ORGAN_SLOT_LIVER)
+		if("STOMACH")
+			damage_amt = our_fella.get_organ_loss(ORGAN_SLOT_STOMACH)
+		if("EYES")
+			damage_amt = our_fella.get_organ_loss(ORGAN_SLOT_EYES)
+		if("EARS")
+			damage_amt = our_fella.get_organ_loss(ORGAN_SLOT_EARS)
+		if("APPENDIX")
+			damage_amt = our_fella.get_organ_loss(ORGAN_SLOT_APPENDIX)
+
+	if(above)
+		if(damage_amt >= threshold)
+			return TRUE
+	else
+		if(damage_amt < threshold)
+			return TRUE
+	return FALSE
+
+/datum/nanite_rule/organ_damage/copy_to(datum/nanite_program/new_program)
+	var/datum/nanite_rule/organ_damage/rule = new(new_program)
+	rule.above = above
+	rule.threshold = threshold
+	rule.damage_type = damage_type
+
+/datum/nanite_rule/organ_damage/display()
+	return "[damage_type] [above ? ">" : "<"] [threshold]"
