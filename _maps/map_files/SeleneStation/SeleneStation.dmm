@@ -12307,6 +12307,7 @@
 /area/station/maintenance/fore)
 "eNL" = (
 /obj/effect/turf_decal/stripes/red/line,
+/obj/item/relic,
 /turf/open/floor/engine,
 /area/station/science/explab)
 "eNP" = (
@@ -36119,10 +36120,10 @@
 /turf/open/floor/iron/dark,
 /area/station/science)
 "nZy" = (
-/obj/structure/table/reinforced,
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 8
 	},
+/obj/machinery/gizmo/toggle/tucker_tubes,
 /turf/open/floor/iron/dark,
 /area/station/science/explab)
 "nZD" = (
@@ -47092,6 +47093,7 @@
 "suP" = (
 /obj/machinery/airalarm/directional/east,
 /obj/effect/turf_decal/stripes/red/line,
+/obj/effect/spawner/random/gizmo,
 /turf/open/floor/engine,
 /area/station/science/explab)
 "sve" = (

@@ -17521,6 +17521,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/interior)
+"eyA" = (
+/obj/effect/turf_decal/tile/purple/opposingcorners,
+/obj/machinery/gizmo/toggle/tucker_tubes,
+/turf/open/floor/iron/white,
+/area/station/science/explab)
 "eyB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/structure/girder,
@@ -24717,6 +24722,7 @@
 /obj/structure/table,
 /obj/item/folder/white,
 /obj/structure/cable,
+/obj/item/relic,
 /turf/open/floor/iron/white,
 /area/station/science/explab)
 "gvN" = (
@@ -30573,6 +30579,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
+"hWi" = (
+/obj/effect/spawner/random/gizmo,
+/turf/open/floor/engine,
+/area/station/science/explab)
 "hWn" = (
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/iron/dark/side{
@@ -183697,7 +183707,7 @@ qyx
 vxK
 jON
 jON
-jON
+eyA
 vxK
 wvv
 hVK
@@ -184462,7 +184472,7 @@ gqP
 cwq
 cwq
 xuv
-qyx
+hWi
 qyx
 qyx
 vxK

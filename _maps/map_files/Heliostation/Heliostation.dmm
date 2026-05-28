@@ -30656,6 +30656,7 @@
 /area/station/maintenance/department/cargo)
 "eIl" = (
 /obj/effect/turf_decal/stripes/corner,
+/obj/effect/spawner/random/gizmo,
 /turf/open/floor/engine,
 /area/station/science/explab)
 "eIo" = (
@@ -33415,6 +33416,13 @@
 /obj/item/storage/toolbox/electrical,
 /obj/machinery/light_switch/directional/south,
 /obj/effect/turf_decal/trimline/purple/filled/line,
+/obj/item/multitool/circuit{
+	pixel_x = -8
+	},
+/obj/item/multitool/circuit,
+/obj/item/multitool/circuit{
+	pixel_x = 7
+	},
 /turf/open/floor/iron/white,
 /area/station/science/explab)
 "fRU" = (
@@ -67014,21 +67022,14 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/greater)
 "sUi" = (
-/obj/item/multitool/circuit{
-	pixel_x = -8
-	},
-/obj/item/multitool/circuit,
-/obj/item/multitool/circuit{
-	pixel_x = 7
-	},
 /obj/structure/window/reinforced/spawner/directional/north,
-/obj/structure/rack,
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 1
 	},
+/obj/machinery/gizmo/toggle/tucker_tubes,
 /turf/open/floor/iron/white,
 /area/station/science/explab)
 "sUq" = (
@@ -78768,6 +78769,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/relic,
 /turf/open/floor/engine,
 /area/station/science/explab)
 "xzs" = (
