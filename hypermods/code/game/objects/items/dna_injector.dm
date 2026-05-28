@@ -165,3 +165,7 @@
 	name = "\improper DNA injector (Smile)"
 	desc = "Gives you Smile."
 	add_mutations = list(/datum/mutation/smile)
+
+/obj/item/dnainjector/lay_on_hands
+	name = "\improper DNA injector (Mending Touch)"
+	add_mutations = list(/datum/mutation/lay_on_hands)
