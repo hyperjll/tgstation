@@ -79,7 +79,7 @@
 /datum/store_item/roundstart/gum_medicated
 	name = "Activin 12-Hour Medicated Gum"
 	item_path = /obj/item/storage/box/gum/wake_up
-	item_cost = 25
+	item_cost = 400
 
 /datum/store_item/roundstart/creampie
 	name = "Banana Cream Pie"
@@ -144,12 +144,12 @@
 /datum/store_item/roundstart/dolphin
 	name = "Dolphin Gloves"
 	item_path = /obj/item/clothing/gloves/tackler/dolphin
-	item_cost = 100
+	item_cost = 500
 
 /datum/store_item/roundstart/cargo_gauntlet
 	name = "H.A.U.L Gloves"
 	item_path = /obj/item/clothing/gloves/cargo_gauntlet
-	item_cost = 100
+	item_cost = 250
 
 /datum/store_item/roundstart/flash
 	name = "Handheld Flash"
