@@ -73955,7 +73955,9 @@
 /area/station/maintenance/floor3/port)
 "tbt" = (
 /obj/structure/cable,
-/obj/machinery/bouldertech/refinery/smelter,
+/obj/machinery/bouldertech/refinery/smelter{
+	dir = 4
+	},
 /obj/machinery/conveyor/inverted{
 	dir = 10;
 	id = "mining"
@@ -80998,7 +81000,9 @@
 /area/station/hallway/floor3/fore)
 "uSC" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/bouldertech/refinery,
+/obj/machinery/bouldertech/refinery{
+	dir = 4
+	},
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "mining"

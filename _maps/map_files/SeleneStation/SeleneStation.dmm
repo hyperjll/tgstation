@@ -21483,7 +21483,9 @@
 /turf/open/floor/iron,
 /area/station/maintenance/starboard/fore)
 "iyY" = (
-/obj/machinery/bouldertech/refinery,
+/obj/machinery/bouldertech/refinery{
+	dir = 4
+	},
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "mining"
@@ -34650,14 +34652,10 @@
 	c_tag = "Security - Gear Room";
 	dir = 9
 	},
-/obj/effect/turf_decal/siding/red{
-	dir = 1
-	},
-/obj/effect/turf_decal/siding/red{
+/obj/effect/turf_decal/siding/red/end{
 	dir = 4
 	},
-/obj/effect/turf_decal/siding/red,
-/obj/effect/turf_decal/siding/red{
+/obj/effect/turf_decal/siding/red/end{
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
@@ -45507,7 +45505,9 @@
 /turf/open/floor/iron/cafeteria,
 /area/station/maintenance/starboard/fore)
 "rQB" = (
-/obj/machinery/bouldertech/refinery/smelter,
+/obj/machinery/bouldertech/refinery/smelter{
+	dir = 4
+	},
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "mining"

@@ -46333,7 +46333,9 @@
 /turf/open/floor/iron,
 /area/station/cargo/miningdock)
 "lsn" = (
-/obj/machinery/bouldertech/refinery,
+/obj/machinery/bouldertech/refinery{
+	dir = 4
+	},
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "mining"
