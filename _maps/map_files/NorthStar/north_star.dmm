@@ -40198,7 +40198,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment,
 /obj/effect/mapping_helpers/airlock_note_placer{
-	note_info = "THIS IS PUBLIC. IT'S MEANT TO BE. PLEASE. GOD. WE KNOW. STOP. TELLING US. - Yours Truly and Forever Faithfully, The Desk Of The Chief Engineer"
+	note_info = "THIS IS PUBLIC. IT'S MEANT TO BE. PLEASE. GOD. WE KNOW. STOP. TELLING US. - Yours Truly and Forever Faithfully, The Desk Of The Chief Engineer";
+	note_path = /obj/item/paper
 	},
 /obj/machinery/door/airlock/science/glass{
 	name = "Science Hall"
@@ -58468,7 +58469,6 @@
 "oYY" = (
 /obj/structure/closet{
 	anchored = 1;
-	can_be_unanchored = 1;
 	name = "Cold protection gear"
 	},
 /obj/item/clothing/suit/hooded/wintercoat,
