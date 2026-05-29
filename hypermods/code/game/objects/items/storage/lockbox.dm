@@ -1,6 +1,6 @@
 /obj/item/storage/lockbox/personal
 	name = "personal lockbox"
-	desc = "A small lockbox used for personal storage and transportation of important goods. Comes equipped with an anti-theft system."
+	desc = "A small lockbox used for personal storage and transportation of important goods. Comes equipped with an anti-theft system. Be sure to swipe an ID to claim, lock and unlock it."
 	icon_state = "lockbox+l"
 	icon_closed = "lockbox"
 	icon_locked = "lockbox+l"
