@@ -84,7 +84,7 @@
 /datum/store_item/roundstart/creampie
 	name = "Banana Cream Pie"
 	item_path = /obj/item/food/pie/cream
-	item_cost = 50
+	item_cost = 150
 
 /datum/store_item/roundstart/whiskey
 	name = "Uncle Git's Special Reserve"
@@ -219,12 +219,12 @@
 /datum/store_item/roundstart/medipens
 	name = "Box of Epinephrine Medipens"
 	item_path = /obj/item/storage/box/medipens
-	item_cost = 200
+	item_cost = 250
 
 /datum/store_item/roundstart/medipens_stims
 	name = "Stimpack Value Kit"
 	item_path = /obj/item/storage/box/medipens/utility
-	item_cost = 400
+	item_cost = 750
 
 /datum/store_item/roundstart/medkitemergency
 	name = "Emergency Medkit"
@@ -264,7 +264,7 @@
 /datum/store_item/roundstart/auto_pump
 	name = "Life-Support Auto-Pump"
 	item_path = /obj/item/auto_pump
-	item_cost = 600
+	item_cost = 750
 
 /datum/store_item/roundstart/hypospray
 	name = "Civilian Hypospray"
