@@ -17,37 +17,43 @@
 /area/ruin/powered)
 "g" = (
 /turf/open/misc/asteroid{
-	name = "dirt"
+	name = "dirt";
+	planetary_atmos = 1
 	},
 /area/ruin/powered)
 "h" = (
 /obj/item/shovel,
 /turf/open/misc/asteroid{
-	name = "dirt"
+	name = "dirt";
+	planetary_atmos = 1
 	},
 /area/ruin/powered)
 "i" = (
 /obj/item/reagent_containers/cup/bucket,
 /turf/open/misc/asteroid{
-	name = "dirt"
+	name = "dirt";
+	planetary_atmos = 1
 	},
 /area/ruin/powered)
 "j" = (
 /obj/structure/water_source/puddle,
 /turf/open/misc/asteroid{
-	name = "dirt"
+	name = "dirt";
+	planetary_atmos = 1
 	},
 /area/ruin/powered)
 "k" = (
 /obj/structure/glowshroom/single,
 /turf/open/misc/asteroid{
-	name = "dirt"
+	name = "dirt";
+	planetary_atmos = 1
 	},
 /area/ruin/powered)
 "l" = (
 /obj/item/storage/toolbox/emergency,
 /turf/open/misc/asteroid{
-	name = "dirt"
+	name = "dirt";
+	planetary_atmos = 1
 	},
 /area/ruin/powered)
 "m" = (
@@ -92,6 +98,7 @@
 "u" = (
 /obj/structure/bed/pod,
 /obj/item/bedsheet/black,
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "v" = (
@@ -179,10 +186,15 @@
 "P" = (
 /turf/template_noop,
 /area/template_noop)
+"Q" = (
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/ruin/powered)
 "S" = (
 /obj/item/clothing/head/helmet/space/orange,
 /turf/open/misc/asteroid{
-	name = "dirt"
+	name = "dirt";
+	planetary_atmos = 1
 	},
 /area/ruin/powered)
 "T" = (
@@ -304,7 +316,7 @@ a
 a
 T
 m
-o
+Q
 o
 t
 w
@@ -322,7 +334,7 @@ T
 T
 c
 f
-o
+Q
 q
 o
 o
@@ -341,7 +353,7 @@ i
 g
 f
 f
-o
+Q
 o
 o
 t
