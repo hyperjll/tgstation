@@ -20689,7 +20689,9 @@
 /turf/open/floor/carpet/grimy,
 /area/station/service/chapel)
 "gbf" = (
-/obj/machinery/door/window/left/directional/south,
+/obj/machinery/door/window/left/directional/south{
+	req_access = list("science")
+	},
 /turf/open/floor/grass/no_border,
 /area/station/science/circuits)
 "gbu" = (
