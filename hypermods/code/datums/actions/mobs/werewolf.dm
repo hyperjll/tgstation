@@ -165,7 +165,7 @@
 
 /datum/action/cooldown/spell/werewolf_pounce
 	name = "Pounce"
-	desc = "Prepare your hind legs to leap through the air, quickly traversing long distances and slamming into enemies, knocking them down! Slamming into things may result in recoil damage."
+	desc = "Use your hind legs to leap high into the air, allowing you to pounce onto enemies, dealing damage and knocking them down!"
 	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
 	button_icon_state = "pounce"
 
@@ -176,26 +176,82 @@
 	antimagic_flags = NONE
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 	invocation_type = INVOCATION_NONE
-	var/jumpdistance = 8 //-1 from to see the actual distance, e.g 4 goes over 3 tiles
-	var/jumpspeed = 5
+	///Ref to the addtimer we have between jumping up and falling down, used to cancel early if you're incapacitated mid-jump.
+	var/jump_timer
+	/**
+	 * boolean we set every time we jump, to know if we should take away the passflags we give,
+	 * so we don't give/take when they have it from other sources (since we don't have traits, we have
+	 * no way to tell which pass flags they get from what source.)
+	 */
+	var/gave_pass_flags = FALSE
 
 /datum/action/cooldown/spell/werewolf_pounce/can_cast_spell(feedback = TRUE)
 	. = ..()
 	if(!iswerewolf(owner))
 		return FALSE
 
-/datum/action/cooldown/spell/werewolf_pounce/cast(mob/living/carbon/cast_on)
-	if(!isliving(cast_on))
+/datum/action/cooldown/spell/werewolf_pounce/cast(mob/living/carbon/owner)
+	playsound(owner, 'sound/effects/footstep/heavy1.ogg', 50, 1)
+	new /obj/effect/temp_visual/telegraphing/exclamation/following(get_turf(owner), 2.5 SECONDS, owner)
+
+	owner.add_traits(list(TRAIT_SILENT_FOOTSTEPS, TRAIT_MOVE_FLYING), ACTION_TRAIT)
+
+	if(owner.pass_flags & PASSTABLE)
+		gave_pass_flags = FALSE
+	else
+		gave_pass_flags = TRUE
+		owner.pass_flags |= PASSTABLE
+
+	owner.set_density(FALSE)
+	owner.layer = ABOVE_ALL_MOB_LAYER
+
+	animate(owner, pixel_y = owner.pixel_y + 60, time = (1 SECONDS), easing = CIRCULAR_EASING|EASE_OUT)
+	animate(pixel_y = initial(owner.pixel_y), time = (1 SECONDS), easing = CIRCULAR_EASING|EASE_IN)
+
+	jump_timer = addtimer(CALLBACK(src, PROC_REF(land), /*do_effects = */TRUE, /*mob_override = */owner), 2 SECONDS, TIMER_STOPPABLE)
+
+/datum/action/cooldown/spell/werewolf_pounce/update_status_on_signal(datum/source, new_stat, old_stat)
+	if(!isnull(jump_timer) && !IsAvailable())
+		INVOKE_ASYNC(src, PROC_REF(land), /*do_effects = */FALSE, /*mob_override = */source)
+		deltimer(jump_timer)
+	return ..()
+
+/**
+ * ## land()
+ *
+ * Called by cast, this is the post-jump effects, damaging mobs it lands on.
+ * Args:
+ * do_effects - Whether we'll do the attacking effects of the land (damaging mobs & sound),
+ * we set this to false if we were forced out of the jump, they lost their ability to do the hit.
+ * mob_doing_effects - This is who we use for aftereffects, passing the mob using the ability, with owner as fallback.
+ * ourselves.
+ */
+
+/datum/action/cooldown/spell/werewolf_pounce/proc/land(do_effects = TRUE, mob/living/mob_doing_effects)
+	if(!mob_doing_effects)
+		mob_doing_effects = owner
+	var/turf/landed_on = get_turf(mob_doing_effects)
+
+	mob_doing_effects.remove_traits(list(TRAIT_SILENT_FOOTSTEPS, TRAIT_MOVE_FLYING), ACTION_TRAIT)
+	if(gave_pass_flags)
+		mob_doing_effects.pass_flags &= ~PASSTABLE
+	mob_doing_effects.set_density(TRUE)
+	mob_doing_effects.layer = initial(mob_doing_effects.layer)
+	SET_PLANE(mob_doing_effects, initial(mob_doing_effects.plane), landed_on)
+
+	if(!do_effects)
 		return
 
-	var/atom/target = get_edge_target_turf(cast_on, cast_on.dir) //gets the user's direction
+	playsound(mob_doing_effects, 'hypermods/sound/mobs/humanoid/werewolf/werewolf_attack2.ogg', 50, TRUE, TRUE)
 
-	ADD_TRAIT(cast_on, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)  //Throwing itself doesn't protect mobs against lava (because gulag).
-	if (cast_on.throw_at(target, jumpdistance, jumpspeed, spin = FALSE, diagonals_first = TRUE, callback = TRAIT_CALLBACK_REMOVE(cast_on, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)))
-		playsound(src, 'hypermods/sound/mobs/humanoid/werewolf/werewolf_attack2.ogg', 50, TRUE, TRUE)
-		cast_on.visible_message(span_warning("[cast_on] leaps into the air at high speed!"))
-	else
-		to_chat(cast_on, span_warning("Something prevents you from leaping into the air!"))
+	for(var/atom/thing as anything in landed_on)
+		if(thing == mob_doing_effects)
+			continue
+
+		if(isliving(thing))
+			var/mob/living/living_target = thing
+			living_target.apply_damage(20, BRUTE)
+			living_target.Knockdown(4 SECONDS)
 
 
 /datum/action/cooldown/spell/touch/werewolf_tainted_claw
@@ -300,39 +356,6 @@
 	my_werewolf.physiology.burn_mod /= 0.3
 	my_werewolf.physiology.tox_mod /= 0.3
 	my_werewolf.physiology.oxy_mod /= 0.3
-
-
-/datum/action/cooldown/spell/werewolf_pounce
-	name = "Pounce"
-	desc = "Prepare your hind legs to leap through the air, quickly traversing long distances and slamming into enemies, knocking them down! Slamming into things may result in recoil damage."
-	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
-	button_icon_state = "pounce"
-
-	cooldown_time = 10 SECONDS
-	spell_max_level = 1
-	overlay_icon_state = "bg_default_border"
-	spell_requirements = NONE
-	antimagic_flags = NONE
-	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
-	invocation_type = INVOCATION_NONE
-
-/datum/action/cooldown/spell/werewolf_pounce/can_cast_spell(feedback = TRUE)
-	. = ..()
-	if(!iswerewolf(owner))
-		return FALSE
-
-/datum/action/cooldown/spell/werewolf_pounce/cast(mob/living/carbon/cast_on)
-	if(!isliving(cast_on))
-		return
-
-	var/atom/target = get_edge_target_turf(cast_on, cast_on.dir) //gets the user's direction
-
-	ADD_TRAIT(cast_on, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)  //Throwing itself doesn't protect mobs against lava (because gulag).
-	if (cast_on.throw_at(target, jumpdistance, jumpspeed, spin = FALSE, diagonals_first = TRUE, callback = TRAIT_CALLBACK_REMOVE(cast_on, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)))
-		playsound(src, 'hypermods/sound/mobs/humanoid/werewolf/werewolf_attack2.ogg', 50, TRUE, TRUE)
-		cast_on.visible_message(span_warning("[cast_on] leaps into the air at high speed!"))
-	else
-		to_chat(cast_on, span_warning("Something prevents you from leaping into the air!"))
 
 
 /datum/action/cooldown/spell/pointed/werewolf_throw
