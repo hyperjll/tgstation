@@ -259,7 +259,7 @@
 	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
 	button_icon_state = "tainted-bite"
 	desc = "Fill your claws with a random toxin to apply to your target. Successful attacks heal toxin damage and rapidly purge your bloodstream."
-	cooldown_time = 90 SECONDS
+	cooldown_time = 60 SECONDS
 	spell_max_level = 1
 	overlay_icon_state = "bg_default_border"
 	//cast_range = 1 // Touch range
@@ -312,7 +312,7 @@
 	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
 	button_icon_state = "howl"
 
-	cooldown_time = 90 SECONDS
+	cooldown_time = 60 SECONDS
 	spell_max_level = 1
 	overlay_icon_state = "bg_default_border"
 	spell_requirements = NONE
@@ -360,7 +360,7 @@
 
 /datum/action/cooldown/spell/pointed/werewolf_throw
 	name = "Throw"
-	desc = "Prepare yourself to throw around a nearby human like a ragdoll, this doesn't require you to grab them. Will be interrupted should be move too quickly after using this ability."
+	desc = "Prepare yourself to throw around a nearby human like a ragdoll, this doesn't require you to grab them. Can be interrupted should you move while attempting to throw someone."
 	button_icon = 'hypermods/icons/ui_icons/antags/werewolf/werewolf_ui.dmi'
 	button_icon_state = "throw"
 
@@ -467,7 +467,7 @@
 	name = "Thrash"
 	desc = "Spin around, flailing your arms at all adjacent targets, knocking them down for a good while and dealing moderate damage."
 
-	cooldown_time = 120 SECONDS
+	cooldown_time = 60 SECONDS
 	spell_max_level = 1
 	overlay_icon_state = "bg_default_border"
 	spell_requirements = NONE
