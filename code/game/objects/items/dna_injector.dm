@@ -23,9 +23,7 @@
 	var/duration = INFINITY
 	/// A DNA datum that has its fields copied to the target on injection.
 	var/datum/dna/stored_dna
-
-	var/used = FALSE
-
+	/// Used to track each mutation's source, notably to prevent certain mutation injectors from being curable via mutaodne.
 	var/mut_type = MUTATION_SOURCE_MUTATOR
 
 /obj/item/dnainjector/Initialize(mapload, datum/dna/stored_dna, damage_coeff = 1)
@@ -79,7 +77,7 @@
 		else
 			target.dna.add_mutation(added_mutation, mut_type)
 			if(duration != INFINITY)
-				addtimer(CALLBACK(target.dna, TYPE_PROC_REF(/datum/dna, remove_mutation), added_mutation, MUTATION_SOURCE_MUTATOR), duration)
+				addtimer(CALLBACK(target.dna, TYPE_PROC_REF(/datum/dna, remove_mutation), added_mutation, mut_type), duration)
 
 	if(stored_dna)
 		target.apply_status_effect(/datum/status_effect/temporary_transformation/dna_injector, duration, stored_dna)

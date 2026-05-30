@@ -37,6 +37,16 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/werewolf,
 	)
 
+/datum/species/werewolf/on_species_gain(mob/living/carbon/human/human_who_gained_species, datum/species/old_species, pref_load, regenerate_icons, replace_missing)
+	. = ..()
+	RegisterSignal(human_who_gained_species, COMSIG_LIVING_LIFE, PROC_REF(on_life))
+
+/datum/species/werewolf/on_species_loss(mob/living/carbon/human/human_who_lost_species, datum/species/new_species, pref_load)
+	. = ..()
+	UnregisterSignal(human_who_lost_species, list(
+		COMSIG_LIVING_LIFE,
+	))
+
 /datum/species/werewolf/prepare_human_for_preview(mob/living/carbon/human/human)
 	human.hair_color = "#bb9966" // brown
 	human.hairstyle = "Business Hair"
@@ -76,8 +86,9 @@
 
 	return to_add
 
-/datum/species/werewolf/spec_life(mob/living/carbon/human/werewolf, seconds_per_tick)
-	. = ..()
+/datum/species/werewolf/proc/on_life(mob/living/carbon/human/werewolf, seconds_per_tick)
+	SIGNAL_HANDLER
+
 	if(werewolf.stat == DEAD)
 		return
 

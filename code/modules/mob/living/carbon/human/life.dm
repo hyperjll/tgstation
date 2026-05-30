@@ -47,6 +47,8 @@
 	// Crit damage but specifically for people who don't get suffocate while in crit so they can actually die eventually
 	if(HAS_TRAIT(src, TRAIT_NOBREATH) && (health < crit_threshold) && !HAS_TRAIT(src, TRAIT_NOCRITDAMAGE))
 		adjust_brute_loss(0.5 * seconds_per_tick)
+	if(nutrition <= (NUTRITION_LEVEL_STARVING - 150) && HAS_TRAIT(src, TRAIT_HUNGER_DAMAGE))
+		take_overall_damage(brute = 0.1, required_bodytype = BODYTYPE_ORGANIC)
 	return stat != DEAD
 
 /mob/living/carbon/human/calculate_affecting_pressure(pressure)
