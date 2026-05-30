@@ -67,7 +67,7 @@
 /area/ruin/powered)
 "n" = (
 /obj/machinery/hydroponics/soil,
-/turf/open/floor/plating,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/powered)
 "o" = (
 /turf/open/floor/plating,
@@ -81,7 +81,7 @@
 /area/ruin/powered)
 "q" = (
 /obj/structure/glowshroom/single,
-/turf/open/floor/plating,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/powered)
 "r" = (
 /obj/structure/rack,
@@ -98,7 +98,6 @@
 "u" = (
 /obj/structure/bed/pod,
 /obj/item/bedsheet/black,
-/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "v" = (
@@ -124,7 +123,7 @@
 "A" = (
 /obj/structure/table,
 /obj/item/knife/combat/survival,
-/turf/open/floor/plating,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/powered)
 "B" = (
 /obj/structure/table/survival_pod,
@@ -177,7 +176,7 @@
 "L" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/cultivator,
-/turf/open/floor/plating,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/powered)
 "M" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
@@ -316,8 +315,8 @@ a
 a
 T
 m
-Q
-o
+f
+f
 t
 w
 y
@@ -334,9 +333,9 @@ T
 T
 c
 f
-Q
+f
 q
-o
+Q
 o
 z
 C
@@ -353,8 +352,8 @@ i
 g
 f
 f
-Q
-o
+f
+c
 o
 t
 t
@@ -372,8 +371,8 @@ g
 g
 f
 f
+c
 u
-o
 A
 T
 P
