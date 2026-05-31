@@ -760,6 +760,8 @@
 		/obj/item/reagent_containers/applicator/pill/epinephrine = 12,
 		/obj/item/reagent_containers/applicator/pill/multiver = 5,
 		/obj/item/reagent_containers/applicator/pill/antiviral = 3,
+		/obj/item/reagent_containers/applicator/pill/naniteremover = 3,
+		/obj/item/reagent_containers/cup/bottle/naniteremover = 1,
 		/obj/item/reagent_containers/cup/bottle/epinephrine = 1,
 		/obj/item/reagent_containers/cup/bottle/multiver = 1)
 

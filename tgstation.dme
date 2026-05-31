@@ -7913,6 +7913,7 @@
 #include "hypermods\nanites\code\nanite_component.dm"
 #include "hypermods\nanites\code\nanite_disease.dm"
 #include "hypermods\nanites\code\nanite_hud.dm"
+#include "hypermods\nanites\code\nanite_reagents.dm"
 #include "hypermods\nanites\code\nanite_remote.dm"
 #include "hypermods\nanites\code\nanite_scanner.dm"
 #include "hypermods\nanites\code\nanite_subsystem.dm"
