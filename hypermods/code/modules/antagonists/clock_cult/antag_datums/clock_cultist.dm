@@ -78,7 +78,7 @@
 /datum/antagonist/clock_cultist/remove_innate_effects(mob/living/mob_override)
 	. = ..()
 	var/mob/living/current = owner.current
-	current.faction -= FACTION_CLOCK
+	current.remove_faction(FACTION_CLOCK)
 	current.remove_language(/datum/language/ratvar, TRUE, TRUE, LANGUAGE_CULTIST)
 	current.clear_alert("clockinfo")
 	current.remove_filter("forbearance")

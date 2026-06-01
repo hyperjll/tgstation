@@ -54,7 +54,7 @@ GLOBAL_LIST_EMPTY(cogscarabs)
 	GLOB.cogscarabs -= src
 	return ..()
 
-/mob/living/basic/drone/cogscarab/transferItemToLoc(obj/item/item, newloc, force, silent) //ideally I would handle this on attacking instead
+/mob/living/basic/drone/cogscarab/transferItemToLoc(obj/item/item, newloc, force, silent, animated) //ideally I would handle this on attacking instead
 	return (item.force <= CLOCK_DRONE_MAX_ITEM_FORCE) && ..()
 
 //====Shell====

@@ -44,6 +44,7 @@
 	return TRUE
 
 /obj/item/reagent_containers/applicator/patch/mender/emp_act()
+	..()
 	if(!tampered)
 		src.visible_message(span_alert("[src] malfunctions and identifies all substaces as harmful, removing them!"))
 		playsound(src, "sparks", 75, 1, -1)

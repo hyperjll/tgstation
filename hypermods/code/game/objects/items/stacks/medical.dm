@@ -32,7 +32,7 @@
 	INVOKE_ASYNC(src, PROC_REF(try_heal), patient, user, heal_zone, FALSE, iscarbon(patient) && auto_change_zone) // auto change is useless for non-carbons
 	return TRUE
 
-/obj/item/stack/medical/bloodpack/try_heal_checks(mob/living/patient, mob/user)
+/obj/item/stack/medical/bloodpack/try_heal_checks(mob/living/patient, mob/living/user, healed_zone, silent = FALSE)
 	if(patient.stat == DEAD)
 		patient.balloon_alert(user, "they're dead!")
 		return FALSE
@@ -46,7 +46,7 @@
 		patient.balloon_alert(user, "can't heal [patient]!")
 		return FALSE
 
-/obj/item/stack/medical/bloodpack/heal_carbon(mob/living/patient, mob/user)
+/obj/item/stack/medical/bloodpack/heal_carbon(mob/living/carbon/patient, mob/living/user, healed_zone)
 	patient.adjust_blood_volume(10, maximum = BLOOD_VOLUME_NORMAL)
 	to_chat(user, span_warning("You've applied the [src] to [patient]."))
 	return TRUE

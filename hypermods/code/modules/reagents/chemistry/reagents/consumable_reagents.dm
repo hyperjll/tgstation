@@ -118,10 +118,12 @@
 	taste_description = "expensive gemstones"
 
 /datum/reagent/rockcandysapphire/on_mob_life(mob/living/carbon/M, metabolization_ratio)
+	..()
 	if(M.on_fire)
 		M.adjust_fire_stacks(-1)
 
 /datum/reagent/rockcandysapphire/on_mob_metabolize(mob/living/M)
+	..()
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.physiology.burn_mod *= 0.85
@@ -130,6 +132,7 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.physiology.burn_mod /= 0.85
+	..()
 
 /datum/reagent/rockcandyemerald
 	name = "Emerald Rock Candy"
@@ -144,6 +147,7 @@
 
 /datum/reagent/rockcandyemerald/on_mob_end_metabolize(mob/living/L)
 	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/emeraldrockcandy)
+	..()
 
 /datum/reagent/rockcandytopaz
 	name = "Topaz Rock Candy"
@@ -162,10 +166,12 @@
 	return ..() || .
 
 /datum/reagent/rockcandytopaz/on_mob_metabolize(mob/living/carbon/M)
+	..()
 	ADD_TRAIT(M, TRAIT_NOBREATH, "topazrockcandy")
 
 /datum/reagent/rockcandytopaz/on_mob_end_metabolize(mob/living/carbon/M)
 	REMOVE_TRAIT(M, TRAIT_NOBREATH, "topazrockcandy")
+	..()
 
 /datum/reagent/rockcandymagic
 	name = "Magic Rock Candy"
@@ -196,6 +202,7 @@
 		H.physiology.burn_mod /= 0.925
 		H.physiology.tox_mod /= 0.925
 		H.physiology.oxy_mod /= 0.925
+	..()
 
 /datum/reagent/rockcandymagic/on_mob_life(mob/living/carbon/M, metabolization_ratio)
 	M.adjust_brute_loss(-0.5, 0)
@@ -349,8 +356,8 @@
 			need_mob_update = carbies.adjust_organ_loss(ORGAN_SLOT_BRAIN, 30 * REM, required_organ_flag = affected_organ_flags)
 			need_mob_update += carbies.adjust_brute_loss(-200 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 			need_mob_update += carbies.adjust_fire_loss(-200 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
-			need_mob_update += carbies.adjust_tox_loss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
-			need_mob_update += carbies.adjust_oxy_loss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
+			need_mob_update += carbies.adjust_tox_loss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
+			need_mob_update += carbies.adjust_oxy_loss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
 			if(need_mob_update)
 				return UPDATE_MOB_HEALTH
 		if(4)

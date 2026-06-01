@@ -706,14 +706,16 @@
 	update()
 
 	if(riggedtoblow)
-		sleep(1 MINUTES)
-		explosion(src, 0, 2, 3, 4)
-		qdel(src)
+		addtimer(CALLBACK(src, .proc/syndirig_explode), 1 MINUTES, TIMER_UNIQUE)
 		riggedtoblow = FALSE // To prevent multiple procs.
 
 	if(riggedtorads)
 		radiation_pulse(src, max_range = 12, threshold = RAD_FULL_INSULATION)
 		riggedtorads = FALSE // To prevent multiple procs.
+
+/obj/machinery/light/proc/syndirig_explode()
+	explosion(src, 0, 2, 3, 4)
+	qdel(src)
 
 /obj/machinery/light/proc/fix()
 	if(status == LIGHT_OK)

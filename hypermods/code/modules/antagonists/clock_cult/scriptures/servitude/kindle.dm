@@ -103,7 +103,6 @@
 	playsound(invoker, 'sound/effects/magic/staff_animation.ogg', 50, TRUE)
 	return TRUE
 
-// copy-pasted from blood cult code lol
 /datum/scripture/slab/kindle/proc/snowflake_martial_arts_handler(mob/living/target, mob/living/carbon/user)
 	var/datum/martial_art/martial_art = GET_ACTIVE_MARTIAL_ART(target)
 	if(!martial_art?.can_use())
@@ -114,7 +113,7 @@
 		counter = TRUE
 	else if(istype(martial_art, /datum/martial_art/the_sleeping_carp))
 		var/datum/martial_art/the_sleeping_carp/eepy_carp = martial_art
-		if(eepy_carp.can_deflect(target, check_intent = FALSE))
+		if(eepy_carp.can_deflect(target, FALSE))
 			counter = TRUE
 			INVOKE_ASYNC(target, TYPE_PROC_REF(/atom/movable, say), message = "PATHETIC!", language = /datum/language/common, ignore_spam = TRUE, forced = martial_art)
 		else
@@ -141,6 +140,5 @@
 		playsound(target, 'hypermods/sound/effects/miss.ogg', vol = 50, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 		return TRUE
 	return FALSE
-
 
 #undef EFFECT_TIME

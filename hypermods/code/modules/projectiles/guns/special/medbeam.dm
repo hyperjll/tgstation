@@ -114,6 +114,7 @@
 
 /// Activates über if ubercharge is ready
 /datum/action/item_action/activate_uber/Trigger(trigger_flags)
+	..()
 
 	if(!istype(target, /obj/item/gun/medbeam/uber))
 		return

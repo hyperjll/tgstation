@@ -63,6 +63,7 @@
 /obj/item/ammo_casing/shotgun/hardlight/emp_act(severity)
 	if (. & EMP_PROTECT_SELF)
 		return
+	..()
 	variance = initial(variance) + severity*4 // yikes
 	if(severity > EMP_LIGHT)
 		pellets = initial(pellets) * (0.5**(severity / EMP_HEAVY)) // also yikes

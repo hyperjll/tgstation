@@ -57,7 +57,7 @@
 		return
 	var/turf/T = user.loc
 	for (var/mob/living/A in T)
-		if (A != user && A.lying_angle)
+		if (A != user && A.body_position == LYING_DOWN)
 			A.adjust_brute_loss(rand(10,13))
 			A.Knockdown(1 SECONDS) // The thing that makes these magboots powerful af
 			to_chat(A,"<span class='userdanger'>[user]'s magboots press down on you, crushing you!</span>")

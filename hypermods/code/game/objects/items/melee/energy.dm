@@ -31,6 +31,7 @@
 **/
 
 /obj/item/melee/energy/blade/hadar/dropped(obj/item/source, mob/living/carbon/user)
+	..()
 	force = 25
 	charge_state = 0
 	icon_state = "[base_icon_state]_low"

@@ -11,5 +11,7 @@
 
 	if(prob(5))
 		if(!IS_TRAITOR(criminalmind) || !IS_HERETIC(criminalmind) || !IS_CULTIST(criminalmind) || !IS_CHANGELING(criminalmind) || !IS_HEAD_REVOLUTIONARY(criminalmind) || !IS_SPY(criminalmind))
-			sleep(60 SECONDS) // A full minute before you get hit with antag, just to leave you guessin. (and to ensure you don't roll traitor and syndi sleeper)
-			criminalmind.mind.add_antag_datum(/datum/antagonist/traitor/infiltrator/sleeper_agent)
+			addtimer(CALLBACK(src, .proc/grant_antagonist_status, criminalmind), 60 SECONDS)
+
+/datum/quirk/criminal_background/proc/grant_antagonist_status(mob/living/carbon/human/our_antagonist)
+	our_antagonist.mind?.add_antag_datum(/datum/antagonist/traitor/infiltrator/sleeper_agent)

@@ -58,7 +58,7 @@ GLOBAL_LIST_EMPTY(clockwork_marauders)
 		if(shield_health < MARAUDER_SHIELD_MAX)
 			. += span_brass("It can be repaired with a <b>welding tool</b>.")
 
-/mob/living/basic/clockwork_marauder/UnarmedAttack(atom/attack_target, proximity_flag)
+/mob/living/basic/clockwork_marauder/UnarmedAttack(atom/attack_target, proximity_flag, list/modifiers)
 	var/obj/structure/destructible/clockwork/structure = attack_target
 	if(istype(structure) && structure.immune_to_servant_attacks)
 		return

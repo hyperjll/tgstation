@@ -3,7 +3,6 @@
 
 /// Runs from COMSIG_LIVING_LIFE, handles Bloodsucker constant proccesses.
 /datum/antagonist/bloodsucker/proc/LifeTick(mob/living/source, seconds_per_tick)
-	SIGNAL_HANDLER
 	if(isbrain(owner?.current))
 		return
 	if(QDELETED(owner))

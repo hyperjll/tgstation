@@ -215,6 +215,7 @@
 	. += emissive_appearance(icon, "[icon_state]_light", src, alpha = src.alpha)
 
 /obj/machinery/nuclearbomb/commando/ui_act(action, params)
+	. = ..()
 	playsound(src, SFX_TERMINAL_TYPE, 20, FALSE)
 	switch(action)
 		if("eject_disk")

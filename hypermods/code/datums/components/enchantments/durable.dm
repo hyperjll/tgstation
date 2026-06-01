@@ -10,5 +10,5 @@
 		integrity_mult = level
 
 	var/integrity_mult_calc = (target.max_integrity * integrity_mult)
-	target.max_integrity = integrity_mult_calc
-	target.atom_integrity = integrity_mult_calc
+	target.modify_max_integrity(integrity_mult_calc)
+	target.repair_damage(integrity_mult_calc)

@@ -131,7 +131,7 @@
 		var/mob/living/basic/new_cat = new /mob/living/basic/pet/cat(M.loc)
 		new_cat.name = M.real_name
 		new_cat.real_name = M.real_name
-		new_cat.faction = M.faction.Copy()
+		new_cat.set_faction(get_faction(M))
 		if(M.mind)
 			M.mind.transfer_to(new_cat)
 		if(M.key)

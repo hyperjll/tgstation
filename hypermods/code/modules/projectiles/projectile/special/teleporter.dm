@@ -22,6 +22,8 @@
 			else
 				return
 
+	..()
+
 /obj/projectile/energy/teleport/proc/can_teleport_notifies(mob/user)
 	var/turf/current_location = get_turf(user)
 	var/area/current_area = current_location.loc

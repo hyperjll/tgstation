@@ -46,7 +46,7 @@
 			AddComponent(/datum/component/traitor_objective_register, disk, \
 				fail_signals = list(COMSIG_QDELETING))
 
-/datum/traitor_objective/sleeper_protocol/proc/on_surgery_success(datum/source, datum/surgery_operation/operation, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results)
+/datum/traitor_objective/sleeper_protocol/proc/on_surgery_success(datum/source, datum/surgery_operation/operation, mob/living/target, target_zone, obj/item/tool, default_display_results)
 	SIGNAL_HANDLER
 	if(istype(operation, /datum/surgery_operation/organ/brainwash/sleeper))
 		succeed_objective()

@@ -8,4 +8,5 @@
 	greyscale_colors = null // But, hey. You have access to sprites, maybe you'll change that.
 
 /obj/item/encryptionkey/universal/Initialize(mapload) // This is to add the centcom channel, believe me, i tried other ways and this was all i could find to do this.
+	. = ..()
 	special_channels |= RADIO_SPECIAL_CENTCOM

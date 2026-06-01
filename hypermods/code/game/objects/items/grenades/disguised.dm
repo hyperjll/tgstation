@@ -25,7 +25,7 @@
 	sleep(det_time)//so you dont die instantly
 	return BRUTELOSS
 
-/obj/item/disguisedgrenade/deconstruct(disassembled = TRUE)
+/obj/item/disguisedgrenade/handle_deconstruct(disassembled = TRUE)
 	if(!disassembled)
 		prime()
 	if(!QDELETED(src))
@@ -129,7 +129,7 @@
 		prime()
 		return TRUE //It hit the grenade, not them
 
-/obj/item/grenade/afterattack(atom/target, mob/user)
+/obj/item/disguisedgrenade/afterattack(atom/target, mob/user)
 	. = ..()
 	if(active)
 		user.throw_item(target)
@@ -157,7 +157,6 @@
 	throwforce = 7
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb_simple = list("beaten")
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 0, RAD = 0, FIRE = 80, ACID = 80)
 
 /obj/item/disguisedgrenade/lizardplush
 	name = "lizard plushie"

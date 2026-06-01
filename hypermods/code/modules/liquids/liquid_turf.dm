@@ -78,6 +78,10 @@
 		return
 	if(!liquids.liquid_group)
 		return
+	if(!liquids.liquid_group.reagents)
+		return
 
-	for(var/datum/reagent/any_reagents as anything in liquids.liquid_group)
-		any_reagents = /datum/reagent/water // straight up replaced!
+	for(var/datum/reagent/reagent_type in liquids.liquid_group.reagents.reagent_list)
+		if(istype(reagent_type, /datum/reagent) && !istype(reagent_type, /datum/reagent/water))
+			liquids.liquid_group.remove_reagent(liquids, reagent_type, reagent_type.volume)
+			liquids.liquid_group.reagents.add_reagent(/datum/reagent/water, reagent_type.volume)

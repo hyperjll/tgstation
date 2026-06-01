@@ -28,30 +28,30 @@
 	ert_team_chosen = /datum/antagonist/ert/deathsquad
 
 /datum/round_event/ghost_role/ert_setup/spawn_role()
-	var/list/mob/dead/observer/chosen_one = SSpolling.poll_ghost_candidates(check_jobban = ROLE_DEATHSQUAD, role = ghost_poll_role, alert_pic = /obj/item/clothing/head/beret/centcom_formal, role_name_text = role_name, amount_to_pick = amount_of_ert)
-	// I'm using
-	if(isnull(chosen_one))
+	var/list/mob/dead/observer/chosen_ones = SSpolling.poll_ghost_candidates(check_jobban = ROLE_DEATHSQUAD, role = ghost_poll_role, alert_pic = /obj/item/clothing/head/beret/centcom_formal, role_name_text = role_name, amount_to_pick = amount_of_ert)
+	if(!chosen_ones || chosen_ones.len == 0)
 		return NOT_ENOUGH_PLAYERS
 	var/spawn_location = pick(GLOB.emergencyresponseteamspawn)
 	if(isnull(spawn_location))
 		return MAP_ERROR
-	var/mob/living/carbon/human/ert_member = new(spawn_location)
-	ert_member.randomize_human_appearance(~RANDOMIZE_SPECIES)
-	ert_member.dna.update_dna_identity()
-	var/datum/mind/Mind = new /datum/mind(chosen_one.key)
-	Mind.set_assigned_role(SSjob.get_job_type(/datum/job/ert_generic))
-	Mind.special_roles = ROLE_DEATHSQUAD
-	Mind.active = TRUE
-	Mind.transfer_to(ert_member)
-	if(!ert_member.client?.prefs.read_preference(/datum/preference/toggle/nuke_ops_species)) // I'm just gonna use the nukie species toggle for this one, nobodies gonna care that much, right?
-		var/species_type = ert_member.client.prefs.read_preference(/datum/preference/choiced/species)
-		ert_member.set_species(species_type) //Apply the preferred species to our freshly-made body.
+	for(var/mob/dead/observer/ghost in chosen_ones)
+		var/mob/living/carbon/human/ert_member = new(spawn_location)
+		ert_member.randomize_human_appearance(~RANDOMIZE_SPECIES)
+		ert_member.dna.update_dna_identity()
+		var/datum/mind/Mind = new /datum/mind(ghost.key)
+		Mind.set_assigned_role(SSjob.get_job_type(/datum/job/ert_generic))
+		Mind.special_roles = ROLE_DEATHSQUAD
+		Mind.active = TRUE
+		Mind.transfer_to(ert_member)
+		if(!ert_member.client?.prefs.read_preference(/datum/preference/toggle/nuke_ops_species)) // I'm just gonna use the nukie species toggle for this one, nobodies gonna care that much, right?
+			var/species_type = ert_member.client.prefs.read_preference(/datum/preference/choiced/species)
+			ert_member.set_species(species_type) //Apply the preferred species to our freshly-made body.
 
-	Mind.add_antag_datum(ert_team_chosen)
+		Mind.add_antag_datum(ert_team_chosen)
 
-	message_admins("[ADMIN_LOOKUPFLW(ert_member)] has been made into a ERT member by an event.")
-	ert_member.log_message("was spawned as a ERT member by an event.", LOG_GAME)
-	spawned_mobs += ert_member
+		message_admins("[ADMIN_LOOKUPFLW(ert_member)] has been made into a ERT member by an event.")
+		ert_member.log_message("was spawned as a ERT member by an event.", LOG_GAME)
+		spawned_mobs += ert_member
 	return SUCCESSFUL_SPAWN
 
 

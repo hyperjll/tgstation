@@ -358,9 +358,9 @@
 			host_mob.do_jitter_animation(10)
 			addtimer(CALLBACK(host_mob, TYPE_PROC_REF(/mob/living/carbon, do_jitter_animation), 10), 40) //jitter immediately, then again after 4 and 8 seconds
 			addtimer(CALLBACK(host_mob, TYPE_PROC_REF(/mob/living/carbon, do_jitter_animation), 10), 80)
-			sleep(10 SECONDS) //so the ghost has time to re-enter
-			if(iscarbon(host_mob))
+			if(iscarbon(host_mob) && host_mob.revive())
 				var/mob/living/carbon/Carbon_mob = host_mob
+				Carbon_mob.Paralyze(10 SECONDS)
 				Carbon_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, -50)
 				Carbon_mob.adjust_organ_loss(ORGAN_SLOT_HEART, -25)
 				Carbon_mob.adjust_organ_loss(ORGAN_SLOT_LUNGS, -25)
@@ -376,7 +376,6 @@
 				Carbon_mob.adjust_blood_volume(10, maximum = BLOOD_VOLUME_NORMAL)
 				Carbon_mob.set_heartattack(FALSE)
 				Carbon_mob.updatehealth()
-			if(host_mob.revive())
 				host_mob.emote("gasp")
 				nanites.adjust_nanites(null, -35)
 				log_combat(host_mob, host_mob, "revived", src)
@@ -384,10 +383,9 @@
 		else // just for basic mobs, might as well.
 			if(!iscarbon(host_mob) && host_mob.revive())
 				nanites.adjust_nanites(null, -35)
-				log_combat(host_mob, host_mob, "revived", src)
-			else // Many programs like Accelerated Regeneration don't heal basic mobs. However, brute mending and burn mending are exceptions. But... i'll make it slowly revive em just to be safe.
 				host_mob.adjust_brute_loss(-5)
 				host_mob.adjust_fire_loss(-5)
+				log_combat(host_mob, host_mob, "revived", src)
 
 
 /datum/nanite_program/synthflesh

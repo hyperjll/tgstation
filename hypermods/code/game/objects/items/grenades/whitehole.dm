@@ -12,7 +12,7 @@
 /obj/item/grenade/whitehole/process()
 	whitehole_vortex()
 
-/obj/item/grenade/whitehole/detonate()
+/obj/item/grenade/whitehole/detonate(mob/living/lanced_by)
 	update_mob()
 	START_PROCESSING(SSobj, src)
 
@@ -22,8 +22,7 @@
 
 	playsound(whitehole_turf, 'hypermods/sound/effects/whitehole_start.ogg', 50, TRUE)
 
-	sleep(5 SECONDS)
-	whitehole_kaboom()
+	addtimer(CALLBACK(src, .proc/whitehole_kaboom), 5 SECONDS)
 	return
 
 /obj/item/grenade/whitehole/proc/whitehole_vortex(turf/T, setting_type, range)

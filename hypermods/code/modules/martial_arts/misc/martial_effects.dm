@@ -11,12 +11,10 @@
 	owner.RemoveElement(/datum/element/forced_gravity, 0)
 
 
-/datum/status_effect/amok/proc/exclusion_check(mob/living/potential_target)
-	return IS_HERETIC_OR_MONSTER(potential_target)
-
-/datum/status_effect/amok/tunnel_madness
+/datum/status_effect/forced_combat/tunnel_madness
 	id = "tunnel_madness"
+	remove_on_fullheal = TRUE
+	alert_type = null
 
-/datum/status_effect/amok/tunnel_madness/exclusion_check(mob/living/potential_target)
-	return faction_check(potential_target.faction, list(FACTION_RAT))
-
+/datum/status_effect/forced_combat/tunnel_madness/will_attack(mob/living/friendly)
+	return (!friendly?.has_faction(FACTION_RAT))

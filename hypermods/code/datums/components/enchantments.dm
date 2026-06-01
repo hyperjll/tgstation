@@ -73,7 +73,13 @@
 
 	if(!examine_description)
 		return
-	if(!IS_CLOCK(user) && !IS_CULTIST(user) && !IS_HERETIC(user) && !IS_WIZARD(user) && !isobserver(user))
+
+	var/is_special = FALSE
+	if(isliving(user))
+		var/mob/living/living_user = user
+		is_special = IS_CLOCK(living_user) || IS_CULTIST(living_user) || IS_HERETIC(living_user) || IS_WIZARD(living_user)
+
+	if(!is_special && !isobserver(user))
 		var/mob/living/living_user = user
 		if(istype(living_user.get_item_by_slot(ITEM_SLOT_EYES), /obj/item/clothing/glasses/science))
 			examine_list += "[examine_description]"
@@ -81,15 +87,20 @@
 		else
 			examine_list += "It is glowing slightly!"
 	else
-		if(IS_CLOCK(user))
-			examine_list += span_brass("[examine_description]")
-			examine_list += span_brass("It's blessing has a power level of [level]!")
-		if(IS_CULTIST(user))
-			examine_list += span_cult("[examine_description]")
-			examine_list += span_cult("It's blessing has a power level of [level]!")
-		if(IS_HERETIC(user))
-			examine_list += span_green("[examine_description]")
-			examine_list += span_green("It's blessing has a power level of [level]!")
-		if(IS_WIZARD(user) || isobserver(user))
+		if(isliving(user))
+			var/mob/living/living_user = user
+			if(IS_CLOCK(living_user))
+				examine_list += span_brass("[examine_description]")
+				examine_list += span_brass("It's blessing has a power level of [level]!")
+			if(IS_CULTIST(living_user))
+				examine_list += span_cult("[examine_description]")
+				examine_list += span_cult("It's blessing has a power level of [level]!")
+			if(IS_HERETIC(living_user))
+				examine_list += span_green("[examine_description]")
+				examine_list += span_green("It's blessing has a power level of [level]!")
+			if(IS_WIZARD(living_user))
+				examine_list += span_notice("[examine_description]")
+				examine_list += span_notice("It's enchantment has a power level of [level]!")
+		if(isobserver(user))
 			examine_list += span_notice("[examine_description]")
 			examine_list += span_notice("It's enchantment has a power level of [level]!")

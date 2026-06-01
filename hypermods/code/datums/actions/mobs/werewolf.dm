@@ -191,6 +191,7 @@
 		return FALSE
 
 /datum/action/cooldown/spell/werewolf_pounce/cast(mob/living/carbon/owner)
+	. = ..()
 	playsound(owner, 'sound/effects/footstep/heavy1.ogg', 50, 1)
 	new /obj/effect/temp_visual/telegraphing/exclamation/following(get_turf(owner), 2.5 SECONDS, owner)
 
@@ -326,6 +327,7 @@
 		return FALSE
 
 /datum/action/cooldown/spell/werewolf_def_howl/cast(mob/living/carbon/cast_on)
+	. = ..()
 	if(!isliving(cast_on))
 		return
 

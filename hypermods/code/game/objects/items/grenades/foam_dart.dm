@@ -8,7 +8,7 @@
 	shrapnel_type = /obj/projectile/bullet/foam_dart
 	shrapnel_radius = 5
 
-/obj/item/grenade/foam_dart/detonate()
+/obj/item/grenade/foam_dart/detonate(mob/living/lanced_by)
 	. = ..()
 	qdel(src)
 

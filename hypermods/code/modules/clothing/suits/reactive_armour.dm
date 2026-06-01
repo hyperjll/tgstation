@@ -376,6 +376,7 @@
 	return 0
 
 /obj/item/clothing/suit/armor/reactive/syndicate/table/emp_act()
+	. = ..()
 	return
 
 //The augmented BIOSCRAMBLING armor.

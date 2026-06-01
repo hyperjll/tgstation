@@ -551,26 +551,16 @@
 	new /obj/item/reagent_containers/cup/bottle/eternal/fuel(src)
 	new /obj/item/reagent_containers/cup/bottle/eternal/iodine(src)
 	new /obj/item/reagent_containers/cup/bottle/eternal/bromine(src)
-	update_contents()
 
 /obj/item/storage/portable_chem_mixer/chemicompiler/update_icon_state()
 	if(!atom_storage.locked)
 		icon_state = "chemicompiler_open"
-		return //..()
+		return ..()
 	if(!QDELETED(beaker))
 		icon_state = "chemicompiler"
-		return //..()
+		return ..()
 	icon_state = "chemicompiler"
-	return //..()
+	return ..()
 
 /obj/item/storage/portable_chem_mixer/chemicompiler/item_ctrl_click(mob/user)
-	if(atom_storage.locked == STORAGE_FULLY_LOCKED)
-		//atom_storage.locked = STORAGE_NOT_LOCKED
-		replace_beaker(user)
-		SStgui.close_uis(src)
-	else
-		atom_storage.locked = STORAGE_FULLY_LOCKED
-		atom_storage.hide_contents(user)
-
-	update_appearance()
 	return CLICK_ACTION_SUCCESS

@@ -6,6 +6,7 @@
 	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 
 /datum/reagent/diseasedblood/expose_mob(mob/living/L, methods=TOUCH, reac_volume, show_message = 1, permeability = 1)
+	..()
 	if((methods & (PATCH|INGEST|INJECT)) || ((methods & VAPOR) && prob(min(reac_volume,100)*permeability)))
 		L.ForceContractDisease(new /datum/disease/advance/random(), FALSE, TRUE)
 
@@ -79,7 +80,6 @@
 	addiction_types = list(/datum/addiction/medicine = 10)
 	var/current_size = RESIZE_DEFAULT_SIZE
 	var/newsize = 1
-	var/delay = 1 SECONDS // Timer between size adjustments
 	var/max_shrinks = 75 // The maxmimum size reduction. This deducted by 1 each second (so 100 / ninety = 0.1 size mult)
 
 /datum/reagent/shrinkcompound/on_mob_life(mob/living/carbon/affected_mob)
@@ -87,11 +87,11 @@
 	while(max_shrinks > 0)
 		affected_mob.update_transform(newsize/current_size)
 		current_size = newsize
-		sleep(delay)
 		max_shrinks--
 		newsize -= 0.01
 
 /datum/reagent/shrinkcompound/on_mob_metabolize(mob/living/affected_mob)
+	..()
 	affected_mob.maxHealth -= 75
 	affected_mob.density = FALSE
 

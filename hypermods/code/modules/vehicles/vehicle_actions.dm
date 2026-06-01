@@ -7,6 +7,7 @@
 	var/explode_delay = 2 SECONDS
 
 /datum/action/vehicle/ridden/wheelchair/kaboom/Trigger(trigger_flags)
+	..(trigger_flags)
 	playsound(vehicle_target, 'hypermods/sound/items/bell.ogg', 40, FALSE)
 	if(exploding)
 		return

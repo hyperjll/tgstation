@@ -583,6 +583,7 @@
 /obj/item/melee/baton/security/dropped()
 	if(active && security_lock)
 		turn_off()
+	return ..()
 
 /obj/item/melee/baton/security/on_saboteur(datum/source, disrupt_duration)
 	. = ..()

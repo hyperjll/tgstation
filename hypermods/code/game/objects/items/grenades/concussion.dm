@@ -12,7 +12,7 @@
 /obj/item/grenade/concussive/process()
 	concussion_vortex()
 
-/obj/item/grenade/concussive/detonate()
+/obj/item/grenade/concussive/detonate(mob/living/lanced_by)
 	update_mob()
 	START_PROCESSING(SSobj, src)
 

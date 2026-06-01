@@ -80,7 +80,7 @@ GLOBAL_VAR_INIT(ratvar_risen, FALSE)
 	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(explode_reebe))
 	return ..()
 
-/obj/structure/destructible/clockwork/the_ark/deconstruct(disassembled = TRUE)
+/obj/structure/destructible/clockwork/the_ark/handle_deconstruct(disassembled = TRUE)
 	if(current_state >= ARK_STATE_FINAL)
 		return
 	ASYNC

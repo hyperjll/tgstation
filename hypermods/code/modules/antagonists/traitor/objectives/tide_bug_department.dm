@@ -135,7 +135,7 @@
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(tide_department)), 60 SECONDS)
 
-/obj/structure/traitor_bug/deconstruct(disassembled)
+/obj/structure/traitor_bug/handle_deconstruct(disassembled)
 	QDEL_NULL(bug_item_ref)
 	return ..()
 

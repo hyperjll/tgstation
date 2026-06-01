@@ -37,7 +37,7 @@
 	foodtypes = MEAT | SUGAR
 	food_flags = FOOD_FINGER_FOOD
 	w_class = WEIGHT_CLASS_TINY
-	faction = list(FACTION_NEUTRAL, ROLE_SYNDICATE)
+	var/spawn_factions = list(FACTION_NEUTRAL, ROLE_SYNDICATE)
 	var/amount_to_spawn = 2
 	var/random = TRUE
 
@@ -59,9 +59,11 @@
 			spawned_mob = create_random_mob(get_turf(holder), mob_class)
 		else
 			spawned_mob = new mob_class(get_turf(holder))//Spawn our specific mob_class
-		if(faction)
-			spawned_mob.faction = faction // Ensuring that whatever spawns always gets the roles set via the var, then add whatever is innate.
-		spawned_mob.add_faction(mob_faction)
+		if(spawn_factions)
+			for(var/role in spawn_factions)
+				spawned_mob.add_faction(role)
+		if(mob_faction)
+			spawned_mob.add_faction(mob_faction)
 		if(prob(50))
 			for(var/j in 1 to rand(1, 3))
 				step(spawned_mob, pick(NORTH,SOUTH,EAST,WEST))

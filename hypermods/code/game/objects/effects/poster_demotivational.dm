@@ -1,2 +1,2 @@
 /obj/item/poster/traitor/explosive
-	special_package = TRUE
+	explosive_poster = TRUE

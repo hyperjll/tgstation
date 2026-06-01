@@ -321,7 +321,7 @@
 	if(hurtguy_blood < BLOOD_VOLUME_NORMAL)
 		var/amount_to_transfer = min(max_blood_transfer, BLOOD_VOLUME_NORMAL - hurtguy_blood)
 		// We ignore incompatibility here.
-		var/blood_transferred = mendicant.transfer_blood_to(hurtguy, amount_to_transfer, ignore_low_blood = TRUE, ignore_incompatibility = TRUE)
+		var/blood_transferred = mendicant.transfer_blood_to(hurtguy, amount_to_transfer, TRUE, ignore_incompatibility = TRUE)
 
 		if(!blood_transferred)
 			return

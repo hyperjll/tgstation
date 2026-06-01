@@ -8,7 +8,7 @@
 	var/freezing_range = 7 //how many tiles away the mob will be stunned.
 	var/freeze_duration = 1 MINUTES
 
-/obj/item/grenade/cryogenic/detonate()
+/obj/item/grenade/cryogenic/detonate(mob/living/lanced_by)
 	update_mob()
 
 	var/freezing_turf = get_turf(src)

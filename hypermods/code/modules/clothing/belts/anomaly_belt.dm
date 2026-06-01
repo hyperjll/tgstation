@@ -68,6 +68,7 @@
 	var/in_stealth = FALSE
 
 /datum/action/item_action/stealth_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/stealth/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -84,7 +85,6 @@
 	decoy.full_setup(
 		owner,
 		target_mob = owner,
-		faction = owner.faction,
 		life = 5 SECONDS,
 		hp = owner.health / 4,
 		damage = 5,
@@ -112,6 +112,7 @@
 	var/effectrange = 6
 
 /datum/action/item_action/pyro_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/pyro/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -145,6 +146,7 @@
 	var/duration = 30 SECONDS
 
 /datum/action/item_action/grav_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/grav/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -181,6 +183,7 @@
 	var/effectrange = 6
 
 /datum/action/item_action/flux_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/flux/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -209,6 +212,7 @@
 	COOLDOWN_DECLARE(anomaly_belt_bluespace)
 
 /datum/action/item_action/bluespace_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/bluespace/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -219,7 +223,7 @@
 		return
 
 	do_sparks(5,FALSE,owner)
-	var/F = find_safe_turf(zlevel = owner.z, extended_safety_checks = TRUE)
+	var/F = find_safe_turf(zlevel_or_levels = owner.z, extended_safety_checks = TRUE)
 	var/range = 0
 	if(!F)
 		F = get_turf(owner)
@@ -243,6 +247,7 @@
 	var/effectrange = 6
 
 /datum/action/item_action/bhole_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/bhole/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -274,6 +279,7 @@
 	var/effectrange = 6
 
 /datum/action/item_action/bioscrambler_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/bioscrambler/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -304,6 +310,7 @@
 	var/effectrange = 6
 
 /datum/action/item_action/hallucination_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/hallucination/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -337,6 +344,7 @@
 	var/effectrange = 4
 
 /datum/action/item_action/dimensional_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/dimensional/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -375,6 +383,7 @@
 	COOLDOWN_DECLARE(anomaly_belt_ectoplasm)
 
 /datum/action/item_action/ectoplasm_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/ectoplasm/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -423,6 +432,7 @@
 	var/effectrange = 6
 
 /datum/action/item_action/cryo_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/cryo/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)
@@ -452,6 +462,7 @@
 	var/anomaly_reagent
 
 /datum/action/item_action/liquid_belt/Trigger(trigger_flags)
+	. = ..()
 	var/obj/item/anomaly_belt_shell/liquid/anom_belt = target
 	if(istype(anom_belt))
 		anom_belt.activate(owner)

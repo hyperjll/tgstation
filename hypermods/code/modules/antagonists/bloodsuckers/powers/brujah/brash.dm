@@ -73,18 +73,18 @@
 		HitWithStyle(target_grillie, 'sound/effects/grillehit.ogg', 50, 1, 0.5 SECONDS)
 		return
 
-	if(iswindow(target_atom) && level_current < 4)
+	if(iswindow(target_atom))
 		var/obj/structure/window/window = target_atom
+		if(level_current < 4)
+			window.balloon_alert(owner, "you need more ranks!")
+			return
 		HitWithStyle(window, 'sound/effects/bang.ogg', 20, 15, 10 SECONDS)
-		return
-	else
-		var/obj/structure/window/window = target_atom
-		window.balloon_alert(owner, "you need more ranks!")
 		return
 
 	if(istable(target_atom))
 		var/obj/structure/table/target_table = target_atom
 		HitWithStyle(target_table, 'sound/effects/bang.ogg', 35, 10, 5 SECONDS)
+		return
 
 	if(!iswallturf(target_atom))
 		return

@@ -536,5 +536,5 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 		/area/station/security/prison, \
 	)
 
-// Clock cultist
-#define IS_CLOCK(mob) ((FACTION_CLOCK in mob.faction) || mob?.mind?.has_antag_datum(/datum/antagonist/clock_cultist))
+/// Checks if the given mob is a clock cultist, either by faction or by having the clock cultist antagonist datum.
+#define IS_CLOCK(mob) ((mob?.has_faction(FACTION_CLOCK)) || mob?.mind?.has_antag_datum(/datum/antagonist/clock_cultist))

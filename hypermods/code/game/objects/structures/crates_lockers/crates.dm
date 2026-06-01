@@ -2,7 +2,7 @@
 	var/goingtogib = FALSE
 	var/timetogib = 1 MINUTES
 
-/obj/structure/closet/crate/trashcart/gibber/open(mob/living/user)
+/obj/structure/closet/crate/trashcart/gibber/open(mob/living/user, force = FALSE, special_effects = TRUE)
 	. = ..()
 	goingtogib = FALSE
 

@@ -3,7 +3,9 @@
 	icon = 'hypermods/icons/obj/weapons/guns/projectiles.dmi'
 	icon_state = "pickpocket"
 
-/obj/projectile/energy/pickpocket/steal/on_hit(atom/target, mob/user, blocked, pierce_hit)
+/obj/projectile/energy/pickpocket/steal/on_hit(atom/target, mob/firer, blocked, pierce_hit)
+	if(!..(target, firer, blocked, pierce_hit))
+		return FALSE
 	if((blocked != 100) && iscarbon(target))
 		var/mob/living/carbon/human/victim = target
 		var/obj/item/back_item = victim.get_item_by_slot(ITEM_SLOT_BACK)
@@ -21,6 +23,8 @@
 		carbon_firer.put_in_hands(item)
 
 /obj/projectile/energy/pickpocket/plant/on_hit(atom/target, mob/firer, blocked, pierce_hit)
+	if(!..(target, firer, blocked, pierce_hit))
+		return FALSE
 	if((blocked != 100) && iscarbon(target))
 		var/mob/living/carbon/human/victim = target
 		var/obj/item/back_item = victim.get_item_by_slot(ITEM_SLOT_BACK)

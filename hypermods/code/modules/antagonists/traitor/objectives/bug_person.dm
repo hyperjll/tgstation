@@ -148,15 +148,14 @@
 	ADD_TRAIT(src, TRAIT_EXAMINE_SKIP, INNATE_TRAIT)
 
 	radio = new(src)
-	radio.broadcasting = TRUE
-	radio.listening = FALSE
 	radio.canhear_range = 0
 	radio.radio_noise = FALSE
 	radio.keyslot = new /obj/item/encryptionkey/syndicate
 	radio.subspace_transmission = TRUE
 	radio.recalculateChannels()
-	radio.frequency = FREQ_SYNDICATE
+	radio.set_frequency(FREQ_SYNDICATE)
 	radio.set_broadcasting(TRUE)
+	radio.set_listening(FALSE)
 
 /obj/item/traitor_bug_mob/examine(mob/user)
 	. = ..()

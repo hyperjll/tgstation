@@ -31,8 +31,7 @@
 					  /obj/item/ammo_box/magazine/m10mm = 4,
 					  /obj/item/gun/ballistic/automatic/pistol/cobra = 1,
 					  /obj/item/ammo_box/magazine/m45 = 4)
-	armor = list(MELEE = 100, BULLET = 100, LASER = 100, ENERGY = 100, BOMB = 50, BIO = 50, RAD = 50, FIRE = 100, ACID = 75)
-	resistance_flags = FIRE_PROOF
+	resistance_flags = FIRE_PROOF | ACID_PROOF | INDESTRUCTIBLE
 	default_price = 50
 	extra_price = 5000
 	payment_department = ACCOUNT_SEC

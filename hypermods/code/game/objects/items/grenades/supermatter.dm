@@ -11,7 +11,7 @@
 /obj/item/grenade/supermatter/process()
 	supermatter_vortex()
 
-/obj/item/grenade/supermatter/detonate()
+/obj/item/grenade/supermatter/detonate(mob/living/lanced_by)
 	update_mob()
 	START_PROCESSING(SSobj, src)
 
@@ -21,8 +21,7 @@
 
 	playsound(supermatter_turf, 'hypermods/sound/effects/supermatter_start.ogg', 50, TRUE)
 
-	sleep(5 SECONDS)
-	supermatter_kaboom()
+	addtimer(CALLBACK(src, .proc/supermatter_kaboom), 5 SECONDS)
 	return
 
 /obj/item/grenade/supermatter/proc/supermatter_vortex(turf/T, setting_type, range)

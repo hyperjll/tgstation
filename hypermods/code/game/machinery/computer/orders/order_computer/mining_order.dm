@@ -13,7 +13,7 @@
 	icon_keyboard = null
 	icon_screen = null
 	circuit = null
-	armor = list(MELEE = 100, BULLET = 100, LASER = 100, ENERGY = 100, BOMB = 50, BIO = 50, RAD = 50, FIRE = 100, ACID = 75)
+	resistance_flags = FIRE_PROOF | ACID_PROOF | INDESTRUCTIBLE
 
 /obj/machinery/computer/order_console/syndicate_voucher/Initialize(mapload)
 	. = ..()

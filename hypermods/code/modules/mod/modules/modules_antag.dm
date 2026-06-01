@@ -176,8 +176,6 @@
 	UnregisterSignal(mod.wearer, COMSIG_LIVING_UNARMED_ATTACK)
 
 /obj/item/mod/module/hacker/electricpalm/hack(mob/living/carbon/human/source, atom/target, proximity, modifiers)
-	SIGNAL_HANDLER
-
 	if(!LAZYACCESS(modifiers, RIGHT_CLICK) || !proximity)
 		return NONE
 	target.add_fingerprint(mod.wearer)
@@ -185,6 +183,8 @@
 	//Got that electric touch
 	if(istype(target, /mob/living/carbon/human))
 		return target.ninjadrain_act(mod.wearer, src)
+
+	return NONE
 
 /obj/item/mod/module/energy_net/syndicate
 	name = "syndicate MOD energy net module"
@@ -214,13 +214,12 @@
 	INVOKE_ASYNC(net, TYPE_PROC_REF(/obj/projectile, fire))
 	drain_power(use_energy_cost)
 
+/obj/item/mod/module/energy_net/syndicate/remove_net(obj/structure/energy_net/syndicate/net)
+	energy_nets -= net
+
 /obj/item/mod/module/energy_net/syndicate/add_net(obj/structure/energy_net/syndicate/net)
 	energy_nets += net
 	RegisterSignal(net, COMSIG_QDELETING, PROC_REF(remove_net))
-
-/obj/item/mod/module/energy_net/syndicate/remove_net(obj/structure/energy_net/syndicate/net)
-	SIGNAL_HANDLER
-	energy_nets -= net
 
 /obj/projectile/energy_net/syndicate
 	name = "energy net"
@@ -265,17 +264,6 @@
 	/// How much of a reagent we need to refill the boost.
 	reagent_required_amount = 20
 
-/obj/item/mod/module/adrenaline_boost/syndicate/Initialize(mapload)
-	. = ..()
-	create_reagents(reagent_required_amount)
-	reagents.add_reagent(reagent_required, reagent_required_amount)
-
-/obj/item/mod/module/adrenaline_boost/used()
-	if(!reagents.has_reagent(reagent_required, reagent_required_amount))
-		balloon_alert(mod.wearer, "no charge!")
-		return FALSE
-	return ..()
-
 /obj/item/mod/module/adrenaline_boost/syndicate/on_use()
 	to_chat(mod.wearer, span_notice("You have used the stimulant boost."))
 	mod.wearer.SetAllImmobility(0)
@@ -284,35 +272,6 @@
 	mod.wearer.reagents.add_reagent(/datum/reagent/medicine/stimulants, 5)
 	reagents.remove_reagent(reagent_required, reagents.total_volume * 0.75)
 	addtimer(CALLBACK(src, PROC_REF(boost_aftereffects), mod.wearer), 7 SECONDS)
-
-/obj/item/mod/module/adrenaline_boost/syndicate/on_install()
-	RegisterSignal(mod, COMSIG_ATOM_ITEM_INTERACTION, PROC_REF(try_boost))
-
-/obj/item/mod/module/adrenaline_boost/syndicate/on_uninstall(deleting = FALSE)
-	UnregisterSignal(mod, COMSIG_ATOM_ITEM_INTERACTION)
-
-/obj/item/mod/module/adrenaline_boost/syndicate/try_boost(source, mob/user, obj/item/attacking_item)
-	SIGNAL_HANDLER
-	if(charge_boost(attacking_item))
-		return COMPONENT_NO_AFTERATTACK
-	return NONE
-
-/obj/item/mod/module/adrenaline_boost/syndicate/charge_boost(obj/item/attacking_item)
-	if(!attacking_item.is_open_container())
-		return FALSE
-	if(reagents.has_reagent(reagent_required, reagent_required_amount))
-		balloon_alert(mod.wearer, "already charged!")
-		return FALSE
-	if(!attacking_item.reagents.trans_to(src, reagent_required_amount, target_id = reagent_required))
-		return FALSE
-	balloon_alert(mod.wearer, "charge [reagents.has_reagent(reagent_required, reagent_required_amount) ? "fully" : "partially"] reloaded")
-	return TRUE
-
-/obj/item/mod/module/adrenaline_boost/syndicate/boost_aftereffects(mob/affected_mob)
-	if(!affected_mob)
-		return
-	reagents.trans_to(affected_mob, reagents.total_volume)
-	to_chat(affected_mob, span_danger("You are beginning to feel the after-effect of the injection."))
 
 /obj/item/mod/module/active_sonar/syndicate
 	name = "syndicate MOD active sonar"

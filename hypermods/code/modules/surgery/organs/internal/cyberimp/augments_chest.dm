@@ -75,6 +75,7 @@
 	var/healing = FALSE
 
 /obj/item/organ/cyberimp/chest/regenerativebetter/on_life(seconds_per_tick)
+	..()
 	if(healing)
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 	else
@@ -118,6 +119,7 @@
 	var/healing = FALSE
 
 /obj/item/organ/cyberimp/chest/regenerative/on_life(seconds_per_tick)
+	..()
 	if(healing)
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 	else
@@ -160,6 +162,7 @@
 	slot = ORGAN_SLOT_HEART_AID
 
 /obj/item/organ/cyberimp/chest/jellypersonregen/on_life(seconds_per_tick)
+	..()
 	if(isjellyperson(owner))
 		addtimer(CALLBACK(src, PROC_REF(heal)), 1 SECONDS)
 	return
@@ -212,10 +215,10 @@
 	COOLDOWN_DECLARE(startsoundcooldown)
 	COOLDOWN_DECLARE(endsoundcooldown)
 
-/obj/item/organ/cyberimp/chest/spinalspeed/Insert(mob/living/carbon/M, special = 0)
+/obj/item/organ/cyberimp/chest/spinalspeed/Insert(mob/living/carbon/M, special = 0, movement_flags)
 	. = ..()
 
-/obj/item/organ/cyberimp/chest/spinalspeed/Remove(mob/living/carbon/M, special = 0)
+/obj/item/organ/cyberimp/chest/spinalspeed/Remove(mob/living/carbon/M, special = 0, movement_flags)
 	if(on)
 		toggle(silent = TRUE)
 	..()
@@ -268,6 +271,7 @@
 	F.color = hsv2rgb(hsv)	//gotta add the flair
 
 /obj/item/organ/cyberimp/chest/spinalspeed/on_life()
+	. = ..()
 	if(!syndicate_implant)//the toy doesn't have a drawback
 		return
 
@@ -336,11 +340,11 @@
 	/// Side-effect chance, if it happens, the dual-wield is cancelled. Tho, this only happens with the refurbished subtype.
 	var/side_effect_chance = 0
 
-/obj/item/organ/cyberimp/chest/dualwield/Insert(mob/living/carbon/organ_owner, special)
+/obj/item/organ/cyberimp/chest/dualwield/Insert(mob/living/carbon/organ_owner, special, movement_flags)
 	. = ..()
 	register()
 
-/obj/item/organ/cyberimp/chest/dualwield/Remove(mob/living/carbon/organ_owner, special)
+/obj/item/organ/cyberimp/chest/dualwield/Remove(mob/living/carbon/organ_owner, special, movement_flags)
 	. = ..()
 	unregister()
 

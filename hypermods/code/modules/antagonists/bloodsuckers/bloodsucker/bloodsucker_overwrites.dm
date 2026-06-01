@@ -17,7 +17,7 @@
 	bloodsuckerdatum.bloodsucker_blood_volume = min(bloodsuckerdatum.bloodsucker_blood_volume + round(reac_volume, 0.1), BLOOD_VOLUME_MAXIMUM)
 
 
-/mob/living/carbon/transfer_blood_to(atom/movable/AM, amount, forced, ignore_incompatibility)
+/mob/living/carbon/transfer_blood_to(atom/movable/AM, amount, ignore_low_blood, ignore_incompatibility, transfer_viruses)
 	. = ..()
 
 	var/datum/antagonist/bloodsucker/bloodsuckerdatum = mind?.has_antag_datum(/datum/antagonist/bloodsucker)

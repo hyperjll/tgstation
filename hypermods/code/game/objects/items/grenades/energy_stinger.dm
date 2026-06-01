@@ -8,7 +8,7 @@
 	shrapnel_type = /obj/projectile/beam/disabler
 	shrapnel_radius = 5
 
-/obj/item/grenade/energy_stinger/detonate()
+/obj/item/grenade/energy_stinger/detonate(mob/living/lanced_by)
 	. = ..()
 	qdel(src)
 

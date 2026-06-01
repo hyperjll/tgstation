@@ -398,7 +398,7 @@
 	if (cached_blood_volume < BLOOD_VOLUME_SAFE)
 		if (target.get_blood_compatibility(chaplain))
 			var/amount_to_transfer = BLOOD_VOLUME_SAFE - cached_blood_volume
-			transferred |= chaplain.transfer_blood_to(target, amount_to_transfer, ignore_low_blood = TRUE)
+			transferred |= chaplain.transfer_blood_to(target, amount_to_transfer, TRUE)
 	else if (cached_blood_volume > BLOOD_VOLUME_EXCESS)
 		transferred |= target.transfer_blood_to(chaplain, cached_blood_volume - BLOOD_VOLUME_EXCESS)
 

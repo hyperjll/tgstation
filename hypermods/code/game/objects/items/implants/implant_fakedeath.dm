@@ -10,21 +10,21 @@
 /obj/item/implant/pseudodeath/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	. = ..()
 	if(.)
-		RegisterSignal(target, COMSIG_LIVING_HEALTH_UPDATE, PROC_REF(check_health))
+		RegisterSignal(target, COMSIG_LIVING_HEALTH_UPDATE, PROC_REF(check_imp_health))
 
 /obj/item/implant/pseudodeath/removed(mob/target, silent = FALSE, special = FALSE)
 	. = ..()
 	if(.)
 		UnregisterSignal(target, COMSIG_LIVING_HEALTH_UPDATE)
 
-/obj/item/implant/pseudodeath/proc/check_health(mob/living/source)
+/obj/item/implant/pseudodeath/proc/check_imp_health(mob/living/source)
 	SIGNAL_HANDLER
 
 	if(!COOLDOWN_FINISHED(src, pseudodeath_cooldown))
 		return
 
 	if(source.health < (source.crit_threshold - healththreshold))
-		fake_death(source)
+		addtimer(CALLBACK(src, PROC_REF(fake_death), source), 0)
 
 /obj/item/implant/pseudodeath/proc/fake_death(mob/living/carbon/source)
 	if(QDELETED(source) || source.stat == DEAD)

@@ -66,7 +66,7 @@
 
 	if((user.getMaxHealth() / 4) < healthlossed) // Do you have a quarter of your health left or under?
 		do_sparks(5,FALSE,user)
-		var/F = find_safe_turf(zlevel = user.z, extended_safety_checks = TRUE)
+		var/F = find_safe_turf(current_location, extended_safety_checks = TRUE)
 		var/range = 0
 		if(!F)
 			do_sparks(5,FALSE,user)

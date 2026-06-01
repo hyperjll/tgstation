@@ -231,7 +231,7 @@
 
 //When the swarmer needs something to go elsewhere.
 /mob/living/basic/swarmer/proc/teleport_target(mob/living/target)
-	var/turf/open/floor/safe_turf = find_safe_turf(zlevels = z, extended_safety_checks = TRUE)
+	var/turf/open/floor/safe_turf = find_safe_turf(z, TRUE)
 
 	if(!safe_turf)
 		return

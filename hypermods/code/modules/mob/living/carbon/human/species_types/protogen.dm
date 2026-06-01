@@ -58,9 +58,6 @@
 	return "The protogen are a cybernetically-augmented species meant for long space ventures,  \
 		hired by Nanotrasen in a collaborative effort due to their workplace efficiency and \
 		their main directive of obtaining knowledge through intergalactic exploration."
-	return "The protogen are a cybernetically-augmented species optimized for long space ventures.  \
-		They were hired by Nanotrasen in a collaborative effort thanks to their workplace efficiency and \
-		their innate motivation to obtain knowledge through intergalactic exploration."
 
 /datum/species/protogen/get_species_lore()
 	return list(

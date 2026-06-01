@@ -206,19 +206,18 @@
 	addtimer(CALLBACK(src, PROC_REF(fade_out), 10 SECONDS), 3 MINUTES)
 
 	radio = new(src)
-	radio.broadcasting = TRUE
-	radio.listening = FALSE
 	radio.canhear_range = 5 // 0 is directly on-top of me, 5 extra tiles is more than enough to cover most rooms.
 	radio.radio_noise = FALSE
 	radio.keyslot = new /obj/item/encryptionkey/syndicate
 	radio.subspace_transmission = TRUE
 	radio.recalculateChannels()
-	radio.frequency = FREQ_SYNDICATE
+	radio.set_frequency(FREQ_SYNDICATE)
 	radio.set_broadcasting(TRUE)
+	radio.set_listening(FALSE)
 
 /obj/structure/traitor_bug/proc/fade_out(seconds)
 	animate(src, alpha = 30, time = seconds)
 
-/obj/structure/traitor_bug/deconstruct(disassembled)
+/obj/structure/traitor_bug/handle_deconstruct(disassembled)
 	explosion(src, light_impact_range = 2, flame_range = 5, explosion_cause = src) // Pretty god damn dangerous
 	return ..()

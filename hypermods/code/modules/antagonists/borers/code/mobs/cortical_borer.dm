@@ -60,14 +60,14 @@ GLOBAL_LIST_INIT(borer_second_name, world.file2list("hypermods/code/modules/anta
 	borer = null
 	return ..()
 
-/obj/item/organ/borer_body/Insert(mob/living/carbon/carbon_target, special, drop_if_replaced)
+/obj/item/organ/borer_body/Insert(mob/living/carbon/carbon_target, special, movement_flags, drop_if_replaced)
 	. = ..()
 	for(var/datum/borer_focus/body_focus as anything in borer.body_focuses)
 		body_focus.on_add()
 	carbon_target.apply_status_effect(/datum/status_effect/grouped/screwy_hud/fake_healthy, type)
 
 //on removal, force the borer out
-/obj/item/organ/borer_body/Remove(mob/living/carbon/carbon_target, special)
+/obj/item/organ/borer_body/Remove(mob/living/carbon/carbon_target, special, movement_flags)
 	. = ..()
 	var/mob/living/basic/cortical_borer/cb_inside = carbon_target.has_borer()
 	for(var/datum/borer_focus/body_focus as anything in cb_inside.body_focuses)
@@ -445,7 +445,7 @@ GLOBAL_LIST_INIT(borer_second_name, world.file2list("hypermods/code/modules/anta
 //previously had borers unable to emote... but that means less RP, and we want that
 
 //borers should not be talking without a host at least
-/mob/living/basic/cortical_borer/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null, filterproof = null, message_range = 7, datum/saymode/saymode = null)
+/mob/living/basic/cortical_borer/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null, filterproof = null, message_range = 7, datum/saymode/saymode = null, list/message_mods = null)
 	if(!inside_human())
 		to_chat(src, span_warning("You are not able to speak without a host!"))
 		return

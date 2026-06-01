@@ -29,7 +29,7 @@
 /datum/martial_art/the_tunnel_arts/deactivate_style(mob/living/remove_from)
 	remove_from.remove_traits(tunnel_traits, TUNNEL_ARTS_TRAIT)
 	UnregisterSignal(remove_from, list(COMSIG_ATOM_ATTACKBY))
-	remove_from.faction -= FACTION_RAT //:(
+	remove_from.remove_faction(FACTION_RAT) //:(
 	return ..()
 
 /datum/martial_art/the_tunnel_arts/proc/check_streak(mob/living/attacker, mob/living/defender)
@@ -79,11 +79,11 @@
 	)
 	to_chat(attacker, span_danger("You palm strike [defender], corrupting [defender.p_their()] Chi energy!"), type = MESSAGE_TYPE_COMBAT)
 	playsound(defender, 'sound/items/weapons/punch1.ogg', 25, TRUE, -1)
-	log_combat(attacker, defender, "god fist (The Tunnel Arts))")
+	log_combat(attacker, defender, "god fist (The Tunnel Arts)")
 	defender.apply_damage(30, attacker.get_attack_type(), affecting)
 	var/atom/throw_target = get_edge_target_turf(defender, attacker.dir)
 	defender.throw_at(throw_target, 3, 4, attacker)
-	defender.apply_status_effect(/datum/status_effect/amok/tunnel_madness)
+	defender.apply_status_effect(/datum/status_effect/forced_combat/tunnel_madness)
 	defender.adjust_confusion_up_to(5 SECONDS, 10 SECONDS)
 	defender.adjust_dizzy_up_to(5 SECONDS, 10 SECONDS)
 	return TRUE
@@ -104,7 +104,7 @@
 	for(var/sounds in 1 to 4)
 		addtimer(CALLBACK(src, PROC_REF(do_attack_sound), defender.loc), sounds DECISECONDS, TIMER_DELETE_ME)
 
-	log_combat(attacker, defender, "god fist (The Tunnel Arts))")
+	log_combat(attacker, defender, "god fist (The Tunnel Arts)")
 	defender.apply_damage(20, attacker.get_attack_type(), affecting)
 
 	if(!defender.mind || defender.stat != CONSCIOUS || prob(50))
@@ -114,7 +114,6 @@
 	khan.full_setup(
 		attacker,
 		target_mob = defender,
-		faction = attacker,
 		life = 10 SECONDS,
 		hp = attacker.health / 2.5,
 		damage = 12,

@@ -93,6 +93,7 @@
 		end_mark_targeting()
 	else
 		start_mark_targeting()
+	return ..()
 
 /datum/action/vehicle/sealed/mecha/judicial_mark/proc/start_mark_targeting()
 	chassis.balloon_alert(owner, "click to choose where to place the center of the judicial marker")
@@ -150,6 +151,7 @@
 	INVOKE_ASYNC(src, PROC_REF(do_discharge))
 	chassis.visible_message(span_warning("\The [chassis] releases a burst of steam!"))
 	S_TIMER_COOLDOWN_START(chassis, COOLDOWN_MECHA_STEAM_DISCHARGE, discharge_cooldown)
+	return ..()
 
 /datum/action/vehicle/sealed/mecha/steam_discharge/proc/do_discharge()
 	var/turf/mech_turf = get_turf(chassis)

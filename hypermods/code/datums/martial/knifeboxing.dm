@@ -1,11 +1,6 @@
 /datum/martial_art/knifeboxing
 	name = "Knife-boxing"
 
-/datum/martial_art/knifeboxing/teach(mob/living/new_holder, make_temporary)
-	if(!ishuman(new_holder))
-		return FALSE
-	return ..()
-
 /datum/martial_art/knifeboxing/disarm_act(mob/living/carbon/human/attacker, mob/living/defender)
 	to_chat(attacker, span_warning("Can't disarm while knife-boxing!"))
 	return MARTIAL_ATTACK_FAIL

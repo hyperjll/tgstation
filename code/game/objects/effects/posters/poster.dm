@@ -20,7 +20,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	var/obj/structure/sign/poster/poster_type = /obj/structure/sign/poster/random
 	var/obj/structure/sign/poster/poster_structure
-	var/special_package = FALSE
+	var/explosive_poster = FALSE
 
 /obj/item/poster/Initialize(mapload, obj/structure/sign/poster/new_poster_structure)
 	. = ..()
@@ -55,9 +55,7 @@
 
 /obj/item/poster/examine(mob/user)
 	. = ..()
-	. += span_notice("You can booby-trap the poster by using a glass shard on it before you put it up.")
-
-		poster_structure.special_trap = special_package
+	. += "You can booby-trap the poster by using a glass shard on it before you put it up."
 
 /obj/item/poster/attackby(obj/item/I, mob/user, list/modifiers, list/attack_modifiers)
 	if(!istype(I, /obj/item/shard))
@@ -116,6 +114,7 @@
 	var/obj/item/shard/trap = locate() in contents
 	if(trap)
 		trap.forceMove(placed_poster)
+	placed_poster.special_trap = explosive_poster
 	placed_poster.poster_item_type = type
 	poster_structure = null
 	flick("poster_being_set", placed_poster)

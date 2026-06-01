@@ -373,10 +373,12 @@
 		affected_mob.emote("scream")
 
 /datum/reagent/medicine/barozine/on_mob_metabolize(mob/living/M)
+	. = ..()
 	ADD_TRAIT(M, TRAIT_RESISTHIGHPRESSURE, type)
 	ADD_TRAIT(M, TRAIT_RESISTLOWPRESSURE, type)
 
 /datum/reagent/medicine/barozine/on_mob_end_metabolize(mob/living/M)
+	. = ..()
 	REMOVE_TRAIT(M, TRAIT_RESISTHIGHPRESSURE, type)
 	REMOVE_TRAIT(M, TRAIT_RESISTLOWPRESSURE, type)
 
@@ -501,6 +503,7 @@
 		H.physiology.burn_mod /= 0.75
 		H.physiology.tox_mod /= 0.75
 		H.physiology.oxy_mod /= 0.75
+	..()
 
 /datum/reagent/medicine/experimentalstimulants
 	name = "Experimental Stimulants"
@@ -582,6 +585,7 @@
 		var/mob/living/carbon/human/M = L
 		M.physiology.brute_mod /= 0.8
 		M.physiology.burn_mod /= 0.8
+	..()
 
 /datum/reagent/medicine/juggernaut/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
@@ -730,11 +734,11 @@
 	metabolization_rate = 1
 
 /datum/reagent/medicine/resurrector_nanites/expose_mob(mob/living/carbon/M)
+	. = ..()
 	if(M.stat != DEAD)
 		return
 	M.notify_revival("Your body is being revived with Resurrector Nanites!")
 	M.set_jitter_if_lower(20 SECONDS)
-	sleep(10 SECONDS)
 	M.fully_heal(heal_flags = HEAL_ALL)
 	M.revive()
 	M.emote("gasp")
@@ -764,12 +768,14 @@
 		return UPDATE_MOB_HEALTH
 
 /datum/reagent/medicine/enchantedgold/on_mob_metabolize(mob/living/M)
+	. = ..()
 	gold_text = pick("golden", "mystical", "enchanted") //random text stuff
 	to_chat(M, span_notice("You feel a [gold_text] power within you!"))
 	M.maxHealth += 10 // Boost max health
 	M.health += 10
 
 /datum/reagent/medicine/enchantedgold/on_mob_end_metabolize(mob/living/M)
+	. = ..()
 	to_chat(M, span_notice("You no longer feel that [gold_text] power within you."))
 	M.maxHealth -= 10
 	//M.health = min(M.health - 10, M.maxHealth) // absorption effect shouldn't be lethal.
@@ -802,6 +808,7 @@
 		return UPDATE_MOB_HEALTH
 
 /datum/reagent/medicine/enchantedsupergold/on_mob_metabolize(mob/living/carbon/M)
+	. = ..()
 	gold_text = pick("golden", "mystical", "enchanted") //random text stuff
 	to_chat(M, span_notice("You feel an incredible [gold_text] power within you!"))
 	M.maxHealth += 40 // Boost max health
@@ -817,6 +824,7 @@
 		H.physiology.oxy_mod *= 0.8
 
 /datum/reagent/medicine/enchantedsupergold/on_mob_end_metabolize(mob/living/carbon/M)
+	. = ..()
 	to_chat(M, span_notice("You no longer feel that incredible [gold_text] power within you."))
 	M.maxHealth -= 40
 	//M.health = min(M.health - 40, M.maxHealth) // absorption effect shouldn't be lethal.
@@ -838,6 +846,7 @@
 	var/wasenhanced = FALSE
 
 /datum/reagent/medicine/clownenhancer/on_mob_metabolize(mob/living/M)
+	..()
 	if(ishuman(M) && (M.mind?.assigned_role == "Clown" || M.mind?.has_antag_datum(/datum/antagonist/nukeop/clownop)))
 		var/mob/living/carbon/human/H = M
 		H.physiology.brute_mod *= 0.2
@@ -854,7 +863,7 @@
 		H.physiology.tox_mod /= 0.2
 		H.physiology.oxy_mod /= 0.2
 		wasenhanced = FALSE
-
+	..()
 
 /datum/reagent/medicine/antiwater
 	name = "Anti-Water"
@@ -872,6 +881,7 @@
 		return UPDATE_MOB_HEALTH
 
 /datum/reagent/medicine/antiwater/on_mob_metabolize(mob/living/M)
+	..()
 	ADD_TRAIT(M, TRAIT_NO_SLIP_WATER, type)
 	if(ishuman(M) && !ispodperson(M)) // Trying not to pick on pods even more.
 		var/mob/living/carbon/human/H = M
@@ -884,6 +894,7 @@
 		var/mob/living/carbon/human/H = M
 		H.physiology.burn_mod /= 1.1
 		wasenhanced = FALSE
+	..()
 
 /datum/reagent/medicine/lavaland_extract
 	name = "Lavaland Extract"

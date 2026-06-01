@@ -176,7 +176,7 @@
 
 	if((imp_in.getMaxHealth() / 4) < healthlossed) // Do you have a quarter of your health left or under?
 		do_sparks(5,FALSE,imp_in)
-		var/F = find_safe_turf(zlevel = imp_in.z, extended_safety_checks = TRUE)
+		var/F = find_safe_turf(zlevel_or_levels = imp_in.z, extended_safety_checks = TRUE)
 		var/range = 0
 		if(!F)
 			do_sparks(5,FALSE,imp_in)

@@ -32,7 +32,7 @@
 			COOLDOWN_START(src, emp_notice, 30 SECONDS)
 		return
 
-	L.set_disabled(TRUE)	//disable the bodypart
+	ADD_TRAIT(owner, L, "leg-augment-emp")
 	addtimer(CALLBACK(src, PROC_REF(reenableleg)), (severity / 2) SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 	if(severity > EMP_LIGHT && prob(5))	//put probabilities into a calculator before you try fucking with this
@@ -49,7 +49,7 @@
 	if(!L)	//You got emped and then lost the leg in those 10 seconds? impressive
 		return
 
-	L.set_disabled(FALSE)
+	REMOVE_TRAIT(owner, L, "leg-augment-emp")
 
 /obj/item/organ/cyberimp/leg/proc/SetSlotFromZone()
 	switch(zone)
@@ -85,12 +85,12 @@
 	to_chat(user, span_notice("You modify [src] to be installed on the [zone == BODY_ZONE_R_LEG ? "right" : "left"] leg."))
 	update_appearance(UPDATE_ICON)
 
-/obj/item/organ/cyberimp/leg/Insert(mob/living/carbon/M, special, drop_if_replaced, special_zone)
+/obj/item/organ/cyberimp/leg/Insert(mob/living/carbon/M, special, movement_flags, drop_if_replaced, special_zone)
 	. = ..()
 	if(HasBoth())
 		AddEffect()
 
-/obj/item/organ/cyberimp/leg/Remove(mob/living/carbon/M, special)
+/obj/item/organ/cyberimp/leg/Remove(mob/living/carbon/M, special, movement_flags)
 	RemoveEffect()
 	. = ..()
 

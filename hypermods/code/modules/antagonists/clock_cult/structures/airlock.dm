@@ -45,6 +45,7 @@
 	return FALSE
 
 /obj/machinery/door/airlock/bronze/clock/emp_act(severity)
+	. = ..(severity)
 	return
 
 /obj/machinery/door/airlock/bronze/clock/glass

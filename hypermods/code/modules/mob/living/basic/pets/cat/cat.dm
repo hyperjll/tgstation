@@ -41,17 +41,9 @@
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
 
 /mob/living/basic/syndicat/death()
-	var/bomb_beeps_until_boom = 3
-	while(bomb_beeps_until_boom > 0)
-		//for extra spice
-		var/beep_volume = 40
-		playsound(loc, 'sound/items/timer.ogg', beep_volume, vary = FALSE)
-		sleep(1 SECONDS)
-		bomb_beeps_until_boom--
-		beep_volume += 20
-	if(bomb_beeps_until_boom == 0)
-		explosion(src, 0, 3, 6, flame_range = 4)
-		qdel(src)
+	. = ..()
+	explosion(src, 0, 3, 6, flame_range = 4)
+	qdel(src)
 
 /datum/ai_controller/basic_controller/syndicat
 	blackboard = list(

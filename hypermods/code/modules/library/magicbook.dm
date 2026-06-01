@@ -213,7 +213,7 @@
 		if(19)
 			//Random bad mutation activation
 			selected_turf.visible_message(span_userdanger("[user] suddenly mutates after using the [src]!"))
-			user.easy_random_mutate((NEGATIVE + MINOR_NEGATIVE), TRUE, TRUE, TRUE, resilient = NONE)
+			user.easy_random_mutate((NEGATIVE + MINOR_NEGATIVE), TRUE, TRUE, TRUE)
 
 			message_admins("[ADMIN_LOOKUPFLW(user)] used a [src] and had it backfire (Bad mutation activation) at [ADMIN_VERBOSEJMP(selected_turf)]")
 			user.log_message("used a [src] and backfired, resulting in Bad mutation activation.", LOG_ATTACK)
@@ -235,6 +235,8 @@
 	var/random_book = pick(subtypesof(/obj/item/magicbook) - /obj/item/magicbook/random)
 	new random_book(loc)
 	qdel(src)
+	return ..()
+
 
 // Actual magic books below
 
@@ -883,7 +885,7 @@
 
 /obj/item/magicbook/shelter/do_effect(mob/user)
 	do_sparks(5,FALSE,user)
-	var/F = find_safe_turf(zlevel = user.z, extended_safety_checks = TRUE)
+	var/F = find_safe_turf(zlevel_or_levels = user.z, extended_safety_checks = TRUE)
 	var/range = 0
 	if(!F)
 		F = get_turf(user)
