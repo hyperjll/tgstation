@@ -33,7 +33,7 @@
 
 /datum/uplink_item/suits/juggernaut
 	name = "Cybersun Juggernaut MODsuit"
-	desc = "A super heavy suit that, by the name implies, will make you a walking juggernaut. \
+	desc = "A super heavy suit that, as the name implies, will make you a walking juggernaut. \
 			Has the greatest defense out of all of our MODsuits, at the cost of speed. \
 			While this MODsuit makes you nearly invincible to bullets, lasers, bombs or melee weapons, \
 			you should still watch out for reagent dartguns as poison can still kill you just as easily."
