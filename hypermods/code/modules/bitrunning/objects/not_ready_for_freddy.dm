@@ -64,11 +64,11 @@
 	current_line++
 
 /obj/machinery/light/small/dim/bitrunner_right
-	cam_break_toggle = FALSE
+	allow_break_on_init = FALSE
 	no_low_power = TRUE
 
 /obj/machinery/light/small/dim/bitrunner_left
-	cam_break_toggle = FALSE
+	allow_break_on_init = FALSE
 	no_low_power = TRUE
 
 /obj/machinery/door/poddoor/bitrunner_right
