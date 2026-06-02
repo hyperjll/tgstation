@@ -81,7 +81,13 @@
 	if(!liquids.liquid_group.reagents)
 		return
 
+	liquids.liquid_group.evaporation_multiplier += 0.1
+
+	if(liquids.liquid_group.reagents_per_turf >= 10) // let's not replace entire chemical oceans with water if we spray cleaner on it once.
+		return
+
 	for(var/datum/reagent/reagent_type in liquids.liquid_group.reagents.reagent_list)
-		if(istype(reagent_type, /datum/reagent) && !istype(reagent_type, /datum/reagent/water))
-			liquids.liquid_group.remove_reagent(liquids, reagent_type, reagent_type.volume)
-			liquids.liquid_group.reagents.add_reagent(/datum/reagent/water, reagent_type.volume)
+		if(!istype(reagent_type.type, /datum/reagent/water))
+			var/reagent_to_remove = reagent_type.type
+			liquids.liquid_group.add_reagent(liquids, /datum/reagent/water, (reagent_type.volume * 0.1), liquids.liquid_group.group_temperature)
+			liquids.liquid_group.remove_reagent(liquids, reagent_to_remove, (reagent_type.volume * 0.1))
