@@ -81,8 +81,8 @@
 	var/power_consumption_rate = 20
 	///break if moved, if false also makes it ignore if the wall its on breaks
 	var/break_if_moved = TRUE
-	///Can this light randomly break if toggled?
-	var/cam_break_toggle = TRUE
+	/// If TRUE we can break on init
+	var/allow_break_on_init = TRUE
 
 	/// Did a syndicate light tube/bulb get inserted?
 	var/riggedtoblow = FALSE
@@ -134,13 +134,14 @@
 /obj/machinery/light/post_machine_initialize()
 	. = ..()
 #ifndef MAP_TEST
-	switch(fitting)
-		if("tube")
-			if(prob(2) && cam_break_toggle)
-				break_light_tube(TRUE)
-		if("bulb")
-			if(prob(5) && cam_break_toggle)
-				break_light_tube(TRUE)
+	if(allow_break_on_init)
+		switch(fitting)
+			if("tube")
+				if(prob(2))
+					break_light_tube(TRUE)
+			if("bulb")
+				if(prob(5))
+					break_light_tube(TRUE)
 #endif
 	update(trigger = FALSE)
 
