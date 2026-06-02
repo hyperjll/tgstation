@@ -84,6 +84,9 @@
 	/// If TRUE we can break on init
 	var/allow_break_on_init = TRUE
 
+	/// Can switching this light on and off break the light?
+	var/cam_break_toggle = FALSE
+
 	/// Did a syndicate light tube/bulb get inserted?
 	var/riggedtoblow = FALSE
 
