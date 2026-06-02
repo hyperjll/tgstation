@@ -218,6 +218,10 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/control)
+"cR" = (
+/obj/effect/landmark/nukeop_elevator/exterior,
+/turf/closed/indestructible/syndicate,
+/area/centcom/syndicate_mothership/control)
 "cT" = (
 /obj/structure/rack,
 /obj/item/storage/belt/sheath/katana/empty{
@@ -2017,6 +2021,12 @@
 "sB" = (
 /obj/effect/baseturf_helper/asteroid/snow,
 /turf/closed/indestructible/rock/snow,
+/area/centcom/syndicate_mothership/control)
+"sC" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 9
+	},
+/turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/control)
 "sE" = (
 /obj/effect/turf_decal/siding/wideplating{
@@ -4428,14 +4438,7 @@
 /turf/closed/indestructible/syndicate,
 /area/centcom/syndicate_mothership/expansion_nanites)
 "Qe" = (
-/obj/machinery/button/door/directional/south{
-	desc = "Looks like the elevator is under maintenance..";
-	name = "Elevator Button"
-	},
-/turf/open/floor/iron/smooth_half{
-	dir = 1
-	},
-/area/centcom/syndicate_mothership/control)
+)
 "Qh" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south{
 	name = "Frosted Window"
@@ -4573,6 +4576,12 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/titanium,
+/area/centcom/syndicate_mothership/control)
+"Rz" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 6
+	},
+/turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/control)
 "RA" = (
 /obj/effect/turf_decal/siding/wideplating{
@@ -5647,6 +5656,7 @@ Ox
 Ox
 Ox
 Ox
+Qe
 "}
 (2,1,1) = {"
 sU
@@ -5749,6 +5759,7 @@ xu
 xu
 xu
 Ox
+Qe
 "}
 (3,1,1) = {"
 sU
@@ -5851,6 +5862,7 @@ am
 Je
 xu
 Ox
+Qe
 "}
 (4,1,1) = {"
 sU
@@ -5953,6 +5965,7 @@ am
 am
 xu
 Ox
+Qe
 "}
 (5,1,1) = {"
 sU
@@ -6055,6 +6068,7 @@ am
 am
 RT
 Ox
+Qe
 "}
 (6,1,1) = {"
 sU
@@ -6157,6 +6171,7 @@ am
 am
 xu
 Ox
+Qe
 "}
 (7,1,1) = {"
 sU
@@ -6259,6 +6274,7 @@ am
 Je
 xu
 Ox
+Qe
 "}
 (8,1,1) = {"
 sU
@@ -6361,6 +6377,7 @@ xu
 xu
 xu
 Ox
+Qe
 "}
 (9,1,1) = {"
 sU
@@ -6463,6 +6480,7 @@ Ox
 Ox
 Ox
 Ox
+Qe
 "}
 (10,1,1) = {"
 sU
@@ -6565,6 +6583,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (11,1,1) = {"
 sU
@@ -6667,6 +6686,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (12,1,1) = {"
 sU
@@ -6769,6 +6789,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (13,1,1) = {"
 sU
@@ -6871,6 +6892,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (14,1,1) = {"
 sU
@@ -6973,6 +6995,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (15,1,1) = {"
 sU
@@ -7075,6 +7098,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (16,1,1) = {"
 sU
@@ -7177,6 +7201,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (17,1,1) = {"
 sU
@@ -7279,6 +7304,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (18,1,1) = {"
 sU
@@ -7381,6 +7407,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (19,1,1) = {"
 sU
@@ -7483,6 +7510,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (20,1,1) = {"
 sU
@@ -7585,6 +7613,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (21,1,1) = {"
 sU
@@ -7687,6 +7716,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (22,1,1) = {"
 sH
@@ -7789,6 +7819,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (23,1,1) = {"
 Ye
@@ -7891,6 +7922,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (24,1,1) = {"
 Ye
@@ -7993,6 +8025,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (25,1,1) = {"
 Ye
@@ -8095,6 +8128,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (26,1,1) = {"
 Ye
@@ -8197,6 +8231,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (27,1,1) = {"
 Ye
@@ -8299,6 +8334,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (28,1,1) = {"
 Ye
@@ -8401,6 +8437,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (29,1,1) = {"
 Ye
@@ -8503,6 +8540,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (30,1,1) = {"
 Ye
@@ -8605,6 +8643,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (31,1,1) = {"
 Ye
@@ -8707,6 +8746,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (32,1,1) = {"
 Ye
@@ -8809,6 +8849,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (33,1,1) = {"
 Ye
@@ -8911,6 +8952,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (34,1,1) = {"
 Ye
@@ -9013,6 +9055,7 @@ Ox
 sU
 sU
 sU
+Qe
 "}
 (35,1,1) = {"
 Ye
@@ -9115,6 +9158,7 @@ Ox
 Ox
 sU
 sU
+Qe
 "}
 (36,1,1) = {"
 Ye
@@ -9217,6 +9261,7 @@ To
 Ox
 sU
 sU
+Qe
 "}
 (37,1,1) = {"
 Ye
@@ -9319,6 +9364,7 @@ Hp
 Ox
 sU
 sU
+Qe
 "}
 (38,1,1) = {"
 Ye
@@ -9421,6 +9467,7 @@ kg
 Ox
 sU
 sU
+Qe
 "}
 (39,1,1) = {"
 Ye
@@ -9523,6 +9570,7 @@ Br
 Ox
 sU
 sU
+Qe
 "}
 (40,1,1) = {"
 Ye
@@ -9625,6 +9673,7 @@ Ox
 Ox
 sU
 sU
+Qe
 "}
 (41,1,1) = {"
 Ye
@@ -9727,6 +9776,7 @@ Ox
 sU
 sU
 sU
+Qe
 "}
 (42,1,1) = {"
 Ye
@@ -9829,6 +9879,7 @@ Ox
 Ox
 sU
 sU
+Qe
 "}
 (43,1,1) = {"
 Ye
@@ -9931,6 +9982,7 @@ To
 Ox
 Ox
 sU
+Qe
 "}
 (44,1,1) = {"
 Ye
@@ -10033,6 +10085,7 @@ To
 qh
 Ox
 Ox
+Qe
 "}
 (45,1,1) = {"
 Ye
@@ -10135,6 +10188,7 @@ xv
 To
 zT
 Ox
+Qe
 "}
 (46,1,1) = {"
 Ye
@@ -10237,6 +10291,7 @@ To
 Hp
 kg
 Ox
+Qe
 "}
 (47,1,1) = {"
 Ye
@@ -10313,7 +10368,7 @@ zH
 wG
 wG
 ru
-XZ
+sC
 TH
 Ov
 DZ
@@ -10339,6 +10394,7 @@ Ox
 Ox
 Ox
 Ox
+Qe
 "}
 (48,1,1) = {"
 Ye
@@ -10416,7 +10472,7 @@ wG
 wG
 ru
 we
-rw
+Rz
 Ov
 DZ
 Ox
@@ -10441,6 +10497,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (49,1,1) = {"
 Ye
@@ -10543,6 +10600,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (50,1,1) = {"
 Ye
@@ -10618,7 +10676,7 @@ go
 as
 wG
 wG
-wS
+cR
 DZ
 DZ
 DZ
@@ -10748,6 +10806,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (52,1,1) = {"
 Ye
@@ -10850,6 +10909,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (53,1,1) = {"
 Ye
@@ -10952,6 +11012,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (54,1,1) = {"
 Ye
@@ -11054,6 +11115,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (55,1,1) = {"
 Ye
@@ -11156,6 +11218,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (56,1,1) = {"
 Ye
@@ -11258,6 +11321,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (57,1,1) = {"
 Ye
@@ -11360,6 +11424,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (58,1,1) = {"
 Ye
@@ -11462,6 +11527,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (59,1,1) = {"
 Ye
@@ -11564,6 +11630,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (60,1,1) = {"
 Ye
@@ -11666,6 +11733,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (61,1,1) = {"
 Ye
@@ -11768,6 +11836,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (62,1,1) = {"
 Ye
@@ -11870,6 +11939,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (63,1,1) = {"
 Ye
@@ -11972,6 +12042,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (64,1,1) = {"
 Ye
@@ -12074,6 +12145,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (65,1,1) = {"
 Ye
@@ -12176,6 +12248,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (66,1,1) = {"
 Ye
@@ -12278,6 +12351,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (67,1,1) = {"
 Ye
@@ -12380,6 +12454,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (68,1,1) = {"
 Ye
@@ -12482,6 +12557,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (69,1,1) = {"
 Ye
@@ -12584,6 +12660,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (70,1,1) = {"
 Ye
@@ -12686,6 +12763,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (71,1,1) = {"
 Ye
@@ -12788,6 +12866,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (72,1,1) = {"
 Ye
@@ -12890,6 +12969,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (73,1,1) = {"
 Ye
@@ -12992,6 +13072,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (74,1,1) = {"
 Ye
@@ -13094,6 +13175,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (75,1,1) = {"
 Ye
@@ -13196,6 +13278,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (76,1,1) = {"
 Ye
@@ -13298,6 +13381,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (77,1,1) = {"
 Ye
@@ -13400,6 +13484,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (78,1,1) = {"
 Ye
@@ -13502,6 +13587,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (79,1,1) = {"
 Ye
@@ -13604,6 +13690,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (80,1,1) = {"
 Ye
@@ -13706,6 +13793,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (81,1,1) = {"
 sU
@@ -13808,6 +13896,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (82,1,1) = {"
 sU
@@ -13910,6 +13999,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (83,1,1) = {"
 sU
@@ -14012,6 +14102,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (84,1,1) = {"
 sU
@@ -14114,6 +14205,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (85,1,1) = {"
 sU
@@ -14216,6 +14308,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (86,1,1) = {"
 sU
@@ -14318,6 +14411,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (87,1,1) = {"
 sU
@@ -14420,6 +14514,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (88,1,1) = {"
 sU
@@ -14522,6 +14617,7 @@ sU
 sU
 sU
 sU
+Qe
 "}
 (89,1,1) = {"
 sU
@@ -14624,4 +14720,5 @@ sU
 sU
 sU
 sU
+Qe
 "}
