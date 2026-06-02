@@ -1589,10 +1589,10 @@
 		return FALSE
 	jestergraphed = FALSE
 
-/// When a airlock is opened with a explosive charge is installed
+/// When a airlock is opened with an explosive charge is installed
 /obj/machinery/door/airlock/proc/blow_charge()
 	panel_open = TRUE
-	update_icon(state = AIRLOCK_OPENING)
+	update_icon()
 	visible_message(span_warning("[src]'s panel is blown off in a spray of deadly shrapnel!"))
 	charge.forceMove(drop_location())
 	charge.ex_act(EXPLODE_DEVASTATE)
