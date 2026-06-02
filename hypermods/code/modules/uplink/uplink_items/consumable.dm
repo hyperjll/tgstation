@@ -113,6 +113,16 @@
 	item = /obj/item/storage/cans/sixmystery
 	cost = 2
 
+/datum/uplink_item/consumable/syndisnacks
+	name = "Syndicate Snack Box"
+	desc = "Contains 1 Robust Nukie Cola and 1 Syndi-cake. The motto is as follows: 'Glory to the Syndicate'. \
+			(Also contains 4 random food items and something to wash it all down.)"
+	item = /obj/item/storage/box/syndie_kit/synditoykit
+	cost = 2
+	surplus = 0
+	cant_discount = TRUE
+	purchasable_from = ~UPLINK_SPY
+
 /datum/uplink_item/consumable/syndiecigs
 	name = "Syndicate Smokes"
 	desc = "Strong flavor, dense smoke, easy on the lungs, infused with omnizine. A classic amongst the Syndicate."
@@ -174,17 +184,6 @@
 			A single dose is estimated to last 5 minutes."
 	item = /obj/item/reagent_containers/hypospray/medipen/pumpupplus
 	cost = 2
-
-/**
-/datum/uplink_item/consumable/syndicryo
-	name = "Cryogelidia Pills"
-	desc = "A single bottle of pills containing Cryogelidia, a chemical which freezes you in a protective block of ice. \
-			The block of ice will turn off and on as the chemical continues metabolizing. \
-			Best used to stall for time or as a defense mechanism, as this renders escape from pursuers hopeless. \
-			Each pill also contains some healing chemicals to help buy time."
-	item = /obj/item/storage/pill_bottle/syndicryo
-	cost = 3
-**/
 
 /datum/uplink_item/consumable/syndicryo
 	name = "Cryogelidia Medipen"

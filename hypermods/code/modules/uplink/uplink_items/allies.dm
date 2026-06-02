@@ -23,6 +23,17 @@
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 
+/datum/uplink_item/reinforcements/spai
+	name = "Syndicate pAI"
+	desc = "A blood-red personal AI device. The perfect companion for when you're on the run. \
+			Can access many unique modules to grant the user additional utility. \
+			Comes with a syndicate encryption key pre-installed. Usefulness not guaranteed."
+	item = /obj/item/pai_card/syndicate
+	cost = 1
+	surplus = 0
+	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+
 /datum/uplink_item/reinforcements/dehy_carp
 	name = "Dehydrated Space Carp"
 	desc = "Looks like a plush toy carp, but just add water and it becomes a real-life space carp! Activate in \

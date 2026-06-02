@@ -39,14 +39,6 @@
 	item = /obj/item/storage/belt/chameleon/bluespace
 	cost = 3
 
-/datum/uplink_item/device_tools/dangerous_bone_gel
-	name = "Reverse Bone Gel"
-	desc = "A single bottle of bone gel, we've specifically modified it to do the exact OPPOSITE of it's intended purpose. Refrain from using on yourself. \
-			The reverse bone gel will apply itself all over the victims body regardless of where it's applied, and only has enough for one use."
-	item = /obj/item/bone_gel_dangerous
-	cost = 3
-	surplus = 10
-
 /datum/uplink_item/device_tools/mrfreezesprayer
 	name = "Frost Oil Chemical Sprayer"
 	desc = "One of our bioterror chemical sprayers, rather than spewing lethal chemicals, it generates and shoots frost oil. \

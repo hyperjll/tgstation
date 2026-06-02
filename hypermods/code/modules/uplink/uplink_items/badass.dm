@@ -54,27 +54,6 @@
 	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
 	cant_discount = TRUE
 
-/datum/uplink_item/badass/syndisnacks
-	name = "Syndicate Snack Box"
-	desc = "Contains 1 Robust Nukie Cola and 1 Syndi-cake. The motto is as follows: 'Glory to the Syndicate'. \
-			(Also contains 4 random food items and something to wash it all down.)"
-	item = /obj/item/storage/box/syndie_kit/synditoykit
-	cost = 2
-	surplus = 0
-	cant_discount = TRUE
-	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/badass/spai
-	name = "Syndicate pAI"
-	desc = "A blood-red personal AI device. The perfect companion for when you're on the run. \
-			Can access many unique modules to grant the user additional utility. \
-			Comes with a syndicate encryption key pre-installed. Usefulness not guaranteed."
-	item = /obj/item/pai_card/syndicate
-	cost = 1
-	surplus = 0
-	cant_discount = TRUE
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
-
 /datum/uplink_item/badass/whetstone
 	name = "Syndicate Whetstone"
 	desc = "A blood-red whetstone used for sharpening objects for satisfactory murder. \

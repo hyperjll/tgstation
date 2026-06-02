@@ -260,7 +260,7 @@
 	surplus = 20
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
-/datum/uplink_item/consumable/payloadcigars
+/datum/uplink_item/deception/payloadcigars
 	name = "Payload Cigars"
 	desc = "The forefront in our research on Bluespace Reagent Reservoir Capsules (B.R.R.C). \
 			Each cigar contains one of our B.R.R.C's allowing for a grant total of 300 units in reagent capacity. \
@@ -269,3 +269,11 @@
 	item = /obj/item/storage/fancy/cigarettes/cigars/payload
 	cost = 2
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/deception/dangerous_bone_gel
+	name = "Reverse Bone Gel"
+	desc = "A single bottle of bone gel, we've specifically modified it to do the exact OPPOSITE of it's intended purpose. Refrain from using on yourself. \
+			The reverse bone gel will apply itself all over the victims body regardless of where it's applied, and only has enough for one use."
+	item = /obj/item/bone_gel_dangerous
+	cost = 3
+	surplus = 10
