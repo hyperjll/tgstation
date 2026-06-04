@@ -260,7 +260,7 @@
 
 /datum/nanite_program/sensor/species
 	name = "Species Sensor"
-	desc = "When triggered, the nanites scan the host to determine their species and output a signal depending on the conditions set in the settings."
+	desc = "The nanites scan the host to determine their species and output a signal depending on the conditions set in the settings."
 	can_rule = TRUE
 
 	///List of all species we can add special sensors for.

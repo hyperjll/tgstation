@@ -42,7 +42,7 @@
 
 /datum/design/nanites/sensor_species
 	name = "Species Sensor"
-	desc = "When triggered, the nanites scan the host to determine their species and output a signal depending on the conditions set in the settings."
+	desc = "The nanites scan the host to determine their species and output a signal depending on the conditions set in the settings."
 	id = "sensor_species_nanites"
 	category = list(NANITES_CATEGORY_SENSOR)
 	program_type = /datum/nanite_program/sensor/species
@@ -56,7 +56,7 @@
 
 /datum/design/nanites/sensor_job
 	name = "Job Sensor"
-	desc = "When triggered, the nanites scan the host's biodata and match it with Nanotrasen's private bio-records and output a signal depending on the conditions set in the settings."
+	desc = "The nanites scan the host's biodata and match it with Nanotrasen's private bio-records and output a signal depending on the conditions set in the settings."
 	id = "sensor_job_nanites"
 	category = list(NANITES_CATEGORY_SENSOR)
 	program_type = /datum/nanite_program/sensor/job
@@ -70,7 +70,7 @@
 
 /datum/design/nanites/sensor_name
 	name = "Name Sensor"
-	desc = "Sends a signal when the nanites detect the host mob's identity to be that of the one specified."
+	desc = "The nanites receive a signal when the nanites detect the host mob's identity to be that of the one specified."
 	id = "sensor_name_nanites"
 	category = list(NANITES_CATEGORY_SENSOR)
 	program_type = /datum/nanite_program/sensor/name
