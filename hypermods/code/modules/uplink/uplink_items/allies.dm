@@ -32,6 +32,7 @@
 	cost = 1
 	surplus = 0
 	cant_discount = TRUE
+	purchasable_from = ALL
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/dehy_carp
