@@ -10,9 +10,13 @@
 	flags = _flags
 	RegisterSignal(target, COMSIG_ATOM_PRE_EMP_ACT, PROC_REF(getEmpFlags))
 	RegisterSignal(target, COMSIG_ATOM_EXAMINE_TAGS, PROC_REF(get_examine_tags))
+	if(isliving(target))
+		ADD_TRAIT(target, TRAIT_EMPIMMUNE, "emp-protection")
 
 /datum/element/empprotection/Detach(atom/target)
 	UnregisterSignal(target, list(COMSIG_ATOM_PRE_EMP_ACT, COMSIG_ATOM_EXAMINE_TAGS))
+	if(isliving(target))
+		REMOVE_TRAIT(target, TRAIT_EMPIMMUNE, "emp-protection")
 	return ..()
 
 /datum/element/empprotection/proc/getEmpFlags(datum/source, severity)

@@ -507,6 +507,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_HALLUCINATION_IMMUNE "hallucination_immune"
 /// Determines who's capable of making/modifying soul contracts.
 #define TRAIT_DEVILISH "devilish"
+/// Are we immune to emp's? (This is used as a flag, not the actual immunity)
+#define TRAIT_EMPIMMUNE "emp_immunity"
 
 //---- Brain trauma resists
 /// Unable to gain any brain trauma whatsoever
