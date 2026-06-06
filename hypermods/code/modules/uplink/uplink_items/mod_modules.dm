@@ -156,6 +156,20 @@
 	cost = 1
 	purchasable_from = ~UPLINK_SPY
 
+/datum/uplink_item/mod_modules/emp_shield_tot
+	name = "MODsuit EMP Shield Module"
+	desc = "An EMP shield module for a MODsuit. It protects the MODsuit from electromagnetic pulses. The wearer is still vulnerable, however."
+	item = /obj/item/mod/module/emp_shield
+	cost = 2
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
+/datum/uplink_item/mod_modules/emp_shield_adv_tot
+	name = "MODsuit Advanced EMP Shield Module"
+	desc = "An advanced EMP shield module for a MODsuit. It protects your entire body from electromagnetic pulses."
+	item = /obj/item/mod/module/emp_shield/advanced
+	cost = 6
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
 /datum/uplink_item/mod_modules/emp
 	name = "MODsuit EMP Module"
 	desc = "A MODsuit module based on the concept of a reverse EMP-shield. Activation of the module will instead produce a massive EMP. \
