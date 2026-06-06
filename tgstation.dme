@@ -7710,6 +7710,8 @@
 #include "hypermods\code\modules\mod\mod_theme.dm"
 #include "hypermods\code\modules\mod\mod_types.dm"
 #include "hypermods\code\modules\mod\modules\modules_antag.dm"
+#include "hypermods\code\modules\mod\modules\modules_general.dm"
+#include "hypermods\code\modules\mod\modules\modules_security.dm"
 #include "hypermods\code\modules\modular_computers\computers\item\disks\role_disks.dm"
 #include "hypermods\code\modules\modular_computers\computers\item\disks\unique_disks.dm"
 #include "hypermods\code\modules\modular_computers\file_system\programs\noaccessprograms.dm"

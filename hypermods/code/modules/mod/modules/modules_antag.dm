@@ -633,8 +633,9 @@
 /obj/item/mod/module/teslacoil
 	name = "MOD tesla coil module"
 	desc = "A tiny, high power tesla coil that's fitted within the MODsuit's back, "
+	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
 	icon = 'icons/obj/machines/engine/tesla_coil.dmi'
-	icon_state = "coil0"
+	icon_state = "teslacoil"
 	module_type = MODULE_USABLE
 	complexity = 4
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 100 // Costly AF
@@ -653,3 +654,90 @@
 
 /obj/item/mod/module/dna_lock/noremove
 	removable = FALSE
+
+/obj/item/mod/module/rad_protection/emitter
+	name = "MOD radiation emitter module"
+	desc = "A module utilizing polymers and reflective shielding to protect the user against ionizing radiation; \
+		a common danger in space. This particular module has seemingly been equipped with a sliver of uranium."
+	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "rademitter"
+
+/obj/item/mod/module/rad_protection/emitter/on_part_activation()
+	ADD_TRAIT(mod.wearer, TRAIT_BYPASS_EARLY_IRRADIATED_CHECK, REF(src))
+	RegisterSignal(mod.wearer, COMSIG_IN_RANGE_OF_IRRADIATION, PROC_REF(on_pre_potential_irradiation))
+	for(var/obj/item/part in mod.get_parts(all = TRUE))
+		ADD_TRAIT(part, TRAIT_RADIATION_PROTECTED_CLOTHING, MOD_TRAIT)
+	mod.wearer.AddComponent(
+		/datum/component/radioactive_emitter, \
+		cooldown_time = 12 SECONDS, \
+		range = 4, \
+		threshold = RAD_MEDIUM_INSULATION, \
+	)
+
+/obj/item/mod/module/rad_protection/emitter/on_part_deactivation(deleting = FALSE)
+	REMOVE_TRAIT(mod.wearer, TRAIT_BYPASS_EARLY_IRRADIATED_CHECK, REF(src))
+	UnregisterSignal(mod.wearer, COMSIG_IN_RANGE_OF_IRRADIATION)
+	for(var/obj/item/part in mod.get_parts(all = TRUE))
+		REMOVE_TRAIT(part, TRAIT_RADIATION_PROTECTED_CLOTHING, MOD_TRAIT)
+	qdel(mod.wearer.GetComponent(/datum/component/radioactive_emitter))
+
+/obj/item/mod/module/pepper_shoulders/smoke
+	name = "MOD reactive smoke module"
+	desc = "A module installs a vat of smoke into the MODsuit, a large quantity of smoke is then released when the wearer is attacked. Refills automatically."
+	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "reactive_smoke"
+	module_type = MODULE_USABLE
+	complexity = 1
+	use_energy_cost = DEFAULT_CHARGE_DRAIN
+	incompatible_modules = list(/obj/item/mod/module/pepper_shoulders)
+	cooldown_time = 12 SECONDS
+	overlay_state_inactive = null
+	overlay_state_use = null
+	required_slots = list(ITEM_SLOT_OCLOTHING)
+
+/obj/item/mod/module/pepper_shoulders/smoke/on_use(mob/activator)
+	playsound(src, 'sound/effects/spray.ogg', 30, TRUE, -6)
+	do_smoke(4, src, get_turf(src), smoke_type = /datum/effect_system/fluid_spread/smoke)
+
+/obj/item/mod/module/pepper_shoulders/histamines
+	name = "MOD reactive histamine smoke module"
+	desc = "A module installs a vat of histamines into the MODsuit, a large quantity of histamines is then released when the wearer is attacked. Refills automatically."
+	icon = 'hypermods/icons/obj/clothing/modsuit/mod_modules.dmi'
+	icon_state = "reactive_histamine"
+	module_type = MODULE_USABLE
+	complexity = 2
+	use_energy_cost = DEFAULT_CHARGE_DRAIN
+	incompatible_modules = list(/obj/item/mod/module/pepper_shoulders)
+	cooldown_time = 20 SECONDS
+	overlay_state_inactive = null
+	overlay_state_use = null
+	required_slots = list(ITEM_SLOT_OCLOTHING)
+
+/obj/item/mod/module/pepper_shoulders/histamines/on_use(mob/activator)
+	playsound(src, 'sound/effects/spray.ogg', 30, TRUE, -6)
+	do_chem_smoke(2, src, get_turf(src), /datum/reagent/toxin/histamine, 10, log = TRUE, smoke_type = /datum/effect_system/fluid_spread/smoke/chem/quick)
+
+/obj/item/mod/module/shooting_assistant/syndicate
+	name = "MOD improved shooting assistant module"
+	icon_state = "shooting_assistant"
+	module_type = MODULE_PASSIVE
+	complexity = 2
+	incompatible_modules = list(/obj/item/mod/module/shooting_assistant)
+	required_slots = list(ITEM_SLOT_GLOVES)
+
+/obj/item/mod/module/shooting_assistant/syndicate/stormtrooper_fired_gun(mob/user, obj/item/gun/gun_fired, target, params, zone_override, list/bonus_spread_values)
+	SIGNAL_HANDLER
+	bonus_spread_values[MIN_BONUS_SPREAD_INDEX] += 10
+	bonus_spread_values[MAX_BONUS_SPREAD_INDEX] += 20
+
+/obj/item/mod/module/shooting_assistant/syndicate/sharpshooter_fired_gun(mob/user, obj/item/gun/gun_fired, target, params, zone_override, list/bonus_spread_values)
+	SIGNAL_HANDLER
+	bonus_spread_values[MIN_BONUS_SPREAD_INDEX] -= 30
+	bonus_spread_values[MAX_BONUS_SPREAD_INDEX] -= 20
+
+/obj/item/mod/module/shooting_assistant/syndicate/apply_ricochet(mob/user, obj/projectile/projectile, datum/fired_from, atom/clicked_atom)
+	SIGNAL_HANDLER
+	projectile.ricochets_max += 2
+	projectile.min_ricochets += 2
+	projectile.ricochet_incidence_leeway = 0 //allows the projectile to bounce at any angle.
+	projectile.accuracy_falloff = 0

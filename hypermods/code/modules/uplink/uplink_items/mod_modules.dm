@@ -133,11 +133,12 @@
 	purchasable_from = ~UPLINK_SPY
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/mod_modules/rad_protection
-	name = "MODsuit Radiation Shielding Module"
-	desc = "A MODsuit module often found within engineering-specific MODsuits. Useful in specific circumstances."
-	item = /obj/item/mod/module/rad_protection
-	cost = 1
+/datum/uplink_item/mod_modules/rad_emitter
+	name = "MODsuit Radiation Emitter Module"
+	desc = "A MODsuit module containing a sliver of uranium which is exposed outward upon the MODsuit's activation. \
+			Effectively allows you to silently irradiate everything nearby. Comes pre-equipped with in-built radiation shielding."
+	item = /obj/item/mod/module/rad_protection/emitter
+	cost = 2
 	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/mod_modules/bluespacestorage
@@ -151,17 +152,10 @@
 /datum/uplink_item/mod_modules/mouthhole
 	name = "MODsuit Mouthhole Module"
 	desc = "A MODsuit module which allows the user to both eat and drink with the MODsuit completely active. \
-			Useful for saving time, and if your medicine is in pill/liquid form."
-	item = /obj/item/mod/module/mouthhole
+			Useful for saving time, and if your medicine is in pill/liquid form. Costs no MODsuit space to install."
+	item = /obj/item/mod/module/mouthhole/syndicate
 	cost = 1
 	purchasable_from = ~UPLINK_SPY
-
-/datum/uplink_item/mod_modules/emp_shield_tot
-	name = "MODsuit EMP Shield Module"
-	desc = "An EMP shield module for a MODsuit. It protects the MODsuit from electromagnetic pulses. The wearer is still vulnerable, however."
-	item = /obj/item/mod/module/emp_shield
-	cost = 2
-	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
 /datum/uplink_item/mod_modules/emp_shield_adv_tot
 	name = "MODsuit Advanced EMP Shield Module"
@@ -295,12 +289,20 @@
 	purchasable_from = ~UPLINK_SPY
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/mod_modules/pepper_shoulders
-	name = "MODsuit Pepper Defense Module"
-	desc = "A MODsuit module with self-restocking canisters of pepper spray, \
-			in the event you are attacked, this module will release a cloud of pepper spray upon your attacker."
-	item = /obj/item/mod/module/pepper_shoulders
+/datum/uplink_item/mod_modules/reactive_smoke
+	name = "MODsuit Reactive Smoke Module"
+	desc = "A MODsuit module with self-restocking canisters of smoke, \
+			in the event you are attacked, this module will release a large cloud of smoke."
+	item = /obj/item/mod/module/pepper_shoulders/smoke
 	cost = 1
+	purchasable_from = ~UPLINK_SPY
+
+/datum/uplink_item/mod_modules/reactive_histamines
+	name = "MODsuit Histamine Defense Module"
+	desc = "A MODsuit module with self-restocking canisters of floral histamines, \
+			in the event you are attacked, this module will release a cloud of histamines around you. Use of internals are highly recommended."
+	item = /obj/item/mod/module/pepper_shoulders/histamines
+	cost = 2
 	purchasable_from = ~UPLINK_SPY
 
 /datum/uplink_item/mod_modules/projectile_dampener
@@ -324,7 +326,7 @@
 	desc = "A MODsuit module that enhances the user's ability with firearms, with a couple drawbacks: \
 			Has two modes: Stormtrooper mode, which features faster fire rates, but lower accuracy \
 			and Sharpshooter mode which slows you down, but provides better accuracy and ricochets."
-	item = /obj/item/mod/module/shooting_assistant
+	item = /obj/item/mod/module/shooting_assistant/syndicate
 	cost = 2
 	purchasable_from = ~UPLINK_SPY
 
@@ -332,7 +334,7 @@
 	name = "MODsuit Anti-Shove Module"
 	desc = "A MODsuit module specifically designed to prevent knockdowns from being shoved into a wall. \
 			Useful against the more 'robust' of the crew who rely on shove-stuns to dispose of their enemies."
-	item = /obj/item/mod/module/shove_blocker
+	item = /obj/item/mod/module/shove_blocker/syndicate
 	cost = 1
 	purchasable_from = ~UPLINK_SPY
 
