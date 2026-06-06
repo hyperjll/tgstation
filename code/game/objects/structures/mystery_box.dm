@@ -199,9 +199,9 @@ GLOBAL_LIST_INIT(mystery_fishing, list(
 	vis_contents += presented_item
 	presented_item.start_animation(src)
 	if(play_sounds)
-	current_sound_channel = SSsounds.reserve_sound_channel_for_datum(src)
-	playsound(src, open_sound, 70, FALSE, channel = current_sound_channel, falloff_exponent = 10)
-	playsound(src, crate_open_sound, 80)
+		current_sound_channel = SSsounds.reserve_sound_channel_for_datum(src)
+		playsound(src, open_sound, 70, FALSE, channel = current_sound_channel, falloff_exponent = 10)
+		playsound(src, crate_open_sound, 80)
 	if(user.mind)
 		LAZYINITLIST(minds_that_opened_us)
 		var/datum/weakref/ref = WEAKREF(user.mind)
