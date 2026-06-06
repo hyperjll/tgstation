@@ -17,8 +17,8 @@
 		if(damage_heart_toggle)
 			var/mob/living/carbon/my_human = owner
 			my_human.adjust_organ_loss(ORGAN_SLOT_HEART, 20)
-		if(owner.reagents.get_reagent_amount(/datum/reagent/medicine/stimulants) < 10)
-			owner.reagents.add_reagent(/datum/reagent/medicine/stimulants, 5) // About 30 seconds.
+		if(owner.reagents.get_reagent_amount(/datum/reagent/determination) < 10)
+			owner.reagents.add_reagent(/datum/reagent/determination, 10)
 
 /obj/item/organ/heart/sheep/Initialize(mapload)
 	. = ..()
@@ -35,8 +35,7 @@
 	if((. & COMSIG_MOB_STOP_REAGENT_TICK) || (organ_flags & ORGAN_FAILING))
 		return
 	if(istype(chem, /datum/reagent/consumable/nutriment))
-		organ_owner.adjust_brute_loss(-0.1 * REM * seconds_per_tick, updating_health = TRUE)
-		organ_owner.adjust_fire_loss(-0.1 * REM * seconds_per_tick, updating_health = TRUE)
+		owner.heal_overall_damage(brute = 0.1, burn = 0.1, required_bodytype = BODYTYPE_ORGANIC)
 
 /obj/item/organ/liver/sheep/Initialize(mapload)
 	. = ..()
