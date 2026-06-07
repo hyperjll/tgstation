@@ -9,6 +9,7 @@
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/ak712x82
+	slot_flags = ITEM_SLOT_BACK
 	spread = 15
 	burst_delay = 2
 	can_suppress = FALSE
@@ -33,6 +34,7 @@
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
+	slot_flags = ITEM_SLOT_BACK
 	burst_delay = 2
 	burst_size = 2
 	spread = 2
@@ -63,6 +65,7 @@
 	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
+	slot_flags = ITEM_SLOT_BACK
 	burst_delay = 2
 	burst_size = 3
 	spread = 1
