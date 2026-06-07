@@ -408,3 +408,13 @@
 	purchasable_from = ~UPLINK_SPY // for the best
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 	wanted_item_result = /obj/item/gun/ballistic/automatic/gyropistol
+
+/datum/uplink_item/dangerous/bowling
+	name = "Bowling Kit"
+	desc = "A cardboard box containing a full set of bowler-style clothing and THREE whole bowling balls! \
+			The packaged shoes allow for increased mobility and the jersey enhances your bowling skills, allowing you \
+			to make your thrown bowling balls turn ANYONE into your bowling pins. Need to blend in instead? Two standard bowling pins are also included. Hey, Agent, let's go bowling!"
+	item = /obj/item/storage/box/syndie_kit/bowling
+	progression_minimum = 10 MINUTES
+	cost = 10
+	surplus = 20

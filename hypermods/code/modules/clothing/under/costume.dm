@@ -28,3 +28,17 @@
 	bio = 10
 	fire = 50
 	acid = 40
+
+/obj/item/clothing/under/bowling_jersey
+	name = "bowling jersey"
+	desc = "The latest in kingpin fashion. \
+			The tag on the inner collar reads 'Replica Clothing'."
+	icon_state = "bowling_jersey"
+	worn_icon_state = "bowling_jersey"
+	inhand_icon_state = "lb_suit"
+	icon = 'hypermods/icons/obj/clothing/under/costume.dmi'
+	worn_icon = 'hypermods/icons/mob/clothing/under/costume.dmi'
+
+/obj/item/clothing/under/bowling_jersey/real
+	desc = "The latest in kingpin fashion. \
+			Nanites sewn in the sleeve increase bowling power."

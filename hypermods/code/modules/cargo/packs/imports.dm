@@ -22,3 +22,10 @@
 	)
 	crate_name = "syndicate modsuit crate"
 	crate_type = /obj/structure/closet/crate/secure/syndicate
+
+/datum/supply_pack/imports/bowling_balls
+	name = "Bowling Crate"
+	desc = "Bowling supplies have been tightly regulated after a classified incident involving several interns, a clown, and a very long hallway. This has allowed smugglers to hike the price."
+	cost = CARGO_CRATE_VALUE * 15
+	order_flags = ORDER_CONTRABAND
+	contains = list(/obj/item/bowling_ball = 3)
