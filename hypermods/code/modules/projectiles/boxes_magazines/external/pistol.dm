@@ -226,7 +226,7 @@
 	icon_state = "v38-8"
 	base_icon_state = "v38"
 	ammo_type = /obj/item/ammo_casing/v38
-	caliber = CALIBER_38
+	caliber = CALIBER_38SPECIAL
 	max_ammo = 8
 	multiple_sprites = AMMO_BOX_PER_BULLET
 	multiple_sprite_use_base = TRUE

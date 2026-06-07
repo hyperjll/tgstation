@@ -156,7 +156,7 @@
 /obj/item/ammo_casing/v38
 	name = ".38 special bullet casing"
 	desc = "A .38 special bullet casing."
-	caliber = CALIBER_38
+	caliber = CALIBER_38SPECIAL
 	projectile_type = /obj/projectile/bullet/v38
 
 /obj/item/ammo_casing/v38/rubber
