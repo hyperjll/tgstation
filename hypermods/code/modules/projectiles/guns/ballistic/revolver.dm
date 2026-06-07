@@ -30,6 +30,7 @@
 			Can be modified with a wrench to accept .357 rounds."
 	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "kestral"
+	base_icon_state = "kestral"
 
 	can_modify_ammo = TRUE
 	initial_caliber = CALIBER_38
