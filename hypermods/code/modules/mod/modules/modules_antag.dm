@@ -726,17 +726,14 @@
 	required_slots = list(ITEM_SLOT_GLOVES)
 
 /obj/item/mod/module/shooting_assistant/syndicate/stormtrooper_fired_gun(mob/user, obj/item/gun/gun_fired, target, params, zone_override, list/bonus_spread_values)
-	SIGNAL_HANDLER
 	bonus_spread_values[MIN_BONUS_SPREAD_INDEX] += 10
 	bonus_spread_values[MAX_BONUS_SPREAD_INDEX] += 20
 
 /obj/item/mod/module/shooting_assistant/syndicate/sharpshooter_fired_gun(mob/user, obj/item/gun/gun_fired, target, params, zone_override, list/bonus_spread_values)
-	SIGNAL_HANDLER
 	bonus_spread_values[MIN_BONUS_SPREAD_INDEX] -= 30
 	bonus_spread_values[MAX_BONUS_SPREAD_INDEX] -= 20
 
 /obj/item/mod/module/shooting_assistant/syndicate/apply_ricochet(mob/user, obj/projectile/projectile, datum/fired_from, atom/clicked_atom)
-	SIGNAL_HANDLER
 	projectile.ricochets_max += 2
 	projectile.min_ricochets += 2
 	projectile.ricochet_incidence_leeway = 0 //allows the projectile to bounce at any angle.
