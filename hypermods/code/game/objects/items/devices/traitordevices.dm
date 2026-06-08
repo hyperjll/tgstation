@@ -111,7 +111,6 @@
 	name = "crew pinpointer"
 	desc = "A handheld tracking device that points to crew suit sensors."
 	icon_state = "pinpointer_crew"
-	has_owner = FALSE
 	pinpointer_owner = null
 	ignore_suit_sensor_level = TRUE
 
@@ -131,7 +130,7 @@
 		user.visible_message(span_notice("[user] deactivates [user.p_their()] pinpointer."), span_notice("You deactivate your pinpointer."))
 		return
 
-	if (has_owner && !pinpointer_owner)
+	if (!pinpointer_owner)
 		pinpointer_owner = user
 
 	if (pinpointer_owner && pinpointer_owner != user)
@@ -200,7 +199,6 @@
 	desc = "A handheld tracking device that points to crew suit sensors regardless of the level they're set too."
 	icon_state = "pinpointer_crew"
 	custom_price = 150
-	has_owner = FALSE
 	pinpointer_owner = null
 	ignore_suit_sensor_level = TRUE
 
