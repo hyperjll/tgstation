@@ -25,6 +25,7 @@
 	semi_auto = FALSE
 	custom_price = 10000
 	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	worn_icon_state = "Hristov"
 
 /obj/item/gun/ballistic/rifle/sniper_rifle/hristov/Initialize(mapload)
 	. = ..()
@@ -60,6 +61,7 @@
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
 	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	worn_icon_state = "sniper"
 
 /obj/item/gun/ballistic/rifle/sniper_rifle/betelgeuse/Initialize(mapload)
 	. = ..()

@@ -17,6 +17,7 @@
 	lock_back_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
 	bolt_drop_sound = 'sound/items/weapons/gun/pistol/slide_drop.ogg'
 	worn_icon = 'hypermods/icons/mob/clothing/belt.dmi'
+	worn_icon_state = "Viper"
 
 /obj/item/gun/ballistic/automatic/pistol/viper/Initialize(mapload)
 	. = ..()
@@ -71,6 +72,7 @@
 	bolt_drop_sound = 'sound/items/weapons/gun/pistol/slide_drop.ogg'
 	fire_sound_volume = 5
 	worn_icon = 'hypermods/icons/mob/clothing/belt.dmi'
+	worn_icon_state = "Cobra"
 
 /obj/item/gun/ballistic/automatic/pistol/cobra/no_mag
 	spawnwithmagazine = FALSE
@@ -114,6 +116,7 @@
 	fire_sound = 'hypermods/sound/weapons/mk58.ogg'
 	custom_price = 2500
 	worn_icon = 'hypermods/icons/mob/clothing/belt.dmi'
+	worn_icon_state = "Mk58"
 
 /obj/item/gun/ballistic/automatic/pistol/mk58/Initialize(mapload) // this is a security pistol, not contraband.
 	. = ..()

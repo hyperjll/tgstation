@@ -18,6 +18,7 @@
 	mag_display_ammo = FALSE
 	fire_sound = 'hypermods/sound/weapons/rifleshot.ogg'
 	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	worn_icon_state = "AKMS"
 
 /obj/item/gun/ballistic/automatic/akm/Initialize(mapload)
 	. = ..()
@@ -41,10 +42,11 @@
 	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_MEDIUM
 	mag_display = TRUE
-	mag_display_ammo = TRUE
-	empty_indicator = TRUE
+	mag_display_ammo = FALSE
+	empty_indicator = FALSE
 	custom_price = 7500
 	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	worn_icon_state = "Lecter"
 
 /obj/item/gun/ballistic/automatic/lecter/Initialize(mapload)
 	. = ..()
@@ -72,10 +74,11 @@
 	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_MEDIUM
 	mag_display = TRUE
-	mag_display_ammo = TRUE
-	empty_indicator = TRUE
+	mag_display_ammo = FALSE
+	empty_indicator = FALSE
 	custom_price = 8000
 	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	worn_icon_state = "Drozd"
 
 /obj/item/gun/ballistic/automatic/drozd/Initialize(mapload)
 	. = ..()
@@ -109,7 +112,8 @@
 	mag_display = TRUE
 	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
 	rack_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
-	//worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	worn_icon_state = "assault_rifle"
 
 /obj/item/gun/ballistic/automatic/veritate/Initialize(mapload)
 	. = ..()
@@ -137,6 +141,7 @@
 	rack_sound = 'sound/items/weapons/gun/l6/l6_rack.ogg'
 	suppressed_sound = 'sound/items/weapons/gun/general/heavy_shot_suppressed.ogg'
 	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	worn_icon_state = "lmg"
 
 /obj/item/gun/ballistic/automatic/antares/Initialize(mapload)
 	. = ..()
@@ -159,6 +164,7 @@
 	mag_display = TRUE
 	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
 	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	worn_icon_state = "assault_rifle"
 
 /obj/item/gun/ballistic/automatic/sirius/Initialize(mapload)
 	. = ..()
@@ -180,6 +186,8 @@
 	mag_display = TRUE
 	actions_types = null // TOGGLING FIREMODE BREAKS THIS GUN FOR SOME FUCKING REASON.
 	rack_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
+	worn_icon = 'hypermods/icons/mob/clothing/back.dmi'
+	worn_icon_state = "assault_rifle"
 
 /obj/item/gun/ballistic/automatic/bellatrix/Initialize(mapload)
 	. = ..()
