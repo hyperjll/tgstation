@@ -3,6 +3,8 @@
 	desc = "A cane traditionally used by the blind to help them see. Folds down to be easier to transport."
 	icon = 'icons/obj/weapons/staff.dmi'
 	icon_state = "cane"
+	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	inhand_icon_state = "stick"
 	fire_sound = 'sound/items/weapons/gun/shotgun/shot.ogg'
 	fire_sound_volume = 90
