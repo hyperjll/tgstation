@@ -22,6 +22,10 @@
 	cartridge_wording = "shell"
 	tac_reloads = FALSE
 
+/obj/item/gun/ballistic/shotgun/cane/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/walking_aid)
+
 /obj/item/gun/ballistic/shotgun/cane/lethal
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/lethal
 
