@@ -10,8 +10,8 @@
 
 /datum/uplink_item/dangerous/throwingknives
 	name = "Throwing Knives"
-	desc = "Exceptionally lethal throwing knives, they perfectly embed into your foes without much \
-			difficulty. Don't rely upon these or your victims will prepare to catch and use these knives."
+	desc = "Exceptionally lethal throwing knives, they perfectly embed into your foes without much difficulty. \
+			These knives are uncatchable by your foes, but precision is key to ensure your knives aren't used against you."
 	item = /obj/item/storage/box/syndie_kit/throwingknives
 	cost = 5
 

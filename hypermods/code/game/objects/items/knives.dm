@@ -87,9 +87,14 @@
 	throw_speed = 2
 	throw_range = 12
 
+/obj/item/knife/throwing/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_UNCATCHABLE, INNATE_TRAIT)
+
 /datum/embedding/throwingknife
 	embed_chance = 100
-	fall_chance = 0.01
+	fall_chance = 1
+	jostle_chance = 10
 
 
 /obj/item/melee/syndidagger
