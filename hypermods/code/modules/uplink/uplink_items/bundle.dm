@@ -73,7 +73,7 @@
 	desc = "The ultimate reversal of energy-based technology! Disables energy weapons, computers, silicon lifeforms, and suit sensors alike! \
 			Contains a EMP implanter, a Tesla Revenge implanter, a EMP-shield implanter, two EMP grenades and \
 			a state-of-the-art SC/FISHER disruptor to take out lights, cameras, and other electronics from a distance!"
-	cost = 5
+	cost = 7
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/disruptor
