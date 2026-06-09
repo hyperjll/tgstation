@@ -116,6 +116,9 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	/// Use for when you don't want JPS to path over a turf.
 	var/jps_heuristic_cost = 0
 
+	/// If TRUE, then this turf will be skipped entirely by minimap rendering.
+	var/skip_minimap_rendering = FALSE
+
 
 /turf/vv_edit_var(var_name, new_value)
 	var/static/list/banned_edits = list(NAMEOF_STATIC(src, x), NAMEOF_STATIC(src, y), NAMEOF_STATIC(src, z))
