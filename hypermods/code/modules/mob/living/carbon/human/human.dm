@@ -43,9 +43,13 @@
 	if(our_human.stat == DEAD) // can't harm yourself.
 		return FALSE
 
-	src.set_jitter_if_lower(30 SECONDS)
-	src.playsound_local(null, 'hypermods/sound/effects/suicide_harm_warning.ogg', 70, FALSE, use_reverb = FALSE)
-	addtimer(CALLBACK(src, PROC_REF(self_harm_dmg)), 19 SECONDS) // give us a heads-up we're about to be hurt.
+	if(our_human.suicide_acting) // We're already about to harm ourselves, dont try again.
+		return FALSE
+
+	our_human.set_jitter_if_lower(30 SECONDS)
+	our_human.playsound_local(null, 'hypermods/sound/effects/suicide_harm_warning.ogg', 70, FALSE, use_reverb = FALSE)
+	our_human.suicide_acting = TRUE
+	addtimer(CALLBACK(our_human, PROC_REF(self_harm_dmg)), 19 SECONDS) // give us a heads-up we're about to be hurt.
 
 /mob/living/carbon/human/proc/self_harm_dmg()
 	var/mob/living/carbon/human/our_human = src
@@ -57,20 +61,23 @@
 		return FALSE
 
 	if(our_human.incapacitated & INCAPABLE_RESTRAINTS || HAS_TRAIT(our_human, TRAIT_HANDS_BLOCKED))
-		src.adjust_organ_loss(ORGAN_SLOT_TONGUE, 20)
-		src.apply_damage(1, BRUTE, BODY_ZONE_HEAD, wound_bonus = 10)
-		src.visible_message(
-			span_danger("[src] bites down hard onto their tongue!"),
+		our_human.adjust_organ_loss(ORGAN_SLOT_TONGUE, 20)
+		our_human.apply_damage(1, BRUTE, BODY_ZONE_HEAD, wound_bonus = 10)
+		our_human.visible_message(
+			span_danger("[our_human] bites down hard onto their tongue!"),
 			span_userdanger("You chomp your own tongue!"),
 		)
 	else
-		var/target_bodypart = src.get_random_valid_zone(pick(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_R_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_ARM, BODY_ZONE_L_LEG))
-		src.apply_damage(10, BRUTE, target_bodypart, wound_bonus = 100, sharpness = TRUE)
-		src.visible_message(
-			span_danger("[src] lashes out and claws into themself!"),
+		var/target_bodypart = our_human.get_random_valid_zone(pick(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_R_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_ARM, BODY_ZONE_L_LEG))
+		our_human.apply_damage(10, BRUTE, target_bodypart, wound_bonus = 100, sharpness = TRUE)
+		our_human.visible_message(
+			span_danger("[our_human] lashes out and claws into themself!"),
 			span_userdanger("You take your frustrations out upon yourself!"),
 		)
-		src.say("[pick("Yes... the pain! It feels so good...", "I CAN'T TAKE IT ANYMORE!!!", "Fuck this place!", "RAAAGH!!!", "...I hope whoever loots my corpse has better luck than me...", "I died the moment I arrived.", "I'm done. I give up.", "Please... just make it stop...", "Someone... please make this STOP.", "I... need SOMETHING... to make me feel better!", "This time I'm REALLY GONNA DO IT.", "This can't be real...", "Perhaps I shouldn't have ever been born.", "I just want to go to sleep, and never wake up.", "I'm leaving once and for all.", "I'll be more useful as a rotted corpse.", "May God have mercy upon my broken soul.", "I'm... a failure after all.")]")
+		// Say some really depressing stuff.
+		our_human.say("[pick("Yes... the pain! It feels so good...", "I CAN'T TAKE IT ANYMORE!!!", "Fuck this place!", "RAAAGH!!!", "...I hope whoever loots my corpse has better luck than me...", "I died the moment I arrived.", "I'm done. I give up.", "Please... just make it stop...", "Someone... please make this STOP.", "I... need SOMETHING... to make me feel better!", "This time I'm REALLY GONNA DO IT.", "This can't be real...", "Perhaps I shouldn't have ever been born.", "I just want to go to sleep, and never wake up.", "I'm leaving once and for all.", "I'll be more useful as a rotted corpse.", "May God have mercy upon my broken soul.", "I'm... a failure after all.")]")
+
+	our_human.suicide_acting = FALSE
 
 /mob/living/carbon/human/proc/last_stand() // used by /datum/status_effect/misery
 	var/mob/living/carbon/human/our_human = src

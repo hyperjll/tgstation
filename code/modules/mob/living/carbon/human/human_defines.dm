@@ -93,3 +93,8 @@
 
 	/// Tracks how long in seconds we've been in a low pressure environment
 	VAR_FINAL/seconds_in_low_pressure = 0
+
+	/// Hyper Edit -- I dont do this often, which i probably SHOULD.
+	// Are we about to attempt suicide due to poor mood/sanity? Used to prevent sound effect stacking.
+	var/suicide_acting = FALSE
+	/// Hyper End
