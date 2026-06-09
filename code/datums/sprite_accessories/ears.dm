@@ -38,3 +38,10 @@
 	icon_state = "fox"
 	color_src = HAIR_COLOR
 	locked = TRUE
+
+/datum/sprite_accessory/ears/werewolf
+	icon = 'hypermods/icons/mob/human/werewolf_features.dmi'
+	name = "Werewolf"
+	icon_state = "werewolf"
+	color_src = HAIR_COLOR
+	locked = TRUE
