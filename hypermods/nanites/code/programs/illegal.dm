@@ -7,6 +7,11 @@
 	trigger_cooldown = 600
 	rogue_types = list(/datum/nanite_program/meltdown)
 
+/datum/nanite_program/freedom/check_conditions()
+	if(!iscarbon(host_mob))
+		return FALSE
+	return ..()
+
 /datum/nanite_program/freedom/on_trigger()
 	. = ..()
 	to_chat(host_mob, "You feel a faint click.")
@@ -22,6 +27,11 @@
 	trigger_cost = 100
 	trigger_cooldown = 300
 	rogue_types = list(/datum/nanite_program/meltdown)
+
+/datum/nanite_program/construct_ammo/check_conditions()
+	if(!iscarbon(host_mob))
+		return FALSE
+	return ..()
 
 /datum/nanite_program/construct_ammo/register_extra_settings()
 	extra_settings[NES_AMMO_CHOICE] = new /datum/nanite_extra_setting/type("9mm Bullets", list("9mm Bullets", "10mm Bullets", ".45 Bullets", ".357 Bullets", "Shotgun Shells"))
@@ -54,6 +64,11 @@
 	trigger_cost = 100
 	trigger_cooldown = 600
 	rogue_types = list(/datum/nanite_program/meltdown)
+
+/datum/nanite_program/construct_c4/check_conditions()
+	if(!iscarbon(host_mob))
+		return FALSE
+	return ..()
 
 /datum/nanite_program/construct_c4/on_trigger()
 	var/obj/item/grenade/c4/Newitem = new
@@ -91,22 +106,19 @@
 	rogue_types = list(/datum/nanite_program/nerve_decay)
 	var/datum/martial_art/kaza_ruk/style = new
 
+/datum/nanite_program/kravmaga/check_conditions()
+	if(!ishuman(host_mob))
+		return FALSE
+	if(!host_mob.mind)
+		return FALSE
+	return ..()
+
 /datum/nanite_program/kravmaga/enable_passive_effect()
 	. = ..()
-	if(!ishuman(host_mob))
-		return
-	if(!host_mob.mind)
-		return
-
 	style.teach(host_mob,1)
 
 /datum/nanite_program/kravmaga/disable_passive_effect()
 	. = ..()
-	if(!ishuman(host_mob))
-		return
-	if(!host_mob.mind)
-		return
-
 	style.unlearn(host_mob)
 
 
@@ -117,6 +129,11 @@
 	trigger_cost = 50
 	trigger_cooldown = 300
 	rogue_types = list(/datum/nanite_program/toxic)
+
+/datum/nanite_program/suicidal/check_conditions()
+	if(!host_mob.reagents)
+		return FALSE
+	return ..()
 
 /datum/nanite_program/suicidal/on_trigger()
 	host_mob.reagents.add_reagent(/datum/reagent/toxin/cyanide, 20)
