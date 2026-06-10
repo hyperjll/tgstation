@@ -105,7 +105,7 @@
 
 /datum/design/nanites/antibomb
 	name = "Explosive Resistance"
-	desc = "The nanites form a near-indestructable netting within the host, preventing the host from being harmed by explosives."
+	desc = "The nanites form a metallic netting within the host, preventing the host from being torn apart by explosives. Additionally increases the hosts resilience against explosives."
 	research_icon_state = "nanite_program_augment"
 	id = "antigibbing_nanites"
 	program_type = /datum/nanite_program/antibomb
