@@ -217,7 +217,7 @@
 
 /datum/design/nanites/telecrystal
 	name = "Redspace Manifestation"
-	desc = "The nanites use nearly 100% of their typical maximum capacity (500) worth of themselves to create a single telecrystal where the host is."
+	desc = "The nanites harness foreign bluespace energies near the host to manufacture an ominous crystal. The process will likely cause significant corruption in the host's nanites."
 	research_icon_state = "nanite_program_utility"
 	id = "telecrystal_nanites"
 	program_type = /datum/nanite_program/telecrystal

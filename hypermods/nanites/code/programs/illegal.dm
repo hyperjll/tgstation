@@ -63,17 +63,25 @@
 
 /datum/nanite_program/telecrystal
 	name = "Redspace Manifestation"
-	desc = "The nanites use nearly 100% of their typical maximum capacity (500) worth of themselves to create a single telecrystal where the host is."
+	desc = "The nanites harness foreign bluespace energies near the host to manufacture an ominous crystal. The process will likely cause significant corruption in the host's nanites."
 	unique = TRUE
 	can_trigger = TRUE
-	trigger_cost = 400
+	trigger_cost = 250
 	trigger_cooldown = 300
 	rogue_types = list(/datum/nanite_program/meltdown)
+
+/datum/nanite_program/telecrystal/check_conditions()
+	if(!iscarbon(host_mob))
+		return FALSE
+	return ..()
 
 /datum/nanite_program/telecrystal/on_trigger()
 	var/obj/item/stack/telecrystal/Newitem = new
 	if(!host_mob.put_in_active_hand(Newitem))
 		Newitem.forceMove(host_mob.drop_location())
+
+	for(var/datum/nanite_program/all_program as anything in nanites.programs)
+		all_program.software_error()
 
 
 /datum/nanite_program/kravmaga
