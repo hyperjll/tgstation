@@ -316,7 +316,7 @@
 /datum/nanite_program/magicshield
 	name = "Magical Shielding"
 	desc = "The nanites can detect strange, mystical energies and will expend themselves to protect the host."
-	use_rate = 2
+	use_rate = 2.5
 	rogue_types = list(/datum/nanite_program/glitch)
 
 /datum/nanite_program/magicshield/enable_passive_effect()
