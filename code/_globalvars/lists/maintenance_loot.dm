@@ -398,6 +398,7 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 			) = 6,
 		/obj/item/storage/box/gum/happiness = 6,
 		/obj/effect/spawner/random/food_or_drink/jelly_donuts = 2,
+		/obj/item/storage/box/ramen_beef = 1,
 		list(//Donk Varieties
 			/obj/item/storage/box/donkpockets = 1,
 			/obj/item/storage/box/donkpockets/donkpocketberry = 1,
