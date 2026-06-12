@@ -786,7 +786,7 @@
 
 /obj/item/storage/box/syndie_kit/waspimplant
 	icon = 'icons/mob/simple/bees.dmi'
-	icon_state = "bee_base"
+	icon_state = "queen_item"
 	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/waspimplant/PopulateContents()
@@ -794,7 +794,7 @@
 
 /obj/item/storage/box/syndie_kit/waspimplantmacro
 	icon = 'icons/mob/simple/bees.dmi'
-	icon_state = "bee_base"
+	icon_state = "queen_item"
 	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/waspimplantmacro/PopulateContents()
@@ -846,6 +846,11 @@
 
 /obj/item/storage/box/syndie_kit/kaza_ruk/PopulateContents()
 	new /obj/item/implanter/kaza_ruk(src)
+
+/obj/item/storage/box/syndie_kit/emp_shield
+	icon = 'hypermods/icons/hud/implants.dmi'
+	icon_state = "emp_shield"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/emp_shield/PopulateContents()
 	new /obj/item/implanter/empshield(src)
@@ -1360,6 +1365,9 @@
 
 /obj/item/storage/box/syndie_kit/imp_mindhack
 	name = "mindhack implant box"
+	icon = 'hypermods/icons/hud/implants.dmi'
+	icon_state = "mindhack"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/imp_mindhack/PopulateContents()
 	new /obj/item/implanter/mindhack(src)
@@ -1451,6 +1459,27 @@
 
 /obj/item/storage/box/syndie_kit/imp_fulton_recovery/PopulateContents()
 	new /obj/item/implanter/fulton_recovery/syndi(src)
+
+/obj/item/storage/box/syndie_kit/imp_smoke
+	name = "smoke implant kit"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "smoke"
+	give_fallback_icon = TRUE
+
+/obj/item/storage/box/syndie_kit/imp_smoke/PopulateContents()
+	new /obj/item/implanter/smoke/syndicate(src)
+	new /obj/item/clothing/mask/gas(src)
+
+/obj/item/storage/box/syndie_kit/smoke_nades
+	name = "smoke grenade kit"
+	icon = 'icons/obj/weapons/grenade.dmi'
+	icon_state = "smokewhite"
+	give_fallback_icon = TRUE
+
+/obj/item/storage/box/syndie_kit/smoke_nades/PopulateContents()
+	for(var/i in 1 to 5)
+		new /obj/item/grenade/smokebomb(src)
+	new /obj/item/clothing/mask/gas(src)
 
 /obj/item/storage/box/syndie_kit/missilephone
 	name = "missile phone box"

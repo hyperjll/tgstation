@@ -221,3 +221,14 @@
 	icon_state = "simplanter0"
 	base_icon_state = "simplanter"
 	imp_type = /obj/item/implant/radio/binary
+
+
+/obj/item/implant/smoke/syndicate
+	uses = 5
+
+/obj/item/implanter/smoke/syndicate
+	name = "implanter (Smoke)"
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "simplanter0"
+	base_icon_state = "simplanter"
+	imp_type = /obj/item/implant/smoke/syndicate

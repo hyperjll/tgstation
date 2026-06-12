@@ -549,6 +549,9 @@
 
 /obj/item/storage/box/syndie_kit/smoke
 	name = "smoke kit"
+	icon = 'icons/hud/implants.dmi'
+	icon_state = "smoke"
+	give_fallback_icon = TRUE
 
 /obj/item/storage/box/syndie_kit/smoke/PopulateContents()
 	for(var/i in 1 to 5)
