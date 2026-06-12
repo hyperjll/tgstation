@@ -52780,8 +52780,8 @@
 	location = "QM #1"
 	},
 /obj/effect/turf_decal/delivery,
-/mob/living/simple_animal/bot/mulebot,
 /obj/machinery/camera/autoname/directional/south,
+/mob/living/basic/bot/mulebot,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "rzb" = (

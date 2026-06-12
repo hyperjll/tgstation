@@ -6441,10 +6441,10 @@
 	location = "QM #1"
 	},
 /obj/effect/turf_decal/delivery,
-/mob/living/simple_animal/bot/mulebot,
 /obj/machinery/camera/directional/east{
 	c_tag = "Supply - Bay South"
 	},
+/mob/living/basic/bot/mulebot,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "cwN" = (
@@ -39629,8 +39629,8 @@
 	location = "QM #2"
 	},
 /obj/effect/turf_decal/delivery,
-/mob/living/simple_animal/bot/mulebot,
 /obj/machinery/light/directional/east,
+/mob/living/basic/bot/mulebot,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "pwz" = (

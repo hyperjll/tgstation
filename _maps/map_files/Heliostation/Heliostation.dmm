@@ -42389,7 +42389,7 @@
 	location = "QM#1";
 	name = "Delivery Beacon - QM"
 	},
-/mob/living/simple_animal/bot/mulebot,
+/mob/living/basic/bot/mulebot,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "joy" = (
@@ -68898,7 +68898,7 @@
 	location = "QM#2";
 	name = "Delivery Beacon - QM"
 	},
-/mob/living/simple_animal/bot/mulebot,
+/mob/living/basic/bot/mulebot,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "tDz" = (

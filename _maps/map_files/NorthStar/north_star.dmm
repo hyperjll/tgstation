@@ -88794,6 +88794,17 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/floor2/port/fore)
+"wNc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/navbeacon{
+	codes_txt = "delivery;dir=8";
+	location = "QM #1"
+	},
+/mob/living/basic/bot/mulebot,
+/turf/open/floor/catwalk_floor/iron,
+/area/station/cargo/storage)
 "wNd" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 6
@@ -120234,7 +120245,7 @@ fgr
 wNx
 cUL
 cUL
-cMA
+wNc
 mnR
 bvf
 pxh

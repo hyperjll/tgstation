@@ -22152,9 +22152,9 @@
 	location = "QM #1"
 	},
 /obj/effect/turf_decal/bot,
-/mob/living/simple_animal/bot/mulebot,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
+/mob/living/basic/bot/mulebot,
 /turf/open/floor/catwalk_floor/iron,
 /area/station/cargo/storage)
 "buE" = (
@@ -22502,8 +22502,8 @@
 	location = "QM #2"
 	},
 /obj/effect/turf_decal/bot,
-/mob/living/simple_animal/bot/mulebot,
 /obj/structure/cable,
+/mob/living/basic/bot/mulebot,
 /turf/open/floor/catwalk_floor/iron,
 /area/station/cargo/storage)
 "bvZ" = (
