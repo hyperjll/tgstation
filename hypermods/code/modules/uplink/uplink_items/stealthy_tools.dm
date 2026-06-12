@@ -1,6 +1,6 @@
 /datum/uplink_item/stealthy_tools/smoke
 	name = "Smoke Grenades"
-	desc = "A box that contains five smoke grenades and a gas smask. For when you want to sow discord, vanish \
+	desc = "A box that contains five smoke grenades and a gas mask. For when you want to sow discord, vanish \
 			without a trace, or run with your arms awkwardly trailing behind you."
 	item = /obj/item/storage/box/syndie_kit/smoke_nades
 	cost = 1
