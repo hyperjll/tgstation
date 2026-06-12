@@ -22,3 +22,15 @@
 /datum/map_template/shuttle/labour/nebula
 	suffix = "nebula"
 	name = "labour shuttle (Nebula)"
+
+/datum/map_template/shuttle/labour/helio
+	suffix = "helio"
+	name = "labour shuttle (Helio)"
+
+/datum/map_template/shuttle/labour/selene
+	suffix = "selene"
+	name = "labour shuttle (Selene)"
+
+/datum/map_template/shuttle/labour/fland
+	suffix = "fland"
+	name = "labour shuttle (Fland)"
