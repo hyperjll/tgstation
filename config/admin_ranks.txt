@@ -34,6 +34,11 @@
 #EVERYTHING = Simply gives you everything without having to type every flag.
 #@ = special keyword for the current permission type that adds all the keywords that the preceding rank has of the same type.
 
+Name = Admin
+Include = @ SPAWN VAREDIT BAN SOUND SERVER BUILD STEALTH FUN ADMIN
+Exclude =
+Edit =
+
 Name = Admin Observer
 Include =
 Exclude = AUTOADMIN
@@ -75,7 +80,7 @@ Exclude = AUTOADMIN
 Edit = EVERYTHING
 
 Name = Admin Plus
-Include = @ POSSESS POLL BUILD SERVER FUN SPAWN VAREDIT DEBUG POLL SERVER SOUND
+Include = @ POSSESS POLL BUILD SERVER FUN SPAWN VAREDIT DEBUG POLL SERVER SOUND ADMIN
 Exclude =
 Edit =
 
