@@ -31,6 +31,16 @@
 	surplus = 40
 	uplink_item_flags = null
 
+/datum/uplink_item/armor/bloodredsneaksuit
+	name = "Blood-Red Sneaksuit"
+	desc = "A blood-red jumpsuit boasting a fearsome design similar to our MODsuits. \
+			Provides a small amount of armor, but renders the wearer's footsteps silent. \
+			It's design also instills great bravery in those who wear it."
+	item = /obj/item/clothing/under/syndicate/bloodred/stealthy
+	cost = 1
+	surplus = 20
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+
 /datum/uplink_item/armor/energyshield
 	name = "Energy Shield"
 	desc = "An incredibly useful personal shield projector, capable of reflecting energy projectiles and defending \
