@@ -166,6 +166,8 @@
 
 #define HUD_JUSTICE_CHARGE "justice_charge"
 
+#define HUD_MULEBOT_CHARGE "mulebot_charge"
+
 /// Converts item slots to hud keys
 #define HUD_KEY_ITEM_SLOT(slot) "item_slot:[slot]"
 /// Converts item slots to hud keys as a compiler constant
