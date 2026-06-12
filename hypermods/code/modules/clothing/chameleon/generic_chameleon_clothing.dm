@@ -8,8 +8,8 @@
 	energy = 25
 	bomb = 30
 	bio = 5
-	fire = 60
-	acid = 60
+	fire = 80
+	acid = 80
 	wound = 20
 
 // Cham suit / armor
