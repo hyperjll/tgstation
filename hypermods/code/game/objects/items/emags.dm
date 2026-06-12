@@ -21,7 +21,7 @@
 
 /obj/item/card/emag/botemagger/Initialize(mapload)
 	. = ..()
-	type_whitelist = list(typesof(/mob/living/basic/bot), typesof(/mob/living/simple_animal/bot)) //list of all acceptable typepaths that this device can affect
+	type_whitelist = list(typesof(/mob/living/basic/bot)) //list of all acceptable typepaths that this device can affect
 
 /obj/item/card/emag/botemagger/can_emag(atom/target, mob/user)
 	for (var/list/subtypelist in type_whitelist)
