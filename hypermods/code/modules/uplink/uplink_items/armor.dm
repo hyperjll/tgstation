@@ -68,6 +68,18 @@
 	surplus = 25
 	uplink_item_flags = null
 
+/datum/uplink_item/armor/armor_polish
+	name = "Armor Polish"
+	desc = "A tin of our finest instant-armor webbing polish. Developed by Cybersun Industries in collaboration with Waffle Co. \
+			This polish may be applied to ANY item to instantly improve it's durability and resilience to all forms of damage! \
+			It's claim-to-fame is it's ability to turn virtually any clothing item into combat-grade protective equipment. \
+			Can be used twice per purchase, improvements are diminished should the item have armor already. \
+			Struggles to improve armor past a protection value of IV."
+	item = /obj/item/item_polish/syndicate
+	cost = 4
+	surplus = 40
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+
 /datum/uplink_item/armor/gunbootsdisabler
 	name = "Disabler Shoes"
 	desc = "A highly experimental pair of 'gunboots' developed by (and later discontinued) Cybersun Industries in an attempt to incorporate turrets within footwear. \
