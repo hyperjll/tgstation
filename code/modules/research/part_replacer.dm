@@ -83,11 +83,12 @@
 		if(!length(battery_list))
 			balloon_alert(user, "no superior batteries!")
 			return ITEM_INTERACT_FAILURE
+
+		selected_battery = pick(battery_list)
+
 		if(!user.transferItemToLoc(selected_battery, src))
 			balloon_alert(user, "blocked!")
 			return ITEM_INTERACT_BLOCKING
-
-		selected_battery = pick(battery_list)
 
 		apc.cell.forceMove(src)
 		selected_battery.forceMove(apc)
@@ -95,7 +96,7 @@
 
 		src.contents -= selected_battery // Gotta manually remove to cuz forcemove doesn't do that for whatever reason.
 
-		user.visible_message(span_notice("[user.name] inserts the [selected_battery.name] to [src.name]!"))
+		user.visible_message(span_notice("[user.name] inserts the [selected_battery.name] into [apc.name]!"))
 		balloon_alert(user, "[selected_battery.name] inserted")
 		play_rped_effect()
 
