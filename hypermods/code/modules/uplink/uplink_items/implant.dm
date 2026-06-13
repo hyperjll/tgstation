@@ -1,6 +1,6 @@
 /datum/uplink_item/implants/smoke
 	name = "Smokescreen Implant"
-	desc = "A single implanter containing a five-use Smokescreen implant. Useful to quickly obscure line-of-sight and secure an escape route. \
+	desc = "A single implanter containing a four-use Smokescreen implant. Useful to quickly obscure line-of-sight and secure an escape route. \
 			Comes with a gas mask."
 	item = /obj/item/storage/box/syndie_kit/imp_smoke
 	cost = 1

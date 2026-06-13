@@ -224,7 +224,7 @@
 
 
 /obj/item/implant/smoke/syndicate
-	uses = 5
+	uses = 4
 
 /obj/item/implanter/smoke/syndicate
 	name = "implanter (Smoke)"
