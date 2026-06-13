@@ -401,6 +401,7 @@
 		/obj/item/construction/rcd/borg,
 		/obj/item/pipe_dispenser,
 		/obj/item/extinguisher,
+		/obj/item/weldingtool/largetank/cyborg,
 		/obj/item/borg/cyborg_omnitool/engineering,
 		/obj/item/borg/cyborg_omnitool/engineering,
 		/obj/item/t_scanner,
@@ -425,6 +426,7 @@
 	model_select_icon = "engineer"
 	model_traits = list(TRAIT_NEGATES_GRAVITY)
 	hat_offset = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))
+	///Weakref to the night vision action
 	var/datum/weakref/night_vision_ref
 	borg_skins = list(
 		"Machinified Engineer" = list(SKIN_ICON_STATE = "engineer", SKIN_HAT_OFFSET = list("north" = list(0, -4), "south" = list(0, -4), "east" = list(4, -4), "west" = list(-4, -4))),
@@ -452,10 +454,12 @@
 	borg.update_sight()
 
 /obj/item/robot_model/engineering/be_transformed_to(obj/item/robot_model/old_model, forced = FALSE)
-	var/datum/action/cooldown/borg_meson/night_vision = new(loc)
 	. = ..()
 	if(!.)
 		return
+
+	//Grant night vision action
+	var/datum/action/cooldown/borg_meson/night_vision = new(loc)
 	night_vision.Grant(loc)
 	night_vision_ref = WEAKREF(night_vision)
 
@@ -1058,6 +1062,7 @@
 		/obj/item/pipe_dispenser,
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/extinguisher,
+		/obj/item/weldingtool/largetank/cyborg,
 		/obj/item/analyzer,
 		/obj/item/borg/cyborg_omnitool/engineering,
 		/obj/item/borg/cyborg_omnitool/engineering,
