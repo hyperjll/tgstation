@@ -46,6 +46,7 @@
 	force = 10
 	custom_materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT)
 	clumsy_check = FALSE
+	can_muzzle_flash = FALSE
 	fire_sound = 'hypermods/sound/weapons/grenadelaunch.ogg'
 	var/time_per_reload = 250
 	var/ammo_left = 4

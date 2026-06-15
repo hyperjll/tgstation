@@ -4,6 +4,7 @@
 	icon_state = "chemgun"
 	inhand_icon_state = "chemgun"
 	w_class = WEIGHT_CLASS_NORMAL
+	can_muzzle_flash = FALSE
 	throw_speed = 3
 	throw_range = 7
 	force = 4
@@ -69,6 +70,7 @@
 	icon_state = "chemguntox"
 	inhand_icon_state = "syringegun"
 	w_class = WEIGHT_CLASS_NORMAL
+	can_muzzle_flash = FALSE
 	throw_speed = 3
 	throw_range = 7
 	force = 4
@@ -137,6 +139,7 @@
 	icon_state = "chemgunexplosive"
 	inhand_icon_state = "syringegun"
 	w_class = WEIGHT_CLASS_NORMAL
+	can_muzzle_flash = FALSE
 	throw_speed = 3
 	throw_range = 7
 	force = 4
@@ -199,6 +202,7 @@
 	icon_state = "chemgunmed"
 	inhand_icon_state = "syringegun"
 	w_class = WEIGHT_CLASS_NORMAL
+	can_muzzle_flash = FALSE
 	throw_speed = 3
 	throw_range = 7
 	force = 4

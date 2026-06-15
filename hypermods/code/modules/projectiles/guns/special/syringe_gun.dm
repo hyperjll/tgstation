@@ -15,7 +15,7 @@
 	pixel_x = 0
 	force = 1 //Very weak to prevent lethalling.
 	suppressed = FALSE
-	can_unsuppress = FALSE //Permanently silenced
+	can_unsuppress = FALSE //Permanently unsilenced
 	syringes = list(new /obj/item/reagent_containers/syringe())
 
 /obj/item/gun/syringe/pblowgun

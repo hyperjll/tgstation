@@ -7,8 +7,9 @@
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_icon_state = "water"
 	w_class = WEIGHT_CLASS_NORMAL
-	clumsy_check = 0 // we do a little trolling
+	clumsy_check = TRUE // we do a little trolling
 	fire_sound = 'sound/effects/spray2.ogg'
+	can_muzzle_flash = FALSE
 	var/reagent_volume = 250
 	var/transfer_volume = 10
 	var/ammo_type = /obj/item/ammo_casing/reagent/water
