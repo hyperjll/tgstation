@@ -8,6 +8,37 @@
 	surplus = 0
 
 
+/datum/uplink_item/vendors/uni_market
+	name = "Universal Market Uplink"
+	desc = "A universal market uplink capable of connecting to any and all markets across the Spinward Sector. \
+			Useful for the acquisition of a any non-syndicate goods. Pairs well with an LTSRBT."
+	item = /obj/item/market_uplink/universal/syndicate
+	cost = 5
+	surplus = 10
+	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+
+/datum/uplink_item/vendors/blackmarket
+	name = "Black Market Uplink"
+	desc = "An illegal black market uplink. Allows you to spend credits on various equipment instead of telecrystals. \
+			Items purchased are provided by less reputable sellers, but can contain useful equipment not provided here. \
+			Pairs well with a Black Market LTSRBT to avoid hassle in acquiring your goods."
+	item = /obj/item/market_uplink/blackmarket
+	cost = 1
+	surplus = 0
+	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+	cant_discount = TRUE
+
+/datum/uplink_item/vendors/ltsrbt
+	name = "Black Market LTSRBT"
+	desc = "Need a faster and better way of transporting your illegal goods from and to the \
+		station? Fear not, the Long-To-Short-Range-Bluespace-Transceiver (LTSRBT for short) \
+		is here to help. Requires a multitool to unpack and a black market uplink to function. Doesn't come with either."
+	item = /obj/item/flatpack/ltsrbt
+	cost = 1
+	surplus = 0
+	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+	cant_discount = TRUE
+
 /datum/uplink_item/vendors/liberation
 	name = "Liberation Station"
 	desc = "A big, clunky 'liberation' vending machine that's sponsored by the big dogs themselves! \

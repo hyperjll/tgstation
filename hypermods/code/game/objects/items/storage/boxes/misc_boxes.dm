@@ -152,3 +152,148 @@
 
 	if(prob(10))
 		new /obj/item/mod/control/pre_equipped/cosmohonk(src)
+
+
+/obj/item/storage/box/plant_produce_box
+	name = "plant produce box"
+	desc = "A brown box. A label on the side reads: 'TerraGov Hydro'"
+	icon_state = "blank_package"
+
+/obj/item/storage/box/plant_produce_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/plant_produce = 1,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/soup_box
+	name = "soup box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/soup_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/soup = 5,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/salad_box
+	name = "salad box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/salad_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/salad = 5,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/dinner_box
+	name = "ready-to-eat dinner box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/dinner_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/dinner = 5,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/three_course_meal_box
+	name = "three course meal box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/three_course_meal_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/three_course_meal = 1,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/beverage_box
+	name = "beverage box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/beverage_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/refreshing_beverage = 5,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/booze_box
+	name = "booze box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/booze_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/booze = 5,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/snack_box
+	name = "snack box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/snack_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/snack = 5,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/lizard_snack_box
+	name = "lizard snack box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/lizard_snack_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/snack/lizard = 5,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/donut_box
+	name = "donut box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/donut_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/donuts = 5,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/jelly_donuts_box
+	name = "jelly donut box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/jelly_donuts_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/jelly_donuts = 5,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/deluxe_snack_box
+	name = "deluxe snack box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/deluxe_snack_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/food_or_drink/any_snack_or_beverage = 5,
+	)
+	generate_items_inside(items_inside, src)
+
+/obj/item/storage/box/medicinal_chem_supplies_box
+	name = "medicinal-chem supplies box"
+	desc = "A brown box."
+	icon_state = "blank_package"
+
+/obj/item/storage/box/medicinal_chem_supplies_box/PopulateContents()
+	var/list/items_inside = list(
+		/obj/effect/spawner/random/medical/chem_supplies = 5,
+	)
+	generate_items_inside(items_inside, src)
+

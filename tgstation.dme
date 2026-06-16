@@ -7613,6 +7613,7 @@
 #include "hypermods\code\modules\cargo\markets\market_items\consumables.dm"
 #include "hypermods\code\modules\cargo\markets\market_items\machinery.dm"
 #include "hypermods\code\modules\cargo\markets\market_items\misc.dm"
+#include "hypermods\code\modules\cargo\markets\market_items\nt_imports.dm"
 #include "hypermods\code\modules\cargo\markets\market_items\tools.dm"
 #include "hypermods\code\modules\cargo\markets\market_items\weapons.dm"
 #include "hypermods\code\modules\cargo\packs\engineering.dm"

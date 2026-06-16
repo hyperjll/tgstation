@@ -49,3 +49,13 @@
 	price_max = CARGO_CRATE_VALUE * 8
 	stock_max = 2
 	availability_prob = 25
+
+/datum/market_item/misc/languagebook
+	name = "Language Studybook"
+	desc = "A random selection of language comprehension study material. For when you want to take up bilinguality."
+	item = /obj/effect/spawner/random/exotic/languagebook
+
+	price_min = CARGO_CRATE_VALUE * 2
+	price_max = CARGO_CRATE_VALUE * 3
+	stock_max = 6
+	availability_prob = 100

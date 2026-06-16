@@ -42,61 +42,6 @@
 	price_max = CARGO_CRATE_VALUE * 0.6
 	availability_prob = 55
 
-/datum/market_item/consumable/medkit
-	name = "Medkit"
-	desc = "A medical kit containing a wide-variety of basic medical supplies."
-	item = /obj/item/storage/medkit/regular
-
-	stock_min = 1
-	stock_max = 5
-	price_min = CARGO_CRATE_VALUE
-	price_max = CARGO_CRATE_VALUE * 1.2
-	availability_prob = 75
-
-/datum/market_item/consumable/medkit_brute
-	name = "Brute Trauma Treatment Kit"
-	desc = "A medical kit containing a selection of items for healing brute-based damage."
-	item = /obj/item/storage/medkit/brute
-
-	stock_min = 1
-	stock_max = 5
-	price_min = CARGO_CRATE_VALUE
-	price_max = CARGO_CRATE_VALUE * 1.25
-	availability_prob = 75
-
-/datum/market_item/consumable/medkit_fire
-	name = "Burn Treatment Kit"
-	desc = "A medical kit containing a selection of items for healing burn-based damage."
-	item = /obj/item/storage/medkit/fire
-
-	stock_min = 1
-	stock_max = 5
-	price_min = CARGO_CRATE_VALUE
-	price_max = CARGO_CRATE_VALUE * 1.25
-	availability_prob = 75
-
-/datum/market_item/consumable/medkit_toxin
-	name = "Toxin Treatment Kit"
-	desc = "A medical kit containing a selection of items for reversing the effects of poisoning and radiation."
-	item = /obj/item/storage/medkit/toxin
-
-	stock_min = 1
-	stock_max = 5
-	price_min = CARGO_CRATE_VALUE
-	price_max = CARGO_CRATE_VALUE * 1.15
-	availability_prob = 75
-
-/datum/market_item/consumable/medkit_oxy
-	name = "Oxygen Deprivation Treatment Kit"
-	desc = "A medical kit containing a selection of items for combatting oxygen deprevation and bloodloss."
-	item = /obj/item/storage/medkit/o2
-
-	stock_min = 1
-	stock_max = 5
-	price_min = CARGO_CRATE_VALUE
-	price_max = CARGO_CRATE_VALUE * 1.1
-	availability_prob = 75
-
 /datum/market_item/consumable/bottle_toxin
 	name = "Toxin Bottle"
 	desc = "A basic, all-purpose poison for any devious plot."
@@ -118,3 +63,14 @@
 	price_min = CARGO_CRATE_VALUE * 1.8
 	price_max = CARGO_CRATE_VALUE * 3.2
 	availability_prob = 75
+
+/datum/market_item/consumable/random_potions
+	name = "Box of Potions"
+	desc = "A box containing seven bottles of endless possibilities. Sponsored by the Wizard Federation"
+	item = /obj/item/storage/box/alchemist_random_chems
+
+	stock_min = 1
+	stock_max = 1
+	price_min = CARGO_CRATE_VALUE * 2
+	price_max = CARGO_CRATE_VALUE * 5
+	availability_prob = 40
