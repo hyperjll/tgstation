@@ -230,7 +230,7 @@
 	icon_state = "arg"
 	inhand_icon_state = "arg"
 	slot_flags = 0
-	accepted_magazine_type = /obj/item/ammo_box/magazine/m223
+	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
 	can_suppress = FALSE
 	burst_size = 3
 	burst_delay = 1
