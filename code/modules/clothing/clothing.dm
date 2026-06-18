@@ -61,6 +61,9 @@
 	// such that you never actually cared about checking if something is *edible*.
 	var/obj/item/food/clothing/moth_snack
 
+	// Is it freshly laundered
+	var/is_laundered = FALSE
+
 	/// Can an A.N.T.A.G Locker be installed to prevent people from picking this thing up?
 	var/antag_lockable = FALSE
 	/// Has an A.N.T.A.G Locker already been installed?
@@ -361,6 +364,9 @@
 	if(get_armor().has_any_armor() || (flags_cover & (HEADCOVERSMOUTH|PEPPERPROOF)) || (clothing_flags & STOPSPRESSUREDAMAGE) || (visor_flags & STOPSPRESSUREDAMAGE))
 		. += span_notice("It has a <a href='byond://?src=[REF(src)];list_armor=1'>tag</a> listing its protection classes.")
 
+	if(is_laundered)
+		. += "[src] looks crisp and pristine."
+
 	if(antag_locked)
 		. += "[src] has a A.N.T.A.G Locker installed."
 
@@ -504,13 +510,8 @@
 	if(stubborn_stains) //Just can't make it feel right
 		return
 
-	var/fresh_mood = AddComponent( \
-		/datum/component/onwear_mood, \
-		saved_event_type = /datum/mood_event/fresh_laundry, \
-		examine_string = "[src] looks crisp and pristine.", \
-	)
-
-	QDEL_IN(fresh_mood, 2 MINUTES)
+	is_laundered = TRUE
+	addtimer(VARSET_CALLBACK(src, is_laundered, FALSE), 2 MINUTES)
 
 //This mostly exists so subtypes can call appriopriate update icon calls on the wearer.
 /obj/item/clothing/proc/update_clothes_damaged_state(damaged_state = CLOTHING_DAMAGED)
