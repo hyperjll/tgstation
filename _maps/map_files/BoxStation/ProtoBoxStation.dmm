@@ -38656,10 +38656,8 @@
 /turf/open/floor/wood,
 /area/station/commons/dorms)
 "eJx" = (
-/obj/machinery/power/smes{
-	charge = 5e+006
-	},
 /obj/structure/cable,
+/obj/machinery/power/smes/full,
 /turf/open/floor/iron,
 /area/station/engineering/gravity_generator)
 "eLf" = (
