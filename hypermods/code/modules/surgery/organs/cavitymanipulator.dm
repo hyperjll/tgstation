@@ -1,22 +1,21 @@
 /obj/item/cavitymanipulator
 	name = "cavity manipulator"
-	desc = "A device that automatically inserts an item into the chest cavity of those it's used upon. \
-			Can also be used to extract any items within the chest cavity, should one exist."
+	desc = "A device that automatically inserts an item into the chest cavity of those it's used upon."
 	icon = 'icons/obj/devices/tool.dmi'
 	icon_state = "autosurgeon_syndicate"
 	inhand_icon_state = "nothing"
 	w_class = WEIGHT_CLASS_SMALL
-	/// How many times you can use the autosurgeon before it becomes useless
+	/// How many times you can use the cavitymanipulator before it becomes useless.
 	var/uses = INFINITY
-	/// What organ will the autosurgeon sub-type will start with. ie, CMO autosurgeon start with a medi-hud.
+	/// What item will the cavitymanipulator sub-type will start with.
 	var/starting_item
-	/// The organ currently loaded in the autosurgeon, ready to be implanted.
+	/// The item currently loaded in the cavitymanipulator, ready to be implanted.
 	var/obj/item/stored_item
-	/// The list of organs and their children we allow into the autosurgeon. An empty list means no whitelist.
+	/// The list of item and their children we allow into the cavitymanipulator. An empty list means no whitelist.
 	var/list/item_whitelist = list()
-	/// The percentage modifier for how fast you can use the autosurgeon to implant other people.
+	/// The percentage modifier for how fast you can use the cavitymanipulator to implant other people.
 	var/surgery_speed = 1
-	/// The overlay that shows when the autosurgeon has an organ inside of it.
+	/// The overlay that shows when the cavitymanipulator has an item inside of it.
 	var/loaded_overlay = "autosurgeon_syndicate_loaded_overlay"
 
 /obj/item/cavitymanipulator/attack_self_tk(mob/user)
@@ -88,7 +87,7 @@
 	target_chest.cavity_item = stored_item
 	// Note that this shit runtimes (Cannot execute null.do drop animation())
 	stored_item = null
-	name = initial(name) //get rid of the organ in the name
+	name = initial(name) //get rid of the item in the name
 	playsound(target.loc, 'sound/items/weapons/circsawhit.ogg', 50, vary = TRUE)
 	update_appearance()
 
