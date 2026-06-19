@@ -6,4 +6,3 @@
 	hardcore_value = -1
 	medical_record_text = "Patient has a heightened sense of hearing."
 	mob_trait = TRAIT_GOOD_HEARING
-	//mail_goodies = list()

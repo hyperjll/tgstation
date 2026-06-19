@@ -5,7 +5,6 @@
 	value = 7
 	hardcore_value = -1
 	medical_record_text = "Patient exhibits an almost supernatural ability to sense incoming 'potential' danger, and is often driven to prepare in advance."
-	//mail_goodies = list()
 
 /datum/quirk/item_quirk/goodies/add_unique(client/client_source)
 	var/list/item_list = list(

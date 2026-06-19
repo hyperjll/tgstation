@@ -5,7 +5,6 @@
 	value = 10
 	hardcore_value = -5
 	medical_record_text = "Patient has previously purchased a R.O.B.U.S.T health implant."
-	//mail_goodies = list()
 
 /datum/quirk/robustimp/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder

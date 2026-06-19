@@ -4,7 +4,6 @@
 	icon = FA_ICON_STAR
 	value = 20
 	medical_record_text = "Patient appears to be overly cautious and paranoid, likely brought on by their past."
-	//mail_goodies = list()
 
 /datum/quirk/criminal_background/add_unique(client/client_source)
 	var/mob/living/carbon/human/criminalmind = quirk_holder

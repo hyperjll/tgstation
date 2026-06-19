@@ -4,7 +4,6 @@
 	icon = FA_ICON_SHIELD
 	value = 7
 	medical_record_text = "Patient was previously enlisted in the security force, watch for potential PTSD."
-	//mail_goodies = list()
 
 /datum/quirk/item_quirk/weapon_permit/add_unique(client/client_source)
 	give_item_to_holder(/obj/item/card/weapon_permit, list(LOCATION_BACKPACK, LOCATION_HANDS))

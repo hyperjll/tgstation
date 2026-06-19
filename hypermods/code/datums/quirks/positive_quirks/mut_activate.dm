@@ -5,7 +5,6 @@
 	value = 6
 	hardcore_value = -2
 	medical_record_text = "Patient was previously used in genetic experimentation, and the changes were certainly positive."
-	//mail_goodies = list()
 
 /datum/quirk/mut_activate/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder

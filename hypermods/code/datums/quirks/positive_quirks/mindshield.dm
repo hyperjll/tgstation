@@ -5,7 +5,6 @@
 	value = 10
 	hardcore_value = -2
 	medical_record_text = "Patient has been trusted with a mindshield implant due to their exceptional value to Nanotrasen."
-	//mail_goodies = list()
 
 /datum/quirk/mindshielded/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder

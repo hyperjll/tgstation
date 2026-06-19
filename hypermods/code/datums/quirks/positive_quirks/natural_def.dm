@@ -5,7 +5,6 @@
 	value = 8
 	hardcore_value = -3
 	medical_record_text = "Patient has above-average robustness against most forms of physical damage."
-	//mail_goodies = list()
 
 /datum/quirk/natural_def/add(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder

@@ -5,7 +5,6 @@
 	value = 10
 	hardcore_value = -2
 	medical_record_text = "Patient is prone to abnormally large adrenaline releases during stressful situations."
-	//mail_goodies = list()
 
 /datum/quirk/adrenaline_junkie/add(client/client_source)
 	RegisterSignal(quirk_holder, COMSIG_LIVING_HEALTH_UPDATE, PROC_REF(do_adrenaline_shit))

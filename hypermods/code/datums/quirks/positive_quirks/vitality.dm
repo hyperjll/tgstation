@@ -5,7 +5,6 @@
 	value = 9
 	hardcore_value = -4
 	medical_record_text = "Patient has above-average physical health."
-	//mail_goodies = list()
 
 /datum/quirk/vitality/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder

@@ -6,4 +6,3 @@
 	hardcore_value = 4
 	medical_record_text = "Patient is in possession of a rare recessive gene long since eradicated by genetic doctoring, resulting in malnourishment being lethal."
 	mob_trait = TRAIT_HUNGER_DAMAGE
-	//mail_goodies = list()

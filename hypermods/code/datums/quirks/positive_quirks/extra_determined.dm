@@ -6,4 +6,3 @@
 	hardcore_value = -3
 	medical_record_text = "Patient demonstrates the ability to operate despite extreme injuries."
 	mob_trait = TRAIT_NOSOFTCRIT_DETERMINED
-	//mail_goodies = list()
