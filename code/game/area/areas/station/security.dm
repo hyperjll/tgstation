@@ -238,3 +238,7 @@
 /area/station/security/prison/garden
 	name = "\improper Prison Garden"
 	icon_state = "prison_garden"
+
+/area/station/security/break_room
+	name = "\improper Security Break Room"
+	icon_state = "security"

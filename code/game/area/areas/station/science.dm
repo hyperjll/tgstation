@@ -136,3 +136,11 @@
 
 /area/station/science/ordnance/bomb/planet
 	area_flags = /area/station/science/ordnance/bomb::area_flags & ~NO_GRAVITY
+
+/area/station/science/upper
+	name = "\improper Upper Science Division"
+	icon_state = "lower_science"
+
+/area/station/science/stairwell
+	name = "\improper Science Division Stairwell"
+	icon_state = "lower_science"

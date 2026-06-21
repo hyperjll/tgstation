@@ -116,3 +116,12 @@
 	name = "\improper Corporate Private Dock"
 	icon_state = "command"
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR
+
+/area/station/command/bar
+	name = "\improper Officers' Lounge"
+	icon_state = "captain"
+	sound_environment = SOUND_AREA_WOODFLOOR
+
+/area/station/command/heads_quarters/dorms
+	name = "\improper Command Dorms"
+	icon_state = "command"

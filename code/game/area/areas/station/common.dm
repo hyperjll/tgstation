@@ -172,3 +172,19 @@
 /area/station/commons/storage/mining
 	name = "\improper Public Mining Storage"
 	icon_state = "mining_storage"
+
+/area/station/commons/botanical_garden
+	name = "\improper Botanical Garden"
+	icon_state = "garden"
+
+/area/station/commons/botanical_garden/gantries
+	name = "\improper Botanical Garden Gantries"
+	icon_state = "garden"
+
+/area/station/commons/fitness/recreation/rec_room
+	name = "\improper Rec Room"
+	icon_state = "rec"
+
+/area/station/commons/fitness/recreation/entertainment/arcade
+	name = "\improper Arcade"
+	icon_state = "entertainment"

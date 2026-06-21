@@ -70,3 +70,32 @@
 /area/station/cargo/miningfoundry
 	name = "\improper Mining Foundry"
 	icon_state = "mining_foundry"
+
+/area/station/cargo/break_room
+	name = "\improper Cargo Break Room"
+	icon_state = "mining"
+
+// Departmental Mailrooms
+/area/station/cargo/dep_mailroom
+	name = "\improper Departmental Breakroom"
+	icon_state = "mining"
+
+/area/station/cargo/dep_mailroom/science
+	name = "\improper Departmental Breakroom - Science"
+	icon_state = "mining"
+
+/area/station/cargo/dep_mailroom/security
+	name = "\improper Departmental Breakroom - Security"
+	icon_state = "mining"
+
+/area/station/cargo/dep_mailroom/service
+	name = "\improper Departmental Breakroom - Service"
+	icon_state = "mining"
+
+/area/station/cargo/dep_mailroom/medical
+	name = "\improper Departmental Breakroom - Medical"
+	icon_state = "mining"
+
+/area/station/cargo/dep_mailroom/engineering
+	name = "\improper Departmental Breakroom - Engineering"
+	icon_state = "mining"

@@ -130,3 +130,23 @@
 	ambientsounds = list(
 		'sound/ambience/aurora_caelus/aurora_caelus_short.ogg',
 		)
+
+/area/station/medical/medbay/lower
+	name = "Lower Medbay"
+	icon_state = "med_aft"
+
+/area/station/medical/medbay/lower/west
+	name = "Lower Medbay - West"
+	icon_state = "med_aft"
+
+/area/station/medical/medbay/lower/east
+	name = "Lower Medbay - East"
+	icon_state = "med_aft"
+
+/area/station/medical/break_room/common_room
+	name = "\improper Medical Common Room"
+	icon_state = "med_break"
+
+/area/station/medical/patients_rooms/recovery_ward
+	name = "Recovery Ward"
+	icon_state = "patients"

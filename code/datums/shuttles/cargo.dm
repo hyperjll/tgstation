@@ -58,3 +58,7 @@
 /datum/map_template/shuttle/cargo/fland
 	suffix = "fland"
 	name = "cargo ferry (Fland)"
+
+/datum/map_template/shuttle/cargo/chilled
+	suffix = "chilled"
+	name = "cargo train (Chilled)"

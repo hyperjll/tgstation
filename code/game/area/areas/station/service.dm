@@ -231,3 +231,19 @@
 	name = "\improper Abandoned Library"
 	icon_state = "abandoned_library"
 	tacmap_color = TACMAP_AREA_MAINTENANCE
+
+/area/station/service/coffee_shop
+	name = "\improper Coffee Shop"
+	icon_state = "barber"
+
+/area/station/service/convenience_store
+	name = "\improper Convenience Store"
+	icon_state = "barber"
+
+/area/station/service/smoothie_bar
+	name = "\improper Smoothie Bar"
+	icon_state = "barber"
+
+/area/station/service/pizzeria
+	name = "\improper Pizzeria"
+	icon_state = "barber"
