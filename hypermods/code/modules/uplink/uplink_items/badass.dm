@@ -22,6 +22,7 @@
 	surplus = 5
 	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
 	cant_discount = TRUE
+	uplink_item_flags = null
 
 /datum/uplink_item/badass/syndie_inducer_bundle
 	name = "Syndicate Electrical Inducer Bundle"
@@ -72,6 +73,7 @@
 	surplus = 0
 	cant_discount = TRUE
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = null
 
 /datum/uplink_item/badass/costumes/centcom_official_mod
 	name = "CentCom Official MODsuit"
@@ -86,6 +88,7 @@
 	surplus = 1 // For that RARE opportunity
 	progression_minimum = 110 MINUTES
 	item = /obj/item/mod/control/pre_equipped/corporate/traitor
+	uplink_item_flags = null // for stealth reasons
 
 /datum/uplink_item/badass/galaxy_gas
 	name = "Galaxy Gas"
