@@ -29,4 +29,4 @@
 	var/mob/living/carbon/human/human_servant = invoker
 	human_servant.set_species(/datum/species/golem/clockwork)
 	human_servant.update_body(TRUE)
-	human_servant.update_mutations_overlay()
+	human_servant.update_appearance(UPDATE_OVERLAYS)
