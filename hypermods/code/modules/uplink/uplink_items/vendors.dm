@@ -11,7 +11,7 @@
 /datum/uplink_item/vendors/uni_market
 	name = "Universal Market Uplink"
 	desc = "A universal market uplink capable of connecting to any and all markets across the Spinward Sector. \
-			Useful for the acquisition of a any non-syndicate goods. Pairs well with an LTSRBT."
+			Useful for the acquisition of any non-syndicate goods. Pairs well with an LTSRBT."
 	item = /obj/item/market_uplink/universal/syndicate
 	cost = 5
 	surplus = 10
