@@ -95,6 +95,15 @@
 	item = /obj/item/storage/box/syndie_kit/tapepackage
 	cost = 1
 
+/datum/uplink_item/device_tools/hacked_module
+	name = "Hacked AI Law Upload Module"
+	desc = "When used with an upload console, this module allows you to upload priority laws to an artificial intelligence. \
+			This board bypasses all access restrictions on the console. \
+			Be careful with wording, as artificial intelligences may look for loopholes to exploit."
+	item = /obj/item/ai_module/syndicate
+	cost = 4
+	progression_minimum = 30 MINUTES
+
 /datum/uplink_item/device_tools/singularity_beacon
 	name = "Power Beacon"
 	desc = "When screwed to wiring attached to an electric grid and activated, this large device pulls any \

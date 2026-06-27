@@ -518,6 +518,12 @@
   SmArtKar:
   - bugfix: Projectile lighting is no longer shown in the right click menu
 2026-06-26:
+  EnterTheJake:
+  - balance: The AI Upload Console now requires AI Uplaod access for laws to be uploaded
+      (Captain,HoP,RD), emag also works.
+  - balance: The hacked AI upload board can bypass the access requirement and has
+      had its time requirement removed.
+  - image: added 2 new overlays for the AI upload console.
   Hatterhat:
   - qol: ChemMasters now have on-the-fly custom transfer amount support. Set it with
       the number input by the eject button. One-time custom transfer amounts remain
@@ -543,3 +549,17 @@
       with mindswaps. Report any oddities.
   - refactor: Grab strength has been refactored a bit, primarily affects martial arts
       and drunken brawling. Report any oddities.
+2026-06-27:
+  CabinetOnFire:
+  - qol: DNA console now automatically matches genetic data with any held genetic
+      sequence scanner, for more efficient geneticist shenanigans!
+  Ghommie:
+  - balance: Wearing a hard hat or any helmet as a station drone will actually improve
+      your armor values now!
+  Melbert:
+  - bugfix: Icebox gulag console doesn't vanish from reality
+  StrangeWeirdKitten:
+  - bugfix: ''' and " works again'
+  vinylspiders:
+  - bugfix: fixed an issue where you could exceed the smartfridge's capacity by using
+      a plant bag
