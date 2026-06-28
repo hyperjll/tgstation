@@ -121,7 +121,8 @@
 /// Body part overlays applied by golem status effects
 /datum/bodypart_overlay/simple/golem_overlay
 	icon = 'icons/mob/human/species/golems.dmi'
-	layers = ALL_EXTERNAL_OVERLAYS
+	layers = EXTERNAL_FRONT | EXTERNAL_ADJACENT | EXTERNAL_BEHIND
+	offset_location = ENTIRE_BODY
 	///The bodypart that the overlay is currently applied to
 	var/datum/weakref/attached_bodypart
 
@@ -132,9 +133,7 @@
 
 /datum/bodypart_overlay/simple/golem_overlay/Destroy(force)
 	var/obj/item/bodypart/referenced_bodypart = attached_bodypart.resolve()
-	if(!referenced_bodypart)
-		return ..()
-	referenced_bodypart.remove_bodypart_overlay(src)
+	referenced_bodypart?.remove_bodypart_overlay(src)
 	return ..()
 
 /// Freezes hunger for the duration
