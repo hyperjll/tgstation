@@ -32,15 +32,15 @@
 	. = ..()
 	if(!cause || !imp_in)
 		return
-	var/mob/living/carbon/R = imp_in
+	var/mob/living/carbon/our_carbon = imp_in
 	var/injectamount = null
 	if (cause == "action_button")
 		injectamount = reagents.total_volume
 	else
 		injectamount = cause
-	reagents.trans_to(R, injectamount)
+	reagents.trans_to(our_carbon, injectamount, methods = INJECT)
 	if(!reagents.total_volume)
-		to_chat(R, span_hear("You hear the faintest of clicks."))
+		to_chat(our_carbon, span_hear("You hear the faintest of clicks."))
 		qdel(src)
 
 
