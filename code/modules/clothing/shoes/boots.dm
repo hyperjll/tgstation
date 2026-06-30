@@ -4,6 +4,7 @@
 	icon_state = "jackboots"
 	inhand_icon_state = "jackboots"
 	supports_variations_flags = CLOTHING_DIGITIGRADE_MASK
+	bodyshapes_with_variations = BODYSHAPE_DIGITIGRADE
 	body_parts_covered = FEET|LEGS
 	armor_type = /datum/armor/shoes_combat
 	strip_delay = 4 SECONDS
@@ -47,6 +48,7 @@
 	icon_state = "jackboots"
 	inhand_icon_state = "jackboots"
 	supports_variations_flags = CLOTHING_DIGITIGRADE_MASK
+	bodyshapes_with_variations = BODYSHAPE_DIGITIGRADE
 	strip_delay = 3 SECONDS
 	equip_delay_other = 5 SECONDS
 	resistance_flags = NONE
@@ -75,6 +77,7 @@
 	icon_state = "ftc_boots"
 	inhand_icon_state = null
 	supports_variations_flags = NONE
+	bodyshapes_with_variations = NONE
 
 /obj/item/clothing/shoes/jackboots/floortile/Initialize(mapload)
 	. = ..()
@@ -86,6 +89,7 @@
 	icon_state = "winterboots"
 	inhand_icon_state = null
 	supports_variations_flags = CLOTHING_DIGITIGRADE_MASK
+	bodyshapes_with_variations = BODYSHAPE_DIGITIGRADE
 	armor_type = /datum/armor/shoes_winterboots
 	cold_protection = FEET|LEGS
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
@@ -137,6 +141,7 @@
 	inhand_icon_state = "jackboots"
 	armor_type = /datum/armor/shoes_workboots
 	supports_variations_flags = CLOTHING_DIGITIGRADE_MASK
+	bodyshapes_with_variations = BODYSHAPE_DIGITIGRADE
 	strip_delay = 2 SECONDS
 	equip_delay_other = 4 SECONDS
 	lace_time = 8 SECONDS
@@ -167,6 +172,7 @@
 	inhand_icon_state = null
 	lace_time = 8 SECONDS
 	supports_variations_flags = CLOTHING_DIGITIGRADE_MASK
+	bodyshapes_with_variations = BODYSHAPE_DIGITIGRADE
 
 /obj/item/clothing/shoes/russian/Initialize(mapload)
 	. = ..()
