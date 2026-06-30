@@ -1701,6 +1701,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
+/obj/machinery/scanner_gate/preset_contraband,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "afL" = (
@@ -3799,7 +3800,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "sci-entrance"
 	},
-/obj/machinery/scanner_gate/preset_guns,
+/obj/machinery/scanner_gate/preset_contraband,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "akX" = (
@@ -3812,7 +3813,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "sci-entrance"
 	},
-/obj/machinery/scanner_gate/preset_guns,
+/obj/machinery/scanner_gate/preset_contraband,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "akY" = (
@@ -4344,7 +4345,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
-/area/station/science/ordnance/testlab)
+/area/station/maintenance/starboard)
 "amy" = (
 /obj/structure/chair/stool{
 	pixel_y = 8
@@ -13248,15 +13249,12 @@
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "aPU" = (
-/obj/machinery/status_display/evac,
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/preopen{
-	id = "bridge blast";
-	name = "Bridge blast door"
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 4
 	},
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/station/command/bridge)
+/obj/machinery/camera/directional/east,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/aft)
 "aPY" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -14773,9 +14771,7 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "aUM" = (
-/obj/machinery/camera/directional/east{
-	c_tag = "Arrivals Bay 2"
-	},
+/obj/machinery/camera/directional/north,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "aUN" = (
@@ -19054,6 +19050,12 @@
 /obj/effect/turf_decal/siding/purple/corner{
 	dir = 1
 	},
+/obj/machinery/button/door{
+	id = "rnd_entrance";
+	name = "Entrance Shutters Control Button";
+	pixel_x = 6;
+	pixel_y = 24
+	},
 /turf/open/floor/iron/white/herringbone,
 /area/station/science/lab)
 "biY" = (
@@ -19300,11 +19302,6 @@
 "bjM" = (
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/light/directional/south,
-/obj/machinery/camera{
-	c_tag = "Medbay Lobby";
-	dir = 5;
-	network = list("ss13","medbay")
-	},
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
@@ -21577,6 +21574,10 @@
 	dir = 9
 	},
 /obj/structure/table/reinforced,
+/obj/machinery/button/door/directional/north{
+	id = "teleporter_shield";
+	name = "Security Lockdown Button"
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/teleporter)
 "bsk" = (
@@ -21612,12 +21613,10 @@
 /turf/open/floor/iron/small,
 /area/station/command/teleporter)
 "bso" = (
-/obj/machinery/light_switch/directional/east,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/small,
-/area/station/command/teleporter)
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
+/obj/item/radio/intercom/directional/west,
+/turf/open/floor/iron,
+/area/station/engineering/atmos)
 "bsq" = (
 /obj/structure/closet/wardrobe/miner,
 /obj/effect/turf_decal/bot,
@@ -22766,6 +22765,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/machinery/scanner_gate/preset_contraband,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/supply)
 "bwZ" = (
@@ -23009,6 +23009,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/machinery/scanner_gate/preset_contraband,
 /turf/open/floor/iron/white,
 /area/station/security/checkpoint/science)
 "byk" = (
@@ -25565,9 +25566,6 @@
 /area/station/engineering/storage/tech)
 "bHR" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/camera/directional/west{
-	c_tag = "Aft Primary Hallway 2"
-	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
@@ -25615,6 +25613,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/status_display/evac{
 	pixel_x = -32
+	},
+/obj/machinery/camera/directional/west{
+	c_tag = "Aft Primary Hallway 2"
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
@@ -25666,14 +25667,10 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "bIo" = (
-/obj/machinery/camera{
-	c_tag = "Morgue North";
-	dir = 9;
-	network = list("ss13","medbay")
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/camera/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "bIs" = (
@@ -28036,6 +28033,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/machinery/scanner_gate/preset_contraband,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/engineering)
 "bRo" = (
@@ -28513,11 +28511,6 @@
 /obj/structure/sign/departments/psychology/directional/south,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 10
-	},
-/obj/machinery/camera{
-	c_tag = "Medbay South";
-	dir = 5;
-	network = list("ss13","medbay")
 	},
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron/white,
@@ -29418,7 +29411,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "bWU" = (
-/obj/machinery/light/directional/east,
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 4;
 	name = "Mix to Engine"
@@ -30746,7 +30738,15 @@
 	id = "nanite_lockdown";
 	name = "Nanite Lab Lockdown";
 	pixel_y = -4;
-	req_access = list("research")
+	req_access = list("research");
+	pixel_x = -5
+	},
+/obj/machinery/button/door{
+	id = "rd_lockdown";
+	name = "Security Doors";
+	pixel_y = -4;
+	req_access = list("research");
+	pixel_x = 5
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/command/heads_quarters/rd)
@@ -31700,10 +31700,10 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced/spawner/directional/west,
-/turf/open/floor/iron,
-/area)
-"cgX" = (
 /obj/machinery/light/directional/south,
+/turf/open/floor/iron,
+/area/station/engineering/atmos)
+"cgX" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	dir = 1;
 	name = "N2 to Airmix"
@@ -34136,6 +34136,10 @@
 "cyu" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
+/obj/machinery/door/poddoor/preopen{
+	name = "Teleporter Security Shielding";
+	id = "teleporter_shield"
+	},
 /turf/open/floor/plating,
 /area/station/command/teleporter)
 "cyC" = (
@@ -36810,7 +36814,7 @@
 	},
 /obj/effect/turf_decal/trimline/purple/line,
 /turf/open/floor/iron/dark,
-/area/station/science/ordnance/testlab)
+/area/station/maintenance/starboard)
 "dnF" = (
 /obj/structure/broken_flooring/corner/directional/west,
 /turf/open/floor/plating,
@@ -37194,11 +37198,6 @@
 "dBu" = (
 /obj/structure/sign/warning/no_smoking/circle/directional/west,
 /obj/machinery/light/directional/west,
-/obj/machinery/camera{
-	c_tag = "Medbay Mid-South";
-	dir = 5;
-	network = list("ss13","medbay")
-	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 10
 	},
@@ -38927,7 +38926,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/dark,
-/area/station/science/ordnance/testlab)
+/area/station/maintenance/starboard)
 "fav" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -39059,7 +39058,7 @@
 "fgT" = (
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible,
 /turf/closed/wall/r_wall,
-/area)
+/area/station/engineering/atmos)
 "fgX" = (
 /obj/effect/turf_decal/siding/thinplating_new,
 /obj/effect/turf_decal/trimline/brown/filled/line,
@@ -40967,7 +40966,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/maintenance/starboard)
+/area/station/science/ordnance)
 "gNf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/burnt_floor,
@@ -43269,6 +43268,7 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 1
 	},
+/obj/machinery/camera/directional/south,
 /turf/open/floor/iron,
 /area/station/medical/medbay/aft)
 "iPs" = (
@@ -43344,6 +43344,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /obj/effect/turf_decal/tile/red/full,
+/obj/machinery/scanner_gate/preset_contraband,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/security/checkpoint/medical)
 "iRu" = (
@@ -46571,14 +46572,10 @@
 /area/station/service/chapel)
 "lEq" = (
 /obj/structure/bodycontainer/morgue,
-/obj/machinery/camera{
-	c_tag = "Morgue South";
-	dir = 5;
-	network = list("ss13","medbay")
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/camera/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "lED" = (
@@ -50834,7 +50831,6 @@
 /obj/machinery/atmospherics/pipe/smart/simple/violet/visible/layer1{
 	dir = 10
 	},
-/obj/item/radio/intercom/directional/east,
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
@@ -53901,14 +53897,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/door/firedoor/heavy,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "rnd2";
-	name = "research lab shutters"
-	},
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/red/line,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "rnd_entrance";
+	name = "research lab entry shutters"
+	},
 /turf/open/floor/iron/herringbone,
 /area/station/science/lab)
 "rKe" = (
@@ -56391,6 +56387,7 @@
 	dir = 1
 	},
 /obj/effect/spawner/random/vending/colavend,
+/obj/machinery/camera/directional/north,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "tRU" = (
@@ -59088,6 +59085,10 @@
 /area/station/medical/medbay/central)
 "wkN" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "rd_lockdown";
+	name = "Research Director office blast door"
+	},
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/rd)
 "wlq" = (
@@ -59227,16 +59228,16 @@
 "wsw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor/heavy,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "rnd2";
-	name = "research lab shutters"
-	},
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/red/line,
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 1
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "rnd_entrance";
+	name = "research lab entry shutters"
 	},
 /turf/open/floor/iron/herringbone,
 /area/station/science/lab)
@@ -74036,7 +74037,7 @@ ayl
 qpl
 bQH
 aNh
-aUM
+ayl
 ayl
 vdW
 aWc
@@ -74293,7 +74294,7 @@ aLw
 aQI
 aKj
 asE
-ayl
+aUM
 ayl
 dGP
 dGP
@@ -86342,8 +86343,8 @@ akf
 aiX
 aiX
 aiX
-aiV
-aiV
+aiX
+aiX
 anP
 aiT
 apd
@@ -89452,7 +89453,7 @@ aJq
 aMa
 aNw
 aOE
-aPU
+aPS
 aRl
 aSx
 aTX
@@ -90994,7 +90995,7 @@ aJq
 aMf
 aNB
 aOE
-aPU
+aPS
 aRr
 aSD
 ceh
@@ -93365,7 +93366,7 @@ ccv
 cdw
 cex
 uJc
-alk
+bso
 cfN
 fWs
 bTa
@@ -93585,7 +93586,7 @@ bmD
 cTD
 bmD
 bqK
-bso
+nVm
 nVm
 dBk
 buZ
@@ -101315,7 +101316,7 @@ bfF
 bMH
 qVo
 rxt
-bfF
+aPU
 gvN
 mql
 bSX
@@ -111072,9 +111073,9 @@ sRW
 bry
 bry
 bry
-bry
+dvO
 gNc
-bry
+dvO
 mtK
 mtK
 mtK

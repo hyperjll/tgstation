@@ -2008,6 +2008,7 @@
 /turf/closed/wall,
 /area/station/hallway/primary/central/aft)
 "aDK" = (
+/obj/structure/sign/warning/directional/east,
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -4775,9 +4776,6 @@
 	},
 /area/space/nearstation)
 "bpv" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
@@ -7074,6 +7072,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/machinery/airalarm/directional/north{
+	pixel_y = 22
+	},
 /turf/open/floor/carpet/green,
 /area/station/service/abandoned_gambling_den)
 "cae" = (
@@ -7670,6 +7671,17 @@
 /obj/machinery/camera/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/storage/gas)
+"cjX" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 1;
+	height = 4;
+	name = "escape pod loader";
+	roundstart_template = /datum/map_template/shuttle/escape_pod/default;
+	width = 3
+	},
+/turf/open/space/basic,
+/area/space)
 "ckd" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -10081,7 +10093,7 @@
 /area/station/medical/chemistry)
 "cUs" = (
 /obj/effect/turf_decal/caution/stand_clear,
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/maintenance/department/chapel)
 "cUv" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
@@ -23109,7 +23121,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/hallway/secondary/entry)
 "gKK" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
@@ -24298,9 +24310,6 @@
 	pixel_y = 10
 	},
 /obj/structure/table/wood,
-/obj/machinery/airalarm/directional/north{
-	pixel_y = 22
-	},
 /obj/effect/turf_decal/tile/bar/opposingcorners{
 	dir = 1
 	},
@@ -34041,7 +34050,7 @@
 /obj/effect/turf_decal/caution/stand_clear{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/hallway/secondary/entry)
 "jVC" = (
 /obj/machinery/door/airlock/maintenance{
@@ -35089,7 +35098,6 @@
 	roundstart_template = /datum/map_template/shuttle/escape_pod/default;
 	width = 3
 	},
-/obj/structure/fans/tiny/invisible,
 /turf/open/space/basic,
 /area/space)
 "kkI" = (
@@ -35650,10 +35658,6 @@
 /obj/structure/table/wood,
 /obj/machinery/light/small{
 	dir = 8
-	},
-/obj/machinery/camera/directional/west{
-	c_tag = "Bar";
-	name = "service camera"
 	},
 /obj/effect/turf_decal/tile/bar/opposingcorners{
 	dir = 1
@@ -41212,6 +41216,11 @@
 	dir = 4
 	},
 /area/station/hallway/primary/central/fore)
+"lWs" = (
+/obj/structure/cable,
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/wood,
+/area/station/service/abandoned_gambling_den)
 "lWz" = (
 /obj/machinery/light{
 	dir = 4
@@ -44200,7 +44209,7 @@
 /area/station/maintenance/fore)
 "mQC" = (
 /obj/structure/railing,
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/maintenance/department/chapel)
 "mQF" = (
 /obj/effect/decal/cleanable/dirt,
@@ -45920,7 +45929,7 @@
 /obj/effect/turf_decal/caution/stand_clear{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/commons/storage/emergency)
 "nsc" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
@@ -48690,7 +48699,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/commons/storage/emergency)
 "okI" = (
 /obj/machinery/vending/cigarette,
@@ -49600,7 +49609,6 @@
 /area/station/engineering/storage/tech)
 "owB" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/warning/directional/south,
 /obj/machinery/computer/mech_bay_power_console{
 	dir = 8
 	},
@@ -49677,6 +49685,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
 	dir = 6
 	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "oxQ" = (
@@ -51298,6 +51307,12 @@
 /obj/machinery/door/window/left/directional/south,
 /turf/open/floor/grass/no_border,
 /area/station/commons/lounge)
+"oZs" = (
+/obj/machinery/door/airlock/external{
+	name = "Escape Pod 5"
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/aft)
 "oZM" = (
 /obj/machinery/status_display/evac{
 	pixel_y = 32
@@ -54445,7 +54460,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/hallway/secondary/entry)
 "pUl" = (
 /obj/machinery/door/airlock/engineering/glass{
@@ -63168,6 +63183,16 @@
 	dir = 8
 	},
 /area/station/commons/dorms)
+"suk" = (
+/obj/docking_port/stationary{
+	dwidth = 1;
+	height = 4;
+	name = "escape pod loader";
+	roundstart_template = /datum/map_template/shuttle/escape_pod/default;
+	width = 3
+	},
+/turf/open/space/basic,
+/area/space)
 "sup" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
@@ -65164,7 +65189,7 @@
 /obj/effect/turf_decal/caution/stand_clear{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/maintenance/aft)
 "sZZ" = (
 /obj/structure/cable,
@@ -67972,7 +67997,7 @@
 	},
 /obj/structure/closet/emcloset,
 /obj/structure/railing,
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/maintenance/department/chapel)
 "tSP" = (
 /obj/structure/closet/secure_closet/miner,
@@ -75390,9 +75415,7 @@
 "vSv" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/item/target/alien/anchored,
-/obj/machinery/camera/preset/ordnance{
-	dir = 5
-	},
+/obj/machinery/camera/preset/ordnance,
 /turf/open/floor/plating/airless,
 /area/station/science/ordnance/bomb)
 "vSE" = (
@@ -75760,7 +75783,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/commons/storage/emergency)
 "vYc" = (
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
@@ -77752,7 +77775,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/station/maintenance/aft)
 "wEv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -102999,7 +103022,7 @@ uMd
 gkH
 aAp
 pUj
-qgi
+nnx
 nnx
 nnx
 nnx
@@ -103256,7 +103279,7 @@ wzH
 pTa
 gZD
 jVg
-pBR
+cjX
 nnx
 nnx
 nnx
@@ -103513,7 +103536,7 @@ xuO
 xAA
 qAY
 gKH
-qgi
+nnx
 nnx
 nnx
 nnx
@@ -107517,7 +107540,7 @@ vLM
 nnx
 nnx
 nnx
-qgi
+nnx
 tSL
 qwi
 bXk
@@ -107774,7 +107797,7 @@ cqv
 nnx
 nnx
 nnx
-bvJ
+suk
 cUs
 byN
 mPW
@@ -108031,7 +108054,7 @@ vLM
 nnx
 nnx
 nnx
-qgi
+nnx
 mQC
 qwi
 sJz
@@ -135650,10 +135673,10 @@ fDn
 gIB
 gIB
 vXB
-ncF
-ncF
-ncF
-ncF
+nwT
+oZs
+nwT
+vXB
 ncF
 uZL
 ksp
@@ -136164,9 +136187,9 @@ gIB
 gIB
 gIB
 vXB
-qgi
+nnx
 kkx
-qgi
+nnx
 vXB
 gIB
 gIB
@@ -136353,7 +136376,7 @@ oUx
 bqH
 gjl
 oJQ
-soO
+lWs
 xTb
 iVD
 jsl
@@ -139961,9 +139984,9 @@ qGv
 qGv
 nnx
 bbZ
-qgi
+nnx
 kkx
-qgi
+nnx
 aqG
 hxb
 aKv

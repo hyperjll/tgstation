@@ -1057,7 +1057,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/obj/machinery/light_switch/directional/west,
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /turf/open/floor/iron/white,
 /area/station/medical/patients_rooms)
@@ -2306,6 +2305,7 @@
 	dir = 2
 	},
 /obj/structure/tank_holder/extinguisher,
+/obj/machinery/camera/directional/north,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "aSK" = (
@@ -2732,6 +2732,7 @@
 	pixel_y = -32
 	},
 /obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/camera/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite)
 "baX" = (
@@ -3349,13 +3350,10 @@
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/nanite)
 "bns" = (
-/obj/machinery/camera/directional/north{
-	c_tag = "Security - Office East";
-	dir = 9
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/camera/directional/north,
 /turf/open/floor/iron,
 /area/station/security/office)
 "bnB" = (
@@ -4145,6 +4143,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 1
 	},
+/obj/machinery/light_switch/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/patients_rooms)
 "bCq" = (
@@ -9121,6 +9120,7 @@
 "dzW" = (
 /obj/structure/training_machine,
 /obj/item/target,
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron,
 /area/station/commons/fitness)
 "dAi" = (
@@ -11175,6 +11175,7 @@
 /turf/open/floor/wood,
 /area/station/service/library/artgallery)
 "eqs" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/broken/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science)
@@ -16672,7 +16673,7 @@
 /area/station/maintenance/starboard)
 "gzG" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat_interior";
+	control_area = "/area/station/ai/satellite/interior";
 	name = "Teleporter Room Turret Control";
 	pixel_y = 25
 	},
@@ -26203,16 +26204,7 @@
 /turf/open/floor/carpet/blue,
 /area/station/commons/dorms)
 "kmR" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/broken/directional{
-	dir = 1
-	},
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
+/obj/machinery/light/broken/directional/north,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science)
 "kmZ" = (
@@ -27663,8 +27655,8 @@
 	dir = 1
 	},
 /obj/item/storage/lockbox/loyalty,
-/obj/machinery/camera/directional/north{
-	c_tag = "Security - Armory";
+/obj/machinery/camera/motion{
+	c_tag = "Armory - Interior";
 	dir = 9
 	},
 /turf/open/floor/iron/dark,
@@ -28695,9 +28687,10 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "llu" = (
-/obj/machinery/light/directional/south,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
+/obj/machinery/camera/directional/south{
+	c_tag = "Public - Rec Room"
+	},
 /turf/open/floor/iron,
 /area/station/commons/fitness)
 "llB" = (
@@ -30495,11 +30488,10 @@
 /turf/open/floor/wood,
 /area/station/security/courtroom)
 "lTz" = (
-/obj/machinery/computer/security/labor{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/station/security/processing)
+/obj/structure/cable,
+/obj/machinery/camera/directional/south,
+/turf/open/floor/plating,
+/area/station/ai/satellite)
 "lTC" = (
 /obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating,
@@ -34648,16 +34640,13 @@
 /area/station/medical/morgue)
 "nug" = (
 /obj/structure/closet/secure_closet/security/sec,
-/obj/machinery/camera/directional/north{
-	c_tag = "Security - Gear Room";
-	dir = 9
-	},
 /obj/effect/turf_decal/siding/red/end{
 	dir = 4
 	},
 /obj/effect/turf_decal/siding/red/end{
 	dir = 8
 	},
+/obj/machinery/camera/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "nui" = (
@@ -35830,6 +35819,7 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron,
 /area/station/commons/fitness)
 "nUe" = (
@@ -37270,6 +37260,10 @@
 /obj/machinery/duct,
 /turf/open/floor/iron,
 /area/station/service/janitor)
+"oxe" = (
+/obj/machinery/computer/security/labor,
+/turf/open/floor/iron,
+/area/station/security/processing)
 "oxG" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -38625,6 +38619,7 @@
 /obj/machinery/computer/mech_bay_power_console{
 	dir = 8
 	},
+/obj/machinery/camera/directional/east,
 /turf/open/floor/iron,
 /area/station/security/mechbay)
 "pbQ" = (
@@ -40468,6 +40463,9 @@
 "pOg" = (
 /obj/effect/turf_decal/trimline/dark_red,
 /obj/machinery/airalarm/directional/west,
+/obj/structure/chair/office{
+	dir = 1
+	},
 /turf/open/floor/iron,
 /area/station/security/processing)
 "pOj" = (
@@ -40549,9 +40547,6 @@
 /obj/structure/reagent_dispensers/water_cooler,
 /obj/machinery/light_switch/directional/south{
 	desc = "Make it dark."
-	},
-/obj/machinery/camera/directional/south{
-	c_tag = "Public - Rec Room"
 	},
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/tile/dark{
@@ -42148,6 +42143,7 @@
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
 "quL" = (
+/obj/machinery/camera/directional/west,
 /turf/open/floor/iron/stairs/left,
 /area/station/security/brig)
 "qvr" = (
@@ -51362,6 +51358,7 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 1
 	},
+/obj/machinery/camera/directional/west,
 /turf/open/floor/iron,
 /area/station/commons/fitness)
 "ueu" = (
@@ -52808,6 +52805,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
+"uJF" = (
+/obj/machinery/camera/directional/east,
+/turf/open/floor/iron,
+/area/station/security/brig)
 "uJO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
@@ -56475,6 +56476,7 @@
 /area/station/security/warden)
 "wiV" = (
 /obj/machinery/vending/wardrobe/sec_wardrobe,
+/obj/machinery/camera/directional/south,
 /turf/open/floor/iron,
 /area/station/security/lockers)
 "wiZ" = (
@@ -57465,6 +57467,13 @@
 /obj/item/storage/box/lights/tubes,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
+"wEm" = (
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 8
+	},
+/obj/machinery/camera/directional/west,
+/turf/open/floor/iron,
+/area/station/commons/fitness)
 "wEn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/hidden{
 	dir = 8
@@ -58194,8 +58203,7 @@
 /turf/open/floor/iron,
 /area/station/construction/mining/aux_base)
 "wSp" = (
-/obj/structure/grille,
-/obj/structure/sign/poster/contraband/kss13,
+/obj/structure/sign/poster/contraband/kss13/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "wSt" = (
@@ -58374,10 +58382,6 @@
 /area/station/security/evidence)
 "wWm" = (
 /obj/machinery/light_switch/directional/south,
-/obj/machinery/camera/directional/south{
-	c_tag = "AI - Entrance";
-	network = list("ss13","minisat")
-	},
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
@@ -59989,10 +59993,6 @@
 /area/station/maintenance/starboard/fore)
 "xzA" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/camera/directional/north{
-	c_tag = "Security - Hallway N";
-	dir = 9
-	},
 /turf/open/floor/iron,
 /area/station/security/brig)
 "xzB" = (
@@ -78450,8 +78450,8 @@ ydu
 ydu
 xRN
 aJv
-yel
 wSp
+xkn
 kfO
 aWJ
 yel
@@ -90764,7 +90764,7 @@ fqi
 jNE
 gIR
 wwW
-kRu
+uJF
 ryJ
 xRB
 oan
@@ -93251,7 +93251,7 @@ jMI
 cUd
 erG
 jMS
-llu
+rpD
 rnG
 lPq
 mFV
@@ -93594,9 +93594,9 @@ iQW
 iQW
 yju
 iwv
-bNp
+oxe
 pOg
-lTz
+bNp
 hAJ
 nkK
 jkY
@@ -94796,7 +94796,7 @@ wLQ
 wLQ
 wLQ
 wLQ
-wLQ
+hFE
 cZA
 kVl
 lNA
@@ -95053,7 +95053,7 @@ wLQ
 wLQ
 wLQ
 wLQ
-hFE
+wLQ
 eKB
 kYK
 bTi
@@ -96596,7 +96596,7 @@ jSk
 jSk
 jSk
 jSk
-jSk
+wEm
 mgP
 hbL
 mnF
@@ -97374,7 +97374,7 @@ qZC
 awm
 laX
 vHo
-ved
+llu
 cZA
 syA
 ujM
@@ -103396,8 +103396,8 @@ wQv
 rJE
 wQv
 wQv
-rxh
 kmR
+cvK
 xNj
 wQv
 wQv
@@ -103649,8 +103649,8 @@ mXv
 nvF
 utO
 ncU
-xNj
 eqs
+rxh
 wHS
 wQv
 rxh
@@ -109429,7 +109429,7 @@ yju
 sRM
 yju
 hSV
-pkL
+lTz
 bba
 gRV
 gRV

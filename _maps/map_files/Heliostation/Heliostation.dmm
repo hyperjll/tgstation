@@ -463,11 +463,7 @@
 /obj/item/crowbar,
 /obj/item/flashlight/glowstick,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/camera/directional/north{
-	c_tag = "Security - Escape Pod Acess";
-	dir = 9;
-	network = list("ss13","security")
-	},
+/obj/machinery/camera/directional/east,
 /turf/open/floor/plating,
 /area/station/maintenance/department/security/upper)
 "acB" = (
@@ -933,10 +929,7 @@
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/light/small/directional/south,
 /obj/structure/table/wood,
-/obj/machinery/fax{
-	fax_name = "Head of Security's Office";
-	name = "Head of Security's Fax Machine"
-	},
+/obj/machinery/fax/heads/hos,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos)
 "aez" = (
@@ -1211,15 +1204,11 @@
 /turf/open/floor/iron/grimy,
 /area/station/security/interrogation)
 "afU" = (
-/obj/machinery/camera/directional/north{
-	c_tag = "Security - Interrogation - Monitoring";
-	dir = 9;
-	network = list("ss13","security")
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/north,
+/obj/machinery/camera/directional/east,
 /turf/open/floor/iron/grimy,
 /area/station/security/interrogation)
 "afV" = (
@@ -2460,6 +2449,7 @@
 /obj/effect/spawner/random/contraband/prison,
 /obj/item/trash/cheesie,
 /obj/machinery/firealarm/directional/west,
+/obj/machinery/camera/directional/north,
 /turf/open/floor/iron/smooth,
 /area/station/security/prison/work)
 "amP" = (
@@ -12908,11 +12898,6 @@
 /obj/structure/table,
 /obj/item/newspaper,
 /obj/machinery/airalarm/directional/north,
-/obj/machinery/camera/directional/east{
-	c_tag = "Security - Prison - Showers";
-	dir = 6;
-	network = list("ss13","security","prison")
-	},
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/plastic,
 /area/station/security/prison/shower)
@@ -22580,10 +22565,7 @@
 	dir = 8
 	},
 /obj/structure/table/wood,
-/obj/machinery/fax{
-	fax_name = "Quartermaster's Office";
-	name = "Quartermaster's Fax Machine"
-	},
+/obj/machinery/fax/heads/qm,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm)
 "czo" = (
@@ -30579,10 +30561,6 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "eGZ" = (
-/obj/machinery/camera/directional/north{
-	c_tag = "AI Chamber - Core";
-	network = list("aicore")
-	},
 /obj/machinery/door/window/brigdoor/right/directional/east{
 	name = "Primary AI Core Access";
 	req_access = list("ai_upload")
@@ -31384,6 +31362,7 @@
 	dir = 8
 	},
 /obj/structure/sign/calendar/directional/north,
+/obj/machinery/camera/directional/west,
 /turf/open/floor/wood,
 /area/station/security/prison)
 "eXt" = (
@@ -34439,10 +34418,7 @@
 /obj/structure/table/reinforced/rglass,
 /obj/effect/turf_decal/tile/blue/half/contrasted,
 /obj/item/radio/intercom/directional/south,
-/obj/machinery/fax{
-	fax_name = "Chief Medical Officer's Office";
-	name = "Chief Medical Officer's Fax Machine"
-	},
+/obj/machinery/fax/heads/cmo,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "gnK" = (
@@ -36844,7 +36820,6 @@
 	},
 /obj/machinery/turretid{
 	control_area = "/area/station/ai/upload/chamber";
-	icon_state = "control_stun";
 	name = "AI Upload Turret Control";
 	pixel_y = 28
 	},
@@ -38747,7 +38722,6 @@
 /area/station/medical/surgery/aft)
 "hTQ" = (
 /obj/machinery/turretid{
-	icon_state = "control_stun";
 	name = "AI Chamber turret control";
 	pixel_x = 3;
 	pixel_y = -23;
@@ -38758,6 +38732,11 @@
 	req_access = list("ai_upload")
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/camera/directional/north{
+	c_tag = "AI Chamber - Core";
+	network = list("aicore");
+	pixel_x = 22
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/ai/satellite/chamber)
 "hTY" = (
@@ -45771,11 +45750,8 @@
 "kDh" = (
 /obj/structure/table/wood,
 /obj/structure/window/reinforced/spawner/directional/west,
-/obj/machinery/fax{
-	fax_name = "Head of Personnel's Office";
-	name = "Head of Personnel's Fax Machine"
-	},
 /obj/structure/cable,
+/obj/machinery/fax/heads/hop,
 /turf/open/floor/wood/large,
 /area/station/command/heads_quarters/hop)
 "kDD" = (
@@ -55608,7 +55584,6 @@
 	dir = 4
 	},
 /obj/machinery/turretid{
-	icon_state = "control_stun";
 	name = "AI Chamber turret control";
 	pixel_x = 3;
 	pixel_y = -23;
@@ -66289,14 +66264,11 @@
 /area/station/security/prison/safe)
 "sFM" = (
 /obj/structure/table/reinforced,
-/obj/machinery/fax{
-	fax_name = "Research Director's Office";
-	name = "Research Director's Fax Machine"
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
 /obj/machinery/status_display/ai/directional/south,
+/obj/machinery/fax/heads/rd,
 /turf/open/floor/iron/dark/textured,
 /area/station/command/heads_quarters/rd)
 "sGg" = (
@@ -71413,10 +71385,7 @@
 /area/station/engineering/storage)
 "uDC" = (
 /obj/structure/table/wood,
-/obj/machinery/fax{
-	fax_name = "Captain's Office";
-	name = "Captain's Fax Machine"
-	},
+/obj/machinery/fax/heads/captain,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "uDM" = (
@@ -73136,11 +73105,8 @@
 	dir = 4
 	},
 /obj/structure/table/reinforced,
-/obj/machinery/fax{
-	fax_name = "Chief Engineer's Office";
-	name = "Chief Engineer's Fax Machine"
-	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/fax/heads/ce,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "voZ" = (
@@ -73227,6 +73193,7 @@
 /obj/effect/turf_decal/trimline/red/line{
 	dir = 4
 	},
+/obj/machinery/camera/directional/east,
 /turf/open/floor/iron/small,
 /area/station/security/prison/safe)
 "vqD" = (
@@ -74797,6 +74764,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/camera/directional/north,
 /turf/open/floor/iron/cafeteria,
 /area/station/security/prison)
 "vVf" = (

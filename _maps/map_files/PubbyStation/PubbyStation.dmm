@@ -2904,10 +2904,7 @@
 /obj/effect/turf_decal/tile/red,
 /obj/structure/cable,
 /obj/structure/table/wood,
-/obj/machinery/fax{
-	fax_name = "Head of Security's Office";
-	name = "Head of Security's Fax Machine"
-	},
+/obj/machinery/fax/heads/hos,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/hos)
 "akV" = (
@@ -7224,10 +7221,7 @@
 /area/station/command/heads_quarters/captain)
 "aAx" = (
 /obj/structure/table/wood,
-/obj/machinery/fax{
-	fax_name = "Captain's Office";
-	name = "Captain's Fax Machine"
-	},
+/obj/machinery/fax/heads/captain,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "aAz" = (
@@ -13689,11 +13683,8 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "bbU" = (
-/obj/machinery/fax{
-	fax_name = "Head of Personnel's Office";
-	name = "Head of Personnel's Fax Machine"
-	},
 /obj/structure/table/wood,
+/obj/machinery/fax/heads/hop,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
 "bbV" = (
@@ -14359,7 +14350,7 @@
 /area/station/cargo/miningdock)
 "beS" = (
 /obj/structure/sign/warning,
-/turf/open/floor/plating,
+/turf/closed/wall,
 /area/station/maintenance/department/science/central)
 "beY" = (
 /obj/machinery/camera/directional/west{
@@ -19830,11 +19821,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/fax{
-	fax_name = "Chief Medical Officer's Office";
-	name = "Chief Medical Officer's Fax Machine"
-	},
 /obj/structure/table/glass,
+/obj/machinery/fax/heads/cmo,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/cmo)
 "bDy" = (
@@ -25055,6 +25043,7 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/disposal/incinerator)
 "ccu" = (
@@ -37717,7 +37706,6 @@
 /turf/open/floor/iron/white,
 /area/station/science/ordnance)
 "kqc" = (
-/obj/machinery/light/directional/west,
 /obj/machinery/camera/directional/west{
 	c_tag = "Incinerator"
 	},
@@ -40880,8 +40868,8 @@
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "mYX" = (
-/obj/machinery/light/directional/south,
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
+/obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/disposal/incinerator)
 "mZi" = (
@@ -46653,10 +46641,7 @@
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/assistance,
-/obj/machinery/fax{
-	fax_name = "Quartermaster's Office";
-	name = "Quartermaster's Fax Machine"
-	},
+/obj/machinery/fax/heads/qm,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm)
 "rzS" = (
@@ -47468,13 +47453,10 @@
 	},
 /obj/machinery/light_switch/directional/east,
 /obj/structure/table/reinforced,
-/obj/machinery/fax{
-	fax_name = "Chief Engineer's Office";
-	name = "Chief Engineer's Fax Machine"
-	},
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/fax/heads/ce,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
 "sfh" = (
@@ -55221,13 +55203,10 @@
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/assistance,
 /obj/structure/table/glass,
-/obj/machinery/fax{
-	fax_name = "Research Director's Office";
-	name = "Research Director's Fax Machine"
-	},
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 8
 	},
+/obj/machinery/fax/heads/rd,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "xMg" = (
@@ -55546,6 +55525,7 @@
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/yellow/fourcorners,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/disposal/incinerator)
 "ybX" = (
@@ -94241,7 +94221,7 @@ tiG
 uMY
 odp
 bZh
-odp
+bZh
 odp
 hUt
 jWA
@@ -95530,7 +95510,7 @@ usl
 usl
 usl
 jKs
-yjt
+mYX
 bYw
 bYw
 bYw
@@ -95787,7 +95767,7 @@ usl
 usl
 usl
 oib
-mYX
+yjt
 mHK
 usl
 xXi
@@ -99846,7 +99826,7 @@ khX
 khX
 vaa
 mri
-gvM
+beS
 uSW
 gvM
 gfi
@@ -100617,7 +100597,7 @@ aaa
 aaa
 aaa
 gvM
-beS
+yet
 uSW
 gvM
 uSW

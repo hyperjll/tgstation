@@ -132,6 +132,7 @@
 			It's stuffed with all the clownly gadgets you managed to bring aboard with you."
 	icon = 'hypermods/icons/obj/storage/box.dmi'
 	icon_state = "clown"
+	illustration = null
 
 /obj/item/storage/box/clowngadgets/PopulateContents()
 	var/list/item_list = list(

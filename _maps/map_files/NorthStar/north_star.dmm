@@ -1412,6 +1412,7 @@
 /obj/structure/mirror/directional/north,
 /obj/effect/landmark/generic_maintenance_landmark,
 /obj/structure/sink/directional/south,
+/obj/machinery/duct,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/captain/private)
 "asf" = (
@@ -4679,6 +4680,7 @@
 /obj/machinery/modular_computer/preset/civilian{
 	dir = 4
 	},
+/obj/machinery/light_switch/directional/west,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/science/robotics/lab)
 "bij" = (
@@ -4726,9 +4728,6 @@
 	name = "Robotics Privacy Control";
 	pixel_x = -24;
 	req_access = list("robotics")
-	},
-/obj/machinery/light_switch/directional/west{
-	pixel_x = -52
 	},
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
@@ -6205,9 +6204,11 @@
 /turf/open/floor/plating,
 /area/station/hallway/floor1/fore)
 "byi" = (
-/obj/machinery/status_display/evac/directional,
-/obj/effect/spawner/structure/window,
-/turf/open/floor/plating,
+/obj/structure/chair/sofa/bench{
+	dir = 1
+	},
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/iron/textured_large,
 /area/station/hallway/secondary/exit/departure_lounge)
 "byk" = (
 /obj/effect/turf_decal/tile/blue/half{
@@ -15572,10 +15573,7 @@
 /area/station/service/lawoffice)
 "dWu" = (
 /obj/structure/table/wood,
-/obj/machinery/fax{
-	fax_name = "Captain's Office";
-	name = "Captain's Fax Machine"
-	},
+/obj/machinery/fax/heads/captain,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain)
 "dWv" = (
@@ -18245,7 +18243,6 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /obj/machinery/turretid{
 	control_area = "/area/station/ai/upload/chamber";
-	icon_state = "control_stun";
 	name = "AI Upload turret control";
 	pixel_y = 28
 	},
@@ -28446,7 +28443,6 @@
 /obj/structure/toilet{
 	dir = 8
 	},
-/obj/machinery/duct,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/captain/private)
 "huh" = (
@@ -30797,12 +30793,9 @@
 /area/station/maintenance/floor3/port)
 "hZq" = (
 /obj/structure/table/wood,
-/obj/machinery/fax{
-	fax_name = "Chief Medical Officer's Office";
-	name = "Chief Medical Officer's Fax Machine"
-	},
 /obj/machinery/duct,
 /obj/structure/sign/poster/official/random/directional/south,
+/obj/machinery/fax/heads/cmo,
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/cmo)
 "hZs" = (
@@ -41234,11 +41227,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
-/obj/machinery/fax{
-	fax_name = "Head of Security's Office";
-	name = "Head of Security's Fax Machine"
-	},
 /obj/structure/table/wood,
+/obj/machinery/fax/heads/hos,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/hos)
 "kHP" = (
@@ -45485,10 +45475,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/table/glass,
-/obj/machinery/fax{
-	fax_name = "Research Director's Office";
-	name = "Research Director's Fax Machine"
-	},
+/obj/machinery/fax/heads/rd,
 /turf/open/floor/iron/large,
 /area/station/command/heads_quarters/rd)
 "lLO" = (
@@ -60443,11 +60430,7 @@
 /obj/machinery/light_switch/directional/east,
 /obj/machinery/space_heater,
 /obj/effect/turf_decal/bot,
-/obj/machinery/camera{
-	c_tag = "Atmospherics Office Cam #1";
-	dir = 6;
-	network = list("ss13","engine")
-	},
+/obj/machinery/camera/directional/north,
 /turf/open/floor/iron,
 /area/station/engineering/atmos/office)
 "pAN" = (
@@ -65217,11 +65200,8 @@
 /turf/open/floor/iron,
 /area/station/maintenance/floor2/starboard/fore)
 "qLH" = (
-/obj/machinery/fax{
-	fax_name = "Head of Personnel's Office";
-	name = "Head of Personnel's Fax Machine"
-	},
 /obj/structure/table,
+/obj/machinery/fax/heads/hop,
 /turf/open/floor/carpet/blue,
 /area/station/command/heads_quarters/hop)
 "qLI" = (
@@ -70634,11 +70614,8 @@
 /area/station/security/brig)
 "skM" = (
 /obj/structure/table/wood,
-/obj/machinery/fax{
-	fax_name = "Quartermaster's Office";
-	name = "Quartermaster's Fax Machine"
-	},
 /obj/machinery/light/small/directional/east,
+/obj/machinery/fax/heads/qm,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/qm)
 "skQ" = (
@@ -76610,13 +76587,13 @@
 /turf/open/floor/pod/dark,
 /area/station/maintenance/floor3/port/aft)
 "tKs" = (
-/obj/structure/curtain,
 /obj/structure/fans/tiny{
 	name = "sink"
 	},
 /obj/item/soap/deluxe,
 /obj/item/bikehorn/rubberducky,
-/obj/machinery/shower/directional/south,
+/obj/machinery/shower/directional/west,
+/obj/structure/curtain,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/captain/private)
 "tKA" = (
@@ -80513,12 +80490,9 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "uMP" = (
-/obj/machinery/fax{
-	fax_name = "Chief Engineer's Office";
-	name = "Chief Engineer's Fax Machine"
-	},
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/machinery/firealarm/directional/east,
+/obj/machinery/fax/heads/ce,
 /turf/open/floor/iron/dark/textured,
 /area/station/command/heads_quarters/ce)
 "uMR" = (
@@ -87452,6 +87426,11 @@
 /obj/machinery/camera/emp_proof/directional/east,
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
+"wxa" = (
+/obj/structure/chair/sofa/bench,
+/obj/machinery/status_display/evac/directional/north,
+/turf/open/floor/iron/textured_large,
+/area/station/hallway/secondary/exit/departure_lounge)
 "wxb" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -109463,15 +109442,15 @@ gJI
 xYo
 bTq
 ycy
-byi
-nlw
+xYo
+wxa
 cCu
 lUu
 ltR
 lUu
 vhj
-hII
 byi
+xYo
 ycy
 faw
 hhx
