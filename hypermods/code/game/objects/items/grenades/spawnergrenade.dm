@@ -5,6 +5,9 @@
 	spawner_type = /obj/item/grown/bananapeel
 	deliveryamt = 10
 
+/obj/item/grenade/spawnergrenade/bananapeel/super
+	spawner_type = /obj/item/grown/bananapeel/super
+
 /obj/item/grenade/spawnergrenade/minisyndies
 	name = "pipebomb"
 	desc = "An improvised explosive device. You can hear muffled tiny screams inside."

@@ -1,3 +1,12 @@
+/datum/uplink_item/explosives/banananade_super
+	name = "Super Banana Grenade"
+	desc = "A singular Banana Grenade. Temporarily blinds those nearby without eye protection, and shoots banana peels everywhere nearby. \
+			The simple act of making physical contact with these banana's is sure to give anyone quite the slip!"
+	item = /obj/item/grenade/spawnergrenade/bananapeel/super
+	cost = 1
+	surplus = 10
+	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_SPY
+
 /datum/uplink_item/disruption/superior_honkrender
 	name = "Superior Honkrender"
 	desc = "An ancient artifact recovered from -. Opens the way to TRANSMISSION OFFLINE---- \

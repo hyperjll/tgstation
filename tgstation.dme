@@ -7687,6 +7687,7 @@
 #include "hypermods\code\modules\hydroponics\unique_plant_genes.dm"
 #include "hypermods\code\modules\hydroponics\grown\alien.dm"
 #include "hypermods\code\modules\hydroponics\grown\apple.dm"
+#include "hypermods\code\modules\hydroponics\grown\banana.dm"
 #include "hypermods\code\modules\hydroponics\grown\beans.dm"
 #include "hypermods\code\modules\hydroponics\grown\berries.dm"
 #include "hypermods\code\modules\hydroponics\grown\cereals.dm"
