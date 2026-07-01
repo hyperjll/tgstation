@@ -421,6 +421,11 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/white/small,
 /area/station/medical/storage)
+"ais" = (
+/obj/structure/window/reinforced/plasma/spawner/directional/north,
+/obj/structure/window/reinforced/plasma/spawner/directional/east,
+/turf/open/space/basic,
+/area/space/nearstation)
 "aiI" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
 /turf/open/floor/iron,
@@ -2576,6 +2581,11 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/electrical)
+"aWy" = (
+/obj/structure/lattice,
+/obj/structure/window/reinforced/plasma/spawner/directional/east,
+/turf/open/space/basic,
+/area/space/nearstation)
 "aWz" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -2595,6 +2605,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
+"aWL" = (
+/obj/structure/window/reinforced/plasma/spawner/directional/west,
+/turf/open/space/basic,
+/area/space/nearstation)
 "aXi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -6348,12 +6362,12 @@
 /obj/item/stack/spacecash/c1,
 /obj/item/stack/spacecash/c1,
 /obj/machinery/airalarm/directional/north,
-/obj/structure/reagent_dispensers/beerkeg,
-/obj/structure/reagent_dispensers/beerkeg,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/reagent_dispensers/keg/beer,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/stone,
 /area/station/service/bar/backroom)
 "cqM" = (
@@ -6772,7 +6786,6 @@
 /area/station/engineering/lobby)
 "cze" = (
 /obj/machinery/turretid{
-	icon_state = "control_stun";
 	name = "AI Chamber turret control";
 	pixel_x = 3;
 	pixel_y = -23;
@@ -11895,6 +11908,12 @@
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/hop)
+"ekw" = (
+/obj/structure/lattice,
+/obj/structure/window/reinforced/plasma/spawner/directional/north,
+/obj/structure/window/reinforced/plasma/spawner/directional/east,
+/turf/open/space/basic,
+/area/space/nearstation)
 "ekL" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 9
@@ -17557,11 +17576,11 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/central)
 "geu" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "medbreach";
 	name = "Anti-Breach Shutters"
 	},
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
 /area/station/medical/treatment_center)
 "geE" = (
@@ -28510,6 +28529,10 @@
 "jxD" = (
 /turf/open/floor/iron,
 /area/station/maintenance/starboard/greater)
+"jxJ" = (
+/obj/structure/window/reinforced/plasma/spawner/directional/east,
+/turf/open/space/basic,
+/area/space/nearstation)
 "jxU" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 9
@@ -29826,6 +29849,11 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/central/greater)
+"jRS" = (
+/obj/structure/lattice,
+/obj/structure/window/reinforced/plasma/spawner/directional/north,
+/turf/open/space/basic,
+/area/space/nearstation)
 "jRU" = (
 /obj/structure/railing,
 /obj/structure/disposalpipe/segment{
@@ -34943,9 +34971,9 @@
 /turf/open/floor/iron/white/small,
 /area/station/medical/psychology)
 "lyq" = (
-/obj/structure/reagent_dispensers/beerkeg,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/radio/intercom/directional/south,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/stone,
 /area/station/service/abandoned_gambling_den)
 "lyt" = (
@@ -36100,7 +36128,7 @@
 /turf/open/floor/circuit,
 /area/station/tcommsat/server)
 "lSf" = (
-/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "lSh" = (
@@ -42312,7 +42340,6 @@
 /obj/effect/landmark/start/cyborg,
 /obj/machinery/turretid{
 	control_area = "/area/station/ai/upload/chamber";
-	icon_state = "control_stun";
 	name = "AI Upload Turret Control";
 	pixel_y = -28
 	},
@@ -50749,6 +50776,12 @@
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
+"qTL" = (
+/obj/structure/lattice,
+/obj/structure/window/reinforced/plasma/spawner/directional/north,
+/obj/structure/window/reinforced/plasma/spawner/directional/west,
+/turf/open/space/basic,
+/area/space/nearstation)
 "qTR" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/wood,
@@ -53253,7 +53286,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/command/heads_quarters/captain)
 "rHw" = (
-/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/plasma/spawner/directional/south,
 /turf/open/space/basic,
 /area/space/nearstation)
 "rHy" = (
@@ -53392,6 +53425,11 @@
 /obj/item/banner/cargo,
 /turf/open/floor/iron/smooth,
 /area/station/command/heads_quarters/qm)
+"rKo" = (
+/obj/structure/lattice,
+/obj/structure/window/reinforced/plasma/spawner/directional/south,
+/turf/open/space/basic,
+/area/space/nearstation)
 "rKv" = (
 /obj/structure/broken_flooring/singular/directional/east,
 /turf/open/floor/iron,
@@ -54624,8 +54662,8 @@
 /turf/open/floor/iron,
 /area/station/cargo/sorting)
 "sge" = (
-/obj/structure/reagent_dispensers/beerkeg,
 /obj/item/clothing/head/costume/festive,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/greater)
 "sgm" = (
@@ -55724,13 +55762,9 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
 "syk" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "medbreach";
-	name = "Anti-Breach Shutters"
-	},
-/obj/effect/spawner/structure/window/reinforced/plasma,
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
-/area/station/medical/treatment_center)
+/area/station/medical/medbay/central)
 "sys" = (
 /obj/structure/broken_flooring/side/directional/south,
 /turf/open/floor/plating,
@@ -56068,6 +56102,11 @@
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/iron/cafeteria,
 /area/station/security/prison/mess)
+"sFG" = (
+/obj/structure/window/reinforced/plasma/spawner/directional/east,
+/obj/structure/window/reinforced/plasma/spawner/directional/south,
+/turf/open/space/basic,
+/area/space/nearstation)
 "sGh" = (
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/stripes/white/line{
@@ -57689,9 +57728,9 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/project)
 "tfc" = (
-/obj/structure/reagent_dispensers/beerkeg,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/extinguisher_cabinet/directional/west,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/stone,
 /area/station/service/abandoned_gambling_den)
 "tff" = (
@@ -59013,6 +59052,11 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/commons/fitness/locker_room)
+"tAl" = (
+/obj/structure/window/reinforced/plasma/spawner/directional/south,
+/obj/structure/window/reinforced/plasma/spawner/directional/west,
+/turf/open/space/basic,
+/area/space/nearstation)
 "tAm" = (
 /obj/effect/turf_decal/tile/brown/opposingcorners,
 /obj/effect/decal/cleanable/dirt,
@@ -67747,6 +67791,11 @@
 /obj/structure/tank_holder/extinguisher,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
+"wjE" = (
+/obj/structure/lattice,
+/obj/structure/window/reinforced/plasma/spawner/directional/west,
+/turf/open/space/basic,
+/area/space/nearstation)
 "wjG" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/iron/dark/small,
@@ -69310,7 +69359,7 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/eva)
 "wIp" = (
-/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/plasma/spawner/directional/north,
 /turf/open/space/basic,
 /area/space/nearstation)
 "wIG" = (
@@ -70121,6 +70170,11 @@
 	},
 /turf/open/misc/dirt/station,
 /area/station/medical/morgue)
+"wSW" = (
+/obj/structure/window/reinforced/plasma/spawner/directional/north,
+/obj/structure/window/reinforced/plasma/spawner/directional/west,
+/turf/open/space/basic,
+/area/space/nearstation)
 "wSZ" = (
 /turf/closed/wall/r_wall,
 /area/station/maintenance/hallway/abandoned_command)
@@ -95775,7 +95829,7 @@ ocv
 eZi
 kHX
 tYX
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -96032,7 +96086,7 @@ bMV
 eZi
 kHX
 tYX
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -96289,7 +96343,7 @@ mWF
 eZi
 kHX
 tYX
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -96546,11 +96600,11 @@ bMV
 eZi
 kHX
 tYX
+ais
+jxJ
 dDB
-dDB
-dDB
-dDB
-dDB
+jxJ
+jxJ
 dDB
 dDB
 dDB
@@ -97066,7 +97120,7 @@ saz
 lcD
 gCl
 tYX
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -97323,7 +97377,7 @@ ryW
 diP
 kHX
 tYX
-blb
+ekw
 blb
 blb
 blb
@@ -97581,7 +97635,7 @@ nUd
 ong
 iuR
 tYX
-dDB
+wIp
 dDB
 blb
 dDB
@@ -97830,15 +97884,15 @@ bMV
 dPp
 kUL
 tYX
-blb
-blb
-dDB
+qTL
+wjE
+tAl
 tYX
 trB
 trB
 trB
 tYX
-dDB
+wIp
 dDB
 blb
 dDB
@@ -98087,15 +98141,15 @@ udW
 djf
 kUL
 tYX
-dDB
+wIp
 blb
-dDB
+rHw
 tYX
 lcF
 trB
 trB
 tYX
-dDB
+ais
 dDB
 blb
 dDB
@@ -98353,7 +98407,7 @@ bnU
 bnU
 iuR
 tYX
-dDB
+wIp
 blb
 dDB
 dDB
@@ -98601,16 +98655,16 @@ lUl
 urf
 cPj
 tYX
-dDB
+wIp
 dDB
 blb
-dDB
+rHw
 tYX
 iNF
 diP
 fVM
 tYX
-blb
+jRS
 blb
 uXY
 uXY
@@ -98858,17 +98912,17 @@ msk
 wmX
 kUL
 tYX
+jRS
 blb
 blb
-blb
-blb
+rKo
 tYX
 iNF
 trB
 fOW
 tYX
-dDB
-dDB
+ais
+jxJ
 uXY
 dvo
 hkW
@@ -99115,10 +99169,10 @@ iFD
 fzT
 kUL
 tYX
-blb
+jRS
 aef
 fBN
-dDB
+rHw
 tYX
 tKl
 trB
@@ -99629,10 +99683,10 @@ eNP
 qFc
 cEo
 tYX
-dDB
+wIp
 kii
 nun
-blb
+rKo
 tYX
 rNN
 trB
@@ -99886,17 +99940,17 @@ gLO
 pbD
 kUL
 tYX
-blb
+jRS
 blb
 dDB
-dDB
+rHw
 tYX
 iNF
 trB
 fjq
 tYX
-dDB
-dDB
+wSW
+aWL
 uXY
 cHX
 qYh
@@ -100143,16 +100197,16 @@ bVJ
 sTb
 kUL
 tYX
-dDB
+wIp
 blb
 blb
-blb
+rKo
 tYX
 iNF
 hrc
 fjq
 tYX
-blb
+jRS
 blb
 uXY
 uXY
@@ -100409,7 +100463,7 @@ ifH
 ifH
 iXi
 tYX
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -100657,15 +100711,15 @@ nUd
 bmY
 kUL
 tYX
-dDB
+wIp
 blb
-dDB
+rHw
 tYX
 auF
 trB
 trB
 waD
-dDB
+wSW
 dDB
 dDB
 dDB
@@ -100914,15 +100968,15 @@ nUd
 dPp
 kUL
 tYX
-dDB
-blb
-dDB
+ais
+aWy
+sFG
 tYX
 trB
 trB
 trB
 waD
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -101179,7 +101233,7 @@ iNF
 xuJ
 iXi
 waD
-blb
+jRS
 blb
 blb
 blb
@@ -101435,7 +101489,7 @@ deR
 diP
 efm
 waD
-dDB
+wSW
 dDB
 dDB
 dDB
@@ -101692,7 +101746,7 @@ kHX
 kHX
 dTg
 tYX
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -101955,19 +102009,19 @@ dDB
 dDB
 dDB
 uSj
-xSO
-xSO
+syk
+syk
 uSj
 dDB
 dDB
 blb
-syk
-syk
+geu
+geu
 xQa
 xQa
 xQa
-syk
-syk
+geu
+geu
 dDB
 dDB
 dDB
@@ -102200,11 +102254,11 @@ dPp
 aww
 nsz
 iuR
+aWL
+aWL
 dDB
-dDB
-dDB
-dDB
-dDB
+aWL
+aWL
 dDB
 blb
 szY
@@ -102217,15 +102271,15 @@ tFs
 uSj
 blb
 blb
-syk
-syk
+geu
+geu
 kEH
 gaF
 pnZ
 gaF
 vdX
-syk
-syk
+geu
+geu
 blb
 blb
 uSj
@@ -102457,7 +102511,7 @@ dPp
 sFs
 fZZ
 tYX
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -102471,10 +102525,10 @@ cop
 qIf
 sqa
 wjr
-xSO
-xep
-xep
 syk
+jxJ
+jxJ
+geu
 hVo
 csE
 gOX
@@ -102482,10 +102536,10 @@ gOX
 xKg
 gqs
 mvP
+geu
+dDB
+dDB
 syk
-dDB
-dDB
-xSO
 wHN
 xrC
 pEt
@@ -102714,7 +102768,7 @@ nJG
 aww
 bje
 tYX
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -102742,7 +102796,7 @@ mZZ
 xQa
 dDB
 dDB
-xSO
+syk
 wuj
 xrC
 icY
@@ -102971,7 +103025,7 @@ cSy
 bpY
 sMt
 tYX
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -102986,8 +103040,8 @@ gnQ
 kIv
 wDo
 uSj
-xuF
-xuF
+aWL
+aWL
 xQa
 pqN
 tcz
@@ -103228,7 +103282,7 @@ vip
 njT
 fGT
 tYX
-dDB
+wIp
 dDB
 dDB
 dDB
@@ -103256,7 +103310,7 @@ ohx
 xQa
 dDB
 dDB
-xSO
+syk
 xUL
 xrC
 ubV
@@ -103500,8 +103554,8 @@ qIf
 diS
 fAJ
 uSj
-xep
-xep
+jxJ
+jxJ
 xQa
 ayf
 qTk
@@ -103511,8 +103565,8 @@ llC
 rbO
 llP
 xQa
-xep
-xep
+jxJ
+jxJ
 uSj
 vLc
 xrC
@@ -104013,9 +104067,9 @@ rVH
 tFQ
 vsx
 oED
-xSO
-xuF
-xuF
+syk
+aWL
+aWL
 geu
 pzb
 kCb
@@ -104025,9 +104079,9 @@ tCZ
 gUk
 rgK
 geu
-xuF
-xuF
-xSO
+aWL
+aWL
+syk
 iTR
 pox
 ryF
@@ -104270,7 +104324,7 @@ gUn
 xSO
 vsx
 oED
-xSO
+syk
 blb
 blb
 geu
@@ -104284,7 +104338,7 @@ geu
 geu
 blb
 blb
-xSO
+syk
 xUL
 pox
 hLa
@@ -105041,8 +105095,8 @@ pRQ
 xSO
 vsx
 rfi
-xSO
-xSO
+syk
+syk
 dDB
 dDB
 blb
@@ -105054,8 +105108,8 @@ dDB
 blb
 dDB
 dDB
-xSO
-xSO
+syk
+syk
 xUL
 vmh
 wYA
@@ -105299,19 +105353,19 @@ tFQ
 vsx
 oED
 qNw
-xSO
+syk
 uSj
 uSj
-xSO
+syk
 uSj
-xSO
+syk
 pKm
-xSO
+syk
 uSj
-xSO
+syk
 uSj
 uSj
-xSO
+syk
 qNw
 xUL
 qWk

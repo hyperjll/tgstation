@@ -1727,7 +1727,7 @@
 /turf/open/floor/iron/grimy,
 /area/station/hallway/primary/port)
 "aHf" = (
-/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/wood,
 /area/station/service/abandoned_gambling_den)
 "aHn" = (
@@ -5697,7 +5697,7 @@
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/foyer)
 "chU" = (
-/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "cit" = (
@@ -9580,7 +9580,7 @@
 /turf/open/floor/iron/terracotta,
 /area/station/maintenance/starboard/aft)
 "dID" = (
-/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "dIF" = (
@@ -21634,7 +21634,7 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
-/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/carpet/neon/simple/black/nodots,
 /area/station/service/bar)
 "iBw" = (

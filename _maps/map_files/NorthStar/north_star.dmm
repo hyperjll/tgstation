@@ -38132,7 +38132,7 @@
 "jTO" = (
 /obj/machinery/airalarm/directional/east,
 /obj/structure/table/wood,
-/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/wood,
 /area/station/service/bar)
 "jTS" = (

@@ -18015,8 +18015,8 @@
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
 "bIc" = (
-/obj/structure/reagent_dispensers/beerkeg,
 /obj/item/radio/intercom/directional/east,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/carpet,
 /area/station/service/bar)
 "bIi" = (
@@ -52798,7 +52798,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "ntY" = (
-/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "nun" = (

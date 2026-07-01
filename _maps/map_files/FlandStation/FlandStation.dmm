@@ -75546,7 +75546,7 @@
 /area/station/security/detectives_office)
 "vUu" = (
 /obj/effect/turf_decal/siding/wood,
-/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/wood,
 /area/station/service/bar/backroom)
 "vUF" = (

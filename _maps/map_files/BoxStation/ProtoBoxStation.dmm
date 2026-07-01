@@ -11111,7 +11111,7 @@
 /area/station/command/eva)
 "aJm" = (
 /obj/structure/sink/kitchen/directional/south,
-/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/spawner/random/food_or_drink/keg,
 /turf/open/floor/wood,
 /area/station/service/bar)
 "aJn" = (
