@@ -221,7 +221,7 @@
 /datum/market_item/nt_food/beerkeg
 	name = "Beer Keg"
 	desc = "A top-of-the-line keg completely full of beer."
-	item = /obj/structure/reagent_dispensers/beerkeg
+	item = /obj/structure/reagent_dispensers/keg/beer
 
 	price_min = CARGO_CRATE_VALUE * 1.5
 	price_max = CARGO_CRATE_VALUE * 2
