@@ -31,7 +31,7 @@
 /datum/reagent/medicine/dexalin/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	var/need_mob_update
-	need_mob_update += affected_mob.adjust_oxy_loss(-2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(-2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 
 	affected_mob.reagents.remove_reagent(/datum/reagent/toxin/lexorin, 1)
 
@@ -41,7 +41,7 @@
 /datum/reagent/medicine/dexalin/overdose_process(mob/living/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	var/need_mob_update
-	need_mob_update += affected_mob.adjust_oxy_loss(4 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(4 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -109,7 +109,7 @@
 	need_mob_update += affected_mob.adjust_brute_loss(-1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_fire_loss(-1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_tox_loss(-1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
-	need_mob_update += affected_mob.adjust_oxy_loss(-1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(-1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -119,7 +119,7 @@
 	need_mob_update += affected_mob.adjust_brute_loss(2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_fire_loss(2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_tox_loss(2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
-	need_mob_update += affected_mob.adjust_oxy_loss(2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(2 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -133,7 +133,7 @@
 /datum/reagent/medicine/dexalinplus/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	var/need_mob_update
-	need_mob_update += affected_mob.adjust_oxy_loss(-7 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(-7 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 
 	affected_mob.adjust_blood_volume(3, maximum = BLOOD_VOLUME_NORMAL)
 
@@ -147,7 +147,7 @@
 /datum/reagent/medicine/dexalinplus/overdose_process(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	var/need_mob_update
-	need_mob_update += affected_mob.adjust_oxy_loss(10 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(10 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 	need_mob_update += affected_mob.adjust_fire_loss(6 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 
 	if(need_mob_update)
@@ -262,7 +262,7 @@
 /datum/reagent/medicine/coagulant/tranexamicacid/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
 	var/need_mob_update
-	need_mob_update += affected_mob.adjust_oxy_loss(-1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(-1 * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 
 	affected_mob.adjust_blood_volume(1, maximum = BLOOD_VOLUME_NORMAL)
 
@@ -297,15 +297,10 @@
 		need_mob_update = affected_mob.adjust_tox_loss(-1.5 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 		need_mob_update += affected_mob.adjust_brute_loss(-1.5 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 		need_mob_update += affected_mob.adjust_fire_loss(-1.5 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-		need_mob_update += affected_mob.adjust_oxy_loss(-10 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
+		need_mob_update += affected_mob.adjust_oxy_loss(-10 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 	else
-		need_mob_update = affected_mob.adjust_oxy_loss(-1 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
-	if(affected_mob.losebreath >= 4)
-		var/obj/item/organ/lungs/affected_lungs = affected_mob.get_organ_slot(ORGAN_SLOT_LUNGS)
-		var/our_respiration_type = affected_lungs ? affected_lungs.respiration_type : affected_mob.mob_respiration_type // use lungs' respiration type or mob_respiration_type if no lungs
-		if(our_respiration_type & affected_respiration_type)
-			affected_mob.losebreath -= 4 * metabolization_ratio * seconds_per_tick
-			need_mob_update = TRUE
+		need_mob_update = affected_mob.adjust_oxy_loss(-1 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+	affected_mob.losebreath = max(0, affected_mob.losebreath - (4 * metabolization_ratio * seconds_per_tick))
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -336,15 +331,10 @@
 		need_mob_update = affected_mob.adjust_tox_loss(-2 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 		need_mob_update += affected_mob.adjust_brute_loss(-2 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 		need_mob_update += affected_mob.adjust_fire_loss(-2 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
-		need_mob_update += affected_mob.adjust_oxy_loss(-10 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
+		need_mob_update += affected_mob.adjust_oxy_loss(-10 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 	else
-		need_mob_update = affected_mob.adjust_oxy_loss(-3 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
-	if(affected_mob.losebreath >= 4)
-		var/obj/item/organ/lungs/affected_lungs = affected_mob.get_organ_slot(ORGAN_SLOT_LUNGS)
-		var/our_respiration_type = affected_lungs ? affected_lungs.respiration_type : affected_mob.mob_respiration_type // use lungs' respiration type or mob_respiration_type if no lungs
-		if(our_respiration_type & affected_respiration_type)
-			affected_mob.losebreath -= 4 * metabolization_ratio * seconds_per_tick
-			need_mob_update = TRUE
+		need_mob_update = affected_mob.adjust_oxy_loss(-3 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+	affected_mob.losebreath = max(0, affected_mob.losebreath - (4 * metabolization_ratio * seconds_per_tick))
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -477,7 +467,7 @@
 	need_mob_update += affected_mob.adjust_brute_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_fire_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_tox_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
-	need_mob_update += affected_mob.adjust_oxy_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 
 	if(affected_mob.bodytemperature > BODYTEMP_NORMAL)
 		affected_mob.adjust_bodytemperature(-40 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
@@ -635,7 +625,7 @@
 	. = ..()
 	var/need_mob_update
 
-	need_mob_update += affected_mob.adjust_oxy_loss(5 * REM * seconds_per_tick, updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(5 * REM * seconds_per_tick, updating_health = FALSE)
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
@@ -669,7 +659,7 @@
 	need_mob_update += affected_mob.adjust_brute_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_fire_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_tox_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
-	need_mob_update += affected_mob.adjust_oxy_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 
 	need_mob_update = affected_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
 	need_mob_update = affected_mob.adjust_organ_loss(ORGAN_SLOT_HEART, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
@@ -706,7 +696,7 @@
 	need_mob_update += affected_mob.adjust_brute_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_fire_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_tox_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
-	need_mob_update += affected_mob.adjust_oxy_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 
 	need_mob_update = affected_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
 	need_mob_update = affected_mob.adjust_organ_loss(ORGAN_SLOT_HEART, -healing * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
@@ -759,7 +749,7 @@
 	need_mob_update += affected_mob.adjust_brute_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_fire_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_tox_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
-	need_mob_update += affected_mob.adjust_oxy_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 
 	if(affected_mob.reagents.has_reagent(/datum/reagent/gold) && prob(50))
 		affected_mob.reagents.add_reagent(type, 0.1)
@@ -796,7 +786,7 @@
 	need_mob_update += affected_mob.adjust_brute_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_fire_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjust_tox_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
-	need_mob_update += affected_mob.adjust_oxy_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+	need_mob_update += affected_mob.adjust_oxy_loss(-healing * metabolization_ratio * seconds_per_tick * normalise_creation_purity(), updating_health = FALSE)
 
 	if(affected_mob.on_fire)
 		affected_mob.adjust_fire_stacks(-4)

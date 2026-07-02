@@ -357,7 +357,7 @@
 			need_mob_update += carbies.adjust_brute_loss(-200 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 			need_mob_update += carbies.adjust_fire_loss(-200 * REM * normalise_creation_purity(), updating_health = FALSE, required_bodytype = affected_bodytype)
 			need_mob_update += carbies.adjust_tox_loss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_biotype = affected_biotype)
-			need_mob_update += carbies.adjust_oxy_loss(30 * REM * normalise_creation_purity(), updating_health = FALSE, required_respiration_type = affected_respiration_type)
+			need_mob_update += carbies.adjust_oxy_loss(30 * REM * normalise_creation_purity(), updating_health = FALSE)
 			if(need_mob_update)
 				return UPDATE_MOB_HEALTH
 		if(4)
