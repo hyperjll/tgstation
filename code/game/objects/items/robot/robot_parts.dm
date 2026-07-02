@@ -349,16 +349,16 @@
 		if(!locomotion)
 			final_product.set_lockcharge(TRUE)
 			to_chat(final_product, span_warning("Error: Servo motors unresponsive."))
-		return ITEM_INTERACT_SUCCESS
 
 // Hyper edits
-		if(be_clockwork && final_product.mind)
+		if(be_clockwork && brainmob.mind)
 			var/datum/antagonist/clock_cultist/new_servant_datum = new
 			if(old_servant_datum)
 				new_servant_datum.silent = TRUE
-			final_product.mind.add_antag_datum(new_servant_datum)
+				brainmob.mind.add_antag_datum(new_servant_datum)
 			new_servant_datum.silent = FALSE
 // Hyper edits end
+		return ITEM_INTERACT_SUCCESS
 
 	if(istype(tool, /obj/item/borg/upgrade/ai))
 		var/obj/item/borg/upgrade/ai/boris_module = tool

@@ -63,18 +63,11 @@
 		return
 
 /datum/traitor_objective/target_player/infect/generate_objective(datum/mind/generating_for, list/possible_duplicates)
-
 	var/list/already_targeting = list() //List of minds we're already targeting. The possible_duplicates is a list of objectives, so let's not mix things
 	for(var/datum/objective/task as anything in handler.primary_objectives)
 		if(!istype(task.target, /datum/mind))
 			continue
 		already_targeting += task.target //Removing primary objective kill targets from the list
-
-	var/parent_type = type::parent_type
-	//don't roll head of staff types if you haven't completed the normal version
-	if(heads_of_staff && !handler.get_completion_count(parent_type))
-		// Locked if they don't have any of the risky bug room objective completed
-		return FALSE
 
 	var/list/possible_targets = list()
 	var/try_target_late_joiners = FALSE
