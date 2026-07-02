@@ -309,13 +309,6 @@
 		notify_flags = NOTIFY_CATEGORY_NOFLASH,
 	)
 	priority_announce("An extra-dimensional rift has been detected within your sector, it's recommended such rifts be located and destroyed.", "Extra-Dimensional Affairs Report", 'sound/announcer/notice/notice1.ogg')
-	/**
-	var/datum/antagonist/traitor/fulp_infiltrator/infil = terrorist.mind.has_antag_datum(/datum/antagonist/traitor/fulp_infiltrator)
-	if(!infil)
-		return
-	var/datum/objective/summon_wormhole/objective = locate() in infil.objectives
-	objective.completed = TRUE
-	**/
 
 /obj/item/grenade/c4/wormhole/Destroy()
 	bombing_zone = null
