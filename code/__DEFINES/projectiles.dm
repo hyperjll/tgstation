@@ -78,6 +78,8 @@
 #define CALIBER_CANNONBALL "cannonball"
 /// The caliber used solely by the orion silenced pistol.
 #define CALIBER_22MM "22mm"
+/// The caliber used by paintball and pepperball guns.
+#define CALIBER_PAINTBALL "paintball"
 
 /// For gunpoints, how many tiles around the target the shooter can roam without losing their shot
 #define GUNPOINT_SHOOTER_STRAY_RANGE 2
