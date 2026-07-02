@@ -142,7 +142,7 @@
 
 /obj/item/reagent_containers/hypospray/medipen/manifoldinjector
 	name = "EHMS autoinjector"
-	desc = "Experimental Hereditary Manifold Sickness autoinjector."
+	desc = "It's an Experimental Hereditary Manifold Sickness autoinjector. Whoever is injected by this will effectively have their days numbered."
 	icon_state = "tbpen"
 	inhand_icon_state = "tbpen"
 	base_icon_state = "tbpen"
