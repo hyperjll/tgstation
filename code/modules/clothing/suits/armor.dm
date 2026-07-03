@@ -649,6 +649,7 @@
 	. = ..()
 	allowed += list(
 		/obj/item/fireaxe/metal_h2_axe,
+		/obj/item/gun/ballistic/rifle/rebarxbow,
 	)
 
 /datum/armor/armor_elder_atmosian

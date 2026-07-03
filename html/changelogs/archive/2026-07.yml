@@ -43,6 +43,8 @@
   - rscadd: Added a new cybernetic implant to the black market, the nutrient implant
       pump plus plus plus
   - spellcheck: fixed a single typo in logs
+  Gboster-0:
+  - bugfix: fixed random modifiers not working in deathmatch
   Ghommie:
   - refactor: refactored food categories (the stuff that tells you if a food item
       is made of meat, fruits, veggies etc, when examined among other things) a little,
@@ -96,11 +98,14 @@
   - bugfix: Health and security HUD now scales with player height, no more huds clipping
       into spacer hair
   - bugfix: Ore veins can no longer spread into gibtonite turfs
+  - qol: Miner callouts are now off by default
+  - bugfix: Miner callouts can now be used to command pets like regular pointing
   Swan:
   - bugfix: fixes the chemical tab of the plant analyzer bluescreening on certain
       seeds.
   TealSeer:
   - bugfix: fixed hand teleporters not working
+  - bugfix: fixed screentip for shoes not showing
   Time-Green:
   - qol: Gizmo's have some improved feedback to help convey the fact that there's
       no such thing as 'doing nothing'
@@ -118,3 +123,6 @@
   - rscadd: AIs can now point to things using holopads
   timothymtorres:
   - rscadd: Mobs that are wet become frozen in freezing temperatures
+2026-07-03:
+  Melbert:
+  - rscdel: Fixed jaws of recovery being able to be stored in the paramedic EMT belt
