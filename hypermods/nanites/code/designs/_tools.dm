@@ -79,3 +79,13 @@
 	build_path = /obj/item/circuitboard/machine/public_nanite_chamber
 	category = list(RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_RESEARCH)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/nanite_injector
+	name = "Nanite Cloud Autoinjector"
+	desc = "A single use autoinjector which allows one to infuse their body with nanites on-the-go."
+	id = "nanite_injector"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT*5, /datum/material/glass = SHEET_MATERIAL_AMOUNT*2)
+	build_path = /obj/item/reagent_containers/hypospray/medipen/naniteinjector
+	category = list(RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_MACHINE_RESEARCH)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE

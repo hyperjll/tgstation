@@ -23,6 +23,7 @@
 		"emproof_battery",
 		"fultonrecoveryimplant",
 		"nanite_disk_noshock",
+		"nanite_injector",
 		"experimental_cloner",
 		"experimental_cloner_scanner",
 		"experimental_cloner_computer",

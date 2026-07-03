@@ -461,3 +461,84 @@
 
 /obj/item/disk/nanite_program/gravity
 	program = /datum/nanite_program/gravity
+
+
+/obj/item/reagent_containers/hypospray/medipen/naniteinjector
+	name = "nanite cloud autoinjector"
+	desc = "An autoinjector containing a synthesized strain of nanobots with a pre-linked cloud ID. Comes with a small booster shot to speed up nanite replication speed."
+	icon = 'hypermods/icons/obj/medical/syringe.dmi'
+	icon_state = "nanite_pen"
+	inhand_icon_state = "nanite_pen"
+	base_icon_state = "nanite_pen"
+	volume = 30
+	amount_per_transfer_from_this = 30
+	list_reagents = list(/datum/reagent/medicine/nanitebooster = 5)
+	/// The techweb that hosts the nanites we're injecting into people.
+	var/datum/techweb/linked_techweb
+	/// What's the cloud id of the nanites within the medipen?
+	var/naniteinject_cloud_id = 1
+	/// What's the safety threshold on the nanites within the
+	var/naniteinject_safety = 50
+
+/obj/item/reagent_containers/hypospray/medipen/naniteinjector/examine(mob/user)
+	. = ..()
+	. += span_notice("Ctrl+Click it to change it's settings!")
+	. += "The digital display reads: Cloud ID [naniteinject_cloud_id]."
+	. += "Below the Cloud ID readout shows: Safety Value [naniteinject_safety]."
+	if(used_up)
+		. += "It's served it's purpose."
+
+/obj/item/reagent_containers/hypospray/medipen/naniteinjector/Initialize(mapload)
+	. = ..()
+	if(!CONFIG_GET(flag/no_default_techweb_link) && !linked_techweb)
+		CONNECT_TO_RND_SERVER_ROUNDSTART(linked_techweb, src)
+
+/obj/item/reagent_containers/hypospray/medipen/naniteinjector/item_ctrl_click(mob/user)
+	var/cloud_id_select = tgui_input_number(user,
+		"What's the Cloud ID for these nanites? From 1 to 100.",
+		"Input Number",
+		default = 1,
+		max_value = 100,
+		min_value = 1,
+		round_value = TRUE,
+	)
+
+	if(!cloud_id_select)
+		return
+
+	naniteinject_cloud_id = cloud_id_select
+
+	var/safety_val_select = tgui_input_number(user,
+		"What's the Safety Threshold for these nanites? From 0 to 500.",
+		"Input Number",
+		default = 50,
+		max_value = 500,
+		min_value = 0,
+		round_value = TRUE,
+	)
+
+	if(!safety_val_select)
+		return
+
+	naniteinject_safety = safety_val_select
+	return CLICK_ACTION_SUCCESS
+
+/obj/item/reagent_containers/hypospray/medipen/naniteinjector/inject(mob/living/affected_mob, mob/user)
+	if(used_up)
+		return ..()
+	if(!iscarbon(affected_mob))
+		return
+	if(affected_mob.GetComponent(/datum/component/nanites))
+		balloon_alert(user, "target has nanites already!")
+		return
+	to_chat(affected_mob, span_warning("You feel someone try to inject you with something."))
+	balloon_alert(user, "injecting...")
+	log_combat(user, affected_mob, "attempted to inject", src)
+	if(!do_after(user, 5 SECONDS, hidden = FALSE))
+		balloon_alert(user, "interrupted!")
+		return
+
+	affected_mob.AddComponent(/datum/component/nanites, linked_techweb)
+	SEND_SIGNAL(affected_mob, COMSIG_NANITE_SET_CLOUD, naniteinject_cloud_id)
+	SEND_SIGNAL(affected_mob, COMSIG_NANITE_SET_SAFETY, naniteinject_safety)
+	return ..()
