@@ -150,12 +150,12 @@
 	amount_per_transfer_from_this = 30
 	list_reagents = list(/datum/reagent/medicine/sansufentanyl = 20)
 	stealthy = TRUE
-	//Was the injector used on someone yet?
-	var/used = FALSE
 
-/obj/item/reagent_containers/hypospray/medipen/manifoldinjector/attack(mob/living/affected_mob, mob/living/carbon/human/user)
-	if(used)
+/obj/item/reagent_containers/hypospray/medipen/manifoldinjector/inject(mob/living/carbon/affected_mob, mob/user)
+	if(used_up)
 		return ..()
+	if(!iscarbon(affected_mob))
+		return
 	to_chat(affected_mob, span_warning("You feel someone try to inject you with something."))
 	balloon_alert(user, "injecting...")
 	log_combat(user, affected_mob, "attempted to inject", src)
@@ -164,6 +164,5 @@
 		return
 	var/datum/disease/chronic_illness/hms = new /datum/disease/chronic_illness()
 	affected_mob.ForceContractDisease(hms)
-	used = TRUE
-	inject(affected_mob, user)
 	SEND_SIGNAL(src, COMSIG_EHMS_INJECTOR_INJECTED, user, affected_mob)
+	return ..()
