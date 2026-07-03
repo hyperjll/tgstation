@@ -963,7 +963,7 @@
 /datum/uplink_item/role_restricted/telegun
 	name = "Teleporter Gun"
 	desc = "Teleporter technology meets energy-based weaponry! After purchase, use in hand to select a tracking beacon to lock on to, \
-			then fire at your target to teleport them to that destination! Works especially well for putting people directly into deathtraps. \
+			then fire at your target to teleport them to that destination! Works especially well for putting people directly into deathtraps, \
 			throwing people into hazardous environments, or getting your pursuers off your ass! This gun does NOT self-charge. \
 			Has a chance to be a wild teleport, sending the victim to a completely random location."
 	item = /obj/item/gun/energy/teleport
