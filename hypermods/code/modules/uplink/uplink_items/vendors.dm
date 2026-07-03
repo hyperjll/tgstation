@@ -140,7 +140,7 @@
 			Purchasing donk pockets in bulk is also an option from this vendor."
 	cant_discount = TRUE
 	item = /obj/machinery/vending/donksnack
-	cost = 3
+	cost = 2
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	var/pod_item = /obj/machinery/vending/donksnack
 
@@ -212,7 +212,7 @@
 			Hotdogs from this vendor are said to have been made with love."
 	cant_discount = TRUE
 	item = /obj/machinery/vending/hotdog
-	cost = 5
+	cost = 3
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	var/pod_item = /obj/machinery/vending/hotdog
 
@@ -252,30 +252,3 @@
 		"spawn" = poditem,
 	))
 	return source //For log icon
-
-/**
-/datum/uplink_item/vendors/
-	name = ""
-	desc = ""
-	progression_minimum = 20 MINUTES
-	cant_discount = TRUE
-	item = /obj/machinery/vending/
-	cost =
-	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
-	var/pod_item = /obj/machinery/vending/
-
-/datum/uplink_item/vendors//spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)
-	var/poditem = new pod_item()
-	if(!istype(poditem))
-		CRASH("uplink produced the wrong item instead of the [pod_item].")
-
-	podspawn(list(
-		"target" = get_turf(user),
-		"style" = /datum/pod_style/syndicate,
-		"spawn" = poditem,
-	))
-	return source //For log icon
-
-
-**/
-
