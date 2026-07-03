@@ -162,3 +162,7 @@
 /datum/lazy_template/commando_base
 	key = LAZY_TEMPLATE_KEY_COMMANDOBASE
 	map_name = "commando_base"
+
+/datum/lazy_template/syndicate_satellite
+	key = LAZY_TEMPLATE_KEY_SYNDICATE_SATELLITE
+	map_name = "syndicate_satellite"

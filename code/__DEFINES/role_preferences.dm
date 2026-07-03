@@ -141,6 +141,7 @@
 #define ROLE_SYNDICATE_DRONE "Syndicate Drone"
 #define ROLE_VENUSHUMANTRAP "Venus Human Trap"
 #define ROLE_ZOMBIE "Zombie"
+#define ROLE_SATELLITE_AGENT "Syndicate Satellite Agent"
 
 // Virtual dom related
 #define ROLE_GLITCH "Glitch" // the parent type of all vdom roles

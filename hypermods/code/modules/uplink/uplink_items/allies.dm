@@ -1,3 +1,40 @@
+/datum/uplink_item/reinforcements/support_sat
+	name = "Syndicate Satellite"
+	desc = "A single-use transponder used to contact our local syndicate support satellite. \
+			After contacting, our satellite should send over a package with everything you'll need to reach it. \
+			Amenities include: A bar, a medical bay, enough syndicate gear for a small team, and enough room for any construction projects. \
+			Our local satellite agent will attempt to assist you in your endeavors, but cannot leave the satellite for security concerns. \
+			A perfect staging area to meet-up with and cooperate alongside other syndicate agents. Do NOT lose or wipe the quantum card provided."
+	item = /obj/item/syndicate_beacon
+	cost = 10
+	limited_stock = 1
+	cant_discount = TRUE
+	refundable = TRUE
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/reinforcements/support_sat/purchase(mob/user, datum/uplink_handler/uplink_handler, atom/movable/source)
+	. = ..()
+	for(var/uplink_items in subtypesof(/datum/uplink_item/reinforcements/support_sat_listing))
+		var/datum/uplink_item/uplink_item = new uplink_items
+		uplink_handler.extra_purchasable += uplink_item
+
+/datum/uplink_item/reinforcements/support_sat_listing
+	restricted = TRUE
+	cant_discount = TRUE
+	category = /datum/uplink_category/reinforcements
+	purchasable_from = NONE //they will be added to extra_purchasable
+
+/datum/uplink_item/reinforcements/support_sat_listing/support_sat_chemlab_key
+	name = "Satellite Chemical Lab Access Card"
+	desc = "An access card to utilize our state-of-the-art chemical lab onboard the syndicate satellite. \
+			Create groundbreaking chemical agents, cook up, sell the best of drugs, and make chemical factories today!"
+	item = /obj/item/keycard/syndicate_chem
+	cost = 8
+	limited_stock = 1
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+
 /datum/uplink_item/reinforcements/syndipal
 	name = "Syndicate Support Beacon"
 	desc = "A single-use beacon which allows us to send over a support agent to your location to assist you. \

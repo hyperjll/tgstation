@@ -380,3 +380,15 @@
 		/obj/item/mod/module/energy_net,
 		/obj/item/mod/module/visor/night,
 	)
+
+/obj/item/mod/control/pre_equipped/interdyne/budget
+	applied_cell = /obj/item/stock_parts/power_store/cell/high
+	applied_modules = list(
+		/obj/item/mod/module/organizer,
+		/obj/item/mod/module/defibrillator,
+		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/health_analyzer,
+		/obj/item/mod/module/injector,
+		/obj/item/mod/module/surgical_processor,
+		/obj/item/mod/module/storage/syndicate,
+	)

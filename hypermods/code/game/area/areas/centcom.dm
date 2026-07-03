@@ -23,3 +23,12 @@
 /area/centcom/syndicate_mothership/firebase_trident/hangar
 	name = "Firebase Trident hangar bay"
 	icon_state = "syndie-elite"
+
+/area/centcom/syndicate_mothership/syndicate_satellite
+	name = "Syndicate Satellite"
+	icon_state = "syndie-elite"
+	static_lighting = TRUE
+	ambience_index = AMBIENCE_MAINT
+
+/area/centcom/syndicate_mothership/syndicate_satellite/allow_teleport
+	area_flags = null
