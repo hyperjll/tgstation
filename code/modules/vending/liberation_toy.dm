@@ -16,6 +16,9 @@
 		/obj/item/gun/ballistic/automatic/toy/riot = 8,
 		/obj/item/gun/ballistic/shotgun/toy/riot = 8,
 		/obj/item/ammo_box/foambox = 20,
+		/obj/item/gun/water = 10,
+		/obj/item/melee/baton/donkbat/toy = 4,
+		/obj/item/toy/plush/goatplushie = 1,
 	)
 	contraband = list(
 		/obj/item/toy/balloon/syndicate = 1,
@@ -28,6 +31,8 @@
 		/obj/item/gun/ballistic/automatic/c20r/toy/unrestricted/riot = 4,
 		/obj/item/gun/ballistic/automatic/l6_saw/toy/unrestricted/riot = 4,
 		/obj/item/ammo_box/foambox/riot = 20,
+		/obj/item/organ/cyberimp/chest/spinalspeed/toy = 2,
+		/obj/item/melee/vxtvulhammer/toy = 2,
 	)
 	armor_type = /datum/armor/vending_toyliberationstation
 	resistance_flags = FIRE_PROOF
