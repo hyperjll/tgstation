@@ -609,8 +609,7 @@ GAME_VERB(/mob/dead/observer, toggle_gas_scan, "Toggle Gas Scan", null)
 	else
 		to_chat(src, span_notice("Gas scan disabled."))
 /// Hyper Edit
-/mob/dead/observer/verb/toggle_nanite_scan()
-	set name = "Toggle Nanite Scan"
+GAME_VERB(/mob/dead/observer, toggle_nanite_scan, "Toggle Nanite Scan", null)
 
 	toggle_ghost_hud_flag(GHOST_NANITE)
 	if(ghost_hud_flags & GHOST_NANITE)
