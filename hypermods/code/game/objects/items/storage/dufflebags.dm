@@ -10,3 +10,8 @@
 	new /obj/item/reagent_containers/cup/glass/bottle/bottleofnothing(src)
 	new /obj/item/book/granter/action/spell/mime/mimery(src)
 	new /obj/item/storage/box/survival/hug/black(src)
+
+/obj/item/storage/backpack/duffelbag/syndie/fletcher/PopulateContents()
+	new /obj/item/gun/ballistic/bow/longbow/syndicate(src)
+	new /obj/item/storage/bag/quiver/full(src)
+	new /obj/item/book/granter/crafting_recipe/fletching(src)

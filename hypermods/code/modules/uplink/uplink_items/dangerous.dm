@@ -257,6 +257,15 @@
 		/datum/uplink_item/ammo/boltactionammo,
 	)
 
+/datum/uplink_item/dangerous/fletcher
+	name = "Fletcher's Bundle"
+	desc = "A suspicious syndicate duffelbag containing three items: A compact longbow, a quiver of arrows, and an instruction booklet to making your own bows and arrows. \
+			The compact longbow's design allows it to be stored within backpacks. Doesn't come with any materials necessary to make replacement bows or arrows."
+	item = /obj/item/storage/backpack/duffelbag/syndie/fletcher
+	cost = 4
+	surplus = 20
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
 /datum/uplink_item/dangerous/watergun
 	name = "Extended Capacity Hyper-Soaker"
 	desc = "A simple yet effective way of applying chemicals to a target's skin. \
