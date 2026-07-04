@@ -5,6 +5,7 @@
 	item = /obj/item/storage/backpack/duffelbag/syndie
 	cost = 2
 	surplus = 50
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/badass/costumes/mime
@@ -13,6 +14,7 @@
 	item = /obj/item/storage/backpack/duffelbag/syndie/mime
 	purchasable_from = (UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
 	progression_minimum = 70 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/badass/construction_bundle
 	name = "Construction Bundle"
@@ -32,6 +34,7 @@
 	surplus = 0
 	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
 	cant_discount = TRUE
+	uplink_item_flags = null
 
 /datum/uplink_item/badass/whetstone
 	name = "Syndicate Whetstone"
@@ -54,6 +57,7 @@
 	surplus = 0
 	cant_discount = TRUE
 	purchasable_from = ~(UPLINK_SPY | UPLINK_ALL_SYNDIE_OPS)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/badass/syndibackpack
 	name = "Syndicate Backpack"
@@ -99,6 +103,7 @@
 	cost = 3
 	surplus = 1 // real low chance
 	limited_stock = 1
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/badass/eyesnatcher
 	name = "Eye-Snatcher"
@@ -117,6 +122,7 @@
 	progression_minimum = 110 MINUTES
 	cost = 2
 	item = /obj/item/storage/box/syndie_kit/maid_kit
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/badass/fish
 	name = "Syndicate Fish Case"
