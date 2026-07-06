@@ -2,7 +2,7 @@
 	name = "Methamphetamine Plus"
 	description = "Neutralizes mannitol. Reduces stun times by about 300%, speeds the user up, and allows the user to quickly recover stamina while dealing a small amount of Brain damage. If overdosed the subject will move randomly, laugh randomly, drop items and suffer from Toxin and Brain damage. If addicted the subject will constantly jitter and drool, before becoming dizzy and losing motor control and eventually suffer heavy toxin damage."
 	color = "#FAFAFA"
-	addiction_types = list(/datum/addiction/stimulants = 4)
+	addiction_types = list(/datum/addiction/stimulants = 40)
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	metabolized_traits = list(TRAIT_STIMULATED)
 
@@ -52,7 +52,7 @@
 	color = "#e38e44"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 35
-	addiction_types = list(/datum/addiction/stimulants = 0.6) //0.26 per 2 seconds
+	addiction_types = list(/datum/addiction/stimulants = 30)
 	metabolized_traits = list(TRAIT_BATON_RESISTANCE, TRAIT_ANALGESIA, TRAIT_STIMULATED)
 
 /datum/reagent/drug/pumpupplus/on_mob_metabolize(mob/living/carbon/affected_mob)
@@ -271,7 +271,7 @@
 	metabolization_rate = 0.12 * REAGENTS_METABOLISM
 	metabolized_traits = list(TRAIT_FEARLESS)
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	addiction_types = list(/datum/addiction/opioids = 6)
+	addiction_types = list(/datum/addiction/opioids = 25)
 	var/isaspastic = FALSE
 
 /datum/reagent/drug/antidepressants/expose_mob(mob/living/carbon/human/human_thing, methods, reac_volume, show_message, touch_protection)

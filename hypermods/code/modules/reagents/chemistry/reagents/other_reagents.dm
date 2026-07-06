@@ -77,7 +77,7 @@
 	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	self_consuming = TRUE
-	addiction_types = list(/datum/addiction/medicine = 10)
+	addiction_types = list(/datum/addiction/medicine = 20)
 	var/current_size = RESIZE_DEFAULT_SIZE
 	var/newsize = 1
 	var/max_shrinks = 75 // The maxmimum size reduction. This deducted by 1 each second (so 100 / ninety = 0.1 size mult)

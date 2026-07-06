@@ -99,7 +99,7 @@
 	overdose_threshold = 30
 	taste_description = "grossness"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	addiction_types = list(/datum/addiction/medicine = 2)
+	addiction_types = list(/datum/addiction/medicine = 40)
 
 /datum/reagent/medicine/tricordrazine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
@@ -238,7 +238,7 @@
 	color = "#b34700"
 	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS, TRAIT_RADIMMUNE)
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	addiction_types = list(/datum/addiction/medicine = 3)
+	addiction_types = list(/datum/addiction/medicine = 30)
 
 /datum/reagent/medicine/arithrazine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
 	. = ..()
@@ -501,7 +501,7 @@
 	color = "#78008C"
 	metabolization_rate = 0.05
 	overdose_threshold = 30
-	addiction_types = list(/datum/addiction/stimulants = 6) //1.2 per 2 seconds
+	addiction_types = list(/datum/addiction/stimulants = 60)
 	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
 	metabolized_traits = list(TRAIT_BATON_RESISTANCE, TRAIT_ANALGESIA, TRAIT_STIMULATED)
 
@@ -559,7 +559,7 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 60
 	randomized_spawns = REAGENT_SPAWN_NO_RANDOM
-	addiction_types = list(/datum/addiction/stimulants = 2) //0.4 per 2 seconds
+	addiction_types = list(/datum/addiction/stimulants = 25)
 
 /datum/reagent/medicine/juggernaut/on_mob_metabolize(mob/living/L)
 	..()
@@ -679,7 +679,7 @@
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	var/healing = 7
 	self_consuming = TRUE
-	addiction_types = list(/datum/addiction/stimulants = 8) //1.6 per 2 seconds
+	addiction_types = list(/datum/addiction/stimulants = 40)
 	metabolized_traits = list(TRAIT_BATON_RESISTANCE, TRAIT_ANALGESIA, TRAIT_STIMULATED)
 
 /datum/reagent/medicine/hyperzine/on_mob_metabolize(mob/living/L)
