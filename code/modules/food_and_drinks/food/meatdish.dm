@@ -19,6 +19,7 @@
 	foodtypes = VEGETABLES|GRAIN|SEAFOOD|FRIED
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/sweaty
 
 /obj/item/food/fishmeat
 	name = "fish fillet"
@@ -36,6 +37,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	starting_reagent_purity = 1.0
 	var/fillet_name = "%NAME fillet"
+	crafted_food_buff = /datum/status_effect/food/armor/melee
 
 /obj/item/food/fishmeat/Initialize(mapload)
 	. = ..()
@@ -185,6 +187,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/armor/wound
 
 /obj/item/food/fishandchips
 	name = "fish and chips"
@@ -200,6 +203,7 @@
 	foodtypes = SEAFOOD | VEGETABLES | FRIED
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/armor/melee
 
 /obj/item/food/fishfry
 	name = "fish fry"
@@ -214,6 +218,7 @@
 	foodtypes = SEAFOOD | VEGETABLES | FRIED
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/armor/melee
 
 /obj/item/food/vegetariansushiroll
 	name = "vegetarian sushi roll"
@@ -227,6 +232,7 @@
 	foodtypes = VEGETABLES|GRAIN
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/armor/energy
 
 /obj/item/food/vegetariansushiroll/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/vegetariansushislice, 4, screentip_verb = "Chop")
@@ -243,6 +249,7 @@
 	foodtypes = VEGETABLES|GRAIN
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/armor/energy
 
 /obj/item/food/spicyfiletsushiroll
 	name = "spicy filet sushi roll"
@@ -258,6 +265,8 @@
 	foodtypes = VEGETABLES|GRAIN|SEAFOOD
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/sweaty
+	crafted_food_buff = /datum/status_effect/food/armor/fire
 
 /obj/item/food/spicyfiletsushiroll/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/spicyfiletsushislice, 4, screentip_verb = "Chop")
@@ -276,6 +285,7 @@
 	foodtypes = VEGETABLES|GRAIN|SEAFOOD
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/armor/fire
 
 // empty sushi for custom sushi
 /obj/item/food/sushi/empty
@@ -325,6 +335,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_4
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/armor/melee
 
 /obj/item/food/fish_poke
 	name = "fish poke"
@@ -342,6 +353,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_4
+	crafted_food_buff = /datum/status_effect/food/armor/melee
 
 ////////////////////////////////////////////MEATS AND ALIKE////////////////////////////////////////////
 
@@ -448,6 +460,7 @@
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_2
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/raw_meatball
 	name = "raw meatball"
@@ -461,6 +474,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	var/meatball_type = /obj/item/food/meatball
 	var/patty_type = /obj/item/food/raw_patty
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/raw_meatball/make_grillable()
 	AddComponent(/datum/component/grillable, meatball_type, rand(30 SECONDS, 40 SECONDS), TRUE)
@@ -507,6 +521,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	venue_value = FOOD_PRICE_CHEAP
 	crafting_complexity = FOOD_COMPLEXITY_1
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/meatball/human
 	name = "strange meatball"
@@ -538,6 +553,7 @@
 	foodtypes = MEAT | RAW
 	w_class = WEIGHT_CLASS_SMALL
 	var/patty_type = /obj/item/food/patty/plain
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/raw_patty/make_grillable()
 	AddComponent(/datum/component/grillable, patty_type, rand(30 SECONDS, 40 SECONDS), TRUE)
@@ -576,6 +592,7 @@
 	foodtypes = MEAT
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_1
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 ///Exists purely for the crafting recipe (because it'll take subtypes)
 /obj/item/food/patty/plain
@@ -637,6 +654,7 @@
 	crafting_complexity = FOOD_COMPLEXITY_2
 	custom_price = PAYCHECK_CREW * 0.6
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/sausage/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/salami, 6, 3 SECONDS, table_required = TRUE,  screentip_verb = "Slice", sound_to_play = SFX_KNIFE_SLICE)
@@ -662,6 +680,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_2
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT / 6)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/rawkhinkali
 	name = "raw khinkali"
@@ -700,6 +719,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/meatbun
 	name = "meat bun"
@@ -731,6 +751,7 @@
 	foodtypes = VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/boiledspiderleg
 	name = "boiled spider leg"
@@ -746,6 +767,7 @@
 	foodtypes = MEAT
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_1
+	crafted_food_buff = /datum/status_effect/food/sweaty
 
 /obj/item/food/spidereggsham
 	name = "green eggs and ham"
@@ -762,6 +784,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_2
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/sashimi
 	name = "spider sashimi"
@@ -779,6 +802,7 @@
 	//total price of this dish is 20 and a small amount more for soy sauce, all of which are available at the orders console
 	venue_value = FOOD_PRICE_CHEAP
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/sweaty
 
 /obj/item/food/sashimi/Initialize(mapload)
 	. = ..()
@@ -803,6 +827,7 @@
 	crafting_complexity = FOOD_COMPLEXITY_1
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
 	var/meat_source = "\"chicken\""
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/nugget/Initialize(mapload)
 	. = ..()
@@ -834,6 +859,7 @@
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_price = PAYCHECK_CREW
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/bbqribs
 	name = "bbq ribs"
@@ -850,6 +876,7 @@
 	foodtypes = MEAT | SUGAR
 	crafting_complexity = FOOD_COMPLEXITY_2
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/meatclown
 	name = "meat clown"
@@ -898,6 +925,7 @@
 	tastes = list("meat" = 3, "metal" = 1)
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_1
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/kebab/human
 	name = "human-kebab"
@@ -978,6 +1006,7 @@
 	foodtypes = MEAT | VEGETABLES
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/sweaty
 
 /obj/item/food/fried_chicken
 	name = "fried chicken"
@@ -991,6 +1020,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/fried_chicken/Initialize(mapload)
 	. = ..()
@@ -1015,6 +1045,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_4
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/beef_wellington
 	name = "beef wellington"
@@ -1031,6 +1062,7 @@
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT * 4)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/beef_wellington/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/beef_wellington_slice, 3, 3 SECONDS, table_required = TRUE,  screentip_verb = "Cut")
@@ -1050,6 +1082,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT * (4/3))
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/korta_wellington
 	name = "korta wellington"
@@ -1066,6 +1099,7 @@
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT * 4)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/korta_wellington/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/korta_wellington_slice, 3, 3 SECONDS, table_required = TRUE,  screentip_verb = "Cut")
@@ -1085,6 +1119,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT * (4/3))
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/roast_dinner
 	name = "roast dinner"
@@ -1101,6 +1136,7 @@
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/roast_dinner/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/roast_slice, 3, 3 SECONDS, table_required = TRUE,  screentip_verb = "Cut")
@@ -1120,6 +1156,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/roast_dinner_lizzy
 	name = "grain-free roast dinner"
@@ -1136,6 +1173,7 @@
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/roast_dinner_lizzy/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/roast_slice_lizzy, 3, 3 SECONDS, table_required = TRUE,  screentip_verb = "Cut")
@@ -1155,6 +1193,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/roast_dinner_tofu
 	name = "tofu roast dinner"
@@ -1170,6 +1209,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/roast_dinner_tofu/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/roast_slice_tofu, 3, 3 SECONDS, table_required = TRUE,  screentip_verb = "Cut")
@@ -1188,6 +1228,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/full_english
 	name = "full english breakfast"
@@ -1204,6 +1245,7 @@
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT * 4)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t3
 
 /obj/item/food/raw_meatloaf
 	name = "raw meatloaf"
@@ -1239,6 +1281,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/meatloaf/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/meatloaf_slice, 4, 3 SECONDS, table_required = TRUE,  screentip_verb = "Cut")
@@ -1258,6 +1301,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_4
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT / 2)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/sweet_and_sour_meatballs
 	name = "sweet and sour meatballs"
@@ -1273,6 +1317,7 @@
 	foodtypes = MEAT | VEGETABLES | FRUIT | PINEAPPLE
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/kebab/pineapple_skewer
 	name = "pineapple skewer"
@@ -1301,6 +1346,7 @@
 	foodtypes = MEAT|VEGETABLES|GRAIN|SEAFOOD|EGG
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/futomaki_sushi_roll/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/futomaki_sushi_slice, 4, screentip_verb = "Chop")
@@ -1318,6 +1364,7 @@
 	foodtypes = VEGETABLES|GRAIN|DAIRY|SEAFOOD
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/philadelphia_sushi_roll
 	name = "philadelphia sushi roll"
@@ -1332,6 +1379,7 @@
 	foodtypes = VEGETABLES|GRAIN|SEAFOOD|DAIRY
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/philadelphia_sushi_roll/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/philadelphia_sushi_slice, 4, screentip_verb = "Chop")
@@ -1349,3 +1397,4 @@
 	foodtypes = VEGETABLES|GRAIN|SEAFOOD|DAIRY
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/health_increase

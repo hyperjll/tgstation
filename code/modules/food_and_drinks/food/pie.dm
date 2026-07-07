@@ -470,6 +470,7 @@
 	yield = 4
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/pieslice/shepherds_pie
 	name = "shepherds pie slice"
@@ -484,6 +485,7 @@
 	foodtypes = MEAT | DAIRY | VEGETABLES
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = SHEET_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/pie/asdfpie
 	name = "pie-flavored pie"
@@ -496,6 +498,7 @@
 	tastes = list("pie" = 1, "the far off year of 2010" = 1)
 	foodtypes = GRAIN|DAIRY
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/pie/bacid_pie
 	name = "battery acid pie"

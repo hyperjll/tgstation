@@ -14,6 +14,7 @@
 	var/obj/item/food/breadslice/slice_type
 	/// so that the yield can change if it isnt 5
 	var/yield = 5
+	crafted_food_buff = /datum/status_effect/food/stam_regen/t2
 
 /obj/item/food/bread/Initialize(mapload)
 	. = ..()
@@ -36,6 +37,7 @@
 	eat_time = 0.5 SECONDS
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/stam_regen
 
 /obj/item/food/breadslice/Initialize(mapload)
 	. = ..()
@@ -306,6 +308,7 @@
 	foodtypes = GRAIN | FRUIT | VEGETABLES
 	slice_type = /obj/item/food/breadslice/mimana
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/breadslice/mimana
 	name = "mimana bread slice"
@@ -320,6 +323,7 @@
 	tastes = list("bread" = 10, "silence" = 10)
 	foodtypes = GRAIN | FRUIT | VEGETABLES
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/bread/empty
 	name = "bread"
@@ -461,6 +465,7 @@
 	foodtypes = VEGETABLES|GRAIN|DAIRY
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/butterbiscuit
 	name = "butter biscuit"
@@ -476,6 +481,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	venue_value = FOOD_PRICE_CHEAP
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/butterdog
 	name = "butterdog"

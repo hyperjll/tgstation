@@ -475,6 +475,7 @@
 	foodtypes = MEAT|GRAIN|DAIRY|VEGETABLES
 	crafting_complexity = FOOD_COMPLEXITY_4
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 8, /datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/armor/bomb
 
 /obj/item/food/pizza/arnold/raw
 	name = "raw Arnold pizza"
@@ -523,6 +524,7 @@
 	tastes = list("crust" = 1, "tomato" = 1, "cheese" = 1, "pepperoni" = 2, "9 millimeter bullets" = 2)
 	foodtypes = GRAIN | VEGETABLES | DAIRY | MEAT
 	crafting_complexity = FOOD_COMPLEXITY_4
+	crafted_food_buff = /datum/status_effect/food/armor/bomb
 
 /obj/item/food/pizzaslice/arnold/attack(mob/living/target, mob/living/user)
 	. =..()

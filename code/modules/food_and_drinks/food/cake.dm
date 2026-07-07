@@ -14,6 +14,7 @@
 	var/obj/item/food/cakeslice/slice_type
 	/// changes yield of sliced cake, default for cake is 5
 	var/yield = 5
+	crafted_food_buff = /datum/status_effect/food/stam_regen
 
 /obj/item/food/cake/Initialize(mapload)
 	. = ..()
@@ -34,6 +35,7 @@
 	foodtypes = GRAIN | DAIRY
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/stam_regen
 
 /obj/item/food/cake/plain
 	name = "plain cake"
@@ -134,6 +136,7 @@
 	foodtypes = GRAIN | DAIRY | MEAT | GORE | SUGAR
 	slice_type = /obj/item/food/cakeslice/brain
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/stam_regen/t3
 
 /obj/item/food/cakeslice/brain
 	name = "brain cake slice"
@@ -148,6 +151,7 @@
 	tastes = list("cake" = 5, "sweetness" = 2, "brains" = 1)
 	foodtypes = GRAIN | DAIRY | MEAT | GORE | SUGAR
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/stam_regen/t2
 
 /obj/item/food/cake/cheese
 	name = "cheese cake"
@@ -274,6 +278,7 @@
 	foodtypes = GRAIN | DAIRY | JUNKFOOD | SUGAR
 	slice_type = /obj/item/food/cakeslice/birthday
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/cake/birthday/make_microwaveable() // super sekrit club
 	AddElement(/datum/element/microwavable, /obj/item/clothing/head/utility/hardhat/cakehat)
@@ -290,6 +295,7 @@
 	tastes = list("cake" = 5, "sweetness" = 1)
 	foodtypes = GRAIN | DAIRY | JUNKFOOD | SUGAR
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/cake/birthday/energy
 	name = "energy cake"
@@ -307,6 +313,7 @@
 	tastes = list("cake" = 3, "a Vlad's Salad" = 1)
 	slice_type = /obj/item/food/cakeslice/birthday/energy
 	crafting_complexity = FOOD_COMPLEXITY_4
+	crafted_food_buff = /datum/status_effect/food/stam_regen/t3
 
 /obj/item/food/cake/birthday/energy/make_microwaveable() //super sekriter club
 	AddElement(/datum/element/microwavable, /obj/item/clothing/head/utility/hardhat/cakehat/energycake)
@@ -337,6 +344,7 @@
 	)
 	tastes = list("cake" = 3, "a Vlad's Salad" = 1)
 	crafting_complexity = FOOD_COMPLEXITY_4
+	crafted_food_buff = /datum/status_effect/food/stam_regen/t2
 
 /obj/item/food/cakeslice/birthday/energy/Initialize(mapload)
 	. = ..()

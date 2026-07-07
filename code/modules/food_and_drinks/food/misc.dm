@@ -721,6 +721,7 @@
 	foodtypes = MEAT|VEGETABLES|GRAIN|DAIRY
 	crafting_complexity = FOOD_COMPLEXITY_4
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/armor/laser
 
 /obj/item/food/moussaka/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/moussaka_slice, 4, 3 SECONDS, table_required = TRUE,  screentip_verb = "Cut")
@@ -738,6 +739,7 @@
 	foodtypes = MEAT|VEGETABLES|GRAIN|DAIRY
 	crafting_complexity = FOOD_COMPLEXITY_4
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT / 4)
+	crafted_food_buff = /datum/status_effect/food/armor/laser
 
 /obj/item/food/candied_pineapple
 	name = "candied pineapple"
@@ -832,6 +834,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	crafting_complexity = FOOD_COMPLEXITY_4
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/armor/laser
 
 /obj/item/food/vegetarian_gyro
 	name = "vegetarian gyro"

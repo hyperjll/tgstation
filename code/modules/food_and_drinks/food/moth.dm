@@ -70,6 +70,7 @@
 	foodtypes = JUNKFOOD|GRAIN|FRIED|NUTS|VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/armor/energy
 
 /obj/item/food/mothic_pizza_dough
 	name = "mothic pizza dough"
@@ -97,6 +98,7 @@
 	foodtypes = DAIRY|VEGETABLES|GRAIN
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_4
+	crafted_food_buff = /datum/status_effect/food/armor/bullet
 
 /obj/item/food/sweet_chili_cabbage_wrap
 	name = "sweet chili cabbage wrap"
@@ -112,6 +114,7 @@
 	foodtypes = DAIRY | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/laser
 
 /obj/item/food/loaded_curds
 	name = "ozlsettitæloskekllön ede pommes" //ozlsettit = overflowing (ozl = over, sett = flow, it = ing), ælo = cheese, skekllön = curds (skeklit = squeaking, llön = pieces/bits), ede = and, pommes = fries (hey, France!)
@@ -129,6 +132,7 @@
 	foodtypes = VEGETABLES|DAIRY|FRIED
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/laser
 
 /obj/item/food/baked_cheese
 	name = "baked cheese wheel"
@@ -192,6 +196,7 @@
 	foodtypes = VEGETABLES|GRAIN|DAIRY|NUTS
 	w_class = WEIGHT_CLASS_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/fire
 
 /obj/item/food/green_lasagne/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/green_lasagne_slice, 6, 3 SECONDS, table_required = TRUE,  screentip_verb = "Slice", sound_to_play = SFX_KNIFE_SLICE)
@@ -209,6 +214,7 @@
 	foodtypes = VEGETABLES|GRAIN|DAIRY|NUTS
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/fire
 
 /obj/item/food/raw_baked_rice
 	name = "big rice pan"
@@ -336,6 +342,7 @@
 	foodtypes = VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/armor/wound
 
 /obj/item/food/mozzarella_sticks
 	name = "mozzarella sticks"
@@ -350,6 +357,7 @@
 	foodtypes = GRAIN|DAIRY|FRIED
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_4
+	crafted_food_buff = /datum/status_effect/food/armor/wound
 
 /obj/item/food/raw_stuffed_peppers
 	name = "raw voltölpaprik" //voltöl = stuffed (vol = full, töl = push), paprik (from German paprika) = bell pepper
@@ -381,6 +389,7 @@
 	foodtypes = DAIRY | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/armor/bomb
 
 /obj/item/food/fueljacks_lunch
 	name = "\improper Fueljack's lunch"
@@ -397,6 +406,7 @@
 	foodtypes = DAIRY | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_4
+	crafted_food_buff = /datum/status_effect/food/armor/energy
 
 /obj/item/food/mac_balls
 	name = "macheronirölen"
@@ -488,6 +498,7 @@
 	foodtypes = DAIRY | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/armor/bio
 
 /obj/item/food/salad/fleet_salad
 	name = "lörtonknusksolt" //lörton = fleet, knusksolt = salad (knusk = crisp, solt = bowl)
@@ -615,6 +626,7 @@
 	slice_type = /obj/item/food/pizzaslice/mothic_firecracker
 	boxtag = "Vesuvian Firecracker"
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/fire
 
 /obj/item/food/pizzaslice/mothic_firecracker
 	name = "mothic firecracker slice"
@@ -624,6 +636,7 @@
 	tastes = list("crust" = 1, "chili" = 1, "corn" = 1, "cheese" = 1, "bbq sauce" = 1)
 	foodtypes = GRAIN | VEGETABLES | DAIRY
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/fire
 
 /obj/item/food/raw_mothic_five_cheese
 	name = "raw mothic five-cheese pizza"
@@ -659,6 +672,7 @@
 	slice_type = /obj/item/food/pizzaslice/mothic_five_cheese
 	boxtag = "Cheeseplosion"
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/bullet
 
 /obj/item/food/pizzaslice/mothic_five_cheese
 	name = "mothic five-cheese slice"
@@ -668,6 +682,7 @@
 	tastes = list("crust" = 1, "cheese" = 1, "more cheese" = 1, "excessive amounts of cheese" = 1)
 	foodtypes = GRAIN | VEGETABLES | DAIRY
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/bullet
 
 /obj/item/food/raw_mothic_white_pie
 	name = "raw mothic white-pie pizza"
@@ -703,6 +718,7 @@
 	slice_type = /obj/item/food/pizzaslice/mothic_white_pie
 	boxtag = "Pane Bianco"
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/wound
 
 /obj/item/food/pizzaslice/mothic_white_pie
 	name = "mothic white-pie slice"
@@ -712,6 +728,7 @@
 	tastes = list("crust" = 1, "cheese" = 1, "more cheese" = 1, "excessive amounts of cheese" = 1)
 	foodtypes = GRAIN | VEGETABLES | DAIRY
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/wound
 
 /obj/item/food/raw_mothic_pesto
 	name = "raw mothic pesto pizza"
@@ -747,6 +764,7 @@
 	slice_type = /obj/item/food/pizzaslice/mothic_pesto
 	boxtag = "Presto Pesto"
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/laser
 
 /obj/item/food/pizzaslice/mothic_pesto
 	name = "mothic pesto slice"
@@ -756,6 +774,7 @@
 	tastes = list("crust" = 1, "pesto" = 1, "cheese" = 1)
 	foodtypes = GRAIN | VEGETABLES | DAIRY | NUTS
 	crafting_complexity = FOOD_COMPLEXITY_5
+	crafted_food_buff = /datum/status_effect/food/armor/laser
 
 /obj/item/food/raw_mothic_garlic
 	name = "raw mothic garlic pizzabread"
@@ -791,6 +810,7 @@
 	slice_type = /obj/item/food/pizzaslice/mothic_garlic
 	boxtag = "Garlic Bread alla Moffuchi"
 	crafting_complexity = FOOD_COMPLEXITY_4
+	crafted_food_buff = /datum/status_effect/food/armor/melee
 
 /obj/item/food/pizzaslice/mothic_garlic
 	name = "mothic garlic pizzabread slice"
@@ -800,6 +820,7 @@
 	tastes = list("dough" = 1, "garlic" = 1, "butter" = 1)
 	foodtypes = GRAIN|VEGETABLES|DAIRY
 	crafting_complexity = FOOD_COMPLEXITY_4
+	crafted_food_buff = /datum/status_effect/food/armor/melee
 
 //Bread
 /obj/item/food/bread/corn

@@ -13,6 +13,7 @@
 	eat_time = 15 //Quick snack
 	w_class = WEIGHT_CLASS_SMALL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/health_increase
 
 /obj/item/food/burger/plain
 	name = "plain burger"
@@ -90,6 +91,7 @@
 	foodtypes = GRAIN | MEAT | GORE
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/armor/bio
 
 /obj/item/food/burger/fish
 	name = "fillet -o- carp sandwich"
@@ -104,6 +106,7 @@
 	foodtypes = GRAIN | SEAFOOD | DAIRY
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_3
+	crafted_food_buff = /datum/status_effect/food/armor/fire
 
 /obj/item/food/burger/tofu
 	name = "tofu burger"
@@ -131,6 +134,7 @@
 	tastes = list("bun" = 4, "lettuce" = 2, "sludge" = 1)
 	foodtypes = GRAIN | TOXIC
 	venue_value = FOOD_PRICE_EXOTIC
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/burger/roburger/big
 	desc = "This massive patty looks like poison. Beep."
@@ -155,6 +159,7 @@
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/armor/acid
 
 /obj/item/food/burger/bearger
 	name = "bearger"
@@ -170,6 +175,7 @@
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/burger/clown
 	name = "clown burger"
@@ -198,6 +204,7 @@
 	foodtypes = GRAIN
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/stam_regen/t2
 
 /obj/item/food/burger/brain
 	name = "brainburger"
@@ -427,6 +434,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/burger/jelly
 	name = "jelly burger"
@@ -470,6 +478,7 @@
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_5
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t3
 
 /obj/item/food/burger/superbite/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] starts to eat [src] in one bite, it looks like [user.p_theyre()] trying to commit suicide!"))
@@ -493,6 +502,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/sweaty
 
 /obj/item/food/burger/rat
 	name = "rat burger"
@@ -523,6 +533,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = /obj/item/melee/baseball_bat::custom_materials
+	crafted_food_buff = /datum/status_effect/food/armor/melee
 
 /obj/item/food/burger/baconburger
 	name = "bacon burger"
@@ -539,6 +550,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/armor/bomb
 
 /obj/item/food/burger/empoweredburger
 	name = "empowered burger"
@@ -568,6 +580,7 @@
 	foodtypes = GRAIN | MEAT | GORE
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/health_increase/t2
 
 /obj/item/food/burger/crab
 	name = "crab burger"
@@ -614,6 +627,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/stam_regen/t2
 
 /obj/item/food/burger/mcguffin
 	name = "mcguffin"
@@ -630,6 +644,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT * 2)
+	crafted_food_buff = /datum/status_effect/food/stam_regen/t2
 
 /obj/item/food/burger/chicken
 	name = "chicken sandwich"
@@ -649,6 +664,7 @@
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATDISH_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/stam_regen/t2
 
 /obj/item/food/burger/cheese
 	name = "cheese burger"
@@ -690,6 +706,7 @@
 		/datum/material/plasma = SMALL_MATERIAL_AMOUNT * 0.5,
 		/datum/material/plastic = SMALL_MATERIAL_AMOUNT * 0.5,
 	)
+	crafted_food_buff = /datum/status_effect/food/sweaty/wacky
 
 /obj/item/food/burger/crazy/Initialize(mapload)
 	. = ..()

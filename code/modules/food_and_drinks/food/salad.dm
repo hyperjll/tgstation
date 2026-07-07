@@ -12,6 +12,7 @@
 	eatverbs = list("devour", "nibble", "gnaw", "gobble", "chomp") //who the fuck gnaws and devours on a salad
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/armor/bio
 
 /obj/item/food/salad/aesirsalad
 	name = "\improper Aesir salad"

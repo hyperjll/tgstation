@@ -280,6 +280,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 	foodtypes = MEAT | BREAKFAST | DAIRY | EGG
 	venue_value = FOOD_PRICE_CHEAP
 	crafting_complexity = FOOD_COMPLEXITY_2
+	crafted_food_buff = /datum/status_effect/food/stam_regen
 
 /obj/item/food/omelette/Initialize(mapload)
 	. = ..()
@@ -319,6 +320,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 	venue_value = FOOD_PRICE_NORMAL
 	crafting_complexity = FOOD_COMPLEXITY_3
 	custom_materials = list(/datum/material/meat = MEATSLAB_MATERIAL_AMOUNT)
+	crafted_food_buff = /datum/status_effect/food/stam_regen
 
 /obj/item/food/eggwrap
 	name = "egg wrap"
