@@ -1157,23 +1157,24 @@
 		update_appearance()
 		return ITEM_INTERACT_SUCCESS
 
-	else if(istype(C, /obj/item/doorCharge))
+	if(istype(tool, /obj/item/doorCharge))
 		if(!panel_open || security_level)
-			to_chat(user, span_warning("The maintenance panel must be open to apply [C]!"))
-			return
+			to_chat(user, span_warning("The maintenance panel must be open to apply [tool]!"))
+			return ITEM_INTERACT_BLOCKING
 		if(obj_flags & EMAGGED)
-			return
+			return ITEM_INTERACT_BLOCKING
 		if(charge && panel_open)
 			to_chat(user, span_warning("There's already a charge hooked up to this door!"))
-			return
+			return ITEM_INTERACT_BLOCKING
 		if(!has_access_panel)
 			to_chat(user, span_warning("The maintenance panel is gone!"))
-			return
-		to_chat(user, span_warning("You apply [C]. Next time someone opens the door, it will explode."))
+			return ITEM_INTERACT_BLOCKING
+		to_chat(user, span_warning("You apply [tool]. Next time someone opens the door, it will explode."))
 		panel_open = FALSE
 		update_appearance(UPDATE_ICON)
-		user.transferItemToLoc(C, src, TRUE)
-		charge = C
+		user.transferItemToLoc(tool, src, TRUE)
+		charge = tool
+		return ITEM_INTERACT_SUCCESS
 
 	if(istype(tool, /obj/item/paper) || istype(tool, /obj/item/photo))
 		if(note)

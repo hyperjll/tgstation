@@ -202,10 +202,10 @@
 		return ITEM_INTERACT_SUCCESS
 
 	if(istype(tool, /obj/item/bombcore))
-		var/obj/item/bombcore/payload_in_question = I
+		var/obj/item/bombcore/payload_in_question = tool
 		if(payload_in_question.no_big_bombs)
 			to_chat(user, span_warning("It doesn't look like this payload can be placed within any bomb assemblies..."))
-			return
+			return ITEM_INTERACT_BLOCKING
 		if(payload)
 			to_chat(user, span_warning("[payload] is already loaded into [src]! You'll have to remove it first."))
 			return ITEM_INTERACT_BLOCKING

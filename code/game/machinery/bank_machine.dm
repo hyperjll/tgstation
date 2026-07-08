@@ -79,8 +79,8 @@
 	else if(istype(tool, /obj/item/poker_chip))
 		var/obj/item/poker_chip/inserted_chip = tool
 		value = inserted_chip.get_item_credit_value()
-	else if(istype(weapon, /obj/item/card/id/departmental_budget))
-		var/obj/item/card/id/departmental_budget/my_dep_card = weapon
+	else if(istype(tool, /obj/item/card/id/departmental_budget))
+		var/obj/item/card/id/departmental_budget/my_dep_card = tool
 		account_department = my_dep_card.department_ID
 		account_dept_name = my_dep_card.department_name
 		say("Account department changed! Now accessing the funds of the [my_dep_card.name].")
