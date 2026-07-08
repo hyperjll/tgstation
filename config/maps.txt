@@ -59,6 +59,11 @@ map kilostation_old
 	maxplayers 40
 endmap
 
+map wawastation
+	votable
+	maxplayers 40
+endmap
+
 map heliostation
 	votable
 endmap
