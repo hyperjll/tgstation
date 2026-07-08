@@ -24,6 +24,7 @@
 		#include "map_files\NebulaStation\NebulaStation.dmm"
 		#include "map_files\KiloStation\KiloStation.dmm"
 		#include "map_files\wawastation\wawastation.dmm"
+		#include "map_files\SokobanStation\sokobanstation.dmm"
 		#include "map_files\DorfWorld\dorfworld.dmm"
 		#include "map_files\KiloStationOld\KiloStationOld.dmm"
 		#include "map_files\Heliostation\Heliostation.dmm"
