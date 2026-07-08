@@ -7147,6 +7147,7 @@
 #include "hypermods\code\datums\quirks\positive_quirks\vitality.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\wealthy.dm"
 #include "hypermods\code\datums\quirks\positive_quirks\weaponpermit.dm"
+#include "hypermods\code\datums\shuttles\mining.dm"
 #include "hypermods\code\datums\sprite_accessories\hair.dm"
 #include "hypermods\code\datums\station_traits\negative_traits.dm"
 #include "hypermods\code\datums\station_traits\neutral_traits.dm"

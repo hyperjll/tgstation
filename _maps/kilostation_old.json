@@ -1,8 +1,8 @@
 {
 	"version": 1,
-	"map_name": "Kilo Station",
-	"map_path": "map_files/KiloStation",
-	"map_file": "KiloStation.dmm",
+	"map_name": "Legacy Kilo Station",
+	"map_path": "map_files/KiloStationOld",
+	"map_file": "KiloStationOld.dmm",
 	"shuttles": {
 		"emergency": "emergency_kilo",
 		"ferry": "ferry_kilo",
