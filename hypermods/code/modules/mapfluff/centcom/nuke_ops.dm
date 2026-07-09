@@ -1,4 +1,12 @@
 //keycards
+/obj/item/keycard/syndicate_fridge/satellite
+	name = "Satellite Kitchen Access Card"
+	desc = "A grey keycard with an image of a soup pot on it. This is required to access the Culinary Lab on the Support Satellite."
+
+/obj/item/keycard/syndicate_chem/satellite
+	name = "Satellite Chemical Lab Access Card"
+	desc = "A red keycard with an image of a beaker. Using this will allow you to gain access to the Chemical Lab on the Support Satellite."
+
 /obj/item/keycard/syndicate_gene
 	name = "Syndicate Genetics Laboratory Access Card"
 	desc = "A red keycard with an image of a dna structure. Using this will allow you to gain access to the Genetics Lab in Firebase Balthazord."

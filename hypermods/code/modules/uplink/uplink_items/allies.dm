@@ -29,8 +29,17 @@
 	name = "Satellite Chemical Lab Access Card"
 	desc = "An access card to utilize our state-of-the-art chemical lab onboard the syndicate satellite. \
 			Create groundbreaking chemical agents, cook up, sell the best of drugs, and make chemical factories today!"
-	item = /obj/item/keycard/syndicate_chem
+	item = /obj/item/keycard/syndicate_chem/satellite
 	cost = 8
+	limited_stock = 1
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/reinforcements/support_sat_listing/support_sat_kitchen_key
+	name = "Satellite Culinary Lab Access Card"
+	desc = "An access card to gain early entry into our premium, high-end kitchen onboard the satellite. \
+			An excellent purchase if you're in dire need of pigging out, or desire to out-bake the entirety of the Spinward Sector!"
+	item = /obj/item/keycard/syndicate_fridge/satellite
+	cost = 4
 	limited_stock = 1
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
@@ -41,6 +50,7 @@
 	item = /obj/item/implanter/sat_authorization
 	cost = 4
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
 
 /datum/uplink_item/reinforcements/syndipal
 	name = "Syndicate Support Beacon"
