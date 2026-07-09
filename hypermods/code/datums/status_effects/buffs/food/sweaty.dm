@@ -6,7 +6,7 @@
 
 /atom/movable/screen/alert/status_effect/food/sweaty
 	name = "Sweaty"
-	desc = "You're feeling rather sweaty"
+	desc = "You're feeling rather sweaty. You're leaving behind puddles of liquid!"
 	overlay_icon = 'hypermods/icons/hud/screen_alert.dmi'
 	overlay_state = "sweaty"
 

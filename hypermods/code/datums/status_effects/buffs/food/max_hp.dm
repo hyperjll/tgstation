@@ -8,8 +8,8 @@
 	. = ..()
 
 /atom/movable/screen/alert/status_effect/food/health_increase_t1
-	name = "Small Health Increase"
-	desc = "You feel slightly heartier."
+	name = "Healthy"
+	desc = "The food you've consumed has boosted your maximum health by a small amount."
 	overlay_state = "in_love"
 
 /datum/status_effect/food/health_increase/t2
@@ -17,9 +17,13 @@
 	alert_type = /atom/movable/screen/alert/status_effect/food/health_increase_t2
 	health_increase = 10
 
+/datum/status_effect/food/health_increase/t2/on_creation(mob/living/new_owner, timeout_mod = 1, strength = 1)
+	new_owner.remove_status_effect(/datum/status_effect/food/health_increase)
+	. = ..()
+
 /atom/movable/screen/alert/status_effect/food/health_increase_t2
-	name = "Small Health Increase"
-	desc = "You feel heartier."
+	name = "Vitality"
+	desc = "The food you've consumed has boosted your maximum health by a moderate amount."
 	overlay_state = "in_love"
 
 /datum/status_effect/food/health_increase/t3
@@ -27,9 +31,13 @@
 	alert_type = /atom/movable/screen/alert/status_effect/food/health_increase_t3
 	health_increase = 20
 
+/datum/status_effect/food/health_increase/t3/on_creation(mob/living/new_owner, timeout_mod = 1, strength = 1)
+	new_owner.remove_status_effect(/datum/status_effect/food/health_increase/t2)
+	. = ..()
+
 /atom/movable/screen/alert/status_effect/food/health_increase_t3
-	name = "Large Health Increase"
-	desc = "You feel incredibly hearty."
+	name = "Hearty"
+	desc = "The food you've consumed has boosted your maximum health by a large amount."
 	overlay_state = "in_love"
 
 /datum/status_effect/food/health_increase/on_apply()
