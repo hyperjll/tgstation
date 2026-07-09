@@ -1597,7 +1597,7 @@
 	new /obj/item/bowling_pins(src)
 
 /obj/item/storage/box/syndie_kit/syndicate_gate_bundle/PopulateContents()
-	new /obj/item/implanter/gate_authorization(src)
+	new /obj/item/implanter/sat_authorization(src)
 	new /obj/item/quantum_keycard/satellite(src)
 	new /obj/item/circuitboard/machine/quantumpad(src)
 	new /obj/item/stack/ore/bluespace_crystal(src)

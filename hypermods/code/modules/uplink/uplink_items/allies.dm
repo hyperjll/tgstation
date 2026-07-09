@@ -34,6 +34,13 @@
 	limited_stock = 1
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
+/datum/uplink_item/reinforcements/support_sat_listing/sat_auth
+	name = "Satellite Authorization Implant"
+	desc = "A single, sterile implanter with an authentication implant required by the on-site turrets to determine who's an invader and who isn't. \
+			Purchasing this implanter will allow you to bring other agents, allies, or captives onto the satellite without trouble."
+	item = /obj/item/implanter/sat_authorization
+	cost = 4
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/syndipal
 	name = "Syndicate Support Beacon"
