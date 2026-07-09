@@ -8,6 +8,9 @@
 /obj/item/storage/fancy/donut_box/deadly
 	spawn_type = /obj/item/food/donut/deadly
 
+/obj/item/storage/fancy/donut_box/deadly/lesser
+	spawn_type = /obj/item/food/donut/deadly/lesser
+
 // Trick Cigarettes
 
 /obj/item/storage/fancy/cigarettes/trick_cigs

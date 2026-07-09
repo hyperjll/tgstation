@@ -1176,7 +1176,7 @@
 		/obj/item/food/syndicake/super = 2,
 		/obj/item/food/peanuts/ban_appeal = 3,
 		/obj/item/food/candy/bronx = 1,
-		/obj/item/storage/fancy/donut_box/deadly = 1,
+		/obj/item/storage/fancy/donut_box/deadly/lesser = 1,
 		/obj/item/food/pizza/vegetable/poisoned = 1,
 	)
 	premium = list(
