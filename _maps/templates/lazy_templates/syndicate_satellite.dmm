@@ -34,7 +34,8 @@
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "by" = (
 /obj/machinery/telecomms/relay/preset/ruskie{
-	use_power = 0
+	use_power = 0;
+	toggled = 1
 	},
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/syndicate_satellite)
@@ -1167,6 +1168,10 @@
 	dir = 4
 	},
 /obj/machinery/light/cold/directional/east,
+/obj/item/multitool{
+	pixel_x = 9;
+	pixel_y = 8
+	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "Pv" = (
