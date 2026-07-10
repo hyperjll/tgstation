@@ -43,15 +43,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"bu" = (
-/obj/effect/turf_decal/tile/dark_red/half/contrasted{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
 "bv" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 8
@@ -130,6 +121,16 @@
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "dk" = (
 /turf/closed/indestructible/opsglass,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"dx" = (
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	id = "syndisat_disposals"
+	},
+/obj/machinery/recycler{
+	dir = 8
+	},
+/turf/open/floor/plating,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "dC" = (
 /obj/effect/turf_decal/tile/dark_blue/half/contrasted{
@@ -250,6 +251,11 @@
 /obj/machinery/defibrillator_mount/directional/north,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
+"fC" = (
+/obj/effect/turf_decal/tile/green/anticorner/contrasted,
+/obj/machinery/smartfridge/drying,
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
 "fF" = (
 /obj/effect/turf_decal/tile/dark_blue{
 	dir = 8
@@ -316,13 +322,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"hn" = (
-/obj/machinery/conveyor/auto{
-	dir = 10;
-	id = "syndisat_disposals"
-	},
-/turf/open/floor/plating,
-/area/centcom/syndicate_mothership/syndicate_satellite)
 "ho" = (
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/item/folder,
@@ -339,12 +338,9 @@
 /obj/machinery/light/cold/directional/west,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"hJ" = (
-/obj/machinery/conveyor/auto{
-	dir = 6;
-	id = "syndisat_disposals"
-	},
-/turf/open/floor/plating,
+"hL" = (
+/obj/effect/turf_decal/tile/dark_red/half/contrasted,
+/turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "hN" = (
 /obj/effect/turf_decal/syndicateemblem/middle/right,
@@ -361,6 +357,15 @@
 "hX" = (
 /obj/structure/closet/mini_fridge,
 /turf/open/floor/plating,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"ik" = (
+/obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
+	dir = 1
+	},
+/obj/structure/reagent_dispensers/watertank,
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/mop,
+/turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "iC" = (
 /obj/structure/closet/crate/freezer{
@@ -460,15 +465,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"kR" = (
-/obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
-	dir = 1
-	},
-/obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/cup/bucket,
-/obj/item/mop,
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
 "kS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/table/reinforced/plastitaniumglass,
@@ -479,27 +475,11 @@
 /obj/effect/turf_decal/syndicateemblem/middle/middle,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"lv" = (
+"lt" = (
 /obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
-	dir = 8
+	dir = 4
 	},
-/obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/storage/box/lights/mixed{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/grenade/chem_grenade/cleaner{
-	pixel_x = 10;
-	pixel_y = 6
-	},
-/obj/item/grenade/chem_grenade/cleaner{
-	pixel_x = 10;
-	pixel_y = 6
-	},
-/obj/item/grenade/chem_grenade/cleaner{
-	pixel_x = 10;
-	pixel_y = 6
-	},
+/obj/machinery/vending/wardrobe/jani_wardrobe,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "lw" = (
@@ -514,15 +494,6 @@
 	dir = 8
 	},
 /obj/structure/sink/directional/west,
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
-"lI" = (
-/obj/effect/turf_decal/tile/dark_red/half/contrasted{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "mu" = (
@@ -579,7 +550,6 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "mY" = (
@@ -638,22 +608,24 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/syndicate_satellite)
+"nW" = (
+/obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/machinery/door/window/right/directional/east{
+	name = "Disposals Shield"
+	},
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
 "nX" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /turf/open/floor/iron,
-/area/centcom/syndicate_mothership/syndicate_satellite)
-"of" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
-/obj/machinery/conveyor/auto{
-	dir = 4;
-	id = "syndisat_disposals"
-	},
-/turf/open/floor/plating,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "og" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
@@ -723,18 +695,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"pa" = (
-/obj/effect/turf_decal/tile/dark_red/anticorner/contrasted,
-/obj/machinery/conveyor_switch/oneway{
-	id = "syndisat_disposals";
-	dir = 1;
-	pixel_y = 4
-	},
-/obj/machinery/door/window/right/directional/east{
-	name = "Disposals Shield"
-	},
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
 "ps" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -800,10 +760,6 @@
 /obj/machinery/duct,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"ql" = (
-/obj/effect/turf_decal/tile/dark_red/half/contrasted,
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
 "qt" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 4
@@ -823,12 +779,12 @@
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "qN" = (
-/obj/effect/turf_decal/tile/green/anticorner/contrasted,
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/machinery/reagentgrinder{
 	pixel_x = -4;
 	pixel_y = 5
 	},
+/obj/effect/turf_decal/tile/green/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "qR" = (
@@ -848,6 +804,20 @@
 "rx" = (
 /obj/machinery/porta_turret/syndicate/energy,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"ry" = (
+/obj/machinery/conveyor/auto{
+	dir = 8;
+	id = "syndisat_disposals"
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"rG" = (
+/obj/machinery/conveyor/auto{
+	dir = 6;
+	id = "syndisat_disposals"
+	},
+/turf/open/floor/plating,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "rM" = (
 /obj/effect/turf_decal/syndicateemblem/top/middle,
@@ -924,6 +894,15 @@
 	},
 /turf/closed/indestructible/syndicate,
 /area/centcom/syndicate_mothership/syndicate_satellite)
+"su" = (
+/obj/effect/turf_decal/tile/dark_red{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
 "sy" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/cafeteria,
@@ -960,6 +939,13 @@
 /obj/machinery/sleeper/syndie/fullupgrade{
 	dir = 8
 	},
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"uh" = (
+/obj/effect/turf_decal/tile/green/half/contrasted{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "up" = (
@@ -1042,15 +1028,6 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/centcom/syndicate_mothership/syndicate_satellite)
-"wI" = (
-/obj/effect/turf_decal/tile/dark_red{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "wQ" = (
 /obj/effect/turf_decal/tile/green/anticorner/contrasted{
@@ -1155,18 +1132,17 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"zm" = (
-/obj/effect/turf_decal/tile/green/anticorner/contrasted{
-	dir = 1
-	},
-/obj/machinery/disposal/bin,
-/obj/structure/disposalpipe/trunk,
-/obj/machinery/light/cold/directional/west,
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
 "zv" = (
 /obj/effect/turf_decal/tile/dark_blue/half/contrasted,
 /obj/machinery/stasis,
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"zC" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "zX" = (
@@ -1182,6 +1158,16 @@
 "Bg" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"Bi" = (
+/obj/machinery/duct,
+/obj/machinery/door/airlock/hatch{
+	name = "Custodial Closet"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
@@ -1216,16 +1202,6 @@
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"Cb" = (
-/obj/machinery/duct,
-/obj/machinery/door/airlock/hatch{
-	name = "Custodial Closet"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
 "Cd" = (
 /obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
 	dir = 8
@@ -1248,6 +1224,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/duct,
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"Cr" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "Cz" = (
@@ -1362,6 +1344,36 @@
 /obj/machinery/teleport/hub/syndicate,
 /turf/open/floor/engine,
 /area/centcom/syndicate_mothership/syndicate_satellite)
+"FL" = (
+/obj/machinery/conveyor/auto{
+	dir = 10;
+	id = "syndisat_disposals"
+	},
+/turf/open/floor/plating,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"FS" = (
+/obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
+	dir = 8
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/storage/box/lights/mixed{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/grenade/chem_grenade/cleaner{
+	pixel_x = 10;
+	pixel_y = 6
+	},
+/obj/item/grenade/chem_grenade/cleaner{
+	pixel_x = 10;
+	pixel_y = 6
+	},
+/obj/item/grenade/chem_grenade/cleaner{
+	pixel_x = 10;
+	pixel_y = 6
+	},
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
 "Gk" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted,
 /obj/machinery/light/cold/directional/south,
@@ -1386,13 +1398,6 @@
 "GL" = (
 /obj/machinery/light/small/dim/directional/east,
 /turf/open/floor/plating,
-/area/centcom/syndicate_mothership/syndicate_satellite)
-"He" = (
-/obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
-	dir = 4
-	},
-/obj/machinery/vending/wardrobe/jani_wardrobe,
-/turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "Hr" = (
 /obj/effect/turf_decal/tile/dark_blue{
@@ -1429,6 +1434,15 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"It" = (
+/obj/effect/turf_decal/tile/green/anticorner/contrasted{
+	dir = 1
+	},
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk,
+/obj/machinery/light/cold/directional/west,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "Iv" = (
@@ -1476,6 +1490,14 @@
 /obj/structure/sink/directional/south,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
+"IT" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
 "Jk" = (
 /obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
 	dir = 1
@@ -1501,18 +1523,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/engine,
-/area/centcom/syndicate_mothership/syndicate_satellite)
-"JW" = (
-/obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/obj/machinery/door/window/right/directional/east{
-	name = "Disposals Shield"
-	},
-/turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "Ke" = (
 /obj/machinery/chem_mass_spec,
@@ -1580,7 +1590,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/green,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "Lr" = (
@@ -1683,12 +1692,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"OA" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
 "OB" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/engine,
@@ -1716,13 +1719,6 @@
 	extended_inventory = 1
 	},
 /turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
-"Pq" = (
-/obj/machinery/conveyor/auto{
-	dir = 8;
-	id = "syndisat_disposals"
-	},
-/turf/open/floor/plating,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "Pu" = (
 /obj/structure/table/wood,
@@ -1758,6 +1754,15 @@
 	resistance_flags = 115
 	},
 /obj/effect/mapping_helpers/airlock/locked,
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"PK" = (
+/obj/effect/turf_decal/tile/green/half/contrasted{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "PQ" = (
@@ -1813,7 +1818,15 @@
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "Qy" = (
-/obj/effect/turf_decal/tile/green/anticorner/contrasted,
+/obj/effect/turf_decal/tile/dark_red/anticorner/contrasted,
+/obj/machinery/conveyor_switch/oneway{
+	id = "syndisat_disposals";
+	dir = 1;
+	pixel_y = 4
+	},
+/obj/machinery/door/window/right/directional/east{
+	name = "Disposals Shield"
+	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "QO" = (
@@ -1832,6 +1845,15 @@
 /obj/effect/turf_decal/tile/green/half/contrasted,
 /obj/machinery/chem_master/condimaster{
 	name = "CondiMaster Neo"
+	},
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"QW" = (
+/obj/effect/turf_decal/tile/dark_red/half/contrasted{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
@@ -1854,6 +1876,15 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
+/turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"RE" = (
+/obj/effect/turf_decal/tile/dark_red/half/contrasted{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "RM" = (
@@ -1922,15 +1953,6 @@
 	dir = 4
 	},
 /obj/machinery/recharge_station,
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
-"SR" = (
-/obj/effect/turf_decal/tile/green/half/contrasted{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 10
-	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "SX" = (
@@ -2010,14 +2032,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"UM" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/disposalpipe/segment{
-	dir = 9
-	},
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
 "UO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/hatch,
@@ -2035,16 +2049,6 @@
 "Vb" = (
 /obj/effect/turf_decal/syndicateemblem/bottom/left,
 /turf/open/floor/mineral/plastitanium/red,
-/area/centcom/syndicate_mothership/syndicate_satellite)
-"Vm" = (
-/obj/machinery/conveyor/auto{
-	dir = 4;
-	id = "syndisat_disposals"
-	},
-/obj/machinery/recycler{
-	dir = 8
-	},
-/turf/open/floor/plating,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "VH" = (
 /obj/effect/turf_decal/tile/dark_blue{
@@ -2181,14 +2185,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/cafeteria,
 /area/centcom/syndicate_mothership/syndicate_satellite)
-"Yc" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/disposalpipe/segment{
-	dir = 6
-	},
-/turf/open/floor/iron/dark,
-/area/centcom/syndicate_mothership/syndicate_satellite)
 "Yn" = (
 /obj/machinery/computer/operating,
 /obj/effect/turf_decal/tile/dark_blue/anticorner/contrasted{
@@ -2281,6 +2277,16 @@
 /obj/structure/sink/directional/west,
 /obj/structure/sign/poster/contraband/interdyne_gene_clinics/directional/east,
 /turf/open/floor/iron/dark,
+/area/centcom/syndicate_mothership/syndicate_satellite)
+"ZJ" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	id = "syndisat_disposals"
+	},
+/turf/open/floor/plating,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "ZN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3791,7 +3797,7 @@ Cd
 cE
 mz
 cE
-zm
+It
 Ob
 TO
 Ko
@@ -3866,14 +3872,14 @@ kn
 sX
 cE
 eB
-SR
-mR
-mR
-mR
+PK
+uh
+uh
+uh
 DX
 Um
-Qy
-oo
+mR
+fC
 oo
 Sq
 Sq
@@ -3911,7 +3917,7 @@ cE
 xQ
 cE
 oo
-Sq
+oo
 Sq
 Sq
 Sq
@@ -3977,12 +3983,12 @@ kn
 pX
 pX
 pX
-Yc
-OA
-OA
-OA
-OA
-UM
+IT
+Cr
+Cr
+Cr
+Cr
+zC
 Gk
 oo
 Sq
@@ -4014,7 +4020,7 @@ kn
 Cj
 mw
 qt
-bu
+RE
 yf
 CH
 CH
@@ -4051,7 +4057,7 @@ Bg
 Kq
 oo
 oo
-Cb
+Bi
 oo
 oo
 oo
@@ -4087,9 +4093,9 @@ ve
 ve
 BK
 oo
-kR
-lI
-lv
+ik
+QW
+FS
 cE
 Sq
 Sq
@@ -4124,9 +4130,9 @@ re
 CH
 dS
 oo
-He
-wI
-ql
+lt
+su
+hL
 cE
 Sq
 Sq
@@ -4162,8 +4168,8 @@ cE
 no
 oo
 oo
-JW
-pa
+nW
+Qy
 cE
 Sq
 Sq
@@ -4199,8 +4205,8 @@ kc
 NU
 KO
 oo
-of
-Pq
+ZJ
+ry
 cE
 Sq
 Sq
@@ -4236,8 +4242,8 @@ hX
 kB
 nR
 oo
-Vm
-Pq
+dx
+ry
 cE
 Sq
 Sq
@@ -4273,8 +4279,8 @@ nA
 GL
 dM
 oo
-hJ
-hn
+rG
+FL
 cE
 Sq
 Sq
