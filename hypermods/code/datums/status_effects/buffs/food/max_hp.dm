@@ -10,7 +10,8 @@
 /atom/movable/screen/alert/status_effect/food/health_increase_t1
 	name = "Healthy"
 	desc = "The food you've consumed has boosted your maximum health by a small amount."
-	overlay_state = "in_love"
+	overlay_icon = 'hypermods/icons/hud/screen_alert.dmi'
+	overlay_state = "maxhp_t1"
 
 /datum/status_effect/food/health_increase/t2
 	id = "t2_health"
@@ -24,7 +25,8 @@
 /atom/movable/screen/alert/status_effect/food/health_increase_t2
 	name = "Vitality"
 	desc = "The food you've consumed has boosted your maximum health by a moderate amount."
-	overlay_state = "in_love"
+	overlay_icon = 'hypermods/icons/hud/screen_alert.dmi'
+	overlay_state = "maxhp_t2"
 
 /datum/status_effect/food/health_increase/t3
 	id = "t3_health"
@@ -38,7 +40,8 @@
 /atom/movable/screen/alert/status_effect/food/health_increase_t3
 	name = "Hearty"
 	desc = "The food you've consumed has boosted your maximum health by a large amount."
-	overlay_state = "in_love"
+	overlay_icon = 'hypermods/icons/hud/screen_alert.dmi'
+	overlay_state = "maxhp_t3"
 
 /datum/status_effect/food/health_increase/on_apply()
 	if(ishuman(owner))
