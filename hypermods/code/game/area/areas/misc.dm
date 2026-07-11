@@ -1,3 +1,6 @@
+/area/space/no_teleport
+	area_flags = NOTELEPORT
+
 /area/space/nearstation/planetary
 	icon = 'hypermods/icons/area/areas_misc.dmi'
 	icon_state = "planetary"
