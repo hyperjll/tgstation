@@ -3,7 +3,7 @@
 	desc = "A language only consisting of musical notes."
 	spans = list(SPAN_ROBOT)
 	key = "s"
-	flags = NO_STUTTER
+	flags = LANGUAGE_NO_STUTTER
 	space_chance = 100
 	sentence_chance = 0
 	default_priority = 60
