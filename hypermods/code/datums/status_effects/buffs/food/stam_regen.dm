@@ -4,8 +4,10 @@
 	var/regen_rate = 1
 
 /datum/status_effect/food/stam_regen/on_creation(mob/living/new_owner, timeout_mod = 1, strength = 1)
-	. = ..()
 	regen_rate *= (1 + (strength / 20))
+	if(new_owner.has_status_effect(/datum/status_effect/food/stam_regen/t3) || new_owner.has_status_effect(/datum/status_effect/food/stam_regen/t2))
+		new_owner.remove_status_effect(/datum/status_effect/food/stam_regen)
+	. = ..()
 
 /atom/movable/screen/alert/status_effect/food/stam_regen_t1
 	name = "Energized"
@@ -19,7 +21,8 @@
 	regen_rate = 2
 
 /datum/status_effect/food/stam_regen/t2/on_creation(mob/living/new_owner, timeout_mod = 1, strength = 1)
-	new_owner.remove_status_effect(/datum/status_effect/food/stam_regen)
+	if(new_owner.has_status_effect(/datum/status_effect/food/stam_regen/t3))
+		new_owner.remove_status_effect(/datum/status_effect/food/stam_regen/t2)
 	. = ..()
 
 /atom/movable/screen/alert/status_effect/food/stam_regen_t2

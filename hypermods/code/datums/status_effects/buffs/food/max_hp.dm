@@ -5,6 +5,8 @@
 
 /datum/status_effect/food/health_increase/on_creation(mob/living/new_owner, timeout_mod = 1, strength = 1)
 	health_increase *= (1 + (strength / 50))
+	if(new_owner.has_status_effect(/datum/status_effect/food/health_increase/t3) || new_owner.has_status_effect(/datum/status_effect/food/health_increase/t2))
+		new_owner.remove_status_effect(/datum/status_effect/food/health_increase)
 	. = ..()
 
 /atom/movable/screen/alert/status_effect/food/health_increase_t1
@@ -19,7 +21,8 @@
 	health_increase = 10
 
 /datum/status_effect/food/health_increase/t2/on_creation(mob/living/new_owner, timeout_mod = 1, strength = 1)
-	new_owner.remove_status_effect(/datum/status_effect/food/health_increase)
+	if(new_owner.has_status_effect(/datum/status_effect/food/health_increase/t3))
+		new_owner.remove_status_effect(/datum/status_effect/food/health_increase/t2)
 	. = ..()
 
 /atom/movable/screen/alert/status_effect/food/health_increase_t2
