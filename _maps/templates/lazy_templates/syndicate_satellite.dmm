@@ -52,13 +52,13 @@
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "bw" = (
-/obj/machinery/chem_dispenser/drinks/fullupgrade{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
 	dir = 8
 	},
 /obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/chem_dispenser/drinks{
+	dir = 4
+	},
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "by" = (
@@ -73,15 +73,16 @@
 	dir = 8
 	},
 /obj/structure/table/wood,
-/obj/effect/spawner/random/food_or_drink/condiment{
-	pixel_x = -5
-	},
 /obj/item/reagent_containers/condiment/saltshaker{
 	pixel_x = -11;
 	pixel_y = 8
 	},
 /obj/effect/spawner/random/food_or_drink/snack{
 	pixel_x = 7
+	},
+/obj/item/reagent_containers/condiment/peppermill{
+	pixel_x = -11;
+	pixel_y = -2
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
@@ -476,7 +477,7 @@
 "kS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/table/reinforced/plastitaniumglass,
-/obj/machinery/chem_dispenser/drinks,
+/obj/machinery/chem_dispenser/drinks/fullupgrade,
 /turf/open/floor/iron/cafeteria,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "ls" = (
@@ -1339,7 +1340,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/table/reinforced/plastitaniumglass,
-/obj/machinery/chem_dispenser/drinks/beer,
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
 /turf/open/floor/iron/cafeteria,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "Fp" = (
@@ -1389,7 +1390,7 @@
 "Gk" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted,
 /obj/machinery/light/cold/directional/south,
-/obj/item/kirbyplants/random,
+/obj/machinery/vending/snack/random,
 /turf/open/floor/iron/dark,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "Gn" = (
@@ -1947,14 +1948,14 @@
 /turf/open/floor/plastic,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "SA" = (
-/obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/bar,
 /obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/chem_dispenser/drinks/beer{
+	dir = 4
+	},
 /turf/open/floor/iron,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 "SH" = (
