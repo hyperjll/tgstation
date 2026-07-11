@@ -815,7 +815,7 @@
 "dB" = (
 /obj/machinery/holopad,
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai/upload/chamber";
 	name = "AI Upload Turret Control";
 	pixel_y = 28
 	},
@@ -1405,6 +1405,10 @@
 /obj/item/assembly/mousetrap/armed,
 /turf/open/misc/asteroid,
 /area/station/command/heads_quarters/hop)
+"fX" = (
+/obj/machinery/air_sensor/engine_chamber,
+/turf/open/floor/engine,
+/area/station/engineering/supermatter)
 "fY" = (
 /obj/item/flashlight/flare/candle/infinite,
 /obj/effect/decal/cleanable/cobweb,
@@ -2897,7 +2901,8 @@
 /obj/machinery/turretid{
 	name = "AI Chamber turret control";
 	pixel_x = 3;
-	pixel_y = -23
+	pixel_y = -23;
+	control_area = "/area/station/ai/satellite/chamber"
 	},
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/circuit,
@@ -3726,7 +3731,7 @@
 /area/station/medical/psychology)
 "qz" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/ai_upload";
+	control_area = "/area/station/ai/upload/chamber";
 	name = "AI Upload Turret Control";
 	pixel_y = 28
 	},
@@ -10175,7 +10180,7 @@
 /area/station/service/kitchen)
 "Sq" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat_interior";
+	control_area = "/area/station/ai/satellite/interior";
 	name = "Antechamber Turret Control";
 	req_access = list("minisat");
 	pixel_y = 30
@@ -111483,7 +111488,7 @@ pT
 mK
 Ek
 id
-HG
+fX
 Ze
 HG
 tS
