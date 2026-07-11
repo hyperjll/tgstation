@@ -37,8 +37,9 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
 	slot_flags = ITEM_SLOT_BACK
 	burst_delay = 2
-	burst_size = 2
+	burst_size = 1
 	spread = 2
+	projectile_damage_multiplier = 0.75
 	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_MEDIUM
 	mag_display = TRUE
@@ -69,8 +70,8 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/r556
 	slot_flags = ITEM_SLOT_BACK
 	burst_delay = 2
-	burst_size = 3
-	spread = 1
+	burst_size = 1
+	spread = 2
 	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_MEDIUM
 	mag_display = TRUE
@@ -82,7 +83,7 @@
 
 /obj/item/gun/ballistic/automatic/drozd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.35 SECONDS)
 
 /obj/item/gun/ballistic/automatic/drozd/freshprint
 	spawnwithmagazine = FALSE
