@@ -1794,7 +1794,10 @@
 /obj/item/storage/belt/medical,
 /obj/item/storage/belt/medical,
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/camera/autoname/directional/east{
+	name = "medical camera";
+	network = list("ss13","medical")
+	},
 /obj/item/autopsy_scanner,
 /obj/item/disk/computer/medical{
 	pixel_y = 10;
@@ -2166,7 +2169,10 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/obj/machinery/camera/autoname/directional/south,
+/obj/machinery/camera/autoname/directional/south{
+	name = "medical camera";
+	network = list("ss13","medical")
+	},
 /obj/item/book/manual/wiki/chemistry{
 	pixel_x = -4;
 	pixel_y = 4
@@ -2253,7 +2259,10 @@
 /obj/machinery/power/energy_accumulator/grounding_rod/anchored,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /obj/structure/cable,
-/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/camera/autoname/directional/east{
+	name = "supermatter camera";
+	network = list("engine")
+	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -2318,7 +2327,10 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/camera/autoname/directional/east{
+	name = "medical camera";
+	network = list("ss13","medical")
+	},
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 6
@@ -3175,7 +3187,10 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
-/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/camera/autoname/directional/east{
+	name = "medical camera";
+	network = list("ss13","medical")
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "oo" = (
@@ -7724,7 +7739,10 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/delivery/white,
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera/autoname/directional/north{
+	network = list("ss13,medbay");
+	name = "medical camera"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "HL" = (
@@ -10902,7 +10920,10 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 8
 	},
-/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/camera/autoname/directional/north{
+	name = "medical camera";
+	network = list("ss13","medical")
+	},
 /obj/structure/bed/medical/emergency,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
