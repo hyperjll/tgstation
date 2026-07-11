@@ -1118,7 +1118,7 @@
 			update_appearance()
 			return ITEM_INTERACT_SUCCESS
 
-		return NONE
+		return ..()
 
 	if(istype(tool, /obj/item/pai_cable))
 		var/obj/item/pai_cable/cable = tool
@@ -1188,7 +1188,7 @@
 		update_appearance()
 		return ITEM_INTERACT_SUCCESS
 
-	return NONE
+	return ..()
 
 
 /obj/machinery/door/airlock/try_to_weld(obj/item/weldingtool/W, mob/living/user)
