@@ -251,6 +251,21 @@
 /obj/item/disk/nanite_program/organ_sensor
 	program = /datum/nanite_program/sensor/organ_damage
 
+/obj/item/disk/nanite_program/fire_sensor
+	program = /datum/nanite_program/sensor/fire
+
+/obj/item/disk/nanite_program/blood_sensor
+	program = /datum/nanite_program/sensor/blood
+
+/obj/item/disk/nanite_program/nutrition_sensor
+	program = /datum/nanite_program/sensor/nutrition
+
+/obj/item/disk/nanite_program/soul_check
+	program = /datum/nanite_program/sensor/soul_check
+
+/obj/item/disk/nanite_program/temperature_sensor
+	program = /datum/nanite_program/sensor/temperature
+
 /obj/item/disk/nanite_program/defib
 	program = /datum/nanite_program/defib
 
