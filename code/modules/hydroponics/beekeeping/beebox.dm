@@ -160,6 +160,14 @@
 		honey_frames += frame
 		return ITEM_INTERACT_SUCCESS
 
+	// Adding flowers increases the resources
+	if(istype(tool, /obj/item/food/grown/poppy))
+		var/obj/item/food/grown/poppy/Poppy = tool
+		visible_message(span_notice("[user] composts the [Poppy] into the [src]."))
+		bee_resources += 20
+		qdel(Poppy)
+		return ITEM_INTERACT_SUCCESS
+
 	if(istype(tool, /obj/item/queen_bee))
 		if(queen_bee)
 			to_chat(user, span_warning("This hive already has a queen!"))
