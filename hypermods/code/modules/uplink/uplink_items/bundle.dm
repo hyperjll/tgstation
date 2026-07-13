@@ -6,6 +6,7 @@
 	cost = 10
 	limited_stock = 1
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/goloudbundle
 	name = "NT-Annihilation 'Go Loud' Kit"
@@ -17,6 +18,7 @@
 	limited_stock = 1
 	cant_discount = TRUE
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	var/loud_kit = /obj/item/storage/box/syndie_kit/goloudbundle
 	var/base_buyer_name
 
@@ -48,6 +50,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/drugpeddler
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/chemicalsynth
 	name = "Chemical Synthesis Kit"
@@ -58,6 +61,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/chemicalsynth
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/observe
 	name = "Observation Kit"
@@ -67,6 +71,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/observe
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/disruptor
 	name = "Electrical Disruptor Kit"
@@ -77,6 +82,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/disruptor
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/anatomy
 	name = "Anatomy Kit"
@@ -86,6 +92,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/anatomy
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/breacher
 	name = "Breacher Kit"
@@ -95,6 +102,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/breacher
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/chameleondeluxe
 	name = "Deluxe Chameleon Kit"
@@ -104,6 +112,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/chameleondeluxe
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/communicator
 	name = "Communicator Kit"
@@ -113,6 +122,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/communicator
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/sleeper
 	name = "Sleeper Kit"
@@ -122,6 +132,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/sleeper
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/smuggler
 	name = "Smuggler Kit"
@@ -131,6 +142,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/box/syndie_kit/smuggler
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/lobbyist
 	name = "Lobbyist Bundle"
@@ -140,6 +152,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/briefcase/lobbyist
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/hyperzine
 	name = "Hyperzine Injector Kit"
@@ -149,6 +162,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/medkit/emergency/hyperzine
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/sniper
 	name = "Sniper Bundle"
@@ -159,16 +173,18 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/briefcase/sniper_traitor
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/shotgun
 	name = "Shotgun Bundle"
-	desc = "A briefcase containing a syndicate kammerer, two boxes of lethal shells, a box of incendiary shells, and a combat uniform. \
+	desc = "A briefcase containing a augmented kammerer, two boxes of lethal shells, a box of incendiary shells, and a combat uniform. \
 			Sponsored by the Gorlex Marauders, rip and tear until it is done!"
 	cost = 11 // Technically 15 TC
 	progression_minimum = 15 MINUTES
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/briefcase/shotgun_traitor
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/akm
 	name = "Assault Rifle Bundle"
@@ -179,6 +195,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/briefcase/akm_traitor
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/medicaltot
 	name = "Medical Bundle"
@@ -188,6 +205,7 @@
 	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	item = /obj/item/storage/backpack/duffelbag/syndie/med/bundle
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/bundles_tc/romerol_kit
@@ -200,6 +218,7 @@
 	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/battle_royale_plus
 	name = "Battle Royale Kit"
@@ -211,6 +230,7 @@
 	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/battlecruiser_plus
 	name = "Battlecruiser Kit"
@@ -222,6 +242,7 @@
 	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/malf_plus
 	name = "Malfunctioning A.I Kit"
@@ -233,6 +254,7 @@
 	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/no_escape_plus
 	name = "NO ESCAPE Kit"
@@ -244,6 +266,7 @@
 	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/meteor_shield_plus
 	name = "IT COMES Kit"
@@ -255,6 +278,7 @@
 	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/destabilizing_crystal_plus
 	name = "Destabilizing Crystal Kit"
@@ -266,6 +290,7 @@
 	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/bundles_tc/silicon_rift_plus
 	name = "Silicon Rift Kit"
@@ -277,3 +302,4 @@
 	progression_minimum = 60 MINUTES
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	cant_discount = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

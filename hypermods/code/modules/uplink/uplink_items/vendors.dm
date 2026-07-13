@@ -4,7 +4,7 @@
 
 /datum/uplink_item/vendors
 	category = /datum/uplink_category/vendors
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	surplus = 0
 
 

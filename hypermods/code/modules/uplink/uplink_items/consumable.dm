@@ -92,7 +92,7 @@
 	item = /obj/item/food/magicrockcandy
 	cost = 5
 	surplus = 5
-	uplink_item_flags = null
+	uplink_item_flags = NONE
 
 /datum/uplink_item/consumable/coffeeplus
 	name = "Waffle Co. Coffee"
@@ -136,7 +136,6 @@
 			These sponsored cigarettes are especially easy on the lungs and will alleviate damage, and keep you in high spirits."
 	item = /obj/item/storage/fancy/cigarettes/cigpack_interdyne
 	cost = 1
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/syndiecigsvarietypack
 	name = "Syndicate Variety Smokes"
@@ -147,7 +146,6 @@
 	cost = 3
 	surplus = 50
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/syndiecigsvarietypackdeluxe
 	name = "Syndicate Variety Smokes Deluxe Edition"
@@ -158,7 +156,6 @@
 	cost = 6
 	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/interdynecigars
 	name = "Interdyne Herbal Cigars"
@@ -167,7 +164,6 @@
 			Each cigar lasts significantly longer than our cigarettes."
 	item = /obj/item/storage/fancy/cigarettes/cigars/interdyne
 	cost = 3
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/consumable/saturnx
 	name = "Stable Saturn-X Autoinjector"
@@ -233,4 +229,3 @@
 	item = /obj/item/reagent_containers/cup/bottle/mindwipe
 	cost = 4
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

@@ -67,6 +67,7 @@
 			Still does a moderate amount of damage when applied from the front."
 	item = /obj/item/switchblade/backstab
 	cost = 4
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/beesword
 	name = "The Stinger"
@@ -95,6 +96,7 @@
 	desc = "A wielded wooden staff that can be used to incapacitate opponents if you dont intent to harm them. This often results in knocking your targets unconscious for a brief period of time."
 	item = /obj/item/melee/bostaff
 	cost = 8
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/katana
 	name = "Katana"
@@ -104,6 +106,7 @@
 	progression_minimum = 25 MINUTES
 	surplus = 25
 	cost = 10
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/vxtvulhammer
 	name = "Vxtvul Hammer"

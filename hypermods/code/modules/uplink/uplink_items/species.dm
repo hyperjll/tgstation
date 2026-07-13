@@ -17,6 +17,7 @@
 	progression_minimum = 20 MINUTES
 	item = /obj/item/dnainjector/hulkmut
 	restricted_species = list(SPECIES_HUMAN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND // Hulk mutations are definitely contraband worthy... just in general.
 
 /datum/uplink_item/species_restricted/xray
 	name = "X-Ray Vision Mutator"
@@ -26,6 +27,7 @@
 	progression_minimum = 20 MINUTES
 	item = /obj/item/dnainjector/xraymut
 	restricted_species = list(SPECIES_HUMAN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND // ... and so would x-ray mutations.
 
 /datum/uplink_item/species_restricted/xenospitter
 	name = "Xenomorphic Pistol"
@@ -44,6 +46,7 @@
 	cost = 3
 	item = /obj/item/storage/box/syndie_kit/killertomato
 	restricted_species = list(SPECIES_PODPERSON)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/beegrenades
 	name = "Buzzkill Grenade"
@@ -61,6 +64,7 @@
 	surplus = 0
 	progression_minimum = 10 MINUTES
 	restricted_species = list(SPECIES_PODPERSON)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/eternal_mutagen
 	name = "Eternal Flask of Unstable Mutagen"
@@ -94,6 +98,7 @@
 	surplus = 0
 	progression_minimum = 10 MINUTES
 	restricted_species = list(SPECIES_PODPERSON)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/tesliumnades
 	name = "Tesla Grenades"
@@ -102,6 +107,7 @@
 	progression_minimum = 10 MINUTES
 	item = /obj/item/ammo_box/nadepouch/tesla
 	restricted_species = list(SPECIES_ETHEREAL)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/syndilampflash
 	name = "Flashing Lantern"
@@ -110,6 +116,7 @@
 	cost = 2
 	item = /obj/item/assembly/flash/lantern
 	restricted_species = list(SPECIES_MOTH)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/lethal_flare
 	name = "Lethal Flare"
@@ -128,6 +135,7 @@
 	surplus = 8
 	progression_minimum = 20 MINUTES
 	restricted_species = list(SPECIES_MOTH)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/lizardsbane
 	name = "Syndicate Liz o' Nine Tails"
@@ -137,6 +145,7 @@
 	cost = 6
 	surplus = 0
 	restricted_species = list(SPECIES_LIZARD)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/lizardplushiebomb
 	name = "Explosive Lizard Plushie"
@@ -146,6 +155,7 @@
 	surplus = 0
 	progression_minimum = 30 MINUTES
 	restricted_species = list(SPECIES_LIZARD)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/degeneratewhip
 	name = "Infinite Cat o' Nine Tails"
@@ -176,6 +186,7 @@
 	surplus = 0
 	progression_minimum = 30 MINUTES
 	restricted_species = list(SPECIES_FELINE)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/jellypersonregen
 	name = "Gelatine Sythesis Implant Autosurgeon"
@@ -193,6 +204,7 @@
 	surplus = 0
 	progression_minimum = 10 MINUTES
 	restricted_species = list(SPECIES_JELLYPERSON)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/radiantburst
 	name = "Radiant Burst Mutator"
@@ -204,6 +216,7 @@
 	progression_minimum = 10 MINUTES
 	item = /obj/item/dnainjector/radiantburst
 	restricted_species = list(SPECIES_ETHEREAL)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/firebreath
 	name = "Fire Breath Mutator"
@@ -215,6 +228,7 @@
 	progression_minimum = 10 MINUTES
 	item = /obj/item/dnainjector/firebreath
 	restricted_species = list(SPECIES_LIZARD)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/species_restricted/plasmafist
 	name = "Frayed Scroll"
@@ -302,13 +316,3 @@
 	surplus = 20
 	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
 	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
-/**
-/datum/uplink_item/armor/superradproof
-	name = "Superior Radproofing Mutation"
-	desc = "An mutator containing a superior version of the 'radproof' mutation, you may inject yourself to render yourself immune to radiation, this mutation cannot be cured by mutadone."
-	item = /obj/item/dnainjector/radproof/super
-	cost = 4
-	surplus = 20
-	restricted_species = list(SPECIES_HUMAN, SPECIES_MOTH, SPECIES_LIZARD, SPECIES_PODPERSON, SPECIES_ETHEREAL, SPECIES_FELINE, SPECIES_JELLYPERSON)
-	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
-**/

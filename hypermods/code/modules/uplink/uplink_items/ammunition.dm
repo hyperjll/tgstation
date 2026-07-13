@@ -5,7 +5,6 @@
 	item = /obj/item/storage/toolbox/guncase/traitor/ammunition
 	cost = 2
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/pistol/random
 	name = "Random 9mm Handgun Magazines"
@@ -97,7 +96,6 @@
 	item = /obj/item/storage/toolbox/guncase/traitor/ammunition/m10mm
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/pistol10mm/random
 	name = "Random 10mm Handgun Magazines"
@@ -175,7 +173,6 @@
 	item = /obj/item/storage/toolbox/guncase/traitor/ammunition/m45
 	cost = 2
 	purchasable_from = ~UPLINK_CLOWN_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/handgun45/random
 	name = "Random .45mm Handgun Magazines"
@@ -253,16 +250,6 @@
 	item = /obj/item/ammo_box/magazine/m45/tranq
 	cost = 2
 
-/**
-/datum/uplink_item/ammo/revolver
-	name = ".357 Speed Loader"
-	desc = "A speed loader that contains seven additional .357 Magnum rounds; usable with the Syndicate revolver. \
-			For when you really need a lot of things dead."
-	item = /obj/item/ammo_box/speedloader/c357
-	cost = 4
-	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) //nukies get their own version
-**/
-
 /datum/uplink_item/ammo/revolver/random
 	name = "Random .357 Speed Loader Box"
 	desc = "A box with two random .357 speed loaders. Who knows what fun toys you might get?"
@@ -314,7 +301,6 @@
 	item = /obj/item/ammo_box/magazine/m50
 	cost = 4
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/deagle/random
 	name = "Random .50 AE Handgun Magazine Box"
@@ -393,12 +379,13 @@
 	item = /obj/item/ammo_box/magazine/m50/rep
 
 /datum/uplink_item/ammo/boltactionammo
-	name = "Stripper Clips"
-	desc = "Five stripper clips for those shoddy bolt action rifles we're selling you."
-	item = /obj/item/storage/box/syndie_kit/stripperclips
+	name = ".310 Strilka Ammo Box"
+	desc = "A smelly, old box of .310 Strilka stripper clips for those bolt-action rifles we're selling you. \
+			Each box contains six clips, with each containing 5 rounds. \
+			Despite the smell, our ammunition specialists have verified their quality."
+	item = /obj/item/storage/toolbox/ammobox/strilka310
 	cost = 2
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/tommygun
 	name = "Tommy Gun Drum Magazine"
@@ -406,7 +393,6 @@
 	item = /obj/item/ammo_box/magazine/tommygunm45
 	cost = 6 // 15 + 6 for 100 rounds of .45. If you dumped out 6 .45 mags, you'd get 48 bullets.
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akm
 	name = "Rifle Magazine (7.12x82mm)"
@@ -414,7 +400,6 @@
 	item = /obj/item/ammo_box/magazine/ak712x82
 	cost = 3
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akmap
 	name = "Armor-Piercing Rifle Magazine (7.12x82mm)"
@@ -422,7 +407,6 @@
 	item = /obj/item/ammo_box/magazine/ak712x82/ap
 	cost = 4
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akmhp
 	name = "Hollow-Point Rifle Magazine (7.12x82mm)"
@@ -430,7 +414,6 @@
 	item = /obj/item/ammo_box/magazine/ak712x82/hp
 	cost = 4
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/akmincendiary
 	name = "Incendiary Rifle Magazine (7.12x82mm)"
@@ -438,7 +421,6 @@
 	item = /obj/item/ammo_box/magazine/ak712x82/incendiary
 	cost = 4
 	purchasable_from = UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/magspears
 	name = "Harpoon Quiver"
@@ -446,8 +428,6 @@
 	item = /obj/item/storage/harpoon_quiver
 	cost = 4
 	surplus = 0
-	 // Just a pouch filled with giant hunks of metal.
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/sniper
 	name = ".50 BMG Magazine"

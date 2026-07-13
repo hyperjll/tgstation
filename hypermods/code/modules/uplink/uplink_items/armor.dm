@@ -13,7 +13,7 @@
 	item = /obj/item/clothing/suit/armor/webvest
 	cost = 5
 	surplus = 30
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/webhelmet
 	name = "Web Helmet"
@@ -21,7 +21,7 @@
 	item = /obj/item/clothing/head/helmet/webhelmet
 	cost = 5
 	surplus = 35
-	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/armoredchameleon
 	name = "Armored Jumpsuit"
@@ -29,7 +29,7 @@
 	item = /obj/item/clothing/under/chameleon/armored
 	cost = 4
 	surplus = 40
-	uplink_item_flags = null
+	uplink_item_flags = NONE
 
 /datum/uplink_item/armor/bloodredsneaksuit
 	name = "Blood-Red Sneaksuit"
@@ -39,7 +39,7 @@
 	item = /obj/item/clothing/under/syndicate/bloodred/stealthy
 	cost = 1
 	surplus = 20
-	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/energyshield
 	name = "Energy Shield"
@@ -49,7 +49,7 @@
 	cost = 8
 	surplus = 20
 	progression_minimum = 20 MINUTES
-	//uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND // The energy shield is used by ERT also, so...
+	uplink_item_flags = NONE // It's used even by Nanotrasen forces.
 
 /datum/uplink_item/armor/armoredtie
 	name = "Armored Tie"
@@ -57,7 +57,7 @@
 	item = /obj/item/clothing/neck/chameleon/armored
 	cost = 2
 	surplus = 25
-	uplink_item_flags = null
+	uplink_item_flags = NONE
 
 /datum/uplink_item/armor/armoredgloves
 	name = "Armored Gloves"
@@ -66,7 +66,7 @@
 	item = /obj/item/clothing/gloves/chameleon/armored
 	cost = 2
 	surplus = 25
-	uplink_item_flags = null
+	uplink_item_flags = NONE
 
 /datum/uplink_item/armor/armor_polish
 	name = "Armor Polish"
@@ -210,6 +210,7 @@
 	item = /obj/item/storage/fancy/cigarettes/dermal_harden
 	cost = 5
 	surplus = 15
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/armor/raid
 	name = "Syndicate Raid MODsuit"

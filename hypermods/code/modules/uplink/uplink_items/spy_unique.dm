@@ -3,6 +3,7 @@
 	desc = "A box containing five random illegal MODsuit modules. Feeling lucky?"
 	item = /obj/item/storage/box/syndie_kit/modsuitmodbundle
 	cost = SPY_UPPER_COST_THRESHOLD - 1 // I'd like this to be in medium-diff bounties
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/spy_unique/xraygoggles
 	name = "X-Ray Goggles"

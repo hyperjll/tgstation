@@ -13,6 +13,7 @@
 	item = /obj/item/storage/box/syndie_kit/cutouts
 	cost = 1
 	surplus = 20
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/deception/fakenucleardisk
 	name = "Decoy Nuclear Authentication Disk"
@@ -32,6 +33,7 @@
 	limited_stock = 4
 	surplus = 8
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS /// Ops get their own version.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/deception/frame
 	name = "F.R.A.M.E. disk"
@@ -94,6 +96,7 @@
 			and apply them to a target object. Helpful for framing crew. Recommend buying soap with your purchase."
 	item = /obj/item/storage/box/syndie_kit/forensics_spoofer
 	cost = 5
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/deception/trap_disks
@@ -104,6 +107,7 @@
 	progression_minimum = 15 MINUTES
 	cost = 7
 	surplus = 10
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/deception/syndistache
 	name = "Syndicate Moustache"
@@ -131,6 +135,7 @@
 	cost = 2
 	surplus = 40
 	progression_minimum = 5 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/deception/bombchameleon
 	name = "Chameleon Bomb"
@@ -160,6 +165,7 @@
 	progression_minimum = 20 MINUTES
 	cost = 4
 	surplus = 15
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/deception/riggedstunbaton
 	name = "Rigged Stun Baton"
@@ -192,6 +198,7 @@
 	cost = 5
 	surplus = 30
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/deception/riggedlights
 	name = "Box of Rigged Replacement Lights"
@@ -202,6 +209,7 @@
 	cost = 7
 	surplus = 25
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/deception/trickflash
 	name = "Trick Flash"
@@ -259,6 +267,7 @@
 	cost = 10
 	surplus = 20
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/deception/payloadcigars
 	name = "Payload Cigars"
@@ -268,7 +277,6 @@
 			Still contains a small amount of Nicotine, to ensure victims are fooled."
 	item = /obj/item/storage/fancy/cigarettes/cigars/payload
 	cost = 2
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/deception/dangerous_bone_gel
 	name = "Reverse Bone Gel"
@@ -277,3 +285,4 @@
 	item = /obj/item/bone_gel_dangerous
 	cost = 3
 	surplus = 10
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

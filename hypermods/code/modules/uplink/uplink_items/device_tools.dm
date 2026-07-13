@@ -7,6 +7,7 @@
 	cost = 2
 	surplus = 75
 	restricted = TRUE
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/toolboxdeluxe
 	name = "Deluxe Syndicate Toolbox"
@@ -24,6 +25,7 @@
 			you to use sign language over telecommunications!"
 	item = /obj/item/clothing/gloves/fingerless/bigboss
 	cost = 2
+	uplink_item_flags = NONE
 
 /datum/uplink_item/device_tools/syndie_bodybag
 	name = "Syndicate Prisoner Transport Bag"
@@ -38,6 +40,7 @@
 	desc = "A robust belt fitted with chameleon technology that is capable of holding all manner of tactical equipment, and can even hold the bulkiest items!"
 	item = /obj/item/storage/belt/chameleon/bluespace
 	cost = 3
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/mrfreezesprayer
 	name = "Frost Oil Chemical Sprayer"
@@ -58,16 +61,17 @@
 	item = /obj/item/encryptionkey/universal
 	cost = 3
 	surplus = 0
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/extraarm
 	name = "Additional Arm"
 	desc = "An additional arm, automatically added to your body upon purchase, allows you to use more items at once."
-	item = /obj/item/storage/box/syndie_kit/left_arm // Placeholder item so left arms aren't globally considered contraband
+	item = /obj/item/bodypart/arm/left
 	cost = 5
 	surplus = 0
 	limited_stock = 2 // It's probably best to not break the UI any further.
 	purchasable_from = ~(UPLINK_SERIOUS_OPS | UPLINK_SPY)
-	// It's just another arm.
+	uplink_item_flags = NONE // It's just another arm.
 
 /datum/uplink_item/device_tools/extraarm/spawn_item(spawn_item, mob/living/carbon/human/user, datum/uplink_handler/handler, atom/movable/source)
 	var/limbs = user.held_items.len
@@ -91,6 +95,7 @@
 	item = /obj/item/storage/box/firingpins/traitor_noremove
 	cost = 2
 	surplus = 0
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/firingpin_traitor_dna
 	name = "Syndicate DNA Firing Pins"
@@ -99,6 +104,7 @@
 	item = /obj/item/storage/box/firingpins/dna_noremove
 	cost = 3
 	surplus = 0
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/chemicompiler
 	name = "Chemi-Compiler"
@@ -118,6 +124,7 @@
 	item = /obj/item/storage/box/syndie_kit/syndicate_radio_mine
 	cost = 4
 	surplus = 0
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/compressionkit
 	name = "Compression Kit"

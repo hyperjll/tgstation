@@ -6,6 +6,7 @@
 /datum/uplink_item/implants
 	category = /datum/uplink_category/implants
 	surplus = 50
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/implants/freedom
 	name = "Freedom Implant"

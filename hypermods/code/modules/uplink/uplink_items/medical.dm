@@ -51,7 +51,7 @@
 	item = /obj/item/storage/medkit/medipenkit
 	cost = 3
 	surplus = 35
-	uplink_item_flags = null
+	uplink_item_flags = NONE
 
 /datum/uplink_item/medical/combatmedipen
 	name = "Combat Medipens"
@@ -60,7 +60,7 @@
 	cost = 3
 	surplus = 40
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = null
+	uplink_item_flags = NONE
 
 /datum/uplink_item/medical/combistimpack
 	name = "Chemical Combi-Stimpack Bag"
@@ -71,7 +71,7 @@
 	cost = 3
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = null
+	uplink_item_flags = NONE
 
 /datum/uplink_item/medical/combistimpackdeluxe
 	name = "Deluxe Combi-Stimpack Bag"
@@ -84,7 +84,7 @@
 	cost = 6
 	surplus = 15
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
-	uplink_item_flags = null
+	uplink_item_flags = NONE
 
 /datum/uplink_item/medical/restorationnaniteinjector
 	name = "Restoration Nanite Injector"
@@ -103,6 +103,7 @@
 	cost = 12
 	surplus = 10
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/miraclesyringe
 	name = "Miracle Syringe"
@@ -113,7 +114,7 @@
 	cost = 1
 	surplus = 50
 	limited_stock = 2
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = NONE
 
 /datum/uplink_item/medical/eternalomnizine
 	name = "Eternal Flask of Omnizine"
@@ -196,6 +197,7 @@
 	cost = 12
 	surplus = 0
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/medical/auto_pump
 	name = "Auto-Pump"
@@ -206,4 +208,4 @@
 	item = /obj/item/auto_pump
 	cost = 2
 	surplus = 20
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = NONE

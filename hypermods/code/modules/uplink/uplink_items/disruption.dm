@@ -12,6 +12,7 @@
 			security's energy weapons and silicon lifeforms when you're in a tight spot."
 	item = /obj/item/storage/box/emps
 	cost = 1
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/disruption/emp/New()
 	..()
@@ -33,15 +34,15 @@
 /datum/uplink_item/disruption/tram_remote
 	name = "Tram Remote Control"
 	desc = "When linked to a tram's on board computer systems, this device allows the user to manipulate the controls remotely. \
-		Includes direction toggle and a rapid mode to bypass door safety checks and crossing signals. \
-		Perfect for running someone over in the name of a tram malfunction!"
+			Includes direction toggle and a rapid mode to bypass door safety checks and crossing signals. \
+			Perfect for running someone over in the name of a tram malfunction!"
 	item = /obj/item/assembly/control/transport/remote
 	cost = 2
 
 /datum/uplink_item/disruption/suspiciousphone
 	name = "Protocol CRAB-17 Phone"
 	desc = "The Protocol CRAB-17 Phone, a phone borrowed from an unknown third party, it can be used to crash the space market, funneling the losses of the crew to your bank account.\
-	The crew can move their funds to a new banking site though, unless they HODL, in which case they deserve it."
+			The crew can move their funds to a new banking site though, unless they HODL, in which case they deserve it."
 	item = /obj/item/suspiciousphone
 	restricted = TRUE
 	cost = 7
@@ -74,6 +75,7 @@
 			Caution: Product may rehydrate when exposed to water. Useful for taking out wiring in maintenance without suspicion."
 	item = /obj/item/storage/box/monkeycubes/syndicate/mice
 	cost = 1
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/disruption/syndicubes
 	name = "Box of Syndicate Cubes"
@@ -83,6 +85,7 @@
 	cost = 5
 	surplus = 10
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/disruption/decoybomb
 	name = "Decoy Syndicate Bomb"
@@ -114,6 +117,7 @@
 			Some may call this evil, we call it capitalism... it's basically the same thing."
 	item = /obj/item/storage/box/firingpins/paywall/noremove
 	cost = 3
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/disruption/missilephone
 	name = "Missile Phone"
@@ -127,6 +131,7 @@
 	cost = 9 // Highly destructive, but not everyone can easily access a communications console.
 	limited_stock = 1
 	progression_minimum = 30 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/disruption/semiautoturret
 	name = "Disposable Semi-Auto Turret"

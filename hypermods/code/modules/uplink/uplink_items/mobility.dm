@@ -40,6 +40,7 @@
 			Despite it's survivability in space, it's not capable of space-traversal. For God's sake, don't make apple pie!"
 	item = /obj/item/storage/box/syndicate/horse_box
 	cost = 10
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 
 /datum/uplink_item/mobility/airshoes
@@ -77,6 +78,7 @@
 	cost = 2
 	surplus = 10
 	item = /obj/item/reagent_containers/cup/bottle/potion/flight/syndicate
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mobility/jetpack
 	name = "Smuggled Jetpack"
@@ -84,6 +86,7 @@
 	item = /obj/item/tank/jetpack
 	cost = 2
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	uplink_item_flags = NONE
 
 /datum/uplink_item/mobility/advlaunchcamerasetup
 	name = "Launchpad & Camera Setup Bundle"
@@ -92,6 +95,7 @@
 	item = /obj/item/storage/box/syndie_kit/launchpadcamerabundle
 	cost = 8
 	surplus = 15
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mobility/portalgun
 	name = "Bluespace Wormhole Projector"
@@ -101,6 +105,7 @@
 	item = /obj/item/gun/energy/wormhole_projector/core_inserted
 	cost = 5
 	surplus = 18
+	uplink_item_flags = NONE
 
 /datum/uplink_item/mobility/spininverters
 	name = "Quantum Spin Inverters"
@@ -108,6 +113,7 @@
 	item = /obj/item/storage/box/syndie_kit/spininverters
 	cost = 2
 	surplus = 20
+	uplink_item_flags = NONE
 
 /datum/uplink_item/mobility/syndicate_fulton
 	name = "Syndicate Fulton Package"
@@ -117,6 +123,7 @@
 	item = /obj/item/storage/box/syndie_kit/syndifulton
 	cost = 6
 	surplus = 30
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mobility/syndiway
 	name = "Syndicate Segway"
@@ -127,7 +134,7 @@
 	cost = 10
 	surplus = 0 // Doesn't function with surplus crates
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
-	//uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND // That'd kinda suck to have security repo your ride, funny, but awful for that poor syndi.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	var/the_ride = /obj/vehicle/ridden/syndiway
 
 /datum/uplink_item/mobility/syndiway/spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)

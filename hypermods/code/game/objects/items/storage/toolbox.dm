@@ -10,7 +10,6 @@
 		I.name = "syndicate [I.name]"
 
 
-
 /obj/item/storage/toolbox/guncase/pistols
 	name = "dual pistol case"
 	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/viper
@@ -104,6 +103,30 @@
 	extra_to_spawn = /obj/item/ammo_box/magazine/m10mm
 	ammo_box_to_spawn = /obj/item/ammo_box/c10mm
 
+/obj/item/storage/toolbox/guncase/traitor/revolver_n
+	name = "/improper Revolver gun case"
+	weapon_to_spawn = /obj/item/gun/ballistic/revolver
+	extra_to_spawn = /obj/item/ammo_box/speedloader/c357
+	ammo_box_to_spawn = /obj/item/ammo_box/c357/no_direct
+
+/obj/item/storage/toolbox/guncase/traitor/python
+	name = "/improper Python gun case"
+	weapon_to_spawn = /obj/item/gun/ballistic/revolver/python
+	extra_to_spawn = /obj/item/ammo_box/speedloader/c357
+	ammo_box_to_spawn = /obj/item/ammo_box/c357/no_direct
+
+/obj/item/storage/toolbox/guncase/traitor/revolver_s
+	name = "/improper Syndicate Revolver gun case"
+	weapon_to_spawn = /obj/item/gun/ballistic/revolver/syndicate
+	extra_to_spawn = /obj/item/ammo_box/speedloader/c357
+	ammo_box_to_spawn = /obj/item/ammo_box/c357/no_direct
+
+/obj/item/storage/toolbox/guncase/traitor/deagle
+	name = "/improper Deagle gun case"
+	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/deagle
+	extra_to_spawn = /obj/item/ammo_box/magazine/m50
+	ammo_box_to_spawn = /obj/item/ammo_box/m50
+
 /obj/item/storage/toolbox/guncase/traitor/ammunition/m10mm
 	name = "10mm magazine case"
 	weapon_to_spawn = /obj/item/ammo_box/magazine/m10mm
@@ -165,6 +188,21 @@
 	weapon_to_spawn = /obj/item/gun/ballistic/shotgun/spes
 	extra_to_spawn = /obj/item/storage/box/lethalshot
 
-/obj/item/storage/toolbox/guncase/flaregun/PopulateContents()
+/obj/item/storage/toolbox/guncase/spes/PopulateContents()
 	new weapon_to_spawn (src)
 	new extra_to_spawn (src)
+
+/obj/item/storage/toolbox/guncase/soviet/regular
+	name = "sahkno gun case"
+	weapon_to_spawn = /obj/item/gun/ballistic/rifle/boltaction
+	extra_to_spawn = /obj/item/ammo_box/speedloader/strilka310
+
+/obj/item/storage/toolbox/guncase/soviet/surplus
+	name = "surplus sahkno gun case"
+	weapon_to_spawn = /obj/item/gun/ballistic/rifle/boltaction/surplus
+	extra_to_spawn = /obj/item/ammo_box/speedloader/strilka310/surplus
+
+/obj/item/storage/toolbox/guncase/soviet/prime
+	name = "prime sahkno gun case"
+	weapon_to_spawn = /obj/item/gun/ballistic/rifle/boltaction/prime
+	extra_to_spawn = /obj/item/ammo_box/speedloader/strilka310

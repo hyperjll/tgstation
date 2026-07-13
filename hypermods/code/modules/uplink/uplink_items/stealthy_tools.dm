@@ -4,6 +4,7 @@
 			without a trace, or run with your arms awkwardly trailing behind you."
 	item = /obj/item/storage/box/syndie_kit/smoke_nades
 	cost = 1
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_tools/agent_card_ultimate
 	name = "Ultimate Agent Identification Card"
@@ -43,6 +44,7 @@
 	item = /obj/item/reagent_containers/cup/bottle/nocturine
 	cost = 3
 	surplus = 40
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_tools/bluespace_chameleon_backpack
 	name = "Bluespace Chameleon Backpack"
@@ -65,6 +67,7 @@
 	item = /obj/item/desynchronizer
 	cost = 4
 	surplus = 20
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_tools/bluespace_briefcase
 	name = "Bluespace Briefcase"
@@ -92,6 +95,7 @@
 	cost = 1
 	surplus = 0
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_tools/thievesgloves
 	name = "Thieves Gloves"

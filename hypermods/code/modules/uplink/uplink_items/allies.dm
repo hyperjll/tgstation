@@ -115,7 +115,6 @@
 	name = "Holoparasites"
 	desc = "Though capable of near sorcerous feats via use of hardlight holograms and nanomachines, they require an \
 			organic host as a home base and source of fuel. Holoparasites come in various types and share damage with their host."
-	//progression_minimum = 30 MINUTES
 	item = /obj/item/guardian_creator/tech
 	cost = 40
 	surplus = 0
@@ -171,6 +170,7 @@
 	cost = 7
 	surplus = 10
 	purchasable_from = ~UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/cyborgrescue
 	name = "Rescue Cyborg Module"
@@ -231,6 +231,7 @@
 	cant_discount = TRUE
 	progression_minimum = 20 MINUTES // About the time nukies arrive, if you manage to get secondary objectives done for it early, then fine?
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) // Only available when a nukie team declares war.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/reinforcements/imp_induction/can_be_bought(datum/uplink_handler/uplink_handler)
 	if(!uplink_handler.warops)

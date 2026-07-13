@@ -6,6 +6,7 @@
 	cost = 4
 	surplus = 7
 	restricted_roles = list(JOB_COOK, JOB_CLOWN, JOB_MIME, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/chef_chem_bottles
 	name = "Chef-Specialized Poisons Kit"
@@ -16,6 +17,7 @@
 	surplus = 12
 	restricted_roles = list(JOB_COOK, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/suspicious_plant_bag
 	name = "Assorted Plant Bag"
@@ -24,6 +26,7 @@
 	item = /obj/item/storage/bag/plants/syndie
 	cost = 5
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/bluespace_plant_bag
 	name = "Bluespace Plant Bag"
@@ -53,6 +56,7 @@
 	cost = 8
 	surplus = 5
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/cherry_bomb_seed
 	name = "Cherry Bomb Seed Packet"
@@ -63,6 +67,7 @@
 	surplus = 3
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/bombanana_seed
 	name = "Bombanana Seed Packet"
@@ -73,6 +78,7 @@
 	surplus = 1
 	restricted_roles = list(JOB_BOTANIST, JOB_CLOWN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/kudzu_seed
 	name = "Kudzu Seed Packet"
@@ -102,6 +108,7 @@
 	limited_stock = 1
 	restricted_roles = list(JOB_PRISONER) // The only one the captain doesn't get.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Prisoner stuff shouldn't be given randomly as bounties. They're here to spice up prisoner rounds.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/twoforone_freedom_implant
 	name = "Two-For-One Freedom Implant Bundle"
@@ -111,26 +118,29 @@
 	limited_stock = 1
 	restricted_roles = list(JOB_PRISONER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/microbomb_prisoner_implanter
 	name = "Microbomb Implanter"
 	desc = "Give me liberty or give me death. \
-	       This microbomb implanter can be used at any time to commit suicide in style, it'll also destroy your items to prevent security from reclaiming anything TOO useful."
+			This microbomb implanter can be used at any time to commit suicide in style, it'll also destroy your items to prevent security from reclaiming anything TOO useful."
 	item = /obj/item/storage/box/syndie_kit/imp_microbomb
 	cost = 2
 	surplus = 10
 	limited_stock = 1
 	restricted_roles = list(JOB_PRISONER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/bluespace_crystal_arti_bundle
 	name = "Box of Artificial Bluespace Crystals"
 	desc = "A cardboard box containing approximately 25 artificial bluespace crystals. Crush them in-hand to randomly teleport somewhere nearby."
 	item = /obj/item/storage/box/syndie_kit/bluespace_crystal_arti_bundle
-	cost = 1
+	cost = 3
 	surplus = 25
 	restricted_roles = list(JOB_PRISONER, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/escapist_bundle
 	name = "Escapist Bundle"
@@ -141,6 +151,7 @@
 	surplus = 1
 	restricted_roles = list(JOB_PRISONER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/chemistry_machine_bundle
 	name = "Supplementary Chemical Dispensery"
@@ -151,6 +162,7 @@
 	surplus = 20
 	restricted_roles = list(JOB_CHEMIST, JOB_PSYCHOLOGIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_BARTENDER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Doesn't make much sense as a bounty.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/xenobio_starter_kit
 	name = "Xenobiology Kickstarter Bundle"
@@ -160,6 +172,7 @@
 	cost = 3
 	restricted_roles = list(JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Doesn't make sense as a bounty.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/spare_null_rod
 	name = "Spare Null Rod"
@@ -170,6 +183,7 @@
 	surplus = 10
 	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Imagine having to steal the null rod to GET a null rod?
+	uplink_item_flags = NULL
 
 /datum/uplink_item/role_restricted/chem_storage_implant_bundle
 	name = "Chemical Storage Implant Bundle"
@@ -180,6 +194,7 @@
 	restricted_roles = list(JOB_CHEMIST, JOB_PSYCHOLOGIST, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN)
 	surplus = 10
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Makes the regular implant moot as a bounty.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/chaplain_healing_bundle
 	name = "Holy Healing Bundle"
@@ -189,6 +204,7 @@
 	surplus = 15
 	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Makes little sense as a bounty.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/burning_extract_bundle
 	name = "Burning Slime Extract Bundle"
@@ -198,6 +214,7 @@
 	cost = 3
 	surplus = 30
 	restricted_roles = list(JOB_SHAFT_MINER, JOB_PARAMEDIC, JOB_JANITOR, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/charged_extract_bundle
 	name = "Charged Slime Extract Bundle"
@@ -207,6 +224,7 @@
 	cost = 5
 	surplus = 30
 	restricted_roles = list(JOB_ATMOSPHERIC_TECHNICIAN, JOB_PSYCHOLOGIST, JOB_CHAPLAIN, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/regenerative_extract_bundle
 	name = "Regenerative Slime Extract Bundle"
@@ -216,6 +234,7 @@
 	cost = 5
 	surplus = 30
 	restricted_roles = list(JOB_CURATOR, JOB_CORONER, JOB_LAWYER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/stabilized_extract_bundle
 	name = "Stabilized Slime Extract Bundle"
@@ -225,6 +244,7 @@
 	cost = 4
 	surplus = 30
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_BOTANIST, JOB_ASSISTANT, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/industrial_extract_bundle
 	name = "Industrial Slime Extract Bundle"
@@ -234,6 +254,7 @@
 	cost = 6
 	surplus = 30
 	restricted_roles = list(JOB_STATION_ENGINEER, JOB_CARGO_TECHNICIAN, JOB_BITRUNNER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/chilling_extract_bundle
 	name = "Chilling Slime Extract Bundle"
@@ -243,6 +264,7 @@
 	cost = 4
 	surplus = 30
 	restricted_roles = list(JOB_CLOWN, JOB_MIME, JOB_GENETICIST, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/consuming_extract_bundle
 	name = "Consuming Slime Extract Bundle"
@@ -252,6 +274,7 @@
 	cost = 3
 	surplus = 30
 	restricted_roles = list(JOB_COOK, JOB_BARTENDER, JOB_CAPTAIN) // Virologist was here.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/clown_pie_bundle
 	name = "Banana-Cream Pie Bundle"
@@ -260,6 +283,7 @@
 	cost = 5
 	surplus = 20
 	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
+	uplink_item_flags = NULL
 
 /datum/uplink_item/role_restricted/clown_trolling_security_bundle
 	name = "The Make-Security-Upset Bundle"
@@ -269,6 +293,7 @@
 	cost = 8
 	surplus = 5
 	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/clown_stun_resist_bundle
 	name = "Stun Resistance Bundle"
@@ -276,6 +301,7 @@
 	item = /obj/item/storage/box/syndie_kit/clown_stun_resist_bundle
 	cost = 7
 	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/curator_die_of_fate
 	name = "Die of Fate"
@@ -286,6 +312,7 @@
 	surplus = 1
 	restricted_roles = list(JOB_CURATOR, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
+	uplink_item_flags = NULL
 
 /datum/uplink_item/role_restricted/syndicate_virus_box
 	name = "Virus Box"
@@ -296,6 +323,7 @@
 	surplus = 5
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CAPTAIN) // Virologist was here.
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // HELL NO.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/manifold_injector_bundle
 	name = "Bundle of HMS Injectors"
@@ -303,6 +331,7 @@
 	item = /obj/item/storage/box/syndie_kit/manifold_injector_bundle
 	cost = 20
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN) // Virologist was here.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/low_budget_chemgun
 	name = "Low-Budget Reagent Dartgun"
@@ -322,6 +351,7 @@
 	limited_stock = 1
 	restricted_roles = list(JOB_PSYCHOLOGIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Just here to make psychologist traitors more interesting.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/psychologist_xray_surgery
 	name = "X-Ray Vision Implant"
@@ -409,6 +439,7 @@
 	cost = 3
 	restricted_roles = list(JOB_ASSISTANT, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Getting this as a bounty is a big fuck-you.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/deluxe_bluespace_chameleon_backpack
 	name = "Deluxe Bluespace Chameleon Backpack"
@@ -425,6 +456,7 @@
 	cost = 6
 	restricted_roles = list(JOB_MIME, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
+	uplink_item_flags = NONE
 
 /datum/uplink_item/role_restricted/mime_invis_backpack
 	name = "Invisible Backpack"
@@ -443,6 +475,7 @@
 	surplus = 10
 	restricted_roles = list(JOB_BARTENDER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Eh, feels more substantial to have this only for barkeeps.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/janitor_acidnade_bundle
 	name = "Highly Acidic Foam Grenade Bundle"
@@ -452,6 +485,7 @@
 	cost = 6
 	surplus = 15
 	restricted_roles = list(JOB_JANITOR, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/janitor_bloodnade_bundle
 	name = "Bloody Mess Grenade Bundle"
@@ -461,6 +495,7 @@
 	item = /obj/item/storage/box/syndie_kit/janitor_bloodnade_bundle
 	cost = 2
 	restricted_roles = list(JOB_JANITOR, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/bluespace_bodybag_bundle
 	name = "Bluespace Body Bag Bundle"
@@ -471,6 +506,7 @@
 	limited_stock = 1
 	restricted_roles = list(JOB_CORONER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Getting this as a bounty is kinda a no-no. Makes certain steal-your-organ bounties a bit too ez.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/bodybaginvis
 	name = "Invisible Body Bag"
@@ -517,6 +553,7 @@
 	cost = 6
 	surplus = 10
 	restricted_roles = list(JOB_ATMOSPHERIC_TECHNICIAN, JOB_CHIEF_ENGINEER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/riggedtanksyndie
 	name = "Rigged Oxygen Cannister"
@@ -533,6 +570,7 @@
 	cost = 3
 	surplus = 20
 	restricted_roles = list(JOB_PARAMEDIC, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/pacifymedipen
 	name = "Pacification Medipen"
@@ -541,6 +579,7 @@
 	cost = 4
 	surplus = 30
 	restricted_roles = list(JOB_PARAMEDIC, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/chemkillswitch
 	name = "Chemical Kill-switch"
@@ -562,6 +601,7 @@
 	cost = 12
 	surplus = 15
 	restricted_roles = list(JOB_PARAMEDIC, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/sacred_flames
 	name = "Book of Sacred Flames"
@@ -573,6 +613,7 @@
 	surplus = 0
 	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Doesn't make sense as a bounty.
+	uplink_item_flags = NONE
 
 /datum/uplink_item/role_restricted/inf_cash
 	name = "Syndicate Counterfeiting Printer"
@@ -603,6 +644,7 @@
 	cost = 6
 	surplus = 25
 	restricted_roles = list(JOB_CHEMIST, JOB_CHIEF_MEDICAL_OFFICER, JOB_CAPTAIN)
+	uplink_item_flags = NONE // Actual security gear.
 
 /datum/uplink_item/role_restricted/holynade
 	name = "Holy Hand Grenade"
@@ -612,6 +654,7 @@
 	surplus = 45
 	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	// I'll let this pass as a spy bounty to hopefully draw attention away from traitor chaplains.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/syndivirusbuffer
 	name = "S. Gene Culture Bottle"
@@ -671,6 +714,7 @@
 	surplus = 7
 	restricted_roles = list(JOB_COOK, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Doesn't make sense as a bounty.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/red_chainsaw
 	name = "Syndicate Chainsaw"
@@ -687,6 +731,7 @@
 	item = /obj/item/storage/box/donkpockets/donkpocketsyndi
 	cost = 4
 	restricted_roles = list(JOB_COOK, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/deadlydonuts
 	name = "Box of Singulonuts"
@@ -695,6 +740,7 @@
 	item = /obj/item/storage/fancy/donut_box/deadly
 	cost = 3
 	restricted_roles = list(JOB_COOK, JOB_ASSISTANT, JOB_CURATOR, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/chemical_art
 	name = "Psychotic Brawl Notes"
@@ -724,6 +770,7 @@
 	item = /obj/item/storage/box/syndie_kit/smugglednades
 	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Doesn't make sense as a bounty.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/explosiveletter
 	name = "Explosive Letter"
@@ -732,6 +779,7 @@
 	surplus = 0
 	item = /obj/item/mail/explosive
 	restricted_roles = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/jestercard
 	name = "Jestographic Sequencer"
@@ -751,6 +799,7 @@
 	surplus = 0
 	item = /obj/item/storage/box/syndie_kit/xeno_organ_kit
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/curatorspellpage
 	name = "Recovered Spellpage"
@@ -761,6 +810,7 @@
 	surplus = 0
 	restricted_roles = list(JOB_CURATOR, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = NONE
 
 /datum/uplink_item/role_restricted/curatorspellpagegreater
 	name = "Recovered Spellbook"
@@ -772,6 +822,7 @@
 	surplus = 0
 	restricted_roles = list(JOB_CURATOR, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/cerberus
 	name = "Necronomicon"
@@ -906,6 +957,7 @@
 	surplus = 5
 	restricted_roles = list(JOB_BOTANIST, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/moonshine
 	name = "Jug of Moonshine"
@@ -915,6 +967,7 @@
 	cost = 2
 	surplus = 0
 	restricted_roles = list(JOB_BARTENDER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/boomboots
 	name = "Boomboots"
@@ -1010,6 +1063,7 @@
 	cost = 3
 	surplus = 0
 	restricted_roles = list(JOB_CHEMIST, JOB_SCIENTIST, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/crushmagboots
 	name = "Crushing Magboots"
@@ -1074,6 +1128,7 @@
 	cost = 4
 	surplus = 0
 	restricted_roles = list(JOB_SHAFT_MINER, JOB_BITRUNNER, JOB_CAPTAIN)
+	uplink_item_flags = NONE
 
 /datum/uplink_item/role_restricted/tier4bitrunner
 	name = "Tier 4 Bitrunner Gear Disk"
@@ -1106,6 +1161,7 @@
 	surplus = 1 // Never give up on the dream, kid.
 	progression_minimum = 30 MINUTES
 	restricted_roles = list(JOB_LAWYER, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/role_restricted/faustian_bargain_kit
 	name = "Faustian Bargain Kit"
@@ -1119,6 +1175,7 @@
 	surplus = 0 // Doesn't work properly in surplus crates.
 	restricted_roles = list(JOB_LAWYER, JOB_CHAPLAIN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Wouldn't work well as a spy bounty.
+	uplink_item_flags = NONE // Mustn't give you away just for trying to do your gimmick.
 
 /datum/uplink_item/role_restricted/faustian_bargain_kit/spawn_item(spawn_path, mob/user, datum/uplink_handler/handler, atom/movable/source)
 	..() // Make sure the kit is given.

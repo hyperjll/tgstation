@@ -28,6 +28,7 @@
 	progression_minimum = 10 MINUTES
 	cost = 2
 	surplus = 10
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/explosivepen
 	name = "Explosive Pen"
@@ -38,6 +39,7 @@
 	surplus = 60
 	progression_minimum = 10 MINUTES
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/molotovs
 	name = "Box of Molotovs"
@@ -46,6 +48,7 @@
 	item = /obj/item/storage/box/syndie_kit/molotovs
 	cost = 1
 	surplus = 30
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/grenadierbelt
 	name = "Grenadier Belt"
@@ -55,6 +58,7 @@
 	cost = 20
 	progression_minimum = 30 MINUTES
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/bioterrorfoam
 	name = "Bioterror Foam Grenade"
@@ -65,6 +69,7 @@
 	cost = 4
 	surplus = 35
 	progression_minimum = 10 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/saxitoxinnade
 	name = "Saxitoxin Grenade"
@@ -74,6 +79,7 @@
 	cost = 5
 	surplus = 40
 	purchasable_from = UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/shrapnelgrenademega
 	name = "FRAGmentation Grenade"
@@ -117,6 +123,7 @@
 	item = /obj/item/ammo_box/nadepouch/flashbang
 	cost = 2
 	surplus = 50
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/firecrackers
 	name = "Firecrackers"
@@ -125,6 +132,7 @@
 	item = /obj/item/ammo_box/nadepouch/firecracker
 	cost = 2
 	surplus = 30
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/stingbangs
 	name = "Stingbangs"
@@ -132,6 +140,7 @@
 	item = /obj/item/ammo_box/nadepouch/stingbang
 	cost = 4
 	surplus = 40
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/mirages
 	name = "Mirage Grenades"
@@ -140,6 +149,7 @@
 	item = /obj/item/ammo_box/nadepouch/mirage
 	cost = 3
 	surplus = 30
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/shrapnelgrenades
 	name = "Fragmentation Grenades"
@@ -149,6 +159,7 @@
 	surplus = 40
 	progression_minimum = 10 MINUTES
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // nukies get a box of em for bigger bang-and-buck now
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/gluongrenades
 	name = "Gluon Grenades"
@@ -158,6 +169,7 @@
 	cost = 4
 	surplus = 25
 	progression_minimum = 10 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/concussgrenades
 	name = "Concussion Grenades"
@@ -167,6 +179,7 @@
 	cost = 5
 	surplus = 40
 	purchasable_from = UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/incengrenades
 	name = "Incendiary Grenades"
@@ -176,6 +189,7 @@
 	surplus = 30
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	progression_minimum = 10 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/sonicgrenades
 	name = "Sonic Grenades"
@@ -184,6 +198,7 @@
 	item = /obj/item/ammo_box/nadepouch/sonic
 	cost = 6
 	surplus = 20
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/antigravity
 	name = "Anti-Gravity Grenades"
@@ -192,6 +207,7 @@
 	item = /obj/item/ammo_box/nadepouch/antigrav
 	cost = 2
 	surplus = 40
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/radbombs
 	name = "Radiation Bombs"
@@ -202,6 +218,7 @@
 	surplus = 30
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	progression_minimum = 10 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/acidfoamnades
 	name = "Highly-Acidic Grenades"
@@ -211,6 +228,7 @@
 	surplus = 30
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	progression_minimum = 15 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/eyebreakersmoke
 	name = "Eyebreaker Smokebombs"
@@ -219,6 +237,7 @@
 	cost = 4
 	surplus = 40
 	progression_minimum = 10 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/supermatternades
 	name = "Supermatter Grenades"
@@ -230,6 +249,7 @@
 	surplus = 35
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/whiteholenades
 	name = "Whitehole Grenades"
@@ -242,6 +262,7 @@
 	surplus = 35
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/hellgrenades
 	name = "Hellfoam Grenades"
@@ -252,6 +273,7 @@
 	surplus = 6
 	purchasable_from = ~(UPLINK_CLOWN_OPS | UPLINK_SPY)
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosives/clusterclf3
 	name = "The Hell-Bomb Cluster"
@@ -341,3 +363,4 @@
 	progression_minimum = 7 MINUTES
 	cost = 4
 	surplus = 30
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

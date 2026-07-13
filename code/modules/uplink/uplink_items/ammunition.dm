@@ -5,6 +5,7 @@
 /datum/uplink_item/ammo
 	category = /datum/uplink_category/ammo
 	surplus = 40
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/ammo/toydarts
 	name = "Donksoft Riot Pistol Ammunition Case"

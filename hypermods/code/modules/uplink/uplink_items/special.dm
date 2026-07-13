@@ -31,6 +31,7 @@
 	item = /obj/item/storage/box/syndie_kit/premium
 	cost = 1
 	surplus = 0
+	uplink_item_flags = NONE
 
 /datum/uplink_item/special/premium_syndibox/New()
 	..()
@@ -72,6 +73,7 @@
 	item = /obj/item/storage/box/syndie_kit/riggedglitterbombs
 	cost = 9
 	surplus = 0
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/riggedglitterbombs/New()
 	..()
@@ -87,6 +89,7 @@
 	item = /obj/item/survivalcapsule/syndicate
 	cost = 8
 	surplus = 0
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/eliteluxurycap/New()
 	..()
@@ -141,7 +144,6 @@
 			In short, every 3 minutes the generator will randomly teleport everyone in a large radius around it in a completely random direction and distance."
 	item = /obj/item/sbeacondrop/bluespace_wave
 	cost = 8
-	var/implant_to_give = /obj/item/storage/box/syndie_kit/syndiefirearmauth
 
 /datum/uplink_item/special/bluespace_wave/New()
 	..()
@@ -155,6 +157,7 @@
 	item = /obj/structure/fermenting_barrel/moonshine
 	cost = 6
 	surplus = 0
+	uplink_item_flags = NONE
 
 /datum/uplink_item/special/moonshine_barrel/New()
 	..()
@@ -222,6 +225,7 @@
 	cost = 30
 	progression_minimum = 110 MINUTES
 	item = /obj/item/storage/box/syndie_kit/centcom_costume_better
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/centcom_official/New()
 	..()
@@ -252,6 +256,7 @@
 	item = /obj/item/storage/box/syndie_kit/boxed_dehydrated_carp
 	cost = 6
 	surplus = 10
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/boxed_dehydrated_carp/New()
 	..()
@@ -308,6 +313,7 @@
 	item = /obj/item/ai_module/reset/purge
 	cost = 2
 	surplus = 0
+	uplink_item_flags = NONE
 
 /datum/uplink_item/special/ailawpurger/New()
 	..()
@@ -321,6 +327,7 @@
 	item = /obj/item/ai_module/toy_ai
 	cost = 6
 	surplus = 0
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/ailawfucker/New()
 	..()
@@ -350,6 +357,7 @@
 	item = /obj/item/toy/plush/carpplushie/dehy_carp/magic
 	cost = 3
 	surplus = 0
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/magicdehydratedcarp/New()
 	..()
@@ -365,6 +373,7 @@
 	cost = 14
 	surplus = 0
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/special/spacepiratekit/New()
 	..()
@@ -379,6 +388,7 @@
 	item = /obj/item/dnainjector/chameleonmut
 	cost = 4
 	surplus = 0
+	uplink_item_flags = NONE
 
 /datum/uplink_item/special/chameleonmutator/New()
 	..()
@@ -393,6 +403,7 @@
 	item = /obj/item/stack/spacecash/c10000
 	cost = 1
 	surplus = 0
+	uplink_item_flags = NONE
 
 /datum/uplink_item/special/syndicategrant/New()
 	..()

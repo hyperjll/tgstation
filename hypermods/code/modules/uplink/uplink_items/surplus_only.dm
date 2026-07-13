@@ -8,6 +8,7 @@
 	surplus = 10
 	purchasable_from = NONE // Surplus crates only.
 	cant_discount = TRUE
+	uplink_item_flags = NONE
 
 
 /datum/uplink_item/surplusonly/chinalake
@@ -83,6 +84,7 @@
 	item = /obj/item/grenade/chem_grenade/saxitoxin
 	cost = 5
 	surplus = 50
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surplusonly/bananapeelpouch
 	name = "Pouch of Banana Peel Grenades"
@@ -97,7 +99,7 @@
 	item = /obj/item/quickhack
 	cost = 2 // Like an airlock card, but worse.
 	surplus = 40
-	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surplusonly/plasma_gun
 	name = "Plasma Rifle"
@@ -114,6 +116,7 @@
 	item = /obj/item/grenade/c4/breaching
 	cost = 1 // Like c4, but worse.
 	surplus = 100 // Will always be considered when getting a surplus crate.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surplusonly/hunting_rifle
 	name = "Old Hunting Rifle"
@@ -146,11 +149,12 @@
 	item = /obj/item/sbeacondrop/heavylaserturret
 	cost = 7
 	surplus = 20
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surplusonly/surplusboltaction
 	name = "Surplus Bolt-Action Rifle"
-	desc = "A Bolt-Action rifle in rather poor condition. Warranty is null. No refunds."
-	item = /obj/item/gun/ballistic/rifle/boltaction/surplus
+	desc = "A Bolt-Action rifle in rather poor condition with three equally poor condition stripper clips of .310 Strilka. Warranty is null. No refunds."
+	item = /obj/item/storage/toolbox/guncase/soviet/surplus
 	cost = 1
 	surplus = 70
 
@@ -191,3 +195,13 @@
 	item = /obj/item/book/granter/crafting_recipe/death_sandwich
 	cost = 3
 	surplus = 4
+
+/datum/uplink_item/surplusonly/encryptionkey
+	name = "Syndicate Encryption Key"
+	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \
+			as well as talk on an encrypted Syndicate channel with other agents that have the same key. In addition, this key also protects \
+			your headset from radio jammers."
+	item = /obj/item/encryptionkey/syndicate
+	cost = 1
+	surplus = 40
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND

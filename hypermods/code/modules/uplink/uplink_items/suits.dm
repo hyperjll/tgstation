@@ -5,6 +5,7 @@
 	item = /obj/item/clothing/suit/hooded/carp_costume/spaceproof/syndi
 	cost = 3
 	surplus = 15
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/suits/scivilian
 	name = "Civilian-Class Syndicate MODsuit"

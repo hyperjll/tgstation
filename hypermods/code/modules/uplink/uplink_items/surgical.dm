@@ -78,6 +78,7 @@
 	item = /obj/item/storage/box/syndie_kit/impsur_toolset
 	cost = 6
 	surplus = 30
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surgical/esword
 	name = "Hardlight Blade Implant"
@@ -97,6 +98,7 @@
 	progression_minimum = 10 MINUTES
 	cost = 10
 	surplus = 30
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surgical/buster
 	name = "Buster Arm Implants"
@@ -110,6 +112,7 @@
 	cost = 25
 	surplus = 10
 	purchasable_from = ~UPLINK_SPY // Letting this pass as a bounty would be hellish. Bounties ain't hard enough for this to be reasonably earned.
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surgical/gasharpoon
 	name = "Garsharpoon Implant"
@@ -126,6 +129,7 @@
 	item = /obj/item/storage/box/syndie_kit/impsur_lifesupp
 	cost = 3
 	surplus = 20
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surgical/medicalhud
 	name = "Syndicate MedHUD Implant"
@@ -163,6 +167,7 @@
 	item = /obj/item/storage/box/syndie_kit/impsur_jumpboots
 	cost = 5
 	surplus = 0
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surgical/airshoes
 	name = "Airshoes Implants"
@@ -171,6 +176,7 @@
 	progression_minimum = 15 MINUTES
 	cost = 8
 	surplus = 40
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surgical/noslipall
 	name = "No-Slip Implants"
@@ -180,6 +186,7 @@
 	progression_minimum = 20 MINUTES
 	cost = 12
 	surplus = 25
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surgical/magboots
 	name = "Magboots Implants"
@@ -189,6 +196,7 @@
 	progression_minimum = 15 MINUTES
 	cost = 8
 	surplus = 10
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/surgical/mantis
 	name = "G.O.R.L.E.X. Mantis Blade"

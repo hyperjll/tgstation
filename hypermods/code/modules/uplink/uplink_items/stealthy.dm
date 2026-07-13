@@ -6,6 +6,7 @@
 	cost = 7
 	surplus = 25
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/combatglovesplus
 	name = "Combat Gloves Plus"
@@ -23,7 +24,7 @@
 			Also comes with two spare magazines and a box of caseless 45 rounds."
 	item = /obj/item/storage/toolbox/guncase/traitor/cobra
 	progression_minimum = 5 MINUTES
-	cost = 7
+	cost = 8
 	surplus = 30
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	relevant_child_items = list(
@@ -62,6 +63,7 @@
 		/datum/uplink_item/ammo/revolver/wallstake,
 		/datum/uplink_item/ammo_restock/ammo357box,
 	)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/donkbat
 	name = "Donk Baseball Bat"
@@ -69,6 +71,7 @@
 	item = /obj/item/melee/baton/donkbat
 	cost = 4
 	surplus = 30
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/cybersun_pen
 	name = "Cybersun Pen"
@@ -76,6 +79,7 @@
 	item = /obj/item/pen/cybersun/disguised
 	cost = 1
 	surplus = 40
+	uplink_item_flags = NONE // The disguise MUST hold.
 
 /datum/uplink_item/stealthy_weapons/hypo_pen
 	name = "Hypo Pen"
@@ -85,6 +89,7 @@
 	item = /obj/item/storage/box/itempack/hypopen
 	cost = 7
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/mindbatterer
 	name = "Mind Batterer"
@@ -122,6 +127,7 @@
 	item = /obj/item/clothing/gloves/boxing/blue/rigged
 	cost = 2
 	surplus = 20
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/shotguncane
 	name = "Shotgun Cane"
@@ -154,14 +160,15 @@
 		/datum/uplink_item/ammo_restock/ripshells,
 		/datum/uplink_item/ammo_restock/anarchyshells,
 	)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/syndispraycan
 	name = "Syndicate Hellcan"
-	desc = "A normal spraycan that's been filled with CLF3 and Plasma, perfect for close-range incendiary shenanigans. Only has 10 uses."
+	desc = "A normal spraycan that's been filled with CLF3 and Napalm, perfect for close-range incendiary shenanigans. Only has 10 uses."
 	item = /obj/item/toy/crayon/spraycan/syndicate
 	progression_minimum = 15 MINUTES
 	cost = 1
-	surplus = 0 // occasionally bursts into flames due to sparks from the pod.
+	surplus = 25
 	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/sleepybaton
@@ -185,6 +192,7 @@
 	cost = 6
 	surplus = 20
 	purchasable_from = ~UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/stealthy_weapons/championbelt
 	name = "Syndicate Championship Belt"

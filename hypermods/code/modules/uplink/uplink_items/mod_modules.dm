@@ -20,6 +20,7 @@
 	item = /obj/item/mod/module/visor/night
 	cost = 1
 	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mod_modules/chameleon
 	name = "MODsuit Chameleon Module"

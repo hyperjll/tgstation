@@ -14,14 +14,14 @@
 			These knives are uncatchable by your foes, but precision is key to ensure your knives aren't used against you."
 	item = /obj/item/storage/box/syndie_kit/throwingknives
 	cost = 3
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/dangerous/m1911pistol
 	name = "M1911 Pistol Case"
 	desc = "A weapon case containing a single M1911 Pistol that fires .45 bullets. Loaded with 9 lethal shots. \
-			Also comes with two spare magazines and a box of .45 rounds. A cheap option for ranged offense, or if you don't \
-			intend to go for the stealthier Cobra."
+			Also comes with two spare magazines and a box of .45 rounds."
 	item = /obj/item/storage/toolbox/guncase/traitor/m1911pistol
-	cost = 6
+	cost = 7
 	surplus = 45
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	relevant_child_items = list(
@@ -72,7 +72,7 @@
 			similar in operation to the standalone SC/FISHER. Chambered in 10mm. \
 			Also comes with two spare magazines and a box of 10mm rounds."
 	item = /obj/item/storage/toolbox/guncase/traitor/fisher
-	cost = 11
+	cost = 9
 	surplus = 20
 	//purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // Eh, i'll allow it.
 	relevant_child_items = list(
@@ -98,6 +98,7 @@
 	cost = 9
 	surplus = 70
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/revolver,
 		/datum/uplink_item/ammo_nuclear/basic/revolver,
@@ -114,8 +115,8 @@
 
 /datum/uplink_item/dangerous/python
 	name = "Python"
-	desc = "A single Python revolver. Fires 9 brutal rounds of .357 magnum. \
-			Starts loaded with 9 lethal Heartpiercer .357 magnum shots which penetrate everything."
+	desc = "A unique .357 Python revolver. Fires 9 brutal rounds of .357 magnum. \
+			Starts loaded with Heartpiercer .357 magnum shots which penetrate everything, from armor to walls!"
 	item = /obj/item/gun/ballistic/revolver/python
 	cost = 11
 	surplus = 50
@@ -142,6 +143,7 @@
 	cost = 10
 	surplus = 45
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/deagle,
 		/datum/uplink_item/ammo/deagle/random,
@@ -159,21 +161,23 @@
 
 /datum/uplink_item/dangerous/sniper_rifle
 	name = "Anti-Materiel Sniper Rifle"
-	desc = "A boltaction anti-materiel rifle, utilizing .50 BMG cartridges. While technically outdated in modern arms markets, it still works exceptionally well as \
-			an anti-personnel rifle. It is also able to be suppressed....somehow."
+	desc = "A bolt-action anti-materiel rifle, utilizing .50 BMG cartridges. While technically outdated in modern arms markets, it still works exceptionally well as \
+			an anti-personnel rifle. Compatible with suppressors."
 	item = /obj/item/gun/ballistic/rifle/sniper_rifle
 	cost = 12
 	surplus = 25
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/sniper,
 		/datum/uplink_item/ammo/snipersurplus,
 	)
 
 /datum/uplink_item/dangerous/syndikammerer
-	name = "Syndicate Kammerer"
-	desc = "A shotgun that doesn't need to have it's pump racked to switch to the next shell, can have 8 shells loaded at any time. \
-			It'll be loaded with lethal shells upon purchase."
+	name = "Augmented Kammerer"
+	desc = "An automatic shotgun often found in the hands of Nanotrasen security personnel, we've kept the appearance for plausible deniability. \
+			We've improved upon to design to allow an EIGHT shell capacity. \
+			Loaded with lethal shells upon purchase."
 	item = /obj/item/gun/ballistic/shotgun/automatic/combat/kammerer/syndicate
 	cost = 10
 	surplus = 35
@@ -235,24 +239,41 @@
 		/datum/uplink_item/ammo_restock/ripshells,
 	)
 
-/datum/uplink_item/dangerous/boltactionrifle
-	name = "Bolt-Action Rifle"
-	desc = "A shoddy bolt action rifle, it has 5 lethal 7.62 rounds loaded. It's handling is rather obnoxious and should only be used if you're on a budget."
-	item = /obj/item/gun/ballistic/rifle/boltaction
-	cost = 3
-	surplus = 60
+/datum/uplink_item/dangerous/boltactionrifle_shoddy
+	name = "Surplus Bolt-Action Rifle"
+	desc = "A shoddy, old bolt action rifle, it has 5 lethal .310 Strilka rounds loaded. It's handling can be rather obnoxious and should only be used if you're on a budget. \
+			Our ammunition experts also warn us that the ammunition loaded is of... less-than-par quality."
+	item = /obj/item/gun/ballistic/rifle/boltaction/surplus
+	cost = 1
+	surplus = 0 // Found in it's own case in surplus crates.
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/boltactionammo,
 	)
 
-/datum/uplink_item/dangerous/boltactionrifleprime
+/datum/uplink_item/dangerous/boltactionrifle
+	name = "Bolt-Action Rifle"
+	desc = "A weapon case containing a bolt action rifle with 5 lethal .310 Strilka rounds loaded. Comes with 3 stripper clips of .310 Strilka. \
+			Ammunition quality is guarenteed by our experts!"
+	item = /obj/item/storage/toolbox/guncase/soviet/regular
+	cost = 3
+	surplus = 50
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/boltactionammo,
+	)
+
+/datum/uplink_item/dangerous/boltactionrifle_prime
 	name = "Prime Bolt-Action Sporting Rifle"
-	desc = "A bolt action rifle with an in-built scope, it has 5 lethal 7.62 rounds loaded. It's still quite alike the regular version we're selling with it's shoddy handling."
-	item = /obj/item/gun/ballistic/rifle/boltaction/prime
+	desc = "A weapon case containing a bolt action rifle with 5 lethal .310 Strilka rounds loaded. Comes with 3 stripper clips of .310 Strilka. \
+			Ammunition quality is guarenteed by our experts! Rifle comes with an in-built scope!"
+	item = /obj/item/storage/toolbox/guncase/soviet/prime
 	cost = 4
 	surplus = 30
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/boltactionammo,
 	)
@@ -265,6 +286,7 @@
 	cost = 4
 	surplus = 20
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/dangerous/watergun
 	name = "Extended Capacity Hyper-Soaker"
@@ -273,6 +295,7 @@
 	item = /obj/item/gun/water/syndicate
 	cost = 3
 	surplus = 10
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/dangerous/tommygun
 	name = "Tommy Gun"
@@ -283,6 +306,7 @@
 	cost = 15
 	surplus = 25
 	purchasable_from = UPLINK_SERIOUS_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/tommygun,
 	)
@@ -296,6 +320,7 @@
 	cost = 13
 	surplus = 20
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/akm,
 		/datum/uplink_item/ammo/akmap,
@@ -311,6 +336,7 @@
 	cost = 8
 	surplus = 35
 	purchasable_from = ~UPLINK_CLOWN_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/dangerous/infernopistol
 	name = "Inferno Pistol"
@@ -377,6 +403,7 @@
 	item = /obj/item/gun/energy/gravity_gun/withcore
 	surplus = 10
 	cost = 2
+	uplink_item_flags = NONE
 
 /datum/uplink_item/dangerous/harpoongun
 	name = "Ballistic Harpoon Gun"
@@ -389,6 +416,7 @@
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/magspears,
 	)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/dangerous/toxinreagentgun
 	name = "Toxin Reagent Gun"
@@ -427,3 +455,4 @@
 	progression_minimum = 10 MINUTES
 	cost = 10
 	surplus = 20
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

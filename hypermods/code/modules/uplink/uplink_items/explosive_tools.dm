@@ -32,6 +32,7 @@
 	cant_discount = TRUE
 	limited_stock = 2
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS //nukies get their own version
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosive_tools/x4bag
 	name = "Bag of X-4 explosives"
@@ -43,6 +44,7 @@
 	limited_stock = 1
 	cant_discount = TRUE
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // nukies get their own version
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosive_tools/soap_clusterbang
 	name = "Slipocalypse Clusterbang"
@@ -84,6 +86,7 @@
 			after a short delay. Comes with 6 remote signallers for ease of use."
 	item = /obj/item/storage/box/syndie_kit/collarbombs
 	cost = 4
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosive_tools/wheelchair
 	name = "Explosive Wheelchair"
@@ -113,6 +116,7 @@
 	surplus = 10
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosive_tools/stunmines
 	name = "Box of Stun Mines"
@@ -120,6 +124,7 @@
 	item = /obj/item/storage/box/syndie_kit/stunmine
 	cost = 3
 	surplus = 50
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosive_tools/heavymines
 	name = "Box of Sledgehammer Stun Mines"
@@ -127,6 +132,7 @@
 	item = /obj/item/storage/box/syndie_kit/heavymine
 	cost = 4
 	surplus = 50
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosive_tools/plasmafiremines
 	name = "Box of Plasma Mines"
@@ -136,6 +142,7 @@
 	surplus = 40
 	purchasable_from = ~UPLINK_CLOWN_OPS
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosive_tools/sleepymines
 	name = "Box of Sleepy Gas Mines"
@@ -144,6 +151,7 @@
 	cost = 4
 	surplus = 45
 	progression_minimum = 20 MINUTES
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/explosive_tools/syndicate_bomb_super
 	name = "Super Syndicate Bomb"

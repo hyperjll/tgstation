@@ -10,7 +10,7 @@
 	actually_paints = FALSE
 	expose_turfs = TRUE
 	charges = 100
-	reagent_contents = list(/datum/reagent/clf3 = 1, /datum/reagent/toxin/plasma = 2)
+	reagent_contents = list(/datum/reagent/clf3 = 1, /datum/reagent/napalm = 2)
 	paint_color = COLOR_BLACK
 
 /obj/item/toy/crayon/spraycan/syndicate/isValidSurface(surface)
@@ -25,7 +25,7 @@
 	overlay_paint_colour = FALSE
 	charges = -1
 	volume_multiplier = 25
-	reagent_contents = list(/datum/reagent/clf3 = 1, /datum/reagent/toxin/plasma = 2)
+	reagent_contents = list(/datum/reagent/clf3 = 1, /datum/reagent/napalm = 2)
 	actually_paints = FALSE
 	expose_turfs = TRUE
 	paint_color = COLOR_BLACK
