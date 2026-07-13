@@ -183,7 +183,7 @@
 	surplus = 10
 	restricted_roles = list(JOB_CHAPLAIN, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Imagine having to steal the null rod to GET a null rod?
-	uplink_item_flags = NULL
+	uplink_item_flags = NONE
 
 /datum/uplink_item/role_restricted/chem_storage_implant_bundle
 	name = "Chemical Storage Implant Bundle"
@@ -283,7 +283,7 @@
 	cost = 5
 	surplus = 20
 	restricted_roles = list(JOB_CLOWN, JOB_CAPTAIN)
-	uplink_item_flags = NULL
+	uplink_item_flags = NONE
 
 /datum/uplink_item/role_restricted/clown_trolling_security_bundle
 	name = "The Make-Security-Upset Bundle"
@@ -312,7 +312,7 @@
 	surplus = 1
 	restricted_roles = list(JOB_CURATOR, JOB_CAPTAIN)
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY // Hell no.
-	uplink_item_flags = NULL
+	uplink_item_flags = NONE
 
 /datum/uplink_item/role_restricted/syndicate_virus_box
 	name = "Virus Box"
