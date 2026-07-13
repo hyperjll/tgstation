@@ -82,19 +82,24 @@
 	righthand_file = 'hypermods/icons/mob/inhands/weapons/swords_righthand.dmi'
 	inhand_icon_state = "throwingknife"
 	embed_type = /datum/embedding/throwingknife
-	force = 15
-	throwforce = 35
+	force = 10
+	throwforce = 25
+	armour_penetration = 40
 	throw_speed = 2
 	throw_range = 12
+	sharpness = SHARP_POINTY
+	resistance_flags = FIRE_PROOF
 
 /obj/item/knife/throwing/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_UNCATCHABLE, INNATE_TRAIT)
 
 /datum/embedding/throwingknife
+	pain_mult = 5 // 10 damage per pain
 	embed_chance = 100
 	fall_chance = 1
 	jostle_chance = 10
+	jostle_pain_mult = 2
 
 
 /obj/item/melee/syndidagger

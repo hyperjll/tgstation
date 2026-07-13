@@ -13,7 +13,7 @@
 	desc = "Exceptionally lethal throwing knives, they perfectly embed into your foes without much difficulty. \
 			These knives are uncatchable by your foes, but precision is key to ensure your knives aren't used against you."
 	item = /obj/item/storage/box/syndie_kit/throwingknives
-	cost = 5
+	cost = 3
 
 /datum/uplink_item/dangerous/m1911pistol
 	name = "M1911 Pistol Case"
