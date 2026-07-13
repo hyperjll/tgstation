@@ -99,3 +99,15 @@
 		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/speed_shoes
+	name = "Inert Speed Shoes"
+	desc = "A hunk of metal and circuitry ready to be made into a pair of speed-augmenting shoes a flux anomaly core."
+	id = "speed_shoes"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 4, /datum/material/gold =SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/diamond =HALF_SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/uranium = SMALL_MATERIAL_AMOUNT*1.5, /datum/material/bluespace =SHEET_MATERIAL_AMOUNT)
+	build_path = /obj/item/speed_shoes_inert
+	category = list(
+		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
