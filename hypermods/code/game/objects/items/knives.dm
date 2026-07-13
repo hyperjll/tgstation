@@ -85,7 +85,7 @@
 	force = 10
 	throwforce = 25
 	armour_penetration = 40
-	throw_speed = 2
+	throw_speed = 4
 	throw_range = 12
 	sharpness = SHARP_POINTY
 	resistance_flags = FIRE_PROOF
