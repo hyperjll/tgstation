@@ -27,7 +27,6 @@
 	response_harm_simple = "kick"
 	mobility_flags = MOBILITY_FLAGS_REST_CAPABLE_DEFAULT
 	gold_core_spawnable = NO_SPAWN // Probably for the best.
-	can_be_held = TRUE
 	faction = list(FACTION_HOSTILE, ROLE_SYNDICATE)
 	ai_controller = /datum/ai_controller/basic_controller/syndicat
 	held_state = "cat2"
@@ -38,6 +37,7 @@
 
 /mob/living/basic/syndicat/Initialize(mapload)
 	. = ..()
+	AddElement(/datum/element/can_be_held)
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
 
 /mob/living/basic/syndicat/death()

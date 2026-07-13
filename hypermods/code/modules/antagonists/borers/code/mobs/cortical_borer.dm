@@ -99,8 +99,6 @@ GLOBAL_LIST_INIT(borer_second_name, world.file2list("hypermods/code/modules/anta
 	// Corticals are tiny
 	mob_size = MOB_SIZE_TINY
 	mob_biotypes = MOB_ORGANIC|MOB_BUG
-	// Because they are small, why can't they be held?
-	can_be_held = TRUE
 	/// What chemicals borers know, starting with none
 	var/list/known_chemicals = list()
 	/// What chemicals the borer can learn
@@ -246,6 +244,8 @@ GLOBAL_LIST_INIT(borer_second_name, world.file2list("hypermods/code/modules/anta
 
 /mob/living/basic/cortical_borer/Initialize(mapload)
 	. = ..()
+
+	AddElement(/datum/element/can_be_held)
 
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT) //they need to be able to move around
 

@@ -8,7 +8,6 @@
 	gold_core_spawnable = NO_SPAWN // Probably for the best.
 	faction = list(FACTION_HOSTILE, ROLE_TRAITOR, ROLE_SPY, ROLE_SYNDICATE)
 	ai_controller = /datum/ai_controller/basic_controller/grenadepenguin
-	can_be_held = TRUE
 
 	melee_damage_lower = 10
 	melee_damage_upper = 15

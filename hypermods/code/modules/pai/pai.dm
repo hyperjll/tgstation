@@ -1,5 +1,4 @@
 /mob/living/silicon/pai/syndicate
-	can_be_held = TRUE
 	can_buckle_to = FALSE
 	density = FALSE
 	desc = "A generic pAI hard-light holographics emitter."

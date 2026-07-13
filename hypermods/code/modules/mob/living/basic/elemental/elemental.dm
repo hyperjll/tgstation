@@ -9,7 +9,6 @@
 	faction = list(FACTION_HOSTILE, FACTION_ANOMALY)
 	mob_biotypes = MOB_BEAST | MOB_AQUATIC
 	ai_controller = /datum/ai_controller/basic_controller/elemental
-	can_be_held = FALSE
 	butcher_results = null
 
 	melee_damage_lower = 10

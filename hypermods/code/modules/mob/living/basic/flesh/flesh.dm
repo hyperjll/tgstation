@@ -9,7 +9,6 @@
 	faction = list(FACTION_HOSTILE, FACTION_ANOMALY, FACTION_FLESH)
 	mob_biotypes = MOB_ORGANIC
 	ai_controller = /datum/ai_controller/basic_controller/flesh
-	can_be_held = FALSE
 	butcher_results = null
 
 	melee_damage_lower = 5
