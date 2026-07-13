@@ -269,7 +269,7 @@
 /obj/item/food/hard_taco_shell/empty
 	name = "hard-shell taco"
 	foodtypes = NONE
-	tastes = list()
+	tastes = null
 	icon_state = "hard_taco_shell"
 	desc = "A customized hard-shell taco."
 	crafting_complexity = FOOD_COMPLEXITY_1
