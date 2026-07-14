@@ -627,3 +627,14 @@
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/knuckleduster
+	name = "Knuckleduster"
+	id = "knuckleduster"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*5)
+	build_path = /obj/item/melee/knuckleduster
+	category = list(
+		RND_CATEGORY_HACKED,
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY

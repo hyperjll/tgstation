@@ -23,3 +23,4 @@
 
 	// Traitor steal objective
 	new /obj/item/card/id/departmental_budget/car(src)
+	new /obj/item/melee/knuckleduster/nanotrasen(src)

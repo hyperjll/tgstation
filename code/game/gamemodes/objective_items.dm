@@ -1053,6 +1053,18 @@
 /obj/item/holotool/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/holotool)
 
+/datum/objective_item/steal/knuckleduster
+	name = "the Quartermaster's Golden Knuckleduster"
+	targetitem = /obj/item/melee/knuckleduster/nanotrasen
+	excludefromjob = list(JOB_CARGO_TECHNICIAN, JOB_BITRUNNER, JOB_SHAFT_MINER, JOB_QUARTERMASTER)
+	exists_on_map = TRUE
+	difficulty = 2
+	steal_hint = "The quartermaster's gold knuckleduster, found within their personal locker."
+	destruction_method = "Too strong to be destroyed via normal means - needs to be dusted via the supermatter, or burnt in the chapel's crematorium."
+
+/obj/item/melee/knuckleduster/nanotrasen/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/melee/knuckleduster/nanotrasen)
+
 /datum/objective_item/steal/spy/codex_gigas
 	name = "the codex gigas"
 	targetitem = /obj/item/book/codex_gigas

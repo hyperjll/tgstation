@@ -176,3 +176,13 @@
 	item = /obj/item/knife/combat/survival/chemical
 	cost = 5
 	surplus = 35
+
+/datum/uplink_item/melee/knuckleduster
+	name = "Syndicate Knuckleduster"
+	desc = "A syndicate-branded knuckleduster, made from pure titanium! \
+			Can be wielded in-hand to slide it onto your fingers to prevent you from being disarmed. \
+			Punches that land on the target's chest or head will moderately damage internal organs."
+	item = /obj/item/melee/knuckleduster/syndie
+	cost = 3
+	surplus = 50
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
