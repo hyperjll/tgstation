@@ -21,7 +21,6 @@
 		MECHA_POWER = 0,
 		MECHA_ARMOR = 1,
 	)
-	phasing_energy_drain = 0
 	possible_int_damage = MECHA_INT_FIRE | MECHA_INT_CONTROL_LOST //fire is the only one that really makes sense but I dont want to have only one int damage possible
 	equip_by_category = list(
 		MECHA_L_ARM = /obj/item/mecha_parts/mecha_equipment/weapon/clock/bow_single_shot,
