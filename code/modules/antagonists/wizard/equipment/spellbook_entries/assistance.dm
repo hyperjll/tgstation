@@ -28,6 +28,13 @@
 	category = SPELLBOOK_CATEGORY_ASSISTANCE
 	cost = 1
 
+/datum/spellbook_entry/tarot_generator
+	name = "Enchanted Tarot Card Deck"
+	desc = "A deck of cards capable of many wonderous things! Will they be offensive? Defensive? Mobility? Utility?!? Only the heart of the cards shall know."
+	spell_type = /obj/item/tarot_generator/wizard
+	category = SPELLBOOK_CATEGORY_ASSISTANCE
+	cost = 2
+
 /datum/spellbook_entry/item/staffanimation
 	name = "Staff of Animation"
 	desc = "An arcane staff capable of shooting bolts of eldritch energy which cause inanimate objects to come to life. This magic doesn't affect machines."

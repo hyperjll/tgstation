@@ -99,3 +99,17 @@
 	desc = "You've reached critically low sanity and have little desire to keep going. If things don't turn around now, it'll all be over soon."
 	icon = 'hypermods/icons/hud/screen_alert.dmi'
 	icon_state = "suicidal"
+
+
+/datum/status_effect/the_empress_r
+	id = "the_empress_r"
+	status_type = STATUS_EFFECT_REPLACE
+	alert_type = null
+	duration = 40 SECONDS
+
+/datum/status_effect/the_empress_r/on_apply()
+	ADD_TRAIT(owner, TRAIT_PACIFISM, TRAIT_STATUS_EFFECT(id))
+	return ..()
+
+/datum/status_effect/the_empress_r/on_remove()
+	REMOVE_TRAIT(owner, TRAIT_PACIFISM, TRAIT_STATUS_EFFECT(id))

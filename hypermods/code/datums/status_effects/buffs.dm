@@ -452,3 +452,150 @@
 	desc = "Something deep within you has awakened. Despite your broken body, you've refused to die. It'll be more difficult to put you down, but not impossible."
 	icon = 'hypermods/icons/hud/screen_alert.dmi'
 	icon_state = "last_stand"
+
+
+/datum/status_effect/reversed_sun
+	id = "reversed_sun"
+	alert_type = null
+	status_type = STATUS_EFFECT_REFRESH
+	duration = 1 MINUTES
+	var/glow_power = 4
+	var/glow_range = 3
+	var/glow_color
+	var/obj/effect/dummy/lighting_obj/moblight/glow
+
+/datum/status_effect/reversed_sun/on_apply()
+	. = ..()
+	owner.become_nearsighted("reversed_sun")
+	ADD_TRAIT(owner, TRAIT_NIGHT_VISION, "reversed_sun")
+	owner.update_sight()
+	glow_color = "#ddd6cf"
+	glow = owner.mob_light()
+	glow.set_light_range_power_color(glow_range, glow_power, glow_color)
+
+/datum/status_effect/reversed_sun/on_remove()
+	. = ..()
+	QDEL_NULL(glow)
+	owner.cure_nearsighted("reversed_sun")
+	REMOVE_TRAIT(owner, TRAIT_NIGHT_VISION, "reversed_sun")
+	owner.update_sight()
+
+
+/datum/status_effect/the_magician
+	id = "the_magician"
+	alert_type = null
+	status_type = STATUS_EFFECT_REFRESH
+	duration = 2 MINUTES
+
+/datum/status_effect/the_magician/on_apply()
+	. = ..()
+	owner.add_traits(list(TRAIT_NO_GUN_AKIMBO, TRAIT_DOUBLE_TAP, TRAIT_NICE_SHOT), "the_magician")
+
+	RegisterSignal(owner, COMSIG_MOB_FIRED_GUN, PROC_REF(on_mob_fired_gun))
+	RegisterSignal(owner, COMSIG_PROJECTILE_FIRER_BEFORE_FIRE, PROC_REF(apply_proj_bonuses))
+
+	to_chat(owner, span_notice("You feel as if you'll never miss a shot."))
+
+/datum/status_effect/the_magician/on_remove()
+	. = ..()
+	owner.remove_traits(list(TRAIT_NO_GUN_AKIMBO, TRAIT_DOUBLE_TAP, TRAIT_NICE_SHOT), "the_magician")
+
+	UnregisterSignal(owner, list(COMSIG_MOB_FIRED_GUN, COMSIG_PROJECTILE_FIRER_BEFORE_FIRE))
+
+	to_chat(owner, span_notice("Your profound abilities with firearms have drifted away from you..."))
+
+/datum/status_effect/the_magician/proc/on_mob_fired_gun(mob/user, obj/item/gun/gun_fired, target, params, zone_override, list/bonus_spread_values)
+	SIGNAL_HANDLER
+	bonus_spread_values[MIN_BONUS_SPREAD_INDEX] -= 10
+	bonus_spread_values[MAX_BONUS_SPREAD_INDEX] -= 35
+
+/datum/status_effect/the_magician/proc/apply_proj_bonuses(mob/user, obj/projectile/projectile, datum/fired_from, atom/clicked_atom)
+	SIGNAL_HANDLER
+	projectile.ricochets_max += 3
+	projectile.min_ricochets += 3
+	projectile.ricochet_incidence_leeway = 0 //allows the projectile to bounce at any angle.
+	projectile.accuracy_falloff = 0
+
+/datum/status_effect/tarot_strength
+	id = "tarot_strength"
+	alert_type = null
+	status_type = STATUS_EFFECT_REFRESH
+	duration = 2 MINUTES
+
+/datum/status_effect/tarot_strength/on_apply()
+	. = ..()
+	owner.add_traits(list(TRAIT_STRENGTH, TRAIT_NOGUNS), "tarot_strength")
+
+	owner.maxHealth += 50
+
+	to_chat(owner, span_notice("Your muscles bolster as newfound vitality fills you, and your ability to use guns has been hampered."))
+
+/datum/status_effect/tarot_strength/on_remove()
+	. = ..()
+	owner.remove_traits(list(TRAIT_STRENGTH, TRAIT_NOGUNS), "tarot_strength")
+
+	owner.maxHealth -= 50
+
+	to_chat(owner, span_notice("Your strength and vitality leaves you as your ability to use guns is restored."))
+
+/datum/status_effect/the_chariot
+	id = "the_chariot"
+	duration = 16 SECONDS
+	tick_interval = 0.25 SECONDS
+	alert_type = null
+	/// The colors we flash when we're under the chariot's effects.
+	var/list/random_color_list = list("#FF0000","#FF5900","#FFBB00","#FFF700","#0DFF00","#00FFE6","#000DFF","#A600FF","#FF00EA")
+
+/datum/status_effect/the_chariot/on_apply()
+	. = ..()
+	owner.add_traits(list(TRAIT_GODMODE, TRAIT_PACIFISM), "the_chariot")
+	owner.add_movespeed_modifier(/datum/movespeed_modifier/status_effect/the_chariot)
+
+/datum/status_effect/the_chariot/on_remove()
+	. = ..()
+	owner.remove_traits(list(TRAIT_GODMODE, TRAIT_PACIFISM), "the_chariot")
+	owner.remove_movespeed_modifier(/datum/movespeed_modifier/status_effect/the_chariot)
+	owner.remove_atom_colour(FIXED_COLOUR_PRIORITY)
+
+/datum/status_effect/the_chariot/tick(seconds_between_ticks)
+	owner.add_atom_colour(pick(random_color_list), FIXED_COLOUR_PRIORITY)
+
+	return ..()
+
+
+/datum/status_effect/force_shield
+	id = "forceshield"
+	alert_type = null
+	status_type = STATUS_EFFECT_REPLACE
+	duration = INFINITY
+	tick_interval = 0
+	/// Maximum amount of block stacks
+	var/max_blocks = 1
+	/// Can we block overwelming type attack like from mechs?
+	var/can_block_overwhelming = FALSE
+	// The look of our shield
+	var/mutable_appearance/shield
+	// Icon state of icons/effects/effects.dmi
+	var/shield_icon_state = "shield-old"
+
+/datum/status_effect/force_shield/on_apply()
+	. = ..()
+	if(!ismob(owner))
+		return
+	owner.AddComponent(/datum/component/limited_shield, max_charges = max_blocks, recharge_start_delay = 0 SECONDS, shield_icon = shield_icon_state, run_hit_callback = null)
+
+/datum/status_effect/force_shield/on_remove()
+	. = ..()
+	if(owner.GetComponent(/datum/component/limited_shield))
+		var/datum/component/limited_shield/shield_component = GetComponent(/datum/component/limited_shield)
+		qdel(shield_component)
+
+/datum/status_effect/force_shield/hierophant
+	id = "the_hierophant"
+	alert_type = null
+	status_type = STATUS_EFFECT_REPLACE
+	duration = INFINITY
+	tick_interval = 0
+	max_blocks = 3
+	shield_icon_state = "psychic"
+

@@ -18,3 +18,6 @@
 
 /datum/movespeed_modifier/status_effect/shoving_customer
 	multiplicative_slowdown = 1.5
+
+/datum/movespeed_modifier/status_effect/the_chariot
+	multiplicative_slowdown = -0.4

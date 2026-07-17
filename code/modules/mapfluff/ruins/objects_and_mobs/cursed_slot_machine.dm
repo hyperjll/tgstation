@@ -24,6 +24,8 @@
 	var/in_use = FALSE
 	/// Cooldown between pulls of the cursed slot machine.
 	COOLDOWN_DECLARE(spin_cooldown)
+	/// After using, do we delete ourselves? Used by tarot cards.
+	var/delete_after_use = FALSE
 
 /obj/structure/cursed_slot_machine/Initialize(mapload)
 	. = ..()
@@ -86,6 +88,8 @@
 		SEND_SIGNAL(user, COMSIG_CURSED_SLOT_MACHINE_LOST)
 		playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 		balloon_alert_to_viewers("you lost!")
+		if(delete_after_use)
+			qdel(src)
 		return
 
 	playsound(src, 'sound/machines/lavaland/cursed_slot_machine_jackpot.ogg', 50, FALSE)

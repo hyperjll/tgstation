@@ -287,6 +287,24 @@
 	beakers += B2
 
 
+/obj/item/grenade/chem_grenade/waterpotassium
+	name = "low-yield explosive grenade"
+	desc = "A low-yield explosive grenade utilizing potassium and water."
+	stage = GRENADE_READY
+	can_dismantle = FALSE
+
+/obj/item/grenade/chem_grenade/waterpotassium/Initialize(mapload)
+	. = ..()
+	var/obj/item/reagent_containers/cup/beaker/B1 = new(src)
+	var/obj/item/reagent_containers/cup/beaker/B2 = new(src)
+
+	B1.reagents.add_reagent(/datum/reagent/potassium, 50)
+	B2.reagents.add_reagent(/datum/reagent/water, 50)
+
+	beakers += B1
+	beakers += B2
+
+
 /obj/item/grenade/chem_grenade/engiairfoam
 	name = "breatheable air grenade"
 	desc = "A foam grenade containing highly condensed breatheable air, pull the pin and launch into a room that has been vacuumed for easy air distribution."

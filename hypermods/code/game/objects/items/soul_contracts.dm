@@ -378,3 +378,34 @@
 	our_signee.maxHealth += 25
 
 	afterWishEffects(I, user)
+
+
+/obj/item/soul_contract/wealth
+	power_to_give = "wealth"
+
+/obj/item/soul_contract/immortality
+	power_to_give = "immortality"
+
+/obj/item/soul_contract/chaos
+	power_to_give = "chaos"
+
+/obj/item/soul_contract/extra_lives
+	power_to_give = "extra lives"
+
+/obj/item/soul_contract/eternal_youth
+	power_to_give = "eternal youth"
+
+/obj/item/soul_contract/vengeance
+	power_to_give = "vengeance"
+
+/obj/item/soul_contract/perfect_health
+	power_to_give = "perfect health"
+
+/obj/item/soul_contract/status
+	power_to_give = "status"
+
+/obj/item/soul_contract/protection
+	power_to_give = "protection"
+
+/obj/item/soul_contract/ultimate_power
+	power_to_give = "ultimate power"
