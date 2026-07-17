@@ -240,16 +240,15 @@
 	var/turf/T = source
 	if(liquid_group.group_overlay_state >= LIQUID_STATE_ANKLES && T.has_gravity(T))
 		playsound(T, 'hypermods/sound/effects/splash.ogg', 50, 0)
-		if(iscarbon(M))
-			var/mob/living/carbon/C = M
-			if(C.wear_mask && C.wear_mask.flags_cover & MASKCOVERSMOUTH)
-				to_chat(C, span_userdanger("You fall in the water!"))
+		if(ishuman(M)) // Was previously iscarbon, but it's changes since wear_mask var got sent to human defines, this means carbons wont suffer when falling into water.
+			var/mob/living/carbon/human/H = M
+			if(H.wear_mask && H.wear_mask.flags_cover & MASKCOVERSMOUTH)
+				to_chat(H, span_userdanger("You fall in the water!"))
 			else
-				liquid_group.transfer_to_atom(src, CHOKE_REAGENTS_INGEST_ON_FALL_AMOUNT, C)
-				C.adjust_oxy_loss(5)
-				//C.emote("cough")
-				INVOKE_ASYNC(C, TYPE_PROC_REF(/mob, emote), "cough")
-				to_chat(C, span_userdanger("You fall in and swallow some water!"))
+				liquid_group.transfer_to_atom(src, CHOKE_REAGENTS_INGEST_ON_FALL_AMOUNT, H)
+				H.adjust_oxy_loss(5)
+				INVOKE_ASYNC(H, TYPE_PROC_REF(/mob, emote), "cough")
+				to_chat(H, span_userdanger("You fall in and swallow some water!"))
 		else
 			to_chat(M, span_userdanger("You fall in the water!"))
 

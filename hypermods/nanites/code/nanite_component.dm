@@ -251,7 +251,7 @@
 
 	if(iscarbon(host_mob))
 		var/mob/living/carbon/our_carbon = host_mob
-		if(our_carbon.wearing_shock_proof_gloves() && !(flags & SHOCK_NOGLOVES))
+		if(our_carbon.get_item_by_slot(ITEM_SLOT_GLOVES)?.siemens_coefficient == 0 && !(flags & SHOCK_NOGLOVES))
 			return
 
 	if(!HAS_TRAIT(host_mob, TRAIT_SHOCKIMMUNE) || conductive)
@@ -266,7 +266,7 @@
 
 	if(iscarbon(host_mob))
 		var/mob/living/carbon/our_carbon = host_mob
-		if(our_carbon.wearing_shock_proof_gloves()) // We don't have flags for this signal, so let's just assume insuls protect you from everything.
+		if(our_carbon.get_item_by_slot(ITEM_SLOT_GLOVES)?.siemens_coefficient == 0) // We don't have flags for this signal, so let's just assume insuls protect you from everything.
 			return
 
 	if(!HAS_TRAIT(host_mob, TRAIT_SHOCKIMMUNE) || conductive)
