@@ -618,6 +618,7 @@
 	. = ..()
 	owner.add_traits(list(TRAIT_GODMODE, TRAIT_STUNIMMUNE, TRAIT_BOMBGIBIMMUNE, TRAIT_NODISMEMBER), "super_form")
 	owner.add_movespeed_modifier(/datum/movespeed_modifier/status_effect/the_chariot)
+	owner.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	if(ishuman(owner))
 		var/mob/living/carbon/human/our_human = owner
 		previous_hair_color = our_human.hair_color
@@ -632,6 +633,7 @@
 	. = ..()
 	owner.remove_traits(list(TRAIT_GODMODE, TRAIT_STUNIMMUNE, TRAIT_BOMBGIBIMMUNE, TRAIT_NODISMEMBER), "super_form")
 	owner.remove_movespeed_modifier(/datum/movespeed_modifier/status_effect/the_chariot)
+	owner.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	if(ishuman(owner))
 		var/mob/living/carbon/human/our_human = owner
 		our_human.set_haircolor(previous_hair_color, update = FALSE)
