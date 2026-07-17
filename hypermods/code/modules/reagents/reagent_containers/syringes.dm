@@ -11,6 +11,7 @@
 	dart_insert_icon = 'hypermods/icons/obj/weapons/guns/toy.dmi'
 	dart_insert_casing_icon_state = "overlay_syringe_cryostasis"
 	dart_insert_projectile_icon_state = "overlay_syringe_cryostasis_proj"
+	custom_materials = list(/datum/material/glass =SHEET_MATERIAL_AMOUNT, /datum/material/silver =HALF_SHEET_MATERIAL_AMOUNT)
 
 /obj/item/reagent_containers/syringe/mutatehuman
 	name = "syringe (Human Mutation Toxin)"
