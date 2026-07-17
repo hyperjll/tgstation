@@ -101,6 +101,31 @@
 /mob/living/carbon/human/proc/last_stand_end()
 	src.cure_fakedeath("last_stand")
 
+/mob/living/carbon/human/proc/go_super()
+	var/mob/living/carbon/human/our_human = src
+
+	if(!our_human) // did we get gibbed or something?
+		return FALSE
+
+	if(our_human.stat == DEAD) // you're dead already.
+		return FALSE
+
+	set_heartattack(FALSE) // Just in case.
+	our_human.Paralyze(1.2 SECONDS) // For the epic floating backflip, trust.
+
+	src.AddElement(/datum/element/forced_gravity, 0)
+	addtimer(CALLBACK(our_human, TYPE_PROC_REF(/datum/, _RemoveElement), list(/datum/element/forced_gravity, 0)), 1.2 SECONDS) // Fly into the air for the animation
+
+	our_human.SpinAnimation(1.2 SECONDS, 1)
+
+	playsound_local(our_human, 'hypermods/sound/effects/supertheme.ogg', 50, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
+
+	addtimer(CALLBACK(our_human, PROC_REF(go_super_finish)), 1.2 SECONDS) // 1.2 Second is when the super theme intro ends and the song REALLY begins.
+
+/mob/living/carbon/human/proc/go_super_finish()
+	for(var/mob/M in GLOB.player_list)
+		playsound(M, 'hypermods/sound/effects/super_transformation.ogg', 50, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
+	apply_status_effect(/datum/status_effect/super_form)
 
 /mob/living/carbon/human/proc/forceEquipOutfit(dresscode) // Taken from select equipment admin verb. Uses by the status infernal contact wish.
 	for(var/obj/item/item in src.get_equipped_items(NONE))

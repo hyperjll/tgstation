@@ -599,3 +599,40 @@
 	max_blocks = 3
 	shield_icon_state = "psychic"
 
+
+/datum/status_effect/super_form
+	id = "super_form"
+	duration = 100 SECONDS
+	alert_type = null
+	status_type = STATUS_EFFECT_REFRESH
+	var/glow_power = 20
+	var/glow_range = 3
+	var/glow_color
+	var/obj/effect/dummy/lighting_obj/moblight/glow
+	var/previous_hair_color
+	var/previous_facial_hair_color
+
+/datum/status_effect/super_form/on_apply()
+	. = ..()
+	owner.add_traits(list(TRAIT_GODMODE, TRAIT_STUNIMMUNE, TRAIT_BOMBGIBIMMUNE, TRAIT_NODISMEMBER), "super_form")
+	owner.add_movespeed_modifier(/datum/movespeed_modifier/status_effect/the_chariot)
+	if(ishuman(owner))
+		var/mob/living/carbon/human/our_human = owner
+		previous_hair_color = our_human.hair_color
+		previous_facial_hair_color = our_human.facial_hair_color
+		our_human.set_haircolor("#FFFF3B", update = FALSE)
+		our_human.set_facial_haircolor("#FFFF3B")
+	glow_color = "FFFFFF"
+	glow = owner.mob_light()
+	glow.set_light_range_power_color(glow_range, glow_power, glow_color)
+
+/datum/status_effect/super_form/on_remove()
+	. = ..()
+	owner.remove_traits(list(TRAIT_GODMODE, TRAIT_STUNIMMUNE, TRAIT_BOMBGIBIMMUNE, TRAIT_NODISMEMBER), "super_form")
+	owner.remove_movespeed_modifier(/datum/movespeed_modifier/status_effect/the_chariot)
+	if(ishuman(owner))
+		var/mob/living/carbon/human/our_human = owner
+		our_human.set_haircolor(previous_hair_color, update = FALSE)
+		our_human.set_facial_haircolor(previous_facial_hair_color)
+	QDEL_NULL(glow)
+
