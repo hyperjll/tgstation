@@ -550,12 +550,14 @@
 	. = ..()
 	owner.add_traits(list(TRAIT_GODMODE, TRAIT_PACIFISM), "the_chariot")
 	owner.add_movespeed_modifier(/datum/movespeed_modifier/status_effect/the_chariot)
+	owner.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
 /datum/status_effect/the_chariot/on_remove()
 	. = ..()
 	owner.remove_traits(list(TRAIT_GODMODE, TRAIT_PACIFISM), "the_chariot")
 	owner.remove_movespeed_modifier(/datum/movespeed_modifier/status_effect/the_chariot)
 	owner.remove_atom_colour(FIXED_COLOUR_PRIORITY)
+	owner.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
 /datum/status_effect/the_chariot/tick(seconds_between_ticks)
 	owner.add_atom_colour(pick(random_color_list), FIXED_COLOUR_PRIORITY)
