@@ -2,6 +2,9 @@
 "a" = (
 /turf/closed/mineral/volcanic/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
+"b" = (
+/turf/closed/mineral/volcanic/lava_land_surface,
+/area/ruin/powered)
 "c" = (
 /turf/closed/wall/mineral/iron,
 /area/ruin/powered)
@@ -14,43 +17,37 @@
 /area/ruin/powered)
 "g" = (
 /turf/open/misc/asteroid{
-	name = "dirt";
-	planetary_atmos = 1
+	name = "dirt"
 	},
 /area/ruin/powered)
 "h" = (
 /obj/item/shovel,
 /turf/open/misc/asteroid{
-	name = "dirt";
-	planetary_atmos = 1
+	name = "dirt"
 	},
 /area/ruin/powered)
 "i" = (
 /obj/item/reagent_containers/cup/bucket,
 /turf/open/misc/asteroid{
-	name = "dirt";
-	planetary_atmos = 1
+	name = "dirt"
 	},
 /area/ruin/powered)
 "j" = (
 /obj/structure/water_source/puddle,
 /turf/open/misc/asteroid{
-	name = "dirt";
-	planetary_atmos = 1
+	name = "dirt"
 	},
 /area/ruin/powered)
 "k" = (
 /obj/structure/glowshroom/single,
 /turf/open/misc/asteroid{
-	name = "dirt";
-	planetary_atmos = 1
+	name = "dirt"
 	},
 /area/ruin/powered)
 "l" = (
 /obj/item/storage/toolbox/emergency,
 /turf/open/misc/asteroid{
-	name = "dirt";
-	planetary_atmos = 1
+	name = "dirt"
 	},
 /area/ruin/powered)
 "m" = (
@@ -64,10 +61,7 @@
 /area/ruin/powered)
 "n" = (
 /obj/machinery/hydroponics/soil,
-/turf/open/misc/asteroid{
-	name = "dirt";
-	planetary_atmos = 1
-	},
+/turf/open/floor/plating,
 /area/ruin/powered)
 "o" = (
 /turf/open/floor/plating,
@@ -80,7 +74,7 @@
 /turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace/normal_atmos,
 /area/ruin/powered)
 "q" = (
-/obj/effect/spawner/structure/window/survival_pod,
+/obj/structure/glowshroom/single,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "r" = (
@@ -176,10 +170,7 @@
 "L" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/cultivator,
-/turf/open/misc/asteroid{
-	name = "dirt";
-	planetary_atmos = 1
-	},
+/turf/open/floor/plating,
 /area/ruin/powered)
 "M" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
@@ -188,16 +179,10 @@
 "P" = (
 /turf/template_noop,
 /area/template_noop)
-"Q" = (
-/obj/structure/fans/tiny,
-/obj/machinery/door/airlock/survival_pod/glass,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "S" = (
 /obj/item/clothing/head/helmet/space/orange,
 /turf/open/misc/asteroid{
-	name = "dirt";
-	planetary_atmos = 1
+	name = "dirt"
 	},
 /area/ruin/powered)
 "T" = (
@@ -284,7 +269,7 @@ a
 a
 T
 c
-c
+b
 t
 t
 t
@@ -300,7 +285,7 @@ a
 a
 a
 T
-c
+T
 L
 n
 t
@@ -317,10 +302,10 @@ a
 a
 a
 a
-c
+T
 m
-g
-g
+o
+o
 t
 w
 y
@@ -333,13 +318,13 @@ s
 (8,1,1) = {"
 a
 T
+T
+T
 c
-c
-c
-g
-g
-k
-Q
+f
+o
+q
+o
 o
 z
 C
@@ -350,15 +335,15 @@ s
 "}
 (9,1,1) = {"
 a
-c
-g
+T
+f
 i
 g
-g
-g
-g
-t
 f
+f
+o
+o
+o
 t
 t
 t
@@ -368,17 +353,17 @@ s
 "}
 (10,1,1) = {"
 a
-c
+T
 S
 j
 g
 g
-g
-g
-q
+f
+f
 u
+o
 A
-c
+T
 P
 s
 s
@@ -396,7 +381,7 @@ r
 c
 c
 c
-c
+T
 P
 P
 s
@@ -405,12 +390,12 @@ s
 (12,1,1) = {"
 a
 T
-c
+T
 k
 M
-c
-c
-c
+T
+T
+T
 T
 a
 a
@@ -424,8 +409,8 @@ E
 a
 a
 T
-c
-c
+T
+T
 T
 a
 a
