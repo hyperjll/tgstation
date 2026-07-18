@@ -80,6 +80,24 @@
 	surplus = 40
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
+/datum/uplink_item/armor/combat_boots
+	name = "Combat Boots"
+	desc = "A pair of combat boots widely provided across the Spinward Sector. \
+			Provides decent protection for your feet, and even has storage for certain small items."
+	item = /obj/item/clothing/shoes/combat
+	cost = 1
+	surplus = 60
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/armor/magboots_syndie
+	name = "Blood-Red Magboots"
+	desc = "A pair of syndicate-branded blood-red magnetic boots. Allows the wearer to operate as if they had gravity. \
+			Unlike the standardized versions provided for free for our operatives, these premium magboots have a greatly reduced magnetic pull, resulting in less strain on the user."
+	item = /obj/item/clothing/shoes/magboots/syndie/premium
+	cost = 2
+	surplus = 50
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_TRIPS_CONTRABAND
+
 /datum/uplink_item/armor/gunbootsdisabler
 	name = "Disabler Shoes"
 	desc = "A highly experimental pair of 'gunboots' developed by (and later discontinued) Cybersun Industries in an attempt to incorporate turrets within footwear. \

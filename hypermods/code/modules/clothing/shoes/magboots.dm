@@ -1,3 +1,12 @@
+/obj/item/clothing/shoes/magboots/syndie/premium
+	name = "premium blood-red magboots"
+	desc = "Reverse-engineered magnetic boots that have a lighter magnetic pull as a result from stolen technology. Property of Gorlex Marauders."
+	icon_state = "syndiemag0"
+	base_icon_state = "syndiemag"
+	magpulse_fishing_modifier = 6
+	fishing_modifier = 3
+	slowdown_active = 0.5
+
 /obj/item/clothing/shoes/magboots/syndie/advanced
 	name = "advanced blood-red magboots"
 	desc = "Reverse-engineered magnetic boots that have a heavy rotating magnetic pull. Property of Gorlex Marauders and Cybersun Industries."
