@@ -2321,12 +2321,8 @@
 /obj/item/food/grown/bell_pepper,
 /obj/item/food/grown/chili,
 /obj/item/food/grown/chili,
-/obj/item/food/grown/parsnip,
-/obj/item/food/grown/parsnip,
 /obj/item/food/grown/redbeet,
 /obj/item/food/grown/redbeet,
-/obj/item/food/grown/watermelon,
-/obj/item/food/grown/watermelon,
 /obj/item/food/grown/peas,
 /obj/item/food/grown/peas,
 /obj/item/food/grown/onion,
@@ -2340,6 +2336,10 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 8
 	},
+/obj/item/food/grown/carrotlike/parsnip,
+/obj/item/food/grown/carrotlike/parsnip,
+/obj/item/food/grown/melonlike/watermelon,
+/obj/item/food/grown/melonlike/watermelon,
 /turf/open/floor/plastic,
 /area/centcom/syndicate_mothership/syndicate_satellite)
 
