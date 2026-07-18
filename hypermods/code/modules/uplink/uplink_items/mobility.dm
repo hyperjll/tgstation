@@ -81,9 +81,9 @@
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/mobility/jetpack
-	name = "Smuggled Jetpack"
-	desc = "A blue jetpack smuggled from NT's suppliers. It's been pre-filled with oxygen."
-	item = /obj/item/tank/jetpack
+	name = "Jetpack Harness"
+	desc = "A lightweight jetpack capable of fitting inside of most storage containers including backpacks. It's been pre-filled with oxygen."
+	item = /obj/item/tank/jetpack/harness
 	cost = 2
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	uplink_item_flags = NONE
