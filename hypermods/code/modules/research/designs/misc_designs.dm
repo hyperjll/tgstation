@@ -111,3 +111,15 @@
 		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/lifeforce_signet
+	name = "Inert Lifeforce Signet"
+	desc = "A hunk of metal and circuitry which is designed to incorporate an ectoplasm anomaly core to forge a lifeforce signet."
+	id = "lifeforce_signet"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/titanium = SHEET_MATERIAL_AMOUNT * 4, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 1, /datum/material/bluespace = SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SHEET_MATERIAL_AMOUNT * 4, /datum/material/uranium = SMALL_MATERIAL_AMOUNT * 2)
+	build_path = /obj/item/lifeforce_signet_inert
+	category = list(
+		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE

@@ -30,3 +30,113 @@
 	. = ..()
 	atom_storage.max_total_storage = 32
 	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
+
+
+/obj/item/lifeforce_signet_inert
+	name = "inert lifeforce signet"
+	desc = "A high-tech signet awaiting an ectoplasm core to be inserted before it can function."
+	icon = 'hypermods/icons/obj/clothing/neck.dmi'
+	icon_state = "lifeforce_signet_inert"
+	worn_icon = 'hypermods/icons/mob/clothing/neck.dmi'
+	worn_icon_state = "lifeforce_signet"
+	w_class = WEIGHT_CLASS_HUGE
+	resistance_flags = FIRE_PROOF
+	item_flags = NO_MAT_REDEMPTION
+	custom_materials = list(/datum/material/titanium = SHEET_MATERIAL_AMOUNT * 4, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 1, /datum/material/bluespace = SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SHEET_MATERIAL_AMOUNT * 4, /datum/material/uranium = SMALL_MATERIAL_AMOUNT * 2)
+	slot_flags = null
+
+/obj/item/lifeforce_signet_inert/Initialize(mapload)
+	. = ..()
+	var/static/list/recipes = list(/datum/crafting_recipe/lifeforce_signet)
+	AddElement(/datum/element/slapcrafting, recipes)
+
+/obj/item/clothing/neck/necklace/lifeforce_signet // Basically, memento mori if it were anomaly tech.
+	name = "Lifeforce Signet"
+	desc = "A signet incorporating the mysterious energies of an Ectoplasm Anomaly Core. It's designed to induce a death-like state in the wearer, rendering them both alive and dead. Though, it may have disastrous effects if taken off."
+	icon = 'hypermods/icons/obj/clothing/neck.dmi'
+	icon_state = "lifeforce_signet"
+	worn_icon = 'hypermods/icons/mob/clothing/neck.dmi'
+	worn_icon_state = "lifeforce_signet"
+	actions_types = list(/datum/action/item_action/hands_free/lifeforce_signet)
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	custom_materials = list(/datum/material/titanium = SHEET_MATERIAL_AMOUNT * 4, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 1, /datum/material/bluespace = SHEET_MATERIAL_AMOUNT, /datum/material/diamond = SHEET_MATERIAL_AMOUNT * 4, /datum/material/uranium = SMALL_MATERIAL_AMOUNT * 2)
+	item_flags = NO_MAT_REDEMPTION
+	var/mob/living/carbon/human/active_owner
+
+/obj/item/clothing/neck/necklace/lifeforce_signet/item_action_slot_check(slot)
+	return (slot & ITEM_SLOT_NECK)
+
+/obj/item/clothing/neck/necklace/lifeforce_signet/dropped(mob/user)
+	. = ..()
+	if(active_owner)
+		signet_removed()
+
+// Just in case
+/obj/item/clothing/neck/necklace/lifeforce_signet/Destroy()
+	if(active_owner)
+		signet_removed()
+	return ..()
+
+/obj/item/clothing/neck/necklace/lifeforce_signet/proc/signet_activated(mob/living/carbon/human/user)
+	to_chat(user, span_warning("You feel your life being drained by the signet..."))
+	if (!do_after(user, 4 SECONDS, target = user))
+		return
+
+	to_chat(user, span_notice("Your very life is now linked to the signet! Removing it would undoubtably kill you for good, be sure to never let someone take it off."))
+	user.add_traits(list(TRAIT_NODEATH, TRAIT_NOHARDCRIT, TRAIT_NOCRITDAMAGE), CLOTHING_TRAIT)
+	RegisterSignal(user, COMSIG_LIVING_HEALTH_UPDATE, PROC_REF(check_health))
+	icon_state = "lifeforce_signet_active"
+	active_owner = user
+
+/obj/item/clothing/neck/necklace/lifeforce_signet/proc/signet_removed()
+	icon_state = "lifeforce_signet"
+	if (!active_owner)
+		return
+	UnregisterSignal(active_owner, COMSIG_LIVING_HEALTH_UPDATE)
+	var/mob/living/carbon/human/stored_owner = active_owner
+	active_owner = null
+	to_chat(stored_owner, span_userdanger("As the signet is removed, your body rapidly crumbles into dust!"))
+	stored_owner.dust(just_ash = TRUE, drop_items = TRUE)
+
+/obj/item/clothing/neck/necklace/lifeforce_signet/proc/check_health(mob/living/source)
+	SIGNAL_HANDLER
+
+	var/list/guardians = source.get_all_linked_holoparasites()
+	if (!length(guardians))
+		return
+	if (source.health <= HEALTH_THRESHOLD_DEAD)
+		for (var/mob/guardian in guardians)
+			if(guardian.loc == src)
+				continue
+			consume_guardian(guardian)
+	else if (source.health > HEALTH_THRESHOLD_CRIT)
+		for (var/mob/guardian in guardians)
+			if(guardian.loc != src)
+				continue
+			regurgitate_guardian(guardian)
+
+/obj/item/clothing/neck/necklace/lifeforce_signet/proc/consume_guardian(mob/living/basic/guardian/guardian)
+	new /obj/effect/temp_visual/guardian/phase/out(get_turf(guardian))
+	guardian.locked = TRUE
+	guardian.forceMove(src)
+	to_chat(guardian, span_userdanger("You have been locked away in your summoner's signet!"))
+	guardian.playsound_local(get_turf(guardian), 'sound/effects/magic/summonitems_generic.ogg', 50, TRUE)
+
+/obj/item/clothing/neck/necklace/lifeforce_signet/proc/regurgitate_guardian(mob/living/basic/guardian/guardian)
+	guardian.locked = FALSE
+	guardian.recall(forced = TRUE)
+	to_chat(guardian, span_notice("You have been returned back from your summoner's signet!"))
+	guardian.playsound_local(get_turf(guardian), 'sound/effects/magic/repulse.ogg', 50, TRUE)
+
+/datum/action/item_action/hands_free/lifeforce_signet
+	check_flags = NONE
+	name = "Bind Lifeforce"
+	desc = "Induce the effects of the signet, be warned that you should never have it removed."
+
+/datum/action/item_action/hands_free/lifeforce_signet/do_effect(trigger_flags)
+	var/obj/item/clothing/neck/necklace/lifeforce_signet/lfsignet = target
+	if(lfsignet.active_owner || !ishuman(owner))
+		return FALSE
+	lfsignet.signet_activated(owner)
+	Remove(lfsignet.active_owner) //Remove the action button, since there's no real use in having it now.
+	return TRUE
