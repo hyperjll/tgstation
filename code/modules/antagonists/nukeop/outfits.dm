@@ -15,7 +15,7 @@
 	box = /obj/item/storage/box/survival/syndie
 	implants = list(
 		/obj/item/implant/weapons_auth,
-		/obj/item/implant/explosive,
+		/obj/item/implant/duster,
 		/obj/item/implant/tacmap/nuclear,
 	)
 	/// Amount of TC to automatically store in this outfit's uplink.
@@ -40,7 +40,7 @@
 
 	implants = list(
 		/obj/item/implant/weapons_auth,
-		/obj/item/implant/explosive,
+		/obj/item/implant/duster,
 		/obj/item/implant/tacmap/nuclear/leader,
 	)
 
@@ -232,6 +232,6 @@
 	uplink_type = null
 	implants = list(
 		/obj/item/implant/weapons_auth,
-		/obj/item/implant/explosive,
+		/obj/item/implant/duster,
 		/obj/item/implant/tacmap/nuclear/offbase,
 	)
