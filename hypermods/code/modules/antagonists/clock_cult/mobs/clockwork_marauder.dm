@@ -110,21 +110,10 @@ GLOBAL_LIST_EMPTY(clockwork_marauders)
 	spoken_languages = list(/datum/language/ratvar = list(LANGUAGE_ATOM))
 
 /datum/ai_controller/basic_controller/clockwork_marauder
+	behavior_tree_json = "hypermods/code/modules/antagonists/clock_cult/mobs/clockwork_marauder.bt.json"
 	blackboard = list(
 		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
 	)
-
-	ai_movement = /datum/ai_movement/basic_avoidance
-	planning_subtrees = list(
-		/datum/ai_planning_subtree/simple_find_target,
-		/datum/ai_planning_subtree/basic_melee_attack_subtree/clockwork_marauder,
-	)
-
-/datum/ai_planning_subtree/basic_melee_attack_subtree/clockwork_marauder
-	melee_attack_behavior = /datum/ai_behavior/basic_melee_attack/clockwork_marauder
-
-/datum/ai_behavior/basic_melee_attack/clockwork_marauder
-	action_cooldown = 1.2 SECONDS
 
 /obj/item/nullrod/Initialize(mapload)
 	. = ..()

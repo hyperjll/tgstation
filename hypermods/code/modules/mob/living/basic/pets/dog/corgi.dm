@@ -16,15 +16,8 @@
 	ai_controller = /datum/ai_controller/basic_controller/cerberus
 
 /datum/ai_controller/basic_controller/cerberus
+	behavior_tree_json = "hypermods/code/modules/mob/living/basic/pets/dog/cerberus.bt.json"
 	blackboard = list(
 		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
 	)
-
 	ai_movement = /datum/ai_movement/basic_avoidance
-	idle_behavior = /datum/idle_behavior/idle_random_walk
-	planning_subtrees = list(
-		/datum/ai_planning_subtree/simple_find_target,
-		/datum/ai_planning_subtree/attack_obstacle_in_path,
-		/datum/ai_planning_subtree/basic_melee_attack_subtree,
-	)
-
