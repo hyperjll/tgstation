@@ -96,7 +96,7 @@
 	src.apply_status_effect(/datum/status_effect/last_stand)
 	balloon_alert(our_human, "But you refuse.")
 	src.playsound_local(null, 'hypermods/sound/effects/last_stand.ogg', 70, FALSE, use_reverb = FALSE)
-	addtimer(CALLBACK(src, PROC_REF(last_stand_end)), 4 SECONDS) // give us a heads-up we're about to be hurt.
+	addtimer(CALLBACK(src, PROC_REF(last_stand_end)), 4 SECONDS) // For the sound to play and for us to react. A literal OH SHIT moment.
 
 /mob/living/carbon/human/proc/last_stand_end()
 	src.cure_fakedeath("last_stand")
