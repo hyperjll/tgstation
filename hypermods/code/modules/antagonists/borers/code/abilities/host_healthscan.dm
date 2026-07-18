@@ -14,6 +14,6 @@
 	if(!.)
 		return FALSE
 	var/mob/living/basic/cortical_borer/cortical_owner = owner
-	healthscan(owner, cortical_owner.human_host, advanced = TRUE) // :thinking:
+	healthscan(owner, cortical_owner.human_host) // :thinking:
 	chemscan(owner, cortical_owner.human_host)
 	StartCooldown()
