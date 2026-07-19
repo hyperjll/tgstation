@@ -1210,3 +1210,13 @@
 	cost = 12
 	surplus = 0
 	restricted_roles = list(JOB_SCIENTIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
+
+/datum/uplink_item/role_restricted/tarot_cards
+	name = "Tarot Card Booster Pack"
+	desc = "A booster pack of enchanted tarot cards popularized by members of the Wizard Federation. \
+			Each booster pack is estimated to offer 5 random tarot cards."
+	item = /obj/item/tarot_card_pack/jumbo
+	cost = 4
+	surplus = 40 // oooh, grab bag of goodies
+	restricted_roles = list(JOB_CURATOR, JOB_CHAPLAIN, JOB_CAPTAIN)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

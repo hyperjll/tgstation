@@ -18,6 +18,9 @@
 		/obj/item/clothing/shoes/sandal/magic = 1,
 		/obj/item/staff = 2,
 	)
+	premium = list(
+		/obj/item/tarot_card_pack = 1,
+	)
 	contraband = list(/obj/item/reagent_containers/cup/bottle/wizarditis = 1) //No one can get to the machine to hack it anyways; for the lulz - Microwave
 	armor_type = /datum/armor/vending_magivend
 	resistance_flags = FIRE_PROOF
