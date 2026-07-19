@@ -14,7 +14,7 @@
 	/// In the preview icon, a nuclear fission explosive device, only appearing if there's an icon state for it.
 	nuke_icon_state = "nuclearbomb_base"
 
-	infiltrator_id = null // our ship spawns at map load.
+	infiltrator_id = null // our ship spawns at map load, and we use a different base.
 
 /// Gets the position we spawn at
 /datum/antagonist/nukeop/commando/get_spawnpoint()
@@ -169,11 +169,24 @@
 	var/common_part = ..()
 	return common_part + disk_report
 
+/datum/team/nuclear/commando/assign_nuke_delayed(attempts = 0)
+	if(!assign_nuke())
+		if(attempts > 10) // I've given this additional time to search, seeing as how the advanced infiltrator will load (WITH THE NUKE!!!) much later after everything.
+			stack_trace("Failed to assign nuke to commando team after multiple attempts. \
+				This likely means the nuke was not found. Please investigate.")
+		else
+			addtimer(CALLBACK(src, PROC_REF(assign_nuke_delayed), attempts + 1), 10 SECONDS)
+		return
+
+	for(var/datum/mind/synd_mind as anything in members)
+		var/datum/antagonist/nukeop/commando/synd_datum = synd_mind.has_antag_datum(/datum/antagonist/nukeop/commando)
+		synd_datum?.memorize_code()
+
 /datum/team/nuclear/commando/assign_nuke()
 	memorized_code = random_nukecode()
 	var/obj/machinery/nuclearbomb/commando/nuke = locate() in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/nuclearbomb/commando)
 	if(!nuke)
-		stack_trace("Syndicate nuke not found during nuke team creation.")
+		stack_trace("Commando nuke not found during commando team creation.")
 		memorized_code = null
 		return
 	tracked_nuke = nuke
@@ -242,15 +255,15 @@
 
 	CRASH("[type] - got an undefined / unexpected result.")
 
-/// Returns whether or not syndicate operatives escaped.
+/// Returns whether or not commando operatives escaped.
 /proc/is_adv_infiltrator_docked_at_syndiebase()
 	var/obj/docking_port/mobile/infiltrator/infiltrator_port = SSshuttle.getShuttle("adv_syndicate")
 
-	var/datum/lazy_template/nukie_base/nukie_template = GLOB.lazy_templates[LAZY_TEMPLATE_KEY_COMMANDOBASE]
-	if(!nukie_template)
+	var/datum/lazy_template/commando_base/commando_template = GLOB.lazy_templates[LAZY_TEMPLATE_KEY_COMMANDOBASE]
+	if(!commando_template)
 		return FALSE // if its not even loaded, cant be docked
 
-	for(var/datum/turf_reservation/loaded_area as anything in nukie_template.reservations)
+	for(var/datum/turf_reservation/loaded_area as anything in commando_template.reservations)
 		var/infiltrator_turf = get_turf(infiltrator_port)
 		if(infiltrator_turf in loaded_area.reserved_turfs)
 			return TRUE

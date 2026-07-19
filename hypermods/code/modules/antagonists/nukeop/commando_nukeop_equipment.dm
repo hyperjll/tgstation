@@ -214,7 +214,7 @@
 	. = ..()
 	. += emissive_appearance(icon, "[icon_state]_light", src, alpha = src.alpha)
 
-/obj/machinery/nuclearbomb/commando/ui_act(action, params)
+/obj/machinery/nuclearbomb/commando/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	playsound(src, SFX_TERMINAL_TYPE, 20, FALSE)
 	switch(action)
@@ -270,7 +270,7 @@
 						update_ui_mode()
 					if("0", "1", "2", "3", "4", "5", "6", "7", "8", "9")
 						if(numeric_input != "ERROR" && ui_mode != NUKEUI_AWAIT_TIMER || NUKEUI_AWAIT_ARM)
-							numeric_input += digit
+							//numeric_input += digit // We need to call back in code for this to work, which mean we're double-inputting the number when using the ui.
 							if(length(numeric_input) > 5)
 								numeric_input = "ERROR"
 							else
