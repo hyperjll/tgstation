@@ -111,7 +111,7 @@
 		return FALSE
 
 	set_heartattack(FALSE) // Just in case.
-	our_human.Paralyze(1.2 SECONDS) // For the epic floating backflip, trust.
+	our_human.Stun(1.2 SECONDS) // For the epic floating backflip, trust.
 
 	src.AddElement(/datum/element/forced_gravity, 0)
 	addtimer(CALLBACK(our_human, TYPE_PROC_REF(/datum/, _RemoveElement), list(/datum/element/forced_gravity, 0)), 1.2 SECONDS) // Fly into the air for the animation
