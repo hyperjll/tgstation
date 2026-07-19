@@ -72,7 +72,7 @@
 "se" = (/obj/machinery/door/airlock/hatch{name = "Gangway Side-Passage"},/obj/structure/fans/tiny,/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,/turf/open/floor/mineral/plastitanium,/area/centcom/syndicate_mothership/firebase_trident)
 "sC" = (/obj/effect/turf_decal/stripes/line{dir = 8},/obj/structure/railing{dir = 8; layer = 4.1},/obj/effect/decal/cleanable/dirt/dust,/obj/structure/rack,/obj/item/katana/cursed{desc = "A gift from your benefactors."; force = 20},/turf/open/floor/mineral/plastitanium,/area/centcom/syndicate_mothership/firebase_trident)
 "sF" = (/obj/effect/decal/cleanable/rubble,/turf/open/misc/asteroid,/area/centcom/syndicate_mothership/firebase_trident)
-"ta" = (/obj/effect/turf_decal/bot,/obj/machinery/vending/snack/random{extended_inventory = 1},/turf/open/floor/mineral/plastitanium/red,/area/centcom/syndicate_mothership/firebase_trident)
+"ta" = (/obj/effect/turf_decal/bot,/obj/machinery/vending/snack/blue{extended_inventory = 1},/turf/open/floor/mineral/plastitanium/red,/area/centcom/syndicate_mothership/firebase_trident)
 "tc" = (/obj/structure/chair/plastic{dir = 8},/turf/open/floor/mineral/plastitanium,/area/centcom/syndicate_mothership/firebase_trident)
 "te" = (/obj/effect/turf_decal/stripes/line{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/centcom/syndicate_mothership/firebase_trident)
 "tf" = (/obj/structure/chair/plastic{dir = 8},/obj/structure/sign/poster/contraband/random/directional/south,/turf/open/floor/mineral/plastitanium,/area/centcom/syndicate_mothership/firebase_trident)
