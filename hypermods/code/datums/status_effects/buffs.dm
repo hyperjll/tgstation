@@ -616,7 +616,7 @@
 
 /datum/status_effect/super_form/on_apply()
 	. = ..()
-	owner.add_traits(list(TRAIT_GODMODE, TRAIT_STUNIMMUNE, TRAIT_BOMBGIBIMMUNE, TRAIT_NODISMEMBER), "super_form")
+	owner.add_traits(list(TRAIT_GODMODE, TRAIT_STUNIMMUNE, TRAIT_BOMBGIBIMMUNE, TRAIT_NODISMEMBER, TRAIT_MOVE_FLOATING, TRAIT_IGNORING_GRAVITY), "super_form")
 	owner.add_movespeed_modifier(/datum/movespeed_modifier/status_effect/the_chariot)
 	owner.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	if(ishuman(owner))
@@ -631,7 +631,7 @@
 
 /datum/status_effect/super_form/on_remove()
 	. = ..()
-	owner.remove_traits(list(TRAIT_GODMODE, TRAIT_STUNIMMUNE, TRAIT_BOMBGIBIMMUNE, TRAIT_NODISMEMBER), "super_form")
+	owner.remove_traits(list(TRAIT_GODMODE, TRAIT_STUNIMMUNE, TRAIT_BOMBGIBIMMUNE, TRAIT_NODISMEMBER, TRAIT_MOVE_FLOATING, TRAIT_IGNORING_GRAVITY), "super_form")
 	owner.remove_movespeed_modifier(/datum/movespeed_modifier/status_effect/the_chariot)
 	owner.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	if(ishuman(owner))

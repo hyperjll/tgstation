@@ -113,8 +113,9 @@
 	set_heartattack(FALSE) // Just in case.
 	our_human.Stun(1.2 SECONDS) // For the epic floating backflip, trust.
 
-	src.AddElement(/datum/element/forced_gravity, 0)
-	addtimer(CALLBACK(our_human, TYPE_PROC_REF(/datum/, _RemoveElement), list(/datum/element/forced_gravity, 0)), 1.2 SECONDS) // Fly into the air for the animation
+	var/original_transform = our_human.transform
+	animate(our_human, transform = our_human.transform.Translate(0, 4), time = 0.6 SECONDS, flags = ANIMATION_PARALLEL)
+	animate(transform = original_transform, time = 0.6 SECONDS)
 
 	our_human.SpinAnimation(1.2 SECONDS, 1)
 
