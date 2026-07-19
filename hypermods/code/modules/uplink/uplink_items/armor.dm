@@ -27,7 +27,7 @@
 	name = "Armored Jumpsuit"
 	desc = "A jumpsuit we've outfitted with a kevlar mesh and our chameleon technology. Perfect for maximizing protection and stealth."
 	item = /obj/item/clothing/under/chameleon/armored
-	cost = 4
+	cost = 2
 	surplus = 40
 	uplink_item_flags = NONE
 
@@ -55,7 +55,7 @@
 	name = "Armored Tie"
 	desc = "A tie we've fitted with a kevlar mesh and our chameleon technology. It provides a small amount of protection against all types of damage."
 	item = /obj/item/clothing/neck/chameleon/armored
-	cost = 2
+	cost = 1
 	surplus = 25
 	uplink_item_flags = NONE
 
@@ -64,7 +64,7 @@
 	desc = "A pair of gloves we've fitted with the toughest durathread we could fabricate AND our chameleon technology. It provides a small amount of protection against all types of damage. \
 			Gloves are insulated and won't restrict your dexterity when using certain equipment."
 	item = /obj/item/clothing/gloves/chameleon/armored
-	cost = 2
+	cost = 1
 	surplus = 25
 	uplink_item_flags = NONE
 
