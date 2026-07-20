@@ -18,13 +18,18 @@
 	var/mode = DISCONNECTED
 	/// currently drained amount to payout for
 	var/power_drained = 0
+	/// How much power we've sold, goes into the final calculations to ensure diminishing returns on investment.
 	var/total_power_drained = 0
+	/// Basically, the maximum value we have our payout divided by: (power_drained / max(max_power_drain_coefficient, total_payout*0.2)), lower values = more money we could make after it's been paying out for a long time.
+	var/max_power_drain_coefficient = 10000
 	/// total amount of money generated, the more power you make the cheaper you have to sell it.
 	var/static/total_payout = 0
 	/// Cable node machine is attached to.
 	var/obj/structure/cable/attached
-	/// how much more money you get from having better parts
-	var/payout_multiplier = 1
+	/// The estimated conversion rate from Kw to Credits, improved with better parts, diminished by total_power_drained. Penalty is lessened with better parts via coefficient.
+	var/payout_multiplier = 0.25
+	/// If true, we won't constantly announce our payout details.
+	var/silent_mode = FALSE
 
 /obj/machinery/power/exporter/Initialize()
 	if(!COOLDOWN_STARTED(src, pay_interval))
@@ -135,7 +140,7 @@
 	power_drained += power_drain_amount
 
 /obj/machinery/power/exporter/proc/pay()
-	var/payout = (power_drained / max(1000, total_payout*0.2))
+	var/payout = (power_drained / max(max_power_drain_coefficient, total_payout*0.2))
 
 	payout = payout * payout_multiplier
 	total_payout += payout
@@ -147,16 +152,22 @@
 	var/cargo_payout = round(payout - engi_payout)
 	cargo_bank.adjust_money(cargo_payout)
 
-	say("Sold [power_drained * 0.001] KW! Engineering and cargo recieved [engi_payout] cr and [cargo_payout] cr.")
+	if(!silent_mode)
+		say("Sold [power_drained * 0.001] KW! Engineering and cargo recieved [engi_payout] cr and [cargo_payout] cr.")
 	total_power_drained += power_drained
 	power_drained = 0
 
 /obj/machinery/power/exporter/RefreshParts()
 	. = ..()
+	// Tier 2 and better parts improve both the coefficient and the ultimate payout. Leading to larger payments and less diminishing returns.
 	for(var/datum/stock_part/capacitor/capacitor in component_parts)
-		payout_multiplier = capacitor.tier
+		payout_multiplier = (capacitor.tier * 0.25)
+		if(capacitor.tier >= 2)
+			max_power_drain_coefficient = (10000 * (1 - (capacitor.tier / 10)))
+		else
+			max_power_drain_coefficient = 10000
 	//incase someone makes tier 25 parts or some bs
-	if(payout_multiplier > 4)
+	if(payout_multiplier > 1)
 		WARNING("This needs to be rebalanced for higher tier parts.")
 
 #undef PAY_INTERVAL_TIME
