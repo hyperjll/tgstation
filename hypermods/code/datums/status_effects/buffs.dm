@@ -570,35 +570,61 @@
 	alert_type = null
 	status_type = STATUS_EFFECT_REPLACE
 	duration = INFINITY
-	tick_interval = 0
-	/// Maximum amount of block stacks
-	var/max_blocks = 1
-	/// Can we block overwelming type attack like from mechs?
-	var/can_block_overwhelming = FALSE
+	tick_interval = STATUS_EFFECT_NO_TICK
+	/// How many times we can block an attack.
+	var/blocks_left = 1
 	// The look of our shield
 	var/mutable_appearance/shield
 	// Icon state of icons/effects/effects.dmi
 	var/shield_icon_state = "shield-old"
 
 /datum/status_effect/force_shield/on_apply()
-	. = ..()
 	if(!ismob(owner))
 		return
-	owner.AddComponent(/datum/component/limited_shield, max_charges = max_blocks, recharge_start_delay = 0 SECONDS, shield_icon = shield_icon_state, run_hit_callback = null)
+	RegisterSignal(owner, COMSIG_LIVING_CHECK_BLOCK, PROC_REF(on_shield_reaction))
+
+	var/mutable_appearance/MA = mutable_appearance('icons/effects/effects.dmi', shield_icon_state, ABOVE_MOB_LAYER)
+	owner.add_overlay(MA)
+	shield = MA
+	return TRUE
 
 /datum/status_effect/force_shield/on_remove()
-	. = ..()
-	if(owner.GetComponent(/datum/component/limited_shield))
-		var/datum/component/limited_shield/shield_component = GetComponent(/datum/component/limited_shield)
-		qdel(shield_component)
+	UnregisterSignal(owner, COMSIG_LIVING_CHECK_BLOCK)
+
+	owner.cut_overlay(shield)
+	return ..()
+
+/datum/status_effect/force_shield/proc/on_shield_reaction(mob/living/carbon/human/source, atom/movable/hitby, damage = 0, attack_text = "the attack", attack_type = MELEE_ATTACK)
+	SIGNAL_HANDLER
+
+	blocks_left--
+
+	owner.visible_message(span_danger("[owner]'s shields deflect [attack_text] soundlessly!"))
+	shield_react_effect(source, hitby)
+
+	if(blocks_left <= 0)
+		owner.visible_message(span_warning("[owner]'s shield dissipates!"))
+		shield_destroy_effect(source, hitby)
+		qdel(src)
+		return SUCCESSFUL_BLOCK
+
+	return SUCCESSFUL_BLOCK
+
+// Additional proc for any special reactionary effects for when the shield is damaged.
+/datum/status_effect/force_shield/proc/shield_react_effect(mob/living/carbon/human/source, atom/movable/hitby)
+	return
+
+// Additional proc for any special effects for when the shield is destroyed.
+/datum/status_effect/force_shield/proc/shield_destroy_effect(mob/living/carbon/human/source, atom/movable/hitby)
+	return
 
 /datum/status_effect/force_shield/hierophant
 	id = "the_hierophant"
 	alert_type = null
 	status_type = STATUS_EFFECT_REPLACE
 	duration = INFINITY
-	tick_interval = 0
-	max_blocks = 3
+	tick_interval = STATUS_EFFECT_NO_TICK
+	blocks_left = 3
 	shield_icon_state = "psychic"
 
 

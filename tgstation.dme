@@ -7209,7 +7209,6 @@
 #include "hypermods\code\datums\ai_laws\laws_antagonistic.dm"
 #include "hypermods\code\datums\components\backstabs.dm"
 #include "hypermods\code\datums\components\enchantments.dm"
-#include "hypermods\code\datums\components\limited_shield.dm"
 #include "hypermods\code\datums\components\randomcrits.dm"
 #include "hypermods\code\datums\components\crafting\chemistry.dm"
 #include "hypermods\code\datums\components\crafting\doors.dm"
