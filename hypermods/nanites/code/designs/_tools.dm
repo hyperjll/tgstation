@@ -5,7 +5,7 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT*5, /datum/material/iron = SHEET_MATERIAL_AMOUNT*5)
 	build_path = /obj/item/nanite_remote
-	category = list(RND_CATEGORY_TOOLS)
+	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/nanite_comm_remote
@@ -15,7 +15,7 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT*5, /datum/material/iron = SHEET_MATERIAL_AMOUNT*5)
 	build_path = /obj/item/nanite_remote/comm
-	category = list(RND_CATEGORY_TOOLS)
+	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/nanite_scanner
@@ -25,7 +25,7 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT*5, /datum/material/iron = SHEET_MATERIAL_AMOUNT*5)
 	build_path = /obj/item/nanite_scanner
-	category = list(RND_CATEGORY_TOOLS)
+	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/nanite_disk
