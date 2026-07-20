@@ -5,7 +5,7 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT*5, /datum/material/iron = SHEET_MATERIAL_AMOUNT*5)
 	build_path = /obj/item/nanite_remote
-	category = list(RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_ELECTRONICS)
+	category = list(RND_CATEGORY_TOOLS)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/nanite_comm_remote
@@ -15,7 +15,7 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT*5, /datum/material/iron = SHEET_MATERIAL_AMOUNT*5)
 	build_path = /obj/item/nanite_remote/comm
-	category = list(RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_ELECTRONICS)
+	category = list(RND_CATEGORY_TOOLS)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/nanite_scanner
@@ -25,8 +25,8 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT*5, /datum/material/iron = SHEET_MATERIAL_AMOUNT*5)
 	build_path = /obj/item/nanite_scanner
-	category = list(RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_ELECTRONICS)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	category = list(RND_CATEGORY_TOOLS)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/nanite_disk
 	name = "Nanite Program Disk"
@@ -35,7 +35,7 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*3, /datum/material/glass = SHEET_MATERIAL_AMOUNT*1)
 	build_path = /obj/item/disk/nanite_program
-	category = list(RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_ELECTRONICS)
+	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/nanite_disk_noshock
@@ -45,7 +45,7 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*3, /datum/material/glass = SHEET_MATERIAL_AMOUNT, /datum/material/gold = SHEET_MATERIAL_AMOUNT*2.5)
 	build_path = /obj/item/disk/nanite_program/no_shock
-	category = list(RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_ELECTRONICS)
+	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design/board/nanite_chamber
