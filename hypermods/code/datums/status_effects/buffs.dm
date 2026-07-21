@@ -712,17 +712,26 @@
 	tesla_zap(source = owner, zap_range = zap_range, power = power, cutoff = 2e8, zap_flags = zap_flags)
 	return
 
+
 /datum/status_effect/super_form
 	id = "super_form"
 	duration = 100 SECONDS
 	alert_type = null
 	status_type = STATUS_EFFECT_REFRESH
+	// All of the glowing stuff we need to shine bright like a diamond~
 	var/glow_power = 20
 	var/glow_range = 3
 	var/glow_color
 	var/obj/effect/dummy/lighting_obj/moblight/glow
+	// Vars to store our hair colors so we may return to them later.
 	var/previous_hair_color
 	var/previous_facial_hair_color
+	// Our special super form effects, will be directly onto our mob.
+	var/mutable_appearance/super_effect
+	// Icon file path for custom effects.
+	var/effect_icon_filepath = 'icons/effects/effects.dmi'
+	// Icon state of effect_icon_filepath
+	var/effect_icon_state = "blessed"
 
 /datum/status_effect/super_form/on_apply()
 	. = ..()
@@ -738,6 +747,9 @@
 	glow_color = "FFFFFF"
 	glow = owner.mob_light()
 	glow.set_light_range_power_color(glow_range, glow_power, glow_color)
+	var/mutable_appearance/MA = mutable_appearance(effect_icon_filepath, effect_icon_state, ABOVE_MOB_LAYER)
+	owner.add_overlay(MA)
+	super_effect = MA
 
 /datum/status_effect/super_form/on_remove()
 	. = ..()
@@ -749,4 +761,4 @@
 		our_human.set_haircolor(previous_hair_color, update = FALSE)
 		our_human.set_facial_haircolor(previous_facial_hair_color)
 	QDEL_NULL(glow)
-
+	owner.cut_overlay(super_effect)
