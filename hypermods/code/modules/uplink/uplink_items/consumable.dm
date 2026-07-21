@@ -229,3 +229,14 @@
 	item = /obj/item/reagent_containers/cup/bottle/mindwipe
 	cost = 4
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/consumable/shielding_gumballs
+	name = "Energy Shield Gumballs"
+	desc = "A wonderous machination designed by Waffle Co. and disguised as mere gumballs, these high-tech consumable energy shield emitters can be ingested to provide temporary shields to the host. \
+			Each E.S.G (Energy Shield Gumball) is designed to deflect or otherwise negate a single blow from any possible attacker. \
+			However, recently food scientists at Waffle Co. have begun development and distribution on elemental shield gumballs that provide additional effects. \
+			Every purchase yields one jar containing 9 regular gumballs, and 5 E.S.G's of random variety."
+	item = /obj/item/storage/fancy/gumballs_jar/five_random_shields
+	cost = 4
+	purchasable_from = UPLINK_TRAITORS | UPLINK_SPY | UPLINK_CLOWN_OPS
+	uplink_item_flags = NONE // The jar itself ain't contraband, but the gumballs are.

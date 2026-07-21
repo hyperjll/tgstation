@@ -230,3 +230,61 @@
 /obj/item/storage/fancy/cigarettes/deluxe_slimey_cigarette_pack/PopulateContents()
 	for(var/i in 1 to 6)
 		new /obj/item/cigarette/syndicate/deluxe_slimey_cigarette_pack(src)
+
+// Gumball jar!!!
+
+/obj/item/storage/fancy/gumballs_jar
+	icon = 'hypermods/icons/obj/food/containers.dmi'
+	icon_state = "gumballs"
+	base_icon_state = "gumballs"
+	name = "gumball jar"
+	desc = "A jar for meant for and likely containing gumballs."
+	contents_tag = "gumballs"
+	foldable_result = /obj/item/reagent_containers/cup/beaker/large
+	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT * 1.25)
+	open_status = FANCY_CONTAINER_ALWAYS_OPEN
+	has_open_closed_states = FALSE
+	storage_type = /datum/storage/gumballs_jar
+	spawn_type = /obj/item/food/gumball
+	spawn_count = 9
+	// If we want a certain number of random gumballs, set this value. Max gumballs per container is 14, so keep that in mind.
+	var/random_gumballs_to_spawn = 0
+	// What item path are we using to spawn the random gumballs? If you put /obj/item/food/gumball, it'll spawn literally ANY type.
+	var/random_gumball_typepath = /obj/item/food/gumball/shield
+
+/obj/item/storage/fancy/gumballs_jar/update_icon_state()
+	. = ..()
+	if(!contents.len)
+		icon_state = "[base_icon_state]_empty"
+	else
+		if(contents.len < 9)
+			icon_state = "[base_icon_state]_[contents.len]"
+		else
+			icon_state = base_icon_state
+
+/obj/item/storage/fancy/gumballs_jar/PopulateContents()
+	. = ..()
+	if(random_gumballs_to_spawn < 1)
+		return
+	var/list/types = typesof(random_gumball_typepath)
+	for(var/i in 1 to random_gumballs_to_spawn)
+		var/type = pick(types)
+		new type(src)
+
+/obj/item/storage/fancy/gumballs_jar/one_random_shield
+	spawn_type = /obj/item/food/gumball
+	spawn_count = 9
+	random_gumballs_to_spawn = 1
+
+/obj/item/storage/fancy/gumballs_jar/five_random_shields
+	spawn_type = /obj/item/food/gumball
+	spawn_count = 9
+	random_gumballs_to_spawn = 5
+
+/obj/item/storage/fancy/gumballs_jar/random_shields
+	spawn_type = null
+	random_gumballs_to_spawn = 9
+
+/obj/item/storage/fancy/gumballs_jar/shield
+	spawn_type = /obj/item/food/gumball/shield
+	spawn_count = 9

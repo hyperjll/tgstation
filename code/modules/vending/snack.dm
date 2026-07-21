@@ -39,6 +39,7 @@
 		/obj/item/food/spacers_sidekick = 3,
 		/obj/item/food/pistachios = 3,
 		/obj/item/food/swirl_lollipop = 3,
+		/obj/item/storage/fancy/gumballs_jar = 2,
 	)
 	refill_canister = /obj/item/vending_refill/snack
 	req_access = list(ACCESS_KITCHEN)

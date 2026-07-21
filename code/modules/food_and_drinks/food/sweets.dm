@@ -274,10 +274,13 @@
 	slot_flags = ITEM_SLOT_MASK
 	w_class = WEIGHT_CLASS_TINY
 	venue_value = FOOD_PRICE_WORTHLESS
+	// Do we have random colors?
+	var/random_color = TRUE
 
 /obj/item/food/gumball/Initialize(mapload)
 	. = ..()
-	color = rgb(rand(0, 255), rand(0, 255), rand(0, 255))
+	if(random_color)
+		color = rgb(rand(0, 255), rand(0, 255), rand(0, 255))
 	AddElement(/datum/element/chewable)
 
 

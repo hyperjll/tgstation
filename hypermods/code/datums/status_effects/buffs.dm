@@ -575,27 +575,34 @@
 	var/blocks_left = 1
 	// The look of our shield
 	var/mutable_appearance/shield
-	// Icon state of icons/effects/effects.dmi
+	// Icon file path for custom icons.
+	var/shield_icon_filepath = 'icons/effects/effects.dmi'
+	// Icon state of shield_icon_filepath
 	var/shield_icon_state = "shield-old"
 
 /datum/status_effect/force_shield/on_apply()
 	if(!ismob(owner))
 		return
 	RegisterSignal(owner, COMSIG_LIVING_CHECK_BLOCK, PROC_REF(on_shield_reaction))
+	shield_apply_effect()
 
-	var/mutable_appearance/MA = mutable_appearance('icons/effects/effects.dmi', shield_icon_state, ABOVE_MOB_LAYER)
+	var/mutable_appearance/MA = mutable_appearance(shield_icon_filepath, shield_icon_state, ABOVE_MOB_LAYER)
 	owner.add_overlay(MA)
 	shield = MA
 	return TRUE
 
 /datum/status_effect/force_shield/on_remove()
 	UnregisterSignal(owner, COMSIG_LIVING_CHECK_BLOCK)
+	shield_remove_effect()
 
 	owner.cut_overlay(shield)
 	return ..()
 
 /datum/status_effect/force_shield/proc/on_shield_reaction(mob/living/carbon/human/source, atom/movable/hitby, damage = 0, attack_text = "the attack", attack_type = MELEE_ATTACK)
 	SIGNAL_HANDLER
+
+	if(HAS_TRAIT(owner, TRAIT_GODMODE))
+		return
 
 	blocks_left--
 
@@ -609,6 +616,14 @@
 		return SUCCESSFUL_BLOCK
 
 	return SUCCESSFUL_BLOCK
+
+// Additional proc for any special stuff for when the shield is originally applied
+/datum/status_effect/force_shield/proc/shield_apply_effect()
+	return
+
+// Additional proc for any special stuff for when the shield is is removed.
+/datum/status_effect/force_shield/proc/shield_remove_effect()
+	return
 
 // Additional proc for any special reactionary effects for when the shield is damaged.
 /datum/status_effect/force_shield/proc/shield_react_effect(mob/living/carbon/human/source, atom/movable/hitby)
@@ -627,6 +642,75 @@
 	blocks_left = 3
 	shield_icon_state = "psychic"
 
+/datum/status_effect/force_shield/bubblewrap
+	id = "bubblewrap_shield"
+	alert_type = null
+	status_type = STATUS_EFFECT_REPLACE
+	duration = INFINITY
+	tick_interval = STATUS_EFFECT_NO_TICK
+	blocks_left = 1
+	shield_icon_filepath = 'hypermods/icons/effects/shield_effects.dmi'
+	shield_icon_state = "bubblewrap"
+
+/datum/status_effect/force_shield/bubblewrap/shield_apply_effect(mob/living/carbon/human/source, atom/movable/hitby)
+	owner.add_traits(list(TRAIT_NOBREATH, TRAIT_RAINSTORM_IMMUNE), "bubblewrap_shield")
+	return
+
+/datum/status_effect/force_shield/bubblewrap/shield_remove_effect(mob/living/carbon/human/source, atom/movable/hitby)
+	owner.remove_traits(list(TRAIT_NOBREATH, TRAIT_RAINSTORM_IMMUNE), "bubblewrap_shield")
+	return
+
+/datum/status_effect/force_shield/flameaura
+	id = "flameaura_shield"
+	alert_type = null
+	status_type = STATUS_EFFECT_REPLACE
+	duration = INFINITY
+	tick_interval = STATUS_EFFECT_NO_TICK
+	blocks_left = 1
+	shield_icon_filepath = 'hypermods/icons/effects/shield_effects.dmi'
+	shield_icon_state = "flameaura"
+
+/datum/status_effect/force_shield/flameaura/shield_apply_effect(mob/living/carbon/human/source, atom/movable/hitby)
+	owner.add_traits(list(TRAIT_LAVA_IMMUNE, TRAIT_ASHSTORM_IMMUNE, TRAIT_RESISTCOLD), "flameaura_shield")
+	return
+
+/datum/status_effect/force_shield/flameaura/shield_remove_effect(mob/living/carbon/human/source, atom/movable/hitby)
+	owner.remove_traits(list(TRAIT_LAVA_IMMUNE, TRAIT_ASHSTORM_IMMUNE, TRAIT_RESISTCOLD), "flameaura_shield")
+	return
+
+/datum/status_effect/force_shield/flameaura/shield_react_effect(mob/living/carbon/human/source, atom/movable/hitby)
+	if(iscarbon(hitby))
+		var/mob/living/carbon/carbon_mob = hitby
+		carbon_mob.adjust_fire_stacks(2)
+		carbon_mob.ignite_mob()
+
+	return
+
+/datum/status_effect/force_shield/thundercoin
+	id = "thundercoin_shield"
+	alert_type = null
+	status_type = STATUS_EFFECT_REPLACE
+	duration = INFINITY
+	tick_interval = STATUS_EFFECT_NO_TICK
+	blocks_left = 1
+	shield_icon_filepath = 'hypermods/icons/effects/shield_effects.dmi'
+	shield_icon_state = "thundercoin"
+	var/zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_LOW_POWER_GEN
+	var/zap_range = 6
+	var/power = 2e8
+
+/// It's an electromagnetic shield, it absolutely latches you to the floor.
+/datum/status_effect/force_shield/thundercoin/shield_apply_effect(mob/living/carbon/human/source, atom/movable/hitby)
+	owner.add_traits(list(TRAIT_SHOCKIMMUNE, TRAIT_NEGATES_GRAVITY), "thundercoin_shield")
+	return
+
+/datum/status_effect/force_shield/thundercoin/shield_remove_effect(mob/living/carbon/human/source, atom/movable/hitby)
+	owner.remove_traits(list(TRAIT_SHOCKIMMUNE, TRAIT_NEGATES_GRAVITY), "thundercoin_shield")
+	return
+
+/datum/status_effect/force_shield/thundercoin/shield_destroy_effect(mob/living/carbon/human/source, atom/movable/hitby)
+	tesla_zap(source = owner, zap_range = zap_range, power = power, cutoff = 2e8, zap_flags = zap_flags)
+	return
 
 /datum/status_effect/super_form
 	id = "super_form"

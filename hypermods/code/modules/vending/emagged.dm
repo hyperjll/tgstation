@@ -1183,6 +1183,7 @@
 		/obj/item/food/spacers_sidekick = 3,
 		/obj/item/food/pistachios = 3,
 		/obj/item/food/swirl_lollipop = 3,
+		/obj/item/storage/fancy/gumballs_jar/one_random_shield = 2,
 		/obj/item/food/pie/cream/bluespace = 1,
 		/obj/item/food/magicrockcandy = 1,
 	)
