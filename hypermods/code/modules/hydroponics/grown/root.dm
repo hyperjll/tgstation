@@ -5,7 +5,7 @@
 	icon_state = "seed-goldcarrot"
 	species = "goldcarrot"
 	plantname = "Golden Carrots"
-	product = /obj/item/food/grown/carrot/gold
+	product = /obj/item/food/grown/carrotlike/gold
 	maturation = 10
 	production = 1
 	yield = 5
@@ -14,7 +14,7 @@
 	mutatelist = list()
 	reagents_add = list(/datum/reagent/medicine/oculine = 0.3, /datum/reagent/consumable/nutriment = 0.08, /datum/reagent/medicine/enchantedgold = 0.05)
 
-/obj/item/food/grown/carrot/gold
+/obj/item/food/grown/carrotlike/gold
 	seed = /obj/item/seeds/carrot/gold
 	name = "golden carrot"
 	desc = "It's REALLY good for the eyes!"

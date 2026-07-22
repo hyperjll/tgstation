@@ -9,13 +9,12 @@
 	icon_grow = "rainbowmelon-grow" // Uses one growth icons set for all the subtypes
 	icon_dead = "rainbowmelon-dead"
 	icon_harvest = "rainbowmelon-harvest"
-	product = /obj/item/food/grown/rainbowmelon
+	product = /obj/item/food/grown/melonlike/rainbowmelon
 	genes = list()
 	mutatelist = null
 	reagents_add = list(/datum/reagent/consumable/melonium = 0.2, /datum/reagent/consumable/nutriment = 0.1)
 
-/// Barrel melon Fruit
-/obj/item/food/grown/rainbowmelon
+/obj/item/food/grown/melonlike/rainbowmelon
 	seed = /obj/item/seeds/watermelon/rainbow
 	name = "rainbowmelon"
 	desc = "The ultimate melon."
