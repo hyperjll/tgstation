@@ -22454,12 +22454,12 @@
 /obj/item/seeds/tower,
 /obj/structure/sink/directional/south,
 /obj/item/food/grown/wheat,
-/obj/item/food/grown/watermelon,
-/obj/item/food/grown/watermelon,
 /obj/item/food/grown/cocoapod,
 /obj/effect/turf_decal/tile/green/anticorner/contrasted{
 	dir = 1
 	},
+/obj/item/food/grown/melonlike/watermelon,
+/obj/item/food/grown/melonlike/watermelon,
 /turf/open/floor/iron,
 /area/station/service/hydroponics/garden)
 "iRt" = (

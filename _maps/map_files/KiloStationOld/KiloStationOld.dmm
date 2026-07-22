@@ -3046,7 +3046,6 @@
 	pixel_x = -7;
 	pixel_y = 8
 	},
-/obj/item/food/grown/watermelon,
 /obj/item/food/grown/wheat,
 /obj/item/food/grown/whitebeet,
 /obj/item/food/grown/apple,
@@ -3056,6 +3055,7 @@
 	name = "Hydroponics Desk";
 	req_access = list("hydroponics")
 	},
+/obj/item/food/grown/melonlike/watermelon,
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
 "aYu" = (

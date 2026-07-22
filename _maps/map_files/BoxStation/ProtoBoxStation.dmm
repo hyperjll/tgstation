@@ -9490,7 +9490,6 @@
 	},
 /obj/structure/cable,
 /obj/item/food/grown/grapes,
-/obj/item/food/grown/watermelon,
 /obj/item/food/grown/wheat,
 /obj/item/food/grown/carrot,
 /obj/item/food/grown/cocoapod,
@@ -9498,6 +9497,7 @@
 /obj/effect/turf_decal/siding/thinplating_new/end{
 	dir = 8
 	},
+/obj/item/food/grown/melonlike/watermelon,
 /turf/open/floor/iron/large,
 /area/station/service/hydroponics/garden)
 "aEG" = (
@@ -46288,13 +46288,13 @@
 /area/station/engineering/transit_tube)
 "lrg" = (
 /obj/item/food/grown/wheat,
-/obj/item/food/grown/watermelon,
 /obj/item/food/grown/citrus/orange,
 /obj/item/food/grown/grapes,
 /obj/structure/table/glass,
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 9
 	},
+/obj/item/food/grown/melonlike/watermelon,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "lrN" = (

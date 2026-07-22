@@ -12504,7 +12504,7 @@
 "bjo" = (
 /obj/structure/railing,
 /obj/machinery/light/directional/west,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/hallway/secondary/entry/upper)
 "bjp" = (
 /obj/effect/turf_decal/trimline/neutral/filled/corner{
@@ -13695,7 +13695,7 @@
 /turf/open/floor/iron,
 /area/station/security/checkpoint/escape)
 "bnI" = (
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/hallway/secondary/entry/lower)
 "bnK" = (
 /obj/structure/closet/toolcloset,
@@ -44948,7 +44948,7 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/east,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/hallway/secondary/entry/lower)
 "knt" = (
 /obj/effect/turf_decal/tile/neutral/half,
@@ -50134,7 +50134,7 @@
 "msv" = (
 /obj/structure/railing,
 /obj/machinery/light/directional/east,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/hallway/secondary/entry/upper)
 "msK" = (
 /obj/effect/turf_decal/trimline/purple/line,
@@ -50245,7 +50245,7 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/west,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/hallway/secondary/entry/lower)
 "muR" = (
 /obj/machinery/door/window/brigdoor/security/cell/left/directional/east{
@@ -59932,7 +59932,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/command)
 "qet" = (
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/station/hallway/secondary/entry/upper)
 "qey" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted{

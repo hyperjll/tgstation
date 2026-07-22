@@ -54624,8 +54624,8 @@
 "wdF" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/cup/bucket,
-/obj/item/food/grown/watermelon,
 /obj/item/food/grown/wheat,
+/obj/item/food/grown/melonlike/watermelon,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/garden)
 "wdL" = (
