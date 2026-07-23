@@ -65,6 +65,18 @@
 	)
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
+/datum/uplink_item/stealthy_weapons/syndicate_energy_bow
+	name = "Syndicate Hardlight Bow"
+	desc = "A modernized hardlight bow based on now outdated designs and modified for silent takedowns of targets. \
+			This hardlight bow utilized an internal energy generator to fabricate an infinite amount of hardlight arrows to shoot and can fabricate three types: \
+			Energy, X-Ray, and Shock. For you pacifists out there, Shock arrows will be your only option. \
+			Can be folded in-hand to allow it to be tucked away within backpacks."
+	item = /obj/item/gun/ballistic/bow/energy/syndicate
+	cost = 10
+	surplus = 20
+	progression_minimum = 15 MINUTES
+	purchasable_from = ~UPLINK_CLOWN_OPS
+
 /datum/uplink_item/stealthy_weapons/donkbat
 	name = "Donk Baseball Bat"
 	desc = "A weighted solid plastic baseball bat, perfect for knocking the wind out of people. Has a very distinct noise."
