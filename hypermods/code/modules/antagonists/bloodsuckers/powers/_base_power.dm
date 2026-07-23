@@ -7,6 +7,7 @@
 	button_icon_state = "power_feed"
 	buttontooltipstyle = "cult"
 	transparent_when_unavailable = TRUE
+	click_to_activate = TRUE
 
 	/// Cooldown you'll have to wait between each use, decreases depending on level.
 	cooldown_time = 2 SECONDS
