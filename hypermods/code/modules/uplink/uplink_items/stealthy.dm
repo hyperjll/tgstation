@@ -67,8 +67,8 @@
 
 /datum/uplink_item/stealthy_weapons/syndicate_energy_bow
 	name = "Syndicate Hardlight Bow"
-	desc = "A modernized hardlight bow based on now outdated designs and modified for silent takedowns of targets. \
-			This hardlight bow utilized an internal energy generator to fabricate an infinite amount of hardlight arrows to shoot and can fabricate three types: \
+	desc = "A modernized hardlight bow based on now outdated designs and modified for silent takedowns. \
+			This hardlight bow utilizes an internal energy generator to fabricate an infinite amount of hardlight arrows to shoot and can fabricate three types: \
 			Energy, X-Ray, and Shock. For you pacifists out there, Shock arrows will be your only option. \
 			Can be folded in-hand to allow it to be tucked away within backpacks."
 	item = /obj/item/gun/ballistic/bow/energy/syndicate
