@@ -13,45 +13,7 @@
 
 	/// Borer mob type, used for antag token spawns.
 	var/borer_mob_type = /mob/living/basic/cortical_borer/neutered
-/**
-/datum/antagonist/cortical_borer/antag_token(datum/mind/hosts_mind, mob/spender)
-	var/list/vents = list()
-	for(var/obj/machinery/atmospherics/components/unary/vent_pump/temp_vent as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/atmospherics/components/unary/vent_pump))
-		if(QDELETED(temp_vent))
-			continue
-		if(is_station_level(temp_vent.loc.z) && !temp_vent.welded)
-			var/datum/pipeline/temp_vent_parent = temp_vent.parents[1]
-			if(!temp_vent_parent)
-				continue // No parent vent
-			// Stops Cortical Borers getting stuck in small networks.
-			// See: Security, Virology
-			if(length(temp_vent_parent.other_atmos_machines) > 20)
-				vents += temp_vent
 
-	if(!length(vents))
-		message_admins(span_adminnotice("[spender] ([ckey(spender.key)]) tried spawning in as a borer, but no suitable vents were found!"))
-		return MAP_ERROR
-
-	if(isliving(spender) && hosts_mind)
-		hosts_mind.current.unequip_everything()
-		new /obj/effect/holy(hosts_mind.current.loc)
-		QDEL_IN(hosts_mind.current, 1 SECONDS)
-
-	var/mob/dead/observer/new_borer = spender
-	var/vent = pick(vents)
-	var/mob/living/basic/cortical_borer/spawned_cb = new borer_mob_type(get_turf(vent))
-	spawned_cb.move_into_vent(vent)
-	spawned_cb.PossessByPlayer(new_borer.ckey)
-	spawned_cb.mind.add_antag_datum(type)
-	notify_ghosts(
-		"Someone has become a borer due to spending an antag token ([spawned_cb])!",
-		source = spawned_cb,
-		action = NOTIFY_ORBIT,
-		header = "Something's Interesting!",
-	)
-	message_admins("[ADMIN_LOOKUPFLW(spawned_cb)] has been made into a borer by using an antag token.")
-	to_chat(spawned_cb, span_warning("You are a cortical borer! You can fear someone to make them stop moving, but make sure to inhabit them! You only grow/heal/talk when inside a host!"))
-**/
 /datum/antagonist/cortical_borer/on_gain()
 	cortical_owner = owner.current
 	forge_objectives()
@@ -112,24 +74,7 @@
 
 		ability_data["ability_name"] = initial(ability.name)
 		ability_data["ability_explanation"] = initial(ability.ability_explanation)
-/* Temporarily disabled -- Turn dis on once i figure out how to space stuff out properly in the TGUI
-		ability_data["ability_explanation"] += "Restrictions:"
-		if(ability.chemical_cost)
-			ability_data["ability_explanation"] += "<p>-To use this ability we need to use [ability.chemical_cost] of our internally synthesized chemicals. "
-		if(ability.stat_evo_points)
-			ability_data["ability_explanation"] += "-To make effective use of this ability we need to spend [ability.stat_evo_points] evolution points. "
-		if(ability.chemical_evo_points)
-			ability_data["ability_explanation"] += "-We have to use [ability.chemical_evo_points] chemical evolution points to use this ability. "
 
-		if(ability.requires_host)
-			ability_data["ability_explanation"] += "-We require a host to use this ability. "
-		if(ability.needs_living_host)
-			ability_data["ability_explanation"] += "-Our host requires to be alive in order for us to use this ability. "
-		if(ability.needs_dead_host)
-			ability_data["ability_explanation"] += "-Our host must be deceased in order for us to make effective use of this ability. "
-		if(ability.sugar_restricted)
-			ability_data["ability_explanation"] += "-We cannot use this ability when our host is under the effect of a highly dangerous chemical known as \"sugar\". "
-*/
 		ability_data["ability_icon"] = initial(ability.button_icon_state)
 
 		data["ability"] += list(ability_data)

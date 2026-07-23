@@ -81,9 +81,6 @@
 		DYNAMIC_TIER_HIGH = 4,
 	)
 	ruleset_flags = RULESET_INVADER
-	//required_enemies = list(2,2,1,1,1,1,1,0,0,0)
-	//required_candidates = 1
-	//cost = 20
 	min_pop = 10
 
 /datum/dynamic_ruleset/midround/from_ghosts/cortical_borer/assign_role(datum/mind/candidate)
