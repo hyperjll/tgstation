@@ -44,6 +44,10 @@
 
 /// mult: SILENT feed is 1/3 the amount
 /datum/antagonist/bloodsucker/proc/handle_feeding(mob/living/carbon/target, mult=1, power_level)
+	if(target.mind && (IS_BLOODSUCKER(target) || IS_VASSAL(target)))
+		to_chat(owner.current, span_warning("You cannot feed on [target]."))
+		return 0
+
 	// Starts at 15 (now 8 since we doubled the Feed time)
 	var/feed_amount = 15 + (power_level * 2)
 	var/blood_taken = min(feed_amount, target.blood_volume) * mult
