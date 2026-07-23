@@ -177,7 +177,7 @@
 		return
 	qdel(src)
 
-/obj/item/magic_tarot_card/throw_at(atom/target, range, speed, mob/thrower, spin, diagonals_first, quickstart, datum/callback/callback, force, dodgeable)
+/obj/item/magic_tarot_card/throw_at(atom/target, range, speed, mob/thrower, spin, diagonals_first, datum/callback/callback, force, gentle, quickstart, throw_type_path)
 	if(face_down)
 		flip()
 	. = ..()
