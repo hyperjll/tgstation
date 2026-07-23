@@ -28,7 +28,7 @@
 	for(var/mob/living/carbon/human/M in urange(10, user, 1))
 		if(prob(75))
 
-			M.Paralyze(rand(200,400))
+			M.Paralyze(rand(10 SECONDS, 40 SECONDS))
 			to_chat(M, span_userdanger("You feel a tremendous, paralyzing wave flood your mind."))
 
 		else
@@ -68,11 +68,12 @@
 
 	log_combat(user, null, "sabotaged the mindshields of everyone nearby", src)
 
-	for(var/mob/living/carbon/human/M in urange(10, user, 1))
+	for(var/mob/living/carbon/human/M in urange(2, user, 1))
 		if(HAS_TRAIT(M, TRAIT_MINDSHIELD))
 
-			M.Paralyze(rand(200,400))
-			to_chat(M, span_userdanger("You hear a tremendously sound shock within your head as your limbs fall limp."))
+			M.Paralyze(rand(3 SECONDS, 20 SECONDS))
+			M.adjust_organ_loss(ORGAN_SLOT_BRAIN, 40)
+			to_chat(M, span_userdanger("You hear a tremendously loud shock within your head as your limbs fall limp."))
 
 		else
 			to_chat(M, span_userdanger("You feel something akin to electricity hit your eyes, but nothing else happens."))

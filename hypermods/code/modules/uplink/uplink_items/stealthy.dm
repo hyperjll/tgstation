@@ -115,11 +115,12 @@
 
 /datum/uplink_item/stealthy_weapons/mindswitch
 	name = "Mindswitch"
-	desc = "A three-use switch which exploits Nanotrasen's mindshield implants, causing the brain \
-			to shut itself off for an extended period of time and causing significant brain damage."
+	desc = "A three-use switch which exploits Nanotrasen's mindshield implants within a SMALL radius around the user, crippling the brain's \
+			motor-ability for a short period of time and causing significant brain damage. Only one purchase is available per agent."
 	item = /obj/item/mindbatterer/mindshield
-	cost = 8
+	cost = 6
 	surplus = 30
+	limited_stock = 1
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS // Would easily make taking down high priority targets too easy.
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
