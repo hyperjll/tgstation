@@ -397,6 +397,7 @@ GLOBAL_LIST_INIT(snow_recipes, list ( \
 	new/datum/stack_recipe("snowman", /obj/structure/statue/snow/snowman, 5, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_ENTERTAINMENT), \
 	new/datum/stack_recipe("snowball", /obj/item/toy/snowball, 1, crafting_flags = NONE, category = CAT_WEAPON_RANGED), \
 	new/datum/stack_recipe("snow tile", /obj/item/stack/tile/mineral/snow, 1, 4, 20, crafting_flags = NONE, category = CAT_TILES), \
+	new/datum/stack_recipe("ice tile", /obj/item/stack/tile/mineral/ice, 2, 4, 20, crafting_flags = NONE, category = CAT_TILES), \
 ))
 
 /obj/item/stack/sheet/mineral/snow/Initialize(mapload, new_amount, merge, list/mat_override, mat_amt)

@@ -7450,6 +7450,7 @@
 #include "hypermods\code\game\objects\items\stacks\medical.dm"
 #include "hypermods\code\game\objects\items\stacks\sheets\glass.dm"
 #include "hypermods\code\game\objects\items\stacks\sheets\mineral.dm"
+#include "hypermods\code\game\objects\items\stacks\tiles\tile_mineral.dm"
 #include "hypermods\code\game\objects\items\storage\ammobox.dm"
 #include "hypermods\code\game\objects\items\storage\backpack.dm"
 #include "hypermods\code\game\objects\items\storage\belt.dm"
