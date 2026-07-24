@@ -72,6 +72,7 @@
 	purchasable_from = ALL
 	progression_minimum = 90 MINUTES
 	item = /obj/item/storage/box/syndie_kit/chameleon/broken
+	cost = 1
 
 /datum/uplink_item/badass/costumes/centcom_official
 	name = "CentCom Official Costume"
