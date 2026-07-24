@@ -87,5 +87,5 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT*5, /datum/material/glass = SHEET_MATERIAL_AMOUNT*2)
 	build_path = /obj/item/reagent_containers/hypospray/medipen/naniteinjector
-	category = list(RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_MACHINE_RESEARCH)
+	category = list(RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
