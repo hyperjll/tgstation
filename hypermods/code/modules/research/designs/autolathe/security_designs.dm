@@ -592,6 +592,18 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
+/datum/design/strilka310_surplus_clip
+	name = ".310 Surplus Clip (VERY Lethal)"
+	id = "strilka310_surplus_clip"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 15)
+	build_path = /obj/item/ammo_box/speedloader/strilka310/surplus
+	category = list(
+		RND_CATEGORY_HACKED,
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
 /datum/design/paintball_red
 	name = "Red Paintballs Magazine"
 	id = "red_paintballs"
