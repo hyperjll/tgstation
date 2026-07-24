@@ -268,7 +268,7 @@
 /datum/uplink_item/dangerous/boltactionrifle_prime
 	name = "Prime Bolt-Action Sporting Rifle"
 	desc = "A weapon case containing a bolt action rifle with 5 lethal .310 Strilka rounds loaded. Comes with 3 stripper clips of .310 Strilka. \
-			Ammunition quality is guarenteed by our experts! Rifle comes with an in-built scope!"
+			Ammunition quality is guarenteed by our experts! Rifle comes with an built-in scope!"
 	item = /obj/item/storage/toolbox/guncase/soviet/prime
 	cost = 4
 	surplus = 30
