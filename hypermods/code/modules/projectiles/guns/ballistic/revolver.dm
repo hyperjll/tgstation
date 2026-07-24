@@ -15,6 +15,9 @@
 	desc = "A old-style double-chamber pistol. Load individually with .357 rounds."
 	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
 	icon_state = "derringer" // Shoutout to SynnGraffkin at https://github.com/Whitesands13/Whitesands/pull/655 for the original icon! - hyperjll
+	inhand_icon_state = "derringer"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/derringer // 2 rounds max
 	fire_sound_volume = 40 // Quieter?
@@ -22,6 +25,24 @@
 
 /obj/item/gun/ballistic/revolver/derringer/attackby(obj/item/A, mob/user, params)
 	if(istype(A, /obj/item/ammo_box)) // prevent speedloader usage
+		return TRUE
+	. = ..()
+
+/obj/item/gun/ballistic/revolver/salamander
+	name = "salamander pistol"
+	desc = "An assassin-grade revolver utilizing .50 AE rounds with a capacity of three bullets. Must be loaded individually."
+	icon = 'hypermods/icons/obj/weapons/guns/ballistic.dmi'
+	icon_state = "salamander"
+	inhand_icon_state = "salamander"
+	lefthand_file = 'hypermods/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'hypermods/icons/mob/inhands/weapons/guns_righthand.dmi'
+	w_class = WEIGHT_CLASS_TINY
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/salamander // 3 rounds max
+	fire_sound_volume = 40
+	fire_delay = 0
+
+/obj/item/gun/ballistic/revolver/salamander/attackby(obj/item/A, mob/user, params)
+	if(istype(A, /obj/item/ammo_box)) // one at a time.
 		return TRUE
 	. = ..()
 

@@ -13,3 +13,9 @@
 /obj/item/ammo_box/magazine/internal/cylinder/derringer
 	name = "derringer revolver cylinder"
 	max_ammo = 2
+
+/obj/item/ammo_box/magazine/internal/cylinder/salamander
+	name = "salamander revolver cylinder"
+	caliber = CALIBER_50AE
+	ammo_type = /obj/item/ammo_casing/a50ae
+	max_ammo = 3

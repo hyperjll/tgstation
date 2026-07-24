@@ -65,6 +65,30 @@
 	)
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
+/datum/uplink_item/stealthy_weapons/salamander
+	name = "Salamander Pistol"
+	desc = "A concealable triple-chamber pistol loaded with individual .50 AE rounds. Fits in boots."
+	item = /obj/item/gun/ballistic/revolver/salamander
+	cost = 4
+	surplus = 50
+	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+	relevant_child_items = list(
+		/datum/uplink_item/ammo/deagle,
+		/datum/uplink_item/ammo/deagle/random,
+		/datum/uplink_item/ammo/deagle/ap,
+		/datum/uplink_item/ammo/deagle/hp,
+		/datum/uplink_item/ammo/deagle/inc,
+		/datum/uplink_item/ammo/deagle/cs,
+		/datum/uplink_item/ammo/deagle/emp,
+		/datum/uplink_item/ammo/deagle/hi,
+		/datum/uplink_item/ammo/deagle/demo,
+		/datum/uplink_item/ammo/deagle/rod,
+		/datum/uplink_item/ammo/deagle/bomb,
+		/datum/uplink_item/ammo/deagle/rep,
+		/datum/uplink_item/ammo_restock/ammo50box,
+	)
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
 /datum/uplink_item/stealthy_weapons/syndicate_energy_bow
 	name = "Syndicate Hardlight Bow"
 	desc = "A modernized hardlight bow based on now outdated designs and modified for silent takedowns. \

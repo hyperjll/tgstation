@@ -121,7 +121,8 @@
 			/obj/item/holochip,
 			/obj/item/toy/crayon,
 			/obj/item/reagent_containers/cup/glass/flask,
-			/obj/item/gun/ballistic/revolver/derringer
+			/obj/item/gun/ballistic/revolver/derringer,
+			/obj/item/gun/ballistic/revolver/salamander
 		),
 		cant_hold_list = list(
 			/obj/item/screwdriver/power,
