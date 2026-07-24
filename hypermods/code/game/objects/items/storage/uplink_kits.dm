@@ -1267,7 +1267,7 @@
 	new /obj/item/card/emag(src)
 	new /obj/item/card/emag/doorjack(src)
 	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
-	new /obj/item/jammer(src)
+	new /obj/item/encryptionkey/syndicate(src)
 	new /obj/item/stack/telecrystal/five(src)
 	new /obj/item/stack/telecrystal/five(src)
 
