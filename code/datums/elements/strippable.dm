@@ -306,7 +306,7 @@
 /proc/start_unequip_mob(obj/item/item, mob/source, mob/user, strip_delay, hidden = FALSE)
 	var/thief_multiplier = HAS_TRAIT(user, TRAIT_THIEF) ? 2 : 1 // Are we stealth-stealing? If so, make timer 2x as long.
 	var/delay = (strip_delay || item.strip_delay) * thief_multiplier
-	if(!do_after(user, delay, source, interaction_key = REF(item), hidden = hidden))
+	if (!do_after(user, strip_delay || item.strip_delay, source, interaction_key = REF(item), cog_icon = hidden ? null : 'icons/effects/progressbar.dmi'))
 		return FALSE
 
 	return TRUE
