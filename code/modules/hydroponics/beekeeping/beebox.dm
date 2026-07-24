@@ -161,8 +161,8 @@
 		return ITEM_INTERACT_SUCCESS
 
 	// Adding flowers increases the resources
-	if(istype(tool, /obj/item/food/grown/poppy))
-		var/obj/item/food/grown/poppy/Poppy = tool
+	if(istype(tool, /obj/item/food/grown/flower/poppy))
+		var/obj/item/food/grown/flower/poppy/Poppy = tool
 		visible_message(span_notice("[user] composts the [Poppy] into the [src]."))
 		bee_resources += 20
 		qdel(Poppy)

@@ -132,7 +132,7 @@
 	user.visible_message(span_danger("[user] presses a few buttons on [src] and it starts ominously beeping!"), span_notice("You activate [src] and start scanning the area. Do not exit [get_area_name(user, TRUE)] until the scan finishes!"))
 	playsound(user, 'sound/machines/beep/triple_beep.ogg', 30, TRUE)
 
-	if(!do_after(user, 3 MINUTES, src, IGNORE_USER_LOC_CHANGE | IGNORE_TARGET_LOC_CHANGE | IGNORE_HELD_ITEM | IGNORE_INCAPACITATED | IGNORE_SLOWDOWNS, extra_checks = CALLBACK(src, PROC_REF(scan_checks), user, user_area, objective), hidden = TRUE))
+	if(!do_after(user, 3 MINUTES, src, IGNORE_USER_LOC_CHANGE | IGNORE_TARGET_LOC_CHANGE | IGNORE_HELD_ITEM | IGNORE_INCAPACITATED | IGNORE_SLOWDOWNS, extra_checks = CALLBACK(src, PROC_REF(scan_checks), user, user_area, objective), cog_icon = null))
 		playsound(user, 'sound/machines/buzz/buzz-sigh.ogg', 30, TRUE)
 		return
 
