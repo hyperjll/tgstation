@@ -470,10 +470,22 @@
 
 
 /datum/design/m50_mag
-	name = ".50 Magazine (Very Lethal)"
+	name = ".50 AE Magazine (Very Lethal)"
 	id = "m50_mag"
 	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*21)
+	build_path = /obj/item/ammo_box/magazine/m50
+	category = list(
+		RND_CATEGORY_HACKED,
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design/m50
+	name = "Ammo Box (.50 AE) (Very Lethal)"
+	id = "m50"
+	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
+	materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 600)
 	build_path = /obj/item/ammo_box/m50
 	category = list(
 		RND_CATEGORY_HACKED,
@@ -482,99 +494,99 @@
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design/m50_mag_ap
-	name = "AP .50 Magazine (Very Lethal)"
+	name = "AP .50 AE Magazine (Very Lethal)"
 	id = "m50_mag_ap"
 	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*21, /datum/material/diamond = SHEET_MATERIAL_AMOUNT*9)
-	build_path = /obj/item/ammo_box/m50/ap
+	build_path = /obj/item/ammo_box/magazine/m50/ap
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design/m50_mag_hp
-	name = "HP .50 Magazine (Very Lethal)"
+	name = "HP .50 AE Magazine (Very Lethal)"
 	id = "m50_mag_hp"
 	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*21, /datum/material/titanium = SHEET_MATERIAL_AMOUNT*3)
-	build_path = /obj/item/ammo_box/m50/hp
+	build_path = /obj/item/ammo_box/magazine/m50/hp
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design/m50_mag_inc
-	name = "Incendiary .50 Magazine (Very Lethal)"
+	name = "Incendiary .50 AE Magazine (Very Lethal)"
 	id = "m50_mag_inc"
 	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*21, /datum/material/plasma = SHEET_MATERIAL_AMOUNT*6)
-	build_path = /obj/item/ammo_box/m50/inc
+	build_path = /obj/item/ammo_box/magazine/m50/inc
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design/m50_mag_emp
-	name = "EMP .50 Magazine (Very Lethal)"
+	name = "EMP .50 AE Magazine (Very Lethal)"
 	id = "m50_mag_emp"
 	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*21, /datum/material/uranium = SHEET_MATERIAL_AMOUNT*6)
-	build_path = /obj/item/ammo_box/m50/emp
+	build_path = /obj/item/ammo_box/magazine/m50/emp
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design/m50_mag_hi
-	name = "Hi-Power .50 Magazine (EXTREMELY Lethal)"
+	name = "Hi-Power .50 AE Magazine (EXTREMELY Lethal)"
 	id = "m50_mag_hi"
 	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
 	materials = list(/datum/material/titanium = SHEET_MATERIAL_AMOUNT*21)
-	build_path = /obj/item/ammo_box/m50/hi
+	build_path = /obj/item/ammo_box/magazine/m50/hi
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design/m50_mag_demo
-	name = "Demolish .50 Magazine (Very Lethal)"
+	name = "Demolish .50 AE Magazine (Very Lethal)"
 	id = "m50_mag_demo"
 	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
 	materials = list(/datum/material/titanium = SHEET_MATERIAL_AMOUNT*12, /datum/material/plasma = SHEET_MATERIAL_AMOUNT*9)
-	build_path = /obj/item/ammo_box/m50/demo
+	build_path = /obj/item/ammo_box/magazine/m50/demo
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design/m50_mag_rod
-	name = "Immovable .50 Magazine (EXTREMELY Lethal)"
+	name = "Immovable .50 AE Magazine (EXTREMELY Lethal)"
 	id = "m50_mag_rod"
 	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
 	materials = list(/datum/material/titanium = SHEET_MATERIAL_AMOUNT*21, /datum/material/bluespace = SHEET_MATERIAL_AMOUNT*4)
-	build_path = /obj/item/ammo_box/m50/rod
+	build_path = /obj/item/ammo_box/magazine/m50/rod
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design/m50_mag_bomb
-	name = "Ordinance .50 Magazine (EXTREMELY Lethal)"
+	name = "Ordinance .50 AE Magazine (EXTREMELY Lethal)"
 	id = "m50_mag_bomb"
 	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*21, /datum/material/plasma = SHEET_MATERIAL_AMOUNT*21)
-	build_path = /obj/item/ammo_box/m50/bomb
+	build_path = /obj/item/ammo_box/magazine/m50/bomb
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design/m50_mag_rep
-	name = "Repulsive .50 Magazine (Very Lethal)"
+	name = "Repulsive .50 AE Magazine (Very Lethal)"
 	id = "m50_mag_rep"
 	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
 	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT*21, /datum/material/bluespace = SHEET_MATERIAL_AMOUNT*1, /datum/material/plasma = SHEET_MATERIAL_AMOUNT*3)
-	build_path = /obj/item/ammo_box/m50/rep
+	build_path = /obj/item/ammo_box/magazine/m50/rep
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO,
 	)
