@@ -246,7 +246,7 @@
 	item = /obj/item/gun/ballistic/rifle/boltaction/surplus
 	cost = 1
 	surplus = 0 // Found in it's own case in surplus crates.
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	purchasable_from = ~UPLINK_CLOWN_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	relevant_child_items = list(
 		/datum/uplink_item/ammo/boltactionammo,

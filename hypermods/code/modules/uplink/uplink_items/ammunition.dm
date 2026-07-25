@@ -385,7 +385,17 @@
 			Despite the smell, our ammunition specialists have verified their quality."
 	item = /obj/item/storage/toolbox/ammobox/strilka310
 	cost = 2
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	purchasable_from = ~UPLINK_CLOWN_OPS
+
+/datum/uplink_item/ammo/boltactionammo_phasic
+	name = "Phasic .310 Strilka Ammo Box"
+	desc = "A smelly, old box of .310 Strilka Phasic stripper clips for those bolt-action rifles we're selling you. \
+			Each box contains six clips, with each containing 5 rounds. \
+			These phasic rounds will pass through all but living material to ensure minimal property damage. \
+			Despite the smell, our ammunition specialists have verified their quality."
+	item = /obj/item/storage/toolbox/ammobox/strilka310/phasic
+	cost = 6
+	purchasable_from = UPLINK_SERIOUS_OPS
 
 /datum/uplink_item/ammo/tommygun
 	name = "Tommy Gun Drum Magazine"

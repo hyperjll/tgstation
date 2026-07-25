@@ -206,3 +206,6 @@
 	name = "prime sahkno gun case"
 	weapon_to_spawn = /obj/item/gun/ballistic/rifle/boltaction/prime
 	extra_to_spawn = /obj/item/ammo_box/speedloader/strilka310
+
+/obj/item/storage/toolbox/ammobox/strilka310/phasic
+	ammo_to_spawn = /obj/item/ammo_box/speedloader/strilka310/phasic
