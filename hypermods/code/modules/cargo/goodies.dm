@@ -1,3 +1,9 @@
+/datum/supply_pack/goody/lockbox_personal
+	name = "Personal Lockbox"
+	desc = "A single secure lockbox equipped with an indentification lock. Perfect for secure storage of certain goods!"
+	cost = PAYCHECK_CREW * 5
+	contains = list(/obj/item/storage/lockbox/personal)
+
 /datum/supply_pack/goody/bicaridinebottles
 	name = "Bicaridine Pill Bottles"
 	desc = "Three pill bottles filled with bicaridine pills. Useful in treating brute damage quickly."
