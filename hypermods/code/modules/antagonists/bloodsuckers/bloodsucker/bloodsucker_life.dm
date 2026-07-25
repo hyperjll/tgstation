@@ -11,7 +11,7 @@
 	if(is_in_torpor())
 		check_end_torpor()
 	// Deduct Blood
-	if(owner.current.stat == CONSCIOUS && !HAS_TRAIT(owner.current, TRAIT_IMMOBILIZED) && !is_in_torpor())
+	if(owner.current.stat == STABLE && !HAS_TRAIT(owner.current, TRAIT_IMMOBILIZED) && !is_in_torpor())
 		INVOKE_ASYNC(src, PROC_REF(AddBloodVolume), -BLOODSUCKER_PASSIVE_BLOOD_DRAIN) // -.1 currently
 	if(HandleHealing())
 		if((COOLDOWN_FINISHED(src, bloodsucker_spam_healing)) && bloodsucker_blood_volume > 0)

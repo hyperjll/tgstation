@@ -107,7 +107,7 @@
 	log_combat(attacker, defender, "god fist (The Tunnel Arts)")
 	defender.apply_damage(20, attacker.get_attack_type(), affecting)
 
-	if(!defender.mind || defender.stat != CONSCIOUS || prob(50))
+	if(!defender.mind || defender.stat != STABLE || prob(50))
 		return TRUE
 
 	var/mob/living/basic/illusion/khan_warrior/khan = new(attacker.loc)

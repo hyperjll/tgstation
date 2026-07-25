@@ -135,7 +135,7 @@
 		to_chat(user, span_warning("You have a stake in your chest! Your powers are useless."))
 		return FALSE
 	// Conscious? -- We use our own (AB_CHECK_CONSCIOUS) here so we can control it more, like the error message.
-	if((check_flags & BP_CANT_USE_WHILE_UNCONSCIOUS) && user.stat != CONSCIOUS)
+	if((check_flags & BP_CANT_USE_WHILE_UNCONSCIOUS) && user.stat != STABLE)
 		to_chat(user, span_warning("You can't do this while you are unconcious!"))
 		return FALSE
 	// Incapacitated?
@@ -212,7 +212,7 @@
 		DeactivatePower()
 		return
 	// We can keep this up (For now), so Pay Cost!
-	if(!(power_flags & BP_AM_COSTLESS_UNCONSCIOUS) && owner.stat != CONSCIOUS)
+	if(!(power_flags & BP_AM_COSTLESS_UNCONSCIOUS) && owner.stat != STABLE)
 		if(bloodsuckerdatum_power)
 			bloodsuckerdatum_power.AddBloodVolume(-constant_bloodcost)
 		else

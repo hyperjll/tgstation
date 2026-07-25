@@ -46,7 +46,7 @@
 	return isatom(cast_on) // We are not really picky
 
 /datum/action/cooldown/spell/touch/acid/IsAvailable(feedback = FALSE)
-	if(!owner || owner.stat != CONSCIOUS || (next_use_time > world.time))
+	if(!owner || owner.stat != STABLE || (next_use_time > world.time))
 		return ..()
 
 	var/mob/living/carbon/human = owner
@@ -56,7 +56,7 @@
 	return ..()
 
 /datum/action/cooldown/spell/touch/acid/can_cast_spell(feedback = TRUE)
-	if(!owner || owner.stat != CONSCIOUS || (next_use_time > world.time))
+	if(!owner || owner.stat != STABLE || (next_use_time > world.time))
 		return ..()
 
 	var/mob/living/carbon/human = owner

@@ -383,7 +383,7 @@
 	if(moody_human.mob_mood.sanity_level >= SANITY_LEVEL_DISTURBED || owner.has_status_effect(/datum/status_effect/last_stand))
 		owner.remove_status_effect(/datum/status_effect/contentment)
 
-	if(HAS_TRAIT(moody_human, TRAIT_CRITICAL_CONDITION))
+	if(moody_human.stat == SOFT_CRIT || moody_human.stat == HARD_CRIT)
 		if(prob(laststand_chance))
 			moody_human.last_stand()
 

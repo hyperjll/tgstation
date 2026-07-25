@@ -24,7 +24,7 @@
 	if(flashed.stat == DEAD)
 		return
 
-	if(flashed.stat != CONSCIOUS)
+	if(flashed.stat != STABLE)
 		return
 
 	flashed.adjust_organ_loss(ORGAN_SLOT_BRAIN, -10)

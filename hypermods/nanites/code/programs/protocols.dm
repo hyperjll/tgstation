@@ -102,7 +102,7 @@
 	var/boost = 3
 
 /datum/nanite_program/protocol/offline/check_conditions()
-	if(nanites.host_mob.stat == CONSCIOUS)
+	if(nanites.host_mob.stat == STABLE)
 		return FALSE
 	return ..()
 

@@ -276,7 +276,7 @@
 		return
 
 	if(on)
-		if(owner.stat == UNCONSCIOUS || owner.stat == DEAD)
+		if(IS_UNCONSCIOUS(owner))
 			toggle(silent = TRUE)
 		time_on += 1
 		switch(time_on)

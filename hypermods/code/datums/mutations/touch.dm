@@ -1,6 +1,6 @@
 // All the code below makes it so you can shock someone if they're pulling you whilst you're cuffed
 /datum/action/cooldown/spell/touch/shock/IsAvailable(feedback = FALSE)
-	if(!owner || owner.stat != CONSCIOUS || !owner.pulledby || (next_use_time > world.time))
+	if(!owner || owner.stat != STABLE || !owner.pulledby || (next_use_time > world.time))
 		return ..()
 
 	var/mob/living/carbon/human = owner

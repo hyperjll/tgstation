@@ -288,7 +288,7 @@
 	if(!iscarbon(target))
 		return
 	var/mob/living/carbon/carbon_target = target
-	if(carbon_target.stat >= UNCONSCIOUS)
+	if(IS_UNCONSCIOUS(carbon_target))
 		return
 	var/obj/effect/justice_engine/cooldown_engine = get_engine_by_state(JUSTICE_ENGINE_ONCOOLDOWN)
 	if(isnull(cooldown_engine))
@@ -443,7 +443,7 @@
 	if(!ishuman(target))
 		return FALSE
 	var/mob/living/carbon/human/live_or_dead = target
-	if(live_or_dead.stat < UNCONSCIOUS && live_or_dead.get_stamina_loss() < 100)
+	if(IS_UNCONSCIOUS(live_or_dead) && live_or_dead.get_stamina_loss() < 100)
 		return FALSE
 	INVOKE_ASYNC(src, PROC_REF(finish_him), src, pilot, live_or_dead)
 	return TRUE
@@ -507,7 +507,7 @@
 /obj/vehicle/sealed/mecha/justice/proc/attack_in_aoe(mob/living/pilot)
 	new /obj/effect/temp_visual/mech_attack_aoe_attack(get_turf(src))
 	for(var/mob/living/something_living in range(1, get_turf(src)))
-		if(something_living.stat >= UNCONSCIOUS \
+		if(IS_UNCONSCIOUS(something_living) \
 		|| something_living.get_stamina_loss() >= 100 \
 		|| something_living == pilot)
 			continue
@@ -549,7 +549,7 @@
 		if(locate(/obj/structure/window) in line_turf)
 			break
 		for(var/mob/living/something_living in line_turf.contents)
-			if(something_living.stat >= UNCONSCIOUS \
+			if(IS_UNCONSCIOUS(something_living) \
 			|| something_living.get_stamina_loss() >= 100 \
 			|| is_driver(something_living) \
 			|| is_occupant(something_living))

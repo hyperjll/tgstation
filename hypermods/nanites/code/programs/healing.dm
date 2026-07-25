@@ -318,7 +318,7 @@
 	return ..()
 
 /datum/nanite_program/critstable/active_effect()
-	if(HAS_TRAIT(host_mob, TRAIT_CRITICAL_CONDITION))
+	if(host_mob.stat == SOFT_CRIT || host_mob.stat == HARD_CRIT)
 		var/datum/reagent/S = host_mob.reagents?.has_reagent(/datum/reagent/medicine/epinephrine)
 		if(S)
 			return

@@ -11,7 +11,7 @@
 	RegisterSignal(target, COMSIG_ITEM_ATTACK, PROC_REF(steal_life))
 
 /datum/component/enchantment/lifesteal/proc/steal_life(datum/source, mob/living/target, mob/living/user)
-	if(!istype(target) || target.stat != CONSCIOUS)
+	if(!istype(target) || target.stat != STABLE)
 		return
 	var/obj/item/parentItem = parent
 	var/health_back = CEILING(level * parentItem.force * 0.1, 1)
