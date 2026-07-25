@@ -77,10 +77,6 @@
 	for(var/i in 1 to 3)
 		new /obj/item/grenade/chem_grenade/incendiary(src)
 
-/obj/item/storage/box/syndie_kit/stripperclips/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/ammo_box/speedloader/strilka310(src)
-
 /obj/item/storage/harpoon_quiver
 	name = "quiver"
 	desc = "A quiver for holding harpoons."
