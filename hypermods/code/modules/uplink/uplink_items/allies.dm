@@ -161,17 +161,6 @@
 	purchasable_from = ALL
 	uplink_item_flags = SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/reinforcements/spongecapsules
-	name = "Syndicate Sponge Capsules"
-	desc = "After extensive research into monkey cubes and gold slime extracts, the xenobiologists at the Tiger Coop managed to combine them \
-			into one all-in-one package. Simply place a capsule where you need your monster party and spray with water. Each capsule will \
-			bring forth 2 random beasts to maul random bystanders. Comes with SIX sponge capsules. Monsters may or may not attack you."
-	item = /obj/item/storage/box/spongecapsules
-	cost = 7
-	surplus = 10
-	purchasable_from = ~UPLINK_SERIOUS_OPS
-	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
 /datum/uplink_item/reinforcements/cyborgrescue
 	name = "Rescue Cyborg Module"
 	desc = "An illegal module which grants a cyborg of choice fulton equipment. \

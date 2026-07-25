@@ -109,10 +109,19 @@
 
 /datum/uplink_item/mobility/spininverters
 	name = "Quantum Spin Inverters"
-	desc = "An experimental device that is able to swap the locations of two entities by switching their particles' spin values. Must be linked to another device to function."
+	desc = "Two experimental devices that are able to swap the locations of themselves and anything they're in contact with by switching their particles' spin values. Devices must be linked before use."
 	item = /obj/item/storage/box/syndie_kit/spininverters
 	cost = 2
 	surplus = 20
+	uplink_item_flags = NONE
+
+/datum/uplink_item/mobility/quantumpad
+	name = "Quantum Pad"
+	desc = "An experimental teleportation pad used to quickly travel between two locations with ease. Requires a multitool to unpack and link between other pads or a quantum keycard to use, purchase comes with neither."
+	item = /obj/item/flatpack/quantumpad
+	cost = 2
+	surplus = 0
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	uplink_item_flags = NONE
 
 /datum/uplink_item/mobility/syndicate_fulton
