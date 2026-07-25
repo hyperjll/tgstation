@@ -31,7 +31,7 @@
 	..()
 	tesla_zap(source = src, zap_range = zap_range, power = power, cutoff = 1e3, zap_flags = zap_flags)
 	return BULLET_ACT_HIT
-// Lower AP than phasic, but it passes through everything.
+// Lower AP than phasic, but it PIERCES through everything.
 /obj/projectile/bullet/c357/heartpiercer
 	name = ".357 Heartpiercer bullet"
 	damage = 35
