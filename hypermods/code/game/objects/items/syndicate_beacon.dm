@@ -38,6 +38,9 @@
 		var/obj/effect/mob_spawn/ghost_role/pod_to_spawn_from = locate(/obj/effect/mob_spawn/ghost_role/human/syndicate/satellite)
 		pod_to_spawn_from.create_from_ghost(pick(volunteers))
 
+	if(QDELETED(src) || !user || !user.is_holding(src) || user.incapacitated)
+		return
+
 	qdel(src)
 	var/new_box = new /obj/item/storage/box/syndie_kit/syndicate_gate_bundle()
 	user.put_in_active_hand(new_box)
