@@ -268,8 +268,10 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 
 		// Current status
 		if(!isnull(uniform))
-			if (sensor_mode >= SENSOR_LIVING || nanite_sensors)
+			if (sensor_mode >= SENSOR_VITALS || nanite_sensors)
 				entry["life_status"] = tracked_living_mob.stat
+			else if (sensor_mode == SENSOR_LIVING)
+				entry["life_status"] = (tracked_living_mob.stat == DEAD) ? DEAD : STABLE
 		else
 			if(nanite_sensors)
 				entry["life_status"] = tracked_living_mob.stat
