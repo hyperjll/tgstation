@@ -22,9 +22,10 @@
 "R" = (/obj/machinery/computer/mech_bay_power_console{dir = 4},/turf/open/floor/carpet/black,/area/misc/survivalpod)
 "S" = (/obj/machinery/light/directional/south,/turf/open/floor/carpet/black,/area/misc/survivalpod)
 "W" = (/obj/machinery/stasis,/turf/open/floor/carpet/black,/area/misc/survivalpod)
+"Z" = (/turf/closed/wall/mineral/plastitanium/survival/pod,/area/misc/survivalpod)
 
 (1,1,1) = {"
-aaaaaaaaa
+ZaaaaaaaZ
 aJgLyndOa
 accccccca
 aRcccccMa
@@ -32,5 +33,5 @@ ajcceccKa
 alccccmWa
 apcccccqa
 alSfcfSBa
-aaazHzaaa
+ZaazHzaaZ
 "}

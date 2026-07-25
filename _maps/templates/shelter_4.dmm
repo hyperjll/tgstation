@@ -68,6 +68,10 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/carpet/black,
 /area/misc/survivalpod)
+"kw" = (
+/obj/effect/turf_decal/mining/survival,
+/turf/closed/wall/mineral/plastitanium/survival/nodiagonal,
+/area/misc/survivalpod)
 "kD" = (
 /obj/effect/turf_decal/mining/survival{
 	dir = 8
@@ -77,10 +81,6 @@
 "np" = (
 /obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/carpet/black,
-/area/misc/survivalpod)
-"nw" = (
-/obj/effect/turf_decal/mining/survival,
-/turf/closed/wall/mineral/plastitanium/survival/nodiagonal,
 /area/misc/survivalpod)
 "nI" = (
 /obj/machinery/door/airlock/survival_pod/glass,
@@ -267,6 +267,9 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/mineral/plastitanium/pod/dark,
 /area/misc/survivalpod)
+"Jb" = (
+/turf/closed/wall/mineral/plastitanium/survival/pod,
+/area/misc/survivalpod)
 "Lj" = (
 /obj/machinery/smartfridge/survival_pod/preloaded,
 /turf/open/floor/carpet/black,
@@ -400,7 +403,7 @@
 /area/misc/survivalpod)
 
 (1,1,1) = {"
-UQ
+Jb
 UQ
 Mh
 UQ
@@ -413,7 +416,7 @@ Yp
 kD
 Yp
 kD
-UQ
+Jb
 "}
 (2,1,1) = {"
 yU
@@ -429,7 +432,7 @@ OT
 eV
 rC
 np
-nw
+kw
 "}
 (3,1,1) = {"
 UQ
@@ -461,7 +464,7 @@ rC
 rC
 rC
 LA
-nw
+kw
 "}
 (5,1,1) = {"
 UQ
@@ -525,7 +528,7 @@ rC
 rC
 rC
 TM
-nw
+kw
 "}
 (9,1,1) = {"
 UQ
@@ -608,7 +611,7 @@ dh
 UQ
 "}
 (14,1,1) = {"
-UQ
+Jb
 UQ
 UQ
 xt
@@ -621,5 +624,5 @@ Bs
 RW
 UQ
 ql
-UQ
+Jb
 "}
