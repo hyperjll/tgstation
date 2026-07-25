@@ -157,3 +157,13 @@
 	surplus = 0
 	cant_discount = TRUE
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/device_tools/workshop_capsule
+	name = "Workshop Capsule"
+	desc = "A single capsule containing an miniaturized suite acting as a base of operations in normally hazardous environments such as space or lavaland. \
+			Contains a hacked autolathe, some materials and tools, a small medical suite, some food and drink, a quantum pad and keycard, and finally a teleporter hub for quick departures. \
+			Be wary that this suite may be discovered by undesirable people, and the teleporter hub may allow people to find it if left online."
+	item = /obj/item/survivalcapsule/syndicate
+	cost = 5
+	surplus = 0
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

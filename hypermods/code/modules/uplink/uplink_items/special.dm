@@ -86,7 +86,7 @@
 	desc = "A single capsule containing an entire survival suite for you to enjoy in normally hazardous environments such as space or lavaland. \
 			Comes with a bar, a miniature medical suite, various vending machines, a restroom with a sink, a teleporter hub, and more! \
 			Requires Syndicate access to enter and exit, you'll need an Agent Identification Card for that."
-	item = /obj/item/survivalcapsule/syndicate
+	item = /obj/item/survivalcapsule/syndicate_luxury
 	cost = 8
 	surplus = 0
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
