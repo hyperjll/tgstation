@@ -991,6 +991,7 @@
 	item = /obj/item/survivalcapsule/cyborg_factory
 	cost = 25
 	surplus = 0
+	progression_minimum = 30 MINUTES
 	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_CAPTAIN)
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
