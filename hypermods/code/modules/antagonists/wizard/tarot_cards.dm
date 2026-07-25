@@ -1002,7 +1002,7 @@
 	SSdynamic.rulesets_to_spawn[LIGHT_MIDROUND] += new_lights // 50/50% chance for it to add room for a new threat.
 	SSdynamic.try_spawn_midround(LIGHT_MIDROUND)
 
-	message_admins("[ADMIN_LOOKUPFLW(target)] used a [target]")
+	message_admins("[ADMIN_LOOKUPFLW(target)] used a [src]")
 	target.log_message("used a [src].", LOG_ATTACK)
 
 /datum/tarot/reversed/the_world
