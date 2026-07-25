@@ -91,7 +91,8 @@
 
 /datum/uplink_item/armor/magboots_syndie
 	name = "Blood-Red Magboots"
-	desc = "A pair of syndicate-branded blood-red magnetic boots. Allows the wearer to operate as if they had gravity. \
+	desc = "A pair of magnetic boots with a Syndicate paintjob that assist with freer movement in space or on-station \
+			especially during gravitational generator failures. \
 			Unlike the standardized versions provided for free for our operatives, these premium magboots have a greatly reduced magnetic pull, resulting in less strain on the user."
 	item = /obj/item/clothing/shoes/magboots/syndie/premium
 	cost = 2
