@@ -549,7 +549,7 @@
 	to_chat(affected_mob, span_warning("You feel someone try to inject you with something."))
 	balloon_alert(user, "injecting...")
 	log_combat(user, affected_mob, "attempted to inject", src)
-	if(!do_after(user, 5 SECONDS, hidden = FALSE))
+	if(!do_after(user, 5 SECONDS, cog_icon = null))
 		balloon_alert(user, "interrupted!")
 		return
 

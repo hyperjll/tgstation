@@ -25,7 +25,7 @@
 		carbon_user.changeNext_move(CLICK_CD_BREAKOUT)
 		carbon_user.last_special = world.time + CLICK_CD_BREAKOUT
 		addtimer(CALLBACK(src, PROC_REF(check_if_shake)), 1 SECONDS)
-		if(do_after(carbon_user, breakout_time, target = src, hidden = FALSE))
+		if(do_after(carbon_user, breakout_time, target = src, cog_icon = null))
 			user.visible_message(span_notice("[occupant] emerges from [src]!"),
 				span_notice("You climb out of [src]!"),
 				span_notice("With a hiss, you hear a machine opening."))
