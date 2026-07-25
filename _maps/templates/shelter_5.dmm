@@ -1,4 +1,4 @@
-"a" = (/turf/closed/wall/mineral/titanium/survival/pod,/area/misc/survivalpod)
+"a" = (/turf/closed/wall/mineral/plastitanium/survival/nodiagonal,/area/misc/survivalpod)
 "c" = (/turf/open/floor/carpet/black,/area/misc/survivalpod)
 "d" = (/obj/machinery/chem_dispenser,/obj/machinery/light/directional/north,/turf/open/floor/carpet/black,/area/misc/survivalpod)
 "e" = (/obj/machinery/transformer,/turf/open/floor/carpet/black,/area/misc/survivalpod)
