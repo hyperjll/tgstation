@@ -174,6 +174,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 
 	if(announcement_time && (world.time >= announcement_time || blobs_legit.len >= announcement_size) && !has_announced)
 		priority_announce("Confirmed outbreak of level 5 biohazard aboard [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", ANNOUNCER_OUTBREAK5)
+		SSshuttle.shuttle_purchase_requirements_met[SHUTTLE_UNLOCK_TOMBSTONE] = TRUE
 		SSsecurity_level.set_level(SEC_LEVEL_AMBER)
 
 		// Set status displays to biohazard alert
