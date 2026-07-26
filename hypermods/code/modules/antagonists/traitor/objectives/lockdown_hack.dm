@@ -39,7 +39,7 @@
 	if(istype(objective, /datum/traitor_objective/lockdown_hack))
 		fail_objective()
 
-/datum/traitor_objective/lockdown_hack/proc/on_unarmed_attack(mob/user, obj/machinery/computer/upload/ai/target, proximity_flag, modifiers)
+/datum/traitor_objective/lockdown_hack/proc/on_unarmed_attack(mob/user, obj/machinery/ai_law_rack/base/core/target, proximity_flag, modifiers)
 	SIGNAL_HANDLER
 	if(!proximity_flag)
 		return
@@ -50,7 +50,7 @@
 	INVOKE_ASYNC(src, PROC_REF(begin_hack), user, target)
 	return COMPONENT_CANCEL_ATTACK_CHAIN
 
-/datum/traitor_objective/lockdown_hack/proc/begin_hack(mob/user, obj/machinery/computer/upload/ai/target)
+/datum/traitor_objective/lockdown_hack/proc/begin_hack(mob/user, obj/machinery/ai_law_rack/base/core/target)
 	if(!target.try_hack_console(user))
 		return
 

@@ -1,4 +1,4 @@
-/obj/machinery/computer/upload/ai/proc/try_hack_console(mob/living/hacker, duration = 30 SECONDS)
+/obj/machinery/ai_law_rack/base/core/proc/try_hack_console(mob/living/hacker, duration = 30 SECONDS)
 	if(!can_hack(hacker, feedback = TRUE))
 		return FALSE
 
@@ -9,7 +9,7 @@
 	return TRUE
 
 /// Checks if this console is hackable. Used as a callback during try_hack_console's doafter as well.
-/obj/machinery/computer/upload/ai/proc/can_hack(mob/living/hacker, feedback = FALSE)
+/obj/machinery/ai_law_rack/base/core/proc/can_hack(mob/living/hacker, feedback = FALSE)
 	if(machine_stat & (NOPOWER|BROKEN))
 		if(feedback && hacker)
 			balloon_alert(hacker, "can't hack!")
@@ -21,7 +21,7 @@
 		return FALSE
 	return TRUE
 
-/obj/machinery/computer/upload/ai/proc/hack_console(mob/living/hacker)
+/obj/machinery/ai_law_rack/base/core/proc/hack_console(mob/living/hacker)
 	for(var/obj/machinery/door/locked_down as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/door))
 		if(QDELETED(locked_down) || !is_station_level(locked_down.z))
 			continue
@@ -40,4 +40,4 @@
 		"Network reset:"), 90 SECONDS)
 
 	message_admins("[ADMIN_LOOKUPFLW(hacker)] hacked a [name] located at [ADMIN_VERBOSEJMP(src)], resulting in a station-wide lockdown!")
-	hacker.log_message("hacked an ai upload console, resulting in a station-wide lockdown.", LOG_GAME, log_globally = TRUE)
+	hacker.log_message("hacked a core module rack, resulting in a station-wide lockdown.", LOG_GAME, log_globally = TRUE)

@@ -321,7 +321,6 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 	applicable_jobs = list(
 		JOB_HEAD_OF_SECURITY = /obj/machinery/rnd/production/techfab/department/security,
 		JOB_CAPTAIN = /obj/machinery/computer/communications,
-		JOB_AI = /obj/machinery/computer/upload/ai,
 	)
 
 	/// Bonus reward to grant if you booby trap successfully
@@ -373,9 +372,6 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 	return add_sabotage_machine(src, type)
 
 /obj/machinery/computer/communications/add_as_sabotage_target()
-	return add_sabotage_machine(src, type)
-
-/obj/machinery/computer/upload/ai/add_as_sabotage_target()
 	return add_sabotage_machine(src, type)
 
 // Destroy these low-priority machines to dissolve the typical nanotrasen experience
