@@ -6,8 +6,7 @@
 	stage_speed = 0
 	transmittable = 2
 	level = 12
-	symptom_delay_min = 30
-	symptom_delay_max = 85
+	symptom_delay = 30
 	threshold_descs = list(
 		"Resistance 8" = "The stamina drain no longer occurs.",
 	)

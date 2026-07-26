@@ -7,8 +7,7 @@
 	transmittable = -2
 	level = 12
 	base_message_chance = 50
-	symptom_delay_min = 30
-	symptom_delay_max = 60
+	symptom_delay = 40
 	var/no_reset = FALSE
 	var/mutadone_proof = NONE
 	threshold_descs = list(
@@ -23,8 +22,7 @@
 	if(!.)
 		return
 	if(A.totalStageSpeed() >= 10) //activate dormant mutations more often at around 1.5x the pace
-		symptom_delay_min = 20
-		symptom_delay_max = 40
+		symptom_delay = 20
 	if(A.totalResistance() >= 8) // Fuck your mutadone sprays.
 		mutadone_proof = (POSITIVE)
 	if(A.totalResistance() >= 14) // A true god amongst men.

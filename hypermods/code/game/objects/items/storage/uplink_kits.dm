@@ -1296,7 +1296,7 @@
 	name = "malf ai kit"
 
 /obj/item/storage/box/syndie_kit/malf_plus/PopulateContents()
-	new /obj/item/ai_module/malf(src)
+	new /obj/item/malf_board(src)
 	new /obj/item/encryptionkey/binary(src)
 
 /obj/item/storage/box/syndie_kit/no_escape_plus

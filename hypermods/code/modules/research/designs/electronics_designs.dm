@@ -4,7 +4,7 @@
 	id = "ai_reactivate_camera"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 2.5)
-	build_path = /obj/item/aiupgrade/reactivate_cameras
+	build_path = /obj/item/ai_module/upgrade/reactivate_cameras
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)
@@ -16,7 +16,7 @@
 	id = "ai_heal_brute"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 4, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 4)
-	build_path = /obj/item/aiupgrade/heal_brute
+	build_path = /obj/item/ai_module/upgrade/heal_brute
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)
@@ -28,7 +28,7 @@
 	id = "ai_heal_burn"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 4, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 4)
-	build_path = /obj/item/aiupgrade/heal_burn
+	build_path = /obj/item/ai_module/upgrade/heal_burn
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)
@@ -40,7 +40,7 @@
 	id = "ai_heal_tox"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 4, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 4)
-	build_path = /obj/item/aiupgrade/heal_tox
+	build_path = /obj/item/ai_module/upgrade/heal_tox
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)
@@ -52,7 +52,7 @@
 	id = "ai_heal_oxy"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 4, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 4)
-	build_path = /obj/item/aiupgrade/heal_oxy
+	build_path = /obj/item/ai_module/upgrade/heal_oxy
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)
@@ -64,7 +64,7 @@
 	id = "ai_turret_maintenance"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 5)
-	build_path = /obj/item/aiupgrade/ai_turret_maintenance
+	build_path = /obj/item/ai_module/upgrade/ai_turret_maintenance
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)
@@ -76,7 +76,7 @@
 	id = "ai_sniper"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 5, /datum/material/gold =SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/diamond =SHEET_MATERIAL_AMOUNT * 2.5)
-	build_path = /obj/item/aiupgrade/sniper
+	build_path = /obj/item/ai_module/upgrade/sniper
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)
@@ -88,7 +88,7 @@
 	id = "ai_construction"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 5, /datum/material/glass =SHEET_MATERIAL_AMOUNT * 5, /datum/material/gold =SHEET_MATERIAL_AMOUNT * 2.5)
-	build_path = /obj/item/aiupgrade/ai_construction
+	build_path = /obj/item/ai_module/upgrade/ai_construction
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_UPGRADES
 	)

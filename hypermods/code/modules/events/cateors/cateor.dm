@@ -158,7 +158,7 @@
 		for you are a starving Victorian child in cat form and require sustenance."
 
 		var/mob/living/silicon/unfortunate_robot = M
-		unfortunate_robot.add_ion_law(pick(cateor_ion_laws))
+		unfortunate_robot.laws.add_supplied_law(pick(cateor_ion_laws))
 
 	playsound(src.loc, 'hypermods/sound/effects/anime_wow.ogg', 50) // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ WOAW!!!
 	qdel(src)

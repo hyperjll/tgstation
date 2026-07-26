@@ -1299,5 +1299,4 @@
 	. = ..()
 	H.SetEmagged(1)
 	H.set_connected_ai(null)
-	H.laws = new /datum/ai_laws/syndicate_override
-	H.laws.associate(src)
+	H.replace_law_set(/datum/ai_laws/syndicate_override)

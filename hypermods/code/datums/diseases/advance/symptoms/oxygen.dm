@@ -8,8 +8,7 @@
 	severity = 5
 	level = 12
 	base_message_chance = 5
-	symptom_delay_min = 1
-	symptom_delay_max = 1
+	symptom_delay = 10
 	threshold_descs = list(
 		"Resistance 10" = "The virus can consume large amounts of blood, leading to suffocation.",
 		"Stealth 6" = "This symptom remains hidden until active.",

@@ -359,10 +359,10 @@
 	var/mob/living/silicon/robot/model/rogue/borg = new /mob/living/silicon/robot/model/rogue(loc)
 	borg.SetEmagged(1)
 	borg.set_connected_ai(null)
-	borg.laws = new /datum/ai_laws/syndicate_override
+	borg.replace_law_set(/datum/ai_laws/syndicate_override)
 	if(owner)
-		borg.set_zeroth_law("Aid [owner] with their tasks in exacting revenge against Nanotrasen.")
-	borg.laws.associate(src)
+		borg.laws.set_zeroth_law("Aid [owner] with their tasks in exacting revenge against Nanotrasen.")
+	borg.laws.protected_zeroth = TRUE
 	borg.key = user.key
 
 /mob/living/silicon/robot/model/rogue

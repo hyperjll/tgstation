@@ -6,8 +6,7 @@
 	stage_speed = 0
 	transmittable = 0
 	level = 11
-	symptom_delay_min = 1
-	symptom_delay_max = 1
+	symptom_delay = 15
 	threshold_descs = list(
 		"Resistance 7" = "All progress bar actions are sped up by an additional 5%.",
 		"Stage Speed 2" = "Carrying bodies is faster.",
