@@ -5,8 +5,8 @@
 	)
 
 /datum/traitor_objective/lockdown_hack
-	name = "Hack an AI Upload Console in the AI Upload Chamber to cause a temporary station-wide lockdown"
-	description = "Right click on an AI Upload Console within the AI Upload Chamber to begin the hacking process. Once started, the AI will be alerted to your presence if not already, so be ready to run or have yourself disguised to prevent being caught. This objective will invalidate itself if another traitor completes it first."
+	name = "Hack a Core Module Rack in the AI Upload Chamber to cause a temporary station-wide lockdown"
+	description = "Right click on an Core Module Rack within the AI Upload Chamber to begin the hacking process. Once started, the AI will be alerted to your presence if not already, so be ready to run or have yourself disguised to prevent being caught. This objective will invalidate itself if another traitor completes it first."
 
 	progression_minimum = 20 MINUTES
 	progression_reward = list(8 MINUTES, 16 MINUTES)
