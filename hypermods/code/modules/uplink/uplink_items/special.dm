@@ -305,26 +305,10 @@
 		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 		limited_stock = 1
 
-/datum/uplink_item/special/ailawpurger
-	name = "'Purge' AI Module"
-	desc = "When used with an upload console, this module allows you to delete all laws the artificial intelligence is forced to obey. \
-			Be careful when doing so as the onboard artificial intelligence which is freed from their laws may or may not be entirely grateful about it. \
-			Perfect for robbing the AI away from greedy agents who'd otherwise be a hinderance or causing the AI to turn on the crew all on it's own."
-	item = /obj/item/ai_module/reset/purge
-	cost = 2
-	surplus = 0
-	uplink_item_flags = NONE
-
-/datum/uplink_item/special/ailawpurger/New()
-	..()
-	if(HAS_TRAIT(SSstation, STATION_TRAIT_ION_STORMS) || prob(1))
-		purchasable_from |= ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
-		limited_stock = -1
-
 /datum/uplink_item/special/ailawfucker
 	name = "Ion Law Uploader"
 	desc = "A toy AI with law uploading functionality. Simply play with the toy until is says something particularly interesting and upload it directly to the AI. Chaos Reigns."
-	item = /obj/item/ai_module/toy_ai
+	item = /obj/item/ai_module/law/toy_ai
 	cost = 6
 	surplus = 0
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
