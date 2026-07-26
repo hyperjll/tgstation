@@ -6298,7 +6298,6 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/effect/spawner/round_default_module,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "bPg" = (
@@ -8450,22 +8449,15 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/aft)
 "cvM" = (
-/obj/machinery/computer/upload/borg{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 4
+/obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer2{
+	dir = 8
 	},
-/obj/machinery/door/window/left/directional/south{
-	name = "Cyborg Upload Console Window";
-	req_access = list("ai_upload");
-	dir = 1
-	},
-/turf/open/floor/circuit,
+/obj/structure/cable,
+/obj/machinery/ai_law_rack/base/core,
+/turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "cvV" = (
 /obj/effect/turf_decal/tile/blue/opposingcorners{
@@ -18518,20 +18510,7 @@
 /turf/open/floor/iron/grid/steel,
 /area/station/command/bridge)
 "fye" = (
-/obj/machinery/computer/upload/ai,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/window/left/directional/south{
-	name = "Cyborg Upload Console Window";
-	req_access = list("ai_upload")
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/circuit,
 /area/station/ai/upload/chamber)
 "fys" = (
@@ -19128,6 +19107,11 @@
 	},
 /obj/structure/cable,
 /obj/effect/landmark/navigate_destination/aiupload,
+/obj/machinery/door/window/brigdoor{
+	name = "AI Module Rack Access";
+	req_access_txt = "20";
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "fFB" = (
@@ -19869,9 +19853,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/ai_module/reset/purge{
-	pixel_y = 11
-	},
+/obj/effect/spawner/round_default_module,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "fPo" = (
@@ -22662,11 +22644,6 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/ai_module/reset{
-	pixel_x = 2;
-	pixel_y = 8
-	},
-/obj/item/ai_module/supplied/freeform,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "gDL" = (
@@ -50930,8 +50907,8 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
 	},
-/obj/item/food/grown/harebell,
-/obj/item/food/grown/harebell,
+/obj/item/food/grown/flower/harebell,
+/obj/item/food/grown/flower/harebell,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/funeral)
 "oSW" = (
@@ -51261,6 +51238,10 @@
 	dir = 1
 	},
 /area/station/engineering/atmos/storage/gas)
+"oYI" = (
+/obj/structure/window/reinforced/spawner/directional/south,
+/turf/open/floor/circuit,
+/area/station/ai/upload/chamber)
 "oYP" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer4{
 	dir = 5
@@ -56378,6 +56359,7 @@
 	},
 /obj/effect/turf_decal/bot,
 /obj/structure/cable,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "qvc" = (
@@ -63774,10 +63756,10 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_y = 2
 	},
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_y = 2
 	},
 /turf/open/floor/iron/dark,
@@ -136605,9 +136587,9 @@ fgT
 akX
 eXq
 bER
-bER
-hUh
-bER
+oYI
+cvM
+fye
 bER
 gDJ
 akX
@@ -136862,9 +136844,9 @@ flo
 akX
 fPc
 bER
-fye
+bER
 fFx
-cvM
+bER
 bER
 icJ
 akX

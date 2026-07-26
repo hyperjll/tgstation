@@ -4113,10 +4113,10 @@
 "bCs" = (
 /obj/item/toy/figure/chaplain,
 /obj/structure/table/glass,
-/obj/item/food/grown/harebell,
-/obj/item/food/grown/harebell,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy,
+/obj/item/food/grown/flower/harebell,
+/obj/item/food/grown/flower/harebell,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/item/radio/intercom/directional/south,
 /obj/effect/turf_decal/tile/neutral/diagonal_centre,
@@ -8287,7 +8287,7 @@
 "dnn" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/cup/glass/shaker,
-/obj/item/food/grown/rainbow_flower,
+/obj/item/food/grown/flower/rainbow_flower,
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
 	},
@@ -9438,9 +9438,7 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/station/science/genetics)
 "dJO" = (
-/obj/machinery/computer/upload/borg{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/engine,
 /area/station/ai/upload/chamber)
 "dJT" = (
@@ -22335,6 +22333,7 @@
 /obj/structure/table/reinforced,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/spawner/random/aimodule/harmless,
 /turf/open/floor/engine,
 /area/station/ai/upload/chamber)
 "iOZ" = (
@@ -28642,8 +28641,8 @@
 /area/station/command/heads_quarters/captain)
 "lol" = (
 /obj/structure/table/reinforced,
-/obj/item/ai_module/supplied/quarantine,
 /obj/structure/cable,
+/obj/effect/spawner/random/aimodule/neutral,
 /turf/open/floor/engine,
 /area/station/ai/upload/chamber)
 "lot" = (
@@ -31433,15 +31432,6 @@
 /turf/open/floor/iron/large,
 /area/station/cargo/miningdock)
 "mxh" = (
-/obj/item/ai_module/core/freeformcore{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/ai_module/core/full/custom,
-/obj/item/ai_module/core/full/asimov{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/structure/table,
 /obj/machinery/flasher/directional/west{
 	id = "AI";
@@ -31452,6 +31442,15 @@
 /obj/machinery/door/window/brigdoor/right/directional/north{
 	name = "Core Modules";
 	req_access = list("ai_upload")
+	},
+/obj/item/ai_module/law/core/freeformcore,
+/obj/item/ai_module/law/core/freeformcore{
+	pixel_x = -4;
+	pixel_y = 6
+	},
+/obj/item/ai_module/law/core/freeformcore{
+	pixel_x = 4;
+	pixel_y = 6
 	},
 /turf/open/floor/engine,
 /area/station/ai/upload/chamber)
@@ -32085,8 +32084,6 @@
 /turf/open/floor/iron,
 /area/station/security/brig/hallway)
 "mNo" = (
-/obj/structure/table/reinforced,
-/obj/item/ai_module/reset,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/engine,
 /area/station/ai/upload/chamber)
@@ -32644,12 +32641,6 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine)
-"mYt" = (
-/obj/machinery/computer/upload/ai{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/station/ai/upload/chamber)
 "mYz" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -40655,7 +40646,7 @@
 /obj/structure/table/wood,
 /obj/item/storage/box/cups,
 /obj/item/reagent_containers/condiment/saltshaker,
-/obj/item/food/grown/rainbow_flower,
+/obj/item/food/grown/flower/rainbow_flower,
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood/tile,
 /area/station/maintenance/department/engine)
@@ -44219,7 +44210,6 @@
 /obj/machinery/camera/motion/directional/east{
 	c_tag = "AI Upload"
 	},
-/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/engine,
 /area/station/ai/upload/chamber)
 "rLo" = (
@@ -45152,8 +45142,7 @@
 /area/station/maintenance/aft/upper)
 "sfZ" = (
 /obj/machinery/light/directional/east,
-/obj/structure/window/reinforced/spawner/directional/north,
-/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/ai_law_rack/base/core,
 /turf/open/floor/engine,
 /area/station/ai/upload/chamber)
 "sgo" = (
@@ -46054,7 +46043,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "sCD" = (
-/obj/item/food/grown/poppy/lily,
+/obj/item/food/grown/flower/poppy/lily,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/glass/plastitanium/screws,
 /obj/effect/decal/cleanable/cobweb,
@@ -51555,19 +51544,19 @@
 /area/station/medical/pharmacy)
 "uRW" = (
 /obj/structure/table/reinforced,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = 7;
 	pixel_y = 7
 	},
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_y = 9;
 	pixel_x = -6
 	},
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = -6;
 	pixel_y = 2
 	},
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = 7
 	},
 /turf/open/floor/iron/dark,
@@ -55573,10 +55562,6 @@
 	pixel_y = -26
 	},
 /obj/effect/spawner/random/aimodule/harmful,
-/obj/item/ai_module/supplied/oxygen,
-/obj/item/ai_module/supplied/protect_station,
-/obj/item/ai_module/zeroth/onehuman,
-/obj/item/ai_module/reset/purge,
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/door/window/brigdoor/left/directional/north{
@@ -58354,8 +58339,6 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "xCq" = (
-/obj/structure/table/reinforced,
-/obj/item/ai_module/supplied/freeform,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/engine,
 /area/station/ai/upload/chamber)
@@ -59092,7 +59075,7 @@
 /turf/closed/wall,
 /area/station/commons/dorms/laundry)
 "xUk" = (
-/obj/item/food/grown/poppy/lily,
+/obj/item/food/grown/flower/poppy/lily,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/parquet,
 /area/station/maintenance/aft/lesser)
@@ -89261,8 +89244,8 @@ jBM
 rLl
 dJO
 sfZ
-mYt
 pif
+tdV
 jBM
 xvz
 nri

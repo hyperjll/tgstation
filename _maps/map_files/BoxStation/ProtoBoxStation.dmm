@@ -9491,7 +9491,7 @@
 /obj/structure/cable,
 /obj/item/food/grown/grapes,
 /obj/item/food/grown/wheat,
-/obj/item/food/grown/carrot,
+/obj/item/food/grown/carrotlike/carrot,
 /obj/item/food/grown/cocoapod,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/turf_decal/siding/thinplating_new/end{
@@ -13023,7 +13023,7 @@
 	dir = 9
 	},
 /obj/structure/table,
-/obj/item/food/grown/poppy/lily,
+/obj/item/food/grown/flower/poppy/lily,
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
 "aOY" = (
@@ -13537,8 +13537,6 @@
 /turf/open/floor/iron,
 /area/station/commons/locker)
 "aQT" = (
-/obj/item/ai_module/core/full/asimov,
-/obj/item/ai_module/core/freeformcore,
 /obj/machinery/door/window/left/directional/east{
 	base_state = "right";
 	icon_state = "right";
@@ -13550,7 +13548,6 @@
 /obj/effect/spawner/random/aimodule/neutral,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/west,
-/obj/item/ai_module/core/full/custom,
 /obj/structure/table/wood/fancy/blue,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai/upload/chamber)
@@ -16202,7 +16199,21 @@
 /area/station/ai/upload/chamber)
 "aZS" = (
 /obj/structure/table,
-/obj/item/ai_module/supplied/freeform,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	name = "Freeform Law Modules";
+	req_access = list("captain");
+	dir = 8
+	},
+/obj/item/ai_module/law/supplied/freeform{
+	pixel_y = 4;
+	pixel_x = 2
+	},
+/obj/item/ai_module/law/supplied/freeform{
+	pixel_y = 5;
+	pixel_x = -2
+	},
+/obj/item/ai_module/law/supplied/freeform,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai/upload/chamber)
 "aZT" = (
@@ -16449,11 +16460,11 @@
 "baA" = (
 /obj/structure/table/wood,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = -8;
 	pixel_y = 7
 	},
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_y = 2
 	},
 /turf/open/floor/iron/dark,
@@ -17137,6 +17148,7 @@
 "bdg" = (
 /obj/structure/cable,
 /obj/machinery/holopad/secure,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "bdh" = (
@@ -17383,18 +17395,8 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/ai/upload/chamber)
 "bee" = (
-/obj/effect/turf_decal/bot_white,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/turf/open/floor/iron/dark,
+/obj/structure/window/reinforced/spawner/directional/east,
+/turf/open/floor/circuit,
 /area/station/ai/upload/chamber)
 "bef" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -24787,7 +24789,6 @@
 "bEX" = (
 /obj/structure/table,
 /obj/item/aicard,
-/obj/item/ai_module/reset,
 /turf/open/floor/plating,
 /area/station/engineering/storage/tech)
 "bEZ" = (
@@ -25064,6 +25065,14 @@
 /area/station/maintenance/starboard)
 "bGc" = (
 /obj/structure/table,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/window{
+	base_state = "right";
+	icon_state = "right";
+	name = "AI Upload Storage";
+	req_access = list("captain");
+	dir = 4
+	},
 /turf/open/floor/iron/dark/textured,
 /area/station/ai/upload/chamber)
 "bGd" = (
@@ -33770,18 +33779,14 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/medical/storage)
 "ctB" = (
-/obj/item/ai_module/supplied/oxygen,
-/obj/item/ai_module/zeroth/onehuman,
 /obj/machinery/door/window/left/directional/west{
 	name = "High-Risk Modules";
 	req_access = list("captain")
 	},
-/obj/item/ai_module/reset/purge,
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/spawner/random/aimodule/harmful,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/east,
-/obj/item/ai_module/supplied/protect_station,
 /obj/structure/table/wood/fancy/red,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai/upload/chamber)
@@ -34981,9 +34986,6 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "cDr" = (
-/obj/machinery/computer/upload/ai{
-	dir = 1
-	},
 /obj/machinery/flasher{
 	id = "AI";
 	pixel_y = -21
@@ -36570,9 +36572,6 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/prison)
 "dae" = (
-/obj/machinery/computer/upload/borg{
-	dir = 1
-	},
 /obj/item/radio/intercom{
 	broadcasting = 1;
 	frequency = 1447;
@@ -37650,13 +37649,13 @@
 	},
 /obj/structure/table/wood,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_y = 11
 	},
 /obj/item/book/bible{
 	pixel_y = 3
 	},
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = -11;
 	pixel_y = 2
 	},
@@ -38264,11 +38263,11 @@
 /obj/machinery/light_switch/directional/west,
 /obj/structure/table/wood,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = 7;
 	pixel_y = 7
 	},
@@ -46689,19 +46688,19 @@
 /area/station/hallway/primary/aft)
 "lHy" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = -6;
 	pixel_y = 10
 	},
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = 8;
 	pixel_y = 12
 	},
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_y = 7
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -57068,6 +57067,10 @@
 /obj/machinery/exodrone_launcher,
 /turf/open/floor/plating,
 /area/station/cargo/drone_bay)
+"uCN" = (
+/obj/structure/window/reinforced/spawner/directional/west,
+/turf/open/floor/circuit,
+/area/station/ai/upload/chamber)
 "uCO" = (
 /obj/structure/table,
 /obj/machinery/camera/directional/south{
@@ -58136,7 +58139,22 @@
 /area/station/security/prison/garden)
 "vuC" = (
 /obj/structure/cable,
-/turf/open/floor/circuit,
+/obj/effect/turf_decal/bot_white,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/machinery/door/window/left/directional/south{
+	name = "AI Upload Console Window"
+	},
+/obj/machinery/ai_law_rack/base/core,
+/turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "vuZ" = (
 /obj/machinery/newscaster/directional/north,
@@ -58175,6 +58193,7 @@
 "vyA" = (
 /obj/structure/table,
 /obj/effect/spawner/round_default_module,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/iron/dark/textured,
 /area/station/ai/upload/chamber)
 "vyX" = (
@@ -60959,7 +60978,7 @@
 /area/station/science/breakroom)
 "xXI" = (
 /obj/structure/table,
-/obj/item/ai_module/reset,
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "xXY" = (
@@ -90491,7 +90510,7 @@ bfv
 bHh
 crP
 crP
-bee
+uCN
 dae
 bfv
 fla

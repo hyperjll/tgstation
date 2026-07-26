@@ -4409,7 +4409,7 @@
 	pixel_x = -8;
 	pixel_y = 8
 	},
-/obj/item/food/grown/rainbow_flower,
+/obj/item/food/grown/flower/rainbow_flower,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "aAH" = (
@@ -10871,9 +10871,9 @@
 /area/station/service/chapel/monastery)
 "bcD" = (
 /obj/structure/table,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy,
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/monastery)
@@ -44517,10 +44517,8 @@
 "kee" = (
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/table,
-/obj/item/ai_module/toy_ai{
-	pixel_y = 8
-	},
 /obj/structure/cable,
+/obj/item/assembly/flash/handheld,
 /turf/open/floor/circuit,
 /area/station/ai/upload/chamber)
 "kel" = (
@@ -45560,6 +45558,11 @@
 /obj/effect/turf_decal/box/white{
 	color = "#52B4E9"
 	},
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/machinery/door/window/brigdoor/right/directional/south{
+	name = "AI Module Rack Access";
+	req_access = list("ai_upload")
+	},
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "kzt" = (
@@ -46154,7 +46157,6 @@
 /turf/open/floor/plating,
 /area/station/engineering/storage)
 "kLm" = (
-/obj/machinery/porta_turret/ai,
 /obj/structure/sign/plaques/kiddie{
 	pixel_y = 32
 	},
@@ -46162,7 +46164,9 @@
 	c_tag = "AI Upload";
 	network = list("aiupload")
 	},
-/turf/open/floor/iron/dark,
+/obj/structure/table/wood/fancy/green,
+/obj/effect/spawner/random/aimodule/harmless,
+/turf/open/floor/circuit/green,
 /area/station/ai/upload/chamber)
 "kLA" = (
 /obj/item/toy/plush/beeplushie,
@@ -49880,6 +49884,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "mmv" = (
@@ -53444,13 +53452,16 @@
 	},
 /obj/machinery/light/dim/directional/north,
 /obj/structure/table,
-/obj/item/ai_module/supplied/freeform{
-	pixel_x = -2
-	},
-/obj/item/ai_module/reset{
-	pixel_y = 9
-	},
 /obj/structure/cable,
+/obj/item/ai_module/law/core/freeformcore,
+/obj/item/ai_module/law/core/freeformcore{
+	pixel_x = -4;
+	pixel_y = 6
+	},
+/obj/item/ai_module/law/core/freeformcore{
+	pixel_x = 4;
+	pixel_y = 6
+	},
 /turf/open/floor/circuit,
 /area/station/ai/upload/chamber)
 "nHB" = (
@@ -55754,17 +55765,8 @@
 /area/station/science/lobby)
 "ozi" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted{
-	dir = 4
+	dir = 8
 	},
-/obj/machinery/computer/upload/borg{
-	dir = 4
-	},
-/obj/machinery/door/window/brigdoor/left/directional/east{
-	name = "AI Upload";
-	req_access = list("ai_upload")
-	},
-/obj/structure/window/reinforced/spawner/directional/north,
-/obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
@@ -56298,9 +56300,6 @@
 "oKz" = (
 /obj/structure/table/wood/fancy/red,
 /obj/effect/spawner/random/aimodule/harmful,
-/obj/item/ai_module/reset/purge{
-	pixel_y = 11
-	},
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/door/window/brigdoor{
 	name = "Core Modules";
@@ -57145,17 +57144,8 @@
 /area/station/service/abandoned_gambling_den)
 "oZi" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted{
-	dir = 8
+	dir = 4
 	},
-/obj/machinery/computer/upload/ai{
-	dir = 8
-	},
-/obj/machinery/door/window/brigdoor/right/directional/west{
-	name = "Core Modules";
-	req_access = list("ai_upload")
-	},
-/obj/structure/window/reinforced/spawner/directional/south,
-/obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
@@ -65357,9 +65347,9 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/gravity_generator)
 "snK" = (
-/obj/structure/table/wood/fancy/green,
-/obj/effect/spawner/random/aimodule/harmless,
-/turf/open/floor/circuit/green,
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/machinery/ai_law_rack/base/core,
+/turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "snP" = (
 /obj/effect/decal/cleanable/dirt,
@@ -76351,10 +76341,6 @@
 	pixel_y = 2
 	},
 /obj/structure/table/reinforced,
-/obj/item/ai_module/reset{
-	pixel_x = -2;
-	pixel_y = -1
-	},
 /obj/item/assembly/flash/handheld{
 	pixel_x = -4;
 	pixel_y = 6

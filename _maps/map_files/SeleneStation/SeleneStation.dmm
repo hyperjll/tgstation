@@ -12996,10 +12996,6 @@
 	dir = 8
 	},
 /area/station/science/xenobiology)
-"fbI" = (
-/obj/machinery/computer/upload/ai,
-/turf/open/floor/iron/dark,
-/area/station/ai/upload/chamber)
 "fbP" = (
 /obj/machinery/light/directional/south,
 /obj/machinery/disposal/bin,
@@ -19061,7 +19057,7 @@
 /obj/item/clothing/gloves/color/green,
 /obj/item/clothing/shoes/sandal,
 /obj/item/clothing/under/dress/sundress,
-/obj/item/food/grown/sunflower,
+/obj/item/food/grown/flower/sunflower,
 /obj/machinery/airalarm/directional/east,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 4
@@ -21684,7 +21680,7 @@
 /area/station/ai/satellite/atmos)
 "iCW" = (
 /obj/structure/closet,
-/obj/item/food/grown/sunflower,
+/obj/item/food/grown/flower/sunflower,
 /obj/item/clothing/under/dress/sundress,
 /obj/item/clothing/shoes/sandal,
 /turf/open/floor/plating,
@@ -30423,10 +30419,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
-"lSD" = (
-/obj/machinery/computer/upload/borg,
-/turf/open/floor/iron/dark,
-/area/station/ai/upload/chamber)
 "lSG" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
@@ -39344,7 +39336,7 @@
 /area/station/science)
 "pqK" = (
 /obj/structure/closet/crate,
-/obj/item/food/grown/sunflower,
+/obj/item/food/grown/flower/sunflower,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "pqM" = (
@@ -41376,6 +41368,16 @@
 /turf/open/floor/iron/grimy,
 /area/station/maintenance/starboard/fore)
 "qfZ" = (
+/obj/structure/table,
+/obj/item/ai_module/law/core/freeformcore,
+/obj/item/ai_module/law/core/freeformcore{
+	pixel_x = -4;
+	pixel_y = 6
+	},
+/obj/item/ai_module/law/core/freeformcore{
+	pixel_x = 4;
+	pixel_y = 6
+	},
 /turf/open/floor/circuit/green,
 /area/station/ai/upload/chamber)
 "qga" = (
@@ -48215,8 +48217,8 @@
 /area/space/nearstation)
 "sUY" = (
 /obj/structure/table/glass,
-/obj/item/food/grown/harebell,
-/obj/item/food/grown/harebell,
+/obj/item/food/grown/flower/harebell,
+/obj/item/food/grown/flower/harebell,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/dock)
 "sVn" = (
@@ -56415,8 +56417,8 @@
 /area/station/security/prison/visit)
 "whF" = (
 /obj/structure/table/glass,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy,
 /obj/machinery/camera/directional/south{
 	c_tag = "Service - Space Burial";
 	network = list("ss13","service")
@@ -57023,6 +57025,7 @@
 /obj/machinery/light/directional/south,
 /obj/structure/table,
 /obj/effect/spawner/random/aimodule/harmless,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "wvA" = (
@@ -57133,12 +57136,7 @@
 /area/station/hallway/primary/port)
 "wxD" = (
 /obj/machinery/airalarm/directional/south,
-/obj/structure/table,
-/obj/item/ai_module/supplied/freeform{
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/ai_module/reset/purge,
+/obj/machinery/ai_law_rack/base/core,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "wyn" = (
@@ -57418,11 +57416,8 @@
 /area/station/engineering/atmos)
 "wDL" = (
 /obj/structure/table,
-/obj/item/ai_module/supplied/freeform{
-	pixel_x = 2;
-	pixel_y = 3
-	},
 /obj/effect/spawner/random/aimodule/neutral,
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/ai/upload/chamber)
 "wDN" = (
@@ -58981,7 +58976,6 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/item/pai_card,
-/obj/item/ai_module/reset,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "xhg" = (
@@ -109712,7 +109706,7 @@ oUt
 coZ
 qKa
 qkc
-lSD
+ukC
 ukC
 unj
 wtX
@@ -110740,7 +110734,7 @@ pdP
 coZ
 fKO
 qkc
-fbI
+ukC
 ukC
 rLy
 wFp
