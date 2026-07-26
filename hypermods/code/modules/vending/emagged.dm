@@ -1901,7 +1901,6 @@
 	premium = list(/obj/item/clothing/head/costume/crown/fancy = 1,
 				   /obj/item/implanter/biosig = 1,
 				   /obj/item/hand_tele = 1,
-				   /obj/item/circuitboard/computer/aiupload = 1,
 				   /obj/item/storage/lockbox/loyalty = 1,
 				   /obj/item/clothing/glasses/sunglasses = 1)
 	refill_canister = /obj/item/vending_refill/capdrobe
