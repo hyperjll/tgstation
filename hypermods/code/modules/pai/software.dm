@@ -35,6 +35,26 @@
 			signaler = new(src)
 	return TRUE
 
+/**
+ * Changes the image displayed on the pAI.
+ *
+ * @returns {boolean} - TRUE if the image was changed, FALSE otherwise.
+ */
+/mob/living/silicon/pai/syndicate/change_image()
+	var/list/possible_choices = list()
+	for(var/datum/pai_screen_image_syndicate/screen_option as anything in subtypesof(/datum/pai_screen_image_syndicate))
+		var/datum/radial_menu_choice/choice = new
+		choice.name = screen_option.name
+		choice.image = image(icon = screen_option.icon, icon_state = screen_option.icon_state)
+		possible_choices[screen_option] += choice
+	var/atom/anchor = get_atom_on_turf(src)
+	var/new_image = show_radial_menu(src, anchor, possible_choices, custom_check = CALLBACK(src, PROC_REF(check_menu), anchor), radius = 40, require_near = TRUE)
+	if(isnull(new_image))
+		return FALSE
+	card.screen_image = new_image
+	card.update_appearance()
+	return TRUE
+
 /mob/living/silicon/pai/syndicate/ui_act(action, list/params, datum/tgui/ui)
 	. = ..()
 	if(.)

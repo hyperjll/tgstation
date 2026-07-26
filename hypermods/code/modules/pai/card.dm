@@ -4,25 +4,23 @@
 	icon_state = "spai"
 	inhand_icon_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	name = "syndicate personal AI device"
+	name = "personal AI device"
 	resistance_flags = FIRE_PROOF | ACID_PROOF | INDESTRUCTIBLE
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
 	worn_icon_state = "electronic"
+	screen_image = /datum/pai_screen_image_syndicate/off
+	syndicate = TRUE
 
 /obj/item/pai_card/syndicate/Initialize(mapload)
 	. = ..()
-
 	update_appearance()
-	SSpai.pai_card_list += src
 	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF)
-	//ADD_TRAIT(src, TRAIT_CASTABLE_LOC, INNATE_TRAIT)
-	//RegisterSignal(src, COMSIG_HIT_BY_SABOTEUR, PROC_REF(on_saboteur))
 
 /obj/item/pai_card/syndicate/update_overlays()
 	. = ..()
-	. += "spai-[screen_image]"
+	. += image(icon = screen_image.icon, icon_state = screen_image.icon_state)
 	if(pai?.hacking_cable)
 		. += "[initial(icon_state)]-connector"
 
@@ -79,4 +77,20 @@
 	)
 
 	addtimer(VARSET_CALLBACK(src, request_spam, FALSE), PAI_SPAM_TIME, TIMER_UNIQUE|TIMER_DELETE_ME)
+	return TRUE
+
+/**
+ * Sets the personality on the current pai_card
+ *
+ * @param {silicon/pai} downloaded - The new pAI to load into the card.
+ */
+/obj/item/pai_card/syndicate/set_personality(mob/living/silicon/pai/downloaded)
+	if(pai)
+		return FALSE
+	pai = downloaded
+	RegisterSignal(pai, COMSIG_QDELETING, PROC_REF(on_pai_del))
+	screen_image = /datum/pai_screen_image_syndicate/neutral
+	update_appearance()
+	playsound(src, 'sound/effects/pai_boot.ogg', 50, TRUE, -1)
+	audible_message("[src] plays a cheerful startup noise!")
 	return TRUE

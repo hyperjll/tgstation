@@ -25,6 +25,9 @@
 	/// Prevents a crew member from hitting "request pAI" repeatedly
 	var/request_spam = FALSE
 
+	/// Prevents overlay stacking
+	var/syndicate = FALSE
+
 /obj/item/pai_card/Initialize(mapload)
 	. = ..()
 
@@ -85,9 +88,10 @@
 
 /obj/item/pai_card/update_overlays()
 	. = ..()
-	. += image(icon = screen_image.icon, icon_state = screen_image.icon_state)
-	if(pai?.hacking_cable)
-		. += "[initial(icon_state)]-connector"
+	if(!syndicate)
+		. += image(icon = screen_image.icon, icon_state = screen_image.icon_state)
+		if(pai?.hacking_cable)
+			. += "[initial(icon_state)]-connector"
 
 /obj/item/pai_card/vv_edit_var(vname, vval)
 	. = ..()

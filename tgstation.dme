@@ -7944,6 +7944,7 @@
 #include "hypermods\code\modules\pai\card.dm"
 #include "hypermods\code\modules\pai\pai.dm"
 #include "hypermods\code\modules\pai\software.dm"
+#include "hypermods\code\modules\pai\datums\screen_icon.dm"
 #include "hypermods\code\modules\paperwork\pen.dm"
 #include "hypermods\code\modules\plumbing\plumbers\filter.dm"
 #include "hypermods\code\modules\plumbing\plumbers\synthesizer.dm"
