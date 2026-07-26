@@ -17607,19 +17607,19 @@
 /area/station/maintenance/department/cargo)
 "gho" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = -4
 	},
-/obj/item/food/grown/harebell,
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell,
+/obj/item/food/grown/flower/harebell{
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/food/grown/harebell{
+/obj/item/food/grown/flower/harebell{
 	pixel_x = 6
 	},
-/obj/item/food/grown/harebell,
-/obj/item/food/grown/harebell,
+/obj/item/food/grown/flower/harebell,
+/obj/item/food/grown/flower/harebell,
 /turf/open/floor/iron/chapel{
 	dir = 4
 	},
@@ -35409,7 +35409,7 @@
 "miD" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/reagent_dispensers/plumbed,
-/turf/open/floor/pod/light,
+/turf/open/floor/mineral/plastitanium/pod/light,
 /area/station/maintenance/department/medical/central)
 "miI" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -42480,9 +42480,9 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical)
 "oJQ" = (
-/obj/item/food/grown/poppy,
+/obj/item/food/grown/flower/poppy,
 /obj/structure/table/wood,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy{
 	pixel_x = -8;
 	pixel_y = 8
 	},
@@ -58966,8 +58966,8 @@
 /area/station/science/robotics/mechbay)
 "uik" = (
 /obj/structure/table/wood,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy{
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy{
 	pixel_x = 8;
 	pixel_y = 8
 	},
@@ -64212,12 +64212,12 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy,
-/obj/item/food/grown/poppy,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy,
+/obj/item/food/grown/flower/poppy,
 /obj/structure/sign/plaques/kiddie/badger{
 	pixel_x = 32
 	},
