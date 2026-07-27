@@ -88,12 +88,12 @@
 
 /datum/store_item/roundstart/candle_floral
 	name = "Flower-Scented Candles"
-	item_path = /obj/item/storage/fancy/candle_box/scented/scented/floral
+	item_path = /obj/item/storage/fancy/candle_box/scented/floral
 	item_cost = 250
 
 /datum/store_item/roundstart/candle_happiness
 	name = "Happiness-Scented Candles"
-	item_path = /obj/item/storage/fancy/candle_box/scented/scented/happiness
+	item_path = /obj/item/storage/fancy/candle_box/scented/happiness
 	item_cost = 250
 
 /datum/store_item/roundstart/creampie
