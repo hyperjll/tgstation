@@ -27,7 +27,7 @@
 /datum/traitor_objective/alert_console_hack/ungenerate_objective()
 	UnregisterSignal(SSdcs, COMSIG_GLOB_TRAITOR_OBJECTIVE_COMPLETED)
 
-/datum/traitor_objective/alert_console_hack/proc/on_unarmed_attack(mob/user, obj/machinery/computer/station_alert/station_only/target, proximity_flag, modifiers)
+/datum/traitor_objective/alert_console_hack/proc/on_unarmed_attack(mob/user, obj/machinery/computer/station_alert/target, proximity_flag, list/modifiers)
 	SIGNAL_HANDLER
 	if(!proximity_flag)
 		return
@@ -38,7 +38,7 @@
 	INVOKE_ASYNC(src, PROC_REF(begin_hack), user, target)
 	return COMPONENT_CANCEL_ATTACK_CHAIN
 
-/datum/traitor_objective/alert_console_hack/proc/begin_hack(mob/user, obj/machinery/computer/station_alert/station_only/target)
+/datum/traitor_objective/alert_console_hack/proc/begin_hack(mob/user, obj/machinery/computer/station_alert/target)
 	if(!target.try_hack_console(user))
 		return
 

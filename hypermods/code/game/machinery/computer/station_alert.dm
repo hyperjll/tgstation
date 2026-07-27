@@ -1,4 +1,4 @@
-/obj/machinery/computer/station_alert/station_only/proc/try_hack_console(mob/living/hacker, duration = 30 SECONDS)
+/obj/machinery/computer/station_alert/proc/try_hack_console(mob/living/hacker, duration = 30 SECONDS)
 	if(!can_hack(hacker, feedback = TRUE))
 		return FALSE
 
@@ -9,7 +9,7 @@
 	return TRUE
 
 /// Checks if this console is hackable. Used as a callback during try_hack_console's doafter as well.
-/obj/machinery/computer/station_alert/station_only/proc/can_hack(mob/living/hacker, feedback = FALSE)
+/obj/machinery/computer/station_alert/proc/can_hack(mob/living/hacker, feedback = FALSE)
 	if(machine_stat & (NOPOWER|BROKEN))
 		if(feedback && hacker)
 			balloon_alert(hacker, "can't hack!")
@@ -21,7 +21,7 @@
 		return FALSE
 	return TRUE
 
-/obj/machinery/computer/station_alert/station_only/proc/hack_console(mob/living/hacker)
+/obj/machinery/computer/station_alert/proc/hack_console(mob/living/hacker)
 	force_event(/datum/round_event_control/falsealarm, "station alert console hack")
 
 	message_admins("[ADMIN_LOOKUPFLW(hacker)] hacked a [name] located at [ADMIN_VERBOSEJMP(src)], resulting in a false alarm!")

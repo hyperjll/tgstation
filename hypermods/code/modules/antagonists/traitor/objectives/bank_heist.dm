@@ -39,7 +39,7 @@
 	if(istype(objective, /datum/traitor_objective/bank_heist))
 		fail_objective()
 
-/datum/traitor_objective/bank_heist/proc/on_unarmed_attack(mob/user, obj/machinery/computer/bank_machine/target, proximity_flag, modifiers)
+/datum/traitor_objective/bank_heist/proc/on_unarmed_attack(mob/user, obj/machinery/computer/bank_machine/target, proximity_flag, list/modifiers)
 	SIGNAL_HANDLER
 	if(!proximity_flag)
 		return

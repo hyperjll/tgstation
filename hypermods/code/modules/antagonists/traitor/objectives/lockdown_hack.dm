@@ -39,7 +39,7 @@
 	if(istype(objective, /datum/traitor_objective/lockdown_hack))
 		fail_objective()
 
-/datum/traitor_objective/lockdown_hack/proc/on_unarmed_attack(mob/user, obj/machinery/ai_law_rack/base/core/target, proximity_flag, modifiers)
+/datum/traitor_objective/lockdown_hack/proc/on_unarmed_attack(mob/user, obj/machinery/ai_law_rack/base/core/target, proximity_flag, list/modifiers)
 	SIGNAL_HANDLER
 	if(!proximity_flag)
 		return

@@ -27,7 +27,7 @@
 /datum/traitor_objective/vendor_drink_spike/ungenerate_objective()
 	UnregisterSignal(SSdcs, COMSIG_GLOB_TRAITOR_OBJECTIVE_COMPLETED)
 
-/datum/traitor_objective/vendor_drink_spike/proc/on_unarmed_attack(mob/user, obj/machinery/vending/cola/target, proximity_flag, modifiers)
+/datum/traitor_objective/vendor_drink_spike/proc/on_unarmed_attack(mob/user, obj/machinery/vending/cola/target, proximity_flag, list/modifiers)
 	SIGNAL_HANDLER
 	if(!proximity_flag)
 		return
