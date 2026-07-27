@@ -94,7 +94,6 @@
 	new /obj/item/clothing/neck/petcollar(src)
 	new /obj/item/pet_carrier(src)
 	new /obj/item/circuitboard/machine/techfab/department/medical(src)
-	new /obj/item/storage/photo_album/cmo(src)
 	new /obj/item/storage/lockbox/medal/med(src)
 
 /obj/structure/closet/secure_closet/chief_medical/populate_contents_immediate()
@@ -104,6 +103,8 @@
 	new /obj/item/reagent_containers/hypospray/cmo(src)
 	new /obj/item/card/id/departmental_budget/med(src)
 	new /obj/item/defibrillator/compact/loaded/cmo(src)
+
+	new /obj/item/storage/photo_album/cmo(src)
 
 /obj/structure/closet/secure_closet/animal
 	name = "animal control locker"

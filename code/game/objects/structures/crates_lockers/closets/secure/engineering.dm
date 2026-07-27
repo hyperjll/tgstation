@@ -16,7 +16,6 @@
 	new /obj/item/storage/lockbox/medal/engineering(src)
 	new /obj/item/circuitboard/machine/techfab/department/engineering(src)
 	new /obj/item/extinguisher/advanced(src)
-	new /obj/item/storage/photo_album/ce(src)
 	new /obj/item/storage/box/skillchips/engineering(src)
 	new /obj/item/storage/box/stickers/chief_engineer(src)
 	new /obj/item/circuitboard/machine/power_exporter(src)
@@ -28,6 +27,8 @@
 	new /obj/item/blueprints(src)
 	new /obj/item/pipe_dispenser(src)
 	new /obj/item/card/id/departmental_budget/eng(src)
+
+	new /obj/item/storage/photo_album/ce(src)
 
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies locker"
