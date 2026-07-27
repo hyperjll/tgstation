@@ -1,3 +1,42 @@
+/// Candles
+
+/obj/item/storage/fancy/candle_box/scented
+	name = "scented candle pack"
+	desc = "A pack of 'scented' red candles, a label on the back reads 'Customizable Scent Variety'."
+	spawn_type = /obj/item/flashlight/flare/candle/scented
+
+/obj/item/storage/fancy/candle_box/scented/floral
+	name = "\improper Floral scented candle pack"
+	desc = "A pack of 'scented' red candles, a label on the back reads 'Floral Variety'."
+	spawn_type = /obj/item/flashlight/flare/candle/scented/floral
+
+/obj/item/storage/fancy/candle_box/scented/omnizine
+	name = "\improper DeForest scented candle pack"
+	desc = "A pack of 'scented' red candles, a label on the back reads 'DeForest Medical is not responsible for any injury or misfortune as a result of this product's usage'."
+	spawn_type = /obj/item/flashlight/flare/candle/scented/omnizine
+
+/obj/item/storage/fancy/candle_box/scented/toxin
+	name = "scented candle pack"
+	desc = "A pack of 'scented' red candles, the label on the back was scratched off..."
+	spawn_type = /obj/item/flashlight/flare/candle/scented/toxin
+
+/obj/item/storage/fancy/candle_box/scented/silent_toxin
+	name = "scented candle pack"
+	desc = "A pack of 'scented' red candles, the label on the back was scratched off..."
+	spawn_type = /obj/item/flashlight/flare/candle/scented/silent_toxin
+
+/obj/item/storage/fancy/candle_box/scented/hunger
+	name = "scented candle pack"
+	desc = "A pack of 'scented' red candles, the label on the back was scratched off..."
+	spawn_type = /obj/item/flashlight/flare/candle/scented/hunger
+
+/obj/item/storage/fancy/candle_box/scented/happiness
+	name = "\improper 'Happiness' scented candle pack"
+	desc = "A pack of 'scented' red candles, a label on the back reads 'Customizable Scent Variety'."
+	spawn_type = /obj/item/flashlight/flare/candle/scented/happiness
+
+/// Cigars and cigarettes
+
 /obj/item/storage/fancy/cigarettes/cigars/security // A rare cigar case available to security, contains trace amounts of opium and dylovene in addition to the usual nicotine.
 	name = "\improper security-issue cigar case"
 	desc = "A case of premium cigars, a small tag reads: 'Contains Opium and Dylovene! Do not smoke if allergic to either'. Seems very expensive."

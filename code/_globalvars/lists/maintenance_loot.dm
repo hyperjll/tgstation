@@ -304,6 +304,10 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 		/obj/item/stack/rods/fifty = 1,
 		/obj/item/stack/sheet/rglass/fifty = 1,
 		/obj/item/stack/sheet/cloth/ten = 1,
+		/obj/item/flashlight/flare/candle/scented/floral = 1,
+		/obj/item/flashlight/flare/candle/scented/toxin = 1,
+		/obj/item/flashlight/flare/candle/scented/hunger = 1,
+		/obj/item/flashlight/flare/candle/scented/happiness = 1,
 		list(//soap
 			/obj/item/soap = 10,
 			/obj/item/soap/homemade = 10,

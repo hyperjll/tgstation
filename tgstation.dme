@@ -7331,6 +7331,7 @@
 #include "hypermods\code\game\objects\effects\anomalies\anomalies_ice.dm"
 #include "hypermods\code\game\objects\effects\anomalies\anomalies_liquids.dm"
 #include "hypermods\code\game\objects\effects\decals\cleanable\misc.dm"
+#include "hypermods\code\game\objects\effects\effect_system\fluid_spread\effects_smoke.dm"
 #include "hypermods\code\game\objects\effects\particles\smoke.dm"
 #include "hypermods\code\game\objects\effects\spawners\gibspawner.dm"
 #include "hypermods\code\game\objects\effects\spawners\random\medical.dm"

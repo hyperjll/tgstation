@@ -128,3 +128,63 @@
 		user.log_message("set [key_name(victim)] on fire with [src]", LOG_ATTACK)
 
 	return ..()
+
+
+/obj/item/flashlight/flare/candle/scented
+	name = "scented candle"
+	desc = "A scented candle, it's design allows it to directly and discreetly disperse specialized fluids into the atmosphere. This particular candle has no label."
+	fuel = 5 MINUTES // (reagent_capacity / scent_strength) * scent_frequency
+	// The amount of reagents we use each time we produce chemical smoke.
+	var/scent_strength = 0.5
+	// The range of the chemical smoke we produce.
+	var/scent_range = 4
+	// How often do we try and make chemical smoke from the reagents within us?
+	var/scent_frequency = 30 SECONDS
+	// How many reagents can we hold to dispense?
+	var/reagent_capacity = 5
+	// What kind of reagent is this scented candle filled with? If null, we leave the scented candle empty for custom filling.
+	var/scent_reagent_type = null
+
+/obj/item/flashlight/flare/candle/scented/Initialize(mapload)
+	. = ..()
+	create_reagents(reagent_capacity, OPENCONTAINER)
+	if(!isnull(scent_reagent_type))
+		reagents.add_reagent(scent_reagent_type, reagent_capacity)
+
+/obj/item/flashlight/flare/candle/scented/ignition(mob/user)
+	addtimer(CALLBACK(src, PROC_REF(produce_scent)), scent_frequency)
+	. = ..()
+
+/obj/item/flashlight/flare/candle/scented/proc/produce_scent()
+	if(!light_on)
+		return FALSE
+	do_chem_smoke(amount = scent_strength, range = scent_range, holder = src, location = get_turf(src), carry = src.reagents, silent = TRUE, smoke_type = /datum/effect_system/fluid_spread/smoke/chem/invisible)
+	reagents.remove_all(scent_strength, FALSE)
+	addtimer(CALLBACK(src, PROC_REF(produce_scent)), scent_frequency)
+
+/obj/item/flashlight/flare/candle/scented/floral
+	desc = "A scented candle, it's design allows it to directly and discreetly disperse specialized fluids into the atmosphere. The label reads 'Floral'."
+	scent_reagent_type = /datum/reagent/toxin/histamine
+
+/obj/item/flashlight/flare/candle/scented/omnizine
+	desc = "A scented candle, it's design allows it to directly and discreetly disperse specialized fluids into the atmosphere. The label reads 'DeForest Special'."
+	scent_reagent_type = /datum/reagent/medicine/omnizine
+
+/obj/item/flashlight/flare/candle/scented/toxin
+	scent_strength = 0.5
+	reagent_capacity = 5
+	scent_reagent_type = /datum/reagent/toxin
+
+/obj/item/flashlight/flare/candle/scented/silent_toxin
+	scent_strength = 1
+	reagent_capacity = 10
+	scent_reagent_type = /datum/reagent/toxin/amanitin
+
+/obj/item/flashlight/flare/candle/scented/hunger
+	scent_strength = 1
+	reagent_capacity = 10
+	scent_reagent_type = /datum/reagent/toxin/lipolicide
+
+/obj/item/flashlight/flare/candle/scented/happiness
+	desc = "A scented candle, it's design allows it to directly and discreetly disperse specialized fluids into the atmosphere. The label reads 'Pure Joy'."
+	scent_reagent_type = /datum/reagent/drug/happiness

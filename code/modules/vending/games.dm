@@ -93,6 +93,7 @@
 				/obj/item/razor = 3,
 				/obj/item/storage/card_binder = 10,
 				/obj/item/storage/dice = 10,
+				/obj/item/storage/fancy/candle_box/scented = 5,
 			),
 		),
 	)

@@ -286,3 +286,13 @@
 	cost = 3
 	surplus = 10
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/deception/silent_toxin_candles
+	name = "Amanitin-Scented Candles"
+	desc = "A box of scented candles laced with Amanitin. Each candle while lit will occasionally disperse silent but deadly toxins into the air for nearby victims to breathe. \
+			Light em up, and place them in populated areas and watch the chaos unfold."
+	item = /obj/item/storage/fancy/candle_box/scented/silent_toxin
+	cost = 5
+	surplus = 0 // Let's not trick people who bought surplus crates.
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND

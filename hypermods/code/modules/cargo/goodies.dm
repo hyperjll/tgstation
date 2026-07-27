@@ -1,3 +1,9 @@
+/datum/supply_pack/goody/scented_candles
+	name = "Scented Candles"
+	desc = "A single box of empty scented candles, for all your scented candle making needs!"
+	cost = PAYCHECK_CREW * 2
+	contains = list(/obj/item/storage/fancy/candle_box/scented)
+
 /datum/supply_pack/goody/lockbox_personal
 	name = "Personal Lockbox"
 	desc = "A single secure lockbox equipped with an indentification lock. Perfect for secure storage of certain goods!"
