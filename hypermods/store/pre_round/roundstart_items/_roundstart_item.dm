@@ -83,17 +83,17 @@
 
 /datum/store_item/roundstart/candle_scented
 	name = "Empty Scented Candles"
-	item_path = /obj/item/flashlight/flare/candle/scented
+	item_path = /obj/item/storage/fancy/candle_box/scented
 	item_cost = 200
 
 /datum/store_item/roundstart/candle_floral
 	name = "Flower-Scented Candles"
-	item_path = /obj/item/flashlight/flare/candle/scented/floral
+	item_path = /obj/item/storage/fancy/candle_box/scented/scented/floral
 	item_cost = 250
 
 /datum/store_item/roundstart/candle_happiness
 	name = "Happiness-Scented Candles"
-	item_path = /obj/item/flashlight/flare/candle/scented/happiness
+	item_path = /obj/item/storage/fancy/candle_box/scented/scented/happiness
 	item_cost = 250
 
 /datum/store_item/roundstart/creampie

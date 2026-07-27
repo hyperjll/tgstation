@@ -174,11 +174,11 @@
 	cost = 2
 	purchasable_from = ~UPLINK_SPY
 
-/datum/uplink_item/deception/hungry_candles
+/datum/uplink_item/disruption/hungry_candles
 	name = "Hunger-Inducing Candles"
 	desc = "A box of scented candles laced with Lipolicide. Each candle while lit will occasionally disperse it's contents into the air for nearby victims to breathe. \
 			Light em up in populated areas and witness as the lunch rush begins."
-	item = /obj/item/flashlight/flare/candle/scented/hunger
+	item = /obj/item/storage/fancy/candle_box/scented/hunger
 	cost = 2
 	surplus = 0 // Let's not trick people who bought surplus crates.
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
