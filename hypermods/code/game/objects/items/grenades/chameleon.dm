@@ -1,4 +1,4 @@
-/obj/item/device/chameleon/bomb
+/obj/item/device/chameleon_bomb
 	name = "chameleon bomb"
 	desc = "Hit the bomb on any object to disguise it as that object. Simply drop the bomb or place it into a storage object to arm it. The bomb will explode when anyone tries to pick up the armed bomb."
 	icon = 'hypermods/icons/obj/weapons/grenade.dmi'
@@ -11,23 +11,24 @@
 	var/armed = FALSE
 	var/arming = FALSE
 
-/obj/item/device/chameleon/bomb/examine(mob/user)
+/obj/item/device/chameleon_bomb/examine(mob/user)
 	. = ..()
 	if((IS_TRAITOR(user) || !IS_NUKE_OP(user)) && armed) //helpful to other syndicates
 		. += "This is a bomb in disguise!"
 
-/obj/item/device/chameleon/bomb/dropped(mob/user)
-	..()
+/obj/item/device/chameleon_bomb/attack_self(mob/user)
+	. = ..()
 	if(!armed && !arming)
 		user.balloon_alert(user, "Arming! Better drop it.")
 		arming = TRUE
+		w_class = WEIGHT_CLASS_BULKY // This is to help prevent you from bagging an arming bomb, only to take it out of your bag later and blow up. Some storage items you can still allow you to fuck yourself over.
 		addtimer(CALLBACK(src, PROC_REF(armup)), 5 SECONDS)
 
-/obj/item/device/chameleon/bomb/proc/armup()
+/obj/item/device/chameleon_bomb/proc/armup()
 	armed = TRUE
 	playsound(src, 'hypermods/sound/effects/c4beep.ogg', 20, 1)
 
-/obj/item/device/chameleon/bomb/pickup()
+/obj/item/device/chameleon_bomb/pickup()
 	..()
 	if(armed)
 		explosion(src, dev_range, lar_range, med_range, low_range, flame_range = burn_range)
@@ -35,7 +36,7 @@
 	else
 		return
 
-/obj/item/device/chameleon/bomb/interact_with_atom(atom/target, mob/user , proximity)
+/obj/item/device/chameleon_bomb/interact_with_atom(atom/target, mob/user , proximity)
 	. = ..()
 	if(!proximity)
 		return

@@ -137,12 +137,12 @@
 	progression_minimum = 5 MINUTES
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
-/datum/uplink_item/deception/bombchameleon
+/datum/uplink_item/deception/chameleon_bomb
 	name = "Chameleon Bomb"
 	desc = "An explosive device fitted with our chameleon technology, when used on an object, the bomb will disguise itself as that object. \
-			To arm, remove the bomb from your hands, disguised or not, the bomb will arm itself and will detonate upon being picked up. \
-			The explosive isn't super powerful, but can seriously harm those who pick it up and leave them incapacitated temporarily."
-	item = /obj/item/device/chameleon/bomb
+			To arm, simply activate the device in-hand and wait 5 seconds for the device to arm, the bomb will detonate upon being picked up. \
+			The explosives aren't of the highest quality, but can still seriously harm those who pick it up and leave them incapacitated temporarily."
+	item = /obj/item/device/chameleon_bomb
 	cost = 2
 	surplus = 50
 	progression_minimum = 10 MINUTES
