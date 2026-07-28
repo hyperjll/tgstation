@@ -886,6 +886,10 @@
   - bugfix: ByondUi/TGUI Map elements will no longer layout incorrectly if you refresh
       the page in some circumstances
 2026-07-28:
+  ArcaneMusic:
+  - bugfix: Selling organs in cargo once again works properly. As a reminder, Normal
+      human organs sell for 20 credits. The organs of a roundstart human are worth
+      10x as much, however.
   Melbert:
   - code_imp: Slightly changed the logic for blindness and unconscious hud effects,
       report any oddities
@@ -896,3 +900,8 @@
   PapaMichael:
   - balance: Pirates prioritize spawning their leaders
   - admin: Admins can configure Heavy Pirates
+  SmArtKar:
+  - bugfix: Fixed cardboard cutouts having an incorrect assistant sprite
+  - bugfix: Fixed some effects not updating hair when they should
+  lelandkemble:
+  - bugfix: You can place items within bodybags by clicking on them again
