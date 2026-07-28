@@ -134,16 +134,20 @@
 	name = "scented candle"
 	desc = "A scented candle, it's design allows it to directly and discreetly disperse specialized fluids into the atmosphere. This particular candle has no label."
 	fuel = 5 MINUTES // (reagent_capacity / scent_strength) * scent_frequency
-	// The amount of reagents we use each time we produce chemical smoke.
-	var/scent_strength = 0.5
+	// The amount of reagents getting dumped into the smoke. Small numbers limit the range of the smoke entirely, so the reagent loss within the candle is instead handled below.
+	var/scent_strength = 10
+	// The amount of reagents actually used up within the candle each time we produce chemical smoke.
+	var/scent_reagent_use = 0.5
 	// The range of the chemical smoke we produce.
-	var/scent_range = 4
+	var/scent_range = 8
 	// How often do we try and make chemical smoke from the reagents within us?
-	var/scent_frequency = 30 SECONDS
-	// How many reagents can we hold to dispense?
-	var/reagent_capacity = 5
+	var/scent_frequency = 10 SECONDS
+	// The maximum amount of reagents each candle can hold?
+	var/reagent_capacity = 15
 	// What kind of reagent is this scented candle filled with? If null, we leave the scented candle empty for custom filling.
 	var/scent_reagent_type = null
+	// The typepath of the smoke we're using. Mostly just for testing.
+	var/scent_smoke_type = /datum/effect_system/fluid_spread/smoke/chem/invisible/quick
 
 /obj/item/flashlight/flare/candle/scented/Initialize(mapload)
 	. = ..()
@@ -156,11 +160,12 @@
 	. = ..()
 
 /obj/item/flashlight/flare/candle/scented/proc/produce_scent()
-	if(!light_on)
+	if(!light_on || QDELETED(src))
 		return FALSE
-	do_chem_smoke(amount = scent_strength, range = scent_range, holder = src, location = get_turf(src), carry = src.reagents, silent = TRUE, smoke_type = /datum/effect_system/fluid_spread/smoke/chem/invisible)
-	reagents.remove_all(scent_strength, FALSE)
+	do_chem_smoke(amount = scent_strength, range = scent_range, holder = src, location = get_turf(src), carry = src.reagents, silent = TRUE, smoke_type = scent_smoke_type)
+	reagents.remove_all(scent_reagent_use, FALSE)
 	addtimer(CALLBACK(src, PROC_REF(produce_scent)), scent_frequency)
+	return TRUE
 
 /obj/item/flashlight/flare/candle/scented/floral
 	desc = "A scented candle, it's design allows it to directly and discreetly disperse specialized fluids into the atmosphere. The label reads 'Floral'."
@@ -171,18 +176,14 @@
 	scent_reagent_type = /datum/reagent/medicine/omnizine
 
 /obj/item/flashlight/flare/candle/scented/toxin
-	scent_strength = 0.5
-	reagent_capacity = 5
 	scent_reagent_type = /datum/reagent/toxin
 
 /obj/item/flashlight/flare/candle/scented/silent_toxin
-	scent_strength = 1
-	reagent_capacity = 10
+	reagent_capacity = 30
 	scent_reagent_type = /datum/reagent/toxin/amanitin
 
 /obj/item/flashlight/flare/candle/scented/hunger
-	scent_strength = 1
-	reagent_capacity = 10
+	reagent_capacity = 30
 	scent_reagent_type = /datum/reagent/toxin/lipolicide
 
 /obj/item/flashlight/flare/candle/scented/happiness
