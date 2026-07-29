@@ -493,7 +493,7 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/ammo_casing/shotgun/dart = 1,
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/bar_wardrobe
-	payment_department = ACCOUNT_MED
+	payment_department = ACCOUNT_SRV
 	extra_price = PAYCHECK_COMMAND
 
 	emagvendorreplace = TRUE
