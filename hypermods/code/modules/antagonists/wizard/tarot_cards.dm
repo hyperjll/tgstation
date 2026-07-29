@@ -676,16 +676,8 @@
 /datum/tarot/reversed/the_fool/activate(mob/living/target)
 	if(!ishuman(target))
 		return
-	var/mob/living/carbon/human/H = target
-	for(var/obj/item/I in H)
-		if(istype(I, /obj/item/implant))
-			continue
-		if(istype(I, /obj/item/bodypart))
-			continue
-		if(istype(I, /obj/item/organ))
-			continue
-
-		I.forceMove(get_turf(H))
+	var/mob/living/carbon/human/our_human = target
+	our_human.drop_all_equipment()
 
 /datum/tarot/reversed/the_magician
 	name = "I - The Magician?"
