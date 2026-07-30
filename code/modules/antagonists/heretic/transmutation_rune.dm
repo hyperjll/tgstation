@@ -153,7 +153,6 @@
 		// Lets format the thing they're missing and put it into our list
 		var/formatted_thing = "[number_of_things] "
 		if(islist(req_type))
-			var/list/req_type_list = req_type
 			var/list/req_text_list = list()
 			for(var/atom/possible_type as anything in req_type_list)
 				req_text_list += ritual.parse_required_item(possible_type)
