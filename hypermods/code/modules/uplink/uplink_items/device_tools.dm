@@ -167,3 +167,4 @@
 	cost = 5
 	surplus = 0
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
