@@ -201,7 +201,7 @@
 
 /datum/heretic_knowledge/spell/target_time_stop
 	name = "Targeted Time Stop"
-	desc = "A long-range spell that causes briefly stops time around a target. \
+	desc = "A long-range spell that briefly stops time around a target. \
 		You aren't rendered immune to this time-stop effect."
 	gain_text = "Before I could leave them, one turned and pointed toward me, stopping me in place with great force. \
 		What words they spoke before I could move again, hadn't met my ears."
