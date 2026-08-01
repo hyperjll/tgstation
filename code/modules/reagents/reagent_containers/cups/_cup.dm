@@ -45,6 +45,8 @@
 	if(heatable)
 		AddElement(/datum/element/reagents_item_heatable)
 	register_context()
+	if(has_lid)
+		update_overlays()
 
 /obj/item/reagent_containers/cup/Destroy(force)
 	QDEL_NULL(lid_assembly)

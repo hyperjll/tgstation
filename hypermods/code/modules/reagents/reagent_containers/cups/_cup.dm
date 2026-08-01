@@ -193,6 +193,11 @@
 	list_reagents = list(/datum/reagent/medicine/enchantedgold = 100)
 
 
+/obj/item/reagent_containers/cup/beaker/large/glue
+	has_lid = TRUE
+	list_reagents = list(/datum/reagent/glue = 100)
+
+
 /obj/item/reagent_containers/cup/tube/vestine
 	name = "vestine tube"
 	list_reagents = list(/datum/reagent/vestine = 30)

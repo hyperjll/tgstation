@@ -183,3 +183,12 @@
 	surplus = 0 // Let's not trick people who bought surplus crates.
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
+/datum/uplink_item/disruption/glue
+	name = "Glue Reserve"
+	desc = "A large beaker containing approximately 100 units worth of industrial-grade glue. \
+			It's applications over the years have been greatly diminished, but it's still capable of making one hell of a mess if spilled."
+	item = /obj/item/reagent_containers/cup/beaker/large/glue
+	cost = 1
+	purchasable_from = ~UPLINK_SPY
+	uplink_item_flags = NONE
