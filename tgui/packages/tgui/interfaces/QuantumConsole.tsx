@@ -59,6 +59,7 @@ type Domain = {
   has_secondary_objectives: BooleanLike;
   name: string;
   reward: number | string;
+  grade_symbol: string;
 };
 
 type DomainEntryProps = {
@@ -284,6 +285,7 @@ function DomainEntry(props: DomainEntryProps) {
       has_secondary_objectives,
       name,
       reward,
+      grade_symbol,
     },
   } = props;
   const { act, data } = useBackend<Data>();
@@ -331,6 +333,7 @@ function DomainEntry(props: DomainEntryProps) {
           {!!announce_ghosts && canView && <Icon name="ghost" ml={1} />}
         </>
       }
+      sideIcon={grade_symbol}
     >
       <Stack height={5}>
         <Stack.Item color="label" grow={4}>

@@ -29,6 +29,8 @@ SUBSYSTEM_DEF(bitrunning)
 			can_view = TRUE
 			can_view_reward = TRUE
 
+		var/grade_symbol = GLOB.bitrunning_grades[domain.best_grade]
+
 		UNTYPED_LIST_ADD(levels, list(
 			"announce_ghosts" = domain.announce_to_ghosts,
 			"cost" = domain.cost,
@@ -38,7 +40,8 @@ SUBSYSTEM_DEF(bitrunning)
 			"is_modular" = domain.is_modular,
 			"has_secondary_objectives" = counterlist_sum(domain.secondary_loot) ? TRUE : FALSE,
 			"name" = can_view ? domain.name : REDACTED,
-			"reward" = can_view_reward ? domain.reward_points : REDACTED
+			"reward" = can_view_reward ? domain.reward_points : REDACTED,
+			"grade_symbol" = grade_symbol,
 		))
 
 	return levels
