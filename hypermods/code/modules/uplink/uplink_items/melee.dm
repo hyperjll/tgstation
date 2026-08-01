@@ -77,7 +77,7 @@
 	item = /obj/item/melee/beelibsword
 	progression_minimum = 15 MINUTES
 	surplus = 30
-	cost = 7
+	cost = 5
 	uplink_item_flags = SYNDIE_ILLEGAL_TECH | SYNDIE_ITEM_SEC_FULTONABLE | SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/trident
@@ -95,7 +95,8 @@
 	name = "Bo Staff"
 	desc = "A wielded wooden staff that can be used to incapacitate opponents if you dont intent to harm them. This often results in knocking your targets unconscious for a brief period of time."
 	item = /obj/item/melee/bostaff
-	cost = 8
+	cost = 6
+	surplus = 40
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/melee/homerun
