@@ -98,6 +98,15 @@
 	cost = 8
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
+/datum/uplink_item/melee/homerun
+	name = "Home-Run Bat"
+	desc = "A wonderously crafted baseball bat which bolsters the wielder's sportsmanship! \
+			Allows the wielder to swat incoming objects being thrown at them with incredible force and can be charged up to deal a devastating home-run swing. \
+			Still made of wood, though."
+	item = /obj/item/melee/baseball_bat/homerun
+	cost = 6
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+
 /datum/uplink_item/melee/katana
 	name = "Katana"
 	desc = "A brilliantly made katana capable of major damage against pretty much anyone. Has high damage, blocking ability, and inflicts wounds easily. \
