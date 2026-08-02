@@ -1,3 +1,19 @@
+/obj/item/storage/toolbox/trapdoor_kit
+	name = "mechanical toolbox"
+	icon_state = "blue"
+	inhand_icon_state = "toolbox_blue"
+	material_flags = NONE
+
+/obj/item/storage/toolbox/trapdoor_kit/PopulateContents()
+	new /obj/item/crowbar(src)
+	new /obj/item/trapdoor_kit(src)
+	new /obj/item/trapdoor_kit(src)
+	new /obj/item/trapdoor_remote/preloaded(src)
+	new /obj/item/reagent_containers/cup/bottle/thermite(src)
+	new /obj/item/reagent_containers/cup/bottle/thermite(src)
+	new /obj/item/assembly/igniter(src)
+
+
 /obj/item/storage/toolbox/syndicate/deluxe/PopulateContents() // dont make this carry over the previous stuff
 	new /obj/item/screwdriver/power(src)
 	new /obj/item/weldingtool/experimental(src)

@@ -217,3 +217,13 @@
 	item = /obj/item/sbeacondrop/toll_booth
 	cost = 4
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/disruption/trapdoors
+	name = "Trapdoor Kit"
+	desc = "A mechanical toolbox containing two trapdoor kits, 2 bottles of thermite, a crowbar, an igniter, and a trapdoor remote. \
+			Use the crowbar to remove tiles and the thermite to burn away the plating to allow the installation of your trapdoors. \
+			Only useful on stations/areas with multiple levels."
+	item = /obj/item/storage/toolbox/trapdoor_kit
+	cost = 1
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY) // Would be funny if nukies could do trapdoor gimmicks, but alas.
+	uplink_item_flags = NONE
