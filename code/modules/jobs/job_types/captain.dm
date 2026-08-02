@@ -94,6 +94,8 @@
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig)
 	skillchips = list(/obj/item/skillchip/disk_verifier)
 
+	wintercoat = /obj/item/clothing/suit/hooded/wintercoat/captain
+
 	var/special_charter
 
 /datum/outfit/job/captain/pre_equip(mob/living/carbon/human/H, visuals_only)
