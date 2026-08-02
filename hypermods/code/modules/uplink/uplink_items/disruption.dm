@@ -208,3 +208,11 @@
 	item = /obj/item/grenade/spawnergrenade/darkness
 	cost = 2
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
+
+/datum/uplink_item/disruption/toll_booth
+	name = "Toll Booth"
+	desc = "A single bluespace beacon used to transport a toll booth to your location. These booths will block passage to all personnel unless a sufficient payment is made. \
+			Thanks to our incredible engineering technology, these toll booths cannot be dismantled!"
+	item = /obj/item/sbeacondrop/toll_booth
+	cost = 4
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS

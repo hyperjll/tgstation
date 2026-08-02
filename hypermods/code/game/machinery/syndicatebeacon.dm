@@ -60,3 +60,7 @@
 /obj/item/sbeacondrop/bluespace_wave
 	desc = "A label on it reads: <i>Activating this device will send an active space-time disruptor to your location</i>."
 	droptype = /obj/machinery/bluespace_wave
+
+/obj/item/sbeacondrop/toll_booth
+	desc = "A label on it reads: <i>Activating this device will send an active toll-booth to your location</i>."
+	droptype = /obj/machinery/scanner_gate/toll_booth
