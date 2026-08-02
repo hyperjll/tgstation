@@ -192,3 +192,12 @@
 	cost = 1
 	purchasable_from = ~UPLINK_SPY
 	uplink_item_flags = NONE
+
+/datum/uplink_item/disruption/flashdark
+	name = "Darklight"
+	desc = "A powerful antiphoton projector which produces a large bubble of darkness around the user. \
+			Perfect for obscuring the vision of anything nearby including digital HUDs all the while disrupting the workplace."
+	item = /obj/item/flashlight/flashdark
+	cost = 2
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+	uplink_item_flags = NONE
