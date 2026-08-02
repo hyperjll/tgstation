@@ -212,7 +212,8 @@
 /datum/uplink_item/disruption/toll_booth
 	name = "Toll Booth"
 	desc = "A single bluespace beacon used to transport a toll booth to your location. These booths will block passage to all personnel unless a sufficient payment is made. \
-			Thanks to our incredible engineering technology, these toll booths cannot be dismantled!"
+			Thanks to our incredible engineering technology, these toll booths cannot be dismantled! \
+			Payees are stored across all toll booths, and will clear approved members after 3 minutes have passed."
 	item = /obj/item/sbeacondrop/toll_booth
 	cost = 4
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
