@@ -1,3 +1,20 @@
+/obj/item/flashlight/spotlight/darkness
+	name = "darkness blob"
+	desc = "Suddenly, your body seizes. What are you looking at?"
+	light_system = COMPLEX_LIGHT
+	light_color = "#ffffff" // pure white
+	light_range = 8
+	light_power = -3 // turns white into black
+	var/light_duration = 60 SECONDS
+
+/obj/item/flashlight/spotlight/darkness/Initialize(mapload)
+	. = ..()
+	addtimer(CALLBACK(src, PROC_REF(turn_off)), light_duration)
+
+/obj/item/flashlight/spotlight/darkness/proc/turn_off()
+	qdel(src)
+
+
 /obj/item/flashlight/syndirig/glowstick
 	name = "glowstick"
 	desc = "A military-grade glowstick."

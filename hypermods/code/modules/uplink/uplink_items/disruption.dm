@@ -201,3 +201,10 @@
 	cost = 2
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	uplink_item_flags = NONE
+
+/datum/uplink_item/disruption/flashdark_grenade
+	name = "Darkbang"
+	desc = "A grenade containing an antiphoton projecting payload capable of rendering a large area in complete darkness for atleast a minute."
+	item = /obj/item/grenade/spawnergrenade/darkness
+	cost = 2
+	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
