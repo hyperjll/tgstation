@@ -123,3 +123,15 @@
 		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design/nerd_suit
+	name = "Incomplete D.O.T.A Suit"
+	desc = "One of Nanotrasen's state-of-the-art D.O.T.A suits designed to increase the life expectancy of it's wearer, it requires a Bioscrambler anomaly core to function."
+	id = "nerd_suit"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/titanium = SHEET_MATERIAL_AMOUNT * 5, /datum/material/gold = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 0.75, /datum/material/plasma = SMALL_MATERIAL_AMOUNT * 1.5)
+	build_path = /obj/item/nerd_suit_inert
+	category = list(
+		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SCIENCE
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE

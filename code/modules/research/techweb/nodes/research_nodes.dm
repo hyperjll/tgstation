@@ -102,6 +102,7 @@
 		"perceptomatrix",
 		"speed_shoes",
 		"lifeforce_signet",
+		"nerd_suit",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	discount_experiments = list(/datum/experiment/scanning/points/anomalies = TECHWEB_TIER_5_POINTS)
