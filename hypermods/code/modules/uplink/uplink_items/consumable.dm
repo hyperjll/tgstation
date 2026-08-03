@@ -137,6 +137,14 @@
 	item = /obj/item/storage/fancy/cigarettes/cigpack_interdyne
 	cost = 1
 
+/datum/uplink_item/consumable/danrejectcigs
+	name = "Dan's Soaked Smokes Rejects"
+	desc = "An off-brand yet interesting packet of cigarettes put-together by a former employee at Interdyne Pharmaceuticals. \
+			Preliminary testing has shown the contents of each packet to be randomized among 12 different cigarettes. \
+			We cannot guarantee the usefulness of each purchase."
+	item = /obj/item/storage/fancy/cigarettes/cigpack_dan
+	cost = 1
+
 /datum/uplink_item/consumable/syndiecigsvarietypack
 	name = "Syndicate Variety Smokes"
 	desc = "A kit containing cigarette packs that resemble your regular nanotrasen approved brands. \

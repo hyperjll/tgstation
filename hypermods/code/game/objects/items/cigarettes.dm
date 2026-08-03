@@ -35,6 +35,92 @@
 	smoke_all = TRUE
 	list_reagents = null
 
+// Dan's soaked rejects
+
+/obj/item/cigarette/slept_past_alarm
+	name = "slept past alarm"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/nicotine = 10, /datum/reagent/tazinide = 10)
+
+/obj/item/cigarette/rollbacks
+	name = "rollbacks"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/nicotine = 10, /datum/reagent/cryostylane = 5, /datum/reagent/toxin/chloralhydrate = 10)
+
+/obj/item/cigarette/cruise_chaser
+	name = "cruise chaser"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/nicotine = 10, /datum/reagent/cryostylane = 5, /datum/reagent/medicine/stimulants = 5)
+
+/obj/item/cigarette/performance_art
+	name = "performance art"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/nicotine = 10, /datum/reagent/consumable/laughter = 5, /datum/reagent/inverse/bicaridine = 10)
+
+/obj/item/cigarette/passion_of_love
+	name = "passion of love"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/nicotine = 10, /datum/reagent/phlogiston = 5, /datum/reagent/clf3 = 5)
+
+/obj/item/cigarette/on_second_thought
+	name = "on second thought"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/nicotine = 10, /datum/reagent/toxin/mutetoxin = 15)
+
+/obj/item/cigarette/big_city_slugger
+	name = "big city slugger"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/nicotine = 10, /datum/reagent/lead = 15)
+
+/obj/item/cigarette/banana_scented
+	name = "banana scented"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/nicotine = 10, /datum/reagent/consumable/banana = 10, /datum/reagent/consumable/nutriment/peptides = 5)
+
+/obj/item/cigarette/super_powered
+	name = "super powered"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/nicotwaine = 5, /datum/reagent/medicine/stimulants = 7.5, /datum/reagent/toxin/heartbreaker = 7.5)
+
+/obj/item/cigarette/say_cheese
+	name = "say cheese"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/drug/vasopressin = 10, /datum/reagent/inverse/hercuri = 10)
+
+/obj/item/cigarette/anarcho_primitivist
+	name = "anarcho primitivist"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/emp_powder = 10, /datum/reagent/toxin/muscleparalyzers = 5, /datum/reagent/impurity/methanol = 5)
+
+/obj/item/cigarette/botanists_folly
+	name = "botanist's folly"
+	desc = "An odd-looking cigarette."
+	smoketime = 3 MINUTES
+	smoke_all = TRUE
+	list_reagents = list(/datum/reagent/toxin/plantbgone/weedkiller = 5, /datum/reagent/plantnutriment/speedgrow = 5, /datum/reagent/glue = 10)
+
 // Trick cigs
 
 /obj/item/cigarette/syndicate/explosive

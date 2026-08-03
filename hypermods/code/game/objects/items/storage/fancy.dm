@@ -103,6 +103,36 @@
 	base_icon_state = "cigarcase_interdyne"
 	spawn_type = /obj/item/cigarette/cigar/interdyne
 
+// Dan's Soaked Rejects
+
+/obj/item/storage/fancy/cigarettes/cigpack_dan
+	name = "dan's soaked smokes rejects"
+	desc = "An odd looking cigarette packet. A message on the back reads: 'Dan worked with Interdyne Pharmaceuticals to dispose of excess chemicals'."
+	icon = 'hypermods/icons/obj/cigarettes.dmi'
+	icon_state = "danrejects"
+	base_icon_state = "danrejects"
+	spawn_type = null
+
+/obj/item/storage/fancy/cigarettes/cigpack_dan/PopulateContents()
+	var/list/item_list = list(
+		/obj/item/cigarette/slept_past_alarm,
+		/obj/item/cigarette/rollbacks,
+		/obj/item/cigarette/cruise_chaser,
+		/obj/item/cigarette/performance_art,
+		/obj/item/cigarette/passion_of_love,
+		/obj/item/cigarette/on_second_thought,
+		/obj/item/cigarette/big_city_slugger,
+		/obj/item/cigarette/banana_scented,
+		/obj/item/cigarette/super_powered,
+		/obj/item/cigarette/say_cheese,
+		/obj/item/cigarette/anarcho_primitivist,
+		/obj/item/cigarette/botanists_folly
+	)
+
+	for(var/i in 1 to 6)
+		var/item = pick(item_list)
+		new item(src)
+
 // Dermal Hardening Cigarettes
 
 /obj/item/storage/fancy/cigarettes/dermal_harden

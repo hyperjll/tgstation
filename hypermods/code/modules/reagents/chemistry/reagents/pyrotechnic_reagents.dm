@@ -27,3 +27,11 @@
 	if(!istype(affected_mob))
 		return
 	affected_mob.physiology.siemens_coeff *= 0.5
+
+/datum/reagent/emp_powder
+	name = "Electromagnetic Powder"
+	description = "Causes an Electromagnetic Pulse when sufficiently heated."
+	color = "#134717"
+	taste_description = "electrical haywire"
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	randomized_spawns = REAGENT_SPAWN_ALL_RANDOM_SPAWNS
