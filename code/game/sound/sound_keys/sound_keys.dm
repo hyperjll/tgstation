@@ -1152,6 +1152,13 @@
 		'sound/effects/magic/void_deflect3.ogg',
 	)
 
+/datum/sound_effect/heavy_drop
+	key = SFX_HEAVY_DROP
+	file_paths = list(
+		'sound/effects/heavy_drop1.ogg',
+		'sound/effects/heavy_drop2.ogg',
+	)
+
 /datum/sound_effect/bloodpack_begin
 	key = SFX_REGEN_BLOODPACK_BEGIN
 	file_paths = list('sound/misc/moist_impact.ogg')
