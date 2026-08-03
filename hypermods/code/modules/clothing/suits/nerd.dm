@@ -170,7 +170,7 @@
 	add_queue('hypermods/sound/voice/nerdsuit/death.ogg', 5 SECONDS, purge_queue=TRUE)
 
 //Mute
-/obj/item/clothing/suit/armor/nerd/proc/handle_speech(datum/source, mob/speech_args)
+/obj/item/clothing/suit/armor/nerd/proc/handle_speech(datum/source, list/speech_args)
 	SIGNAL_HANDLER
 
 	if(!(obj_flags & EMAGGED))
