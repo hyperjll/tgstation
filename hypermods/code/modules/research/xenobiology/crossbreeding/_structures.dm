@@ -192,9 +192,10 @@ GLOBAL_LIST_EMPTY(bluespace_slime_crystals)
 	colour = "blue"
 	effect_desc = "It stabilizes air around it to the standard O2/N2 mixture, and stabilizes the temperature. Effect is blocked by walls."
 	range_type = "view"
+	effect_range = 2
 
 /obj/structure/slime_crystal/blue/process()
-	for(var/turf/open/T in view(2, src))
+	for(var/turf/open/T in view(effect_range, src))
 		if(isspaceturf(T))
 			continue
 		var/datum/gas_mixture/base_mix = SSair.parse_gas_string(OPENTURF_DEFAULT_ATMOS)
@@ -495,6 +496,8 @@ GLOBAL_LIST_EMPTY(bluespace_slime_crystals)
 		return
 	var/mob/living/carbon/human/human_user = user
 	var/list/mutation_list = human_user.dna.mutations
+	if(!length(mutation_list))
+		return
 	stored_mutation = pick(mutation_list)
 	stored_mutation = stored_mutation.type
 
