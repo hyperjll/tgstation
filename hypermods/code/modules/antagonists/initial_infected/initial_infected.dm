@@ -42,7 +42,7 @@
 
 /datum/antagonist/initial_infected/proc/make_background_clone_icon(datum/outfit/zombie_fit)
 	var/mob/living/carbon/human/dummy/consistent/zombie = new
-	zombie.set_species(/datum/species/zombie/infectious)
+	zombie.apply_status_effect(/datum/status_effect/zombie)
 
 	var/datum/universal_icon/zombie_icon = render_preview_outfit(zombie_fit, zombie)
 	zombie_icon.change_opacity(0.7)
@@ -84,7 +84,7 @@
 	return ..()
 
 /datum/objective/assassinate/zombies/check_completion()
-	return completed || (!considered_alive(target) || considered_afk(target) || considered_exiled(target) || iszombie(target))
+	return completed || (!considered_alive(target) || considered_afk(target) || considered_exiled(target) || target.current?.has_status_effect(/datum/status_effect/zombie))
 
 /datum/objective/assassinate/zombies/update_explanation_text()
 	. = ..()
@@ -98,7 +98,7 @@
 	for(var/mob/living/carbon/human/player as anything in GLOB.human_list)
 		if(player.stat == DEAD) // If they aren't dead
 			continue
-		if(iszombie(player)) // If they aren't already a zombie
+		if(player.has_status_effect(/datum/status_effect/zombie)) // If they aren't already a zombie
 			continue
 		if((player.mind?.assigned_role.departments_bitflags))
 			all_targets += player.mind

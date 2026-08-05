@@ -98,17 +98,3 @@
 		werewolf.updatehealth()
 	if(prob(2))
 		werewolf.regenerate_limbs()
-
-/datum/species/werewolf/get_scream_sound(mob/living/carbon/human/human)
-	if(human.physique == MALE)
-		return pick(
-			'hypermods/sound/mobs/humanoid/werewolf/howl1.ogg',
-			'hypermods/sound/mobs/humanoid/werewolf/howl2.ogg',
-			'hypermods/sound/mobs/humanoid/werewolf/howl3.ogg',
-		)
-
-	return pick(
-		'hypermods/sound/mobs/humanoid/werewolf/howl4.ogg',
-		'hypermods/sound/mobs/humanoid/werewolf/howl5.ogg',
-		'hypermods/sound/mobs/humanoid/werewolf/howl6.ogg',
-	)

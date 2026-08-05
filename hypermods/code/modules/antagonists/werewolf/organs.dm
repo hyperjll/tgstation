@@ -65,8 +65,18 @@
 	say_mod = "growls"
 	modifies_speech = TRUE
 	taste_sensitivity = 5
-	//liked_foodtypes = GROSS | MEAT | RAW | GORE
-	//disliked_foodtypes = SUGAR
+	liked_foodtypes = GROSS | MEAT | RAW | GORE
+	disliked_foodtypes = SUGAR
+	emote_sounds = list(
+		/datum/emote/living/scream::key = list(
+			'hypermods/sound/mobs/humanoid/werewolf/howl1.ogg',
+			'hypermods/sound/mobs/humanoid/werewolf/howl2.ogg',
+			'hypermods/sound/mobs/humanoid/werewolf/howl3.ogg',
+			'hypermods/sound/mobs/humanoid/werewolf/howl4.ogg',
+			'hypermods/sound/mobs/humanoid/werewolf/howl5.ogg',
+			'hypermods/sound/mobs/humanoid/werewolf/howl6.ogg',
+		),
+	)
 
 /obj/item/organ/tongue/werewolf/modify_speech(datum/source, list/speech_args)
 	var/message = speech_args[SPEECH_MESSAGE]
