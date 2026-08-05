@@ -24,3 +24,4 @@
 	new /obj/item/reagent_containers/cup/bottle/sacid(src)
 	new /obj/item/reagent_containers/cup/bottle/water(src)
 	new /obj/item/reagent_containers/cup/bottle/welding_fuel(src)
+	force_update_contents()

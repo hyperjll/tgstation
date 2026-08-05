@@ -21,6 +21,11 @@
 	///List in which all currently dispensable reagents go
 	var/list/dispensable_reagents = list()
 
+	// Hyper Edit
+	/// Needs a base_icon_state for subtypes like the chemicompiler.
+	base_icon_state = "portablechemicalmixer"
+	// Hyper End
+
 /obj/item/storage/portable_chem_mixer/Initialize(mapload)
 	. = ..()
 	register_context()
@@ -62,12 +67,12 @@
 
 /obj/item/storage/portable_chem_mixer/update_icon_state()
 	if(!atom_storage.locked)
-		icon_state = "portablechemicalmixer_open"
+		icon_state = "[base_icon_state]_open"
 		return ..()
 	if(!QDELETED(beaker))
-		icon_state = "portablechemicalmixer_full"
+		icon_state = "[base_icon_state]_full"
 		return ..()
-	icon_state = "portablechemicalmixer_empty"
+	icon_state = "[base_icon_state]_empty"
 	return ..()
 
 /obj/item/storage/portable_chem_mixer/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
@@ -255,3 +260,10 @@
 		SStgui.close_uis(src)
 	atom_storage.set_locked(atom_storage.locked ? STORAGE_NOT_LOCKED : STORAGE_FULLY_LOCKED)
 	return CLICK_ACTION_SUCCESS
+
+/// Hyper Edit
+
+/obj/item/storage/portable_chem_mixer/proc/force_update_contents()
+	update_contents()
+
+/// Hyper End

@@ -507,6 +507,7 @@
 	desc = "An illegal, portable device that dispenses and mixes chemicals using an internal chemical synthesizer."
 	icon = 'hypermods/icons/obj/medical/chemical.dmi'
 	icon_state = "chemicompiler"
+	base_icon_state = "chemicompiler"
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = null
 	///The amount of reagent that is to be dispensed currently
@@ -517,8 +518,6 @@
 /obj/item/storage/portable_chem_mixer/chemicompiler/Initialize(mapload)
 	. = ..()
 	atom_storage.locked = STORAGE_FULLY_LOCKED
-	//register_context()
-	//update_contents()
 
 /obj/item/storage/portable_chem_mixer/chemicompiler/PopulateContents()
 	new /obj/item/reagent_containers/cup/bottle/eternal/stable_plasma(src)
@@ -550,16 +549,7 @@
 	new /obj/item/reagent_containers/cup/bottle/eternal/fuel(src)
 	new /obj/item/reagent_containers/cup/bottle/eternal/iodine(src)
 	new /obj/item/reagent_containers/cup/bottle/eternal/bromine(src)
-
-/obj/item/storage/portable_chem_mixer/chemicompiler/update_icon_state()
-	if(!atom_storage.locked)
-		icon_state = "chemicompiler_open"
-		return ..()
-	if(!QDELETED(beaker))
-		icon_state = "chemicompiler"
-		return ..()
-	icon_state = "chemicompiler"
-	return ..()
+	force_update_contents()
 
 /obj/item/storage/portable_chem_mixer/chemicompiler/item_ctrl_click(mob/user)
 	return CLICK_ACTION_SUCCESS
