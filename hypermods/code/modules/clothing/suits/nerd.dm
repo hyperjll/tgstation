@@ -1,30 +1,12 @@
-/obj/item/nerd_suit_inert
-	name = "augmentable D.O.T.A suit"
-	desc = "It's one of Nanotrasen's state-of-the-art D.O.T.A suits, it's lacking a Bioscrambler anomaly core to function."
-	icon = 'hypermods/icons/obj/clothing/suits/suit.dmi'
-	icon_state = "nerd"
-	icon = 'hypermods/icons/obj/clothing/shoes.dmi'
-	w_class = WEIGHT_CLASS_HUGE
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	item_flags = NO_MAT_REDEMPTION
-	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/titanium = SHEET_MATERIAL_AMOUNT * 5, /datum/material/gold = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 0.75, /datum/material/plasma = SMALL_MATERIAL_AMOUNT * 1.5)
-	slot_flags = null
-
-/obj/item/nerd_suit_inert/Initialize(mapload)
-	. = ..()
-	var/static/list/recipes = list(/datum/crafting_recipe/nerd_suit)
-	AddElement(/datum/element/slapcrafting, recipes)
-
 #define SOUND_BEEP(sound) add_queue(##sound, 20)
 #define MORPHINE_INJECTION_DELAY (30 SECONDS)
 
 /obj/item/clothing/suit/armor/nerd
-	name = "\improper D.O.T.A. suit"
+	name = "\improper Anomalous D.O.T.A. suit"
 	desc = "The Defenseless Operator Traversal Assistance suit is a highly experimental Nanotrasen designed \
 		protective full body harness designed to prolong the lifespan (and thus productivity) of an employee \
-		via anomalous technology provided in-part by the core of a Bioscrambler anomaly. \
-		Unfortunately the research department couldn't design a helmet before the third quarter so this is definitely not spaceproof. \
-		One size fits most."
+		via surplus medical technology and anomalous technology provided in-part by the core of a Bioscrambler anomaly. \
+		A helmet was sadly never designed due to time and budget constraints."
 	worn_icon = 'hypermods/icons/mob/clothing/suits/suit.dmi'
 	icon = 'hypermods/icons/obj/clothing/suits/suit.dmi'
 	icon_state = "nerd"
@@ -35,6 +17,7 @@
 	armor_type = /datum/armor/dota_suit
 	item_flags = NO_MAT_REDEMPTION
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/titanium = SHEET_MATERIAL_AMOUNT * 5, /datum/material/gold = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 0.75, /datum/material/plasma = SMALL_MATERIAL_AMOUNT * 1.5)
+	clothing_traits = list(TRAIT_QUICKER_CARRY, TRAIT_RADIMMUNE, TRAIT_BOMBGIBIMMUNE)
 	allowed = list(
 		/obj/item/tank/internals,
 		/obj/item/gun/energy/recharge/kinetic_accelerator,
@@ -66,7 +49,7 @@
 
 	var/obj/item/geiger_counter/GC
 
-	// Determines any anomaly-specific benefits.
+	// Determines if anomaly-specific benefits are activated.
 	var/anomalous = TRUE
 
 	COOLDOWN_DECLARE(next_damage_notify)
@@ -219,18 +202,21 @@
 	if(!COOLDOWN_FINISHED(src, next_morphine))
 		return
 
-	if(!((obj_flags & EMAGGED) && emag_doses_left < 0))
-		owner.reagents.add_reagent(/datum/reagent/medicine/morphine, 3)
-		SOUND_BEEP('hypermods/sound/voice/nerdsuit/beep_3.ogg')
-		add_queue('hypermods/sound/voice/nerdsuit/morphine.ogg',2 SECONDS)
-	else
+	if(obj_flags & EMAGGED && emag_doses_left > 0)
 		owner.reagents.add_reagent(/datum/reagent/medicine/stimulants, 5)
+		if(anomalous)
+			owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 3)
 		SOUND_BEEP('hypermods/sound/voice/nerdsuit/beep_3.ogg')
 		add_queue('hypermods/sound/voice/nerdsuit/stimulants.ogg',2 SECONDS)
 		emag_doses_left--
 		if(emag_doses_left <= 0)
 			to_chat(owner, span_warning("\The [name] seems to have run out of stimulants..."))
-
+	else
+		owner.reagents.add_reagent(/datum/reagent/medicine/morphine, 3)
+		if(anomalous)
+			owner.reagents.add_reagent(/datum/reagent/medicine/salglu_solution, 10)
+		SOUND_BEEP('hypermods/sound/voice/nerdsuit/beep_3.ogg')
+		add_queue('hypermods/sound/voice/nerdsuit/morphine.ogg',2 SECONDS)
 	COOLDOWN_START(src, next_morphine, MORPHINE_INJECTION_DELAY)
 	return TRUE
 
@@ -268,11 +254,18 @@
 #undef MORPHINE_INJECTION_DELAY
 #undef SOUND_BEEP
 
-/obj/item/clothing/suit/armor/nerd/no_anom_mention // Just in case you wanted to map this somewhere or have it printable without an anomaly core.
+/obj/item/clothing/suit/armor/nerd/no_anom
+	name = "\improper D.O.T.A. suit"
 	desc = "The Defenseless Operator Traversal Assistance suit is a highly experimental Nanotrasen designed \
 		protective full body harness designed to prolong the lifespan (and thus productivity) of an employee \
-		via surplus medical technology found in the abandoned part of maintenance no one seems to want to talk about. \
-		Unfortunately the research department couldn't design a helmet before the third quarter so this is definitely not spaceproof. \
-		One size fits most."
+		via the usage of surplus medical technology. It's apparatus has a slot of a Bioscrambler anomaly core, \
+		and if one is installed, will improve the suit's functionality. \
+		A helmet was sadly never designed due to time and budget constraints."
+	clothing_traits = list(TRAIT_QUICK_CARRY)
 	armor_type = /datum/armor/dota_suit_weak
 	anomalous = FALSE
+
+/obj/item/clothing/suit/armor/nerd/no_anom/Initialize(mapload)
+	. = ..()
+	var/static/list/recipes = list(/datum/crafting_recipe/nerd_suit)
+	AddElement(/datum/element/slapcrafting, recipes)

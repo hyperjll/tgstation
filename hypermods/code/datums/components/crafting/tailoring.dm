@@ -17,9 +17,9 @@
 	category = CAT_CLOTHING
 
 /datum/crafting_recipe/nerd_suit
-	name = "D.O.T.A Suit"
+	name = "Anomalous D.O.T.A Suit"
 	reqs = list(
-		/obj/item/nerd_suit_inert = 1,
+		/obj/item/clothing/suit/armor/nerd/no_anom = 1,
 		/obj/item/assembly/signaler/anomaly/bioscrambler = 1,
 	)
 	result = /obj/item/clothing/suit/armor/nerd
