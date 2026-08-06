@@ -109,6 +109,7 @@
 		"rcd_ammo",
 		"weldingmask",
 		"magboots",
+		"diode_disk_stamina",
 		"smfpayload",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
