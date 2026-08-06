@@ -661,9 +661,11 @@
 		/obj/item/clothing/glasses/eyepatch/medical = 2,
 		/obj/item/storage/box/bandages = 2,
 		/obj/item/storage/box/triage_cards = 4,
-		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 5,
 		/obj/item/storage/pill_bottle/inaprovaline = 3,
 		/obj/item/storage/pill_bottle/painkillers = 5,
+		/obj/item/storage/pill_bottle/iron = 3,
+		/obj/item/stack/medical/bruise_pack = 2,
+		/obj/item/stack/medical/mesh = 2,
 	)
 	contraband = list(
 		/obj/item/storage/box/gum/happiness = 3,
@@ -690,6 +692,7 @@
 		/obj/item/storage/medkit/expanded/advanced = 1,
 		/obj/item/shears = 1,
 		/obj/item/storage/organbox = 1,
+		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 3,
 		/obj/item/reagent_containers/hypospray/medipen/ekit = 3,
 		/obj/item/reagent_containers/cup/beaker/cryoxadone = 4,
 		/obj/item/reagent_containers/medigel/synthflesh = 2,
