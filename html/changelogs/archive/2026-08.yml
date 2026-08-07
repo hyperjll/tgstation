@@ -187,6 +187,8 @@
   Wisemonster:
   - balance: The electrodistruptive diode disk has been moved from energy manipulation
       research to experimental tools research
+  - spellcheck: Removed "portable" from the portable chem dispenser board (it was
+      just a normal dispensor anyways)
   YesterdaysPromise:
   - bugfix: Walls now remember what kind of grider was used to build them to return
       to upon deconstruction.
@@ -205,3 +207,14 @@
       to the direction they face
   - bugfix: fixes a 4 year old projectile code bug that mirrored the angle across
       the diagonal
+2026-08-07:
+  FalloutFalcon:
+  - code_imp: Adds mirror to download byond versions for CLI
+  Metek:
+  - refactor: Thanks to cutting edge technological advances, check_breath() calculations
+      have been optimized by approximately 41% ( using alist() instead of list() )
+  SmArtKar:
+  - refactor: Rewrote dynamic lighting lumcount to use spatial-grid based requests
+  vinylspiders:
+  - bugfix: birdboat will no longer try to eat everything in sight at all times, in
+      exchange their range for noticing food has been increased...
