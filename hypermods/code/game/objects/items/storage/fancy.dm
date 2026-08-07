@@ -307,7 +307,7 @@
 	icon_state = "gumballs"
 	base_icon_state = "gumballs"
 	name = "gumball jar"
-	desc = "A jar for meant for and likely containing gumballs."
+	desc = "A jar meant for and likely containing: gumballs."
 	contents_tag = "gumballs"
 	foldable_result = /obj/item/reagent_containers/cup/beaker/large
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT * 1.25)
