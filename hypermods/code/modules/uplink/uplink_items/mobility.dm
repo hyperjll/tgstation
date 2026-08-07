@@ -126,9 +126,10 @@
 
 /datum/uplink_item/mobility/syndicate_fulton
 	name = "Syndicate Fulton Package"
-	desc = "A box containing two fulton packs that can be used anywhere, and two beacons for those fultons. \
-			The fulton packs can be used anywhere, and the beacons can only be discovered via our packs. \
-			Beacons are completely invisible. Comes with a manual to make more."
+	desc = "A box containing two fulton packs, and two fulton beacons. \
+			The fulton packs provided can be used anywhere, and the beacons can only be discovered via these specialized fulton packs! \
+			Beacons provided are equipped with chameleon technology to avoid discovery. \
+			An instruction manual will be provided with purchase to ensure you may make as many as you desire."
 	item = /obj/item/storage/box/syndie_kit/syndifulton
 	cost = 6
 	surplus = 30
