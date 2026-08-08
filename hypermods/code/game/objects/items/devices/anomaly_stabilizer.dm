@@ -15,7 +15,7 @@
 	if(!istype(target, /obj/effect/anomaly))
 		return NONE
 	var/obj/effect/anomaly/target_anomaly = target
-	target_anomaly.stabilize()
 	target_anomaly.was_stabilized_manually = TRUE
+	target_anomaly.stabilize()
 	do_sparks(3, FALSE, user)
 	qdel(src)

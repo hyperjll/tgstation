@@ -150,9 +150,10 @@
 	if(!immortal)
 		immortal = TRUE
 	if(!stabilized)
-		var/obj/machinery/announcement_system/announcement_system = get_announcement_system()
-		if (!isnull(announcement_system))
-			announcement_system.broadcast("[src] that originally manifested in [impact_area] has been stabilized and is now generating passive research.", list(RADIO_CHANNEL_SCIENCE), TRUE)
+		if(was_stabilized_manually)
+			var/obj/machinery/announcement_system/announcement_system = get_announcement_system()
+			if(!isnull(announcement_system))
+				announcement_system.broadcast("[src] that originally manifested in [impact_area] has been stabilized and is now generating passive research.", list(RADIO_CHANNEL_SCIENCE), TRUE)
 		stabilized = TRUE
 		name = (has_core ? "stable " : "hollow ") + name
 	if(!has_core)
