@@ -90,6 +90,7 @@ endmap
 
 map flandstation
 	minplayers 30
+	votable
 endmap
 
 map birdshot
