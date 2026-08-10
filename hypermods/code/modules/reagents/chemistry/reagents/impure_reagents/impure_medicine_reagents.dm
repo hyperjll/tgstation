@@ -51,7 +51,6 @@
 	affected_mob.reagents.remove_reagent(/datum/reagent/tazinide, 4)
 	affected_mob.reagents.remove_reagent(/datum/reagent/teslium/energized_jelly, 4)
 	affected_mob.reagents.remove_reagent(/datum/reagent/consumable/liquidelectricity, 4)
-	affected_mob.reagents.remove_reagent(/datum/reagent/consumable/liquidelectricity/enriched, 4)
 
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
