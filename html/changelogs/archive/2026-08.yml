@@ -283,6 +283,8 @@
       failing to do for at least 4 years.
   - balance: Conveyor belts don't rotate you
 2026-08-10:
+  Aliceee2ch:
+  - bugfix: Fixed private orders (goodies).
   ArcaneMusic:
   - bugfix: Cooldown modkits and AOE modkits now work as intended. Cooldowns make
       the gun shoot faster, and AOE modkits will make the gun slightly slower, regardless
@@ -291,6 +293,14 @@
   - image: most ballistics bullets have a flashy look to them, which aids readability
   Fabian272:
   - bugfix: Black broth no longer requires ice to make.
+  Gboster-0:
+  - bugfix: if a headset starts with a 2nd key in it, it will have that key inside
+      of itself instead of in nullspace (this has no gameplay effect)
+  JohnFulpWillard:
+  - bugfix: Borg sheet numbers now updates properly between items sharing the same
+      material type.
+  - qol: pAIs now have a health hud instead of it being tucked away in the stat panel.
+  - bugfix: Health HUDs exact HP % text now update as you heal/injure.
   Melbert:
   - rscdel: Deleted "Enriched Liquid Electricity". It's now just "Liquid Electricity",
       though it can still be enriched to shock people. Ethereal blood is still un-enriched.
@@ -302,6 +312,10 @@
   - refactor: Refactored the way botany plants set up their reagents. Report any oddities,
       particularly with traits that activate on harvest (like auto-distilling composition),
       their tastes, or with special reagents (like blood or vitamins).
+  - rscadd: You can use food items in place of some organs for "organ manipulation"...It
+      won't work, but y'know, you can do it
+  - qol: Organ manipulation will cancel mid operation if it suddenly becomes invalid,
+      rather than allow it to continue
   PapaMichael:
   - config: Maintenance Drone laws and flavortext can be modified by the server config
   hry-gh:
@@ -309,3 +323,14 @@
   - bugfix: you can navigate recently input commands with ctrl+up/down again
   - bugfix: pressing space in the input autocompletes to the next shared verb name
       prefix
+2026-08-11:
+  JohnFulpWillard:
+  - qol: Borgs can now unlock their cover in their self-examine text.
+  PapaMichael:
+  - bugfix: The enter key now closes the job text-highlight field
+  Wisemonster:
+  - bugfix: Antag Bloodworms can't be hypno'd with lazarus injectors
+  - code_imp: Added a IS_BLOODWORM check
+  lelandkemble:
+  - code_imp: Some primarily admin-only procs that transform a mob into another mob
+      are now all doing the same thing.
