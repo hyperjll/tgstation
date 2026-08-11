@@ -17,6 +17,7 @@
 	#include "map_files\KiloStation\KiloStation.dmm"
 	#include "map_files\Birdshot\birdshot.dmm"
 	#include "map_files\BoxStation\ProtoBoxStation.dmm"
+	#include "map_files\CereStation\cerestation.dmm"
 	#include "map_files\FlandStation\FlandStation.dmm"
 	#include "map_files\NorthStar\north_star.dmm"
 	#include "map_files\wawastation\wawastation.dmm"

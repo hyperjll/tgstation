@@ -93,6 +93,11 @@ map flandstation
 	votable
 endmap
 
+map cerestation
+	minplayers 40
+	votable
+endmap
+
 map birdshot
 	votable
 	maxplayers 30
