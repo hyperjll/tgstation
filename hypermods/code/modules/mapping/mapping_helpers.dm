@@ -6,7 +6,7 @@
 
 /obj/effect/mapping_helpers/atom_injector/bloody_my_shit_up/inject(atom/target)
 	if(!blood_dna)
-		blood_dna = list("Unknown DNA" = BLOOD_TYPE_O_MINUS)
+		blood_dna = list("Unknown DNA" = /datum/blood_type/human/o_minus)
 	target.add_blood_DNA(blood_dna)
 
 
